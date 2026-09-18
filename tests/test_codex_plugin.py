@@ -41,6 +41,21 @@ class CodexPluginTests(unittest.TestCase):
         self.assertEqual(codex["repository"], claude["repository"])
         self.assertEqual(codex["homepage"], claude["homepage"])
 
+    def test_marketplace_distribue_la_racine_sans_copie(self) -> None:
+        marketplace = load_json(".agents/plugins/marketplace.json")
+        plugin = load_json(".codex-plugin/plugin.json")
+        self.assertEqual(marketplace["name"], plugin["name"])
+        self.assertEqual(len(marketplace["plugins"]), 1)
+        entry = marketplace["plugins"][0]
+        self.assertEqual(entry["name"], plugin["name"])
+        self.assertEqual(
+            entry["source"],
+            {"source": "url", "url": plugin["repository"] + ".git", "ref": "main"},
+        )
+        self.assertEqual(entry["policy"]["installation"], "AVAILABLE")
+        self.assertEqual(entry["policy"]["authentication"], "ON_INSTALL")
+        self.assertEqual(entry["category"], plugin["interface"]["category"])
+
 
 if __name__ == "__main__":
     unittest.main()

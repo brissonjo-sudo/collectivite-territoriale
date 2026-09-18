@@ -35,7 +35,18 @@ Les mises à jour automatiques peuvent être désactivées pour une marketplace 
 
 La version Codex est décrite par `.codex-plugin/plugin.json`. Elle réutilise les mêmes dossiers `skills/` et le même serveur juridique `.mcp.json` que la version Claude Code. Les quatre skills sont exposés sous le nom `collectivite-territoriale:<nom>`. Le skill juridique indépendant `recherche-juridique` n'est pas embarqué.
 
-Ce dépôt contient la source du plugin Codex ; son inscription à une marketplace Codex et son installation ne font pas partie de cette version. Sur le compte auteur, les quatre skills sont déjà présents individuellement : **ne pas installer aussi ce plugin**, afin d'éviter les doublons et le surcoût de contexte. Une nouvelle conversation est nécessaire après une future installation pour charger les skills et outils du plugin.
+La marketplace Codex est déclarée dans `.agents/plugins/marketplace.json`. Elle référence la racine de ce même dépôt via Git : aucune seconde copie des skills n'est nécessaire. Pour l'ajouter et installer le plugin dans Codex :
+
+```text
+codex plugin marketplace add brissonjo-sudo/collectivite-territoriale
+codex plugin add collectivite-territoriale@collectivite-territoriale
+```
+
+Pour les mises à jour ultérieures, utiliser `codex plugin marketplace upgrade collectivite-territoriale`, puis mettre à jour le plugin dans Codex. Ouvrir une nouvelle conversation après installation ou mise à jour afin de charger ses skills et outils. L'accès au serveur MCP juridique peut nécessiter une autorisation.
+
+Cette marketplace Git est destinée à Codex CLI et à l'application de bureau ChatGPT ; elle ne publie pas le plugin dans l'annuaire public universel. Pour un espace de travail ChatGPT, un administrateur doit importer la marketplace depuis l'URL du dépôt. Comme le plugin déclare un serveur MCP, un tel import est utilisable dans l'application de bureau uniquement.
+
+**Compte de l'auteur :** les quatre skills sont déjà présents individuellement. Ne pas installer aussi ce plugin, afin d'éviter les doublons et le surcoût de contexte. L'ajout de la marketplace seule n'installe pas le plugin.
 
 ## Sources et synchronisation
 

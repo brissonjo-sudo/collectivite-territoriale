@@ -1,0 +1,21 @@
+{
+  "name": "collectivite-territoriale",
+  "interface": {
+    "displayName": "Collectivité territoriale"
+  },
+  "plugins": [
+    {
+      "name": "collectivite-territoriale",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/brissonjo-sudo/collectivite-territoriale.git",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
