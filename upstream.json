@@ -1,0 +1,30 @@
+{
+  "format_version": 1,
+  "skills": {
+    "dpm-fpt": {
+      "repository": "https://github.com/brissonjo-sudo/Dpm-fpt.git",
+      "commit": "1668c89798f1f50a829c0b94d3cf6bf33a3640fb",
+      "version": "1.0.5",
+      "paths": ["SKILL.md", "references/", "objets/"]
+    },
+    "drh-fpt": {
+      "repository": "https://github.com/brissonjo-sudo/Drh-fpt.git",
+      "commit": "f07e2b6f4ecee5175a45eb696d25d98fb3f9b0ee",
+      "version": "0.5.1",
+      "paths": ["SKILL.md", "references/", "assets/"]
+    },
+    "dpo-ct": {
+      "repository": "https://github.com/brissonjo-sudo/DPO-CT.git",
+      "commit": "f3406f412368199a33f47e7861eb450eab2b2cdb",
+      "version": "0.2.1",
+      "paths": ["SKILL.md", "references/", "assets/"]
+    },
+    "dirfi-fpt": {
+      "repository": "https://github.com/brissonjo-sudo/DirFi-fpt.git",
+      "commit": "e54b2c70c305ab24a1ae3e0273f48ca449530e62",
+      "version": "1.0.3",
+      "paths": ["SKILL.md", "references/", "objets/"],
+      "exclude": ["references/cache-taux-seuils.md"]
+    }
+  }
+}

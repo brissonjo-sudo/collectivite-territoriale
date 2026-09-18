@@ -1,0 +1,19 @@
+{
+  "name": "collectivite-territoriale",
+  "displayName": "Collectivité territoriale",
+  "version": "1.0.0",
+  "description": "Quatre expertises métier pour les collectivités territoriales françaises : police municipale, ressources humaines, protection des données et finances locales, avec accès au serveur juridique Légifrance/Judilibre.",
+  "author": {
+    "name": "brissonjo-sudo",
+    "url": "https://github.com/brissonjo-sudo"
+  },
+  "homepage": "https://github.com/brissonjo-sudo/collectivite-territoriale",
+  "repository": "https://github.com/brissonjo-sudo/collectivite-territoriale",
+  "keywords": [
+    "collectivites-territoriales",
+    "police-municipale",
+    "ressources-humaines",
+    "protection-des-donnees",
+    "finances-locales"
+  ]
+}

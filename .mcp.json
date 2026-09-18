@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "droit-francais": {
+      "type": "http",
+      "url": "https://droit-francais-skill.onrender.com/mcp"
+    }
+  }
+}

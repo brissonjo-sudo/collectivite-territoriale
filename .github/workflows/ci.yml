@@ -1,0 +1,23 @@
+name: Validation du plugin
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Contrôler les copies figées
+        run: python scripts/check_sync.py
+      - name: Vérifier le détecteur de dérive
+        run: python -m unittest discover -s tests
+      - name: Contrôler les pointeurs inter-dépôts
+        run: |
+          if rg -n '\b(Dpm-fpt|Drh-fpt|Dpo-ct|DirFi-fpt|droit-francais-skill)/[^[:space:]`]+\.md' skills; then
+            exit 1
+          fi
