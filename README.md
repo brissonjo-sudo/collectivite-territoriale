@@ -1,6 +1,6 @@
 # Collectivité territoriale
 
-Plugin Claude Code destiné aux collectivités territoriales françaises. Une installation donne accès à quatre skills métier :
+Source des plugins Claude Code et Codex destinés aux collectivités territoriales françaises. Elle regroupe quatre skills métier :
 
 | Skill | Domaine | Version embarquée |
 |---|---|---|
@@ -11,7 +11,7 @@ Plugin Claude Code destiné aux collectivités territoriales françaises. Une in
 
 Le serveur MCP `droit-francais` est déclaré dans `.mcp.json` pour interroger Légifrance/Judilibre. Son utilisation peut demander une autorisation OAuth dans Claude Code. Le skill indépendant `recherche-juridique` n'est pas inclus.
 
-## Installation et mise à jour
+## Claude Code : installation et mise à jour
 
 Dans Claude Code :
 
@@ -31,6 +31,12 @@ Les mises à jour automatiques peuvent être désactivées pour une marketplace 
 
 **Compte de l'auteur :** si ces quatre skills sont déjà synchronisés individuellement, ne pas installer ce plugin en plus. Les deux jeux coexistent sous des noms distincts et peuvent doubler le contexte chargé. Le plugin est prévu pour la distribution à d'autres collectivités.
 
+## Codex / ChatGPT
+
+La version Codex est décrite par `.codex-plugin/plugin.json`. Elle réutilise les mêmes dossiers `skills/` et le même serveur juridique `.mcp.json` que la version Claude Code. Les quatre skills sont exposés sous le nom `collectivite-territoriale:<nom>`. Le skill juridique indépendant `recherche-juridique` n'est pas embarqué.
+
+Ce dépôt contient la source du plugin Codex ; son inscription à une marketplace Codex et son installation ne font pas partie de cette version. Sur le compte auteur, les quatre skills sont déjà présents individuellement : **ne pas installer aussi ce plugin**, afin d'éviter les doublons et le surcoût de contexte. Une nouvelle conversation est nécessaire après une future installation pour charger les skills et outils du plugin.
+
 ## Sources et synchronisation
 
 Chaque dossier `skills/<nom>/` est une copie exacte des fichiers d'exécution de son dépôt amont. `upstream.json` fige le dépôt, le commit, la version et les chemins inclus. Le fichier `references/cache-taux-seuils.md` de `dirfi-fpt`, exclu de son propre paquet de distribution, n'est pas embarqué.
@@ -48,7 +54,10 @@ Sans `--local-repos`, les scripts clonent les dépôts GitHub et vérifient les 
 
 ```text
 claude plugin validate . --strict
+python -m unittest discover -s tests
 python scripts/check_sync.py
 ```
+
+Le manifeste Codex est aussi vérifié localement avec le validateur du skill système `plugin-creator`.
 
 Le plan de construction et l'historique des audits préalables sont conservés dans `docs/plan-plugin.md`. Les licences et conditions d'utilisation des contenus métier restent celles de leurs dépôts amont ; ce dépôt ne leur attribue pas une licence nouvelle.
