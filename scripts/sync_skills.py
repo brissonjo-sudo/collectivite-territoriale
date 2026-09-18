@@ -7,12 +7,10 @@ upstream.json. Aucune modification du contenu des skills n'est effectuée.
 from __future__ import annotations
 
 import argparse
-import io
 import json
 import re
 import shutil
 import subprocess
-import tarfile
 import tempfile
 from pathlib import Path, PurePosixPath
 
@@ -22,10 +20,12 @@ COMMIT_ID = re.compile(r"^[0-9a-f]{40}$")
 VERSION_TITLE = re.compile(r"(?m)^# Skill\s*:\s*[^\n]*\(v(\d+\.\d+\.\d+)\)")
 
 
-def run_git(*args: str, cwd: Path | None = None) -> bytes:
+def run_git(
+    *args: str, cwd: Path | None = None, input_data: bytes | None = None
+) -> bytes:
     result = subprocess.run(
         ["git", *args], cwd=cwd, stdout=subprocess.PIPE,
-        stderr=subprocess.PIPE, check=False,
+        stderr=subprocess.PIPE, input=input_data, check=False,
     )
     if result.returncode:
         raise RuntimeError(
@@ -70,25 +70,40 @@ def load_upstreams(root: Path) -> dict[str, dict]:
 
 def archive_files(repository: Path, spec: dict) -> dict[str, bytes]:
     run_git("cat-file", "-e", f"{spec['commit']}^{{commit}}", cwd=repository)
-    archive = run_git(
-        "archive", "--format=tar", spec["commit"], "--", *spec["paths"],
+    tree = run_git(
+        "ls-tree", "-r", "-z", spec["commit"], "--", *spec["paths"],
         cwd=repository,
     )
     excluded = set(spec.get("exclude", []))
+    entries: list[tuple[str, str]] = []
+    for record in tree.split(b"\0"):
+        if not record:
+            continue
+        metadata, raw_name = record.split(b"\t", 1)
+        mode, kind, raw_oid = metadata.decode("ascii").split()
+        name = safe_relative(raw_name.decode("utf-8"))
+        if name in excluded:
+            continue
+        if kind != "blob" or mode not in ("100644", "100755"):
+            raise ValueError(f"Type de fichier non pris en charge : {name}")
+        entries.append((name, raw_oid))
+    # git archive transforme certains CRLF selon la configuration du poste.
+    # Lire les blobs bruts garantit une copie identique sur Windows et Linux.
+    request = b"".join(oid.encode("ascii") + b"\n" for _, oid in entries)
+    response = run_git("cat-file", "--batch", cwd=repository, input_data=request)
     files: dict[str, bytes] = {}
-    with tarfile.open(fileobj=io.BytesIO(archive), mode="r:") as tar:
-        for member in tar:
-            if member.isdir():
-                continue
-            if not member.isfile():
-                raise ValueError(f"Type de fichier non pris en charge : {member.name}")
-            name = safe_relative(member.name)
-            if name in excluded:
-                continue
-            stream = tar.extractfile(member)
-            if stream is None:
-                raise ValueError(f"Fichier illisible : {name}")
-            files[name] = stream.read()
+    offset = 0
+    for name, oid in entries:
+        end_header = response.index(b"\n", offset)
+        raw_id, kind, raw_size = response[offset:end_header].split()
+        if raw_id.decode("ascii") != oid or kind != b"blob":
+            raise ValueError(f"Objet Git inattendu : {name}")
+        size = int(raw_size)
+        start = end_header + 1
+        files[name] = response[start:start + size]
+        offset = start + size + 1
+    if offset != len(response):
+        raise ValueError("Réponse Git incomplète ou surnuméraire")
     if "SKILL.md" not in files:
         raise ValueError("SKILL.md absent de l'archive amont")
     title = VERSION_TITLE.search(files["SKILL.md"].decode("utf-8"))
@@ -113,7 +128,7 @@ def snapshots(root: Path, local_repos: Path | None = None) -> dict[str, dict[str
         for name, spec in upstreams.items():
             source = Path(temp) / name
             run_git(
-                "clone", "--quiet", "--no-checkout", "--filter=blob:none",
+                "clone", "--quiet", "--no-checkout",
                 spec["repository"], str(source),
             )
             result[name] = archive_files(source, spec)
