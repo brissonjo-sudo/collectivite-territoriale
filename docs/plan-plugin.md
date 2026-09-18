@@ -1,3 +1,9 @@
+> **État au 2026-09-18** : les phases préparatoires 0 à 2 sont closes. La
+> phase 3 est mise en œuvre dans ce dépôt sur la branche de construction du
+> plugin ; les vérifications de la phase 4 figurent dans la PR associée.
+> Les mentions « à faire » ci-dessous sont des instantanés historiques de la
+> planification et ne remplacent pas l'état courant du dépôt.
+>
 > **Origine** : copie versionnée du fichier de plan de la session Claude Code
 > (`/root/.claude/plans/planifie-l-audit-du-skill-swirling-alpaca.md`, non
 > versionné par nature — stockage de session, perdu si le conteneur est

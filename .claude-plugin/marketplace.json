@@ -1,0 +1,18 @@
+{
+  "name": "collectivite-territoriale",
+  "owner": {
+    "name": "brissonjo-sudo",
+    "url": "https://github.com/brissonjo-sudo"
+  },
+  "description": "Quatre skills métier et un serveur juridique pour les collectivités territoriales françaises.",
+  "plugins": [
+    {
+      "name": "collectivite-territoriale",
+      "source": "./",
+      "displayName": "Collectivité territoriale",
+      "description": "Police municipale, RH, DPO et finances locales avec accès Légifrance/Judilibre.",
+      "version": "1.0.0",
+      "repository": "https://github.com/brissonjo-sudo/collectivite-territoriale"
+    }
+  ]
+}

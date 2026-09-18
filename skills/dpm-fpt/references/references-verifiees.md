@@ -1,0 +1,332 @@
+# Références vérifiées sur Légifrance
+
+> **Socle de références vérifiées** — identifiants relevés par consultation
+> directe des pages Légifrance le **2026-06-30** (règle de provenance P1 :
+> aucun identifiant reconstitué de mémoire). Ce fichier lève les références
+> structurelles auparavant marquées « à confirmer ». **Il ne dispense pas** de
+> revérifier la version en vigueur **à la date d'usage** avant d'insérer une
+> citation dans un acte : le droit évolue, et plusieurs textes ci-dessous ont
+> une **abrogation programmée** (voir l'alerte CPP).
+>
+> Format retenu : `Réf. — objet — en vigueur depuis JJ/MM/AAAA — LEGIARTI…
+> (consulté le 2026-06-30)`.
+>
+> Compléments de sûreté : art. 56 et 78-6 CPP vérifiés le **2026-07-28** ;
+> arrêté du 27 avril 1999, art. 1 et 2, et CRPA L. 211-2 vérifiés le
+> **2026-08-03** ; **art. 122-5 du code pénal** et **CE, Sect., 19 mai 1933,
+> *Benjamin*** vérifiés le **2026-09-06** (correctif issu de la campagne `r3` :
+> ces deux références, citées en incise sans provenance, étaient la cause
+> directe d'échecs de sourcing — voir §7 pour la jurisprudence).
+>
+> **Revue de rentrée 2026 (audit du 2026-09-14)** : les **62 identifiants** du
+> socle ont été recontrôlés un à un sur Légifrance. **60 conformes** ; **2
+> versions nouvelles** depuis la date consignée, toutes deux issues de la
+> **loi n° 2026-798 du 18 août 2026** (dite « Ripost », JORF du 19/08/2026,
+> `JORFTEXT000054707332`) : **art. 21 CPP** (§2) et **CSP L. 3332-15** (§5),
+> mis à jour ci-dessous. Huit références citées dans les branches sans figurer
+> au socle y sont portées (§8), et l'alerte de vigueur est complétée.
+
+---
+
+## ⚠️ Alerte vigueur — réécriture du Code de procédure pénale
+
+Tous les articles du **CPP** listés ci-dessous portent, sur Légifrance, la
+mention : **« Abrogé par l'ordonnance n° 2025-1091 du 19 novembre 2025 — art. 1
+(V) — à compter du 1er janvier 2029 »** (réécriture générale du CPP à entrée en
+vigueur différée). **Ils sont en vigueur et applicables au 2026-06-30** ;
+l'abrogation ne prend effet qu'au **01/01/2029**, avec renumérotation probable.
+Toute citation d'un article du CPP après 2028 devra viser la nouvelle
+numérotation. À surveiller à chaque revue de rentrée. L'ordonnance porte
+`JORFTEXT000052650320` (consultée le 2026-09-14) ; son article 5 permet un
+report de l'application par décret jusqu'au 01/09/2030 — confirmer la date
+d'application effective à chaque revue.
+
+## ⚠️ Alerte vigueur — loi n° 2026-798 du 18 août 2026 (« Ripost »)
+
+Loi « visant à offrir des réponses immédiates aux phénomènes troublant
+l'ordre public, la sécurité et la tranquillité de nos concitoyens », NOR
+INTD2604047L, JORF n° 0192 du 19/08/2026, `JORFTEXT000054707332`, en
+vigueur au **20/08/2026** (consultée le 2026-09-14). Effets constatés sur le
+socle :
+
+- **art. 21 CPP** (art. 55 de la loi) : les APJA des **1° à 1° ter** (police
+  nationale, gendarmerie, policiers adjoints, réservistes) peuvent désormais,
+  sous le contrôle d'un OPJ et après formation, **recevoir par procès-verbal
+  les déclarations** de toute personne susceptible de fournir indices,
+  preuves et renseignements, hors crimes, mineurs, infractions sexuelles et
+  violences intrafamiliales. **Les agents de police municipale (2°) sont
+  exclus de cette extension** : leur périmètre est inchangé (constatation,
+  compte rendu, recueil des seules observations du contrevenant lors d'un PV).
+  Même logique à l'**art. 15-3 CPP** (réception des plaintes par les APJA des
+  1° à 1° ter, jamais par un agent PM). Le garde-fou §5.2 de `SKILL.md`
+  s'applique tel quel ; l'extension aux autres APJA ne se transpose pas à la
+  PM par analogie.
+- **CSP L. 3332-15** (art. 49 de la loi) : durées maximales de fermeture
+  administrative modifiées — voir §5.
+- Autres dispositions (rassemblements festifs, rodéos motorisés, protoxyde
+  d'azote, mortiers d'artifice, caméras individuelles de la **police
+  nationale** L. 241-1 CSI) : **hors socle**, à traiter via
+  `recherche-juridique` à la date des faits. L'art. **L. 241-2 CSI**
+  (caméras individuelles des agents PM) n'est **pas modifié** (§8).
+
+---
+
+## 1. CGCT — pouvoirs de police et contrôle de légalité
+
+| Référence | Objet | En vigueur depuis | Identifiant |
+|---|---|---|---|
+| **L. 2212-1** | Le maire chargé de la police municipale sous contrôle de l'État | 24/02/1996 | LEGIARTI000006390149 |
+| **L. 2212-2** | Objets de la police municipale (énumération en 7 points) | 22/12/2014 | LEGIARTI000029946370 |
+| **L. 2214-4** | Communes à police étatisée (répartition État / maire) | 07/03/2007 | LEGIARTI000006390224 |
+| **L. 2215-1** | Pouvoir de substitution du préfet (carence / menace intercommunale ; mise en demeure préalable pour une commune) | 07/03/2007 | LEGIARTI000006390227 |
+| **L. 2131-2** | Liste des actes soumis à transmission obligatoire au contrôle de légalité (8 catégories) | 01/07/2022 | LEGIARTI000044190560 |
+| **L. 5211-9-2** | Transfert des polices spéciales au président d'EPCI + droit d'opposition du maire (6 mois) | 31/12/2023 | LEGIARTI000048850168 |
+
+> Note L. 2131-2 : les **arrêtés de police du maire en matière de circulation et
+> de stationnement** ne figurent pas dans la liste des actes à transmettre —
+> point utile pour `controle-legalite.md` et le générateur `arrete-modele.md`.
+> Note L. 5211-9-2 : identifiant corrigé après lecture réelle de la page (un
+> identifiant antérieur apparaissait en résultat de recherche mais correspondait
+> à une version périmée).
+
+## 2. CPP — cadre APJA / OPJ (voir alerte vigueur ci-dessus)
+
+| Référence | Objet | En vigueur depuis | Identifiant |
+|---|---|---|---|
+| **art. 16** | Qualité d'officier de police judiciaire ; ne fonde pas à lui seul les actes d'enquête | 26/01/2023 | LEGIARTI000047052868 |
+| **art. 21** | Agents de police judiciaire adjoints ; **PM au 2°**. Version du 20/08/2026 (loi n° 2026-798, art. 55) : recueil de déclarations par PV ouvert aux seuls APJA des 1° à 1° ter — **les agents PM en sont exclus** | 20/08/2026 (précédente : 12/07/2023, `LEGIARTI000047810871`) | LEGIARTI000054725485 (consulté le 2026-09-14) |
+| **art. 21-2** | Compte rendu immédiat de la PM à l'OPJ ; transmission au maire + procureur | 16/04/1999 | LEGIARTI000006574893 |
+| **art. 73** | Appréhension de l'auteur d'un crime/délit flagrant puni d'emprisonnement ; conduite devant l'OPJ | 02/06/2014 | LEGIARTI000029000766 |
+| **art. 53** | Définition du flagrant délit ; enquête de flagrance (8 j, prorogeable) | 10/03/2004 | LEGIARTI000006575016 |
+| **art. 56** | Perquisition de flagrance réalisée par l'OPJ ; aucun pouvoir de perquisition de l'agent PM | 26/06/2024 | LEGIARTI000049778813 |
+| **art. 78-6** | Relevé d'identité par l'APJA ; refus ou impossibilité, décision et ordre éventuel de l'OPJ | 02/03/2017 | LEGIARTI000034114850 |
+| **art. 537** | Force probante des PV de contravention (foi jusqu'à preuve contraire) | 01/04/2005 | LEGIARTI000006576893 |
+
+## 3. CSI — police municipale, coordination, vidéoprotection, déontologie
+
+| Référence | Objet | En vigueur depuis | Identifiant |
+|---|---|---|---|
+| **L. 511-1** | Missions des agents de police municipale | 01/07/2021 | LEGIARTI000041587492 |
+| **L. 511-5** | Autorisation préfectorale de port d'arme (sous convention de coordination) | 29/12/2019 | LEGIARTI000041411486 |
+| **L. 512-4** | Convention de coordination : **obligatoire dès 3 emplois** d'agent PM | 27/05/2021 | LEGIARTI000043540466 |
+| **L. 132-4** | Animation de la prévention par le maire ; **CLSPD obligatoire > 5000 hab ou QPV** ; coordonnateur désigné **> 15 000 hab** | 23/03/2024 | LEGIARTI000049313006 |
+| **L. 132-5** | Groupes de travail et d'échange d'informations du CLSPD | 23/03/2024 | LEGIARTI000049313001 |
+| **L. 251-1 et s.** | Vidéoprotection voie publique : autorisation préfectorale, avis commission départementale | 21/05/2023 | LEGIARTI000047569469 |
+| **L. 252-5** | Vidéoprotection : destruction des enregistrements dans un **délai max. d'un mois** (hors enquête/flagrance) | 01/05/2012 | LEGIARTI000025505435 |
+| **R. 252-3** | Contenu de la demande d'autorisation : mention (8°) du délai de conservation, **sans fixer le plafond** (celui-ci = L. 252-5) | 30/11/2023 | LEGIARTI000048480362 |
+
+> **Note L. 132-4** : identifiant confirmé après lecture directe de la page —
+> `LEGIARTI000049313006` est la **version en vigueur** (23/03/2024), tandis que
+> l'identifiant `LEGIARTI000043541062` rencontré auparavant correspond au
+> **conteneur d'article / à une version antérieure**. L'incohérence relevée en
+> première passe est ainsi levée.
+> **Note vidéoprotection** : la **durée de conservation** est plafonnée à **un
+> mois** par l'art. **L. 252-5** (législatif) ; l'art. R. 252-3 ne fait
+> qu'exiger que le demandeur **indique** la durée retenue dans son dossier.
+
+### Déontologie et armement (correctifs de source)
+
+- **Code de déontologie des agents de police municipale** : codifié aux
+  **art. R. 515-1 à R. 515-21 du CSI**, créés par le **décret n° 2013-1113 du
+  4 décembre 2013** (NOR INTD1312013D, JORF du 06/12/2013), en vigueur au
+  01/01/2014. L'article R. 515-1 (LEGIARTI000030254967) porte une version au
+  19/02/2015 (modification par décret n° 2015-181 du 16/02/2015).
+  ➜ **Correctif** : la mention « décret déontologie 2022 » (issue du prompt
+  d'exécution) est **inexacte** ; il n'existe pas de refonte 2022 du code de
+  déontologie PM. L'**ancien** code de déontologie autonome (décret
+  n° 2003-735 du 1er août 2003) a été **abrogé** et recodifié dans le CSI en
+  2013-2014.
+- **Armement PM** : le **décret n° 2020-511 du 2 mai 2020** (NOR INTD1829768D,
+  JORFTEXT000041842314) est un décret **modificatif** du CSI (munitions, port
+  d'armes de catégorie B, déontologie R. 515-7) : ses dispositions vivent dans
+  les articles codifiés (R. 511-24 et s.), il n'a pas de statut « en vigueur »
+  autonome. À ne pas confondre avec le décret n° 2020-1775 du 29/12/2020.
+
+## 4. Code de la route — constatation et fourrière
+
+| Référence | Objet | En vigueur depuis | Identifiant |
+|---|---|---|---|
+| **L. 130-4** | Agents compétents pour constater les contraventions (dont APJA) | 26/01/2022 | LEGIARTI000045072417 |
+| **L. 325-1** | Immobilisation / mise en fourrière (maire ou OPJ) | 01/01/2017 | LEGIARTI000033813311 |
+| **R. 325-1** | Modalités de la fourrière (chapitre R. 325-1 à R. 325-52) | 05/01/2012 | LEGIARTI000025111479 |
+| **R. 417-10** | Arrêt / stationnement gênant — **contravention de 2e classe** | 16/01/2022 | LEGIARTI000045025551 |
+
+## 5. Divers — animaux, débits de boissons, domaine public, Constitution, code pénal
+
+| Référence | Objet | En vigueur depuis | Identifiant |
+|---|---|---|---|
+| **C. rural L. 211-11** | Animal dangereux : mesures du maire, placement d'office (8 j ouvrés), euthanasie sur avis vétérinaire | 08/05/2010 | LEGIARTI000022200153 |
+| **C. rural L. 211-12** | Catégorisation des chiens dangereux (1re / 2e catégorie) | 22/06/2008 | LEGIARTI000019065649 |
+| **Arrêté du 27/04/1999, art. 1** | Liste de la 1re catégorie : notamment types Staffordshire/American Staffordshire non inscrits à un livre généalogique reconnu | 21/09/2000 | LEGIARTI000006608534 |
+| **Arrêté du 27/04/1999, art. 2** | Liste de la 2e catégorie : races Staffordshire/American Staffordshire, Rottweiler, Tosa ; type Rottweiler non inscrit également inclus | 21/09/2000 | LEGIARTI000006608536 |
+| **C. rural L. 211-13-1** | Permis de détention : attestation d'aptitude + évaluation comportementale | 22/06/2008 | LEGIARTI000019065631 |
+| **C. rural L. 211-14** | Permis de détention délivré par le maire (pièces : identification, vaccination antirabique, assurance RC, attestation d'aptitude, évaluation comportementale ; **stérilisation** pour la 1re catégorie) | 22/06/2008 | LEGIARTI000019065635 |
+| **C. rural L. 211-14-2** | Déclaration des morsures ; surveillance ; évaluation comportementale | 08/05/2010 | LEGIARTI000022200148 |
+| **C. rural L. 211-16** | Chiens de 1re catégorie : **accès interdit** aux lieux publics (sauf voie publique), transports en commun, locaux ouverts au public ; muselière + laisse (majeur) sur la voie publique et parties communes pour 1re **et** 2e catégorie | 21/09/2000 | LEGIARTI000006583059 |
+| **C. rural L. 211-19-1** | Interdiction de la divagation des animaux | 06/10/2006 | LEGIARTI000006583063 |
+| **C. rural L. 211-23** | Définition de l'état de divagation (chiens / chats) | 24/02/2005 | LEGIARTI000006583072 |
+| **CSP L. 3332-15** | Fermeture administrative des débits de boissons et restaurants. Version du 20/08/2026 (loi n° 2026-798, art. 49) : **1.** infractions aux lois et règlements — préfet, **6 mois**, portés à **12 mois** en cas de réitération ; **2.** atteinte à l'ordre public, la santé, la tranquillité ou la moralité publiques — préfet, **3 mois** (2 mois avant le 20/08/2026), portés à **6 mois** en cas de réitération ; délégation possible au **maire** qui en fait la demande (au nom de l'État, transmission au préfet sous **3 jours**) ; **2 bis.** exécutoire 48 h après notification si les faits datent de plus de 45 jours ; **3.** actes criminels ou délictueux — **6 mois**, **12 mois** en réitération, annulation du permis d'exploitation ; **6.** à Paris, préfet de police | 20/08/2026 (précédente : 29/12/2019, `LEGIARTI000041411119`) | LEGIARTI000054725387 (consulté le 2026-09-14) |
+| **CG3P L. 2122-1** | Occupation du domaine public subordonnée à un **titre** | 21/04/2017 | LEGIARTI000034448110 |
+| **Constitution art. 66** | L'autorité judiciaire gardienne de la liberté individuelle | 05/10/1958 | LEGIARTI000006527558 |
+| **CRPA L. 211-2** | Motivation des décisions administratives individuelles défavorables, dont les refus d'autorisation | 01/01/2016 | LEGIARTI000031367505 |
+| **Code pénal art. 122-5** | Légitime défense des personnes (al. 1) et des biens (al. 2) ; exigence de proportionnalité entre les moyens employés et la gravité de l'atteinte — fondement autonome, distinct du cadre d'usage des armes de l'art. L. 435-1 CSI | 01/03/1994 | LEGIARTI000006417218 (consulté le 2026-09-06 ; aucune abrogation programmée signalée) |
+
+> **Note CG3P** : le caractère **précaire et révocable** de l'autorisation est
+> porté par les articles voisins (notamment **L. 2122-3**), et non par le corps
+> de L. 2122-1 — citer L. 2122-3 en complément dans `occupation-domaine-public.md`.
+
+## 6. Compléments consolidés depuis les branches (audit du 2026-07-01)
+
+Identifiants relevés en branche le 2026-06-30 mais absents du registre ;
+**reconfirmés par consultation directe de Légifrance le 2026-07-01** (12/12
+confirmés, tous en vigueur).
+
+| Référence | Objet | En vigueur depuis | Identifiant |
+|---|---|---|---|
+| **CSI L. 251-2** | Finalités légales de la vidéoprotection | 21/05/2023 | LEGIARTI000041599395 |
+| **CSI L. 252-2** | Conditions de visionnage et d'habilitation | 21/05/2023 | LEGIARTI000047569434 |
+| **CSI L. 252-3** | Accès et transmission des enregistrements | 27/05/2021 | LEGIARTI000043540807 |
+| **CSI L. 253-5** | Droit d'accès des personnes filmées / saisine de la commission | 21/05/2023 | LEGIARTI000038791144 |
+| **CSI R. 511-12** | Catégories d'armes autorisées pour la PM (décret n° 2020-1775) | 01/01/2021 | LEGIARTI000042957393 |
+| **CSI L. 435-1** | Cadre d'usage des armes (absolue nécessité, proportionnalité) | 02/03/2017 | LEGIARTI000034107970 |
+| **CSI L. 731-3** | Plan communal de sauvegarde | 27/11/2021 | LEGIARTI000044375292 |
+| **CSI L. 132-1** | Le maire concourt à la prévention de la délinquance (fondement CLSPD) | 01/05/2012 | LEGIARTI000025504999 |
+| **CSI L. 511-2** | Agrément préfectoral + assermentation des agents PM | 27/05/2021 | LEGIARTI000043540434 |
+| **CGCT L. 2312-1** | Débat / rapport d'orientation budgétaire (DOB) | 01/01/2026 | LEGIARTI000051731867 |
+| **CCP L. 2122-1** | Marché sans publicité ni mise en concurrence préalables | 09/12/2020 | LEGIARTI000042657232 |
+| **CCP R. 2123-1** | Procédure adaptée (MAPA) | 02/04/2021 | LEGIARTI000043316424 |
+
+> **Note L. 253-5** : la version en vigueur est celle du **21/05/2023** (loi
+> n° 2023-380) — la note « version 16/10/2020 » qui figurait dans la branche
+> vidéoprotection a été actualisée.
+> **Note art. 537 CPP** : l'audit du 2026-07-01 a détecté un identifiant
+> divergent (`LEGIARTI000006576892`, version antérieure) dans deux générateurs ;
+> ils ont été réalignés sur la valeur du registre (`LEGIARTI000006576893`,
+> version en vigueur 01/04/2005, reconfirmée le 2026-07-01).
+
+---
+
+## 7. Jurisprudence vérifiée
+
+> **Pourquoi cette section existe** : le socle ne couvrait que des articles de
+> codes. Les arrêts de principe, cités par leur **nom d'usage**, échappaient de
+> ce fait au dispositif de provenance et se retrouvaient affirmés sans réserve —
+> cause directe d'échecs de sourcing sur deux campagnes de test (cas 01 de
+> l'exécution du 2026-08-03, cas 15 de la campagne `r3`). Une décision
+> juridictionnelle se cite **comme un article** : avec sa référence et sa date
+> de vérification, ou avec sa réserve.
+
+| Décision | Objet | Références | Identifiant |
+|---|---|---|---|
+| **CE, Sect., 19 mai 1933, *Benjamin*** | Principe de **proportionnalité des mesures de police administrative** : le maire doit concilier ses pouvoirs de police avec la liberté de réunion et ne peut interdire une réunion dont les troubles pouvaient être prévenus par des mesures moins attentatoires | Requêtes n° **17413** et **17520** ; publié au **recueil Lebon, p. 541** ; annulation sur recours pour excès de pouvoir | CETATEXT000007636694 (Légifrance, consulté le **2026-09-06** ; recoupé sur ArianeWeb — Conseil d'État) |
+
+> **Portée** : cet arrêt est le **fondement du test de proportionnalité** appliqué
+> par `controle-legalite.md` avant toute production d'acte de police. Il est
+> désormais citable avec sa provenance. Ses **déclinaisons jurisprudentielles
+> récentes** (application à un cas d'espèce, évolutions sur la liberté
+> d'expression ou de manifestation) restent hors socle et relèvent de
+> `recherche-juridique`.
+
+---
+
+## 8. Compléments consolidés à l'audit du 2026-09-14
+
+Références citées avec un numéro précis dans les branches, objets ou
+générateurs sans figurer au socle (constat de l'audit), **vérifiées par
+consultation directe de Légifrance le 2026-09-14** et portées ici.
+
+| Référence | Objet | En vigueur depuis | Identifiant |
+|---|---|---|---|
+| **CGCT L. 2131-4** | Actes **exclus** de l'obligation de transmission au contrôle de légalité (actes pris au nom de l'État, actes de droit privé) | 01/07/2022 | LEGIARTI000044190553 |
+| **CGCT L. 2212-3** | Police municipale des communes **riveraines de la mer** (rivage jusqu'à la limite des eaux) — ne concerne pas la circulation | 24/02/1996 | LEGIARTI000006390154 |
+| **CSI L. 512-2** | **Recrutement d'agents PM par un EPCI** à fiscalité propre, mis à disposition des communes membres — ne porte pas sur les plages horaires d'intervention (voir L. 512-4 pour la convention de coordination) | 29/12/2019 | LEGIARTI000041411493 |
+| **CSI L. 241-2** | **Caméras individuelles des agents PM** : autorisation préfectorale sur demande du maire, convention de coordination, enregistrement non permanent, finalités, conservation | 26/01/2022 | LEGIARTI000045071841 (non modifié par la loi n° 2026-798, qui ne touche que L. 241-1) |
+| **CG3P L. 2122-3** | L'autorisation d'occupation du domaine public présente un **caractère précaire et révocable** | 01/07/2006 | LEGIARTI000006361202 |
+| **Code de la route R. 325-14** | **Autorité qui prescrit la mise en fourrière** : OPJ territorialement compétent, **ou APJA chef de la police municipale (ou occupant ces fonctions)**, de sa propre initiative ou sur proposition de l'agent verbalisateur ; véhicule volé, propriétaire non identifié ou fausses plaques → **OPJ seul** ou accord préalable exprès | 01/04/2021 (décret n° 2020-775 du 24/06/2020) | LEGIARTI000042039259 |
+| **Décret n° 2013-1113 du 4 décembre 2013** | Partie réglementaire du CSI (livres I, II, IV et V), dont le **code de déontologie des agents PM** (R. 515-1 à R. 515-21) | 06/12/2013 (JORF n° 0283) | JORFTEXT000028276865 |
+| **Loi n° 2026-798 du 18 août 2026** | Loi « Ripost » — voir l'alerte de vigueur en tête de fichier | 20/08/2026 | JORFTEXT000054707332 |
+| **CPP art. 15-3** | Réception des plaintes par les OPJ et APJ ; depuis le 20/08/2026, **APJA des 1° à 1° ter de l'art. 21 seulement** (formation, contrôle OPJ, exclusions) — **jamais un agent PM** ; abrogation programmée au 01/01/2029 | 20/08/2026 (loi n° 2026-798, art. 55) | LEGIARTI000054725475 |
+| **CPP art. 803** | **Menottes ou entraves** : uniquement si la personne est dangereuse pour autrui ou pour elle-même, ou susceptible de prendre la fuite ; mesures pour éviter qu'elle soit photographiée ou filmée ; abrogation programmée au 01/01/2029 | 16/06/2000 (loi n° 2000-516) | LEGIARTI000006578404 (ne pas confondre avec `…403`, version 1993-2000) |
+| **CJA R. 421-1** | Délai de recours contentieux de **deux mois** à compter de la notification ou de la publication | 01/01/2020 (décret n° 2019-1502) | LEGIARTI000039807005 |
+| **CJA L. 521-1** | **Référé-suspension** (urgence + doute sérieux sur la légalité) | 01/01/2001 | LEGIARTI000006449326 |
+| **CJA L. 521-2** | **Référé-liberté** (atteinte grave et manifestement illégale à une liberté fondamentale, 48 h) | 01/01/2001 | LEGIARTI000006449327 |
+| **CGCT L. 2131-1** | **Caractère exécutoire** des actes des communes : publication ou notification et, pour les actes de L. 2131-2, transmission au préfet | 01/07/2022 (ord. n° 2021-1310) | LEGIARTI000044190563 |
+| **CGCT L. 2131-6** | **Déféré préfectoral** : le préfet défère au tribunal administratif les actes de L. 2131-2 qu'il estime contraires à la légalité, dans les **deux mois** de leur transmission | 01/07/2022 (texte modificateur non lu explicitement sur la page — probable ord. n° 2021-1310) | LEGIARTI000044190539 |
+| **CGCT L. 2212-5** | Missions des agents PM et organisation des services : **renvoi au titre Ier du livre V du CSI** | 01/05/2012 (ord. n° 2012-351) | LEGIARTI000025543324 |
+| **CSI L. 512-5** | **Convention intercommunale de coordination**, en substitution de L. 512-4, quand des agents PM sont mis à disposition de plusieurs communes — ne fixe pas les plages horaires d'intervention | 27/05/2021 (loi n° 2021-646) | LEGIARTI000043540455 (l'identifiant `LEGIARTI000041411429` cité en branche renvoie vers cette version courante) |
+
+> **Pointe de vigilance L. 512-2 / L. 512-4 / L. 512-5** : deux branches
+> rattachaient les plages horaires d'intervention de la PM à « L. 512-2 et
+> s. ». L. 512-2 traite du recrutement intercommunal ; L. 512-4 impose la
+> convention de coordination (seuil de trois emplois) ; L. 512-5 régit la
+> convention **intercommunale**. **Aucun de ces articles ne fixe les plages
+> horaires** (intervention de nuit, 23 h – 6 h) : cette règle relève de la
+> partie réglementaire (R. 512-5 et s.) et de la convention type annexée au
+> CSI — **non consultées en source primaire, identifiants non obtenus,
+> réserve maintenue**.
+>
+> **Palpations de sécurité (CSI L. 511-1, al. 6, au socle §3)** : les agents
+> PM affectés par le maire à la sécurité d'une manifestation sportive,
+> récréative ou culturelle, d'un périmètre de protection (L. 226-1) ou de
+> l'accès à un bâtiment communal peuvent procéder à l'**inspection visuelle
+> des bagages**, à leur **fouille avec le consentement** du propriétaire et
+> à des **palpations de sécurité avec le consentement exprès** de la personne
+> (par une personne de même sexe). Hors ces cas et hors consentement, **aucune
+> fouille ni palpation** : c'est une mesure de sûreté, jamais un acte
+> d'enquête.
+
+---
+
+## 9. Compléments v1.0.5 — points relevés par des répondants pendant `r4`
+
+Trois points de fond signalés pendant la campagne `r4` (non appliqués à
+chaud, cf. `CHANGELOG.md`), **vérifiés par consultation directe de
+Légifrance le 2026-09-17** et portés ici.
+
+| Référence | Objet | En vigueur depuis | Identifiant |
+|---|---|---|---|
+| **Code de la route L. 413-1** | **Grand excès de vitesse** : dépasser la vitesse maximale autorisée de **50 km/h ou plus** est un **délit dès la première infraction** (3 mois d'emprisonnement, 3 750 € d'amende, confiscation et suspension du permis possibles) | 31/12/2025 | LEGIARTI000051877176 |
+| **CSI R. 511-1** | Habilitation des agents PM à constater par PV, notamment les contraventions de **CP R. 610-5** relatives aux **arrêtés de police municipale pris par le maire ou par le préfet** (CGCT art. L. 2215-1, 1° à 3°) — **ne couvre pas** un arrêté pris par le président d'EPCI | 01/01/2014 | LEGIARTI000028285997 |
+| **Code pénal R. 633-6** | Dépôt d'ordures/déchets hors des conditions fixées par l'autorité compétente (contravention de 3ᵉ classe) — **ne figure pas** dans la liste des contraventions constatables par la PM au titre de R. 511-1 | 05/06/2026 | LEGIARTI000054196263 |
+
+> **Grand excès de vitesse — conséquence métier** : la bascule en délit
+> interdit le PV de simple contravention ; l'agent constate et rend compte
+> immédiatement à l'OPJ (art. 21-2 CPP), sans acte d'enquête ni de garde à
+> vue. Portée dans `reglementation-appliquee.md` §5.1.
+>
+> **CSI R. 511-1 / CP R. 610-5 / CP R. 633-6** : la verbalisation directe
+> « sur le RSD » (règlement sanitaire départemental, arrêté préfectoral) et
+> sur les arrêtés municipaux de salubrité repose sur R. 511-1, **restreinte
+> aux arrêtés du maire ou du préfet** — un arrêté du président d'EPCI n'y
+> figure pas nommément. R. 633-6 (dépôt sauvage) est une contravention
+> pénale distincte, non listée par R. 511-1 : sa constatation par la PM
+> reste à vérifier au cas par cas, pas présumée. Portée dans
+> `reglementation-appliquee.md` §5.3.
+>
+> **Transfert EPCI (CGCT L. 5211-9-2, au socle §1)** : l'article distingue
+> un **transfert de plein droit** (I.A, dont la réglementation de la collecte
+> des déchets ménagers) et un **transfert facultatif** (I.B, dont les
+> prérogatives de **C. env. L. 541-3**), ce dernier décidé par **arrêté
+> préfectoral après accord de tous les maires et du président de l'EPCI**
+> (IV du même article). Le texte ne dit nulle part que les agents PM
+> constatent par PV les contraventions à un arrêté du **président** d'EPCI :
+> CSI L. 511-1 (au socle §3) ne vise que les « arrêtés de police du
+> **maire** ». **Question ouverte, non tranchée par cette version** :
+> l'habilitation générale de R. 511-1 (arrêtés du maire ou du préfet) ne se
+> transpose pas d'elle-même à un arrêté du président d'EPCI ; à vérifier via
+> `recherche-juridique` avant tout acte fondé sur un tel arrêté. Portée dans
+> `pouvoirs-police.md` §4.1.
+
+## Références restées « non confirmées » (revue de rentrée)
+
+- **Nouvelle numérotation du CPP** applicable au 01/01/2029 (ordonnance
+  n° 2025-1091) — à intégrer avant cette échéance.
+
+> Levées le 2026-07-01 : `CSI L. 132-4` (identifiant confirmé,
+> `LEGIARTI000049313006`) et la durée de conservation vidéo (plafond d'un mois,
+> `CSI L. 252-5`, `LEGIARTI000025505435` ; `R. 252-3` = mention dans la demande).
+> **RSD** (règlement sanitaire départemental) : point **levé** — liens de
+> récupération vérifiés par département dans **`liste-RSD.md`** (96/101
+> départements avec lien officiel ARS/préfecture au 2026-07-01 ; 5 à obtenir sur
+> demande). Le RSD n'est pas consolidé sur Légifrance : il reste un arrêté
+> préfectoral local (fondement CSP L. 1311-1 et L. 1311-2).
