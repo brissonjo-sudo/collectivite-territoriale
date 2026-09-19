@@ -1,5 +1,13 @@
 # Historique des versions
 
+## 1.0.1 — 2026-09-19
+
+- Mise à jour de `dirfi-fpt` vers la v1.0.4, figée sur le commit amont
+  `d970fe530d3f50f6b4c330e3cfb85db35b7126ab`.
+- Clarification de la co-activation DirFi/DRH dans le plugin agrégateur.
+- Ajout d'un cas de non-régression ChatGPT/Codex sur une gratification de
+  départ à la retraite sans base juridique préalable.
+
 ## Distribution Codex — 2026-09-19
 
 - Ajout du manifeste Codex, sans modification des quatre skills ni du serveur MCP partagé.

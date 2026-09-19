@@ -7,7 +7,7 @@ Source des plugins Claude Code et Codex destinés aux collectivités territorial
 | `collectivite-territoriale:dpm-fpt` | Police municipale et limites APJA | 1.0.5 |
 | `collectivite-territoriale:drh-fpt` | Ressources humaines territoriales | 0.5.1 |
 | `collectivite-territoriale:dpo-ct` | Protection des données | 0.2.1 |
-| `collectivite-territoriale:dirfi-fpt` | Finances locales | 1.0.3 |
+| `collectivite-territoriale:dirfi-fpt` | Finances locales | 1.0.4 |
 
 Le serveur MCP `droit-francais` est déclaré dans `.mcp.json` pour interroger Légifrance/Judilibre. Son utilisation peut demander une autorisation OAuth dans Claude Code. Le skill indépendant `recherche-juridique` n'est pas inclus.
 
@@ -70,5 +70,10 @@ python scripts/check_sync.py
 ```
 
 Le manifeste Codex est aussi vérifié localement avec le validateur du skill système `plugin-creator`.
+
+Le cas de non-régression `tests/cas-plugin.json` vérifie la coordination
+DirFi/DRH/juridique sur une gratification de départ à la retraite : refus du
+mandatement sans base, absence de prime ad personam et aucun régime spécial
+présumé avant qualification de l'agent.
 
 Le plan de construction et l'historique des audits préalables sont conservés dans `docs/plan-plugin.md`. Les licences et conditions d'utilisation des contenus métier restent celles de leurs dépôts amont ; ce dépôt ne leur attribue pas une licence nouvelle.

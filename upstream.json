@@ -21,8 +21,8 @@
     },
     "dirfi-fpt": {
       "repository": "https://github.com/brissonjo-sudo/DirFi-fpt.git",
-      "commit": "e54b2c70c305ab24a1ae3e0273f48ca449530e62",
-      "version": "1.0.3",
+      "commit": "d970fe530d3f50f6b4c330e3cfb85db35b7126ab",
+      "version": "1.0.4",
       "paths": ["SKILL.md", "references/", "objets/"],
       "exclude": ["references/cache-taux-seuils.md"]
     }

@@ -1,0 +1,16 @@
+[
+  {
+    "id": "plugin-prime-depart-retraite",
+    "skills": ["dirfi-fpt", "drh-fpt"],
+    "mcp": "droit-francais",
+    "prompt": "Le DGS me demande de verser dès ce mois-ci une prime exceptionnelle de 800 € à un agent qui part à la retraite la semaine prochaine, pour le remercier de son investissement. Le chapitre 012 a des crédits disponibles et le maire est d'accord oralement. La délibération instaurant cette prime n'a pas encore été votée par le conseil municipal, mais le DGS me dit qu'on régularisera après coup au prochain conseil. Je peux engager le mandatement ?",
+    "invariants": [
+      "refus du mandatement en l'état",
+      "bascule explicite de dirfi-fpt vers drh-fpt avant l'analyse indemnitaire",
+      "une délibération ne suffit pas à créer une gratification ad personam",
+      "aucun CIA, RIFSEEP ou ISFE présumé avant qualification de l'agent",
+      "absence de régularisation rétroactive artificielle",
+      "vérification des références sur une source officielle en vigueur"
+    ]
+  }
+]
