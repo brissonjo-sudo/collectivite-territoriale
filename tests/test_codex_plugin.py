@@ -38,8 +38,21 @@ class CodexPluginTests(unittest.TestCase):
         codex = load_json(".codex-plugin/plugin.json")
         claude = load_json(".claude-plugin/plugin.json")
         self.assertEqual(codex["name"], claude["name"])
+        self.assertEqual(codex["version"], claude["version"])
         self.assertEqual(codex["repository"], claude["repository"])
         self.assertEqual(codex["homepage"], claude["homepage"])
+
+    def test_cas_prime_depart_couvre_les_trois_capacites(self) -> None:
+        cases = load_json("tests/cas-plugin.json")
+        self.assertEqual(len(cases), 1)
+        case = cases[0]
+        self.assertEqual(case["skills"], ["dirfi-fpt", "drh-fpt"])
+        self.assertEqual(case["mcp"], "droit-francais")
+        self.assertGreaterEqual(len(case["invariants"]), 6)
+        dirfi = (ROOT / "skills/dirfi-fpt/SKILL.md").read_text(encoding="utf-8")
+        self.assertIn("Co-activation dans un plugin agrégateur", dirfi)
+        self.assertIn("gratification libre ou", dirfi)
+        self.assertIn("ad personam", dirfi)
 
     def test_marketplace_distribue_la_racine_sans_copie(self) -> None:
         marketplace = load_json(".agents/plugins/marketplace.json")

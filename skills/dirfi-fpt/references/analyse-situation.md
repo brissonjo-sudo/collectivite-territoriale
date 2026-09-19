@@ -104,6 +104,14 @@ en non-valeur), passer par `controle-interne-financier.md` avant de conclure.
 **Règle de non-autorisation** : qu'un skill délégataire soit mobilisable dans la
 session ne vaut **pas** autorisation de traiter à sa place.
 
+Dans un plugin agrégateur, si `drh-fpt` est effectivement activé, la réponse
+peut se poursuivre après le bloc `BASCULE` sous un intertitre
+`Analyse drh-fpt`. La partie DirFi reste limitée au circuit de dépense, aux
+crédits et au calendrier ; toute qualification du régime indemnitaire appartient
+à la section DRH. Une prime ponctuelle ne doit jamais être présentée comme
+créable par la seule volonté locale : faire contrôler son fondement, la parité,
+les critères généraux et l'absence de traitement ad personam.
+
 ---
 
 ## 4. Orienter vers la branche (couche 2)

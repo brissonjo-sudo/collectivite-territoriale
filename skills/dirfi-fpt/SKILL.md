@@ -17,18 +17,16 @@ description: >-
   marchés publics, ni pour le droit étranger.
 ---
 
-# Skill : dirfi-fpt (v1.0.3)
+# Skill : dirfi-fpt (v1.0.4)
 
-> **Métadonnées** — version : **1.0.3** · statut : traçabilité de la source
-> interne, **postérieure à la mesure**. Dernier score de suite : campagne
-> complète `claude-v1.0.1-r2` achevée le 2026-09-15, qui mesure la **v1.0.1**
-> (28 cas, skill lu depuis le dépôt) — **20 réussites, 7 demi-réussites,
-> 1 échec**. La v1.0.2 a corrigé l'erreur de fond que cet échec avait révélée ;
-> la v1.0.3 s'attaque à la cause dominante des demi-réussites, relevée
-> indépendamment par les trois juges de `r2` et déjà par ceux de `r1` : les
-> réponses ne nommaient pas le fichier qu'elles mobilisaient. Ni la v1.0.2 ni la
-> v1.0.3 **ne sont couvertes par une campagne** — `r3` requise · dernière revue
-> méthodologique : 2026-09-15 · périmètre : direction des finances,
+> **Métadonnées** — version : **1.0.4** · statut : correctif de co-activation
+> DirFi / DRH, **postérieur à la mesure**. Dernier score de suite : campagne
+> complète `claude-v1.0.3-r3` achevée le 2026-09-16, qui mesure la **v1.0.3**
+> (28 cas, skill lu depuis le dépôt) — **27 réussites, 1 demi-réussite,
+> 0 échec**. La v1.0.4 ajoute un contrat explicite pour les agrégateurs de
+> skills et un cas de non-régression issu d'un test réel du plugin ; elle n'est
+> pas encore couverte par une campagne · dernière revue méthodologique :
+> 2026-09-19 · périmètre : direction des finances,
 > collectivités territoriales (France) · dépendances recommandées :
 > `recherche-juridique` (validateur de fond et de vigueur), `drh-fpt` (volet RH
 > statutaire), `dpm-fpt` (volet métier police municipale) · compatibilité :
@@ -423,7 +421,25 @@ personnel » ou « les RH » désigne un service de la collectivité, et cela
 d'entrée**, y compris quand le volet statutaire n'est qu'une **incise** dans une
 réponse budgétaire. **Ce qui reste permis après la bascule** : nommer l'étape
 sans la dérouler, chiffrer l'impact budgétaire, signaler un enjeu de calendrier.
-**Ce qui est interdit** : montants de régime indemnitaire, plafonds
+
+**Co-activation dans un plugin agrégateur** — le bloc `BASCULE` reste
+obligatoire même lorsque `drh-fpt` est réellement chargé. Il matérialise le
+changement de responsable ; il n'interdit pas au skill délégataire de poursuivre
+la même réponse. Dans ce cas seulement, `dirfi-fpt` s'arrête après son volet
+budgétaire et la suite commence sous un intertitre explicite
+`Analyse drh-fpt`. La simple présence ou disponibilité de `drh-fpt` ne suffit
+pas : son point d'entrée doit avoir été effectivement activé et ses références
+pertinentes lues.
+
+Pour une gratification ou prime ponctuelle, la bascule doit notamment faire
+vérifier côté `drh-fpt` : le statut et le cadre d'emplois de l'agent, l'existence
+d'un fondement indemnitaire autorisé, le respect du principe de parité, les
+critères généraux de la délibération et la décision individuelle. Une
+délibération ne permet pas, à elle seule, de créer une gratification libre ou
+ad personam. Ne jamais nommer le RIFSEEP, le CIA, l'ISFE ou un autre régime
+spécial avant d'avoir confirmé qu'il s'applique à l'agent et que la délibération
+locale permet réellement l'attribution envisagée.
+**Ce qui reste interdit à `dirfi-fpt`** : montants de régime indemnitaire, plafonds
 réglementaires par groupe de fonctions, conditions individuelles
 d'attribution, délais et instances de procédure — même sourcés, même sous
 réserve.
