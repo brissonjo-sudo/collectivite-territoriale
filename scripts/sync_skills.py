@@ -61,46 +61,85 @@ def load_upstreams(root: Path) -> dict[str, dict]:
             raise ValueError(f"Dépôt inattendu : {name}")
         if not spec["paths"] or "SKILL.md" not in spec["paths"]:
             raise ValueError(f"Point d'entrée manquant : {name}")
+        source_root = spec.get("source_root", "")
+        if source_root:
+            safe_relative(source_root, directory=True)
+        local_directory = spec.get("local_directory", name)
+        if not SKILL_NAME.fullmatch(local_directory):
+            raise ValueError(f"Répertoire local invalide : {local_directory!r}")
         for path in spec["paths"]:
             safe_relative(path)
         for path in spec.get("exclude", []):
             safe_relative(path)
+        additional_targets: set[str] = set()
+        for mapping in spec.get("additional_files", []):
+            if not isinstance(mapping, dict) or set(mapping) != {"source", "target"}:
+                raise ValueError(f"Fichier additionnel invalide : {name}")
+            safe_relative(mapping["source"])
+            target = safe_relative(mapping["target"])
+            if target in additional_targets:
+                raise ValueError(f"Destination additionnelle dupliquée : {target}")
+            additional_targets.add(target)
     return data["skills"]
 
 
 def archive_files(repository: Path, spec: dict) -> dict[str, bytes]:
     run_git("cat-file", "-e", f"{spec['commit']}^{{commit}}", cwd=repository)
+    source_root = spec.get("source_root", "")
+    selected_paths = [f"{source_root}{path}" for path in spec["paths"]]
+    additional = {
+        mapping["source"]: mapping["target"]
+        for mapping in spec.get("additional_files", [])
+    }
     tree = run_git(
-        "ls-tree", "-r", "-z", spec["commit"], "--", *spec["paths"],
+        "ls-tree", "-r", "-z", spec["commit"], "--",
+        *selected_paths, *additional,
         cwd=repository,
     )
     excluded = set(spec.get("exclude", []))
-    entries: list[tuple[str, str]] = []
+    entries: list[tuple[str, str, str]] = []
+    seen_additional: set[str] = set()
     for record in tree.split(b"\0"):
         if not record:
             continue
         metadata, raw_name = record.split(b"\t", 1)
         mode, kind, raw_oid = metadata.decode("ascii").split()
-        name = safe_relative(raw_name.decode("utf-8"))
-        if name in excluded:
+        source_name = safe_relative(raw_name.decode("utf-8"))
+        if source_name in additional:
+            target_name = additional[source_name]
+            seen_additional.add(source_name)
+        elif source_root and source_name.startswith(source_root):
+            target_name = safe_relative(source_name[len(source_root):])
+        elif not source_root:
+            target_name = source_name
+        else:
+            raise ValueError(f"Fichier hors racine source : {source_name}")
+        if target_name in excluded:
             continue
         if kind != "blob" or mode not in ("100644", "100755"):
-            raise ValueError(f"Type de fichier non pris en charge : {name}")
-        entries.append((name, raw_oid))
+            raise ValueError(f"Type de fichier non pris en charge : {source_name}")
+        entries.append((source_name, target_name, raw_oid))
+    missing_additional = set(additional) - seen_additional
+    if missing_additional:
+        missing = ", ".join(sorted(missing_additional))
+        raise ValueError(f"Fichier additionnel absent : {missing}")
+    targets = [target for _, target, _ in entries]
+    if len(targets) != len(set(targets)):
+        raise ValueError("Collision de destinations dans l'archive amont")
     # git archive transforme certains CRLF selon la configuration du poste.
     # Lire les blobs bruts garantit une copie identique sur Windows et Linux.
-    request = b"".join(oid.encode("ascii") + b"\n" for _, oid in entries)
+    request = b"".join(oid.encode("ascii") + b"\n" for _, _, oid in entries)
     response = run_git("cat-file", "--batch", cwd=repository, input_data=request)
     files: dict[str, bytes] = {}
     offset = 0
-    for name, oid in entries:
+    for source_name, target_name, oid in entries:
         end_header = response.index(b"\n", offset)
         raw_id, kind, raw_size = response[offset:end_header].split()
         if raw_id.decode("ascii") != oid or kind != b"blob":
-            raise ValueError(f"Objet Git inattendu : {name}")
+            raise ValueError(f"Objet Git inattendu : {source_name}")
         size = int(raw_size)
         start = end_header + 1
-        files[name] = response[start:start + size]
+        files[target_name] = response[start:start + size]
         offset = start + size + 1
     if offset != len(response):
         raise ValueError("Réponse Git incomplète ou surnuméraire")
@@ -119,7 +158,7 @@ def snapshots(root: Path, local_repos: Path | None = None) -> dict[str, dict[str
     result: dict[str, dict[str, bytes]] = {}
     if local_repos is not None:
         for name, spec in upstreams.items():
-            source = local_repos / name
+            source = local_repos / spec.get("local_directory", name)
             if not (source / ".git").exists():
                 raise ValueError(f"Dépôt local introuvable : {source}")
             result[name] = archive_files(source, spec)
@@ -157,7 +196,7 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--local-repos", type=Path,
-        help="Dossier contenant les quatre dépôts locaux, pour travailler hors réseau",
+        help="Dossier contenant les cinq dépôts locaux, pour travailler hors réseau",
     )
     args = parser.parse_args()
     synchronize(ROOT, snapshots(ROOT, args.local_repos))

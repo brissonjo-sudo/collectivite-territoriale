@@ -25,6 +25,17 @@
       "version": "1.0.4",
       "paths": ["SKILL.md", "references/", "objets/"],
       "exclude": ["references/cache-taux-seuils.md"]
+    },
+    "recherche-juridique": {
+      "repository": "https://github.com/brissonjo-sudo/droit-francais-skill.git",
+      "commit": "e437d10a2d4bbf66ba7a9c1e9fb49e773166054e",
+      "version": "3.5.0",
+      "source_root": "skill/",
+      "local_directory": "droit-francais-skill",
+      "paths": ["SKILL.md", "CHANGELOG.md", "profils/", "references/", "scripts/"],
+      "additional_files": [
+        {"source": "LICENSE", "target": "LICENSE"}
+      ]
     }
   }
 }

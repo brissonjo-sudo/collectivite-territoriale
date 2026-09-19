@@ -15,7 +15,7 @@ def load_json(path: str) -> dict:
 
 
 class CodexPluginTests(unittest.TestCase):
-    def test_les_quatre_skills_amont_sont_exposes(self) -> None:
+    def test_les_cinq_skills_amont_sont_exposes(self) -> None:
         manifest = load_json(".codex-plugin/plugin.json")
         pinned = load_json("upstream.json")["skills"]
         self.assertEqual(manifest["skills"], "./skills/")
@@ -27,10 +27,29 @@ class CodexPluginTests(unittest.TestCase):
             with self.subTest(skill=name):
                 self.assertTrue((ROOT / "skills" / name / "SKILL.md").is_file())
 
+    def test_recherche_juridique_est_autonome_et_sans_secret(self) -> None:
+        skill = ROOT / "skills/recherche-juridique"
+        entrypoint = (skill / "SKILL.md").read_text(encoding="utf-8")
+        self.assertIn("version: 3.5.0", entrypoint)
+        self.assertTrue((skill / "references/format-citation.md").is_file())
+        self.assertTrue((skill / "profils/collectivites.md").is_file())
+        self.assertTrue((skill / "scripts/legifrance.py").is_file())
+        self.assertTrue((skill / "LICENSE").is_file())
+        self.assertFalse((skill / "skill").exists())
+        self.assertFalse((skill / "skills").exists())
+        forbidden = [
+            path.relative_to(skill).as_posix()
+            for path in skill.rglob("*")
+            if path.is_file()
+            and (path.name == ".env" or path.suffix == ".pyc" or "__pycache__" in path.parts)
+        ]
+        self.assertEqual(forbidden, [])
+
     def test_mcp_juridique_est_declare(self) -> None:
         manifest = load_json(".codex-plugin/plugin.json")
         self.assertEqual(manifest["mcpServers"], "./.mcp.json")
         server = load_json(".mcp.json")["mcpServers"]["droit-francais"]
+        self.assertEqual(len(load_json(".mcp.json")["mcpServers"]), 1)
         self.assertEqual(server["type"], "http")
         self.assertTrue(server["url"].startswith("https://"))
 
@@ -42,13 +61,34 @@ class CodexPluginTests(unittest.TestCase):
         self.assertEqual(codex["repository"], claude["repository"])
         self.assertEqual(codex["homepage"], claude["homepage"])
 
-    def test_cas_prime_depart_couvre_les_trois_capacites(self) -> None:
+    def test_cas_plugin_couvrent_les_coactivations_juridiques(self) -> None:
         cases = load_json("tests/cas-plugin.json")
-        self.assertEqual(len(cases), 1)
-        case = cases[0]
-        self.assertEqual(case["skills"], ["dirfi-fpt", "drh-fpt"])
-        self.assertEqual(case["mcp"], "droit-francais")
-        self.assertGreaterEqual(len(case["invariants"]), 6)
+        self.assertEqual(len(cases), 4)
+        by_id = {case["id"]: case for case in cases}
+        self.assertEqual(
+            by_id["plugin-prime-depart-retraite"]["skills"],
+            ["dirfi-fpt", "drh-fpt", "recherche-juridique"],
+        )
+        self.assertEqual(
+            by_id["plugin-garde-fou-apja"]["skills"],
+            ["dpm-fpt", "recherche-juridique"],
+        )
+        self.assertEqual(
+            by_id["plugin-violation-donnees"]["skills"],
+            ["dpo-ct", "recherche-juridique"],
+        )
+        self.assertEqual(
+            by_id["plugin-mcp-indisponible"]["skills"],
+            ["recherche-juridique"],
+        )
+        for case in cases[:3]:
+            self.assertEqual(case["mcp"], "droit-francais")
+            self.assertEqual(case["mcp_mode"], "required")
+            self.assertGreaterEqual(len(case["invariants"]), 4)
+        degraded = by_id["plugin-mcp-indisponible"]
+        self.assertIsNone(degraded["mcp"])
+        self.assertEqual(degraded["mcp_mode"], "disabled")
+        self.assertGreaterEqual(len(degraded["invariants"]), 4)
         dirfi = (ROOT / "skills/dirfi-fpt/SKILL.md").read_text(encoding="utf-8")
         self.assertIn("Co-activation dans un plugin agrégateur", dirfi)
         self.assertIn("gratification libre ou", dirfi)

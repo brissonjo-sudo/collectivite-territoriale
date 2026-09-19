@@ -1,5 +1,17 @@
 # Historique des versions
 
+## 1.1.0 — 2026-09-20
+
+- Ajout de `recherche-juridique` v3.5.0 comme cinquième skill, figé sur le
+  commit amont `e437d10a2d4bbf66ba7a9c1e9fb49e773166054e`.
+- Conservation d'un unique serveur MCP `droit-francais` : le skill apporte la
+  méthode de vérification, le serveur apporte l'accès aux sources.
+- Extension du synchroniseur pour les racines amont, les noms de dépôts locaux
+  distincts et les fichiers additionnels attribués.
+- Ajout de cas de co-activation DPM/juridique et DPO/juridique, et renforcement
+  du cas DirFi/DRH/juridique.
+- Ajout de la licence CC-BY-SA-4.0 au runtime juridique embarqué.
+
 ## 1.0.1 — 2026-09-19
 
 - Mise à jour de `dirfi-fpt` vers la v1.0.4, figée sur le commit amont
