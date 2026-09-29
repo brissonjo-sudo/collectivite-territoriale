@@ -148,8 +148,8 @@ class CodexPluginTests(unittest.TestCase):
             self.assertGreaterEqual(len(case["invariants"]), 4)
         self.assertEqual(by_id["plugin-violation-donnees"]["web_mode"], "official_source")
         self.assertEqual(
-            by_id["plugin-violation-donnees"]["official_source_host"],
-            "eur-lex.europa.eu",
+            by_id["plugin-violation-donnees"]["official_source_hosts"],
+            ["eur-lex.europa.eu", "www.cnil.fr"],
         )
         degraded = by_id["plugin-mcp-indisponible"]
         self.assertIsNone(degraded["mcp"])

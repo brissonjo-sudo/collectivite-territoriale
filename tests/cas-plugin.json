@@ -42,7 +42,7 @@
     "mcp": "droit-francais",
     "mcp_mode": "required",
     "web_mode": "official_source",
-    "official_source_host": "eur-lex.europa.eu",
+    "official_source_hosts": ["eur-lex.europa.eu", "www.cnil.fr"],
     "prompt": "Un fichier contenant les coordonnées et données sociales de 2 000 usagers a été envoyé au mauvais destinataire hier. Que doit faire la collectivité et quels délais juridiques doit-elle respecter ?",
     "invariants": [
       "qualification documentée de la violation",

@@ -58,9 +58,10 @@ def build_prompt(case: dict[str, Any]) -> str:
         else "Le MCP est volontairement désactivé : applique la voie dégradée."
     )
     web_rule = (
-        "Les articles 33 et 34 du RGPD doivent être vérifiés sur la source "
-        "primaire officielle EUR-Lex avec WebFetch. N'affirme pas le délai "
-        "comme vérifié si cette récupération échoue."
+        "Les articles 33 et 34 du RGPD doivent être vérifiés avec WebFetch "
+        "sur EUR-Lex ou, si EUR-Lex ne restitue pas le texte, sur la page "
+        "officielle de la CNIL. N'affirme pas le délai comme vérifié si ces "
+        "récupérations échouent."
         if case["web_mode"] == "official_source"
         else "N'utilise ni WebFetch ni WebSearch."
     )
@@ -270,10 +271,10 @@ def technical_failures(clean: list[dict[str, Any]], case: dict[str, Any]) -> lis
         and event.get("succeeded") is True
     ]
     if case["web_mode"] == "official_source":
-        expected_host = case["official_source_host"]
-        if not any(event.get("host") == expected_host for event in official_calls):
+        expected_hosts = set(case["official_source_hosts"])
+        if not any(event.get("host") in expected_hosts for event in official_calls):
             failures.append("official_source_call_missing")
-        if any(event.get("host") != expected_host for event in official_calls):
+        if any(event.get("host") not in expected_hosts for event in official_calls):
             failures.append("non_official_web_source")
     elif any(event["type"] == "official_source_call" for event in clean):
         failures.append("web_call_unexpected")
