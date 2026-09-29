@@ -51,7 +51,7 @@
     "id": "plugin-mcp-indisponible",
     "skills": ["recherche-juridique"],
     "activation_sequence": ["recherche-juridique"],
-    "max_budget_usd": 0.25,
+    "max_budget_usd": 0.5,
     "mcp": null,
     "mcp_mode": "disabled",
     "prompt": "[lookup] L'article L. 111-1 du code des relations entre le public et l'administration est-il en vigueur aujourd'hui ? Donne son texte exact et un identifiant Légifrance vérifié.",

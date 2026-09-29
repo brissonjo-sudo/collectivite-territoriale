@@ -150,6 +150,7 @@ class CodexPluginTests(unittest.TestCase):
         self.assertIsNone(degraded["mcp"])
         self.assertEqual(degraded["mcp_mode"], "disabled")
         self.assertEqual(degraded["activation_sequence"], degraded["skills"])
+        self.assertGreaterEqual(degraded["max_budget_usd"], 0.5)
         self.assertGreaterEqual(len(degraded["invariants"]), 4)
         dirfi = (ROOT / "skills/dirfi-fpt/SKILL.md").read_text(encoding="utf-8")
         self.assertIn("Co-activation dans un plugin agrégateur", dirfi)
