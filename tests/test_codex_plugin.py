@@ -146,11 +146,17 @@ class CodexPluginTests(unittest.TestCase):
             self.assertEqual(case["activation_sequence"], case["skills"])
             self.assertGreaterEqual(case["max_budget_usd"], 1.0)
             self.assertGreaterEqual(len(case["invariants"]), 4)
+        self.assertEqual(by_id["plugin-violation-donnees"]["web_mode"], "official_source")
+        self.assertEqual(
+            by_id["plugin-violation-donnees"]["official_source_host"],
+            "eur-lex.europa.eu",
+        )
         degraded = by_id["plugin-mcp-indisponible"]
         self.assertIsNone(degraded["mcp"])
         self.assertEqual(degraded["mcp_mode"], "disabled")
         self.assertEqual(degraded["activation_sequence"], degraded["skills"])
         self.assertGreaterEqual(degraded["max_budget_usd"], 0.5)
+        self.assertEqual(degraded["web_mode"], "disabled")
         self.assertGreaterEqual(len(degraded["invariants"]), 4)
         dirfi = (ROOT / "skills/dirfi-fpt/SKILL.md").read_text(encoding="utf-8")
         self.assertIn("Co-activation dans un plugin agrégateur", dirfi)
@@ -163,11 +169,20 @@ class CodexPluginTests(unittest.TestCase):
         command = build_command(prime, "claude")
         prompt = build_prompt(prime)
         self.assertIn("--strict-mcp-config", command)
+        self.assertIn("--restricted", command)
+        self.assertIn("--tools", command)
         self.assertIn("--no-session-persistence", command)
         self.assertIn("--permission-prompts", command)
         self.assertIn("collectivite-territoriale:dirfi-fpt", prompt)
         self.assertIn("collectivite-territoriale:drh-fpt", prompt)
         self.assertIn("collectivite-territoriale:recherche-juridique", prompt)
+
+        dpo = next(case for case in cases if case["id"] == "plugin-violation-donnees")
+        dpo_command = build_command(dpo, "claude")
+        self.assertEqual(dpo_command[dpo_command.index("--tools") + 1], "Skill,WebFetch")
+        degraded = next(case for case in cases if case["id"] == "plugin-mcp-indisponible")
+        degraded_command = build_command(degraded, "claude")
+        self.assertEqual(degraded_command[degraded_command.index("--tools") + 1], "Skill")
 
     def test_harnais_refuse_skill_autonome_et_mcp_etranger(self) -> None:
         case = next(
@@ -189,11 +204,13 @@ class CodexPluginTests(unittest.TestCase):
                 "skill": "collectivite-territoriale:recherche-juridique",
             },
             {"type": "foreign_mcp_call", "tool": "mcp__claude_ai_Droit_Francais__search"},
+            {"type": "unexpected_tool_call", "tool": "WebFetch"},
             {"type": "result", "is_error": False},
         ]
         failures = technical_failures(clean, case)
         self.assertIn("standalone_recherche_juridique_loaded", failures)
         self.assertIn("foreign_mcp_call", failures)
+        self.assertIn("unexpected_tool_call", failures)
         self.assertIn("plugin_mcp_call_missing", failures)
 
     def test_preuve_comportementale_respecte_le_contrat(self) -> None:

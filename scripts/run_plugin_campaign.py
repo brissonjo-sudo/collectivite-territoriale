@@ -15,6 +15,7 @@ import subprocess
 import sys
 from pathlib import Path
 from typing import Any
+from urllib.parse import urlparse
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -56,9 +57,16 @@ def build_prompt(case: dict[str, Any]) -> str:
         if case["mcp_mode"] == "required"
         else "Le MCP est volontairement désactivé : applique la voie dégradée."
     )
+    web_rule = (
+        "Les articles 33 et 34 du RGPD doivent être vérifiés sur la source "
+        "primaire officielle EUR-Lex avec WebFetch. N'affirme pas le délai "
+        "comme vérifié si cette récupération échoue."
+        if case["web_mode"] == "official_source"
+        else "N'utilise ni WebFetch ni WebSearch."
+    )
     return (
         "Contrat de campagne : avant de répondre, active exactement une fois, "
-        f"dans cet ordre, {ordered}. {mcp_rule} "
+        f"dans cet ordre, {ordered}. {mcp_rule} {web_rule} "
         "Ne remplace jamais une activation Skill par une simple mention textuelle. "
         "Produis ensuite une réponse unique et finale à la demande suivante.\n\n"
         f"{case['prompt']}"
@@ -69,8 +77,19 @@ def allowed_tools(case: dict[str, Any]) -> str:
     """Construit la liste fermée des outils autorisés sans interaction."""
 
     tools = ["Skill"]
+    if case["web_mode"] == "official_source":
+        tools.append("WebFetch")
     if case["mcp_mode"] == "required":
         tools.extend(f"{LEGAL_MCP_PREFIX}{name}" for name in MCP_TOOLS)
+    return ",".join(tools)
+
+
+def builtin_tools(case: dict[str, Any]) -> str:
+    """Limite les outils intégrés, indépendamment des permissions implicites."""
+
+    tools = ["Skill"]
+    if case["web_mode"] == "official_source":
+        tools.append("WebFetch")
     return ",".join(tools)
 
 
@@ -92,6 +111,9 @@ def build_command(case: dict[str, Any], claude: str) -> list[str]:
         "--mcp-config",
         mcp_config,
         "--strict-mcp-config",
+        "--restricted",
+        "--tools",
+        builtin_tools(case),
         "--setting-sources",
         "project,local",
         "--no-session-persistence",
@@ -111,15 +133,23 @@ def build_command(case: dict[str, Any], claude: str) -> list[str]:
     ]
 
 
-def message_tool_names(event: dict[str, Any]) -> list[tuple[str, dict[str, Any]]]:
+def message_tool_calls(
+    event: dict[str, Any],
+) -> list[tuple[str, dict[str, Any], str]]:
     """Extrait uniquement les noms et entrées des appels d'outils."""
 
     message = event.get("message") or {}
-    calls: list[tuple[str, dict[str, Any]]] = []
+    calls: list[tuple[str, dict[str, Any], str]] = []
     for block in message.get("content") or []:
         if block.get("type") != "tool_use":
             continue
-        calls.append((block.get("name", ""), block.get("input") or {}))
+        calls.append(
+            (
+                block.get("name", ""),
+                block.get("input") or {},
+                block.get("id", ""),
+            )
+        )
     return calls
 
 
@@ -127,6 +157,7 @@ def sanitize(events: list[dict[str, Any]], case: dict[str, Any]) -> list[dict[st
     """Réduit le flux à la preuve utile, sans raisonnement ni signature."""
 
     clean: list[dict[str, Any]] = []
+    calls_by_id: dict[str, dict[str, Any]] = {}
     for event in events:
         if event.get("type") == "system" and event.get("subtype") == "init":
             skills = [
@@ -148,18 +179,40 @@ def sanitize(events: list[dict[str, Any]], case: dict[str, Any]) -> list[dict[st
                     "strict_mcp_config": True,
                 }
             )
-        for name, inputs in message_tool_names(event):
+        for name, inputs, tool_use_id in message_tool_calls(event):
             if name == "Skill":
-                clean.append(
-                    {
-                        "type": "skill_activation",
-                        "skill": inputs.get("skill"),
-                    }
-                )
+                record = {
+                    "type": "skill_activation",
+                    "skill": inputs.get("skill"),
+                }
             elif name.startswith(LEGAL_MCP_PREFIX):
-                clean.append({"type": "plugin_mcp_call", "tool": name})
+                record = {
+                    "type": "plugin_mcp_call",
+                    "tool": name,
+                    "succeeded": None,
+                }
             elif name.startswith(FOREIGN_MCP_PREFIX):
-                clean.append({"type": "foreign_mcp_call", "tool": name})
+                record = {"type": "foreign_mcp_call", "tool": name}
+            elif name == "WebFetch":
+                record = {
+                    "type": "official_source_call",
+                    "tool": name,
+                    "host": urlparse(inputs.get("url", "")).hostname,
+                    "succeeded": None,
+                }
+            else:
+                record = {"type": "unexpected_tool_call", "tool": name}
+            clean.append(record)
+            if tool_use_id:
+                calls_by_id[tool_use_id] = record
+
+        message = event.get("message") or {}
+        for block in message.get("content") or []:
+            if block.get("type") != "tool_result":
+                continue
+            record = calls_by_id.get(block.get("tool_use_id", ""))
+            if record is not None and "succeeded" in record:
+                record["succeeded"] = not bool(block.get("is_error"))
         if event.get("type") == "result":
             clean.append(
                 {
@@ -194,17 +247,36 @@ def technical_failures(clean: list[dict[str, Any]], case: dict[str, Any]) -> lis
         failures.append("activation_sequence_mismatch")
 
     plugin_calls = [
-        event for event in clean if event["type"] == "plugin_mcp_call"
+        event
+        for event in clean
+        if event["type"] == "plugin_mcp_call" and event.get("succeeded") is True
     ]
     foreign_calls = [
         event for event in clean if event["type"] == "foreign_mcp_call"
     ]
     if foreign_calls:
         failures.append("foreign_mcp_call")
+    if any(event["type"] == "unexpected_tool_call" for event in clean):
+        failures.append("unexpected_tool_call")
     if case["mcp_mode"] == "required" and not plugin_calls:
         failures.append("plugin_mcp_call_missing")
     if case["mcp_mode"] == "disabled" and plugin_calls:
         failures.append("plugin_mcp_call_unexpected")
+
+    official_calls = [
+        event
+        for event in clean
+        if event["type"] == "official_source_call"
+        and event.get("succeeded") is True
+    ]
+    if case["web_mode"] == "official_source":
+        expected_host = case["official_source_host"]
+        if not any(event.get("host") == expected_host for event in official_calls):
+            failures.append("official_source_call_missing")
+        if any(event.get("host") != expected_host for event in official_calls):
+            failures.append("non_official_web_source")
+    elif any(event["type"] == "official_source_call" for event in clean):
+        failures.append("web_call_unexpected")
 
     result = next((event for event in clean if event["type"] == "result"), None)
     if result is None or result.get("is_error"):

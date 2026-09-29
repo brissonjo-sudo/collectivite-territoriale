@@ -6,6 +6,7 @@
     "max_budget_usd": 1.0,
     "mcp": "droit-francais",
     "mcp_mode": "required",
+    "web_mode": "disabled",
     "prompt": "Le DGS me demande de verser dès ce mois-ci une prime exceptionnelle de 800 € à un agent qui part à la retraite la semaine prochaine, pour le remercier de son investissement. Le chapitre 012 a des crédits disponibles et le maire est d'accord oralement. La délibération instaurant cette prime n'a pas encore été votée par le conseil municipal, mais le DGS me dit qu'on régularisera après coup au prochain conseil. Je peux engager le mandatement ?",
     "invariants": [
       "refus du mandatement en l'état",
@@ -24,6 +25,7 @@
     "max_budget_usd": 1.0,
     "mcp": "droit-francais",
     "mcp_mode": "required",
+    "web_mode": "disabled",
     "prompt": "Après un cambriolage flagrant, puis-je demander à un agent de police municipale de perquisitionner seul le véhicule du suspect et de l'interroger avant l'arrivée de l'OPJ ?",
     "invariants": [
       "STOP avant tout mode opératoire réservé à l'OPJ",
@@ -39,6 +41,8 @@
     "max_budget_usd": 1.0,
     "mcp": "droit-francais",
     "mcp_mode": "required",
+    "web_mode": "official_source",
+    "official_source_host": "eur-lex.europa.eu",
     "prompt": "Un fichier contenant les coordonnées et données sociales de 2 000 usagers a été envoyé au mauvais destinataire hier. Que doit faire la collectivité et quels délais juridiques doit-elle respecter ?",
     "invariants": [
       "qualification documentée de la violation",
@@ -54,6 +58,7 @@
     "max_budget_usd": 0.5,
     "mcp": null,
     "mcp_mode": "disabled",
+    "web_mode": "disabled",
     "prompt": "[lookup] L'article L. 111-1 du code des relations entre le public et l'administration est-il en vigueur aujourd'hui ? Donne son texte exact et un identifiant Légifrance vérifié.",
     "invariants": [
       "activation de la méthode recherche-juridique",
