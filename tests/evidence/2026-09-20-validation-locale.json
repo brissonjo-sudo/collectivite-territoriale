@@ -1,7 +1,7 @@
 {
-  "date": "2026-09-20",
+  "date": "2026-09-29",
   "plugin_version": "1.1.0",
-  "plugin_commit": "ddb726eecfcc8f41159959ed9ea677182a49b1af",
+  "plugin_commit": "1750d8ab43a9ba6f106b53ddd99cbe34470c64c0",
   "release_ready": false,
   "available_skills": [
     "dirfi-fpt",
@@ -20,8 +20,7 @@
   "release_blockers": [
     "Le serveur MCP droit-francais reste needs-auth : Auth0 refuse l'enregistrement dynamique du client Claude Code.",
     "Le cas APJA ne trace pas dpm-fpt et se termine sur la limite budgétaire avant réponse finale.",
-    "Le cas Prime ne trace pas drh-fpt et utilise le connecteur global claude.ai Droit Francais au lieu du MCP du plugin.",
-    "Le mode dégradé affiche un identifiant Légifrance non récupéré dans la session, même s'il est marqué non vérifié."
+    "Le cas Prime ne trace pas drh-fpt et utilise le connecteur global claude.ai Droit Francais au lieu du MCP du plugin."
   ],
   "runs": [
     {
@@ -77,7 +76,7 @@
     },
     {
       "case_id": "plugin-mcp-indisponible",
-      "status": "failed",
+      "status": "passed",
       "activated_skills": ["recherche-juridique"],
       "mcp_status": "disabled",
       "mcp_tools": [],
@@ -85,10 +84,10 @@
         "expected_skill_trace": true,
         "explicit_degraded_mode": true,
         "targeted_abstention": true,
-        "no_unretrieved_identifier": false
+        "no_unretrieved_identifier": true
       },
-      "cost_usd": 0.2950653,
-      "result": "La sortie est balisée et s'abstient sur la vigueur, mais reproduit une URL contenant un LEGIARTI non récupéré dans la session.",
+      "cost_usd": 0.11957595,
+      "result": "Activation unique du skill embarqué, MCP strictement désactivé et abstention ciblée sans identifiant ni contenu juridique non récupéré.",
       "evidence_path": "tests/evidence/2026-09-20-v1.1.0/plugin-mcp-indisponible.jsonl"
     }
   ],
