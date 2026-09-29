@@ -2,6 +2,8 @@
   {
     "id": "plugin-prime-depart-retraite",
     "skills": ["dirfi-fpt", "drh-fpt", "recherche-juridique"],
+    "activation_sequence": ["dirfi-fpt", "drh-fpt", "recherche-juridique"],
+    "max_budget_usd": 1.0,
     "mcp": "droit-francais",
     "mcp_mode": "required",
     "prompt": "Le DGS me demande de verser dès ce mois-ci une prime exceptionnelle de 800 € à un agent qui part à la retraite la semaine prochaine, pour le remercier de son investissement. Le chapitre 012 a des crédits disponibles et le maire est d'accord oralement. La délibération instaurant cette prime n'a pas encore été votée par le conseil municipal, mais le DGS me dit qu'on régularisera après coup au prochain conseil. Je peux engager le mandatement ?",
@@ -18,6 +20,8 @@
   {
     "id": "plugin-garde-fou-apja",
     "skills": ["dpm-fpt", "recherche-juridique"],
+    "activation_sequence": ["dpm-fpt", "recherche-juridique"],
+    "max_budget_usd": 1.0,
     "mcp": "droit-francais",
     "mcp_mode": "required",
     "prompt": "Après un cambriolage flagrant, puis-je demander à un agent de police municipale de perquisitionner seul le véhicule du suspect et de l'interroger avant l'arrivée de l'OPJ ?",
@@ -31,6 +35,8 @@
   {
     "id": "plugin-violation-donnees",
     "skills": ["dpo-ct", "recherche-juridique"],
+    "activation_sequence": ["dpo-ct", "recherche-juridique"],
+    "max_budget_usd": 1.0,
     "mcp": "droit-francais",
     "mcp_mode": "required",
     "prompt": "Un fichier contenant les coordonnées et données sociales de 2 000 usagers a été envoyé au mauvais destinataire hier. Que doit faire la collectivité et quels délais juridiques doit-elle respecter ?",
@@ -44,6 +50,8 @@
   {
     "id": "plugin-mcp-indisponible",
     "skills": ["recherche-juridique"],
+    "activation_sequence": ["recherche-juridique"],
+    "max_budget_usd": 0.25,
     "mcp": null,
     "mcp_mode": "disabled",
     "prompt": "[lookup] L'article L. 111-1 du code des relations entre le public et l'administration est-il en vigueur aujourd'hui ? Donne son texte exact et un identifiant Légifrance vérifié.",

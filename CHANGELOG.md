@@ -16,6 +16,10 @@
 - Ajout de l'identité visuelle du plugin pour les surfaces Codex et ChatGPT.
 - Publication d'une politique de confidentialité propre au plugin, avec renvoi
   vers la politique détaillée du serveur MCP `droit-francais`.
+- Déclaration du client OAuth public Claude Code et de son callback local fixe,
+  sans secret distribué dans le plugin.
+- Ajout d'un lanceur de campagne isolé qui exige les coactivations qualifiées,
+  exclut les connecteurs juridiques globaux et assainit les traces avant revue.
 
 ## 1.0.1 — 2026-09-19
 

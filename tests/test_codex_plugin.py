@@ -7,9 +7,13 @@ import json
 import struct
 import unittest
 from pathlib import Path
+import sys
 
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT / "scripts"))
+
+from run_plugin_campaign import build_command, build_prompt, technical_failures  # noqa: E402
 
 
 def load_json(path: str) -> dict:
@@ -54,6 +58,14 @@ class CodexPluginTests(unittest.TestCase):
         self.assertEqual(len(load_json(".mcp.json")["mcpServers"]), 1)
         self.assertEqual(server["type"], "http")
         self.assertTrue(server["url"].startswith("https://"))
+        self.assertEqual(
+            server["oauth"],
+            {
+                "clientId": "tpc_gCoyj4qPSuyrg1ZZWDyp4D",
+                "callbackPort": 44956,
+            },
+        )
+        self.assertNotIn("clientSecret", server["oauth"])
 
     def test_identite_du_plugin_coherente(self) -> None:
         codex = load_json(".codex-plugin/plugin.json")
@@ -131,15 +143,57 @@ class CodexPluginTests(unittest.TestCase):
         for case in cases[:3]:
             self.assertEqual(case["mcp"], "droit-francais")
             self.assertEqual(case["mcp_mode"], "required")
+            self.assertEqual(case["activation_sequence"], case["skills"])
+            self.assertGreaterEqual(case["max_budget_usd"], 1.0)
             self.assertGreaterEqual(len(case["invariants"]), 4)
         degraded = by_id["plugin-mcp-indisponible"]
         self.assertIsNone(degraded["mcp"])
         self.assertEqual(degraded["mcp_mode"], "disabled")
+        self.assertEqual(degraded["activation_sequence"], degraded["skills"])
         self.assertGreaterEqual(len(degraded["invariants"]), 4)
         dirfi = (ROOT / "skills/dirfi-fpt/SKILL.md").read_text(encoding="utf-8")
         self.assertIn("Co-activation dans un plugin agrégateur", dirfi)
         self.assertIn("gratification libre ou", dirfi)
         self.assertIn("ad personam", dirfi)
+
+    def test_harnais_impose_isolation_et_activation_qualifiee(self) -> None:
+        cases = load_json("tests/cas-plugin.json")
+        prime = next(case for case in cases if case["id"] == "plugin-prime-depart-retraite")
+        command = build_command(prime, "claude")
+        prompt = build_prompt(prime)
+        self.assertIn("--strict-mcp-config", command)
+        self.assertIn("--no-session-persistence", command)
+        self.assertIn("--permission-prompts", command)
+        self.assertIn("collectivite-territoriale:dirfi-fpt", prompt)
+        self.assertIn("collectivite-territoriale:drh-fpt", prompt)
+        self.assertIn("collectivite-territoriale:recherche-juridique", prompt)
+
+    def test_harnais_refuse_skill_autonome_et_mcp_etranger(self) -> None:
+        case = next(
+            case
+            for case in load_json("tests/cas-plugin.json")
+            if case["id"] == "plugin-garde-fou-apja"
+        )
+        clean = [
+            {
+                "type": "init",
+                "standalone_recherche_juridique_loaded": True,
+            },
+            {
+                "type": "skill_activation",
+                "skill": "collectivite-territoriale:dpm-fpt",
+            },
+            {
+                "type": "skill_activation",
+                "skill": "collectivite-territoriale:recherche-juridique",
+            },
+            {"type": "foreign_mcp_call", "tool": "mcp__claude_ai_Droit_Francais__search"},
+            {"type": "result", "is_error": False},
+        ]
+        failures = technical_failures(clean, case)
+        self.assertIn("standalone_recherche_juridique_loaded", failures)
+        self.assertIn("foreign_mcp_call", failures)
+        self.assertIn("plugin_mcp_call_missing", failures)
 
     def test_preuve_comportementale_respecte_le_contrat(self) -> None:
         evidence = load_json("tests/evidence/2026-09-20-validation-locale.json")

@@ -2,7 +2,11 @@
   "mcpServers": {
     "droit-francais": {
       "type": "http",
-      "url": "https://droit-francais-skill.onrender.com/mcp"
+      "url": "https://droit-francais-skill.onrender.com/mcp",
+      "oauth": {
+        "clientId": "tpc_gCoyj4qPSuyrg1ZZWDyp4D",
+        "callbackPort": 44956
+      }
     }
   }
 }

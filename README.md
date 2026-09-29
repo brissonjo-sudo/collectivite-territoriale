@@ -33,7 +33,9 @@ L'activation simultanée de plusieurs skills dépend de la question posée. Une 
 
 - Claude Code ou Codex avec prise en charge des plugins et marketplaces Git.
 - Accès réseau au serveur MCP pour les recherches juridiques en mode nominal.
-- Autorisation OAuth si le client la demande. Aucun secret PISTE n'est distribué dans ce dépôt.
+- Autorisation OAuth si le client la demande. Claude Code utilise le client
+  public préenregistré déclaré dans `.mcp.json`, avec PKCE et un callback local
+  fixe ; aucun secret OAuth ou PISTE n'est distribué dans ce dépôt.
 - En cas d'indisponibilité du MCP, le plugin doit signaler la voie dégradée et ne pas inventer de référence.
 
 Le plugin traite le droit français et l'aide à la décision dans le contexte des collectivités territoriales. Toute conclusion sensible doit être confrontée à la source officielle et aux circonstances du dossier.
@@ -55,6 +57,10 @@ Après une nouvelle version publiée :
 ```
 
 Ouvrir une nouvelle session après l'installation ou la mise à jour afin de charger les skills et les outils du plugin.
+
+À la première utilisation dans Claude Code, lancer `/mcp`, sélectionner
+`droit-francais` puis suivre l'autorisation dans le navigateur. Le client OAuth
+est public : aucun secret client ne doit être demandé ou ajouté localement.
 
 ## Installation dans Codex
 
@@ -108,6 +114,12 @@ Le manifeste Codex est également contrôlé avec le validateur du skill systèm
 - le comportement dégradé lorsque le MCP juridique est désactivé.
 
 Les fichiers présents prouvent l'installation conjointe, pas la coactivation effective. La release 1.1.0 exige donc aussi des traces comportementales en conversations fraîches.
+
+Le lanceur `scripts/run_plugin_campaign.py` exécute les quatre scénarios dans
+des sessions non persistées, impose les activations qualifiées attendues,
+désactive les connecteurs juridiques globaux et ne conserve qu'une trace JSONL
+assainie dans `tests/evidence/.work/`. Cette sortie reste soumise à une revue
+humaine des invariants métier avant d'être promue en preuve de release.
 
 ## Architecture et décisions
 
