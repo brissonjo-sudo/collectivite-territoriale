@@ -8,6 +8,7 @@
   },
   "homepage": "https://github.com/brissonjo-sudo/collectivite-territoriale",
   "repository": "https://github.com/brissonjo-sudo/collectivite-territoriale",
+  "license": "CC-BY-SA-4.0",
   "keywords": [
     "collectivites-territoriales",
     "police-municipale",
@@ -27,6 +28,9 @@
     "category": "Productivity",
     "capabilities": ["Interactive", "MCP"],
     "websiteURL": "https://github.com/brissonjo-sudo/collectivite-territoriale",
+    "privacyPolicyURL": "https://github.com/brissonjo-sudo/collectivite-territoriale/blob/main/PRIVACY.md",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png",
     "defaultPrompt": [
       "Aide-moi à traiter une question de police municipale.",
       "Analyse cette situation RH dans la fonction publique territoriale.",

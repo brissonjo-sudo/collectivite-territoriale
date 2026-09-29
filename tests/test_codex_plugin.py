@@ -2,7 +2,9 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
+import struct
 import unittest
 from pathlib import Path
 
@@ -60,6 +62,51 @@ class CodexPluginTests(unittest.TestCase):
         self.assertEqual(codex["version"], claude["version"])
         self.assertEqual(codex["repository"], claude["repository"])
         self.assertEqual(codex["homepage"], claude["homepage"])
+        self.assertEqual(codex["license"], "CC-BY-SA-4.0")
+        self.assertEqual(claude["license"], "CC-BY-SA-4.0")
+        license_text = (ROOT / "LICENSE").read_text(encoding="utf-8")
+        self.assertIn(
+            "Creative Commons Attribution-ShareAlike 4.0 International",
+            license_text,
+        )
+
+    def test_metadonnees_publiques_et_iconographie(self) -> None:
+        manifest = load_json(".codex-plugin/plugin.json")
+        interface = manifest["interface"]
+        self.assertEqual(interface["composerIcon"], "./assets/icon.png")
+        self.assertEqual(interface["logo"], "./assets/icon.png")
+        self.assertEqual(
+            interface["privacyPolicyURL"],
+            "https://github.com/brissonjo-sudo/collectivite-territoriale/"
+            "blob/main/PRIVACY.md",
+        )
+
+        icon = ROOT / "assets/icon.png"
+        data = icon.read_bytes()
+        self.assertLessEqual(len(data), 5 * 1024 * 1024)
+        self.assertEqual(data[:8], b"\x89PNG\r\n\x1a\n")
+        self.assertEqual(data[12:16], b"IHDR")
+        width, height = struct.unpack(">II", data[16:24])
+        self.assertEqual(width, height)
+        self.assertGreaterEqual(width, 48)
+        self.assertLessEqual(width, 4096)
+        self.assertEqual(
+            hashlib.sha256(data).hexdigest().upper(),
+            "10ACA45CB876735F06E10B352B9A2BA004B5DEAE462E08D8DFBA092044AAEE1F",
+        )
+
+        privacy = (ROOT / "PRIVACY.md").read_text(encoding="utf-8")
+        for heading in (
+            "## Données traitées",
+            "## Finalités",
+            "## Destinataires et prestataires",
+            "## Conservation",
+            "## Choix et droits des utilisateurs",
+            "## Sécurité et mises à jour",
+        ):
+            with self.subTest(heading=heading):
+                self.assertIn(heading, privacy)
+        self.assertIn("droit-francais-skill", privacy)
 
     def test_cas_plugin_couvrent_les_coactivations_juridiques(self) -> None:
         cases = load_json("tests/cas-plugin.json")
@@ -93,6 +140,53 @@ class CodexPluginTests(unittest.TestCase):
         self.assertIn("Co-activation dans un plugin agrégateur", dirfi)
         self.assertIn("gratification libre ou", dirfi)
         self.assertIn("ad personam", dirfi)
+
+    def test_preuve_comportementale_respecte_le_contrat(self) -> None:
+        evidence = load_json("tests/evidence/2026-09-20-validation-locale.json")
+        cases = {case["id"]: case for case in load_json("tests/cas-plugin.json")}
+        self.assertEqual(evidence["plugin_version"], "1.1.0")
+        self.assertRegex(evidence["plugin_commit"], r"^[0-9a-f]{40}$")
+        self.assertEqual(
+            set(evidence["available_skills"]),
+            set(load_json("upstream.json")["skills"]),
+        )
+        runs = {run["case_id"]: run for run in evidence["runs"]}
+        self.assertEqual(set(runs), set(cases))
+        for case_id, run in runs.items():
+            with self.subTest(case=case_id):
+                self.assertIn(run["status"], {"passed", "failed", "blocked"})
+                self.assertTrue((ROOT / run["evidence_path"]).is_file())
+                self.assertIsInstance(run["activated_skills"], list)
+                self.assertIsInstance(run["mcp_tools"], list)
+                self.assertIsInstance(run["invariants"], dict)
+                if run["status"] == "passed":
+                    self.assertTrue(
+                        set(cases[case_id]["skills"]).issubset(
+                            run["activated_skills"]
+                        )
+                    )
+                    self.assertTrue(all(run["invariants"].values()))
+                    if cases[case_id]["mcp_mode"] == "required":
+                        self.assertTrue(
+                            any(
+                                tool.startswith("mcp__droit-francais__")
+                                for tool in run["mcp_tools"]
+                            )
+                        )
+                    else:
+                        self.assertEqual(run["mcp_status"], "disabled")
+                        self.assertEqual(run["mcp_tools"], [])
+        self.assertEqual(
+            evidence["release_ready"],
+            all(run["status"] == "passed" for run in runs.values()),
+        )
+
+    def test_barriere_de_release_comportementale(self) -> None:
+        evidence = load_json("tests/evidence/2026-09-20-validation-locale.json")
+        self.assertTrue(
+            evidence["release_ready"],
+            "Release bloquée : " + " | ".join(evidence["release_blockers"]),
+        )
 
     def test_marketplace_distribue_la_racine_sans_copie(self) -> None:
         marketplace = load_json(".agents/plugins/marketplace.json")

@@ -11,6 +11,11 @@
 - Ajout de cas de co-activation DPM/juridique et DPO/juridique, et renforcement
   du cas DirFi/DRH/juridique.
 - Ajout de la licence CC-BY-SA-4.0 au runtime juridique embarqué.
+- Adoption de CC-BY-SA-4.0 comme licence globale du plugin et de ses cinq
+  contenus embarqués.
+- Ajout de l'identité visuelle du plugin pour les surfaces Codex et ChatGPT.
+- Publication d'une politique de confidentialité propre au plugin, avec renvoi
+  vers la politique détaillée du serveur MCP `droit-francais`.
 
 ## 1.0.1 — 2026-09-19
 

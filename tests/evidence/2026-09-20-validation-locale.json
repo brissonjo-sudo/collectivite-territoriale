@@ -1,0 +1,99 @@
+{
+  "date": "2026-09-20",
+  "plugin_version": "1.1.0",
+  "plugin_commit": "ddb726eecfcc8f41159959ed9ea677182a49b1af",
+  "release_ready": false,
+  "available_skills": [
+    "dirfi-fpt",
+    "dpm-fpt",
+    "dpo-ct",
+    "drh-fpt",
+    "recherche-juridique"
+  ],
+  "environment": {
+    "host": "Claude Code 2.1.143",
+    "model": "claude-sonnet-4-6",
+    "mode": "--plugin-dir local, sessions non persistées",
+    "standalone_droit_francais_loaded": false,
+    "isolation": "Le skill autonome a été déplacé hors du dossier de découverte pendant chaque essai puis restauré."
+  },
+  "release_blockers": [
+    "Le serveur MCP droit-francais reste needs-auth : Auth0 refuse l'enregistrement dynamique du client Claude Code.",
+    "Le cas APJA ne trace pas dpm-fpt et se termine sur la limite budgétaire avant réponse finale.",
+    "Le cas Prime ne trace pas drh-fpt et utilise le connecteur global claude.ai Droit Francais au lieu du MCP du plugin.",
+    "Le mode dégradé affiche un identifiant Légifrance non récupéré dans la session, même s'il est marqué non vérifié."
+  ],
+  "runs": [
+    {
+      "case_id": "plugin-garde-fou-apja",
+      "status": "failed",
+      "activated_skills": ["recherche-juridique"],
+      "mcp_status": "needs-auth",
+      "mcp_tools": [],
+      "invariants": {
+        "expected_skill_trace": false,
+        "plugin_mcp_call_succeeded": false,
+        "output_checked": false
+      },
+      "cost_usd": 0.36590865,
+      "result": "Limite budgétaire atteinte avant réponse finale ; dpm-fpt absent de la trace.",
+      "evidence_path": "tests/evidence/2026-09-20-v1.1.0/plugin-garde-fou-apja.jsonl"
+    },
+    {
+      "case_id": "plugin-prime-depart-retraite",
+      "status": "failed",
+      "activated_skills": ["dirfi-fpt", "recherche-juridique"],
+      "mcp_status": "needs-auth",
+      "mcp_tools": [
+        "mcp__claude_ai_Droit_Francais__search_articles",
+        "mcp__claude_ai_Droit_Francais__search",
+        "mcp__claude_ai_Droit_Francais__get_article"
+      ],
+      "invariants": {
+        "expected_skill_trace": false,
+        "plugin_mcp_call_succeeded": false,
+        "refusal_to_pay": true,
+        "explicit_drh_handoff": true
+      },
+      "cost_usd": 0.5860971,
+      "result": "Réponse métier conforme sur le refus et la bascule, mais drh-fpt n'est pas activé et les outils juridiques viennent d'un connecteur global.",
+      "evidence_path": "tests/evidence/2026-09-20-v1.1.0/plugin-prime-depart-retraite.jsonl"
+    },
+    {
+      "case_id": "plugin-violation-donnees",
+      "status": "failed",
+      "activated_skills": ["dpo-ct", "recherche-juridique"],
+      "mcp_status": "needs-auth",
+      "mcp_tools": [],
+      "invariants": {
+        "expected_skill_trace": true,
+        "plugin_mcp_call_succeeded": false,
+        "risk_assessment": true,
+        "human_review": true
+      },
+      "cost_usd": 0.4676893,
+      "result": "Coactivation correcte et réponse exploitable, mais aucun appel réussi au MCP du plugin.",
+      "evidence_path": "tests/evidence/2026-09-20-v1.1.0/plugin-violation-donnees.jsonl"
+    },
+    {
+      "case_id": "plugin-mcp-indisponible",
+      "status": "failed",
+      "activated_skills": ["recherche-juridique"],
+      "mcp_status": "disabled",
+      "mcp_tools": [],
+      "invariants": {
+        "expected_skill_trace": true,
+        "explicit_degraded_mode": true,
+        "targeted_abstention": true,
+        "no_unretrieved_identifier": false
+      },
+      "cost_usd": 0.2950653,
+      "result": "La sortie est balisée et s'abstient sur la vigueur, mais reproduit une URL contenant un LEGIARTI non récupéré dans la session.",
+      "evidence_path": "tests/evidence/2026-09-20-v1.1.0/plugin-mcp-indisponible.jsonl"
+    }
+  ],
+  "codex_smoke": {
+    "status": "not_run",
+    "reason": "La campagne Claude Code n'a pas franchi la barrière de release."
+  }
+}

@@ -1,0 +1,7 @@
+{"type":"init","plugin_version":"1.1.0","plugin_commit":"ddb726eecfcc8f41159959ed9ea677182a49b1af","available_skills":["dirfi-fpt","dpm-fpt","dpo-ct","drh-fpt","recherche-juridique"],"standalone_droit_francais_loaded":false,"mcp_status":"needs-auth"}
+{"type":"skill_activation","skill":"dirfi-fpt"}
+{"type":"skill_activation","skill":"recherche-juridique"}
+{"type":"foreign_mcp_call","tool":"mcp__claude_ai_Droit_Francais__search_articles"}
+{"type":"foreign_mcp_call","tool":"mcp__claude_ai_Droit_Francais__search"}
+{"type":"foreign_mcp_call","tool":"mcp__claude_ai_Droit_Francais__get_article"}
+{"type":"result","status":"failed","reason":"missing_drh_activation_and_foreign_mcp","cost_usd":0.5860971,"missing_skills":["drh-fpt"],"plugin_mcp_tools":[],"observed_invariants":["refusal_to_pay","explicit_drh_handoff"]}

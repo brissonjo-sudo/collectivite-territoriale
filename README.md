@@ -1,80 +1,127 @@
 # Collectivité territoriale
 
-Source des plugins Claude Code et Codex destinés aux collectivités territoriales françaises. Elle regroupe quatre skills métier et une méthode juridique transverse :
+[![Validation du plugin](https://github.com/brissonjo-sudo/collectivite-territoriale/actions/workflows/ci.yml/badge.svg)](https://github.com/brissonjo-sudo/collectivite-territoriale/actions/workflows/ci.yml)
+
+Plugin Claude Code et Codex destiné aux collectivités territoriales françaises. Une seule installation réunit quatre expertises métier, une méthode de recherche juridique sourcée et un accès optionnel à Légifrance/Judilibre.
+
+> **Statut :** la version 1.1.0 est un candidat en cours de validation comportementale. La version publiée sur `main` reste la référence installable tant que la release 1.1.0 n'est pas taguée.
+
+Ce plugin aide à qualifier une situation, identifier les expertises à mobiliser et produire une réponse traçable. Il ne remplace ni la validation d'un juriste, ni le contrôle de l'autorité compétente, ni la vérification des textes officiels en vigueur.
+
+## Contenu
 
 | Skill | Domaine | Version embarquée |
-|---|---|---|
+|---|---|---:|
 | `collectivite-territoriale:dpm-fpt` | Police municipale et limites APJA | 1.0.5 |
 | `collectivite-territoriale:drh-fpt` | Ressources humaines territoriales | 0.5.1 |
 | `collectivite-territoriale:dpo-ct` | Protection des données | 0.2.1 |
 | `collectivite-territoriale:dirfi-fpt` | Finances locales | 1.0.4 |
 | `collectivite-territoriale:recherche-juridique` | Recherche et vérification du droit français | 3.5.0 |
 
-Le serveur MCP `droit-francais` est déclaré dans `.mcp.json` pour interroger Légifrance/Judilibre. Son utilisation peut demander une autorisation OAuth dans Claude Code. Le skill `recherche-juridique` complète ce serveur par la méthode de vérification de vigueur, de provenance et de citation ; l'accès au MCP et la méthode ne se substituent pas l'un à l'autre.
+Le serveur MCP `droit-francais`, déclaré une seule fois dans `.mcp.json`, fournit l'accès aux sources Légifrance/Judilibre. Le skill `recherche-juridique` apporte la méthode de vérification de vigueur, de provenance et de citation. Le serveur et la méthode sont complémentaires.
 
-## Claude Code : installation et mise à jour
+## Exemples d'usage
 
-Dans Claude Code :
+- Sécuriser une réponse de police municipale et arrêter l'analyse avant tout acte réservé à un OPJ.
+- Examiner une prime ou une décision RH avec les dimensions budgétaire, statutaire et juridique.
+- Qualifier une violation de données, apprécier le risque et vérifier le délai applicable.
+- Rechercher le droit en vigueur, citer les sources retrouvées et signaler explicitement ce qui n'a pas pu être vérifié.
+
+L'activation simultanée de plusieurs skills dépend de la question posée. Une réponse métier correcte ne constitue pas, à elle seule, une preuve que la méthode juridique ou le serveur MCP ont été utilisés.
+
+## Prérequis et limites
+
+- Claude Code ou Codex avec prise en charge des plugins et marketplaces Git.
+- Accès réseau au serveur MCP pour les recherches juridiques en mode nominal.
+- Autorisation OAuth si le client la demande. Aucun secret PISTE n'est distribué dans ce dépôt.
+- En cas d'indisponibilité du MCP, le plugin doit signaler la voie dégradée et ne pas inventer de référence.
+
+Le plugin traite le droit français et l'aide à la décision dans le contexte des collectivités territoriales. Toute conclusion sensible doit être confrontée à la source officielle et aux circonstances du dossier.
+
+La collecte et la transmission éventuelles de données sont décrites dans la [politique de confidentialité](PRIVACY.md). Le serveur MCP peut être désactivé lorsque la transmission d'une requête juridique au service distant n'est pas souhaitée.
+
+## Installation dans Claude Code
 
 ```text
 /plugin marketplace add brissonjo-sudo/collectivite-territoriale
 /plugin install collectivite-territoriale@collectivite-territoriale
 ```
 
-Pour actualiser une installation existante après une nouvelle version publiée :
+Après une nouvelle version publiée :
 
 ```text
 /plugin marketplace update collectivite-territoriale
 /plugin update collectivite-territoriale@collectivite-territoriale
 ```
 
-Les mises à jour automatiques peuvent être désactivées pour une marketplace tierce. Vérifier la version affichée après la mise à jour.
+Ouvrir une nouvelle session après l'installation ou la mise à jour afin de charger les skills et les outils du plugin.
 
-**Compte de l'auteur :** si ces cinq skills sont déjà synchronisés individuellement, ne pas installer ce plugin en plus. Les deux jeux coexistent sous des noms distincts et peuvent doubler le contexte chargé. Le plugin est prévu pour la distribution à d'autres collectivités.
+## Installation dans Codex
 
-## Codex / ChatGPT
-
-La version Codex est décrite par `.codex-plugin/plugin.json`. Elle réutilise les mêmes dossiers `skills/` et le même serveur juridique `.mcp.json` que la version Claude Code. Les cinq skills sont exposés sous le nom `collectivite-territoriale:<nom>`.
-
-La marketplace Codex est déclarée dans `.agents/plugins/marketplace.json`. Elle référence la racine de ce même dépôt via Git : aucune seconde copie des skills n'est nécessaire. Pour l'ajouter et installer le plugin dans Codex :
+La marketplace Codex est déclarée dans `.agents/plugins/marketplace.json` et référence directement ce dépôt Git :
 
 ```text
-codex plugin marketplace add brissonjo-sudo/collectivite-territoriale
+codex plugin marketplace add brissonjo-sudo/collectivite-territoriale --ref main
 codex plugin add collectivite-territoriale@collectivite-territoriale
 ```
 
-Pour les mises à jour ultérieures, utiliser `codex plugin marketplace upgrade collectivite-territoriale`, puis mettre à jour le plugin dans Codex. Ouvrir une nouvelle conversation après installation ou mise à jour afin de charger ses skills et outils. L'accès au serveur MCP juridique peut nécessiter une autorisation.
+Pour actualiser la marketplace :
 
-Cette marketplace Git est destinée à Codex CLI et à l'application de bureau ChatGPT ; elle ne publie pas le plugin dans l'annuaire public universel. Pour un espace de travail ChatGPT, un administrateur doit importer la marketplace depuis l'URL du dépôt. Comme le plugin déclare un serveur MCP, un tel import est utilisable dans l'application de bureau uniquement.
+```text
+codex plugin marketplace upgrade collectivite-territoriale
+```
 
-**Compte de l'auteur :** les cinq skills sont déjà présents individuellement. Ne pas installer aussi ce plugin, afin d'éviter les doublons et le surcoût de contexte. L'ajout de la marketplace seule n'installe pas le plugin.
+Le plugin peut aussi être installé depuis le répertoire des plugins de l'application de bureau après ajout de la marketplace. Ouvrir une nouvelle conversation après installation ou mise à jour.
 
-## Sources et synchronisation
+Cette marketplace Git sert au développement, aux tests et à la distribution directe. Elle ne publie pas automatiquement le plugin dans l'annuaire public universel. Dans un espace de travail ChatGPT, l'import et les autorisations restent administrés par l'organisation.
 
-Chaque dossier `skills/<nom>/` est une copie exacte des fichiers d'exécution de son dépôt amont. `upstream.json` fige le dépôt, le commit, la version et les chemins inclus. Le fichier `references/cache-taux-seuils.md` de `dirfi-fpt`, exclu de son propre paquet de distribution, n'est pas embarqué. Pour `recherche-juridique`, la racine canonique `skill/` est aplatie dans `skills/recherche-juridique/` et la licence amont est copiée avec le runtime ; aucun manifeste, serveur MCP ou fichier `.env` du dépôt juridique n'est dupliqué.
+> **Compte de l'auteur :** ne pas installer ce plugin en parallèle des cinq skills individuels. Les deux jeux coexistent sous des noms distincts et peuvent doubler le contexte chargé.
 
-Pour reproduire les copies depuis les dépôts locaux placés côte à côte :
+## Sources et reproductibilité
+
+Chaque dossier `skills/<nom>/` est une copie exacte des fichiers d'exécution de son dépôt amont. `upstream.json` fige le dépôt, le commit, la version et les chemins inclus.
+
+Pour `recherche-juridique`, la racine canonique `skill/` est aplatie dans `skills/recherche-juridique/`. Sa licence est copiée avec le runtime ; aucun manifeste, serveur MCP, fichier `.env` ou autre fichier de dépôt amont n'est dupliqué. Le fichier `references/cache-taux-seuils.md` de `dirfi-fpt`, exclu de son propre paquet de distribution, n'est pas embarqué.
+
+Pour reproduire les copies depuis des dépôts locaux placés côte à côte :
 
 ```text
 python scripts/sync_skills.py --local-repos C:\chemin\vers\repos
 python scripts/check_sync.py --local-repos C:\chemin\vers\repos
 ```
 
-Sans `--local-repos`, les scripts clonent les dépôts GitHub et vérifient les commits figés. La CI exécute `check_sync.py` et échoue si un fichier embarqué diffère, manque ou apparaît en plus. Une mise à jour d'un skill exige de changer son commit et sa version dans `upstream.json`, de relancer la synchronisation et d'incrémenter la version du plugin dans les deux manifestes.
+Sans `--local-repos`, les scripts clonent les dépôts GitHub et vérifient les commits figés. La CI échoue si un fichier embarqué diffère, manque ou apparaît en plus. Une mise à jour d'un skill exige de modifier son commit et sa version dans `upstream.json`, de relancer la synchronisation et d'incrémenter la version du plugin dans les deux manifestes.
 
-## Validation locale
+## Validation
 
 ```text
-claude plugin validate .
 python -m unittest discover -s tests
 python scripts/check_sync.py
+claude plugin validate .
 ```
 
-Le manifeste Codex est aussi vérifié localement avec le validateur du skill système `plugin-creator`.
+Le manifeste Codex est également contrôlé avec le validateur du skill système `plugin-creator`. Les cas de `tests/cas-plugin.json` couvrent notamment :
 
-Le cas de non-régression `tests/cas-plugin.json` vérifie la coordination
-DirFi/DRH/juridique sur une gratification de départ à la retraite, le garde-fou
-APJA sur une demande d'acte réservé à l'OPJ et la réponse DPO à une violation
-de données.
+- le garde-fou APJA sur une demande d'acte réservé à l'OPJ ;
+- une gratification de départ mobilisant finances, RH et recherche juridique ;
+- une violation de données mobilisant DPO et recherche juridique ;
+- le comportement dégradé lorsque le MCP juridique est désactivé.
 
-Le plan de construction et l'historique des audits préalables sont conservés dans `docs/plan-plugin.md`. Les licences et conditions d'utilisation des contenus métier restent celles de leurs dépôts amont ; ce dépôt ne leur attribue pas une licence nouvelle. Le runtime de `recherche-juridique` est attribué à `brissonjo-sudo` et reste distribué sous CC-BY-SA-4.0, dont le texte accompagne sa copie dans `skills/recherche-juridique/LICENSE`.
+Les fichiers présents prouvent l'installation conjointe, pas la coactivation effective. La release 1.1.0 exige donc aussi des traces comportementales en conversations fraîches.
+
+## Architecture et décisions
+
+- `.codex-plugin/plugin.json` : manifeste de compatibilité Codex.
+- `.claude-plugin/plugin.json` : manifeste Claude Code.
+- `.agents/plugins/marketplace.json` et `.claude-plugin/marketplace.json` : catalogues de distribution.
+- `.mcp.json` : unique déclaration du serveur `droit-francais`.
+- `skills/` : cinq runtimes figés et synchronisés.
+- `upstream.json` et `scripts/` : provenance et contrôle de dérive.
+
+Le format de compatibilité actuel reste volontairement utilisé pour la release 1.1.0. La migration vers le manifeste portable Agent Plugins fera l'objet d'un chantier séparé. Le plan de construction et les décisions d'architecture sont conservés dans `docs/`.
+
+## Licences
+
+Le plugin et ses cinq contenus embarqués sont distribués sous licence [CC-BY-SA-4.0](LICENSE), avec attribution à `brissonjo-sudo`. Cette licence globale couvre notamment `dpm-fpt` et `dpo-ct`, qui ne disposaient pas auparavant d'une licence explicite dans leur dépôt amont.
+
+Les textes, décisions et métadonnées récupérés depuis Légifrance ou Judilibre restent soumis aux droits, licences et conditions de réutilisation de leurs producteurs. Le texte CC-BY-SA-4.0 accompagne également la copie du runtime `recherche-juridique` dans `skills/recherche-juridique/LICENSE`.
