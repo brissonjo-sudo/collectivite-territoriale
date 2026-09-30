@@ -273,7 +273,10 @@ class CodexPluginTests(unittest.TestCase):
                         self.assertEqual(run["mcp_tools"], [])
         self.assertEqual(
             evidence["release_ready"],
-            all(run["status"] == "passed" for run in runs.values()),
+            all(run["status"] == "passed" for run in runs.values())
+            and evidence.get("review", {}).get("human_legal_validation") is True
+            and evidence.get("codex_smoke", {}).get("status") == "passed"
+            and evidence.get("codex_smoke", {}).get("plugin_commit") == evidence["plugin_commit"],
         )
 
     def test_barriere_de_release_comportementale(self) -> None:

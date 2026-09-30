@@ -1,4 +1,4 @@
-"""Vérifie que chaque skill embarqué est identique à son commit amont figé."""
+"""Vérifie chaque skill contre son commit amont et ses surcharges locales figées."""
 
 from __future__ import annotations
 

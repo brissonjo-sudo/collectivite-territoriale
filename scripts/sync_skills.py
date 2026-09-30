@@ -1,7 +1,8 @@
 """Recopie les fichiers d'exécution des skills depuis des commits Git figés.
 
 La liste des dépôts, commits, versions et chemins vient exclusivement de
-upstream.json. Aucune modification du contenu des skills n'est effectuée.
+upstream.json. Les surcharges locales déclarées sont appliquées après contrôle
+des empreintes du contenu amont et des corrections.
 """
 
 from __future__ import annotations
@@ -13,6 +14,8 @@ import shutil
 import subprocess
 import tempfile
 from pathlib import Path, PurePosixPath
+
+from instruction_overlays import apply_overlays, validate_overlays
 
 ROOT = Path(__file__).resolve().parents[1]
 SKILL_NAME = re.compile(r"^[a-z0-9]+(?:-[a-z0-9]+)*$")
@@ -53,6 +56,7 @@ def load_upstreams(root: Path) -> dict[str, dict]:
     if data.get("format_version") != 1 or not isinstance(data.get("skills"), dict):
         raise ValueError("Format upstream.json non pris en charge")
     for name, spec in data["skills"].items():
+        validate_overlays(spec.get("instruction_overlays", []))
         if not SKILL_NAME.fullmatch(name):
             raise ValueError(f"Nom de skill invalide : {name!r}")
         if not COMMIT_ID.fullmatch(spec["commit"]):
@@ -161,7 +165,7 @@ def snapshots(root: Path, local_repos: Path | None = None) -> dict[str, dict[str
             source = local_repos / spec.get("local_directory", name)
             if not (source / ".git").exists():
                 raise ValueError(f"Dépôt local introuvable : {source}")
-            result[name] = archive_files(source, spec)
+            result[name] = apply_overlays(root, archive_files(source, spec), spec.get("instruction_overlays", []))
         return result
     with tempfile.TemporaryDirectory(prefix="collectivite-sync-") as temp:
         for name, spec in upstreams.items():
@@ -170,7 +174,7 @@ def snapshots(root: Path, local_repos: Path | None = None) -> dict[str, dict[str
                 "clone", "--quiet", "--no-checkout",
                 spec["repository"], str(source),
             )
-            result[name] = archive_files(source, spec)
+            result[name] = apply_overlays(root, archive_files(source, spec), spec.get("instruction_overlays", []))
     return result
 
 

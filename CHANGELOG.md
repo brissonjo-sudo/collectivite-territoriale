@@ -2,6 +2,11 @@
 
 ## 1.1.0 — 2026-09-20
 
+- Corrections locales traçables des instructions DPM, DPO et recherche
+  juridique : provenance de session, abstention, absence de pouvoir d'attente
+  et calcul des délais uniquement à partir de faits connus. Les bases amont
+  restent figées ; surcharges contrôlées par SHA-256 et ancre unique.
+
 - Ajout de `recherche-juridique` v3.5.0 comme cinquième skill, figé sur le
   commit amont `e437d10a2d4bbf66ba7a9c1e9fb49e773166054e`.
 - Conservation d'un unique serveur MCP `droit-francais` : le skill apporte la

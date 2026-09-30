@@ -85,7 +85,9 @@ Cette marketplace Git sert au développement, aux tests et à la distribution di
 
 ## Sources et reproductibilité
 
-Chaque dossier `skills/<nom>/` est une copie exacte des fichiers d'exécution de son dépôt amont. `upstream.json` fige le dépôt, le commit, la version et les chemins inclus.
+Chaque dossier `skills/<nom>/` provient des fichiers d'exécution d'un commit amont figé. `upstream.json` fixe le dépôt, le commit, la version de base et les chemins inclus. `dirfi-fpt` et `drh-fpt` restent des copies exactes. `dpm-fpt`, `dpo-ct` et `recherche-juridique` sont des **variantes locales du plugin**, avec les corrections de méthode conservées dans `overlays/` et déclarées dans `instruction_overlays`.
+
+Chaque surcharge est liée à l'empreinte SHA-256 exacte de son fichier amont et de son texte local ; elle est insérée une seule fois à une ancre unique. Tout changement de base, de correction ou d'ancre bloque la synchronisation tant qu'il n'a pas été revu. Les versions internes identifient la base amont, pas une nouvelle release de ces dépôts. Le commit du plugin identifie la variante complète. Aucun dépôt amont n'est modifié par ces surcharges.
 
 Pour `recherche-juridique`, la racine canonique `skill/` est aplatie dans `skills/recherche-juridique/`. Sa licence est copiée avec le runtime ; aucun manifeste, serveur MCP, fichier `.env` ou autre fichier de dépôt amont n'est dupliqué. Le fichier `references/cache-taux-seuils.md` de `dirfi-fpt`, exclu de son propre paquet de distribution, n'est pas embarqué.
 
@@ -96,7 +98,7 @@ python scripts/sync_skills.py --local-repos C:\chemin\vers\repos
 python scripts/check_sync.py --local-repos C:\chemin\vers\repos
 ```
 
-Sans `--local-repos`, les scripts clonent les dépôts GitHub et vérifient les commits figés. La CI échoue si un fichier embarqué diffère, manque ou apparaît en plus. Une mise à jour d'un skill exige de modifier son commit et sa version dans `upstream.json`, de relancer la synchronisation et d'incrémenter la version du plugin dans les deux manifestes.
+Sans `--local-repos`, les scripts clonent les dépôts GitHub et vérifient les commits figés, puis appliquent uniquement les surcharges déclarées et vérifiées. La CI échoue si un fichier embarqué diffère du résultat reproductible, manque ou apparaît en plus. Une mise à jour d'un skill exige de modifier son commit et sa version dans `upstream.json`, de relancer la synchronisation et d'incrémenter la version du plugin dans les deux manifestes. Une correction locale exige de revoir ses empreintes et son ancre, de régénérer les copies et de refaire la campagne comportementale.
 
 ## Validation
 
