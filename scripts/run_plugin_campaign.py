@@ -69,6 +69,8 @@ def build_prompt(case: dict[str, Any]) -> str:
         "Contrat de campagne : avant de répondre, active exactement une fois, "
         f"dans cet ordre, {ordered}. {mcp_rule} {web_rule} "
         "Ne remplace jamais une activation Skill par une simple mention textuelle. "
+        "Read est disponible pour consulter les références et profils demandés "
+        "par les skills, uniquement sous le dossier skills du plugin local. "
         "Produis ensuite une réponse unique et finale à la demande suivante.\n\n"
         f"{case['prompt']}"
     )
@@ -77,7 +79,7 @@ def build_prompt(case: dict[str, Any]) -> str:
 def allowed_tools(case: dict[str, Any]) -> str:
     """Construit la liste fermée des outils autorisés sans interaction."""
 
-    tools = ["Skill"]
+    tools = ["Skill", "Read(./skills/**)"]
     if case["web_mode"] == "official_source":
         tools.append("WebFetch")
     if case["mcp_mode"] == "required":
@@ -88,7 +90,7 @@ def allowed_tools(case: dict[str, Any]) -> str:
 def builtin_tools(case: dict[str, Any]) -> str:
     """Limite les outils intégrés, indépendamment des permissions implicites."""
 
-    tools = ["Skill"]
+    tools = ["Skill", "Read"]
     if case["web_mode"] == "official_source":
         tools.append("WebFetch")
     return ",".join(tools)
@@ -186,6 +188,18 @@ def sanitize(events: list[dict[str, Any]], case: dict[str, Any]) -> list[dict[st
                     "type": "skill_activation",
                     "skill": inputs.get("skill"),
                 }
+            elif name == "Read":
+                try:
+                    relative = Path(inputs.get("file_path", "")).resolve().relative_to(
+                        (ROOT / "skills").resolve()
+                    )
+                    record = {
+                        "type": "plugin_file_read",
+                        "path": relative.as_posix(),
+                        "succeeded": None,
+                    }
+                except (ValueError, OSError):
+                    record = {"type": "unexpected_tool_call", "tool": "Read outside plugin skills"}
             elif name.startswith(LEGAL_MCP_PREFIX):
                 record = {
                     "type": "plugin_mcp_call",
@@ -199,6 +213,7 @@ def sanitize(events: list[dict[str, Any]], case: dict[str, Any]) -> list[dict[st
                     "type": "official_source_call",
                     "tool": name,
                     "host": urlparse(inputs.get("url", "")).hostname,
+                    "source_path": urlparse(inputs.get("url", "")).path,
                     "succeeded": None,
                 }
             else:
@@ -263,6 +278,11 @@ def technical_failures(clean: list[dict[str, Any]], case: dict[str, Any]) -> lis
         failures.append("plugin_mcp_call_missing")
     if case["mcp_mode"] == "disabled" and plugin_calls:
         failures.append("plugin_mcp_call_unexpected")
+    if case["mcp_mode"] == "disabled" and any(
+        event["type"] == "plugin_mcp_call" for event in clean
+    ):
+        if "plugin_mcp_call_unexpected" not in failures:
+            failures.append("plugin_mcp_call_unexpected")
 
     official_calls = [
         event
@@ -274,7 +294,10 @@ def technical_failures(clean: list[dict[str, Any]], case: dict[str, Any]) -> lis
         expected_hosts = set(case["official_source_hosts"])
         if not any(event.get("host") in expected_hosts for event in official_calls):
             failures.append("official_source_call_missing")
-        if any(event.get("host") not in expected_hosts for event in official_calls):
+        if any(
+            event.get("host") not in expected_hosts
+            for event in clean if event["type"] == "official_source_call"
+        ):
             failures.append("non_official_web_source")
     elif any(event["type"] == "official_source_call" for event in clean):
         failures.append("web_call_unexpected")
@@ -339,6 +362,8 @@ def main() -> int:
             continue
         clean, process_exit = execute(case, args.claude)
         failures = technical_failures(clean, case)
+        if process_exit:
+            failures.append("process_exit_nonzero")
         summary = {
             "type": "technical_assessment",
             "case_id": case["id"],

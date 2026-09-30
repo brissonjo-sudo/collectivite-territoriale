@@ -13,7 +13,7 @@ import sys
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
-from run_plugin_campaign import build_command, build_prompt, technical_failures  # noqa: E402
+from run_plugin_campaign import build_command, build_prompt, technical_failures, sanitize  # noqa: E402
 
 
 def load_json(path: str) -> dict:
@@ -179,10 +179,33 @@ class CodexPluginTests(unittest.TestCase):
 
         dpo = next(case for case in cases if case["id"] == "plugin-violation-donnees")
         dpo_command = build_command(dpo, "claude")
-        self.assertEqual(dpo_command[dpo_command.index("--tools") + 1], "Skill,WebFetch")
+        self.assertEqual(dpo_command[dpo_command.index("--tools") + 1], "Skill,Read,WebFetch")
         degraded = next(case for case in cases if case["id"] == "plugin-mcp-indisponible")
         degraded_command = build_command(degraded, "claude")
-        self.assertEqual(degraded_command[degraded_command.index("--tools") + 1], "Skill")
+        self.assertEqual(degraded_command[degraded_command.index("--tools") + 1], "Skill,Read")
+        self.assertIn("Read(./skills/**)", command[command.index("--allowedTools") + 1])
+
+    def test_lecture_des_references_bornee_et_assainie(self) -> None:
+        case = load_json("tests/cas-plugin.json")[0]
+        calls = [
+            {"type": "tool_use", "name": "Read", "id": "read1",
+             "input": {"file_path": str(ROOT / "skills/recherche-juridique/references/modules.md")}},
+            {"type": "tool_use", "name": "Read", "id": "read2",
+             "input": {"file_path": str(ROOT / ".env")}},
+        ]
+        clean = sanitize([{"message": {"content": calls}},
+                          {"message": {"content": [{"type": "tool_result", "tool_use_id": "read1", "content": "NOT_TO_RETAIN"}]}}], case)
+        self.assertEqual(clean[0]["type"], "plugin_file_read")
+        self.assertTrue(clean[0]["succeeded"])
+        self.assertEqual(clean[0]["path"], "recherche-juridique/references/modules.md")
+        self.assertEqual(clean[1]["type"], "unexpected_tool_call")
+        self.assertNotIn("NOT_TO_RETAIN", json.dumps(clean))
+
+    def test_mcp_desactive_refuse_meme_un_appel_en_echec(self) -> None:
+        case = load_json("tests/cas-plugin.json")[-1]
+        self.assertIn("plugin_mcp_call_unexpected", technical_failures([
+            {"type": "plugin_mcp_call", "succeeded": False}
+        ], case))
 
     def test_harnais_refuse_skill_autonome_et_mcp_etranger(self) -> None:
         case = next(
