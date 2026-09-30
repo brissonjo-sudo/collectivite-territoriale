@@ -23,4 +23,3 @@ Ne pas présenter la notification CNIL préalable comme condition de
 l'information des personnes, ni attendre son achèvement lorsque l'information
 des personnes doit intervenir dans les meilleurs délais. La décision revient
 au responsable de traitement, après conseil du DPO et validation humaine.
-

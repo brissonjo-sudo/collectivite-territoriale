@@ -17,9 +17,14 @@ de séquence « conserver jusqu'à son arrivée ». Un STOP ou une instruction
 hiérarchique ne crée aucun fondement supplémentaire.
 
 Le socle embarqué et ses dates historiques ne valent pas une consultation
-officielle dans la session. Pour chaque référence utilisée, la récupérer à la
-source et contrôler son applicabilité, ou indiquer explicitement qu'elle est
-non vérifiée dans cette session. Ne pas reprendre d'identifiant du socle comme
-preuve d'une récupération actuelle. En doute persistant sur une contrainte,
-ne pas la recommander ; maintenir le STOP et le compte rendu à l'OPJ.
-
+officielle dans la session. **Read d'un fichier local n'est pas une récupération
+en source primaire**, même si ce fichier contient des identifiants et des dates
+de contrôle. Ne pas recopier ces identifiants dans la réponse : un identifiant
+n'est restituable que si un outil d'accès à la source officielle l'a réellement
+récupéré dans cette session. Les mentions « au socle », « recontrôlé » ou
+« applicable aujourd'hui » ne remplacent pas cette vérification. Pour une
+référence non récupérée, citer seulement son numéro si nécessaire, la marquer
+explicitement **non vérifiée dans cette session** et ne pas affirmer sa vigueur
+actuelle. Ne pas conclure globalement que tous les articles sont applicables
+aujourd'hui après n'en avoir contrôlé qu'une partie. En doute persistant sur
+une contrainte, ne pas la recommander ; maintenir le STOP et le compte rendu.

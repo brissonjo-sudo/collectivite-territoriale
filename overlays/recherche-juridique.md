@@ -8,6 +8,9 @@ sans modifier les étapes ni autoriser d'autres outils.
   déclarer une référence vérifiée aujourd'hui, récupérer dans cette session
   son texte et les éléments permettant d'établir sa vigueur à la date utile.
   Un appel d'outil réussi ne valide pas les autres références de la réponse.
+  Read d'un fichier embarqué n'est pas un accès à la source primaire : même
+  lu dans cette session, son contenu historique ne prouve ni la récupération
+  officielle d'un identifiant ni la vigueur actuelle du texte.
   Sans récupération suffisante, signaler le point comme non vérifié et ne
   pas conclure sur son applicabilité actuelle.
 - **Identifiants** : la règle de provenance vaut aussi pour les identifiants
@@ -27,4 +30,3 @@ sans modifier les étapes ni autoriser d'autres outils.
   dans un tableau, une échéance ou la synthèse finale.
 - **Citation** : des guillemets exigent le libellé réellement récupéré.
   Sinon paraphraser en indiquant la source et les limites, sans faux extrait.
-
