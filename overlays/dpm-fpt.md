@@ -7,6 +7,18 @@ du §5.2, sans préambule, puis expliquer le refus sans dérouler l'acte interdi
 La flagrance ne transforme pas un délit en crime et ne confère pas les pouvoirs
 de l'OPJ : ne qualifier que ce que les faits et sources permettent d'établir.
 
+**Bénéficiaires de chaque compétence.** Vérifier la catégorie exacte d'agent
+visée par chaque alinéa, pas seulement le titre général « APJA ». Une faculté
+réservée aux catégories 1° à 1° ter de l'art. 21 CPP ne s'étend pas aux agents
+PM classés au 2°, même sous contrôle d'un OPJ. Ne pas recommander à l'agent PM
+le recueil de déclarations de témoins par procès-verbal sur ce fondement.
+Distinguer les renseignements recueillis dans les formes propres à la PM,
+les observations éventuelles du contrevenant lors d'un PV de constatation,
+et la réception formalisée de déclarations par un agent d'une autre catégorie.
+Si une réforme est invoquée, contrôler dans la source actuelle les bénéficiaires,
+les conditions et les exclusions avant de conclure. Le refus pour l'agent PM
+ne justifie pas une affirmation générale sur les compétences de tous les APJA.
+
 **Ne pas créer un pouvoir d'attente.** Distinguer l'appréhension et la conduite
 devant l'OPJ le plus proche sous les conditions de l'art. 73 CPP, la route
 distincte du relevé d'identité de l'art. 78-6, et l'absence de fondement.
