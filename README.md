@@ -4,7 +4,7 @@
 
 Plugin Claude Code et Codex destiné aux collectivités territoriales françaises. Une seule installation réunit quatre expertises métier, une méthode de recherche juridique sourcée et un accès optionnel à Légifrance/Judilibre.
 
-> **Statut :** la version 1.1.0 est un candidat en cours de validation comportementale. La version publiée sur `main` reste la référence installable tant que la release 1.1.0 n'est pas taguée.
+> **Statut :** la version 1.1.1 est un candidat d'alignement DRH, sans validation comportementale ni publication. La marketplace suit `main` : elle distribue le contenu fusionné, même sans tag. La fusion et l'installation ne prouvent pas la qualification d'une release.
 
 Ce plugin aide à qualifier une situation, identifier les expertises à mobiliser et produire une réponse traçable. Il ne remplace ni la validation d'un juriste, ni le contrôle de l'autorité compétente, ni la vérification des textes officiels en vigueur.
 
@@ -13,7 +13,7 @@ Ce plugin aide à qualifier une situation, identifier les expertises à mobilise
 | Skill | Domaine | Version embarquée |
 |---|---|---:|
 | `collectivite-territoriale:dpm-fpt` | Police municipale et limites APJA | 1.0.5 |
-| `collectivite-territoriale:drh-fpt` | Ressources humaines territoriales | 0.5.1 |
+| `collectivite-territoriale:drh-fpt` | Ressources humaines territoriales | 0.6.0 |
 | `collectivite-territoriale:dpo-ct` | Protection des données | 0.2.1 |
 | `collectivite-territoriale:dirfi-fpt` | Finances locales | 1.0.4 |
 | `collectivite-territoriale:recherche-juridique` | Recherche et vérification du droit français | 3.5.0 |
@@ -115,7 +115,7 @@ Le manifeste Codex est également contrôlé avec le validateur du skill systèm
 - une violation de données mobilisant DPO et recherche juridique ;
 - le comportement dégradé lorsque le MCP juridique est désactivé.
 
-Les fichiers présents prouvent l'installation conjointe, pas la coactivation effective. La release 1.1.0 exige donc aussi des traces comportementales en conversations fraîches.
+Les fichiers présents prouvent l'installation conjointe, pas la coactivation effective. La release 1.1.1 exige donc aussi des traces comportementales en conversations fraîches. Le statut du candidat est conservé dans `tests/evidence/release-1.1.1.json` ; les traces 1.1.0 restent historiques et ne qualifient pas le nouveau runtime DRH.
 
 Le lanceur `scripts/run_plugin_campaign.py` exécute les quatre scénarios dans
 des sessions non persistées, impose les activations qualifiées attendues,
@@ -132,7 +132,7 @@ humaine des invariants métier avant d'être promue en preuve de release.
 - `skills/` : cinq runtimes figés et synchronisés.
 - `upstream.json` et `scripts/` : provenance et contrôle de dérive.
 
-Le format de compatibilité actuel reste volontairement utilisé pour la release 1.1.0. La migration vers le manifeste portable Agent Plugins fera l'objet d'un chantier séparé. Le plan de construction et les décisions d'architecture sont conservés dans `docs/`.
+Le format de compatibilité actuel reste volontairement utilisé pour la release 1.1.1. La migration vers le manifeste portable Agent Plugins fera l'objet d'un chantier séparé. Le plan de construction et les décisions d'architecture sont conservés dans `docs/`.
 
 ## Licences
 

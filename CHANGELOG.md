@@ -1,5 +1,16 @@
 # Historique des versions
 
+## 1.1.1 — 2026-10-03 — Candidat d'alignement DRH
+
+- Mise à jour de `drh-fpt` vers 0.6.0 depuis `main`, au commit
+  `f81c9b955f7ebb47df7e93bdc41ac743d85a2973` : dix fichiers modifiés et
+  ajout de `references/contrat-execution.md`.
+- Conservation des quatre autres bases et des trois surcharges déclarées.
+- Clarification de la référence DPM : `main` en 1.0.5, distinct de la branche
+  par défaut et du checkout local en 1.0.3 au jour du contrôle.
+- Nouvelle barrière de release liée à la 1.1.1 ; les preuves historiques de
+  la 1.1.0 ne valent pas qualification de cette mise à jour.
+
 ## 1.1.0 — 2026-09-20
 
 - Corrections locales traçables des instructions DPM, DPO et recherche
