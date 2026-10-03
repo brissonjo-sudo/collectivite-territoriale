@@ -5,26 +5,91 @@
       "repository": "https://github.com/brissonjo-sudo/Dpm-fpt.git",
       "commit": "1668c89798f1f50a829c0b94d3cf6bf33a3640fb",
       "version": "1.0.5",
-      "paths": ["SKILL.md", "references/", "objets/"]
+      "paths": [
+        "SKILL.md",
+        "references/",
+        "objets/"
+      ],
+      "instruction_overlays": [
+        {
+          "target": "SKILL.md",
+          "source": "overlays/dpm-fpt.md",
+          "base_sha256": "f6820c1f51013029268cd68b8db564c1b88965ff77fa678c6b7aeb5a37c3ca96",
+          "source_sha256": "087b9ab52c9feb7435cecb1701a7f27d955d8c2d4e3ec1b70e55dfa32e6e094a",
+          "anchor": "## 1. Déclenchement"
+        }
+      ]
     },
     "drh-fpt": {
       "repository": "https://github.com/brissonjo-sudo/Drh-fpt.git",
       "commit": "f07e2b6f4ecee5175a45eb696d25d98fb3f9b0ee",
       "version": "0.5.1",
-      "paths": ["SKILL.md", "references/", "assets/"]
+      "paths": [
+        "SKILL.md",
+        "references/",
+        "assets/"
+      ]
     },
     "dpo-ct": {
       "repository": "https://github.com/brissonjo-sudo/DPO-CT.git",
       "commit": "f3406f412368199a33f47e7861eb450eab2b2cdb",
       "version": "0.2.1",
-      "paths": ["SKILL.md", "references/", "assets/"]
+      "paths": [
+        "SKILL.md",
+        "references/",
+        "assets/"
+      ],
+      "instruction_overlays": [
+        {
+          "target": "SKILL.md",
+          "source": "overlays/dpo-ct.md",
+          "base_sha256": "41e4f3b262f8bbd3e7ca568613c57ad053399311a946a4aec3bb0fa1adc602b7",
+          "source_sha256": "01e06632f376a5b6cf7a5ff1304312709db9ba9fba0da91d64851ed0cdada3d5",
+          "anchor": "## 1. Déclenchement"
+        }
+      ]
     },
     "dirfi-fpt": {
       "repository": "https://github.com/brissonjo-sudo/DirFi-fpt.git",
       "commit": "d970fe530d3f50f6b4c330e3cfb85db35b7126ab",
       "version": "1.0.4",
-      "paths": ["SKILL.md", "references/", "objets/"],
-      "exclude": ["references/cache-taux-seuils.md"]
+      "paths": [
+        "SKILL.md",
+        "references/",
+        "objets/"
+      ],
+      "exclude": [
+        "references/cache-taux-seuils.md"
+      ]
+    },
+    "recherche-juridique": {
+      "repository": "https://github.com/brissonjo-sudo/droit-francais-skill.git",
+      "commit": "e437d10a2d4bbf66ba7a9c1e9fb49e773166054e",
+      "version": "3.5.0",
+      "source_root": "skill/",
+      "local_directory": "droit-francais-skill",
+      "paths": [
+        "SKILL.md",
+        "CHANGELOG.md",
+        "profils/",
+        "references/",
+        "scripts/"
+      ],
+      "additional_files": [
+        {
+          "source": "LICENSE",
+          "target": "LICENSE"
+        }
+      ],
+      "instruction_overlays": [
+        {
+          "target": "SKILL.md",
+          "source": "overlays/recherche-juridique.md",
+          "base_sha256": "33a48ee9e830dcde148a80ecb4fa74c795ec11eca3fad7c9b5370d7162662857",
+          "source_sha256": "03c5250538c663547257022f2161d9dbb65f549f5617c29ed794bedffe003f2a",
+          "anchor": "## Déclenchement"
+        }
+      ]
     }
   }
 }

@@ -1,4 +1,4 @@
-"""Vérifie que chaque skill embarqué est identique à son commit amont figé."""
+"""Vérifie chaque skill contre son commit amont et ses surcharges locales figées."""
 
 from __future__ import annotations
 
@@ -45,7 +45,7 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--local-repos", type=Path,
-        help="Dossier contenant les quatre dépôts locaux, pour travailler hors réseau",
+        help="Dossier contenant les cinq dépôts locaux, pour travailler hors réseau",
     )
     args = parser.parse_args()
     expected = snapshots(ROOT, args.local_repos)

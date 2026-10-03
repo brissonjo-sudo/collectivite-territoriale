@@ -1,34 +1,41 @@
 {
   "name": "collectivite-territoriale",
-  "version": "1.0.1",
-  "description": "Quatre expertises métier pour les collectivités territoriales françaises, avec accès au serveur juridique Légifrance/Judilibre.",
+  "version": "1.1.0",
+  "description": "Quatre expertises métier et une méthode juridique transverse pour les collectivités territoriales françaises, avec accès à Légifrance/Judilibre.",
   "author": {
     "name": "brissonjo-sudo",
     "url": "https://github.com/brissonjo-sudo"
   },
   "homepage": "https://github.com/brissonjo-sudo/collectivite-territoriale",
   "repository": "https://github.com/brissonjo-sudo/collectivite-territoriale",
+  "license": "CC-BY-SA-4.0",
   "keywords": [
     "collectivites-territoriales",
     "police-municipale",
     "ressources-humaines",
     "protection-des-donnees",
-    "finances-locales"
+    "finances-locales",
+    "recherche-juridique",
+    "légifrance"
   ],
   "skills": "./skills/",
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Collectivité territoriale",
-    "shortDescription": "Quatre expertises pour les collectivités",
-    "longDescription": "Police municipale, ressources humaines territoriales, protection des données et finances locales, avec accès au serveur juridique Légifrance/Judilibre.",
+    "shortDescription": "Quatre métiers et une méthode juridique",
+    "longDescription": "Police municipale, ressources humaines territoriales, protection des données et finances locales, complétées par une méthode de recherche juridique et un accès Légifrance/Judilibre.",
     "developerName": "brissonjo-sudo",
     "category": "Productivity",
     "capabilities": ["Interactive", "MCP"],
     "websiteURL": "https://github.com/brissonjo-sudo/collectivite-territoriale",
+    "privacyPolicyURL": "https://github.com/brissonjo-sudo/collectivite-territoriale/blob/main/PRIVACY.md",
+    "composerIcon": "./assets/icon.png",
+    "logo": "./assets/icon.png",
     "defaultPrompt": [
       "Aide-moi à traiter une question de police municipale.",
       "Analyse cette situation RH dans la fonction publique territoriale.",
-      "Vérifie ce point de finances locales avec ses sources."
+      "Vérifie ce point de finances locales avec ses sources.",
+      "Recherche et vérifie cette règle de droit français."
     ]
   }
 }

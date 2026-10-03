@@ -1,0 +1,3 @@
+{"type":"init","plugin_version":"1.1.0","plugin_commit":"ddb726eecfcc8f41159959ed9ea677182a49b1af","available_skills":["dirfi-fpt","dpm-fpt","dpo-ct","drh-fpt","recherche-juridique"],"standalone_droit_francais_loaded":false,"mcp_status":"needs-auth"}
+{"type":"skill_activation","skill":"recherche-juridique"}
+{"type":"result","status":"failed","reason":"budget_exceeded_before_final","cost_usd":0.36590865,"missing_skills":["dpm-fpt"],"plugin_mcp_tools":[]}
