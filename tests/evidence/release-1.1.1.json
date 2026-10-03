@@ -1,0 +1,27 @@
+{
+  "date": "2026-10-03",
+  "plugin_version": "1.1.1",
+  "plugin_commit": null,
+  "release_ready": false,
+  "upstream_commits": {
+    "dpm-fpt": "1668c89798f1f50a829c0b94d3cf6bf33a3640fb",
+    "drh-fpt": "f81c9b955f7ebb47df7e93bdc41ac743d85a2973",
+    "dpo-ct": "f3406f412368199a33f47e7861eb450eab2b2cdb",
+    "dirfi-fpt": "d970fe530d3f50f6b4c330e3cfb85db35b7126ab",
+    "recherche-juridique": "e437d10a2d4bbf66ba7a9c1e9fb49e773166054e"
+  },
+  "release_blockers": [
+    "La campagne comportementale du candidat 1.1.1 n'a pas été exécutée.",
+    "Les traces historiques de la 1.1.0 ne qualifient pas le runtime DRH 0.6.0 ; elles consignaient des échecs d'authentification MCP et de coactivation.",
+    "La revue humaine et le smoke Codex du commit candidat restent à réaliser."
+  ],
+  "historical_evidence": "tests/evidence/2026-09-20-validation-locale.json",
+  "runs": [],
+  "review": {
+    "human_legal_validation": false
+  },
+  "codex_smoke": {
+    "status": "not_run",
+    "plugin_commit": null
+  }
+}

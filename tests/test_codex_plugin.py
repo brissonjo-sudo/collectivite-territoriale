@@ -72,6 +72,8 @@ class CodexPluginTests(unittest.TestCase):
         claude = load_json(".claude-plugin/plugin.json")
         self.assertEqual(codex["name"], claude["name"])
         self.assertEqual(codex["version"], claude["version"])
+        marketplace = load_json(".claude-plugin/marketplace.json")
+        self.assertEqual(marketplace["plugins"][0]["version"], codex["version"])
         self.assertEqual(codex["repository"], claude["repository"])
         self.assertEqual(codex["homepage"], claude["homepage"])
         self.assertEqual(codex["license"], "CC-BY-SA-4.0")
@@ -279,8 +281,47 @@ class CodexPluginTests(unittest.TestCase):
             and evidence.get("codex_smoke", {}).get("plugin_commit") == evidence["plugin_commit"],
         )
 
+    def test_preuve_courante_correspond_au_runtime(self) -> None:
+        manifest = load_json(".codex-plugin/plugin.json")
+        evidence = load_json(f"tests/evidence/release-{manifest['version']}.json")
+        self.assertEqual(evidence["plugin_version"], manifest["version"])
+        self.assertEqual(
+            evidence["upstream_commits"],
+            {name: spec["commit"] for name, spec in load_json("upstream.json")["skills"].items()},
+        )
+        cases = {case["id"]: case for case in load_json("tests/cas-plugin.json")}
+        runs = {run["case_id"]: run for run in evidence["runs"]}
+        self.assertEqual(len(runs), len(evidence["runs"]))
+        qualified_runs = set(runs) == set(cases) and all(
+            run["status"] == "passed"
+            and run.get("plugin_commit") == evidence["plugin_commit"]
+            and set(cases[case_id]["skills"]).issubset(run["activated_skills"])
+            and bool(run["invariants"])
+            and all(run["invariants"].values())
+            and (ROOT / run["evidence_path"]).is_file()
+            and (
+                any(tool.startswith("mcp__droit-francais__") for tool in run["mcp_tools"])
+                if cases[case_id]["mcp_mode"] == "required"
+                else run["mcp_status"] == "disabled" and not run["mcp_tools"]
+            )
+            for case_id, run in runs.items()
+        )
+        qualified_commit = (
+            isinstance(evidence["plugin_commit"], str)
+            and len(evidence["plugin_commit"]) == 40
+            and all(char in "0123456789abcdef" for char in evidence["plugin_commit"])
+        )
+        self.assertEqual(
+            evidence["release_ready"],
+            qualified_runs and qualified_commit
+            and evidence["review"]["human_legal_validation"] is True
+            and evidence["codex_smoke"]["status"] == "passed"
+            and evidence["codex_smoke"]["plugin_commit"] == evidence["plugin_commit"],
+        )
+
     def test_barriere_de_release_comportementale(self) -> None:
-        evidence = load_json("tests/evidence/2026-09-20-validation-locale.json")
+        manifest = load_json(".codex-plugin/plugin.json")
+        evidence = load_json(f"tests/evidence/release-{manifest['version']}.json")
         self.assertTrue(
             evidence["release_ready"],
             "Release bloquée : " + " | ".join(evidence["release_blockers"]),
