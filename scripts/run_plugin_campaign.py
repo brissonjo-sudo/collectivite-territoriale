@@ -308,6 +308,8 @@ def technical_failures(clean: list[dict[str, Any]], case: dict[str, Any]) -> lis
     if any(event["type"] == "unexpected_tool_call" for event in clean):
         failures.append("unexpected_tool_call")
     if any(event["type"] == "plugin_file_read" and event.get("succeeded") is not True
+           and not (event.get("path") == "recherche-juridique/profil.md"
+                    and not (ROOT / "skills/recherche-juridique/profil.md").exists())
            for event in clean):
         failures.append("plugin_read_not_successful")
     if case["mcp_mode"] == "required" and not plugin_calls:
@@ -349,6 +351,8 @@ def execute(case: dict[str, Any], claude: str) -> tuple[list[dict[str, Any]], in
 
     environment = os.environ.copy()
     environment["ENABLE_CLAUDEAI_MCP_SERVERS"] = "false"
+    environment["CLAUDE_CODE_DISABLE_BUNDLED_SKILLS"] = "1"
+    environment["DISABLE_DOCTOR_COMMAND"] = "1"
     completed = subprocess.run(
         build_command(case, claude),
         cwd=ROOT,
@@ -382,7 +386,16 @@ def main() -> int:
         default=ROOT / "tests/evidence/.work",
     )
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--frozen-manifest", type=Path)
     args = parser.parse_args()
+    if not args.dry_run:
+        if args.frozen_manifest is None:
+            parser.error("--frozen-manifest requis avant toute exécution mesurée")
+        frozen = json.loads(args.frozen_manifest.read_text(encoding="utf-8"))
+        for relative, expected_hash in frozen["files"].items():
+            path = (ROOT / relative).resolve()
+            if not path.is_relative_to(ROOT) or hashlib.sha256(path.read_bytes()).hexdigest() != expected_hash:
+                parser.error(f"Contenu divergent du gel : {relative}")
 
     cases = load_cases()
     selected = [
@@ -406,8 +419,8 @@ def main() -> int:
             "case_sha256": hashlib.sha256(json.dumps(case, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest(),
             "prompt_sha256": hashlib.sha256(build_prompt(case).encode("utf-8")).hexdigest(),
             "harness_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
-            "frozen_manifest_sha256": hashlib.sha256((ROOT / "tests/evidence/qualification-dsi/gel.json").read_bytes()).hexdigest()
-                if (ROOT / "tests/evidence/qualification-dsi/gel.json").exists() else None,
+            "candidate_commit": frozen["candidate_commit"],
+            "frozen_manifest_sha256": hashlib.sha256(args.frozen_manifest.read_bytes()).hexdigest(),
         })
         failures = technical_failures(clean, case)
         if process_exit:

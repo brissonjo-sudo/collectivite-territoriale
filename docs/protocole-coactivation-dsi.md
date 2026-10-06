@@ -6,6 +6,11 @@ Les quatre scénarios historiques sont conservés, huit scénarios DSI sont
 ajoutés dans `tests/cas-plugin.json`. Le runtime DSI mesuré est repris à
 l'identique ; les pilotes r1/r2 servent au préflight et ne comptent pas dans
 la mesure figée. Le gel référence le commit candidat et toutes les empreintes.
+La première mesure `mesure-r1` reste conservée séparément : l'inventaire
+contenait les skills natifs de Claude et le contrôle de profil optionnel était
+trop strict. La révision r2 désactive ces skills natifs et reconnaît uniquement
+l'absence permise de `recherche-juridique/profil.md` (profil neutre, §chargement
+du profil). Aucune autre lecture échouée ne bénéficie de cette exception.
 
 ## Exécution
 
@@ -16,7 +21,7 @@ de skill dans l'instruction de sélection. Les modes MCP requis et désactivés
 ne peuvent pas être substitués. Aucun retry ne remplace une trace conservée.
 
 Seuls Skill, les lectures du runtime et les outils de source expressément
-autorisisés sont disponibles. Hooks désactivés, aucun Bash, aucune écriture,
+autorisés sont disponibles. Hooks et skills natifs désactivés, aucun Bash, aucune écriture,
 aucune persistance de session. Le flux brut reste en mémoire ; seuls textes
 visibles, noms d'outils, états de réussite, identité de session et résultat
 sont conservés, sans raisonnement, signature, jeton ni contenu de retour MCP.
@@ -30,6 +35,8 @@ success sans erreur et processus sorti à zéro. Pour un cas nominal, exiger
 un appel MCP réussi ; pour les cas RGPD désignés, une récupération officielle
 réussie est aussi exigée. Un appel réussi prouve le transport, pas la pertinence
 ni la vigueur du droit invoqué.
+Un manifeste de gel explicite est obligatoire ; ses empreintes sont vérifiées
+avant le premier cas. Le runtime ne doit pas être modifié durant une exécution.
 
 ## Jugement indépendant
 
