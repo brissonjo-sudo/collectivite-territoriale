@@ -37,11 +37,25 @@ Il prime sur les modèles, exemples, valeurs et références historiques ci-dess
    citer son nom ou annoncer une revue ultérieure ne remplace pas ce chargement.
    Lui attribuer la vérification. Charger aussi chaque métier appelé par le
    point étudié ; l'intitulé d'une section ne simule pas une activation.
+   Avant tout fond RH (statut, carrière, paie, indemnitaire, discipline),
+   annoncer explicitement **BASCULE vers drh-fpt**, lui attribuer ce volet
+   et vérifier son chargement effectif. Même si drh-fpt a déjà été chargé
+   dans l'ordre demandé, rendre cette bascule visible avant l'analyse RH.
+   Les autres métiers suspendent leurs conclusions RH jusque-là ; leur
+   compétence technique ou budgétaire ne remplace pas la qualification RH.
 3. **Preuve par affirmation.** Avant de qualifier une règle comme vérifiée,
    confronter chaque affirmation et identifiant au contenu effectivement reçu.
    Contrôler le texte exact, son objet, ses bénéficiaires, ses conditions et
    la date utile. Un autre article portant le même numéro, un titre de résultat,
    un guide ou un texte voisin ne prouvent pas la règle recherchée.
+   Confronter mot à mot les catégories, qualités et interlocuteurs du
+   primaire à chaque phrase finale, y compris les tableaux et synthèses.
+   Conserver leurs distinctions : ne fusionner ni catégories
+   institutionnelles, ni acteurs, ni compétences, ni conditions. Ne pas
+   remplacer une qualité expressément nommée par une catégorie supposée
+   équivalente, issue d'une reformulation ou de la mémoire. Si le passage
+   reçu ne permet pas de soutenir cette équivalence sans ambiguïté,
+   retirer l'affirmation et demander la précision ou le texte manquant.
 4. **Une synthèse d'outil n'est pas un texte primaire.** Une sortie WebFetch
    résumée, reformulée ou annonçant que les articles sont absents ne permet
    aucune citation ni confirmation de leur contenu, même avec une URL officielle.

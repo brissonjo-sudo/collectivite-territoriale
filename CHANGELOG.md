@@ -1,5 +1,18 @@
 # Historique des versions
 
+## 1.2.0-dev.4 — 2026-10-06 — Correctif méthodologique non mesuré
+
+- Confrontation mot à mot des catégories, qualités, interlocuteurs et conditions
+  du primaire à chaque phrase finale ; retrait des équivalences ambiguës.
+- Bascule explicite vers DRH avant le fond RH, même après un chargement imposé
+  des skills ; cadrage DSI avec inventaire, exploitation, continuité,
+  responsabilités, preuves, recette et questions manquantes.
+- Six bases amont inchangées ; seuls les contrats locaux déclarés évoluent.
+- Conservation de la tentative dev.3 r6 : une réponse APJA complète en échec,
+  quinze interruptions de quota. Dev.4 n'a aucune mesure ni score transféré.
+- Nouveau gel et seize nouvelles conversations requis ; revues humaines et
+  smoke Codex ouverts ; `release_ready=false`.
+
 ## 1.2.0-dev.3 — 2026-10-06 — Renforcement de la coactivation, publication bloquée
 
 - Conservation de la campagne dev.2 : 16 cas exécutés, dont trois échecs
