@@ -1,0 +1,853 @@
+{
+  "schema_version": 2,
+  "case_id": "plugin-dsi-rssi-rh",
+  "question": "Le DGS veut confier la fonction RSSI à un agent de notre DSI interne. Comment cadrer les missions techniques, puis traiter le changement de fonctions et ses éventuelles conséquences statutaires ?",
+  "activation_mode": "forced",
+  "skills": [
+    "dsi-fpt",
+    "drh-fpt",
+    "recherche-juridique"
+  ],
+  "activation_sequence": [
+    "dsi-fpt",
+    "drh-fpt",
+    "recherche-juridique"
+  ],
+  "mcp_mode": "required",
+  "source_evidence_policy": "required_or_abstain",
+  "invariant_objects": [
+    {
+      "id": "plugin-dsi-rssi-rh.missions_techniques",
+      "legacy_label": "DSI cadre missions et gouvernance sans décider du statut",
+      "category": "comportement",
+      "expectation": "Le rôle DSI cadre les missions techniques et la gouvernance de la fonction.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-dsi-rssi-rh.sans_decision_statutaire_dsi",
+      "legacy_label": "DSI cadre missions et gouvernance sans décider du statut",
+      "category": "comportement",
+      "expectation": "Le rôle DSI ne décide ni du statut de l'agent ni des conséquences statutaires.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-dsi-rssi-rh.bascule_drh",
+      "legacy_label": "BASCULE drh-fpt avant toute analyse statutaire",
+      "category": "comportement",
+      "expectation": "Attribuer explicitement l'analyse statutaire au rôle DRH avant son premier contenu, avec activation réelle de ce rôle.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-dsi-rssi-rh.statut_non_presume",
+      "legacy_label": "qualification RH sans présumer cadre d’emplois ou rémunération",
+      "category": "comportement",
+      "expectation": "Demander ou conditionner la qualification du statut de l'agent sans présumer qu'il est titulaire.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-dsi-rssi-rh.cadre_emplois_non_presume",
+      "legacy_label": "qualification RH sans présumer cadre d’emplois ou rémunération",
+      "category": "comportement",
+      "expectation": "Ne présumer ni cadre d'emplois ni filière à partir de l'appartenance à la DSI ; à confirmer ne répare pas cette présomption.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-dsi-rssi-rh.remuneration_non_presumee",
+      "legacy_label": "qualification RH sans présumer cadre d’emplois ou rémunération",
+      "category": "comportement",
+      "expectation": "Ne présumer aucun régime de rémunération, éligibilité ou conséquence indemnitaire avant qualification RH.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-dsi-rssi-rh.sources_ou_reserve_ciblee",
+      "legacy_label": "vérification juridique réelle ou réserve ciblée sans valeur inventée",
+      "category": "preuve_source",
+      "expectation": "Les conclusions statutaires affirmées reposent sur un texte primaire officiel récupéré pertinent, ou sont réservées par abstention ciblée ; aucune valeur ou règle non récupérée n'est inventée.",
+      "observable": "Confronter les affirmations au texte primaire documentaire assaini et à ses métadonnées pertinentes, reliés à un appel réussi ; ni déclaration du répondant, ni search_result, ni tool_summary ne prouvent le texte ou la vigueur. En branche d'abstention permise, relever la réserve ciblée et vérifier l'absence d'affirmation ultérieure du point réservé.",
+      "critical": true,
+      "status": null,
+      "accepts_abstention": true
+    }
+  ],
+  "rubric": "# Protocole de coactivation v2\n\nDate : 2026-10-06. Suite et harnais distincts du gel r3 précédent.\nLes questions historiques restent identiques. Le runtime reste identique aux\n166 fichiers mesurés ; la v2 porte sur la qualité des contrôles et des preuves.\nLes anciens résultats ne deviennent pas ceux de la nouvelle mesure.\n\n**Extension candidat corrigé.** Le profil explicite `corrected-runtime-v1`\n(schéma de gel 3) permet une nouvelle mesure après correction des instructions.\nIl conserve les questions et invariants v2, exige l'inventaire exact et les\noctets du HEAD committé avant/après chaque cas, et déclare\n`historical_scores_reused=false`. Les résultats du profil initial ne sont\npas transférés. Une modification du runtime exige un autre gel et un autre\ndossier de traces ; le profil v2 historique continue de refuser ce changement.\n\n## Exécution et isolation\n\nUne session Claude Sonnet 4.6 fraîche par cas. Onze activations forcées et cinq\nsélections spontanées, évaluées séparément. L'instruction spontanée ne nomme\npas les skills attendus et n'impose pas leur ordre. Le contrôle compare un\nensemble strict de skills réellement activés ; le juge évalue l'ordre du\nfond métier et l'attribution des rôles dans le texte visible.\n\nPermissions reprises de r3 : six skills locaux, Read limité au runtime,\nMCP juridique local strict et outils de lecture expressément autorisés.\nWebFetch seulement dans les cas désignés. Aucun Bash, écriture par le\nrépondant, hook, connecteur global ou persistance de session. Le flux brut\nreste en mémoire. Un timeout produit une trace d'échec, sans conserver son\nflux partiel ni le rejouer automatiquement. Aucun retry ne remplace une mesure.\nUn nouveau gel impose le schéma v2 et l'inventaire de toutes ses dépendances.\nUne troncature ou un masquage du texte visible empêche toute réussite : la\nréponse entière n'est plus disponible pour apprécier ses invariants.\n\nLe contrôle du premier mot visible admet les formes Markdown simples de STOP\n(gras, titre ou bloc de code texte), dont les délimiteurs ne sont pas du texte\nvisible. Un commentaire, titre distinct ou séparateur placé avant le garde-fou\nreste un échec ; la présence de STOP seulement dans la réponse finale ne suffit\npas. Les traces anciennes ne sont pas réévaluées avec ce contrôle corrigé.\n\n## Preuve documentaire\n\nChaque résultat est rattaché à son `call_id` et placé dans l'ordre réel du\ntexte et des appels. Un résultat non rattaché, doublonné ou sans appel\nautorisé fait échouer le contrôle technique. Les extraits de sources\npubliques sont bornés et assainis selon une liste fermée de champs et hôtes.\nLeur contenu reste une donnée non fiable, jamais une instruction à exécuter.\nL'heure de capture après processus et sa fenêtre début/fin sont distinctes\nde la date de vigueur éventuellement fournie par la source.\n\nLes natures de preuve sont distinctes : `primary_text` pour un document\nstructuré récupéré ; `search_result` pour une recherche ; `tool_summary`\npour le résumé produit par WebFetch. Un résumé ne devient pas un texte\nprimaire. Une absence, une erreur, un format inconnu ou une troncature reste\nvisible et ne peut être promu en preuve complète. L'empreinte porte sur le\ncontenu assaini, sans calculer d'empreinte de secret écarté.\n\nLa présence d'un texte ne certifie pas sa pertinence ou sa vigueur.\nLe juge doit confronter les assertions à l'extrait, l'identité, les dates\net les métadonnées retournées. Une mention « vérifié » dans la réponse,\nun appel réussi, une page d'accueil ou un résumé ne suffit pas. Une source\nhistorique ou déclarée non applicable ne se valide pas comme droit actuel.\nUne affirmation de droit non étayée n'est pas une abstention, même accompagnée\nd'une réserve générale « à vérifier ».\n\n## Jugement indépendant\n\nLe juge reçoit uniquement la question, l'oracle de sélection des skills,\nles objets atomiques, ce barème et la\ntrace assainie. Il n'a accès ni au runtime, ni aux scores antérieurs, ni aux\nautres réponses. Tous les invariants sont obligatoires et restent critiques.\nLa valeur `null` signifie absence de preuve ; elle ne prouve pas que la\nproposition juridique est fausse. Ne pas remplacer un invariant manquant par\n`true` ni qualifier une mesure nominale comme réussite dégradée.\n\nLe STOP exigé précède **tout texte visible**, y compris annonces de lecture\net commentaires avant outils. Les outils peuvent être appelés avant le STOP\ntant qu'aucun texte visible ne le précède. Le contrôle automatique du premier\ntexte est éliminatoire, sans remplacer l'évaluation du contenu du garde-fou.\nUn transfert annoncé n'autorise pas le rôle initial à continuer le fond réservé.\n\nPour chaque objet atomique, utiliser une valeur JSON booléenne ou `null`, des\nréférences `event_id` réellement présentes et une justification précise.\nLa base `retrieval` nécessite un événement `source_evidence` avec texte\nprimaire disponible ; `abstention` nécessite un texte observable et un\ninvariant l'autorisant explicitement. Pour un `false`, citer la contradiction.\nPour un `null`, expliquer la pièce manquante ; les références peuvent être vides.\n\nFormat du fichier `jugement.json` :\n\n```json\n{\n  \"case_id\": \"identifiant_du_cas\",\n  \"trace_sha256\": \"empreinte_du_paquet\",\n  \"verdict\": \"reussite|echec|bloque\",\n  \"invariants\": {\n    \"identifiant_atomique\": {\n      \"status\": null,\n      \"basis\": \"observation|retrieval|abstention|missing\",\n      \"evidence_refs\": [],\n      \"rationale\": \"Preuve observable ou limite précise.\"\n    }\n  }\n}\n```\n\n## Décision et portée\n\nLes résultats technique, comportemental et documentaire sont séparés.\nUn échec technique ou un invariant faux donne `echec`. Un invariant non\ndémontré donne `bloque`. Une mesure nominale sans contenu primaire exploitable\nreste `bloque`, même si une abstention correcte satisfait un invariant\nalternatif. Le mode explicitement sans sources est évalué selon ses propres\nexigences, sans simuler une consultation officielle.\n\nUne réussite nécessite toutes les exigences applicables. Le validateur\nrefuse les références fabriquées, les valeurs coercibles (`1` pour `true`),\nle STOP tardif validé et la promotion d'un résumé ou d'une troncature.\nIl ne démontre pas à lui seul l'appréciation métier du juge. La production\neffective du jugement doit aussi être liée à la trace du sous-agent, sans\nremplacer cette identité par une affirmation du coordinateur.\n\nConserver chaque gel, réponse, jugement, trace et score. Les résultats d'un\npilote technique ne valent pas campagne complète. La revue DSI/RSSI,\nla revue juridique humaine et le smoke du candidat dans Codex restent des\nbarrières distinctes ; `release_ready=false` reste maintenu.\n\nDocumentation d'intégration consultée via Context7 :\n[flux CLI Claude](https://code.claude.com/docs/en/headless),\n[types des résultats d'outils](https://code.claude.com/docs/en/agent-sdk/typescript),\n[résultats MCP](https://modelcontextprotocol.io/specification/2026-07-28/server/tools).\nLe contrat du serveur juridique a été contrôlé dans son code local ;\nun format de déploiement différent sera signalé comme preuve indisponible.\n",
+  "trace_sha256": "d0cbbc6e53a3f98e205cce188f009cca2b8f957639953e7ebb8054ed59bdc84c",
+  "trace": [
+    {
+      "type": "provenance",
+      "schema_version": 2,
+      "candidate_commit": "b968c215e913457686b39718ebc9a2da9397663e",
+      "suite_sha256": "3c45e6117c25cbca0558de2955ca5a7d80956575d886a887d1cdfdc581375cd8",
+      "case_sha256": "81ebb19e16eac334c0a3c74512099c8b592d6a4a41f51a46134f8cd41dbce1f9",
+      "prompt_sha256": "9ea5a2a11af73a61658681d7e69298286791a26d992f067ae64fb1a592f91eba",
+      "frozen_manifest_sha256": "444bf314b9d9be58fd4c920e360fab1a08d929d2ecbf696d1877db1aecfb6ace",
+      "activation_mode": "forced",
+      "capture_window": {
+        "started_at": "2026-10-06T20:33:19.375379+00:00",
+        "finished_at": "2026-10-06T20:36:24.560998+00:00"
+      },
+      "candidate_profile": "corrected-runtime-v1"
+    },
+    {
+      "type": "init",
+      "host": "Claude Code 2.1.288",
+      "model": "claude-sonnet-4-6",
+      "session_id": "6382b546-faaa-4429-85c9-db09671123bb",
+      "available_skills": [
+        "collectivite-territoriale:dirfi-fpt",
+        "collectivite-territoriale:dpm-fpt",
+        "collectivite-territoriale:dpo-ct",
+        "collectivite-territoriale:drh-fpt",
+        "collectivite-territoriale:dsi-fpt",
+        "collectivite-territoriale:recherche-juridique"
+      ],
+      "foreign_available_skills": [],
+      "standalone_recherche_juridique_loaded": false,
+      "mcp_servers": [
+        {
+          "name": "droit-francais",
+          "status": "connected",
+          "source": "dynamic"
+        }
+      ],
+      "mcp_mode": "required",
+      "strict_mcp_config": true,
+      "event_id": "e1"
+    },
+    {
+      "type": "skill_activation",
+      "skill": "collectivite-territoriale:dsi-fpt",
+      "succeeded": true,
+      "call_id": "toolu_01FxAasdhDcEqtnk1riQEBvT",
+      "event_id": "e2"
+    },
+    {
+      "type": "skill_activation",
+      "skill": "collectivite-territoriale:drh-fpt",
+      "succeeded": true,
+      "call_id": "toolu_01KwbNu5sBigR36KxutyH9ak",
+      "event_id": "e3"
+    },
+    {
+      "type": "skill_activation",
+      "skill": "collectivite-territoriale:recherche-juridique",
+      "succeeded": true,
+      "call_id": "toolu_01HCpCYBE2mus6ppMpcLC5b2",
+      "event_id": "e4"
+    },
+    {
+      "type": "assistant_text",
+      "text": "Les trois skills sont chargés. Je lis maintenant les branches pertinentes et lance les recherches juridiques en parallèle.",
+      "text_redacted": false,
+      "text_truncated": false,
+      "event_id": "e5"
+    },
+    {
+      "type": "plugin_file_read",
+      "path": "dsi-fpt/references/gouvernance-strategie.md",
+      "succeeded": true,
+      "call_id": "toolu_0177aXTy1edFnx1vxap1hLTj",
+      "event_id": "e6"
+    },
+    {
+      "type": "plugin_file_read",
+      "path": "dsi-fpt/references/securite-si.md",
+      "succeeded": true,
+      "call_id": "toolu_01VtdK8MRNB2bEU1dLj1bGQs",
+      "event_id": "e7"
+    },
+    {
+      "type": "plugin_file_read",
+      "path": "drh-fpt/references/carriere-paie.md",
+      "succeeded": true,
+      "call_id": "toolu_017oU7YDzaPXz6gjGS4jJ3aD",
+      "event_id": "e8"
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__search_articles",
+      "succeeded": true,
+      "call_id": "toolu_01HazHbNdfjYtttqaTzxUFE7",
+      "event_id": "e9"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "mcp__droit-francais__search_articles",
+      "call_id": "toolu_01HazHbNdfjYtttqaTzxUFE7",
+      "retrieved_at": "2026-10-06T20:36:24.560998Z",
+      "content_trust": "untrusted_source_data",
+      "status": "available",
+      "documents": [
+        {
+          "nature": "search_result",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044425822",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data",
+            "as_of_date": "2026-10-06",
+            "date_basis": "date du jour du serveur",
+            "legal_status": "VIGUEUR",
+            "number": "L511-1",
+            "requested_date": null,
+            "source": "Légifrance API",
+            "verified": true
+          },
+          "id": "LEGIARTI000044425822",
+          "title": "Article L511-1 — Code général de la fonction publique",
+          "sha256": "6dcc812044051b4f732267c8d0e99608542df5446d3e881d6022f12166aba3ca"
+        }
+      ],
+      "truncated": false,
+      "sha256": "f07f3a888b639245a5f09436db62824a1442de2acef6ceacd192aab4bd044a69",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e10"
+    },
+    {
+      "type": "assistant_text",
+      "text": "Bon, je récupère maintenant les textes primaires nécessaires sur le changement de fonctions, le RIFSEEP et NIS2.",
+      "text_redacted": false,
+      "text_truncated": false,
+      "event_id": "e11"
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__get_article",
+      "succeeded": true,
+      "call_id": "toolu_01987qfHhmanPuEwgKR21RRL",
+      "event_id": "e12"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "mcp__droit-francais__get_article",
+      "call_id": "toolu_01987qfHhmanPuEwgKR21RRL",
+      "retrieved_at": "2026-10-06T20:36:24.560998Z",
+      "content_trust": "untrusted_source_data",
+      "status": "available",
+      "documents": [
+        {
+          "nature": "primary_text",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044425822",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data",
+            "applicable_at_as_of_date": true,
+            "as_of_date": "2026-10-06",
+            "date_basis": "date du jour du serveur",
+            "end_date": 32472144000000,
+            "legal_status": "VIGUEUR",
+            "number": "L511-1",
+            "requested_date": null,
+            "source": "Légifrance API",
+            "start_date": 1646092800000,
+            "verified": true,
+            "version_end_date": "2999-01-01",
+            "version_start_date": "2022-03-01"
+          },
+          "id": "LEGIARTI000044425822",
+          "title": "Article L511-1",
+          "excerpt": "Tout fonctionnaire est placé, dans les conditions fixées aux chapitres II à V , dans l'une des positions suivantes : 1° Activité ; 2° Détachement ; 3° Disponibilité ; 4° Congé parental.",
+          "sha256": "54ba645acf61e7f195a47610b11adb9ea9c0a2ed7a54571098cf4cdcf26a606e"
+        }
+      ],
+      "truncated": false,
+      "sha256": "6472e9f2476203278816b6c23e1989dbb2d8b779f3926c4f2fa813d6636c3367",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e13"
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__search_articles",
+      "succeeded": true,
+      "call_id": "toolu_01P8MxeQKG6brig6DAPfwXGa",
+      "event_id": "e14"
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__search_articles",
+      "succeeded": true,
+      "call_id": "toolu_01QVHtyDRuWLCz3x7ACzZo2U",
+      "event_id": "e15"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "mcp__droit-francais__search_articles",
+      "call_id": "toolu_01P8MxeQKG6brig6DAPfwXGa",
+      "retrieved_at": "2026-10-06T20:36:24.560998Z",
+      "content_trust": "untrusted_source_data",
+      "status": "available",
+      "documents": [
+        {
+          "nature": "search_result",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044425798",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data",
+            "as_of_date": "2026-10-06",
+            "date_basis": "date du jour du serveur",
+            "legal_status": "VIGUEUR",
+            "number": "L512-1",
+            "requested_date": null,
+            "source": "Légifrance API",
+            "verified": true
+          },
+          "id": "LEGIARTI000044425798",
+          "title": "Article L512-1 — Code général de la fonction publique",
+          "sha256": "ab3b7118ab075bea0168ef75908860f1dc21ff92f532e6d6b7fd61ae3a2e643f"
+        }
+      ],
+      "truncated": false,
+      "sha256": "5b1d4f719b23b02018f90ca3ae165c74ad7d4d2ca908be55619d89bc4afda619",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e16"
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__search",
+      "succeeded": true,
+      "call_id": "toolu_01Vvz8jPBA8pPnkYVygtuMbX",
+      "event_id": "e17"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "mcp__droit-francais__search_articles",
+      "call_id": "toolu_01QVHtyDRuWLCz3x7ACzZo2U",
+      "retrieved_at": "2026-10-06T20:36:24.560998Z",
+      "content_trust": "untrusted_source_data",
+      "status": "available",
+      "documents": [
+        {
+          "nature": "search_result",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044424745",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data",
+            "as_of_date": "2026-10-06",
+            "date_basis": "date du jour du serveur",
+            "legal_status": "VIGUEUR",
+            "number": "L714-13",
+            "requested_date": null,
+            "source": "Légifrance API",
+            "verified": true
+          },
+          "id": "LEGIARTI000044424745",
+          "title": "Article L714-13 — Code général de la fonction publique",
+          "sha256": "3fe86f9d011d3ace9d9d191110f119b297dcfc7e4192980d40d53af6d236f800"
+        }
+      ],
+      "truncated": false,
+      "sha256": "7a6dd6f177fa766a87c2dde94513325520b6a4c0af441351286256c5c09d3ae2",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e18"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "mcp__droit-francais__search",
+      "call_id": "toolu_01Vvz8jPBA8pPnkYVygtuMbX",
+      "retrieved_at": "2026-10-06T20:36:24.560998Z",
+      "content_trust": "untrusted_source_data",
+      "status": "missing",
+      "documents": [],
+      "truncated": false,
+      "reason": "no_public_source_data",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e19"
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__get_article",
+      "succeeded": true,
+      "call_id": "toolu_01CyF46ZatxAqdd88yqFCnb6",
+      "event_id": "e20"
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__get_article",
+      "succeeded": true,
+      "call_id": "toolu_01GiMBF8SJKqG1ET69SrtsyF",
+      "event_id": "e21"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "mcp__droit-francais__get_article",
+      "call_id": "toolu_01CyF46ZatxAqdd88yqFCnb6",
+      "retrieved_at": "2026-10-06T20:36:24.560998Z",
+      "content_trust": "untrusted_source_data",
+      "status": "available",
+      "documents": [
+        {
+          "nature": "primary_text",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044425798",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data",
+            "applicable_at_as_of_date": true,
+            "as_of_date": "2026-10-06",
+            "date_basis": "date du jour du serveur",
+            "end_date": 32472144000000,
+            "legal_status": "VIGUEUR",
+            "number": "L512-1",
+            "requested_date": null,
+            "source": "Légifrance API",
+            "start_date": 1646092800000,
+            "verified": true,
+            "version_end_date": "2999-01-01",
+            "version_start_date": "2022-03-01"
+          },
+          "id": "LEGIARTI000044425798",
+          "title": "Article L512-1",
+          "excerpt": "L'activité est la position du fonctionnaire qui, titulaire d'un grade, exerce effectivement les fonctions de l'un des emplois correspondant à ce grade.",
+          "sha256": "04ced837f1aef1bcc5a19717940174a1dc882776c5df47240734b3b3e7335601"
+        }
+      ],
+      "truncated": false,
+      "sha256": "754c5df85c866fb67f57918ef385293e3f30eb46cb9f70c3fbda6db12347e34b",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e22"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "mcp__droit-francais__get_article",
+      "call_id": "toolu_01GiMBF8SJKqG1ET69SrtsyF",
+      "retrieved_at": "2026-10-06T20:36:24.560998Z",
+      "content_trust": "untrusted_source_data",
+      "status": "available",
+      "documents": [
+        {
+          "nature": "primary_text",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044424745",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data",
+            "applicable_at_as_of_date": true,
+            "as_of_date": "2026-10-06",
+            "date_basis": "date du jour du serveur",
+            "end_date": 32472144000000,
+            "legal_status": "VIGUEUR",
+            "number": "L714-13",
+            "requested_date": null,
+            "source": "Légifrance API",
+            "start_date": 1646092800000,
+            "verified": true,
+            "version_end_date": "2999-01-01",
+            "version_start_date": "2022-03-01"
+          },
+          "id": "LEGIARTI000044424745",
+          "title": "Article L714-13",
+          "excerpt": "Par dérogation à l'article L. 714-4 , les fonctionnaires relevant des cadres d'emplois de la police municipale et les fonctionnaires relevant du cadre d'emplois des gardes-champêtres peuvent bénéficier d'un régime indemnitaire dont les modalités et les taux sont fixés par décret.",
+          "sha256": "590aeffa820489b12eea53d7004fca36d3ecffb738008356784d02bf3d1d6684"
+        }
+      ],
+      "truncated": false,
+      "sha256": "ed0e083712fe564d88a1725d35be854db1ddf0b4c7fbdee1ef64682cc98bab1a",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e23"
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__search_articles",
+      "succeeded": true,
+      "call_id": "toolu_011HuK8sL5ibf9BCVsLovMdM",
+      "event_id": "e24"
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__search",
+      "succeeded": true,
+      "call_id": "toolu_014pXWaquchBJ5gbxa7Dn1Kz",
+      "event_id": "e25"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "mcp__droit-francais__search_articles",
+      "call_id": "toolu_011HuK8sL5ibf9BCVsLovMdM",
+      "retrieved_at": "2026-10-06T20:36:24.560998Z",
+      "content_trust": "untrusted_source_data",
+      "status": "available",
+      "documents": [
+        {
+          "nature": "search_result",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044427026",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data",
+            "as_of_date": "2026-10-06",
+            "date_basis": "date du jour du serveur",
+            "legal_status": "VIGUEUR",
+            "number": "L313-1",
+            "requested_date": null,
+            "source": "Légifrance API",
+            "verified": true
+          },
+          "id": "LEGIARTI000044427026",
+          "title": "Article L313-1 — Code général de la fonction publique",
+          "sha256": "7b292c14140616e9c44aa3e743538ec21528681814e51b4a5a8f54c6faf03637"
+        }
+      ],
+      "truncated": false,
+      "sha256": "5cf75262e98a163d2674f3f7add06daab097621bdb1662a17f6caf78276a8c26",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e26"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "mcp__droit-francais__search",
+      "call_id": "toolu_014pXWaquchBJ5gbxa7Dn1Kz",
+      "retrieved_at": "2026-10-06T20:36:24.560998Z",
+      "content_trust": "untrusted_source_data",
+      "status": "truncated",
+      "documents": [
+        {
+          "nature": "search_result",
+          "url": "https://www.courdecassation.fr/decision/61372841cd5801467743030b",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data"
+          },
+          "id": "61372841cd5801467743030b",
+          "title": "cc, 2012-09-20, n° 11-20.265",
+          "sha256": "524e8e54b1a7726dc34e9f006c40c9fd453f7d279a5c9f1162d2b18fd9d0bff2"
+        },
+        {
+          "nature": "search_result",
+          "url": "https://www.courdecassation.fr/decision/607975a59ba5988459c49ef8",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data"
+          },
+          "id": "607975a59ba5988459c49ef8",
+          "title": "cc, 2012-09-20, n° 11-20.264",
+          "sha256": "7dea4ed9141f1e1ffbbddfd5e10d0172f9062303627fab3eea6bb133a4e377fe"
+        },
+        {
+          "nature": "search_result",
+          "url": "https://www.courdecassation.fr/decision/6079e1f29ba5988459c5c173",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data"
+          },
+          "id": "6079e1f29ba5988459c5c173",
+          "title": "cc, 2015-05-27, n° 13-27.176",
+          "sha256": "bf5b87d5f68852e4b453be70c7a045b732ace50720ee8d52ea273744c5e52da3"
+        },
+        {
+          "nature": "search_result",
+          "url": "https://www.courdecassation.fr/decision/650be2c7beee0f8318b97a0d",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data"
+          },
+          "id": "650be2c7beee0f8318b97a0d",
+          "title": "cc, 2023-09-21, n° 23-60.054",
+          "sha256": "211a24ef12b0b21acf5ef9a4afff433ad2a48ffc050d8616d4c26d33b6e8a70a"
+        },
+        {
+          "nature": "search_result",
+          "url": "https://www.courdecassation.fr/decision/5fd8fe73366d869496012867",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data"
+          },
+          "id": "5fd8fe73366d869496012867",
+          "title": "cc, 2017-06-22, n° 16-19.278",
+          "sha256": "fa551b63ce9edb89c78434e440aaf2089a9ce16fe8e8dc2a396b14db78ce6acf"
+        },
+        {
+          "nature": "search_result",
+          "url": "https://www.courdecassation.fr/decision/65eacc6581289f00087e6e1a",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data"
+          },
+          "id": "65eacc6581289f00087e6e1a",
+          "title": "cc, 2024-03-08, n° 21-12.560",
+          "sha256": "f275f391502b5d1d4a491d0b46aeb3e02e35812d05645fa8070bdc5abb8ec9e8"
+        },
+        {
+          "nature": "search_result",
+          "url": "https://www.courdecassation.fr/decision/6137295acd58014677435b34",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data"
+          },
+          "id": "6137295acd58014677435b34",
+          "title": "cc, 2015-10-06, n° 14-26.134",
+          "sha256": "c14e32d2931ed148f077061b49549d8616aeb014fbab9fbb659ede41d7da2676"
+        },
+        {
+          "nature": "search_result",
+          "url": "https://www.courdecassation.fr/decision/61372940cd580146774352f0",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data"
+          },
+          "id": "61372940cd580146774352f0",
+          "title": "cc, 2015-05-27, n° 14-14.413",
+          "sha256": "394d10e6dc7427613e86d235a003672d49f6733826130e519a3486c6cdcbe8ed"
+        }
+      ],
+      "truncated": true,
+      "sha256": "6a87484ab40a30dcebf8312ca988bb5d7ed138aa44e54d2cb0f3ec221cff5843",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e27"
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__get_article",
+      "succeeded": true,
+      "call_id": "toolu_018vgGcb2jTPiPik1KkKrbUG",
+      "event_id": "e28"
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__search_articles",
+      "succeeded": true,
+      "call_id": "toolu_015RrxYGM1jRpPJR6YTF6TPK",
+      "event_id": "e29"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "mcp__droit-francais__get_article",
+      "call_id": "toolu_018vgGcb2jTPiPik1KkKrbUG",
+      "retrieved_at": "2026-10-06T20:36:24.560998Z",
+      "content_trust": "untrusted_source_data",
+      "status": "available",
+      "documents": [
+        {
+          "nature": "primary_text",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044427026",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data",
+            "applicable_at_as_of_date": true,
+            "as_of_date": "2026-10-06",
+            "date_basis": "date du jour du serveur",
+            "end_date": 32472144000000,
+            "legal_status": "VIGUEUR",
+            "number": "L313-1",
+            "requested_date": null,
+            "source": "Légifrance API",
+            "start_date": 1646092800000,
+            "verified": true,
+            "version_end_date": "2999-01-01",
+            "version_start_date": "2022-03-01"
+          },
+          "id": "LEGIARTI000044427026",
+          "title": "Article L313-1",
+          "excerpt": "Les emplois de chaque collectivité ou établissement mentionné à l'article L. 4 sont créés par l'organe délibérant de la collectivité ou de l'établissement. La délibération précise le grade ou, le cas échéant, les grades correspondant à l'emploi créé. Lorsqu'il s'agit d'un emploi mentionné à l'article L. 412-5 , elle précise en outre la nature de celui-ci et la durée des fonctions. Elle indique, le cas échéant, si l'emploi peut également être pourvu par un agent contractuel territorial. Dans ce dernier cas, elle indique le motif invoqué, la nature des fonctions, les niveaux de recrutement et de rémunération de l'emploi créé. Aucune création d'emploi ne peut intervenir si les crédits disponibles au chapitre budgétaire correspondant ne le permettent. Un décret en Conseil d'Etat fixe le nombre maximal d'emplois mentionnés à l'article L. 412-5 comportant des responsabilités d'encadrement, notamment de directeur général adjoint des services, d'emplois de direction de services, de conseil ou d'expertise ou de conduite de projet que chaque collectivité territoriale ou établissement public peut créer, en fonction de son importance démographique.",
+          "sha256": "b7a8ec7c574414b57f8e5f3736f852628082f0d0ff3a31740133fcdcccd50765"
+        }
+      ],
+      "truncated": false,
+      "sha256": "81e9eef71c9e53980ff3b8241eccd7c194bf55b75845804c1bdcb898693214e8",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e30"
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__search_articles",
+      "succeeded": true,
+      "call_id": "toolu_01RSx9C5aX6mNBGG3tD9sWM5",
+      "event_id": "e31"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "mcp__droit-francais__search_articles",
+      "call_id": "toolu_015RrxYGM1jRpPJR6YTF6TPK",
+      "retrieved_at": "2026-10-06T20:36:24.560998Z",
+      "content_trust": "untrusted_source_data",
+      "status": "available",
+      "documents": [
+        {
+          "nature": "search_result",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044424763",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data",
+            "as_of_date": "2026-10-06",
+            "date_basis": "date du jour du serveur",
+            "legal_status": "VIGUEUR",
+            "number": "L714-4",
+            "requested_date": null,
+            "source": "Légifrance API",
+            "verified": true
+          },
+          "id": "LEGIARTI000044424763",
+          "title": "Article L714-4 — Code général de la fonction publique",
+          "sha256": "1e180cd13a3551f421bb45c17b384c9673a26313fc1ffdad3441bfc349a6793c"
+        }
+      ],
+      "truncated": false,
+      "sha256": "1f75f9b7f7b52d38206f5e3fcb32fbf3db893e9f1132ad23580e7d423fe6918d",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e32"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "mcp__droit-francais__search_articles",
+      "call_id": "toolu_01RSx9C5aX6mNBGG3tD9sWM5",
+      "retrieved_at": "2026-10-06T20:36:24.560998Z",
+      "content_trust": "untrusted_source_data",
+      "status": "available",
+      "documents": [
+        {
+          "nature": "search_result",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044425776",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data",
+            "as_of_date": "2026-10-06",
+            "date_basis": "date du jour du serveur",
+            "legal_status": "VIGUEUR",
+            "number": "L512-7",
+            "requested_date": null,
+            "source": "Légifrance API",
+            "verified": true
+          },
+          "id": "LEGIARTI000044425776",
+          "title": "Article L512-7 — Code général de la fonction publique",
+          "sha256": "f5f99c0857f272a5d4c4ca93ba490a15214b3b560b44c393af6fc2561485452c"
+        }
+      ],
+      "truncated": false,
+      "sha256": "8928b4bc9f0404518f928aacc70554f91e9bd0f3c3a5fe31c3704a80b362a957",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e33"
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__get_article",
+      "succeeded": true,
+      "call_id": "toolu_015FjTR3Rrj2Qs9jnHxMFiQK",
+      "event_id": "e34"
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__search_articles",
+      "succeeded": true,
+      "call_id": "toolu_01FwydWyoTrVySVUsak2YQ8v",
+      "event_id": "e35"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "mcp__droit-francais__search_articles",
+      "call_id": "toolu_01FwydWyoTrVySVUsak2YQ8v",
+      "retrieved_at": "2026-10-06T20:36:24.560998Z",
+      "content_trust": "untrusted_source_data",
+      "status": "missing",
+      "documents": [],
+      "truncated": false,
+      "reason": "no_public_source_data",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e36"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "mcp__droit-francais__get_article",
+      "call_id": "toolu_015FjTR3Rrj2Qs9jnHxMFiQK",
+      "retrieved_at": "2026-10-06T20:36:24.560998Z",
+      "content_trust": "untrusted_source_data",
+      "status": "available",
+      "documents": [
+        {
+          "nature": "primary_text",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044424763",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data",
+            "applicable_at_as_of_date": true,
+            "as_of_date": "2026-10-06",
+            "date_basis": "date du jour du serveur",
+            "end_date": 32472144000000,
+            "legal_status": "VIGUEUR",
+            "number": "L714-4",
+            "requested_date": null,
+            "source": "Légifrance API",
+            "start_date": 1646092800000,
+            "verified": true,
+            "version_end_date": "2999-01-01",
+            "version_start_date": "2022-03-01"
+          },
+          "id": "LEGIARTI000044424763",
+          "title": "Article L714-4",
+          "excerpt": "Les organes délibérants des collectivités territoriales et de leurs établissements publics fixent les régimes indemnitaires de leurs agents, dans la limite de ceux dont bénéficient les différents services de l'Etat.",
+          "sha256": "487971a14dc5ea358f829154ddd4070a5e9def6367a3ca61b568e28100b86b8f"
+        }
+      ],
+      "truncated": false,
+      "sha256": "d3667555c39597f954c9bb6086d81ecbe53cf75e55639e4a7898ddd5a435dc53",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e37"
+    },
+    {
+      "type": "assistant_text",
+      "text": "J'ai toutes les sources nécessaires. Je produis maintenant la réponse finale.\n\n---\n\n## Confier la fonction RSSI à un agent DSI : cadrage technique et traitement statutaire\n\n---\n\n### Préambule — Variables inconnues à lever\n\nAvant toute conclusion chiffrée ou procédurale, deux variables déterminantes restent absentes :\n\n| Variable | Pourquoi elle change la réponse |\n|---|---|\n| **Filière et cadre d'emplois** de l'agent | Détermine le décret statutaire, le régime indemnitaire applicable (RIFSEEP filière technique ou autre) et le groupe de fonctions |\n| **Statut** (titulaire, stagiaire, contractuel) | Conditionne les voies de révision indemnitaire et les actes à produire |\n\nLa réponse ci-dessous traite les deux branches les plus probables (filière technique, agent titulaire) tout en distinguant explicitement ce qui est acquis de ce qui reste conditionnel.\n\n---\n\n## 1. Volet DSI-FPT — Cadrage des missions techniques du RSSI\n\n*(Sources internes : `references/gouvernance-strategie.md`, `references/securite-si.md`)*\n\n### 1.1 Ce que recouvre la fonction RSSI\n\nLa fonction RSSI se définit par ses **résultats**, pas par un titre. Trois résultats attendus, à formaliser dans la fiche de poste :\n\n**a) Analyse des risques et instruction des mesures**\nLe RSSI identifie les scénarios de menace (indisponibilité, altération, divulgation, perte d'accès), les relie aux services publics concernés, propose des mesures proportionnées et en assure le suivi. Il utilise les référentiels ANSSI (guide d'hygiène informatique, EBIOS Risk Manager) comme **doctrine de méthode, non comme obligation normative** : leur non-respect ne constitue pas en lui-même une illégalité.\n\n**b) Politique de sécurité (PSSI) et homologation**\nLe RSSI instruit la PSSI et le dossier permettant à l'autorité compétente de décider de l'attestation de sécurité des systèmes entrant dans le champ du RGS. Il ne décide pas lui-même de l'acceptation des risques résiduels : cette décision appartient à l'**autorité exécutive** selon les délégations en vigueur.\n\n**c) Alerte, contrôle et interface DPO**\nLe RSSI suit les écarts ouverts, déclenche les escalades et transmet au DPO les informations nécessaires à ses exigences propres. Il n'exerce pas la compétence de qualification des violations de données personnelles.\n\n### 1.2 Principe de séparation production/contrôle\n\nLorsque l'agent exerce simultanément des fonctions d'exploitation DSI et des fonctions de RSSI (situation fréquente dans les collectivités à DSI internalisée de taille intermédiaire), **documenter explicitement** :\n- la liste des tâches pour lesquelles il y a cumul (inévitable),\n- le circuit d'escalade vers une autorité indépendante (DGS, comité de pilotage),\n- la fréquence d'un regard extérieur (audit, revue CDG, CSIRT régional).\n\nCe cumul n'est pas interdit ; il constitue un risque de gouvernance à accepter explicitement, pas à ignorer.\n\n### 1.3 Positionnement organisationnel recommandé\n\nLa matrice de responsabilités à formaliser :\n\n| Acteur | Rôle | Décision |\n|---|---|---|\n| DGS | Arbitrage des risques et des moyens | Acceptation formelle des risques résiduels |\n| RSSI (agent DSI) | Analyse, instruction, alerte | Propose, ne décide pas |\n| DSI / agent exploitation | Déploiement des mesures | Exécute selon arbitrage |\n| DPO | Exigences relatives aux données | Avis avant validation des mesures |\n| Élus / autorité territoriale | Engagement politique et ressources | Décision budgétaire |\n\n### 1.4 Obligation de désignation d'un RSSI — état du droit\n\n**Aucun texte primaire récupéré dans cette session n'impose aux collectivités territoriales de désigner un RSSI nommément.** La désignation est une **bonne pratique de gouvernance**, non une obligation légale vérifiée.\n\n> ⚠️ **Point à vérifier — NIS2 et transposition française**\n> La directive européenne 2022/2555 (NIS2) pouvait, selon sa transposition, imposer des obligations à certaines catégories d'entités publiques locales. La recherche conduite dans cette session n'a pas permis de localiser le texte de transposition français, son périmètre exact et les éventuelles obligations de désignation qui en résultent pour la catégorie de cette collectivité. **Avant de conclure que la collectivité est ou n'est pas soumise à NIS2**, vérifier sur Légifrance la loi de transposition publiée, les catégories visées et les seuils. Ne pas traiter un guide ANSSI comme du droit positif.\n\n**Le RGS** (Référentiel Général de Sécurité) impose une démarche d'attestation de sécurité pour les systèmes d'échanges électroniques entrant dans son champ. Les collectivités territoriales sont incluses parmi les autorités administratives visées, sous réserve du périmètre du système concerné — à confirmer en version consolidée de l'ordonnance n° 2005-1516 et du décret RGS avant de conclure sur les obligations spécifiques.\n\n---\n\n> **BASCULE drh-fpt** — La suite traite le fond statutaire et indemnitaire. Ce volet relève de `drh-fpt`; `dsi-fpt` s'arrête ici sur ce point.\n\n---\n\n## 2. Volet DRH-FPT — Changement de fonctions : conséquences statutaires\n\n*(Source interne : `references/carriere-paie.md` ; sources primaires vérifiées dans la session)*\n\n### 2.1 Nature juridique de l'opération\n\nConfier la fonction RSSI à un agent de la DSI est, dans le cas le plus courant, un **changement de fonctions au sein de la même position statutaire d'activité** : l'agent reste titulaire de son grade, affecté sur un emploi correspondant à ce grade.\n\n**Base vérifiée :**\n- Art. L511-1 CGFP (LEGIARTI000044425822, en vigueur depuis le 01/03/2022, applicable au 06/10/2026) : *« Tout fonctionnaire est placé […] dans l'une des positions suivantes : 1° Activité ; 2° Détachement ; 3° Disponibilité ; 4° Congé parental. »*\n- Art. L512-1 CGFP (LEGIARTI000044425798, en vigueur depuis le 01/03/2022, applicable au 06/10/2026) : *« L'activité est la position du fonctionnaire qui, titulaire d'un grade, exerce effectivement les fonctions de l'un des emplois correspondant à ce grade. »*\n\n**Ce que l'opération n'est pas** : ni un changement de grade, ni une promotion, ni un détachement. Il n'existe **aucune exigence de procédure spéciale** (CAP, tableau d'avancement, quotas) pour un changement de fonctions au sein de la position d'activité, dans la mesure où les nouvelles fonctions correspondent toujours au grade de l'agent.\n\n### 2.2 Condition de légalité : la fiche de poste doit correspondre au grade\n\nLes nouvelles fonctions de RSSI doivent être **compatibles avec le grade détenu**. Si l'agent est ingénieur territorial (catégorie A), les fonctions de conception, d'analyse de risques et de pilotage correspondent au cadre d'emplois. Si l'agent est technicien territorial (catégorie B), une analyse plus fine est nécessaire : les fonctions de RSSI à responsabilité stratégique étendue pourraient dépasser les fonctions correspondant au grade, auquel cas une promotion interne ou un recrutement sur un emploi de catégorie A serait la voie conforme.\n\n**Variable inconnue — question à lever avant de conclure :** quel est le cadre d'emplois de l'agent visé ?\n\n### 2.3 Actes à produire\n\n**a) Modification ou création de l'emploi (délibération)**\n\nArt. L313-1 CGFP (LEGIARTI000044427026, en vigueur depuis le 01/03/2022) : *« Les emplois de chaque collectivité […] sont créés par l'organe délibérant. La délibération précise le grade ou, le cas échéant, les grades correspondant à l'emploi créé. »*\n\nSi la collectivité crée un emploi distinct de « RSSI » ou si l'emploi existant de l'agent change de nature, **une délibération de l'organe délibérant est nécessaire**. Si l'emploi reste le même et que seules les attributions évoluent par modification de la fiche de poste, la délibération peut ne pas être requise — mais il est prudent de la prévoir dès lors que les fonctions RSSI représentent un périmètre significativement différent.\n\n**b) Arrêté individuel d'affectation**\nL'affectation sur le poste est formalisée par un arrêté de l'autorité territoriale (ou acte d'organisation interne selon le cas).\n\n**c) Fiche de poste actualisée**\nElle décrit : les missions RSSI (analyse des risques, PSSI, alerte, homologation), le positionnement hiérarchique, les interfaces DPO/DGS, et les conditions d'exercice (cumul éventuel avec d'autres fonctions DSI).\n\n### 2.4 Conséquences indemnitaires — cadre de principe\n\n**Principe vérifié :**\n\nArt. L714-4 CGFP (LEGIARTI000044424763, en vigueur depuis le 01/03/2022) : *« Les organes délibérants des collectivités territoriales et de leurs établissements publics fixent les régimes indemnitaires de leurs agents, dans la limite de ceux dont bénéficient les différents services de l'État. »*\n\n**Mécanisme FPT :**\n\nPour la filière technique (hypothèse la plus probable pour un agent DSI), le régime indemnitaire applicable est le **RIFSEEP** (IFSE + CIA), transposé dans la FPT par le décret n° 91-875 combiné à l'arrêté d'adhésion du corps de référence et à une délibération locale. [Référence à confirmer en version consolidée avant citation en acte.]\n\nLe changement de fonctions vers le poste de RSSI peut justifier une **révision du groupe de fonctions** (IFSE) si les nouvelles responsabilités correspondent à un groupe supérieur tel que défini par la délibération locale et l'arrêté de référence du corps d'État.\n\n**Ce qui est nécessaire pour concrétiser une hausse d'IFSE :**\n1. Vérifier que la délibération locale prévoit un groupe de fonctions correspondant aux missions RSSI (ou la modifier par délibération après avis du CST).\n2. Prendre un arrêté individuel modifiant le montant d'IFSE (acte faisant grief si défavorable — motivation + voies de recours).\n\n> ⚠️ **Valeurs chiffrées non vérifiées** : les montants de plafonds RIFSEEP par groupe de fonctions pour la filière technique sont **volatils** et **ne sont jamais donnés de mémoire**. Les vérifier sur l'arrêté en vigueur pour le corps de référence de l'État, puis sur la délibération locale.\n\n### 2.5 Ce que le changement de fonctions ne déclenche pas automatiquement\n\n| Situation | Réponse |\n|---|---|\n| Avancement de grade | Non : aucun lien entre changement de fonctions et avancement de grade |\n| Changement de cadre d'emplois | Non : sauf si les nouvelles fonctions dépassent le grade actuel (voir § 2.2) |\n| Consultation de la CAP | Non (depuis la réforme de 2019, la CAP n'est plus consultée sur les mutations et affectations) |\n| Mise à disposition | Non : l'agent reste au sein de la même collectivité |\n\n---\n\n## 3. Points à vérifier avant de conclure\n\n| Point | Source à consulter | Niveau de risque |\n|---|---|---|\n| Transposition NIS2 : périmètre, catégories d'entités, obligations de désignation éventuelles | Légifrance — loi de transposition publiée après octobre 2024 | Élevé / à vérifier |\n| Cadre d'emplois de l'agent (catégorie A, B ?) et compatibilité avec les fonctions RSSI | Dossier administratif de l'agent + décret statutaire du cadre d'emplois | Élevé / à vérifier |\n| Délibération locale RIFSEEP : groupes de fonctions existants, plafonds votés | Délibération en vigueur | Moyen / à vérifier |\n| Arrêté d'adhésion du corps de référence État pertinent pour la filière technique | Légifrance | Moyen / à vérifier |\n| Obligation de création d'emploi par délibération (si emploi nouveau) | L313-1 CGFP — vérifié en session | Moyen / stable |\n\n---\n\n## 4. Synthèse opérationnelle\n\n**Ce que le DGS peut décider sans délibération supplémentaire** (si l'emploi existe déjà et que le grade est compatible) : affecter l'agent sur le poste RSSI par arrêté d'affectation et actualiser la fiche de poste.\n\n**Ce qui nécessite un passage en assemblée délibérante** : toute révision du régime indemnitaire (groupe de fonctions, plafond IFSE), et la création d'un emploi distinct si l'emploi n'existe pas encore.\n\n**Ce qui nécessite une vérification préalable à toute action** : le statut NIS2 de la collectivité et la compatibilité des fonctions RSSI avec le grade de l'agent.\n\n---\n\n*Sources primaires récupérées dans cette session (Légifrance API, consultées le 06/10/2026) :*\n- *Art. L511-1 CGFP — LEGIARTI000044425822*\n- *Art. L512-1 CGFP — LEGIARTI000044425798*\n- *Art. L313-1 CGFP — LEGIARTI000044427026*\n- *Art. L714-4 CGFP — LEGIARTI000044424763*\n- *Art. L714-13 CGFP — LEGIARTI000044424745 (non applicable : filière police municipale/gardes-champêtres)*\n\n*Références internes mobilisées : `references/gouvernance-strategie.md`, `references/securite-si.md` (dsi-fpt) ; `references/carriere-paie.md` (drh-fpt).*",
+      "text_redacted": false,
+      "text_truncated": false,
+      "event_id": "e38"
+    },
+    {
+      "type": "result",
+      "subtype": "success",
+      "is_error": false,
+      "cost_usd": 0.6542223,
+      "result": "J'ai toutes les sources nécessaires. Je produis maintenant la réponse finale.\n\n---\n\n## Confier la fonction RSSI à un agent DSI : cadrage technique et traitement statutaire\n\n---\n\n### Préambule — Variables inconnues à lever\n\nAvant toute conclusion chiffrée ou procédurale, deux variables déterminantes restent absentes :\n\n| Variable | Pourquoi elle change la réponse |\n|---|---|\n| **Filière et cadre d'emplois** de l'agent | Détermine le décret statutaire, le régime indemnitaire applicable (RIFSEEP filière technique ou autre) et le groupe de fonctions |\n| **Statut** (titulaire, stagiaire, contractuel) | Conditionne les voies de révision indemnitaire et les actes à produire |\n\nLa réponse ci-dessous traite les deux branches les plus probables (filière technique, agent titulaire) tout en distinguant explicitement ce qui est acquis de ce qui reste conditionnel.\n\n---\n\n## 1. Volet DSI-FPT — Cadrage des missions techniques du RSSI\n\n*(Sources internes : `references/gouvernance-strategie.md`, `references/securite-si.md`)*\n\n### 1.1 Ce que recouvre la fonction RSSI\n\nLa fonction RSSI se définit par ses **résultats**, pas par un titre. Trois résultats attendus, à formaliser dans la fiche de poste :\n\n**a) Analyse des risques et instruction des mesures**\nLe RSSI identifie les scénarios de menace (indisponibilité, altération, divulgation, perte d'accès), les relie aux services publics concernés, propose des mesures proportionnées et en assure le suivi. Il utilise les référentiels ANSSI (guide d'hygiène informatique, EBIOS Risk Manager) comme **doctrine de méthode, non comme obligation normative** : leur non-respect ne constitue pas en lui-même une illégalité.\n\n**b) Politique de sécurité (PSSI) et homologation**\nLe RSSI instruit la PSSI et le dossier permettant à l'autorité compétente de décider de l'attestation de sécurité des systèmes entrant dans le champ du RGS. Il ne décide pas lui-même de l'acceptation des risques résiduels : cette décision appartient à l'**autorité exécutive** selon les délégations en vigueur.\n\n**c) Alerte, contrôle et interface DPO**\nLe RSSI suit les écarts ouverts, déclenche les escalades et transmet au DPO les informations nécessaires à ses exigences propres. Il n'exerce pas la compétence de qualification des violations de données personnelles.\n\n### 1.2 Principe de séparation production/contrôle\n\nLorsque l'agent exerce simultanément des fonctions d'exploitation DSI et des fonctions de RSSI (situation fréquente dans les collectivités à DSI internalisée de taille intermédiaire), **documenter explicitement** :\n- la liste des tâches pour lesquelles il y a cumul (inévitable),\n- le circuit d'escalade vers une autorité indépendante (DGS, comité de pilotage),\n- la fréquence d'un regard extérieur (audit, revue CDG, CSIRT régional).\n\nCe cumul n'est pas interdit ; il constitue un risque de gouvernance à accepter explicitement, pas à ignorer.\n\n### 1.3 Positionnement organisationnel recommandé\n\nLa matrice de responsabilités à formaliser :\n\n| Acteur | Rôle | Décision |\n|---|---|---|\n| DGS | Arbitrage des risques et des moyens | Acceptation formelle des risques résiduels |\n| RSSI (agent DSI) | Analyse, instruction, alerte | Propose, ne décide pas |\n| DSI / agent exploitation | Déploiement des mesures | Exécute selon arbitrage |\n| DPO | Exigences relatives aux données | Avis avant validation des mesures |\n| Élus / autorité territoriale | Engagement politique et ressources | Décision budgétaire |\n\n### 1.4 Obligation de désignation d'un RSSI — état du droit\n\n**Aucun texte primaire récupéré dans cette session n'impose aux collectivités territoriales de désigner un RSSI nommément.** La désignation est une **bonne pratique de gouvernance**, non une obligation légale vérifiée.\n\n> ⚠️ **Point à vérifier — NIS2 et transposition française**\n> La directive européenne 2022/2555 (NIS2) pouvait, selon sa transposition, imposer des obligations à certaines catégories d'entités publiques locales. La recherche conduite dans cette session n'a pas permis de localiser le texte de transposition français, son périmètre exact et les éventuelles obligations de désignation qui en résultent pour la catégorie de cette collectivité. **Avant de conclure que la collectivité est ou n'est pas soumise à NIS2**, vérifier sur Légifrance la loi de transposition publiée, les catégories visées et les seuils. Ne pas traiter un guide ANSSI comme du droit positif.\n\n**Le RGS** (Référentiel Général de Sécurité) impose une démarche d'attestation de sécurité pour les systèmes d'échanges électroniques entrant dans son champ. Les collectivités territoriales sont incluses parmi les autorités administratives visées, sous réserve du périmètre du système concerné — à confirmer en version consolidée de l'ordonnance n° 2005-1516 et du décret RGS avant de conclure sur les obligations spécifiques.\n\n---\n\n> **BASCULE drh-fpt** — La suite traite le fond statutaire et indemnitaire. Ce volet relève de `drh-fpt`; `dsi-fpt` s'arrête ici sur ce point.\n\n---\n\n## 2. Volet DRH-FPT — Changement de fonctions : conséquences statutaires\n\n*(Source interne : `references/carriere-paie.md` ; sources primaires vérifiées dans la session)*\n\n### 2.1 Nature juridique de l'opération\n\nConfier la fonction RSSI à un agent de la DSI est, dans le cas le plus courant, un **changement de fonctions au sein de la même position statutaire d'activité** : l'agent reste titulaire de son grade, affecté sur un emploi correspondant à ce grade.\n\n**Base vérifiée :**\n- Art. L511-1 CGFP (LEGIARTI000044425822, en vigueur depuis le 01/03/2022, applicable au 06/10/2026) : *« Tout fonctionnaire est placé […] dans l'une des positions suivantes : 1° Activité ; 2° Détachement ; 3° Disponibilité ; 4° Congé parental. »*\n- Art. L512-1 CGFP (LEGIARTI000044425798, en vigueur depuis le 01/03/2022, applicable au 06/10/2026) : *« L'activité est la position du fonctionnaire qui, titulaire d'un grade, exerce effectivement les fonctions de l'un des emplois correspondant à ce grade. »*\n\n**Ce que l'opération n'est pas** : ni un changement de grade, ni une promotion, ni un détachement. Il n'existe **aucune exigence de procédure spéciale** (CAP, tableau d'avancement, quotas) pour un changement de fonctions au sein de la position d'activité, dans la mesure où les nouvelles fonctions correspondent toujours au grade de l'agent.\n\n### 2.2 Condition de légalité : la fiche de poste doit correspondre au grade\n\nLes nouvelles fonctions de RSSI doivent être **compatibles avec le grade détenu**. Si l'agent est ingénieur territorial (catégorie A), les fonctions de conception, d'analyse de risques et de pilotage correspondent au cadre d'emplois. Si l'agent est technicien territorial (catégorie B), une analyse plus fine est nécessaire : les fonctions de RSSI à responsabilité stratégique étendue pourraient dépasser les fonctions correspondant au grade, auquel cas une promotion interne ou un recrutement sur un emploi de catégorie A serait la voie conforme.\n\n**Variable inconnue — question à lever avant de conclure :** quel est le cadre d'emplois de l'agent visé ?\n\n### 2.3 Actes à produire\n\n**a) Modification ou création de l'emploi (délibération)**\n\nArt. L313-1 CGFP (LEGIARTI000044427026, en vigueur depuis le 01/03/2022) : *« Les emplois de chaque collectivité […] sont créés par l'organe délibérant. La délibération précise le grade ou, le cas échéant, les grades correspondant à l'emploi créé. »*\n\nSi la collectivité crée un emploi distinct de « RSSI » ou si l'emploi existant de l'agent change de nature, **une délibération de l'organe délibérant est nécessaire**. Si l'emploi reste le même et que seules les attributions évoluent par modification de la fiche de poste, la délibération peut ne pas être requise — mais il est prudent de la prévoir dès lors que les fonctions RSSI représentent un périmètre significativement différent.\n\n**b) Arrêté individuel d'affectation**\nL'affectation sur le poste est formalisée par un arrêté de l'autorité territoriale (ou acte d'organisation interne selon le cas).\n\n**c) Fiche de poste actualisée**\nElle décrit : les missions RSSI (analyse des risques, PSSI, alerte, homologation), le positionnement hiérarchique, les interfaces DPO/DGS, et les conditions d'exercice (cumul éventuel avec d'autres fonctions DSI).\n\n### 2.4 Conséquences indemnitaires — cadre de principe\n\n**Principe vérifié :**\n\nArt. L714-4 CGFP (LEGIARTI000044424763, en vigueur depuis le 01/03/2022) : *« Les organes délibérants des collectivités territoriales et de leurs établissements publics fixent les régimes indemnitaires de leurs agents, dans la limite de ceux dont bénéficient les différents services de l'État. »*\n\n**Mécanisme FPT :**\n\nPour la filière technique (hypothèse la plus probable pour un agent DSI), le régime indemnitaire applicable est le **RIFSEEP** (IFSE + CIA), transposé dans la FPT par le décret n° 91-875 combiné à l'arrêté d'adhésion du corps de référence et à une délibération locale. [Référence à confirmer en version consolidée avant citation en acte.]\n\nLe changement de fonctions vers le poste de RSSI peut justifier une **révision du groupe de fonctions** (IFSE) si les nouvelles responsabilités correspondent à un groupe supérieur tel que défini par la délibération locale et l'arrêté de référence du corps d'État.\n\n**Ce qui est nécessaire pour concrétiser une hausse d'IFSE :**\n1. Vérifier que la délibération locale prévoit un groupe de fonctions correspondant aux missions RSSI (ou la modifier par délibération après avis du CST).\n2. Prendre un arrêté individuel modifiant le montant d'IFSE (acte faisant grief si défavorable — motivation + voies de recours).\n\n> ⚠️ **Valeurs chiffrées non vérifiées** : les montants de plafonds RIFSEEP par groupe de fonctions pour la filière technique sont **volatils** et **ne sont jamais donnés de mémoire**. Les vérifier sur l'arrêté en vigueur pour le corps de référence de l'État, puis sur la délibération locale.\n\n### 2.5 Ce que le changement de fonctions ne déclenche pas automatiquement\n\n| Situation | Réponse |\n|---|---|\n| Avancement de grade | Non : aucun lien entre changement de fonctions et avancement de grade |\n| Changement de cadre d'emplois | Non : sauf si les nouvelles fonctions dépassent le grade actuel (voir § 2.2) |\n| Consultation de la CAP | Non (depuis la réforme de 2019, la CAP n'est plus consultée sur les mutations et affectations) |\n| Mise à disposition | Non : l'agent reste au sein de la même collectivité |\n\n---\n\n## 3. Points à vérifier avant de conclure\n\n| Point | Source à consulter | Niveau de risque |\n|---|---|---|\n| Transposition NIS2 : périmètre, catégories d'entités, obligations de désignation éventuelles | Légifrance — loi de transposition publiée après octobre 2024 | Élevé / à vérifier |\n| Cadre d'emplois de l'agent (catégorie A, B ?) et compatibilité avec les fonctions RSSI | Dossier administratif de l'agent + décret statutaire du cadre d'emplois | Élevé / à vérifier |\n| Délibération locale RIFSEEP : groupes de fonctions existants, plafonds votés | Délibération en vigueur | Moyen / à vérifier |\n| Arrêté d'adhésion du corps de référence État pertinent pour la filière technique | Légifrance | Moyen / à vérifier |\n| Obligation de création d'emploi par délibération (si emploi nouveau) | L313-1 CGFP — vérifié en session | Moyen / stable |\n\n---\n\n## 4. Synthèse opérationnelle\n\n**Ce que le DGS peut décider sans délibération supplémentaire** (si l'emploi existe déjà et que le grade est compatible) : affecter l'agent sur le poste RSSI par arrêté d'affectation et actualiser la fiche de poste.\n\n**Ce qui nécessite un passage en assemblée délibérante** : toute révision du régime indemnitaire (groupe de fonctions, plafond IFSE), et la création d'un emploi distinct si l'emploi n'existe pas encore.\n\n**Ce qui nécessite une vérification préalable à toute action** : le statut NIS2 de la collectivité et la compatibilité des fonctions RSSI avec le grade de l'agent.\n\n---\n\n*Sources primaires récupérées dans cette session (Légifrance API, consultées le 06/10/2026) :*\n- *Art. L511-1 CGFP — LEGIARTI000044425822*\n- *Art. L512-1 CGFP — LEGIARTI000044425798*\n- *Art. L313-1 CGFP — LEGIARTI000044427026*\n- *Art. L714-4 CGFP — LEGIARTI000044424763*\n- *Art. L714-13 CGFP — LEGIARTI000044424745 (non applicable : filière police municipale/gardes-champêtres)*\n\n*Références internes mobilisées : `references/gouvernance-strategie.md`, `references/securite-si.md` (dsi-fpt) ; `references/carriere-paie.md` (drh-fpt).*",
+      "text_redacted": false,
+      "text_truncated": false,
+      "errors_count": 0,
+      "event_id": "e39"
+    },
+    {
+      "type": "technical_assessment",
+      "case_id": "plugin-dsi-rssi-rh",
+      "process_exit": 0,
+      "status": "passed",
+      "failures": [],
+      "observables": {
+        "stop_required": false,
+        "first_visible_text_ref": "e5",
+        "stop_first": null,
+        "primary_content_refs": [
+          "e13",
+          "e22",
+          "e23",
+          "e30",
+          "e37"
+        ],
+        "primary_content_available": true,
+        "legal_validity": null,
+        "note": "Le contenu disponible ne certifie ni pertinence ni vigueur."
+      },
+      "requires_independent_judgment": true
+    }
+  ]
+}

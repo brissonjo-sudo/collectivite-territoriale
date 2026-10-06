@@ -1,5 +1,53 @@
 # Historique des versions
 
+## 1.2.0-dev.4 — 2026-10-06 — Correctif méthodologique non mesuré
+
+- Confrontation mot à mot des catégories, qualités, interlocuteurs et conditions
+  du primaire à chaque phrase finale ; retrait des équivalences ambiguës.
+- Bascule explicite vers DRH avant le fond RH, même après un chargement imposé
+  des skills ; cadrage DSI avec inventaire, exploitation, continuité,
+  responsabilités, preuves, recette et questions manquantes.
+- Six bases amont inchangées ; seuls les contrats locaux déclarés évoluent.
+- Conservation de la tentative dev.3 r6 : une réponse APJA complète en échec,
+  quinze interruptions de quota. Dev.4 n'a aucune mesure ni score transféré.
+- Nouveau gel et seize nouvelles conversations requis ; revues humaines et
+  smoke Codex ouverts ; `release_ready=false`.
+
+## 1.2.0-dev.3 — 2026-10-06 — Renforcement de la coactivation, publication bloquée
+
+- Conservation de la campagne dev.2 : 16 cas exécutés, dont trois échecs
+  techniques de sélection spontanée. Ses résultats restent attachés à ses
+  octets ; aucun jugement ni score n'est transféré vers ce candidat.
+- Contrat prioritaire en tête des six skills : STOP avant toute annonce,
+  chargement réel de la recherche juridique, texte primaire pertinent pour
+  chaque affirmation et abstention intégrale si la récupération est insuffisante.
+- Descriptions des cinq métiers resserrées ; variantes locales DSI et DirFi
+  déclarées et contrôlées depuis les mêmes commits amont.
+- Nouveau gel et nouvelle campagne requis. Relectures DSI/RSSI et juridique
+  humaines et smoke Codex non acquis ; `release_ready=false`.
+
+## 1.2.0-dev.2 — 2026-10-06 — Candidat correctif, publication bloquée
+
+- Intégration de DSI 0.2.1 depuis le commit source
+  `704e5dd6a3d15994ed431b23585aabd72086ca75`, sans modification locale de ses
+  trente fichiers runtime. Les cinq autres bases amont restent figées.
+- STOP initial visible, mobilisation effective de la recherche juridique,
+  abstention complète sans source primaire et traitement du statut RH inconnu.
+  Les surcharges restent déclarées, bornées et contrôlées par empreinte.
+- Correction des descriptions DPM/DPO dès la découverte du skill, avec une
+  opération de remplacement limitée à ce seul champ de métadonnées.
+- Suite de coactivation à seize cas et 124 exigences atomiques, dont cinq
+  sélections spontanées. Nouvelle qualification sur le runtime corrigé,
+  sans transfert des scores des campagnes antérieures.
+- Gel fondé sur les blobs Git bruts, contrôlé avant et après chaque cas,
+  et jugement lié à l'exécution native d'un sous-agent frais.
+- Collecte des textes primaires assainis et correction de l'assainissement
+  qui masquait à tort un titre contenant « signature » sans valeur secrète.
+- Retrait des renvois DSI d'exécution vers le cache de maintenance qui n'est
+  pas distribué dans le paquet runtime.
+- Revue DSI/RSSI, revue juridique humaine et smoke du candidat dans Codex
+  restent des barrières distinctes : `release_ready=false`.
+
 ## 1.1.1 — 2026-10-03 — Candidat d'alignement DRH
 
 - Mise à jour de `drh-fpt` vers 0.6.0 depuis `main`, au commit

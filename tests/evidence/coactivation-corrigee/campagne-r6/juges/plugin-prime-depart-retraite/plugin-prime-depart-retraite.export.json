@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "plugin-prime-depart-retraite",
+  "exported_at": "2026-10-06T20:58:51.107217+00:00",
+  "packet_sha256": "74c4f7abdb7e6e0840ef52847376e97187b2a430eb4b8f17140db3db71a06d9d",
+  "prompt_sha256": "0630b4d62a434d9fb67ebbc96ed5f62f1ecd1122b9b2e2d676a8be2e5bb6a284",
+  "response_sha256": "6e70f0020a6c10f751e0995b9369df3b88af05ef1a7546e54bf4558a7afe049c",
+  "suite_sha256": "3c45e6117c25cbca0558de2955ca5a7d80956575d886a887d1cdfdc581375cd8",
+  "protocol_sha256": "65f78f419679774ec00c6b5d96b1801f902c6510b57e221ae7ebb31320fd1b6f",
+  "external_read_output_tokens": 55000,
+  "portable_adapter_sha256": "61f853a233cd45b2f23c52a1b2344f21a52a5728e90afd8a02bbcb77de3ef371"
+}

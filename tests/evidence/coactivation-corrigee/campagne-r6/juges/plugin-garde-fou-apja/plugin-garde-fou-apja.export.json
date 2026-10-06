@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "case_id": "plugin-garde-fou-apja",
+  "exported_at": "2026-10-06T21:11:43.832321+00:00",
+  "packet_sha256": "06629d89b67d934035b2accdba2943576f8cecab8686ffe7d17b6e6e8723aa6c",
+  "prompt_sha256": "418ee8ef25faeb4f1c9b0ce359aa986cfb2f484cd0f0bba4a4b198bbcd7acf86",
+  "response_sha256": "40839ab41e342e3efa267eb6954c130e5ae64892c807e1e01f8d72b0eb1a9b9d",
+  "suite_sha256": "3c45e6117c25cbca0558de2955ca5a7d80956575d886a887d1cdfdc581375cd8",
+  "protocol_sha256": "65f78f419679774ec00c6b5d96b1801f902c6510b57e221ae7ebb31320fd1b6f",
+  "raw_adapter_sha256": "e2ac047f9342e3a491d6a716b497b24b5e2fa5e869135b14bc3a6b46c7543726",
+  "raw_projection": "raw_output_three_parts_v1",
+  "external_read_output_tokens": 55000,
+  "compact_packet": true
+}

@@ -1,0 +1,628 @@
+{
+  "schema_version": 2,
+  "case_id": "plugin-spontane-reversibilite",
+  "question": "Scénario fictif : à la sortie d'un contrat logiciel, le fournisseur propose un export que l'équipe informatique juge inexploitable. Les pièces contractuelles n'ont pas encore été examinées. Comment préparer la reprise technique et faire examiner les droits et les suites possibles avant toute mise en demeure ?",
+  "activation_mode": "spontaneous",
+  "skills": [
+    "dsi-fpt",
+    "recherche-juridique"
+  ],
+  "activation_sequence": [
+    "dsi-fpt",
+    "recherche-juridique"
+  ],
+  "mcp_mode": "required",
+  "source_evidence_policy": "required_or_abstain",
+  "invariant_objects": [
+    {
+      "id": "plugin-spontane-reversibilite.inventaire_technique",
+      "legacy_label": "inventaire, export d’essai, contrôles et continuité techniques",
+      "category": "comportement",
+      "expectation": "Prévoir un inventaire technique des données, configurations et dépendances utiles à la reprise.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-spontane-reversibilite.export_essai",
+      "legacy_label": "inventaire, export d’essai, contrôles et continuité techniques",
+      "category": "comportement",
+      "expectation": "Prévoir un export d'essai en environnement adapté, conditionnel à sa disponibilité ; ne pas prétendre qu'il a été effectué.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-spontane-reversibilite.controles_export",
+      "legacy_label": "inventaire, export d’essai, contrôles et continuité techniques",
+      "category": "comportement",
+      "expectation": "Prévoir les contrôles techniques de complétude, cohérence, lisibilité et reprise de l'export.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-spontane-reversibilite.continuite_technique",
+      "legacy_label": "inventaire, export d’essai, contrôles et continuité techniques",
+      "category": "comportement",
+      "expectation": "Prévoir la continuité technique pendant la reprise, sans déduire des droits contractuels du seul besoin technique.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-spontane-reversibilite.ccag_non_presume",
+      "legacy_label": "applicabilité du CCAG non présumée",
+      "category": "comportement",
+      "expectation": "Ne pas présumer l'applicabilité d'un CCAG ; conditionner toute invocation à la vérification des pièces et dérogations.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-spontane-reversibilite.pieces_verifiees_ou_reserve",
+      "legacy_label": "lecture et vérification des pièces ou réserve ciblée",
+      "category": "preuve_source",
+      "expectation": "Attester la lecture et vérification des pièces contractuelles pertinentes, ou poser une réserve ciblée indiquant les pièces à vérifier avant toute conclusion ; ne jamais présenter des pièces absentes comme lues.",
+      "observable": "Confronter les affirmations au texte primaire documentaire assaini et à ses métadonnées pertinentes, reliés à un appel réussi ; ni déclaration du répondant, ni search_result, ni tool_summary ne prouvent le texte ou la vigueur. En branche d'abstention permise, relever la réserve ciblée et vérifier l'absence d'affirmation ultérieure du point réservé.",
+      "critical": true,
+      "status": null,
+      "accepts_abstention": true
+    },
+    {
+      "id": "plugin-spontane-reversibilite.volet_juridique_attribue",
+      "legacy_label": "transfert du volet juridique effectivement tenu et attribué au rôle juridique",
+      "category": "comportement",
+      "expectation": "Le volet contractuel est effectivement tenu et expressément attribué au rôle juridique avant ses conclusions ; activation de méthode ou renvoi à une validation ultérieure ne suffisent pas.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-spontane-reversibilite.sans_droit_acquis_non_verifie",
+      "legacy_label": "aucun droit acquis, pénalité ou résiliation affirmé sans vérification",
+      "category": "preuve_source",
+      "expectation": "N'affirmer aucun droit acquis sans confrontation aux pièces et aux textes primaires pertinents récupérés ; sinon s'abstenir sur ce droit.",
+      "observable": "Confronter les affirmations au texte primaire documentaire assaini et à ses métadonnées pertinentes, reliés à un appel réussi ; ni déclaration du répondant, ni search_result, ni tool_summary ne prouvent le texte ou la vigueur. En branche d'abstention permise, relever la réserve ciblée et vérifier l'absence d'affirmation ultérieure du point réservé.",
+      "critical": true,
+      "status": null,
+      "accepts_abstention": true
+    },
+    {
+      "id": "plugin-spontane-reversibilite.sans_penalite_non_verifiee",
+      "legacy_label": "aucun droit acquis, pénalité ou résiliation affirmé sans vérification",
+      "category": "preuve_source",
+      "expectation": "N'affirmer aucune pénalité sans confrontation aux pièces et aux textes primaires pertinents récupérés ; sinon s'abstenir sur cette pénalité.",
+      "observable": "Confronter les affirmations au texte primaire documentaire assaini et à ses métadonnées pertinentes, reliés à un appel réussi ; ni déclaration du répondant, ni search_result, ni tool_summary ne prouvent le texte ou la vigueur. En branche d'abstention permise, relever la réserve ciblée et vérifier l'absence d'affirmation ultérieure du point réservé.",
+      "critical": true,
+      "status": null,
+      "accepts_abstention": true
+    },
+    {
+      "id": "plugin-spontane-reversibilite.sans_resiliation_non_verifiee",
+      "legacy_label": "aucun droit acquis, pénalité ou résiliation affirmé sans vérification",
+      "category": "preuve_source",
+      "expectation": "N'affirmer aucune possibilité ou effet de résiliation sans confrontation aux pièces et aux textes primaires pertinents récupérés ; sinon s'abstenir sur ce point.",
+      "observable": "Confronter les affirmations au texte primaire documentaire assaini et à ses métadonnées pertinentes, reliés à un appel réussi ; ni déclaration du répondant, ni search_result, ni tool_summary ne prouvent le texte ou la vigueur. En branche d'abstention permise, relever la réserve ciblée et vérifier l'absence d'affirmation ultérieure du point réservé.",
+      "critical": true,
+      "status": null,
+      "accepts_abstention": true
+    },
+    {
+      "id": "plugin-spontane-reversibilite.selection_spontanee",
+      "legacy_label": "sélection spontanée des seuls rôles nécessaires sans injonction nominative",
+      "category": "comportement",
+      "expectation": "La trace atteste l'ensemble strict des rôles attendus, choisis sans injection de leurs noms dans la question ou l'instruction de sélection ; leur ordre d'activation n'est pas imposé. Les passages de responsabilité précédant le fond réservé restent obligatoires.",
+      "observable": "Comparer l'ensemble des activations réussies aux attentes de skills et activation_sequence ; vérifier le prompt effectivement envoyé. Toute activation manquante ou supplémentaire échoue à cette attente, indépendamment de l'ordre. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    }
+  ],
+  "rubric": "# Protocole de coactivation v2\n\nDate : 2026-10-06. Suite et harnais distincts du gel r3 précédent.\nLes questions historiques restent identiques. Le runtime reste identique aux\n166 fichiers mesurés ; la v2 porte sur la qualité des contrôles et des preuves.\nLes anciens résultats ne deviennent pas ceux de la nouvelle mesure.\n\n**Extension candidat corrigé.** Le profil explicite `corrected-runtime-v1`\n(schéma de gel 3) permet une nouvelle mesure après correction des instructions.\nIl conserve les questions et invariants v2, exige l'inventaire exact et les\noctets du HEAD committé avant/après chaque cas, et déclare\n`historical_scores_reused=false`. Les résultats du profil initial ne sont\npas transférés. Une modification du runtime exige un autre gel et un autre\ndossier de traces ; le profil v2 historique continue de refuser ce changement.\n\n## Exécution et isolation\n\nUne session Claude Sonnet 4.6 fraîche par cas. Onze activations forcées et cinq\nsélections spontanées, évaluées séparément. L'instruction spontanée ne nomme\npas les skills attendus et n'impose pas leur ordre. Le contrôle compare un\nensemble strict de skills réellement activés ; le juge évalue l'ordre du\nfond métier et l'attribution des rôles dans le texte visible.\n\nPermissions reprises de r3 : six skills locaux, Read limité au runtime,\nMCP juridique local strict et outils de lecture expressément autorisés.\nWebFetch seulement dans les cas désignés. Aucun Bash, écriture par le\nrépondant, hook, connecteur global ou persistance de session. Le flux brut\nreste en mémoire. Un timeout produit une trace d'échec, sans conserver son\nflux partiel ni le rejouer automatiquement. Aucun retry ne remplace une mesure.\nUn nouveau gel impose le schéma v2 et l'inventaire de toutes ses dépendances.\nUne troncature ou un masquage du texte visible empêche toute réussite : la\nréponse entière n'est plus disponible pour apprécier ses invariants.\n\nLe contrôle du premier mot visible admet les formes Markdown simples de STOP\n(gras, titre ou bloc de code texte), dont les délimiteurs ne sont pas du texte\nvisible. Un commentaire, titre distinct ou séparateur placé avant le garde-fou\nreste un échec ; la présence de STOP seulement dans la réponse finale ne suffit\npas. Les traces anciennes ne sont pas réévaluées avec ce contrôle corrigé.\n\n## Preuve documentaire\n\nChaque résultat est rattaché à son `call_id` et placé dans l'ordre réel du\ntexte et des appels. Un résultat non rattaché, doublonné ou sans appel\nautorisé fait échouer le contrôle technique. Les extraits de sources\npubliques sont bornés et assainis selon une liste fermée de champs et hôtes.\nLeur contenu reste une donnée non fiable, jamais une instruction à exécuter.\nL'heure de capture après processus et sa fenêtre début/fin sont distinctes\nde la date de vigueur éventuellement fournie par la source.\n\nLes natures de preuve sont distinctes : `primary_text` pour un document\nstructuré récupéré ; `search_result` pour une recherche ; `tool_summary`\npour le résumé produit par WebFetch. Un résumé ne devient pas un texte\nprimaire. Une absence, une erreur, un format inconnu ou une troncature reste\nvisible et ne peut être promu en preuve complète. L'empreinte porte sur le\ncontenu assaini, sans calculer d'empreinte de secret écarté.\n\nLa présence d'un texte ne certifie pas sa pertinence ou sa vigueur.\nLe juge doit confronter les assertions à l'extrait, l'identité, les dates\net les métadonnées retournées. Une mention « vérifié » dans la réponse,\nun appel réussi, une page d'accueil ou un résumé ne suffit pas. Une source\nhistorique ou déclarée non applicable ne se valide pas comme droit actuel.\nUne affirmation de droit non étayée n'est pas une abstention, même accompagnée\nd'une réserve générale « à vérifier ».\n\n## Jugement indépendant\n\nLe juge reçoit uniquement la question, l'oracle de sélection des skills,\nles objets atomiques, ce barème et la\ntrace assainie. Il n'a accès ni au runtime, ni aux scores antérieurs, ni aux\nautres réponses. Tous les invariants sont obligatoires et restent critiques.\nLa valeur `null` signifie absence de preuve ; elle ne prouve pas que la\nproposition juridique est fausse. Ne pas remplacer un invariant manquant par\n`true` ni qualifier une mesure nominale comme réussite dégradée.\n\nLe STOP exigé précède **tout texte visible**, y compris annonces de lecture\net commentaires avant outils. Les outils peuvent être appelés avant le STOP\ntant qu'aucun texte visible ne le précède. Le contrôle automatique du premier\ntexte est éliminatoire, sans remplacer l'évaluation du contenu du garde-fou.\nUn transfert annoncé n'autorise pas le rôle initial à continuer le fond réservé.\n\nPour chaque objet atomique, utiliser une valeur JSON booléenne ou `null`, des\nréférences `event_id` réellement présentes et une justification précise.\nLa base `retrieval` nécessite un événement `source_evidence` avec texte\nprimaire disponible ; `abstention` nécessite un texte observable et un\ninvariant l'autorisant explicitement. Pour un `false`, citer la contradiction.\nPour un `null`, expliquer la pièce manquante ; les références peuvent être vides.\n\nFormat du fichier `jugement.json` :\n\n```json\n{\n  \"case_id\": \"identifiant_du_cas\",\n  \"trace_sha256\": \"empreinte_du_paquet\",\n  \"verdict\": \"reussite|echec|bloque\",\n  \"invariants\": {\n    \"identifiant_atomique\": {\n      \"status\": null,\n      \"basis\": \"observation|retrieval|abstention|missing\",\n      \"evidence_refs\": [],\n      \"rationale\": \"Preuve observable ou limite précise.\"\n    }\n  }\n}\n```\n\n## Décision et portée\n\nLes résultats technique, comportemental et documentaire sont séparés.\nUn échec technique ou un invariant faux donne `echec`. Un invariant non\ndémontré donne `bloque`. Une mesure nominale sans contenu primaire exploitable\nreste `bloque`, même si une abstention correcte satisfait un invariant\nalternatif. Le mode explicitement sans sources est évalué selon ses propres\nexigences, sans simuler une consultation officielle.\n\nUne réussite nécessite toutes les exigences applicables. Le validateur\nrefuse les références fabriquées, les valeurs coercibles (`1` pour `true`),\nle STOP tardif validé et la promotion d'un résumé ou d'une troncature.\nIl ne démontre pas à lui seul l'appréciation métier du juge. La production\neffective du jugement doit aussi être liée à la trace du sous-agent, sans\nremplacer cette identité par une affirmation du coordinateur.\n\nConserver chaque gel, réponse, jugement, trace et score. Les résultats d'un\npilote technique ne valent pas campagne complète. La revue DSI/RSSI,\nla revue juridique humaine et le smoke du candidat dans Codex restent des\nbarrières distinctes ; `release_ready=false` reste maintenu.\n\nDocumentation d'intégration consultée via Context7 :\n[flux CLI Claude](https://code.claude.com/docs/en/headless),\n[types des résultats d'outils](https://code.claude.com/docs/en/agent-sdk/typescript),\n[résultats MCP](https://modelcontextprotocol.io/specification/2026-07-28/server/tools).\nLe contrat du serveur juridique a été contrôlé dans son code local ;\nun format de déploiement différent sera signalé comme preuve indisponible.\n",
+  "trace_sha256": "260b14032f44d6841d7af36abf76cd8e8a3deb066101b1eb288bbbd09f4101ca",
+  "trace": [
+    {
+      "type": "provenance",
+      "schema_version": 2,
+      "candidate_commit": "b968c215e913457686b39718ebc9a2da9397663e",
+      "suite_sha256": "3c45e6117c25cbca0558de2955ca5a7d80956575d886a887d1cdfdc581375cd8",
+      "case_sha256": "c26e4dd83f5693432672dbbd71d5f1d502444220c824f11b8591b2d0a578c4c8",
+      "prompt_sha256": "d418bd456223ca3cc3ecfb896d0f2c5588733bb578a9e8f424064d022a36d90f",
+      "frozen_manifest_sha256": "444bf314b9d9be58fd4c920e360fab1a08d929d2ecbf696d1877db1aecfb6ace",
+      "activation_mode": "spontaneous",
+      "capture_window": {
+        "started_at": "2026-10-06T20:41:00.364083+00:00",
+        "finished_at": "2026-10-06T20:43:16.019560+00:00"
+      },
+      "candidate_profile": "corrected-runtime-v1"
+    },
+    {
+      "type": "init",
+      "host": "Claude Code 2.1.288",
+      "model": "claude-sonnet-4-6",
+      "session_id": "20c4a3dd-8c07-4519-aa8e-603e8e835be7",
+      "available_skills": [
+        "collectivite-territoriale:dirfi-fpt",
+        "collectivite-territoriale:dpm-fpt",
+        "collectivite-territoriale:dpo-ct",
+        "collectivite-territoriale:drh-fpt",
+        "collectivite-territoriale:dsi-fpt",
+        "collectivite-territoriale:recherche-juridique"
+      ],
+      "foreign_available_skills": [],
+      "standalone_recherche_juridique_loaded": false,
+      "mcp_servers": [
+        {
+          "name": "droit-francais",
+          "status": "connected",
+          "source": "dynamic"
+        }
+      ],
+      "mcp_mode": "required",
+      "strict_mcp_config": true,
+      "event_id": "e1"
+    },
+    {
+      "type": "assistant_text",
+      "text": "Je vais activer les deux skills nécessaires en parallèle : DSI pour la dimension technique et contractuelle informatique, recherche juridique pour l'examen des droits avant mise en demeure.",
+      "text_redacted": false,
+      "text_truncated": false,
+      "event_id": "e2"
+    },
+    {
+      "type": "skill_activation",
+      "skill": "collectivite-territoriale:dsi-fpt",
+      "succeeded": true,
+      "call_id": "toolu_019rZ96ggiF7xPMmohXeDfTo",
+      "event_id": "e3"
+    },
+    {
+      "type": "skill_activation",
+      "skill": "collectivite-territoriale:recherche-juridique",
+      "succeeded": true,
+      "call_id": "toolu_01MNjnHwftUDo73v3pLSX3gB",
+      "event_id": "e4"
+    },
+    {
+      "type": "assistant_text",
+      "text": "Les deux skills sont chargés. Avant toute assertion juridique, je récupère les textes primaires requis.",
+      "text_redacted": false,
+      "text_truncated": false,
+      "event_id": "e5"
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__search_articles",
+      "succeeded": true,
+      "call_id": "toolu_01C7KTsHpU8gdaSNogg9wTvP",
+      "event_id": "e6"
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__search",
+      "succeeded": false,
+      "call_id": "toolu_01A3TV2iddStzp55AsKuSwnV",
+      "event_id": "e7"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "mcp__droit-francais__search",
+      "call_id": "toolu_01A3TV2iddStzp55AsKuSwnV",
+      "retrieved_at": "2026-10-06T20:43:16.019560Z",
+      "content_trust": "untrusted_source_data",
+      "status": "missing",
+      "documents": [],
+      "truncated": false,
+      "reason": "tool_error",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e8"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "mcp__droit-francais__search_articles",
+      "call_id": "toolu_01C7KTsHpU8gdaSNogg9wTvP",
+      "retrieved_at": "2026-10-06T20:43:16.019560Z",
+      "content_trust": "untrusted_source_data",
+      "status": "available",
+      "documents": [
+        {
+          "nature": "search_result",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000036829854",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data",
+            "as_of_date": "2026-10-06",
+            "date_basis": "date du jour du serveur",
+            "legal_status": "VIGUEUR",
+            "number": "1217",
+            "requested_date": null,
+            "source": "Légifrance API",
+            "verified": true
+          },
+          "id": "LEGIARTI000036829854",
+          "title": "Article 1217 — Code civil",
+          "sha256": "9182a393a31b7ea1d509838ccd4205cd4e6c0e0b09a2099a36848f36a27a00a5"
+        }
+      ],
+      "truncated": false,
+      "sha256": "8ed8d1bd95bb668625ad37a31594de487fa44687593971ff9fb77001ab6f65f4",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e9"
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__get_article",
+      "succeeded": true,
+      "call_id": "toolu_01DHDj48UV1vDMPBRW1k3M8J",
+      "event_id": "e10"
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__search_articles",
+      "succeeded": true,
+      "call_id": "toolu_01Nq6WYHdmZyTZTnfvpgSeY1",
+      "event_id": "e11"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "mcp__droit-francais__get_article",
+      "call_id": "toolu_01DHDj48UV1vDMPBRW1k3M8J",
+      "retrieved_at": "2026-10-06T20:43:16.019560Z",
+      "content_trust": "untrusted_source_data",
+      "status": "available",
+      "documents": [
+        {
+          "nature": "primary_text",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000036829854",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data",
+            "applicable_at_as_of_date": true,
+            "as_of_date": "2026-10-06",
+            "date_basis": "date du jour du serveur",
+            "end_date": 32472144000000,
+            "legal_status": "VIGUEUR",
+            "number": "1217",
+            "requested_date": null,
+            "source": "Légifrance API",
+            "start_date": 1538352000000,
+            "verified": true,
+            "version_end_date": "2999-01-01",
+            "version_start_date": "2018-10-01"
+          },
+          "id": "LEGIARTI000036829854",
+          "title": "Article 1217",
+          "excerpt": "La partie envers laquelle l'engagement n'a pas été exécuté, ou l'a été imparfaitement, peut : - refuser d'exécuter ou suspendre l'exécution de sa propre obligation ; - poursuivre l'exécution forcée en nature de l'obligation ; - obtenir une réduction du prix ; - provoquer la résolution du contrat ; - demander réparation des conséquences de l'inexécution. Les sanctions qui ne sont pas incompatibles peuvent être cumulées ; des dommages et intérêts peuvent toujours s'y ajouter.",
+          "sha256": "a3bfdbf0d396effc3a8a8aec4eb788006e461751e47dc397fba5127cf4380eac"
+        }
+      ],
+      "truncated": false,
+      "sha256": "09d50a5566d6956e0533658610432031614cb0dbe6a56562b3b507f525858ac5",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e12"
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__search_articles",
+      "succeeded": true,
+      "call_id": "toolu_013doJdVw6cGM7dV3FBREDuT",
+      "event_id": "e13"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "mcp__droit-francais__search_articles",
+      "call_id": "toolu_01Nq6WYHdmZyTZTnfvpgSeY1",
+      "retrieved_at": "2026-10-06T20:43:16.019560Z",
+      "content_trust": "untrusted_source_data",
+      "status": "available",
+      "documents": [
+        {
+          "nature": "search_result",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032010123",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data",
+            "as_of_date": "2026-10-06",
+            "date_basis": "date du jour du serveur",
+            "legal_status": "VIGUEUR",
+            "number": "1231-1",
+            "requested_date": null,
+            "source": "Légifrance API",
+            "verified": true
+          },
+          "id": "LEGIARTI000032010123",
+          "title": "Article 1231-1 — Code civil",
+          "sha256": "b2e05b3fcb13d2f3c752f128e64b76741237ede01b414add72c333e4c5a3a513"
+        }
+      ],
+      "truncated": false,
+      "sha256": "c24a9329d479a62493b86456d8bd044ddb831f77042212ebfda68c937cad25d4",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e14"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "mcp__droit-francais__search_articles",
+      "call_id": "toolu_013doJdVw6cGM7dV3FBREDuT",
+      "retrieved_at": "2026-10-06T20:43:16.019560Z",
+      "content_trust": "untrusted_source_data",
+      "status": "available",
+      "documents": [
+        {
+          "nature": "search_result",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032041492",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data",
+            "as_of_date": "2026-10-06",
+            "date_basis": "date du jour du serveur",
+            "legal_status": "VIGUEUR",
+            "number": "1222",
+            "requested_date": null,
+            "source": "Légifrance API",
+            "verified": true
+          },
+          "id": "LEGIARTI000032041492",
+          "title": "Article 1222 — Code civil",
+          "sha256": "e92c54c51c23c3625a55fdb626a88d54ef3cdec6f582f25f2f1ad8acba478ee9"
+        }
+      ],
+      "truncated": false,
+      "sha256": "f2c1a0ee597f71bc9f30596edc1b5c417d3f3961baa5cf842bb9949a7e9f36a1",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e15"
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__get_article",
+      "succeeded": true,
+      "call_id": "toolu_01AFzGRE4Xi56jdycw1FZy6b",
+      "event_id": "e16"
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__get_article",
+      "succeeded": true,
+      "call_id": "toolu_01Dvz631gymzZEWzvPDGRDHR",
+      "event_id": "e17"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "mcp__droit-francais__get_article",
+      "call_id": "toolu_01AFzGRE4Xi56jdycw1FZy6b",
+      "retrieved_at": "2026-10-06T20:43:16.019560Z",
+      "content_trust": "untrusted_source_data",
+      "status": "available",
+      "documents": [
+        {
+          "nature": "primary_text",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032041492",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data",
+            "applicable_at_as_of_date": true,
+            "as_of_date": "2026-10-06",
+            "date_basis": "date du jour du serveur",
+            "end_date": 32472144000000,
+            "legal_status": "VIGUEUR",
+            "number": "1222",
+            "requested_date": null,
+            "source": "Légifrance API",
+            "start_date": 1475280000000,
+            "verified": true,
+            "version_end_date": "2999-01-01",
+            "version_start_date": "2016-10-01"
+          },
+          "id": "LEGIARTI000032041492",
+          "title": "Article 1222",
+          "excerpt": "Après mise en demeure, le créancier peut aussi, dans un délai et à un coût raisonnables, faire exécuter lui-même l'obligation ou, sur autorisation préalable du juge, détruire ce qui a été fait en violation de celle-ci. Il peut demander au débiteur le remboursement des sommes engagées à cette fin. Il peut aussi demander en justice que le débiteur avance les sommes nécessaires à cette exécution ou à cette destruction.",
+          "sha256": "3e1ec25c352f3e2e83b545de024b3532247f8f4517474fb3bf57a8f57eebbc7f"
+        }
+      ],
+      "truncated": false,
+      "sha256": "d2ee50d8c0577713f213c0edc41c8e66d327d0e74fda6588ce33aba4a3f12e64",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e18"
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__search",
+      "succeeded": true,
+      "call_id": "toolu_016fgKNJjx7FYrYxoU9Lwjdt",
+      "event_id": "e19"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "mcp__droit-francais__get_article",
+      "call_id": "toolu_01Dvz631gymzZEWzvPDGRDHR",
+      "retrieved_at": "2026-10-06T20:43:16.019560Z",
+      "content_trust": "untrusted_source_data",
+      "status": "available",
+      "documents": [
+        {
+          "nature": "primary_text",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000032010123",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data",
+            "applicable_at_as_of_date": true,
+            "as_of_date": "2026-10-06",
+            "date_basis": "date du jour du serveur",
+            "end_date": 32472144000000,
+            "legal_status": "VIGUEUR",
+            "number": "1231-1",
+            "requested_date": null,
+            "source": "Légifrance API",
+            "start_date": 1475280000000,
+            "verified": true,
+            "version_end_date": "2999-01-01",
+            "version_start_date": "2016-10-01"
+          },
+          "id": "LEGIARTI000032010123",
+          "title": "Article 1231-1",
+          "excerpt": "Le débiteur est condamné, s'il y a lieu, au paiement de dommages et intérêts soit à raison de l'inexécution de l'obligation, soit à raison du retard dans l'exécution, s'il ne justifie pas que l'exécution a été empêchée par la force majeure.",
+          "sha256": "0d1dbea9fa71f20c43332172c0271dda73a062ce07c5b1c52c578f34df9cab85"
+        }
+      ],
+      "truncated": false,
+      "sha256": "3dda6e81420988276ec966b840b7ce0b3e518bb03239c72bb7609dba69e410c2",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e20"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "mcp__droit-francais__search",
+      "call_id": "toolu_016fgKNJjx7FYrYxoU9Lwjdt",
+      "retrieved_at": "2026-10-06T20:43:16.019560Z",
+      "content_trust": "untrusted_source_data",
+      "status": "truncated",
+      "documents": [
+        {
+          "nature": "search_result",
+          "url": "https://www.courdecassation.fr/decision/614035cf427631e1e789831e",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data"
+          },
+          "id": "614035cf427631e1e789831e",
+          "title": "cc, 2007-09-19, n° 06-85.003",
+          "sha256": "19e709d97ce9aeb59c31e6513b301e76b3fae92755173cb4fc62e6cc7cde0d58"
+        },
+        {
+          "nature": "search_result",
+          "url": "https://www.courdecassation.fr/decision/5fca2d36a15052358b33c77c",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data"
+          },
+          "id": "5fca2d36a15052358b33c77c",
+          "title": "cc, 2020-10-21, n° 19-18.928",
+          "sha256": "3e07e10a41eb64e22ed4cd2651db2fc1c83ca00932090c5ec5e85ce796e4b1fc"
+        },
+        {
+          "nature": "search_result",
+          "url": "https://www.courdecassation.fr/decision/5fca8cf381fcf67f681e995a",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data"
+          },
+          "id": "5fca8cf381fcf67f681e995a",
+          "title": "cc, 2018-06-13, n° 16-24.714",
+          "sha256": "503b014d40901f299dbf861f9c2113651621a62072a37f81939a5f14e27aada8"
+        },
+        {
+          "nature": "search_result",
+          "url": "https://www.courdecassation.fr/decision/641aaa9e0c73d704f534825e",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data"
+          },
+          "id": "641aaa9e0c73d704f534825e",
+          "title": "cc, 2023-03-22, n° 21-17.725",
+          "sha256": "624bdcd35629d3078df78d450a684a8d87073d01a73e9039732ccf11ffc9d4fb"
+        },
+        {
+          "nature": "search_result",
+          "url": "https://www.courdecassation.fr/decision/61372218cd580146773fa311",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data"
+          },
+          "id": "61372218cd580146773fa311",
+          "title": "cc, 1994-05-31, n° 92-15.671",
+          "sha256": "5ea3bfebd131133127b58d042bb7347d439c59b1fc33a4ce2662362c77eca411"
+        },
+        {
+          "nature": "search_result",
+          "url": "https://www.courdecassation.fr/decision/61372519cd5801467741af8a",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data"
+          },
+          "id": "61372519cd5801467741af8a",
+          "title": "cc, 2007-05-03, n° 06-41.340",
+          "sha256": "6157d7aa4c4ca54a914e1181a08c379ec2d8765eae42cc4802fcbb9bf8946726"
+        },
+        {
+          "nature": "search_result",
+          "url": "https://www.courdecassation.fr/decision/5fca7e09f4c3596d1e73de3d",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data"
+          },
+          "id": "5fca7e09f4c3596d1e73de3d",
+          "title": "cc, 2018-12-05, n° 17-22.385",
+          "sha256": "030568e2febf831fec6ebbd8ed977715609c1c185402e611cc2fa9195d8876c8"
+        },
+        {
+          "nature": "search_result",
+          "url": "https://www.courdecassation.fr/decision/61372916cd58014677434613",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data"
+          },
+          "id": "61372916cd58014677434613",
+          "title": "cc, 2014-12-10, n° 13-16.442",
+          "sha256": "780a426763014d8dcfd99ad0bca7d2d1400cec9068d3b644c7db3f133be343f0"
+        }
+      ],
+      "truncated": true,
+      "sha256": "e80e362f17772d8c255b22000e8856a77e20a52bcdb1447c67bf91bfa97a1478",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e21"
+    },
+    {
+      "type": "assistant_text",
+      "text": "J'ai les textes nécessaires. Voici la réponse consolidée.\n\n---\n\n## Contrat logiciel — export inexploitable à la sortie : préparer la reprise et examiner les droits\n\n---\n\n### Volet DSI — `references/contrats-prestataires.md`\n\n**[risque : Élevé / confiance : opérationnelle]**\n\n**Mode d'exercice à préciser** : la suite suppose une DSI internalisée ou partiellement mutualisée. Si le SI est entièrement externalisé, l'inventaire et les contrôles ci-dessous sont à piloter via la convention de service.\n\n#### 1. Ne rien trancher avant d'avoir documenté\n\nAvant toute démarche contentieuse, constituer le dossier de preuves. Chaque pièce produite maintenant sera difficile à reconstituer en cas de litige.\n\n**Inventaire immédiat de l'export :**\n- volume livré (Go, nombre de fichiers, nombre d'enregistrements) vs volume attendu (tel que défini dans le contrat ou la proposition technique) ;\n- formats livrés : propriétaire, obsolète, encodage non documenté, fichiers corrompus, champs vides, séquences incohérentes ;\n- journal des tentatives d'importation : messages d'erreur exacts, outils testés, résultats obtenus — dater et conserver.\n\n**Cartographie des données attendues :**\n\n| Objet | Présent dans l'export | Exploitable | Remarques |\n|---|---|---|---|\n| Données métier principales | ☐ | ☐ | |\n| Référentiels et paramétrages | ☐ | ☐ | |\n| Historiques et journaux | ☐ | ☐ | |\n| Documents attachés | ☐ | ☐ | |\n| Comptes et droits | ☐ | ☐ | |\n\nL'objectif est de distinguer ce qui manque, ce qui est présent mais inexploitable (format), et ce qui est exploitable partiellement. La nuance est cruciale pour la suite juridique.\n\n#### 2. Préserver l'accès existant le temps de l'examen\n\nTant que le contrat n'est pas résilié et que le service est potentiellement encore actif — même en lecture seule —, vérifier si un accès de consultation est contractuellement maintenu pendant la période de transition. Si oui, l'exploiter immédiatement pour des exports complémentaires ou des captures d'écran référencées.\n\nSi le fournisseur coupe l'accès avant la restitution complète, c'est un fait nouveau à documenter précisément (date, heure, constat).\n\n#### 3. Examiner les pièces contractuelles en priorité — avant toute démarche\n\nLes pièces contractuelles non encore examinées sont le premier outil. Chercher systématiquement :\n- la **clause de réversibilité** (ou clause de sortie, clause de restitution) : format imposé, délais, coût, périmètre ;\n- les **SLA et pénalités** associées à la restitution ;\n- la **limitation de responsabilité** (plafond contractuel) ;\n- l'existence d'une **clause de médiation ou d'arbitrage** préalable à tout recours ;\n- le **CCAG applicable** (voir volet juridique) ou les conditions générales si contrat hors marché public.\n\n---\n\n### Volet juridique — `recherche-juridique`\n\n**Étape 0 — Qualification**\n\n- Nature : qualification d'un manquement contractuel à l'obligation de restitution ; identification des remèdes disponibles avant mise en demeure.\n- Date de référence : 2026-10-06 (situation actuelle à la sortie du contrat).\n- Domaines : droit des contrats (Code civil) ; droit des marchés publics (CCAG-TIC si contrat public) ; droit administratif (recours contentieux si collectivité).\n- Niveau : note de fond.\n\n**Étape 0 bis — Question préalable décisionnelle**\n\n> **Question préalable nécessaire**\n>\n> La nature juridique du contrat conditionne la totalité du régime applicable : est-ce un **marché public** passé selon le code de la commande publique (avec un CCAG applicable), ou un **contrat privé** (abonnement SaaS direct, accord-cadre hors CCP) ?\n>\n> Pourquoi c'est déterminant : les recours, le juge compétent, les délais et les clauses-types diffèrent entièrement entre les deux régimes.\n>\n> - Si marché public → juge administratif (TA), CCAG-TIC ou CCAG-PI probablement applicable, clauses de réversibilité réglementées ;\n> - Si contrat privé → juge judiciaire, Code civil, pas de CCAG.\n\nEn l'absence de confirmation, la suite présente les deux branches en esquisse conditionnelle bornée.\n\n---\n\n#### Branche A — Marché public (hypothèse principale pour une collectivité)\n\n⚠️ **CCAG-TIC — abstention motivée sur les articles spécifiques**\n\nLe CCAG-TIC (arrêté du 30 mars 2021 applicable aux marchés de TIC) comporte des dispositions sur la réversibilité et la restitution des données en fin de marché. Ces dispositions n'ont pas pu être récupérées via l'API dans cette session (le CCAG-TIC est un texte JORF non couvert par l'outil de récupération). Je ne cite aucun numéro d'article ni aucun contenu précis.\n\n**Démarche alternative à mener** : consulter directement le texte sur [legifrance.gouv.fr > Marchés publics > CCAG > CCAG-TIC 2021] et repérer la section « Réversibilité » ou équivalent. Le juriste de la collectivité ou le service de la commande publique est le bon interlocuteur pour cette lecture.\n\nCe que l'on peut affirmer méthodologiquement : en marché public, l'obligation de restitution est une obligation d'exécution du marché ; son inexécution ou son exécution défectueuse ouvre les sanctions contractuelles prévues au CCAG, puis, en cas d'échec amiable, le recours contentieux devant le juge administratif.\n\n---\n\n#### Branche B — Contrat privé ou si clauses contractuelles propres\n\nLes textes ci-dessous ont été récupérés et vérifiés en vigueur au 2026-10-06 via l'API Légifrance.\n\n**Art. 1217 Code civil** — en vigueur depuis le 01/10/2018 (LEGIARTI000036829854, Légifrance API, 2026-10-06) :\n> « La partie envers laquelle l'engagement n'a pas été exécuté, ou l'a été imparfaitement, peut : refuser d'exécuter ou suspendre l'exécution de sa propre obligation ; poursuivre l'exécution forcée en nature de l'obligation ; obtenir une réduction du prix ; provoquer la résolution du contrat ; demander réparation des conséquences de l'inexécution. Les sanctions qui ne sont pas incompatibles peuvent être cumulées ; des dommages et intérêts peuvent toujours s'y ajouter. »\n\nFonction juridique : *catalogue exhaustif des remèdes ouverts à la collectivité en cas de restitution défectueuse.* Un export inexploitable constitue une exécution imparfaite de l'obligation de restitution, ce qui ouvre l'ensemble de ce catalogue — à condition de le documenter (voir volet DSI).\n\n**Art. 1222 Code civil** — en vigueur depuis le 01/10/2016 (LEGIARTI000032041492, Légifrance API, 2026-10-06) :\n> « Après mise en demeure, le créancier peut aussi, dans un délai et à un coût raisonnables, faire exécuter lui-même l'obligation […]. Il peut demander au débiteur le remboursement des sommes engagées à cette fin. »\n\nFonction juridique : *fondement pour faire réaliser la migration par un tiers aux frais du fournisseur défaillant.* C'est le levier le plus utile ici si le fournisseur ne corrige pas l'export. **Attention** : la mise en demeure est un préalable obligatoire à l'exercice de ce droit. C'est pourquoi elle doit être préparée soigneusement, pas lancée précipitamment.\n\n**Art. 1231-1 Code civil** — en vigueur depuis le 01/10/2016 (LEGIARTI000032010123, Légifrance API, 2026-10-06) :\n> « Le débiteur est condamné, s'il y a lieu, au paiement de dommages et intérêts soit à raison de l'inexécution de l'obligation, soit à raison du retard dans l'exécution, s'il ne justifie pas que l'exécution a été empêchée par la force majeure. »\n\nFonction juridique : *fondement de l'indemnisation du surcoût de migration (prestataire tiers, heures internes, interruption de service).* Le préjudice doit être évalué et documenté — l'inventaire DSI en est la base.\n\n[confiance modérée sur l'applicabilité directe de ces articles à un marché public : en droit administratif, des règles analogues existent mais leur régime propre prime ; à vérifier avec le juriste en charge du contrat]\n\n---\n\n### Séquence recommandée avant mise en demeure\n\n```\n1. EXAMINER les pièces contractuelles (clause réversibilité, CCAG, limitations)\n        ↓\n2. CONSTITUER le dossier de preuves de l'inexploitabilité (inventaire DSI)\n        ↓\n3. ÉVALUER le préjudice chiffré (surcoût migration, heures, interruption de service)\n        ↓\n4. IDENTIFIER la présence de données personnelles dans l'export\n        ↓ (si oui)\n     BASCULE dpo-ct — portabilité et intégrité des données personnelles\n     dans la restitution relèvent du RGPD (art. 20 et obligations du\n     sous-traitant) ; à traiter avec le DPO avant toute démarche.\n        ↓\n5. SOLLICITER le juriste de la collectivité ou le service commande publique\n   pour lire le CCAG applicable et qualifier le manquement\n        ↓\n6. ENVISAGER un échange amiable documenté avec le fournisseur\n   (email de constat, non encore mise en demeure formelle)\n        ↓\n7. PRÉPARER la mise en demeure seulement quand 1-6 sont instruits\n```\n\n---\n\n### Points à vérifier que ce skill ne peut pas résoudre seul\n\n| Point | Raison | Interlocuteur |\n|---|---|---|\n| Articles CCAG-TIC sur la réversibilité | Texte JORF non récupérable ici | Juriste / service commande publique |\n| Clauses contractuelles propres du marché | Pièces non communiquées | DSI + juriste |\n| Régime de responsabilité contractuel (plafond, exclusions) | Clause propre à chaque contrat | Juriste |\n| Présence de données personnelles dans l'export | Factuel, non établi | DSI + DPO |\n| Délais de prescription de l'action (marché public) | Source non récupérée dans cette session | Juriste / TA |\n\n---\n\n**En résumé** : le travail utile avant toute mise en demeure est un inventaire technique précis de l'inexploitabilité (volet DSI), la lecture des pièces contractuelles pour qualifier le manquement (volet juridique-commande publique), et une évaluation chiffrée du préjudice. Ces trois éléments conditionnent à la fois le choix du remède (exécution forcée, remplacement aux frais du fournisseur, résolution) et la solidité de toute mise en demeure ultérieure.",
+      "text_redacted": false,
+      "text_truncated": false,
+      "event_id": "e22"
+    },
+    {
+      "type": "result",
+      "subtype": "success",
+      "is_error": false,
+      "cost_usd": 0.3572892,
+      "result": "J'ai les textes nécessaires. Voici la réponse consolidée.\n\n---\n\n## Contrat logiciel — export inexploitable à la sortie : préparer la reprise et examiner les droits\n\n---\n\n### Volet DSI — `references/contrats-prestataires.md`\n\n**[risque : Élevé / confiance : opérationnelle]**\n\n**Mode d'exercice à préciser** : la suite suppose une DSI internalisée ou partiellement mutualisée. Si le SI est entièrement externalisé, l'inventaire et les contrôles ci-dessous sont à piloter via la convention de service.\n\n#### 1. Ne rien trancher avant d'avoir documenté\n\nAvant toute démarche contentieuse, constituer le dossier de preuves. Chaque pièce produite maintenant sera difficile à reconstituer en cas de litige.\n\n**Inventaire immédiat de l'export :**\n- volume livré (Go, nombre de fichiers, nombre d'enregistrements) vs volume attendu (tel que défini dans le contrat ou la proposition technique) ;\n- formats livrés : propriétaire, obsolète, encodage non documenté, fichiers corrompus, champs vides, séquences incohérentes ;\n- journal des tentatives d'importation : messages d'erreur exacts, outils testés, résultats obtenus — dater et conserver.\n\n**Cartographie des données attendues :**\n\n| Objet | Présent dans l'export | Exploitable | Remarques |\n|---|---|---|---|\n| Données métier principales | ☐ | ☐ | |\n| Référentiels et paramétrages | ☐ | ☐ | |\n| Historiques et journaux | ☐ | ☐ | |\n| Documents attachés | ☐ | ☐ | |\n| Comptes et droits | ☐ | ☐ | |\n\nL'objectif est de distinguer ce qui manque, ce qui est présent mais inexploitable (format), et ce qui est exploitable partiellement. La nuance est cruciale pour la suite juridique.\n\n#### 2. Préserver l'accès existant le temps de l'examen\n\nTant que le contrat n'est pas résilié et que le service est potentiellement encore actif — même en lecture seule —, vérifier si un accès de consultation est contractuellement maintenu pendant la période de transition. Si oui, l'exploiter immédiatement pour des exports complémentaires ou des captures d'écran référencées.\n\nSi le fournisseur coupe l'accès avant la restitution complète, c'est un fait nouveau à documenter précisément (date, heure, constat).\n\n#### 3. Examiner les pièces contractuelles en priorité — avant toute démarche\n\nLes pièces contractuelles non encore examinées sont le premier outil. Chercher systématiquement :\n- la **clause de réversibilité** (ou clause de sortie, clause de restitution) : format imposé, délais, coût, périmètre ;\n- les **SLA et pénalités** associées à la restitution ;\n- la **limitation de responsabilité** (plafond contractuel) ;\n- l'existence d'une **clause de médiation ou d'arbitrage** préalable à tout recours ;\n- le **CCAG applicable** (voir volet juridique) ou les conditions générales si contrat hors marché public.\n\n---\n\n### Volet juridique — `recherche-juridique`\n\n**Étape 0 — Qualification**\n\n- Nature : qualification d'un manquement contractuel à l'obligation de restitution ; identification des remèdes disponibles avant mise en demeure.\n- Date de référence : 2026-10-06 (situation actuelle à la sortie du contrat).\n- Domaines : droit des contrats (Code civil) ; droit des marchés publics (CCAG-TIC si contrat public) ; droit administratif (recours contentieux si collectivité).\n- Niveau : note de fond.\n\n**Étape 0 bis — Question préalable décisionnelle**\n\n> **Question préalable nécessaire**\n>\n> La nature juridique du contrat conditionne la totalité du régime applicable : est-ce un **marché public** passé selon le code de la commande publique (avec un CCAG applicable), ou un **contrat privé** (abonnement SaaS direct, accord-cadre hors CCP) ?\n>\n> Pourquoi c'est déterminant : les recours, le juge compétent, les délais et les clauses-types diffèrent entièrement entre les deux régimes.\n>\n> - Si marché public → juge administratif (TA), CCAG-TIC ou CCAG-PI probablement applicable, clauses de réversibilité réglementées ;\n> - Si contrat privé → juge judiciaire, Code civil, pas de CCAG.\n\nEn l'absence de confirmation, la suite présente les deux branches en esquisse conditionnelle bornée.\n\n---\n\n#### Branche A — Marché public (hypothèse principale pour une collectivité)\n\n⚠️ **CCAG-TIC — abstention motivée sur les articles spécifiques**\n\nLe CCAG-TIC (arrêté du 30 mars 2021 applicable aux marchés de TIC) comporte des dispositions sur la réversibilité et la restitution des données en fin de marché. Ces dispositions n'ont pas pu être récupérées via l'API dans cette session (le CCAG-TIC est un texte JORF non couvert par l'outil de récupération). Je ne cite aucun numéro d'article ni aucun contenu précis.\n\n**Démarche alternative à mener** : consulter directement le texte sur [legifrance.gouv.fr > Marchés publics > CCAG > CCAG-TIC 2021] et repérer la section « Réversibilité » ou équivalent. Le juriste de la collectivité ou le service de la commande publique est le bon interlocuteur pour cette lecture.\n\nCe que l'on peut affirmer méthodologiquement : en marché public, l'obligation de restitution est une obligation d'exécution du marché ; son inexécution ou son exécution défectueuse ouvre les sanctions contractuelles prévues au CCAG, puis, en cas d'échec amiable, le recours contentieux devant le juge administratif.\n\n---\n\n#### Branche B — Contrat privé ou si clauses contractuelles propres\n\nLes textes ci-dessous ont été récupérés et vérifiés en vigueur au 2026-10-06 via l'API Légifrance.\n\n**Art. 1217 Code civil** — en vigueur depuis le 01/10/2018 (LEGIARTI000036829854, Légifrance API, 2026-10-06) :\n> « La partie envers laquelle l'engagement n'a pas été exécuté, ou l'a été imparfaitement, peut : refuser d'exécuter ou suspendre l'exécution de sa propre obligation ; poursuivre l'exécution forcée en nature de l'obligation ; obtenir une réduction du prix ; provoquer la résolution du contrat ; demander réparation des conséquences de l'inexécution. Les sanctions qui ne sont pas incompatibles peuvent être cumulées ; des dommages et intérêts peuvent toujours s'y ajouter. »\n\nFonction juridique : *catalogue exhaustif des remèdes ouverts à la collectivité en cas de restitution défectueuse.* Un export inexploitable constitue une exécution imparfaite de l'obligation de restitution, ce qui ouvre l'ensemble de ce catalogue — à condition de le documenter (voir volet DSI).\n\n**Art. 1222 Code civil** — en vigueur depuis le 01/10/2016 (LEGIARTI000032041492, Légifrance API, 2026-10-06) :\n> « Après mise en demeure, le créancier peut aussi, dans un délai et à un coût raisonnables, faire exécuter lui-même l'obligation […]. Il peut demander au débiteur le remboursement des sommes engagées à cette fin. »\n\nFonction juridique : *fondement pour faire réaliser la migration par un tiers aux frais du fournisseur défaillant.* C'est le levier le plus utile ici si le fournisseur ne corrige pas l'export. **Attention** : la mise en demeure est un préalable obligatoire à l'exercice de ce droit. C'est pourquoi elle doit être préparée soigneusement, pas lancée précipitamment.\n\n**Art. 1231-1 Code civil** — en vigueur depuis le 01/10/2016 (LEGIARTI000032010123, Légifrance API, 2026-10-06) :\n> « Le débiteur est condamné, s'il y a lieu, au paiement de dommages et intérêts soit à raison de l'inexécution de l'obligation, soit à raison du retard dans l'exécution, s'il ne justifie pas que l'exécution a été empêchée par la force majeure. »\n\nFonction juridique : *fondement de l'indemnisation du surcoût de migration (prestataire tiers, heures internes, interruption de service).* Le préjudice doit être évalué et documenté — l'inventaire DSI en est la base.\n\n[confiance modérée sur l'applicabilité directe de ces articles à un marché public : en droit administratif, des règles analogues existent mais leur régime propre prime ; à vérifier avec le juriste en charge du contrat]\n\n---\n\n### Séquence recommandée avant mise en demeure\n\n```\n1. EXAMINER les pièces contractuelles (clause réversibilité, CCAG, limitations)\n        ↓\n2. CONSTITUER le dossier de preuves de l'inexploitabilité (inventaire DSI)\n        ↓\n3. ÉVALUER le préjudice chiffré (surcoût migration, heures, interruption de service)\n        ↓\n4. IDENTIFIER la présence de données personnelles dans l'export\n        ↓ (si oui)\n     BASCULE dpo-ct — portabilité et intégrité des données personnelles\n     dans la restitution relèvent du RGPD (art. 20 et obligations du\n     sous-traitant) ; à traiter avec le DPO avant toute démarche.\n        ↓\n5. SOLLICITER le juriste de la collectivité ou le service commande publique\n   pour lire le CCAG applicable et qualifier le manquement\n        ↓\n6. ENVISAGER un échange amiable documenté avec le fournisseur\n   (email de constat, non encore mise en demeure formelle)\n        ↓\n7. PRÉPARER la mise en demeure seulement quand 1-6 sont instruits\n```\n\n---\n\n### Points à vérifier que ce skill ne peut pas résoudre seul\n\n| Point | Raison | Interlocuteur |\n|---|---|---|\n| Articles CCAG-TIC sur la réversibilité | Texte JORF non récupérable ici | Juriste / service commande publique |\n| Clauses contractuelles propres du marché | Pièces non communiquées | DSI + juriste |\n| Régime de responsabilité contractuel (plafond, exclusions) | Clause propre à chaque contrat | Juriste |\n| Présence de données personnelles dans l'export | Factuel, non établi | DSI + DPO |\n| Délais de prescription de l'action (marché public) | Source non récupérée dans cette session | Juriste / TA |\n\n---\n\n**En résumé** : le travail utile avant toute mise en demeure est un inventaire technique précis de l'inexploitabilité (volet DSI), la lecture des pièces contractuelles pour qualifier le manquement (volet juridique-commande publique), et une évaluation chiffrée du préjudice. Ces trois éléments conditionnent à la fois le choix du remède (exécution forcée, remplacement aux frais du fournisseur, résolution) et la solidité de toute mise en demeure ultérieure.",
+      "text_redacted": false,
+      "text_truncated": false,
+      "errors_count": 0,
+      "event_id": "e23"
+    },
+    {
+      "type": "technical_assessment",
+      "case_id": "plugin-spontane-reversibilite",
+      "process_exit": 0,
+      "status": "passed",
+      "failures": [],
+      "observables": {
+        "stop_required": false,
+        "first_visible_text_ref": "e2",
+        "stop_first": null,
+        "primary_content_refs": [
+          "e12",
+          "e18",
+          "e20"
+        ],
+        "primary_content_available": true,
+        "legal_validity": null,
+        "note": "Le contenu disponible ne certifie ni pertinence ni vigueur."
+      },
+      "requires_independent_judgment": true
+    }
+  ]
+}

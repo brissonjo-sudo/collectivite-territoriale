@@ -1,0 +1,24 @@
+{
+  "agent": "/root/juge_coactivation_r3_01",
+  "session_id": "01a110d6-fba6-77b2-b41b-a88978074485",
+  "parent_thread_id": "01a1103e-0b49-70c1-8f4e-66a36b54916f",
+  "models": [
+    "gpt-6.1-sol"
+  ],
+  "tools_called": [
+    "exec",
+    "exec",
+    "exec"
+  ],
+  "completed": true,
+  "tokens_reported": {
+    "input_tokens": 160353,
+    "cached_input_tokens": 154112,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1649,
+    "reasoning_output_tokens": 286,
+    "total_tokens": 162002
+  },
+  "trace_sha256": "22af0db5932616d3adfef892818db3e24e0f099b59bae505eba5fff24aa37e6b",
+  "filter": "Entrées, texte visible et appels/résultats outils ; instructions système et raisonnement exclus"
+}

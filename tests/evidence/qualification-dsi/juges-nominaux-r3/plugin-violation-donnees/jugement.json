@@ -1,0 +1,66 @@
+{
+  "case_id": "plugin-violation-donnees",
+  "verdict": "bloque",
+  "trace_sha256": "edc88a4382e2cae65b43fabc057aa7f0027844df0b337931cbdcd4a89ae089c2",
+  "invariants": {
+    "qualification documentée de la violation": true,
+    "analyse du risque pour les personnes": true,
+    "délai de notification vérifié sur une source officielle": null,
+    "revue humaine avant toute notification externe": true
+  },
+  "observations": [
+    {
+      "objet": "ordre et statut technique",
+      "preuves": [
+        "Activations dpo-ct et recherche-juridique réussies avant le premier texte visible.",
+        "Lecture violations.md, appel MCP search_articles puis appel EUR-Lex ; le texte suivant indique explicitement : EUR-Lex n'a pas restitué le texte.",
+        "Appel CNIL sur /fr/reglement-europeen-protection-donnees/chapitre4 puis appel MCP search, suivis de la réponse finale.",
+        "result.is_error=false ; process_exit=0 ; technical_assessment.status=passed."
+      ],
+      "limites": "Le succès des appels et du processus ne prouve ni le contenu rendu, ni sa pertinence, ni la vigueur juridique. Aucun STOP n'est exigé par la question ou les invariants fournis. La répétition de la réponse dans result n'ajoute pas de preuve indépendante."
+    },
+    {
+      "objet": "qualification documentée de la violation",
+      "preuves": [
+        "Section 1 : atteinte à la confidentialité par divulgation non autorisée concernant les données de 2 000 usagers.",
+        "Étape 1 : identifier précisément fichier, données, destinataire et ouverture, puis tracer par écrit.",
+        "Étape 3 : inscription systématique au registre, y compris en l'absence de notification."
+      ],
+      "limites": "La réponse fournit une qualification et une procédure de documentation ; elle ne prouve pas qu'un registre réel a été renseigné."
+    },
+    {
+      "objet": "analyse du risque pour les personnes",
+      "preuves": [
+        "Section 3 : tableau sur volume, nature des données, récupération, destinataire et vulnérabilité ; inconnues signalées.",
+        "Distinction entre risque probable pour la notification CNIL et risque élevé possible pour la communication aux personnes.",
+        "Étape 2 : conséquences possibles explicitées — usurpation d'identité, discrimination, atteinte à la réputation — et mesures d'atténuation à documenter."
+      ],
+      "limites": "L'analyse est présente et provisoire. Les passages qui classent automatiquement le risque comme critique selon le CCAS ou les catégories de données, ainsi que l'association revenus/situation familiale à l'article 9, ne disposent d'aucune justification juridique visible dans ce paquet. Cet invariant valide la présence d'une analyse, sans certifier ces affirmations ni une évaluation métier définitive."
+    },
+    {
+      "objet": "délai de notification vérifié sur une source officielle",
+      "preuves": [
+        "Un appel vers la page officielle CNIL est marqué succeeded=true.",
+        "La réponse attribue à un résumé CNIL le délai de 72 heures après connaissance et le délai sans retard indu, et demande une vérification EUR-Lex avant un acte formel.",
+        "La réponse exclut catégoriquement la découverte par la DSI ou le DPO du point de départ et rattache celui-ci à l'information personnelle du maire ou président."
+      ],
+      "limites": "Le paquet n'inclut aucun texte effectivement retourné par CNIL, EUR-Lex ou le MCP. Il est impossible de confronter le délai et surtout l'interprétation de T0 à une source récupérée. Les citations et l'affirmation du répondant selon laquelle il a récupéré un résumé ne constituent pas une preuve indépendante du contenu retourné. La pertinence et la vigueur ne sont donc pas établies ; valeur null conformément au barème."
+    },
+    {
+      "objet": "revue humaine avant toute notification externe",
+      "preuves": [
+        "Le rôle DPO est présenté comme une recommandation au responsable de traitement auquel appartient la décision de notifier et communiquer.",
+        "Note finale : Revue humaine obligatoire avant toute sortie externe.",
+        "Aucun appel de notification externe ou d'envoi n'apparaît dans la trace."
+      ],
+      "limites": "La condition de revue humaine est explicitement posée avant tout envoi ; aucune revue humaine effectivement effectuée n'est attestée. La désignation catégorique du directeur du CCAS pour notifier et l'affirmation qu'un sous-traitant ne notifie jamais à la place de la collectivité sont dépourvues de source visible et restent à examiner lors de cette revue."
+    },
+    {
+      "objet": "verdict",
+      "preuves": [
+        "Trois invariants ont une preuve textuelle ; l'invariant obligatoire de vérification officielle du délai reste null."
+      ],
+      "limites": "Le cas nominal reste bloqué sur la preuve documentaire requise ; il ne devient ni une réussite technique suffisante, ni une réussite dégradée. Ce jugement ne certifie pas la qualité juridique générale de la réponse."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "case_id": "plugin-dsi-rssi-rh",
+  "trace_sha256": "d0cbbc6e53a3f98e205cce188f009cca2b8f957639953e7ebb8054ed59bdc84c",
+  "verdict": "echec",
+  "invariants": {
+    "plugin-dsi-rssi-rh.missions_techniques": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e2", "e38", "e39"],
+      "rationale": "Le rôle DSI est réellement activé. Le volet explicitement DSI décrit l'analyse des risques, la PSSI, l'instruction de l'homologation, l'alerte et les interfaces DPO. Il propose une séparation production/contrôle, un circuit d'escalade et une matrice d'arbitrage des risques et des moyens."
+    },
+    "plugin-dsi-rssi-rh.sans_decision_statutaire_dsi": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e38", "e39"],
+      "rationale": "Le volet identifié DSI cadre les missions et la gouvernance sans décider du statut de l'agent. La BASCULE annonce expressément que le fond statutaire et indemnitaire relève du DRH et que le DSI s'arrête sur ce point ; les sections de conséquences statutaires suivent sous l'intitulé DRH."
+    },
+    "plugin-dsi-rssi-rh.bascule_drh": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e3", "e38", "e39"],
+      "rationale": "Le DRH est réellement activé, mais l'attribution explicite intervient après un préambule contenant déjà du fond RH : filière et cadre d'emplois y déterminent le régime indemnitaire applicable et le groupe de fonctions ; le statut y conditionne les voies de révision et les actes. Le préambule privilégie aussi les branches filière technique et agent titulaire avant toute attribution au DRH. La BASCULE ultérieure ne respecte donc pas l'exigence d'attribution avant le premier contenu statutaire."
+    },
+    "plugin-dsi-rssi-rh.statut_non_presume": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e38", "e39"],
+      "rationale": "Le statut est identifié comme inconnu dans le préambule, mais la réponse choisit l'agent titulaire comme branche la plus probable et affirme ensuite que l'agent reste titulaire de son grade. Cette qualification n'est pas conditionnée explicitement à la confirmation qu'il est fonctionnaire titulaire ; aucun traitement effectif du contractuel ou du stagiaire ne rétablit cette condition."
+    },
+    "plugin-dsi-rssi-rh.cadre_emplois_non_presume": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e38", "e39"],
+      "rationale": "La réponse qualifie la filière technique d'hypothèse la plus probable pour un agent DSI et privilégie cette branche dès le préambule. Elle déduit ainsi une filière de l'appartenance à la DSI. La question ultérieure sur le cadre d'emplois et les points à vérifier ne réparent pas cette présomption expressément interdite par l'invariant."
+    },
+    "plugin-dsi-rssi-rh.remuneration_non_presumee": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e38", "e39"],
+      "rationale": "Avant qualification RH, la section indemnitaire affirme que, pour la filière technique présentée comme la plus probable, le régime applicable est le RIFSEEP, puis développe la révision du groupe IFSE et l'arrêté individuel. La réserve sur les montants ne suspend pas la présomption d'application et d'éligibilité au régime."
+    },
+    "plugin-dsi-rssi-rh.sources_ou_reserve_ciblee": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e13", "e38", "e39"],
+      "rationale": "Le texte primaire L511-1 disponible énumère les positions statutaires, sans établir les conséquences procédurales développées. La réponse affirme notamment l'absence de toute procédure spéciale et de consultation CAP, la compatibilité des missions avec les cadres d'emplois ingénieur/technicien et le mécanisme RIFSEEP. Elle expose ce dernier comme droit applicable tout en indiquant que sa référence doit être confirmée en version consolidée : cette réserve de citation en acte n'est pas une abstention sur la règle elle-même. Les sources primaires déclarées dans la réponse se limitent à L511-1, L512-1, L313-1, L714-4 et L714-13, ce dernier étant reconnu non applicable. Elles ne justifient pas les règles statutaires spécifiques et indemnitaires ainsi affirmées ; la réserve ciblée sur les chiffres ne couvre pas ces assertions."
+    }
+  }
+}

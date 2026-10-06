@@ -1,0 +1,40 @@
+{
+  "plugin_version": "1.2.0-dev.4",
+  "measurement_status": "not_measured",
+  "upstream_commits_unchanged": true,
+  "exact_synchronization_passed": true,
+  "existing_tests": {
+    "total": 125,
+    "passed": 124,
+    "failures": 1,
+    "intentional_failure": "test_barriere_de_release_comportementale"
+  },
+  "claude_marketplace_validation": "passed",
+  "claude_plugin_validation": "passed",
+  "git_diff_check": "passed",
+  "historical_scores_reused": false,
+  "release_ready": false,
+  "modified_files": {
+    ".claude-plugin/marketplace.json": "ba7be3873c8745acaa0025de4603f12929fb331e47cfbae456910580eb899c4f",
+    ".claude-plugin/plugin.json": "9f477f78d2534ff5e5d99f74c0455dc609509713f2e812d8dbcb756e49cbb21e",
+    ".codex-plugin/plugin.json": "3f4e00d2aa34f3a0128b61fb3675b04542b5a296f95dbd0e1980866175aa7580",
+    "CHANGELOG.md": "7acbbe6a5d16d8e0ad1e1e4e854c40bde4e46c940df5dbdd0dac3f2eb4844f37",
+    "README.md": "f2783776070504c67603531ca696d84ae6a680abb50fc0f8aa6818ed8978817f",
+    "docs/adr/0005-confrontation-categories-et-bascule.md": "309e522bb058d8f795a7995d9c2db5fc696efdbd4f481785bcd8272ead8d588f",
+    "overlays/dirfi-fpt.md": "759239a8a09d3aae6935acab43c90122a54375ae2f33e283e56c9fdc274cfdbd",
+    "overlays/dpm-fpt.md": "763b7a36ce9fbfd77bd9a9fac87b10b6b5e15fb39e96d5fa13388c16a5846ed6",
+    "overlays/dpo-ct.md": "49d9c20876cac0162e225886d44552a430d47eddbf0304d9e9fbb1db8b38de34",
+    "overlays/drh-fpt.md": "59429081e024692ee99f0bd812fc81800f0bb53973f9d89a6b6f7fed481cc0e2",
+    "overlays/dsi-fpt.md": "3dfb36c8263088a1ded56cf00b2114576e1d08172208ae836f0f29c82f739501",
+    "overlays/recherche-juridique.md": "7d469a2737890392bea0bd7dc92bfb6333f1014ab6845e9bc8924822ae22c4ab",
+    "skills/dirfi-fpt/SKILL.md": "b405643f1b9880207f51fcab312c126536189505439354690f0a9e1c07fc2cae",
+    "skills/dpm-fpt/SKILL.md": "5fdea77283c9ce5486ab877bacc12ec04a22270d54bb8356882bd25f6ac4afac",
+    "skills/dpo-ct/SKILL.md": "8d4ba93e471af3684d4ea704e6a606d18b8375a94a8dda3add1a98dabb9cc1fc",
+    "skills/drh-fpt/SKILL.md": "1ffc536c06577f149c0e409391d430bb6a6ab0d7fb98a016be2375dd5bdedc66",
+    "skills/dsi-fpt/SKILL.md": "2d16fb324073e4fe9e8b918304b54e25c997da2f0cda7262279e181eebdd0474",
+    "skills/recherche-juridique/SKILL.md": "fa6905de2bea1ffb08bd8eb1bf99967cfad7f6e18e88e651973dfcf9b97e88f6",
+    "tests/evidence/release-1.2.0-dev.4.json": "4b3d25728c0bfd0052cfd1efdb7393a8da42e46904b66c858413d175f6e758c0",
+    "upstream.json": "e13016a91d88ca83f572c08f5e85de1b8cd4e827e0174c5e29839b0e7013644c"
+  },
+  "codex_marketplace_version": "No version field exists; existing main reference unchanged"
+}

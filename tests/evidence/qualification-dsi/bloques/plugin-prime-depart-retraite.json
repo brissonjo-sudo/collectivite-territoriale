@@ -1,0 +1,10 @@
+{
+  "case_id": "plugin-prime-depart-retraite",
+  "status": "blocked",
+  "reason": "MCP droit-francais needs-auth : prérequis nominal non satisfait",
+  "candidate_commit": "feda10354f0977591fea3f124f81b70ce4867652",
+  "attempt_on_r3": false,
+  "authentication_observation": "tests/evidence/qualification-dsi/mesure-r1/plugin-dsi-reversibilite.jsonl",
+  "authentication_observation_is_prior_harness": true,
+  "mcp_configuration_sha256": "b8cddef4bf926639ae05a3e7f0d5b13cce9e474da9541ba2a90decf09b9cea4a"
+}

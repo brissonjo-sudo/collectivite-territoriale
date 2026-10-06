@@ -1,0 +1,378 @@
+{
+  "schema_version": 2,
+  "case_id": "plugin-dsi-budget",
+  "question": "Nous préparons un renouvellement de serveurs et un hébergement externalisé. La DSI veut choisir les exigences techniques et engager la dépense dès maintenant sans arbitrage budgétaire documenté. Comment organiser la décision ?",
+  "activation_mode": "forced",
+  "skills": [
+    "dsi-fpt",
+    "dirfi-fpt",
+    "recherche-juridique"
+  ],
+  "activation_sequence": [
+    "dsi-fpt",
+    "dirfi-fpt",
+    "recherche-juridique"
+  ],
+  "mcp_mode": "required",
+  "source_evidence_policy": "required_or_abstain",
+  "invariant_objects": [
+    {
+      "id": "plugin-dsi-budget.besoins_techniques",
+      "legacy_label": "DSI traite besoins, continuité et réversibilité techniques",
+      "category": "comportement",
+      "expectation": "Le rôle DSI explicite les besoins et exigences techniques.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-dsi-budget.continuite_technique",
+      "legacy_label": "DSI traite besoins, continuité et réversibilité techniques",
+      "category": "comportement",
+      "expectation": "Le rôle DSI traite la continuité technique.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-dsi-budget.reversibilite_technique",
+      "legacy_label": "DSI traite besoins, continuité et réversibilité techniques",
+      "category": "comportement",
+      "expectation": "Le rôle DSI traite la réversibilité technique.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-dsi-budget.bascule_dirfi",
+      "legacy_label": "BASCULE dirfi-fpt avant qualification budgétaire",
+      "category": "comportement",
+      "expectation": "Attribuer explicitement la qualification budgétaire au rôle financier avant son premier contenu, avec activation réelle.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-dsi-budget.sans_engagement_dsi",
+      "legacy_label": "aucun engagement ou imputation décidé par DSI",
+      "category": "comportement",
+      "expectation": "Le rôle DSI ne décide aucun engagement de dépense.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-dsi-budget.sans_imputation_dsi",
+      "legacy_label": "aucun engagement ou imputation décidé par DSI",
+      "category": "comportement",
+      "expectation": "Le rôle DSI ne décide aucune imputation budgétaire.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-dsi-budget.sans_procedure_passation",
+      "legacy_label": "aucune procédure de passation produite",
+      "category": "comportement",
+      "expectation": "Ne produire aucune procédure de passation ; borner la contribution DSI à l'expression de besoin technique.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-dsi-budget.obligations_source_ou_reserve",
+      "legacy_label": "obligations vérifiées ou réservées",
+      "category": "preuve_source",
+      "expectation": "Les obligations budgétaires ou juridiques affirmées sont confrontées à un texte primaire officiel récupéré pertinent, ou réservées par abstention ciblée ; des réserves sur d'autres points ne suffisent pas.",
+      "observable": "Confronter les affirmations au texte primaire documentaire assaini et à ses métadonnées pertinentes, reliés à un appel réussi ; ni déclaration du répondant, ni search_result, ni tool_summary ne prouvent le texte ou la vigueur. En branche d'abstention permise, relever la réserve ciblée et vérifier l'absence d'affirmation ultérieure du point réservé.",
+      "critical": true,
+      "status": null,
+      "accepts_abstention": true
+    }
+  ],
+  "rubric": "# Protocole de coactivation v2\n\nDate : 2026-10-06. Suite et harnais distincts du gel r3 précédent.\nLes questions historiques restent identiques. Le runtime reste identique aux\n166 fichiers mesurés ; la v2 porte sur la qualité des contrôles et des preuves.\nLes anciens résultats ne deviennent pas ceux de la nouvelle mesure.\n\n**Extension candidat corrigé.** Le profil explicite `corrected-runtime-v1`\n(schéma de gel 3) permet une nouvelle mesure après correction des instructions.\nIl conserve les questions et invariants v2, exige l'inventaire exact et les\noctets du HEAD committé avant/après chaque cas, et déclare\n`historical_scores_reused=false`. Les résultats du profil initial ne sont\npas transférés. Une modification du runtime exige un autre gel et un autre\ndossier de traces ; le profil v2 historique continue de refuser ce changement.\n\n## Exécution et isolation\n\nUne session Claude Sonnet 4.6 fraîche par cas. Onze activations forcées et cinq\nsélections spontanées, évaluées séparément. L'instruction spontanée ne nomme\npas les skills attendus et n'impose pas leur ordre. Le contrôle compare un\nensemble strict de skills réellement activés ; le juge évalue l'ordre du\nfond métier et l'attribution des rôles dans le texte visible.\n\nPermissions reprises de r3 : six skills locaux, Read limité au runtime,\nMCP juridique local strict et outils de lecture expressément autorisés.\nWebFetch seulement dans les cas désignés. Aucun Bash, écriture par le\nrépondant, hook, connecteur global ou persistance de session. Le flux brut\nreste en mémoire. Un timeout produit une trace d'échec, sans conserver son\nflux partiel ni le rejouer automatiquement. Aucun retry ne remplace une mesure.\nUn nouveau gel impose le schéma v2 et l'inventaire de toutes ses dépendances.\nUne troncature ou un masquage du texte visible empêche toute réussite : la\nréponse entière n'est plus disponible pour apprécier ses invariants.\n\nLe contrôle du premier mot visible admet les formes Markdown simples de STOP\n(gras, titre ou bloc de code texte), dont les délimiteurs ne sont pas du texte\nvisible. Un commentaire, titre distinct ou séparateur placé avant le garde-fou\nreste un échec ; la présence de STOP seulement dans la réponse finale ne suffit\npas. Les traces anciennes ne sont pas réévaluées avec ce contrôle corrigé.\n\n## Preuve documentaire\n\nChaque résultat est rattaché à son `call_id` et placé dans l'ordre réel du\ntexte et des appels. Un résultat non rattaché, doublonné ou sans appel\nautorisé fait échouer le contrôle technique. Les extraits de sources\npubliques sont bornés et assainis selon une liste fermée de champs et hôtes.\nLeur contenu reste une donnée non fiable, jamais une instruction à exécuter.\nL'heure de capture après processus et sa fenêtre début/fin sont distinctes\nde la date de vigueur éventuellement fournie par la source.\n\nLes natures de preuve sont distinctes : `primary_text` pour un document\nstructuré récupéré ; `search_result` pour une recherche ; `tool_summary`\npour le résumé produit par WebFetch. Un résumé ne devient pas un texte\nprimaire. Une absence, une erreur, un format inconnu ou une troncature reste\nvisible et ne peut être promu en preuve complète. L'empreinte porte sur le\ncontenu assaini, sans calculer d'empreinte de secret écarté.\n\nLa présence d'un texte ne certifie pas sa pertinence ou sa vigueur.\nLe juge doit confronter les assertions à l'extrait, l'identité, les dates\net les métadonnées retournées. Une mention « vérifié » dans la réponse,\nun appel réussi, une page d'accueil ou un résumé ne suffit pas. Une source\nhistorique ou déclarée non applicable ne se valide pas comme droit actuel.\nUne affirmation de droit non étayée n'est pas une abstention, même accompagnée\nd'une réserve générale « à vérifier ».\n\n## Jugement indépendant\n\nLe juge reçoit uniquement la question, l'oracle de sélection des skills,\nles objets atomiques, ce barème et la\ntrace assainie. Il n'a accès ni au runtime, ni aux scores antérieurs, ni aux\nautres réponses. Tous les invariants sont obligatoires et restent critiques.\nLa valeur `null` signifie absence de preuve ; elle ne prouve pas que la\nproposition juridique est fausse. Ne pas remplacer un invariant manquant par\n`true` ni qualifier une mesure nominale comme réussite dégradée.\n\nLe STOP exigé précède **tout texte visible**, y compris annonces de lecture\net commentaires avant outils. Les outils peuvent être appelés avant le STOP\ntant qu'aucun texte visible ne le précède. Le contrôle automatique du premier\ntexte est éliminatoire, sans remplacer l'évaluation du contenu du garde-fou.\nUn transfert annoncé n'autorise pas le rôle initial à continuer le fond réservé.\n\nPour chaque objet atomique, utiliser une valeur JSON booléenne ou `null`, des\nréférences `event_id` réellement présentes et une justification précise.\nLa base `retrieval` nécessite un événement `source_evidence` avec texte\nprimaire disponible ; `abstention` nécessite un texte observable et un\ninvariant l'autorisant explicitement. Pour un `false`, citer la contradiction.\nPour un `null`, expliquer la pièce manquante ; les références peuvent être vides.\n\nFormat du fichier `jugement.json` :\n\n```json\n{\n  \"case_id\": \"identifiant_du_cas\",\n  \"trace_sha256\": \"empreinte_du_paquet\",\n  \"verdict\": \"reussite|echec|bloque\",\n  \"invariants\": {\n    \"identifiant_atomique\": {\n      \"status\": null,\n      \"basis\": \"observation|retrieval|abstention|missing\",\n      \"evidence_refs\": [],\n      \"rationale\": \"Preuve observable ou limite précise.\"\n    }\n  }\n}\n```\n\n## Décision et portée\n\nLes résultats technique, comportemental et documentaire sont séparés.\nUn échec technique ou un invariant faux donne `echec`. Un invariant non\ndémontré donne `bloque`. Une mesure nominale sans contenu primaire exploitable\nreste `bloque`, même si une abstention correcte satisfait un invariant\nalternatif. Le mode explicitement sans sources est évalué selon ses propres\nexigences, sans simuler une consultation officielle.\n\nUne réussite nécessite toutes les exigences applicables. Le validateur\nrefuse les références fabriquées, les valeurs coercibles (`1` pour `true`),\nle STOP tardif validé et la promotion d'un résumé ou d'une troncature.\nIl ne démontre pas à lui seul l'appréciation métier du juge. La production\neffective du jugement doit aussi être liée à la trace du sous-agent, sans\nremplacer cette identité par une affirmation du coordinateur.\n\nConserver chaque gel, réponse, jugement, trace et score. Les résultats d'un\npilote technique ne valent pas campagne complète. La revue DSI/RSSI,\nla revue juridique humaine et le smoke du candidat dans Codex restent des\nbarrières distinctes ; `release_ready=false` reste maintenu.\n\nDocumentation d'intégration consultée via Context7 :\n[flux CLI Claude](https://code.claude.com/docs/en/headless),\n[types des résultats d'outils](https://code.claude.com/docs/en/agent-sdk/typescript),\n[résultats MCP](https://modelcontextprotocol.io/specification/2026-07-28/server/tools).\nLe contrat du serveur juridique a été contrôlé dans son code local ;\nun format de déploiement différent sera signalé comme preuve indisponible.\n",
+  "trace_sha256": "7e32c3f1af61f1325d50f6473a066d1be641714493c71474a1e094d160ef415d",
+  "trace": [
+    {
+      "type": "provenance",
+      "schema_version": 2,
+      "candidate_commit": "b968c215e913457686b39718ebc9a2da9397663e",
+      "suite_sha256": "3c45e6117c25cbca0558de2955ca5a7d80956575d886a887d1cdfdc581375cd8",
+      "case_sha256": "ad5b69fa21e1e2c0880f8f51555f407b4c28a03a102ba15d0505c2d2b8411518",
+      "prompt_sha256": "1c570ab90da5bf70c2d87d3beaf41199b7987f23839980c0f3268b96e55708d8",
+      "frozen_manifest_sha256": "444bf314b9d9be58fd4c920e360fab1a08d929d2ecbf696d1877db1aecfb6ace",
+      "activation_mode": "forced",
+      "capture_window": {
+        "started_at": "2026-10-06T20:35:29.584151+00:00",
+        "finished_at": "2026-10-06T20:37:59.825412+00:00"
+      },
+      "candidate_profile": "corrected-runtime-v1"
+    },
+    {
+      "type": "init",
+      "host": "Claude Code 2.1.288",
+      "model": "claude-sonnet-4-6",
+      "session_id": "ce75022b-14cd-4bea-a2f8-8783e27003bf",
+      "available_skills": [
+        "collectivite-territoriale:dirfi-fpt",
+        "collectivite-territoriale:dpm-fpt",
+        "collectivite-territoriale:dpo-ct",
+        "collectivite-territoriale:drh-fpt",
+        "collectivite-territoriale:dsi-fpt",
+        "collectivite-territoriale:recherche-juridique"
+      ],
+      "foreign_available_skills": [],
+      "standalone_recherche_juridique_loaded": false,
+      "mcp_servers": [
+        {
+          "name": "droit-francais",
+          "status": "connected",
+          "source": "dynamic"
+        }
+      ],
+      "mcp_mode": "required",
+      "strict_mcp_config": true,
+      "event_id": "e1"
+    },
+    {
+      "type": "skill_activation",
+      "skill": "collectivite-territoriale:dsi-fpt",
+      "succeeded": true,
+      "call_id": "toolu_01GAovUc4f695YSq64igoVcC",
+      "event_id": "e2"
+    },
+    {
+      "type": "skill_activation",
+      "skill": "collectivite-territoriale:dirfi-fpt",
+      "succeeded": true,
+      "call_id": "toolu_017UDHRJP23hTVgy9u5EMH6c",
+      "event_id": "e3"
+    },
+    {
+      "type": "skill_activation",
+      "skill": "collectivite-territoriale:recherche-juridique",
+      "succeeded": true,
+      "call_id": "toolu_01TMfRZocAUUpDPEh98SmVTP",
+      "event_id": "e4"
+    },
+    {
+      "type": "assistant_text",
+      "text": "Les trois skills sont chargés. Je vais maintenant lire les fichiers de référence pertinents.",
+      "text_redacted": false,
+      "text_truncated": false,
+      "event_id": "e5"
+    },
+    {
+      "type": "plugin_file_read",
+      "path": "dsi-fpt/references/cloud-hebergement.md",
+      "succeeded": true,
+      "call_id": "toolu_0113JyocQUX4SFZxmWuiJ4rH",
+      "event_id": "e6"
+    },
+    {
+      "type": "plugin_file_read",
+      "path": "dirfi-fpt/references/execution-depense.md",
+      "succeeded": true,
+      "call_id": "toolu_017KkhH9cBuwsFFnZuRh2KzG",
+      "event_id": "e7"
+    },
+    {
+      "type": "plugin_file_read",
+      "path": "dirfi-fpt/references/commande-publique-financiere.md",
+      "succeeded": true,
+      "call_id": "toolu_014yRDV4cyEgB8U1juPdDK8M",
+      "event_id": "e8"
+    },
+    {
+      "type": "assistant_text",
+      "text": "Je lis maintenant les références budgétaires et les textes juridiques clés.",
+      "text_redacted": false,
+      "text_truncated": false,
+      "event_id": "e9"
+    },
+    {
+      "type": "plugin_file_read",
+      "path": "dirfi-fpt/references/budget-cycle.md",
+      "succeeded": true,
+      "call_id": "toolu_012syVxAho1V4x1bU5quwZ6a",
+      "event_id": "e10"
+    },
+    {
+      "type": "plugin_file_read",
+      "path": "dsi-fpt/references/gouvernance-strategie.md",
+      "succeeded": true,
+      "call_id": "toolu_01NyCfXQ8bgV72u8hHypQ9YP",
+      "event_id": "e11"
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__search_articles",
+      "succeeded": true,
+      "call_id": "toolu_018b7AToutUPiFk6FVuQEduw",
+      "event_id": "e12"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "mcp__droit-francais__search_articles",
+      "call_id": "toolu_018b7AToutUPiFk6FVuQEduw",
+      "retrieved_at": "2026-10-06T20:37:59.825412Z",
+      "content_trust": "untrusted_source_data",
+      "status": "available",
+      "documents": [
+        {
+          "nature": "search_result",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051731740",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data",
+            "as_of_date": "2026-10-06",
+            "date_basis": "date du jour du serveur",
+            "legal_status": "VIGUEUR",
+            "number": "L1612-1",
+            "requested_date": null,
+            "source": "Légifrance API",
+            "verified": true
+          },
+          "id": "LEGIARTI000051731740",
+          "title": "Article L1612-1 — Code général des collectivités territoriales",
+          "sha256": "7443612530c8799ee707fa65d0c2e85819593c795ed43e4e1f9eb904c5a4de70"
+        }
+      ],
+      "truncated": false,
+      "sha256": "76f8975180664808225da303d55761eec36df790cfab0f30ed1f06303abab125",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e13"
+    },
+    {
+      "type": "assistant_text",
+      "text": "Je récupère l'article L1612-1 CGCT et recherche les règles d'autorisation budgétaire applicables.",
+      "text_redacted": false,
+      "text_truncated": false,
+      "event_id": "e14"
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__get_article",
+      "succeeded": true,
+      "call_id": "toolu_01BEBfz1H4zKeihAmCEbbLHL",
+      "event_id": "e15"
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__search_articles",
+      "succeeded": true,
+      "call_id": "toolu_0189DL3y2JQxCuZtoVuAve1o",
+      "event_id": "e16"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "mcp__droit-francais__get_article",
+      "call_id": "toolu_01BEBfz1H4zKeihAmCEbbLHL",
+      "retrieved_at": "2026-10-06T20:37:59.825412Z",
+      "content_trust": "untrusted_source_data",
+      "status": "available",
+      "documents": [
+        {
+          "nature": "primary_text",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000051731740",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data",
+            "applicable_at_as_of_date": true,
+            "as_of_date": "2026-10-06",
+            "date_basis": "date du jour du serveur",
+            "end_date": 32472144000000,
+            "legal_status": "VIGUEUR",
+            "number": "L1612-1",
+            "requested_date": null,
+            "source": "Légifrance API",
+            "start_date": 1767225600000,
+            "verified": true,
+            "version_end_date": "2999-01-01",
+            "version_start_date": "2026-01-01"
+          },
+          "id": "LEGIARTI000051731740",
+          "title": "Article L1612-1",
+          "excerpt": "Dans le cas où le budget d'une collectivité territoriale n'a pas été adopté avant le 1er janvier de l'exercice auquel il s'applique, l'exécutif de la collectivité territoriale est en droit, jusqu'à l'adoption de ce budget, de mettre en recouvrement les recettes et d'engager, de liquider et de mandater les dépenses de la section de fonctionnement dans la limite de celles inscrites au budget de l'année précédente. Il est en droit de mandater les dépenses afférentes au remboursement en capital des annuités de la dette venant à échéance avant le vote du budget. En outre, jusqu'à l'adoption du budget ou jusqu'au 15 avril, en l'absence d'adoption du budget avant cette date, l'exécutif de la collectivité territoriale peut, sur autorisation de l'organe délibérant, engager, liquider et mandater les dépenses d'investissement, dans la limite du quart des crédits ouverts au budget de l'exercice précédent, non compris les crédits afférents au remboursement de la dette. L'autorisation mentionnée à l'alinéa ci-dessus précise le montant et l'affectation des crédits. Lorsque la section d'investissement ou la section de fonctionnement du budget comporte soit des autorisations de programme et des crédits de paiement, soit des autorisations d'engagement et des crédits de paiement, le maire ou le président de l'assemblée délibérante peut, jusqu'à l'adoption du budget ou jusqu'à son règlement s'il n'est pas adopté, liquider et mandater les dépenses d'investissement et les dépenses de fonctionnement correspondant aux autorisations ouvertes au cours des exercices antérieurs, dans la limite d'un montant de crédits de paiement par chapitre égal au tiers des autorisations ouvertes au cours de l'exercice précédent. Les crédits correspondants, visés aux alinéas ci-dessus, sont inscrits au budget lors de son adoption. Le comptable est en droit de payer les mandats et recouvrer les titres de recettes émis dans les conditions ci-dessus.",
+          "sha256": "3e925aea49a1922baca1129b0d4c87da50b125bdd5942ac1f7f814461fad22c9"
+        }
+      ],
+      "truncated": false,
+      "sha256": "5464f105a53b6ee83b6666ee5780c67b0774c6286756f17f459baf7762ef6cf8",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e17"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "mcp__droit-francais__search_articles",
+      "call_id": "toolu_0189DL3y2JQxCuZtoVuAve1o",
+      "retrieved_at": "2026-10-06T20:37:59.825412Z",
+      "content_trust": "untrusted_source_data",
+      "status": "available",
+      "documents": [
+        {
+          "nature": "search_result",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000033035595",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data",
+            "as_of_date": "2026-10-06",
+            "date_basis": "date du jour du serveur",
+            "legal_status": "VIGUEUR",
+            "number": "L2122-21",
+            "requested_date": null,
+            "source": "Légifrance API",
+            "verified": true
+          },
+          "id": "LEGIARTI000033035595",
+          "title": "Article L2122-21 — Code général des collectivités territoriales",
+          "sha256": "1afca6ebb456a590945dc160b5856a93914cbb68a8ef1129f7629dc087f32de1"
+        }
+      ],
+      "truncated": false,
+      "sha256": "8681b4442d0848dd9847387966a56899cda9c406775cf44260cf14cc835534dc",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e18"
+    },
+    {
+      "type": "assistant_text",
+      "text": "J'ai les éléments nécessaires. Voici la réponse finale.\n\n---\n\n## ALERTE BUDGÉTAIRE\n\n*(dirfi-fpt `SKILL.md` §5.3 — `references/execution-depense.md` §5.1)*\n\nLa situation décrite — engager une dépense sans arbitrage budgétaire documenté — correspond au déclencheur « exécution d'une dépense sans crédit ouvert ». L'engagement comptable ne peut intervenir que sur crédit disponible préalablement ouvert ; l'engagement juridique crée une obligation financière qui doit être couverte par un crédit voté ou une autorisation expresse de l'assemblée délibérante.\n\n**Ne pas engager en l'état. Traiter d'abord l'arbitrage et l'inscription des crédits.**\n\n---\n\n## Analyse dsi-fpt\n\n*Source : `references/gouvernance-strategie.md` §5, `references/cloud-hebergement.md` §3-§6*\n\n### Ce que la DSI peut et doit faire seule\n\nLa DSI est compétente pour **instruire les options techniques** :\n\n- formaliser les exigences du service (criticité, continuité, volumes, accès, dépendances) ;\n- comparer les modes d'exercice — interne, mutualisé, externalisé — sur les mêmes exigences ;\n- pour l'hébergement externalisé : vérifier l'offre exacte, la qualification éventuelle (ne pas conclure sur une étiquette sans preuve officielle à la date de la décision), la localisation documentée, les accès et la réversibilité (`references/cloud-hebergement.md` §5) ;\n- chiffrer le **coût complet exprimé en besoins** (investissement initial, hébergement récurrent, maintenance, exit) — c'est la pièce d'entrée vers le DirFi, pas un engagement.\n\n### Ce que la DSI ne peut pas décider seule\n\n> « La DSI instruit les options et ne s'attribue pas leur décision. »\n> (`references/gouvernance-strategie.md` §5 — *Schéma directeur et arbitrages*)\n\nLa décision d'**affecter des crédits** et d'**engager la dépense** revient à l'ordonnateur (le maire ou le président), sur la base de crédits ouverts par l'assemblée délibérante. La DSI prépare le dossier ; l'arbitrage appartient à la DGS puis à l'exécutif.\n\n**[risque élevé / confiance stable sur le principe, montants à vérifier]**\n\n---\n\nBASCULE dpo-ct — Le projet d'hébergement externalisé concerne vraisemblablement des données à caractère personnel (agents, administrés, applications métiers). La qualification du traitement, la sous-traitance au sens du RGPD, les transferts éventuels hors UE et l'AIPD éventuelle ne sont pas traitées ici.\nÀ reprendre côté dpo-ct : exigences de conformité, clauses de sous-traitance RGPD, transferts hors UE, AIPD si applicable.\n\n---\n\n## Analyse dirfi-fpt\n\n*Source : `references/execution-depense.md` §5.1, `references/budget-cycle.md` §3-§5, `references/commande-publique-financiere.md` §5.11-§5.13*\n\n### La règle : crédit disponible préalable à tout engagement\n\nL'engagement comptable (réservation du crédit) et l'engagement juridique (bon de commande, marché, décision d'attribution) doivent être **concordants et antérieurs** à l'exécution. Engager sans crédit ouvert expose l'ordonnateur à un rejet du comptable et, potentiellement, à une mise en jeu de sa responsabilité.\n\nLe renouvellement de serveurs relève de la **section d'investissement** ; un contrat d'hébergement pluriannuel peut comporter un volet investissement (licences, matériel migré) et un volet fonctionnement récurrent (abonnement SaaS ou IaaS) — l'imputation exacte est à arrêter avec le DirFi, car elle conditionne la disponibilité des crédits et le régime AP/CP éventuel.\n\n### Fondement juridique vérifié\n\n**Art. L1612-1 CGCT** — *version en vigueur depuis le 1er janvier 2026, LEGIARTI000051731740, consulté sur Légifrance le 2026-10-06, applicable à la date de la question.* [confiance élevée]\n\nPar voie de conséquence : le régime dérogatoire avant vote du budget (limit du quart des crédits de l'exercice précédent) exige une **autorisation expresse de l'assemblée délibérante précisant le montant et l'affectation**. Dans le régime normal (budget voté), l'engagement d'investissement ne peut dépasser les crédits votés. Toute dépense d'investissement sans crédit ouvert ou sans autorisation de l'assemblée est irrégulière.\n\n**Décret n° 2012-1246 du 7 novembre 2012 relatif à la gestion budgétaire et comptable publique (GBCP)** — fondement du principe ordonnateur/comptable, cité en réserve « à confirmer en version consolidée » : l'engagement sans crédit disponible transfère une obligation sans couverture, ce que le comptable contrôle avant paiement.\n\n### Ce que l'arbitrage budgétaire documenté doit contenir\n\n| Point | Contenu attendu |\n|---|---|\n| Nature de la dépense | Investissement / fonctionnement / mixte — conditionne l'imputation M57 et la section (`references/nomenclature-m57.md`) |\n| Disponibilité des crédits | Vérification sur le chapitre concerné à la date d'engagement envisagée |\n| Pluriannualité | Si l'opération s'étale sur plusieurs exercices : AP/CP à voter par l'assemblée (`references/budget-cycle.md`) |\n| Crédits manquants | Décision modificative (DM) nécessaire si les crédits n'existent pas au budget voté |\n| Engagement comptable | Ne peut intervenir qu'après ouverture formelle des crédits |\n\n---\n\n## Séquence régulière à mettre en place\n\n```\n1. DSI produit\n   └─ Cahier des charges technique (references/templates/cahier-des-charges-technique.md)\n      + Fiche projet SI (references/templates/fiche-projet-si.md)\n      + Comparaison des options d'hébergement (cloud-hebergement.md §6)\n      + Coût complet exprimé en besoins (investissement + fonctionnement récurrent)\n\n2. DPO se prononce (BASCULE ci-dessus)\n   └─ Exigences RGPD, AIPD si applicable, clauses de sous-traitance\n\n3. DirFi instruit l'arbitrage financier\n   └─ Qualification fonctionnement / investissement\n   └─ Vérification disponibilité des crédits au budget voté\n   └─ Si crédits insuffisants → DM ou inscription d'AP/CP à porter en assemblée\n   └─ Note d'impact financier (references/templates/note-impact-financier.md)\n\n4. DGS / Exécutif arbitre formellement\n   └─ Décision sur les options techniques et le montant\n   └─ Mandatement de la procédure (passation) au service compétent\n\n5. Crédits ouverts confirmés\n   └─ Engagement comptable régulier possible\n\n6. Procédure de passation du marché\n   └─ HORS PÉRIMÈTRE — relève du service de la commande publique\n```\n\n---\n\n## Signal de frontière — passation des marchés\n\nLa procédure de passation (allotissement, critères de sélection, publicité, choix du titulaire, recours précontractuel) est **hors périmètre** des skills `dsi-fpt` et `dirfi-fpt`. Elle relève du service de la commande publique. La DSI contribue au cahier des charges technique ; elle ne conduit pas la procédure.\n\n---\n\n## Synthèse opérationnelle\n\nLe point bloquant est double : **gouvernance** (la DSI ne peut pas arbitrer seule une dépense) et **droit budgétaire** (l'engagement sans crédit ouvert est irrégulier). La solution n'est pas de retarder le projet mais de le **séquencer correctement** : la DSI formalise le besoin et les options, le DirFi instruit les crédits, l'exécutif tranche, l'assemblée vote si nécessaire, puis seulement la dépense est engagée et la passation lancée. Ce séquencement est aussi la meilleure protection de l'ordonnateur.",
+      "text_redacted": false,
+      "text_truncated": false,
+      "event_id": "e19"
+    },
+    {
+      "type": "result",
+      "subtype": "success",
+      "is_error": false,
+      "cost_usd": 0.6142875,
+      "result": "J'ai les éléments nécessaires. Voici la réponse finale.\n\n---\n\n## ALERTE BUDGÉTAIRE\n\n*(dirfi-fpt `SKILL.md` §5.3 — `references/execution-depense.md` §5.1)*\n\nLa situation décrite — engager une dépense sans arbitrage budgétaire documenté — correspond au déclencheur « exécution d'une dépense sans crédit ouvert ». L'engagement comptable ne peut intervenir que sur crédit disponible préalablement ouvert ; l'engagement juridique crée une obligation financière qui doit être couverte par un crédit voté ou une autorisation expresse de l'assemblée délibérante.\n\n**Ne pas engager en l'état. Traiter d'abord l'arbitrage et l'inscription des crédits.**\n\n---\n\n## Analyse dsi-fpt\n\n*Source : `references/gouvernance-strategie.md` §5, `references/cloud-hebergement.md` §3-§6*\n\n### Ce que la DSI peut et doit faire seule\n\nLa DSI est compétente pour **instruire les options techniques** :\n\n- formaliser les exigences du service (criticité, continuité, volumes, accès, dépendances) ;\n- comparer les modes d'exercice — interne, mutualisé, externalisé — sur les mêmes exigences ;\n- pour l'hébergement externalisé : vérifier l'offre exacte, la qualification éventuelle (ne pas conclure sur une étiquette sans preuve officielle à la date de la décision), la localisation documentée, les accès et la réversibilité (`references/cloud-hebergement.md` §5) ;\n- chiffrer le **coût complet exprimé en besoins** (investissement initial, hébergement récurrent, maintenance, exit) — c'est la pièce d'entrée vers le DirFi, pas un engagement.\n\n### Ce que la DSI ne peut pas décider seule\n\n> « La DSI instruit les options et ne s'attribue pas leur décision. »\n> (`references/gouvernance-strategie.md` §5 — *Schéma directeur et arbitrages*)\n\nLa décision d'**affecter des crédits** et d'**engager la dépense** revient à l'ordonnateur (le maire ou le président), sur la base de crédits ouverts par l'assemblée délibérante. La DSI prépare le dossier ; l'arbitrage appartient à la DGS puis à l'exécutif.\n\n**[risque élevé / confiance stable sur le principe, montants à vérifier]**\n\n---\n\nBASCULE dpo-ct — Le projet d'hébergement externalisé concerne vraisemblablement des données à caractère personnel (agents, administrés, applications métiers). La qualification du traitement, la sous-traitance au sens du RGPD, les transferts éventuels hors UE et l'AIPD éventuelle ne sont pas traitées ici.\nÀ reprendre côté dpo-ct : exigences de conformité, clauses de sous-traitance RGPD, transferts hors UE, AIPD si applicable.\n\n---\n\n## Analyse dirfi-fpt\n\n*Source : `references/execution-depense.md` §5.1, `references/budget-cycle.md` §3-§5, `references/commande-publique-financiere.md` §5.11-§5.13*\n\n### La règle : crédit disponible préalable à tout engagement\n\nL'engagement comptable (réservation du crédit) et l'engagement juridique (bon de commande, marché, décision d'attribution) doivent être **concordants et antérieurs** à l'exécution. Engager sans crédit ouvert expose l'ordonnateur à un rejet du comptable et, potentiellement, à une mise en jeu de sa responsabilité.\n\nLe renouvellement de serveurs relève de la **section d'investissement** ; un contrat d'hébergement pluriannuel peut comporter un volet investissement (licences, matériel migré) et un volet fonctionnement récurrent (abonnement SaaS ou IaaS) — l'imputation exacte est à arrêter avec le DirFi, car elle conditionne la disponibilité des crédits et le régime AP/CP éventuel.\n\n### Fondement juridique vérifié\n\n**Art. L1612-1 CGCT** — *version en vigueur depuis le 1er janvier 2026, LEGIARTI000051731740, consulté sur Légifrance le 2026-10-06, applicable à la date de la question.* [confiance élevée]\n\nPar voie de conséquence : le régime dérogatoire avant vote du budget (limit du quart des crédits de l'exercice précédent) exige une **autorisation expresse de l'assemblée délibérante précisant le montant et l'affectation**. Dans le régime normal (budget voté), l'engagement d'investissement ne peut dépasser les crédits votés. Toute dépense d'investissement sans crédit ouvert ou sans autorisation de l'assemblée est irrégulière.\n\n**Décret n° 2012-1246 du 7 novembre 2012 relatif à la gestion budgétaire et comptable publique (GBCP)** — fondement du principe ordonnateur/comptable, cité en réserve « à confirmer en version consolidée » : l'engagement sans crédit disponible transfère une obligation sans couverture, ce que le comptable contrôle avant paiement.\n\n### Ce que l'arbitrage budgétaire documenté doit contenir\n\n| Point | Contenu attendu |\n|---|---|\n| Nature de la dépense | Investissement / fonctionnement / mixte — conditionne l'imputation M57 et la section (`references/nomenclature-m57.md`) |\n| Disponibilité des crédits | Vérification sur le chapitre concerné à la date d'engagement envisagée |\n| Pluriannualité | Si l'opération s'étale sur plusieurs exercices : AP/CP à voter par l'assemblée (`references/budget-cycle.md`) |\n| Crédits manquants | Décision modificative (DM) nécessaire si les crédits n'existent pas au budget voté |\n| Engagement comptable | Ne peut intervenir qu'après ouverture formelle des crédits |\n\n---\n\n## Séquence régulière à mettre en place\n\n```\n1. DSI produit\n   └─ Cahier des charges technique (references/templates/cahier-des-charges-technique.md)\n      + Fiche projet SI (references/templates/fiche-projet-si.md)\n      + Comparaison des options d'hébergement (cloud-hebergement.md §6)\n      + Coût complet exprimé en besoins (investissement + fonctionnement récurrent)\n\n2. DPO se prononce (BASCULE ci-dessus)\n   └─ Exigences RGPD, AIPD si applicable, clauses de sous-traitance\n\n3. DirFi instruit l'arbitrage financier\n   └─ Qualification fonctionnement / investissement\n   └─ Vérification disponibilité des crédits au budget voté\n   └─ Si crédits insuffisants → DM ou inscription d'AP/CP à porter en assemblée\n   └─ Note d'impact financier (references/templates/note-impact-financier.md)\n\n4. DGS / Exécutif arbitre formellement\n   └─ Décision sur les options techniques et le montant\n   └─ Mandatement de la procédure (passation) au service compétent\n\n5. Crédits ouverts confirmés\n   └─ Engagement comptable régulier possible\n\n6. Procédure de passation du marché\n   └─ HORS PÉRIMÈTRE — relève du service de la commande publique\n```\n\n---\n\n## Signal de frontière — passation des marchés\n\nLa procédure de passation (allotissement, critères de sélection, publicité, choix du titulaire, recours précontractuel) est **hors périmètre** des skills `dsi-fpt` et `dirfi-fpt`. Elle relève du service de la commande publique. La DSI contribue au cahier des charges technique ; elle ne conduit pas la procédure.\n\n---\n\n## Synthèse opérationnelle\n\nLe point bloquant est double : **gouvernance** (la DSI ne peut pas arbitrer seule une dépense) et **droit budgétaire** (l'engagement sans crédit ouvert est irrégulier). La solution n'est pas de retarder le projet mais de le **séquencer correctement** : la DSI formalise le besoin et les options, le DirFi instruit les crédits, l'exécutif tranche, l'assemblée vote si nécessaire, puis seulement la dépense est engagée et la passation lancée. Ce séquencement est aussi la meilleure protection de l'ordonnateur.",
+      "text_redacted": false,
+      "text_truncated": false,
+      "errors_count": 0,
+      "event_id": "e20"
+    },
+    {
+      "type": "technical_assessment",
+      "case_id": "plugin-dsi-budget",
+      "process_exit": 0,
+      "status": "passed",
+      "failures": [],
+      "observables": {
+        "stop_required": false,
+        "first_visible_text_ref": "e5",
+        "stop_first": null,
+        "primary_content_refs": [
+          "e17"
+        ],
+        "primary_content_available": true,
+        "legal_validity": null,
+        "note": "Le contenu disponible ne certifie ni pertinence ni vigueur."
+      },
+      "requires_independent_judgment": true
+    }
+  ]
+}

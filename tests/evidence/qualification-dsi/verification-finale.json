@@ -1,0 +1,155 @@
+{
+  "judge_links": [
+    {
+      "case_id": "plugin-prime-depart-retraite",
+      "verified": true,
+      "comparison": "full_json",
+      "call_ids": [
+        "call_WcQEVLvBPfa3w4uDKhXwpCfI"
+      ],
+      "formats": [
+        "powershell-literal-json"
+      ]
+    },
+    {
+      "case_id": "plugin-garde-fou-apja",
+      "verified": true,
+      "comparison": "full_json",
+      "call_ids": [
+        "call_wJcat7rZvFfe9sJEFBYtxUyB"
+      ],
+      "formats": [
+        "powershell-literal-json"
+      ]
+    },
+    {
+      "case_id": "plugin-violation-donnees",
+      "verified": true,
+      "comparison": "full_json",
+      "call_ids": [
+        "call_lFT6Xz706iOkWE9GZelrYFyZ"
+      ],
+      "formats": [
+        "apply_patch-json"
+      ]
+    },
+    {
+      "case_id": "plugin-mcp-indisponible",
+      "verified": true,
+      "comparison": "full_json",
+      "call_ids": [
+        "call_vrDt6zSObT7lqObrnJWkx8SK"
+      ],
+      "formats": [
+        "powershell-literal-json"
+      ]
+    },
+    {
+      "case_id": "plugin-dsi-incident-donnees",
+      "verified": true,
+      "comparison": "full_json",
+      "call_ids": [
+        "call_z8eWh2k3Ul42Np29c1YNjzw5"
+      ],
+      "formats": [
+        "apply_patch-json"
+      ]
+    },
+    {
+      "case_id": "plugin-dsi-rssi-rh",
+      "verified": true,
+      "comparison": "full_json",
+      "call_ids": [
+        "call_WSSTMXLoEsE1TJ9tB7Z5vRco"
+      ],
+      "formats": [
+        "apply_patch-json"
+      ]
+    },
+    {
+      "case_id": "plugin-dsi-videoprotection",
+      "verified": true,
+      "comparison": "full_json",
+      "call_ids": [
+        "call_6XJCiQ1ns9cjNXUsWOeZmDus"
+      ],
+      "formats": [
+        "apply_patch-json"
+      ]
+    },
+    {
+      "case_id": "plugin-dsi-budget",
+      "verified": true,
+      "comparison": "full_json",
+      "call_ids": [
+        "call_jlsRMkAv5dPUZOqrXcO2MrlC"
+      ],
+      "formats": [
+        "apply_patch-json"
+      ]
+    },
+    {
+      "case_id": "plugin-dsi-reversibilite",
+      "verified": true,
+      "comparison": "full_json",
+      "call_ids": [
+        "call_SWLsKYmvKicQI08h22Ajrl2o"
+      ],
+      "formats": [
+        "apply_patch-json"
+      ]
+    },
+    {
+      "case_id": "plugin-dsi-reouverture",
+      "verified": true,
+      "comparison": "full_json",
+      "call_ids": [
+        "call_wX77soemryPqKXxDP1IKS64Y"
+      ],
+      "formats": [
+        "apply_patch-json"
+      ]
+    },
+    {
+      "case_id": "plugin-dsi-technique",
+      "verified": true,
+      "comparison": "full_json",
+      "call_ids": [
+        "call_PJmXV7dokNlOh5BMdnP0m82H"
+      ],
+      "formats": [
+        "apply_patch-json"
+      ]
+    },
+    {
+      "case_id": "plugin-dsi-source-indisponible",
+      "verified": true,
+      "comparison": "full_json",
+      "call_ids": [
+        "call_jTgpvHxer7pXCGpqwTqsLpJs"
+      ],
+      "formats": [
+        "js-literal-json"
+      ]
+    }
+  ],
+  "judge_json_comparison": "full_json",
+  "frozen_files": 177,
+  "runtime_files": 166,
+  "canonical_files_preserved": {
+    "tests/evidence/release-1.1.1.json": "a1ebbebde502bc0c30f44ca1c3389bb36f7305c25d483c4ce46b8d055a13c4dc",
+    "docs/qualification-1.1.1-2026-10-03.md": "56eb31c5cf7ed24d4d7e41bebd2a2a6b1114d9f2a6aa052b55ef3cc606307612"
+  },
+  "release_ready": false,
+  "local_tests": {
+    "command": "python -m unittest discover -s tests",
+    "passed": 31,
+    "total": 32,
+    "intentional_failure": "test_barriere_de_release_comportementale"
+  },
+  "portable_helpers": {
+    "controle_nominaux.py": "1b2aeb01aeb0b5ca68a4cddd150d859c21575c6e26877e3387105206c30019ad",
+    "lie_jugements.py": "50a13bd6e049aec97d952b2145b0efb7625823f620f3a752dcc42df0fb2ae8ae"
+  },
+  "presentation_v3_sha256": "83b1eae980b5d525747cefbf00abaae511ec3aacd288f34e960c7c757d4b39a6"
+}

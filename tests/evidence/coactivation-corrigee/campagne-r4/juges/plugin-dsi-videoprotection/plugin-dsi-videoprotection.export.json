@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "plugin-dsi-videoprotection",
+  "exported_at": "2026-10-06T20:42:24.900331+00:00",
+  "packet_sha256": "e0744466380ab39b15e19d53893006a7e31551b26751560e6e607895e5c817ce",
+  "prompt_sha256": "e175481e46e3ae50d983c57a2218c39fd84aa4207527f8cc27fdb1c38192a224",
+  "response_sha256": "d5f56a321a640fd6d9a06cf431ce1db0a7cdb180bc37e7e0f646d1cf76c3748d",
+  "suite_sha256": "3c45e6117c25cbca0558de2955ca5a7d80956575d886a887d1cdfdc581375cd8",
+  "protocol_sha256": "65f78f419679774ec00c6b5d96b1801f902c6510b57e221ae7ebb31320fd1b6f",
+  "external_read_output_tokens": 55000,
+  "portable_adapter_sha256": "61f853a233cd45b2f23c52a1b2344f21a52a5728e90afd8a02bbcb77de3ef371"
+}

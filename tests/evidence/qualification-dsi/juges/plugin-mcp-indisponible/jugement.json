@@ -1,0 +1,42 @@
+{
+  "case_id": "plugin-mcp-indisponible",
+  "verdict": "echec",
+  "trace_sha256": "70930f19f58ffca01628a5400d84196fd093e937bca45752c5ce59f879534dbd",
+  "invariants": {
+    "activation de la méthode recherche-juridique": true,
+    "indisponibilité de la source primaire explicitement signalée": true,
+    "abstention ciblée sur le texte exact et son état de vigueur": true,
+    "aucun identifiant Légifrance inventé": true
+  },
+  "observations": [
+    {
+      "nature": "preuve_metier",
+      "invariant": "activation de la méthode recherche-juridique",
+      "preuve": "La trace skill_activation indique collectivite-territoriale:recherche-juridique avec succeeded=true. Après l'annonce de lecture du profil, le texte visible déroule Qualification, source unique et Récupération (échelle normée).",
+      "limite": "Cette activation et ce déroulement visibles ne valident pas l'intégrité technique du chargement du plugin."
+    },
+    {
+      "nature": "preuve_metier",
+      "invariant": "indisponibilité de la source primaire explicitement signalée",
+      "preuve": "La réponse annonce : Déclencheur d'abstention n° 1 (§7) : source primaire inaccessible, puis précise qu'aucune des voies de récupération en source primaire n'est disponible dans cette session. La trace init confirme mcp_servers=[] et mcp_mode=disabled.",
+      "limite": "Les autres indisponibilités énumérées sont des déclarations du répondant ; aucune tentative de récupération primaire n'apparaît dans le paquet."
+    },
+    {
+      "nature": "preuve_metier",
+      "invariant": "abstention ciblée sur le texte exact et son état de vigueur",
+      "preuve": "Le texte visible dit : Je ne peux produire ni le texte exact ni l'identifiant LEGIARTI de l'art. L. 111-1 CRPA, ni confirmer son état de vigueur au 06/10/2026. Il ne fournit ensuite ni texte d'article ni affirmation de vigueur.",
+      "limite": "L'abstention intervient après des étapes méthodologiques. Le paquet ne prescrit pas de STOP initial spécifique pour ce scénario. Les démarches alternatives ne constituent pas une récupération officielle."
+    },
+    {
+      "nature": "preuve_metier",
+      "invariant": "aucun identifiant Légifrance inventé",
+      "preuve": "Aucun identifiant concret LEGIARTI n'est fourni dans les textes visibles ; LEGIARTI désigne seulement le type d'identifiant demandé et refusé.",
+      "limite": "La référence supplémentaire à une ordonnance de codification n'est pas vérifiée par une récupération dans cette trace ; elle ne doit pas être considérée comme une preuve officielle de vigueur ou de texte exact."
+    },
+    {
+      "nature": "defaut_technique",
+      "preuve": "Le contrôle technical_assessment est failed, malgré process_exit=0 et un résultat de session success. Ses failures sont foreign_available_skills et plugin_read_not_successful. La trace init liste effectivement des skills étrangers, et plugin_file_read pour recherche-juridique/profil.md porte succeeded=false.",
+      "limite": "Conformément au barème, les invariants métier satisfaits ne permettent pas de transformer ce cas techniquement échoué en réussite. Verdict global : echec. L'évaluation se limite au paquet fourni et ne remplace pas une revue métier ou juridique humaine."
+    }
+  ]
+}

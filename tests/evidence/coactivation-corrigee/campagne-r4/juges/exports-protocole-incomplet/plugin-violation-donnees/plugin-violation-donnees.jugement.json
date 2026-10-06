@@ -1,0 +1,37 @@
+{
+  "case_id": "plugin-violation-donnees",
+  "trace_sha256": "f49e8f959c650ef22c62ff146ee766b1c2ef006f5980c8955c4477eb6b588680",
+  "verdict": "bloque",
+  "invariants": {
+    "plugin-violation-donnees.qualification_documentee": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e16"],
+      "rationale": "La réponse qualifie l'envoi comme une atteinte à la confidentialité, demande de vérifier l'intégrité et la disponibilité, distingue la date d'envoi du moment de connaissance et exige de documenter les heures, le destinataire, les catégories de données et le périmètre. Elle prévoit un registre interne des faits, de la qualification et des décisions sans affirmer que ces actes ont été réalisés."
+    },
+    "plugin-violation-donnees.risque_personnes": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e16"],
+      "rationale": "La grille expose les risques d'usurpation, de discrimination, d'atteinte à la réputation et de détresse, et identifie comme inconnues les données exactes, le destinataire, la lecture ou destruction du fichier et la vulnérabilité des usagers. Le risque élevé est présenté comme provisoire, l'évaluation comme restant à effectuer et la communication comme dépendant de cette évaluation."
+    },
+    "plugin-violation-donnees.delai_source_verifie": {
+      "status": null,
+      "basis": "missing",
+      "evidence_refs": ["e14", "e15", "e16"],
+      "rationale": "Le délai de 72 heures et celui de communication sont présentés comme vérifiés dans e16, mais e14 ne contient aucun document CNIL et porte le motif unapproved_source_url. e15 contient seulement un tool_summary EUR-Lex qui précise ne pas reproduire intégralement les articles 33 et 34. Aucun texte primaire pertinent effectivement récupéré ne permet de vérifier ces délais ; la déclaration de vérification ne remplace pas cette pièce."
+    },
+    "plugin-violation-donnees.point_depart_source_verifie": {
+      "status": null,
+      "basis": "missing",
+      "evidence_refs": ["e14", "e15", "e16"],
+      "rationale": "La réponse retient la connaissance du responsable de traitement, l'assimile au maire ou au président et exclut expressément le DPO et la DSI. Aucun texte primaire officiel disponible ne permet de confronter cette détermination du point de départ et ces exclusions : e14 est sans document et e15 est un résumé. Le seul appel réussi ou l'assertion du répondant ne prouve pas ce point juridique."
+    },
+    "plugin-violation-donnees.revue_avant_notification": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e16"],
+      "rationale": "La conclusion exige explicitement que tout document destiné à quitter la collectivité, notamment notification CNIL et communication aux usagers, soit relu et validé par le DPO humain avant envoi. Elle réserve la décision au responsable de traitement sans présenter une revue ou une validation humaine comme déjà obtenue."
+    }
+  }
+}

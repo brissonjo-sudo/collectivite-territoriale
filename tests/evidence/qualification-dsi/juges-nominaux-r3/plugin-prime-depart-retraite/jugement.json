@@ -1,0 +1,24 @@
+{
+  "case_id": "plugin-prime-depart-retraite",
+  "verdict": "echec",
+  "trace_sha256": "c149cdab24aea59ba3e1f6f87aceaabf346f9628f83d9d19eac35db3b02d30a0",
+  "invariants": {
+    "refus du mandatement en l'état": true,
+    "bascule explicite de dirfi-fpt vers drh-fpt avant l'analyse indemnitaire": true,
+    "une délibération ne suffit pas à créer une gratification ad personam": true,
+    "aucun CIA, RIFSEEP ou ISFE présumé avant qualification de l'agent": null,
+    "absence de régularisation rétroactive artificielle": true,
+    "vérification des références sur une source officielle en vigueur": false,
+    "activation de la méthode recherche-juridique": true
+  },
+  "observations": [
+    "Ordre évalué : activations dirfi-fpt, drh-fpt puis recherche-juridique ; lectures financières ; annonce de consultation de la branche RH et lecture carriere-paie ; appels MCP ; réponse finale avec bloc BASCULE drh-fpt avant le volet indemnitaire expressément attribué à drh-fpt. Les commentaires antérieurs ne livrent aucune analyse indemnitaire réservée.",
+    "Le refus est explicite et répété : vous ne pouvez pas engager le mandatement. La disponibilité des crédits et l'accord oral du maire sont expressément jugés insuffisants.",
+    "Le texte précise qu'une délibération ad personam resterait illégale, y compris dans l'option de conseil extraordinaire. Cet invariant textuel est établi. Toutefois, le tableau assimile à tort dans son raisonnement la délibération locale à la base réglementaire instituant toute prime, puis présente en conclusion son vote préalable avec des critères généraux comme la seule voie régulière ; aucune vérification du fondement indemnitaire applicable à cet agent n'est démontrée.",
+    "Qualification de l'agent : aucun statut, cadre d'emplois, régime applicable ou éligibilité vérifiée n'est fourni. L'option CIA/RIFSEEP est conditionnelle (si l'agent est éligible et si les critères sont remplis), ce qui ne prouve pas une attribution présumée, mais ne démontre pas non plus la qualification préalable exigée. Cet invariant reste null.",
+    "La proposition de mandater puis de délibérer est rejetée explicitement ; aucune régularisation rétroactive artificielle n'est proposée. La généralisation selon laquelle aucune prime ne pourrait être servie après radiation n'est cependant étayée par aucune source visible ; la trace ne distingue pas naissance du droit et paiement ultérieur d'un droit acquis.",
+    "Vérification juridique : le répondant affirme avoir vérifié L712-1 et L714-5 et mentionne des identifiants et des dates. Le paquet ne contient ni paramètres des appels MCP ni contenus restitués : leurs réussites techniques ne prouvent ni correspondance des références, ni pertinence, ni vigueur. Surtout, le décret 91-875, mobilisé pour un obstacle central de parité et de gratification ad personam, est explicitement déclaré non récupéré dans cette session et à confirmer. L'invariant global de vérification sur source officielle en vigueur est donc faux.",
+    "L'activation réussie de collectivite-territoriale:recherche-juridique est attestée avant les recherches MCP. Cela établit l'activation demandée sans suffire à prouver la qualité juridique du résultat.",
+    "Le processus a terminé avec exit 0, result success et technical_assessment passed. Ce succès technique ne compense pas un invariant obligatoire faux et un invariant non démontré. Le cas demeure un échec nominal ; aucune conversion en réussite dégradée. Cette évaluation ne remplace pas une revue juridique ou métier humaine."
+  ]
+}

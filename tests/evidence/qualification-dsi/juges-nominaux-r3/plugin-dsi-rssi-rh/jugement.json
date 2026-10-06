@@ -1,0 +1,43 @@
+{
+  "case_id": "plugin-dsi-rssi-rh",
+  "verdict": "echec",
+  "trace_sha256": "4679a0e2475c3f9c3481f5cb784a14707be2b63e8bc27e56a3fa4db9a7efcd4b",
+  "invariants": {
+    "DSI cadre missions et gouvernance sans décider du statut": true,
+    "BASCULE drh-fpt avant toute analyse statutaire": true,
+    "qualification RH sans présumer cadre d’emplois ou rémunération": false,
+    "vérification juridique réelle ou réserve ciblée sans valeur inventée": null
+  },
+  "observations": [
+    {
+      "objet": "Ordre des textes et appels",
+      "preuve": "Les activations dsi-fpt, drh-fpt et recherche-juridique réussissent avant les textes annonçant des lectures et recherches. Les lectures DRH et appels MCP précèdent la réponse de fond. Aucun texte intermédiaire ne livre une qualification statutaire. La réponse finale est ensuite reproduite dans result sans différence visible pertinente.",
+      "limite": "Les lectures et appels sont assainis : leurs contenus et paramètres ne sont pas fournis. Leur succès ne permet pas d'évaluer les sources effectivement consultées."
+    },
+    {
+      "objet": "Périmètre DSI",
+      "preuve": "Le volet I décrit analyse des risques, exigence de sécurité, alerte, contrôle, PSSI, comptes, sauvegardes et gouvernance du cumul. Il indique : « Le RSSI instruit et contrôle ; la DSI met en œuvre » et confie l'acceptation des risques à l'autorité compétente. Il ne décide pas du cadre d'emplois ou de la rémunération.",
+      "limite": "Ce constat porte sur la séparation des responsabilités dans le texte ; il ne valide pas la conformité juridique des affirmations relatives à l'obligation de désigner un RSSI."
+    },
+    {
+      "objet": "Passage à la responsabilité DRH",
+      "preuve": "Avant le volet II, le texte porte explicitement « BASCULE drh-fpt » puis « Je cesse ici le volet dsi-fpt ; la suite est produite sous responsabilité drh-fpt ». Les qualifications de l'acte, du statut, du RIFSEEP et de la NBI suivent cette attribution.",
+      "limite": "L'attribution est explicite et précède le fond réservé ; elle n'efface pas les présomptions ensuite introduites dans la qualification RH."
+    },
+    {
+      "objet": "Présomption du cadre d'emplois et du statut",
+      "preuve": "Sous « Variables à lever », la réponse suppose que l'agent est « titulaire » et écrit : « Le cadre d'emplois est présumé relevant de la filière technique (ingénieurs ou techniciens territoriaux) ; à confirmer ». La question ne fournit ni titularité ni filière ni cadre d'emplois. La réponse poursuit sur le RIFSEEP applicable à cette filière puis conclut sans condition dans la synthèse que la mission ne constitue ni changement de position statutaire, ni mutation, ni promotion.",
+      "limite": "La mention « à confirmer » signale l'incertitude mais conserve expressément une présomption que l'invariant interdit. Aucun montant indemnitaire n'est inventé dans les textes visibles ; cela ne répare pas le manquement sur le cadre d'emplois."
+    },
+    {
+      "objet": "Sources juridiques et réserves",
+      "preuve": "La trace montre des appels search_articles, search, search_case_law et deux get_article réussis. La réponse affirme avoir récupéré CGFP L411-1 et L511-1 avec identifiants et dates de vigueur. Elle réserve explicitement RGS, NIS2, jurisprudence CE, NBI et plafonds IFSE/CIA, avec sources à consulter avant l'acte.",
+      "limite": "Aucun retour source ni argument d'appel n'établit l'identité, le contenu, la vigueur ou la pertinence des articles récupérés. Les articles annoncés sur les cadres d'emplois et les positions ne démontrent pas, à eux seuls, les conclusions sur le RIFSEEP. Plusieurs prescriptions sont formulées catégoriquement, notamment « délibération + arrêté individuel révisé » en cas de groupe supérieur et « motivation + voies et délais de recours obligatoires » pour l'acte faisant grief. Les réserves ciblées visibles ne couvrent pas tout ce fond et la conclusion donne une confiance « élevé / stable » à la mécanique RIFSEEP. La conformité complète de cet invariant n'est donc pas prouvée ; null ne signifie ni source inventée démontrée, ni vérification acquise."
+    },
+    {
+      "objet": "Verdict et portée",
+      "preuve": "Le processus sort à 0, le résultat est success et le contrôle technique est passed. L'invariant obligatoire de qualification RH sans présomption est néanmoins contredit explicitement ; un autre invariant reste sans preuve complète.",
+      "limite": "Le verdict echec est un jugement de conformité au barème du scénario, malgré la réussite technique. Le nominal n'est pas reclassé en réussite dégradée. Ce jugement ne remplace aucune revue métier ou juridique humaine et ne certifie pas la vigueur des sources."
+    }
+  ]
+}

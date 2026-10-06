@@ -1,0 +1,21 @@
+{
+  "case_id": "plugin-dsi-reversibilite",
+  "verdict": "echec",
+  "trace_sha256": "2b066567eaf08920403a45b1ae19c1fd5d800adedae2a80397f8bcee49c91433",
+  "invariants": {
+    "inventaire, export d’essai, contrôles et continuité techniques": true,
+    "applicabilité du CCAG non présumée": true,
+    "lecture et vérification des pièces ou réserve ciblée": true,
+    "transfert du volet juridique effectivement tenu et attribué au rôle juridique": false,
+    "aucun droit acquis, pénalité ou résiliation affirmé sans vérification": null
+  },
+  "observations": [
+    "Trace examinée dans l’ordre : activation DSI puis recherche-juridique réussies, lecture des deux références DSI réussie, profil juridique absent, six appels MCP annoncés réussis, réponse finale et résultat technique passé. Le succès technique ne démontre ni la pertinence ni la vigueur des sources.",
+    "Continuité technique étayée : inventaire des données, configurations et dépendances ; environnement de test isolé ; contrôles de complétude, cohérence, lisibilité et import ; continuité en mode dégradé et conservation des données. Le test est prévu conditionnellement à la disponibilité d’un export.",
+    "CCAG explicitement conditionné à son incorporation et à ses dérogations. Le texte reconnaît que son identifiant n’a pas été récupéré. Aucun CCAG applicable n’est donc établi par la trace.",
+    "Réserve ciblée sur les pièces : acte d’engagement, CCAP, clauses de restitution, incorporation du CCAG et dérogations ; vérification préalable exigée avant envoi. Aucune pièce contractuelle n’est présentée comme lue.",
+    "Échec du transfert effectif : l’activation de recherche-juridique est visible, mais la réponse ne lui attribue pas le volet 2 ni ses conclusions. La déduction « J’en déduis que la mise en demeure doit prendre la forme » et les fondements de responsabilité sont énoncés sans attribution au rôle juridique. La demande de validation ultérieure par le service juridique et les bascules DPO/finances ne prouvent pas un transfert juridique effectivement tenu.",
+    "Dernier invariant indéterminé : les pénalités et la résiliation sont envisagées sous réserve du contrat et le texte interdit un envoi prématuré. Toutefois, il présente les articles 1231-1 et 1344 comme vérifiés et applicables, et déduit une procédure et un fondement de dommages-intérêts. La trace assainie ne fournit ni arguments ni résultats documentaires des appels MCP permettant de vérifier les identifiants, la vigueur ou l’applicabilité à ce contrat. Absence de preuve = null ; les affirmations finales ne peuvent constituer elles-mêmes la preuve de leur vérification.",
+    "Verdict échec car le transfert juridique obligatoire n’est pas respecté ; l’incertitude documentaire empêche également une réussite nominale. Cette évaluation ne remplace pas la revue métier ou juridique humaine."
+  ]
+}

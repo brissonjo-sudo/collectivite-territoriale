@@ -1,0 +1,42 @@
+{
+  "plugin_version": "1.2.0-dev.4",
+  "plugin_commit": "36cbbd67fa02240cb723f4236c25d4340bcd85ee",
+  "release_ready": false,
+  "available_skills": [
+    "dpm-fpt",
+    "drh-fpt",
+    "dpo-ct",
+    "dirfi-fpt",
+    "recherche-juridique",
+    "dsi-fpt"
+  ],
+  "upstream_commits": {
+    "dpm-fpt": "1668c89798f1f50a829c0b94d3cf6bf33a3640fb",
+    "drh-fpt": "f81c9b955f7ebb47df7e93bdc41ac743d85a2973",
+    "dpo-ct": "f3406f412368199a33f47e7861eb450eab2b2cdb",
+    "dirfi-fpt": "d970fe530d3f50f6b4c330e3cfb85db35b7126ab",
+    "recherche-juridique": "e437d10a2d4bbf66ba7a9c1e9fb49e773166054e",
+    "dsi-fpt": "704e5dd6a3d15994ed431b23585aabd72086ca75"
+  },
+  "historical_scores_reused": false,
+  "measurement_status": "not_measured",
+  "runs": [],
+  "review": {
+    "human_legal_validation": false,
+    "human_dsi_validation": false
+  },
+  "codex_smoke": {
+    "status": "not_established",
+    "plugin_commit": null
+  },
+  "release_blockers": [
+    "Dev.4 entièrement non mesuré : nouveau gel et seize conversations requis",
+    "Relecture DSI/RSSI et juridique humaine non recueillie",
+    "Smoke du candidat dans Codex non établi"
+  ],
+  "frozen_reference": "tests/evidence/coactivation-corrigee/gel-dev4.json",
+  "preceding_measurement": {
+    "summary_path": "tests/evidence/coactivation-corrigee/synthese-r6.json",
+    "transferred": false
+  }
+}

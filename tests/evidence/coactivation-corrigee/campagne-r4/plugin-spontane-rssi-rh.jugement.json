@@ -1,0 +1,55 @@
+{
+  "case_id": "plugin-spontane-rssi-rh",
+  "trace_sha256": "5869672c0f8bca852b1f35ae80d39aa8dec23c8348bc934289b1c9bbc634f5e3",
+  "verdict": "echec",
+  "invariants": {
+    "plugin-spontane-rssi-rh.missions_techniques": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e3", "e9"],
+      "rationale": "Le rôle DSI réellement activé cadre l'analyse des risques, les exigences de sécurité, le suivi des écarts et l'escalade. Il distingue instruction et décision des risques résiduels, puis prévoit un regard indépendant lorsque exploitation et contrôle sont cumulés."
+    },
+    "plugin-spontane-rssi-rh.sans_decision_statutaire_dsi": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e9"],
+      "rationale": "La partie DSI reste consacrée aux missions et à la gouvernance. Elle attribue explicitement statut, rémunération, fiche de poste et actes au rôle RH avant de terminer son volet ; aucune décision statutaire n'y est formulée."
+    },
+    "plugin-spontane-rssi-rh.bascule_drh": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e4", "e9"],
+      "rationale": "L'activation drh-fpt réussit avant le contenu métier. Dans le texte visible, BASCULE drh-fpt attribue les conséquences sur l'agent au rôle RH et précède la section Analyse drh-fpt ainsi que son premier contenu statutaire."
+    },
+    "plugin-spontane-rssi-rh.statut_non_presume": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e9"],
+      "rationale": "La section RH déclare le statut inconnu, distingue titulaire, stagiaire et contractuel et demande de réunir ce statut avant tout acte. Elle ne traite pas l'agent comme nécessairement titulaire."
+    },
+    "plugin-spontane-rssi-rh.cadre_emplois_non_presume": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e9"],
+      "rationale": "La réponse indique expressément que le rattachement à la DSI et la compétence informatique ne renseignent ni filière ni cadre d'emplois ni grade. Les branches techniques, administratives et police municipale sont conditionnelles ; aucune n'est attribuée à l'agent."
+    },
+    "plugin-spontane-rssi-rh.remuneration_non_presumee": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e9"],
+      "rationale": "Aucun régime, droit à une prime ou montant n'est attribué à cet agent. La réponse réserve le régime applicable, l'éligibilité NBI et les conséquences indemnitaires à la qualification de la filière, du cadre d'emplois et des actes locaux. Les règles générales non sourcées sont évaluées séparément dans l'invariant documentaire."
+    },
+    "plugin-spontane-rssi-rh.sources_ou_reserve_ciblee": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e9"],
+      "rationale": "Aucun texte primaire ni appel juridique n'est capturé. Malgré les réserves sur le régime individuel et les références NBI, la réponse affirme des règles : retrait obligatoire de la NBI dès cessation de l'exercice, non-cumul RIFSEEP/ISFE, délibération après avis du CST pour les astreintes et application des IHTS au dépassement de 1 607 heures. Elle affirme aussi l'avis préalable du CST pour une modification indemnitaire. Ces assertions non récupérées dépassent l'abstention ciblée ; les mentions à vérifier ne les transforment pas en abstention."
+    },
+    "plugin-spontane-rssi-rh.selection_spontanee": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e2", "e3", "e4"],
+      "rationale": "La question ne nomme pas les skills, et le répondant choisit spontanément deux rôles dans e2. Les seules activations réussies sont dsi-fpt et drh-fpt dans e3 et e4. L'activation recherche-juridique attendue manque : l'ensemble strict des trois rôles requis n'est donc pas satisfait."
+    }
+  }
+}

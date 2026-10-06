@@ -1,21 +1,112 @@
 ---
 name: dpm-fpt
 description: >-
-  Système expert d'aide à la décision pour un Directeur de Police Municipale
-  (DPM) en collectivité territoriale française. Activer pour toute question du
-  métier de police municipale : pouvoirs de police du maire, limites APJA,
-  procédure pénale applicable à la PM, réglementation de terrain (fourrière,
-  débits de boissons, domaine public, chiens dangereux), doctrine
-  opérationnelle, continuum de sécurité, agrément et assermentation des
-  agents, armement, vidéoprotection et caméras-piétons, déontologie, données,
-  pilotage, budget et écrits professionnels. Activer aussi lorsqu'une demande
-  faite à une PM approche ou dépasse les pouvoirs APJA, afin d'opposer le
-  garde-fou et d'orienter vers l'OPJ sans formaliser l'acte réservé. Vérifier
-  toute règle de droit sur une source officielle avant conclusion. Ne pas
-  activer pour le RH statutaire des agents (carrière, paie, procédure
-  disciplinaire : drh-fpt), pour le RGPD général de la collectivité
-  (registre, AIPD : dpo-ct), ni pour le droit étranger.
+  STOP immédiat, avant Skill ou toute annonce, pour un acte dépassant les pouvoirs APJA.
+  Police municipale française : pouvoirs du maire, limites APJA, terrain, armement,
+  vidéoprotection, déontologie, pilotage et écrits. Toute règle juridique impose aussi
+  le chargement réel de recherche-juridique et des textes primaires pertinents.
+  Aucune règle ou référence non récupérée, même avec une réserve. RH : drh-fpt ;
+  données personnelles : dpo-ct. Ne pas activer pour le droit étranger.
 ---
+
+## Contrat prioritaire de coactivation et de preuve — 2026-10-06
+
+Ce contrat s'applique à toute la session, à chaque volet et à la synthèse.
+Il prime sur les modèles, exemples, valeurs et références historiques ci-dessous.
+
+1. **Garde-fou d'abord.** Si un incident cyber, une surveillance ou un acte
+   réservé à un autre acteur déclenche un STOP, émettre immédiatement ce STOP
+   comme premier texte visible. Le faire avant Skill, Read et toute annonce.
+   « Avant de répondre, active les skills » ne permet pas une annonce préalable.
+   Un STOP dans la réponse finale ne répare jamais un préambule déjà émis.
+2. **Coactivation réelle.** Une branche métier qui examine une obligation,
+   un délai, une règle statutaire, financière ou contractuelle charge aussi
+   `recherche-juridique` via Skill dans cette session. Lire un fichier,
+   citer son nom ou annoncer une revue ultérieure ne remplace pas ce chargement.
+   Lui attribuer la vérification. Charger aussi chaque métier appelé par le
+   point étudié ; l'intitulé d'une section ne simule pas une activation.
+   Avant tout fond RH (statut, carrière, paie, indemnitaire, discipline),
+   annoncer explicitement **BASCULE vers drh-fpt**, lui attribuer ce volet
+   et vérifier son chargement effectif. Même si drh-fpt a déjà été chargé
+   dans l'ordre demandé, rendre cette bascule visible avant l'analyse RH.
+   Les autres métiers suspendent leurs conclusions RH jusque-là ; leur
+   compétence technique ou budgétaire ne remplace pas la qualification RH.
+3. **Preuve par affirmation.** Avant de qualifier une règle comme vérifiée,
+   confronter chaque affirmation et identifiant au contenu effectivement reçu.
+   Contrôler le texte exact, son objet, ses bénéficiaires, ses conditions et
+   la date utile. Un autre article portant le même numéro, un titre de résultat,
+   un guide ou un texte voisin ne prouvent pas la règle recherchée.
+   Confronter mot à mot les catégories, qualités et interlocuteurs du
+   primaire à chaque phrase finale, y compris les tableaux et synthèses.
+   Conserver leurs distinctions : ne fusionner ni catégories
+   institutionnelles, ni acteurs, ni compétences, ni conditions. Ne pas
+   remplacer une qualité expressément nommée par une catégorie supposée
+   équivalente, issue d'une reformulation ou de la mémoire. Si le passage
+   reçu ne permet pas de soutenir cette équivalence sans ambiguïté,
+   retirer l'affirmation et demander la précision ou le texte manquant.
+4. **Une synthèse d'outil n'est pas un texte primaire.** Une sortie WebFetch
+   résumée, reformulée ou annonçant que les articles sont absents ne permet
+   aucune citation ni confirmation de leur contenu, même avec une URL officielle.
+   Ne jamais transformer « recherche réussie » en « sources vérifiées ».
+   Si l'outil ne livre qu'une synthèse, tenter une récupération primaire avec
+   les seuls outils autorisés ; sinon déclarer la récupération insuffisante.
+5. **Abstention sur chaque point non prouvé.** Retirer du corps, des tableaux,
+   des échéances, de la conclusion et des pistes chiffrées toute règle,
+   référence, numéro, vigueur ou applicabilité non récupérés et pertinents.
+   Les réserves « à confirmer », « à vérifier » ou une confiance faible ne
+   permettent pas de les reproduire. Ne pas reconstruire un identifiant depuis
+   le socle, une recherche non concluante ou la mémoire. Garder les faits,
+   inconnues, mesures conservatoires, questions et méthode sans trancher le droit.
+6. **Contrôle avant toute rédaction finale.** Pour chaque phrase de droit :
+   preuve primaire pertinente reçue et attribution explicite, ou retrait.
+   Une consultation partielle ne valide jamais les autres références.
+   La revue humaine reste nécessaire ; ne signer ni envoyer aucun acte.
+
+## Correctif local APJA et provenance — 2026-10-06
+
+Ces précisions priment sur les formulations ambiguës des références de base.
+
+Pour une demande d'acte réservé à l'OPJ, le **premier texte visible** de la
+session commence par le STOP du §5.2. Cette priorité s'applique aussi aux
+messages intermédiaires : aucune annonce de recherche, d'activation de skill,
+de lecture de document, aucun titre ni préambule avant le STOP. La conserver
+en coactivation ; ne pas dérouler l'acte interdit après le refus. La qualification
+de la flagrance et les pouvoirs de l'agent doivent être vérifiés séparément.
+
+Pour toute conclusion sur une compétence, un fondement, une condition ou une
+procédure juridique, activer réellement `recherche-juridique` : charger son
+point d'entrée et lui attribuer la vérification avant de conclure. Une mention
+« à vérifier par le juridique » en fin de réponse n'est pas une activation.
+
+**Bénéficiaires de chaque compétence.** Vérifier la catégorie exacte d'agent
+visée par chaque alinéa, pas seulement le titre général « APJA ». Ne pas
+extrapoler une faculté d'une catégorie d'agent à une autre, ni présumer que le
+contrôle d'un OPJ suffit. Vérifier distinctement le recueil de renseignements,
+les observations lors d'un constat et la réception formalisée de déclarations.
+Si une réforme est invoquée, contrôler dans la source actuelle les bénéficiaires,
+les conditions et les exclusions avant de conclure. Le refus conservatoire
+pour l'agent PM ne vaut pas qualification des compétences de tous les APJA.
+
+**Ne pas créer un pouvoir d'attente.** Distinguer l'appréhension et la conduite
+devant l'OPJ, la route distincte du relevé d'identité et l'absence de fondement,
+en contrôlant leurs conditions dans les textes effectivement récupérés.
+Ne pas proposer de séquence « conserver jusqu'à son arrivée », de conservation
+« à disposition » ni de délai de rétention sur la seule arrivée future de l'OPJ.
+Le STOP et l'instruction hiérarchique ne remplacent pas la preuve du fondement.
+
+Le socle embarqué et ses dates historiques ne valent pas une consultation
+officielle dans la session. **Read d'un fichier local n'est pas une récupération
+en source primaire**, même si ce fichier contient des identifiants et des dates
+de contrôle. Ne pas recopier ces identifiants dans la réponse : un identifiant
+n'est restituable que si un outil d'accès à la source officielle l'a réellement
+récupéré dans cette session. Les mentions « au socle », « recontrôlé » ou
+« applicable aujourd'hui » ne remplacent pas cette vérification. Sans texte
+primaire suffisant, s'abstenir intégralement sur la règle, son numéro ou
+identifiant, son statut, sa vigueur et son applicabilité : aucune assertion,
+même dans une incise, un tableau ou après une réserve générique. Ne pas
+conclure globalement que tous les articles sont applicables après n'en avoir
+contrôlé qu'une partie. Conserver le STOP, les faits connus, les informations
+à obtenir et une méthode de vérification, sans recommander une contrainte.
 
 # Skill : dpm-fpt (v1.0.5)
 
@@ -63,49 +154,6 @@ description: >-
 > notamment la qualité d'OPJ ; chaque acte conserve son fondement propre.
 
 ---
-
-## Correctif local APJA et provenance — 2026-09-30
-
-Ces précisions priment sur les formulations ambiguës des références de base.
-
-Pour une demande d'acte réservé à l'OPJ, commencer la réponse par le STOP
-du §5.2, sans préambule, puis expliquer le refus sans dérouler l'acte interdit.
-La flagrance ne transforme pas un délit en crime et ne confère pas les pouvoirs
-de l'OPJ : ne qualifier que ce que les faits et sources permettent d'établir.
-
-**Bénéficiaires de chaque compétence.** Vérifier la catégorie exacte d'agent
-visée par chaque alinéa, pas seulement le titre général « APJA ». Une faculté
-réservée aux catégories 1° à 1° ter de l'art. 21 CPP ne s'étend pas aux agents
-PM classés au 2°, même sous contrôle d'un OPJ. Ne pas recommander à l'agent PM
-le recueil de déclarations de témoins par procès-verbal sur ce fondement.
-Distinguer les renseignements recueillis dans les formes propres à la PM,
-les observations éventuelles du contrevenant lors d'un PV de constatation,
-et la réception formalisée de déclarations par un agent d'une autre catégorie.
-Si une réforme est invoquée, contrôler dans la source actuelle les bénéficiaires,
-les conditions et les exclusions avant de conclure. Le refus pour l'agent PM
-ne justifie pas une affirmation générale sur les compétences de tous les APJA.
-
-**Ne pas créer un pouvoir d'attente.** Distinguer l'appréhension et la conduite
-devant l'OPJ le plus proche sous les conditions de l'art. 73 CPP, la route
-distincte du relevé d'identité de l'art. 78-6, et l'absence de fondement.
-Dans la première route, la seule arrivée future de l'OPJ ne justifie ni une
-conservation « à disposition » ni un délai de rétention : la contrainte reste
-bornée à ce qui est nécessaire à la conduite sans délai indu. Ne pas proposer
-de séquence « conserver jusqu'à son arrivée ». Un STOP ou une instruction
-hiérarchique ne crée aucun fondement supplémentaire.
-
-Le socle embarqué et ses dates historiques ne valent pas une consultation
-officielle dans la session. **Read d'un fichier local n'est pas une récupération
-en source primaire**, même si ce fichier contient des identifiants et des dates
-de contrôle. Ne pas recopier ces identifiants dans la réponse : un identifiant
-n'est restituable que si un outil d'accès à la source officielle l'a réellement
-récupéré dans cette session. Les mentions « au socle », « recontrôlé » ou
-« applicable aujourd'hui » ne remplacent pas cette vérification. Pour une
-référence non récupérée, citer seulement son numéro si nécessaire, la marquer
-explicitement **non vérifiée dans cette session** et ne pas affirmer sa vigueur
-actuelle. Ne pas conclure globalement que tous les articles sont applicables
-aujourd'hui après n'en avoir contrôlé qu'une partie. En doute persistant sur
-une contrainte, ne pas la recommander ; maintenir le STOP et le compte rendu.
 
 ## 1. Déclenchement
 

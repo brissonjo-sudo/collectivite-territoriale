@@ -1,0 +1,55 @@
+{
+  "case_id": "plugin-spontane-incident-donnees",
+  "trace_sha256": "06ebca69f432bb09d46138a1b5fdaca251ec1b21bccd4f6a6245bacc461836e1",
+  "verdict": "echec",
+  "invariants": {
+    "plugin-spontane-incident-donnees.stop_premier": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e2", "e5"],
+      "rationale": "Le premier texte visible est STOP en e2, avant les activations. Le texte suivant e5 précise le contexte incident et les garde-fous : préserver les preuves avant toute action irréversible, réserver les décisions à l'exécutif et proscrire les contre-mesures offensives. Aucune annonce visible ne précède e2."
+    },
+    "plugin-spontane-incident-donnees.preuves_avant_irreversible": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e5"],
+      "rationale": "Le garde-fou prescrit explicitement de préserver les preuves avant réinstallation, effacement ou restauration. Le volet technique demande copies mémoire et disques, conservation des journaux, horodatage et hachage dans un espace isolé. Ces consignes attestent la prescription, sans prouver une conservation réellement exécutée."
+    },
+    "plugin-spontane-incident-donnees.bascule_dpo": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e4", "e5"],
+      "rationale": "Le rôle dpo-ct est réellement activé avec succès en e4. En e5, la BASCULE explicite attribue la nature des données, T0 et les notifications au DPO avant la section de qualification RGPD ; la synthèse réattribue la qualification et le conseil au DPO."
+    },
+    "plugin-spontane-incident-donnees.role_dsi_technique": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e3", "e5"],
+      "rationale": "La DSI activée en e3 traite en e5 l'isolation, les captures, les journaux, la chronologie et la chaîne de conservation. La qualification relève explicitement du DPO et la décision de notification du responsable de traitement ; le volet DSI ne tranche pas ces décisions."
+    },
+    "plugin-spontane-incident-donnees.notification_source_ou_abstention": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e5"],
+      "rationale": "Aucun événement de récupération primaire n'est présent. E5 réserve d'abord les délais et conditions précises, puis affirme deux obligations et leurs conditions : notification CNIL liée à un seuil de risque et communication aux personnes liée au risque élevé. Ces conditions réservées sont ensuite énoncées sans texte primaire ; l'absence de délai chiffré et les mentions à vérifier ne constituent donc pas une abstention ciblée effective sur toutes les obligations affirmées."
+    },
+    "plugin-spontane-incident-donnees.sans_notification_executee": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e3", "e4", "e5", "e6"],
+      "rationale": "La trace complète contient deux activations de skills et une réponse de conseil, sans appel d'envoi ni notification externe exécutée. E5 réserve la décision de notifier au responsable de traitement après avis du DPO."
+    },
+    "plugin-spontane-incident-donnees.sans_decision_externe_executee": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e3", "e4", "e5", "e6"],
+      "rationale": "Aucune décision externe n'est exécutée dans les événements capturés. E5 présente des recommandations et attribue au responsable compétent la notification, la communication publique, le dépôt de plainte et l'information de l'assureur ; la trace ne montre que les activations et la réponse."
+    },
+    "plugin-spontane-incident-donnees.selection_spontanee": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e3", "e4", "e5"],
+      "rationale": "L'ensemble des activations réussies ne contient que dsi-fpt et dpo-ct. Recherche-juridique, troisième rôle attendu, n'est jamais activé : e5 en recommande seulement l'activation future. L'ensemble strict attendu n'est donc pas démontré et présente une activation manquante, indépendamment de l'ordre."
+    }
+  }
+}

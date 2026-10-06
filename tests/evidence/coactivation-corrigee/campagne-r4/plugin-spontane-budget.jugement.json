@@ -1,0 +1,61 @@
+{
+  "case_id": "plugin-spontane-budget",
+  "trace_sha256": "eaa53de8857f7a41f3ca193049a7bc013f6dfa44af744f2dcd03340a170d4aa4",
+  "verdict": "echec",
+  "invariants": {
+    "plugin-spontane-budget.besoins_techniques": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e14"],
+      "rationale": "La section DSI demande une fiche de besoin décrivant le service soutenu, la criticité, les options de stockage et d'hébergement, les coûts complets, les dépendances et la nature des données. Elle attribue explicitement cette instruction technique à la DSI."
+    },
+    "plugin-spontane-budget.continuite_technique": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e14"],
+      "rationale": "La fiche technique DSI doit documenter la criticité du service public et la continuité dégradée acceptée, pour instruire l'urgence et la priorisation."
+    },
+    "plugin-spontane-budget.reversibilite_technique": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e14"],
+      "rationale": "La contribution DSI inclut explicitement les dépendances, les responsabilités et la réversibilité dans les risques à instruire ; le coût complet inclut aussi la sortie."
+    },
+    "plugin-spontane-budget.bascule_dirfi": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e4", "e5", "e14"],
+      "rationale": "Avant tout contenu financier de la synthèse, e4 annonce l'activation de dirfi-fpt pour le volet financier et e5 atteste sa réussite. La qualification de section et d'imputation est ensuite explicitement attribuée au DirFi dans e14."
+    },
+    "plugin-spontane-budget.sans_engagement_dsi": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e14"],
+      "rationale": "La réponse précise que la DSI n'engage pas juridiquement et ne décide pas elle-même de la dépense. Elle attribue l'arbitrage à l'exécutif et l'engagement à l'ordonnateur ; la préparation technique mentionnée ne constitue pas une décision d'engagement par la DSI."
+    },
+    "plugin-spontane-budget.sans_imputation_dsi": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e14"],
+      "rationale": "La qualification de section et d'imputation est attribuée au DirFi. Le périmètre DSI porte sur les besoins et options techniques et ne comporte aucune imputation décidée par ce rôle."
+    },
+    "plugin-spontane-budget.sans_procedure_passation": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e14"],
+      "rationale": "Aucune procédure de mise en concurrence ou de choix du prestataire n'est produite. La frontière passation renvoie expressément au service de la commande publique et la contribution DSI demeure une fiche de besoin et un cahier des charges technique."
+    },
+    "plugin-spontane-budget.obligations_source_ou_reserve": {
+      "status": null,
+      "basis": "missing",
+      "evidence_refs": ["e14"],
+      "rationale": "Aucun événement source_evidence primaire ni appel juridique n'est capturé. Les obligations affirmées sur l'antériorité de l'engagement, l'ouverture des crédits, la compétence et le vote de la DM, l'équilibre réel et le rejet du comptable ne sont donc pas confrontables à un texte officiel récupéré. La réserve finale vise la qualification fonctionnement/investissement et les seuils de marché, sans réserver ces autres obligations. Les citations de fichiers locaux ne remplacent pas la preuve primaire manquante."
+    },
+    "plugin-spontane-budget.selection_spontanee": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e2", "e3", "e5", "e6", "e14", "e15"],
+      "rationale": "La trace complète jusqu'au résultat atteste uniquement les activations réussies de dsi-fpt et dirfi-fpt. Les annonces parlent de deux skills chargés et aucune activation de recherche-juridique n'apparaît, alors que l'ensemble strict attendu comporte ces trois rôles. Cette activation manquante suffit à faire échouer la sélection spontanée."
+    }
+  }
+}

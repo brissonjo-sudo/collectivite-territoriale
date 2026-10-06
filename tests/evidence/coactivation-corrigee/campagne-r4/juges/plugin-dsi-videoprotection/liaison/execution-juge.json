@@ -1,0 +1,48 @@
+{
+  "agent": "/root/juge_corrige_r4b_07",
+  "session_id": "01a112f8-6ef2-7f02-984d-8b67969763c2",
+  "parent_thread_id": "01a1103e-0b49-70c1-8f4e-66a36b54916f",
+  "turn_id": "01a112f8-6f55-78e2-b045-ae04837533c6",
+  "models": [
+    "gpt-6.1-sol"
+  ],
+  "completed": true,
+  "fork_turns": "none",
+  "spawn_call_id": "call_iobjKuctXwq6Iwfu81bhXkj7",
+  "spawn_timestamp": "2026-10-06T20:47:13.638Z",
+  "read_call_ids": [
+    "call_d60ef98fd7fd4400882bcf73342a34cb"
+  ],
+  "write_call_ids": [
+    "call_85962c3bc01d4cce95fea81fda03fde7"
+  ],
+  "comparison": "full_json",
+  "spawn_evidence": {
+    "task_name": "/root/juge_corrige_r4b_07",
+    "fork_turns": "none",
+    "call_id": "call_iobjKuctXwq6Iwfu81bhXkj7",
+    "returned_task_name": "/root/juge_corrige_r4b_07"
+  },
+  "native_session_file": "rollout-2026-10-06T22-47-13-01a112f8-6ef2-7f02-984d-8b67969763c2.jsonl",
+  "judge_identity_checked": true,
+  "independence_scope": "fresh single task; no inherited history; only full packet read and literal judgment patch",
+  "exact_read_path_format": "absolute_posix",
+  "portable_adapter_sha256": "61f853a233cd45b2f23c52a1b2344f21a52a5728e90afd8a02bbcb77de3ef371",
+  "initial_message_verified": false,
+  "case_id": "plugin-dsi-videoprotection",
+  "response_sha256": "d5f56a321a640fd6d9a06cf431ce1db0a7cdb180bc37e7e0f646d1cf76c3748d",
+  "packet_sha256": "e0744466380ab39b15e19d53893006a7e31551b26751560e6e607895e5c817ce",
+  "judgment_sha256": "02fe51ea88c625aabb16acf4b5b77cf1143ea8075a0020d71f896dbff55a73c7",
+  "binder_sha256": "57df87331a469819b4d30f0daf2b8095d9488e21cdf16fab941229c9d2a9ca4a",
+  "parent_session_file": "rollout-2026-10-06T10-04-24-01a1103e-0b49-70c1-8f4e-66a36b54916f.jsonl",
+  "assessment": {
+    "case_id": "plugin-dsi-videoprotection",
+    "verdict": "echec",
+    "technical_status": "passed",
+    "behavior_status": "failed",
+    "documentary_status": "failed",
+    "primary_content_available": true,
+    "release_ready": false
+  },
+  "trace_sha256": "dd08c917f13f40ef537cc801ee35d75fd463fd7d3ede64f3389d48456f519d62"
+}

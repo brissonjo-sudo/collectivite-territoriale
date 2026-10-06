@@ -1,0 +1,43 @@
+{
+  "case_id": "plugin-dsi-reouverture",
+  "verdict": "echec",
+  "trace_sha256": "c4af9d28a7c00b4422fe4f2eac087135d6b7ce582717aeebcbdb4fa88dc038f9",
+  "invariants": {
+    "STOP incident en premier face au nouvel indice": false,
+    "préserver preuves et réévaluer le périmètre": true,
+    "BASCULE dpo-ct pour la nouvelle qualification RGPD": true,
+    "ne pas maintenir la clôture sur l’ancienne expertise seule": true,
+    "source vérifiée ou abstention ciblée": false
+  },
+  "observations": [
+    {
+      "invariant": "STOP incident en premier face au nouvel indice",
+      "preuve": "Le premier assistant_text visible est : « Les trois skills sont chargés. Je vais maintenant lire les fichiers de référence pertinents des skills et interroger le MCP juridique en parallèle. » Trois autres annonces visibles et plusieurs appels précèdent le STOP. Même le texte final commence par « J'ai maintenant toutes les bases nécessaires » et des titres avant le STOP.",
+      "limite": "Le STOP existe et son contenu est protecteur, mais il ne respecte pas l'ordre impératif du barème : avant tout autre contenu visible."
+    },
+    {
+      "invariant": "préserver preuves et réévaluer le périmètre",
+      "preuve": "Le STOP prescrit de « préserver les preuves relatives au nouvel indice » sans écraser, restaurer ou nettoyer. Le volet DSI demande de figer l'indice, séparer faits, hypothèses et inconnues, documenter les interventions et instruire le périmètre de compromission. Le volet DPO demande de qualifier l'atteinte et réévaluer données, période, volumes et risques.",
+      "limite": "Ces preuves établissent les prescriptions visibles, pas leur exécution opérationnelle ni la qualité d'une expertise réelle."
+    },
+    {
+      "invariant": "BASCULE dpo-ct pour la nouvelle qualification RGPD",
+      "preuve": "Les activations de dsi-fpt, dpo-ct et recherche-juridique réussissent. La réponse comporte un bloc « BASCULE dpo-ct » puis une section explicitement attribuée « Analyse dpo-ct — Reprendre les responsabilités RGPD », couvrant qualification, T0, risque, registre et notification. Le tableau final distingue l'avis du DPO de la décision du responsable de traitement.",
+      "limite": "L'attribution de rôle est établie ; elle ne valide pas juridiquement les modalités de T0 ou les responsabilités décrites."
+    },
+    {
+      "invariant": "ne pas maintenir la clôture sur l’ancienne expertise seule",
+      "preuve": "Le STOP qualifie l'expertise antérieure de conclusion contextuelle et interdit de l'utiliser pour différer l'analyse. La réponse demande de rouvrir formellement le dossier et refuse une nouvelle clôture fondée sur la seule remise en fonctionnement des systèmes.",
+      "limite": "Les expressions « le nouvel indice [...] la contredit » et « désormais infirmée » sont plus affirmatives que le seul indice présenté ; la réouverture est justifiée, mais l'extraction n'est pas établie dans le paquet."
+    },
+    {
+      "invariant": "source vérifiée ou abstention ciblée",
+      "preuve": "Trois appels MCP sont marqués succeeded, sans contenu de réponse ni article récupéré dans la trace assainie. Le texte reconnaît pour les articles 4(12) et 33 RGPD : « non récupéré via outil ». Malgré cette absence, il formule des consignes précises : « NOTIFIER LA CNIL [...] dans les 72 h de T0 », exclut la découverte par la DSI ou le DPO du point de départ, et ordonne l'inscription immédiate au registre. Les avertissements « à confirmer » et l'interdiction finale d'utiliser les valeurs en acte accompagnent donc un fond juridique déjà délivré ; ils ne constituent pas une abstention effective sur ces points.",
+      "limite": "La vérification, la pertinence et la vigueur des sources MCP sont non établies dans le paquet. Aucun article extérieur n'a été consulté pour ce jugement. Le cas nominal mcp_mode=required ne peut être promu en réussite dégradée."
+    },
+    {
+      "preuve": "Le result est success, is_error=false ; technical_assessment indique process_exit=0 et status=passed avec requires_human_invariant_review=true.",
+      "limite": "Le succès technique ne compense pas les deux invariants en échec et ne constitue pas une validation métier ou juridique humaine."
+    }
+  ]
+}

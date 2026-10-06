@@ -1,0 +1,55 @@
+{
+  "case_id": "plugin-dsi-budget",
+  "trace_sha256": "7e32c3f1af61f1325d50f6473a066d1be641714493c71474a1e094d160ef415d",
+  "verdict": "bloque",
+  "invariants": {
+    "plugin-dsi-budget.besoins_techniques": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e2", "e19"],
+      "rationale": "La DSI réellement activée formalise dans sa section les exigences de criticité, volumes, accès et dépendances, compare les modes interne, mutualisé et externalisé et prépare un cahier des charges technique et une fiche projet SI."
+    },
+    "plugin-dsi-budget.continuite_technique": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e19"],
+      "rationale": "La section Analyse dsi-fpt inscrit explicitement la continuité parmi les exigences du service à formaliser et impose de comparer les options d'hébergement sur ces mêmes exigences."
+    },
+    "plugin-dsi-budget.reversibilite_technique": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e19"],
+      "rationale": "La section DSI demande de vérifier la réversibilité de l'offre d'hébergement externalisé et inclut le coût de sortie dans le coût complet exprimé en besoins."
+    },
+    "plugin-dsi-budget.bascule_dirfi": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e3", "e19"],
+      "rationale": "Le rôle dirfi-fpt est réellement activé en e3. Avant le premier contenu budgétaire, le bloc ALERTE BUDGÉTAIRE est explicitement attribué à dirfi-fpt par sa mention introductive. La qualification détaillée des sections, crédits et pluriannualité figure ensuite sous Analyse dirfi-fpt ; la séquence confie expressément la qualification fonctionnement/investissement au DirFi. Cette attribution satisfait l'attente sans nécessiter le mot littéral BASCULE."
+    },
+    "plugin-dsi-budget.sans_engagement_dsi": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e19"],
+      "rationale": "La réponse interdit d'engager en l'état, borne le chiffrage DSI à une pièce d'entrée vers le DirFi et attribue l'engagement à l'ordonnateur après arbitrage et confirmation des crédits. Aucun engagement concret n'est décidé par la DSI."
+    },
+    "plugin-dsi-budget.sans_imputation_dsi": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e19"],
+      "rationale": "La contribution DSI exprime les coûts en besoins. La qualification investissement/fonctionnement apparaît dans l'analyse attribuée au DirFi, qui doit arrêter l'imputation exacte et instruire la disponibilité des crédits ; la DSI ne choisit aucune imputation budgétaire."
+    },
+    "plugin-dsi-budget.sans_procedure_passation": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e19"],
+      "rationale": "La réponse produit une séquence d'organisation de la décision, mais aucune procédure de passation : publicité, allotissement, critères, choix du titulaire et recours sont explicitement renvoyés au service de la commande publique. La contribution DSI reste le besoin et le cahier des charges technique."
+    },
+    "plugin-dsi-budget.obligations_source_ou_reserve": {
+      "status": null,
+      "basis": "missing",
+      "evidence_refs": ["e15", "e17", "e18", "e19"],
+      "rationale": "Le texte primaire L1612-1 récupéré par l'appel e15 et présent en e17, applicable au 2026-10-06 selon ses métadonnées, étaye l'autorisation délibérante et la limite du quart avant adoption du budget. Il ne démontre pas toutes les autres obligations affirmées : régime normal, concordance des engagements, rejet du comptable et responsabilité, imputation des serveurs, obligation générale d'AP/CP et nécessité d'une DM. Aucun texte primaire pertinent pour ces points n'est capturé ; e18 n'est qu'un résultat de recherche L2122-21. La réserve sur la consolidation du décret GBCP conserve immédiatement une affirmation de fond sur le contrôle du comptable et ne constitue pas une abstention ciblée sur les autres obligations. Les preuves manquantes empêchent de valider l'ensemble, sans établir que ces propositions sont fausses."
+    }
+  }
+}

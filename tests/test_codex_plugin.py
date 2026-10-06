@@ -21,6 +21,45 @@ def load_json(path: str) -> dict:
 
 
 class CodexPluginTests(unittest.TestCase):
+    def test_textes_visibles_conserves_et_arret_incomplet_refuse(self) -> None:
+        case = load_json("tests/cas-plugin.json")[-1]
+        events = [{"type": "assistant", "message": {"content": [
+            {"type": "text", "text": "Préambule"},
+            {"type": "thinking", "thinking": "NOT_TO_RETAIN", "signature": "NOT_TO_RETAIN"}]}},
+            {"type": "assistant", "message": {"content": [{"type": "text", "text": "STOP"}]}},
+            {"type": "result", "subtype": "error_max_turns", "is_error": False, "result": "STOP"}]
+        clean = sanitize(events, case)
+        self.assertEqual([e["text"] for e in clean if e["type"] == "assistant_text"], ["Préambule", "STOP"])
+        self.assertNotIn("NOT_TO_RETAIN", json.dumps(clean))
+        self.assertIn("result_error_or_absent", technical_failures(clean, case))
+
+    def test_activation_refusee_ne_qualifie_pas_une_coactivation(self) -> None:
+        case = next(c for c in load_json("tests/cas-plugin.json") if c["id"] == "plugin-dsi-technique")
+        calls = [{"type": "tool_use", "name": "Skill", "id": "activation1",
+                  "input": {"skill": "collectivite-territoriale:dsi-fpt"}}]
+        for outcome in (False, True):
+            clean = sanitize([{"message": {"content": calls}},
+                {"message": {"content": [{"type": "tool_result", "tool_use_id": "activation1",
+                                           "is_error": outcome, "content": "NOT_TO_RETAIN"}]}}], case)
+            self.assertEqual(clean[0]["succeeded"], not outcome)
+            self.assertEqual("skill_activation_not_successful" in technical_failures(clean, case), outcome)
+            self.assertNotIn("NOT_TO_RETAIN", json.dumps(clean))
+        pending = sanitize([{"message": {"content": calls}}], case)
+        self.assertIn("skill_activation_not_successful", technical_failures(pending, case))
+
+    def test_selection_spontanee_non_guidee_et_degrade_distinct(self) -> None:
+        cases = {c["id"]: c for c in load_json("tests/cas-plugin.json")}
+        technical = build_prompt(cases["plugin-dsi-technique"])
+        self.assertNotIn("collectivite-territoriale:dsi-fpt", technical)
+        self.assertNotIn("voie dégradée", technical)
+        self.assertIn("voie dégradée", build_prompt(cases["plugin-dsi-source-indisponible"]))
+        dsi = [c for c in cases.values() if c["id"].startswith("plugin-dsi-")]
+        self.assertEqual(len(dsi), 8)
+        for case in dsi:
+            self.assertEqual(case["skills"][0], "dsi-fpt")
+            self.assertGreaterEqual(len(case["invariants"]), 4)
+        self.assertEqual(sum(c["mcp_mode"] == "required" for c in dsi), 6)
+
     def test_les_cinq_skills_amont_sont_exposes(self) -> None:
         manifest = load_json(".codex-plugin/plugin.json")
         pinned = load_json("upstream.json")["skills"]
@@ -124,7 +163,7 @@ class CodexPluginTests(unittest.TestCase):
 
     def test_cas_plugin_couvrent_les_coactivations_juridiques(self) -> None:
         cases = load_json("tests/cas-plugin.json")
-        self.assertEqual(len(cases), 4)
+        self.assertEqual(len(cases), 12)
         by_id = {case["id"]: case for case in cases}
         self.assertEqual(
             by_id["plugin-prime-depart-retraite"]["skills"],
@@ -240,12 +279,12 @@ class CodexPluginTests(unittest.TestCase):
 
     def test_preuve_comportementale_respecte_le_contrat(self) -> None:
         evidence = load_json("tests/evidence/2026-09-20-validation-locale.json")
-        cases = {case["id"]: case for case in load_json("tests/cas-plugin.json")}
+        cases = {case["id"]: case for case in load_json("tests/cas-plugin-historiques.json")}
         self.assertEqual(evidence["plugin_version"], "1.1.0")
         self.assertRegex(evidence["plugin_commit"], r"^[0-9a-f]{40}$")
         self.assertEqual(
             set(evidence["available_skills"]),
-            set(load_json("upstream.json")["skills"]),
+            set(load_json("upstream.json")["skills"]) - {"dsi-fpt"},
         )
         runs = {run["case_id"]: run for run in evidence["runs"]}
         self.assertEqual(set(runs), set(cases))
@@ -296,8 +335,8 @@ class CodexPluginTests(unittest.TestCase):
             run["status"] == "passed"
             and run.get("plugin_commit") == evidence["plugin_commit"]
             and set(cases[case_id]["skills"]).issubset(run["activated_skills"])
-            and bool(run["invariants"])
-            and all(run["invariants"].values())
+            and set(run["invariants"]) == set(cases[case_id]["invariants"])
+            and all(value is True for value in run["invariants"].values())
             and (ROOT / run["evidence_path"]).is_file()
             and (
                 any(tool.startswith("mcp__droit-francais__") for tool in run["mcp_tools"])

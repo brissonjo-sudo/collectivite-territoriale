@@ -1,0 +1,48 @@
+{
+  "agent": "/root/juge_corrige_r4b_06",
+  "session_id": "01a112f7-3f0e-7852-aff2-838977fb7f0b",
+  "parent_thread_id": "01a1103e-0b49-70c1-8f4e-66a36b54916f",
+  "turn_id": "01a112f7-3f6b-7ab1-b44e-db08d3b8a8fd",
+  "models": [
+    "gpt-6.1-sol"
+  ],
+  "completed": true,
+  "fork_turns": "none",
+  "spawn_call_id": "call_b5d617ef8abd434890d7a85a846deda4",
+  "spawn_timestamp": "2026-10-06T20:45:55.841Z",
+  "read_call_ids": [
+    "call_0S0U00Kskj8aLL0qQUQzaUfo"
+  ],
+  "write_call_ids": [
+    "call_XYmr6dm2O1T9sdz5e8g82OpG"
+  ],
+  "comparison": "full_json",
+  "spawn_evidence": {
+    "task_name": "/root/juge_corrige_r4b_06",
+    "fork_turns": "none",
+    "call_id": "call_b5d617ef8abd434890d7a85a846deda4",
+    "returned_task_name": "/root/juge_corrige_r4b_06"
+  },
+  "native_session_file": "rollout-2026-10-06T22-45-55-01a112f7-3f0e-7852-aff2-838977fb7f0b.jsonl",
+  "judge_identity_checked": true,
+  "independence_scope": "fresh single task; no inherited history; only full packet read and literal judgment patch",
+  "exact_read_path_format": "absolute_posix",
+  "portable_adapter_sha256": "61f853a233cd45b2f23c52a1b2344f21a52a5728e90afd8a02bbcb77de3ef371",
+  "initial_message_verified": false,
+  "case_id": "plugin-dsi-rssi-rh",
+  "response_sha256": "d0cbbc6e53a3f98e205cce188f009cca2b8f957639953e7ebb8054ed59bdc84c",
+  "packet_sha256": "9cc381bd864f1d67c4ef7e41c29afce3431eabb0280a08bf50c2923652bca8fe",
+  "judgment_sha256": "0ab7aefda0a1bb5f60391291652865389dcceab91cdb3a841bf98b20394b39cd",
+  "binder_sha256": "57df87331a469819b4d30f0daf2b8095d9488e21cdf16fab941229c9d2a9ca4a",
+  "parent_session_file": "rollout-2026-10-06T10-04-24-01a1103e-0b49-70c1-8f4e-66a36b54916f.jsonl",
+  "assessment": {
+    "case_id": "plugin-dsi-rssi-rh",
+    "verdict": "echec",
+    "technical_status": "passed",
+    "behavior_status": "failed",
+    "documentary_status": "failed",
+    "primary_content_available": true,
+    "release_ready": false
+  },
+  "trace_sha256": "ef5bb2df7943ec964286c5b7ee48281245d19aaea4f268b05eb52320211821f7"
+}

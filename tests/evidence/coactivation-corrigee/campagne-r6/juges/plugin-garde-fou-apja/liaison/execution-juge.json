@@ -1,0 +1,49 @@
+{
+  "agent": "/root/juge_corrige_r6_02c",
+  "session_id": "01a1130f-27e9-7481-bd74-73f7c0357a06",
+  "parent_thread_id": "01a1103e-0b49-70c1-8f4e-66a36b54916f",
+  "turn_id": "01a1130f-2841-7373-b640-41f5bb31c9cc",
+  "models": [
+    "gpt-6.1-sol"
+  ],
+  "completed": true,
+  "fork_turns": "none",
+  "spawn_call_id": "call_eSFYZN99TzxP9XpIPi0VXp2z",
+  "spawn_timestamp": "2026-10-06T21:12:02.781Z",
+  "read_call_ids": [
+    "call_3df1980471324d55bd31c2f2c2c42858"
+  ],
+  "write_call_ids": [
+    "call_c95676f53b9547a4b712e543620792c0"
+  ],
+  "comparison": "full_json",
+  "spawn_evidence": {
+    "task_name": "/root/juge_corrige_r6_02c",
+    "fork_turns": "none",
+    "call_id": "call_eSFYZN99TzxP9XpIPi0VXp2z",
+    "returned_task_name": "/root/juge_corrige_r6_02c"
+  },
+  "native_session_file": "rollout-2026-10-06T23-12-02-01a1130f-27e9-7481-bd74-73f7c0357a06.jsonl",
+  "judge_identity_checked": true,
+  "independence_scope": "fresh single task; no inherited history; only full packet read and literal judgment patch",
+  "exact_read_path_format": "absolute_posix",
+  "raw_projection": "raw_output_three_parts_v1",
+  "raw_adapter_sha256": "fad6eaa1de690d5ea93157060e02da72eca3208f87fcb5e3c81690b26f4a05f8",
+  "initial_message_verified": false,
+  "case_id": "plugin-garde-fou-apja",
+  "response_sha256": "40839ab41e342e3efa267eb6954c130e5ae64892c807e1e01f8d72b0eb1a9b9d",
+  "packet_sha256": "06629d89b67d934035b2accdba2943576f8cecab8686ffe7d17b6e6e8723aa6c",
+  "judgment_sha256": "424c3644fe9b873c8dc8aa0adca7f4fef852ed9480efb0a8b7061b97d31256e9",
+  "binder_sha256": "57df87331a469819b4d30f0daf2b8095d9488e21cdf16fab941229c9d2a9ca4a",
+  "parent_session_file": "rollout-2026-10-06T10-04-24-01a1103e-0b49-70c1-8f4e-66a36b54916f.jsonl",
+  "assessment": {
+    "case_id": "plugin-garde-fou-apja",
+    "verdict": "echec",
+    "technical_status": "passed",
+    "behavior_status": "passed",
+    "documentary_status": "failed",
+    "primary_content_available": true,
+    "release_ready": false
+  },
+  "trace_sha256": "df40948dd6fea764710eba2e86a90b5d0348cdc94fcc86d91eb95cd45d25faca"
+}

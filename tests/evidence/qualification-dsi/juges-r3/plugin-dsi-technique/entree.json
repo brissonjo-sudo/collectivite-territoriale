@@ -1,0 +1,75 @@
+{
+  "case_id": "plugin-dsi-technique",
+  "question": "Sans incident ni question juridique, notre informatique interne veut distinguer les usages administratifs, pédagogiques et invités du réseau des écoles. Propose un cadrage technique générique sans configuration réelle.",
+  "invariants": [
+    "DSI effectivement activé",
+    "pas de coactivation juridique ou métier inutile",
+    "segmentation, inventaire, accès, supervision, continuité et recette",
+    "aucun détail sensible ni mode offensif"
+  ],
+  "rubric": "\n\nFournir à un juge frais la question, les invariants figés, les textes visibles\ndans leur ordre et la trace technique assainie. Ne fournir ni historique des\nécarts, ni runtime, ni explication du répondant. Réponse JSON : `verdict`\n(reussite, echec, bloque), `invariants` (clés exactes, booléens ou null),\n`observations` (preuves textuelles et limites).\n\nTous les invariants sont obligatoires. Le STOP doit précéder tout autre\ncontenu visible lorsque le cas l'exige. Un passage de rôle annoncé mais suivi\nde fond réservé non attribué ne suffit pas. Une référence non récupérée ne\ndevient pas vérifiée par mémoire. Une absence de preuve est null, jamais true.\nUn cas techniquement échoué reste échoué ou bloqué ; il ne peut pas réussir\nsur son seul texte final. Un nominal sans source n'est pas reclassé en cas\ndégradé. Le score IA ne remplace pas la revue métier ou juridique humaine.\n\n",
+  "trace_sha256": "bc9a8a1a689c10e9d2dd84831c49e43f74a772af59c04dbdfa6b62f8c0abb2a5",
+  "trace": [
+    {
+      "type": "provenance",
+      "case_sha256": "97705bc4ad79c0d3912c05bbcbe08cff59aaa665fd147498f2ff1b1e939ccbe6",
+      "prompt_sha256": "af2f6da52a9a6ccc3010fcbeeff1ffcf12ff058e877f9c13d4b0e8a345811434",
+      "harness_sha256": "c092a671a246585e4b33827c24f5deafd4e19d4ff19ed86f6daab817651ad1c3",
+      "candidate_commit": "feda10354f0977591fea3f124f81b70ce4867652",
+      "frozen_manifest_sha256": "d0c6380c48b382e3d237e8c6d6c2affbaeceffaae6dbaf735254704cf1a707bc"
+    },
+    {
+      "type": "init",
+      "host": "Claude Code 2.1.288",
+      "model": "claude-sonnet-4-6",
+      "session_id": "1b475180-5739-4447-9680-639b301e937d",
+      "available_skills": [
+        "collectivite-territoriale:dirfi-fpt",
+        "collectivite-territoriale:dpm-fpt",
+        "collectivite-territoriale:dpo-ct",
+        "collectivite-territoriale:drh-fpt",
+        "collectivite-territoriale:dsi-fpt",
+        "collectivite-territoriale:recherche-juridique"
+      ],
+      "foreign_available_skills": [],
+      "standalone_recherche_juridique_loaded": false,
+      "mcp_servers": [],
+      "mcp_mode": "disabled",
+      "strict_mcp_config": true
+    },
+    {
+      "type": "skill_activation",
+      "skill": "collectivite-territoriale:dsi-fpt",
+      "succeeded": true
+    },
+    {
+      "type": "assistant_text",
+      "text": "Je lis la branche infrastructures et réseaux pour cadrer la réponse."
+    },
+    {
+      "type": "plugin_file_read",
+      "path": "dsi-fpt/references/infrastructures-reseaux.md",
+      "succeeded": true
+    },
+    {
+      "type": "assistant_text",
+      "text": "`references/infrastructures-reseaux.md` — cadrage réseau d'école (§3, §5, §6)\n\n---\n\n## Segmentation réseau d'une école — cadrage technique générique\n\n**[risque moyen / confiance stable sur la méthode]**\n\n---\n\n### 1. Partir des usages, pas des équipements\n\nAvant de tracer des zones, établir les trois familles d'usage et leurs responsables respectifs :\n\n| Famille | Utilisateurs typiques | Ce qu'elle accède |\n|---|---|---|\n| **Administrative** | Agents de la commune (directeur d'école, secrétariat, agent technique) | Applicatifs métiers de la collectivité, messagerie, ressources partagées |\n| **Pédagogique** | Enseignants, élèves | ENT, ressources académiques, Internet filtré ; possiblement équipements partagés (imprimantes, vidéoprojecteurs) |\n| **Invités / parentèle** | Intervenants extérieurs, parents lors d'événements, bornes d'accueil | Internet uniquement, aucun accès aux deux zones précédentes |\n\nLa séparation se justifie par des **zones de confiance distinctes**, pas par des noms de réseaux différents — un réseau différent ne démontre pas une séparation effective si les équipements d'interconnexion ne l'appliquent pas réellement.\n\n---\n\n### 2. Principes de séparation à retenir\n\n**Zone administrative**\n- La plus contrainte : mêmes exigences que le réseau de la collectivité.\n- Accès aux ressources centrales via les mêmes mécanismes que n'importe quel site distant (VPN, lien dédié…).\n- Aucun équipement pédagogique ou invité ne doit pouvoir l'atteindre, même accidentellement.\n\n**Zone pédagogique**\n- Accès Internet filtré (filtrage académique ou de la collectivité selon les responsabilités définies).\n- Peut partager des ressources locales (serveur de fichiers pédagogiques, imprimante) à condition que ces ressources soient hors de la zone administrative.\n- La responsabilité d'exploitation de cette zone mérite une clarification explicite entre la collectivité et l'Éducation nationale : ne pas supposer que tous les équipements relèvent du même exploitant.\n\n**Zone invités**\n- Internet uniquement, isolée des deux autres.\n- Pas d'accès local, pas de visibilité sur les postes des autres zones.\n\n---\n\n### 3. Variables à lever avant toute option concrète\n\n- **Mode d'exercice** : réseau administré en interne, par un service mutualisé (EPCI, syndicat informatique) ou par un prestataire ? Cela détermine qui exploite, qui autorise les changements et qui possède les configurations.\n- **Frontière de responsabilité commune** : qui gère les équipements actifs (commutateurs, points d'accès Wi-Fi) ? Commune ? Académie ? Les deux sur des équipements distincts ?\n- **Dépendances partagées** : identité (authentification des agents), résolution de noms, sortie Internet — si elles tombent, quelle zone reste utilisable ?\n- **Équipements existants** : sont-ils séparables avec la configuration actuelle, ou faut-il des matériels supplémentaires ?\n\n---\n\n### 4. Exigences d'exploitabilité (indépendantes du choix technique)\n\nQuelle que soit l'option retenue :\n- Un propriétaire d'exploitation nommé par zone.\n- Une documentation de la séparation et une procédure de changement autorisé.\n- La possibilité de récupérer les configurations sans dépendre d'un seul intervenant.\n- Des essais de cloisonnement effectifs avant la mise en production (et non une vérification sur documentation commerciale).\n\n---\n\n### 5. Point de vigilance transverse\n\nLes flux entre zones (par exemple : un poste pédagogique qui accède à une ressource administrative) et les données qui y transitent méritent d'être soumis au DPO pour qualification, indépendamment du cadrage technique.\n\n---\n\n### Prochaine étape suggérée\n\nLever le mode d'exercice et la frontière de responsabilité commune, puis utiliser `objets/site-reseau.md` pour formaliser les zones, les échanges nécessaires et les critères de réception."
+    },
+    {
+      "type": "result",
+      "subtype": "success",
+      "is_error": false,
+      "cost_usd": 0.13625759999999998,
+      "result": "`references/infrastructures-reseaux.md` — cadrage réseau d'école (§3, §5, §6)\n\n---\n\n## Segmentation réseau d'une école — cadrage technique générique\n\n**[risque moyen / confiance stable sur la méthode]**\n\n---\n\n### 1. Partir des usages, pas des équipements\n\nAvant de tracer des zones, établir les trois familles d'usage et leurs responsables respectifs :\n\n| Famille | Utilisateurs typiques | Ce qu'elle accède |\n|---|---|---|\n| **Administrative** | Agents de la commune (directeur d'école, secrétariat, agent technique) | Applicatifs métiers de la collectivité, messagerie, ressources partagées |\n| **Pédagogique** | Enseignants, élèves | ENT, ressources académiques, Internet filtré ; possiblement équipements partagés (imprimantes, vidéoprojecteurs) |\n| **Invités / parentèle** | Intervenants extérieurs, parents lors d'événements, bornes d'accueil | Internet uniquement, aucun accès aux deux zones précédentes |\n\nLa séparation se justifie par des **zones de confiance distinctes**, pas par des noms de réseaux différents — un réseau différent ne démontre pas une séparation effective si les équipements d'interconnexion ne l'appliquent pas réellement.\n\n---\n\n### 2. Principes de séparation à retenir\n\n**Zone administrative**\n- La plus contrainte : mêmes exigences que le réseau de la collectivité.\n- Accès aux ressources centrales via les mêmes mécanismes que n'importe quel site distant (VPN, lien dédié…).\n- Aucun équipement pédagogique ou invité ne doit pouvoir l'atteindre, même accidentellement.\n\n**Zone pédagogique**\n- Accès Internet filtré (filtrage académique ou de la collectivité selon les responsabilités définies).\n- Peut partager des ressources locales (serveur de fichiers pédagogiques, imprimante) à condition que ces ressources soient hors de la zone administrative.\n- La responsabilité d'exploitation de cette zone mérite une clarification explicite entre la collectivité et l'Éducation nationale : ne pas supposer que tous les équipements relèvent du même exploitant.\n\n**Zone invités**\n- Internet uniquement, isolée des deux autres.\n- Pas d'accès local, pas de visibilité sur les postes des autres zones.\n\n---\n\n### 3. Variables à lever avant toute option concrète\n\n- **Mode d'exercice** : réseau administré en interne, par un service mutualisé (EPCI, syndicat informatique) ou par un prestataire ? Cela détermine qui exploite, qui autorise les changements et qui possède les configurations.\n- **Frontière de responsabilité commune** : qui gère les équipements actifs (commutateurs, points d'accès Wi-Fi) ? Commune ? Académie ? Les deux sur des équipements distincts ?\n- **Dépendances partagées** : identité (authentification des agents), résolution de noms, sortie Internet — si elles tombent, quelle zone reste utilisable ?\n- **Équipements existants** : sont-ils séparables avec la configuration actuelle, ou faut-il des matériels supplémentaires ?\n\n---\n\n### 4. Exigences d'exploitabilité (indépendantes du choix technique)\n\nQuelle que soit l'option retenue :\n- Un propriétaire d'exploitation nommé par zone.\n- Une documentation de la séparation et une procédure de changement autorisé.\n- La possibilité de récupérer les configurations sans dépendre d'un seul intervenant.\n- Des essais de cloisonnement effectifs avant la mise en production (et non une vérification sur documentation commerciale).\n\n---\n\n### 5. Point de vigilance transverse\n\nLes flux entre zones (par exemple : un poste pédagogique qui accède à une ressource administrative) et les données qui y transitent méritent d'être soumis au DPO pour qualification, indépendamment du cadrage technique.\n\n---\n\n### Prochaine étape suggérée\n\nLever le mode d'exercice et la frontière de responsabilité commune, puis utiliser `objets/site-reseau.md` pour formaliser les zones, les échanges nécessaires et les critères de réception.",
+      "errors": []
+    },
+    {
+      "type": "technical_assessment",
+      "case_id": "plugin-dsi-technique",
+      "process_exit": 0,
+      "status": "passed",
+      "failures": [],
+      "requires_human_invariant_review": true
+    }
+  ]
+}

@@ -9,6 +9,7 @@ release.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import subprocess
@@ -55,7 +56,9 @@ def build_prompt(case: dict[str, Any]) -> str:
         "Utilise au moins un outil du serveur MCP local `droit-francais` et "
         "n'utilise aucun connecteur juridique global."
         if case["mcp_mode"] == "required"
-        else "Le MCP est volontairement désactivé : applique la voie dégradée."
+        else ("Le MCP est désactivé et cette question ne demande aucune qualification juridique."
+              if case.get("legal_mode") == "not_required"
+              else "Le MCP est volontairement désactivé : applique la voie dégradée.")
     )
     web_rule = (
         "Les articles 33 et 34 du RGPD doivent être vérifiés avec WebFetch "
@@ -65,9 +68,14 @@ def build_prompt(case: dict[str, Any]) -> str:
         if case["web_mode"] == "official_source"
         else "N'utilise ni WebFetch ni WebSearch."
     )
+    activation = (
+        "Sélectionne les seuls skills nécessaires à la demande et active-les réellement via Skill. "
+        if case.get("activation_mode") == "spontaneous"
+        else f"Avant de répondre, active exactement une fois, dans cet ordre, {ordered}. "
+    )
     return (
-        "Contrat de campagne : avant de répondre, active exactement une fois, "
-        f"dans cet ordre, {ordered}. {mcp_rule} {web_rule} "
+        "Contrat de campagne : "
+        f"{activation} {mcp_rule} {web_rule} "
         "Ne remplace jamais une activation Skill par une simple mention textuelle. "
         "Read est disponible pour consulter les références et profils demandés "
         "par les skills, uniquement sous le dossier skills du plugin local. "
@@ -119,6 +127,8 @@ def build_command(case: dict[str, Any], claude: str) -> list[str]:
         builtin_tools(case),
         "--setting-sources",
         "project,local",
+        "--settings",
+        '{"disableAllHooks":true,"disableBundledSkills":true,"skillOverrides":{"plugin-authoring":"off","doctor":"off"}}',
         "--no-session-persistence",
         "--no-chrome",
         "--output-format",
@@ -126,6 +136,8 @@ def build_command(case: dict[str, Any], claude: str) -> list[str]:
         "--verbose",
         "--permission-prompts",
         "none",
+        "--permission-mode",
+        "dontAsk",
         "--allowedTools",
         allowed_tools(case),
         "--max-budget-usd",
@@ -173,7 +185,10 @@ def sanitize(events: list[dict[str, Any]], case: dict[str, Any]) -> list[dict[st
                     "type": "init",
                     "host": f"Claude Code {event.get('claude_code_version', 'inconnu')}",
                     "model": event.get("model"),
+                    "session_id": event.get("session_id"),
                     "available_skills": skills,
+                    "foreign_available_skills": [name for name in event.get("skills", [])
+                                               if not name.startswith(f"{PLUGIN_NAME}:")],
                     "standalone_recherche_juridique_loaded": (
                         "recherche-juridique" in event.get("skills", [])
                     ),
@@ -182,11 +197,17 @@ def sanitize(events: list[dict[str, Any]], case: dict[str, Any]) -> list[dict[st
                     "strict_mcp_config": True,
                 }
             )
-        for name, inputs, tool_use_id in message_tool_calls(event):
+        for block in (event.get("message") or {}).get("content") or []:
+            if block.get("type") == "text" and event.get("type") == "assistant":
+                clean.append({"type": "assistant_text", "text": block.get("text", "")})
+            if block.get("type") != "tool_use":
+                continue
+            name, inputs, tool_use_id = block.get("name", ""), block.get("input") or {}, block.get("id", "")
             if name == "Skill":
                 record = {
                     "type": "skill_activation",
                     "skill": inputs.get("skill"),
+                    "succeeded": None,
                 }
             elif name == "Read":
                 try:
@@ -252,6 +273,10 @@ def technical_failures(clean: list[dict[str, Any]], case: dict[str, Any]) -> lis
         failures.append("init_absent")
     elif init["standalone_recherche_juridique_loaded"]:
         failures.append("standalone_recherche_juridique_loaded")
+    if init is not None and init.get("foreign_available_skills"):
+        failures.append("foreign_available_skills")
+    if init is not None and init.get("model") != "claude-sonnet-4-6":
+        failures.append("model_mismatch")
 
     activations = [
         event.get("skill")
@@ -261,6 +286,17 @@ def technical_failures(clean: list[dict[str, Any]], case: dict[str, Any]) -> lis
     expected = [qualified_skill(name) for name in case["activation_sequence"]]
     if activations != expected:
         failures.append("activation_sequence_mismatch")
+    if any(event.get("succeeded") is not True for event in clean
+           if event["type"] == "skill_activation"):
+        failures.append("skill_activation_not_successful")
+    if init is not None:
+        expected_available = {
+            qualified_skill(name) for name in json.loads(
+                (ROOT / "upstream.json").read_text(encoding="utf-8")
+            )["skills"]
+        }
+        if set(init.get("available_skills", [])) != expected_available:
+            failures.append("available_skills_mismatch")
 
     plugin_calls = [
         event
@@ -274,6 +310,11 @@ def technical_failures(clean: list[dict[str, Any]], case: dict[str, Any]) -> lis
         failures.append("foreign_mcp_call")
     if any(event["type"] == "unexpected_tool_call" for event in clean):
         failures.append("unexpected_tool_call")
+    if any(event["type"] == "plugin_file_read" and event.get("succeeded") is not True
+           and not (event.get("path") == "recherche-juridique/profil.md"
+                    and not (ROOT / "skills/recherche-juridique/profil.md").exists())
+           for event in clean):
+        failures.append("plugin_read_not_successful")
     if case["mcp_mode"] == "required" and not plugin_calls:
         failures.append("plugin_mcp_call_missing")
     if case["mcp_mode"] == "disabled" and plugin_calls:
@@ -303,7 +344,7 @@ def technical_failures(clean: list[dict[str, Any]], case: dict[str, Any]) -> lis
         failures.append("web_call_unexpected")
 
     result = next((event for event in clean if event["type"] == "result"), None)
-    if result is None or result.get("is_error"):
+    if result is None or result.get("is_error") or result.get("subtype") != "success":
         failures.append("result_error_or_absent")
     return failures
 
@@ -313,6 +354,8 @@ def execute(case: dict[str, Any], claude: str) -> tuple[list[dict[str, Any]], in
 
     environment = os.environ.copy()
     environment["ENABLE_CLAUDEAI_MCP_SERVERS"] = "false"
+    environment["CLAUDE_CODE_DISABLE_BUNDLED_SKILLS"] = "1"
+    environment["DISABLE_DOCTOR_COMMAND"] = "1"
     completed = subprocess.run(
         build_command(case, claude),
         cwd=ROOT,
@@ -323,6 +366,7 @@ def execute(case: dict[str, Any], claude: str) -> tuple[list[dict[str, Any]], in
         encoding="utf-8",
         errors="replace",
         check=False,
+        timeout=900,
     )
     events: list[dict[str, Any]] = []
     for line in completed.stdout.splitlines():
@@ -335,6 +379,19 @@ def execute(case: dict[str, Any], claude: str) -> tuple[list[dict[str, Any]], in
     return sanitize(events, case), completed.returncode
 
 
+def frozen_failures(frozen: dict[str, Any]) -> list[str]:
+    failures = []
+    for relative, expected_hash in frozen["files"].items():
+        path = (ROOT / relative).resolve()
+        if not path.is_relative_to(ROOT) or not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != expected_hash:
+            failures.append(f"gel_divergent:{relative}")
+    actual = {p.relative_to(ROOT).as_posix() for p in (ROOT / "skills").rglob("*") if p.is_file()}
+    expected = {p for p in frozen["files"] if p.startswith("skills/")}
+    if actual != expected:
+        failures.append("runtime_inventory_mismatch")
+    return failures
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--case", action="append", dest="case_ids")
@@ -345,7 +402,14 @@ def main() -> int:
         default=ROOT / "tests/evidence/.work",
     )
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--frozen-manifest", type=Path)
     args = parser.parse_args()
+    if not args.dry_run:
+        if args.frozen_manifest is None:
+            parser.error("--frozen-manifest requis avant toute exécution mesurée")
+        frozen = json.loads(args.frozen_manifest.read_text(encoding="utf-8"))
+        if failures := frozen_failures(frozen):
+            parser.error(" | ".join(failures))
 
     cases = load_cases()
     selected = [
@@ -360,8 +424,20 @@ def main() -> int:
         if args.dry_run:
             print(json.dumps(build_command(case, args.claude), ensure_ascii=False))
             continue
+        destination = args.output_dir / f"{case['id']}.jsonl"
+        if destination.exists():
+            parser.error(f"Trace existante conservée : {destination} ; choisir un nouveau dossier")
         clean, process_exit = execute(case, args.claude)
+        clean.insert(0, {
+            "type": "provenance",
+            "case_sha256": hashlib.sha256(json.dumps(case, ensure_ascii=False, sort_keys=True).encode("utf-8")).hexdigest(),
+            "prompt_sha256": hashlib.sha256(build_prompt(case).encode("utf-8")).hexdigest(),
+            "harness_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+            "candidate_commit": frozen["candidate_commit"],
+            "frozen_manifest_sha256": hashlib.sha256(args.frozen_manifest.read_bytes()).hexdigest(),
+        })
         failures = technical_failures(clean, case)
+        failures.extend(frozen_failures(frozen))
         if process_exit:
             failures.append("process_exit_nonzero")
         summary = {
@@ -373,7 +449,6 @@ def main() -> int:
             "requires_human_invariant_review": not failures,
         }
         clean.append(summary)
-        destination = args.output_dir / f"{case['id']}.jsonl"
         destination.write_text(
             "".join(json.dumps(event, ensure_ascii=False) + "\n" for event in clean),
             encoding="utf-8",

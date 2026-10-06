@@ -15,8 +15,16 @@
           "target": "SKILL.md",
           "source": "overlays/dpm-fpt.md",
           "base_sha256": "f6820c1f51013029268cd68b8db564c1b88965ff77fa678c6b7aeb5a37c3ca96",
-          "source_sha256": "087b9ab52c9feb7435cecb1701a7f27d955d8c2d4e3ec1b70e55dfa32e6e094a",
-          "anchor": "## 1. Déclenchement"
+          "source_sha256": "763b7a36ce9fbfd77bd9a9fac87b10b6b5e15fb39e96d5fa13388c16a5846ed6",
+          "anchor": "# Skill : dpm-fpt (v1.0.5)"
+        },
+        {
+          "target": "SKILL.md",
+          "source": "overlays/dpm-fpt-description.md",
+          "base_sha256": "7b50ed2abd3461f7137b3f39fa1fbd11374ecd1a6af99b182adf5f0a2140abb3",
+          "source_sha256": "0a90dda5daad1020ac3282d600b16afb2531c2a0a6c28ab623f48bba6341b315",
+          "anchor": "description: >-\n  Système expert d'aide à la décision pour un Directeur de Police Municipale\n  (DPM) en collectivité territoriale française. Activer pour toute question du\n  métier de police municipale : pouvoirs de police du maire, limites APJA,\n  procédure pénale applicable à la PM, réglementation de terrain (fourrière,\n  débits de boissons, domaine public, chiens dangereux), doctrine\n  opérationnelle, continuum de sécurité, agrément et assermentation des\n  agents, armement, vidéoprotection et caméras-piétons, déontologie, données,\n  pilotage, budget et écrits professionnels. Activer aussi lorsqu'une demande\n  faite à une PM approche ou dépasse les pouvoirs APJA, afin d'opposer le\n  garde-fou et d'orienter vers l'OPJ sans formaliser l'acte réservé. Vérifier\n  toute règle de droit sur une source officielle avant conclusion. Ne pas\n  activer pour le RH statutaire des agents (carrière, paie, procédure\n  disciplinaire : drh-fpt), pour le RGPD général de la collectivité\n  (registre, AIPD : dpo-ct), ni pour le droit étranger.\n",
+          "operation": "replace-description"
         }
       ]
     },
@@ -28,6 +36,23 @@
         "SKILL.md",
         "references/",
         "assets/"
+      ],
+      "instruction_overlays": [
+        {
+          "target": "SKILL.md",
+          "source": "overlays/drh-fpt.md",
+          "base_sha256": "b1e5ba27f8d4fb73ee78ddfc575d87c435132f98d755e808fc5794d6c30b44aa",
+          "source_sha256": "59429081e024692ee99f0bd812fc81800f0bb53973f9d89a6b6f7fed481cc0e2",
+          "anchor": "# Skill : drh-fpt (v0.6.0)"
+        },
+        {
+          "target": "SKILL.md",
+          "source": "overlays/drh-fpt-description.md",
+          "operation": "replace-description",
+          "base_sha256": "7fc9827f5faffd2db638ef44cef96ae7833a459fd097f909a766b6a1d0e96d71",
+          "source_sha256": "2bc2dd65548a757cd6a508cb40ab5d17d50ef03e931c8b0a886cf336870527c2",
+          "anchor": "description: >-\n  Expertise opérationnelle et juridiquement vérifiée en ressources humaines de\n  la fonction publique territoriale, pour les collectivités de plus de 350\n  agents. Active ce skill pour toute question RH territoriale : carrière et\n  paie, régime indemnitaire, santé et QVT, recrutement et formation, instances\n  et dialogue social, masse salariale et SI RH, communication interne, agents\n  contractuels, protection fonctionnelle, déontologie, cumul d'activités,\n  signalements ; pour qualifier une situation statutaire, sécuriser un acte\n  (avancement, sanction, refus, délibération) ou produire un livrable RH\n  (note, délibération, fiche de procédure, courrier d'agent). Pour toute règle\n  reposant sur un texte, une procédure, un calcul, un délai, une condition\n  d'accès, une compétence d'instance ou une jurisprudence, le skill vérifie la\n  source officielle avant de conclure. Ne pas activer pour le droit privé hors\n  FPT, les fonctions publiques d'État ou hospitalière, ni pour les\n  collectivités de moins de 350 agents.\n"
+        }
       ]
     },
     "dpo-ct": {
@@ -44,8 +69,16 @@
           "target": "SKILL.md",
           "source": "overlays/dpo-ct.md",
           "base_sha256": "41e4f3b262f8bbd3e7ca568613c57ad053399311a946a4aec3bb0fa1adc602b7",
-          "source_sha256": "01e06632f376a5b6cf7a5ff1304312709db9ba9fba0da91d64851ed0cdada3d5",
-          "anchor": "## 1. Déclenchement"
+          "source_sha256": "49d9c20876cac0162e225886d44552a430d47eddbf0304d9e9fbb1db8b38de34",
+          "anchor": "# Skill : dpo-ct (v0.2.1)"
+        },
+        {
+          "target": "SKILL.md",
+          "source": "overlays/dpo-ct-description.md",
+          "base_sha256": "044e68378e5748b57a2fc1e0b1727f106f419549c68d06b590486be4bdfda4f3",
+          "source_sha256": "b03cf3abefa8165e312048c948b86cbdcfdc7abc92bc9029592d907595aa1ed7",
+          "anchor": "description: >-\n  Système expert d'aide à la décision pour un Délégué à la Protection des\n  Données (DPO) en collectivité territoriale française. Activer pour toute\n  question de protection des données personnelles : avis RGPD sur un projet ou\n  un traitement, AIPD (méthode CNIL), registre des traitements (art. 30),\n  violation de données et notification CNIL (72 h), droits des personnes\n  (accès, effacement, opposition...), sous-traitance (art. 28) et transferts\n  hors UE, sécurité (art. 32), doctrine CNIL et CEPD, traitements communaux\n  (état civil, élections, scolaire, action sociale, vidéoprotection,\n  téléservices, open data). Activer aussi dès qu'un projet de la collectivité\n  implique des données personnelles, même sans mention du RGPD ou du DPO.\n  Toute règle reposant sur un texte est vérifiée à la source officielle avant\n  conclusion. Ne pas activer pour le volet opérationnel de la police\n  municipale (dpm-fpt), le RH statutaire (drh-fpt), ni le droit hors UE.\n",
+          "operation": "replace-description"
         }
       ]
     },
@@ -60,6 +93,23 @@
       ],
       "exclude": [
         "references/cache-taux-seuils.md"
+      ],
+      "instruction_overlays": [
+        {
+          "target": "SKILL.md",
+          "source": "overlays/dirfi-fpt.md",
+          "base_sha256": "b9ea140e83a02f8fb7bcfae9b3ad038b5576256977c51b749f63265dfdc1c59b",
+          "source_sha256": "759239a8a09d3aae6935acab43c90122a54375ae2f33e283e56c9fdc274cfdbd",
+          "anchor": "# Skill : dirfi-fpt (v1.0.4)"
+        },
+        {
+          "target": "SKILL.md",
+          "source": "overlays/dirfi-fpt-description.md",
+          "operation": "replace-description",
+          "base_sha256": "760552a6589a0db39e5fcd567ff0129d5214c4b277a297aed4cf1b54bd20aea7",
+          "source_sha256": "35c4bb8bb599339bfb0753b6a7b266b3ddf26673b1cc69747a47cf9f5555f19c",
+          "anchor": "description: >-\n  Système expert d'aide à la décision pour un Directeur des Finances (DirFi) en\n  collectivité territoriale française. Activer pour toute question de finances\n  publiques locales : cycle budgétaire et vote du budget, nomenclature M57,\n  exécution de la dépense et de la recette, régies, fiscalité locale, dotations\n  et péréquation, dette et trésorerie, prospective et analyse financière,\n  subventions, volet financier de la commande publique, contrôle interne\n  financier et écrits budgétaires. Activer aussi lorsqu'un montage fait manier\n  des deniers publics hors du circuit du comptable public, afin d'opposer le\n  garde-fou gestion de fait, ou lorsqu'un acte budgétaire paraît irrégulier,\n  afin d'opposer le garde-fou budgétaire avant toute recommandation\n  d'exécution. Vérifier toute règle de droit et toute valeur chiffrée sur une\n  source officielle avant conclusion. Ne pas activer pour le RH statutaire des\n  agents (carrière, paie, régime indemnitaire : drh-fpt), pour la passation des\n  marchés publics, ni pour le droit étranger.\n"
+        }
       ]
     },
     "recherche-juridique": {
@@ -86,8 +136,39 @@
           "target": "SKILL.md",
           "source": "overlays/recherche-juridique.md",
           "base_sha256": "33a48ee9e830dcde148a80ecb4fa74c795ec11eca3fad7c9b5370d7162662857",
-          "source_sha256": "03c5250538c663547257022f2161d9dbb65f549f5617c29ed794bedffe003f2a",
-          "anchor": "## Déclenchement"
+          "source_sha256": "7d469a2737890392bea0bd7dc92bfb6333f1014ab6845e9bc8924822ae22c4ab",
+          "anchor": "# Skill : recherche-juridique (v3.5.0)"
+        }
+      ]
+    },
+    "dsi-fpt": {
+      "repository": "https://github.com/brissonjo-sudo/DSI-fpt.git",
+      "commit": "704e5dd6a3d15994ed431b23585aabd72086ca75",
+      "version": "0.2.1",
+      "paths": [
+        "SKILL.md",
+        "agents/",
+        "references/",
+        "objets/"
+      ],
+      "exclude": [
+        "references/cache-valeurs.md"
+      ],
+      "instruction_overlays": [
+        {
+          "target": "SKILL.md",
+          "source": "overlays/dsi-fpt.md",
+          "base_sha256": "4522f18710d8e3d9ecc8183a86ed2f8a2b96b4212fabbc3ab1ad4619fb51be76",
+          "source_sha256": "3dfb36c8263088a1ded56cf00b2114576e1d08172208ae836f0f29c82f739501",
+          "anchor": "# Skill : dsi-fpt (v0.2.1)"
+        },
+        {
+          "target": "SKILL.md",
+          "source": "overlays/dsi-fpt-description.md",
+          "operation": "replace-description",
+          "base_sha256": "8deb76e9cecfc2b42082df4b166c04fdef04abeccce09fc8218ac9890af6d8c9",
+          "source_sha256": "6b2f0466da433f658297416dc7bbc36a85706bd54fee27f0576b59c2f9482ed6",
+          "anchor": "description: >-\n  Incident cyber ou surveillance : le premier texte visible commence par STOP,\n  avant toute annonce d'activation. Aide à la décision DSI/RSSI en collectivité française.\n  Activer pour les questions de gouvernance du SI, sécurité et\n  homologation, crise cyber et continuité, réseaux et infrastructures, cloud et\n  hébergement, applications métiers et interopérabilité, dématérialisation et\n  téléservices, accessibilité numérique, intelligence artificielle et\n  algorithmes publics, contrats informatiques. Toute question de droit exige\n  l'activation réelle de recherche-juridique et un texte primaire récupéré,\n  sinon abstention sur le fond. Ne pas activer pour la conformité\n  RGPD, l'AIPD ou la notification de violation (dpo-ct), le RH statutaire\n  (drh-fpt), la doctrine de vidéoprotection (dpm-fpt), le budget (dirfi-fpt),\n  ni la passation des marchés.\n"
         }
       ]
     }

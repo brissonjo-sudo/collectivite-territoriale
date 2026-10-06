@@ -1,0 +1,23 @@
+{
+  "agent": "/root/juge_nominal_04",
+  "session_id": "01a111a9-4afe-7703-88e1-dace9a7689f2",
+  "parent_thread_id": "01a1103e-0b49-70c1-8f4e-66a36b54916f",
+  "models": [
+    "gpt-6.1-sol"
+  ],
+  "tools_called": [
+    "exec",
+    "exec"
+  ],
+  "completed": true,
+  "tokens_reported": {
+    "input_tokens": 128278,
+    "cached_input_tokens": 117760,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 1843,
+    "reasoning_output_tokens": 249,
+    "total_tokens": 130121
+  },
+  "trace_sha256": "1d8a4dbfacf687b9b4c3af6b75423ea4fb0d6a92429407cac3e21aaf8c3583a5",
+  "filter": "Entrées, texte visible et appels/résultats outils ; instructions système et raisonnement exclus"
+}

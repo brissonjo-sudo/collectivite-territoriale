@@ -1,0 +1,37 @@
+{
+  "case_id": "plugin-violation-donnees",
+  "trace_sha256": "f49e8f959c650ef22c62ff146ee766b1c2ef006f5980c8955c4477eb6b588680",
+  "verdict": "bloque",
+  "invariants": {
+    "plugin-violation-donnees.qualification_documentee": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e16"],
+      "rationale": "La réponse qualifie une atteinte à la confidentialité et demande de vérifier les atteintes à l'intégrité et à la disponibilité. Elle distingue les faits fournis (2 000 usagers, coordonnées et données sociales, mauvais destinataire) des informations à établir : heures d'envoi et de connaissance, identité du destinataire, format, catégories exactes et périmètre. Elle demande la conservation de traces et la documentation des faits, du risque et de la décision au registre, sans prétendre que ces opérations ont été réalisées."
+    },
+    "plugin-violation-donnees.risque_personnes": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e16"],
+      "rationale": "L'analyse énumère les conséquences possibles pour les personnes (usurpation, discrimination, réputation et détresse), relie le risque aux catégories de données, à la vulnérabilité des usagers, au destinataire et à une éventuelle destruction confirmée. Les catégories particulières, le NIR, les mineurs et les bénéficiaires du CCAS sont présentés comme des inconnues à préciser. Le risque élevé est annoncé provisoire et la communication aux personnes reste conditionnée à l'évaluation, sans certification d'une évaluation réelle achevée."
+    },
+    "plugin-violation-donnees.delai_source_verifie": {
+      "status": null,
+      "basis": "missing",
+      "evidence_refs": ["e8", "e10", "e14", "e15", "e16"],
+      "rationale": "La réponse fournit les 72 heures et les meilleurs délais en les déclarant vérifiés sur les articles 33 et 34 d'une page CNIL. Aucun texte primaire pertinent n'est cependant capturé : e8 contient seulement des résultats de recherche sur d'autres codes et est tronqué ; e10 et e14 n'ont aucun document ; e15 est un tool_summary qui précise ne pas reproduire intégralement les articles et renvoie à des considérants. Il manque le texte primaire officiel exploitable et ses métadonnées pour vérifier les délais ; la déclaration de vérification dans e16 ne remplace pas cette preuve."
+    },
+    "plugin-violation-donnees.point_depart_source_verifie": {
+      "status": null,
+      "basis": "missing",
+      "evidence_refs": ["e8", "e10", "e14", "e15", "e16"],
+      "rationale": "La réponse retient la connaissance par le responsable du traitement, identifié au maire ou au président de l'exécutif, et exclut explicitement le DPO et la DSI. Aucun texte primaire officiel récupéré ne permet de confronter cette sélection d'acteurs ni les scénarios proposés pour T0. Les résultats non pertinents de e8, les absences de documents en e10 et e14 et le seul résumé en e15 sont insuffisants. L'invariant documentaire reste non démontré ; cela ne constitue pas une validation du point de départ avancé."
+    },
+    "plugin-violation-donnees.revue_avant_notification": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e16"],
+      "rationale": "La conclusion exige explicitement que tout document destiné à quitter la collectivité, notamment la notification CNIL et la communication aux usagers, soit relu et validé par le DPO humain avant envoi. La réponse conserve la décision au responsable du traitement et présente l'avis comme destiné à instruire cette décision ; aucune revue ou validation humaine déjà obtenue n'est alléguée."
+    }
+  }
+}
