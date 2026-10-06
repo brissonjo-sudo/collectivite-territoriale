@@ -1,5 +1,20 @@
 # Historique des versions
 
+## 1.2.0 — 2026-10-06 — Candidat d'intégration DCP
+
+- Ajout de `dcp-fpt` 0.1.0 au commit de fusion amont
+  `eeb1cb14a3ad94d78631661dce5ae11f1e071308`, sans surcharge locale.
+- Copie des 30 fichiers runtime et de la licence ; cache de valeurs,
+  conception, outillage et preuves amont exclus.
+- Conservation des cinq autres bases, des trois surcharges et du MCP unique.
+- Manifestes Claude/Codex et présentation adaptés aux six skills.
+- Cinq scénarios DCP ajoutés au contrat de campagne : égalité, acte
+  irréversible, frontières financières/données, DSI externe et mode dégradé.
+- Nouvelle preuve de candidat avec `release_ready=false`. Mesure, smoke et
+  relecture praticien restent à faire après l'intégration candidate.
+- Les preuves historiques conservent leur inventaire d'origine ; elles
+  n'attestent aucune activation DCP.
+
 ## 1.1.1 — 2026-10-03 — Candidat d'alignement DRH
 
 - Mise à jour de `drh-fpt` vers 0.6.0 depuis `main`, au commit

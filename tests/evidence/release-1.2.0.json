@@ -1,0 +1,37 @@
+{
+  "date": "2026-10-06",
+  "plugin_version": "1.2.0",
+  "plugin_commit": null,
+  "release_ready": false,
+  "upstream_commits": {
+    "dpm-fpt": "1668c89798f1f50a829c0b94d3cf6bf33a3640fb",
+    "drh-fpt": "f81c9b955f7ebb47df7e93bdc41ac743d85a2973",
+    "dpo-ct": "f3406f412368199a33f47e7861eb450eab2b2cdb",
+    "dirfi-fpt": "d970fe530d3f50f6b4c330e3cfb85db35b7126ab",
+    "recherche-juridique": "e437d10a2d4bbf66ba7a9c1e9fb49e773166054e",
+    "dcp-fpt": "eeb1cb14a3ad94d78631661dce5ae11f1e071308"
+  },
+  "release_blockers": [
+    "La campagne comportementale du candidat 1.2.0, dont les scénarios DCP, reste à exécuter.",
+    "La suite métier et la mesure DCP 0.1.0 restent à construire et à exécuter.",
+    "L'accès MCP et les options de la CLI réelle doivent être qualifiés avant campagne.",
+    "La relecture par un praticien est différée après l'intégration candidate ; elle reste requise avant qualification et publication.",
+    "Le smoke Codex du commit candidat reste à réaliser."
+  ],
+  "historical_evidence": "tests/evidence/2026-09-20-validation-locale.json",
+  "runs": [],
+  "skill_measurements": {
+    "dcp-fpt": {
+      "status": "not_run",
+      "upstream_commit": "eeb1cb14a3ad94d78631661dce5ae11f1e071308",
+      "evidence_path": null
+    }
+  },
+  "review": {
+    "human_legal_validation": false
+  },
+  "codex_smoke": {
+    "status": "not_run",
+    "plugin_commit": null
+  }
+}
