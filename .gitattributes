@@ -1,2 +1,7 @@
 skills/** -text
 overlays/** text eol=lf
+scripts/** text eol=lf
+docs/** text eol=lf
+tests/*.py text eol=lf
+tests/*.json text eol=lf
+tests/evidence/** -text
