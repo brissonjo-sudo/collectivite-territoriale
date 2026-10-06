@@ -46,10 +46,11 @@ et les prérequis ouverts. Les anciennes traces restent historiques.
 
 La CI distingue intégration technique et qualification de publication dans
 deux jobs. Le test de publication reste identique, dans `ReleaseGateTests`,
-et reste inclus dans la découverte complète. Le job candidat sélectionne
-les trois classes de contrôles techniques ; toute nouvelle classe technique
-devra être ajoutée à cette sélection. Aucun passage au vert n'est attribué
-à la publication avant mesure, smoke et relecture.
+et reste inclus dans la découverte complète. Le job candidat lance toute
+la découverte avec `CT_SAUTER_BARRIERE=1`, qui saute cette seule classe :
+toute nouvelle classe de tests y est exécutée sans liste à tenir à jour. Le
+job de publication force `CT_SAUTER_BARRIERE=0`. Aucun passage au vert n'est
+attribué à la publication avant mesure, smoke et relecture.
 
 L'intégration candidate sur une branche ne met pas à jour les installations.
 La marketplace suivant `main`, une fusion distribuerait le candidat : cette

@@ -4,6 +4,8 @@ from __future__ import annotations
 
 import hashlib
 import json
+import os
+import re
 import struct
 import unittest
 from pathlib import Path
@@ -340,7 +342,8 @@ class CodexPluginTests(unittest.TestCase):
 
     def test_dcp_distribution_sans_cache_ni_conception(self) -> None:
         spec = load_json("upstream.json")["skills"]["dcp-fpt"]
-        self.assertEqual(spec["version"], "0.1.0")
+        version = spec["version"]
+        self.assertRegex(version, r"^\d+\.\d+\.\d+$")
         self.assertIn("references/cache-valeurs.md", spec["exclude"])
         skill = ROOT / "skills/dcp-fpt"
         for excluded in ("references/cache-valeurs.md", "docs", "tests", "scripts", "vault"):
@@ -352,7 +355,12 @@ class CodexPluginTests(unittest.TestCase):
             (ROOT / "LICENSE").read_text(encoding="utf-8"),
         )
         entrypoint = (skill / "SKILL.md").read_text(encoding="utf-8")
-        self.assertIn("non mesuré, non relu par un praticien", entrypoint)
+        # La version déclarée doit être celle du titre de la copie figée :
+        # le test suit la promotion (0.x vers 1.0.0) sans constante à réécrire.
+        self.assertRegex(entrypoint, rf"(?m)^# Skill : dcp-fpt \(v{re.escape(version)}\)$")
+        if version.startswith("0."):
+            # Tant que le skill n'a pas passé le seuil de mesure, l'avertissement reste obligatoire.
+            self.assertIn("non mesuré, non relu par un praticien", entrypoint)
         self.assertNotIn("instruction_overlays", spec)
 
     def test_cas_dcp_orchestration_et_outils(self) -> None:
@@ -401,8 +409,17 @@ class CodexPluginTests(unittest.TestCase):
         self.assertEqual(entry["category"], plugin["interface"]["category"])
 
 
+@unittest.skipIf(
+    os.environ.get("CT_SAUTER_BARRIERE") == "1",
+    "Barrière de publication contrôlée par le job « Qualification de publication »",
+)
 class ReleaseGateTests(unittest.TestCase):
-    """Verrou de publication distinct des contrôles d'intégration candidate."""
+    """Verrou de publication distinct des contrôles d'intégration candidate.
+
+    Le job « Intégration candidate » lance toute la découverte avec
+    CT_SAUTER_BARRIERE=1 : toute nouvelle classe de tests y est donc exécutée
+    sans liste à tenir à jour. Seule cette classe y est sautée.
+    """
 
     def test_barriere_de_release_comportementale(self) -> None:
         manifest = load_json(".codex-plugin/plugin.json")

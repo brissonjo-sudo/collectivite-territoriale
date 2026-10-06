@@ -15,8 +15,10 @@ jobs:
           python-version: '3.11'
       - name: Contrôler les copies figées
         run: python scripts/check_sync.py
-      - name: Vérifier le détecteur de dérive
-        run: python -m unittest discover -s tests -k SyncCheckTests -k CodexPluginTests -k InstructionOverlayTests
+      - name: Lancer tous les tests hors barrière de publication
+        env:
+          CT_SAUTER_BARRIERE: "1"
+        run: python -m unittest discover -s tests
       - name: Contrôler les pointeurs inter-dépôts
         run: |
           if rg -n '\b(Dpm-fpt|Drh-fpt|Dpo-ct|DirFi-fpt|DCP-fpt|droit-francais-skill)/[^[:space:]`]+\.md' skills; then
@@ -32,4 +34,6 @@ jobs:
         with:
           python-version: '3.11'
       - name: Contrôler la barrière de publication
+        env:
+          CT_SAUTER_BARRIERE: "0"
         run: python -m unittest discover -s tests -k ReleaseGateTests
