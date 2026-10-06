@@ -128,7 +128,7 @@ def build_command(case: dict[str, Any], claude: str) -> list[str]:
         "--setting-sources",
         "project,local",
         "--settings",
-        '{"disableAllHooks":true}',
+        '{"disableAllHooks":true,"disableBundledSkills":true,"skillOverrides":{"plugin-authoring":"off","doctor":"off"}}',
         "--no-session-persistence",
         "--no-chrome",
         "--output-format",
@@ -197,7 +197,12 @@ def sanitize(events: list[dict[str, Any]], case: dict[str, Any]) -> list[dict[st
                     "strict_mcp_config": True,
                 }
             )
-        for name, inputs, tool_use_id in message_tool_calls(event):
+        for block in (event.get("message") or {}).get("content") or []:
+            if block.get("type") == "text" and event.get("type") == "assistant":
+                clean.append({"type": "assistant_text", "text": block.get("text", "")})
+            if block.get("type") != "tool_use":
+                continue
+            name, inputs, tool_use_id = block.get("name", ""), block.get("input") or {}, block.get("id", "")
             if name == "Skill":
                 record = {
                     "type": "skill_activation",
@@ -240,8 +245,6 @@ def sanitize(events: list[dict[str, Any]], case: dict[str, Any]) -> list[dict[st
 
         message = event.get("message") or {}
         for block in message.get("content") or []:
-            if block.get("type") == "text" and event.get("type") == "assistant":
-                clean.append({"type": "assistant_text", "text": block.get("text", "")})
             if block.get("type") != "tool_result":
                 continue
             record = calls_by_id.get(block.get("tool_use_id", ""))
@@ -376,6 +379,19 @@ def execute(case: dict[str, Any], claude: str) -> tuple[list[dict[str, Any]], in
     return sanitize(events, case), completed.returncode
 
 
+def frozen_failures(frozen: dict[str, Any]) -> list[str]:
+    failures = []
+    for relative, expected_hash in frozen["files"].items():
+        path = (ROOT / relative).resolve()
+        if not path.is_relative_to(ROOT) or not path.is_file() or hashlib.sha256(path.read_bytes()).hexdigest() != expected_hash:
+            failures.append(f"gel_divergent:{relative}")
+    actual = {p.relative_to(ROOT).as_posix() for p in (ROOT / "skills").rglob("*") if p.is_file()}
+    expected = {p for p in frozen["files"] if p.startswith("skills/")}
+    if actual != expected:
+        failures.append("runtime_inventory_mismatch")
+    return failures
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--case", action="append", dest="case_ids")
@@ -392,10 +408,8 @@ def main() -> int:
         if args.frozen_manifest is None:
             parser.error("--frozen-manifest requis avant toute exécution mesurée")
         frozen = json.loads(args.frozen_manifest.read_text(encoding="utf-8"))
-        for relative, expected_hash in frozen["files"].items():
-            path = (ROOT / relative).resolve()
-            if not path.is_relative_to(ROOT) or hashlib.sha256(path.read_bytes()).hexdigest() != expected_hash:
-                parser.error(f"Contenu divergent du gel : {relative}")
+        if failures := frozen_failures(frozen):
+            parser.error(" | ".join(failures))
 
     cases = load_cases()
     selected = [
@@ -423,6 +437,7 @@ def main() -> int:
             "frozen_manifest_sha256": hashlib.sha256(args.frozen_manifest.read_bytes()).hexdigest(),
         })
         failures = technical_failures(clean, case)
+        failures.extend(frozen_failures(frozen))
         if process_exit:
             failures.append("process_exit_nonzero")
         summary = {

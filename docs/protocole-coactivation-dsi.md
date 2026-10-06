@@ -11,6 +11,9 @@ contenait les skills natifs de Claude et le contrôle de profil optionnel était
 trop strict. La révision r2 désactive ces skills natifs et reconnaît uniquement
 l'absence permise de `recherche-juridique/profil.md` (profil neutre, §chargement
 du profil). Aucune autre lecture échouée ne bénéficie de cette exception.
+La mesure r2 expose encore `plugin-authoring` ; elle reste un échec d'isolation.
+La révision r3 ajoute un `skillOverrides` ciblé, conserve l'ordre texte/appel
+dans chaque message et vérifie empreintes et inventaire après chaque cas.
 
 ## Exécution
 
