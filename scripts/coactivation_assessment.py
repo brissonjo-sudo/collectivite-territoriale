@@ -9,6 +9,25 @@ from typing import Any
 from run_coactivation_v2 import observable_checks, technical_failures
 
 
+def validate_source_links(events: list[dict[str, Any]]) -> None:
+    """Exige une liaison non ambiguë entre chaque source et son appel antérieur."""
+    calls: dict[str, dict[str, Any]] = {}
+    for event in events:
+        if event['type'] in ('plugin_mcp_call', 'official_source_call'):
+            identifier = event.get('call_id')
+            if not isinstance(identifier, str) or not identifier or identifier in calls:
+                raise ValueError('Identité d’appel documentaire absente ou ambiguë')
+            calls[identifier] = event
+        if event['type'] == 'source_evidence':
+            call = calls.get(event.get('call_id'))
+            if call is None:
+                raise ValueError('Preuve documentaire non liée à un appel antérieur')
+            if event.get('tool') != call.get('tool'):
+                raise ValueError('Preuve documentaire attribuée à un autre outil')
+            if event.get('status') == 'available' and call.get('succeeded') is not True:
+                raise ValueError('Preuve documentaire associée à un appel échoué')
+
+
 def build_judge_packet(case: dict[str, Any], trace: Path, protocol: Path) -> dict[str, Any]:
     """Fournit une entrée figée à un juge frais, sans runtime ni anciens scores."""
     events = [json.loads(line) for line in trace.read_text(encoding='utf-8').splitlines()]
@@ -47,16 +66,7 @@ def validate_judgment(case: dict[str, Any], events: list[dict[str, Any]],
         raise ValueError('Succès technique non démontré par la trace')
     if assessment['observables'] != observable_checks(events, case):
         raise ValueError('Observations techniques non conformes à la trace')
-    calls = {event.get('call_id'): index for index, event in enumerate(events)
-             if event['type'] in ('plugin_mcp_call', 'official_source_call')}
-    for index, event in enumerate(events):
-        if event['type'] != 'source_evidence':
-            continue
-        call_index = calls.get(event.get('call_id'))
-        if call_index is None or call_index >= index:
-            raise ValueError('Preuve documentaire non liée à un appel antérieur')
-        if event.get('status') == 'available' and events[call_index].get('succeeded') is not True:
-            raise ValueError('Preuve documentaire associée à un appel échoué')
+    validate_source_links(events)
     categories: dict[str, list[bool | None]] = {'comportement': [], 'preuve_source': []}
     for key, result in values.items():
         if not isinstance(result, dict) or set(result) != {'status', 'basis', 'evidence_refs', 'rationale'}:

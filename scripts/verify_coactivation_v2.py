@@ -7,7 +7,7 @@ import json
 from pathlib import Path
 from typing import Any
 
-from coactivation_assessment import validate_judgment
+from coactivation_assessment import validate_judgment, validate_source_links
 from run_coactivation_v2 import SUITE, build_prompt, frozen_failures_v2, load_cases, observable_checks, technical_failures
 
 
@@ -50,6 +50,7 @@ def main() -> int:
         if len(init) != 1 or init[0]['session_id'] in sessions:
             parser.error('Session absente, ambiguë ou réutilisée : ' + path.name)
         sessions.add(init[0]['session_id'])
+        validate_source_links(events)
         for event in events:
             if event['type'] != 'source_evidence' or event.get('status') == 'missing':
                 continue

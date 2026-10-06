@@ -248,6 +248,32 @@ class SuiteContractTests(unittest.TestCase):
 
 
 class TraceContractTests(unittest.TestCase):
+    def test_liaisons_documentaires_verifiees_sans_jugement_independant(self) -> None:
+        case = BY_ID["plugin-dsi-budget"]
+        baseline = [event for event in trace(case)
+                    if event["type"] in ("plugin_mcp_call", "source_evidence")]
+        self.assertEqual([event["type"] for event in baseline], ["plugin_mcp_call", "source_evidence"])
+        self.assertEqual(baseline[0]["tool"], baseline[1]["tool"])
+        self.assertIsNone(assessment.validate_source_links(baseline))
+        for mutation in ("absent", "tardif", "doublon", "autre_outil", "echec", "id_absent"):
+            with self.subTest(mutation=mutation):
+                events = copy.deepcopy(baseline)
+                source_call, source = events
+                if mutation == "absent":
+                    events.remove(source_call)
+                elif mutation == "tardif":
+                    events.reverse()
+                elif mutation == "doublon":
+                    events.insert(1, copy.deepcopy(source_call))
+                elif mutation == "autre_outil":
+                    source["tool"] = "mcp__droit-francais__search_articles"
+                elif mutation == "echec":
+                    source_call["succeeded"] = False
+                else:
+                    source_call.pop("call_id")
+                with self.assertRaises(ValueError):
+                    assessment.validate_source_links(events)
+
     def test_secrets_textes_visibles_et_resultats_absents_de_la_trace_persistable(self) -> None:
         case = BY_ID["plugin-garde-fou-apja"]
         text = (
