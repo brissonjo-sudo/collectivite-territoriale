@@ -1,0 +1,202 @@
+# Branche — Accessibilité numérique
+
+## 1. Périmètre / Exclusions
+
+Piloter l'accessibilité des sites, applications et documents numériques de la
+collectivité. Organiser l'évaluation, la correction, la déclaration et les
+exigences techniques envers les prestataires.
+
+**Exclusions** : fond et choix des contenus éditoriaux → service communication
+ou producteur métier ; inclusion et médiation numérique → service compétent,
+hors périmètre ; passation → service de la commande publique, hors périmètre.
+Droit des données recueillies via un dispositif de contact → `BASCULE dpo-ct`.
+Arrêter le volet concerné sans l'illustrer. Exécution du contrat →
+`references/contrats-prestataires.md` ; parcours d'un téléservice →
+`references/dematerialisation-teleservices.md`.
+
+## 2. Questions couvertes
+
+- La collectivité doit-elle publier une déclaration pour ce service ?
+- Que faire quand le site n'a jamais été évalué ?
+- Comment prioriser les corrections d'un portail ou des documents ?
+- Comment vérifier une promesse d'accessibilité du prestataire ?
+- Comment organiser un schéma de progression et suivre ses actions ?
+- Comment répondre à un contrôle sans affirmer une conformité non démontrée ?
+
+## 3. Arbre de traitement
+
+Passer par `references/analyse-situation.md`. Afficher le garde-fou de
+`SKILL.md` en premier si la demande révèle un incident ou vise une surveillance
+de personnes ; ne pas instrumenter un suivi individuel au nom de l'évaluation.
+
+| Question | Variables à lever | Décision | Vérification | Livrable |
+|---|---|---|---|---|
+| Déclaration absente | Organisme, service, périmètre, audit disponible | Évaluer et préparer une publication fidèle ; ne pas annoncer la conformité | Texte applicable et contenu exigé de la déclaration | État des lieux et projet de déclaration |
+| Portail bloquant une démarche | Parcours touché, composant, responsable, solution utilisable | Corriger d'abord le blocage de service ; définir la mesure provisoire avec le métier | Tests du parcours et preuve de correction | Plan de correction priorisé |
+| Prestataire promettant la conformité | Périmètre livré, preuves, référentiel annoncé, contrat | Exiger des résultats vérifiables et une recette indépendante de la promesse | Référentiel en vigueur, résultats et engagements | Exigences techniques et recette |
+| Contrôle ou mise en demeure | Demande officielle, service visé, preuves et échéances | Organiser la réponse avec la direction compétente | Fondement, procédure et délais lus à la source | Dossier de preuves et suivi des actions |
+
+## 4. Variables à lever
+
+- Mode internalisé, mutualisé ou externalisé ; qui corrige le code, qui
+  publie les documents et qui décide les priorités.
+- Nature juridique de l'organisme, service numérique concerné, date de
+  référence ; catégorie ou taille seulement si le texte en dépend.
+- Périmètre : site, application, documents, composants fournis par un tiers
+  et parcours indispensables au service.
+- Criticité des blocages, existence d'une solution réellement utilisable et
+  interlocuteur responsable des demandes d'assistance.
+- Données éventuellement recueillies et exigences de `dpo-ct` ; ne pas
+  collecter d'informations nominatives pour les besoins de la réponse.
+- Prestataire et contrat, référentiel utilisé par l'évaluation, disponibilité
+  des résultats, modifications intervenues depuis l'audit.
+
+## 5. Règles métier
+
+### Applicabilité et publications
+
+Partir des entrées accessibilité de `references/references-verifiees.md` :
+la loi pour l'égalité des droits et des chances et son décret d'application,
+**à confirmer en version consolidée**. Le registre rattache les collectivités
+aux personnes morales de droit public ; ne pas appliquer à la collectivité
+un seuil visant les entreprises. Vérifier ensuite le service et les
+éventuelles exclusions avant toute conclusion d'obligation.
+
+Pour la déclaration, le schéma de progression et les mentions publiques,
+vérifier le contenu, le champ et les modalités exigés sur la source officielle.
+Ne pas inventer un statut de conformité en l'absence d'évaluation. Une
+déclaration décrit le résultat établi ; sa publication ne rend pas le service
+accessible. Toute invocation d'une charge disproportionnée requiert une
+analyse documentée du régime applicable, pas un simple motif de coût.
+
+### Évaluation et correction
+
+Définir le périmètre évalué, les parcours, les documents et les composants.
+Combiner contrôles automatiques et vérifications humaines prévues par la
+méthode applicable. Un outil automatique seul ne démontre pas la conformité.
+Conserver les constats et leurs limites ; ne pas extrapoler l'évaluation
+d'une page à tous les services.
+
+Prioriser les obstacles qui empêchent d'achever une démarche, puis les
+composants partagés qui reproduisent le défaut et les corrections locales.
+Faire tester chaque correction sur le parcours concerné. Organiser les
+corrections éditoriales avec le producteur compétent sans écrire son contenu.
+Une solution provisoire ne prouve pas que le service initial est conforme.
+
+### Prestataires et fonctionnement courant
+
+Transformer « accessible » en périmètre livré, méthode d'évaluation, preuves
+attendues et traitement des défauts. Faire vérifier le produit effectivement
+livré, documents et composants compris ; distinguer l'attestation commerciale
+du prestataire et les résultats de recette.
+
+Attribuer la maintenance des corrections au responsable du composant. Après
+une évolution du parcours ou du socle technique, vérifier que les preuves
+existantes restent pertinentes. La collectivité garde le pilotage, y compris
+en mode mutualisé ou externalisé ; l'exécution contractuelle relève de
+`references/contrats-prestataires.md`.
+
+### Droit, méthode et contrôle
+
+Distinguer le texte qui établit l'obligation, le référentiel qui sert à
+l'évaluer et les bonnes pratiques d'organisation décrites ici. La provenance
+datée du registre ne garantit pas la version actuelle du RGAA ni la lecture
+de son arrêté. Relire la source officielle avant de citer une version.
+Pour un contrôle par l'Arcom, ne fournir aucune sanction ou échéance de
+mémoire ; préparer les preuves sans prédire l'issue de la procédure.
+
+## 6. Procédures
+
+**Hypothèse : service existant, sans incident actif.**
+
+1. La DSI et les responsables de service recensent les supports et parcours.
+   Si l'audit manque, demander son périmètre avant de rédiger un statut.
+2. Vérifier le régime applicable et la méthode en vigueur ; confier
+   l'évaluation à une compétence adaptée et documenter ses limites.
+3. Relier chaque constat au parcours, au composant et à son responsable.
+   Faire décider les priorités selon l'effet sur le service et les
+   dépendances, avec `references/gouvernance-strategie.md`.
+4. DSI, prestataire et producteurs compétents corrigent leur périmètre.
+   Recetter les corrections et conserver les preuves non identifiantes.
+5. Préparer les publications sur des résultats établis ; faire valider les
+   éléments requis selon les sources officielles.
+6. Suivre les défauts restants, le dispositif de contact et les changements
+   qui rendent l'audit obsolète. Les durées, échéances et modalités exigées
+   se vérifient à la source.
+
+## 7. Déclencheurs de vérification
+
+Appliquer `references/socle-sources-verification.md` avant toute affirmation
+sur organisme assujetti, support couvert, exclusion, charge disproportionnée,
+contenu obligatoire d'une déclaration ou d'un schéma, version du référentiel,
+contrôle ou sanction. Sources : Légifrance pour le droit, DINUM pour la
+méthode publiée, Arcom pour le contrôle dans son champ.
+
+En cas de contradiction ou de version impossible à confirmer, solliciter
+`recherche-juridique` et réserver le point. La lecture historique du registre
+ne vaut pas lecture de la session ; donner la méthode sans valeur volatile.
+
+## 8. Pièges et confusions fréquentes
+
+- Déclarer une conformité parce qu'un outil n'a détecté aucune erreur.
+- Évaluer l'accueil et ignorer le parcours de dépôt ou ses documents.
+- Croire qu'un prestataire libère la collectivité de son pilotage.
+- Substituer une déclaration ou une surcouche à la correction démontrée.
+- Réutiliser un audit après une refonte sans vérifier son périmètre.
+- Invoquer une exception générale parce que le service est ancien ou le coût
+  élevé, sans lecture du régime applicable.
+- Appliquer un seuil d'entreprise à une personne morale de droit public.
+- Transformer un guide d'organisation de l'État en obligation locale.
+- Répondre à une plainte d'accessibilité par une extraction des traces d'une
+  personne : garde-fou surveillance avant tout paramétrage ou extraction.
+
+## 9. Données et valeurs à vérifier
+
+Version du RGAA, références de son approbation, normes applicables, exclusions,
+modalités et contenu des publications, durée et rythme des documents de
+progression, délais de réponse ou de mise en demeure et montants des sanctions.
+Nommer ces points sans leurs valeurs ; consulter
+`references/references-verifiees.md` puis les sources officielles à la date
+de référence. Un calendrier annoncé ou un cache ne suffit pas à conclure.
+
+## 10. Écrits et livrables
+
+- Inventaire : supports, responsables, parcours critiques et état des preuves.
+- Plan de correction : obstacle, composant, responsable, priorité, preuve
+  attendue et état de recette.
+- Déclaration et documents de progression : brouillons dont le contenu légal
+  obligatoire reste subordonné à la vérification officielle.
+- Exigences d'accessibilité et protocole de recette →
+  `references/templates/cahier-des-charges-technique.md` ; projet de mise
+  en conformité → `references/templates/fiche-projet-si.md`, avec
+  `references/ecrits-numerique.md`.
+
+Marquer `[INCOMPLET]` les résultats ou champs non établis ; ne pas attribuer
+un taux ou un statut fictif. Ne pas joindre de réclamation nominative.
+
+## 11. Double échelle [risque / confiance]
+
+| Situation | Repère |
+|---|---|
+| Inventaire des supports sans qualification de conformité | [faible / stable] si le périmètre est connu |
+| Correction locale avec parcours recetté | [moyen / stable] sur cette correction seulement |
+| Démarche publique bloquée ou déclaration sans audit | [élevé / à vérifier] ; prioriser la preuve et la correction |
+| Sanction, exception ou procédure officielle non relue | [élevé / abstention] sur montant ou conclusion juridique |
+
+Appliquer `SKILL.md` : un audit ancien ou limité réduit la confiance ;
+l'absence de preuve ne réduit pas l'enjeu d'un obstacle au service public.
+
+## 12. Checklist de branche
+
+- Garde-fous incident et surveillance examinés avant tout contenu technique ?
+- Frontières données, contenu éditorial, médiation et passation tenues ?
+- Mode d'exercice et responsables des supports et corrections identifiés ?
+- Applicabilité établie pour l'organisme et le service concerné ?
+- Référentiel en vigueur vérifié ; périmètre et limites de l'audit visibles ?
+- Résultats humains et automatiques distingués, sans conformité inventée ?
+- Parcours critiques, composants partagés et documents pris en compte ?
+- Publication fidèle aux preuves, contenu obligatoire sourcé ou réservé ?
+- Obligation, doctrine et contrat distingués ; aucun seuil d'entreprise importé ?
+- Valeurs relues à la source en session ou réservées, sans auto-attestation ?
+- Livrable complet ou `[INCOMPLET]`, sans donnée nominative ni secret ?
+- Chemins des fichiers mobilisés cités là où leur règle est utilisée ?

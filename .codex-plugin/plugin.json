@@ -1,7 +1,7 @@
 {
   "name": "collectivite-territoriale",
-  "version": "1.1.1",
-  "description": "Quatre expertises métier et une méthode juridique transverse pour les collectivités territoriales françaises, avec accès à Légifrance/Judilibre.",
+  "version": "1.2.0-dev.1",
+  "description": "Candidat de qualification : cinq métiers territoriaux et recherche juridique ; coactivation DSI à éprouver, non publié.",
   "author": {
     "name": "brissonjo-sudo",
     "url": "https://github.com/brissonjo-sudo"
@@ -22,11 +22,14 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Collectivité territoriale",
-    "shortDescription": "Quatre métiers et une méthode juridique",
-    "longDescription": "Police municipale, ressources humaines territoriales, protection des données et finances locales, complétées par une méthode de recherche juridique et un accès Légifrance/Judilibre.",
+    "shortDescription": "Candidat : cinq métiers et une méthode juridique",
+    "longDescription": "Candidat de qualification : cinq métiers territoriaux et recherche juridique ; coactivation DSI à éprouver, non publié.",
     "developerName": "brissonjo-sudo",
     "category": "Productivity",
-    "capabilities": ["Interactive", "MCP"],
+    "capabilities": [
+      "Interactive",
+      "MCP"
+    ],
     "websiteURL": "https://github.com/brissonjo-sudo/collectivite-territoriale",
     "privacyPolicyURL": "https://github.com/brissonjo-sudo/collectivite-territoriale/blob/main/PRIVACY.md",
     "composerIcon": "./assets/icon.png",

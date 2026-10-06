@@ -90,6 +90,20 @@
           "anchor": "## Déclenchement"
         }
       ]
+    },
+    "dsi-fpt": {
+      "repository": "https://github.com/brissonjo-sudo/DSI-fpt.git",
+      "commit": "60c6210b1a6dce7a30a53e96ded0b0e0cf5beea9",
+      "version": "0.2.0",
+      "paths": [
+        "SKILL.md",
+        "agents/",
+        "references/",
+        "objets/"
+      ],
+      "exclude": [
+        "references/cache-valeurs.md"
+      ]
     }
   }
 }
