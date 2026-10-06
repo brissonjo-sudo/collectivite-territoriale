@@ -4,14 +4,14 @@
     "name": "brissonjo-sudo",
     "url": "https://github.com/brissonjo-sudo"
   },
-  "description": "Quatre skills métier, une méthode juridique transverse et un serveur juridique pour les collectivités territoriales françaises.",
+  "description": "Cinq skills métier, une méthode juridique transverse et un serveur juridique pour les collectivités territoriales françaises.",
   "plugins": [
     {
       "name": "collectivite-territoriale",
       "source": "./",
       "displayName": "Collectivité territoriale",
       "description": "Candidat de qualification incluant DSI ; non publié.",
-      "version": "1.2.0-dev.2",
+      "version": "1.2.0-dev.3",
       "repository": "https://github.com/brissonjo-sudo/collectivite-territoriale"
     }
   ]

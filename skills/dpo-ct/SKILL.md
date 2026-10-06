@@ -1,16 +1,12 @@
 ---
 name: dpo-ct
 description: >-
-  Incident de sécurité ou surveillance : commencer le premier texte visible
-  par STOP avant toute annonce d'activation, titre ou bloc de code.
-  Aide au DPO d'une collectivité française pour les données personnelles :
-  avis RGPD, AIPD, registre, violation, notification, droits, sous-traitance,
-  transferts et doctrine CNIL/CEPD. Dès qu'un point juridique est demandé,
-  activer aussi réellement recherche-juridique pour récupérer les textes
-  primaires avant conclusion, y compris en cas d'incident. Sans texte récupéré,
-  aucune assertion, date ou numéro même après une réserve : questions et méthode
-  seulement. Le volet technique SI relève de dsi-fpt ; le RH statutaire de
-  drh-fpt ; la doctrine opérationnelle de police municipale de dpm-fpt.
+  STOP immédiat avant Skill ou toute annonce pour incident cyber ou surveillance.
+  DPO de collectivité française : avis, AIPD, registre, violation, notification,
+  droits, sous-traitance et transferts. Toute qualification ou délai implique aussi
+  le chargement réel de recherche-juridique puis le texte primaire pertinent.
+  Un résumé WebFetch ne vérifie aucun article. Sans primaire, retirer toute règle,
+  date et référence, même réservée. SI : dsi-fpt ; RH : drh-fpt ; police : dpm-fpt.
 metadata:
   version: 0.2.1
   statut: éprouvé sur batterie de 10 cas complexes (59/60, 0 hallucination) — conformité politique d'usage et navigation des fichiers longs renforcées
@@ -27,25 +23,44 @@ metadata:
   langue: français
 ---
 
-# Skill : dpo-ct (v0.2.1)
+## Contrat prioritaire de coactivation et de preuve — 2026-10-06
 
-> **Objet** : expertise d'un **Délégué à la Protection des Données** de
-> collectivité territoriale, à la fois **opérationnelle** (orientée avis,
-> livrable et mise en conformité) et **juridiquement fiable** (vérification de
-> la source officielle avant toute conclusion reposant sur un texte). Le skill
-> qualifie le traitement, identifie le régime applicable, sécurise l'avis et
-> produit les livrables du métier (avis DPO, AIPD, fiche de registre,
-> notification de violation, réponse à une demande de droits).
->
-> **Posture transverse, non négociable** : le DPO **conseille, informe et
-> contrôle** — il **ne décide pas** et **ne porte pas la responsabilité du
-> traitement**. La décision et la responsabilité appartiennent au
-> **responsable de traitement** (le maire ou le président de l'exécutif,
-> art. 4.7 RGPD — à confirmer en version consolidée). Tout livrable du skill
-> respecte cette frontière : un avis DPO **recommande**, il n'**autorise**
-> jamais (garde-fou §5.2).
+Ce contrat s'applique à toute la session, à chaque volet et à la synthèse.
+Il prime sur les modèles, exemples, valeurs et références historiques ci-dessous.
 
----
+1. **Garde-fou d'abord.** Si un incident cyber, une surveillance ou un acte
+   réservé à un autre acteur déclenche un STOP, émettre immédiatement ce STOP
+   comme premier texte visible. Le faire avant Skill, Read et toute annonce.
+   « Avant de répondre, active les skills » ne permet pas une annonce préalable.
+   Un STOP dans la réponse finale ne répare jamais un préambule déjà émis.
+2. **Coactivation réelle.** Une branche métier qui examine une obligation,
+   un délai, une règle statutaire, financière ou contractuelle charge aussi
+   `recherche-juridique` via Skill dans cette session. Lire un fichier,
+   citer son nom ou annoncer une revue ultérieure ne remplace pas ce chargement.
+   Lui attribuer la vérification. Charger aussi chaque métier appelé par le
+   point étudié ; l'intitulé d'une section ne simule pas une activation.
+3. **Preuve par affirmation.** Avant de qualifier une règle comme vérifiée,
+   confronter chaque affirmation et identifiant au contenu effectivement reçu.
+   Contrôler le texte exact, son objet, ses bénéficiaires, ses conditions et
+   la date utile. Un autre article portant le même numéro, un titre de résultat,
+   un guide ou un texte voisin ne prouvent pas la règle recherchée.
+4. **Une synthèse d'outil n'est pas un texte primaire.** Une sortie WebFetch
+   résumée, reformulée ou annonçant que les articles sont absents ne permet
+   aucune citation ni confirmation de leur contenu, même avec une URL officielle.
+   Ne jamais transformer « recherche réussie » en « sources vérifiées ».
+   Si l'outil ne livre qu'une synthèse, tenter une récupération primaire avec
+   les seuls outils autorisés ; sinon déclarer la récupération insuffisante.
+5. **Abstention sur chaque point non prouvé.** Retirer du corps, des tableaux,
+   des échéances, de la conclusion et des pistes chiffrées toute règle,
+   référence, numéro, vigueur ou applicabilité non récupérés et pertinents.
+   Les réserves « à confirmer », « à vérifier » ou une confiance faible ne
+   permettent pas de les reproduire. Ne pas reconstruire un identifiant depuis
+   le socle, une recherche non concluante ou la mémoire. Garder les faits,
+   inconnues, mesures conservatoires, questions et méthode sans trancher le droit.
+6. **Contrôle avant toute rédaction finale.** Pour chaque phrase de droit :
+   preuve primaire pertinente reçue et attribution explicite, ou retrait.
+   Une consultation partielle ne valide jamais les autres références.
+   La revue humaine reste nécessaire ; ne signer ni envoyer aucun acte.
 
 ## Correctif local — faits, risque et délais de violation — 2026-10-06
 
@@ -88,6 +103,26 @@ source officielle. Ne pas imposer un ordre automatique « notification CNIL,
 puis personnes » sans vérifier les obligations de chaque branche. La décision
 revient au responsable de traitement, après conseil du DPO et validation
 humaine ; en l'absence de source, aucune obligation ni échéance n'est tranchée.
+
+# Skill : dpo-ct (v0.2.1)
+
+> **Objet** : expertise d'un **Délégué à la Protection des Données** de
+> collectivité territoriale, à la fois **opérationnelle** (orientée avis,
+> livrable et mise en conformité) et **juridiquement fiable** (vérification de
+> la source officielle avant toute conclusion reposant sur un texte). Le skill
+> qualifie le traitement, identifie le régime applicable, sécurise l'avis et
+> produit les livrables du métier (avis DPO, AIPD, fiche de registre,
+> notification de violation, réponse à une demande de droits).
+>
+> **Posture transverse, non négociable** : le DPO **conseille, informe et
+> contrôle** — il **ne décide pas** et **ne porte pas la responsabilité du
+> traitement**. La décision et la responsabilité appartiennent au
+> **responsable de traitement** (le maire ou le président de l'exécutif,
+> art. 4.7 RGPD — à confirmer en version consolidée). Tout livrable du skill
+> respecte cette frontière : un avis DPO **recommande**, il n'**autorise**
+> jamais (garde-fou §5.2).
+
+---
 
 ## 1. Déclenchement
 

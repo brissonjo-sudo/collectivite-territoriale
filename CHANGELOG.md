@@ -1,5 +1,18 @@
 # Historique des versions
 
+## 1.2.0-dev.3 — 2026-10-06 — Renforcement de la coactivation, publication bloquée
+
+- Conservation de la campagne dev.2 : 16 cas exécutés, dont trois échecs
+  techniques de sélection spontanée. Ses résultats restent attachés à ses
+  octets ; aucun jugement ni score n'est transféré vers ce candidat.
+- Contrat prioritaire en tête des six skills : STOP avant toute annonce,
+  chargement réel de la recherche juridique, texte primaire pertinent pour
+  chaque affirmation et abstention intégrale si la récupération est insuffisante.
+- Descriptions des cinq métiers resserrées ; variantes locales DSI et DirFi
+  déclarées et contrôlées depuis les mêmes commits amont.
+- Nouveau gel et nouvelle campagne requis. Relectures DSI/RSSI et juridique
+  humaines et smoke Codex non acquis ; `release_ready=false`.
+
 ## 1.2.0-dev.2 — 2026-10-06 — Candidat correctif, publication bloquée
 
 - Intégration de DSI 0.2.1 depuis le commit source

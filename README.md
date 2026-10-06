@@ -4,7 +4,7 @@
 
 Plugin Claude Code et Codex destiné aux collectivités territoriales françaises. Une seule installation réunit cinq expertises métier, une méthode de recherche juridique sourcée et un accès optionnel à Légifrance/Judilibre.
 
-> **Statut :** la version 1.2.0-dev.2 est un candidat correctif à six skills, avec DSI 0.2.1. La revue DSI/RSSI, la revue juridique humaine et le smoke du candidat dans Codex restent ouverts ; `release_ready=false`. La marketplace suit `main` : elle distribue le contenu fusionné, même sans tag. La fusion et l'installation ne prouvent pas la qualification d'une release.
+> **Statut :** la version 1.2.0-dev.3 est un candidat correctif à six skills, avec DSI 0.2.1. La revue DSI/RSSI, la revue juridique humaine et le smoke du candidat dans Codex restent ouverts ; `release_ready=false`. La marketplace suit `main` : elle distribue le contenu fusionné, même sans tag. La fusion et l'installation ne prouvent pas la qualification d'une release.
 
 Ce plugin aide à qualifier une situation, identifier les expertises à mobiliser et produire une réponse traçable. Il ne remplace ni la validation d'un juriste, ni le contrôle de l'autorité compétente, ni la vérification des textes officiels en vigueur.
 
@@ -87,9 +87,9 @@ Cette marketplace Git sert au développement, aux tests et à la distribution di
 
 ## Sources et reproductibilité
 
-Chaque dossier `skills/<nom>/` provient des fichiers d'exécution d'un commit amont figé. `upstream.json` fixe le dépôt, le commit, la version de base et les chemins inclus. `dirfi-fpt` et `dsi-fpt` restent des copies exactes. `dpm-fpt`, `drh-fpt`, `dpo-ct` et `recherche-juridique` sont des **variantes locales du plugin**, avec les corrections de méthode conservées dans `overlays/` et déclarées dans `instruction_overlays`.
+Chaque dossier `skills/<nom>/` provient des fichiers d'exécution d'un commit amont figé. `upstream.json` fixe le dépôt, le commit, la version de base et les chemins inclus. Les six skills sont des **variantes locales du plugin**, avec les corrections de méthode conservées dans `overlays/` et déclarées dans `instruction_overlays`.
 
-Chaque surcharge est liée à l'empreinte SHA-256 exacte de son fichier amont et de son texte local ; l'insertion utilise une ancre unique. Pour DPM et DPO, un remplacement borné du champ `description` rend les garde-fous visibles dès la découverte du skill ; il ne modifie ni les autres métadonnées ni le corps. Toute divergence de base, de correction ou d'ancre bloque la synchronisation. Les versions internes identifient la base amont, pas une nouvelle release de ces dépôts. Le commit du plugin identifie la variante complète. Aucun dépôt amont n'est modifié par ces surcharges.
+Chaque surcharge est liée à l'empreinte SHA-256 exacte de son fichier amont et de son texte local ; l'insertion utilise une ancre unique. Pour les cinq métiers, un remplacement borné du champ `description` rend les garde-fous et les dépendances visibles dès la découverte du skill ; il ne modifie ni les autres métadonnées ni le corps. Toute divergence de base, de correction ou d'ancre bloque la synchronisation. Les versions internes identifient la base amont, pas une nouvelle release de ces dépôts. Le commit du plugin identifie la variante complète. Aucun dépôt amont n'est modifié par ces surcharges.
 
 Pour `recherche-juridique`, la racine canonique `skill/` est aplatie dans `skills/recherche-juridique/`. Sa licence est copiée avec le runtime ; aucun manifeste, serveur MCP, fichier `.env` ou autre fichier de dépôt amont n'est dupliqué. Le fichier `references/cache-taux-seuils.md` de `dirfi-fpt`, exclu de son propre paquet de distribution, n'est pas embarqué.
 
@@ -117,7 +117,9 @@ Le manifeste Codex est également contrôlé avec le validateur du skill systèm
 - une violation de données mobilisant DPO et recherche juridique ;
 - le comportement dégradé lorsque le MCP juridique est désactivé.
 
-Les fichiers embarqués prouvent la composition du plugin, pas la coactivation effective. Le candidat correctif exige donc une nouvelle campagne sur ses propres octets figés, avec des conversations et des juges indépendants frais. Son statut est conservé dans `tests/evidence/release-1.2.0-dev.2.json`. Les traces des candidats précédents restent historiques et ne qualifient pas ce runtime corrigé.
+Les fichiers embarqués prouvent la composition du plugin, pas la coactivation effective. Le candidat correctif exige donc une nouvelle campagne sur ses propres octets figés, avec des conversations et des juges indépendants frais. Son statut est conservé dans `tests/evidence/release-1.2.0-dev.3.json`. Les traces des candidats précédents restent historiques et ne qualifient pas ce runtime corrigé.
+
+Les contrats prioritaires sont placés en tête du corps des six skills, avant les exemples historiques. Les résumés WebFetch et résultats de recherche ne permettent aucune confirmation juridique ; la pertinence du texte récupéré se contrôle affirmation par affirmation. La mesure autonome du DSI source ne qualifie pas la variante du plugin.
 
 La suite de coactivation v2 comporte seize cas, avec 124 exigences atomiques : onze activations imposées et cinq sélections spontanées. Le profil `corrected-runtime-v1` vérifie les blobs Git bruts avant et après chaque cas ; il refuse tout transfert de score depuis l'ancien runtime. Les extraits primaires assainis, la conformité du comportement et l'identité native des juges font l'objet de contrôles distincts.
 

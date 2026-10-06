@@ -1,6 +1,9 @@
 skills/** -text
 overlays/** text eol=lf
 /upstream.json text eol=lf
+/.claude-plugin/*.json text eol=lf
+/.codex-plugin/*.json text eol=lf
+/.agents/plugins/*.json text eol=lf
 scripts/** text eol=lf
 docs/** text eol=lf
 tests/*.py text eol=lf

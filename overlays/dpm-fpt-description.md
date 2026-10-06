@@ -1,9 +1,7 @@
 description: >-
-  Demande dépassant les pouvoirs APJA : commencer le premier texte visible par
-  STOP avant toute annonce d'activation, titre, séparateur ou ouverture de bloc.
-  Aide à la décision pour la police municipale française : pouvoirs du maire,
-  limites APJA, terrain, doctrine opérationnelle, armement, vidéoprotection,
-  agréments, déontologie, pilotage et écrits. Sur une question de droit, activer
-  réellement recherche-juridique et récupérer le texte primaire avant conclusion.
-  Sans source, s'abstenir du fond. Ne pas activer pour le RH statutaire
-  (drh-fpt), le RGPD général (dpo-ct) ou le droit étranger.
+  STOP immédiat, avant Skill ou toute annonce, pour un acte dépassant les pouvoirs APJA.
+  Police municipale française : pouvoirs du maire, limites APJA, terrain, armement,
+  vidéoprotection, déontologie, pilotage et écrits. Toute règle juridique impose aussi
+  le chargement réel de recherche-juridique et des textes primaires pertinents.
+  Aucune règle ou référence non récupérée, même avec une réserve. RH : drh-fpt ;
+  données personnelles : dpo-ct. Ne pas activer pour le droit étranger.
