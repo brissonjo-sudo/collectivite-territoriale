@@ -2,11 +2,9 @@
 from __future__ import annotations
 
 import hashlib
-import io
 import json
 import re
 import subprocess
-import tarfile
 from datetime import datetime, timezone
 from pathlib import Path
 from typing import Any
@@ -96,15 +94,45 @@ def source_overlays(root: Path) -> dict[str, str]:
 
 
 def git_bytes(root: Path, revision: str, paths: set[str]) -> dict[str, bytes]:
-    """Lit les blobs committés en mémoire ; aucune extraction ni exécution."""
-    command = ['git', '-c', 'safe.directory=' + root.as_posix(), 'archive',
-               '--format=tar', revision, *sorted(paths)]
-    archive = subprocess.check_output(command, cwd=root)
-    with tarfile.open(fileobj=io.BytesIO(archive), mode='r:') as stream:
-        result = {member.name: stream.extractfile(member).read()
-                  for member in stream.getmembers() if member.isfile()}
-    if set(result) != paths:
+    """Lit les blobs bruts ; git archive peut convertir les fins de ligne Windows."""
+    git = ['git', '-c', 'safe.directory=' + root.as_posix(), '--literal-pathspecs']
+    tree = subprocess.check_output([*git, 'ls-tree', '-r', '-z', revision, '--',
+                                    *sorted(paths)], cwd=root)
+    entries: dict[str, bytes] = {}
+    for record in tree.split(b'\0'):
+        if not record:
+            continue
+        metadata, raw_name = record.split(b'\t', 1)
+        mode, kind, oid = metadata.split()
+        name = raw_name.decode('utf-8')
+        if (name not in paths or name in entries or kind != b'blob'
+                or mode not in (b'100644', b'100755')
+                or not re.fullmatch(rb'[0-9a-f]{40}(?:[0-9a-f]{24})?', oid)):
+            raise ValueError('Objet Git non régulier ou inattendu : ' + name)
+        entries[name] = oid
+    if set(entries) != paths:
         raise ValueError('Inventaire absent du commit')
+    request = b''.join(oid + b'\n' for oid in entries.values())
+    response = subprocess.check_output([*git, 'cat-file', '--batch'], cwd=root, input=request)
+    result: dict[str, bytes] = {}
+    offset = 0
+    for name, oid in entries.items():
+        end_header = response.find(b'\n', offset)
+        if end_header == -1:
+            raise ValueError('En-tête Git incomplet : ' + name)
+        fields = response[offset:end_header].split()
+        if (len(fields) != 3 or fields[0] != oid or fields[1] != b'blob'
+                or not fields[2].isdigit()):
+            raise ValueError('Réponse Git inattendue : ' + name)
+        size = int(fields[2])
+        start = end_header + 1
+        end = start + size
+        if end >= len(response) or response[end:end + 1] != b'\n':
+            raise ValueError('Blob Git incomplet : ' + name)
+        result[name] = response[start:end]
+        offset = end + 1
+    if offset != len(response):
+        raise ValueError('Réponse Git surnuméraire')
     return result
 
 

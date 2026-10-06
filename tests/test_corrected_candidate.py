@@ -70,6 +70,32 @@ class CorrectedCandidateTests(unittest.TestCase):
             self.assertEqual([], self.failures())
         self.assertIs(False, self.frozen['historical_scores_reused'])
 
+    def test_raw_crlf_blob_is_preserved_under_windows_autocrlf(self) -> None:
+        relative = '.agents/plugins/marketplace.json'
+        raw = b'{\r\n  "fixture": "CRLF"\r\n}\r\n'
+        self.write(relative, raw)
+        self.commit()
+        self.git('config', 'core.autocrlf', 'true')
+        self.assertEqual(raw, candidate.git_bytes(self.root, 'HEAD', {relative})[relative])
+        self.frozen = candidate.build_manifest(self.root)
+        self.assertEqual([], self.failures(live=True))
+
+    def test_batch_rejects_non_regular_git_objects(self) -> None:
+        relative = 'skills/dsi-fpt/SKILL.md'
+        tree = b'120000 blob ' + b'a' * 40 + b'\t' + relative.encode() + b'\0'
+        with (patch.object(candidate.subprocess, 'check_output', return_value=tree),
+              self.assertRaisesRegex(ValueError, 'non régulier')):
+            candidate.git_bytes(self.root, 'HEAD', {relative})
+
+    def test_batch_rejects_truncated_blob(self) -> None:
+        relative = 'skills/dsi-fpt/SKILL.md'
+        oid = b'a' * 40
+        tree = b'100644 blob ' + oid + b'\t' + relative.encode() + b'\0'
+        truncated = oid + b' blob 9\nshort\n'
+        with (patch.object(candidate.subprocess, 'check_output', side_effect=[tree, truncated]),
+              self.assertRaisesRegex(ValueError, 'Blob Git incomplet')):
+            candidate.git_bytes(self.root, 'HEAD', {relative})
+
     def test_modified_runtime_detected(self) -> None:
         self.write('skills/dsi-fpt/SKILL.md', b'Mutation\n')
         self.assertIn('gel_divergent:skills/dsi-fpt/SKILL.md', self.failures())

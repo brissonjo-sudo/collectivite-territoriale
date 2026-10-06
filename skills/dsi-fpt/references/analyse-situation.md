@@ -70,7 +70,7 @@ le lien**, sans dupliquer.
 | Situation | Objet |
 |---|---|
 | Lancer ou conduire un projet applicatif | `objets/projet-si.md` |
-| Gérer un incident de sécurité de bout en bout (après le STOP) | `objets/incident-securite.md` |
+| Gérer un incident actif après le STOP, ou instruire clôture et réouverture d'un incident ancien | `objets/incident-securite.md` |
 | Ouvrir un téléservice aux usagers | `objets/teleservice.md` |
 | Choisir, contractualiser ou quitter une solution en ligne | `objets/solution-saas.md` |
 | Équiper ou sécuriser un site (mairie annexe, école) | `objets/site-reseau.md` |

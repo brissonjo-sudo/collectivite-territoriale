@@ -385,6 +385,11 @@ volet et la suite commence sous un intertitre explicite (`Analyse dpo-ct`,
 son point d'entrée doit avoir été effectivement activé et ses références
 pertinentes lues.
 
+Si seul `dsi-fpt` est chargé ou que le délégataire ne peut pas être activé,
+le bloc BASCULE arrête le fond concerné. Ne pas poursuivre par des articles,
+clauses juridiques ou un intertitre simulant le délégataire. Les sources
+consultées par la DSI ne lui transfèrent pas cette compétence.
+
 Les skills d'accessibilité (TDAH, DYS, etc.) régissent la **forme** uniquement.
 
 ---

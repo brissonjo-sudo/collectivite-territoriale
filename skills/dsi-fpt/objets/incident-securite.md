@@ -29,6 +29,14 @@ Organisation et limites → `../references/crise-cyber-continuite.md`.
 
 ## 3. Procédures
 
+Pour un incident ancien, contenu et documenté, ne pas inventer une crise
+actuelle : instruire les preuves, validations de reprise, réserves et RETEX.
+Nommer cet objet dans le livrable de clôture. Prévoir explicitement la
+réouverture : de nouveaux indices de compromission ou des faits contredisant
+l'expertise font réafficher le STOP incident ; si des données personnelles
+peuvent alors être touchées, `BASCULE dpo-ct` avant toute qualification ou
+notification. La clôture ne dispense pas de ces garde-fous conditionnels.
+
 1. Après affichage du STOP, orienter la préservation des preuves et l'appui spécialisé → `../references/crise-cyber-continuite.md`.
 2. Établir les faits, inconnues, responsabilités et décisions attendues → `../references/crise-cyber-continuite.md`.
 3. Faire instruire le périmètre touché et la sécurité de reprise → `../references/securite-si.md` ; basculer vers `dpo-ct` si nécessaire.
