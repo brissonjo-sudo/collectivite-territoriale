@@ -470,7 +470,11 @@ def extract_source_evidence(
                         **{key: item[key] for key in _DATE_FIELDS | _TEXT_FIELDS | _BOOL_FIELDS if key in item},
                         **(item.get("metadata") if isinstance(item.get("metadata"), dict) else {}),
                     }
-                    # Un résultat de recherche reste un résultat, même avec extrait.
+                if "results" in payload or tool[len(MCP_PREFIX):] in (
+                    "search", "search_articles", "search_case_law",
+                ):
+                    # La nature dépend aussi de l'outil : un document direct
+                    # renvoyé par une recherche ne devient pas un texte primaire.
                     raw.pop("text", None)
                 doc = _document(raw)
                 if doc:

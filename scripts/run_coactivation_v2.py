@@ -16,6 +16,28 @@ from source_evidence import extract_source_evidence, scrub_visible_text
 
 ROOT = Path(__file__).resolve().parents[1]
 SUITE = ROOT / 'tests/cas-coactivation-v2.json'
+FROZEN_V2_REQUIRED = (
+    'scripts/run_coactivation_v2.py', 'scripts/source_evidence.py',
+    'scripts/coactivation_assessment.py', 'scripts/freeze_coactivation_v2.py',
+    'scripts/verify_coactivation_v2.py',
+    'tests/cas-coactivation-v2.json', 'tests/test_coactivation_v2.py',
+    'tests/test_source_evidence.py', 'docs/cas-coactivation-v2.md',
+    'docs/protocole-coactivation-v2.md', '.gitattributes',
+    'tests/evidence/qualification-dsi/gel-r3.json',
+)
+
+
+def frozen_failures_v2(frozen: dict[str, Any]) -> list[str]:
+    """Exige le contrat v2 et ses dépendances en plus du contrôle des octets."""
+    if frozen.get('schema_version') != 2 or not isinstance(frozen.get('files'), dict):
+        return ['frozen_schema_v2_required']
+    prior = json.loads((ROOT / 'tests/evidence/qualification-dsi/gel-r3.json').read_text(encoding='utf-8'))
+    missing = (set(FROZEN_V2_REQUIRED) | set(prior['files'])) - set(frozen['files'])
+    if missing:
+        return ['frozen_v2_inventory_incomplete:' + path for path in sorted(missing)]
+    if any(frozen['files'][path] != checksum for path, checksum in prior['files'].items()):
+        return ['baseline_runtime_or_harness_changed']
+    return legacy.frozen_failures(frozen)
 
 
 def load_cases() -> list[dict[str, Any]]:
@@ -78,6 +100,11 @@ def sanitize(events: list[dict[str, Any]], case: dict[str, Any], *, captured_at:
         records = legacy.sanitize([event], case)
         raw_calls = iter(legacy.message_tool_calls(event))
         for record in records:
+            if record['type'] == 'official_source_call':
+                # La preuve assainie porte l'URL utile ; le chemin brut est exclu.
+                record.pop('source_path', None)
+                if record.get('host') not in case.get('official_source_hosts', []):
+                    record['host'] = 'unapproved_source_host'
             if record['type'] in ('assistant_text', 'result'):
                 field = 'text' if record['type'] == 'assistant_text' else 'result'
                 scrubbed = scrub_visible_text(record.get(field, ''))
@@ -123,6 +150,10 @@ def sanitize(events: list[dict[str, Any]], case: dict[str, Any], *, captured_at:
 def technical_failures(clean: list[dict[str, Any]], case: dict[str, Any]) -> list[str]:
     """Vérifie le transport et le routage observé, indépendamment du droit."""
     failures = legacy.technical_failures(clean, case)
+    for flag in ('truncated', 'redacted'):
+        if any(event.get('text_' + flag) is True for event in clean
+               if event['type'] in ('assistant_text', 'result')):
+            failures.append('visible_text_' + flag)
     if case.get('activation_mode') == 'spontaneous':
         actual = [e.get('skill') for e in clean if e['type'] == 'skill_activation']
         expected = {legacy.qualified_skill(s) for s in case['skills']}
@@ -198,7 +229,7 @@ def main() -> int:
     if args.frozen_manifest is None:
         parser.error('--frozen-manifest requis')
     frozen = json.loads(args.frozen_manifest.read_text(encoding='utf-8'))
-    if failures := legacy.frozen_failures(frozen):
+    if failures := frozen_failures_v2(frozen):
         parser.error(' | '.join(failures))
     args.output_dir.mkdir(parents=True, exist_ok=True)
     for case in selected:
@@ -211,7 +242,7 @@ def main() -> int:
         if path.exists():
             parser.error('Trace existante conservée : ' + str(path))
         clean, code, window = execute(case, args.claude)
-        failures = technical_failures(clean, case) + legacy.frozen_failures(frozen)
+        failures = technical_failures(clean, case) + frozen_failures_v2(frozen)
         if code:
             failures.append('process_exit_nonzero')
         assessment = {'type': 'technical_assessment', 'case_id': case['id'], 'process_exit': code,

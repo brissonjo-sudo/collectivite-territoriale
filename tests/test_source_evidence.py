@@ -163,6 +163,20 @@ class SourceEvidenceTests(unittest.TestCase):
         self.assertNotIn("excerpt", doc)
         self.assertNotIn("query", json.dumps(result))
 
+    def test_document_direct_de_recherche_jamais_texte_primaire(self) -> None:
+        for name in ("search", "search_articles", "search_case_law"):
+            for block in (
+                {"structuredContent": article()},
+                {"content": json.dumps(article())},
+                {"content": json.dumps({"structuredContent": article()})},
+            ):
+                with self.subTest(tool=name, block=block):
+                    result = extract(block, tool="mcp__droit-francais__" + name)
+                    doc = result["documents"][0]
+                    self.assertEqual(doc["nature"], "search_result")
+                    self.assertNotIn("excerpt", doc)
+                    self.assertEqual(doc["id"], ARTICLE_ID)
+
     def test_extraits_et_nombre_documents_bornes_et_tronques(self) -> None:
         block = {"content": [{"type": "text", "text": json.dumps(article(text="Une phrase synthétique. " * 700))}]}
         result = extract(block)

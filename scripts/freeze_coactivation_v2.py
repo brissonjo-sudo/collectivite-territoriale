@@ -8,16 +8,10 @@ import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
-from run_coactivation_v2 import ROOT
+from run_coactivation_v2 import ROOT, FROZEN_V2_REQUIRED
 from run_plugin_campaign import frozen_failures
 
-ADDED = (
-    'scripts/run_coactivation_v2.py', 'scripts/source_evidence.py',
-    'scripts/coactivation_assessment.py', 'scripts/freeze_coactivation_v2.py',
-    'tests/cas-coactivation-v2.json', 'tests/test_coactivation_v2.py',
-    'tests/test_source_evidence.py', 'docs/cas-coactivation-v2.md',
-    'docs/protocole-coactivation-v2.md', '.gitattributes',
-)
+ADDED = FROZEN_V2_REQUIRED
 
 
 def main() -> int:

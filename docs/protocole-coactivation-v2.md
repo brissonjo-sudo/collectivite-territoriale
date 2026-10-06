@@ -19,6 +19,9 @@ WebFetch seulement dans les cas désignés. Aucun Bash, écriture par le
 répondant, hook, connecteur global ou persistance de session. Le flux brut
 reste en mémoire. Un timeout produit une trace d'échec, sans conserver son
 flux partiel ni le rejouer automatiquement. Aucun retry ne remplace une mesure.
+Un nouveau gel impose le schéma v2 et l'inventaire de toutes ses dépendances.
+Une troncature ou un masquage du texte visible empêche toute réussite : la
+réponse entière n'est plus disponible pour apprécier ses invariants.
 
 ## Preuve documentaire
 
@@ -47,7 +50,8 @@ d'une réserve générale « à vérifier ».
 
 ## Jugement indépendant
 
-Le juge reçoit uniquement la question, les objets atomiques, ce barème et la
+Le juge reçoit uniquement la question, l'oracle de sélection des skills,
+les objets atomiques, ce barème et la
 trace assainie. Il n'a accès ni au runtime, ni aux scores antérieurs, ni aux
 autres réponses. Tous les invariants sont obligatoires et restent critiques.
 La valeur `null` signifie absence de preuve ; elle ne prouve pas que la

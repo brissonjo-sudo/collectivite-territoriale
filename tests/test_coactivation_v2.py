@@ -145,6 +145,23 @@ def judgment(case: dict[str, Any], events: list[dict[str, Any]]) -> dict[str, An
 
 
 class SuiteContractTests(unittest.TestCase):
+    def test_gel_r3_sans_mesure_v2_refuse_meme_si_ses_empreintes_sont_valides(self) -> None:
+        frozen = json.loads((ROOT / "tests/evidence/qualification-dsi/gel-r3.json").read_text(encoding="utf-8"))
+        self.assertNotIn("tests/cas-coactivation-v2.json", frozen["files"])
+        self.assertNotIn("scripts/run_coactivation_v2.py", frozen["files"])
+        # L'oracle r3 est accepté ici : le rejet doit porter sur la couverture
+        # de mesure v2, indépendamment de la dérive du candidat historique.
+        with patch.object(campaign.legacy, "frozen_failures", return_value=[]):
+            failures = campaign.frozen_failures_v2(frozen)
+        self.assertTrue(failures, "Un gel r3 ne fige ni suite, ni harnais, ni juge v2.")
+        # Changer seulement l'étiquette de schéma d'un gel r3 ne doit pas
+        # permettre de masquer l'absence des empreintes de la mesure v2.
+        frozen["schema_version"] = 2
+        with patch.object(campaign.legacy, "frozen_failures", return_value=[]):
+            failures = campaign.frozen_failures_v2(frozen)
+        self.assertTrue(any("cas-coactivation-v2.json" in failure
+                            or "run_coactivation_v2.py" in failure for failure in failures))
+
     def test_douze_questions_historiques_exactes_et_seize_cas(self) -> None:
         historical = json.loads((ROOT / "tests/cas-plugin.json").read_text(encoding="utf-8"))
         cases = campaign.load_cases()
@@ -251,6 +268,24 @@ class TraceContractTests(unittest.TestCase):
         self.assertIn("Texte public après masquage.", visible["text"])
         self.assertIn("Résultat public.", final["result"])
         self.assertTrue(campaign.observable_checks(events, case)["stop_first"])
+        self.assertIn("visible_text_redacted", campaign.technical_failures(events, case))
+
+    def test_chemin_url_sensible_ne_fuit_pas_via_official_source_call(self) -> None:
+        case = copy.deepcopy(BY_ID["plugin-dsi-budget"])
+        case.update(web_mode="official_source", official_source_hosts=["www.cnil.fr"])
+        sensitive_url = "https://www.cnil.fr/fr/token=synthetic-private-path"
+        raw = raw_trace(case)
+        raw.insert(-2, message(call("WebFetch", "toolu_sensitive_path", url=sensitive_url, prompt="Lire")))
+        raw.insert(-2, message(result("toolu_sensitive_path", "Résumé public."), kind="user"))
+        events = campaign.sanitize(raw, case, captured_at=STAMP)
+        self.assertNotIn("synthetic-private-path", json.dumps(events, ensure_ascii=False))
+        web_call = next(event for event in events if event.get("call_id") == "toolu_sensitive_path"
+                        and event["type"] == "official_source_call")
+        self.assertNotIn("source_path", web_call)
+        evidence = next(event for event in events if event.get("call_id") == "toolu_sensitive_path"
+                        and event["type"] == "source_evidence")
+        self.assertEqual(evidence["status"], "missing")
+        self.assertEqual(evidence["documents"], [])
 
     def test_erreurs_brutes_non_persistees_mais_compteur_diagnostic_preserve(self) -> None:
         case = BY_ID["plugin-dsi-budget"]
@@ -386,6 +421,31 @@ class JudgeContractTests(unittest.TestCase):
         self.assertEqual(accepted["behavior_status"], "passed")
         self.assertEqual(accepted["documentary_status"], "passed")
         self.assertFalse(accepted["release_ready"])
+
+    def test_texte_visible_tronque_interdit_reussite_meme_si_fin_contradictoire_masquee(self) -> None:
+        for target in ("assistant_text", "result"):
+            with self.subTest(target=target):
+                raw = raw_trace(self.case)
+                long_text = ("Analyse synthétique réservant la décision métier.\n" * 2000
+                             + "Conclusion contradictoire : engager sans aucune vérification.")
+                if target == "assistant_text":
+                    raw[-2]["message"]["content"][0]["text"] = long_text
+                else:
+                    raw[-1]["result"] = long_text
+                events = campaign.sanitize(raw, self.case, captured_at=STAMP)
+                visible = next(event for event in events if event["type"] == target)
+                self.assertTrue(visible["text_truncated"])
+                self.assertNotIn("Conclusion contradictoire", visible.get("text", visible.get("result", "")))
+                self.assertIn("visible_text_truncated", campaign.technical_failures(events, self.case))
+                refresh_assessment(self.case, events)
+                judge = judgment(self.case, events)
+                with self.assertRaises(ValueError):
+                    assessment.validate_judgment(self.case, events, judge, TRACE_SHA)
+                # Une retouche du bilan local ne peut faire disparaître le
+                # signal de troncature que le juge recalcule depuis les pièces.
+                events[-1].update(status="passed", failures=[])
+                with self.assertRaises(ValueError):
+                    assessment.validate_judgment(self.case, events, judge, TRACE_SHA)
 
     def test_oracle_transmis_au_juge_et_hash_des_octets_de_la_trace(self) -> None:
         case = BY_ID["plugin-spontane-budget"]
