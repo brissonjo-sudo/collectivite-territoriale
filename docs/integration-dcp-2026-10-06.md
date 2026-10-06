@@ -43,7 +43,20 @@ git diff --check
 La CI exécute ces contrôles dans deux jobs : intégration candidate et
 qualification de publication. Le test de barrière doit rester en échec tant
 que la preuve 1.2.0 contient `release_ready=false` ; tout autre échec est une
-régression. Aucun résultat CI distant n'est encore attesté dans ce relevé.
+régression.
+
+CI distante observée sur le commit d'intégration
+`8eb474f44928225d7b061f2b14e757ce103b4e6e` :
+[exécution push](https://github.com/brissonjo-sudo/collectivite-territoriale/actions/runs/37521315307).
+Le job **Intégration candidate** a réussi (copies, 31 tests et pointeurs).
+Le job **Qualification de publication** a échoué uniquement sur la barrière
+attendue `release_ready=false` ; l'exécution globale est donc en échec.
+Ce relevé ne déclare pas une CI globalement verte ni une release qualifiée.
+
+Intégration proposée dans la
+[PR #9 brouillon](https://github.com/brissonjo-sudo/collectivite-territoriale/pull/9),
+sans fusion. L'ajout de ce relevé constitue un commit documentaire distinct,
+soumis aux mêmes jobs.
 
 L'aide de Claude Code 2.1.288 annonce les options `--restricted`,
 `--strict-mcp-config`, `--tools`, `--allowedTools`, `--permission-prompts`,
