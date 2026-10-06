@@ -38,6 +38,10 @@ du décideur vérifiés → note de décision et portefeuille priorisé`.
 `numérique responsable → périmètre matériel, applicatif et usages → actions
 mesurables → applicabilité de l'obligation vérifiée → feuille de route`.
 
+Un intitulé RSSI ne détermine ni filière, ni cadre d'emplois, ni titularité.
+Pour une demande RH, transmettre les faits connus à `drh-fpt` et laisser
+explicitement inconnus le statut et les critères non fournis.
+
 ## 4. Variables à lever
 
 - Mode d'exercice : internalisé, mutualisé ou externalisé ; compétence

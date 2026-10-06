@@ -15,7 +15,7 @@
           "target": "SKILL.md",
           "source": "overlays/dpm-fpt.md",
           "base_sha256": "f6820c1f51013029268cd68b8db564c1b88965ff77fa678c6b7aeb5a37c3ca96",
-          "source_sha256": "087b9ab52c9feb7435cecb1701a7f27d955d8c2d4e3ec1b70e55dfa32e6e094a",
+          "source_sha256": "d28a081faeff6795455947ba5c591167475aecd0b5f322383a4d74d3689e5f9e",
           "anchor": "## 1. Déclenchement"
         }
       ]
@@ -28,6 +28,15 @@
         "SKILL.md",
         "references/",
         "assets/"
+      ],
+      "instruction_overlays": [
+        {
+          "target": "SKILL.md",
+          "source": "overlays/drh-fpt.md",
+          "base_sha256": "b1e5ba27f8d4fb73ee78ddfc575d87c435132f98d755e808fc5794d6c30b44aa",
+          "source_sha256": "4d9ab3372a9c9d0bb7d7dee378bb330b750acf2b05aec0055c20dd5c1dff0b31",
+          "anchor": "## 1. Déclenchement"
+        }
       ]
     },
     "dpo-ct": {
@@ -44,7 +53,7 @@
           "target": "SKILL.md",
           "source": "overlays/dpo-ct.md",
           "base_sha256": "41e4f3b262f8bbd3e7ca568613c57ad053399311a946a4aec3bb0fa1adc602b7",
-          "source_sha256": "01e06632f376a5b6cf7a5ff1304312709db9ba9fba0da91d64851ed0cdada3d5",
+          "source_sha256": "750bbd31aa5c35efcd5f774c9b0a8aaad154194e96c0874c021b41a8dec3c485",
           "anchor": "## 1. Déclenchement"
         }
       ]
@@ -86,15 +95,15 @@
           "target": "SKILL.md",
           "source": "overlays/recherche-juridique.md",
           "base_sha256": "33a48ee9e830dcde148a80ecb4fa74c795ec11eca3fad7c9b5370d7162662857",
-          "source_sha256": "03c5250538c663547257022f2161d9dbb65f549f5617c29ed794bedffe003f2a",
+          "source_sha256": "5cda19d8867a52a67258f164b540645ca92747fc820298e1d0a575c367ab7843",
           "anchor": "## Déclenchement"
         }
       ]
     },
     "dsi-fpt": {
       "repository": "https://github.com/brissonjo-sudo/DSI-fpt.git",
-      "commit": "60c6210b1a6dce7a30a53e96ded0b0e0cf5beea9",
-      "version": "0.2.0",
+      "commit": "07fe8cdb5371a48132c8fef145289558fe049ee6",
+      "version": "0.2.1",
       "paths": [
         "SKILL.md",
         "agents/",

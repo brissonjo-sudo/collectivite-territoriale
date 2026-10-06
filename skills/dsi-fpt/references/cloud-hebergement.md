@@ -83,14 +83,13 @@ prestataires qui demandent la qualification ; il ne crée pas, par lui-même,
 une obligation générale d'achat pour les collectivités. Une offre en cours
 de qualification n'est pas une offre qualifiée.
 
-La doctrine « cloud au centre » et la disposition de la loi visant à
-sécuriser et réguler l'espace numérique sur les données sensibles des
-administrations de l'État ne constituent pas une obligation cloud générale
-de la collectivité : le socle vérifié indique leur champ de destinataires.
-Ces références peuvent éclairer un choix comme **doctrine ou référence de
-bonne pratique**, sans transfert de leur caractère obligatoire. Vérifier
-le statut de l'entité si elle invoque un champ particulier ; les textes
-structurels se citent **à confirmer en version consolidée**.
+Pour la doctrine « cloud au centre » et les dispositions invoquées sur les
+données sensibles des administrations, vérifier sur les textes récupérés
+les destinataires et le statut de l'entité, avant de conclure pour une
+collectivité. Distinguer **doctrine ou référence de bonne pratique** et
+obligation établie ; le socle historique ne prouve pas le champ actuel. Les textes
+structurels sont des pistes de recherche : leur citation comme fondement
+exige leur récupération primaire actuelle, sans exception de réserve.
 
 La qualification apporte une preuve délimitée, pas une garantie de sécurité
 du service complet : configuration, identité, terminal, intégration et
@@ -124,6 +123,9 @@ Poursuivre la comparaison technique sur les points indépendants de ce régime.
 Distinguer récupération des données et reconstitution d'un service utilisable.
 Identifier données, métadonnées, formats, configurations utiles,
 interfaces, identité et fonctionnalités dont dépend l'usage dans la cible.
+Inclure les pièces jointes, relations, historique, documentation et moyens
+d'administration nécessaires. Préciser assistance du prestataire, dépendances,
+coût technique de la double exploitation et critères d'acceptation par le métier.
 Une exportation lisible n'est pas nécessairement complète ni importable.
 Faire tester un jeu synthétique dans un périmètre autorisé ; demander une
 preuve de complétude et de réutilisation.
@@ -155,8 +157,11 @@ incident apparaît, appliquer le STOP avant cette procédure.
 
 Pour une sortie, obtenir la cible et les dépendances, vérifier les engagements
 applicables, contrôler l'essai puis faire valider la bascule par le métier.
-Ne pas supprimer la source avant validation de la récupération et de la
-reprise par les personnes compétentes. Les échéances se vérifient dans le
+Ne pas supprimer la source avant validation de la récupération **et du
+fonctionnement métier dans la cible**, fermeture du besoin de retour arrière
+et contrôle des preuves à conserver. Demander alors la clôture des accès et
+la preuve de suppression selon les exigences établies par les rôles compétents.
+Le téléchargement d'un export ne déclenche jamais à lui seul la suppression. Les échéances se vérifient dans le
 texte applicable et le contrat ; ne pas inventer un délai de sortie.
 
 ## 7. Déclencheurs de vérification

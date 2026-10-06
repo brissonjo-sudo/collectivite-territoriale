@@ -5,7 +5,7 @@ import argparse
 import hashlib
 import json
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 
 from coactivation_assessment import validate_judgment, validate_source_links
 from run_coactivation_v2 import SUITE, build_prompt, frozen_failures_v2, load_cases, observable_checks, technical_failures
@@ -17,14 +17,15 @@ def digest(value: Any) -> str:
                                   separators=(',', ':')).encode()).hexdigest()
 
 
-def main() -> int:
+def main(*, frozen_validator: Callable[[dict[str, Any]], list[str]] = frozen_failures_v2,
+         candidate_profile: str | None = None) -> int:
     """Refuse toute divergence ; distingue une trace valide d'un cas réussi."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--manifest', required=True, type=Path)
     parser.add_argument('--traces', required=True, type=Path)
     args = parser.parse_args()
     frozen = json.loads(args.manifest.read_text(encoding='utf-8'))
-    if failures := frozen_failures_v2(frozen):
+    if failures := frozen_validator(frozen):
         parser.error(' | '.join(failures))
     cases = {case['id']: case for case in load_cases()}
     paths = sorted(args.traces.glob('*.jsonl'))
@@ -44,6 +45,8 @@ def main() -> int:
             'prompt_sha256': hashlib.sha256(build_prompt(case).encode()).hexdigest(),
             'frozen_manifest_sha256': hashlib.sha256(args.manifest.read_bytes()).hexdigest(),
         }
+        if candidate_profile is not None:
+            expected['candidate_profile'] = candidate_profile
         if any(provenance.get(key) != value for key, value in expected.items()):
             parser.error('Provenance divergente : ' + path.name)
         init = [event for event in events if event['type'] == 'init']

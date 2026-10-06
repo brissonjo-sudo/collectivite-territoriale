@@ -9,7 +9,11 @@
 
 ## 1. Séquence imposée
 
-Dérouler dans cet ordre. S'arrêter dès qu'une étape impose un bloc.
+Dérouler dans cet ordre. Examiner tous les garde-fous déclenchés et les
+frontières, sans arrêter cet examen au premier bloc. Si un déclencheur est
+déjà visible dans la demande, son STOP ouvre le premier message visible,
+avant toute annonce. Les blocs limitent le contenu permis ; la suite est
+traitée par le rôle compétent selon `SKILL.md` §5.7, ou reste en abstention.
 
 | Étape | Question | Si oui |
 |---|---|---|
@@ -20,7 +24,7 @@ Dérouler dans cet ordre. S'arrêter dès qu'une étape impose un bloc.
 | 5 | Quelle est la **nature** de la question ? | Orienter vers la branche (§2) |
 | 6 | S'agit-il d'une **situation récurrente** qui traverse plusieurs branches ? | Orienter vers l'objet (§4) |
 | 7 | Un **écrit** est-il attendu ? | Orienter vers le gabarit (§5) |
-| 8 | Une ligne « Oui » de la **matrice de vérification** est-elle concernée ? | Socle-sources et **applicabilité** (`socle-sources-verification.md`) |
+| 8 | Une ligne « Oui » de la **matrice de vérification** est-elle concernée ? | Activer `recherche-juridique`, récupérer la source primaire et vérifier l'applicabilité (`socle-sources-verification.md`) |
 | 9 | Quel est le **niveau de risque** ? | Double échelle (`SKILL.md` §5.1) |
 
 ---

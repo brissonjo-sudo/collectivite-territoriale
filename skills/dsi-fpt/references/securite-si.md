@@ -73,6 +73,26 @@ non normative**, sans imposer une méthode à toute collectivité. Une mesure
 non exploitable par l'équipe n'est pas une maîtrise durable : prévoir son
 administration, le remplacement du responsable et la vérification.
 
+### Responsabilités et preuves d'exécution
+
+Cette matrice décrit une organisation à faire confirmer, sans préjuger des
+compétences ni des délégations juridiques :
+
+| Acteur | Contribution à faire préciser | Contrôle attendu |
+|---|---|---|
+| Autorité compétente | Arbitrage des risques et moyens | Délégations vérifiées, décision tracée |
+| RSSI | Analyse des risques et suivi des écarts | Mesures, responsables et preuves |
+| DSI ou service mutualisé | Déploiement et exploitation | Tests, accès et documentation disponibles |
+| DPO | Exigences relatives aux données personnelles | Avis reçu avant choix et validation des mesures |
+| Métier | Services essentiels et reprise acceptable | Validation fonctionnelle des essais |
+
+En mutualisation ou externalisation, demander au fournisseur ou service les
+pièces contrôlables : document de sécurité, journaux accessibles dans un cadre
+autorisé, preuve de restauration, circuit d'alerte, inventaire des comptes
+et droits, contributions au dossier d'homologation et modalités de restitution.
+Attribuer chaque pièce à un responsable et noter les éléments non fournis ;
+une déclaration du prestataire ne vaut pas preuve d'exécution.
+
 ### Comptes, droits et postes
 
 Séparer les usages ordinaires et l'administration. Donner un propriétaire aux
@@ -124,7 +144,9 @@ incident actif ; sinon revenir immédiatement au garde-fou.
    d'une perte, sans recueillir de données identifiantes.
 2. Rapprocher inventaire, droits, maintenance et sauvegardes ; identifier les
    écarts qui rendent une reprise impossible ou exposent l'administration.
-3. Proposer des actions ordonnées par réduction du risque, dépendances et
+3. Recueillir les exigences du DPO et des métiers **avant** de choisir et
+   valider les mesures. Un avis tardif impose leur réexamen et, si nécessaire,
+   une nouvelle validation. Proposer des actions ordonnées par réduction du risque, dépendances et
    capacité d'exploitation ; attribuer chacune à un acteur.
 4. Faire décider les exceptions : justification, compensation, responsable,
    condition de réexamen. Un silence n'est pas une acceptation.
@@ -143,8 +165,10 @@ homologation sur une simple checklist technique.
 Appliquer `references/socle-sources-verification.md` dès qu'une réponse
 conclut à une obligation, désigne un signataire, invoque le RGS, une
 qualification, un calendrier ou une sanction. Vérifier la transposition
-française et ses catégories avant toute conclusion fondée sur NIS2 ; un
-projet législatif ne crée pas d'obligation.
+française et ses catégories à la date de la demande avant toute conclusion
+fondée sur NIS2. Ne figer ni « applicable » ni « non transposée » : vérifier
+les textes publiés, l'entité et le service concernés. Sans source récupérée,
+s'abstenir sur le statut et l'applicabilité ; une incise ne fait pas exception.
 
 Toute qualification revendiquée se vérifie sur la source ANSSI pour l'offre
 exacte, à la date de la décision. Le périmètre d'un certificat ne se déduit

@@ -9,7 +9,7 @@ import re
 import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Any
+from typing import Any, Callable
 
 import run_plugin_campaign as legacy
 from source_evidence import extract_source_evidence, scrub_visible_text
@@ -209,7 +209,8 @@ def execute(case: dict[str, Any], claude: str) -> tuple[list[dict[str, Any]], in
     return sanitize(events, case, captured_at=finished), code, {'started_at': started, 'finished_at': finished}
 
 
-def main() -> int:
+def main(*, frozen_validator: Callable[[dict[str, Any]], list[str]] = frozen_failures_v2,
+         candidate_profile: str | None = None) -> int:
     """Mesure seulement un gel explicite et refuse d'écraser une preuve existante."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--case', action='append', dest='case_ids')
@@ -229,7 +230,7 @@ def main() -> int:
     if args.frozen_manifest is None:
         parser.error('--frozen-manifest requis')
     frozen = json.loads(args.frozen_manifest.read_text(encoding='utf-8'))
-    if failures := frozen_failures_v2(frozen):
+    if failures := frozen_validator(frozen):
         parser.error(' | '.join(failures))
     args.output_dir.mkdir(parents=True, exist_ok=True)
     for case in selected:
@@ -238,11 +239,13 @@ def main() -> int:
             parser.error('Trace existante conservée : ' + str(path))
     result = 0
     for case in selected:
+        if failures := frozen_validator(frozen):
+            parser.error(' | '.join(failures))
         path = args.output_dir / (case['id'] + '.jsonl')
         if path.exists():
             parser.error('Trace existante conservée : ' + str(path))
         clean, code, window = execute(case, args.claude)
-        failures = technical_failures(clean, case) + frozen_failures_v2(frozen)
+        failures = technical_failures(clean, case) + frozen_validator(frozen)
         if code:
             failures.append('process_exit_nonzero')
         assessment = {'type': 'technical_assessment', 'case_id': case['id'], 'process_exit': code,
@@ -254,6 +257,8 @@ def main() -> int:
             'prompt_sha256': hashlib.sha256(build_prompt(case).encode()).hexdigest(),
             'frozen_manifest_sha256': hashlib.sha256(args.frozen_manifest.read_bytes()).hexdigest(),
             'activation_mode': case.get('activation_mode', 'forced'), 'capture_window': window}
+        if candidate_profile is not None:
+            provenance['candidate_profile'] = candidate_profile
         path.write_text(''.join(json.dumps(e, ensure_ascii=False) + '\n' for e in [provenance, *clean, assessment]),
                         encoding='utf-8', newline='\n')
         print(json.dumps({'case_id': case['id'], 'technical_status': assessment['status'],

@@ -82,6 +82,12 @@ objectifs et priorités de continuité sont instruits par
 
 ### Exploitabilité et téléphonie
 
+Pour diagnostiquer une infrastructure, relier l'inventaire des équipements
+et dépendances aux besoins des sites, à la supervision (indicateurs, alertes,
+responsable d'exploitation) et à la continuité (point de panne, solution de
+secours, essai autorisé). Signaler les inconnues avant de dimensionner. Ces
+questions techniques seules ne nécessitent pas de coactivation juridique.
+
 Exiger un propriétaire d'exploitation, une documentation à jour, une
 procédure de changement autorisée et la possibilité de récupérer les
 configurations. Éviter une architecture que seul un intervenant sait

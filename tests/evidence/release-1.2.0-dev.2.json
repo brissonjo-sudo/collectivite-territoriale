@@ -1,0 +1,37 @@
+{
+  "plugin_version": "1.2.0-dev.2",
+  "plugin_commit": null,
+  "release_ready": false,
+  "available_skills": [
+    "dpm-fpt",
+    "drh-fpt",
+    "dpo-ct",
+    "dirfi-fpt",
+    "recherche-juridique",
+    "dsi-fpt"
+  ],
+  "upstream_commits": {
+    "dpm-fpt": "1668c89798f1f50a829c0b94d3cf6bf33a3640fb",
+    "drh-fpt": "f81c9b955f7ebb47df7e93bdc41ac743d85a2973",
+    "dpo-ct": "f3406f412368199a33f47e7861eb450eab2b2cdb",
+    "dirfi-fpt": "d970fe530d3f50f6b4c330e3cfb85db35b7126ab",
+    "recherche-juridique": "e437d10a2d4bbf66ba7a9c1e9fb49e773166054e",
+    "dsi-fpt": "07fe8cdb5371a48132c8fef145289558fe049ee6"
+  },
+  "historical_scores_reused": false,
+  "runs": [],
+  "review": {
+    "human_legal_validation": false,
+    "human_dsi_validation": false
+  },
+  "codex_smoke": {
+    "status": "not_established",
+    "plugin_commit": null
+  },
+  "release_blockers": [
+    "Nouvelle campagne du runtime corrigé non qualifiée",
+    "Relecture DSI/RSSI et juridique humaine non recueillie",
+    "Smoke du candidat dans Codex non établi",
+    "Écarts autonomes DSI à instruire"
+  ]
+}

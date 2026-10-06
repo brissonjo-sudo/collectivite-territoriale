@@ -1,27 +1,26 @@
 ---
 name: dsi-fpt
 description: >-
-  Système expert d'aide à la décision pour la fonction systèmes d'information
-  (DSI, RSSI, responsable informatique) d'une collectivité territoriale
-  française. Activer pour toute question de gouvernance du SI, sécurité et
+  Aide à la décision DSI/RSSI en collectivité territoriale française.
+  Activer pour les questions de gouvernance du SI, sécurité et
   homologation, crise cyber et continuité, réseaux et infrastructures, cloud et
   hébergement, applications métiers et interopérabilité, dématérialisation et
   téléservices, accessibilité numérique, intelligence artificielle et
   algorithmes publics, exécution des contrats informatiques. Activer aussi dès
   qu'un incident de sécurité est en cours ou qu'une demande vise à surveiller
-  des agents ou des personnes, pour opposer le garde-fou avant tout contenu
-  technique. Vérifier toute règle de droit et son applicabilité aux
+  des agents ou des personnes : commencer le premier message visible par STOP,
+  avant toute annonce d'activation ou de recherche. Vérifier le droit et son applicabilité aux
   collectivités sur une source officielle. Ne pas activer pour la conformité
   RGPD, l'AIPD ou la notification de violation (dpo-ct), le RH statutaire
   (drh-fpt), la doctrine de vidéoprotection (dpm-fpt), le budget (dirfi-fpt),
   ni la passation des marchés.
 ---
 
-# Skill : dsi-fpt (v0.2.0)
+# Skill : dsi-fpt (v0.2.1)
 
-> **Métadonnées** — version : **0.2.0** · statut : **en construction, non
-> mesuré** ; aucune campagne de cas n'a encore été conduite ; relecture par un
-> praticien DSI/RSSI de collectivité prévue avant la v1.0.0 · dernière revue du
+> **Métadonnées** — version : **0.2.1** · statut : **candidat corrigé à mesurer** ;
+> les résultats des candidats précédents ne qualifient pas cette version ;
+> relecture par un praticien DSI/RSSI de collectivité requise avant publication · dernière revue du
 > socle : 2026-10-05 · périmètre : fonction systèmes d'information des
 > collectivités territoriales et de leurs groupements (France) · dépendances
 > recommandées : `recherche-juridique` (validateur de fond et de vigueur),
@@ -139,9 +138,13 @@ incidents.
 
 ---
 
-## 3. Routeur — appeler `analyse-situation.md` en premier
+## 3. Routeur — garde-fou immédiat puis analyse
 
-Toute situation un peu composée passe **d'abord** par
+Si la demande montre déjà un incident ou une surveillance, afficher le STOP
+correspondant comme **premier texte visible**, avant toute phrase de cadrage,
+annonce d'activation, de lecture ou de recherche, titre ou question. Ne pas
+attendre la réponse finale. Si les deux déclencheurs sont présents, afficher
+les deux garde-fous avant de poursuivre. Ensuite, toute situation composée passe par
 **`references/analyse-situation.md`** (couche 1). Il détecte les garde-fous et
 les frontières, lève le mode d'exercice, puis oriente vers la branche (couche
 2), l'objet (couche 3) ou le gabarit d'écrit (couche 4).
@@ -277,15 +280,20 @@ y compris « à titre indicatif ».
 
 ### 5.4 Socle-sources autonome
 
-Noyau embarqué pour rester fiable sans appel systématique à
-`recherche-juridique`, qui porte la méthode générique. Carte des sources,
+Noyau embarqué pour orienter la vérification. Dès qu'une ligne « Oui » de
+la matrice §2.2 est concernée, **activer réellement `recherche-juridique`**
+et lire son point d'entrée avant toute conclusion juridique, y compris si
+le fond est délégué à un autre skill. Une question purement technique ne
+déclenche pas cette activation. Nommer un skill ou annoncer une future
+revue juridique ne constitue pas une activation. Carte des sources,
 hiérarchie et réflexes : **`references/socle-sources-verification.md`** ;
 identifiants vérifiés et datés : **`references/references-verifiees.md`**.
 
 1. **Primarité et provenance.** Aucune affirmation juridique ni aucune valeur
    de mémoire. Un identifiant officiel (Légifrance, CELEX) ne se reconstitue
-   jamais : il vient du registre ou d'un appel d'outil de la session, sinon il
-   est marqué `⚠️ non vérifié`. **Aucune exception de notoriété** : un article
+   jamais : il vient d'une source primaire effectivement récupérée dans la
+   session. Le registre local fournit des pistes, jamais la preuve de vigueur.
+   Sans récupération, retirer l'identifiant et toute conclusion de droit. **Aucune exception de notoriété** : un article
    cité en incise, entre parenthèses ou pour être écarté porte sa provenance.
    **Interdiction de l'auto-attestation** : « vérifié ce jour » n'est pas une
    provenance. Une provenance opposable porte **trois éléments** — la source
@@ -297,8 +305,10 @@ identifiants vérifiés et datés : **`references/references-verifiees.md`**.
    personne. Une doctrine n'est pas du droit positif.
 3. **Régime des valeurs, à deux vitesses.** Valeurs volatiles (montants,
    seuils, délais, dates d'application, versions de référentiels) : jamais de
-   mémoire, jamais sans date. Références structurelles stables : citables avec
-   la réserve « à confirmer en version consolidée ».
+   mémoire, jamais sans date. Les références structurelles exigent aussi une
+   source primaire récupérée avant tout usage comme fondement. Une réserve
+   générique ne permet aucune assertion non vérifiée, même en incise, pour
+   écarter un article ou annoncer l'état d'une transposition.
 4. **Date de référence.** Le droit du numérique s'applique par étapes et ses
    calendriers sont parfois repoussés par un texte modificatif : raisonner sur
    la version applicable à la date de la question.
@@ -306,8 +316,13 @@ identifiants vérifiés et datés : **`references/references-verifiees.md`**.
    contradiction : ne pas trancher ; livrer une esquisse bornée et le point
    exact à vérifier.
 
-**Absence d'outil de vérification** : aucune valeur ni aucun identifiant n'est
-produit. On livre la méthode et l'endroit exact où vérifier.
+**Source primaire absente, inaccessible ou outil indisponible** : aucune
+valeur, aucun numéro d'article ou identifiant, aucune assertion de vigueur,
+d'applicabilité ou de contenu juridique n'est produit. Cela vaut aussi pour
+les passages des références internes : ils orientent la recherche, sans
+constituer une preuve actuelle. Livrer les faits techniques, les pièces
+manquantes et les questions à vérifier. Un résultat de recherche, un lien ou
+un résumé d'outil ne remplace pas le texte primaire récupéré et daté.
 
 ### 5.5 Frontière `dpo-ct` — le DPO exige, la DSI met en œuvre
 
@@ -354,7 +369,12 @@ l'interlocuteur compétent, puis s'arrêter.
    pose les garde-fous.
 2. **`dpo-ct`** / **`drh-fpt`** / **`dpm-fpt`** / **`dirfi-fpt`** — activés
    sur leur périmètre propre (§5.5, §5.6).
-3. **`recherche-juridique`** — validateur de fond.
+3. **`recherche-juridique`** — activé pour vérifier le fond, les sources et
+   leur applicabilité avant toute assertion juridique. Les conclusions sur
+   l'exécution, la restitution, les frais ou les droits contractuels sont
+   attribuées à son volet explicite ; `dsi-fpt` conserve l'inventaire, les
+   contrôles de reprise et la continuité. Même en cas d'abstention, identifier
+   ce rôle et le point qu'il ne peut confirmer.
 
 **Co-activation dans un plugin agrégateur** — le bloc `BASCULE` reste
 obligatoire même lorsque le skill délégataire est réellement chargé. Il
@@ -409,14 +429,16 @@ exploitable), ni de détail d'architecture qui faciliterait une attaque s'il
    bien la collectivité ? Une doctrine de l'État, un projet de loi ou une
    directive non transposée ont-ils été présentés comme des obligations ?
 5. Toute affirmation d'une ligne « Oui » de la **matrice (§2.2)** a-t-elle été
-   vérifiée, ou marquée à vérifier, **avant** d'être énoncée ?
+   vérifiée sur un texte primaire récupéré dans la session **avant** d'être
+   énoncée ? Sinon, retirer l'assertion et préciser le point à vérifier.
 6. **Sourcing** — test à charge, sur le corps du texte produit : chaque
    référence et chaque valeur (article, montant, seuil, délai, date
    d'application, version de référentiel), y compris en incise ou pour être
-   écartée, porte-t-elle sa provenance datée ou sa réserve ?
+   écartée, porte-t-elle une preuve primaire datée effectivement récupérée ?
+   Une réserve ne permet pas de conserver un fondement non vérifié.
 7. **Auto-attestation** : pour chaque valeur donnée comme acquise, une source
-   a-t-elle **réellement** été appelée dans la session ? Sinon, `⚠️ non vérifié`
-   ou retrait.
+   primaire a-t-elle **réellement** été récupérée dans la session ? Sinon,
+   retrait de la conclusion ; le registre ou une recherche seuls ne suffisent pas.
 8. **Frontière `dpo-ct` (§5.5)** : le texte qualifie-t-il le droit des données,
    un délai de notification, une base légale ? Si oui, la **BASCULE** précède-t-elle
    ce contenu, avec **`dpo-ct` nommé** ? À défaut, supprimer le contenu.
@@ -449,7 +471,7 @@ exploitable), ni de détail d'architecture qui faciliterait une attaque s'il
 - Le droit du numérique évolue vite : transpositions en attente, calendriers
   européens échelonnés et parfois repoussés, référentiels révisés. Confirmer la
   version en vigueur avant tout usage en acte.
-- Version **non mesurée** et **non relue par un praticien** à ce jour : à
+- Candidat corrigé : **mesure propre requise**, **non relu par un praticien** ; à
   utiliser avec un regard critique jusqu'à la v1.0.0.
 
 ---
