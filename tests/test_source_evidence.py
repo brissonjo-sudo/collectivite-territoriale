@@ -363,6 +363,17 @@ class VisibleTextTests(unittest.TestCase):
                 self.assertNotIn("synthetic-private", result["text"])
                 self.assertNotIn("sha256", result)
 
+    def test_titre_signature_sans_valeur_preserve(self) -> None:
+        text = "**Questions à poser avant signature :**\n\n1. Quelle pièce manque ?"
+        self.assertEqual(scrub_visible_text(text),
+                         {"text": text, "redacted": False, "truncated": False})
+
+    def test_signature_courte_et_valeur_apres_titre_masquees(self) -> None:
+        for text in ("signature=abc", "**signature :** secret-test",
+                     '"signature": "abc"'):
+            with self.subTest(text=text):
+                self.assertTrue(scrub_visible_text(text)["redacted"])
+
     def test_urls_sensibles_entierement_masquees_et_markdown_preserve(self) -> None:
         for url in (
             ARTICLE_URL + "?token=synthetic-private-token",

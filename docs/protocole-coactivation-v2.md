@@ -5,6 +5,14 @@ Les questions historiques restent identiques. Le runtime reste identique aux
 166 fichiers mesurés ; la v2 porte sur la qualité des contrôles et des preuves.
 Les anciens résultats ne deviennent pas ceux de la nouvelle mesure.
 
+**Extension candidat corrigé.** Le profil explicite `corrected-runtime-v1`
+(schéma de gel 3) permet une nouvelle mesure après correction des instructions.
+Il conserve les questions et invariants v2, exige l'inventaire exact et les
+octets du HEAD committé avant/après chaque cas, et déclare
+`historical_scores_reused=false`. Les résultats du profil initial ne sont
+pas transférés. Une modification du runtime exige un autre gel et un autre
+dossier de traces ; le profil v2 historique continue de refuser ce changement.
+
 ## Exécution et isolation
 
 Une session Claude Sonnet 4.6 fraîche par cas. Onze activations forcées et cinq

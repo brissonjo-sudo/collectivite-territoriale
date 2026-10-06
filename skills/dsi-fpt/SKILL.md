@@ -1,16 +1,15 @@
 ---
 name: dsi-fpt
 description: >-
-  Aide à la décision DSI/RSSI en collectivité territoriale française.
+  Incident cyber ou surveillance : le premier texte visible commence par STOP,
+  avant toute annonce d'activation. Aide à la décision DSI/RSSI en collectivité française.
   Activer pour les questions de gouvernance du SI, sécurité et
   homologation, crise cyber et continuité, réseaux et infrastructures, cloud et
   hébergement, applications métiers et interopérabilité, dématérialisation et
   téléservices, accessibilité numérique, intelligence artificielle et
-  algorithmes publics, exécution des contrats informatiques. Activer aussi dès
-  qu'un incident de sécurité est en cours ou qu'une demande vise à surveiller
-  des agents ou des personnes : commencer le premier message visible par STOP,
-  avant toute annonce d'activation ou de recherche. Vérifier le droit et son applicabilité aux
-  collectivités sur une source officielle. Ne pas activer pour la conformité
+  algorithmes publics, contrats informatiques. Toute question de droit exige
+  l'activation réelle de recherche-juridique et un texte primaire récupéré,
+  sinon abstention sur le fond. Ne pas activer pour la conformité
   RGPD, l'AIPD ou la notification de violation (dpo-ct), le RH statutaire
   (drh-fpt), la doctrine de vidéoprotection (dpm-fpt), le budget (dirfi-fpt),
   ni la passation des marchés.
@@ -143,7 +142,9 @@ incidents.
 Si la demande montre déjà un incident ou une surveillance, afficher le STOP
 correspondant comme **premier texte visible**, avant toute phrase de cadrage,
 annonce d'activation, de lecture ou de recherche, titre ou question. Ne pas
-attendre la réponse finale. Si les deux déclencheurs sont présents, afficher
+attendre la réponse finale. Le texte commence par le mot STOP : ne pas le
+précéder d'un séparateur, d'un titre ou d'une ouverture de bloc de code.
+Si les deux déclencheurs sont présents, afficher
 les deux garde-fous avant de poursuivre. Ensuite, toute situation composée passe par
 **`references/analyse-situation.md`** (couche 1). Il détecte les garde-fous et
 les frontières, lève le mode d'exercice, puis oriente vers la branche (couche
@@ -323,6 +324,12 @@ les passages des références internes : ils orientent la recherche, sans
 constituer une preuve actuelle. Livrer les faits techniques, les pièces
 manquantes et les questions à vérifier. Un résultat de recherche, un lien ou
 un résumé d'outil ne remplace pas le texte primaire récupéré et daté.
+
+Dans ce mode, ne pas expliquer les effets d'une catégorie de texte, la
+hiérarchie des normes ou le champ d'un régime pour justifier l'abstention :
+ce serait déjà produire du fond sans preuve. Le motif suffit : « aucun texte
+primaire récupéré dans cette session ». Lister les questions et portails à
+consulter, sans compléter une référence numérique depuis un fichier interne.
 
 ### 5.5 Frontière `dpo-ct` — le DPO exige, la DSI met en œuvre
 

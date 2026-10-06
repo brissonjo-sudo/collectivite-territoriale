@@ -62,7 +62,8 @@ _SUSPECT = re.compile(
 _SECRET_ASSIGNMENT = re.compile(
     r"(?i)\b(?:authorization|(?:set[ _-]?)?cookie|api[ _-]?key|"
     r"access[ _-]?token|refresh[ _-]?token|token|secret|password|"
-    r"mot[ _]de[ _]passe|jeton|clé[ _]api|signature)[\"']?[ \t]*[:=][^\r\n]*"
+    r"mot[ _]de[ _]passe|jeton|clé[ _]api|signature)[\"']?[ \t]*[:=]"
+    r"(?![ \t]*\*{0,2}[ \t]*(?:\r?\n|$))[^\r\n]*"
 )
 _PRIVATE_KEY = re.compile(
     r"-----BEGIN [A-Z ]*PRIVATE KEY-----[\s\S]*?"

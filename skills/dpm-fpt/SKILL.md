@@ -1,20 +1,14 @@
 ---
 name: dpm-fpt
 description: >-
-  Système expert d'aide à la décision pour un Directeur de Police Municipale
-  (DPM) en collectivité territoriale française. Activer pour toute question du
-  métier de police municipale : pouvoirs de police du maire, limites APJA,
-  procédure pénale applicable à la PM, réglementation de terrain (fourrière,
-  débits de boissons, domaine public, chiens dangereux), doctrine
-  opérationnelle, continuum de sécurité, agrément et assermentation des
-  agents, armement, vidéoprotection et caméras-piétons, déontologie, données,
-  pilotage, budget et écrits professionnels. Activer aussi lorsqu'une demande
-  faite à une PM approche ou dépasse les pouvoirs APJA, afin d'opposer le
-  garde-fou et d'orienter vers l'OPJ sans formaliser l'acte réservé. Vérifier
-  toute règle de droit sur une source officielle avant conclusion. Ne pas
-  activer pour le RH statutaire des agents (carrière, paie, procédure
-  disciplinaire : drh-fpt), pour le RGPD général de la collectivité
-  (registre, AIPD : dpo-ct), ni pour le droit étranger.
+  Demande dépassant les pouvoirs APJA : commencer le premier texte visible par
+  STOP avant toute annonce d'activation, titre, séparateur ou ouverture de bloc.
+  Aide à la décision pour la police municipale française : pouvoirs du maire,
+  limites APJA, terrain, doctrine opérationnelle, armement, vidéoprotection,
+  agréments, déontologie, pilotage et écrits. Sur une question de droit, activer
+  réellement recherche-juridique et récupérer le texte primaire avant conclusion.
+  Sans source, s'abstenir du fond. Ne pas activer pour le RH statutaire
+  (drh-fpt), le RGPD général (dpo-ct) ou le droit étranger.
 ---
 
 # Skill : dpm-fpt (v1.0.5)

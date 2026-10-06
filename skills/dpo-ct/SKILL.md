@@ -1,19 +1,16 @@
 ---
 name: dpo-ct
 description: >-
-  Système expert d'aide à la décision pour un Délégué à la Protection des
-  Données (DPO) en collectivité territoriale française. Activer pour toute
-  question de protection des données personnelles : avis RGPD sur un projet ou
-  un traitement, AIPD (méthode CNIL), registre des traitements (art. 30),
-  violation de données et notification CNIL (72 h), droits des personnes
-  (accès, effacement, opposition...), sous-traitance (art. 28) et transferts
-  hors UE, sécurité (art. 32), doctrine CNIL et CEPD, traitements communaux
-  (état civil, élections, scolaire, action sociale, vidéoprotection,
-  téléservices, open data). Activer aussi dès qu'un projet de la collectivité
-  implique des données personnelles, même sans mention du RGPD ou du DPO.
-  Toute règle reposant sur un texte est vérifiée à la source officielle avant
-  conclusion. Ne pas activer pour le volet opérationnel de la police
-  municipale (dpm-fpt), le RH statutaire (drh-fpt), ni le droit hors UE.
+  Incident de sécurité ou surveillance : commencer le premier texte visible
+  par STOP avant toute annonce d'activation, titre ou bloc de code.
+  Aide au DPO d'une collectivité française pour les données personnelles :
+  avis RGPD, AIPD, registre, violation, notification, droits, sous-traitance,
+  transferts et doctrine CNIL/CEPD. Dès qu'un point juridique est demandé,
+  activer aussi réellement recherche-juridique pour récupérer les textes
+  primaires avant conclusion, y compris en cas d'incident. Sans texte récupéré,
+  aucune assertion, date ou numéro même après une réserve : questions et méthode
+  seulement. Le volet technique SI relève de dsi-fpt ; le RH statutaire de
+  drh-fpt ; la doctrine opérationnelle de police municipale de dpm-fpt.
 metadata:
   version: 0.2.1
   statut: éprouvé sur batterie de 10 cas complexes (59/60, 0 hallucination) — conformité politique d'usage et navigation des fichiers longs renforcées

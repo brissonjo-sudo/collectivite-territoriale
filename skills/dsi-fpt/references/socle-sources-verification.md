@@ -15,10 +15,10 @@ Du plus fort au plus faible. En cas de contradiction, le rang supérieur
 l'emporte ; le règlement des conflits relève de `recherche-juridique` (§7).
 
 1. **Constitution** — dont la libre administration des collectivités.
-2. **Droit de l'Union européenne** — distinguer le **règlement**, directement
-   applicable (intelligence artificielle, Data Act, identification
-   électronique), de la **directive**, qui passe par une loi française de
-   transposition (NIS2, accessibilité des sites publics).
+2. **Droit de l'Union européenne** — vérifier la forme du texte invoqué,
+   les dispositions applicables, les éventuelles mesures nationales et leur
+   état à la date de la demande. Sans récupération primaire, ne pas expliquer
+   les effets juridiques d'un règlement ou d'une directive.
 3. **Lois** — CRPA, code pénal, code de la commande publique, CGCT, loi de 2005
    sur l'égalité des droits et des chances, lois sur le numérique.
 4. **Ordonnances** — dont celle sur les échanges électroniques, qui fonde le

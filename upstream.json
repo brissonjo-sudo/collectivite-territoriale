@@ -17,6 +17,14 @@
           "base_sha256": "f6820c1f51013029268cd68b8db564c1b88965ff77fa678c6b7aeb5a37c3ca96",
           "source_sha256": "d28a081faeff6795455947ba5c591167475aecd0b5f322383a4d74d3689e5f9e",
           "anchor": "## 1. Déclenchement"
+        },
+        {
+          "target": "SKILL.md",
+          "source": "overlays/dpm-fpt-description.md",
+          "base_sha256": "b8269b417c66b94cc8e44f7f5f86290113a9fe0f43f94bd2a59d5498f838714f",
+          "source_sha256": "0fb83cdf7d6a26eb1e18a995392712641f0c3391752ba197d8b921a9ca9708cf",
+          "anchor": "description: >-\n  Système expert d'aide à la décision pour un Directeur de Police Municipale\n  (DPM) en collectivité territoriale française. Activer pour toute question du\n  métier de police municipale : pouvoirs de police du maire, limites APJA,\n  procédure pénale applicable à la PM, réglementation de terrain (fourrière,\n  débits de boissons, domaine public, chiens dangereux), doctrine\n  opérationnelle, continuum de sécurité, agrément et assermentation des\n  agents, armement, vidéoprotection et caméras-piétons, déontologie, données,\n  pilotage, budget et écrits professionnels. Activer aussi lorsqu'une demande\n  faite à une PM approche ou dépasse les pouvoirs APJA, afin d'opposer le\n  garde-fou et d'orienter vers l'OPJ sans formaliser l'acte réservé. Vérifier\n  toute règle de droit sur une source officielle avant conclusion. Ne pas\n  activer pour le RH statutaire des agents (carrière, paie, procédure\n  disciplinaire : drh-fpt), pour le RGPD général de la collectivité\n  (registre, AIPD : dpo-ct), ni pour le droit étranger.\n",
+          "operation": "replace-description"
         }
       ]
     },
@@ -55,6 +63,14 @@
           "base_sha256": "41e4f3b262f8bbd3e7ca568613c57ad053399311a946a4aec3bb0fa1adc602b7",
           "source_sha256": "750bbd31aa5c35efcd5f774c9b0a8aaad154194e96c0874c021b41a8dec3c485",
           "anchor": "## 1. Déclenchement"
+        },
+        {
+          "target": "SKILL.md",
+          "source": "overlays/dpo-ct-description.md",
+          "base_sha256": "6439175954c2263adb9ef6d93b85ea326672f7f194b2f7df48526d0dfcadd1c7",
+          "source_sha256": "404d43ffaf39067361be912fa98f8a5b3d331f59eedcf8b364a8105f41bbb4fc",
+          "anchor": "description: >-\n  Système expert d'aide à la décision pour un Délégué à la Protection des\n  Données (DPO) en collectivité territoriale française. Activer pour toute\n  question de protection des données personnelles : avis RGPD sur un projet ou\n  un traitement, AIPD (méthode CNIL), registre des traitements (art. 30),\n  violation de données et notification CNIL (72 h), droits des personnes\n  (accès, effacement, opposition...), sous-traitance (art. 28) et transferts\n  hors UE, sécurité (art. 32), doctrine CNIL et CEPD, traitements communaux\n  (état civil, élections, scolaire, action sociale, vidéoprotection,\n  téléservices, open data). Activer aussi dès qu'un projet de la collectivité\n  implique des données personnelles, même sans mention du RGPD ou du DPO.\n  Toute règle reposant sur un texte est vérifiée à la source officielle avant\n  conclusion. Ne pas activer pour le volet opérationnel de la police\n  municipale (dpm-fpt), le RH statutaire (drh-fpt), ni le droit hors UE.\n",
+          "operation": "replace-description"
         }
       ]
     },
@@ -102,7 +118,7 @@
     },
     "dsi-fpt": {
       "repository": "https://github.com/brissonjo-sudo/DSI-fpt.git",
-      "commit": "d33b28278f6ec4e7f30cdee416104256824e5a00",
+      "commit": "f932e46da3fec34e1d8aa699b5233d260b8df9c6",
       "version": "0.2.1",
       "paths": [
         "SKILL.md",
