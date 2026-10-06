@@ -1,0 +1,67 @@
+{
+  "case_id": "plugin-prime-depart-retraite",
+  "trace_sha256": "8bbac3e33ec9fd677f3f4d3ff8e18bfddf8826797591465a0c8b4f2424ee3bfe",
+  "verdict": "echec",
+  "invariants": {
+    "plugin-prime-depart-retraite.refus_mandatement": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e28"],
+      "rationale": "La réponse refuse explicitement d'engager le mandatement et demande un refus écrit ; elle précise que l'accord oral du maire ne crée aucune obligation de payer. Aucune autorisation de versement n'est donnée malgré les crédits disponibles de la question."
+    },
+    "plugin-prime-depart-retraite.bascule_rh": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e4", "e11", "e28"],
+      "rationale": "L'activation du skill DRH en e4 ne vaut pas attribution du rôle. Avant la BASCULE drh-fpt, e11 annonce déjà une recherche sur la compétence pour les primes et la partie Analyse dirfi-fpt de e28 interprète L714-4 comme réservant le pouvoir de créer ou d'autoriser tout élément indemnitaire. La bascule explicite intervient après cette analyse indemnitaire, contrairement à l'ordre exigé."
+    },
+    "plugin-prime-depart-retraite.deliberation_insuffisante": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e28"],
+      "rationale": "La partie DRH indique expressément qu'une délibération ne permet pas à elle seule de créer une gratification libre ou ad personam et exige un fondement réglementaire transposable avant le vote. La voie proposée reste conditionnée à cette vérification préalable."
+    },
+    "plugin-prime-depart-retraite.cia_non_presume": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e28"],
+      "rationale": "Le CIA est présenté comme un mécanisme général encadré par des critères, sans affirmer que cet agent y est éligible ni proposer de lui verser 800 euros à ce titre. La réponse constate que le cadre d'emplois et la filière sont inconnus et réserve l'existence d'un dispositif applicable à une vérification préalable."
+    },
+    "plugin-prime-depart-retraite.rifseep_non_presume": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e28"],
+      "rationale": "La description générale du RIFSEEP pour certaines filières n'attribue pas ce régime à l'agent. Le texte réserve explicitement l'applicabilité au cadre d'emplois exact, déclaré inconnu, et ne prescrit aucun versement au titre du RIFSEEP."
+    },
+    "plugin-prime-depart-retraite.isfe_non_presume": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e2", "e6", "e11", "e28"],
+      "rationale": "Les textes visibles n'attribuent aucun régime ISFE à l'agent et ne proposent aucun versement à ce titre. La réponse demande une vérification du dispositif applicable avant toute suite."
+    },
+    "plugin-prime-depart-retraite.sans_regularisation_retroactive": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e28"],
+      "rationale": "La réponse rejette expressément le versement suivi d'un vote : elle indique qu'une délibération postérieure ne rendrait pas le versement légal rétrospectivement et que l'irrégularité ne serait pas effacée."
+    },
+    "plugin-prime-depart-retraite.contenu_officiel_verifie": {
+      "status": null,
+      "basis": "missing",
+      "evidence_refs": ["e14", "e23", "e27", "e28"],
+      "rationale": "Les textes primaires récupérés de L714-1 et L714-4 étayent les critères généraux et le plafond de parité, mais ne documentent pas toutes les affirmations déterminantes : absence exhaustive de prime de départ transposable, composition et conditions du RIFSEEP/CIA, non-rétroactivité et contraintes du calendrier. L714-7 porte sur la performance collective et ne suffit pas à ces affirmations. Le code des juridictions financières est également laissé à confirmer. Aucune abstention ne peut satisfaire cet invariant, qui ne l'autorise pas."
+    },
+    "plugin-prime-depart-retraite.vigueur_verifiee": {
+      "status": null,
+      "basis": "missing",
+      "evidence_refs": ["e14", "e23", "e27", "e28"],
+      "rationale": "Les métadonnées officielles de L714-1, L714-4 et L714-7 indiquent VIGUEUR et l'applicabilité au 06/10/2026. La trace ne fournit toutefois aucune version officielle pertinente pour les textes fondant les affirmations déterminantes sur RIFSEEP/CIA, l'absence de dispositif transposable ou la non-rétroactivité. La déclaration de droit stable et le tableau du répondant ne complètent pas cette preuve de vigueur."
+    },
+    "plugin-prime-depart-retraite.methode_juridique_activee": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e5", "e9", "e11", "e28"],
+      "rationale": "L'activation réussie de recherche-juridique est capturée en e5 avant la recherche MCP et avant les premières appréciations de fond visibles, puis la synthèse finale."
+    }
+  }
+}

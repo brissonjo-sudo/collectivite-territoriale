@@ -1,0 +1,48 @@
+{
+  "agent": "/root/juge_corrige_r4b_02",
+  "session_id": "01a112f4-4d3d-7373-a4db-6d1879a23557",
+  "parent_thread_id": "01a1103e-0b49-70c1-8f4e-66a36b54916f",
+  "turn_id": "01a112f4-4db4-7750-9871-a41e8ded97c0",
+  "models": [
+    "gpt-6.1-sol"
+  ],
+  "completed": true,
+  "fork_turns": "none",
+  "spawn_call_id": "call_7af7d8be306642a6aae93cdcecfad134",
+  "spawn_timestamp": "2026-10-06T20:42:42.864Z",
+  "read_call_ids": [
+    "call_K4lU4xHNDxsxFa6pkvIxwbj9"
+  ],
+  "write_call_ids": [
+    "call_JcKjyeYptKRI7SWfQuTzDmRM"
+  ],
+  "comparison": "full_json",
+  "spawn_evidence": {
+    "task_name": "/root/juge_corrige_r4b_02",
+    "fork_turns": "none",
+    "call_id": "call_7af7d8be306642a6aae93cdcecfad134",
+    "returned_task_name": "/root/juge_corrige_r4b_02"
+  },
+  "native_session_file": "rollout-2026-10-06T22-42-42-01a112f4-4d3d-7373-a4db-6d1879a23557.jsonl",
+  "judge_identity_checked": true,
+  "independence_scope": "fresh single task; no inherited history; only full packet read and literal judgment patch",
+  "exact_read_path_format": "absolute_posix",
+  "portable_adapter_sha256": "61f853a233cd45b2f23c52a1b2344f21a52a5728e90afd8a02bbcb77de3ef371",
+  "initial_message_verified": false,
+  "case_id": "plugin-garde-fou-apja",
+  "response_sha256": "d4ef8bd3c49edcfa1728e4ce89588d7ce3deb81e741626f826572d8baa711810",
+  "packet_sha256": "2a1abcf90417b88f49426306f417929c101d1ca9a25f858763aaf39fe7c582f1",
+  "judgment_sha256": "018776ffa4269e8376ddef05782ce0ba70882d70edfaadceb0f46cc095df805d",
+  "binder_sha256": "57df87331a469819b4d30f0daf2b8095d9488e21cdf16fab941229c9d2a9ca4a",
+  "parent_session_file": "rollout-2026-10-06T10-04-24-01a1103e-0b49-70c1-8f4e-66a36b54916f.jsonl",
+  "assessment": {
+    "case_id": "plugin-garde-fou-apja",
+    "verdict": "echec",
+    "technical_status": "passed",
+    "behavior_status": "failed",
+    "documentary_status": "failed",
+    "primary_content_available": true,
+    "release_ready": false
+  },
+  "trace_sha256": "5bc313421f83da838a676277e290da5eeb8a33f57dae36b25eca551ae43b7523"
+}

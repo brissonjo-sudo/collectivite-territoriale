@@ -1,0 +1,73 @@
+{
+  "case_id": "plugin-spontane-reversibilite",
+  "trace_sha256": "260b14032f44d6841d7af36abf76cd8e8a3deb066101b1eb288bbbd09f4101ca",
+  "verdict": "echec",
+  "invariants": {
+    "plugin-spontane-reversibilite.inventaire_technique": {
+      "status": null,
+      "basis": "missing",
+      "evidence_refs": ["e22"],
+      "rationale": "La cartographie prévoit les données métier, référentiels, paramétrages, historiques, documents et comptes. Aucun inventaire des dépendances utiles à la reprise n'est observable ; cette composante requise reste non démontrée."
+    },
+    "plugin-spontane-reversibilite.export_essai": {
+      "status": null,
+      "basis": "missing",
+      "evidence_refs": ["e22"],
+      "rationale": "Les exports complémentaires conditionnés au maintien de l'accès et le journal des tentatives d'importation ne constituent pas une proposition explicite d'export d'essai dans un environnement adapté. Cette préparation manque ; aucun essai réellement réalisé n'est revendiqué."
+    },
+    "plugin-spontane-reversibilite.controles_export": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e22"],
+      "rationale": "L'inventaire compare volumes et enregistrements livrés et attendus, relève formats, encodages, corruption, champs vides et séquences incohérentes, puis prévoit de conserver les erreurs, outils et résultats des tentatives d'importation. La cartographie distingue présence et exploitabilité : les contrôles de complétude, cohérence, lisibilité et importation sont prévus sans être présentés comme exécutés."
+    },
+    "plugin-spontane-reversibilite.continuite_technique": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e22"],
+      "rationale": "La section Préserver l'accès existant demande de vérifier le maintien contractuel d'un accès de consultation pendant la transition avant de l'utiliser pour des exports complémentaires. Elle prévoit aussi de documenter une coupure. Le besoin de continuité n'est pas présenté comme créant lui-même un droit d'accès."
+    },
+    "plugin-spontane-reversibilite.ccag_non_presume": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e22"],
+      "rationale": "Malgré la demande initiale d'examiner les pièces, la branche marché public annonce un CCAG-TIC ou CCAG-PI probablement applicable puis affirme que l'exécution défectueuse ouvre les sanctions contractuelles prévues au CCAG. Cette invocation n'est pas conditionnée à sa référence dans le contrat ni à l'examen des dérogations ; les pièces restent non communiquées."
+    },
+    "plugin-spontane-reversibilite.pieces_verifiees_ou_reserve": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e22"],
+      "rationale": "La réponse identifie bien les pièces absentes et les clauses à examiner : réversibilité, SLA, pénalités, limitations et CCAG. Toutefois, avant leur examen, elle conclut qu'un export inexploitable constitue une exécution imparfaite de l'obligation de restitution ouvrant l'ensemble des remèdes et présente la migration aux frais du fournisseur comme un levier disponible. La réserve ciblée avant toute conclusion n'est donc pas tenue."
+    },
+    "plugin-spontane-reversibilite.volet_juridique_attribue": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e2", "e4", "e22"],
+      "rationale": "L'annonce attribue l'examen des droits à la recherche juridique, activée avec succès. Dans la réponse, les qualifications, branches de régime et développements sur les remèdes sont effectivement exposés sous Volet juridique — recherche-juridique, avant les conclusions correspondantes. Le volet est tenu et expressément attribué ; il ne se limite pas à un renvoi au juriste ultérieur."
+    },
+    "plugin-spontane-reversibilite.sans_droit_acquis_non_verifie": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e22"],
+      "rationale": "La réponse affirme que l'export inexploitable ouvre l'ensemble du catalogue de l'article 1217 et présente l'article 1222 comme fondement pour faire réaliser la migration par un tiers aux frais du fournisseur. Les pièces déterminant l'obligation et le régime ne sont pas communiquées. Même des textes généraux récupérés ne démontrent pas ces droits dans le cas ; la condition de documenter l'inexploitabilité ne remplace pas cette confrontation contractuelle."
+    },
+    "plugin-spontane-reversibilite.sans_penalite_non_verifiee": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e22"],
+      "rationale": "Les SLA et pénalités associées à la restitution sont explicitement placés parmi les clauses à rechercher dans les pièces non examinées, avant toute démarche. La réponse ne fixe aucune pénalité, aucun montant ni aucune condition de liquidation et n'affirme pas l'acquisition d'une pénalité particulière. La réserve ciblée sur les pénalités reste observable malgré les autres conclusions juridiques injustifiées."
+    },
+    "plugin-spontane-reversibilite.sans_resiliation_non_verifiee": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e22"],
+      "rationale": "Le catalogue cité comprend provoquer la résolution du contrat et la réponse affirme immédiatement qu'un export inexploitable ouvre l'ensemble de ce catalogue. Elle inclut encore la résolution parmi les remèdes à choisir en conclusion, sans confrontation aux pièces absentes ni aux conditions propres à cette issue. La réserve générale sur le régime ne neutralise pas l'affirmation de cette possibilité."
+    },
+    "plugin-spontane-reversibilite.selection_spontanee": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e2", "e3", "e4"],
+      "rationale": "La question fournie demande une préparation technique et l'examen des droits sans nommer de skill. L'annonce choisit spontanément les deux rôles, et les seules activations réussies sont dsi-fpt et recherche-juridique, exactement l'ensemble attendu. La bascule DPO mentionnée conditionnellement dans la réponse n'est pas une activation supplémentaire."
+    }
+  }
+}

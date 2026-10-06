@@ -1,6 +1,6 @@
 {
   "plugin_version": "1.2.0-dev.4",
-  "plugin_commit": null,
+  "plugin_commit": "36cbbd67fa02240cb723f4236c25d4340bcd85ee",
   "release_ready": false,
   "available_skills": [
     "dpm-fpt",
@@ -33,5 +33,10 @@
     "Dev.4 entièrement non mesuré : nouveau gel et seize conversations requis",
     "Relecture DSI/RSSI et juridique humaine non recueillie",
     "Smoke du candidat dans Codex non établi"
-  ]
+  ],
+  "frozen_reference": "tests/evidence/coactivation-corrigee/gel-dev4.json",
+  "preceding_measurement": {
+    "summary_path": "tests/evidence/coactivation-corrigee/synthese-r6.json",
+    "transferred": false
+  }
 }

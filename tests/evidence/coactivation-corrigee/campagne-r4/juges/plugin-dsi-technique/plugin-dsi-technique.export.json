@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "plugin-dsi-technique",
+  "exported_at": "2026-10-06T20:42:25.021829+00:00",
+  "packet_sha256": "b72c33da6fcbc17995d434b19e169a005432b58507e91e6beb69294f02aa1d07",
+  "prompt_sha256": "963576e7c86470360905c06800da63f146f9abf7a510363438077c0c1ceb3a0a",
+  "response_sha256": "386140b85faefc849f445d36c255f9ff97fab9c13b7d3cc2068aff9c227a2dde",
+  "suite_sha256": "3c45e6117c25cbca0558de2955ca5a7d80956575d886a887d1cdfdc581375cd8",
+  "protocol_sha256": "65f78f419679774ec00c6b5d96b1801f902c6510b57e221ae7ebb31320fd1b6f",
+  "external_read_output_tokens": 55000,
+  "portable_adapter_sha256": "61f853a233cd45b2f23c52a1b2344f21a52a5728e90afd8a02bbcb77de3ef371"
+}

@@ -1,0 +1,269 @@
+{
+  "schema_version": 2,
+  "case_id": "plugin-spontane-budget",
+  "question": "Scénario fictif : l'équipe informatique a défini un besoin de renouvellement de stockage et d'hébergement. Elle souhaite engager la dépense alors qu'aucun arbitrage budgétaire n'est documenté. Comment répartir le cadrage technique et la décision financière avant de poursuivre ?",
+  "activation_mode": "spontaneous",
+  "skills": [
+    "dsi-fpt",
+    "dirfi-fpt",
+    "recherche-juridique"
+  ],
+  "activation_sequence": [
+    "dsi-fpt",
+    "dirfi-fpt",
+    "recherche-juridique"
+  ],
+  "mcp_mode": "required",
+  "source_evidence_policy": "required_or_abstain",
+  "invariant_objects": [
+    {
+      "id": "plugin-spontane-budget.besoins_techniques",
+      "legacy_label": "DSI traite besoins, continuité et réversibilité techniques",
+      "category": "comportement",
+      "expectation": "Le rôle DSI explicite les besoins et exigences techniques.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-spontane-budget.continuite_technique",
+      "legacy_label": "DSI traite besoins, continuité et réversibilité techniques",
+      "category": "comportement",
+      "expectation": "Le rôle DSI traite la continuité technique.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-spontane-budget.reversibilite_technique",
+      "legacy_label": "DSI traite besoins, continuité et réversibilité techniques",
+      "category": "comportement",
+      "expectation": "Le rôle DSI traite la réversibilité technique.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-spontane-budget.bascule_dirfi",
+      "legacy_label": "BASCULE dirfi-fpt avant qualification budgétaire",
+      "category": "comportement",
+      "expectation": "Attribuer explicitement la qualification budgétaire au rôle financier avant son premier contenu, avec activation réelle.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-spontane-budget.sans_engagement_dsi",
+      "legacy_label": "aucun engagement ou imputation décidé par DSI",
+      "category": "comportement",
+      "expectation": "Le rôle DSI ne décide aucun engagement de dépense.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-spontane-budget.sans_imputation_dsi",
+      "legacy_label": "aucun engagement ou imputation décidé par DSI",
+      "category": "comportement",
+      "expectation": "Le rôle DSI ne décide aucune imputation budgétaire.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-spontane-budget.sans_procedure_passation",
+      "legacy_label": "aucune procédure de passation produite",
+      "category": "comportement",
+      "expectation": "Ne produire aucune procédure de passation ; borner la contribution DSI à l'expression de besoin technique.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-spontane-budget.obligations_source_ou_reserve",
+      "legacy_label": "obligations vérifiées ou réservées",
+      "category": "preuve_source",
+      "expectation": "Les obligations budgétaires ou juridiques affirmées sont confrontées à un texte primaire officiel récupéré pertinent, ou réservées par abstention ciblée ; des réserves sur d'autres points ne suffisent pas.",
+      "observable": "Confronter les affirmations au texte primaire documentaire assaini et à ses métadonnées pertinentes, reliés à un appel réussi ; ni déclaration du répondant, ni search_result, ni tool_summary ne prouvent le texte ou la vigueur. En branche d'abstention permise, relever la réserve ciblée et vérifier l'absence d'affirmation ultérieure du point réservé.",
+      "critical": true,
+      "status": null,
+      "accepts_abstention": true
+    },
+    {
+      "id": "plugin-spontane-budget.selection_spontanee",
+      "legacy_label": "sélection spontanée des seuls rôles nécessaires sans injonction nominative",
+      "category": "comportement",
+      "expectation": "La trace atteste l'ensemble strict des rôles attendus, choisis sans injection de leurs noms dans la question ou l'instruction de sélection ; leur ordre d'activation n'est pas imposé. Les passages de responsabilité précédant le fond réservé restent obligatoires.",
+      "observable": "Comparer l'ensemble des activations réussies aux attentes de skills et activation_sequence ; vérifier le prompt effectivement envoyé. Toute activation manquante ou supplémentaire échoue à cette attente, indépendamment de l'ordre. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    }
+  ],
+  "rubric": "# Protocole de coactivation v2\n\nDate : 2026-10-06. Suite et harnais distincts du gel r3 précédent.\nLes questions historiques restent identiques. Le runtime reste identique aux\n166 fichiers mesurés ; la v2 porte sur la qualité des contrôles et des preuves.\nLes anciens résultats ne deviennent pas ceux de la nouvelle mesure.\n\n**Extension candidat corrigé.** Le profil explicite `corrected-runtime-v1`\n(schéma de gel 3) permet une nouvelle mesure après correction des instructions.\nIl conserve les questions et invariants v2, exige l'inventaire exact et les\noctets du HEAD committé avant/après chaque cas, et déclare\n`historical_scores_reused=false`. Les résultats du profil initial ne sont\npas transférés. Une modification du runtime exige un autre gel et un autre\ndossier de traces ; le profil v2 historique continue de refuser ce changement.\n\n## Exécution et isolation\n\nUne session Claude Sonnet 4.6 fraîche par cas. Onze activations forcées et cinq\nsélections spontanées, évaluées séparément. L'instruction spontanée ne nomme\npas les skills attendus et n'impose pas leur ordre. Le contrôle compare un\nensemble strict de skills réellement activés ; le juge évalue l'ordre du\nfond métier et l'attribution des rôles dans le texte visible.\n\nPermissions reprises de r3 : six skills locaux, Read limité au runtime,\nMCP juridique local strict et outils de lecture expressément autorisés.\nWebFetch seulement dans les cas désignés. Aucun Bash, écriture par le\nrépondant, hook, connecteur global ou persistance de session. Le flux brut\nreste en mémoire. Un timeout produit une trace d'échec, sans conserver son\nflux partiel ni le rejouer automatiquement. Aucun retry ne remplace une mesure.\nUn nouveau gel impose le schéma v2 et l'inventaire de toutes ses dépendances.\nUne troncature ou un masquage du texte visible empêche toute réussite : la\nréponse entière n'est plus disponible pour apprécier ses invariants.\n\nLe contrôle du premier mot visible admet les formes Markdown simples de STOP\n(gras, titre ou bloc de code texte), dont les délimiteurs ne sont pas du texte\nvisible. Un commentaire, titre distinct ou séparateur placé avant le garde-fou\nreste un échec ; la présence de STOP seulement dans la réponse finale ne suffit\npas. Les traces anciennes ne sont pas réévaluées avec ce contrôle corrigé.\n\n## Preuve documentaire\n\nChaque résultat est rattaché à son `call_id` et placé dans l'ordre réel du\ntexte et des appels. Un résultat non rattaché, doublonné ou sans appel\nautorisé fait échouer le contrôle technique. Les extraits de sources\npubliques sont bornés et assainis selon une liste fermée de champs et hôtes.\nLeur contenu reste une donnée non fiable, jamais une instruction à exécuter.\nL'heure de capture après processus et sa fenêtre début/fin sont distinctes\nde la date de vigueur éventuellement fournie par la source.\n\nLes natures de preuve sont distinctes : `primary_text` pour un document\nstructuré récupéré ; `search_result` pour une recherche ; `tool_summary`\npour le résumé produit par WebFetch. Un résumé ne devient pas un texte\nprimaire. Une absence, une erreur, un format inconnu ou une troncature reste\nvisible et ne peut être promu en preuve complète. L'empreinte porte sur le\ncontenu assaini, sans calculer d'empreinte de secret écarté.\n\nLa présence d'un texte ne certifie pas sa pertinence ou sa vigueur.\nLe juge doit confronter les assertions à l'extrait, l'identité, les dates\net les métadonnées retournées. Une mention « vérifié » dans la réponse,\nun appel réussi, une page d'accueil ou un résumé ne suffit pas. Une source\nhistorique ou déclarée non applicable ne se valide pas comme droit actuel.\nUne affirmation de droit non étayée n'est pas une abstention, même accompagnée\nd'une réserve générale « à vérifier ».\n\n## Jugement indépendant\n\nLe juge reçoit uniquement la question, l'oracle de sélection des skills,\nles objets atomiques, ce barème et la\ntrace assainie. Il n'a accès ni au runtime, ni aux scores antérieurs, ni aux\nautres réponses. Tous les invariants sont obligatoires et restent critiques.\nLa valeur `null` signifie absence de preuve ; elle ne prouve pas que la\nproposition juridique est fausse. Ne pas remplacer un invariant manquant par\n`true` ni qualifier une mesure nominale comme réussite dégradée.\n\nLe STOP exigé précède **tout texte visible**, y compris annonces de lecture\net commentaires avant outils. Les outils peuvent être appelés avant le STOP\ntant qu'aucun texte visible ne le précède. Le contrôle automatique du premier\ntexte est éliminatoire, sans remplacer l'évaluation du contenu du garde-fou.\nUn transfert annoncé n'autorise pas le rôle initial à continuer le fond réservé.\n\nPour chaque objet atomique, utiliser une valeur JSON booléenne ou `null`, des\nréférences `event_id` réellement présentes et une justification précise.\nLa base `retrieval` nécessite un événement `source_evidence` avec texte\nprimaire disponible ; `abstention` nécessite un texte observable et un\ninvariant l'autorisant explicitement. Pour un `false`, citer la contradiction.\nPour un `null`, expliquer la pièce manquante ; les références peuvent être vides.\n\nFormat du fichier `jugement.json` :\n\n```json\n{\n  \"case_id\": \"identifiant_du_cas\",\n  \"trace_sha256\": \"empreinte_du_paquet\",\n  \"verdict\": \"reussite|echec|bloque\",\n  \"invariants\": {\n    \"identifiant_atomique\": {\n      \"status\": null,\n      \"basis\": \"observation|retrieval|abstention|missing\",\n      \"evidence_refs\": [],\n      \"rationale\": \"Preuve observable ou limite précise.\"\n    }\n  }\n}\n```\n\n## Décision et portée\n\nLes résultats technique, comportemental et documentaire sont séparés.\nUn échec technique ou un invariant faux donne `echec`. Un invariant non\ndémontré donne `bloque`. Une mesure nominale sans contenu primaire exploitable\nreste `bloque`, même si une abstention correcte satisfait un invariant\nalternatif. Le mode explicitement sans sources est évalué selon ses propres\nexigences, sans simuler une consultation officielle.\n\nUne réussite nécessite toutes les exigences applicables. Le validateur\nrefuse les références fabriquées, les valeurs coercibles (`1` pour `true`),\nle STOP tardif validé et la promotion d'un résumé ou d'une troncature.\nIl ne démontre pas à lui seul l'appréciation métier du juge. La production\neffective du jugement doit aussi être liée à la trace du sous-agent, sans\nremplacer cette identité par une affirmation du coordinateur.\n\nConserver chaque gel, réponse, jugement, trace et score. Les résultats d'un\npilote technique ne valent pas campagne complète. La revue DSI/RSSI,\nla revue juridique humaine et le smoke du candidat dans Codex restent des\nbarrières distinctes ; `release_ready=false` reste maintenu.\n\nDocumentation d'intégration consultée via Context7 :\n[flux CLI Claude](https://code.claude.com/docs/en/headless),\n[types des résultats d'outils](https://code.claude.com/docs/en/agent-sdk/typescript),\n[résultats MCP](https://modelcontextprotocol.io/specification/2026-07-28/server/tools).\nLe contrat du serveur juridique a été contrôlé dans son code local ;\nun format de déploiement différent sera signalé comme preuve indisponible.\n",
+  "trace_sha256": "eaa53de8857f7a41f3ca193049a7bc013f6dfa44af744f2dcd03340a170d4aa4",
+  "trace": [
+    {
+      "type": "provenance",
+      "schema_version": 2,
+      "candidate_commit": "b968c215e913457686b39718ebc9a2da9397663e",
+      "suite_sha256": "3c45e6117c25cbca0558de2955ca5a7d80956575d886a887d1cdfdc581375cd8",
+      "case_sha256": "fb63b543148b4cea4c9f66f02db185569aac0f1f3a106d171b879ca9160d326d",
+      "prompt_sha256": "0acdc15e56b3c5f89971454e10a16be30303f307bf9b16c941f41672db880518",
+      "frozen_manifest_sha256": "444bf314b9d9be58fd4c920e360fab1a08d929d2ecbf696d1877db1aecfb6ace",
+      "activation_mode": "spontaneous",
+      "capture_window": {
+        "started_at": "2026-10-06T20:39:47.555012+00:00",
+        "finished_at": "2026-10-06T20:41:18.608469+00:00"
+      },
+      "candidate_profile": "corrected-runtime-v1"
+    },
+    {
+      "type": "init",
+      "host": "Claude Code 2.1.288",
+      "model": "claude-sonnet-4-6",
+      "session_id": "df4e89e5-078d-4b6d-9696-ca0df79a7411",
+      "available_skills": [
+        "collectivite-territoriale:dirfi-fpt",
+        "collectivite-territoriale:dpm-fpt",
+        "collectivite-territoriale:dpo-ct",
+        "collectivite-territoriale:drh-fpt",
+        "collectivite-territoriale:dsi-fpt",
+        "collectivite-territoriale:recherche-juridique"
+      ],
+      "foreign_available_skills": [],
+      "standalone_recherche_juridique_loaded": false,
+      "mcp_servers": [
+        {
+          "name": "droit-francais",
+          "status": "connected",
+          "source": "dynamic"
+        }
+      ],
+      "mcp_mode": "required",
+      "strict_mcp_config": true,
+      "event_id": "e1"
+    },
+    {
+      "type": "assistant_text",
+      "text": "J'active les deux skills nécessaires pour couvrir les deux volets de votre question.",
+      "text_redacted": false,
+      "text_truncated": false,
+      "event_id": "e2"
+    },
+    {
+      "type": "skill_activation",
+      "skill": "collectivite-territoriale:dsi-fpt",
+      "succeeded": true,
+      "call_id": "toolu_014XCyZdP5uLzwa9v9TFX2LL",
+      "event_id": "e3"
+    },
+    {
+      "type": "assistant_text",
+      "text": "Le skill `dsi-fpt` est chargé. J'active maintenant `dirfi-fpt` pour le volet financier, puis je lis les fichiers de branche pertinents.",
+      "text_redacted": false,
+      "text_truncated": false,
+      "event_id": "e4"
+    },
+    {
+      "type": "skill_activation",
+      "skill": "collectivite-territoriale:dirfi-fpt",
+      "succeeded": true,
+      "call_id": "toolu_01MnXjBwRjdTzvowa2BpF62s",
+      "event_id": "e5"
+    },
+    {
+      "type": "assistant_text",
+      "text": "Les deux skills sont chargés. Je lis maintenant les fichiers de branche pertinents des deux skills en parallèle.",
+      "text_redacted": false,
+      "text_truncated": false,
+      "event_id": "e6"
+    },
+    {
+      "type": "plugin_file_read",
+      "path": "dsi-fpt/references/analyse-situation.md",
+      "succeeded": true,
+      "call_id": "toolu_01K9u2MxvdZB1vnhdxKHAJUd",
+      "event_id": "e7"
+    },
+    {
+      "type": "plugin_file_read",
+      "path": "dirfi-fpt/references/analyse-situation.md",
+      "succeeded": true,
+      "call_id": "toolu_01X5uNxtdr9cii1J3iEfg828",
+      "event_id": "e8"
+    },
+    {
+      "type": "assistant_text",
+      "text": "Je lis maintenant les branches spécifiques de chaque skill pour ce scénario.",
+      "text_redacted": false,
+      "text_truncated": false,
+      "event_id": "e9"
+    },
+    {
+      "type": "plugin_file_read",
+      "path": "dsi-fpt/references/cloud-hebergement.md",
+      "succeeded": true,
+      "call_id": "toolu_01UtmStFuekzk13hz1tSDzL1",
+      "event_id": "e10"
+    },
+    {
+      "type": "plugin_file_read",
+      "path": "dsi-fpt/references/gouvernance-strategie.md",
+      "succeeded": true,
+      "call_id": "toolu_01ELZdPmTSgGSNimd2PTYzb8",
+      "event_id": "e11"
+    },
+    {
+      "type": "plugin_file_read",
+      "path": "dirfi-fpt/references/execution-depense.md",
+      "succeeded": true,
+      "call_id": "toolu_01VwbcQsiF2v18hXdF9ZoM8r",
+      "event_id": "e12"
+    },
+    {
+      "type": "plugin_file_read",
+      "path": "dirfi-fpt/references/budget-cycle.md",
+      "succeeded": true,
+      "call_id": "toolu_0121uK3qiG81J7PD88hCEYzq",
+      "event_id": "e13"
+    },
+    {
+      "type": "assistant_text",
+      "text": "J'ai tous les éléments des deux skills. Je rédige maintenant la réponse de synthèse.\n\n---\n\n## Répartition cadrage technique (DSI) / décision financière (DirFi)\n\n### Point d'alerte préalable — engagement sans crédit documenté\n\nL'absence d'arbitrage budgétaire documenté expose à une exécution sans crédit ouvert, qui est l'un des déclencheurs du garde-fou budgétaire (`dirfi-fpt SKILL.md §5.3`, `references/analyse-situation.md` Détecteur B). **L'engagement juridique ne peut pas précéder la vérification des crédits disponibles.** Avant toute commande ou bon de commande, la séquence ci-dessous doit être complète.\n\n---\n\n### Ce que fait la DSI : instruire, pas décider\n\n(`dsi-fpt references/gouvernance-strategie.md §5.1`, `references/cloud-hebergement.md §3`)\n\nLa DSI produit une fiche de besoin structurée (`references/templates/fiche-projet-si.md`) qui documente :\n\n| Élément | Ce qu'il permet |\n|---|---|\n| Service public soutenu, criticité, continuité dégradée acceptée | Justifier l'urgence ou la priorisation |\n| Options comparées : stockage interne, mutualisé, hébergement externe | Permettre un arbitrage éclairé de l'exécutif |\n| Coût complet exprimé en besoins (acquisition, maintenance, exploitation, sortie) | Alimenter le chiffrage DirFi |\n| Dépendances, responsabilités et réversibilité | Identifier les risques résiduels |\n| Nature des données hébergées | Signal vers `dpo-ct` si données personnelles sensibles |\n\n> **Ce que la DSI ne fait pas** : elle n'ouvre pas les crédits, elle n'engage pas juridiquement, elle ne décide pas elle-même de la dépense. La DSI instruit ; l'exécutif arbitre ; le DirFi vérifie les crédits et instruit l'acte budgétaire. (`dsi-fpt references/gouvernance-strategie.md §5.1` : « La DSI instruit les options et ne s'attribue pas leur décision »)\n\n---\n\n### Ce que fait le DirFi : qualifier, ouvrir les crédits, autoriser l'engagement\n\n(`dirfi-fpt references/execution-depense.md §5.1`, `references/budget-cycle.md §5.4`)\n\n**Séquence imposée** — à respecter dans cet ordre :\n\n1. **Qualifier la section et la nature de la dépense**\n   - Hébergement récurrent (abonnement, SaaS, infogérance) → **section de fonctionnement**\n   - Acquisition d'infrastructure ou renouvellement augmentant la valeur patrimoniale → **section d'investissement** (à confirmer via `references/nomenclature-m57.md` : la règle est que seule une dépense augmentant la valeur du patrimoine ou prolongeant sa durée de vie relève de l'investissement)\n   - L'entretien courant reste en fonctionnement, quelles que soient les circonstances.\n\n2. **Vérifier l'existence de crédits disponibles sur le chapitre concerné**\n   (`references/execution-depense.md §5.1` : « les deux [engagement juridique et comptable] doivent être concordants et **antérieurs** à l'exécution de la prestation »)\n   - Si des crédits ont été ouverts au budget primitif sur le chapitre concerné → l'engagement peut être préparé, sous réserve du montant disponible.\n   - Si aucun crédit n'est disponible pour ce projet → **aucun engagement n'est possible** avant une décision modificative (DM) ou un virement de crédits.\n\n3. **Identifier l'autorité compétente pour l'acte budgétaire**\n   (`references/budget-cycle.md §5.5`) : virement de crédits entre chapitres = compétence de l'assemblée sauf délégation expresse à l'exécutif ; DM = compétence de l'assemblée. Vérifier l'existence et l'étendue exacte d'une délégation en vigueur.\n\n4. **Si les crédits sont insuffisants : décision modificative (DM)**\n   - La DM doit respecter l'équilibre réel section par section (`references/budget-cycle.md §5.4`) — elle ne peut pas masquer un déséquilibre.\n   - Elle doit être votée par l'assemblée délibérante avant tout engagement juridique.\n\n5. **Une fois les crédits ouverts : engagement juridique et comptable concordants**\n   (`references/execution-depense.md §5.1`) : le bon de commande, le marché ou toute décision qui crée l'obligation vis-à-vis du tiers constitue l'engagement juridique ; l'engagement comptable réserve le crédit correspondant. Les deux doivent être simultanés et antérieurs à l'exécution.\n\n---\n\n### Tableau de répartition des rôles\n\n| Étape | Acteur | Support |\n|---|---|---|\n| Formaliser le besoin et les options | **DSI** | Fiche projet (`fiche-projet-si.md`) |\n| Qualifier section et imputation | **DirFi** | `nomenclature-m57.md` |\n| Vérifier la disponibilité des crédits | **DirFi** | Budget en cours, état des crédits |\n| Arbitrer et décider | **Exécutif (ordonnateur)** | Note d'arbitrage DGS |\n| Si crédits insuffisants : préparer la DM | **DirFi** | `deliberation-budgetaire.md` |\n| Voter la DM | **Assemblée délibérante** | — |\n| Préparer l'engagement | **DSI + service commande publique** | Cahier des charges technique |\n| Engager (bon de commande, marché) | **Ordonnateur** | Hors périmètre : passation → service de la commande publique |\n\n> **Frontière passation** : la procédure de mise en concurrence et le choix du prestataire sont **hors périmètre** des deux skills. Le service de la commande publique est l'interlocuteur compétent pour cette étape.\n\n---\n\n### Ce qui bloque en l'état\n\n| Blocage | Condition de levée |\n|---|---|\n| Aucun arbitrage budgétaire documenté | Fiche DSI complète + décision de l'exécutif |\n| Crédits insuffisants ou absents | Vote d'une DM par l'assemblée |\n| Section non qualifiée (F ou I) | Qualification via `nomenclature-m57.md` |\n| Engagement sans crédit | Interdit — risque ALERTE BUDGÉTAIRE |\n\n---\n\n**[risque / confiance] : élevé / stable sur la méthode.** L'engagement sans crédit ouvert est une irrégularité formelle pouvant déclencher un rejet du comptable. La qualification fonctionnement/investissement et les seuils de marché sont des valeurs à vérifier à la source avant tout acte.",
+      "text_redacted": false,
+      "text_truncated": false,
+      "event_id": "e14"
+    },
+    {
+      "type": "result",
+      "subtype": "success",
+      "is_error": false,
+      "cost_usd": 0.45803039999999995,
+      "result": "J'ai tous les éléments des deux skills. Je rédige maintenant la réponse de synthèse.\n\n---\n\n## Répartition cadrage technique (DSI) / décision financière (DirFi)\n\n### Point d'alerte préalable — engagement sans crédit documenté\n\nL'absence d'arbitrage budgétaire documenté expose à une exécution sans crédit ouvert, qui est l'un des déclencheurs du garde-fou budgétaire (`dirfi-fpt SKILL.md §5.3`, `references/analyse-situation.md` Détecteur B). **L'engagement juridique ne peut pas précéder la vérification des crédits disponibles.** Avant toute commande ou bon de commande, la séquence ci-dessous doit être complète.\n\n---\n\n### Ce que fait la DSI : instruire, pas décider\n\n(`dsi-fpt references/gouvernance-strategie.md §5.1`, `references/cloud-hebergement.md §3`)\n\nLa DSI produit une fiche de besoin structurée (`references/templates/fiche-projet-si.md`) qui documente :\n\n| Élément | Ce qu'il permet |\n|---|---|\n| Service public soutenu, criticité, continuité dégradée acceptée | Justifier l'urgence ou la priorisation |\n| Options comparées : stockage interne, mutualisé, hébergement externe | Permettre un arbitrage éclairé de l'exécutif |\n| Coût complet exprimé en besoins (acquisition, maintenance, exploitation, sortie) | Alimenter le chiffrage DirFi |\n| Dépendances, responsabilités et réversibilité | Identifier les risques résiduels |\n| Nature des données hébergées | Signal vers `dpo-ct` si données personnelles sensibles |\n\n> **Ce que la DSI ne fait pas** : elle n'ouvre pas les crédits, elle n'engage pas juridiquement, elle ne décide pas elle-même de la dépense. La DSI instruit ; l'exécutif arbitre ; le DirFi vérifie les crédits et instruit l'acte budgétaire. (`dsi-fpt references/gouvernance-strategie.md §5.1` : « La DSI instruit les options et ne s'attribue pas leur décision »)\n\n---\n\n### Ce que fait le DirFi : qualifier, ouvrir les crédits, autoriser l'engagement\n\n(`dirfi-fpt references/execution-depense.md §5.1`, `references/budget-cycle.md §5.4`)\n\n**Séquence imposée** — à respecter dans cet ordre :\n\n1. **Qualifier la section et la nature de la dépense**\n   - Hébergement récurrent (abonnement, SaaS, infogérance) → **section de fonctionnement**\n   - Acquisition d'infrastructure ou renouvellement augmentant la valeur patrimoniale → **section d'investissement** (à confirmer via `references/nomenclature-m57.md` : la règle est que seule une dépense augmentant la valeur du patrimoine ou prolongeant sa durée de vie relève de l'investissement)\n   - L'entretien courant reste en fonctionnement, quelles que soient les circonstances.\n\n2. **Vérifier l'existence de crédits disponibles sur le chapitre concerné**\n   (`references/execution-depense.md §5.1` : « les deux [engagement juridique et comptable] doivent être concordants et **antérieurs** à l'exécution de la prestation »)\n   - Si des crédits ont été ouverts au budget primitif sur le chapitre concerné → l'engagement peut être préparé, sous réserve du montant disponible.\n   - Si aucun crédit n'est disponible pour ce projet → **aucun engagement n'est possible** avant une décision modificative (DM) ou un virement de crédits.\n\n3. **Identifier l'autorité compétente pour l'acte budgétaire**\n   (`references/budget-cycle.md §5.5`) : virement de crédits entre chapitres = compétence de l'assemblée sauf délégation expresse à l'exécutif ; DM = compétence de l'assemblée. Vérifier l'existence et l'étendue exacte d'une délégation en vigueur.\n\n4. **Si les crédits sont insuffisants : décision modificative (DM)**\n   - La DM doit respecter l'équilibre réel section par section (`references/budget-cycle.md §5.4`) — elle ne peut pas masquer un déséquilibre.\n   - Elle doit être votée par l'assemblée délibérante avant tout engagement juridique.\n\n5. **Une fois les crédits ouverts : engagement juridique et comptable concordants**\n   (`references/execution-depense.md §5.1`) : le bon de commande, le marché ou toute décision qui crée l'obligation vis-à-vis du tiers constitue l'engagement juridique ; l'engagement comptable réserve le crédit correspondant. Les deux doivent être simultanés et antérieurs à l'exécution.\n\n---\n\n### Tableau de répartition des rôles\n\n| Étape | Acteur | Support |\n|---|---|---|\n| Formaliser le besoin et les options | **DSI** | Fiche projet (`fiche-projet-si.md`) |\n| Qualifier section et imputation | **DirFi** | `nomenclature-m57.md` |\n| Vérifier la disponibilité des crédits | **DirFi** | Budget en cours, état des crédits |\n| Arbitrer et décider | **Exécutif (ordonnateur)** | Note d'arbitrage DGS |\n| Si crédits insuffisants : préparer la DM | **DirFi** | `deliberation-budgetaire.md` |\n| Voter la DM | **Assemblée délibérante** | — |\n| Préparer l'engagement | **DSI + service commande publique** | Cahier des charges technique |\n| Engager (bon de commande, marché) | **Ordonnateur** | Hors périmètre : passation → service de la commande publique |\n\n> **Frontière passation** : la procédure de mise en concurrence et le choix du prestataire sont **hors périmètre** des deux skills. Le service de la commande publique est l'interlocuteur compétent pour cette étape.\n\n---\n\n### Ce qui bloque en l'état\n\n| Blocage | Condition de levée |\n|---|---|\n| Aucun arbitrage budgétaire documenté | Fiche DSI complète + décision de l'exécutif |\n| Crédits insuffisants ou absents | Vote d'une DM par l'assemblée |\n| Section non qualifiée (F ou I) | Qualification via `nomenclature-m57.md` |\n| Engagement sans crédit | Interdit — risque ALERTE BUDGÉTAIRE |\n\n---\n\n**[risque / confiance] : élevé / stable sur la méthode.** L'engagement sans crédit ouvert est une irrégularité formelle pouvant déclencher un rejet du comptable. La qualification fonctionnement/investissement et les seuils de marché sont des valeurs à vérifier à la source avant tout acte.",
+      "text_redacted": false,
+      "text_truncated": false,
+      "errors_count": 0,
+      "event_id": "e15"
+    },
+    {
+      "type": "technical_assessment",
+      "case_id": "plugin-spontane-budget",
+      "process_exit": 0,
+      "status": "failed",
+      "failures": [
+        "plugin_mcp_call_missing",
+        "activation_set_mismatch"
+      ],
+      "observables": {
+        "stop_required": false,
+        "first_visible_text_ref": "e2",
+        "stop_first": null,
+        "primary_content_refs": [],
+        "primary_content_available": false,
+        "legal_validity": null,
+        "note": "Le contenu disponible ne certifie ni pertinence ni vigueur."
+      },
+      "requires_independent_judgment": true
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "plugin-spontane-rssi-rh",
+  "exported_at": "2026-10-06T20:42:25.142809+00:00",
+  "packet_sha256": "ce77bd9381ebe2f77940eee322f5ae3e0ef7ef640bf64b983c5bacf502a371a8",
+  "prompt_sha256": "1093c0594af3f77df92329c457eaf1254b892cccafc8bd15cf1ed266a02a78c0",
+  "response_sha256": "5869672c0f8bca852b1f35ae80d39aa8dec23c8348bc934289b1c9bbc634f5e3",
+  "suite_sha256": "3c45e6117c25cbca0558de2955ca5a7d80956575d886a887d1cdfdc581375cd8",
+  "protocol_sha256": "65f78f419679774ec00c6b5d96b1801f902c6510b57e221ae7ebb31320fd1b6f",
+  "external_read_output_tokens": 55000,
+  "portable_adapter_sha256": "61f853a233cd45b2f23c52a1b2344f21a52a5728e90afd8a02bbcb77de3ef371"
+}

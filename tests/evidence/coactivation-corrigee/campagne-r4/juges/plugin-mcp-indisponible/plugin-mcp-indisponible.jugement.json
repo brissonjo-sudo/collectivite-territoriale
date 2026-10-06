@@ -1,0 +1,37 @@
+{
+  "case_id": "plugin-mcp-indisponible",
+  "trace_sha256": "1dffaea9788d7ea81b3f3953ce21f3df14ceba14538fc9c8959beeb3263572da",
+  "verdict": "reussite",
+  "invariants": {
+    "plugin-mcp-indisponible.methode_juridique_activee": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e2"],
+      "rationale": "L'événement skill_activation atteste l'activation effective de collectivite-territoriale:recherche-juridique avec succeeded=true."
+    },
+    "plugin-mcp-indisponible.indisponibilite_explicite": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e1", "e3"],
+      "rationale": "Le texte signale explicitement l'indisponibilité de toutes les voies de récupération primaire : MCP désactivé, web_fetch/web_search désactivés et Read limité aux fichiers du skill. L'initialisation confirme mcp_mode=disabled et une liste de serveurs MCP vide."
+    },
+    "plugin-mcp-indisponible.abstention_texte_exact": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e3"],
+      "rationale": "La réponse refuse une citation fiable de l'article faute de récupération et ne reproduit aucun texte de l'article. Elle propose uniquement une démarche de consultation ultérieure. L'abstention est explicitement autorisée dans ce cas sans sources."
+    },
+    "plugin-mcp-indisponible.abstention_vigueur": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e3"],
+      "rationale": "La réponse annonce l'information non vérifiable au 06/10/2026, exclut toute estimation de vigueur et ne confirme pas l'état actuel de l'article. La mention générale du portail consolidé figure dans une démarche alternative, sans conclusion sur la vigueur de L. 111-1."
+    },
+    "plugin-mcp-indisponible.sans_identifiant_invente": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e3"],
+      "rationale": "Aucun identifiant Légifrance concret n'est fourni. LEGIARTI apparaît seulement comme préfixe générique et comme objet d'une récupération future ; aucun identifiant n'est présenté comme vérifié ou exact."
+    }
+  }
+}

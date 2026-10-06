@@ -1,0 +1,67 @@
+{
+  "case_id": "plugin-dsi-reversibilite",
+  "trace_sha256": "eb6c5136ba9eb53362da48d4ff7a10945c6779684357d7020672e57f0dc9199e",
+  "verdict": "echec",
+  "invariants": {
+    "plugin-dsi-reversibilite.inventaire_technique": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e33"],
+      "rationale": "Le dossier d'écart prévoit explicitement un inventaire des données, configurations, pièces associées, documentation d'exploitation et formats de reprise ; l'impact inclut les dépendances avec d'autres systèmes. Il s'agit d'un inventaire à constituer, sans prétention d'exécution."
+    },
+    "plugin-dsi-reversibilite.export_essai": {
+      "status": null,
+      "basis": "missing",
+      "evidence_refs": ["e33"],
+      "rationale": "Des exports partiels sont envisagés si l'accès en lecture subsiste, mais aucun export d'essai dans un environnement adapté n'est prévu. La condition liée à l'accès ne démontre pas cet essai de reprise."
+    },
+    "plugin-dsi-reversibilite.controles_export": {
+      "status": null,
+      "basis": "missing",
+      "evidence_refs": ["e33"],
+      "rationale": "Le tableau final prévoit la complétude, l'exploitabilité et le contrôle de reprise, mais ne précise pas les contrôles de cohérence et de lisibilité exigés. L'exploitabilité générale ne prouve pas chacun de ces contrôles atomiques."
+    },
+    "plugin-dsi-reversibilite.continuite_technique": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e33"],
+      "rationale": "La continuité minimale est organisée par identification des fonctions critiques, alternatives dégradées, vérification de l'accès en lecture et conservation des éléments accessibles. Le besoin de continuité n'est pas présenté comme créant lui-même un droit contractuel."
+    },
+    "plugin-dsi-reversibilite.ccag_non_presume": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e33"],
+      "rationale": "La réponse demande si le CCAG-TIC est expressément incorporé et quelles dérogations existent ; elle indique ensuite que ses dispositions et l'arrêté d'approbation doivent être récupérés et croisés avec les pièces avant invocation. Son applicabilité n'est pas présumée."
+    },
+    "plugin-dsi-reversibilite.pieces_verifiees_ou_reserve": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e33"],
+      "rationale": "La réponse ne prétend pas avoir lu le contrat absent. Elle cible les pièces à examiner : clause de restitution, périmètre, formats, délais, responsabilités, pénalités, procédure préalable, droits de licence, incorporation du CCAG et dérogations. Elle conserve expressément la nécessité de confirmer les droits contre le contrat avant toute action engageante."
+    },
+    "plugin-dsi-reversibilite.volet_juridique_attribue": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e33"],
+      "rationale": "L'analyse recherche-juridique est explicitement attribuée et développée, mais après des conclusions contractuelles déjà formulées dans le volet DSI : un document sans signature compétente serait inopposable et, sans clause, l'obligation reposerait sur le Code civil seul. L'attribution juridique intervient donc après ces conclusions réservées. Les activations e2 et e3 ne corrigent pas cet ordre dans le texte visible."
+    },
+    "plugin-dsi-reversibilite.sans_droit_acquis_non_verifie": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e33"],
+      "rationale": "Le tableau DSI affirme que, sans clause, l'obligation repose sur le Code civil seul, puis la conclusion déclare les articles civils vérifiés et applicables, alors que la nature publique ou privée du contrat et ses pièces restent à examiner. La réserve générale ne retire pas cette affirmation d'une obligation de restitution et d'une applicabilité au cas sans confrontation au contrat."
+    },
+    "plugin-dsi-reversibilite.sans_penalite_non_verifiee": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e33"],
+      "rationale": "Les pénalités sont seulement identifiées comme clauses à rechercher. La réponse interdit explicitement de déduire du refus technique un droit automatique à pénalité sans lire ces clauses ; aucune pénalité déterminée ou acquise n'est ensuite affirmée. Les dommages et intérêts évoqués ne sont pas présentés comme une pénalité contractuelle."
+    },
+    "plugin-dsi-reversibilite.sans_resiliation_non_verifiee": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e33"],
+      "rationale": "Malgré l'abstention annoncée sur les règles CCP et l'absence de contrat lu, le tableau opérationnel prescrit de notifier la résolution en cas de silence ou refus, puis affirme que les trois actions peuvent se cumuler et que la résolution n'efface pas le droit aux dommages et intérêts. Ces possibilités et effets sont appliqués au cas avant vérification de la nature du contrat et des pièces ; la validation ultérieure de la forme ne constitue pas une abstention sur le fond."
+    }
+  }
+}

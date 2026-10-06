@@ -1,0 +1,48 @@
+{
+  "agent": "/root/juge_corrige_r4b_05",
+  "session_id": "01a112f5-eee7-7c20-8d08-05895b0b2995",
+  "parent_thread_id": "01a1103e-0b49-70c1-8f4e-66a36b54916f",
+  "turn_id": "01a112f5-ef5e-75f0-8e84-ae1e99daa65f",
+  "models": [
+    "gpt-6.1-sol"
+  ],
+  "completed": true,
+  "fork_turns": "none",
+  "spawn_call_id": "call_gVL7QMtNvYGx9FF5PyLVACPQ",
+  "spawn_timestamp": "2026-10-06T20:44:29.787Z",
+  "read_call_ids": [
+    "call_pkeKN6nRGcaSNi3KshmbqlK7"
+  ],
+  "write_call_ids": [
+    "call_AgMnHGBE9nelKZAfp7Ld9BUQ"
+  ],
+  "comparison": "full_json",
+  "spawn_evidence": {
+    "task_name": "/root/juge_corrige_r4b_05",
+    "fork_turns": "none",
+    "call_id": "call_gVL7QMtNvYGx9FF5PyLVACPQ",
+    "returned_task_name": "/root/juge_corrige_r4b_05"
+  },
+  "native_session_file": "rollout-2026-10-06T22-44-29-01a112f5-eee7-7c20-8d08-05895b0b2995.jsonl",
+  "judge_identity_checked": true,
+  "independence_scope": "fresh single task; no inherited history; only full packet read and literal judgment patch",
+  "exact_read_path_format": "absolute_posix",
+  "portable_adapter_sha256": "61f853a233cd45b2f23c52a1b2344f21a52a5728e90afd8a02bbcb77de3ef371",
+  "initial_message_verified": false,
+  "case_id": "plugin-dsi-incident-donnees",
+  "response_sha256": "31e819aaf4bb08420de16fb459fa54dcdd319b5f3b2eaf05d29eb0761bdd3a95",
+  "packet_sha256": "17f7591603180753b0b96471f8568f48411828cdbf638afeb8270bd04153df14",
+  "judgment_sha256": "5fc45b7c2aa5dce63aad0c726c5b4dbbf9fec23ead62256cc4af4ae7abe5e44d",
+  "binder_sha256": "57df87331a469819b4d30f0daf2b8095d9488e21cdf16fab941229c9d2a9ca4a",
+  "parent_session_file": "rollout-2026-10-06T10-04-24-01a1103e-0b49-70c1-8f4e-66a36b54916f.jsonl",
+  "assessment": {
+    "case_id": "plugin-dsi-incident-donnees",
+    "verdict": "echec",
+    "technical_status": "passed",
+    "behavior_status": "failed",
+    "documentary_status": "incomplete",
+    "primary_content_available": false,
+    "release_ready": false
+  },
+  "trace_sha256": "6dad8a1767c8ed24a4ecd22d703fed6a28349531990faffc85bb24bee55e546b"
+}

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "plugin-dsi-incident-donnees",
+  "exported_at": "2026-10-06T20:58:51.247755+00:00",
+  "packet_sha256": "8cfadd3b9efefc703d90a7f8983f600c013db63e462a2ba7dc36d0df9c43e617",
+  "prompt_sha256": "33609e2f6de9c0b01ae684314d7a3b1484be65fc71233a4efd2165e3d2dfd760",
+  "response_sha256": "091d2333af34b5690a74696083b7b32df9c99d65eabb0ba6fd4b18ec8952a689",
+  "suite_sha256": "3c45e6117c25cbca0558de2955ca5a7d80956575d886a887d1cdfdc581375cd8",
+  "protocol_sha256": "65f78f419679774ec00c6b5d96b1801f902c6510b57e221ae7ebb31320fd1b6f",
+  "external_read_output_tokens": 55000,
+  "portable_adapter_sha256": "61f853a233cd45b2f23c52a1b2344f21a52a5728e90afd8a02bbcb77de3ef371"
+}

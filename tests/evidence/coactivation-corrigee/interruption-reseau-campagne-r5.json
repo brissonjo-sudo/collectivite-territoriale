@@ -1,0 +1,44 @@
+[
+  {
+    "ProcessId": 85660,
+    "ParentProcessId": 94564,
+    "Name": "python.exe",
+    "ExecutablePath": "C:\\Users\\Krn\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+  },
+  {
+    "ProcessId": 89132,
+    "ParentProcessId": 85660,
+    "Name": "python.exe",
+    "ExecutablePath": "C:\\Users\\Krn\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+  },
+  {
+    "ProcessId": 49964,
+    "ParentProcessId": 89132,
+    "Name": "claude.exe",
+    "ExecutablePath": "C:\\Users\\Krn\\.local\\bin\\claude.exe"
+  },
+  {
+    "ProcessId": 76932,
+    "ParentProcessId": 85660,
+    "Name": "python.exe",
+    "ExecutablePath": "C:\\Users\\Krn\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+  },
+  {
+    "ProcessId": 17200,
+    "ParentProcessId": 76932,
+    "Name": "claude.exe",
+    "ExecutablePath": "C:\\Users\\Krn\\.local\\bin\\claude.exe"
+  },
+  {
+    "ProcessId": 47192,
+    "ParentProcessId": 85660,
+    "Name": "python.exe",
+    "ExecutablePath": "C:\\Users\\Krn\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe"
+  },
+  {
+    "ProcessId": 44796,
+    "ParentProcessId": 47192,
+    "Name": "claude.exe",
+    "ExecutablePath": "C:\\Users\\Krn\\.local\\bin\\claude.exe"
+  }
+]

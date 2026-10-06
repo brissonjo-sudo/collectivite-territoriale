@@ -1,0 +1,48 @@
+{
+  "agent": "/root/juge_corrige_r4b_13",
+  "session_id": "01a112ff-942f-7c00-8b0a-6849dd72f901",
+  "parent_thread_id": "01a1103e-0b49-70c1-8f4e-66a36b54916f",
+  "turn_id": "01a112ff-9486-7130-9bcf-3ce919d80c30",
+  "models": [
+    "gpt-6.1-sol"
+  ],
+  "completed": true,
+  "fork_turns": "none",
+  "spawn_call_id": "call_fcf0c861d7b34230bc508731e03560cb",
+  "spawn_timestamp": "2026-10-06T20:55:01.919Z",
+  "read_call_ids": [
+    "call_BODWeCR8pkZMEGXMagdDa6WX"
+  ],
+  "write_call_ids": [
+    "call_UfIow67JzTMYPyKnHi6cMvSL"
+  ],
+  "comparison": "full_json",
+  "spawn_evidence": {
+    "task_name": "/root/juge_corrige_r4b_13",
+    "fork_turns": "none",
+    "call_id": "call_fcf0c861d7b34230bc508731e03560cb",
+    "returned_task_name": "/root/juge_corrige_r4b_13"
+  },
+  "native_session_file": "rollout-2026-10-06T22-55-01-01a112ff-942f-7c00-8b0a-6849dd72f901.jsonl",
+  "judge_identity_checked": true,
+  "independence_scope": "fresh single task; no inherited history; only full packet read and literal judgment patch",
+  "exact_read_path_format": "absolute_posix",
+  "portable_adapter_sha256": "61f853a233cd45b2f23c52a1b2344f21a52a5728e90afd8a02bbcb77de3ef371",
+  "initial_message_verified": false,
+  "case_id": "plugin-spontane-incident-donnees",
+  "response_sha256": "06ebca69f432bb09d46138a1b5fdaca251ec1b21bccd4f6a6245bacc461836e1",
+  "packet_sha256": "c5df37fc81eec6ac6d543ae3b740990bff4404bf56ba5ce754741f6e672a8d06",
+  "judgment_sha256": "2ca6c7191f3c871b8ef27c2c400f8aaf5fa9d1040347d19470b10f3f22c867c9",
+  "binder_sha256": "57df87331a469819b4d30f0daf2b8095d9488e21cdf16fab941229c9d2a9ca4a",
+  "parent_session_file": "rollout-2026-10-06T10-04-24-01a1103e-0b49-70c1-8f4e-66a36b54916f.jsonl",
+  "assessment": {
+    "case_id": "plugin-spontane-incident-donnees",
+    "verdict": "echec",
+    "technical_status": "failed",
+    "behavior_status": "failed",
+    "documentary_status": "failed",
+    "primary_content_available": false,
+    "release_ready": false
+  },
+  "trace_sha256": "18be13d2c83ce97f5a9713eafcca51541c60ee754f3019ccad5b50a139a9e692"
+}

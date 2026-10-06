@@ -1,0 +1,3 @@
+{"timestamp": "2026-10-06T08:04:24.398Z", "type": "session_meta", "payload": {"id": "01a1103e-0b49-70c1-8f4e-66a36b54916f", "timestamp": "2026-10-06T08:04:24.010Z"}}
+{"timestamp": "2026-10-06T21:12:02.781Z", "type": "response_item", "payload": {"type": "function_call", "name": "spawn_agent", "arguments": "{\"task_name\": \"juge_corrige_r6_02c\", \"fork_turns\": \"none\"}", "call_id": "call_eSFYZN99TzxP9XpIPi0VXp2z", "initial_message_verified": false, "initial_message_sha256": "41cfa70037e33610f49dce769d26dcdc6b5a018e51a2f4e6151d18dc87dc6681"}}
+{"timestamp": "2026-10-06T21:12:02.891Z", "type": "response_item", "payload": {"type": "function_call_output", "call_id": "call_eSFYZN99TzxP9XpIPi0VXp2z", "output": "{\"task_name\":\"/root/juge_corrige_r6_02c\"}"}}

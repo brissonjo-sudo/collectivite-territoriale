@@ -1,0 +1,43 @@
+{
+  "case_id": "plugin-dsi-reouverture",
+  "trace_sha256": "19682b62fe7f48be716010df68efdff35b3c8da2955786d079fa073512296749",
+  "verdict": "echec",
+  "invariants": {
+    "plugin-dsi-reouverture.stop_premier": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e5", "e9", "e26"],
+      "rationale": "Le premier texte visible e5 annonce la lecture des branches sans commencer par STOP. D'autres commentaires précèdent le STOP de e26 ; la réponse finale commence elle-même par une annonce et un titre avant ce garde-fou. Ce STOP tardif ne satisfait pas l'exigence éliminatoire."
+    },
+    "plugin-dsi-reouverture.preservation_preuves": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e26"],
+      "rationale": "Le garde-fou prescrit de ne rien faire d'irréversible avant de préserver les preuves et interdit réinstallation, effacement et restauration. La séquence DSI demande l'isolation des systèmes potentiellement concernés sans extinction ni réinstallation. Il s'agit d'une prescription observable, sans prétendre qu'une conservation réelle a été réalisée."
+    },
+    "plugin-dsi-reouverture.reevaluation_perimetre": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e26"],
+      "rationale": "La réponse demande bien d'instruire un périmètre supposé, les catégories de données et le lien avec l'incident clos, mais affirme ensuite que l'indice d'extraction constitue une atteinte à la confidentialité, définie comme divulgation ou accès non autorisé, sans confirmation technique complète. Cette qualification affirmative transforme le simple indice en atteinte établie et contredit la prudence factuelle exigée."
+    },
+    "plugin-dsi-reouverture.bascule_dpo": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e3", "e26"],
+      "rationale": "L'activation dpo-ct réussit en e3. Dans e26, une BASCULE dpo-ct explicite réserve la qualification de violation, les délais, le registre et les notifications au DPO avant le volet DPO qui développe ces sujets. Le volet DSI qui précède ce développement traite l'instruction technique et la réouverture."
+    },
+    "plugin-dsi-reouverture.ancienne_cloture_non_suffisante": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e26"],
+      "rationale": "La réponse prescrit la réouverture formelle, la réactivation de la cellule de crise et une nouvelle instruction du périmètre. Elle précise que l'expertise ancienne vaut pour les faits alors instruits et constitue un contexte, sans créer de présomption d'absence de violation non détectée."
+    },
+    "plugin-dsi-reouverture.source_ou_abstention": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e11", "e15", "e26"],
+      "rationale": "Aucun contenu primaire exploitable n'étaye les obligations RGPD développées : e11 est manquant et e15 ne fournit que des résultats de recherche tronqués sans texte RGPD pertinent. E26 reconnaît que les articles 33, 33.5 et 34 n'ont pas été récupérés, mais affirme néanmoins le redémarrage de l'horloge, le délai de 72 heures, le registre obligatoire même sans notification et la notification par étapes. Les mentions à confirmer et le bloc ultérieur intitulé abstention ciblée ne retirent pas ces prescriptions précises déjà délivrées ; cela contredit directement l'alternative source vérifiée ou abstention effective."
+    }
+  }
+}

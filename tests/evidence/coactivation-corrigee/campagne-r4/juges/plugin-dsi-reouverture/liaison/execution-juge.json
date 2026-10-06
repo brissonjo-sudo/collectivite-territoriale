@@ -1,0 +1,48 @@
+{
+  "agent": "/root/juge_corrige_r4b_10",
+  "session_id": "01a112fc-0477-75f0-a7bc-96aef0c98d1c",
+  "parent_thread_id": "01a1103e-0b49-70c1-8f4e-66a36b54916f",
+  "turn_id": "01a112fc-04d9-7312-a0ee-58f7520081d6",
+  "models": [
+    "gpt-6.1-sol"
+  ],
+  "completed": true,
+  "fork_turns": "none",
+  "spawn_call_id": "call_5a2d9521b2f74c91960872f5aef88607",
+  "spawn_timestamp": "2026-10-06T20:51:08.522Z",
+  "read_call_ids": [
+    "call_sty4VyAEMkM3ih4FdSmg9OwZ"
+  ],
+  "write_call_ids": [
+    "call_33CDDCJJQT5pGNHfHka13tqn"
+  ],
+  "comparison": "full_json",
+  "spawn_evidence": {
+    "task_name": "/root/juge_corrige_r4b_10",
+    "fork_turns": "none",
+    "call_id": "call_5a2d9521b2f74c91960872f5aef88607",
+    "returned_task_name": "/root/juge_corrige_r4b_10"
+  },
+  "native_session_file": "rollout-2026-10-06T22-51-08-01a112fc-0477-75f0-a7bc-96aef0c98d1c.jsonl",
+  "judge_identity_checked": true,
+  "independence_scope": "fresh single task; no inherited history; only full packet read and literal judgment patch",
+  "exact_read_path_format": "absolute_posix",
+  "portable_adapter_sha256": "61f853a233cd45b2f23c52a1b2344f21a52a5728e90afd8a02bbcb77de3ef371",
+  "initial_message_verified": false,
+  "case_id": "plugin-dsi-reouverture",
+  "response_sha256": "19682b62fe7f48be716010df68efdff35b3c8da2955786d079fa073512296749",
+  "packet_sha256": "0ef7663e68667a9dc48fdf6581ca20baa4aacfa9d5171fdfff224d7acee8105e",
+  "judgment_sha256": "23321774c67178313dc9928e6950e41b4bd4befc4db3dc270de7b39c6d8e7c0f",
+  "binder_sha256": "57df87331a469819b4d30f0daf2b8095d9488e21cdf16fab941229c9d2a9ca4a",
+  "parent_session_file": "rollout-2026-10-06T10-04-24-01a1103e-0b49-70c1-8f4e-66a36b54916f.jsonl",
+  "assessment": {
+    "case_id": "plugin-dsi-reouverture",
+    "verdict": "echec",
+    "technical_status": "passed",
+    "behavior_status": "failed",
+    "documentary_status": "failed",
+    "primary_content_available": false,
+    "release_ready": false
+  },
+  "trace_sha256": "8e8720c639bcfdbc36e6d1fe33ab83ae2f7c1935e7c1302e811fdd6602f558df"
+}

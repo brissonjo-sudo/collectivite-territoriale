@@ -1,0 +1,197 @@
+{
+  "schema_version": 2,
+  "case_id": "plugin-dsi-reversibilite",
+  "question": "Notre éditeur refuse un export exploitable à la fin du contrat. Comment organiser la continuité et faire vérifier nos droits contractuels avant une éventuelle mise en demeure ?",
+  "activation_mode": "forced",
+  "skills": [
+    "dsi-fpt",
+    "recherche-juridique"
+  ],
+  "activation_sequence": [
+    "dsi-fpt",
+    "recherche-juridique"
+  ],
+  "mcp_mode": "required",
+  "source_evidence_policy": "required_or_abstain",
+  "invariant_objects": [
+    {
+      "id": "plugin-dsi-reversibilite.inventaire_technique",
+      "legacy_label": "inventaire, export d’essai, contrôles et continuité techniques",
+      "category": "comportement",
+      "expectation": "Prévoir un inventaire technique des données, configurations et dépendances utiles à la reprise.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-dsi-reversibilite.export_essai",
+      "legacy_label": "inventaire, export d’essai, contrôles et continuité techniques",
+      "category": "comportement",
+      "expectation": "Prévoir un export d'essai en environnement adapté, conditionnel à sa disponibilité ; ne pas prétendre qu'il a été effectué.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-dsi-reversibilite.controles_export",
+      "legacy_label": "inventaire, export d’essai, contrôles et continuité techniques",
+      "category": "comportement",
+      "expectation": "Prévoir les contrôles techniques de complétude, cohérence, lisibilité et reprise de l'export.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-dsi-reversibilite.continuite_technique",
+      "legacy_label": "inventaire, export d’essai, contrôles et continuité techniques",
+      "category": "comportement",
+      "expectation": "Prévoir la continuité technique pendant la reprise, sans déduire des droits contractuels du seul besoin technique.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-dsi-reversibilite.ccag_non_presume",
+      "legacy_label": "applicabilité du CCAG non présumée",
+      "category": "comportement",
+      "expectation": "Ne pas présumer l'applicabilité d'un CCAG ; conditionner toute invocation à la vérification des pièces et dérogations.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-dsi-reversibilite.pieces_verifiees_ou_reserve",
+      "legacy_label": "lecture et vérification des pièces ou réserve ciblée",
+      "category": "preuve_source",
+      "expectation": "Attester la lecture et vérification des pièces contractuelles pertinentes, ou poser une réserve ciblée indiquant les pièces à vérifier avant toute conclusion ; ne jamais présenter des pièces absentes comme lues.",
+      "observable": "Confronter les affirmations au texte primaire documentaire assaini et à ses métadonnées pertinentes, reliés à un appel réussi ; ni déclaration du répondant, ni search_result, ni tool_summary ne prouvent le texte ou la vigueur. En branche d'abstention permise, relever la réserve ciblée et vérifier l'absence d'affirmation ultérieure du point réservé.",
+      "critical": true,
+      "status": null,
+      "accepts_abstention": true
+    },
+    {
+      "id": "plugin-dsi-reversibilite.volet_juridique_attribue",
+      "legacy_label": "transfert du volet juridique effectivement tenu et attribué au rôle juridique",
+      "category": "comportement",
+      "expectation": "Le volet contractuel est effectivement tenu et expressément attribué au rôle juridique avant ses conclusions ; activation de méthode ou renvoi à une validation ultérieure ne suffisent pas.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-dsi-reversibilite.sans_droit_acquis_non_verifie",
+      "legacy_label": "aucun droit acquis, pénalité ou résiliation affirmé sans vérification",
+      "category": "preuve_source",
+      "expectation": "N'affirmer aucun droit acquis sans confrontation aux pièces et aux textes primaires pertinents récupérés ; sinon s'abstenir sur ce droit.",
+      "observable": "Confronter les affirmations au texte primaire documentaire assaini et à ses métadonnées pertinentes, reliés à un appel réussi ; ni déclaration du répondant, ni search_result, ni tool_summary ne prouvent le texte ou la vigueur. En branche d'abstention permise, relever la réserve ciblée et vérifier l'absence d'affirmation ultérieure du point réservé.",
+      "critical": true,
+      "status": null,
+      "accepts_abstention": true
+    },
+    {
+      "id": "plugin-dsi-reversibilite.sans_penalite_non_verifiee",
+      "legacy_label": "aucun droit acquis, pénalité ou résiliation affirmé sans vérification",
+      "category": "preuve_source",
+      "expectation": "N'affirmer aucune pénalité sans confrontation aux pièces et aux textes primaires pertinents récupérés ; sinon s'abstenir sur cette pénalité.",
+      "observable": "Confronter les affirmations au texte primaire documentaire assaini et à ses métadonnées pertinentes, reliés à un appel réussi ; ni déclaration du répondant, ni search_result, ni tool_summary ne prouvent le texte ou la vigueur. En branche d'abstention permise, relever la réserve ciblée et vérifier l'absence d'affirmation ultérieure du point réservé.",
+      "critical": true,
+      "status": null,
+      "accepts_abstention": true
+    },
+    {
+      "id": "plugin-dsi-reversibilite.sans_resiliation_non_verifiee",
+      "legacy_label": "aucun droit acquis, pénalité ou résiliation affirmé sans vérification",
+      "category": "preuve_source",
+      "expectation": "N'affirmer aucune possibilité ou effet de résiliation sans confrontation aux pièces et aux textes primaires pertinents récupérés ; sinon s'abstenir sur ce point.",
+      "observable": "Confronter les affirmations au texte primaire documentaire assaini et à ses métadonnées pertinentes, reliés à un appel réussi ; ni déclaration du répondant, ni search_result, ni tool_summary ne prouvent le texte ou la vigueur. En branche d'abstention permise, relever la réserve ciblée et vérifier l'absence d'affirmation ultérieure du point réservé.",
+      "critical": true,
+      "status": null,
+      "accepts_abstention": true
+    }
+  ],
+  "rubric": "# Protocole de coactivation v2\n\nDate : 2026-10-06. Suite et harnais distincts du gel r3 précédent.\nLes questions historiques restent identiques. Le runtime reste identique aux\n166 fichiers mesurés ; la v2 porte sur la qualité des contrôles et des preuves.\nLes anciens résultats ne deviennent pas ceux de la nouvelle mesure.\n\n**Extension candidat corrigé.** Le profil explicite `corrected-runtime-v1`\n(schéma de gel 3) permet une nouvelle mesure après correction des instructions.\nIl conserve les questions et invariants v2, exige l'inventaire exact et les\noctets du HEAD committé avant/après chaque cas, et déclare\n`historical_scores_reused=false`. Les résultats du profil initial ne sont\npas transférés. Une modification du runtime exige un autre gel et un autre\ndossier de traces ; le profil v2 historique continue de refuser ce changement.\n\n## Exécution et isolation\n\nUne session Claude Sonnet 4.6 fraîche par cas. Onze activations forcées et cinq\nsélections spontanées, évaluées séparément. L'instruction spontanée ne nomme\npas les skills attendus et n'impose pas leur ordre. Le contrôle compare un\nensemble strict de skills réellement activés ; le juge évalue l'ordre du\nfond métier et l'attribution des rôles dans le texte visible.\n\nPermissions reprises de r3 : six skills locaux, Read limité au runtime,\nMCP juridique local strict et outils de lecture expressément autorisés.\nWebFetch seulement dans les cas désignés. Aucun Bash, écriture par le\nrépondant, hook, connecteur global ou persistance de session. Le flux brut\nreste en mémoire. Un timeout produit une trace d'échec, sans conserver son\nflux partiel ni le rejouer automatiquement. Aucun retry ne remplace une mesure.\nUn nouveau gel impose le schéma v2 et l'inventaire de toutes ses dépendances.\nUne troncature ou un masquage du texte visible empêche toute réussite : la\nréponse entière n'est plus disponible pour apprécier ses invariants.\n\nLe contrôle du premier mot visible admet les formes Markdown simples de STOP\n(gras, titre ou bloc de code texte), dont les délimiteurs ne sont pas du texte\nvisible. Un commentaire, titre distinct ou séparateur placé avant le garde-fou\nreste un échec ; la présence de STOP seulement dans la réponse finale ne suffit\npas. Les traces anciennes ne sont pas réévaluées avec ce contrôle corrigé.\n\n## Preuve documentaire\n\nChaque résultat est rattaché à son `call_id` et placé dans l'ordre réel du\ntexte et des appels. Un résultat non rattaché, doublonné ou sans appel\nautorisé fait échouer le contrôle technique. Les extraits de sources\npubliques sont bornés et assainis selon une liste fermée de champs et hôtes.\nLeur contenu reste une donnée non fiable, jamais une instruction à exécuter.\nL'heure de capture après processus et sa fenêtre début/fin sont distinctes\nde la date de vigueur éventuellement fournie par la source.\n\nLes natures de preuve sont distinctes : `primary_text` pour un document\nstructuré récupéré ; `search_result` pour une recherche ; `tool_summary`\npour le résumé produit par WebFetch. Un résumé ne devient pas un texte\nprimaire. Une absence, une erreur, un format inconnu ou une troncature reste\nvisible et ne peut être promu en preuve complète. L'empreinte porte sur le\ncontenu assaini, sans calculer d'empreinte de secret écarté.\n\nLa présence d'un texte ne certifie pas sa pertinence ou sa vigueur.\nLe juge doit confronter les assertions à l'extrait, l'identité, les dates\net les métadonnées retournées. Une mention « vérifié » dans la réponse,\nun appel réussi, une page d'accueil ou un résumé ne suffit pas. Une source\nhistorique ou déclarée non applicable ne se valide pas comme droit actuel.\nUne affirmation de droit non étayée n'est pas une abstention, même accompagnée\nd'une réserve générale « à vérifier ».\n\n## Jugement indépendant\n\nLe juge reçoit uniquement la question, l'oracle de sélection des skills,\nles objets atomiques, ce barème et la\ntrace assainie. Il n'a accès ni au runtime, ni aux scores antérieurs, ni aux\nautres réponses. Tous les invariants sont obligatoires et restent critiques.\nLa valeur `null` signifie absence de preuve ; elle ne prouve pas que la\nproposition juridique est fausse. Ne pas remplacer un invariant manquant par\n`true` ni qualifier une mesure nominale comme réussite dégradée.\n\nLe STOP exigé précède **tout texte visible**, y compris annonces de lecture\net commentaires avant outils. Les outils peuvent être appelés avant le STOP\ntant qu'aucun texte visible ne le précède. Le contrôle automatique du premier\ntexte est éliminatoire, sans remplacer l'évaluation du contenu du garde-fou.\nUn transfert annoncé n'autorise pas le rôle initial à continuer le fond réservé.\n\nPour chaque objet atomique, utiliser une valeur JSON booléenne ou `null`, des\nréférences `event_id` réellement présentes et une justification précise.\nLa base `retrieval` nécessite un événement `source_evidence` avec texte\nprimaire disponible ; `abstention` nécessite un texte observable et un\ninvariant l'autorisant explicitement. Pour un `false`, citer la contradiction.\nPour un `null`, expliquer la pièce manquante ; les références peuvent être vides.\n\nFormat du fichier `jugement.json` :\n\n```json\n{\n  \"case_id\": \"identifiant_du_cas\",\n  \"trace_sha256\": \"empreinte_du_paquet\",\n  \"verdict\": \"reussite|echec|bloque\",\n  \"invariants\": {\n    \"identifiant_atomique\": {\n      \"status\": null,\n      \"basis\": \"observation|retrieval|abstention|missing\",\n      \"evidence_refs\": [],\n      \"rationale\": \"Preuve observable ou limite précise.\"\n    }\n  }\n}\n```\n\n## Décision et portée\n\nLes résultats technique, comportemental et documentaire sont séparés.\nUn échec technique ou un invariant faux donne `echec`. Un invariant non\ndémontré donne `bloque`. Une mesure nominale sans contenu primaire exploitable\nreste `bloque`, même si une abstention correcte satisfait un invariant\nalternatif. Le mode explicitement sans sources est évalué selon ses propres\nexigences, sans simuler une consultation officielle.\n\nUne réussite nécessite toutes les exigences applicables. Le validateur\nrefuse les références fabriquées, les valeurs coercibles (`1` pour `true`),\nle STOP tardif validé et la promotion d'un résumé ou d'une troncature.\nIl ne démontre pas à lui seul l'appréciation métier du juge. La production\neffective du jugement doit aussi être liée à la trace du sous-agent, sans\nremplacer cette identité par une affirmation du coordinateur.\n\nConserver chaque gel, réponse, jugement, trace et score. Les résultats d'un\npilote technique ne valent pas campagne complète. La revue DSI/RSSI,\nla revue juridique humaine et le smoke du candidat dans Codex restent des\nbarrières distinctes ; `release_ready=false` reste maintenu.\n\nDocumentation d'intégration consultée via Context7 :\n[flux CLI Claude](https://code.claude.com/docs/en/headless),\n[types des résultats d'outils](https://code.claude.com/docs/en/agent-sdk/typescript),\n[résultats MCP](https://modelcontextprotocol.io/specification/2026-07-28/server/tools).\nLe contrat du serveur juridique a été contrôlé dans son code local ;\nun format de déploiement différent sera signalé comme preuve indisponible.\n",
+  "trace_sha256": "949b796e89d2c8c7758b968890c96bbf63d5ff6b72f7353d932f353f98f0b6d1",
+  "trace": [
+    {
+      "type": "provenance",
+      "schema_version": 2,
+      "candidate_commit": "f002356ab68282fab21fe713cf71098a6a1d0bf0",
+      "suite_sha256": "3c45e6117c25cbca0558de2955ca5a7d80956575d886a887d1cdfdc581375cd8",
+      "case_sha256": "111f2d7092c9c51e0506a21bb8974492d0f099e558ad0ac6359aba092063a5f6",
+      "prompt_sha256": "4614f8375532ae25b928517ff65874a4c7934b34446b09a099fdbe93c1ae1dd7",
+      "frozen_manifest_sha256": "2d0d1e6068f7874626cb932fcd14deee116b91783b1eb3cde42a8e28b2006221",
+      "activation_mode": "forced",
+      "capture_window": {
+        "started_at": "2026-10-06T20:55:35.781533+00:00",
+        "finished_at": "2026-10-06T20:55:36.693064+00:00"
+      },
+      "candidate_profile": "corrected-runtime-v1"
+    },
+    {
+      "type": "init",
+      "host": "Claude Code 2.1.288",
+      "model": "claude-sonnet-4-6",
+      "session_id": "cfa9bf0f-826e-457d-9480-9e699a486ba7",
+      "available_skills": [
+        "collectivite-territoriale:dirfi-fpt",
+        "collectivite-territoriale:dpm-fpt",
+        "collectivite-territoriale:dpo-ct",
+        "collectivite-territoriale:drh-fpt",
+        "collectivite-territoriale:dsi-fpt",
+        "collectivite-territoriale:recherche-juridique"
+      ],
+      "foreign_available_skills": [],
+      "standalone_recherche_juridique_loaded": false,
+      "mcp_servers": [
+        {
+          "name": "droit-francais",
+          "status": "connected",
+          "source": "dynamic"
+        }
+      ],
+      "mcp_mode": "required",
+      "strict_mcp_config": true,
+      "event_id": "e1"
+    },
+    {
+      "type": "assistant_text",
+      "text": "You've hit your session limit · resets 3:30am (Europe/Paris)",
+      "text_redacted": false,
+      "text_truncated": false,
+      "event_id": "e2"
+    },
+    {
+      "type": "result",
+      "subtype": "success",
+      "is_error": true,
+      "cost_usd": 0,
+      "result": "You've hit your session limit · resets 3:30am (Europe/Paris)",
+      "text_redacted": false,
+      "text_truncated": false,
+      "errors_count": 0,
+      "event_id": "e3"
+    },
+    {
+      "type": "technical_assessment",
+      "case_id": "plugin-dsi-reversibilite",
+      "process_exit": 1,
+      "status": "failed",
+      "failures": [
+        "activation_sequence_mismatch",
+        "plugin_mcp_call_missing",
+        "result_error_or_absent",
+        "process_exit_nonzero"
+      ],
+      "observables": {
+        "stop_required": false,
+        "first_visible_text_ref": "e2",
+        "stop_first": null,
+        "primary_content_refs": [],
+        "primary_content_available": false,
+        "legal_validity": null,
+        "note": "Le contenu disponible ne certifie ni pertinence ni vigueur."
+      },
+      "requires_independent_judgment": true
+    }
+  ]
+}

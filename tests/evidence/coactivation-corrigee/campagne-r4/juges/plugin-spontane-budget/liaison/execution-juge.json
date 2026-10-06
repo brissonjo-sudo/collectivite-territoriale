@@ -1,0 +1,48 @@
+{
+  "agent": "/root/juge_corrige_r4b_15",
+  "session_id": "01a11301-bfd1-7383-8024-7fc63e186d94",
+  "parent_thread_id": "01a1103e-0b49-70c1-8f4e-66a36b54916f",
+  "turn_id": "01a11301-c03a-7b82-afdf-66b8cd5a0ef9",
+  "models": [
+    "gpt-6.1-sol"
+  ],
+  "completed": true,
+  "fork_turns": "none",
+  "spawn_call_id": "call_8de0bb484c1e4457896215ebf2915dcf",
+  "spawn_timestamp": "2026-10-06T20:57:24.163Z",
+  "read_call_ids": [
+    "call_eaf41d93c3aa40ed899b955efee53f62"
+  ],
+  "write_call_ids": [
+    "call_a179dced92c349f6b0d1463a3ccc65e3"
+  ],
+  "comparison": "full_json",
+  "spawn_evidence": {
+    "task_name": "/root/juge_corrige_r4b_15",
+    "fork_turns": "none",
+    "call_id": "call_8de0bb484c1e4457896215ebf2915dcf",
+    "returned_task_name": "/root/juge_corrige_r4b_15"
+  },
+  "native_session_file": "rollout-2026-10-06T22-57-24-01a11301-bfd1-7383-8024-7fc63e186d94.jsonl",
+  "judge_identity_checked": true,
+  "independence_scope": "fresh single task; no inherited history; only full packet read and literal judgment patch",
+  "exact_read_path_format": "absolute_posix",
+  "portable_adapter_sha256": "61f853a233cd45b2f23c52a1b2344f21a52a5728e90afd8a02bbcb77de3ef371",
+  "initial_message_verified": false,
+  "case_id": "plugin-spontane-budget",
+  "response_sha256": "eaa53de8857f7a41f3ca193049a7bc013f6dfa44af744f2dcd03340a170d4aa4",
+  "packet_sha256": "66ad25268af8991ebeb51fac578a6422c410e65775a75d18b73217ce57ae91d0",
+  "judgment_sha256": "26b1bcde87d7bc003a8d04bdcdeb7398b0b4138d444e6144961f2a3a942eb1f9",
+  "binder_sha256": "57df87331a469819b4d30f0daf2b8095d9488e21cdf16fab941229c9d2a9ca4a",
+  "parent_session_file": "rollout-2026-10-06T10-04-24-01a1103e-0b49-70c1-8f4e-66a36b54916f.jsonl",
+  "assessment": {
+    "case_id": "plugin-spontane-budget",
+    "verdict": "echec",
+    "technical_status": "failed",
+    "behavior_status": "failed",
+    "documentary_status": "incomplete",
+    "primary_content_available": false,
+    "release_ready": false
+  },
+  "trace_sha256": "7263258a8890ad086a4dcc1d3ed6c0fa0b892c287e0bcd6d44f7e7f38daacd03"
+}

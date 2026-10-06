@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "plugin-dsi-reversibilite",
+  "exported_at": "2026-10-06T20:58:51.386065+00:00",
+  "packet_sha256": "76f16839c1c377a843c13bcc732fec6685a83947702878cb59e06990cd8355e2",
+  "prompt_sha256": "3ca843e1f0f4ee1774e4d7e7b5211642643f2b71f9c94a048f8768c18dcc72af",
+  "response_sha256": "949b796e89d2c8c7758b968890c96bbf63d5ff6b72f7353d932f353f98f0b6d1",
+  "suite_sha256": "3c45e6117c25cbca0558de2955ca5a7d80956575d886a887d1cdfdc581375cd8",
+  "protocol_sha256": "65f78f419679774ec00c6b5d96b1801f902c6510b57e221ae7ebb31320fd1b6f",
+  "external_read_output_tokens": 55000,
+  "portable_adapter_sha256": "61f853a233cd45b2f23c52a1b2344f21a52a5728e90afd8a02bbcb77de3ef371"
+}

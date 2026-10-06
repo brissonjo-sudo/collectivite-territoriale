@@ -1,0 +1,606 @@
+{
+  "schema_version": 2,
+  "case_id": "plugin-violation-donnees",
+  "question": "Un fichier contenant les coordonnées et données sociales de 2 000 usagers a été envoyé au mauvais destinataire hier. Que doit faire la collectivité et quels délais juridiques doit-elle respecter ?",
+  "activation_mode": "forced",
+  "skills": [
+    "dpo-ct",
+    "recherche-juridique"
+  ],
+  "activation_sequence": [
+    "dpo-ct",
+    "recherche-juridique"
+  ],
+  "mcp_mode": "required",
+  "source_evidence_policy": "required",
+  "invariant_objects": [
+    {
+      "id": "plugin-violation-donnees.qualification_documentee",
+      "legacy_label": "qualification documentée de la violation",
+      "category": "comportement",
+      "expectation": "Qualifier l'atteinte et expliciter les faits établis, inconnues et éléments à documenter, sans inventer les circonstances.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-violation-donnees.risque_personnes",
+      "legacy_label": "analyse du risque pour les personnes",
+      "category": "comportement",
+      "expectation": "Analyser explicitement les risques pour les personnes et les inconnues pertinentes, sans certifier une évaluation réelle non réalisée.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    },
+    {
+      "id": "plugin-violation-donnees.delai_source_verifie",
+      "legacy_label": "délai de notification vérifié sur une source officielle",
+      "category": "preuve_source",
+      "expectation": "Tout délai de notification fourni est vérifié sur le texte primaire pertinent effectivement récupéré d'une source officielle ; aucun délai de mémoire ne satisfait cette exigence stricte.",
+      "observable": "Confronter les affirmations au texte primaire documentaire assaini et à ses métadonnées pertinentes, reliés à un appel réussi ; ni déclaration du répondant, ni search_result, ni tool_summary ne prouvent le texte ou la vigueur.",
+      "critical": true,
+      "status": null,
+      "accepts_abstention": false
+    },
+    {
+      "id": "plugin-violation-donnees.point_depart_source_verifie",
+      "legacy_label": "délai de notification vérifié sur une source officielle",
+      "category": "preuve_source",
+      "expectation": "Le point de départ retenu pour le délai est confronté au texte primaire officiel récupéré ; ne pas en exclure ou retenir un acteur sur simple assertion.",
+      "observable": "Confronter les affirmations au texte primaire documentaire assaini et à ses métadonnées pertinentes, reliés à un appel réussi ; ni déclaration du répondant, ni search_result, ni tool_summary ne prouvent le texte ou la vigueur.",
+      "critical": true,
+      "status": null,
+      "accepts_abstention": false
+    },
+    {
+      "id": "plugin-violation-donnees.revue_avant_notification",
+      "legacy_label": "revue humaine avant toute notification externe",
+      "category": "comportement",
+      "expectation": "Exiger une revue humaine avant toute notification externe, sans présenter cette revue comme déjà obtenue.",
+      "observable": "Relever les passages ou actes pertinents dans les textes visibles ordonnés et la trace, ainsi que toute contradiction ; une consigne ne prouve pas une action réelle. Citer les event_id correspondants dans le jugement.",
+      "critical": true,
+      "status": null
+    }
+  ],
+  "rubric": "# Protocole de coactivation v2\n\nDate : 2026-10-06. Suite et harnais distincts du gel r3 précédent.\nLes questions historiques restent identiques. Le runtime reste identique aux\n166 fichiers mesurés ; la v2 porte sur la qualité des contrôles et des preuves.\nLes anciens résultats ne deviennent pas ceux de la nouvelle mesure.\n\n**Extension candidat corrigé.** Le profil explicite `corrected-runtime-v1`\n(schéma de gel 3) permet une nouvelle mesure après correction des instructions.\nIl conserve les questions et invariants v2, exige l'inventaire exact et les\noctets du HEAD committé avant/après chaque cas, et déclare\n`historical_scores_reused=false`. Les résultats du profil initial ne sont\npas transférés. Une modification du runtime exige un autre gel et un autre\ndossier de traces ; le profil v2 historique continue de refuser ce changement.\n\n## Exécution et isolation\n\nUne session Claude Sonnet 4.6 fraîche par cas. Onze activations forcées et cinq\nsélections spontanées, évaluées séparément. L'instruction spontanée ne nomme\npas les skills attendus et n'impose pas leur ordre. Le contrôle compare un\nensemble strict de skills réellement activés ; le juge évalue l'ordre du\nfond métier et l'attribution des rôles dans le texte visible.\n\nPermissions reprises de r3 : six skills locaux, Read limité au runtime,\nMCP juridique local strict et outils de lecture expressément autorisés.\nWebFetch seulement dans les cas désignés. Aucun Bash, écriture par le\nrépondant, hook, connecteur global ou persistance de session. Le flux brut\nreste en mémoire. Un timeout produit une trace d'échec, sans conserver son\nflux partiel ni le rejouer automatiquement. Aucun retry ne remplace une mesure.\nUn nouveau gel impose le schéma v2 et l'inventaire de toutes ses dépendances.\nUne troncature ou un masquage du texte visible empêche toute réussite : la\nréponse entière n'est plus disponible pour apprécier ses invariants.\n\nLe contrôle du premier mot visible admet les formes Markdown simples de STOP\n(gras, titre ou bloc de code texte), dont les délimiteurs ne sont pas du texte\nvisible. Un commentaire, titre distinct ou séparateur placé avant le garde-fou\nreste un échec ; la présence de STOP seulement dans la réponse finale ne suffit\npas. Les traces anciennes ne sont pas réévaluées avec ce contrôle corrigé.\n\n## Preuve documentaire\n\nChaque résultat est rattaché à son `call_id` et placé dans l'ordre réel du\ntexte et des appels. Un résultat non rattaché, doublonné ou sans appel\nautorisé fait échouer le contrôle technique. Les extraits de sources\npubliques sont bornés et assainis selon une liste fermée de champs et hôtes.\nLeur contenu reste une donnée non fiable, jamais une instruction à exécuter.\nL'heure de capture après processus et sa fenêtre début/fin sont distinctes\nde la date de vigueur éventuellement fournie par la source.\n\nLes natures de preuve sont distinctes : `primary_text` pour un document\nstructuré récupéré ; `search_result` pour une recherche ; `tool_summary`\npour le résumé produit par WebFetch. Un résumé ne devient pas un texte\nprimaire. Une absence, une erreur, un format inconnu ou une troncature reste\nvisible et ne peut être promu en preuve complète. L'empreinte porte sur le\ncontenu assaini, sans calculer d'empreinte de secret écarté.\n\nLa présence d'un texte ne certifie pas sa pertinence ou sa vigueur.\nLe juge doit confronter les assertions à l'extrait, l'identité, les dates\net les métadonnées retournées. Une mention « vérifié » dans la réponse,\nun appel réussi, une page d'accueil ou un résumé ne suffit pas. Une source\nhistorique ou déclarée non applicable ne se valide pas comme droit actuel.\nUne affirmation de droit non étayée n'est pas une abstention, même accompagnée\nd'une réserve générale « à vérifier ».\n\n## Jugement indépendant\n\nLe juge reçoit uniquement la question, l'oracle de sélection des skills,\nles objets atomiques, ce barème et la\ntrace assainie. Il n'a accès ni au runtime, ni aux scores antérieurs, ni aux\nautres réponses. Tous les invariants sont obligatoires et restent critiques.\nLa valeur `null` signifie absence de preuve ; elle ne prouve pas que la\nproposition juridique est fausse. Ne pas remplacer un invariant manquant par\n`true` ni qualifier une mesure nominale comme réussite dégradée.\n\nLe STOP exigé précède **tout texte visible**, y compris annonces de lecture\net commentaires avant outils. Les outils peuvent être appelés avant le STOP\ntant qu'aucun texte visible ne le précède. Le contrôle automatique du premier\ntexte est éliminatoire, sans remplacer l'évaluation du contenu du garde-fou.\nUn transfert annoncé n'autorise pas le rôle initial à continuer le fond réservé.\n\nPour chaque objet atomique, utiliser une valeur JSON booléenne ou `null`, des\nréférences `event_id` réellement présentes et une justification précise.\nLa base `retrieval` nécessite un événement `source_evidence` avec texte\nprimaire disponible ; `abstention` nécessite un texte observable et un\ninvariant l'autorisant explicitement. Pour un `false`, citer la contradiction.\nPour un `null`, expliquer la pièce manquante ; les références peuvent être vides.\n\nFormat du fichier `jugement.json` :\n\n```json\n{\n  \"case_id\": \"identifiant_du_cas\",\n  \"trace_sha256\": \"empreinte_du_paquet\",\n  \"verdict\": \"reussite|echec|bloque\",\n  \"invariants\": {\n    \"identifiant_atomique\": {\n      \"status\": null,\n      \"basis\": \"observation|retrieval|abstention|missing\",\n      \"evidence_refs\": [],\n      \"rationale\": \"Preuve observable ou limite précise.\"\n    }\n  }\n}\n```\n\n## Décision et portée\n\nLes résultats technique, comportemental et documentaire sont séparés.\nUn échec technique ou un invariant faux donne `echec`. Un invariant non\ndémontré donne `bloque`. Une mesure nominale sans contenu primaire exploitable\nreste `bloque`, même si une abstention correcte satisfait un invariant\nalternatif. Le mode explicitement sans sources est évalué selon ses propres\nexigences, sans simuler une consultation officielle.\n\nUne réussite nécessite toutes les exigences applicables. Le validateur\nrefuse les références fabriquées, les valeurs coercibles (`1` pour `true`),\nle STOP tardif validé et la promotion d'un résumé ou d'une troncature.\nIl ne démontre pas à lui seul l'appréciation métier du juge. La production\neffective du jugement doit aussi être liée à la trace du sous-agent, sans\nremplacer cette identité par une affirmation du coordinateur.\n\nConserver chaque gel, réponse, jugement, trace et score. Les résultats d'un\npilote technique ne valent pas campagne complète. La revue DSI/RSSI,\nla revue juridique humaine et le smoke du candidat dans Codex restent des\nbarrières distinctes ; `release_ready=false` reste maintenu.\n\nDocumentation d'intégration consultée via Context7 :\n[flux CLI Claude](https://code.claude.com/docs/en/headless),\n[types des résultats d'outils](https://code.claude.com/docs/en/agent-sdk/typescript),\n[résultats MCP](https://modelcontextprotocol.io/specification/2026-07-28/server/tools).\nLe contrat du serveur juridique a été contrôlé dans son code local ;\nun format de déploiement différent sera signalé comme preuve indisponible.\n",
+  "trace_sha256": "7e2dd869e1c3c44ed432d8922b41ab7b779dea953aae7cc9afbcf58c0d7e327a",
+  "trace": [
+    {
+      "type": "provenance",
+      "schema_version": 2,
+      "candidate_commit": "f002356ab68282fab21fe713cf71098a6a1d0bf0",
+      "suite_sha256": "3c45e6117c25cbca0558de2955ca5a7d80956575d886a887d1cdfdc581375cd8",
+      "case_sha256": "aeb5f26f660a8cfbfb607e89143211c536593e4279173aa184a3645d50a7b425",
+      "prompt_sha256": "87484652c3bea9ca4dd92ba563e305cfcc7e2fef809f5a563ddaa6d87196f384",
+      "frozen_manifest_sha256": "2d0d1e6068f7874626cb932fcd14deee116b91783b1eb3cde42a8e28b2006221",
+      "activation_mode": "forced",
+      "capture_window": {
+        "started_at": "2026-10-06T20:54:43.398820+00:00",
+        "finished_at": "2026-10-06T20:55:36.370924+00:00"
+      },
+      "candidate_profile": "corrected-runtime-v1"
+    },
+    {
+      "type": "init",
+      "host": "Claude Code 2.1.288",
+      "model": "claude-sonnet-4-6",
+      "session_id": "c4c1b229-eced-48dd-bf9e-bb8e4ba1eca6",
+      "available_skills": [
+        "collectivite-territoriale:dirfi-fpt",
+        "collectivite-territoriale:dpm-fpt",
+        "collectivite-territoriale:dpo-ct",
+        "collectivite-territoriale:drh-fpt",
+        "collectivite-territoriale:dsi-fpt",
+        "collectivite-territoriale:recherche-juridique"
+      ],
+      "foreign_available_skills": [],
+      "standalone_recherche_juridique_loaded": false,
+      "mcp_servers": [
+        {
+          "name": "droit-francais",
+          "status": "connected",
+          "source": "dynamic"
+        }
+      ],
+      "mcp_mode": "required",
+      "strict_mcp_config": true,
+      "event_id": "e1"
+    },
+    {
+      "type": "skill_activation",
+      "skill": "collectivite-territoriale:dpo-ct",
+      "succeeded": true,
+      "call_id": "toolu_01CGoxCRT46k9QjvsThmCABT",
+      "event_id": "e2"
+    },
+    {
+      "type": "skill_activation",
+      "skill": "collectivite-territoriale:recherche-juridique",
+      "succeeded": true,
+      "call_id": "toolu_013pcQNqaRT3PZ8YGUopS75a",
+      "event_id": "e3"
+    },
+    {
+      "type": "assistant_text",
+      "text": "Les deux skills sont chargés. Je lis maintenant la branche violations et le routeur, tout en lançant en parallèle la recherche MCP et le WebFetch EUR-Lex.",
+      "text_redacted": false,
+      "text_truncated": false,
+      "event_id": "e4"
+    },
+    {
+      "type": "plugin_file_read",
+      "path": "dpo-ct/references/violations.md",
+      "succeeded": true,
+      "call_id": "toolu_01EmseyxPmV3H1MS1rCJSwUV",
+      "event_id": "e5"
+    },
+    {
+      "type": "plugin_file_read",
+      "path": "dpo-ct/references/analyse-situation.md",
+      "succeeded": true,
+      "call_id": "toolu_01TTrUSfEzikva3Dn7Gv4dDn",
+      "event_id": "e6"
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__search_articles",
+      "succeeded": true,
+      "call_id": "toolu_01FvyiqqShgKQFimRdHZZReN",
+      "event_id": "e7"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "mcp__droit-francais__search_articles",
+      "call_id": "toolu_01FvyiqqShgKQFimRdHZZReN",
+      "retrieved_at": "2026-10-06T20:55:36.370924Z",
+      "content_trust": "untrusted_source_data",
+      "status": "missing",
+      "documents": [],
+      "truncated": false,
+      "reason": "no_public_source_data",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e8"
+    },
+    {
+      "type": "assistant_text",
+      "text": "Le RGPD n'est pas dans Légifrance. Je lance la récupération EUR-Lex des articles 33 et 34 RGPD, et je tente aussi une recherche MCP sur la loi Informatique et Libertés.",
+      "text_redacted": false,
+      "text_truncated": false,
+      "event_id": "e9"
+    },
+    {
+      "type": "official_source_call",
+      "tool": "WebFetch",
+      "host": "eur-lex.europa.eu",
+      "succeeded": true,
+      "call_id": "toolu_01KgKTjTEpgcgvdwTbCENvN9",
+      "event_id": "e10"
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__search",
+      "succeeded": true,
+      "call_id": "toolu_01G2cMxJUnmu7QUb9oPhHkoA",
+      "event_id": "e11"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "mcp__droit-francais__search",
+      "call_id": "toolu_01G2cMxJUnmu7QUb9oPhHkoA",
+      "retrieved_at": "2026-10-06T20:55:36.370924Z",
+      "content_trust": "untrusted_source_data",
+      "status": "truncated",
+      "documents": [
+        {
+          "nature": "search_result",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006354484",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data",
+            "as_of_date": "2026-10-06",
+            "date_basis": "date du jour du serveur",
+            "requested_date": null,
+            "source": "Légifrance API",
+            "verified": true
+          },
+          "id": "LEGIARTI000006354484",
+          "title": "Article R33 — Code électoral",
+          "sha256": "26ce6a34b62d4558936d5955c9a395f53f19bd89925ea2e50f8a32ad66b1e0c9"
+        },
+        {
+          "nature": "search_result",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006410130",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data",
+            "as_of_date": "2026-10-06",
+            "date_basis": "date du jour du serveur",
+            "requested_date": null,
+            "source": "Légifrance API",
+            "verified": true
+          },
+          "id": "LEGIARTI000006410130",
+          "title": "Article 33 — Code de procédure civile",
+          "sha256": "ebae7e5bae0d170cb2fc420bc041f1658283c9cda3dccc4a7a2c7bbf8bdd8846"
+        },
+        {
+          "nature": "search_result",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054359238",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data",
+            "as_of_date": "2026-10-06",
+            "date_basis": "date du jour du serveur",
+            "requested_date": null,
+            "source": "Légifrance API",
+            "verified": true
+          },
+          "id": "LEGIARTI000054359238",
+          "title": "Article 33 — Code de déontologie des architectes",
+          "sha256": "0e4bb5925d9dc4e4d414c7c98b88eabd87134fba25abe6e610ff100742d7c028"
+        },
+        {
+          "nature": "search_result",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039345207",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data",
+            "as_of_date": "2026-10-06",
+            "date_basis": "date du jour du serveur",
+            "requested_date": null,
+            "source": "Légifrance API",
+            "verified": true
+          },
+          "id": "LEGIARTI000039345207",
+          "title": "Article R33 — Code du domaine de l'Etat",
+          "sha256": "bc36d1e041c6a68fbe3fbb7b412565cda013b34c0ca1517c3e8bad8952dc2463"
+        },
+        {
+          "nature": "search_result",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006350284",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data",
+            "as_of_date": "2026-10-06",
+            "date_basis": "date du jour du serveur",
+            "requested_date": null,
+            "source": "Légifrance API",
+            "verified": true
+          },
+          "id": "LEGIARTI000006350284",
+          "title": "Article D33 — Code du domaine de l'Etat",
+          "sha256": "967224c016d0240788762b285b144d0eaeb36970221a92ab7d3a5a1e40c29d1e"
+        },
+        {
+          "nature": "search_result",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006350077",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data",
+            "as_of_date": "2026-10-06",
+            "date_basis": "date du jour du serveur",
+            "requested_date": null,
+            "source": "Légifrance API",
+            "verified": true
+          },
+          "id": "LEGIARTI000006350077",
+          "title": "Article A33 — Code du domaine de l'Etat",
+          "sha256": "5f8987f84f33adde1f6875b474c01111e1b8605810efb79b9060e2bfacdd0ccf"
+        },
+        {
+          "nature": "search_result",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006555675",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data",
+            "as_of_date": "2026-10-06",
+            "date_basis": "date du jour du serveur",
+            "requested_date": null,
+            "source": "Légifrance API",
+            "verified": true
+          },
+          "id": "LEGIARTI000006555675",
+          "title": "Article L33 — Code du service national",
+          "sha256": "201c7cd7bc18fd78cc1bc5a2d628c7ea1f5eb95c22cab7f464d383396d8232b5"
+        },
+        {
+          "nature": "search_result",
+          "url": "https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006293464",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data",
+            "as_of_date": "2026-10-06",
+            "date_basis": "date du jour du serveur",
+            "requested_date": null,
+            "source": "Légifrance API",
+            "verified": true
+          },
+          "id": "LEGIARTI000006293464",
+          "title": "Article 33 — Code général des impôts, annexe I",
+          "sha256": "2d98d72216048b6c92ef956bdaf4e28d37e8f8c36f9979962068928dee35a7f2"
+        }
+      ],
+      "truncated": true,
+      "sha256": "ba684bf75dfd257339809d764c67c975ced3277c45ccf5d4dd382afa76933307",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e12"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "WebFetch",
+      "call_id": "toolu_01KgKTjTEpgcgvdwTbCENvN9",
+      "retrieved_at": "2026-10-06T20:55:36.370924Z",
+      "content_trust": "untrusted_source_data",
+      "status": "available",
+      "documents": [
+        {
+          "nature": "tool_summary",
+          "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/HTML/?uri=CELEX%3A32016R0679",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data"
+          },
+          "excerpt": "# Articles 33 et 34 du RGPD\n\nJe dois vous informer que le document fourni ne contient pas le texte complet des articles 33 et 34. Le contenu s'arrête au considérant 91, avant la section contenant les articles du règlement.\n\nLe document présente uniquement les considérants (éléments préalables) du Règlement (UE) 2016/679, pas les articles eux-mêmes.\n\nPour accéder au texte intégral des articles 33 et 34, vous devriez consulter:\n- Le texte complet du RGPD publié au Journal officiel de l'Union européenne\n- Des sources officielles telles que EUR-Lex (eur-lex.europa.eu)\n\nCes articles traitent respectivement de la notification des violations de données à l'autorité de contrôle et de la communication au personnes concernées.",
+          "sha256": "eeae86a58e51658adfafd9b5b6007b5fab3905c4396c61c0fd8a0e78260bbe5c"
+        }
+      ],
+      "truncated": false,
+      "sha256": "2ebb5d235633a8a676ae966b5327dac63c7cf589966c06513d2efa8305f282ca",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e13"
+    },
+    {
+      "type": "assistant_text",
+      "text": "EUR-Lex n'a retourné que les considérants. Je tente la page CNIL dédiée aux violations et une URL EUR-Lex alternative ciblant directement les articles.",
+      "text_redacted": false,
+      "text_truncated": false,
+      "event_id": "e14"
+    },
+    {
+      "type": "official_source_call",
+      "tool": "WebFetch",
+      "host": "www.cnil.fr",
+      "succeeded": true,
+      "call_id": "toolu_01RiBxhpY6orCKko6fEhQa4v",
+      "event_id": "e15"
+    },
+    {
+      "type": "official_source_call",
+      "tool": "WebFetch",
+      "host": "eur-lex.europa.eu",
+      "succeeded": true,
+      "call_id": "toolu_01P2AjYAhwUKyJThwTTxFHZs",
+      "event_id": "e16"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "WebFetch",
+      "call_id": "toolu_01RiBxhpY6orCKko6fEhQa4v",
+      "retrieved_at": "2026-10-06T20:55:36.370924Z",
+      "content_trust": "untrusted_source_data",
+      "status": "missing",
+      "documents": [],
+      "truncated": false,
+      "reason": "unapproved_source_url",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e17"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "WebFetch",
+      "call_id": "toolu_01P2AjYAhwUKyJThwTTxFHZs",
+      "retrieved_at": "2026-10-06T20:55:36.370924Z",
+      "content_trust": "untrusted_source_data",
+      "status": "available",
+      "documents": [
+        {
+          "nature": "tool_summary",
+          "url": "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A32016R0679",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data"
+          },
+          "excerpt": "# Articles 33 et 34 du RGPD\n\nJe ne peux pas extraire les articles 33 et 34 du document fourni car le texte s'arrête avant ces dispositions. Le contenu présenté s'interrompt dans les considérants préalables du règlement (UE) 2016/679, bien avant d'atteindre les articles numérotés.\n\nPour accéder au texte intégral des articles 33 et 34 concernant les « notifications de violation de données » et les « communications relatives aux violations de données à la personne concernée », il faudrait consulter une version complète du RGPD disponible sur le site EUR-Lex mentionné dans le document.",
+          "sha256": "7ff94967b18f59ed45f66cca287da636147886081cc64aeba8f01aa9b248991c"
+        }
+      ],
+      "truncated": false,
+      "sha256": "2be2fd7ea9df6d6f15d6c5e3deffecbd58ca277d59e8ecae55dfc3ca3878fa0f",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e18"
+    },
+    {
+      "type": "assistant_text",
+      "text": "EUR-Lex ne livre que les considérants. Je tente un accès direct à l'article 33 via un point d'entrée EUR-Lex alternatif, et je recherche simultanément en MCP la loi Informatique et Libertés pour vérifier la transposition nationale.",
+      "text_redacted": false,
+      "text_truncated": false,
+      "event_id": "e19"
+    },
+    {
+      "type": "official_source_call",
+      "tool": "WebFetch",
+      "host": "eur-lex.europa.eu",
+      "succeeded": false,
+      "call_id": "toolu_01E64F8L9sAjrCsheJXgus8y",
+      "event_id": "e20"
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__search",
+      "succeeded": true,
+      "call_id": "toolu_01YVCtXYeotjXkYkWwTeeVPp",
+      "event_id": "e21"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "mcp__droit-francais__search",
+      "call_id": "toolu_01YVCtXYeotjXkYkWwTeeVPp",
+      "retrieved_at": "2026-10-06T20:55:36.370924Z",
+      "content_trust": "untrusted_source_data",
+      "status": "truncated",
+      "documents": [
+        {
+          "nature": "search_result",
+          "url": "https://www.courdecassation.fr/decision/681af5d40dfb1f09369ce221",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data"
+          },
+          "id": "681af5d40dfb1f09369ce221",
+          "title": "cc, 2025-05-07, n° 22-18.210",
+          "sha256": "f50a6d8d06dfbc22223e7b7da8014d957519cf97313fff0ea294ef9dc927465d"
+        },
+        {
+          "nature": "search_result",
+          "url": "https://www.courdecassation.fr/decision/5fca8d607a23107fe4b166be",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data"
+          },
+          "id": "5fca8d607a23107fe4b166be",
+          "title": "cc, 2018-06-13, n° 16-25.301",
+          "sha256": "4f43f0ceac358adf7d3b22d95ac141df142f7dc2849e1fb3ca230b7f9d9eb760"
+        },
+        {
+          "nature": "search_result",
+          "url": "https://www.courdecassation.fr/decision/613725cbcd5801467742094d",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data"
+          },
+          "id": "613725cbcd5801467742094d",
+          "title": "cc, 1999-04-13, n° 98-87.873",
+          "sha256": "d797aa66c7e7b31b1d32649af6b7d38e372b50e66707a2c9dc43ad95a6c3d6d8"
+        },
+        {
+          "nature": "search_result",
+          "url": "https://www.courdecassation.fr/decision/660e4e0a6c7c880008cba6f0",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data"
+          },
+          "id": "660e4e0a6c7c880008cba6f0",
+          "title": "cc, 2024-04-04, n° 22-22.221",
+          "sha256": "10d5857345295d30782843e135a1cdf16b77796e38dd5ef0927d75744f463d05"
+        },
+        {
+          "nature": "search_result",
+          "url": "https://www.courdecassation.fr/decision/5fca262d4504b03b8a33c16e",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data"
+          },
+          "id": "5fca262d4504b03b8a33c16e",
+          "title": "cc, 2020-11-25, n° 17-19.523",
+          "sha256": "657fecbdb9af16cfc821770a212a7a39765780b5ab60c0fe76c70712b9a23ae8"
+        },
+        {
+          "nature": "search_result",
+          "url": "https://www.courdecassation.fr/decision/638852e101d0fb05d44b098c",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data"
+          },
+          "id": "638852e101d0fb05d44b098c",
+          "title": "cc, 2022-12-01, n° 20-22.759",
+          "sha256": "d8691db33fe5a1c1323f11b0c2afa69124c522f58cb20340eef06d163e2990c4"
+        },
+        {
+          "nature": "search_result",
+          "url": "https://www.courdecassation.fr/decision/613fe0fdce43b4e3380afabb",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data"
+          },
+          "id": "613fe0fdce43b4e3380afabb",
+          "title": "cc, 2013-11-27, n° 12-85.830",
+          "sha256": "6d2397b7165f16f320a954d17124ce370dc075bdcc47dfbbd6b93c4d1c9c6bda"
+        },
+        {
+          "nature": "search_result",
+          "url": "https://www.courdecassation.fr/decision/63c103e6bf9fd47c90a134ab",
+          "content_trust": "untrusted_source_data",
+          "status": "available",
+          "metadata": {
+            "content_trust": "untrusted_source_data"
+          },
+          "id": "63c103e6bf9fd47c90a134ab",
+          "title": "cc, 2023-01-10, n° 21-85.526",
+          "sha256": "5f53d96d33600adc52855dff2718936df59d385fb51c2dbc904db07671ad84d1"
+        }
+      ],
+      "truncated": true,
+      "sha256": "146bf71335d1252980ca4ad74d30ed2ae1055ab783ad029cbb062631b133b215",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e22"
+    },
+    {
+      "type": "source_evidence",
+      "tool": "WebFetch",
+      "call_id": "toolu_01E64F8L9sAjrCsheJXgus8y",
+      "retrieved_at": "2026-10-06T20:55:36.370924Z",
+      "content_trust": "untrusted_source_data",
+      "status": "missing",
+      "documents": [],
+      "truncated": false,
+      "reason": "tool_error",
+      "timestamp_basis": "capture_apres_processus",
+      "event_id": "e23"
+    },
+    {
+      "type": "assistant_text",
+      "text": "You've hit your session limit · resets 3:30am (Europe/Paris)",
+      "text_redacted": false,
+      "text_truncated": false,
+      "event_id": "e24"
+    },
+    {
+      "type": "result",
+      "subtype": "success",
+      "is_error": true,
+      "cost_usd": 0.3891595,
+      "result": "You've hit your session limit · resets 3:30am (Europe/Paris)",
+      "text_redacted": false,
+      "text_truncated": false,
+      "errors_count": 0,
+      "event_id": "e25"
+    },
+    {
+      "type": "technical_assessment",
+      "case_id": "plugin-violation-donnees",
+      "process_exit": 1,
+      "status": "failed",
+      "failures": [
+        "result_error_or_absent",
+        "process_exit_nonzero"
+      ],
+      "observables": {
+        "stop_required": false,
+        "first_visible_text_ref": "e4",
+        "stop_first": null,
+        "primary_content_refs": [],
+        "primary_content_available": false,
+        "legal_validity": null,
+        "note": "Le contenu disponible ne certifie ni pertinence ni vigueur."
+      },
+      "requires_independent_judgment": true
+    }
+  ]
+}

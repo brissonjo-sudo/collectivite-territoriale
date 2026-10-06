@@ -1,6 +1,6 @@
 {
   "plugin_version": "1.2.0-dev.3",
-  "plugin_commit": null,
+  "plugin_commit": "f002356ab68282fab21fe713cf71098a6a1d0bf0",
   "release_ready": false,
   "available_skills": [
     "dpm-fpt",
@@ -32,5 +32,16 @@
     "Nouvelle campagne du runtime renforcé non qualifiée",
     "Relecture DSI/RSSI et juridique humaine non recueillie",
     "Smoke du candidat dans Codex non établi"
-  ]
+  ],
+  "corrected_campaign": {
+    "summary_path": "tests/evidence/coactivation-corrigee/synthese-r6.json",
+    "completed_responses": 1,
+    "quota_interrupted": 15,
+    "fresh_judges": 1,
+    "verdict_counts": {
+      "echec": 1
+    },
+    "behavioral_campaign_complete": false,
+    "release_ready": false
+  }
 }

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "plugin-spontane-budget",
+  "exported_at": "2026-10-06T20:58:51.594706+00:00",
+  "packet_sha256": "15c13cbed378b6ae15c5bb747a2650dca8fb3c7a4f8628a4102fd9787b244726",
+  "prompt_sha256": "2d6a6ecf39699039678a96c2b14148f391527de0efb566c1ef7d02c0b2b175e8",
+  "response_sha256": "7665b58f380910c0f32eb08e8b352a660fa34981d8f1fe85c690801da749db32",
+  "suite_sha256": "3c45e6117c25cbca0558de2955ca5a7d80956575d886a887d1cdfdc581375cd8",
+  "protocol_sha256": "65f78f419679774ec00c6b5d96b1801f902c6510b57e221ae7ebb31320fd1b6f",
+  "external_read_output_tokens": 55000,
+  "portable_adapter_sha256": "61f853a233cd45b2f23c52a1b2344f21a52a5728e90afd8a02bbcb77de3ef371"
+}

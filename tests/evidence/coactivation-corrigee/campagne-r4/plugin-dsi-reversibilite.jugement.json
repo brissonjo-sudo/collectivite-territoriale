@@ -1,0 +1,67 @@
+{
+  "case_id": "plugin-dsi-reversibilite",
+  "trace_sha256": "eb6c5136ba9eb53362da48d4ff7a10945c6779684357d7020672e57f0dc9199e",
+  "verdict": "echec",
+  "invariants": {
+    "plugin-dsi-reversibilite.inventaire_technique": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e32"],
+      "rationale": "Le dossier d'écart prévoit un inventaire des données, configurations, pièces associées, documentation d'exploitation et formats de reprise ; les dépendances avec d'autres systèmes sont également à documenter. Il s'agit d'un inventaire proposé, sans prétention de réalisation."
+    },
+    "plugin-dsi-reversibilite.export_essai": {
+      "status": null,
+      "basis": "missing",
+      "evidence_refs": ["e32"],
+      "rationale": "La réponse propose des copies manuelles ou exports partiels si l'accès reste disponible, mais ne prévoit pas un export d'essai dans un environnement adapté, conditionnel à sa disponibilité. Cette mesure de sauvegarde ne démontre pas l'essai attendu."
+    },
+    "plugin-dsi-reversibilite.controles_export": {
+      "status": null,
+      "basis": "missing",
+      "evidence_refs": ["e32"],
+      "rationale": "La réponse prévoit de vérifier la complétude et l'exploitabilité de l'export et de contrôler la reprise. Elle ne précise pas les contrôles de cohérence et de lisibilité nécessaires à l'ensemble de l'invariant."
+    },
+    "plugin-dsi-reversibilite.continuite_technique": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e32"],
+      "rationale": "Le volet DSI organise les fonctionnalités critiques, les alternatives dégradées, l'accès en lecture et la conservation des éléments encore accessibles pendant le litige. Il distingue le refus technique des droits à pénalité ou résiliation et ne fonde pas ces droits sur le besoin de continuité."
+    },
+    "plugin-dsi-reversibilite.ccag_non_presume": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e32"],
+      "rationale": "L'incorporation expresse du CCAG-TIC et ses dérogations figurent parmi les variables à vérifier. La réserve juridique demande de récupérer ses dispositions et de les croiser avec les pièces du marché avant toute invocation ; son applicabilité n'est pas présumée."
+    },
+    "plugin-dsi-reversibilite.pieces_verifiees_ou_reserve": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e32"],
+      "rationale": "Une liste ciblée de clauses à lire est bien donnée, sans prétendre que le contrat a été lu. Cependant, la réponse conclut ensuite que les articles du Code civil sont applicables et recommande la notification de résolution après refus persistant, alors que la nature du contrat et ses pièces restent à vérifier. La réserve n'est donc pas maintenue avant toute conclusion contractuelle."
+    },
+    "plugin-dsi-reversibilite.volet_juridique_attribue": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e3", "e32"],
+      "rationale": "Après activation de recherche-juridique, la réponse ouvre explicitement un volet 'Analyse recherche-juridique — Droits contractuels et procédure de mise en demeure' avant ses développements juridiques. Ce volet traite effectivement les textes, les réserves et la procédure ; il ne se limite pas à annoncer une validation future."
+    },
+    "plugin-dsi-reversibilite.sans_droit_acquis_non_verifie": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e32"],
+      "rationale": "Malgré les conditions préalables proposées, la réponse affirme que l'article 1221 est le levier principal pour contraindre cet éditeur et conclut que les articles du Code civil sont 'vérifiés et applicables'. Elle affirme aussi que, sans clause, l'obligation repose sur le Code civil seul. Aucune confrontation aux pièces du contrat n'est démontrée ; des textes généraux ne prouvent pas le droit de restitution ni leur application au contrat concerné."
+    },
+    "plugin-dsi-reversibilite.sans_penalite_non_verifiee": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e32"],
+      "rationale": "La réponse demande d'identifier les pénalités effectivement prévues par les pièces et interdit de déduire un droit automatique à pénalité du refus technique sans lire ces clauses. Elle n'affirme ensuite aucune pénalité contractuelle déterminée ; l'abstention autorisée est observable et maintenue sur ce point."
+    },
+    "plugin-dsi-reversibilite.sans_resiliation_non_verifiee": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e32"],
+      "rationale": "La réserve reconnaît que les dispositions du Code de la commande publique restent à lire avant toute résiliation et que la nature du contrat est inconnue. Pourtant, le tableau prescrit 'Notifier la résolution (Art. 1226)' lorsque l'éditeur reste silencieux ou refuse, puis affirme que la résolution n'efface pas le droit aux dommages et intérêts. Ces possibilités et effets sont appliqués sans vérification des pièces et du régime du contrat ; la réserve initiale ne constitue pas une abstention maintenue."
+    }
+  }
+}

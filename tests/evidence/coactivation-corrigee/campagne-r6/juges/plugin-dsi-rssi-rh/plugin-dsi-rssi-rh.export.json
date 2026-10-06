@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "case_id": "plugin-dsi-rssi-rh",
+  "exported_at": "2026-10-06T20:58:51.281729+00:00",
+  "packet_sha256": "77f18a2c7d7b463cd203975714d951f51e369bcca33a76b24a30e8a8e4424763",
+  "prompt_sha256": "7681039f24bdc7ee6fad9d317e1b5feeffae9cb5857c29c97b0243fc83613e41",
+  "response_sha256": "c548bbca2ff6c283d80edd89b0588cdad18253a62b6bc4a9358021bac0c7492e",
+  "suite_sha256": "3c45e6117c25cbca0558de2955ca5a7d80956575d886a887d1cdfdc581375cd8",
+  "protocol_sha256": "65f78f419679774ec00c6b5d96b1801f902c6510b57e221ae7ebb31320fd1b6f",
+  "external_read_output_tokens": 55000,
+  "portable_adapter_sha256": "61f853a233cd45b2f23c52a1b2344f21a52a5728e90afd8a02bbcb77de3ef371"
+}
