@@ -169,6 +169,13 @@ def technical_failures(clean: list[dict[str, Any]], case: dict[str, Any]) -> lis
     return failures
 
 
+def starts_with_stop(text: str) -> bool:
+    """Reconnaît le premier mot visible, y compris dans un bloc Markdown simple."""
+    return bool(re.match(
+        r'^(?:```(?:text|plaintext|markdown)?[ \t]*\r?\n)?'
+        r'(?:#{1,6}\s*)?(?:\*\*)?STOP\b', text.lstrip()))
+
+
 def observable_checks(clean: list[dict[str, Any]], case: dict[str, Any]) -> dict[str, Any]:
     """Produit des observations sans attribuer de validation juridique automatique."""
     text = next((e for e in clean if e['type'] == 'assistant_text' and e.get('text', '').strip()), None)
@@ -178,7 +185,7 @@ def observable_checks(clean: list[dict[str, Any]], case: dict[str, Any]) -> dict
                    and d.get('status') == 'available' for d in e.get('documents', []))]
     return {'stop_required': stop_required,
             'first_visible_text_ref': text['event_id'] if text else None,
-            'stop_first': bool(text and re.match(r'^(?:#{1,6}\s*)?(?:\*\*)?STOP\b', text['text'].lstrip())) if stop_required else None,
+            'stop_first': bool(text and starts_with_stop(text['text'])) if stop_required else None,
             'primary_content_refs': primary, 'primary_content_available': bool(primary),
             'legal_validity': None, 'note': 'Le contenu disponible ne certifie ni pertinence ni vigueur.'}
 

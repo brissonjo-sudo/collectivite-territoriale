@@ -31,6 +31,12 @@ Un nouveau gel impose le schéma v2 et l'inventaire de toutes ses dépendances.
 Une troncature ou un masquage du texte visible empêche toute réussite : la
 réponse entière n'est plus disponible pour apprécier ses invariants.
 
+Le contrôle du premier mot visible admet les formes Markdown simples de STOP
+(gras, titre ou bloc de code texte), dont les délimiteurs ne sont pas du texte
+visible. Un commentaire, titre distinct ou séparateur placé avant le garde-fou
+reste un échec ; la présence de STOP seulement dans la réponse finale ne suffit
+pas. Les traces anciennes ne sont pas réévaluées avec ce contrôle corrigé.
+
 ## Preuve documentaire
 
 Chaque résultat est rattaché à son `call_id` et placé dans l'ordre réel du
