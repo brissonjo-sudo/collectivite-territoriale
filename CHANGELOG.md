@@ -1,5 +1,27 @@
 # Historique des versions
 
+## 1.2.0-dev.2 — 2026-10-06 — Candidat correctif, publication bloquée
+
+- Intégration de DSI 0.2.1 depuis le commit source
+  `704e5dd6a3d15994ed431b23585aabd72086ca75`, sans modification locale de ses
+  trente fichiers runtime. Les cinq autres bases amont restent figées.
+- STOP initial visible, mobilisation effective de la recherche juridique,
+  abstention complète sans source primaire et traitement du statut RH inconnu.
+  Les surcharges restent déclarées, bornées et contrôlées par empreinte.
+- Correction des descriptions DPM/DPO dès la découverte du skill, avec une
+  opération de remplacement limitée à ce seul champ de métadonnées.
+- Suite de coactivation à seize cas et 124 exigences atomiques, dont cinq
+  sélections spontanées. Nouvelle qualification sur le runtime corrigé,
+  sans transfert des scores des campagnes antérieures.
+- Gel fondé sur les blobs Git bruts, contrôlé avant et après chaque cas,
+  et jugement lié à l'exécution native d'un sous-agent frais.
+- Collecte des textes primaires assainis et correction de l'assainissement
+  qui masquait à tort un titre contenant « signature » sans valeur secrète.
+- Retrait des renvois DSI d'exécution vers le cache de maintenance qui n'est
+  pas distribué dans le paquet runtime.
+- Revue DSI/RSSI, revue juridique humaine et smoke du candidat dans Codex
+  restent des barrières distinctes : `release_ready=false`.
+
 ## 1.1.1 — 2026-10-03 — Candidat d'alignement DRH
 
 - Mise à jour de `drh-fpt` vers 0.6.0 depuis `main`, au commit

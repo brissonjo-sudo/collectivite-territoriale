@@ -196,8 +196,8 @@ cloud, le règlement européen sur les données et les sources ANSSI/DINUM.
 Vérifier version de SecNumCloud, validité et périmètre de qualification,
 dates d'application des frais de changement, textes modificatifs et
 échéances contractuelles. Le régime de données de santé reste non vérifié.
-Ne pas recopier les valeurs de `references/cache-valeurs.md` ; reprendre
-la source à la date du besoin.
+Le cache de maintenance est hors du paquet runtime ; reprendre la source
+officielle à la date du besoin, sans charger ni copier ce cache.
 
 ## 10. Écrits et livrables
 

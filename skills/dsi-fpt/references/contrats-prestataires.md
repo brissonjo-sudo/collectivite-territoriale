@@ -178,7 +178,8 @@ les dispositions effectivement vérifiées et les limites signalées.
 Relire les délais de réclamation, correction et sortie, conditions de
 pénalité, frais, préavis, durées de maintenance et calendrier des droits
 invoqués. Ne citer aucune valeur sans source datée ;
-`references/cache-valeurs.md` indique les points officiels à consulter.
+le registre livré oriente la recherche des textes primaires. Le cache de
+maintenance du dépôt source est exclu du paquet runtime et ne se charge pas.
 
 ## 10. Écrits et livrables
 

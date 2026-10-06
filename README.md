@@ -2,9 +2,9 @@
 
 [![Validation du plugin](https://github.com/brissonjo-sudo/collectivite-territoriale/actions/workflows/ci.yml/badge.svg)](https://github.com/brissonjo-sudo/collectivite-territoriale/actions/workflows/ci.yml)
 
-Plugin Claude Code et Codex destiné aux collectivités territoriales françaises. Une seule installation réunit quatre expertises métier, une méthode de recherche juridique sourcée et un accès optionnel à Légifrance/Judilibre.
+Plugin Claude Code et Codex destiné aux collectivités territoriales françaises. Une seule installation réunit cinq expertises métier, une méthode de recherche juridique sourcée et un accès optionnel à Légifrance/Judilibre.
 
-> **Statut :** la version 1.1.1 est un candidat d'alignement DRH, sans validation comportementale ni publication. La marketplace suit `main` : elle distribue le contenu fusionné, même sans tag. La fusion et l'installation ne prouvent pas la qualification d'une release.
+> **Statut :** la version 1.2.0-dev.2 est un candidat correctif à six skills, avec DSI 0.2.1. La revue DSI/RSSI, la revue juridique humaine et le smoke du candidat dans Codex restent ouverts ; `release_ready=false`. La marketplace suit `main` : elle distribue le contenu fusionné, même sans tag. La fusion et l'installation ne prouvent pas la qualification d'une release.
 
 Ce plugin aide à qualifier une situation, identifier les expertises à mobiliser et produire une réponse traçable. Il ne remplace ni la validation d'un juriste, ni le contrôle de l'autorité compétente, ni la vérification des textes officiels en vigueur.
 
@@ -17,6 +17,7 @@ Ce plugin aide à qualifier une situation, identifier les expertises à mobilise
 | `collectivite-territoriale:dpo-ct` | Protection des données | 0.2.1 |
 | `collectivite-territoriale:dirfi-fpt` | Finances locales | 1.0.4 |
 | `collectivite-territoriale:recherche-juridique` | Recherche et vérification du droit français | 3.5.0 |
+| `collectivite-territoriale:dsi-fpt` | Systèmes d'information, sécurité et continuité | 0.2.1 |
 
 Le serveur MCP `droit-francais`, déclaré une seule fois dans `.mcp.json`, fournit l'accès aux sources Légifrance/Judilibre. Le skill `recherche-juridique` apporte la méthode de vérification de vigueur, de provenance et de citation. Le serveur et la méthode sont complémentaires.
 
@@ -26,6 +27,7 @@ Le serveur MCP `droit-francais`, déclaré une seule fois dans `.mcp.json`, four
 - Examiner une prime ou une décision RH avec les dimensions budgétaire, statutaire et juridique.
 - Qualifier une violation de données, apprécier le risque et vérifier le délai applicable.
 - Rechercher le droit en vigueur, citer les sources retrouvées et signaler explicitement ce qui n'a pas pu être vérifié.
+- Cadrer un projet SI, un incident ou une réversibilité avec les responsabilités DSI, DPO, RH, finances et recherche juridique.
 
 L'activation simultanée de plusieurs skills dépend de la question posée. Une réponse métier correcte ne constitue pas, à elle seule, une preuve que la méthode juridique ou le serveur MCP ont été utilisés.
 
@@ -81,13 +83,13 @@ Le plugin peut aussi être installé depuis le répertoire des plugins de l'appl
 
 Cette marketplace Git sert au développement, aux tests et à la distribution directe. Elle ne publie pas automatiquement le plugin dans l'annuaire public universel. Dans un espace de travail ChatGPT, l'import et les autorisations restent administrés par l'organisation.
 
-> **Compte de l'auteur :** ne pas installer ce plugin en parallèle des cinq skills individuels. Les deux jeux coexistent sous des noms distincts et peuvent doubler le contexte chargé.
+> **Compte de l'auteur :** ne pas installer ce plugin en parallèle des skills individuels portant les mêmes rôles. Les deux jeux coexistent sous des noms distincts et peuvent doubler le contexte chargé.
 
 ## Sources et reproductibilité
 
-Chaque dossier `skills/<nom>/` provient des fichiers d'exécution d'un commit amont figé. `upstream.json` fixe le dépôt, le commit, la version de base et les chemins inclus. `dirfi-fpt` et `drh-fpt` restent des copies exactes. `dpm-fpt`, `dpo-ct` et `recherche-juridique` sont des **variantes locales du plugin**, avec les corrections de méthode conservées dans `overlays/` et déclarées dans `instruction_overlays`.
+Chaque dossier `skills/<nom>/` provient des fichiers d'exécution d'un commit amont figé. `upstream.json` fixe le dépôt, le commit, la version de base et les chemins inclus. `dirfi-fpt` et `dsi-fpt` restent des copies exactes. `dpm-fpt`, `drh-fpt`, `dpo-ct` et `recherche-juridique` sont des **variantes locales du plugin**, avec les corrections de méthode conservées dans `overlays/` et déclarées dans `instruction_overlays`.
 
-Chaque surcharge est liée à l'empreinte SHA-256 exacte de son fichier amont et de son texte local ; elle est insérée une seule fois à une ancre unique. Tout changement de base, de correction ou d'ancre bloque la synchronisation tant qu'il n'a pas été revu. Les versions internes identifient la base amont, pas une nouvelle release de ces dépôts. Le commit du plugin identifie la variante complète. Aucun dépôt amont n'est modifié par ces surcharges.
+Chaque surcharge est liée à l'empreinte SHA-256 exacte de son fichier amont et de son texte local ; l'insertion utilise une ancre unique. Pour DPM et DPO, un remplacement borné du champ `description` rend les garde-fous visibles dès la découverte du skill ; il ne modifie ni les autres métadonnées ni le corps. Toute divergence de base, de correction ou d'ancre bloque la synchronisation. Les versions internes identifient la base amont, pas une nouvelle release de ces dépôts. Le commit du plugin identifie la variante complète. Aucun dépôt amont n'est modifié par ces surcharges.
 
 Pour `recherche-juridique`, la racine canonique `skill/` est aplatie dans `skills/recherche-juridique/`. Sa licence est copiée avec le runtime ; aucun manifeste, serveur MCP, fichier `.env` ou autre fichier de dépôt amont n'est dupliqué. Le fichier `references/cache-taux-seuils.md` de `dirfi-fpt`, exclu de son propre paquet de distribution, n'est pas embarqué.
 
@@ -115,7 +117,9 @@ Le manifeste Codex est également contrôlé avec le validateur du skill systèm
 - une violation de données mobilisant DPO et recherche juridique ;
 - le comportement dégradé lorsque le MCP juridique est désactivé.
 
-Les fichiers présents prouvent l'installation conjointe, pas la coactivation effective. La release 1.1.1 exige donc aussi des traces comportementales en conversations fraîches. Le statut du candidat est conservé dans `tests/evidence/release-1.1.1.json` ; les traces 1.1.0 restent historiques et ne qualifient pas le nouveau runtime DRH.
+Les fichiers embarqués prouvent la composition du plugin, pas la coactivation effective. Le candidat correctif exige donc une nouvelle campagne sur ses propres octets figés, avec des conversations et des juges indépendants frais. Son statut est conservé dans `tests/evidence/release-1.2.0-dev.2.json`. Les traces des candidats précédents restent historiques et ne qualifient pas ce runtime corrigé.
+
+La suite de coactivation v2 comporte seize cas, avec 124 exigences atomiques : onze activations imposées et cinq sélections spontanées. Le profil `corrected-runtime-v1` vérifie les blobs Git bruts avant et après chaque cas ; il refuse tout transfert de score depuis l'ancien runtime. Les extraits primaires assainis, la conformité du comportement et l'identité native des juges font l'objet de contrôles distincts.
 
 Le lanceur `scripts/run_plugin_campaign.py` exécute les quatre scénarios dans
 des sessions non persistées, impose les activations qualifiées attendues,
@@ -129,13 +133,13 @@ humaine des invariants métier avant d'être promue en preuve de release.
 - `.claude-plugin/plugin.json` : manifeste Claude Code.
 - `.agents/plugins/marketplace.json` et `.claude-plugin/marketplace.json` : catalogues de distribution.
 - `.mcp.json` : unique déclaration du serveur `droit-francais`.
-- `skills/` : cinq runtimes figés et synchronisés.
+- `skills/` : six runtimes figés et synchronisés.
 - `upstream.json` et `scripts/` : provenance et contrôle de dérive.
 
-Le format de compatibilité actuel reste volontairement utilisé pour la release 1.1.1. La migration vers le manifeste portable Agent Plugins fera l'objet d'un chantier séparé. Le plan de construction et les décisions d'architecture sont conservés dans `docs/`.
+Le format de compatibilité actuel reste volontairement utilisé pour ce candidat. La migration vers le manifeste portable Agent Plugins fera l'objet d'un chantier séparé. Le plan de construction et les décisions d'architecture sont conservés dans `docs/`.
 
 ## Licences
 
-Le plugin et ses cinq contenus embarqués sont distribués sous licence [CC-BY-SA-4.0](LICENSE), avec attribution à `brissonjo-sudo`. Cette licence globale couvre notamment `dpm-fpt` et `dpo-ct`, qui ne disposaient pas auparavant d'une licence explicite dans leur dépôt amont.
+Le plugin et ses six contenus embarqués sont distribués sous licence [CC-BY-SA-4.0](LICENSE), avec attribution à `brissonjo-sudo`. Cette licence globale couvre notamment `dpm-fpt` et `dpo-ct`, qui ne disposaient pas auparavant d'une licence explicite dans leur dépôt amont.
 
 Les textes, décisions et métadonnées récupérés depuis Légifrance ou Judilibre restent soumis aux droits, licences et conditions de réutilisation de leurs producteurs. Le texte CC-BY-SA-4.0 accompagne également la copie du runtime `recherche-juridique` dans `skills/recherche-juridique/LICENSE`.

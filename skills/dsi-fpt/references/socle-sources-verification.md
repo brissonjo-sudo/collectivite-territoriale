@@ -5,7 +5,9 @@
 > motivée) relève de `recherche-juridique`. Ce fichier ne la réécrit pas : il
 > fournit la **carte des sources propres au numérique des collectivités
 > territoriales** et les réflexes du métier. Les identifiants vérifiés sont
-> dans `references-verifiees.md`, les valeurs datées dans `cache-valeurs.md`.
+> dans `references-verifiees.md`. Le cache de maintenance des valeurs est
+> conservé uniquement dans le dépôt source, exclu du paquet runtime : ne pas
+> tenter de le charger depuis ce paquet. Revenir aux textes primaires en session.
 
 ---
 
@@ -109,8 +111,10 @@ avant toute conclusion. Aucun statut du tableau ne dispense de ce contrôle.
 
 Montants de sanction, seuils de population ou d'effectif, délais, dates
 d'application, versions de référentiels. Elles se vérifient **à la source en
-session** et se citent avec la date de lecture. `cache-valeurs.md` dit
-**quoi vérifier et où** ; il ne se recopie pas.
+session** et se citent avec la date de lecture. Le registre livré fournit
+des pistes historiques à vérifier, sans valeur juridique actuelle présumée.
+Le cache de maintenance reste hors runtime ; ni sa lecture ni sa copie
+ne sont une étape d'exécution du paquet.
 
 ### Références structurelles stables — pistes à vérifier
 

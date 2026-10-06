@@ -193,8 +193,9 @@ Consulter `references/references-verifiees.md` pour le champ du RGS,
 l'attestation et les catégories éventuellement soumises à un régime cyber.
 Vérifier la version du RGS, du guide d'hygiène et d'EBIOS Risk Manager,
 la validité et le périmètre des qualifications, les délais de réexamen
-invoqués et les calendriers de transposition. Ne pas recopier les valeurs
-de `references/cache-valeurs.md` ; retourner à la source officielle.
+invoqués et les calendriers de transposition. Le cache de maintenance est hors
+du paquet runtime : ne pas le charger ni en recopier les valeurs. Retourner
+à la source officielle.
 
 ## 10. Écrits et livrables
 

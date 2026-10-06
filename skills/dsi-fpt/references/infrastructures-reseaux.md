@@ -190,7 +190,8 @@ de doctrine et la stratégie de numérique responsable. Les textes DEEE,
 réemploi et prescriptions sectorielles non présents au registre restent à
 vérifier avant usage. Vérifier seuils, taux, échéances, périmètre des
 équipements et versions de référentiels à leur source, sans les produire de
-mémoire. `references/cache-valeurs.md` indique où reprendre une vérification.
+mémoire. Le registre livré oriente la recherche de sources primaires ; le cache
+de maintenance du dépôt source est hors runtime et ne se charge pas.
 
 Les capacités techniques et dates de fin de support se contrôlent auprès
 de leur source compétente et du dossier d'exploitation ; ne pas en déduire

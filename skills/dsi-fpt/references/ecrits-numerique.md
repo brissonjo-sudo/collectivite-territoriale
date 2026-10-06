@@ -166,8 +166,9 @@ son vocabulaire ; pour un engagement contractuel, le contrat effectivement
 incorporé. Confirmer versions, dates d'application, mentions exigées,
 signataire habilité, délais et niveaux de service avant de les écrire.
 
-`references/cache-valeurs.md` indique les points à relire ; aucune valeur ne
-se recopie sans une source datée. Si la source manque, retirer la conclusion
+Le registre livré fournit des pistes à relire sur la source primaire ; le cache
+de maintenance est exclu du paquet runtime et ne se charge pas. Aucune valeur
+ne se recopie sans une source datée. Si la source manque, retirer la conclusion
 engageante et marquer le point `⚠️ non vérifié`.
 
 ## 10. Écrits et livrables

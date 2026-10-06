@@ -163,8 +163,9 @@ en est déduite ; ne pas transposer une obligation de l'État par analogie.
 
 Relire les délais d'engagement contractuel, échéances imposées par une
 autorité, exigences de conservation, version des guides utilisés et régime
-de signalement réellement applicable. `references/cache-valeurs.md` sert de
-carte de vérification, sans reprise de ses valeurs. Toute règle non
+de signalement réellement applicable. Le registre livré oriente la recherche
+de textes primaires ; le cache de maintenance est hors runtime et ne se charge
+pas. Toute règle non
 confirmée reste réservée ; aucune conclusion juridique n'en est tirée.
 
 ## 10. Écrits et livrables

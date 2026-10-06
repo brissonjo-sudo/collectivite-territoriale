@@ -7,7 +7,8 @@
 > identifiant ne se reconstitue jamais de mémoire.
 >
 > **Aucune valeur chiffrée ici** (montant, seuil, délai, date d'échéance) :
-> elles sont dans `cache-valeurs.md`, avec leur date de lecture.
+> le cache daté est conservé dans le seul dépôt source, hors paquet runtime.
+> Ne pas tenter de le charger ; revenir à la source primaire pour toute valeur.
 >
 > **Vérification du 2026-10-05.** Droit français : API Légifrance (outils
 > `Droit_Francais`, `search_articles` et `get_article`), texte de chaque article
@@ -209,7 +210,8 @@
 ## 15. Doctrine d'appui et référentiels
 
 > **Doctrine d'appui : non normative, sauf texte contraire cité.** Versions et
-> dates de publication : `cache-valeurs.md`. Lus le 2026-10-05 sur les sites
+> dates de publication : cache de maintenance du seul dépôt source, hors
+> paquet runtime ; ne pas le charger. Lus le 2026-10-05 sur les sites
 > officiels (détail et URL : `docs/socle/lot-4-doctrine.md`).
 
 ### 15.1 Référentiels rendus obligatoires par un texte

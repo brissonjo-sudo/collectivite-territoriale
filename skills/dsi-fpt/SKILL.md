@@ -27,6 +27,12 @@ description: >-
 > (police municipale et vidéoprotection), `dirfi-fpt` (finances) ·
 > compatibilité : Codex, Claude Opus, Claude Sonnet · langue : français.
 
+> **Périmètre distribué** : le cache de maintenance des valeurs est conservé
+> uniquement dans le dépôt source, hors du paquet runtime. Ne pas tenter de
+> le charger depuis ce paquet. Le registre livré est une piste historique,
+> jamais une preuve actuelle. Sans texte primaire récupéré dans la session,
+> s'abstenir sur les montants, seuils, délais, calendriers et conclusions de droit.
+
 > **Objet** : expertise de la personne qui porte la **fonction systèmes
 > d'information** d'une collectivité, à la fois **opérationnelle** (orientée
 > décision, priorités et livrables) et **juridiquement fiable** (vérification
@@ -497,6 +503,7 @@ exploitable), ni de détail d'architecture qui faciliterait une attaque s'il
 - **Revue du socle** : à chaque étape d'un texte suivi (transposition de NIS2,
   calendrier du règlement sur l'IA, nouvelle version du RGAA ou du RGS), et au
   moins à chaque rentrée de septembre ; reporter les dates dans
-  `references/references-verifiees.md` et `references/cache-valeurs.md`.
+  `references/references-verifiees.md` et, dans le seul dépôt source, le cache
+  de maintenance exclu du paquet runtime.
 
 > Historique → `CHANGELOG.md` · Décisions d'architecture → `docs/adr/`

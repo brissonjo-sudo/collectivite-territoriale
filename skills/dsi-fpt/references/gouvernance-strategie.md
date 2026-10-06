@@ -166,8 +166,9 @@ restent à confirmer en version consolidée pour la décision.
 
 Vérifier à la source la population retenue, les catégories visées, les seuils,
 le calendrier, le décret d'application, les pouvoirs du signataire et les
-dispositions de la convention. Utiliser `references/cache-valeurs.md` comme
-carte des points à relire, sans reprendre ses valeurs.
+dispositions de la convention. Le registre livré oriente ces vérifications.
+Le cache de maintenance du dépôt source est hors du paquet runtime : ne pas
+le charger ni reprendre ses valeurs.
 
 ## 10. Écrits et livrables
 

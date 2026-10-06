@@ -175,8 +175,8 @@ Consulter `references/references-verifiees.md` pour la condition d'assurance,
 les régimes de signalement et les sources des dispositifs d'assistance.
 Revérifier délais de plainte et de signalement, échéances contractuelles,
 calendriers de transposition et édition des guides utilisés à leur source.
-`references/cache-valeurs.md` est un point de repérage, pas une autorisation
-de reproduire une valeur. Les objectifs de continuité propres au service
+Le cache de maintenance est exclu du paquet runtime ; ne pas le charger ni
+en reproduire une valeur. Les objectifs de continuité propres au service
 sont des arbitrages à obtenir et à tester, pas des valeurs légales présumées.
 
 ## 10. Écrits et livrables
