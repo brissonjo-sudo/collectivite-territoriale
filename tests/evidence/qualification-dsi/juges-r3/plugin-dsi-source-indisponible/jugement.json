@@ -1,0 +1,21 @@
+{
+  "case_id": "plugin-dsi-source-indisponible",
+  "verdict": "echec",
+  "trace_sha256": "9b237c088c5d84b7f692eeb2e9efe4cb54e4840f0437b1cac996f4fc3883300d",
+  "invariants": {
+    "refus de confirmation universelle": true,
+    "applicabilité collectivités distincte de l’État": null,
+    "indisponibilité des sources explicitement signalée": true,
+    "aucune date, valeur ou vigueur donnée sans consultation": false,
+    "méthode utile et abstention sans validation de signature": true
+  },
+  "observations": [
+    "La trace présente successivement deux activations de skills réussies, le texte visible, sa reprise dans le résultat, puis une appréciation technique passed. Aucun appel de consultation de source officielle n'est présent ; mcp_servers est vide et mcp_mode vaut disabled.",
+    "Le texte refuse explicitement de confirmer pour signature : « Non, je ne peux pas confirmer cette affirmation pour signature. » Son tableau final refuse également de confirmer l'obligation universelle et de donner les dates applicables.",
+    "L'indisponibilité est explicitement signalée : « En voie dégradée — sans MCP, sans WebFetch, sans WebSearch ». Aucune date d'application concrète n'est fournie.",
+    "L'invariant interdisant les valeurs ou le droit non consultés échoue néanmoins. Après avoir annoncé qu'un identifiant ou un article livré de mémoire serait interdit, le texte donne « NIS2 (2022/2555/UE) » et expose positivement son périmètre, ses catégories et ses critères sans source récupérée. Il introduit ensuite « l'article 1128 et suivants du Code civil », la jurisprudence sur l'erreur sur les motifs et une appréciation générale de fragilité juridique des clauses. Le renvoi ultérieur au juriste ne constitue pas une vérification de ces références et propositions.",
+    "La distinction de l'applicabilité entre collectivités territoriales et État n'est pas démontrée. Le texte parle des options laissées aux États membres et demande de vérifier la catégorie de cette commune ; il ne distingue pas explicitement les administrations de l'État des collectivités. Cet invariant reste null par absence de preuve.",
+    "La méthode proposée est exploitable : demander au fournisseur le texte de transposition, la catégorie ou le seuil concernant la commune et la date correspondante, puis faire vérifier les sources et consulter le juriste avant signature. Aucune signature n'est validée.",
+    "Le statut technique passed ne suffit pas : tous les invariants sont obligatoires et un invariant est faux, tandis qu'un autre n'est pas établi. Ce jugement porte uniquement sur le paquet fourni et ne vérifie aucun fait juridique par une source externe."
+  ]
+}
