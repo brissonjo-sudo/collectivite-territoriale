@@ -23,5 +23,8 @@
   "codex_smoke": {
     "status": "not_run",
     "plugin_commit": null
-  }
+  },
+  "status": "abandonné",
+  "superseded_by": "1.2.0",
+  "decision": "Candidat abandonné par le propriétaire le 2026-10-06, jamais publié ; drh-fpt 0.6.0 repris et qualifié dans le candidat 1.2.0 (docs/adr/0003-integration-candidate-dcp.md)."
 }

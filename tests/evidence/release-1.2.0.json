@@ -16,7 +16,8 @@
     "La suite métier et la mesure DCP 0.1.0 restent à construire et à exécuter.",
     "L'accès MCP et les options de la CLI réelle doivent être qualifiés avant campagne.",
     "La relecture par un praticien est différée après l'intégration candidate ; elle reste requise avant qualification et publication.",
-    "Le smoke Codex du commit candidat reste à réaliser."
+    "Le smoke Codex du commit candidat reste à réaliser.",
+    "La campagne 1.2.0 qualifie aussi l'alignement drh-fpt 0.6.0 repris du candidat 1.1.1 abandonné."
   ],
   "historical_evidence": "tests/evidence/2026-09-20-validation-locale.json",
   "runs": [],

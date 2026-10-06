@@ -54,3 +54,13 @@ devra être ajoutée à cette sélection. Aucun passage au vert n'est attribué
 L'intégration candidate sur une branche ne met pas à jour les installations.
 La marketplace suivant `main`, une fusion distribuerait le candidat : cette
 fusion et la publication restent des décisions distinctes, sans automatisme.
+
+## Sort du candidat 1.1.1
+
+Décision du propriétaire du 2026-10-06 : le candidat 1.1.1 est **abandonné**
+et ne sera jamais publié. Il n'avait pas été qualifié. Ses changements
+(`drh-fpt` 0.6.0) sont repris tels quels dans le candidat 1.2.0, dont la
+qualification couvre donc deux évolutions : DCP et l'alignement DRH. La
+campagne 1.2.0 porte sur les neuf scénarios, y compris ceux qui mobilisent
+`drh-fpt`. `tests/evidence/release-1.1.1.json` est conservé comme trace
+historique et marqué supplanté par 1.2.0.

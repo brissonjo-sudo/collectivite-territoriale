@@ -14,8 +14,13 @@
   relecture praticien restent à faire après l'intégration candidate.
 - Les preuves historiques conservent leur inventaire d'origine ; elles
   n'attestent aucune activation DCP.
+- Reprise du candidat 1.1.1 abandonné (`drh-fpt` 0.6.0) : la qualification
+  1.2.0 couvre aussi cet alignement.
 
-## 1.1.1 — 2026-10-03 — Candidat d'alignement DRH
+## 1.1.1 — 2026-10-03 — Candidat d'alignement DRH (abandonné, jamais publié)
+
+- **Abandonné le 2026-10-06** par décision du propriétaire, sans qualification ;
+  ses changements sont repris dans le candidat 1.2.0.
 
 - Mise à jour de `drh-fpt` vers 0.6.0 depuis `main`, au commit
   `f81c9b955f7ebb47df7e93bdc41ac743d85a2973` : dix fichiers modifiés et
