@@ -9,12 +9,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          # Historique et étiquettes complets : l'étiquette distribuée est vérifiée.
+          fetch-depth: 0
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Vérifier l'étiquette distribuée par la marketplace
+        env:
+          CT_EXIGER_ETIQUETTE: "1"
+        run: python -m unittest tests.test_codex_plugin.CodexPluginTests.test_etiquette_designe_le_commit_epingle
       - name: Contrôler les copies figées
         run: python scripts/check_sync.py
       - name: Vérifier le détecteur de dérive
+        env:
+          CT_EXIGER_ETIQUETTE: "1"
         run: python -m unittest discover -s tests
       - name: Contrôler les pointeurs inter-dépôts
         run: |

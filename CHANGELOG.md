@@ -1,5 +1,16 @@
 # Historique des versions
 
+## Distribution — 2026-10-06 — Marketplaces épinglées (sans changement de version)
+
+- Les marketplaces Claude Code et Codex distribuent l'étiquette `v1.1.1`
+  (`cad8bbd`), et non plus `main` : une fusion ne publie plus rien.
+- `v1.1.1` est consignée comme non qualifiée, distribuée par défaut jusqu'à
+  la qualification de la version suivante.
+- Procédure de publication et registre des étiquettes : `docs/publication.md` ;
+  décision : `docs/adr/0004-distribution-epinglee.md`.
+- CI : vérification obligatoire que l'étiquette distribuée existe et désigne
+  le commit épinglé.
+
 ## 1.1.1 — 2026-10-03 — Candidat d'alignement DRH
 
 - Mise à jour de `drh-fpt` vers 0.6.0 depuis `main`, au commit
