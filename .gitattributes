@@ -5,3 +5,5 @@ docs/** text eol=lf
 tests/*.py text eol=lf
 tests/*.json text eol=lf
 tests/evidence/** -text
+/.mcp.json -text
+/scripts/run_plugin_campaign.py -text
