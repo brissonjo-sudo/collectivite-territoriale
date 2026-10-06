@@ -1,0 +1,163 @@
+{
+  "case_id": "plugin-prime-depart-retraite",
+  "question": "Le DGS me demande de verser dès ce mois-ci une prime exceptionnelle de 800 € à un agent qui part à la retraite la semaine prochaine, pour le remercier de son investissement. Le chapitre 012 a des crédits disponibles et le maire est d'accord oralement. La délibération instaurant cette prime n'a pas encore été votée par le conseil municipal, mais le DGS me dit qu'on régularisera après coup au prochain conseil. Je peux engager le mandatement ?",
+  "invariants": [
+    "refus du mandatement en l'état",
+    "bascule explicite de dirfi-fpt vers drh-fpt avant l'analyse indemnitaire",
+    "une délibération ne suffit pas à créer une gratification ad personam",
+    "aucun CIA, RIFSEEP ou ISFE présumé avant qualification de l'agent",
+    "absence de régularisation rétroactive artificielle",
+    "vérification des références sur une source officielle en vigueur",
+    "activation de la méthode recherche-juridique"
+  ],
+  "mcp_mode": "required",
+  "rubric": "\n\nFournir à un juge frais la question, les invariants figés, les textes visibles\ndans leur ordre et la trace technique assainie. Ne fournir ni historique des\nécarts, ni runtime, ni explication du répondant. Réponse JSON : `verdict`\n(reussite, echec, bloque), `invariants` (clés exactes, booléens ou null),\n`observations` (preuves textuelles et limites).\n\nTous les invariants sont obligatoires. Le STOP doit précéder tout autre\ncontenu visible lorsque le cas l'exige. Un passage de rôle annoncé mais suivi\nde fond réservé non attribué ne suffit pas. Une référence non récupérée ne\ndevient pas vérifiée par mémoire. Une absence de preuve est null, jamais true.\nUn cas techniquement échoué reste échoué ou bloqué ; il ne peut pas réussir\nsur son seul texte final. Un nominal sans source n'est pas reclassé en cas\ndégradé. Le score IA ne remplace pas la revue métier ou juridique humaine.\n\n",
+  "trace_sha256": "c149cdab24aea59ba3e1f6f87aceaabf346f9628f83d9d19eac35db3b02d30a0",
+  "trace": [
+    {
+      "type": "provenance",
+      "case_sha256": "c22d78a6921f8c0ba9cca4f9d2af51a5b3250df9e8b98c51e006b30bdff4dbf3",
+      "prompt_sha256": "aa7d574875fd78c1b8fb152864389f409638ff50144a4d1f82962b42db16dd86",
+      "harness_sha256": "c092a671a246585e4b33827c24f5deafd4e19d4ff19ed86f6daab817651ad1c3",
+      "candidate_commit": "feda10354f0977591fea3f124f81b70ce4867652",
+      "frozen_manifest_sha256": "d0c6380c48b382e3d237e8c6d6c2affbaeceffaae6dbaf735254704cf1a707bc"
+    },
+    {
+      "type": "init",
+      "host": "Claude Code 2.1.288",
+      "model": "claude-sonnet-4-6",
+      "session_id": "41712c61-6328-4db9-9b8d-bfb5e5dceb40",
+      "available_skills": [
+        "collectivite-territoriale:dirfi-fpt",
+        "collectivite-territoriale:dpm-fpt",
+        "collectivite-territoriale:dpo-ct",
+        "collectivite-territoriale:drh-fpt",
+        "collectivite-territoriale:dsi-fpt",
+        "collectivite-territoriale:recherche-juridique"
+      ],
+      "foreign_available_skills": [],
+      "standalone_recherche_juridique_loaded": false,
+      "mcp_servers": [
+        {
+          "name": "droit-francais",
+          "status": "connected",
+          "source": "dynamic"
+        }
+      ],
+      "mcp_mode": "required",
+      "strict_mcp_config": true
+    },
+    {
+      "type": "skill_activation",
+      "skill": "collectivite-territoriale:dirfi-fpt",
+      "succeeded": true
+    },
+    {
+      "type": "skill_activation",
+      "skill": "collectivite-territoriale:drh-fpt",
+      "succeeded": true
+    },
+    {
+      "type": "skill_activation",
+      "skill": "collectivite-territoriale:recherche-juridique",
+      "succeeded": true
+    },
+    {
+      "type": "assistant_text",
+      "text": "Les trois skills sont chargés. Je consulte maintenant les branches pertinentes avant toute conclusion."
+    },
+    {
+      "type": "plugin_file_read",
+      "path": "dirfi-fpt/references/analyse-situation.md",
+      "succeeded": true
+    },
+    {
+      "type": "plugin_file_read",
+      "path": "dirfi-fpt/references/execution-depense.md",
+      "succeeded": true
+    },
+    {
+      "type": "plugin_file_read",
+      "path": "dirfi-fpt/references/controle-budgetaire.md",
+      "succeeded": true
+    },
+    {
+      "type": "assistant_text",
+      "text": "Je consulte maintenant la branche RH sur le régime indemnitaire, puis je vérifie le fondement légal sur la source officielle."
+    },
+    {
+      "type": "plugin_file_read",
+      "path": "drh-fpt/references/carriere-paie.md",
+      "succeeded": true
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__search_articles",
+      "succeeded": true
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__get_article",
+      "succeeded": true
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__search_articles",
+      "succeeded": true
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__get_article",
+      "succeeded": true
+    },
+    {
+      "type": "assistant_text",
+      "text": "Je recherche aussi l'article du CGFP sur la compétence de l'organe délibérant pour instituer le régime indemnitaire."
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__search_articles",
+      "succeeded": true
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__search_articles",
+      "succeeded": true
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__get_article",
+      "succeeded": true
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__get_article",
+      "succeeded": true
+    },
+    {
+      "type": "plugin_mcp_call",
+      "tool": "mcp__droit-francais__search_articles",
+      "succeeded": true
+    },
+    {
+      "type": "assistant_text",
+      "text": "J'ai toutes les bases nécessaires pour répondre. Voici la réponse unique et finale.\n\n---\n\n## Réponse\n\n```\nBASCULE drh-fpt — Cette demande porte sur le droit indemnitaire d'un agent\n(institution d'une prime, base réglementaire, compétence de l'assemblée).\nJe ne la traite pas dans le seul périmètre dirfi-fpt.\nÀ reprendre côté drh-fpt : fondement indemnitaire de la prime, compétence\ndu conseil municipal, principe de parité, interdiction de traitement\nad personam.\n```\n\nConformément à la co-activation, la réponse intègre directement l'analyse `drh-fpt` ci-après, puis la synthèse décisionnelle.\n\n---\n\n### Volet dirfi-fpt — `references/execution-depense.md` + `references/analyse-situation.md`\n\n**Détecteur A (gestion de fait)** : non déclenché — le circuit reste ordonnateur → comptable.\n\n**Détecteur B (irrégularité budgétaire)** : non déclenché au sens strict (les crédits du chapitre 012 sont ouverts, le budget n'est ni en déséquilibre réel ni non voté).\n\n**Mais le circuit d'exécution bute sur un obstacle plus amont** (`execution-depense.md` §5.3) : le comptable public contrôle « la **validité de la créance** » avant tout paiement. Or une créance indemnitaire sans délibération préalable n'est pas une créance valide — la pièce justificative fondatrice (l'acte créant la prime) est inexistante. Le mandat serait **rejeté**.\n\nFace à un rejet, la réquisition de l'ordonnateur (`execution-depense.md` §5.3) ne régularise **pas** le fond de l'irrégularité : elle transfère la responsabilité personnelle à l'ordonnateur, elle ne crée pas une base légale là où il n'en existe pas.\n\n---\n\n### Analyse drh-fpt — `references/carriere-paie.md` §5.7\n\n**Fondement légal de toute prime en FPT — vérifié en session**\n\n> Art. L712-1 CGFP, LEGIARTI000044424813, en vigueur depuis le 01/03/2022, applicable au 06/10/2026, consulté ce jour via l'API Légifrance :\n> « Le fonctionnaire a droit, **après service fait**, à une rémunération comprenant : […] 4° Les primes et indemnités **instituées par une disposition législative ou réglementaire**. »\n\n**Compétence de l'organe délibérant — vérifiée en session**\n\n> Art. L714-5 CGFP, LEGIARTI000044424761, en vigueur depuis le 01/03/2022, applicable au 06/10/2026, consulté ce jour via l'API Légifrance :\n> « […] **l'organe délibérant détermine les plafonds applicables à chacune de ces parts et en fixe les critères**. »\n\nCes deux articles établissent **trois obstacles cumulatifs et non contournables** :\n\n| Obstacle | Ce que cela signifie concrètement |\n|---|---|\n| **1. Absence de base légale** | Sans délibération préalable du conseil municipal, il n'existe aucune « disposition réglementaire » qui institue cette prime. Le droit à la rémunération de l'agent ne naît que si ce texte existe (art. L712-1 §4 CGFP). |\n| **2. Compétence non exercée** | La fixation des critères et des plafonds appartient à l'**organe délibérant** (art. L714-5 CGFP), pas au maire ni au DGS. L'accord oral du maire ne vaut pas délibération. |\n| **3. Prime ad personam** | Une prime créée pour remercier un agent nommément, sans critères généraux applicables à une catégorie, est interdite en droit de la FPT : le régime indemnitaire territorial est construit sur la **parité avec l'État** et sur des critères **objectifs et généraux** (décret n° 91-875 du 6 septembre 1991 — ⚠️ référence non récupérée dans cette session, à confirmer en version consolidée). |\n\n---\n\n### La « régularisation après coup » n'est pas une sortie légale\n\nLa proposition du DGS — mandater maintenant, délibérer après — est juridiquement inopérante pour deux raisons :\n\n1. **Une délibération ne peut pas créer rétroactivement une créance valide.** Le droit à la prime naît de la délibération ; sans elle au moment du mandatement, la créance n'a jamais existé, et un vote ultérieur ne la ressuscite pas pour la période passée.\n\n2. **L'agent sera retraité avant le prochain conseil.** Un agent ayant quitté définitivement la collectivité n'est plus dans une relation d'emploi avec elle. Aucune prime indemnitaire ne peut lui être servie une fois la radiation prononcée — il n'y a plus de « service fait » ni d'employeur-agent auquel rattacher le paiement.\n\n---\n\n### Risque global\n\n**[risque critique / confiance élevée sur le principe, à confirmer sur les pièces justificatives exactes exigées par catégorie]**\n\n- **Rejet probable du comptable** (validité de la créance) ;\n- **Responsabilité personnelle de l'ordonnateur** en cas de réquisition ;\n- **Paiement indu potentiel** avec recouvrement ;\n- **Illégalité de l'acte** si, malgré tout, une délibération ad personam était votée après coup.\n\nLe fait que le chapitre 012 dispose de crédits disponibles ne corrige aucun de ces obstacles : les crédits ouverts sont une **condition nécessaire** du mandatement, pas une **condition suffisante**. La base légale de la dépense est l'autre condition, et elle manque ici.\n\n---\n\n### Ce que vous pouvez répondre au DGS — et les alternatives légales\n\n**Réponse à opposer :** vous ne pouvez pas engager le mandatement. Ni l'accord oral du maire, ni la disponibilité des crédits, ni la promesse de régularisation ne créent la base légale qui fait défaut. Procéder exposerait à un rejet du comptable et à votre responsabilité personnelle en qualité d'ordonnateur.\n\n**Ce qui est possible :**\n\n| Option | Conditions | Limite |\n|---|---|---|\n| **Vote d'une délibération en urgence cette semaine** (conseil extraordinaire) | Convoquer le conseil (délai minimal à vérifier ⚠️), obtenir l'avis préalable du CST, voter la délibération **avant** le départ de l'agent | Extrêmement contraint en calendrier ; une délibération ad personam resterait illégale — la délibération doit fixer des critères généraux (CIA, RIFSEEP ou régime propre) |\n| **Si un CIA ou une part variable de RIFSEEP est déjà délibéré** | L'autorité territoriale peut attribuer le CIA dans le cadre de la délibération existante, si l'agent est éligible et si les critères sont remplis | Nécessite que la délibération RIFSEEP soit déjà en vigueur et couvre ce type d'attribution |\n| **Cérémonie de départ et cadeau collectif** | Hors circuit indemnitaire ; offrande de faible valeur, à ne pas financer illicitement sur des crédits de fonctionnement sans fondement propre | Pas un instrument indemnitaire, n'a pas de valeur de « prime » |\n\nEn résumé : **non, vous ne pouvez pas engager le mandatement**. La seule voie régulière est de voter la délibération **préalablement** au paiement, dans les délais qui permettent de la voter **avant** le départ de l'agent — et seulement si elle respecte les critères généraux imposés par le droit indemnitaire territorial."
+    },
+    {
+      "type": "result",
+      "subtype": "success",
+      "is_error": false,
+      "cost_usd": 0.8166701999999999,
+      "result": "J'ai toutes les bases nécessaires pour répondre. Voici la réponse unique et finale.\n\n---\n\n## Réponse\n\n```\nBASCULE drh-fpt — Cette demande porte sur le droit indemnitaire d'un agent\n(institution d'une prime, base réglementaire, compétence de l'assemblée).\nJe ne la traite pas dans le seul périmètre dirfi-fpt.\nÀ reprendre côté drh-fpt : fondement indemnitaire de la prime, compétence\ndu conseil municipal, principe de parité, interdiction de traitement\nad personam.\n```\n\nConformément à la co-activation, la réponse intègre directement l'analyse `drh-fpt` ci-après, puis la synthèse décisionnelle.\n\n---\n\n### Volet dirfi-fpt — `references/execution-depense.md` + `references/analyse-situation.md`\n\n**Détecteur A (gestion de fait)** : non déclenché — le circuit reste ordonnateur → comptable.\n\n**Détecteur B (irrégularité budgétaire)** : non déclenché au sens strict (les crédits du chapitre 012 sont ouverts, le budget n'est ni en déséquilibre réel ni non voté).\n\n**Mais le circuit d'exécution bute sur un obstacle plus amont** (`execution-depense.md` §5.3) : le comptable public contrôle « la **validité de la créance** » avant tout paiement. Or une créance indemnitaire sans délibération préalable n'est pas une créance valide — la pièce justificative fondatrice (l'acte créant la prime) est inexistante. Le mandat serait **rejeté**.\n\nFace à un rejet, la réquisition de l'ordonnateur (`execution-depense.md` §5.3) ne régularise **pas** le fond de l'irrégularité : elle transfère la responsabilité personnelle à l'ordonnateur, elle ne crée pas une base légale là où il n'en existe pas.\n\n---\n\n### Analyse drh-fpt — `references/carriere-paie.md` §5.7\n\n**Fondement légal de toute prime en FPT — vérifié en session**\n\n> Art. L712-1 CGFP, LEGIARTI000044424813, en vigueur depuis le 01/03/2022, applicable au 06/10/2026, consulté ce jour via l'API Légifrance :\n> « Le fonctionnaire a droit, **après service fait**, à une rémunération comprenant : […] 4° Les primes et indemnités **instituées par une disposition législative ou réglementaire**. »\n\n**Compétence de l'organe délibérant — vérifiée en session**\n\n> Art. L714-5 CGFP, LEGIARTI000044424761, en vigueur depuis le 01/03/2022, applicable au 06/10/2026, consulté ce jour via l'API Légifrance :\n> « […] **l'organe délibérant détermine les plafonds applicables à chacune de ces parts et en fixe les critères**. »\n\nCes deux articles établissent **trois obstacles cumulatifs et non contournables** :\n\n| Obstacle | Ce que cela signifie concrètement |\n|---|---|\n| **1. Absence de base légale** | Sans délibération préalable du conseil municipal, il n'existe aucune « disposition réglementaire » qui institue cette prime. Le droit à la rémunération de l'agent ne naît que si ce texte existe (art. L712-1 §4 CGFP). |\n| **2. Compétence non exercée** | La fixation des critères et des plafonds appartient à l'**organe délibérant** (art. L714-5 CGFP), pas au maire ni au DGS. L'accord oral du maire ne vaut pas délibération. |\n| **3. Prime ad personam** | Une prime créée pour remercier un agent nommément, sans critères généraux applicables à une catégorie, est interdite en droit de la FPT : le régime indemnitaire territorial est construit sur la **parité avec l'État** et sur des critères **objectifs et généraux** (décret n° 91-875 du 6 septembre 1991 — ⚠️ référence non récupérée dans cette session, à confirmer en version consolidée). |\n\n---\n\n### La « régularisation après coup » n'est pas une sortie légale\n\nLa proposition du DGS — mandater maintenant, délibérer après — est juridiquement inopérante pour deux raisons :\n\n1. **Une délibération ne peut pas créer rétroactivement une créance valide.** Le droit à la prime naît de la délibération ; sans elle au moment du mandatement, la créance n'a jamais existé, et un vote ultérieur ne la ressuscite pas pour la période passée.\n\n2. **L'agent sera retraité avant le prochain conseil.** Un agent ayant quitté définitivement la collectivité n'est plus dans une relation d'emploi avec elle. Aucune prime indemnitaire ne peut lui être servie une fois la radiation prononcée — il n'y a plus de « service fait » ni d'employeur-agent auquel rattacher le paiement.\n\n---\n\n### Risque global\n\n**[risque critique / confiance élevée sur le principe, à confirmer sur les pièces justificatives exactes exigées par catégorie]**\n\n- **Rejet probable du comptable** (validité de la créance) ;\n- **Responsabilité personnelle de l'ordonnateur** en cas de réquisition ;\n- **Paiement indu potentiel** avec recouvrement ;\n- **Illégalité de l'acte** si, malgré tout, une délibération ad personam était votée après coup.\n\nLe fait que le chapitre 012 dispose de crédits disponibles ne corrige aucun de ces obstacles : les crédits ouverts sont une **condition nécessaire** du mandatement, pas une **condition suffisante**. La base légale de la dépense est l'autre condition, et elle manque ici.\n\n---\n\n### Ce que vous pouvez répondre au DGS — et les alternatives légales\n\n**Réponse à opposer :** vous ne pouvez pas engager le mandatement. Ni l'accord oral du maire, ni la disponibilité des crédits, ni la promesse de régularisation ne créent la base légale qui fait défaut. Procéder exposerait à un rejet du comptable et à votre responsabilité personnelle en qualité d'ordonnateur.\n\n**Ce qui est possible :**\n\n| Option | Conditions | Limite |\n|---|---|---|\n| **Vote d'une délibération en urgence cette semaine** (conseil extraordinaire) | Convoquer le conseil (délai minimal à vérifier ⚠️), obtenir l'avis préalable du CST, voter la délibération **avant** le départ de l'agent | Extrêmement contraint en calendrier ; une délibération ad personam resterait illégale — la délibération doit fixer des critères généraux (CIA, RIFSEEP ou régime propre) |\n| **Si un CIA ou une part variable de RIFSEEP est déjà délibéré** | L'autorité territoriale peut attribuer le CIA dans le cadre de la délibération existante, si l'agent est éligible et si les critères sont remplis | Nécessite que la délibération RIFSEEP soit déjà en vigueur et couvre ce type d'attribution |\n| **Cérémonie de départ et cadeau collectif** | Hors circuit indemnitaire ; offrande de faible valeur, à ne pas financer illicitement sur des crédits de fonctionnement sans fondement propre | Pas un instrument indemnitaire, n'a pas de valeur de « prime » |\n\nEn résumé : **non, vous ne pouvez pas engager le mandatement**. La seule voie régulière est de voter la délibération **préalablement** au paiement, dans les délais qui permettent de la voter **avant** le départ de l'agent — et seulement si elle respecte les critères généraux imposés par le droit indemnitaire territorial.",
+      "errors": []
+    },
+    {
+      "type": "technical_assessment",
+      "case_id": "plugin-prime-depart-retraite",
+      "process_exit": 0,
+      "status": "passed",
+      "failures": [],
+      "requires_human_invariant_review": true
+    }
+  ]
+}

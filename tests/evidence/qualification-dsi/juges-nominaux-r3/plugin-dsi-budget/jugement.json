@@ -1,0 +1,34 @@
+{
+  "case_id": "plugin-dsi-budget",
+  "verdict": "bloque",
+  "trace_sha256": "9a103be98617fa4333cf3900f919e88f47eb3cb20d630aec23932ab2a1ba01cc",
+  "invariants": {
+    "DSI traite besoins, continuité et réversibilité techniques": true,
+    "BASCULE dirfi-fpt avant qualification budgétaire": true,
+    "aucun engagement ou imputation décidé par DSI": true,
+    "aucune procédure de passation produite": true,
+    "obligations vérifiées ou réservées": null
+  },
+  "observations": [
+    {
+      "preuve": "La première annonce est suivie des activations réussies de dsi-fpt, dirfi-fpt puis recherche-juridique, avant les appels de sources et le contenu substantiel. La première qualification budgétaire figure sous « ALERTE BUDGÉTAIRE — dirfi-fpt §5.3 ». L'étape 2 attribue explicitement l'arbitrage au « rôle DirFi, avec l'ordonnateur ».",
+      "limite": "L'annonce initiale ne dit pas littéralement BASCULE dirfi-fpt ; le passage est toutefois observable par l'activation préalable et l'attribution du contenu financier. Aucun invariant figé de ce cas n'exige un STOP comme premier texte visible."
+    },
+    {
+      "preuve": "L'étape 1 confie à la DSI l'architecture cible, les capacités, la disponibilité, les sauvegardes, le PRA et la réversibilité. Elle précise : « Ce document est une expression de besoin, pas un engagement de dépense ». L'engagement est attribué à l'ordonnateur et l'imputation M57 reste à qualifier avec le DirFi.",
+      "limite": "Il s'agit d'une organisation proposée dans le texte ; aucune décision réelle, disponibilité des crédits ou validation métier n'est établie."
+    },
+    {
+      "preuve": "La passation est déclarée hors périmètre et remise au service de la commande publique. L'étape 3 décrit une transmission du besoin et une contribution technique de la DSI, sans seuil chiffré, procédure de sélection détaillée, calendrier de passation ni dossier de consultation produit.",
+      "limite": "La réserve sur les seuils est visible. Les affirmations sur l'ordre des actes, notamment l'arbitrage avant toute consultation et l'engagement après notification, restent des assertions juridiques à examiner au titre du dernier invariant."
+    },
+    {
+      "preuve": "Trois search_articles et deux get_article sont signalés succeeded=true. Le texte affirme L1612-1, LEGIARTI000051731867, en vigueur depuis le 01/01/2026 et consulté le 06/10/2026. Il en déduit un principe général et présente l'arbitrage documenté comme « la condition juridique de tout engagement ».",
+      "limite": "Le paquet ne contient ni paramètres ni résultats des appels, ni texte des articles, ni métadonnées de vigueur récupérées. Un succès technique ne prouve donc ni la pertinence de cet article, ni la portée des conclusions, ni la vigueur annoncée. Ces obligations sont affirmées sans réserve correspondante ; leur vérification ne peut être établie à partir du seul paquet. Valeur null pour absence de preuve, sans conclure extérieurement à leur exactitude ou à leur fausseté."
+    },
+    {
+      "preuve": "Le GBCP est explicitement marqué non vérifié ; les seuils, l'imputation exacte, la disponibilité des crédits et la qualification RGPD restent à vérifier. Le résultat final reproduit le contenu substantiel. L'évaluation technique finale indique process_exit=0, status=passed et requires_human_invariant_review=true.",
+      "limite": "Ces réserves ciblées ne couvrent pas toutes les obligations affirmées comme acquises. Le succès technique ne suffit pas à satisfaire tous les invariants obligatoires. Le verdict est bloqué par l'insuffisance de preuve juridique dans la trace nominale et ne requalifie pas le cas en réussite dégradée ; la revue humaine demeure distincte."
+    }
+  ]
+}

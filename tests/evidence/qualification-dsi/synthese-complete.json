@@ -1,37 +1,6 @@
 {
-  "plugin_version": "1.2.0-dev.1",
-  "plugin_commit": "feda10354f0977591fea3f124f81b70ce4867652",
-  "release_ready": false,
-  "available_skills": [
-    "dpm-fpt",
-    "drh-fpt",
-    "dpo-ct",
-    "dirfi-fpt",
-    "recherche-juridique",
-    "dsi-fpt"
-  ],
-  "upstream_commits": {
-    "dpm-fpt": "1668c89798f1f50a829c0b94d3cf6bf33a3640fb",
-    "drh-fpt": "f81c9b955f7ebb47df7e93bdc41ac743d85a2973",
-    "dpo-ct": "f3406f412368199a33f47e7861eb450eab2b2cdb",
-    "dirfi-fpt": "d970fe530d3f50f6b4c330e3cfb85db35b7126ab",
-    "recherche-juridique": "e437d10a2d4bbf66ba7a9c1e9fb49e773166054e",
-    "dsi-fpt": "60c6210b1a6dce7a30a53e96ded0b0e0cf5beea9"
-  },
-  "release_blockers": [
-    "Campagne de coactivation : 9 échecs et 2 bloqués",
-    "Relecture DSI/RSSI et juridique humaine non recueillie",
-    "Smoke du candidat dans Codex non établi",
-    "Écarts autonomes DSI cas 10 et 14 à instruire"
-  ],
-  "review": {
-    "human_legal_validation": false
-  },
-  "codex_smoke": {
-    "status": "pending",
-    "plugin_commit": null,
-    "note": "Contrôles statiques effectués ; activation du candidat dans Codex non mesurée"
-  },
+  "candidate_commit": "feda10354f0977591fea3f124f81b70ce4867652",
+  "runtime_files": 166,
   "runs": [
     {
       "case_id": "plugin-prime-depart-retraite",
@@ -399,5 +368,37 @@
       "technical_failures": [],
       "plugin_commit": "feda10354f0977591fea3f124f81b70ce4867652"
     }
-  ]
+  ],
+  "nominal_status_label": "0 réussites, 7 échecs, 2 bloqués sur 9",
+  "technical_status_label": "Activation spontanée réussie ; contenu incomplet",
+  "degraded_status_label": "1/2 réussites",
+  "completed_on_r3": 12,
+  "nominal_deferred": 0,
+  "release_ready": false,
+  "frozen_inventory_and_hashes": "passed",
+  "initial_measurements_preserved": [
+    "mesure-r1",
+    "mesure-r2"
+  ],
+  "human_practitioner_review": false,
+  "local_checks": {
+    "passed": 31,
+    "intentional_release_barrier_failure": 1,
+    "total": 32
+  },
+  "counts": {
+    "failed": 9,
+    "blocked": 2,
+    "passed": 1
+  },
+  "nominal_counts": {
+    "failed": 7,
+    "blocked": 2
+  },
+  "nominal_technical_counts": {
+    "passed": 9
+  },
+  "technical_success_count": 12,
+  "nominal_transport_label": "9/9 sessions MCP connectées",
+  "authentication_resumed_by_user": true
 }
