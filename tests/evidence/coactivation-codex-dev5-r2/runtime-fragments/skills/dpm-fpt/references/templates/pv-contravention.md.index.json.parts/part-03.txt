@@ -1,0 +1,49 @@
+on au contrôle
+  de légalité** au sens de l'art. L. 2131-2 CGCT. Ne pas confondre avec
+  l'**arrêté** (`references/templates/arrete-modele.md`), qui lui reste soumis à
+  `controle-legalite.md` avant toute production.
+- Si, en cours de séquence de questions, il apparaît que les faits
+  dépassent le périmètre de l'art. 21 CPP (acte réservé à l'OPJ, art. 16
+  CPP), interrompre l'assemblage du PV, afficher le **STOP**
+  (`SKILL.md` §5.2) en premier livrable, et limiter la suite à l'action
+  APJA conforme : constatation, préservation des traces, compte rendu au
+  maire et à l'OPJ (`penal-procedure.md` §4.2, §4.5).
+
+---
+
+## 8. Checklist finale avant restitution du PV
+
+1. Garde-fou APJA testé, situation dans le périmètre art. 21 CPP — sinon
+   STOP affiché en premier (§7).
+2. Choix de l'écrit confirmé : constatation directe d'une contravention
+   dans la compétence matérielle de l'agent (§0).
+3. Séquence de questions déroulée **une à une**, confirmation obtenue à
+   chaque étape (§1).
+4. Toutes les mentions obligatoires de §2 renseignées ou explicitement
+   `[INCOMPLET]`.
+5. Qualification retenue **renvoyée** à `reglementation-appliquee.md` /
+   `penal-procedure.md`, jamais tranchée ici ; mention `⚠️ non vérifié` si
+   non confirmée en session.
+6. Localisation suffisamment précise pour préserver la force probante de
+   l'art. 537 CPP (§4) — sinon signalé comme risque de perte de force
+   probante renforcée.
+7. Aucune donnée nominative réelle insérée dans un gabarit ou un brouillon
+   de travail — uniquement des espaces réservés.
+8. Section **« Champs manquants à compléter »** présente si au moins un
+   `[INCOMPLET]` subsiste, et demande explicite formulée à l'utilisateur.
+9. Circuit de transmission OMP identifié ou marqué `[INCOMPLET]` — pas de
+   délai chiffré inventé.
+10. Rappel de la valeur probante (§4) joint au PV produit.
+11. Si route 53/73 ou 78-6 associée : signalée comme écrit distinct
+    (`references/templates/rapport-mise-a-disposition.md`), non fusionnée dans
+    ce PV.
+12. PV non transmis, non visé comme définitif tant qu'un `[INCOMPLET]`
+    subsiste (§3, §6).
+
+[risque : élevé sur la valeur probante (art. 537 CPP) et la compétence de
+constatation, le PV n'étant cependant pas un acte faisant grief au sens de
+`controle-legalite.md` / confiance : stable sur le principe de l'art. 537
+CPP et de l'art. L. 130-4 du code de la route (vérifiés sur Légifrance le
+2026-06-30), à confirmer en version consolidée pour le détail des
+compétences par catégorie d'agent, la qualification retenue au cas
+d'espèce, et le circuit local de transmission à l'OMP]

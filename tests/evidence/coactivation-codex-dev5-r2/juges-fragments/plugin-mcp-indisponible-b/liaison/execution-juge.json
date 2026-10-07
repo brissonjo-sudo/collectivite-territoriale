@@ -1,0 +1,52 @@
+{
+  "agent": "/root/juge_codex_dev5_r2_04b",
+  "thread_id": "01a1179a-2743-7ab0-8515-d0109dfbbd3d",
+  "parent_thread_id": "01a1103e-0b49-70c1-8f4e-66a36b54916f",
+  "model": "gpt-6.1-sol",
+  "turn_id": "01a1179a-27ac-72b3-812a-a25357c8bdfc",
+  "created_at": "2026-10-07T18:22:20.996Z",
+  "started_at": "2026-10-07T18:22:21.112Z",
+  "completed_at": "2026-10-07T18:22:55.570Z",
+  "fork_turns": "none",
+  "initial_message_verified": false,
+  "initial_message_sha256": "a0f6e3892a5ef35da6e9915c8b906895d0ab538dd7d043693421821cae454886",
+  "case_id": "plugin-mcp-indisponible",
+  "assessment": {
+    "case_id": "plugin-mcp-indisponible",
+    "verdict": "reussite",
+    "technical_status": "passed",
+    "behavior_status": "passed",
+    "documentary_status": "passed",
+    "primary_content_available": false,
+    "release_ready": false
+  },
+  "host": "Codex",
+  "activation_kind": "file_read_fragments",
+  "actual_plugin_activation_verified": false,
+  "full_packet_context_verified": true,
+  "fragment_count": 2,
+  "judge_adapter_sha256": "e1e04cd4ab37425885d57861151c893a7b921999ac295ddc7d44c5a0443fdc0b",
+  "packet_sha256": "5b83ec255bb2ea19f6d9a922110878037eadcf1aff109bbf05a1f79fad89cb2d",
+  "response_sha256": "37ad16d675afe5f007acc0367766bc2f33cb2586dd02111cad5ebcd7f7d3abee",
+  "judgment_sha256": "bd61870324621f1df225ba7632b3bf64398b6bb884ad98633d26ab7e094716e0",
+  "trace_sha256": "f86a536740da830b223f01f9c4acfd63f11333c1126c115fec9fa55753629a54",
+  "rejected_creation_attempts": [],
+  "native_session_file": "rollout-2026-10-07T20-22-20-01a1179a-2743-7ab0-8515-d0109dfbbd3d.jsonl",
+  "parent_session_file": "rollout-2026-10-06T10-04-24-01a1103e-0b49-70c1-8f4e-66a36b54916f.jsonl",
+  "presentation_wrapper_sha256": "b709a2641f5433f3336a916b67b115570e5d77ed17d58433d39a89634ce3c14b",
+  "exact_presentation_normalizations": [
+    {
+      "call_id": "call_d02ccd85687c43b49cc828e78cafe058",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-mcp-indisponible-b/fragment-01.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_2b0ad96e5ddd44e998816511c072bff2",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-mcp-indisponible-b/fragment-02.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    }
+  ],
+  "normalization_scope": "only expected content plus one terminal CRLF; raw events unchanged"
+}

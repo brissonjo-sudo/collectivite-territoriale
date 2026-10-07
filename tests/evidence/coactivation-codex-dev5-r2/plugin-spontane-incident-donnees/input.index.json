@@ -1,0 +1,44 @@
+{
+  "source_path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-spontane-incident-donnees/input.json",
+  "source_sha256": "ecc01cecd5f263e4d4dbda1a6aa2384e9e09d397d183f85cf8b2b104328f7c7a",
+  "characters": 45544,
+  "fragment_limit": 8000,
+  "fragments": [
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-spontane-incident-donnees/input.index.json.parts/part-01.txt",
+      "sha256": "081d2c544d1b0fc4570addf9d8514c8eac1937008cbc7e33e07900fd0aac5598",
+      "characters": 8000,
+      "number": 1
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-spontane-incident-donnees/input.index.json.parts/part-02.txt",
+      "sha256": "ea05b441467e12568311aec6945470fe43495e69592dbf1ff2f1db1f62f8d6dd",
+      "characters": 8000,
+      "number": 2
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-spontane-incident-donnees/input.index.json.parts/part-03.txt",
+      "sha256": "d24c888dd44de9e6697899b920e68ff1ab4857f5f7b34dd2bf1df44cf8e407ad",
+      "characters": 8000,
+      "number": 3
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-spontane-incident-donnees/input.index.json.parts/part-04.txt",
+      "sha256": "3f640269f5b37913d61c96b07422a17265f285e84018354872a57d339b649dc7",
+      "characters": 8000,
+      "number": 4
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-spontane-incident-donnees/input.index.json.parts/part-05.txt",
+      "sha256": "611ca2fab8b241aedee7c0a31fad0ae34f040e7bbba08c3df810ec5cce62a743",
+      "characters": 8000,
+      "number": 5
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-spontane-incident-donnees/input.index.json.parts/part-06.txt",
+      "sha256": "369f0b8be5c5dde5b74165ef20abf100af5881a5a405e1aa616feaa15d746061",
+      "characters": 5544,
+      "number": 6
+    }
+  ]
+}

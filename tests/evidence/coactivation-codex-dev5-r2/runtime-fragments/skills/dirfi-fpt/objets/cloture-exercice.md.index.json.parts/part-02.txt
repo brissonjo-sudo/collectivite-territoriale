@@ -1,0 +1,65 @@
+risprudence clé
+
+> Pointeur uniquement — voir **`recherche-juridique`**. Aucune décision n'est
+> citée ici par son nom d'usage, son millésime ou son numéro.
+
+Thèmes appelant une recherche avant conclusion :
+- Conséquences d'une **discordance non résolue** entre compte administratif
+  et compte de gestion.
+- Conditions de régularité d'un **reste à réaliser** insuffisamment justifié.
+- Contentieux relatifs à l'**affectation du résultat** non conforme aux
+  règles de priorité applicables.
+- Portée exacte du **seuil de déficit** déclenchant la saisine de la chambre
+  régionale des comptes.
+
+---
+
+## 6. Check-list opérationnelle
+
+### Garde-fou budgétaire (`SKILL.md` §5.3) — à vérifier en priorité
+
+- [ ] Le compte administratif fait-il apparaître un **déficit au-delà du
+      seuil légal** ? Si oui → **ALERTE BUDGÉTAIRE** affichée avant tout
+      contenu, orientation vers `controle-budgetaire.md` §4.3.
+- [ ] Une **provision obligatoire** a-t-elle été omise ? Si oui → même
+      traitement.
+
+### Rattachement, restes à réaliser, provisions
+
+- [ ] Charges et produits de l'exercice rattachés selon la méthode prévue,
+      sans report indu sur l'exercice suivant ?
+- [ ] Restes à réaliser recensés et **chacun justifié par une pièce
+      probante** ?
+- [ ] Provisions et dépréciations examinées et, si obligatoires,
+      constituées ?
+- [ ] Opérations d'ordre de clôture passées et cohérentes avec l'état de
+      l'actif ?
+
+### Arrêté des comptes et affectation
+
+- [ ] Concordance entre compte administratif et compte de gestion / CFU
+      vérifiée avant présentation à l'assemblée ?
+- [ ] Règles de vote respectées (participation de l'ordonnateur, quorum) ?
+- [ ] Affectation du résultat conforme aux règles de priorité et cohérente
+      avec les restes à réaliser ?
+- [ ] Calendrier de clôture (journée complémentaire, dates limites) vérifié
+      et non présumé ?
+- [ ] Couple [risque / confiance] indiqué — risque élevé dès qu'un déficit
+      ou une discordance apparaît.
+- [ ] Cas journalisable (discordance persistante, reste à réaliser
+      insuffisamment justifié, déficit détecté) → proposé pour `JOURNAL.md`.
+
+---
+
+## Références et remontées
+
+**Branches mobilisées** : `budget-cycle.md` (calendrier, compte
+administratif, affectation), `nomenclature-m57.md` (rattachement, restes à
+réaliser, provisions, opérations d'ordre), `controle-budgetaire.md` (risque
+de déficit), `execution-depense.md` et `execution-recette.md`
+(mandatements et titres de fin d'exercice).
+
+**Point de mise à jour requis** : calendrier légal de clôture, durée de la
+journée complémentaire, seuil de déficit déclenchant la saisine de la
+chambre régionale des comptes, calendrier de généralisation du compte
+financier unique.

@@ -1,0 +1,148 @@
+` |
+| Contrats et prestataires | `references/contrats-prestataires.md` |
+| Écrits de la DSI | `references/ecrits-numerique.md` |
+| Retours d'expérience | `references/retex.md` |
+
+**Objets** (couche 3) : `objets/projet-si.md`, `objets/incident-securite.md`,
+`objets/teleservice.md`, `objets/solution-saas.md`, `objets/site-reseau.md`,
+`objets/compte-poste-agent.md`.
+
+> **Renvois fréquents** : incident → crise **et** sécurité (et `dpo-ct` si des
+> données sont touchées) ; téléservice → dématérialisation, accessibilité
+> **et** sécurité ; solution en ligne → cloud **et** contrats ; départ d'un
+> agent → sécurité (comptes) **et** `drh-fpt` pour le fond.
+
+### Traçabilité de la source interne — obligatoire
+
+Toute réponse qui mobilise une branche, un objet ou un gabarit le **nomme par
+son chemin**, là où sa règle est utilisée (`references/securite-si.md`,
+`objets/incident-securite.md`). Nommer la notion ne suffit pas. Le chemin permet
+de **vérifier**, de **corriger**, et de **distinguer** ce qui vient du skill de
+ce qui vient de la mémoire du modèle. En cas de doute sur le fichier compétent,
+passer par le routeur.
+
+---
+
+## 5. Dispositifs transverses (obligatoires)
+
+### 5.1 Double échelle risque × confiance
+
+Le **risque fixe le plancher d'exigence**, la **confiance ajuste le ton**.
+
+| Risque \ Confiance | Stable | À vérifier | Jurisprudentiel | Abstention |
+|---|---|---|---|---|
+| **Faible** | Réponse directe | Réponse + mention courte | Réponse + signal débat | Esquisse conditionnelle |
+| **Moyen** | Réponse + vérif. ponctuelle | Vérification avant usage | Recherche approfondie | Abstention, demander confirmation |
+| **Élevé** | Citation de source obligatoire | Citation + réserve | Citation + signal débat + alternative | Abstention motivée |
+| **Critique** | Citation + double vérification | Abstention si doute persistant | Abstention, ne pas trancher | Abstention stricte |
+
+Le **risque** se détermine par l'**enjeu**, pas par la difficulté :
+interruption d'un service public, incident en cours, données sensibles ou de
+personnes vulnérables, preuve à préserver, responsabilité de la collectivité ou
+d'un agent, sanction d'une autorité, contentieux contractuel. Indiquer le
+couple **[risque / confiance]** quand il est utile à la décision.
+
+### 5.2 Garde-fou « incident cyber » — règle d'or
+
+**Déclencheurs (liste ouverte)** : rançongiciel, chiffrement de fichiers,
+compromission de compte, fuite ou exfiltration de données, indisponibilité
+suspecte, intrusion constatée, demande de rançon, alerte d'un tiers sur une
+attaque.
+
+Dès qu'un déclencheur apparaît, le **premier livrable, avant tout autre
+contenu**, est :
+
+```
+STOP — Incident de sécurité en cours ou récent.
+1. Ne rien faire d'irréversible avant de préserver les preuves : ne pas
+   réinstaller, effacer, restaurer ni rallumer ce qui a été touché ; isoler.
+2. Ne rien taire : signaler l'incident dans les circuits prévus (autorité
+   territoriale, assureur, plainte, autorités compétentes) ; les délais se
+   vérifient à la source.
+3. Ne pas décider seul de ce qui revient à l'exécutif : paiement d'une rançon,
+   communication publique, arrêt d'un service public.
+4. Aucune contre-mesure offensive, aucun accès à un système tiers.
+5. Données personnelles possiblement touchées → BASCULE dpo-ct.
+```
+
+Ensuite seulement, orienter vers `references/crise-cyber-continuite.md` et
+`objets/incident-securite.md`. Le skill aide à **organiser, documenter et
+reprendre** ; il ne remplace ni l'appui d'un CSIRT territorial ou d'un
+prestataire de réponse à incident, ni les autorités compétentes.
+
+**Les références de ce garde-fou ne sont pas dispensées de provenance** : une
+obligation de plainte, de signalement ou de notification se cite avec sa
+source et sa date, ou ne se cite pas.
+
+### 5.3 Garde-fou « surveillance de personnes »
+
+**Déclencheurs (liste ouverte)** : lire la messagerie, les fichiers ou
+l'historique d'un agent ; extraire des journaux nominatifs ; contrôler
+l'activité d'un poste ; géolocaliser des agents ou des véhicules ; biométrie ;
+vidéoprotection algorithmique ; reconnaissance faciale ; tout dispositif qui
+observe des personnes.
+
+Sortie imposée, **avant le contenu technique** :
+
+```
+STOP — Cette demande vise à accéder aux contenus ou aux traces d'une personne,
+ou à surveiller des personnes. Aucune commande, extraction ni paramétrage
+avant que la base et les conditions soient établies.
+BASCULE dpo-ct (base légale, information, AIPD) ; drh-fpt si un agent est
+visé ; dpm-fpt pour la voie publique.
+```
+
+Ce qui reste permis : décrire **ce qu'il faudra exiger, tracer et conserver**
+(journalisation des accès, séparation des rôles, conservation des preuves).
+Ce qui est interdit : **comment le faire** tant que la base n'est pas établie,
+y compris « à titre indicatif ».
+
+### 5.4 Socle-sources autonome
+
+Noyau embarqué pour orienter la vérification. Dès qu'une ligne « Oui » de
+la matrice §2.2 est concernée, **activer réellement `recherche-juridique`**
+et lire son point d'entrée avant toute conclusion juridique, y compris si
+le fond est délégué à un autre skill. Une question purement technique ne
+déclenche pas cette activation. Nommer un skill ou annoncer une future
+revue juridique ne constitue pas une activation. Carte des sources,
+hiérarchie et réflexes : **`references/socle-sources-verification.md`** ;
+identifiants vérifiés et datés : **`references/references-verifiees.md`**.
+
+1. **Primarité et provenance.** Aucune affirmation juridique ni aucune valeur
+   de mémoire. Un identifiant officiel (Légifrance, CELEX) ne se reconstitue
+   jamais : il vient d'une source primaire effectivement récupérée dans la
+   session. Le registre local fournit des pistes, jamais la preuve de vigueur.
+   Sans récupération, retirer l'identifiant et toute conclusion de droit. **Aucune exception de notoriété** : un article
+   cité en incise, entre parenthèses ou pour être écarté porte sa provenance.
+   **Interdiction de l'auto-attestation** : « vérifié ce jour » n'est pas une
+   provenance. Une provenance opposable porte **trois éléments** — la source
+   nommée, le point d'entrée obtenu (identifiant ou URL), la date de
+   consultation — ou elle n'existe pas.
+2. **Applicabilité d'abord.** Avant « la collectivité doit », vérifier que le
+   texte la vise : mention expresse, catégorie qui l'inclut, seuil, option
+   laissée aux États membres, transposition publiée. Un projet de loi n'oblige
+   personne. Une doctrine n'est pas du droit positif.
+3. **Régime des valeurs, à deux vitesses.** Valeurs volatiles (montants,
+   seuils, délais, dates d'application, versions de référentiels) : jamais de
+   mémoire, jamais sans date. Les références structurelles exigent aussi une
+   source primaire récupérée avant tout usage comme fondement. Une réserve
+   générique ne permet aucune assertion non vérifiée, même en incise, pour
+   écarter un article ou annoncer l'état d'une transposition.
+4. **Date de référence.** Le droit du numérique s'applique par étapes et ses
+   calendriers sont parfois repoussés par un texte modificatif : raisonner sur
+   la version applicable à la date de la question.
+5. **Abstention motivée.** Source inaccessible, valeur non confirmée,
+   contradiction : ne pas trancher ; livrer une esquisse bornée et le point
+   exact à vérifier.
+
+**Source primaire absente, inaccessible ou outil indisponible** : aucune
+valeur, aucun numéro d'article ou identifiant, aucune assertion de vigueur,
+d'applicabilité ou de contenu juridique n'est produit. Cela vaut aussi pour
+les passages des références internes : ils orientent la recherche, sans
+constituer une preuve actuelle. Livrer les faits techniques, les pièces
+manquantes et les questions à vérifier. Un résultat de recherche, un lien ou
+un résumé d'outil ne remplace pas le texte primaire récupéré et daté.
+
+Dans ce mode, ne pas expliquer les effets d'une catégorie de texte, la
+hiérarchie des normes ou le champ d'un régime pour justifier l'abstention :
+ce serait déjà produire du fond sans preuve. Le motif suffit : « aucu

@@ -1,0 +1,151 @@
+# Branche — Nomenclature & comptabilité M57 (v0.1.0)
+
+> Structure conforme à `_gabarit-branche.md`. Aucun numéro d'article, aucun
+> numéro de compte détaillé, aucun seuil ni durée d'amortissement n'est cité
+> de mémoire : seules les **règles**, les **méthodes** et la consigne de
+> vérifier l'instruction en vigueur figurent ici. Les références
+> structurelles stables (nom de l'instruction, du plan de comptes) sont
+> citées avec la réserve « à confirmer en version consolidée ».
+
+## 1. Périmètre / Exclusions
+
+- **Périmètre** : l'**architecture de la nomenclature M57** — référentiel
+  budgétaire et comptable de droit commun des collectivités —, ses
+  déclinaisons (développée, abrégée, simplifiée), le plan de comptes et ses
+  classes, la fongibilité des crédits, les amortissements, les provisions et
+  dépréciations, le rattachement des charges et produits à l'exercice, les
+  restes à réaliser, les immobilisations et l'inventaire, la distinction
+  opérations d'ordre / opérations réelles, l'articulation budgets annexes /
+  TVA, l'état de l'actif et le compte financier unique (CFU) sous son angle
+  **comptable**.
+- **Exclusions** : la **mécanique du vote** et le **calendrier** du cycle
+  budgétaire (DOB, BP, DM, CA/CFU sous son angle procédural) →
+  `budget-cycle.md` ; le **circuit d'exécution** de la dépense (engagement,
+  liquidation, mandatement) et de la recette (titre, recouvrement) →
+  `execution-depense.md` et `execution-recette.md`.
+
+---
+
+## 2. Questions couvertes
+
+- Qu'est-ce que la M57, et en quoi diffère-t-elle des nomenclatures
+  antérieures (M14, M52, M71, M4) qu'elle a vocation à remplacer ?
+- Quelle différence entre M57 développée, abrégée et simplifiée, et laquelle
+  s'applique à cette collectivité ?
+- Comment est organisé le plan de comptes, et à quoi correspondent les
+  grandes classes de comptes ?
+- Qu'est-ce que la fongibilité des crédits en M57, et comment s'articule-t-elle
+  avec le niveau de vote choisi ?
+- Quels biens doivent être amortis, qui fixe la durée d'amortissement, et
+  comment sortir un bien de l'inventaire ?
+- Dans quels cas une provision est-elle obligatoire, et comment distinguer
+  provision et dépréciation ?
+- Qu'est-ce que le rattachement des charges et produits à l'exercice, et en
+  quoi diffère-t-il de la journée complémentaire ?
+- Que sont les restes à réaliser, et comment les identifier en dépenses et en
+  recettes ?
+- Qu'est-ce qu'une opération d'ordre, par opposition à une opération réelle ?
+- Comment un budget annexe s'articule-t-il avec l'assujettissement à la TVA ?
+- Qu'est-ce que l'état de l'actif, et quel est son lien avec l'inventaire
+  physique et le compte financier unique ?
+
+---
+
+## 3. Arbre de traitement
+
+`qualifier l'opération comptable en cause (amortissement / provision /
+rattachement / RAR / opération d'ordre / immobilisation) → identifier le
+régime M57 applicable à la collectivité (développée / abrégée / simplifiée) →
+situer l'opération dans le plan de comptes (classe, éventuellement compte) →
+tester si l'opération est une obligation ou une faculté → vérifier l'exercice
+de rattachement → vérifier la cohérence avec l'état de l'actif / l'inventaire
+→ déclencheurs de vérification (§7) → signaler tout risque d'irrégularité
+comptable ou d'incidence sur le compte financier unique → orienter vers
+l'écrit (§10)`.
+
+Ne jamais qualifier une écriture sans avoir d'abord identifié si elle relève
+d'une opération **réelle** (flux de trésorerie) ou d'une opération **d'ordre**
+(écriture sans flux) : la confusion des deux fausse tout raisonnement
+d'équilibre.
+
+---
+
+## 4. Variables à lever
+
+- **Régime M57 applicable** : développée, abrégée ou simplifiée — conditionne
+  le niveau de détail du plan de comptes et certaines obligations annexes
+  (états, présentation croisée). À vérifier, jamais présumé par défaut.
+- **Nature du bien ou de la charge en cause** : immobilisation corporelle,
+  incorporelle, financière ; charge à rattacher ; produit à rattacher.
+- **Caractère obligatoire ou facultatif** de l'amortissement ou de la
+  provision selon la nature du bien, la strate de la collectivité et la
+  section budgétaire concernée.
+- **Existence d'un ou plusieurs budgets annexes** et leur régime de TVA
+  (assujetti, non assujetti, secteurs distincts).
+- **Stade d'entrée dans le régime cible du compte financier unique (CFU)**,
+  distinct du régime transitoire (compte administratif + compte de gestion) —
+  conditionne la présentation de certains états (état de l'actif notamment).
+- **Exercice de rattachement en cause** : l'opération se rapporte-t-elle à
+  l'exercice clos, à l'exercice en cours, ou est-elle éligible à la journée
+  complémentaire (→ `budget-cycle.md` §5.10, ne pas confondre) ?
+- **Existence de restes à réaliser** identifiés à la clôture, en dépenses
+  comme en recettes, pouvant affecter l'équilibre du budget suivant.
+
+---
+
+## 5. Règles métier
+
+### 5.1 Architecture générale de la M57
+
+- La M57 est le **référentiel budgétaire et comptable de droit commun** des
+  collectivités territoriales et de leurs établissements publics, destiné à
+  se substituer progressivement aux nomenclatures sectorielles antérieures
+  (communale, départementale, régionale) — nom exact de l'instruction et
+  texte fondateur : référence structurelle stable, **à confirmer en version
+  consolidée**.
+- Elle repose sur les **mêmes principes budgétaires** que les nomenclatures
+  antérieures (annualité, unité, universalité, spécialité, équilibre réel,
+  sincérité — détaillés en `budget-cycle.md` §5.8), et introduit des
+  instruments renforcés : fongibilité étendue des crédits, AP/CP et AE/CP
+  généralisées, compte financier unique.
+- Elle s'organise, comme les nomenclatures antérieures, en un **plan de
+  comptes** structuré par **classes**, décliné en une présentation budgétaire
+  par **nature** et, le cas échéant, par **fonction** (→ `budget-cycle.md`
+  §5.9 pour le vote).
+
+### 5.2 M57 développée, abrégée, simplifiée
+
+- **M57 développée** : niveau de détail le plus complet, applicable de plein
+  droit ou sur option selon la strate — critère exact à vérifier.
+- **M57 abrégée** : niveau intermédiaire, allégeant certaines obligations
+  (état de la dette détaillé, annexes) sans changer les principes.
+- **M57 simplifiée** : niveau le plus allégé, réservé aux collectivités dont
+  la taille ou les enjeux financiers ne justifient pas un détail complet —
+  critères d'éligibilité à vérifier avant toute affirmation.
+- **Ce que le choix du régime ne change pas** : les principes budgétaires, la
+  distinction opérations réelles/d'ordre, l'existence même des obligations
+  d'amortissement et de provision (§5.5-5.6) — il module seulement le
+  **niveau de détail** et certaines obligations documentaires.
+
+### 5.3 Plan de comptes et classes de comptes
+
+- Le plan de comptes M57 s'organise en **classes**, dont la portée générale
+  peut être rappelée sans détail chiffré : comptes de bilan (immobilisations,
+  stocks, tiers, financiers) et comptes de gestion (charges, produits). Le
+  détail exact des classes et sous-comptes est une donnée de nomenclature
+  technique : **à vérifier dans l'instruction en vigueur**, jamais reconstitué
+  de mémoire pour une imputation précise.
+- **Méthode d'imputation** : qualifier d'abord la **nature économique** de
+  l'opération (immobilisation, charge, produit, opération financière), puis
+  rechercher la classe et le compte correspondants dans l'instruction à jour
+  — ne jamais imputer par analogie avec une autre nomenclature (M14 notamment)
+  sans vérifier la table de correspondance officielle.
+- Une erreur d'imputation n'est pas qu'une question de forme : elle peut
+  fausser la lecture de l'équilibre par section et la sincérité du CFU.
+
+### 5.4 Fongibilité des crédits
+
+- La M57 renforce la **fongibilité** des crédits par rapport aux
+  nomenclatures antérieures, en particulier lorsque le vote est organisé par
+  **chapitre** : les crédits d'un même chapitre peuvent financer plusieurs
+  articles sans virement formalisé, sous réserve des ch

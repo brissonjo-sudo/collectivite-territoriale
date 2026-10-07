@@ -1,0 +1,125 @@
+titulaires, pour assister temporairement les agents de police municipale
+  dans les communes touristiques et les stations classées — ces agents ne
+  peuvent **porter aucune arme** (CSI, art. L. 511-2 — à confirmer le détail
+  exact en version consolidée).
+- **Effet sur la qualité d'APJA** : l'agrément et l'assermentation sont une
+  **condition d'exercice**, pas une formalité accessoire. Toute absence,
+  expiration de fait (changement de collectivité sans nouvel agrément) ou
+  retrait expose à une **irrégularité de procédure** sur tout acte de
+  constatation pris dans l'intervalle. Croiser systématiquement avec
+  `penal-procedure.md` avant de valider un acte APJA.
+- **Frontière avec `drh-fpt`** : le **recrutement et la titularisation**
+  statutaires de l'agent (stage, intégration, mutation) relèvent de
+  `drh-fpt` ; **seule** la condition d'agrément/assermentation propre au
+  métier PM reste ici.
+
+### 4.2 FIA et formation continue armement
+
+- La **formation initiale d'application (FIA)**, généraliste, organisée par
+  le CNFPT pour le cadre d'emplois, relève de `drh-fpt` (formation générale,
+  §5.4 SKILL.md) — **sauf** son **volet armement**, qui reste ici.
+- **Spécificité conservée** : la **formation préalable au port d'arme** et
+  l'**entraînement périodique obligatoire** (maniement, tir) qui conditionnent
+  le **maintien de l'autorisation préfectorale de port d'arme** sont traités
+  en détail dans `armement-equipements.md` (§4.7) — **ne pas dupliquer ici**,
+  renvoyer systématiquement à cette branche pour le contenu, la périodicité et
+  la traçabilité de cette formation.
+- **Articulation** : cette branche RH ne fait que **rappeler la frontière** —
+  le contenu métier de la formation armement (texte applicable, fréquence,
+  conditions de retrait du droit de port en cas de non-respect) est intégralement
+  dans `armement-equipements.md`.
+
+### 4.3 Cycles atypiques et régime indemnitaire propre (ISFE)
+
+- **Cycles atypiques** : la police municipale fonctionne souvent en horaires
+  décalés (nuit, week-end, jours fériés, services en cycle), notamment pour
+  couvrir les plages fixées par une éventuelle **convention de coordination**
+  (le service ne peut en principe intervenir qu'entre certaines plages
+  horaires sauf exception **gardes statiques** et **manifestations
+  organisées par la commune**, sauf stipulation contraire de la convention —
+  règle portée par la **convention de coordination** (CSI, art. **L. 512-4**,
+  au socle) et ses textes d'application (L. 512-5 et s., *à confirmer en
+  version consolidée*) ; **non** par L. 512-2, qui traite du recrutement
+  intercommunal (socle §8). Voir `continuum-partenariats.md` pour le contenu
+  de la convention). L'**organisation du cycle de travail** lui-même (durée annuelle
+  de référence, régime des heures supplémentaires, astreintes) relève du
+  **temps de travail statutaire général** → `drh-fpt`
+  (branche carrière et paie, §5.9). **Ce qui reste ici** : la
+  **logique métier** du cycle (pourquoi le service est organisé ainsi au
+  regard des missions et de la convention), pas le régime juridique du temps
+  de travail.
+- **Régime indemnitaire propre — ISFE** : la filière police municipale et les
+  gardes champêtres sont **hors RIFSEEP**. Le régime indemnitaire propre,
+  l'**Indemnité Spéciale de Fonction et d'Engagement (ISFE)**, est fondé sur
+  l'art. **L. 714-13 du CGFP** et institué par le **décret n° 2024-614 du 26
+  juin 2024** (deux parts : fixe + variable liée à l'engagement) — détail
+  intégral, plafonds, procédure d'institution, clause de sauvegarde, et
+  abrogation des anciens régimes (décrets n° 97-702, 2000-45, 2006-1397) —
+  voir le skill `drh-fpt` (branche carrière et paie, §5.7). **Ne pas
+  redévelopper ce détail ici** : seule la **logique métier** du lien entre sujétions de
+  service (nuit, dimanche, jours fériés, astreintes, engagement
+  opérationnel) et part variable de l'ISFE relève de cette branche, comme
+  élément de pilotage du service (organisation des roulements, valorisation
+  de l'engagement) ; le **calcul, la délibération et les arrêtés individuels**
+  relèvent de `drh-fpt`.
+- **Frontière pratique** : si la question est « combien », « selon quel
+  plafond », « quelle procédure d'institution », « quel arrêté individuel » →
+  `drh-fpt`. Si la question est « comment organiser le service compte tenu
+  des contraintes horaires et de l'engagement attendu » → cette branche
+  (`doctrine-operationnelle.md` pour le détail des dispositifs).
+
+### 4.4 Constat du manquement déontologique
+
+- Le **code de déontologie des agents de police municipale** (CSI, partie
+  réglementaire, Livre V — rattachement général **vérifié sur Légifrance le
+  2026-06-30** dans `socle-sources-verification.md` ; numéro précis d'article
+  applicable à confirmer en version consolidée) fixe les devoirs
+  professionnels : dignité, probité, impartialité, discrétion, usage
+  proportionné de la force, rapports avec le public et la hiérarchie.
+- **Ce que `dpm-fpt` traite** : le **constat textuel** — qualifier un fait
+  rapporté au regard du code de déontologie (quel devoir est en cause, quel
+  texte le fonde), à l'occasion d'un **rapport d'information**, d'un
+  **compte rendu hiérarchique**, ou d'une **observation de terrain** — voir
+  `conformite-deontologie-donnees.md` pour le détail de la grille de constat
+  et `ecrits-professionnels.md` pour le rapport correspondant.
+- **Ce que `dpm-fpt` ne traite jamais** : dès que le dossier **bascule en
+  procédure** — notification de griefs, communication du dossier, saisine du
+  conseil de discipline, mesures conservatoires (suspension), échelle des
+  sanctions, droits de la défense — la main passe **immédiatement** à
+  `drh-fpt` (branche carrière et paie, §5.5). Ce basculement
+  s'opère **dès le premier acte de procédure**, pas seulement à la sanction
+  finale.
+- **Cas particulier — manquement avec dimension pénale** (usage disproportionné
+  de la force, violences) : tester **prioritairement** le garde-fou APJA
+  (`SKILL.md` §5.2) — l'agent peut lui-même devenir mis en cause pénalement,
+  ce qui prime sur le traitement déontologique interne. Voir
+  `armement-equipements.md` (§4.4 et §7) pour l'articulation usage de la
+  force / garde-fou APJA.
+
+### 4.5 Commandement opérationnel de terrain
+
+- **Double hiérarchie à distinguer** :
+  - **hiérarchie statutaire** : grade, cadre d'emplois, position dans
+    l'organigramme — relève de `drh-fpt` (carrière, positions) ;
+  - **hiérarchie fonctionnelle/opérationnelle** : autorité de commandement
+    exercée **sur le terrain**, pendant une intervention ou un dispositif,
+    indépendamment du grade statutaire dans certains schémas d'organisation
+    (chef de poste, coordinateur d'un dispositif événementiel, officier de
+    garde) — relève de **cette branche**.
+- Les agents de police municipale agissent **sous l'autorité du maire**
+  (CGCT, art. **L. 2212-5**, au socle §8, LEGIARTI000025543324, vérifié le 2026-09-14 —
+  rattachement confirmé : les agents exécutent, dans la limite de leurs
+  attributions et sous l'autorité du maire, les tâches relevant de la
+  compétence de celui-ci en matière de prévention et de surveillance du bon
+  ordre, de la tranquillité, de la sécurité et de la salubrité publiques).
+  Le **maire** reste le **titulaire du pouvoir de police** ; le
+  **commandement opérationnel** (organisation des patrouilles, répartition
+  des moyens, direction d'un dispositif) est **délégué en pratique** au
+  directeur ou chef de service, dans le cadre fixé par le maire — sans que
+  cela transfère le pouvoir de police lui-même (`pouvoirs-police.md`).
+- **Le commandement opérationnel de terrain conservé ici** couvre : la
+  **doctrine de commandement** (qui dirige une intervention, une patrouille,
+  un dispositif), la **chaîne de remontée d'information** vers le directeur
+  et le maire, et l'**articulation avec les forces de l'État** sur le terrain
+  (`continuum-partenariats.md`). Le **contenu opérationnel détaillé**
+  (organisation des patroui

@@ -1,0 +1,150 @@
+# Branche — Écrits financiers (v1.0.0)
+
+> Structure conforme à `_gabarit-branche.md`. Branche pilote de la couche 4.
+> Aucune valeur datée ni numéro d'article cité de mémoire : seules les
+> **règles** figurent, avec consigne de vérifier la version en vigueur à la
+> date de l'acte.
+
+## 1. Périmètre / Exclusions
+
+**Périmètre** : cette branche **pilote les cinq générateurs interactifs**
+de `references/templates/` : typologie des écrits d'une direction des
+finances classés par nature, compétence et mentions obligatoires pour
+chacun, transmission au contrôle de légalité et délais, motivation et
+voies de recours des actes faisant grief, logique interactive obligatoire
+et règles de rédaction communes à tous ces écrits.
+
+**Exclusions** : le **contenu métier** de chaque domaine (fond du calcul
+d'un ratio, régime d'une compétence, procédure d'un contrôle) reste dans la
+branche correspondante — `references/budget-cycle.md`,
+`references/dette-tresorerie.md`, `references/subventions.md`,
+`references/controle-interne-financier.md`, etc. Cette branche **assemble
+et met en forme**, elle ne tranche pas le fond ; toute question de fond
+posée pendant l'assemblage d'un écrit se renvoie à la branche compétente
+plutôt que d'être improvisée ici.
+
+---
+
+## 2. Questions couvertes
+
+- Quel écrit produire pour telle décision ou telle situation financière ?
+- Qui est compétent pour signer ou adopter cet écrit ?
+- Quelles mentions sont obligatoires pour être régulier ?
+- Cet écrit doit-il être transmis au contrôle de légalité, et dans quel
+  délai ?
+- Cet écrit fait-il grief ? Si oui, comment le motiver et quelles voies de
+  recours indiquer ?
+- Comment piloter le générateur interactif correspondant : quelles
+  questions poser, dans quel ordre, comment traiter une donnée manquante ?
+- Comment garantir la cohérence des montants entre le corps de l'écrit et
+  ses annexes ?
+
+---
+
+## 3. Arbre de traitement
+
+`identifier la nature de la décision ou de l'opération financière →
+qualifier la nature de l'écrit (§4) → vérifier la compétence et les
+mentions obligatoires (§5) → ouvrir le générateur references/templates/
+correspondant → poser les questions une à une (objet, exercice, montant,
+imputation, section, autorité compétente, calendrier) → si donnée
+manquante : marquer [INCOMPLET] et la demander explicitement (jamais
+halluciner) → assembler le document → vérifier la transmission requise
+(§5, §6) → produire le livrable`.
+
+Avant toute production, tester si l'écrit s'inscrit dans un **garde-fou**
+du `SKILL.md` : un projet de délibération ou de convention qui ferait
+manier des fonds hors circuit du comptable (§5.2 SKILL) ou qui exécuterait
+un acte budgétaire irrégulier (§5.3 SKILL) impose le STOP ou l'ALERTE
+correspondante **avant** toute mise en forme.
+
+---
+
+## 4. Variables à lever
+
+- **Nature de la décision ou de l'opération** à l'origine de l'écrit
+  (budgétaire, fiscale, garantie, subvention, procédure interne...).
+- **Autorité compétente pressentie** : assemblée délibérante, exécutif,
+  DirFi, service — à confirmer selon la branche de fond concernée avant de
+  la présenter comme acquise.
+- **Exercice budgétaire** concerné et date des faits.
+- **Montant(s) en jeu** et **imputation** (section, chapitre, article
+  selon la nomenclature applicable — renvoi `references/nomenclature-m57.md`
+  pour le détail).
+- **Destinataire(s) et transmission** requise (contrôle de légalité,
+  organisme tiers, assemblée).
+- **Caractère faisant grief ou non** de l'acte, conditionnant la
+  motivation et les voies de recours.
+- **Données manquantes** bloquant l'assemblage → règle `[INCOMPLET]`
+  (§5.6).
+
+---
+
+## 5. Règles métier
+
+### 5.1 Typologie des écrits d'une direction des finances
+
+| Catégorie | Écrits type | Nature |
+|---|---|---|
+| **Acte décisionnel** | Délibération budgétaire, délibération fiscale, délibération de garantie d'emprunt | Acte de l'assemblée délibérante, exécutoire après transmission et publicité |
+| **Acte d'exécution** | Certificat administratif, état de mandatement | Acte de l'ordonnateur, dans le cadre de crédits déjà ouverts |
+| **Écrit de pilotage** | Note d'impact financier, note de cadrage budgétaire, rapport d'orientation budgétaire | Aide à la décision, non un acte au sens juridique strict |
+| **Écrit conventionnel** | Convention de subvention, convention financière | Engagement contractuel entre la collectivité et un tiers |
+| **Écrit de procédure** | Fiche de procédure interne | Document d'organisation interne, opposable en contrôle interne |
+
+Un même dossier peut cumuler plusieurs de ces écrits : une opération de
+garantie d'emprunt combine typiquement une délibération (acte décisionnel),
+une convention avec le bénéficiaire (écrit conventionnel) et une note
+d'impact financier préalable (écrit de pilotage). Ne jamais réduire une
+opération complexe à un seul écrit sans avoir vérifié les autres nécessaires.
+
+### 5.2 Acte décisionnel — compétence, mentions, transmission
+
+- **Délibération budgétaire** (budget primitif, décision modificative,
+  budget supplémentaire) : compétence de l'**assemblée délibérante**.
+  Mentions obligatoires minimales : identification de l'exercice, respect
+  du cadre et de la présentation budgétaire applicables, vote par section
+  et, selon le régime en vigueur, par chapitre ou par article — vérifier
+  le niveau de vote exact avant toute affirmation. **Transmission** au
+  représentant de l'État au titre du contrôle de légalité, dans un délai à
+  vérifier ; l'acte n'est exécutoire qu'après transmission et publicité.
+- **Délibération fiscale** (vote des taux, institution d'une exonération
+  facultative) : compétence de l'assemblée délibérante. Mentions
+  obligatoires : identification précise de l'imposition concernée, taux ou
+  dispositif voté, exercice d'application. **Délai de vote et de
+  transmission aux services fiscaux** à vérifier systématiquement : un
+  retard peut priver la mesure d'effet pour l'exercice visé.
+- **Délibération de garantie d'emprunt** (renvoi
+  `references/dette-tresorerie.md` §5.9 pour le fond) : compétence de
+  l'assemblée délibérante, non délégable dans les mêmes conditions qu'une
+  opération de dette propre. Mentions obligatoires : identité du
+  bénéficiaire, caractéristiques du prêt garanti, quotité de garantie,
+  ratios prudentiels vérifiés. **Acte faisant grief potentiel** : passage
+  obligatoire par `references/controle-budgetaire.md` avant production,
+  motivation en fait et en droit, transmission au contrôle de légalité.
+
+### 5.3 Acte d'exécution — compétence, mentions, transmission
+
+- **Certificat administratif** : établi par l'**ordonnateur** ou son
+  délégataire, pour attester un fait ou une situation nécessaire à
+  l'exécution d'une dépense ou d'une recette (absence de pièce type,
+  justification d'une créance). Mentions obligatoires : objet précis,
+  base de l'attestation, référence à l'engagement ou au dossier concerné,
+  signature de l'autorité compétente. Pas de transmission au contrôle de
+  légalité en tant que tel : pièce interne à la chaîne comptable, remise
+  au comptable à l'appui du mandat ou du titre.
+- **État de mandatement** : document récapitulatif établi par les services
+  de l'ordonnateur pour transmettre au comptable un ensemble de mandats.
+  Mentions obligatoires : identification de l'exercice, du chapitre et de
+  l'imputation, cohérence entre le total de l'état et la somme des mandats
+  qui le composent (règle de cohérence, §5.7). Pas d'acte faisant grief :
+  document d'exécution, pas de voies de recours à prévoir.
+
+### 5.4 Écrit de pilotage — compétence, mentions, transmission
+
+- **Note d'impact financier** : rédigée par le **DirFi** ou ses services,
+  destinée à éclairer une décision (de l'exécutif ou de l'assemblée) sur
+  le coût, l'imputation et le calendrier budgétaire d'un projet. Pas d'acte
+  au sens juridique : pas de transmission obligatoire, mais rigueur exigée
+  sur les montants et l'imputation car elle **fonde** souvent une
+  délibération ultérieure. Générateur : `references/templates

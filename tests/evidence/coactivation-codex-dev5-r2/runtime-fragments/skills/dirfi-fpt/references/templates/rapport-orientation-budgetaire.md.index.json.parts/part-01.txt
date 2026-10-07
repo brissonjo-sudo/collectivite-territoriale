@@ -1,0 +1,166 @@
+# Générateur interactif — Rapport d'orientation budgétaire (v1.0.0)
+
+> Couche 4 (`references/templates/`), piloté par `references/ecrits-financiers.md`
+> et par `SKILL.md` §6. Mécanique de dialogue alignée sur les générateurs du
+> skill frère `Dpm-fpt` (questions posées **une à une**, aucune donnée
+> inventée, règle `[INCOMPLET]` stricte, checklist finale). Le contenu
+> métier est propre aux finances locales.
+>
+> **Nature de l'écrit** : le rapport d'orientation budgétaire (ROB) est un
+> document **préalable** au débat d'orientation budgétaire (DOB). Il n'est
+> **pas lui-même une décision** : il n'a pas à être voté au fond, mais sa
+> **présentation** est une formalité substantielle du cycle budgétaire dont
+> l'omission fragilise le budget primitif voté ensuite. Branches de
+> rattachement : `../budget-cycle.md` (fond du DOB/ROB), `../prospective-analyse.md`
+> (contenu prospectif et ratios), `../dette-tresorerie.md` (volet dette).
+>
+> **Ce fichier ne tranche jamais seul** si l'obligation de ROB s'applique à
+> la collectivité concernée, ni le contenu minimal exigé selon sa strate :
+> ce point est une variable à lever en premier (§1 étape 2).
+
+---
+
+## 0. Quand utiliser ce générateur
+
+Le ROB sert à **informer** l'assemblée avant le débat d'orientation
+budgétaire : contexte financier, grandes orientations, structure de la
+dette, perspectives pluriannuelles. Il précède le vote du budget primitif.
+
+**Avant d'ouvrir ce générateur**, vérifier que l'écrit demandé est bien un
+ROB et non un autre document :
+
+1. **S'agit-il de décider un dispositif budgétaire précis (vote de crédits,
+   affectation, garantie) ?** Oui → `deliberation-budgetaire.md`, pas ce
+   générateur — le ROB n'a pas de dispositif décisionnel chiffré au sens
+   d'un vote de crédits.
+2. **S'agit-il de chiffrer l'impact d'un projet précis pour une décision
+   ponctuelle ?** Oui → `note-impact-financier.md`, pas ce générateur — le
+   ROB porte sur l'ensemble de la politique budgétaire de l'exercice, pas sur
+   un projet isolé.
+3. **La question porte-t-elle sur le contenu individuel du régime
+   indemnitaire ou sur une mesure statutaire précise ?** Oui → n'aborder ici
+   que l'**enveloppe** ; émettre le bloc **BASCULE `drh-fpt`** (§5, `SKILL.md`
+   §5.5) dès que la discussion dépasse l'enveloppe.
+
+Si aucun de ces cas ne redirige ailleurs : le **ROB** est le bon écrit.
+Poursuivre au §1.
+
+---
+
+## 1. Séquence interactive obligatoire
+
+**Principe directeur** (`SKILL.md` §6) : questions posées **une à une**,
+jamais en bloc. Confirmer chaque réponse avant de passer au champ suivant.
+Ne jamais pré-remplir un champ non fourni : appliquer la règle `[INCOMPLET]`
+(§4).
+
+### Étape 1 — Exercice concerné
+- Q1 : « Pour quel exercice budgétaire ce rapport est-il préparé ? »
+- Pourquoi : toute donnée macroéconomique, tout taux ou seuil cité doit être
+  rattaché à une date de référence précise (`SKILL.md` §5.4 point 3) — un ROB
+  ne se rédige jamais « pour l'exercice courant » par défaut.
+
+### Étape 2 — Strate de la collectivité et obligation de ROB
+- Q2 : « Quelle est la catégorie et la taille de la collectivité (commune,
+  EPCI, département, région — et, si pertinent, la population ou le seuil
+  d'effectifs) ? »
+- Pourquoi : **l'obligation de tenir un DOB avec rapport, et le contenu
+  minimal exigé, varient selon la strate** — ce point n'est **jamais**
+  présumé. Si la strate ou le seuil applicable ne sont pas connus avec
+  certitude, marquer `[INCOMPLET — préciser : strate exacte / seuil
+  applicable — à vérifier avant de fixer le contenu minimal du rapport]` et
+  renvoyer à vérification avant de fixer la structure définitive du document.
+
+### Étape 3 — Contexte macroéconomique et loi de finances
+- Q3 : « Quels éléments de contexte macroéconomique et de loi de finances de
+  l'année souhaitez-vous faire figurer (évolutions de la fiscalité locale,
+  des dotations, des concours de l'État) ? »
+- Pourquoi : ces éléments sont des valeurs volatiles (`SKILL.md` §5.4
+  point 2) — jamais citées de mémoire, toujours datées. Renvoi
+  `../dotations-perequation.md` et `../fiscalite-locale.md` pour le fond.
+
+### Étape 4 — Rétrospective
+- Q4 : « Sur quelle période souhaitez-vous présenter la rétrospective
+  (évolution des principaux agrégats : recettes, dépenses, épargne,
+  encours de dette) ? Disposez-vous déjà de ces séries chiffrées ? »
+- Pourquoi : la rétrospective éclaire la prospective ; renvoi
+  `../prospective-analyse.md` §5.7 pour la méthode. Si les séries ne sont pas
+  fournies, ne jamais les reconstituer : marquer `[INCOMPLET — préciser :
+  séries rétrospectives]`.
+
+### Étape 5 — Prospective de fonctionnement et d'investissement
+- Q5 : « Quelles sont les grandes orientations envisagées en fonctionnement
+  (évolution des charges, des recettes) et en investissement (projets
+  structurants, montant global envisagé) pour les exercices à venir ? »
+- Pourquoi : distinction stricte des deux sections, conforme aux principes
+  budgétaires (renvoi `../budget-cycle.md`). Aucun montant prospectif n'est
+  avancé sans être qualifié de projection, jamais présenté comme acquis.
+
+### Étape 6 — Structure et gestion de la dette
+- Q6 : « Quel est l'état de l'encours de dette (montant global, structure par
+  type de taux, profil d'extinction) et la stratégie de gestion envisagée
+  pour l'exercice ? »
+- Pourquoi : le ROB comporte en principe une présentation de la structure de
+  la dette — renvoi `../dette-tresorerie.md` pour le fond et les ratios
+  associés.
+
+### Étape 7 — Engagements pluriannuels
+- Q7 : « Existe-t-il des autorisations de programme/crédits de paiement
+  (AP/CP) ou des engagements pluriannuels (marchés, conventions de
+  subvention pluriannuelles) à mentionner ? »
+- Pourquoi : ces engagements conditionnent la marge de manœuvre des
+  exercices suivants — renvoi `../budget-cycle.md` §5.9 bis.
+
+### Étape 8 — Ressources humaines, sous l'angle de l'enveloppe uniquement
+- Q8 : « Quelle est l'évolution envisagée de l'enveloppe globale de la masse
+  salariale (chapitre 012) pour l'exercice à venir, en montant global ou en
+  taux d'évolution ? »
+- Pourquoi : `SKILL.md` §5.5 — `dirfi-fpt` reste compétent tant que la
+  discussion porte sur l'**enveloppe, le coût et l'imputation**. Dès que la
+  réponse approche le **droit individuel** d'un agent ou le **régime
+  indemnitaire** (taux, plafond par groupe de fonctions, condition
+  d'attribution), **interrompre** cette rubrique et émettre le bloc
+  **BASCULE** avant de poursuivre :
+
+```
+BASCULE drh-fpt — Cette demande porte sur le droit statutaire ou indemnitaire
+des agents. Je ne la traite pas ici, y compris si drh-fpt est mobilisable dans
+cette session.
+À reprendre côté drh-fpt : [objet précis].
+```
+
+- Ce qui reste permis après la bascule : nommer l'étape sans la dérouler,
+  chiffrer l'impact budgétaire global, signaler un enjeu de calendrier
+  (`SKILL.md` §5.5).
+
+### Étape 9 — Programmation des investissements
+- Q9 : « Une programmation pluriannuelle des investissements (PPI) existe-t-
+  elle ou est-elle à construire ? Quels sont les projets et montants
+  envisagés, même provisoires ? »
+- Pourquoi : renvoi `../prospective-analyse.md` §5.6. Toute valeur provisoire
+  doit être présentée comme telle, jamais comme un montant arrêté.
+
+### Étape 10 — Transmission et publicité
+- Q10 : « Ce rapport sera-t-il mis à disposition du public (site internet ou
+  autre support), et selon quelles modalités et quel délai ? »
+- Pourquoi : la publicité du ROB est une formalité propre à vérifier selon
+  la strate (étape 2) — ne jamais présumer son absence ou sa dispense.
+
+**À l'issue de l'étape 10** : si toutes les réponses nécessaires ont été
+recueillies, passer à l'assemblage (§2). Sinon, appliquer la règle
+`[INCOMPLET]` (§4).
+
+---
+
+## 2. Gabarit d'assemblage
+
+> Champs à compléter entre `[ ]`. Aucune collectivité, aucun nom de personne
+> ou d'organisme réel ne figure dans ce canevas.
+
+```
+[COLLECTIVITÉ — en-tête]
+
+RAPPORT D'ORIENTATION BUDGÉTAIRE
+Exercice [année — étape 1]
+
+Présenté en vue du débat d'orien

@@ -1,0 +1,83 @@
+ppatoire vise
+  précisément ce contournement par transparence.
+
+#### Conservé
+- 14 modes d'erreur (l'étape 0 bis est une garde procédurale, pas un
+  15e mode).
+- 7 principes, procédure en 7 étapes, double mode A/B, 5 modules,
+  4 techniques, 3 gabarits + sous-gabarit concours.
+- Étapes 0 et 7 visibles ; l'étape 0 bis rejoint la liste des étapes
+  visibles.
+
+### [2.0.0] — 2026-05-19
+
+#### Ajouté
+- **14 modes d'erreur** (au lieu de 10) : ajout des modes 11
+  (dispositions transitoires), 12 (renvois normatifs), 13 (inversion
+  cumulatif/alternatif), 14 (faux positif textuel / texte mobilisé
+  pour la mauvaise fonction juridique).
+- **7e principe structurant P6** : légalité criminelle (art. 111-3 et
+  111-4 CP) + application de la loi pénale dans le temps
+  (non-rétroactivité, rétroactivité in mitius, art. 112-1 CP).
+- **Double mode opératoire A / B** avec balises `[complet]`,
+  `[express]`, `[syllogisme]`, `[opérationnel]`.
+- **5 modules activables** en mode A : PÉNAL (non désactivable par
+  `[express]`), ACTE-ADMIN, PA-PJ, FOND, CONTENTIEUX.
+- **Niveau de confiance gradué** par affirmation (élevé / modéré /
+  faible avec justification d'une ligne).
+- **4e technique de raisonnement T4** : raisonnement par distinction.
+- **Arguments classiques** intégrés à l'étape 7 : a contrario,
+  a fortiori, par l'absurde.
+- **Sous-gabarit « note de concours »** (balise `[syllogisme]`) avec
+  structure majeure / mineure / conclusion.
+- **En-tête standardisé** et **encart récapitulatif** obligatoires
+  pour tous les gabarits.
+- **Étape 0 enrichie** : test de régime applicable, désambiguïsation
+  factuelle (qui, quand, où, qualité, pouvoir, contre qui), dates
+  faits + action.
+- **Étape 2 enrichie** : suivi obligatoire des renvois normatifs
+  jusqu'à leur source ultime, test cumulatif / alternatif explicite.
+- **Étape 3 enrichie** : dispositions transitoires, décisions QPC.
+- **Étape 4 enrichie** : règle de triangulation **unifiée** —
+  obligatoire dès qu'une interprétation est en jeu, non requise pour
+  la simple constatation matérielle, règle conservatrice en cas de
+  doute. Remplace toute mention antérieure de triangulation pénale.
+- **Étape 5 enrichie** : 7 contrôles dont lex specialis (3),
+  compétence de l'auteur (5), opposabilité (6), délais et
+  prescriptions (7).
+- **Étape 6 enrichie** : niveau de confiance gradué, contrôle
+  texte-cible / question-cible.
+- **Étape 7 enrichie** : arguments classiques, rôle facultatif
+  directeur opérationnel sur balise `[opérationnel]`.
+- **9 déclencheurs d'abstention** (au lieu de 5) : ajout circulaire
+  interne non publique (4 — signalement sans spéculation), doute
+  sérieux en matière répressive (6), échec triangulation obligatoire
+  (7), renvoi normatif essentiel non résolu (8), prescription /
+  forclusion incalculable (9).
+- **Sortie dégradée balisée** comme alternative à l'abstention totale.
+- **Ratio decidendi / obiter dictum** obligatoires par décision citée.
+- **Fonction juridique** obligatoire par texte cité.
+- **Section Maintenance et versioning** avec checklist annuelle
+  1er septembre, priorisée par fréquence de contentieux.
+- **Fichier `docs/maintenance.md`** créé pour la procédure de revue
+  détaillée.
+
+#### Modifié
+- Refonte complète du SKILL.md autour de l'architecture mode A / mode B.
+- Cas particuliers Police Municipale Saint-Ouen alignés sur les
+  nouveaux modules (notamment partage de compétences avec PP en
+  petite couronne).
+
+#### Conservé (issu de v1)
+- 4 registres explicites (texte / jurisprudence / déduction /
+  incertitude) — désormais P5.
+- 3 gabarits de sortie (express / fond / citation pour acte).
+- Techniques T1 (qualification adversariale), T2 (triangulation),
+  T3 (archéologie textuelle).
+- Étapes 0 et 7 **visibles** dans la réponse finale.
+
+### [1.0.0] — 2026-05-19 (commit 2f73937)
+
+#### Ajouté
+- Version initiale avec 10 modes d'erreur, 6 principes, procédure en
+  7 étapes, 3 gabarits, 3 techniques, 5 déclencheurs d'abstention.

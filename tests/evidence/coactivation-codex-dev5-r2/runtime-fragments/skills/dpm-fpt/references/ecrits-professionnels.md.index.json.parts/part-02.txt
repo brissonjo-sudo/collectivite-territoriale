@@ -1,0 +1,150 @@
+ ou rapports établis par les
+officiers ou agents de police judiciaire, les agents de police judiciaire
+adjoints, ou les fonctionnaires ou agents chargés de certaines fonctions de
+police judiciaire **auxquels la loi a attribué le pouvoir de constater les
+contraventions par procès-verbal**, font **foi jusqu'à preuve contraire**.
+**La preuve contraire ne peut être rapportée que par écrit ou par témoins.**
+
+**Conséquences pratiques pour l'agent PM** :
+- Le PV de contravention de l'agent PM agréé et assermenté (art. 21 CPP)
+  bénéficie de cette **force probante renforcée**, à la différence d'un
+  simple rapport.
+- Cette force probante n'est **pas automatique** : elle suppose que le
+  texte d'incrimination concerné **attribue bien** à l'agent PM le pouvoir
+  de constater par procès-verbal (vérifier dans `reglementation-appliquee.md`
+  ou le texte spécial applicable — ex. code de la route, art. L. 130-4,
+  §5.3).
+- **Exigence de précision** (jurisprudence constante de la Cour de
+  cassation sur l'art. 537 CPP, *à vérifier au cas par cas via
+  `recherche-juridique` avant citation en acte*) : pour valoir jusqu'à
+  preuve contraire, le PV doit **localiser précisément** l'infraction
+  (lieu exact, le cas échéant portion de voie) et énoncer les éléments
+  matériels constatés avec une précision suffisante pour permettre au
+  contrevenant et au juge de vérifier les faits. Un PV imprécis perd sa
+  force probante renforcée et retombe au régime de preuve ordinaire.
+- La force probante porte sur la **matérialité des faits constatés
+  personnellement par l'agent** — pas sur la qualification juridique
+  retenue, ni sur des éléments rapportés de tiers.
+
+Le **rapport d'information** et le **rapport de mise à disposition**
+n'ont **pas** ce régime de preuve renforcée : ce sont des écrits de compte
+rendu, appréciés selon le régime de preuve ordinaire.
+
+### 5.3 Mentions obligatoires — principes communs
+
+Avant tout détail propre à chaque écrit, **toujours** consigner :
+- **identité du rédacteur** (nom, qualité, n° d'agrément si exigé par le
+  texte applicable — à vérifier) ;
+- **date et heure** précises de la constatation ou du fait (et, le cas
+  échéant, heure d'appréhension / heure de mise à disposition distinctes,
+  §5.4) ;
+- **lieu précis** — exigence renforcée pour le PV (§5.2) ;
+- **faits matériellement constatés**, formulés au plus près de
+  l'observation directe, sans interprétation ni supposition ;
+- **qualification retenue**, avec le texte d'incrimination précis (renvoi
+  `reglementation-appliquee.md` / `penal-procedure.md` pour le fond — cette
+  branche ne tranche pas la qualification elle-même) ;
+- **identité du mis en cause** si connue, et des **témoins** le cas
+  échéant ;
+- **observations recueillies** du contrevenant, si l'agent les a
+  recueillies dans le cadre de l'art. 21 CPP (faculté, pas obligation) ;
+- **suites données** et **destinataire(s)** du document.
+
+**Mentions propres au PV de contravention** — en sus de ce qui précède :
+- texte exact de l'incrimination (visa précis) ;
+- éventuelle référence à un appareil de contrôle homologué (radar,
+  cinémomètre, horodateur) si la contravention en dépend — modalités de
+  preuve spécifiques à vérifier selon le texte applicable ;
+- mention de la notification ou de l'avis au contrevenant selon la
+  procédure applicable (verbalisation électronique ou PV papier — circuit
+  à vérifier localement).
+
+**Mentions propres au rapport de mise à disposition** — en sus du socle
+commun :
+- **route juridique exacte** : art. 53 et 73 CPP, ou art. 78-6 CPP ;
+- **faits établissant toutes les conditions** de la route retenue ;
+- **heure exacte de l'appréhension** (route 53/73), ou du refus / de
+  l'impossibilité de justifier l'identité et du compte rendu à l'OPJ
+  (route 78-6) ;
+- **heure exacte de la présentation, de la rétention ordonnée ou de la
+  remise** à l'OPJ ;
+- pour la route 78-6, **ordre ou décision de l'OPJ** et heure de réception ;
+- **identité ou qualité de l'OPJ destinataire**, si connue ;
+- description de la **contrainte exercée**, strictement limitée à ce qui
+  a été nécessaire (`penal-procedure.md` §4.3) — ne jamais laisser entendre
+  une mesure d'audition ou de fouille relevant de l'OPJ.
+
+**Mentions propres au rapport d'information** — en sus du socle commun :
+- préciser explicitement qu'**aucune route 53/73 ou 78-6** n'est établie
+  (pour distinguer sans ambiguïté du rapport de mise à disposition) ;
+- préciser le **canal de transmission** retenu (maire, OPJ territorialement
+  compétent, procureur via l'OPJ — `penal-procedure.md` §4.2).
+
+### 5.4 Articulation avec le garde-fou APJA
+
+Si, au cours du recueil des informations pour l'écrit, il apparaît que la
+situation **dépasse le pouvoir APJA** par une demande d'acte réservé à l'OPJ, le
+**garde-fou** (`SKILL.md` §5.2, `penal-procedure.md` §4.5) prime sur la
+production de l'écrit :
+1. Afficher le **STOP** en premier livrable.
+2. Rendre compte immédiatement à l'OPJ et limiter la suite à l'action APJA
+   conforme.
+3. Qualifier séparément une éventuelle route 53/73 ou 78-6. Si aucune route
+   n'est établie, ne retenir personne et produire seulement l'écrit de
+   constatation ou d'information adapté.
+4. Produire un **rapport de mise à disposition** uniquement lorsqu'une route
+   est établie — **aucun** écrit d'audition ou assimilé à un acte réservé OPJ.
+
+Le vocabulaire de la demande ne suffit pas à qualifier l'échange : « entendu »
+ou « a avoué » peut désigner des propos spontanés, des observations recueillies
+lors d'une constatation ou un questionnement structuré. Avant toute
+requalification, demander l'initiative des propos, les questions posées, la
+contrainte éventuelle, la forme questions-réponses et les droits notifiés. Le
+rapport licite décrit seulement les circonstances et les propos effectivement
+perçus ; il ne reconstruit jamais un PV d'audition et ne qualifie pas
+catégoriquement l'échange en l'absence de faits suffisants.
+
+### 5.5 Règle `[INCOMPLET]` — donnée manquante
+
+**Interdiction absolue d'halluciner une donnée manquante** (date, lieu,
+identité, texte d'incrimination, heure). Si une information nécessaire
+n'est pas fournie :
+1. Produire le brouillon avec les champs disponibles.
+2. Marquer explicitement chaque champ manquant par `[INCOMPLET — préciser :
+   <nom du champ>]`.
+3. **Lister** ces champs en fin de document, dans une section dédiée.
+4. **Demander explicitement** les données manquantes avant de considérer
+   l'écrit comme finalisé.
+
+Ne jamais transmettre, viser, ni présenter comme définitif un document
+portant une mention `[INCOMPLET]` non résolue.
+
+---
+
+## 6. Procédures et délais
+
+1. **Détection du type d'écrit** (§5.1) — avant toute question de détail.
+2. **Recueil interactif** — questions posées **une à une** : qui / quand /
+   où / pourquoi / qualification / témoins / suites (cf. `SKILL.md` §6).
+   Ne pas enchaîner plusieurs questions en bloc : un champ à la fois,
+   confirmation avant de passer au suivant.
+3. **Vérification des mentions obligatoires** (§5.3) avant assemblage
+   final.
+4. **Vérification de la qualification** — renvoi à
+   `reglementation-appliquee.md` (contenu de l'infraction) et
+   `penal-procedure.md` (pouvoir mobilisé) ; cette branche **n'invente
+   jamais** une qualification.
+5. **Transmission** — selon le type d'écrit :
+   - PV de contravention : circuit de transmission au juge/officier du
+     ministère public selon la procédure applicable (verbalisation
+     électronique ou circuit papier) — *modalités et délais à vérifier
+     localement, pas de délai chiffré donné de mémoire* ;
+   - rapport d'information / rapport de mise à disposition : maire **et**
+     OPJ territorialement compétent (`penal-procedure.md` §4.2), sans
+     attendre la rédaction définitive pour le **compte rendu oral
+     immédiat**, l'écrit formalisant ensuite la trace.
+6. **Archivage et traçabilité** — conserver une trace de la version
+   transmise, en particulier en cas de contestation ultérieure (preuve
+   contraire au PV, §5.2).
+
+> Annoncer tout

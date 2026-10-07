@@ -1,0 +1,25 @@
+---
+
+## 8. Checklist avant de considérer le rapport comme finalisé
+
+1. Garde-fou APJA testé en premier (§0, §6) : aucun fait réservé OPJ
+   reconstitué comme s'il relevait de l'APJA.
+2. Toutes les étapes du §1 parcourues **une à une**, avec confirmation à
+   chaque étape.
+3. Absence de route 53/73 ou 78-6 explicitement confirmée — sinon, redirection
+   vers `references/templates/rapport-mise-a-disposition.md`.
+4. Aucune donnée manquante comblée par supposition — règle `[INCOMPLET]`
+   (§4) appliquée et champs listés explicitement si nécessaire.
+5. Faits rédigés de façon strictement factuelle, observation directe
+   distinguée des éléments rapportés par un tiers.
+6. Qualification, si évoquée, présentée comme hypothèse non tranchée, avec
+   renvoi aux branches compétentes.
+7. Destinataire(s) précisé(s), double transmission maire/OPJ distinguée si
+   pertinente.
+8. Si une suite proposée prend la forme d'un acte faisant grief : rappel
+   explicite du passage obligatoire par `references/controle-legalite.md`
+   avant toute production de cet acte — ce rapport ne s'y substitue pas.
+9. Aucune donnée nominative exposée inutilement (`SKILL.md` §7 point 11).
+10. Mention finale claire : document **prêt à transmettre** ou **marqué
+    `[INCOMPLET]`** avec demande explicite des champs manquants — jamais
+    d'état intermédiaire ambigu.

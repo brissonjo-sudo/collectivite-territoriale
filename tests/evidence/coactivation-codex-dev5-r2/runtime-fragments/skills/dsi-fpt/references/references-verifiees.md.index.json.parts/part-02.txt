@@ -1,0 +1,83 @@
+'art. L. 112-10 du CRPA pour la décision
+> de création d'un téléservice, objet que cet article ne traite plus : renvoi à
+> ne pas relayer.
+
+## 5. Accessibilité numérique
+
+| Objet | Référence | Identifiant | En vigueur depuis | Statut | Collectivités |
+|---|---|---|---|---|---|
+| Loi pour l'égalité des droits et des chances (texte) | Loi n° 2005-102 du 11 février 2005 | JORFTEXT000000809647 (WebFetch) | — | vérifié par WebFetch | — |
+| Obligation d'accessibilité des services en ligne ; déclaration, schéma pluriannuel, mention en page d'accueil | Loi n° 2005-102, art. 47 | LEGIARTI000048050213 | 2023-09-08 | vérifié | **Oui (inférence)** : « personnes morales de droit public » ; exception de charge disproportionnée (II) |
+| Contrôle et sanction par l'Arcom, après mise en demeure publique | Loi n° 2005-102, art. 47-1 | LEGIARTI000048050174 | 2023-09-08 | vérifié | Oui (inférence) ; montants dans le cache |
+| Décret accessibilité (texte) | Décret n° 2019-768 du 24 juillet 2019 | JORFTEXT000038811937 (WebFetch) | — | vérifié par WebFetch | — |
+| Accessibilité selon les normes harmonisées de l'Union | Décret n° 2019-768, art. 1 | LEGIARTI000054748661 | 2026-08-27 | vérifié | Oui (inférence) |
+| Seuil de chiffre d'affaires des entreprises soumises | Décret n° 2019-768, art. 2 | LEGIARTI000038956842 | 2019-07-26 | vérifié | **Non** (entreprises seulement) |
+| Référentiel d'accessibilité arrêté par les ministres | Décret n° 2019-768, art. 5 | LEGIARTI000054748666 | 2026-08-27 | vérifié | Oui (inférence) |
+| Publication et contenu de la déclaration d'accessibilité | Décret n° 2019-768, art. 6 | LEGIARTI000038956852 | 2019-07-26 | vérifié | Oui |
+| Définition de l'« organisme du secteur public » | Directive (UE) 2016/2102, art. 3, point 1 | CELEX 32016L2102 | — | vérifié | **Oui, expressément** : « les autorités régionales ou locales » |
+
+> Les articles 1 et 5 du décret n° 2019-768 ont été modifiés le 2026-08-27 :
+> revérifier le référentiel en vigueur avant de citer une version du RGAA.
+
+## 6. Atteintes aux systèmes de traitement automatisé de données
+
+| Objet | Référence | Identifiant | En vigueur depuis | Statut | Collectivités |
+|---|---|---|---|---|---|
+| Accès ou maintien frauduleux | Code pénal, art. 323-1 | LEGIARTI000047052655 | 2023-01-26 | vérifié | Oui (protection des systèmes de la collectivité) ; l'aggravation vise les systèmes à caractère personnel « mis en œuvre par l'Etat » |
+| Entrave ou altération du fonctionnement | Code pénal, art. 323-2 | LEGIARTI000030939443 | 2015-07-27 | vérifié | Oui |
+| Introduction, extraction, modification frauduleuse de données | Code pénal, art. 323-3 | LEGIARTI000030939448 | 2015-07-27 | vérifié | Oui |
+| Outils d'attaque, sauf motif légitime (recherche, sécurité informatique) | Code pénal, art. 323-3-1 | LEGIARTI000028345220 | 2013-12-20 | vérifié | Sous conditions : la réserve de motif légitime couvre les audits et tests commandés |
+| Association en vue de commettre ces infractions | Code pénal, art. 323-4 | LEGIARTI000006418325 | 2004-06-22 | vérifié | Oui |
+| Bande organisée | Code pénal, art. 323-4-1 | LEGIARTI000047052660 | 2023-01-26 | vérifié | Oui |
+| Peines complémentaires des personnes physiques | Code pénal, art. 323-5 | LEGIARTI000006418326 | 1994-03-01 | vérifié | Oui (agents ou prestataires auteurs) |
+| Peines des personnes morales | Code pénal, art. 323-6 | LEGIARTI000020630782 | 2009-05-14 | vérifié | Sous conditions (art. 121-2) |
+| Tentative | Code pénal, art. 323-7 | LEGIARTI000006418329 | 2004-06-22 | vérifié | Oui |
+| Exclusion des mesures des services de renseignement de l'État | Code pénal, art. 323-8 | LEGIARTI000030938304 | 2015-07-27 | vérifié | **Non** |
+| Responsabilité pénale des personnes morales ; collectivités limitées aux activités délégables | Code pénal, art. 121-2 | LEGIARTI000006417204 | 2005-12-31 | vérifié | **Sous conditions**, expressément |
+
+## 7. Assurance du risque cyber
+
+| Objet | Référence | Identifiant | En vigueur depuis | Statut | Collectivités |
+|---|---|---|---|---|---|
+| L'indemnisation d'une atteinte à un système de traitement automatisé est subordonnée à une plainte de la victime dans un délai fixé | Code des assurances, art. L12-10-1 | LEGIARTI000047048152 | 2023-04-24 | vérifié | **Sous conditions** : personnes morales et activité professionnelle ; seulement si le contrat contient une telle garantie. **Le texte ne mentionne pas la rançon.** |
+
+## 8. Directive NIS2 et transposition
+
+| Objet | Référence | Identifiant | En vigueur depuis | Statut | Collectivités |
+|---|---|---|---|---|---|
+| Option nationale d'appliquer la directive aux entités de l'administration publique au niveau local | Directive (UE) 2022/2555, art. 2 § 5 | CELEX 32022L2555 | — | vérifié | **Sous conditions** : dépend du choix de la loi française |
+| Délai de transposition | Directive (UE) 2022/2555, art. 41 | CELEX 32022L2555 | — | vérifié | Sans effet direct |
+| Loi française de transposition (projet « résilience des infrastructures critiques et renforcement de la cybersécurité ») | Dossier législatif de l'Assemblée nationale | — | — | **⚠️ non publiée au 2026-10-05** | **Non applicable à ce jour** |
+
+> **Règle opposable.** Ne jamais écrire qu'une collectivité « est soumise à
+> NIS2 ». Au 2026-10-05, aucune loi de transposition n'est publiée et la
+> directive laisse le niveau local à l'option de chaque État. Les seuils de
+> population figurant dans les versions du projet divergent : aucun n'est
+> retenu. À revérifier à chaque revue du socle.
+
+## 9. Organisation, mutualisation et numérique responsable
+
+| Objet | Référence | Identifiant | En vigueur depuis | Statut | Collectivités |
+|---|---|---|---|---|---|
+| Services communs entre un EPCI à fiscalité propre et ses communes | CGCT, art. L5211-4-2 | LEGIARTI000045213577 | 2022-02-23 | vérifié | **Sous conditions** : EPCI à fiscalité propre et communes membres ; convention, fiche d'impact, avis des comités sociaux territoriaux |
+| Biens partagés entre un EPCI à fiscalité propre et ses communes | CGCT, art. L5211-4-3 | LEGIARTI000023260130 | 2010-12-18 | vérifié | Sous conditions, même périmètre |
+| Stratégie numérique responsable de certaines communes et EPCI | Loi n° 2021-1485 du 15 novembre 2021, art. 35 | LEGIARTI000044328507 ; loi : JORFTEXT000044327272 (WebFetch) | 2021-11-17 | vérifié | **Sous conditions** : seuil de population (cache) ; ⚠️ décret d'application non vérifié |
+
+## 10. Cloud et hébergement
+
+| Objet | Référence | Identifiant | En vigueur depuis | Statut | Collectivités |
+|---|---|---|---|---|---|
+| Critères de sécurité et de protection contre l'accès d'autorités d'États tiers pour les données sensibles hébergées en cloud | Loi n° 2024-449 du 21 mai 2024 (SREN), art. 31 | LEGIARTI000049565888 ; loi : JORFTEXT000049563368 (lu dans une URL) | 2024-05-23 | vérifié (article) | **Non** : vise « les administrations de l'Etat, ses opérateurs » et certains GIP ; ⚠️ décret d'application non vérifié |
+| Définition du « client » d'un fournisseur de services de traitement de données | Règlement (UE) 2023/2854 (Data Act), art. 2, point 30 | CELEX 32023R2854 | — | vérifié | **Oui** : « une personne physique ou morale » sous contrat, sans exclusion des personnes publiques |
+| Suppression progressive des frais de changement de fournisseur | Règlement (UE) 2023/2854, art. 29 | CELEX 32023R2854 | — | vérifié | **Oui (bénéficiaire)** ; dates dans le cache |
+
+> **Règle opposable.** La loi SREN (art. 31) et la doctrine « cloud au centre »
+> visent l'État. Elles ne s'imposent pas à une collectivité. Le skill peut les
+> citer comme **référence de bonne pratique**, jamais comme obligation.
+
+## 11. Intelligence artificielle
+
+| Objet | Référence | Identifiant | En vigueur depuis | Statut | Collectivités |
+|---|---|---|---|---|---|
+| Définition du « déployeur » | Règlement (UE) 2024/1689, art. 3, point 4 | CELEX 32024R1689 | — | vérifié | **Oui, expressément** : « une autorité publique » |
+| Analyse d'impact sur les droits fondamentaux avant dépl

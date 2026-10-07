@@ -1,0 +1,154 @@
+# Brique posture — RETEX (retour d'expérience post-intervention)
+
+> Structure adaptée de `_gabarit-branche.md` (brique posture transverse, pas une
+> branche métier complète). Pas de base légale propre : c'est un **outil de
+> pilotage et d'apprentissage**, pas un fondement de pouvoir. Toute base légale
+> mobilisée pendant l'intervention analysée relève de la branche métier
+> concernée, jamais de cette brique.
+
+## Périmètre / Exclusions
+
+- **Périmètre** : structurer un retour d'expérience post-intervention : ce qui
+  a marché, risques futurs, actions correctrices.
+- **Exclusions** : **aucune base légale propre**. Le RETEX ne fonde aucun
+  pouvoir, ne qualifie aucune infraction, ne motive aucun acte : il **analyse**
+  une action déjà menée sous le fondement légal mobilisé au moment des faits.
+  Pour ce fondement, renvoyer systématiquement à la branche compétente
+  (`pouvoirs-police.md`, `penal-procedure.md`, `reglementation-appliquee.md`,
+  `doctrine-operationnelle.md`, `armement-equipements.md`,
+  `continuum-partenariats.md`, `videoprotection.md`,
+  `conformite-deontologie-donnees.md` selon le sujet). L'**anticipation
+  contentieuse adversariale** d'une décision relève de `contentieux.md`. La
+  **relecture préalable** d'un acte avant production relève de
+  `controle-legalite.md`. Le **constat** d'un manquement déontologique
+  individuel relève de `conformite-deontologie-donnees.md` (puis `drh-fpt` dès
+  que la procédure disciplinaire débute, `SKILL.md` §5.4).
+
+---
+
+## 1. Questions couvertes
+
+- « Comment structurer le retour d'expérience après cette intervention /cet
+  événement ? »
+- « Qu'est-ce qui a fonctionné, qu'est-ce qui a dysfonctionné ? »
+- « Quels risques résiduels subsistent pour une situation comparable future ? »
+- « Quelles actions correctrices engager, avec quel pilote et quelle
+  échéance ? »
+- « Comment capitaliser ce RETEX dans la doctrine du service (consignes,
+  fiches réflexes, dispositifs futurs) ? »
+- « Faut-il un RETEX formel pour cet événement, ou un simple débriefing
+  oral ? »
+
+---
+
+## 2. Arbre de traitement
+
+`événement clos → qualifier le besoin de RETEX (§4) → reconstituer la
+chronologie factuelle (§5.1) → analyser écarts et points forts (§5.2-5.3) →
+évaluer les risques résiduels (§5.4) → définir des actions correctrices
+traçables (§5.5) → capitaliser (§5.6) → livrable (§9)`
+
+Ne jamais sauter la **chronologie factuelle** pour aller directement aux
+préconisations : un RETEX qui commence par les solutions avant d'avoir établi
+les faits perd sa valeur probante et sa valeur d'apprentissage.
+
+---
+
+## 3. Variables à lever
+
+- **Déclencheur du RETEX** : intervention courante, incident notable,
+  dispositif événementiel, usage de la force ou de l'armement, blessure
+  d'agent ou de tiers, dysfonctionnement matériel ou de coordination,
+  intervention médiatisée ou contestée.
+- **Caractère obligatoire ou facultatif** : certains événements appellent un
+  RETEX systématique par doctrine interne du service (ex. tout usage de
+  l'arme, toute blessure en service, tout dispositif événementiel à enjeu) ;
+  d'autres relèvent de l'appréciation du commandement. Vérifier la **doctrine
+  locale** du service avant d'affirmer un caractère obligatoire — ce n'est pas
+  une règle de droit générale, c'est un choix d'organisation (renvoi
+  `doctrine-operationnelle.md`).
+- **Niveau de RETEX attendu** : débriefing oral à chaud (équipe, fin de
+  service) vs RETEX formel écrit (dispositif, incident notable) vs RETEX
+  partagé multi-acteurs (préfecture, SDIS, parquet, bailleur — selon
+  l'événement).
+- **Existence d'un volet contentieux ou disciplinaire en parallèle** : si une
+  procédure contentieuse, pénale ou disciplinaire est ouverte sur les mêmes
+  faits, le RETEX **n'a pas vocation à s'y substituer ni à l'anticiper** — voir
+  §4 (distinction RETEX / contentieux / discipline).
+- **Périmètre des participants** : qui doit contribuer (agents engagés,
+  encadrement, partenaires extérieurs) et qui doit être destinataire des
+  conclusions (maire, DGS, état-major de sécurité le cas échéant).
+- **Caractère sensible des données recueillies** : présence de données
+  personnelles (agents, administrés, témoins) dans le RETEX → vérifier la
+  nécessité de les conserver et leur traitement → renvoi
+  `conformite-deontologie-donnees.md`.
+
+---
+
+## 4. Positionnement du RETEX — ce qu'il n'est pas
+
+Le RETEX est un outil **interne de pilotage et d'apprentissage**, pas un acte
+juridique ni une pièce de procédure. Distinguer strictement :
+
+| Le RETEX | N'est pas |
+|---|---|
+| Une reconstitution factuelle et une analyse organisationnelle | Une enquête disciplinaire (`drh-fpt`, `SKILL.md` §5.4) |
+| Un outil de progrès collectif, sans recherche de faute individuelle première | Une recherche de responsabilité individuelle en tant que telle |
+| Un document interne de pilotage | Une pièce de procédure pénale ou un rapport destiné à l'autorité judiciaire (renvoi `penal-procedure.md` pour ces écrits) |
+| Une analyse a posteriori de ce qui s'est passé | Une anticipation adversariale de la solidité d'une décision (`contentieux.md`) |
+
+**Conséquence pratique** : si l'analyse du RETEX fait apparaître un manquement
+individuel susceptible de discipline, **ne pas instruire la faute dans le
+RETEX**. Signaler le point au commandement et basculer vers
+`conformite-deontologie-donnees.md` (constat) puis `drh-fpt` (procédure). Le
+RETEX peut continuer en parallèle sur son volet organisationnel, mais sépare
+les deux documents.
+
+> **Point de vigilance rédactionnel** : un RETEX mal rédigé (jugements de
+> valeur sur une personne, qualification pénale précoce, aveu de
+> dysfonctionnement non vérifié) peut être communicable ou exploitable dans un
+> contentieux ultérieur. Rédiger en faits vérifiables, pas en accusations ni en
+> auto-incrimination du service. En cas de doute sur la communicabilité ou
+> l'usage possible du document, ne pas trancher seul : signaler le point.
+
+---
+
+## 5. Méthode — structurer le RETEX
+
+### 5.1 Chronologie factuelle
+- Reconstituer les faits dans l'ordre, avec horodatage le plus précis
+  possible : déclenchement, décisions prises, moyens engagés, communications
+  échangées, fin d'intervention.
+- Distinguer **ce qui est établi** (main courante, enregistrements, mains
+  courantes radio, témoignages concordants) de **ce qui reste incertain**
+  (témoignage isolé, reconstitution approximative). Ne jamais présenter une
+  hypothèse comme un fait établi.
+- Identifier les **acteurs et autorités impliqués** : agents PM, encadrement,
+  forces de l'État, SDIS/SAMU, autorité de police compétente (maire/préfet
+  selon la qualification) — sans rejuger ici la qualification, qui relève des
+  branches de fond.
+
+### 5.2 Ce qui a fonctionné
+- Identifier explicitement les points positifs : délai de réaction, qualité de
+  la coordination, respect des consignes/fiches réflexes, efficacité d'un
+  équipement, justesse d'une décision de commandement.
+- Éviter l'écueil inverse du RETEX à charge : un RETEX uniquement focalisé sur
+  les écarts perd sa valeur d'apprentissage positif et décourage la remontée
+  d'information spontanée des agents.
+
+### 5.3 Écarts et dysfonctionnements
+- Identifier les écarts entre **ce qui était prévu** (doctrine, consigne,
+  fiche réflexe, dispositif) et **ce qui s'est passé**.
+- Catégoriser chaque écart par nature : humain (formation, décision),
+  organisationnel (effectif, commandement, communication), matériel
+  (équipement, radio, véhicule), procédural (consigne absente, obsolète ou non
+  appliquée), partenarial (coordination avec un service tiers).
+- Rattacher chaque écart à un **fait précis** de la chronologie (§5.1), jamais
+  à une impression générale.
+
+### 5.4 Risques résiduels
+- Pour chaque écart identifié (§5.3), évaluer s'il est **susceptible de se
+  reproduire** dans une situation comparable future, et avec quelle
+  probabilité/gravité.
+- Distinguer le **risque opérationnel** (sécurité des agents, sécurité des
+  tiers, efficacité de l'intervention) du **risque juri

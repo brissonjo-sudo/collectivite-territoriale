@@ -1,57 +1,59 @@
-# Qualification des corrections
+# Qualification de la coactivation au 7 octobre 2026
 
-Dernier candidat : dev.5 au commit `ebeee944e878b11177d5ccb85d9043c4c97260a9`,
-entièrement non mesuré. Il précise l'activation DSI,
-le STOP conservatoire, le transfert RH persistant et la voie sans source.
-Le runtime dev.4 précédent est `36cbbd67fa02240cb723f4236c25d4340bcd85ee`.
-Mesure partielle r7 au HEAD `d1ab287376c8ae3605b0459850210be4a4e91bf9` :
-six réponses achevées et six juges frais, une réussite et cinq échecs.
-Trois nominaux indiquent `needs-auth` ; un autre cas est interrompu sans réponse
-capturée et neuf ne sont pas exécutés. Les 211 empreintes gelées sont intactes.
-Voir [rapport partiel r7](../../tests/evidence/coactivation-corrigee/rapport-partiel-corrections-r7.md)
-et [synthèse](../../tests/evidence/coactivation-corrigee/synthese-partielle-r7.json).
-`tests/evidence/coactivation-corrigee/gel-dev5.json`
-sert seulement de référence d'empreintes pour la reprise de dev.5 ; ce n'est pas une mesure.
-Les pins amont sont inchangés, mais les six variantes locales sont distinctes.
+La campagne native Codex R2 est achevée : seize réponses et seize juges frais,
+soit 32 rôles distincts ; 4 réussites, 6 échecs et 6 cas bloqués. Les 124 exigences atomiques
+donnent 107 vraies, 6 fausses et 11 indéterminées.
+Onze cas imposent les rôles et cinq permettent leur sélection spontanée.
 
-R4 dev.2 : 16 jugements frais, une réussite, douze échecs, trois bloqués.
-R5 : trois erreurs réseau achevées ; autres processus interrompus, aucune notation.
-R6 dev.3 : un APJA achevé puis échoué documentaire, quinze refus de quota.
-Les deux tentatives de lecture tronquée sont conservées et exclues des scores.
-Les synthèses, rapports et traces restent dans `tests/evidence/coactivation-corrigee`.
-Le dernier correctif dev.5 ne reçoit aucun score de ces campagnes ni de r7.
+Cette mesure porte exclusivement sur dev.5 au commit candidat
+`3f0d34bd068e3427edc9335a4f1415aaf1c7c98d`, runtime `ebeee944e878b11177d5ccb85d9043c4c97260a9`. L'audit indépendant rejoue les appels
+natifs, les lectures par fragments, les réponses et les jugements ; il contrôle
+les 211 fichiers gelés, dont 166 fichiers de runtime. Les messages initiaux
+opaques et l'isolation complète du système partagé ne sont pas vérifiés.
+Les séquences imposées et le rappel initial de STOP ne démontrent pas,
+à eux seuls, un déclenchement autonome par le plugin.
 
-La PR DSI #5 porte la présentation et l'archive portable des mesures DSI/r6 :
-https://github.com/brissonjo-sudo/DSI-fpt/pull/5
+Les agents ont chargé les fichiers candidats. L'activation réelle du plugin
+n'est pas démontrée ; une exigence littérale « via Skill » ne peut donc pas
+être validée par cette seule lecture. Les sources retrouvées, leur pertinence
+pour chaque affirmation et leur vigueur sont des contrôles distincts.
+Certains retours de sources sont tronqués ; leur transport réel est conservé,
+sans prétendre que leur contenu complet a été disponible au répondant.
+La tentative d'écriture hors périmètre du cas spontané RSSI/RH a été refusée
+par Windows, conservée et classée comme échec technique. Aucune réponse
+n'a été réécrite ni relancée pour améliorer le score.
 
-Après le 7 octobre 2026 à 03 h 31 Europe/Paris, depuis la racine du dépôt :
+Le candidat courant `1.2.0-dev.6` est distinct et **non mesuré**. La campagne dev.5 reste historique et aucun de ses scores ne lui est transféré. Un nouveau gel, une mesure propre à ses octets et son smoke Codex restent nécessaires.
 
-```powershell
-& '.\docs\qualification\Reprendre-coactivation-corrigee.ps1' -PluginRoot (Get-Location).Path -Revision r8
-```
+Cette campagne a été exécutée ici avec les sous-agents natifs Codex, sans
+lancer Claude Code ni exiger son authentification. Les avis humains DSI/RSSI
+et juridiques, le smoke du candidat et la qualification de release restent
+ouverts ; `release_ready=false`. Ni fusion, ni publication n'est autorisée
+par la mesure ou par une CI seule.
 
-Le script refuse un dossier existant, contrôle les empreintes du candidat déclaré, fige le HEAD
-courant et lance seize nouvelles conversations. Chaque réponse achevée exige
-ensuite un juge frais. Il s'arrête si le quota persiste ou si un cas nominal
-constate que le MCP n'est pas connecté ; il ne programme aucune tâche.
-R7 est conservée et ne doit pas être complétée après réauthentification.
-Avant la reprise, lancer Claude Code dans ce dépôt, valider le serveur
-`droit-francais`, puis utiliser `/mcp` pour renouveler OAuth. Aucun secret n'est
-à copier dans les preuves. Les corrections de STOP, BASCULE RH, activation DSI et
-abstention de dev.5 restent à mesurer dans ce candidat distinct.
+Voir le [rapport R2](../../tests/evidence/coactivation-codex-dev5-r2/rapport.md),
+la [synthèse](../../tests/evidence/coactivation-codex-dev5-r2/synthese.json) et
+l'[audit natif complet](../../tests/evidence/coactivation-codex-dev5-r2/audit-natif-final.json).
+L'outillage et l'inventaire des octets sont archivés avec les preuves R2.
 
-Outillage de preuve archivé dans `outillage/` : les scripts des traces sont
-interprétés par une grammaire fermée, jamais exécutés. Les tests se lancent dans
-des processus distincts pour éviter les adaptations globales d'import :
+La portée R1 exploratoire, les premières lectures tronquées et les tentatives
+rejetées sont conservées. Elles ne contribuent pas aux résultats R2.
+R7 dev.4 reste une mesure partielle : six réponses et six juges frais,
+une réussite et cinq échecs ; trois nominaux `needs-auth`, un cas interrompu
+sans réponse et neuf cas non exécutés. Voir le
+[rapport r7](../../tests/evidence/coactivation-corrigee/rapport-partiel-corrections-r7.md).
+R4, R5 et R6, leurs synthèses et leurs traces restent dans
+`tests/evidence/coactivation-corrigee`. Leurs scores ne sont pas transférés.
 
-```powershell
-Set-Location '.\docs\qualification\outillage'
-python -m unittest test_lie_jugements_corriges_bruts
-python -m unittest test_verifier_archive_corrigee
-python -m unittest test_portable_adapter
-```
+Le script historique `Reprendre-coactivation-corrigee.ps1` et son outillage
+restent conservés pour reproductibilité de l'ancienne voie d'exécution.
+Ils ne sont pas un préalable à la campagne native Codex exécutée ici.
+Une future mesure devra utiliser le candidat courant figé, des rôles frais
+et une nouvelle portée de preuve ; aucun dossier achevé ne doit être complété
+après changement de candidat ou d'authentification.
 
-La lecture brute complète conserve les véritables appels et retours natifs.
-L'adaptateur d'export 02c historique est conservé séparément de la correction
-du parseur qui accepte un retour ligne final, sans autoriser d'instruction ajoutée.
-Avis humains et smoke Codex ouverts. `release_ready=false`.
+La [PR DSI #5](https://github.com/brissonjo-sudo/DSI-fpt/pull/5) porte le bilan
+et la présentation. La
+[PR plugin #11](https://github.com/brissonjo-sudo/collectivite-territoriale/pull/11)
+reste brouillon. Le contrôle local, la CI, la mesure, les avis humains, le smoke
+et la publication sont rapportés séparément.

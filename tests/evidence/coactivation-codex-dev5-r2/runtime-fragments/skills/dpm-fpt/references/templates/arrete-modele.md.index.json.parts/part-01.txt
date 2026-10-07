@@ -1,0 +1,136 @@
+# Générateur interactif — Arrêté (modèle) (v0.1.0)
+
+> Couche 4 (`references/templates/`), piloté par `references/ecrits-professionnels.md`
+> (§4, §5.1, §6 point 4, §10). Cet écrit n'est **pas** un écrit de
+> constatation (PV, rapport) : c'est un **acte administratif de l'autorité
+> territoriale**, susceptible de **faire grief**. À ce titre, ce générateur
+> est **subordonné** à `references/controle-legalite.md` : la grille de
+> contrôle a priori (§4 de ce fichier) doit être déroulée **avant** toute
+> rédaction, et chaque réserve qu'elle soulève doit être reportée dans le
+> brouillon produit ici.
+>
+> **Discipline d'écriture** : champs à compléter entre `[ ]`. **Aucune
+> donnée nominative** (administré, agent) ne doit apparaître dans ce
+> gabarit ni dans un brouillon produit en session — seuls des espaces
+> réservés. Tout visa d'article, tout numéro de décision, toute date
+> d'entrée en vigueur portent la réserve **« à confirmer en version
+> consolidée »** tant qu'ils n'ont pas été vérifiés sur la source
+> officielle dans la session en cours (socle-sources, `SKILL.md` §5.3).
+> Référence de gabarit générique d'acte faisant grief : le gabarit de
+> décision du skill `drh-fpt` (structure visas / considérants / dispositif /
+> voies de recours / check-list — transposée ici au champ police
+> municipale et enrichie de la grille `controle-legalite.md`).
+
+---
+
+## 0. Pré-requis avant d'ouvrir le générateur
+
+1. **Nature de l'acte qualifiée** (`controle-legalite.md` §3) : police
+   générale (CGCT) ou police spéciale (laquelle) ; acte individuel ou
+   réglementaire ; acte faisant grief ou non. Si la question relève en
+   réalité d'un acte RH individuel (sanction, refus d'avancement, fin de
+   fonctions d'un agent) → **frontière stricte** vers `drh-fpt`
+   (`SKILL.md` §5.4) ; ce générateur reste compétent uniquement pour le
+   contrôle de légalité de l'acte en tant que tel, en miroir.
+2. **Garde-fou APJA testé** (`SKILL.md` §5.2) : un arrêté de police ne
+   couvre jamais un acte réservé à l'OPJ. Si le contexte qui motive
+   l'arrêté révèle une situation dépassant l'art. 21 CPP, afficher le
+   **STOP** avant toute chose, rendre compte à l'OPJ et traiter l'aspect
+   pénal séparément. Un rapport de mise à disposition ne se justifie que si
+   une route 53/73 ou 78-6 est établie (`penal-procedure.md`).
+3. **Conflit de compétence** (maire / préfet / OPJ) écarté ou signalé
+   (`analyse-situation.md` §3, `controle-legalite.md` §4.1) : l'autorité
+   envisagée comme signataire est-elle bien compétente sur cet objet
+   précis (police générale du maire, ou police spéciale dont le titulaire
+   réel doit être vérifié) ?
+4. **Passage obligatoire par la grille de contrôle a priori**
+   (`controle-legalite.md` §4, reprise et restituée au §4 ci-dessous) :
+   ce générateur ne rédige **aucun** arrêté sans avoir déroulé cette
+   grille dans l'ordre (compétence → procédure → base légale →
+   motivation → proportionnalité → voies de recours → transmission).
+
+---
+
+## 1. Séquence de questions — une à une, jamais en bloc
+
+**Règle de conduite** (`SKILL.md` §6, `ecrits-professionnels.md` §6.2) :
+poser **un champ à la fois**, attendre la réponse, **confirmer** la valeur
+reçue avant de passer au champ suivant. Ne jamais enchaîner plusieurs
+questions dans le même tour. Si une réponse manque ou reste vague,
+**relancer une fois** sur ce champ précis, puis, si elle reste
+indisponible, basculer ce champ en `[INCOMPLET]` (§5) et continuer la
+séquence sur les champs suivants plutôt que de bloquer tout l'entretien.
+
+L'ordre ci-dessous suit la trame **qui / quand / où / pourquoi /
+qualification / témoins / suites** imposée par `SKILL.md` §6, adaptée à un
+acte administratif (pas un écrit de constatation : « témoins » devient
+« tiers concernés / contradictoire », « qualification » devient « base
+légale »).
+
+### Étape 1 — Autorité et qualité du signataire (« qui » décide)
+- Q1.1 : « Quelle est l'autorité signataire envisagée (le maire en
+  personne, ou un délégataire — adjoint, conseiller délégué, DGS) ? »
+- Q1.2 : « Si délégataire : un arrêté de délégation de signature ou de
+  fonction existe-t-il, couvrant précisément cet objet ? Est-il publié et
+  non retiré à la date envisagée de signature ? » — si la réponse est
+  incertaine, marquer `[INCOMPLET — préciser : existence et périmètre de
+  la délégation]` et signaler le risque d'incompétence (`controle-legalite.md`
+  §4.1).
+- Q1.3 : « Dans quelle commune et au titre de quelle compétence (police
+  générale du maire au titre du CGCT, ou police spéciale — laquelle) ? »
+
+### Étape 2 — Date d'effet et urgence (« quand »)
+- Q2.1 : « Quelle est la date envisagée de signature de l'arrêté ? »
+- Q2.2 : « Quelle doit être la date d'effet / d'entrée en vigueur ? »
+  — rappel : pour un acte **défavorable à un administré identifié**, la
+  date d'effet est en principe celle de la **notification**, pas de la
+  signature (pas de rétroactivité d'un acte faisant grief — cf. le gabarit
+  de décision du skill `drh-fpt`, check-list).
+- Q2.3 : « S'agit-il d'une mesure prise en **urgence** ? » — si oui,
+  signaler que certaines formalités préalables (contradictoire,
+  consultation) peuvent être allégées, **à vérifier au cas par cas**
+  selon le texte applicable (`controle-legalite.md` §4.2) ; ne jamais
+  présumer la dispense sans cette vérification.
+
+### Étape 3 — Champ d'application géographique et personnel (« où »)
+- Q3.1 : « L'arrêté est-il **réglementaire** (portée générale, ex. un
+  périmètre, une voie, l'ensemble de la commune) ou **individuel** (vise
+  une personne ou une situation déterminée) ? » — conditionne le régime
+  de motivation CRPA et le mode de publicité (`controle-legalite.md`
+  §3, §4.4).
+- Q3.2 : « Quel est le périmètre géographique précis concerné (adresse,
+  voie, portion de voie, zone délimitée, ou ensemble du territoire
+  communal) ? » — exigence de précision : éviter toute formulation trop
+  générale qui exposerait à un grief de mesure disproportionnée
+  (`controle-legalite.md` §4.5).
+- Q3.3 (si acte individuel) : « La mesure vise-t-elle une personne
+  identifiée ? » — ne **jamais** inscrire de donnée nominative réelle
+  dans le brouillon ; utiliser `[NOM Prénom]`, `[adresse]` en espace
+  réservé.
+
+### Étape 4 — Motifs et base légale (« pourquoi » / qualification)
+- Q4.1 : « Quel trouble, risque ou objectif d'intérêt général motive cet
+  arrêté (ordre public, sécurité, salubrité, tranquillité, autre police
+  spéciale) ? Décrire les faits précis et datés qui le caractérisent. »
+- Q4.2 : « S'agit-il d'un objet couvert par une **police spéciale** ?
+  Si oui, laquelle, et qui en est le titulaire (parfois le maire au nom
+  de l'État, parfois le préfet) ? » — renvoi obligatoire à
+  `references/pouvoirs-police.md` pour trancher le fond ; ce générateur
+  ne tranche jamais lui-même la compétence. Rappel : la police spéciale,
+  quand elle existe, prime en principe sur la police générale pour le
+  même objet, sauf circonstances locales particulières à motiver
+  explicitement (`controle-legalite.md` §4.3).
+- Q4.3 : « Quel texte fondateur précis souhaitez-vous viser (code,
+  article exact) ? » — **ce générateur ne tranche jamais la base légale
+  de fond lui-même** ; renvoi obligatoire à `references/pouvoirs-police.md`
+  ou `references/reglementation-appliquee.md` selon l'objet. Si le texte
+  proposé n'a pas été vérifié dans la session contre une source
+  officielle, le marquer `⚠️ non vérifié — à confirmer en version
+  consolidée avant signature`. Refuser tout visa générique type « vu le
+  CGCT » sans article précis (`controle-legalite.md` §7, piège n° 1).
+- Q4.4 : « La mesure envisagée est-elle la **moins attentatoire aux
+  libertés** parmi celles permettant d'atteindre l'objectif ? Une mesure
+  alternative moins restrictive a-t-elle été envisagée et, le cas
+  échéant, pourquoi a-t-elle été écartée ? » — test de proportionnalité
+  obligatoire (`controle-legalite.md` §4.5, principe posé par CE, Sect.,
+  19 mai 1933, *Benjamin*, req. n° 17413 et 17520, Lebon p. 541,

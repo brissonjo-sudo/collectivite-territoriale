@@ -1,0 +1,142 @@
+e 5, chaque montant qualifié. Si aucun coût de
+fonctionnement n'a été identifié après relance : le mentionner explicitement
+avec la mise en garde reprise du §1 étape 5, jamais un silence sur ce
+point.]
+
+III. RECETTES ATTENDUES
+[Détail par source (tarification, subvention, économie documentée) — étape
+6, chaque montant qualifié, distinct des coûts, jamais présenté en net par
+défaut]
+
+IV. PLAN DE FINANCEMENT
+[Sources de financement du coût d'investissement — étape 7, chacune
+qualifiée acquise / sollicitée / envisagée. Renvoi ../dette-tresorerie.md si
+emprunt, ../subventions.md si subvention reçue.]
+
+V. IMPACT SUR L'ÉPARGNE ET LES RATIOS
+[Impact sur l'épargne brute/nette et sur la capacité de désendettement —
+étape 8, méthode renvoyée à ../prospective-analyse.md §5.1-§5.2. Si les
+données ne sont pas disponibles : « [INCOMPLET — préciser : données de
+prospective nécessaires au calcul] », jamais une valeur substituée.]
+
+VI. TABLEAU DES OPTIONS COMPARÉES
+
+| Option | Coût d'investissement | Coût de fonctionnement annuel | Recettes attendues | Impact épargne/dette | Soutenable ? |
+|---|---|---|---|---|---|
+| [Option retenue] | [montant] ([qualif.]) | [montant] ([qualif.]) | [montant] ([qualif.]) | [impact] ([qualif.]) | [Oui / Non / Sous condition — préciser laquelle] |
+| [Alternative 1, dont statu quo] | [montant] ([qualif.]) | [montant] ([qualif.]) | [montant] ([qualif.]) | [impact] ([qualif.]) | [Oui / Non / Sous condition] |
+| [Alternative 2 si pertinente] | [ ] | [ ] | [ ] | [ ] | [ ] |
+
+[La colonne « Soutenable ? » ne se remplit jamais par défaut à « Oui » :
+elle reflète l'appréciation croisée du coût de fonctionnement induit et de
+l'impact sur l'épargne, avec la réserve « sous condition » chaque fois
+qu'une donnée reste `à vérifier` ou `hypothétique`.]
+
+VII. ALTERNATIVES COMPARÉES — COMMENTAIRE
+[Commentaire qualitatif sur les alternatives du tableau — étape 9]
+
+VIII. POINTS DE VIGILANCE
+[Risques et incertitudes identifiés — étape 10 : calendrier, dépassement de
+coût, dépendance à une recette hypothétique, évolution réglementaire]
+
+Fait à [lieu], le [date].
+[Signature du rédacteur — direction des finances]
+```
+
+---
+
+## 4. Mentions obligatoires et contrôles de cohérence
+
+- [ ] Chaque valeur chiffrée qualifiée `certain` / `à vérifier` /
+  `hypothétique` — aucune exception.
+- [ ] **Coûts de fonctionnement induits** explicitement traités, même en cas
+  de réponse « aucun » — jamais une section absente ou muette.
+- [ ] Recettes attendues présentées séparément des coûts, jamais nettées par
+  défaut.
+- [ ] Plan de financement : chaque source qualifiée acquise / sollicitée /
+  envisagée.
+- [ ] Impact sur l'épargne et les ratios renvoyé à la méthode de
+  `../prospective-analyse.md`, jamais recalculé de façon autonome sans les
+  données sources.
+- [ ] Tableau d'options comportant au moins une alternative, dont le statu
+  quo si pertinent, avec une colonne « Soutenable ? » renseignée pour
+  chaque ligne.
+- [ ] Cohérence entre le total du tableau d'options et le détail des
+  sections I à IV — tout écart signalé, jamais corrigé silencieusement.
+
+---
+
+## 5. Règle `[INCOMPLET]` — application stricte
+
+**Interdiction absolue d'halluciner une donnée manquante** : montant de
+coût ou de recette, qualification d'une valeur, impact sur l'épargne, part
+de financement acquise.
+
+1. Produire le brouillon avec les champs disponibles ; une section
+   incomplète ne bloque pas la rédaction des autres.
+2. Marquer chaque champ manquant `[INCOMPLET — préciser : <nom du champ>]`.
+3. En fin de document, si au moins un champ est marqué `[INCOMPLET]`,
+   ajouter :
+
+```
+---
+## CHAMPS MANQUANTS — NOTE NON FINALISABLE EN L'ÉTAT
+
+Les informations suivantes sont requises avant transmission au décideur :
+- [champ manquant 1 — étape correspondante]
+- [champ manquant 2 — étape correspondante]
+- [...]
+
+Cette note ne doit être ni transmise, ni présentée comme définitive tant
+que ces champs ne sont pas renseignés.
+```
+
+4. **Demander explicitement** ces données à l'utilisateur, en reprenant la
+   formulation de la question d'étape correspondante (§1).
+5. Ne jamais marquer le document comme « prêt à transmettre » tant qu'une
+   mention `[INCOMPLET]` subsiste.
+6. **Cas particulier — coûts de fonctionnement induits (étape 5)** : ne
+   jamais retenir un impact nul par défaut faute de réponse ; marquer
+   `[INCOMPLET — préciser : coûts de fonctionnement induits, à chiffrer
+   avant décision]`.
+
+---
+
+## 6. Double échelle [risque / confiance]
+
+| Point | Risque | Confiance |
+|---|---|---|
+| Coût d'investissement | Moyen à élevé | Selon qualification (devis ferme vs estimation) |
+| Coûts de fonctionnement induits omis | Élevé | Point d'insistance obligatoire (§1 étape 5) |
+| Recettes hypothétiques présentées comme acquises | Élevé | À corriger systématiquement — qualification stricte |
+| Impact sur l'épargne et la dette | Élevé | Renvoi impératif `../prospective-analyse.md` |
+| Financement par emprunt ou subvention non encore acquis | Élevé | Qualifier acquis / sollicité / envisagé |
+| Absence d'alternative présentée | Moyen | Au moins une alternative exigée |
+| Donnée manquante | Élevé | N/A — `[INCOMPLET]` obligatoire |
+
+---
+
+## 7. Checklist avant remise
+
+1. Toutes les étapes du §1 parcourues une à une, avec confirmation à chaque
+   étape.
+2. **Coûts de fonctionnement induits** traités explicitement, avec la
+   relance obligatoire en cas de réponse absente ou vague (étape 5).
+3. Chaque valeur chiffrée du document porte sa qualification `certain` /
+   `à vérifier` / `hypothétique` — vérification exhaustive, pas seulement
+   sur les montants principaux.
+4. Recettes distinguées des coûts, jamais présentées en net par défaut.
+5. Plan de financement qualifié source par source (acquis / sollicité /
+   envisagé).
+6. Impact sur l'épargne et les ratios renvoyé à `../prospective-analyse.md`,
+   jamais recalculé sans les données sources disponibles.
+7. Tableau d'options comparant au moins deux options (dont le statu quo si
+   pertinent), colonne « Soutenable ? » renseignée pour chacune, sans
+   défaut optimiste.
+8. Aucune donnée manquante comblée par supposition — règle `[INCOMPLET]`
+   (§5) appliquée et champs listés explicitement si nécessaire.
+9. Aucune donnée nominative, aucun nom d'organisme ou de collectivité réel
+   dans le document produit.
+10. Mention finale claire : note **prête à transmettre** ou marquée
+    **`[INCOMPLET]`** avec demande explicite des champs manquants — jamais
+    d'état intermédiaire ambigu.

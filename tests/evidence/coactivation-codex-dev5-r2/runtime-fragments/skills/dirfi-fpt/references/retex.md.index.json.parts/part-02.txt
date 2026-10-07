@@ -1,0 +1,53 @@
+rticle n'est cité dans cette brique. Un point de droit traversé par un cas
+se vérifie et se cite dans la branche de fond concernée.
+
+---
+
+## 10. Écrits & livrables
+
+- **Entrée `JOURNAL.md`** — livrable principal, au format imposé (§6.2).
+- **Entrée `CHANGELOG.md`** — quand l'enseignement dépasse le cas d'espèce
+  (§6.3).
+- **ADR** (`docs/adr/`) — quand la décision qui en découle est structurante.
+
+Aucun de ces écrits n'est destiné à un tiers extérieur au skill.
+
+---
+
+## 11. Double échelle [risque / confiance]
+
+- **Cas sans écart, versé pour mémoire** : [risque faible / confiance stable]
+  — aucune vérification de source nécessaire.
+- **Incident récurrent (rejet, dépassement, retard, subvention, prospective)** :
+  [risque moyen / confiance stable sur la méthode, à vérifier sur tout point
+  de droit traversé].
+- **Cas touchant un volet contentieux ou disciplinaire** : [risque élevé / à
+  vérifier] — cloisonner le RETEX (méthode) du volet procédure
+  (`contentieux-financier.md`, `drh-fpt`) ; ne jamais y trancher une
+  responsabilité.
+
+---
+
+## 12. Checklist de branche
+
+1. Le cas a-t-il été qualifié comme journalisable (§5.1) ?
+2. La **chronologie factuelle** a-t-elle précédé toute préconisation (§6.1) ?
+3. L'incident a-t-il été catégorisé parmi les types repérés, ou explicitement
+   qualifié d'« autre » (§6.1) ?
+4. L'entrée respecte-t-elle le **format imposé** (§6.2), avec action et
+   suite renseignées ?
+5. La bascule vers `CHANGELOG.md` (et, si besoin, une ADR) a-t-elle été
+   envisagée pour tout enseignement dépassant le cas d'espèce (§6.3) ?
+6. Le cas a-t-il été situé par rapport à la prochaine **revue annuelle**
+   (§6.4) ?
+7. L'**anonymisation** (§5.2) a-t-elle été appliquée sans exception ?
+8. Aucune base légale n'a-t-elle été citée de mémoire, tout point de droit
+   étant renvoyé à la branche de fond (§7) ?
+9. La distinction avec `contentieux-financier.md` et `controle-budgetaire.md`
+   a-t-elle été maintenue, sans que le RETEX ne tranche à leur place ?
+10. Couple **[risque / confiance]** (§11) indiqué selon le sous-cas ?
+
+[risque / confiance] : risque variable selon le déclencheur (faible à élevé,
+§11) — confiance stable sur la méthode ; vérification obligatoire dès que le
+RETEX traverse un point de droit ou de procédure relevant d'une autre
+branche.

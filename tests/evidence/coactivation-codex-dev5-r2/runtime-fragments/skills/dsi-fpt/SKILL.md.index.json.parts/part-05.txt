@@ -1,0 +1,36 @@
+é est-il
+    nommé par son chemin, là où sa règle est utilisée ?
+17. **Cas journalisable** apparu → proposé pour `JOURNAL.md` ?
+
+---
+
+## 8. Limites et précautions
+
+- Ne remplace ni le RSSI, ni un prestataire de réponse à incident, ni le CSIRT
+  territorial, ni les autorités compétentes, ni un conseil juridique pour les
+  décisions à fort enjeu.
+- Ne guide jamais une action offensive, un contournement de protection, ni une
+  surveillance de personnes sans base établie (§5.2, §5.3).
+- La fiabilité dépend de l'accessibilité des sources officielles au moment de
+  la requête.
+- Le droit du numérique évolue vite : transpositions en attente, calendriers
+  européens échelonnés et parfois repoussés, référentiels révisés. Confirmer la
+  version en vigueur avant tout usage en acte.
+- Candidat corrigé : **mesure propre requise**, **non relu par un praticien** ; à
+  utiliser avec un regard critique jusqu'à la v1.0.0.
+
+---
+
+## 9. Apprentissage et maintenance
+
+- **`JOURNAL.md`** — une entrée par cas significatif, anonymisée (ni agent, ni
+  administré, ni détail d'architecture identifiable).
+- **`CHANGELOG.md`** — versionnage sémantique.
+- **`docs/adr/`** — une ADR par décision structurante.
+- **Revue du socle** : à chaque étape d'un texte suivi (transposition de NIS2,
+  calendrier du règlement sur l'IA, nouvelle version du RGAA ou du RGS), et au
+  moins à chaque rentrée de septembre ; reporter les dates dans
+  `references/references-verifiees.md` et, dans le seul dépôt source, le cache
+  de maintenance exclu du paquet runtime.
+
+> Historique → `CHANGELOG.md` · Décisions d'architecture → `docs/adr/`

@@ -1,0 +1,36 @@
+(existence, publication,
+   périmètre, non-retrait) si signataire ≠ maire.
+5. **Base légale** citée avec article précis, police générale/spéciale
+   correctement distinguées, primauté de la spéciale respectée ou
+   circonstances locales motivées.
+6. **Motivation en fait et en droit** complète si l'acte relève de
+   l'art. L. 211-2 CRPA — non stéréotypée.
+7. **Test de proportionnalité** explicitement passé, alternative moins
+   restrictive envisagée et écartée si pertinent.
+8. **Voies et délais de recours** mentionnés si l'acte fait grief (Q7.1) ;
+   signalé comme risque pratique majeur si la réponse à Q7.1 reste
+   incertaine.
+9. **Obligation de transmission au contrôle de légalité** vérifiée
+   (art. L. 2131-2 CGCT) et circuit/délai identifiés ou `[INCOMPLET]`.
+10. Toutes les mentions de §4 renseignées ou explicitement `[INCOMPLET]`.
+11. Aucune donnée nominative réelle insérée dans un gabarit ou un
+    brouillon de travail — uniquement des espaces réservés.
+12. Section **« Champs manquants à compléter »** présente si au moins un
+    `[INCOMPLET]` subsiste, distinguant champs factuels et réserves de
+    contrôle de légalité, et demande explicite formulée à l'utilisateur.
+13. Toute référence numérotée porte sa réserve « à confirmer en version
+    consolidée » ou la mention « vérifié sur Légifrance le JJ/MM/AAAA »
+    (règle de provenance, `SKILL.md` §5.3).
+14. Arrêté **non signé, non transmis, non visé comme définitif** tant
+    qu'un `[INCOMPLET]` ou une réserve de la grille §3 subsiste.
+
+[risque : critique — acte faisant grief, exposition contentieuse directe
+sur la collectivité en cas d'irrégularité (compétence, motivation,
+proportionnalité, transmission) / confiance : stable sur les principes
+de `controle-legalite.md` (compétence, motivation CRPA, art. L. 2131-1 et
+L. 2131-2 CGCT — au socle, recontrôlés le 2026-09-14 ; proportionnalité
+*Benjamin*, req. n° 17413 et 17520, Lebon p. 541, `CETATEXT000007636694` —
+vérifié le 2026-09-06), à vérifier systématiquement sur la base légale de fond
+propre à chaque police (générale ou spéciale), sur l'existence et le
+périmètre exact d'une délégation de signature, et sur les seuils/délais
+chiffrés de transmission (à confirmer en version consolidée)]

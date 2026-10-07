@@ -1,0 +1,39 @@
+Organisez deux travaux en parallèle : **préparer la continuité avec la DSI et les métiers**, et **faire examiner les pièces et les droits contractuels par le service juridique** avant de décider d’une mise en demeure.
+
+**Cadrage — [INCOMPLET]**
+
+Analyse du 07/10/2026 ; dates du refus, de fin du contrat et d’action envisagée : inconnues. Collectivité et territoire : à préciser. Régime du contrat : non établi. Note opérationnelle, méthode recherche-juridique A standard. **[Risque élevé / confiance juridique : abstention]** ; la criticité réelle du service reste à établir.
+
+Fait fourni : l’éditeur refuse un export exploitable à la fin du contrat. Le contrat, le refus écrit, les accès restants, le support et la capacité de reprise n’ont pas été examinés. Les fichiers du candidat ont été chargés par fragments ; cela ne constitue pas une activation native d’un Skill ou d’un plugin.
+
+Trois précisions conditionnent la suite :
+
+1. Quelle entité a signé, et pouvez-vous fournir les clauses de sortie/restitution avec leurs annexes et dérogations, sans secrets ni données nominatives ?
+2. Quand le contrat prend-il fin, quand le refus a-t-il été formulé et quelle coupure l’éditeur annonce-t-il ?
+3. Qui exploite actuellement le service — équipe interne, service mutualisé ou prestataire — et quelles opérations métier seraient bloquées ?
+
+**Volet DSI : plan de continuité à compléter**
+
+Le cadrage suit `dsi-fpt/references/analyse-situation.md` ; le dossier de sortie suit `dsi-fpt/references/contrats-prestataires.md`. Les éléments ci-dessous sont des besoins techniques proposés, dont l’existence dans les engagements souscrits reste à examiner.
+
+| Travail | Responsable à désigner | Preuves et validation attendues |
+|---|---|---|
+| Inventorier le périmètre | DSI avec responsable métier | Données, pièces jointes, configurations, formats, relations, interfaces, composants et licences ; inventaire validé par le métier, écarts visibles |
+| Clarifier l’exploitation transitoire | Responsable d’exploitation, interne ou mutualisé, avec interlocuteur éditeur | Accès encore disponibles, couverture de support, contacts, supervision du service et traitement des anomalies ; essai du circuit de support |
+| Préparer le fonctionnement dégradé | Responsable métier avec coordination de la direction | Opérations prioritaires, moyens disponibles, interruption et perte de données acceptables à arbitrer ; exercice du fonctionnement dégradé |
+| Tester une restitution | DSI et opérateur de reprise autorisé | Export d’essai documenté, dictionnaire, liens, pièces et paramètres ; contrôles de complétude, cohérence et lisibilité, puis import et validation métier |
+| Préparer la bascule | DSI avec responsable métier et décideur à identifier | Traitement des modifications entre export et bascule, anomalies bloquantes, retour préparé et contrôle après reprise ; décision tracée sur les résultats de recette |
+
+Pour la continuité, appliquer `dsi-fpt/references/crise-cyber-continuite.md` : fixer les priorités avec les métiers et les confronter aux moyens démontrés. Pour la reprise, appliquer `dsi-fpt/references/applications-interoperabilite.md` : un fichier reçu ou un nombre de lignes importées ne démontre pas un service utilisable. Tester dans un environnement autorisé avec des données fictives ou préparées selon les exigences reçues. Conserver les copies déjà disponibles et les constats ; éviter suppression et fermeture prématurée des accès pendant la préparation.
+
+**Analyse recherche-juridique : vérification non aboutie**
+
+Deux appels réels à droit_francais ont été effectués le 07/10/2026 : recherche thématique dans Judilibre, puis récupération d’une décision. Le contenu reçu concerne la location de produits informatiques et ne fournit pas de fondement pertinent à votre demande d’export. Aucune règle applicable à votre contrat n’est donc confirmée. Je m’abstiens sur l’obligation de restitution, les frais, les délais, les sanctions et les conditions d’une mise en demeure. La méthode vient de `recherche-juridique/SKILL.md` ; le volet contentieux reste suspendu selon `recherche-juridique/references/modules.md`.
+
+Préparez pour le service juridique : contrat signé, annexes, avenants, documents incorporés et dérogations, engagements de réversibilité, licences, demandes d’export, refus écrit, tickets, chronologie et constats techniques non nominatifs. Séparez ce qui était promis de ce qui est constaté et de ce que vous proposez désormais.
+
+Demandez une note répondant précisément à ces questions : quels éléments et formats peut-on réclamer sur les pièces examinées ? Quels droits d’usage permettent la reprise ? Quels frais sont justifiés ? Quelle procédure, quels délais, quel destinataire et quel signataire retenir avant une mise en demeure ? Quels textes primaires et quelles versions soutiennent chaque conclusion ?
+
+Le dossier préalable peut réunir **fait → pièce → clause à examiner → impact métier → résultat technique demandé**. Aucun acte n’est ici rédigé comme définitif, signé ou envoyé. Le projet éventuel et ses suites restent à faire valider après cette revue.
+
+Limites : contrat absent, dates et responsabilités inconnues, reprise non testée, aucun fondement juridique pertinent récupéré. La méthode technique est proposée ; vos droits et la capacité réelle de continuité restent à établir.

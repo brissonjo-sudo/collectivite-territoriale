@@ -1,0 +1,82 @@
+e d'emprunt** — `../references/templates/deliberation-budgetaire.md`.
+- **Rapport de contrôle du satellite** : synthèse annuelle destinée à
+  l'assemblée ou à l'exécutif, formalisme à adapter localement.
+
+**Acte soumis au contrôle de légalité** : délibération de participation, de
+garantie, ou de création d'un budget annexe — vérifier compétence, mentions
+obligatoires et transmission via `../references/controle-budgetaire.md`.
+
+---
+
+## 5. Jurisprudence clé
+
+> Pointeur uniquement — voir **`recherche-juridique`**. Aucune décision n'est
+> citée ici par son nom d'usage, son millésime ou son numéro.
+
+Thèmes appelant une recherche avant conclusion :
+- Critères jurisprudentiels de l'**association transparente** et de la
+  **para-administration**.
+- Étendue du **contrôle** qu'une collectivité doit exercer sur un satellite
+  pour ne pas voir sa responsabilité engagée en cas de défaillance de
+  celui-ci.
+- Conditions de mise en jeu d'une **garantie d'emprunt** accordée à un
+  satellite défaillant.
+- Régime de responsabilité applicable aux **représentants de la collectivité**
+  siégeant dans les organes d'un satellite.
+
+---
+
+## 6. Check-list opérationnelle
+
+### Garde-fou ordonnateur / comptable (`SKILL.md` §5.2)
+
+- [ ] Le satellite dispose-t-il d'une **gouvernance, d'un financement et
+      d'une activité réellement autonomes** ? Si l'un de ces critères fait
+      défaut de façon caractérisée → suspicion d'association transparente ou
+      de para-administration, à signaler avant toute autre recommandation.
+- [ ] Le satellite **sert-il de caisse** à la collectivité ou exécute-t-il
+      des missions qui devraient relever directement d'un service de la
+      collectivité, financées hors du circuit du comptable ? Si oui → **STOP**
+      de §5.2 à afficher avant tout contenu.
+
+### Typologie et flux
+
+- [ ] Type de satellite identifié précisément (budget annexe, régie
+      autonome, CCAS, SEM, SPL, délégataire, association) ?
+- [ ] Flux financiers recensés (participations, subventions d'équilibre,
+      avances) et chacun rattaché à son fondement juridique ?
+- [ ] Récurrence d'une subvention d'équilibre documentée et questionnée si
+      elle traduit une dépendance structurelle ?
+
+### Information et contrôle
+
+- [ ] Annexe budgétaire relative aux organismes satellites tenue à jour ?
+- [ ] Obligation de communication des comptes du satellite vérifiée et
+      respectée ?
+- [ ] Contrôle de l'organisme documenté (comptes, présence en gouvernance,
+      compte rendu d'activité) ?
+- [ ] Garanties d'emprunt accordées : délibération spécifique, quotité et
+      plafond vérifiés, exposition cumulée suivie ?
+- [ ] Couple [risque / confiance] indiqué si utile à la décision.
+- [ ] Cas journalisable (satellite à la limite de la transparence,
+      dépendance financière croissante) → proposé pour `JOURNAL.md`.
+
+---
+
+## Références et remontées
+
+**Branches mobilisées** : `nomenclature-m57.md` et `budget-cycle.md`
+(budgets annexes), `subventions.md` (subventions et participations),
+`controle-interne-financier.md` (contrôle des organismes),
+`dette-tresorerie.md` (garanties d'emprunt), `contentieux-financier.md`
+(conséquences d'une requalification).
+
+**Objets liés** : `../objets/subvention-association.md`,
+`../objets/regie.md` (régie dotée de l'autonomie financière),
+`../objets/immobilisation.md` (biens de retour en délégation de service
+public), `../objets/emprunt.md` (garanties).
+
+**Point de mise à jour requis** : critères précis de l'autonomie financière
+selon chaque forme de satellite, plafonds et quotités de garantie, seuils de
+communication des comptes — à réviser en cas d'évolution du régime
+applicable.

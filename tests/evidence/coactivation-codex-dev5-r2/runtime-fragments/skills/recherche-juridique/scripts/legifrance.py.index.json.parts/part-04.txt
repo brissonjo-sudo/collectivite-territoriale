@@ -1,0 +1,220 @@
+: min(args.limit, 50),  # plafond imposé par l'API
+        "resolve_references": "true" if args.resolve_references else None,
+    }
+    data = judilibre_get("/search", params)
+
+    if args.json:
+        print(json.dumps(data, ensure_ascii=False, indent=2))
+        return 0
+
+    results = data.get("results") or []
+    total = data.get("total", len(results))
+    if not results:
+        print(
+            f"Aucune décision pour « {args.query} ». Élargir la requête, "
+            "vérifier les filtres, ou utiliser --operator or.",
+            file=sys.stderr,
+        )
+        return 5
+
+    print(f"{total} décision(s) trouvée(s), {len(results)} affichée(s) :")
+    print("─" * 72)
+    for r in results:
+        jur = JURIDICTIONS.get(r.get("jurisdiction"), r.get("jurisdiction") or "?")
+        chambre = r.get("chamber") or ""
+        date = _fmt_date(r.get("decision_date"))
+        num = r.get("number") or "?"
+        ecli = r.get("ecli") or ""
+        sol = r.get("solution") or ""
+        pub = r.get("publication") or []
+        pub_lbl = ", ".join(PUBLICATIONS.get(p, p) for p in pub) if pub else ""
+        print(f"• {jur} {chambre}, {date}, n° {num}".rstrip())
+        if ecli:
+            print(f"  ECLI      : {ecli}")
+        if sol:
+            print(f"  Solution  : {sol}")
+        if pub_lbl:
+            print(f"  Publication: {pub_lbl}")
+        print(f"  Identifiant: {r.get('id', '?')}")
+        summary = (r.get("summary") or "").strip()
+        if summary:
+            print(f"  Sommaire  : {_truncate(_strip_html(summary), 300)}")
+        highlights = r.get("highlights") or {}
+        for zone, extracts in list(highlights.items())[:2]:
+            if extracts:
+                print(f"  [{zone}] {_truncate(_strip_html(str(extracts[0])), 220)}")
+        print("─" * 72)
+
+    print(
+        "\nRègle de provenance : ne citer une décision qu'après récupération "
+        "de son texte via « decision <identifiant> ». Un résultat de "
+        "recherche ne vaut pas lecture."
+    )
+    return 0
+
+
+def cmd_decision(args) -> int:
+    """Récupère le texte intégral et les métadonnées d'une décision Judilibre."""
+    params = {
+        "id": args.id.strip(),
+        "resolve_references": "true",
+        "query": args.query,
+        "operator": args.operator if args.query else None,
+    }
+    data = judilibre_get("/decision", params)
+
+    if args.json:
+        print(json.dumps(data, ensure_ascii=False, indent=2))
+        return 0
+
+    if not data or not data.get("id"):
+        raise LegifranceError(
+            f"Décision {args.id} introuvable (réponse vide).", exit_code=5
+        )
+
+    jur = JURIDICTIONS.get(data.get("jurisdiction"), data.get("jurisdiction") or "?")
+    chambre = data.get("chamber") or ""
+    date = _fmt_date(data.get("decision_date"))
+    num = data.get("number") or "?"
+    pub = data.get("publication") or []
+    pub_lbl = ", ".join(PUBLICATIONS.get(p, p) for p in pub) if pub else "non publiée"
+
+    print("─" * 72)
+    print(f"Juridiction        : {jur} {chambre}".rstrip())
+    print(f"Date               : {date}")
+    print(f"Numéro             : {num}")
+    print(f"ECLI               : {data.get('ecli') or '?'}")
+    print(f"Formation          : {data.get('formation') or '?'}")
+    print(f"Solution           : {data.get('solution') or '?'}")
+    print(f"Publication        : {pub_lbl}")
+    print(f"Identifiant        : {data.get('id')}   (← provenance vérifiée)")
+    print("─" * 72)
+
+    summary = _strip_html(data.get("summary") or "")
+    if summary:
+        print("SOMMAIRE")
+        print(summary)
+        print("─" * 72)
+
+    if args.zones:
+        zones = data.get("zones") or {}
+        text = data.get("text") or ""
+        if zones and text:
+            for name, spans in zones.items():
+                if not isinstance(spans, list):
+                    continue
+                chunk = " ".join(
+                    text[s.get("start", 0): s.get("end", 0)]
+                    for s in spans
+                    if isinstance(s, dict)
+                ).strip()
+                if chunk:
+                    print(f"[{name.upper()}]")
+                    print(_strip_html(chunk))
+                    print()
+        else:
+            print("(zonage non disponible pour cette décision)")
+    else:
+        text = _strip_html(data.get("text") or "")
+        print(text if text else "(texte non renvoyé par l'API)")
+    print("─" * 72)
+
+    if not pub:
+        print(
+            "⚠️  Décision non publiée au Bulletin : portée doctrinale limitée, "
+            "à ne pas présenter comme un arrêt de principe.",
+            file=sys.stderr,
+        )
+
+    print()
+    print("Citation normalisée (à compléter avec la date de consultation) :")
+    print(
+        f"  {jur} {chambre}, {_fr_date(date)}, n° {num}"
+        f"{', ' + data.get('ecli') if data.get('ecli') else ''}"
+        f", {pub_lbl}, identifiant Judilibre {data.get('id')}, "
+        "consulté le JJ/MM/AAAA".replace(" ,", ",")
+    )
+    return 0
+
+
+def cmd_taxonomy(args) -> int:
+    """Liste les valeurs acceptées par un filtre Judilibre (chambre, formation, thème…)."""
+    params = {"id": args.key, "context_value": args.jurisdiction}
+    data = judilibre_get("/taxonomy", params)
+    if args.json:
+        print(json.dumps(data, ensure_ascii=False, indent=2))
+        return 0
+    result = data.get("result", data)
+    if isinstance(result, dict):
+        for key, label in result.items():
+            print(f"  {key:<24} {label}")
+    else:
+        print(json.dumps(result, ensure_ascii=False, indent=2))
+    return 0
+
+
+# --------------------------------------------------------------------------- #
+# Utilitaires
+# --------------------------------------------------------------------------- #
+def _truncate(text: str, limit: int) -> str:
+    text = " ".join(text.split())
+    return text if len(text) <= limit else text[: limit - 1] + "…"
+
+
+def _first_id_with_prefix(obj, prefixes) -> str | None:
+    """Cherche récursivement un identifiant commençant par l'un des préfixes.
+
+    Nécessaire côté jurisprudence Légifrance : dans les réponses de /search,
+    ``results[i]["id"]`` vaut ``None`` et l'identifiant officiel n'existe que
+    sous ``results[i]["titles"][0]["id"]``.
+    """
+    prefixes = tuple(prefixes)
+    if isinstance(obj, str):
+        return obj if obj.startswith(prefixes) else None
+    if isinstance(obj, dict):
+        for v in obj.values():
+            found = _first_id_with_prefix(v, prefixes)
+            if found:
+                return found
+    if isinstance(obj, list):
+        for v in obj:
+            found = _first_id_with_prefix(v, prefixes)
+            if found:
+                return found
+    return None
+
+
+def _aujourdhui() -> str:
+    """Date civile locale (AAAA-MM-JJ), défaut des recherches par version.
+
+    Date **locale** et non UTC : une réforme entre en vigueur à une date du
+    calendrier français, et un poste à Paris interrogé en soirée obtiendrait
+    en UTC la version de la veille — soit, le jour même d'une entrée en
+    vigueur, le texte que le skill a précisément pour objet de ne plus citer.
+    """
+    import datetime
+
+    return datetime.date.today().strftime("%Y-%m-%d")
+
+
+def _epoch_ms(iso_date: str) -> int:
+    """AAAA-MM-JJ -> millisecondes epoch UTC, format attendu par `singleDate`.
+
+    La conversion est ancrée à minuit UTC, comme les dates de version
+    renvoyées par l'API (``dateDebut`` : ``…T00:00:00.000+0000``) : une même
+    date rend ainsi la même version quel que soit le fuseau de la machine.
+    """
+    import datetime
+
+    try:
+        jour = datetime.datetime.strptime(iso_date, "%Y-%m-%d")
+    except (ValueError, TypeError) as exc:
+        raise LegifranceError(
+            f"Date invalide : {iso_date!r} (format attendu AAAA-MM-JJ).",
+            exit_code=2,
+        ) from exc
+    return int(jour.replace(tzinfo=datetime.timezone.utc).timestamp() * 1000)
+
+
+def _fmt_date(value) -> str:
+    """Les dates Légifrance sont souvent des timestamps ms epoch ou des chaînes

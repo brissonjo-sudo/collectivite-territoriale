@@ -1,0 +1,76 @@
+{
+  "agent": "/root/juge_codex_dev5_r2_08b",
+  "thread_id": "01a117b6-ac26-7202-b9e2-6639a7002687",
+  "parent_thread_id": "01a1103e-0b49-70c1-8f4e-66a36b54916f",
+  "model": "gpt-6.1-sol",
+  "turn_id": "01a117b6-ac7c-7bd2-9d10-084c0eac7426",
+  "created_at": "2026-10-07T18:53:30.022Z",
+  "started_at": "2026-10-07T18:53:30.121Z",
+  "completed_at": "2026-10-07T18:55:04.533Z",
+  "fork_turns": "none",
+  "initial_message_verified": false,
+  "initial_message_sha256": "5460c74215d5c9e729208b501a4ec654dd0407169d8c072b11b4ecbd8840140c",
+  "case_id": "plugin-dsi-budget",
+  "assessment": {
+    "case_id": "plugin-dsi-budget",
+    "verdict": "echec",
+    "technical_status": "passed",
+    "behavior_status": "failed",
+    "documentary_status": "passed",
+    "primary_content_available": true,
+    "release_ready": false
+  },
+  "host": "Codex",
+  "activation_kind": "file_read_fragments",
+  "actual_plugin_activation_verified": false,
+  "full_packet_context_verified": true,
+  "fragment_count": 6,
+  "judge_adapter_sha256": "e1e04cd4ab37425885d57861151c893a7b921999ac295ddc7d44c5a0443fdc0b",
+  "packet_sha256": "7262e06ed38307e1f026ce6cf2a25ce6ee19e09f2db17ff5a43b9bf868b4c424",
+  "response_sha256": "0891485b8080df0153c3dc7a84a3de5cb8f3d1d268db0113ddd39a5140888c42",
+  "judgment_sha256": "f58542a363990b4fcabc24850a1629714e397eb0a78687c01b590bc35a84e8b2",
+  "trace_sha256": "5647f570ab7994e3152ed55cbd64ccdb7849e868a6aa739e210ed73085a51489",
+  "rejected_creation_attempts": [],
+  "native_session_file": "rollout-2026-10-07T20-53-30-01a117b6-ac26-7202-b9e2-6639a7002687.jsonl",
+  "parent_session_file": "rollout-2026-10-06T10-04-24-01a1103e-0b49-70c1-8f4e-66a36b54916f.jsonl",
+  "presentation_wrapper_sha256": "b709a2641f5433f3336a916b67b115570e5d77ed17d58433d39a89634ce3c14b",
+  "exact_presentation_normalizations": [
+    {
+      "call_id": "call_86cda280ee764ef78153a51e1f33cfb3",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-budget-b/fragment-01.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_c893cc51ea04493a8079b940ee379466",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-budget-b/fragment-02.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_ed6c27ef13c24999aa62e86e956ca009",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-budget-b/fragment-03.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_306023d884fc456389ce177a2b16017a",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-budget-b/fragment-04.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_a65d070792c240c083d21bc04905826e",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-budget-b/fragment-05.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_c4208b35962d46e0980c84fb2ac899df",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-budget-b/fragment-06.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    }
+  ],
+  "normalization_scope": "only expected content plus one terminal CRLF; raw events unchanged"
+}

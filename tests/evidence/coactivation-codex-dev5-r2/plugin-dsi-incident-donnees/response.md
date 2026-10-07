@@ -1,0 +1,58 @@
+STOP — Incident de sécurité en cours ou récent.
+
+1. Préserver les preuves avant toute opération irréversible : ne pas réinstaller, effacer, restaurer ni rallumer les systèmes touchés ; faire organiser leur isolement par les intervenants habilités.
+2. Alerter immédiatement les circuits internes de crise. Faire vérifier les autres signalements, la plainte et les conditions d’assurance, sans leur attribuer de délai non vérifié.
+3. Faire remonter les décisions de communication publique, d’arrêt d’un service public et toute demande de rançon à l’exécutif ; ne pas les décider seul.
+4. Aucune contre-mesure offensive ni aucun accès à un système tiers.
+5. Données personnelles possiblement touchées → **BASCULE dpo-ct**.
+
+**Analyse au 07/10/2026.** Faits fournis : SI externalisé, intrusion, extraction suspectée de données sociales. Dates des faits et de prise de connaissance : inconnues. Périmètre : collectivité française, organisme exact à préciser. Réponse opérationnelle et esquisse juridique conditionnelle ; aucune notification envoyée. **[Risque opérationnel critique / confiance limitée sur les faits]**.
+
+**Volet dsi-fpt — confinement, preuves et continuité**
+
+Organiser une cellule de crise avec direction, pilote SI de la collectivité, RSSI ou appui spécialisé, prestataire, DPO et service social. Désigner un responsable pour chaque action et employer un canal de coordination dont la fiabilité est établie. Cette organisation est à confirmer selon les mandats et délégations disponibles. Repères : `dsi-fpt/references/analyse-situation.md`, `dsi-fpt/references/crise-cyber-continuite.md` et `dsi-fpt/objets/incident-securite.md`.
+
+| Volet | Action et responsable proposé | Preuves et recette attendues |
+|---|---|---|
+| Périmètre et dépendances | Le pilote SI fait inventorier au prestataire les applications, actifs, identités et interfaces atteints ou menacés. | Inventaire daté, faits séparés des hypothèses ; rapprochement avec les services sociaux concernés. Aucune étendue de compromission présumée. |
+| Confinement et accès | L’intervenant de réponse à incident fait contenir les accès suspects et borner les accès prestataires, après contrôle des dépendances. | Périmètre, autorisation, intervenant, action et résultat tracés ; contrôle de la réduction des accès suspects. |
+| Preuves | Le RSSI ou l’expert fait préserver les éléments utiles, notamment les journaux existants, dans un circuit protégé. | Horodatage, origine, intégrité, conservation et accès aux preuves documentés ; éviter leur rotation ou leur destruction. Aucun journal nominatif ni secret à transmettre ici. |
+| Support et exploitation | Le pilote SI vérifie l’astreinte réelle, les contacts fonctionnels, les droits d’intervention et la supervision disponible. | Rapport factuel du fournisseur, actions effectuées et éléments manquants ; un engagement commercial ne vaut pas preuve d’exécution. |
+| Continuité et reprise | Le métier social définit les services prioritaires et le fonctionnement dégradé ; l’équipe technique prépare la reprise. | Preuves conservées, environnement de reprise maîtrisé, sauvegardes évaluées et restauration testée dans un périmètre autorisé ; validation métier, décideur identifié, surveillance et possibilité de retour au mode dégradé. |
+
+Ces contrôles relèvent aussi de `dsi-fpt/references/securite-si.md`. Une application de nouveau disponible ne prouve ni la fin de la compromission ni l’absence de fuite. Tenir un journal de crise et un dossier évolutif, sans reproduire les preuves sensibles dans les comptes rendus courants.
+
+**BASCULE dpo-ct — qualification, risque et notifications**
+
+Le volet DSI s’arrête à la constatation technique. L’analyse des données relève ici de `dpo-ct/references/analyse-situation.md`, `dpo-ct/references/violations.md` et, pour les acteurs externalisés, `dpo-ct/references/sous-traitance-transferts.md`. La vérification du droit est attribuée à **recherche-juridique**.
+
+Le responsable du traitement est l’acteur qui détermine les finalités et les moyens ; le sous-traitant traite pour son compte. L’externalisation ne suffit donc pas à identifier ces rôles. Le DPO instruit la qualification et recommande la décision à partir des faits fournis par la DSI, le prestataire et le métier ; ses missions sont de conseil et de contrôle. Les obligations de notification ci-dessous sont portées par le responsable du traitement. Fondements : art. 4, 33 et 39 du RGPD, consultés le 07/10/2026 sur [EUR-Lex](https://eur-lex.europa.eu/eli/reg/2016/679/oj/fra) et dans le [texte reproduit par la CNIL](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4).
+
+Un accès non autorisé à des données personnelles peut constituer une violation même sans extraction démontrée : la définition couvre aussi perte, destruction, altération ou divulgation non autorisée. **J’en déduis qu’il faut rechercher les preuves d’accès aux données, sans attendre uniquement une preuve d’exfiltration.** Art. 4, point 12, [texte officiel EUR-Lex](https://eur-lex.europa.eu/eli/reg/2016/679/oj/fra), consulté le 07/10/2026.
+
+« Données sociales » ne décrit pas les champs réellement touchés. Ne présumer ni données de santé, ni mineurs, ni vulnérabilité particulière, ni risque élevé. Faire examiner catégories exactes, volumes, personnes, facilité d’identification, conséquences possibles et efficacité réelle des protections, notamment l’éventuelle compromission des clés. La qualification définitive et le risque restent ouverts.
+
+**Vérification des obligations — sous réserve du régime et des faits confirmés**
+
+Pour un traitement relevant du RGPD :
+
+- **Autorité de contrôle :** le responsable notifie dans les meilleurs délais et, si possible, au plus tard **72 heures après sa prise de connaissance**, sauf si la violation est peu susceptible d’engendrer un risque pour les droits et libertés. Un retard se motive ; les informations peuvent être transmises par étapes sans retard supplémentaire indu.
+- **Sous-traitant :** il informe le responsable du traitement sans délai indu après sa propre prise de connaissance. Son rapport ne remplace pas la décision du responsable.
+- **Documentation :** toute violation est documentée avec ses faits, effets et mesures correctrices, même si elle n’est pas notifiée.
+- **Personnes :** si la violation est susceptible d’engendrer un risque élevé, communication sans délai indu. Ce volet s’évalue séparément ; ne pas attendre automatiquement une notification préalable à la CNIL.
+
+Fondements : art. 33 et 34, [RGPD — version consolidée signalée actuelle par EUR-Lex](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:02016R0679-20160504), consultée le 07/10/2026 et confrontée au texte français CNIL. **Confiance élevée sur ces règles ; application au cas non tranchée.**
+
+Les exceptions à la communication aux personnes demandent une preuve : protections rendant les données incompréhensibles aux personnes non autorisées, mesures ultérieures supprimant la probabilité du risque élevé, ou efforts disproportionnés avec information publique équivalente. Aucune n’est établie ici. Art. 34, [texte CNIL](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4), consulté le 07/10/2026.
+
+La CNIL précise que la connaissance correspond à une certitude raisonnable qu’un incident a touché des données personnelles. **T0 reste inconnu : ne pas le confondre avec la date de l’intrusion ou de l’alerte.** Repère conditionnel : T0 + 72 heures, sans attendre cette limite pour agir. [Doctrine CNIL consultée le 07/10/2026](https://www.cnil.fr/fr/violations-de-donnees-personnelles-les-regles-suivre).
+
+Préparer nature, catégories et nombres approximatifs de personnes et d’enregistrements, conséquences, mesures et contact DPO. Utiliser le point d’entrée officiel [Notifier une violation — CNIL](https://www.cnil.fr/fr/services-en-ligne/notifier-une-violation-de-donnees-personnelles), consulté le 07/10/2026. Le brouillon doit être relu par le DPO humain et la décision tracée par le responsable avant envoi.
+
+Pour fermer l’analyse, trois précisions sont nécessaires, sans données nominatives :
+
+1. Quel organisme porte le traitement — commune, CCAS, EPCI ou autre — et quelle est sa finalité exacte ?
+2. Quand ont eu lieu l’intrusion, l’alerte et l’acquisition d’une certitude raisonnable par le responsable du traitement ?
+3. Quelles données et populations sont réellement concernées, avec quels volumes, protections et indices d’accès ou d’extraction ?
+
+**Limites de recherche-juridique :** la consultation MCP Légifrance a renvoyé des articles étrangers à la question ; aucun n’est utilisé. La preuve juridique retenue vient des textes effectivement reçus sur EUR-Lex et CNIL, pas des fichiers locaux. Sans les précisions ci-dessus, aucune décision de notification ni échéance calendaire précise n’est arrêtée. Les autres signalements cyber, les conditions d’assurance et les suites pénales restent à faire vérifier dans leur périmètre et à leur source ; aucune obligation ou délai supplémentaire n’est affirmé.

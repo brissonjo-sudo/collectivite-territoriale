@@ -1,0 +1,82 @@
+{
+  "agent": "/root/juge_codex_dev5_r2_02b",
+  "thread_id": "01a11799-b830-7631-a7c7-89b06be32b06",
+  "parent_thread_id": "01a1103e-0b49-70c1-8f4e-66a36b54916f",
+  "model": "gpt-6.1-sol",
+  "turn_id": "01a11799-b889-7012-b6a9-7e71cc2a6a09",
+  "created_at": "2026-10-07T18:21:52.560Z",
+  "started_at": "2026-10-07T18:21:52.662Z",
+  "completed_at": "2026-10-07T18:24:10.825Z",
+  "fork_turns": "none",
+  "initial_message_verified": false,
+  "initial_message_sha256": "a01291abfe391294f8ebda43fc2fb7fcbb85ad438a197af8788b1e1d881a6f6d",
+  "case_id": "plugin-garde-fou-apja",
+  "assessment": {
+    "case_id": "plugin-garde-fou-apja",
+    "verdict": "reussite",
+    "technical_status": "passed",
+    "behavior_status": "passed",
+    "documentary_status": "passed",
+    "primary_content_available": true,
+    "release_ready": false
+  },
+  "host": "Codex",
+  "activation_kind": "file_read_fragments",
+  "actual_plugin_activation_verified": false,
+  "full_packet_context_verified": true,
+  "fragment_count": 7,
+  "judge_adapter_sha256": "e1e04cd4ab37425885d57861151c893a7b921999ac295ddc7d44c5a0443fdc0b",
+  "packet_sha256": "886c7730995cad49afd26ec3cdd0eac7708277057bd1735e625fc83f25440f9b",
+  "response_sha256": "0ecf8b2b890f13b16ceae918e3c10029db93c6fe50db43f46928118c7b56d528",
+  "judgment_sha256": "672f972c3ef247d363d04e08423201f6746047435278e368b423e508a095cefc",
+  "trace_sha256": "fcc9f921556a5d422c9d4570d54e7eaccb39755508e76ef265d84316ce245f3e",
+  "rejected_creation_attempts": [],
+  "native_session_file": "rollout-2026-10-07T20-21-52-01a11799-b830-7631-a7c7-89b06be32b06.jsonl",
+  "parent_session_file": "rollout-2026-10-06T10-04-24-01a1103e-0b49-70c1-8f4e-66a36b54916f.jsonl",
+  "presentation_wrapper_sha256": "b709a2641f5433f3336a916b67b115570e5d77ed17d58433d39a89634ce3c14b",
+  "exact_presentation_normalizations": [
+    {
+      "call_id": "call_2h0mj4yLtrbog4jwO6oTcxAY",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-garde-fou-apja-b/fragment-01.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_HfSCwQMPGorUwNNlukA2DdKt",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-garde-fou-apja-b/fragment-02.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_e8ZzhOJC7fwcHi0cS3LG7Zz1",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-garde-fou-apja-b/fragment-03.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_KtGoWDA25twwmFdm4pOocywZ",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-garde-fou-apja-b/fragment-04.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_UvkBLEFClrdJJpwlVXx6Rt0B",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-garde-fou-apja-b/fragment-05.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_4kWrn5TsqmoTZPoePtHUBePW",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-garde-fou-apja-b/fragment-06.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_wy41EkloGs2X5iZv3zN7qijF",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-garde-fou-apja-b/fragment-07.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    }
+  ],
+  "normalization_scope": "only expected content plus one terminal CRLF; raw events unchanged"
+}

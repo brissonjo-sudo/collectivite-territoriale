@@ -1,0 +1,139 @@
+# Objet — Accidents de la circulation (v0.1.0)
+
+> Structure conforme à `_gabarit-objet.md`. Cet objet **agrège et pointe** ; le
+> fond juridique reste dans `references/`, la jurisprudence reste renvoyée à
+> `recherche-juridique`. Aucune référence numérotée ou valeur datée citée de
+> mémoire : tout numéro d'article ou délai est marqué « à confirmer en version
+> consolidée » sauf vérification effective en session.
+
+**Situation type** : accident de la circulation sur la voie publique — du simple
+constat à la constatation d'infraction, avec ou sans appréhension de personne,
+transmission aux forces de l'ordre, secours et sécurisation du site.
+
+**[Risque / Confiance] dominant** : **Moyen / À vérifier**. Le cadre général de
+l'intervention est stable (constatation, sécurisation, rapports aux autorités),
+mais la frontière APJA vs OPJ dépend du déroulement des faits (délit grave,
+interpellation d'un conducteur), du droit applicable au type d'accident, et de
+la convention locale de coordination avec les forces de l'ordre. Aucun délai
+(délai de transmission de PV au procureur, délai de consultation d'un OPJ avant
+intervention sur un crime routier) ne doit être donné de mémoire.
+
+---
+
+## 1. Acteurs et autorités compétentes
+
+- **Le maire** : titulaire de la **police générale** (CGCT, art. L. 2212-2 —
+  ordre, sûreté, sécurité, salubrité) et de la **police du code de la route**
+  (police spéciale). Il est informé sans délai de tout accident mortel ou grave
+  (blessure, dommage matériel significatif) → signaler au DPM et à la mairie
+  selon la procédure locale (note d'information, rapport).
+- **La police municipale (PM)** : **constate** l'accident (lieux, véhicules
+  impliqués, identificateurs, contexte), **sécurise le site** (signalisation,
+  éloignement des tiers, coordination avec les secours), **rend compte** sans
+  délai au maire et à l'OPJ territorialement compétent (Police Nationale ou
+  Gendarmerie selon la juridiction). L'agent PM n'auditionne **jamais** un
+  suspect et ne retient un conducteur que sur un fondement qualifié : art. 53
+  + 73 CPP en cas de crime flagrant ou de délit flagrant puni
+  d'emprisonnement, ou art. 78-6 CPP dans le cadre strict d'un relevé
+  d'identité et selon la décision de l'OPJ.
+- **Les forces de l'État (OPJ — Police Nationale, Gendarmerie)** : seules
+  compétentes pour les actes de police judiciaire (audition de suspects,
+  garde à vue, perquisition liée à l'accident), notamment en cas de crime
+  routier (homicide involontaire, blessures involontaires aggravées) ou de
+  délit caractérisé (fuite, défaut d'assurance constaté). Dès que le seuil de
+  compétence est franchi, la PM **rend compte immédiatement à l'OPJ**
+  (art. 21-2 CPP). Elle ne présente une personne à l'OPJ que sur un fondement
+  qualifié (art. 53 + 73 ou art. 78-6 CPP, `SKILL.md` §5.2) : le
+  franchissement du seuil, à lui seul, ne crée aucun pouvoir de rétention.
+- **Les secours (SAMU, pompiers)** : interviennent en parallèle de la PM sur
+  base juridique propre (aide à personne). La PM **coordonne** sans entraver (→
+  `../references/continuum-partenariats.md`).
+- **Conflit de compétence à signaler** : un accident est souvent d'abord constaté
+  par la PM (être sur le terrain en priorité), puis une OPJ prend le relais
+  (besoin d'enquête, crime routier). Documenter le moment du transfert et éviter
+  la contradiction d'actes (deux PV du même fait).
+
+---
+
+## 2. Textes applicables (pointeurs)
+
+> Le fond juridique n'est pas reproduit ici. Pointeurs vers les branches :
+
+- **`../references/penal-procedure.md`** §4.1 à §4.5 (qualité APJA de l'agent
+  PM, constatation de faits, relations avec l'OPJ, routes art. 53/73 et 78-6
+  CPP) et garde-fou APJA (actes réservés à l'OPJ).
+- **`../references/reglementation-appliquee.md`** §5.1 (code de la route : vitesse
+  excessive, défaut d'assurance, défaut de permis, fuite, stationnement gênant
+  en lien avec l'accident — qualifications distinctes du seul accident matériel).
+- **`../references/continuum-partenariats.md`** (convention de coordination
+  PM/OPJ, logique de transmission et d'assistance mutuelle, délais de mise à
+  disposition si appréhension en flagrance).
+- Codes clés mobilisables (à confirmer en version consolidée avant toute
+  citation en acte) : **code de la route** (livre V titre I et II —
+  responsabilité, assurances, infractions) ; **code pénal** (homicide
+  involontaire art. 221-6, blessures involontaires art. 222-19 — délits routiers
+  graves nécessitant saisine rapide de l'OPJ) ; **CPP** (art. 21 et 21-2 APJA, art. 73
+  mise à disposition en flagrance, art. 16 compétence OPJ).
+- **Réserve systématique** : aucun délai de transmission de PV au procureur,
+  aucun seuil de gravité requérant assistance OPJ, aucune classification des
+  blessures n'est cité de mémoire — toujours « à confirmer en version
+  consolidée » avant tout acte ou écrit.
+
+---
+
+## 3. Procédures (étapes, délais)
+
+### 3.1 Première intervention — sécurisation et constatation
+
+1. **Arrivée sur site** : priorité **sécurité des personnes et du site**.
+   - Placer les véhicules de la PM en signalisation adaptée (feux, cônes,
+     triangles selon le contexte, à vérifier dans les règles du code de la
+     route — à confirmer en version consolidée).
+   - Éloigner les tiers curieux du zone de danger immédiat.
+   - Coordonner avec les secours arrivant (SAMU, pompiers) : ne pas entraver,
+     signaler tout acte d'interpellation ou de constatation pénale en cours.
+
+2. **Constatation rapide des faits** :
+   - **Identifier les véhicules** : immatriculation, propriétaire/utilisateur,
+     type, état apparent.
+   - **Identifier les conducteurs/occupants** : identité, permis (presence et
+     validité), assurance véhicule, observations de comportement (fatigue,
+     langage, cohérence — **jamais de test d'alcoolémie seul : réservé à l'OPJ**,
+     cf. 3.3).
+   - **Localisation précise de l'accident** : adresse, carrefour, lieux-dits,
+     kilomètres si route.
+   - **Circonstances** : heure, condition météo/routes, direction/vitesse
+     apparente, manœuvres, témoins présents.
+   - **Dégâts matériels et victimes** : nombre et état apparent des blessés,
+     véhicules endommagés (photos selon la procédure locale), objets projetés.
+   - **Éléments d'infraction potentielle** : vitesse excessive apparente (radar
+     mobile si possible), défaut d'assurance (avis du tiers), défaut de permis
+     déclaré, signes de fuite du site.
+
+3. **Tracer le constat** :
+   - **Schéma de l'accident** si équipement disponible, sinon description
+     textuelle précise (points de choc, position finale des véhicules, débris).
+   - **Photos/vidéo** selon les disponibilités et les protections de données
+     requises (→ `../references/conformite-deontologie-donnees.md`).
+   - **Noms et coordonnées des témoins** présents (ne pas les interroger
+     formellement — réservé à l'OPJ si flagrance criminelle).
+
+4. **Test d'alcoolémie ou dépistage de substances** :
+   - **Situation simple (accident matériel mineur, pas de délit apparent)** :
+     **aucun test** — la PM ne dispose pas du pouvoir. Rendre compte, laisser
+     les conducteurs circuler (sauf immobilisation d'urgence si véhicule
+     dangereux).
+   - **Accident grave ou soupçon de délit** (fuite, vitesse extrême, signes
+     d'imprégnation alcoolique) : appel immédiat de l'OPJ et qualification du
+     fondement avant toute contrainte. Le soupçon seul ne suffit pas à retenir
+     le conducteur (cf. 3.3 et garde-fou §6).
+
+### 3.2 Accidents sans infraction pénale aparente (matériel seul)
+
+1. **Recueillir les coordonnées** des conducteurs et propriétaires, assurances
+   (polices, numéro sinistre si déclaration déjà effectuée).
+2. **Rendre compte** au maire ou au DPM selon la procédure locale (rapport
+   d'information, fiche de synthèse) : lieux, date, heure, véhicules,
+   circonstances, destiné à l'information générale et au suivi statistique de
+   l'accidentalité.
+3. **Orienter les conducteurs** vers leurs assurances respectives pour règleme

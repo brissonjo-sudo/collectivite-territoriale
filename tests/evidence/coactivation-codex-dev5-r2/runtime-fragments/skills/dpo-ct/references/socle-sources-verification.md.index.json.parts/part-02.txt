@@ -1,0 +1,61 @@
+ élève le risque (échelle §5.1) et pèse
+sur l'obligation d'AIPD. Une commune traite vite « à grande échelle » à
+l'échelle de sa population.
+
+### Croiser avec le régime des archives publiques
+Tout document d'une collectivité est une archive publique : l'effacement
+RGPD s'articule avec le code du patrimoine (visa du directeur des archives
+départementales pour l'élimination — à confirmer). Ne jamais conclure
+« supprimer » sans ce croisement.
+
+---
+
+## 5. Quand appeler `recherche-juridique`
+
+- **Réforme récente** touchant la loi 78-17, le décret d'application ou un
+  texte sectoriel.
+- **Doctrine non stabilisée** : lignes directrices CEPD en consultation,
+  référentiel CNIL en révision.
+- **Jurisprudence complexe** : CJUE (transferts, responsabilité), CE
+  (contentieux CNIL, actes des collectivités).
+- **Identifiant officiel non récupéré** en session (`LEGIARTI`, `CELEX`,
+  n° de délibération CNIL) : ne jamais le reconstituer de mémoire.
+- **Doute sur le champ d'application** d'un texte sectoriel à un cas
+  particulier.
+
+---
+
+## 6. Règle de provenance des identifiants
+
+Tout identifiant officiel (`LEGIARTI`, `JORFTEXT`, `NOR`, `CELEX`, n° de
+délibération CNIL, n° de requête) cité dans une sortie du skill **provient
+obligatoirement d'un appel d'outil effectué dans la session**. Un identifiant
+jamais récupéré :
+- **ne se reconstitue jamais de mémoire** ;
+- est **omis**, ou marqué `⚠️ non vérifié — identifiant non récupéré` ;
+- **interdit** l'usage du gabarit de citation pour acte
+  (cf. `recherche-juridique`, règle de provenance).
+
+Un numéro d'article structurellement stable (ex. « art. 30 RGPD ») peut être
+cité sans appel d'outil **uniquement** assorti de la réserve « à confirmer en
+version consolidée », sauf s'il a été vérifié dans la session en cours
+(mention « vérifié le JJ/MM/AAAA »). Pour la **loi 78-17**, dont la
+numérotation a été profondément remaniée, la vérification en session est la
+règle.
+
+---
+
+## 7. Abstention motivée
+
+- Référence non vérifiable à la date utile → ne pas citer de mémoire ;
+  signaler « à vérifier ».
+- Régime applicable (RGPD / Police-Justice) indéterminable avec les éléments
+  fournis → poser la question, ne pas présumer.
+- Durée de conservation sans source identifiée → proposer la démarche
+  (texte sectoriel ? référentiel CNIL ? décision locale documentée ?) sans
+  inventer de valeur.
+- Doctrine CNIL et texte en tension apparente → signaler la tension, ne pas
+  arbitrer seul ; suggérer `recherche-juridique`.
+
+L'abstention est **ciblée** : elle porte sur le point incertain et n'empêche
+pas de livrer le reste de l'analyse.

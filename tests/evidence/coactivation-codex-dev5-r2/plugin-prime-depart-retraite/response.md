@@ -1,0 +1,33 @@
+STOP — **Non, n’engagez pas le mandatement de ces 800 € en l’état.** Suspendez ce versement et documentez le blocage auprès du DGS.
+
+**BASCULE vers drh-fpt** — le fond indemnitaire appartient à drh-fpt ; dirfi-fpt conserve le volet budgétaire. Les points d’entrée dirfi-fpt, drh-fpt et recherche-juridique ont été lus intégralement par fragments, sans activation native revendiquée. La vérification juridique ci-dessous est attribuée à recherche-juridique.
+
+Date d’analyse et de référence : **07/10/2026**. Commune française ; note express, mode A. Les dates exactes du départ et du paiement restent à préciser.
+
+### Analyse drh-fpt
+
+La branche `drh-fpt/references/carriere-paie.md` conduit à distinguer l’intention de remercier l’agent du fondement de sa rémunération.
+
+**Texte vérifié :** les organes délibérants des collectivités territoriales et de leurs établissements publics fixent les régimes indemnitaires de leurs agents, dans la limite de ceux dont bénéficient les différents services de l’État. Source : [CGFP, article L714-4 — LEGIARTI000044424763](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044424763), version depuis le 01/03/2022, applicable au 07/10/2026, récupérée par `mcp__droit_francais__get_article` le 07/10/2026. Fonction : compétence et limite du régime indemnitaire.
+
+**J’en déduis que** l’accord oral du maire et la demande du DGS ne remplacent pas la fixation du régime par l’organe délibérant. Le vote annoncé au prochain conseil ne fournit aucun fondement disponible aujourd’hui pour cette prime nouvelle.
+
+**Un vote ne suffirait pas à démontrer que cette gratification est autorisée.** Le texte reçu encadre la compétence locale ; il ne crée pas un droit à une prime de départ à la retraite. Le statut, la filière, le cadre d’emplois et les actes locaux n’étant pas fournis, je ne valide aucun dispositif indemnitaire ni aucune alternative de paie. Je n’atteste pas davantage qu’une délibération future pourrait régulariser rétroactivement le versement.
+
+Pour une éventuelle délibération indemnitaire, il faut également contrôler son caractère exécutoire : publicité adaptée et transmission au représentant de l’État. Sources : [CGCT, L2131-1 — LEGIARTI000044190563](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044190563) et [L2131-2, I, 1° — LEGIARTI000044190560](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044190560), versions depuis le 01/07/2022, applicables au 07/10/2026, récupérées par `mcp__droit_francais__get_article` le 07/10/2026. Les modalités précises restent à contrôler selon la commune.
+
+### Volet dirfi-fpt
+
+Selon les faits communiqués, le chapitre 012 dispose de crédits. Conservez cette information pour le contrôle budgétaire ; elle ne résout pas le fondement indemnitaire examiné par drh-fpt. Aucun coût employeur complet n’a été établi.
+
+Pour le dossier de paiement, `dirfi-fpt/references/execution-depense.md` oriente vers la nomenclature réglementaire. Le comptable ne doit exiger que les pièces prévues pour la dépense correspondante dans l’annexe I : [CGCT, D1617-19 — LEGIARTI000006395700](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006395700), version depuis le 01/05/2007, applicable au 07/10/2026, récupérée par `mcp__droit_francais__get_article` le 07/10/2026. **L’annexe pertinente n’a pas été récupérée** : je ne certifie donc ni la liste exacte des pièces ni l’issue du contrôle du comptable.
+
+### Suite opérationnelle
+
+1. Maintenir le versement suspendu et conserver la trace de la demande.
+2. Faire instruire par la DRH et le juriste le fondement éventuel, les bénéficiaires, les critères généraux, la limite applicable et la décision individuelle ; réunir les actes locaux existants.
+3. Faire contrôler avec le comptable le dossier de paiement et les pièces correspondant à la qualification retenue, avant toute reprise du mandatement.
+
+**Quel est le statut de l’agent, son cadre d’emplois, et existe-t-il déjà une délibération indemnitaire susceptible de couvrir la reconnaissance envisagée ?** Ces éléments permettraient à drh-fpt d’examiner une piste, sans promettre les 800 € ni leur versement ce mois-ci. Dans l’attente, un message de remerciement peut être préparé.
+
+**Risque : élevé. Confiance : élevée sur la compétence vérifiée ; abstention sur le droit individuel à la prime, une régularisation rétroactive et les pièces exactes.** ACTE-ADMIN appliqué pour la compétence et l’entrée en vigueur ; aucune qualification pénale, aucun acte signé ou envoyé. Une revue humaine reste nécessaire avant exécution.

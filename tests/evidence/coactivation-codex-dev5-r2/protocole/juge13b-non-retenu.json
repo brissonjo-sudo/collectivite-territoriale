@@ -1,0 +1,6 @@
+{
+  "retained": false,
+  "reason": "Root initial instructions named part-01.txt instead of existing fragment-01.txt; agent interrupted before judgment; no previous score supplied to new fresh judge",
+  "agent": "/root/juge_codex_dev5_r2_13b",
+  "native_filtered_sha256": "c85bff30bca3ed712a9e13f0fc583ceef38b5cdbd6119ef6a1dc286b5b612103"
+}

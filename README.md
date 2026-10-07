@@ -4,7 +4,7 @@
 
 Plugin Claude Code et Codex destiné aux collectivités territoriales françaises. Une seule installation réunit cinq expertises métier, une méthode de recherche juridique sourcée et un accès optionnel à Légifrance/Judilibre.
 
-> **Statut :** la version 1.2.0-dev.5 est un candidat correctif à six skills, avec DSI 0.2.1, **entièrement non mesuré**. La mesure r7 de dev.4 reste distincte : six réponses jugées, une réussite et cinq échecs, avec trois nominaux `needs-auth`. La revue DSI/RSSI, la revue juridique humaine et le smoke du candidat dans Codex restent ouverts ; `release_ready=false`. La marketplace suit `main` : elle distribue le contenu fusionné, même sans tag. La fusion et l'installation ne prouvent pas la qualification d'une release.
+> **Statut :** candidat courant `1.2.0-dev.6`. La campagne native Codex R2 de dev.5 comporte seize réponses et seize juges frais : 4 réussites, 6 échecs et 6 cas bloqués. Le candidat courant `1.2.0-dev.6` est distinct et **non mesuré**. La campagne dev.5 reste historique et aucun de ses scores ne lui est transféré. Son gel statique contrôle 213 fichiers contre le commit source dev.6 ; une mesure propre à ses octets et son smoke Codex restent nécessaires. Avis DSI/RSSI et juridique humains ouverts ; `release_ready=false`. La marketplace suit `main` et distribue le contenu fusionné, même sans tag. La fusion et l'installation ne prouvent pas la qualification.
 
 Ce plugin aide à qualifier une situation, identifier les expertises à mobiliser et produire une réponse traçable. Il ne remplace ni la validation d'un juriste, ni le contrôle de l'autorité compétente, ni la vérification des textes officiels en vigueur.
 
@@ -117,7 +117,7 @@ Le manifeste Codex est également contrôlé avec le validateur du skill systèm
 - une violation de données mobilisant DPO et recherche juridique ;
 - le comportement dégradé lorsque le MCP juridique est désactivé.
 
-Les fichiers embarqués prouvent la composition du plugin, pas la coactivation effective. Le candidat correctif exige donc une nouvelle campagne sur ses propres octets figés, avec des conversations et des juges indépendants frais. Son statut est conservé dans `tests/evidence/release-1.2.0-dev.4.json`. Les traces des candidats précédents restent historiques et ne qualifient pas ce runtime corrigé.
+Les fichiers embarqués prouvent la composition du plugin, pas la coactivation effective. La campagne native Codex R2 et ses limites sont décrites dans [le bilan de qualification](docs/qualification/README.md), avec les preuves dans `tests/evidence/coactivation-codex-dev5-r2`. Le statut du candidat courant est conservé dans `tests/evidence/release-1.2.0-dev.6.json`. Chaque runtime distinct exige sa propre mesure ; les traces et scores des candidats précédents restent historiques.
 
 Les contrats prioritaires sont placés en tête du corps des six skills, avant les exemples historiques. Les résumés WebFetch et résultats de recherche ne permettent aucune confirmation juridique ; la pertinence du texte récupéré se contrôle affirmation par affirmation. La mesure autonome du DSI source ne qualifie pas la variante du plugin.
 
@@ -126,8 +126,9 @@ jugement relève une reformulation erronée d'une catégorie du texte primaire ;
 les quinze autres cas sont interrompus par le quota du fournisseur. Ces
 traces et leur échec sont conservés. Dev.4 renforce la confrontation des
 catégories mot à mot, la bascule RH préalable et le cadrage technique DSI.
-Aucun score dev.3, ni la mesure autonome DSI, n'est transféré à dev.4 :
-un nouveau gel et seize nouvelles conversations restent nécessaires.
+Aucun score dev.3, ni la mesure autonome DSI, n'a été transféré à dev.4.
+Les campagnes dev.4 r7 et dev.5 Codex R2 restent attachées à leurs propres
+commits ; leur bilan et la version courante sont distingués dans la qualification.
 
 La suite de coactivation v2 comporte seize cas, avec 124 exigences atomiques : onze activations imposées et cinq sélections spontanées. Le profil `corrected-runtime-v1` vérifie les blobs Git bruts avant et après chaque cas ; il refuse tout transfert de score depuis l'ancien runtime. Les extraits primaires assainis, la conformité du comportement et l'identité native des juges font l'objet de contrôles distincts.
 

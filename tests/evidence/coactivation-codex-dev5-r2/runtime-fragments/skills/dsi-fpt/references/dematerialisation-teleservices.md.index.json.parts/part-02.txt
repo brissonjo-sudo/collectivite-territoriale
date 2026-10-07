@@ -1,0 +1,58 @@
+ de réception » tout écran de confirmation.
+- Ouvrir le portail sans service responsable des demandes en erreur.
+- Reprendre une exigence destinée à l'État sans test d'applicabilité locale.
+- Mesurer individuellement l'activité des agents à partir des traces du
+  parapheur : garde-fou surveillance avant tout contenu technique.
+- Réinitialiser un portail compromis pour le remettre rapidement en service :
+  garde-fou incident avant toute action irréversible.
+
+## 9. Données et valeurs à vérifier
+
+Délais et contenu des accusés, exceptions à la saisine, effets de la démarche,
+versions du RGS, niveaux de signature et d'identification requis, calendrier
+du règlement sur les services de confiance et modalités de publication des
+décisions de sécurité. Nommer ces points sans valeurs ; partir de
+`references/references-verifiees.md`, puis relire les sources officielles.
+Ne pas extrapoler depuis une référence dont seules l'existence et l'objet
+ont été lus.
+
+## 10. Écrits et livrables
+
+- Fiche de parcours : service responsable, états, réception, transfert,
+  anomalies, preuves et repli validé.
+- Dossier d'ouverture : résultats de recette, décisions de sécurité,
+  accessibilité, réserves, exploitation et décision du responsable compétent.
+- Exigences techniques →
+  `references/templates/cahier-des-charges-technique.md` ; fiche projet →
+  `references/templates/fiche-projet-si.md` ; dossier de sécurité →
+  `references/templates/note-homologation.md` via la branche sécurité.
+
+Les champs opérationnels ne remplacent pas un contenu légal obligatoire :
+vérifier celui-ci avant rédaction. Produire `[INCOMPLET]` si la démarche, le
+signataire ou le mode de prise en charge ne sont pas établis.
+
+## 11. Double échelle [risque / confiance]
+
+| Situation | Repère |
+|---|---|
+| Maquette sans données réelles ni effet sur une demande | [faible / stable] sur le parcours technique |
+| Ouverture avec responsabilité métier ou repli non établis | [élevé / à vérifier] ; compléter avant décision |
+| Validité d'une saisine ou signature engageant un usager | [élevé / à vérifier] ; source avant conclusion |
+| Demandes perdues ou portail suspectement indisponible | [critique / à vérifier] si incident suspecté ; garde-fou en premier |
+
+Suivre `SKILL.md` : la confiance sur l'outil ne prouve ni compétence de
+signature ni validité juridique de la démarche.
+
+## 12. Checklist de branche
+
+- Garde-fous incident et surveillance affichés en premier si déclenchés ?
+- Bascule `dpo-ct` et autres frontières respectées, sans illustration ?
+- Mode d'exercice, métier et responsable de l'ouverture identifiés ?
+- Démarche, canaux annoncés et exceptions vérifiés avant conclusion ?
+- Identification, authentification, signature et habilitation distinguées ?
+- Réception et prise en charge démontrées, anomalies et repli attribués ?
+- Accessibilité et sécurité renvoyées à leurs branches ?
+- Obligation, bonne pratique, État et collectivité distingués ?
+- Sources datées et applicables ; valeurs relues en session ou réservées ?
+- Livrable complet ou `[INCOMPLET]`, sans donnée nominative ni secret ?
+- Chemins des fichiers mobilisés cités à l'endroit utile ?

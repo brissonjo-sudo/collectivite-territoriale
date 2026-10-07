@@ -1,0 +1,155 @@
+# Brique posture — Contrôle de légalité (v0.1.0)
+
+> Brique transverse, pas une branche métier. Structure adaptée du gabarit
+> `_gabarit-branche.md` : on garde le bloc Périmètre/Exclusions, l'arbre de
+> traitement, la grille de contrôle et la checklist ; on retire les sections
+> sans objet pour une posture (pas de « procédures et délais » dédiées, pas de
+> sous-domaines métier). Appelée **avant toute production d'acte** via
+> `references/templates/` (arrêté, note au maire, règlement) — voir `SKILL.md` §6 et
+> `analyse-situation.md` §4.
+
+## Périmètre / Exclusions
+
+- **Périmètre** : auditer un arrêté, une note, un règlement ou une décision
+  **avant production**, en se plaçant en **posture de juge administratif**
+  (contrôle a priori, comme si l'acte était déjà déféré).
+- **Exclusions** : la **recherche de jurisprudence** elle-même (identification,
+  triangulation, autorité d'une décision) → `recherche-juridique` (Mode B). Le
+  **contenu de fond** de chaque police (pouvoirs, base légale détaillée) →
+  branche métier concernée (`pouvoirs-police.md`,
+  `reglementation-appliquee.md`, etc.), simple pointeur ici. L'**anticipation
+  des faiblesses contentieuses après production** (mémoire en défense, risque
+  de recours) → `contentieux.md`. Les **statistiques et le suivi qualité** des
+  actes → `retex.md`.
+
+---
+
+## 1. Questions couvertes
+
+- « Cet arrêté tient-il devant le juge administratif ? »
+- « Ai-je la bonne base légale, la bonne autorité, la bonne motivation ? »
+- « Cette mesure est-elle proportionnée ? »
+- « Cet acte doit-il être transmis au contrôle de légalité ? Sous quel délai
+  produit-il effet ? »
+- « Quelles voies et délais de recours mentionner ? »
+- « La procédure préalable (consultation, contradictoire, publicité) a-t-elle
+  été respectée ? »
+
+---
+
+## 2. Arbre de traitement
+
+`projet d'acte → identifier la nature de l'acte (§4) → dérouler la grille de
+contrôle (§5, dans l'ordre) → lever les variables manquantes (§3) →
+décision : produire / corriger / abstenir (§6) → vérification socle-sources
+(§7) → écrit corrigé ou liste de réserves (§8)`
+
+Ne jamais transmettre un acte « tel quel » pour rédaction tant qu'un point de
+la grille (§5) n'est pas levé ou explicitement assumé comme risque accepté et
+signalé au commanditaire (maire/DGS).
+
+---
+
+## 3. Variables à lever
+
+- **Nature de l'acte** : police générale (CGCT) / police spéciale (laquelle)
+  / acte de gestion interne / acte RH (→ frontière `drh-fpt`, SKILL.md §5.4).
+- **Caractère individuel ou réglementaire** — conditionne le régime de
+  motivation (CRPA, §5.3) et le mode de publicité.
+- **Acte faisant grief ou non** — seuls les actes faisant grief appellent
+  motivation renforcée + voies de recours.
+- **Autorité signataire réelle** — maire en personne, ou délégataire
+  (adjoint, DGS) : vérifier l'existence et la régularité de la délégation
+  (arrêté de délégation publié, en vigueur, non retiré).
+- **Urgence** — conditionne la procédure contradictoire applicable (un acte
+  pris en urgence peut alléger certaines formalités, à vérifier au cas par
+  cas) et le mode d'entrée en vigueur (CGCT, §5.5).
+- **Catégorie de l'acte au regard de la liste de transmission obligatoire**
+  (CGCT — voir §5.5) : transmissible ou non.
+
+---
+
+## 4. Grille de contrôle a priori — posture « juge administratif »
+
+Dérouler **dans cet ordre**. Un contrôle de légalité, en pratique, vérifie
+souvent dans cette séquence ; le juge administratif raisonne de même
+(moyens de légalité externe avant moyens de légalité interne).
+
+### 4.1 Compétence (légalité externe)
+- **Auteur de l'acte** : l'autorité signataire détient-elle le pouvoir
+  exercé ? Police générale → maire (CGCT, base à vérifier branche
+  `pouvoirs-police.md`) ; police spéciale → vérifier le titulaire exact
+  (parfois le préfet, parfois le maire au nom de l'État) ; risque de
+  **conflit de compétence** → renvoyer à `analyse-situation.md` §3 et
+  `pouvoirs-police.md`.
+- **Délégation** : si signataire ≠ maire, l'arrêté de délégation de
+  signature/fonction couvre-t-il précisément cet objet et cette date ?
+  Délégation publiée et non retirée ?
+- **Compétence territoriale** : l'acte reste-t-il dans les limites du
+  territoire communal (sauf police spéciale à portée différente) ?
+- **Incompétence négative** : l'autorité ne s'est-elle pas crue liée alors
+  qu'elle disposait d'un pouvoir d'appréciation (ex. pouvoir de police jamais
+  discrétionnaire à 100 %, motivation stéréotypée révélatrice) ?
+
+### 4.2 Procédure (légalité externe)
+- **Consultations obligatoires** préalables identifiées et tracées (CST,
+  commissions, organismes consultatifs selon l'objet — propre à chaque police
+  spéciale, à vérifier branche concernée) ?
+- **Procédure contradictoire** : la personne visée par une mesure
+  individuelle défavorable a-t-elle été mise en mesure de présenter des
+  observations, sauf urgence ou exception légale (à vérifier au cas par cas
+  selon le texte applicable — CRPA, dispositions relatives à la procédure
+  contradictoire) ?
+- **Formalités de publicité** : affichage, publication au recueil des actes
+  administratifs, notification individuelle — selon la nature de l'acte.
+- **Signature et date** : acte daté, signé, original conservé.
+
+### 4.3 Base légale (légalité interne)
+- **Texte fondateur identifié et cité avec précision** (article exact, pas de
+  visa générique type « vu le CGCT » sans article).
+- **Police générale vs spéciale** : la police spéciale, quand elle existe,
+  prime en principe sur la police générale pour le même objet — sauf
+  circonstances locales particulières justifiant une mesure complémentaire du
+  maire (principe à vérifier au cas par cas, jurisprudence administrative
+  constante sur le sujet → `recherche-juridique` si contesté).
+- **Absence de détournement de pouvoir** : le motif réel correspond-il à la
+  finalité légale du texte invoqué (ordre public, salubrité, sécurité,
+  tranquillité — pas un motif étranger, ex. opportunité politique ou
+  financière déguisée) ?
+- **Erreur de droit / erreur de fait** : les faits visés dans les visas
+  sont-ils exacts et matériellement établis ?
+
+### 4.4 Motivation (CRPA)
+- **Motivation en fait et en droit obligatoire** pour les décisions visées à
+  l'art. **L. 211-2 du Code des relations entre le public et l'administration
+  (CRPA)** *(vérifié sur Légifrance le 2026-06-30)* — notamment : mesures de
+  police, sanctions, décisions restreignant l'exercice d'une liberté
+  publique, refus d'autorisation, retrait/abrogation d'une décision créatrice
+  de droits.
+- **Test pratique** : la motivation permet-elle à un tiers de comprendre,
+  sans autre pièce, pourquoi cette mesure précise a été prise (et pas une
+  mesure moins contraignante) ? Une motivation stéréotypée ou recopiée d'un
+  autre acte est un risque d'annulation.
+- **Décisions implicites et exceptions** : certaines décisions favorables ou
+  de portée générale échappent à l'obligation — vérifier le régime exact
+  avant d'affirmer une dispense.
+
+### 4.5 Proportionnalité (police administrative)
+- **Principe (jurisprudence constante, illustrée par l'arrêt de principe)** :
+  toute mesure de police administrative doit être **nécessaire, adaptée et
+  proportionnée** au trouble à l'ordre public ; l'autorité doit retenir la
+  mesure la **moins attentatoire aux libertés** parmi celles permettant
+  d'atteindre l'objectif.
+  ```
+  CE, Sect., 19 mai 1933, Benjamin, Lebon p. 541
+  Ratio decidendi : une mesure de police administrative doit être
+  proportionnée à la menace pour l'ordre public ; l'autorité de police
+  doit choisir la mesure la moins attentatoire aux libertés permettant
+  d'atteindre le but d'intérêt général.
+  ```
+  *(Référence d'arrêt de principe reprise telle que citée dans le skill
+  `drh-fpt` et la doctrine constante ; numéro de requête non
+  attribué à l'époque — la fiche complète, le contexte et les décisions
+  d'application relèvent de `recherche-juridique`.)*
+- **Test pratique en 3 questions** :
+  1. La mesure est-elle **strictement nécessaire** (trouble ré

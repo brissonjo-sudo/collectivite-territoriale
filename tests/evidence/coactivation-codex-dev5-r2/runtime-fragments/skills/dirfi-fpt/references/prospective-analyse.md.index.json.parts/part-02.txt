@@ -1,0 +1,138 @@
+ budgétaire
+  réduite.
+- **Coefficient de mobilisation du potentiel fiscal** : `produit fiscal
+  effectivement perçu sur les impositions concernées / potentiel fiscal de
+  la collectivité`. Mesure le degré d'utilisation, par la collectivité, de
+  sa capacité fiscale théorique par rapport à la référence retenue pour ce
+  potentiel.
+- **Aucun de ces ratios ne se lit isolément** : toujours les croiser avec la
+  chaîne de l'épargne (§5.1) et la tendance pluriannuelle (§5.5), jamais sur
+  un seul exercice.
+
+### 5.4 Ratios obligatoires annexés au budget, fonds de roulement, BFR, trésorerie nette
+
+- Un jeu de **ratios obligatoires** doit figurer en annexe du budget primitif
+  et du compte administratif ou du compte financier unique, dont la liste
+  exacte et la présentation relèvent d'un texte à vérifier (CGCT, dispositions
+  relatives aux documents budgétaires — à confirmer en version consolidée).
+  Ne jamais présenter une liste de ces ratios comme exhaustive sans l'avoir
+  vérifiée.
+- **Fonds de roulement (FR)** : ressources stables (financements permanents)
+  moins emplois stables (immobilisations nettes). Mesure la marge de
+  sécurité structurelle de la collectivité.
+- **Besoin en fonds de roulement (BFR)** : décalage entre les besoins de
+  financement du cycle d'exploitation courant (créances, stocks le cas
+  échéant) et les ressources courantes correspondantes (dettes
+  fournisseurs et assimilées). Pour une collectivité, il reflète
+  essentiellement les décalages entre émission des titres/mandats et leur
+  recouvrement/paiement effectif.
+- **Trésorerie nette (TN)** : `TN = FR − BFR`. Une trésorerie nette
+  durablement négative, alors que le fonds de roulement paraît suffisant,
+  signale un BFR anormalement élevé (délais de recouvrement dégradés, par
+  exemple) à investiguer, plutôt qu'un problème de fonds de roulement.
+- Ne jamais confondre la **trésorerie nette** ainsi calculée avec le solde
+  du compte au comptable public à un instant donné : le second est un
+  solde de caisse, la première un agrégat de gestion sur la durée.
+
+### 5.5 Construction d'une prospective pluriannuelle
+
+**Méthode**, dans l'ordre :
+1. **Scénario tendanciel** : projeter chaque grande masse (recettes
+   fiscales, dotations, charges de personnel, charges à caractère général,
+   charges financières, investissement récurrent) sur la base des
+   **tendances observées** en rétrospective (§5.7), sans rupture supposée.
+2. **Hypothèses explicites et documentées** : chaque hypothèse retenue
+   (évolution des bases fiscales, des dotations, de l'inflation appliquée
+   aux charges, glissement de la masse salariale) doit être **écrite, datée
+   et justifiée**, jamais implicite — une hypothèse non documentée invalide
+   la lecture qui en découle.
+3. **Sensibilité** : faire varier une à une les hypothèses les plus
+   incertaines (taux d'un futur emprunt, dynamique des bases fiscales,
+   évolution d'une dotation) pour identifier ce qui pèse le plus sur la
+   trajectoire d'épargne et d'endettement.
+4. **Scénario de rupture** : construire un scénario alternatif intégrant un
+   choc identifié (réforme fiscale ou de dotations, charge nouvelle,
+   investissement majeur) pour mesurer l'écart au tendanciel et la marge de
+   manœuvre résiduelle.
+- Jamais de **donnée manquante comblée par supposition silencieuse** :
+  demander la donnée, ou signaler explicitement l'hypothèse retenue.
+- Croiser systématiquement la trajectoire projetée d'épargne nette (§5.1)
+  et de capacité de désendettement (§5.2) avec la dette existante
+  (`references/dette-tresorerie.md`).
+
+### 5.6 Programmation pluriannuelle des investissements (PPI)
+
+- **Méthode** : recenser les projets par échéance envisagée, les classer
+  par degré d'engagement (déjà engagé, décidé non engagé, à l'étude), puis
+  les confronter à la capacité de financement dégagée par la prospective
+  (§5.5) — recettes propres, subventions attendues, épargne nette
+  disponible, recours à l'emprunt.
+- **Articulation AP/CP** : une PPI validée politiquement se traduit, pour
+  les opérations significatives, en **autorisations de programme et
+  crédits de paiement**, ouverts et révisés par l'assemblée délibérante
+  (renvoi `references/budget-cycle.md` pour le formalisme, non dupliqué
+  ici).
+- **Plan de financement** : distinguer les recettes mobilisables par
+  nature (subventions à confirmer, FCTVA à échéance à vérifier, emprunt,
+  autofinancement) et confronter le total au besoin, en signalant tout
+  écart non couvert plutôt que de le combler par une hypothèse d'emprunt
+  non assumée comme telle.
+- Une PPI dont le financement suppose une épargne supérieure à celle
+  réellement projetée (§5.5) est un signal à faire remonter avant
+  présentation à l'assemblée.
+
+### 5.7 Analyse rétrospective
+
+- Porte sur une **série d'exercices clos** (nombre à adapter au besoin,
+  généralement plusieurs années), jamais sur un seul exercice présenté
+  comme représentatif d'une tendance.
+- **Retraitements nécessaires** avant comparaison inter-exercices :
+  neutraliser les éléments exceptionnels ou non récurrents (cession
+  exceptionnelle, recette ou dépense non reconductible, changement de
+  périmètre par intégration ou sortie d'un budget annexe), signaler tout
+  changement de nomenclature ou de règle comptable affectant la
+  comparabilité d'une année sur l'autre.
+- **Comparaison à la strate** : rapprocher les ratios de la collectivité de
+  ceux d'un groupe de comparaison pertinent (collectivités de même
+  catégorie et de taille comparable), en vérifiant à chaque fois la
+  définition exacte retenue par la source de comparaison pour chaque
+  agrégat (§5.8) — deux sources peuvent définir un même ratio différemment.
+- Une rétrospective sert de **fondement** au scénario tendanciel de la
+  prospective (§5.5) : sans rétrospective retraitée et fiable, aucune
+  prospective ne peut être présentée comme robuste.
+
+### 5.8 Sources de données de comparaison et leurs limites
+
+- Les données de comparaison à la strate proviennent de bases publiques
+  (données financières et fiscales des collectivités) ou d'observatoires
+  spécialisés. Ne jamais citer un chiffre de comparaison sans en vérifier
+  la source, la date d'actualisation et le périmètre exact retenu.
+- **Limites systématiques** : hétérogénéité des périmètres (budget
+  principal seul ou consolidé selon les collectivités comparées), décalage
+  temporel entre l'exercice de la collectivité analysée et celui de la
+  base de comparaison, définitions parfois différentes d'un même ratio
+  selon la source.
+- Présenter toute comparaison à la strate avec sa **réserve méthodologique**
+  explicite plutôt que comme un constat brut.
+
+### 5.9 Pilotage de la masse salariale — angle budgétaire uniquement
+
+- Cette branche traite la masse salariale (chapitre budgétaire dédié)
+  strictement comme une **masse à cadrer** : enveloppe globale, évolution
+  prévisionnelle, poids dans les charges de fonctionnement (renvoi §5.3,
+  taux de rigidité), articulation avec la prospective (§5.5).
+- **Glissement vieillesse-technicité (GVT)** et **effet de noria** peuvent
+  être **nommés** comme composantes de l'évolution de la masse salariale
+  d'un exercice à l'autre (progression liée à l'ancienneté et aux
+  avancements pour le GVT, effet de l'écart de rémunération entre agents
+  partants et agents recrutés pour la noria), à des fins de **cadrage
+  budgétaire global** uniquement.
+- **Renvoi obligatoire à `drh-fpt`** dès que la question porte sur : le
+  calcul individuel d'un droit statutaire, une mesure de régime
+  indemnitaire, une ligne directrice de gestion, ou tout paramètre
+  RH nécessitant une compétence statutaire pour être chiffré précisément.
+  Appliquer alors le **bloc BASCULE** du `SKILL.md` §5.5 avant tout contenu
+  statutaire, y compris si la question n'était, au départ, qu'une question
+  de cadrage budgétaire glissant vers le détail individuel.
+- **Ce qui reste permis** après la bascule : citer l'enveloppe globale
+  votée, son évolution en euros ou en pourcentage 

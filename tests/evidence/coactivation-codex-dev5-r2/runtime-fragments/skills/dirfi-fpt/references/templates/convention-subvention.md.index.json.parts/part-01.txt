@@ -1,0 +1,173 @@
+# Générateur interactif — Convention de subvention (v1.0.0)
+
+> Couche 4 (`references/templates/`), piloté par `references/ecrits-financiers.md`
+> et par `SKILL.md` §6. Mécanique de dialogue alignée sur les générateurs du
+> skill frère `Dpm-fpt` (questions posées **une à une**, aucune donnée
+> inventée, règle `[INCOMPLET]` stricte, checklist finale). Le contenu
+> métier est propre aux finances locales. Branche de rattachement :
+> `../subventions.md`.
+>
+> **Garde-fou §5.2 `SKILL.md` — à dérouler avant toute rédaction.** Une
+> subvention qui rémunère en réalité une prestation, ou versée à une
+> association transparente servant de caisse à la collectivité, caractérise
+> un risque de **gestion de fait** ou de **requalification en marché
+> public**. Ce générateur **refuse de produire une convention de subvention**
+> tant que la qualification préalable du flux (§0) n'a pas écarté ce risque,
+> et **le dit explicitement** à l'utilisateur.
+
+---
+
+## 0. Contrôle préalable obligatoire — qualification du flux
+
+**Avant toute question de rédaction**, poser et trancher cette question,
+seule et en premier, conformément à `../subventions.md` §5.1 :
+
+> « Qui est à l'initiative du projet financé, et qui en définit le
+> contenu — le bénéficiaire, ou la collectivité ? La collectivité impose-t-
+> elle un cahier des charges, des spécifications précises, un calendrier
+> d'exécution détaillé, en échange du versement ? »
+
+**Grille de décision** :
+
+| Constat | Qualification | Suite |
+|---|---|---|
+| Le bénéficiaire est à l'initiative de son action, la collectivité n'impose pas de spécifications précises | **Subvention** | Poursuivre au §1 |
+| La collectivité définit le besoin (cahier des charges, spécifications techniques ou fonctionnelles) et rémunère une prestation déterminée | **Commande publique** | **Refuser** de rédiger une convention de subvention (voir bloc ci-dessous) |
+| Incertain après une relance | Indéterminé | Ne pas trancher soi-même ; marquer `[INCOMPLET — préciser : nature du flux, à qualifier avant toute rédaction]` et renvoyer à `../subventions.md` §5.1 et `../commande-publique-financiere.md` |
+
+**Si la qualification est « commande publique »**, afficher, avant tout
+autre contenu :
+
+```
+REFUS — Ce flux qualifie une commande publique, pas une subvention.
+La collectivité définit le besoin et rémunère une prestation déterminée :
+rédiger une convention de subvention exposerait à une requalification en
+marché public, avec les conséquences d'une procédure de passation non
+suivie.
+Je ne rédige pas de convention de subvention pour ce flux.
+Orientez-vous vers ../commande-publique-financiere.md pour le support
+contractuel adapté (marché, bon de commande, ou procédure adaptée selon le
+montant).
+```
+
+**Signal d'alerte propre à la subvention à une association** (`../subventions.md`
+§5.12) : si l'association bénéficiaire présente un risque d'**association
+transparente** (dirigeants, financement ou activité la confondant avec un
+service de la collectivité), suspendre également l'assemblage et renvoyer à
+`../../objets/satellites.md` avant de poursuivre — ce risque relève au fond
+du garde-fou `SKILL.md` §5.2.
+
+**Seulement si la qualification est confirmée « subvention »** : poursuivre
+au §1.
+
+---
+
+## 1. Séquence interactive obligatoire
+
+**Principe directeur** (`SKILL.md` §6) : questions posées **une à une**,
+jamais en bloc. Confirmer chaque réponse avant de passer au champ suivant.
+Ne jamais pré-remplir un champ non fourni : appliquer la règle `[INCOMPLET]`
+(§5).
+
+### Étape 1 — Bénéficiaire et nature juridique
+- Q1 : « Quel est le bénéficiaire (nature juridique : association loi 1901,
+  fondation, autre organisme de droit privé, établissement public) ? »
+- Pourquoi : la nature juridique conditionne le régime applicable — renvoi
+  `../subventions.md` §5.9 à §5.11 selon le cas (association, entreprise,
+  personne privée).
+
+### Étape 2 — Objet précis de la subvention
+- Q2 : « Quel est l'objet précis de l'action ou du projet soutenu ? »
+- Pourquoi : l'objet doit rester formulé comme le **soutien à une action du
+  bénéficiaire**, jamais comme la commande d'une prestation à livrer
+  (`../subventions.md` §5.4) — cohérence à revérifier avec le §0.
+
+### Étape 3 — Montant et pluriannualité
+- Q3 : « Quel est le montant envisagé, et s'agit-il d'une subvention
+  annuelle ou pluriannuelle (auquel cas, sur combien d'exercices et selon
+  quelle répartition) ? »
+- Pourquoi : le montant cumulé par bénéficiaire et par exercice détermine si
+  la convention est **obligatoire** (au-delà du seuil réglementaire, à
+  vérifier) ou seulement une **faculté** (`../subventions.md` §5.3). Ne
+  jamais énoncer ce seuil de mémoire.
+
+### Étape 4 — Compétence et acte d'attribution
+- Q4 : « Une délibération d'attribution existe-t-elle ou est-elle à
+  produire en parallèle (`deliberation-budgetaire.md`) ? L'assemblée a-t-elle
+  délégué l'attribution des subventions à l'exécutif, et dans quelles
+  limites ? »
+- Pourquoi : l'attribution relève de la compétence de l'assemblée délibérante
+  sauf délégation régulière (`../subventions.md` §5.2) — jamais présumée.
+
+### Étape 5 — Modalités de versement
+- Q5 : « Le versement intervient-il en une fois ou en plusieurs fractions
+  (acompte, solde après justification) ? Une avance est-elle prévue, et sur
+  quelle base ? »
+- Pourquoi : une avance ne se présume jamais de droit commun ; elle doit
+  être expressément prévue par la convention ou la délibération
+  (`../subventions.md` §5.5).
+
+### Étape 6 — Obligations du bénéficiaire
+- Q6 : « Quelles obligations le bénéficiaire doit-il respecter (réalisation
+  de l'action dans les conditions annoncées, mention de la collectivité dans
+  sa communication, restitution en cas de non-exécution) ? »
+
+### Étape 7 — Justificatifs et compte rendu financier
+- Q7 : « Quels justificatifs le bénéficiaire doit-il produire (compte rendu
+  financier, bilan d'activité, comptes annuels), et selon quelle
+  périodicité ? »
+- Pourquoi : renvoi `../subventions.md` §5.6 et §5.7 ; l'absence de contrôle
+  effectif affaiblit la défense de la collectivité en cas de contestation.
+
+### Étape 8 — Contrôle et droit de visite
+- Q8 : « La collectivité doit-elle pouvoir exercer un contrôle sur place de
+  l'utilisation des fonds (droit de visite), en plus du contrôle sur
+  pièces ? »
+
+### Étape 9 — Reversement
+- Q9 : « En cas de non-exécution, de non-conformité à l'objet, ou de
+  dissolution du bénéficiaire, la convention prévoit-elle une clause de
+  reversement ? Selon quelles modalités et quel délai ? »
+- Pourquoi : renvoi `../subventions.md` §5.8 ; le délai d'action en
+  reversement doit être vérifié, notamment si la convention resterait
+  silencieuse.
+
+### Étape 10 — Durée
+- Q10 : « Quelle est la durée de la convention (annuelle, pluriannuelle avec
+  reconduction expresse ou tacite) ? »
+
+### Étape 11 — Résiliation
+- Q11 : « Dans quels cas et selon quelles modalités (préavis, motif) la
+  convention peut-elle être résiliée par l'une ou l'autre partie ? »
+
+### Étape 12 — Assurances
+- Q12 : « Le bénéficiaire doit-il justifier d'une couverture d'assurance
+  pour l'activité financée (responsabilité civile notamment) ? »
+
+### Étape 13 — Communication
+- Q13 : « Quelles obligations de communication ou de visibilité de la
+  collectivité sont attendues du bénéficiaire (logo, mention dans les
+  supports, événement) ? » — vigilance : cette mention reste une
+  contrepartie de **communication**, pas une prestation qui requalifierait le
+  flux en commande publique (renvoi §0).
+
+**À l'issue de l'étape 13** : si toutes les réponses nécessaires ont été
+recueillies, passer à l'assemblage (§2). Sinon, appliquer la règle
+`[INCOMPLET]` (§5).
+
+---
+
+## 2. Gabarit d'assemblage
+
+> Champs à compléter entre `[ ]`. Aucun nom d'organisme réel, aucune donnée
+> nominative dans ce canevas.
+
+```
+[COLLECTIVITÉ — en-tête]
+
+CONVENTION DE SUBVENTION N° [numéro] / [année]
+
+Entre :
+[COLLECTIVITÉ], représentée par [autorité habilitée, en vertu de
+[délibération ou délégation identifiée — étape 4]],
+d'un

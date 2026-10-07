@@ -1,0 +1,98 @@
+irmer en version consolidée) et
+  la **périodicité d'exercice** du plan.
+- **Police générale du maire** : art. **L. 2212-1 et L. 2212-2 du CGCT**
+  (L. 2212-2 vérifié sur Légifrance le 2026-06-30 ; identifiant
+  LEGIARTI000029946370) — fondement de l'intervention du maire en gestion de
+  crise communale et en dispositif événementiel communal ; pour le détail des
+  pouvoirs, renvoyer à `pouvoirs-police.md`.
+- **ZSP** : circulaire du ministère de l'Intérieur de 2012 (intitulé et
+  référence exacts — à confirmer en version consolidée ; ce n'est pas un
+  texte codifié, ne jamais lui attribuer un numéro LEGIARTI). Vérifier le
+  dispositif territorial réellement actif localement à la date des faits, les
+  ZSP ayant pu être remplacées ou complétées par d'autres priorités
+  ministérielles depuis 2012.
+- **Dispositif ORSEC** : cadre légal et réglementaire propre à la sécurité
+  civile (code de la sécurité intérieure, Livre VII) — numéros d'articles
+  précis à vérifier au cas par cas selon le point traité (déclenchement,
+  rôle du DOS, articulation préfet/maire).
+- **Cycles de travail PM** : régime statutaire et éventuelles dérogations
+  propres à la filière → renvoi `rh-specificites-pm.md` ; ne pas citer de
+  décret de mémoire ici.
+
+---
+
+## 10. Écrits & livrables
+
+1. **Organisation** — note de doctrine d'emploi (missions prioritaires,
+   modes de patrouille, sectorisation), fiche de cycle de service (en lien
+   avec `rh-specificites-pm.md` pour la conformité statutaire).
+2. **Dispositif événementiel** — ordre d'opération / fiche de dispositif
+   (effectifs, missions, points de regroupement, procédure dégradée) ;
+   distinct des **autorisations administratives** sous-jacentes, à produire
+   via `references/templates/arrete-modele.md` le cas échéant.
+3. **Gestion de crise** — maincourante de crise, fiche réflexe par type de
+   risque, contribution PM au PCS communal.
+4. **Pilotage** — note au maire/DGS sur le dimensionnement du service ou sur
+   l'articulation avec un dispositif territorial (ZSP ou équivalent) →
+   `references/templates/note-maire-modele.md`.
+5. **Retour d'expérience** — après tout dispositif événementiel à enjeu ou
+   toute gestion de crise → `retex.md`.
+
+Aucun de ces écrits ne constitue, par lui-même, un acte faisant grief ; si un
+dispositif débouche sur un **arrêté** (réglementation temporaire de
+circulation, fermeture de voie), basculer vers `controle-legalite.md` avant
+production.
+
+---
+
+## 11. Double échelle [risque / confiance]
+
+- **Doctrine d'emploi, sectorisation de patrouille** : organisation interne —
+  [risque faible / confiance stable] tant qu'aucun texte n'est invoqué comme
+  contraignant.
+- **Dispositif événementiel courant** (kermesse, marché) : [risque moyen /
+  confiance stable] sur le fondement (police générale du maire) ; vérifier
+  l'autorisation sous-jacente si occupation du domaine public ou débit de
+  boissons.
+- **Dispositif événementiel à forte affluence ou contexte de menace** :
+  [risque élevé / à vérifier] — vérification obligatoire de la répartition
+  des compétences et de l'articulation avec les forces de l'État.
+- **Gestion de crise communale (PCS)** : [risque élevé / à vérifier] —
+  vérifier le caractère obligatoire du plan et la chaîne de commandement
+  (maire / préfet).
+- **Bascule ORSEC / crise dépassant la compétence communale** : [risque
+  critique / à vérifier] — abstention sur toute description précise de la
+  chaîne de commandement sans vérification, renvoyer vers les autorités
+  compétentes (préfecture, SDIS).
+- **ZSP et dispositifs territoriaux analogues** : [risque moyen / à
+  vérifier] — le dispositif change de nom et de cadre au fil des politiques
+  publiques ; ne jamais présenter une doctrine ZSP comme stable dans le
+  temps.
+
+---
+
+## 12. Checklist de branche
+
+1. Qualification de la situation posée : organisation courante / événement /
+   crise communale / crise dépassant la compétence communale ?
+2. Autorité compétente identifiée (maire, et le cas échéant préfet) et rôle
+   de la PM positionné comme **exécutant**, pas comme pilote ?
+3. Garde-fou APJA rappelé si la situation peut déraper vers un acte
+   judiciaire réservé à l'OPJ (`penal-procedure.md`) ?
+4. Autorisations administratives sous-jacentes d'un dispositif événementiel
+   vérifiées (renvoi `reglementation-appliquee.md`) avant de figer le
+   dispositif sécurité ?
+5. PCS : caractère obligatoire et actualisation vérifiés avant toute
+   affirmation sur la commune concernée ?
+6. ZSP ou dispositif territorial cité avec sa nature réelle (circulaire,
+   non codifiée) et vérifié comme actif à la date des faits ?
+7. Frontière RH respectée : cycle de travail traité comme organisation
+   opérationnelle ici, renvoyé à `rh-specificites-pm.md`/`drh-fpt` pour sa
+   conformité statutaire ?
+8. Aucune référence d'article citée sans réserve « à confirmer en version
+   consolidée », sauf les trois mentions vérifiées sur Légifrance le
+   2026-06-30 (§9) ?
+9. Couple [risque / confiance] indiqué selon le sous-domaine concerné (§11) ?
+10. Si écrit produit : type identifié (organisation / dispositif / crise /
+    pilotage / RETEX) et, si acte faisant grief, passage par
+    `controle-legalite.md` ?

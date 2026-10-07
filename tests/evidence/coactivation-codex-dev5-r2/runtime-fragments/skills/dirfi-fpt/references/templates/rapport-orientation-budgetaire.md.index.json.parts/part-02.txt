@@ -1,0 +1,163 @@
+tation budgétaire du [date de séance].
+
+Strate et régime applicable : [catégorie de collectivité, seuil ou
+population — étape 2 ; obligation de ROB et contenu minimal — [INCOMPLET —
+préciser : à vérifier] si non confirmés].
+
+I. CONTEXTE MACROÉCONOMIQUE ET FINANCIER
+[Éléments de loi de finances et de contexte macroéconomique de l'exercice —
+étape 3, chacun daté ; renvoi ../fiscalite-locale.md, ../dotations-perequation.md]
+
+II. RÉTROSPECTIVE
+[Évolution des principaux agrégats sur la période retenue — étape 4 ;
+renvoi ../prospective-analyse.md §5.7. Si des séries manquent :
+[INCOMPLET — préciser : séries rétrospectives].]
+
+III. ORIENTATIONS DE FONCTIONNEMENT
+[Grandes orientations en fonctionnement — étape 5, section fonctionnement
+uniquement]
+
+IV. ORIENTATIONS D'INVESTISSEMENT
+[Grandes orientations en investissement, projets structurants — étape 5,
+section investissement uniquement]
+
+V. STRUCTURE ET GESTION DE LA DETTE
+[Encours, structure par type de taux, profil d'extinction, stratégie
+envisagée — étape 6 ; renvoi ../dette-tresorerie.md]
+
+VI. ENGAGEMENTS PLURIANNUELS
+[AP/CP en cours, conventions pluriannuelles — étape 7 ; renvoi
+../budget-cycle.md §5.9 bis]
+
+VII. RESSOURCES HUMAINES — ENVELOPPE GLOBALE
+[Évolution de l'enveloppe de masse salariale (chapitre 012) — étape 8,
+montant global ou taux uniquement. Si un point statutaire ou indemnitaire a
+été soulevé pendant l'entretien, le bloc BASCULE figure ci-dessus, avant
+cette section, et aucun contenu statutaire individuel n'apparaît ici.]
+
+VIII. PROGRAMMATION DES INVESTISSEMENTS (PPI)
+[Programmation pluriannuelle, projets et montants — étape 9, toute valeur
+provisoire signalée comme telle ; renvoi ../prospective-analyse.md §5.6]
+
+IX. TRANSMISSION ET PUBLICITÉ
+[Modalités de mise à disposition du public — étape 10, ou [INCOMPLET] si non
+précisées]
+
+Fait à [lieu], le [date].
+[Signature de l'autorité exécutive ou du directeur des finances]
+```
+
+---
+
+## 3. Mentions obligatoires et contrôles de cohérence
+
+- [ ] Exercice budgétaire concerné identifié sans ambiguïté (étape 1).
+- [ ] Strate de la collectivité qualifiée, obligation de ROB et contenu
+  minimal vérifiés ou explicitement `[INCOMPLET]` (étape 2).
+- [ ] Toute donnée macroéconomique ou de loi de finances datée (étape 3).
+- [ ] Section fonctionnement et section investissement distinguées, jamais
+  fusionnées (étape 5).
+- [ ] Structure de la dette présentée avec renvoi `../dette-tresorerie.md`
+  (étape 6).
+- [ ] Aucun contenu statutaire individuel ou indemnitaire dans la section
+  RH — uniquement l'enveloppe (étape 8) ; bloc BASCULE émis si un tel
+  contenu a été approché pendant l'entretien.
+- [ ] Toute valeur prospective ou de PPI présentée explicitement comme une
+  projection, jamais comme un montant arrêté (étape 5, étape 9).
+- [ ] Modalités de transmission et de publicité renseignées ou marquées
+  `[INCOMPLET]` (étape 10).
+- [ ] Cohérence entre les montants de la rétrospective, de la prospective et
+  de la PPI signalée si un écart apparaît entre sections.
+
+---
+
+## 4. Règle `[INCOMPLET]` — application stricte
+
+**Interdiction absolue d'halluciner une donnée manquante** : série
+rétrospective, montant prospectif, taux macroéconomique, obligation de ROB
+selon la strate, modalité de publicité.
+
+1. Produire le brouillon avec les champs disponibles ; une section
+   incomplète ne bloque pas la rédaction des autres.
+2. Marquer chaque champ manquant `[INCOMPLET — préciser : <nom du champ>]`.
+3. En fin de document, si au moins un champ est marqué `[INCOMPLET]`,
+   ajouter :
+
+```
+---
+## CHAMPS MANQUANTS — RAPPORT NON FINALISABLE EN L'ÉTAT
+
+Les informations suivantes sont requises avant présentation au débat
+d'orientation budgétaire :
+- [champ manquant 1 — étape correspondante]
+- [champ manquant 2 — étape correspondante]
+- [...]
+
+Ce rapport ne doit être ni présenté en séance, ni mis à disposition du
+public, tant que ces champs ne sont pas renseignés — sous réserve de la
+vérification de l'obligation exacte applicable à la strate (étape 2).
+```
+
+4. **Demander explicitement** ces données à l'utilisateur, en reprenant la
+   formulation de la question d'étape correspondante (§1).
+5. Ne jamais marquer le document comme « prêt à présenter » tant qu'une
+   mention `[INCOMPLET]` subsiste, en particulier sur la strate et
+   l'obligation de ROB (étape 2), qui conditionne le contenu minimal exigé.
+
+---
+
+## 5. Frontière RH — rappel opérationnel
+
+Le ROB aborde nécessairement la masse salariale : c'est un point de
+vigilance permanent, pas une exception.
+
+- **Reste ici** : montant ou taux d'évolution de l'enveloppe globale,
+  impact budgétaire d'une mesure collective déjà décidée ailleurs, calendrier
+  d'une négociation en cours (sans en détailler le contenu).
+- **Bascule vers `drh-fpt`** : tout plafond par groupe de fonctions, tout
+  taux individuel de RIFSEEP/IFSE, toute condition d'attribution, toute
+  référence à une instance de dialogue social (CST, F3SCT) ou à une
+  procédure statutaire.
+- **Format imposé** dès qu'un déclencheur apparaît : le bloc BASCULE
+  (§1 étape 8) est émis **avant** tout contenu statutaire, jamais en note de
+  bas de page après coup.
+
+---
+
+## 6. Double échelle [risque / confiance]
+
+| Point | Risque | Confiance |
+|---|---|---|
+| Obligation de ROB et contenu minimal selon la strate | Élevé | À vérifier systématiquement (étape 2) |
+| Données macroéconomiques et de loi de finances | Moyen à élevé | Jamais de mémoire, toujours datées |
+| Rétrospective / prospective | Moyen | Distinguer valeur constatée et projection |
+| Structure de la dette | Élevé | Renvoi `../dette-tresorerie.md` |
+| Enveloppe RH (masse salariale) | Moyen | Bascule `drh-fpt` dès le droit individuel |
+| Programmation des investissements (PPI) | Moyen | Toute valeur provisoire signalée comme telle |
+| Publicité et transmission | Moyen | À vérifier selon la strate |
+
+---
+
+## 7. Checklist avant remise
+
+1. Toutes les étapes du §1 parcourues une à une, avec confirmation à chaque
+   étape.
+2. Strate de la collectivité et obligation de ROB vérifiées avant de figer
+   le contenu minimal du rapport (étape 2) — jamais présumées.
+3. Sections fonctionnement et investissement distinguées à chaque rubrique
+   concernée (étape 5).
+4. Aucune donnée macroéconomique, aucun taux, aucun seuil cité sans date
+   d'effet (étape 3, §5.4 `SKILL.md`).
+5. Section RH limitée à l'enveloppe ; bloc BASCULE émis avant tout contenu
+   statutaire ou indemnitaire approché pendant l'entretien (étape 8, §5).
+6. Toute valeur prospective ou de PPI présentée comme projection, jamais
+   comme montant acquis (étape 5, étape 9).
+7. Aucune donnée manquante comblée par supposition — règle `[INCOMPLET]`
+   (§4) appliquée et champs listés explicitement si nécessaire.
+8. Modalités de transmission et de publicité renseignées ou marquées à
+   vérifier (étape 10).
+9. Aucune donnée nominative, aucun nom d'organisme ou de collectivité réel
+   dans le document produit.
+10. Mention finale claire : rapport **prêt à présenter** ou marqué
+    **`[INCOMPLET]`** avec demande explicite des champs manquants — jamais
+    d'état intermédiaire ambigu.

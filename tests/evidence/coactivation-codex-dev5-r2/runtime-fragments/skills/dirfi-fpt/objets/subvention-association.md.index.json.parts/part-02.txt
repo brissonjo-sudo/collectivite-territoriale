@@ -1,0 +1,90 @@
+ subvention** — `../references/templates/convention-subvention.md` : mentions obligatoires listées en §3.4.
+- **Délibération d'attribution** — `../references/templates/deliberation-budgetaire.md`.
+- **Mise en demeure et titre de recette de reversement** — via
+  `../references/execution-recette.md` (procédure de fond, pas de gabarit
+  dédié dans cet objet).
+- **Note d'impact financier**, si l'engagement pluriannuel le justifie —
+  `../references/templates/note-impact-financier.md`.
+
+**Acte soumis au contrôle de légalité** : délibération d'attribution et
+convention au-delà du seuil — vérifier compétence de l'organe, mentions
+obligatoires, transmission et délais via `../references/controle-budgetaire.md`
+avant toute production.
+
+---
+
+## 5. Jurisprudence clé
+
+> Pointeur uniquement — voir **`recherche-juridique`** pour toute recherche,
+> vérification de vigueur et citation traçable. Aucune décision n'est citée
+> ici par son nom d'usage, son millésime ou son numéro.
+
+Thèmes appelant une recherche avant conclusion :
+- Critères de la **requalification d'une subvention en marché public**.
+- Critères jurisprudentiels de l'**association transparente** (contrôle
+  effectif de la collectivité sur la direction, le financement ou
+  l'activité de l'association).
+- Étendue du **contrôle de l'emploi des fonds** exigible et conséquences
+  d'un contrôle absent.
+- Conditions de mise en jeu du **reversement** et prescription applicable.
+
+---
+
+## 6. Check-list opérationnelle
+
+### Garde-fou ordonnateur / comptable (`SKILL.md` §5.2) — à traiter en premier
+
+- [ ] L'association dispose-t-elle d'une **gouvernance et d'un financement
+      réellement autonomes** (dirigeants distincts des élus/agents,
+      ressources propres, décisions prises hors de l'influence directe de la
+      collectivité) ? Si non → suspicion d'**association transparente**,
+      orienter vers `../objets/satellites.md` et signaler le risque de
+      gestion de fait avant toute autre recommandation.
+- [ ] La subvention **rémunère-t-elle en réalité une prestation** définie
+      par la collectivité (cahier des charges, calendrier imposé,
+      spécifications précises) ? Si oui → requalification en commande
+      publique à envisager, ne pas valider le montage en l'état.
+- [ ] L'association **sert-elle de caisse** à la collectivité (elle encaisse
+      ou décaisse pour le compte de celle-ci, hors toute logique de projet
+      propre) ? Si oui → **STOP** de `SKILL.md` §5.2 à afficher avant tout
+      contenu.
+
+### Qualification et compétence
+
+- [ ] Flux qualifié **avant** toute autre étape : subvention ou commande
+      publique ?
+- [ ] Compétence identifiée : assemblée, ou exécutif dans les limites d'une
+      délégation vérifiée ?
+- [ ] Section et imputation qualifiées ou renvoyées à vérification.
+
+### Convention et versement
+
+- [ ] Seuil de conventionnement vérifié (jamais de mémoire) et convention
+      produite si nécessaire.
+- [ ] Contenu de la convention conforme (objet, montant, durée, obligations,
+      contrôle, clause de reversement).
+- [ ] Avance expressément prévue avant tout versement anticipé.
+
+### Contrôle et suite
+
+- [ ] Compte rendu financier exigé et effectivement contrôlé.
+- [ ] Non-exécution constatée → mise en demeure puis titre de recette.
+- [ ] Publicité annuelle de la subvention traitée ou signalée comme à
+      vérifier.
+- [ ] Couple [risque / confiance] indiqué si utile à la décision.
+- [ ] Cas journalisable (montage atypique, association à la limite de la
+      transparence) → proposé pour `JOURNAL.md`.
+
+---
+
+## Références et remontées
+
+**Branches mobilisées** : `subventions.md` (fond), `commande-publique-financiere.md` (frontière de qualification), `nomenclature-m57.md` et `budget-cycle.md` (imputation et inscription), `execution-recette.md` (reversement), `contentieux-financier.md` (conséquences d'un montage irrégulier).
+
+**Objet lié** : `../objets/satellites.md` dès qu'une association présente des
+signes de dépendance structurelle envers la collectivité.
+
+**Point de mise à jour requis** : seuil réglementaire de conventionnement,
+taux d'autofinancement minimal, délais de caducité et de reversement, régime
+européen des aides d'État aux entreprises — valeurs volatiles à réviser à
+chaque loi de finances ou évolution réglementaire.

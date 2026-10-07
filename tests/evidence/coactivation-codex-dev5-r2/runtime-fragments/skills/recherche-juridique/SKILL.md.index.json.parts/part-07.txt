@@ -1,0 +1,163 @@
+par `[express]` |
+| **ACTE-ADMIN** | Rédaction/analyse/contrôle acte admin (arrêté, décision individuelle, sanction, refus) | Proportionnalité Benjamin, compétence renforcée, opposabilité, triangulation si acte faisant grief |
+| **PA-PJ** | Opération susceptible d'être PA ou PJ (constatation, interpellation, contrôle, mesure préventive) | Mini-grille : finalité / autorité / temporalité / régime procédural |
+| **FOND** | Niveau = note de fond / citation pour acte / concours ; ou interprétation controversée | T3 obligatoire, grille autorité jurisprudentielle |
+| **CONTENTIEUX** | Risque recours / stratégie procédurale / voie de droit envisagée | Régime contentieux + office juge + charge + moyens + délais |
+| **DOC-AUDIT** | Audit, relecture ou correction juridique d'un ou plusieurs fichiers | Registre des affirmations, risque élevé vérifié à 100 %, matrice acteur–lieu–propriétaire–pouvoir, cohérence du corpus, contrôle post-correction ; non désactivable par `[express]` |
+
+**Lire [`references/modules.md`](references/modules.md) dès qu'un module s'active.**
+
+---
+## 6. Gabarits de sortie
+
+**Gabarit A** — Note express · **Gabarit B** — Note de fond · **Gabarit C** — Citation
+pour acte · **Gabarit D** — Audit documentaire · **Sous-gabarit
+`[syllogisme]`** — Note de concours (surcouche B).
+
+**Lire [`references/gabarits-sortie.md`](references/gabarits-sortie.md) avant toute rédaction de livrable.**
+
+---
+## 7. Déclencheurs d'abstention (ou sortie dégradée balisée)
+
+Le skill s'arrête sur le point concerné et le signale, plutôt que de
+spéculer, dans **dix cas** :
+
+1. **Source primaire inaccessible** (Légifrance indisponible, URL non
+   résolue, erreur HTTP).
+2. **Texte trouvé** mais date d'entrée en vigueur ou disposition
+   transitoire **impossible à confirmer**.
+3. **Décision juridictionnelle** invoquée dont la **référence exacte
+   est introuvable**.
+4. **Circulaire interne non publique** (DGGN, DGPN, préfecture,
+   parquet, note de service DGS, instruction préfectorale) : signaler
+   l'**existence probable** pour recherche interne par l'utilisateur,
+   ne **pas spéculer** sur le contenu.
+5. **Faits postérieurs au cutoff** d'entraînement, non vérifiables
+   par recherche web.
+6. **Matière répressive** : doute sérieux sur un élément constitutif
+   (P6).
+7. **Échec de la triangulation obligatoire** (étape 4).
+8. **Renvoi normatif essentiel** introuvable ou non résolu (mode 12).
+9. **Délai de prescription ou de forclusion** possiblement expiré,
+   sans possibilité de calcul certain.
+10. **Information décisionnelle détenue par le seul utilisateur,
+    manquante** (étape 0 bis) : ne pas déployer d'analyse complète sur
+    une hypothèse non levée ; poser la question et, au plus, livrer
+    une esquisse conditionnelle bornée.
+
+**Format d'abstention motivée** :
+
+```
+**⚠️ Information non vérifiable — abstention motivée**
+
+Je ne peux pas produire de citation fiable pour [référence] à la
+date du [date] pour la raison suivante : [motif précis dans la
+liste ci-dessus].
+
+Démarches alternatives :
+- Accéder directement à : [URL officielle]
+- Consulter : [autre source officielle]
+- Source informelle à vérifier en interne : [si applicable]
+
+Je préfère m'abstenir plutôt que spéculer.
+```
+
+**Format de clarification motivée (cas n° 10, étape 0 bis)** :
+
+```
+**Question préalable nécessaire**
+
+Un point conditionne la réponse et je ne peux pas le trancher seul :
+[formulation fermée ou à choix de la question].
+
+Pourquoi c'est déterminant : [une ligne — quel régime / quelle
+conclusion bascule selon la réponse].
+
+Esquisse conditionnelle (bornée) :
+- Si [a] → [orientation en une ou deux lignes].
+- Si [b] → [orientation en une ou deux lignes].
+
+Je traite la suite dès que ce point est précisé.
+```
+
+Dans tous les cas, **l'abstention est ciblée** sur le point précis et
+n'empêche pas la livraison du reste de l'analyse avec sortie dégradée
+balisée (P7).
+
+---
+
+## 8. Cas particuliers métier — définis par le profil
+
+Les cas particuliers propres à un métier (textes de référence,
+jurisprudences cardinales, pièges récurrents) **ne sont pas codés dans le
+noyau** : ils vivent dans la **section 5 du profil actif** (`profil.md`).
+
+- **Profil chargé** → appliquer sa section 5 (ex. pour police-gendarmerie :
+  pouvoirs OPJ/APJ, arrêtés de police du maire, MGP/EPT ; pour avocat :
+  délais et voies de droit ; etc.). Voir [`profils/`](profils/).
+- **Profil neutre** (pas de `profil.md`) → **aucun cas particulier métier
+  n'est présumé**. Les particularités **universelles** du droit français
+  (Alsace-Moselle, outre-mer, IDF / petite couronne, champ territorial,
+  dispositions transitoires) restent traitées par l'étape 5 et
+  [`references/checklist-vigueur.md`](references/checklist-vigueur.md),
+  indépendamment de tout profil.
+
+En cas de contexte décisionnel non couvert par le profil → étape 0 bis
+(question obligatoire), jamais d'hypothèse.
+
+---
+
+## 9. Limites et précautions du skill lui-même
+
+- Ce skill ne remplace pas l'avis d'un juriste ou d'un avocat pour
+  les décisions à fort enjeu contentieux.
+- La qualité dépend de l'accessibilité de Légifrance et des autres
+  sources au moment de la requête.
+- Pour les textes anciens non codifiés (avant numérisation
+  Légifrance), la vérification manuelle au JORF papier peut être
+  nécessaire.
+- Les textes UE (EUR-Lex) suivent leur propre nomenclature ; vérifier
+  la transposition en droit français séparément.
+- **Palier 3 (API PISTE) — outillé depuis la v2.3.0.** L'étape 2
+  (récupération) peut être automatisée et fiabilisée par les
+  métadonnées officielles via [`scripts/legifrance.py`](scripts/legifrance.py)
+  (API Légifrance **et** Judilibre, toutes deux via PISTE). C'est le moyen
+  privilégié de satisfaire P1 et la règle de provenance : l'identifiant
+  `LEGIARTI`, la date de version en vigueur et le statut (en vigueur /
+  modifié / abrogé) proviennent alors d'une réponse officielle, non de la
+  mémoire du modèle. L'**ordre des voies** (outillée → repli web →
+  abstention) est normé à l'**étape 2** et ne se rejoue pas ici : à défaut
+  d'accès API, la voie web conserve son risque de rendu incomplet, sans
+  abaisser d'un cran l'exigence de provenance. Les étapes 0, 0 bis, 4, 5,
+  6, 7 et les techniques T1/T2/T3/T4 restent essentielles.
+
+---
+
+## 10. Maintenance et versioning
+
+### En-tête du SKILL.md
+Métadonnées YAML obligatoires :
+- `version` (sémantique MAJEUR.MINEUR.PATCH),
+- `date_derniere_revue_methodologique`,
+- `date_derniere_verification_sources`.
+
+### Checklist annuelle (1er septembre — rentrée juridique)
+
+Priorisée par les **domaines prioritaires du profil actif** (section 3 de
+`profil.md`). Les entrées ci-dessous sont l'exemple du profil
+police-gendarmerie ; les remplacer par les domaines du profil utilisé.
+
+- [ ] Évolutions des **codes de la section 3 du profil** (priorité haute).
+- [ ] **Arrêts de principe** rendus dans l'année par les juridictions
+      suprêmes sur ces matières (priorité haute).
+- [ ] **Nouvelle loi de programmation / réforme** du champ suivi (priorité variable).
+- [ ] Cohérence des fichiers `profils/` avec le format en 5 sections.
+- [ ] Mise à jour de `date_derniere_revue_methodologique`.
+- [ ] Mise à jour de `date_derniere_verification_sources`.
+
+Procédure de revue détaillée → [`references/maintenance.md`](references/maintenance.md).
+
+---
+
+
+> Historique complet → [`CHANGELOG.md`](CHANGELOG.md)

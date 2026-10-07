@@ -1,0 +1,122 @@
+ns du propriétaire, avis
+   vétérinaire) — l'agent constate et signale.
+9. Basculer trop tard vers le **garde-fou APJA** lors d'un contrôle routier
+   qui s'oriente vers une vérification approfondie d'emprise (alcool,
+   stupéfiants) — §6.
+10. Citer une **durée, un délai ou une classe de contravention** de mémoire
+    au lieu de vérifier la version consolidée, y compris pour les articles
+    déjà vérifiés dans cette branche.
+
+---
+
+## 9. Données / références à vérifier
+
+- **Code de la route, art. L. 325-1** — fondement de l'immobilisation, de la
+  mise en fourrière, de la mise en circulation et de la destruction des
+  véhicules (*vérifié sur Légifrance le 2026-06-30* — recontrôler la version
+  en vigueur à la date des faits).
+- **Code de la route, art. R. 325-1 et s.** — modalités d'exécution de la
+  fourrière (autorité décisionnaire selon les cas, conditions de garde,
+  restitution, frais) — **à confirmer en version consolidée**, non détaillé
+  dans cette session au-delà du repérage de la section.
+- **Code de la route, art. R. 417-10** — qualification du stationnement
+  gênant (*vérifié sur Légifrance le 2026-06-30* — recontrôler la version en
+  vigueur à la date des faits ; classe de contravention exacte à confirmer).
+- **Code de la santé publique, art. L. 3332-15** — fermeture administrative
+  des débits de boissons et restaurants, par le préfet ou le maire selon le
+  cas, avertissement substitutif, transmission au préfet des arrêtés du
+  maire (*vérifié sur Légifrance le 2026-06-30* — durées exactes en mois et
+  délai de transmission **à confirmer en version consolidée**).
+- **Code général de la propriété des personnes publiques, art. L. 2122-1** —
+  principe du titre d'occupation du domaine public (*vérifié sur Légifrance
+  le 2026-06-30* — recontrôler la version en vigueur à la date des faits ;
+  article précisant le caractère précaire et révocable à confirmer).
+- **Code rural et de la pêche maritime, art. L. 211-11** — pouvoir du maire
+  (à défaut du préfet) sur les animaux dangereux : mesures de prévention,
+  placement en cas de danger grave et immédiat, euthanasie après défaut de
+  garanties, droit aux observations du propriétaire (*vérifié sur Légifrance
+  le 2026-06-30* — recontrôler la version en vigueur à la date des faits ;
+  délai ouvé exact **à confirmer en version consolidée**).
+- **Code rural, catégorisation des chiens dangereux (1re/2e catégorie),
+  permis de détention, évaluation comportementale** — L. 211-12, L. 211-13-1,
+  L. 211-14 et L. 211-16 sont au socle vérifié. La liste concrète des chiens et
+  la distinction inscription/non-inscription à un livre généalogique reconnu
+  relèvent de l'**arrêté du 27 avril 1999**, art. 1 et 2, et non du seul art.
+  L. 211-12. Pour le refus du permis par le maire, traiter la décision
+  individuelle défavorable faisant grief via `controle-legalite.md` et l'art.
+  L. 211-2 CRPA. Recontrôler la version applicable avant tout acte.
+- **Règlement sanitaire départemental (RSD)** — nature réglementaire locale
+  (préfet du département) : numéro et contenu **propres à chaque
+  département**, à se procurer au cas par cas, jamais à généraliser de
+  mémoire.
+- **Code de l'environnement** (bruit, déchets, publicité, ICPE) — articles
+  applicables **non vérifiés dans cette session** : à identifier et
+  confirmer au cas par cas selon la nature exacte du trouble.
+- **Code de la construction et de l'habitation / CSP** (péril, insalubrité)
+  — articles et procédures **non vérifiés dans cette session**, hors détail
+  de cette branche.
+
+---
+
+## 10. Écrits & livrables
+
+1. **Écrit de constatation** — PV de contravention (stationnement gênant,
+   infraction au code de la route, manquement à un arrêté de police) →
+   `references/templates/pv-contravention.md`.
+2. **Rapport d'information** — signalement d'un fait relevant d'une police
+   spéciale nécessitant une décision de l'autorité (animal dangereux,
+   salubrité, occupation sans titre) → `references/templates/rapport-information.md`.
+3. **Acte de l'autorité de police** — arrêté de fermeture, arrêté sur animal
+   dangereux, mise en demeure de régularisation d'occupation du domaine
+   public. Acte faisant grief si défavorable : **motivation en fait et en
+   droit + voies de recours** + vérification de la transmission au
+   **contrôle de légalité** → `controle-legalite.md` avant production, puis
+   `references/templates/arrete-modele.md`.
+4. **Note au maire** — sur l'étendue de son pouvoir dans un domaine
+   sectoriel, un conflit de compétence (maire/préfet/ARS), ou une situation
+   à fort enjeu (fermeture, animal dangereux) → `references/templates/note-maire-modele.md`.
+5. **Rapport de mise à disposition** — uniquement si une route 53/73 ou 78-6
+   est établie ; le seul basculement vers un acte réservé à l'OPJ ne suffit
+   pas → `references/templates/rapport-mise-a-disposition.md` +
+   `penal-procedure.md`.
+
+---
+
+## 11. Double échelle [risque / confiance]
+
+| Sous-domaine | Risque | Confiance |
+|---|---|---|
+| Qualification du stationnement gênant (art. R. 417-10) | Faible à moyen | Stable |
+| Mise en fourrière (décision, conditions de garde) | Moyen à élevé | Stable dans son principe, modalités à vérifier |
+| Fermeture administrative d'un débit de boissons | Élevé | Stable dans son principe, durées à vérifier |
+| Salubrité — RSD et habitat insalubre/péril | Moyen à élevé | À vérifier (texte local + procédure longue) |
+| Occupation du domaine public sans titre | Moyen à élevé | Stable dans son principe, modalités locales à vérifier |
+| Bruit de voisinage vs bruit d'activité/ICPE | Moyen | À vérifier (qualification de la source) |
+| Mesures sur animal dangereux (art. L. 211-11) | Élevé | Stable dans son principe, délais et catégorisation à vérifier |
+| Cumul administratif / pénal sur un même fait | Moyen à élevé | Stable dans son principe |
+
+---
+
+## 12. Checklist de branche
+
+1. Domaine sectoriel exact identifié, y compris en cas de cumul (ex. débit de
+   boissons + bruit) ?
+2. Police générale ou police spéciale correctement distinguée, texte de
+   référence nommé (§5) ?
+3. Autorité compétente identifiée (maire/préfet/ARS) sans confusion avec la
+   police générale ?
+4. Garde-fou APJA testé si la constatation peut basculer vers un acte
+   réservé à l'OPJ (§6) ?
+5. Délais et durées chiffrés signalés comme « à confirmer en version
+   consolidée », jamais donnés de mémoire ?
+6. Cumul de procédures (administrative/pénale) repéré et signalé ?
+7. Si acte faisant grief : motivation, voies de recours, contrôle de
+   légalité traités via `controle-legalite.md` ?
+8. Renvoi fait vers l'objet métier compétent (`objets/fourriere.md`,
+   `objets/commerce.md`, `objets/police-chiens.md`,
+   `objets/occupation-domaine-public.md`) plutôt que duplication du détail
+   opérationnel ?
+9. Articles cités avec leur statut (« vérifié sur Légifrance le 2026-06-30 »
+   ou « à confirmer en version consolidée ») ?
+
+**[risque variable selon sous-domaine — voir §11 / confiance variable, voir §11]**

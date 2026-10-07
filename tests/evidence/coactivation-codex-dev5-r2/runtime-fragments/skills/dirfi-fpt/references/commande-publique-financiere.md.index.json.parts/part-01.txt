@@ -1,0 +1,163 @@
+# Branche — Volet financier de la commande publique (v1.0.0)
+
+> Structure conforme à `_gabarit-branche.md`. Aucun seuil, aucun taux, aucun
+> plafond, aucun délai chiffré et aucun numéro d'article n'est cité de
+> mémoire : seules les **règles**, les **méthodes de calcul** et la consigne
+> de vérifier la version en vigueur figurent ci-dessous. **La passation des
+> marchés est hors périmètre de cette branche et du skill : elle est
+> signalée, jamais traitée.**
+
+## 1. Périmètre / Exclusions
+
+- **Périmètre** : **uniquement l'aval financier** d'un marché déjà passé —
+  avance obligatoire et facultative, remboursement de l'avance ; acomptes et
+  périodicité ; retenue de garantie et garantie à première demande ; caution
+  personnelle et solidaire ; révision et actualisation des prix ; prix
+  ferme, ferme actualisable, révisable ; pénalités de retard et leur
+  imputation ; règlement des comptes, décompte général et définitif ;
+  sous-traitance et paiement direct ; cession ou nantissement de créance ;
+  délai global de paiement propre aux marchés et intérêts moratoires ;
+  imputation comptable d'un marché, marchés à tranches, accords-cadres et
+  bons de commande sous l'angle de l'engagement comptable ; avenants et leur
+  impact budgétaire.
+- **Exclusions explicites et répétées** : la **passation** du marché
+  (allotissement, publicité, définition des critères de sélection, analyse
+  des offres, recours précontractuel, choix du titulaire) est **hors
+  périmètre du skill**. Cette branche ne l'aborde à aucun titre : toute
+  question de passation doit être **signalée comme hors périmètre**, jamais
+  instruite au fond, y compris lorsqu'elle affleure au détour d'une question
+  financière (exemple : critère de prix dans l'analyse des offres — hors
+  périmètre ; méthode de fixation du prix dans le marché déjà attribué —
+  dans le périmètre, §5.5).
+
+---
+
+## 2. Questions couvertes
+
+- Quand une avance est-elle due, comment la calculer et comment la
+  récupérer ?
+- Comment calculer un acompte et selon quelle périodicité ?
+- Quelle différence entre retenue de garantie et garantie à première
+  demande, et comment chacune se libère-t-elle ?
+- Comment fonctionne la révision de prix, quelle formule et quel index
+  mobiliser, qu'est-ce que le mois d'établissement du prix ?
+- Comment calculer et imputer des pénalités de retard ?
+- Qu'est-ce que le décompte général et définitif, et quels sont ses effets ?
+- Comment payer un sous-traitant déclaré et accepté ?
+- Comment traiter une cession ou un nantissement de créance issue d'un
+  marché ?
+- Quel délai de paiement s'applique à un marché public, et quelles
+  conséquences en cas de dépassement ?
+- Comment engager comptablement un marché à tranches, un accord-cadre à
+  bons de commande ?
+- Comment traiter budgétairement un avenant ?
+
+**Rappel constant** : toute question relative au **choix du titulaire, à
+l'allotissement, à la publicité ou aux critères de sélection** est hors
+périmètre de cette branche — signaler la limite (§1) au lieu d'y répondre.
+
+---
+
+## 3. Arbre de traitement
+
+`vérifier d'abord que la question porte sur l'exécution financière d'un
+marché déjà attribué, non sur sa passation (§1) → qualifier l'étape
+(formation du prix / exécution financière / clôture) → nature et montant du
+marché (travaux, fournitures, services, tranches, accord-cadre) →
+identifier la clause contractuelle applicable (avance, révision, pénalités,
+garantie) → règle et méthode de calcul (§5, §6) → imputation comptable → 
+vérification (§7) → écrit ou livrable (§10)`
+
+Si la question porte sur la **passation**, arrêter le traitement à cette
+première étape et produire le signal de limite de périmètre avant toute
+autre analyse.
+
+---
+
+## 4. Variables à lever
+
+- **Nature et durée du marché** : travaux, fournitures, services ; marché à
+  exécution unique ou à exécution successive.
+- **Montant du marché** au regard du **seuil réglementaire de l'avance
+  obligatoire** — nommer le seuil sans le chiffrer, le vérifier avant toute
+  conclusion.
+- **Mode de détermination du prix** : ferme, ferme actualisable, révisable —
+  conditionne l'ensemble des clauses financières applicables (§5.5).
+- **Existence d'une sous-traitance déclarée et acceptée** (acceptation du
+  sous-traitant et agrément des conditions de paiement — ACAP), condition du
+  paiement direct (§5.8).
+- **Existence d'une clause de garantie** : retenue de garantie ou garantie à
+  première demande, alternative laissée au choix du titulaire selon les
+  conditions du marché.
+- **Existence de tranches** (ferme, optionnelles) ou d'un **accord-cadre à
+  bons de commande** : conditionne le mode d'engagement comptable (§5.12,
+  §5.13).
+- **Régime de TVA applicable** à l'opération, pertinent pour le calcul des
+  acomptes et du décompte.
+
+---
+
+## 5. Règles métier
+
+### 5.1 Avance
+
+- **Avance obligatoire** : due au-delà d'un **seuil réglementaire de montant
+  du marché — valeur à vérifier avant usage**, sauf exclusion prévue par le
+  texte pour certaines situations (titulaire, durée, nature du marché).
+- **Avance facultative** : en deçà du seuil, l'acheteur peut néanmoins
+  prévoir une avance dans les documents du marché.
+- **Taux et montant maximal de l'avance** : encadrés par le texte — **jamais
+  chiffrés de mémoire**.
+- **Remboursement** : par **précompte** sur les sommes dues au titulaire au
+  fur et à mesure de l'exécution, selon un rythme et des modalités fixés par
+  le marché — méthode à poser, pas de valeur.
+
+### 5.2 Acomptes
+
+- **Objet** : règlement des prestations partiellement exécutées, distinct de
+  l'avance qui n'est pas liée à un service fait.
+- **Périodicité** : généralement resserrée pour les prestations à exécution
+  successive (souvent mensuelle pour les travaux) — **périodicité exacte à
+  vérifier selon la nature du marché**, jamais présumée uniforme.
+- **Calcul** : sur la base des prestations réalisées et constatées
+  (situations de travaux, bons de livraison, service fait), jamais sur une
+  base forfaitaire non justifiée.
+
+### 5.3 Retenue de garantie et garantie à première demande
+
+- **Retenue de garantie** : prélèvement sur chaque versement dû au
+  titulaire, destiné à couvrir les réserves et malfaçons constatées à la
+  réception ; plafonné en proportion du montant du marché — **plafond à
+  vérifier, jamais chiffré de mémoire**.
+- **Garantie à première demande** : alternative au choix du titulaire,
+  substituant l'engagement d'un tiers garant au prélèvement direct sur les
+  paiements.
+- **Libération** : à l'expiration du délai de garantie contractuel ou après
+  levée des réserves constatées à la réception — délai à vérifier, jamais
+  présumé.
+
+### 5.4 Caution personnelle et solidaire
+
+- **Mécanisme** : engagement d'un tiers garant se substituant au titulaire
+  pour garantir certaines obligations (notamment le remboursement de
+  l'avance), alternative distincte de la garantie à première demande par sa
+  nature juridique et son régime propre.
+- **Vigilance** : vérifier la nature exacte de l'engagement demandé
+  (caution simple ou solidaire) avant toute mise en jeu.
+
+### 5.5 Révision et actualisation des prix
+
+- **Prix ferme** : non révisable pendant toute la durée d'exécution ; peut
+  toutefois être **actualisé** si un délai s'écoule entre l'établissement du
+  prix (l'offre) et le début d'exécution, au-delà d'un délai fixé par le
+  texte ou le marché — **délai à vérifier**.
+- **Prix ferme actualisable** : combine la fermeté du prix pendant
+  l'exécution et une actualisation possible avant le début de celle-ci.
+- **Prix révisable** : évolue pendant l'exécution selon une **formule
+  paramétrique** rapportant le prix initial à un ou plusieurs **index**
+  publiés, représentatifs du coût de la prestation.
+- **Méthode générique de révision** : `Pn = P0 × (a + b × In / I0)`, où
+  `P0` est le prix initial établi au **mois d'établissement du prix** (mois
+  de référence contractuel), `In` l'index à la date de règlement, `I0`
+  l'index au mois de référence, et `a` + `b` une pondération contractuelle
+  e

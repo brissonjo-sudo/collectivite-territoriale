@@ -1,0 +1,69 @@
+oiement de certains systèmes à haut risque | Règlement (UE) 2024/1689, art. 27 | CELEX 32024R1689 ; consolidé 02024R1689-20260727 | selon art. 113 | vérifié | **Sous conditions** : « déployeurs qui sont des organismes de droit public » |
+| Haut risque : éligibilité aux prestations et services d'aide sociale essentiels | Règlement (UE) 2024/1689, annexe III, point 5 a) | CELEX 32024R1689 | selon art. 113 | vérifié | **Sous conditions** : systèmes « utilisés par les autorités publiques ou en leur nom » |
+| Calendrier d'application, tel que modifié | Règlement (UE) 2024/1689, art. 113 (version consolidée au 2026-07-27) | consolidé 02024R1689-20260727 | — | vérifié | Commun ; dates dans le cache |
+| Règlement modificatif (« omnibus numérique sur l'IA ») ; échéance propre aux systèmes à haut risque des autorités publiques | Règlement (UE) 2026/1744 du 8 juillet 2026 | CELEX 32026R1744 | publié le 2026-07-24 | vérifié | **Oui, sous conditions** ; date dans le cache |
+| Identification biométrique à distance en temps réel à des fins répressives : autorisation préalable | Règlement (UE) 2024/1689, art. 5 | CELEX 32024R1689 | selon art. 113 | vérifié (ce passage) ; ⚠️ liste complète non relue | **Frontière** : sert au garde-fou surveillance et au renvoi `dpm-fpt`, jamais de mode d'emploi |
+
+> Une version consolidée de l'Union « n'a aucun effet juridique » : la
+> référence opposable reste le règlement 2024/1689 et ses modificatifs.
+
+## 12. Contrats informatiques et facturation électronique
+
+| Objet | Référence | Identifiant | En vigueur depuis | Statut | Collectivités |
+|---|---|---|---|---|---|
+| CCAG des marchés de techniques de l'information et de la communication (arrêté d'approbation) | Arrêté du 30 mars 2021 | JORFTEXT000043310689 (WebFetch) ; art. 39 : LEGIARTI000043320046 | 2021-04-01 | vérifié | **Sous conditions** : applicable seulement si le marché s'y réfère |
+| Référence facultative aux CCAG dans les clauses du marché | CCP, art. R2112-2 | LEGIARTI000037730993 | 2019-04-01 | vérifié | Oui |
+| Pouvoirs adjudicateurs | CCP, art. L1211-1 | LEGIARTI000037703308 | 2019-04-01 | vérifié | Oui (« personnes morales de droit public ») |
+| Modification d'un marché sans nouvelle mise en concurrence | CCP, art. L2194-1 | LEGIARTI000037703841 | 2019-04-01 | vérifié | Oui |
+| Résiliation : principe, force majeure, faute ou intérêt général, cas d'exclusion | CCP, art. L2195-1 à L2195-4 | LEGIARTI000037703847 ; LEGIARTI000037703849 ; LEGIARTI000037703851 ; LEGIARTI000042657215 | 2019-04-01 (L2195-4 : 2020-12-09) | vérifié | Oui (L2195-3 : contrat administratif) |
+| Factures électroniques transmises par les titulaires de marchés | CCP, art. L. 2192-1 | LEGIARTI000046195587 | 2024-07-01 | vérifié | Oui (inférence) : obligation **des fournisseurs** |
+| Acceptation des factures électroniques par les personnes publiques | CCP, art. L. 2192-2 | LEGIARTI000046195584 | 2024-07-01 | vérifié | Oui (inférence) : obligation **de la collectivité** |
+| Acceptation des factures conformes à la norme | CCP, art. L. 2192-3 | LEGIARTI000038541739 | 2019-07-22 | vérifié | Oui (inférence) |
+| Portail public de facturation (version en vigueur jusqu'au changement de version) | CCP, art. L. 2192-5 | LEGIARTI000053546705 | 2026-02-21 | vérifié | **Oui, expressément** : « les collectivités territoriales » |
+| Portail public de facturation (version future) | CCP, art. L. 2192-5 | LEGIARTI000054567709 | version future (date dans le cache) | vérifié | Oui, expressément |
+| Exclusions du dispositif | CCP, art. L. 2192-6 | LEGIARTI000038960975 | 2020-01-01 | vérifié | Aucune exclusion ne vise une collectivité |
+
+> **Frontière.** Ces références servent l'**exécution** des contrats. La
+> passation (procédure, critères, publicité) est hors périmètre et ne
+> s'illustre pas.
+
+## 13. Identification électronique et interopérabilité (Union)
+
+| Objet | Référence | Identifiant | En vigueur depuis | Statut | Collectivités |
+|---|---|---|---|---|---|
+| Identification électronique et services de confiance | Règlement (UE) n° 910/2014 (eIDAS), modifié par le règlement (UE) 2024/1183 | CELEX 32014R0910 ; 32024R1183 | — | vérifié (existence et objet) ; **⚠️ obligations des organismes publics et dates non relues** | ⚠️ non vérifié |
+| Définition de l'« organisme du secteur public » par renvoi à la directive (UE) 2019/1024 | Règlement (UE) 2024/903, art. 2, point 6 | CELEX 32024R0903 | ⚠️ dates non relues | vérifié (définition) | ⚠️ non vérifié (directive 2019/1024 non lue) |
+
+## 14. Frontière avec `dpo-ct` (pointeurs seulement)
+
+| Objet | Référence | Identifiant | Statut | Traitement |
+|---|---|---|---|---|
+| Sécurité du traitement | RGPD, art. 32 | CELEX 32016R0679 | vérifié (intitulé) | Régime traité par `dpo-ct` |
+| Notification à l'autorité de contrôle d'une violation de données | RGPD, art. 33 | CELEX 32016R0679 | vérifié (intitulé) | Régime traité par `dpo-ct` |
+
+## 15. Doctrine d'appui et référentiels
+
+> **Doctrine d'appui : non normative, sauf texte contraire cité.** Versions et
+> dates de publication : cache de maintenance du seul dépôt source, hors
+> paquet runtime ; ne pas le charger. Lus le 2026-10-05 sur les sites
+> officiels (détail et URL : `docs/socle/lot-4-doctrine.md`).
+
+### 15.1 Référentiels rendus obligatoires par un texte
+
+| Référentiel | Éditeur | Texte qui le rend opposable | Statut | Collectivités |
+|---|---|---|---|---|
+| Référentiel général de sécurité (RGS) | ANSSI, avec la DINUM | Ordonnance n° 2005-1516 et décret n° 2010-112 (§4) ; arrêté d'approbation cité par la page ANSSI (⚠️ arrêté non relu sur Légifrance) | vérifié (page ANSSI et document) | **Oui** : la page ANSSI cite expressément « les collectivités territoriales ». Démarche d'homologation de sécurité et analyse de risques exigées ; le reste est présenté comme recommandations |
+| Référentiel général d'amélioration de l'accessibilité (RGAA) | DINUM | Loi n° 2005-102, art. 47, et décret n° 2019-768, art. 5 (§5) : méthode technique de vérification | vérifié (version) ; ⚠️ date propre de la version et références de l'arrêté non affichées | **Oui** (personnes morales de droit public) ; une nouvelle version majeure est annoncée, à revérifier |
+| Référentiel général d'interopérabilité (RGI) | DINUM | Officialisé par arrêté (via WebFetch, ⚠️ arrêté non relu sur Légifrance) | vérifié (document) | **Sous conditions** : le document se déclare applicable à « l'ensemble des autorités administratives », dont les collectivités ; portée exacte de ses règles à qualifier |
+
+### 15.2 Doctrine non normative
+
+| Document | Éditeur | Statut | Portée pour une collectivité |
+|---|---|---|---|
+| Guide d'hygiène informatique | ANSSI | vérifié | Bonne pratique ; aucun texte ne le rend obligatoire |
+| Méthode EBIOS Risk Manager | ANSSI | vérifié | Bonne pratique ; méthode d'analyse de risques au libre choix de la collectivité |
+| Référentiel SecNumCloud (exigences des prestataires) | ANSSI | vérifié | **S'impose aux prestataires qui demandent la qualification, pas aux acheteurs** ; préconisé pour les données sensibles |
+| Catalogue des offres qualifiées | ANSSI | vérifié (mis à jour chaque mois) | Outil de vérification avant achat, à consulter à la date de la décision |
+| Doctrine « cloud au centre » (circulaire du Premier ministre) | Premier ministre, DINUM | vérifié via WebFetch | **Vise l'État** (destinataires : membres du gouvernement). Bonne pratique seulement pour une collectivité. **Piège** : la traduction anglaise de la règle R5 dit « local authorities » là où le français dit « l'administration » ; se référer au texte français |
+| CERT-FR | ANSSI | vérifié | Périmètre prioritaire : État, opérateurs d'importance vitale et de services essentiels ; pas l'interlocuteur de première ligne d'une collectivité |
+| CSIRT territoriaux et centres de ressources cyber | ANSSI ; liste sur le site du CERT-FR | vérifié | **Nomment expressément les collectivités** ; réponse à incident de premier niveau gratuite ; aucune obligation de recours. Citer la liste nomi

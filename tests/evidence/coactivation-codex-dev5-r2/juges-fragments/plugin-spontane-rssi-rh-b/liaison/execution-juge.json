@@ -1,0 +1,82 @@
+{
+  "agent": "/root/juge_codex_dev5_r2_14b",
+  "thread_id": "01a117c8-0b46-7ad1-9ee9-4e936970ed45",
+  "parent_thread_id": "01a1103e-0b49-70c1-8f4e-66a36b54916f",
+  "model": "gpt-6.1-sol",
+  "turn_id": "01a117c8-0bce-7a32-baa5-8adaae274c6b",
+  "created_at": "2026-10-07T19:12:28.487Z",
+  "started_at": "2026-10-07T19:12:28.637Z",
+  "completed_at": "2026-10-07T19:15:17.967Z",
+  "fork_turns": "none",
+  "initial_message_verified": false,
+  "initial_message_sha256": "07d9346906a29aba8040bf5064036b9b2fdf002273439e9e0134c7fc18c75b74",
+  "case_id": "plugin-spontane-rssi-rh",
+  "assessment": {
+    "case_id": "plugin-spontane-rssi-rh",
+    "verdict": "echec",
+    "technical_status": "failed",
+    "behavior_status": "passed",
+    "documentary_status": "passed",
+    "primary_content_available": false,
+    "release_ready": false
+  },
+  "host": "Codex",
+  "activation_kind": "file_read_fragments",
+  "actual_plugin_activation_verified": false,
+  "full_packet_context_verified": true,
+  "fragment_count": 7,
+  "judge_adapter_sha256": "e1e04cd4ab37425885d57861151c893a7b921999ac295ddc7d44c5a0443fdc0b",
+  "packet_sha256": "f7d069c33d64c211c0deab12bbecf9b810f54d5d87543a18a93139bc5d23fb24",
+  "response_sha256": "14bc48d55ee9b83b6d17e9bff5643d9d06068e422c0d69ffb86c31e6b8f320e4",
+  "judgment_sha256": "9e00f59ef3d5f34cf4e6143d1d57375b00b14f7256702dee78ff0fcb3e243610",
+  "trace_sha256": "af55134c92fa8b9ef3eead8e3bfc12060a07dbdad73ed4618e90cc83d56bc98a",
+  "rejected_creation_attempts": [],
+  "native_session_file": "rollout-2026-10-07T21-12-28-01a117c8-0b46-7ad1-9ee9-4e936970ed45.jsonl",
+  "parent_session_file": "rollout-2026-10-06T10-04-24-01a1103e-0b49-70c1-8f4e-66a36b54916f.jsonl",
+  "presentation_wrapper_sha256": "b709a2641f5433f3336a916b67b115570e5d77ed17d58433d39a89634ce3c14b",
+  "exact_presentation_normalizations": [
+    {
+      "call_id": "call_kc7Rqhp7mFGc7Bb5ogjfXl1D",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-rssi-rh-b/fragment-01.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_QxvGVEs3RH6YkzE9nQDPknHN",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-rssi-rh-b/fragment-02.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_3ahKpD5lMB0PkRkJB5I65KSn",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-rssi-rh-b/fragment-03.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_JlZZugtS19cL9Dj767BZLWd6",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-rssi-rh-b/fragment-04.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_E4DXoQpizXW0Dj9tmasXevV2",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-rssi-rh-b/fragment-05.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_wdLxeddYDvwS9uQcCb6olka8",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-rssi-rh-b/fragment-06.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_vdCMjTD249gkAlsB6wLeCths",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-rssi-rh-b/fragment-07.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    }
+  ],
+  "normalization_scope": "only expected content plus one terminal CRLF; raw events unchanged"
+}

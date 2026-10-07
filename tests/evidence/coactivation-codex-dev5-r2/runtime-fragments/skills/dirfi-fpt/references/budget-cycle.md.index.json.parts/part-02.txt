@@ -1,0 +1,126 @@
+ions en
+  cours d'année.
+
+### 5.4 Décisions modificatives (DM)
+
+- Acte qui **modifie le budget** de l'exercice en cours, sans plafond de
+  nombre fixé par principe, mais toujours **soumis aux mêmes principes
+  budgétaires** que le budget primitif — en particulier l'**équilibre réel**
+  et la **sincérité** : une DM ne peut ni masquer un déséquilibre, ni inscrire
+  des recettes ou des dépenses fictives pour rétablir un équilibre apparent.
+- Vote selon la **même procédure** que le budget primitif (compétence de
+  l'assemblée, respect du niveau de vote).
+- Une DM de fin d'exercice, même limitée à des ajustements de crédits déjà
+  consommés, reste soumise au même contrôle de sincérité qu'une DM de début
+  d'exercice.
+
+### 5.5 Virements de crédits
+
+- **Mouvement de crédits** entre chapitres ou entre articles à l'intérieur
+  d'une même section, sans modification du montant total des crédits ouverts
+  au budget.
+- La **compétence** dépend du niveau de vote retenu (§5.9) et d'une
+  éventuelle **délégation** consentie à l'exécutif : sans délégation
+  expresse, tout virement significatif relève de l'assemblée ; avec
+  délégation, l'exécutif décide dans les limites fixées par la délibération
+  de délégation et par le CGCT.
+- Le **chapitre des dépenses imprévues**, lorsqu'il est ouvert, obéit à un
+  régime propre : il ne peut financer que des dépenses imprévisibles au moment
+  du vote, dans une limite fixée par le CGCT — limite à vérifier, jamais
+  reconstituée de mémoire.
+- Ne jamais présenter un virement comme un moyen de contourner l'absence de
+  crédit pour une dépense obligatoire (→ garde-fou budgétaire, `SKILL.md`
+  §5.3).
+
+### 5.6 Compte administratif et compte financier unique (CFU)
+
+- Le **compte administratif** est établi par l'**ordonnateur** : il retrace
+  l'exécution du budget de l'exercice clos (recettes et dépenses réellement
+  constatées et mandatées).
+- Le **compte financier unique (CFU)**, propre au référentiel M57, se
+  substitue au compte administratif et au compte de gestion du comptable dans
+  un document **unique**, établi **conjointement** par l'ordonnateur et le
+  comptable — l'articulation avec le régime transitoire dépend de la date
+  d'entrée effective de la collectivité dans ce dispositif : **à vérifier**.
+- Vote soumis à une **règle de retrait** : l'exécutif ne prend pas part au
+  vote qui arrête son propre compte (ou la part CA du CFU) ; modalité exacte
+  de présidence de séance à vérifier.
+- Doit être voté avant une **date limite fixée par le CGCT**, distincte de
+  celle du budget primitif — à vérifier séparément.
+- **Concordance obligatoire** entre volet ordonnateur et comptable : un écart
+  non expliqué est un signal d'alerte, pas une anomalie de forme.
+
+### 5.7 Affectation du résultat
+
+- Après le vote du compte administratif ou du CFU, le **résultat de la
+  section de fonctionnement** de l'exercice clos est affecté par
+  délibération distincte, dans un **ordre de priorité** fixé par le CGCT :
+  couverture du **besoin de financement** de la section d'investissement en
+  priorité (compte tenu des restes à réaliser), le solde pouvant être affecté
+  en réserve ou reporté en fonctionnement.
+- Le **résultat de la section d'investissement** (excédent ou déficit) est
+  **reporté**, il ne fait pas l'objet d'une affectation au sens strict.
+- L'affectation ne peut pas masquer un déficit réel de fonctionnement : dès
+  qu'un doute apparaît, orienter vers le garde-fou budgétaire.
+
+### 5.8 Principes budgétaires
+
+| Principe | Signification opérationnelle |
+|---|---|
+| **Annualité** | L'exercice budgétaire correspond en principe à l'année civile. Aménagements encadrés : journée complémentaire (§5.10), restes à réaliser, AP/CP et AE/CP (§5.9 bis) qui engagent au-delà d'un exercice sans rouvrir chaque année l'autorisation de programme elle-même. |
+| **Unité** | Un document budgétaire unique retrace l'ensemble des opérations. Exception encadrée : les **budgets annexes** (§5.11), retracés séparément mais rattachés à la même personne morale. |
+| **Universalité** | Interdiction de **contraction** entre recettes et dépenses (les flux s'inscrivent bruts) et principe de **non-affectation** d'une recette à une dépense déterminée, sauf exceptions prévues par un texte (redevances pour service rendu, budgets annexes, financements affectés). |
+| **Spécialité** | Les crédits sont votés par chapitre ou par article et ne peuvent financer que l'objet pour lequel ils ont été ouverts, sous réserve de la fongibilité que permet le niveau de vote retenu (§5.9). |
+| **Équilibre réel** | Chaque section (fonctionnement, investissement) doit être votée en équilibre, recettes et dépenses évaluées de façon sincère, et le remboursement du capital de la dette doit être couvert par des ressources propres de la section d'investissement (hors emprunt nouveau). L'équilibre réel n'est pas la simple égalité arithmétique globale du document : il se teste **section par section**. |
+| **Sincérité** | Les prévisions de recettes et de dépenses doivent être évaluées de façon sincère, sans sous-évaluation ni sur-évaluation délibérée. Un déséquilibre masqué par une prévision insincère reste un déséquilibre réel au sens du principe précédent. |
+
+### 5.9 Vote par nature ou par fonction, et niveau de vote des crédits
+
+- **Vote par nature** : présentation calée sur le plan de comptes (détail en
+  `nomenclature-m57.md`). **Vote par fonction** : présentation par
+  destination de la dépense, obligatoire ou facultative selon la strate — à
+  vérifier. Une présentation croisée peut être exigée sans changer le vote
+  juridique, qui porte sur un seul des deux modes.
+- **Niveau de vote des crédits** — choix de l'assemblée, à consigner en
+  délibération : par **chapitre** (fongibilité interne, sous réserve des
+  chapitres à régime spécifique — personnel, dépenses imprévues) ou par
+  **article** (pas de fongibilité automatique, tout dépassement suppose un
+  virement formalisé). Ce choix conditionne directement la marge de manœuvre
+  de l'exécutif pour les virements (§5.5).
+
+### 5.9 bis AP/CP et AE/CP
+
+- **Autorisation de programme / crédits de paiement (AP/CP)** : outil de
+  pilotage pluriannuel des dépenses d'**investissement**. L'assemblée vote une
+  **enveloppe globale** (l'AP) répartie sur plusieurs exercices, puis ouvre
+  chaque année les **crédits de paiement (CP)** correspondant à la tranche de
+  l'exercice.
+- **Autorisation d'engagement / crédits de paiement (AE/CP)** : même logique
+  appliquée à certaines dépenses de **fonctionnement** pluriannuelles
+  (conventions notamment).
+- **Ce que cela change, et ce que cela ne change pas** : le vote de l'AP
+  **autorise** l'engagement juridique pluriannuel, mais **n'ouvre** les
+  crédits disponibles pour le mandatement qu'à hauteur des CP votés **chaque
+  année** — le contrôle annuel des CP reste indispensable.
+- Toute AP/CP ou AE/CP en cours doit être **signalée à l'appui du DOB** et
+  suivie dans un état annexé au budget → `prospective-analyse.md` pour le
+  volet analytique (ne pas dupliquer ici).
+
+### 5.10 Journée complémentaire
+
+- Période courant **après le 31 décembre** de l'exercice, pendant laquelle
+  certaines opérations, essentiellement des opérations **comptables** de
+  clôture, peuvent encore être rattachées à l'exercice clos.
+- **À ne pas confondre** avec le **rattachement des charges et produits à
+  l'exercice** (mécanisme de sincérité comptable, propre à la M57, détaillé en
+  `nomenclature-m57.md`) : la journée complémentaire est une **fenêtre
+  calendaire** de clôture, le rattachement est une **règle d'imputation**.
+  Les deux mécanismes coexistent mais répondent à des logiques distinctes.
+- Durée et opérations éligibles : à vérifier, le régime pouvant différer selon
+  la nature du budget et le degré d'application de la M57.
+
+### 5.11 Budgets annexes
+
+- Retracent, par dérogation au principe d'unité, les opérations d'un
+  **service ou d'une activité individualisable**, notamment lorsqu'il s'agit
+  d'un service public à caractère industrie

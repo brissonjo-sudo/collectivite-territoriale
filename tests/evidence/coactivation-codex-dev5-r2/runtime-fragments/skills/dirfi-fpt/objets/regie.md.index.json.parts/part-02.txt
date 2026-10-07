@@ -1,0 +1,106 @@
+registres) avant la prise de fonction du
+   successeur.
+2. **Dissolution de la régie** : acte de suppression, symétrique à l'acte
+   constitutif (avis du comptable recommandé), versement final des fonds,
+   apurement du cautionnement.
+3. Conserver le dossier complet (actes, cautionnement, versements,
+   contrôles) pour la durée de prescription applicable — à vérifier.
+
+---
+
+## 4. Écrits associés
+
+- **Fiche de procédure financière** — `../references/templates/fiche-procedure-financiere.md` : formaliser le fonctionnement de la régie (objet, montants, modalités, contrôles).
+- **Acte constitutif** et **acte de nomination du régisseur** : actes
+  administratifs de l'ordonnateur, non produits par un générateur dédié dans
+  cette version — s'assurer qu'ils reprennent toutes les mentions de §3.1 à
+  §3.5.
+- **Bordereaux de versement** au comptable : traçabilité de chaque remise de
+  fonds.
+- **Procès-verbal de remise de service** : lors de tout changement de
+  régisseur.
+
+**Acte soumis au contrôle de légalité** : l'acte constitutif d'une régie
+relève, selon son support, du régime des actes de l'ordonnateur — vérifier la
+compétence, les mentions obligatoires et la transmission via
+`../references/controle-budgetaire.md`.
+
+---
+
+## 5. Jurisprudence clé
+
+> Pointeur uniquement — voir **`recherche-juridique`**. Aucune décision n'est
+> citée ici par son nom d'usage, son millésime ou son numéro.
+
+Thèmes appelant une recherche avant conclusion :
+- Conditions de mise en jeu de la **responsabilité personnelle et
+  pécuniaire** du régisseur (déficit de caisse, faute, force majeure).
+- Effets d'une **institution de régie sans avis conforme du comptable** ou
+  sans acte constitutif régulier — qualification en gestion de fait.
+- Portée du **contrôle de l'ordonnateur** et articulation avec celui du
+  comptable.
+- Régime de responsabilité applicable au **mandataire** par rapport au
+  régisseur titulaire.
+
+---
+
+## 6. Check-list opérationnelle
+
+### Garde-fou ordonnateur / comptable (`SKILL.md` §5.2) — impérativement en tête
+
+- [ ] Le maniement de fonds envisagé passe-t-il **exclusivement** par une
+      régie **régulièrement instituée** ? Toute opération de caisse par un
+      agent hors de ce cadre est un déclencheur du **STOP** de §5.2.
+- [ ] L'**acte constitutif** existe-t-il et couvre-t-il précisément
+      l'opération envisagée (objet, montant, modalités) ? Une opération hors
+      de l'objet défini par l'acte constitutif équivaut à une absence de
+      régie pour cette opération.
+- [ ] L'**avis conforme du comptable** a-t-il été obtenu **avant**
+      l'institution ou la modification de la régie ? Sans cet avis, ne pas
+      valider le montage — orienter vers la saisine du comptable.
+- [ ] Le **régisseur est-il nommé par arrêté** et en fonction à la date de
+      l'opération ? Une opération réalisée par un agent non nommé
+      caractérise une gestion de fait.
+- [ ] Le **montant maximal de l'encaisse** est-il respecté à l'instant de
+      l'opération ?
+
+### Constitution et vie de la régie
+
+- [ ] Cautionnement constitué si exigé, avant l'entrée en fonction.
+- [ ] Modalités d'encaissement/paiement autorisées et pièces justificatives
+      définies.
+- [ ] Périodicité de versement au comptable fixée et respectée.
+- [ ] Contrôles de l'ordonnateur et du comptable documentés et réalisés à la
+      périodicité prévue.
+- [ ] Mandataires nommés dans le respect de la responsabilité du régisseur
+      titulaire.
+- [ ] Fin de régie (mutation, dissolution) traitée par une remise de service
+      contradictoire et un apurement complet.
+
+### Contrôles transverses
+
+- [ ] Toute valeur chiffrée (encaisse, cautionnement, délais) marquée
+      « à vérifier » plutôt que citée de mémoire.
+- [ ] Couple [risque / confiance] indiqué — le risque reste **critique**
+      pour toute régie tant que l'acte constitutif ou l'avis conforme ne sont
+      pas confirmés.
+- [ ] Cas journalisable (régie créée sans avis conforme, dépassement
+      d'encaisse constaté, déficit de caisse) → proposé pour `JOURNAL.md`.
+
+---
+
+## Références et remontées
+
+**Branches mobilisées** : `execution-recette.md` (régies de recettes),
+`execution-depense.md` (régies d'avances), `controle-interne-financier.md`
+(contrôles), `contentieux-financier.md` (responsabilité et gestion de fait).
+
+**Rappel transverse** : cette fiche est la **voie de régularisation de
+référence** citée par le routeur du garde-fou §5.2 (`SKILL.md`, point 1).
+Toute situation orientée ici depuis un autre objet ou une autre branche
+reprend le raisonnement au point 3.1.
+
+**Point de mise à jour requis** : seuils de dispense de cautionnement,
+montants maximaux d'encaisse par nature de régie, périodicités réglementaires
+de versement — valeurs volatiles à réviser à chaque évolution du régime des
+régies.

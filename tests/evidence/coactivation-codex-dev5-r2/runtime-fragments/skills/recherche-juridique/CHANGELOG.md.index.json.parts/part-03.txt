@@ -1,0 +1,146 @@
+rchitecture PISTE (API Légifrance + Judilibre).
+
+### [plugin-v0.8.1] — 2026-09-04
+
+Correctif de sécurité issu d'un audit adversarial du chemin d'authentification,
+mené le 4 septembre 2026 puis soumis au test de mutation par une relecture
+indépendante. Le noyau méthodologique est inchangé ; seul le vérificateur de
+jetons bouge. **Cette version doit être déployée avant toute soumission** : la
+production servait encore `0.8.0`, donc un serveur dépourvu de ces correctifs.
+
+#### Corrigé
+- **Amplification JWKS non authentifiée** — un jeton portant un identifiant de
+  clé inconnu forçait PyJWT à recharger le jeu de clés en contournant son
+  cache, et ce cache ne mémorise pas les échecs. Chaque requête anonyme coûtait
+  donc un aller-retour vers l'émetteur, indéfiniment : mesuré en production à
+  54 ms de surcoût par requête, facteur 1,8. Le délai d'attente valait trente
+  secondes par défaut, sur un pool de quarante threads et un processus unique.
+  Le rafraîchissement forcé est désormais plafonné à un par minute quel que
+  soit le nombre d'identifiants distincts présentés, et le délai ramené à cinq
+  secondes. Contre-épreuve : 20 rechargements réseau sur le code d'avant, 1 sur
+  celui-ci ; 200 contre 1 à plus forte charge.
+- **Ruée sur l'expiration du cache** — le cache de jeu de clés de PyJWT n'a
+  aucun verrou : à l'instant précis où il expire, quarante requêtes
+  concurrentes déclenchaient trente appels réseau, sans qu'aucun jeton valide
+  soit nécessaire. Les appels sont sérialisés en *single-flight* : un seul
+  thread contacte l'émetteur, les autres retrouvent le cache rechargé.
+- **Révocation de clé non honorée** — le cache de second niveau était un
+  `lru_cache` sans expiration ; le jeu de clés n'en comptant que deux, rien
+  n'était jamais évincé et une clé révoquée restait acceptée jusqu'au
+  redémarrage du processus. Tourner une clé compromise n'avait donc aucun effet
+  sur ce serveur. Elle cesse maintenant d'être acceptée en cinq minutes au pire.
+- **Panne de l'émetteur journalisée comme un refus de jeton** —
+  `PyJWKClientConnectionError` héritant de `PyJWTError`, un DNS mort, un port
+  fermé ou un délai dépassé produisaient `auth_rejected` en INFO au lieu
+  d'`auth_unavailable` en WARNING, noyant le signal « l'émetteur est tombé »
+  dans le bruit des jetons invalides.
+
+#### Tests
+- 178 → **196 tests**, aucun échec, aucun ignoré. Chaque correction porte sa
+  contre-épreuve, appliquée puis annulée, de sorte qu'aucun de ces tests ne
+  passe sur le code d'avant.
+- Comblé deux angles morts que la suite ne voyait pas : les jeux de clés
+  simulés n'en contenaient qu'**une seule**, si bien qu'une confusion de clé —
+  vérifier la signature avec la mauvaise clé du jeu — survivait à toute la
+  suite ; et les quatre branches d'erreur du contrôle de métadonnées OAuth,
+  qui protège le point de rupture historique du connecteur ChatGPT, n'étaient
+  exercées par aucun test.
+- Corrigé des mocks qui rendaient des tests aveugles : ils acceptaient
+  n'importe quel identifiant de clé, alors que la check-list Auth0 citait l'un
+  d'eux comme preuve du refus d'un identifiant inconnu. La preuve citée ne
+  prouvait rien ; elle est devenue vraie.
+
+#### Sécurité — ce qui reste ouvert
+- Aucune limitation de débit par IP **avant** l'authentification. L'atténuation
+  ci-dessus porte sur deux à trois ordres de grandeur, mais borner la durée
+  d'occupation d'un thread ne borne pas leur nombre : le finding est reclassé
+  de gravité élevée à moyenne, **non refermé**.
+- L'authentification reste la seule autorisation : aucune portée n'est exigée
+  et aucun sujet n'est comparé à une liste. Voir `docs/audit-securite.md` § 8.
+
+### [plugin-v0.8.0] — 2026-09-02
+
+Durcissement du serveur MCP après l'audit externe du 1er septembre 2026 et la
+revue de fusion du 2. Le noyau méthodologique (v3.2.0) est inchangé ; seul
+l'empaquetage et le serveur bougent.
+
+#### Ajouté
+- **Reprise bornée sur erreur transitoire** — un `429` ou un `5xx` ponctuel des
+  API amont est rejoué deux fois au plus, avec recul exponentiel et respect de
+  `Retry-After`, sous un budget de 8 s inférieur au délai d'une seule requête.
+  Aucun autre `4xx` n'est rejoué.
+- **Identifiant de corrélation** sur les erreurs amont : le client reçoit un
+  message public stable, le journal porte le détail sous la même référence.
+- **Instructions MCP** servies au client à la connexion : trois règles de
+  méthode — rien de mémoire, vigueur vérifiée, refus explicite.
+- **Surveillance de production** — sonde de disponibilité séparant un réveil
+  d'instance d'une panne, résumé de série avec verdict d'observation, et
+  workflow planifié tenant le registre.
+
+#### Corrigé
+- **Cache de jeton PISTE** commun à Légifrance et Judilibre, respectant
+  `expires_in` avec une marge, et renouvelé **une seule fois** sur `401`. Le
+  jeton Judilibre n'expirait jamais et cassait la voie OAuth jusqu'au
+  redémarrage ; Légifrance en redemandait un à chaque opération.
+- **Détail amont** (URL complète, fragment de réponse) retiré des messages
+  rendus au client et réservé au journal.
+- **Retrait conservatoire Judilibre** : identifiants normalisés, liste
+  malformée refusée au démarrage, nombre d'entrées journalisé. Une valeur mal
+  recopiée était acceptée en silence et la décision restait servie.
+
+### [plugin-v0.7.0] — 2026-09-01
+
+Première release de la série *plugin*, taguée séparément du skill. Le noyau
+méthodologique (v3.2.0) est inchangé.
+
+#### Ajouté
+- **`.claude-plugin/plugin.json`** : manifeste plugin Claude Code, aligné sur
+  le manifeste OpenAI (nom, version, licence) ; serveur MCP déclaré en ligne
+  avec `${CLAUDE_PLUGIN_ROOT}` pour des chemins portables après installation.
+- **`.claude-plugin/marketplace.json`** : le dépôt sert de marketplace
+  Claude Code (`claude plugin marketplace add brissonjo-sudo/droit-francais-skill`
+  puis `claude plugin install droit-francais-skill@droit-francais`).
+- **README** : section « Comme plugin Claude Code », prérequis (Python avec
+  `requirements-mcp.txt`, identifiants PISTE hors du paquet) et arborescence.
+- **Convention de tags préfixés** `skill-v*` / `plugin-v*` (voir en-tête).
+
+#### Conservé
+- Skill v3.2.0, plugin OpenAI `.codex-plugin/plugin.json` et serveur MCP
+  inchangés : cette release ne modifie que la distribution.
+
+### [3.2.0] — 2026-08-27
+
+Issue d'un retour d'expérience sur l'audit d'un corpus opérationnel. La
+méthode vérifiait les sources mais ne garantissait ni l'exhaustivité du
+contrôle documentaire, ni la validité de la conséquence tirée d'une citation
+exacte, ni la cohérence entre fichiers.
+
+#### Ajouté
+- **Module DOC-AUDIT**, non désactivable par `[express]`, pour tout audit,
+  toute relecture juridique ou correction d'un document existant.
+- **`references/audit-documentaire.md`** : protocole bloquant — qualification
+  du livrable et date de droit, inventaire du corpus, registre des
+  affirmations, contrôle de 100 % du risque élevé, matrice
+  acteur–lieu–propriétaire–pouvoir, double test source/conséquence, cohérence
+  interdocuments et contrôle post-correction.
+- **Gabarit D — Audit documentaire** : synthèse des corrections, couverture
+  du risque élevé, divergences et limites restantes.
+- Quatre modes d'erreur : validation héritée (15), citation exacte mais
+  conséquence fausse (16), mauvais acteur–lieu–propriétaire–pouvoir (17),
+  incohérence de corpus (18).
+- Quatre sondes d'évaluation correspondant aux nouveaux modes.
+
+#### Modifié
+- **SKILL.md** : version 3.1.1 → 3.2.0 ; déclenchement de DOC-AUDIT ; contrôle
+  source/conséquence à l'étape 6.
+- **README, références et maintenance** : 18 modes, 6 modules, gabarit D et
+  quatrième test fonctionnel de revue.
+
+#### Corrigé
+- **`tests/eval-modes-erreur.csv`** : guillemets manquants autour de deux
+  regex contenant une virgule ; le lecteur CSV tronquait silencieusement les
+  motifs interdits des modes 5 et 7. `run_eval.py` rejette désormais toute
+  ligne comportant des colonnes excédentaires au lieu de les ignorer.
+
+#### Sécurité
+- Un audit antéri

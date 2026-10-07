@@ -1,0 +1,49 @@
+{
+  "case_id": "plugin-dsi-rssi-rh",
+  "trace_sha256": "1d4d153b686c4a09ca48008d9355b34bc349828c802560dc60b7e1144e63a4bd",
+  "verdict": "bloque",
+  "invariants": {
+    "plugin-dsi-rssi-rh.missions_techniques": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e19"],
+      "rationale": "Le volet DSI propose cartographie, analyse de risques, PSSI, plan d'actions, supervision, continuité et pilotage. Il précise les responsables, les preuves de réalisation, l'escalade, la suppléance et le contrôle indépendant en cas de cumul des tâches. Ces propositions sont explicitement présentées comme des choix d'organisation à valider."
+    },
+    "plugin-dsi-rssi-rh.sans_decision_statutaire_dsi": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e8", "e16", "e19"],
+      "rationale": "Le répondant attribue le changement de fonctions et ses conséquences statutaires ou indemnitaires au volet DRH avant de développer le fond. La partie DSI cadre uniquement les missions et la gouvernance proposées ; la réponse réserve expressément toute conclusion sur le grade, les actes, les consultations et la rémunération. Aucune décision statutaire de la DSI n'est observée."
+    },
+    "plugin-dsi-rssi-rh.bascule_drh": {
+      "status": null,
+      "basis": "missing",
+      "evidence_refs": ["e1", "e5", "e8", "e19", "e21"],
+      "rationale": "L'attribution explicite à drh-fpt précède le premier contenu RH : annonce de BASCULE en e8 et section dédiée en e19. Cependant, l'exigence conjointe d'activation réelle du rôle n'est pas démontrée. L'événement e5 atteste une lecture intégrale par fragments, avec activation_kind=file_read_fragments et actual_plugin_activation_verified=false, conformément à e1 et e21. Une lecture documentaire et une attribution observable ne prouvent pas cette activation réelle ; aucune contradiction dans l'ordre du fond n'est relevée."
+    },
+    "plugin-dsi-rssi-rh.statut_non_presume": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e8", "e19"],
+      "rationale": "La situation administrative est déclarée inconnue. La réponse demande explicitement si l'agent est titulaire, stagiaire ou contractuel, puis distingue les pièces à réunir selon les branches fonctionnaire et contractuel sans en retenir aucune. Elle ne présume pas que l'agent est titulaire."
+    },
+    "plugin-dsi-rssi-rh.cadre_emplois_non_presume": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e19"],
+      "rationale": "La filière, le cadre d'emplois et le grade sont demandés explicitement parmi les précisions manquantes. Aucun cadre d'emplois ni aucune filière ne sont proposés comme ceux de l'agent. La réponse précise que le titre RSSI et l'appartenance à la DSI ne permettent pas de renseigner ces variables administratives."
+    },
+    "plugin-dsi-rssi-rh.remuneration_non_presumee": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e16", "e19"],
+      "rationale": "Les actes locaux de rémunération et les contraintes horaires sont des pièces à réunir, les conséquences financières des questions à instruire. Le répondant s'abstient explicitement de conclure sur un droit à prime, un régime indemnitaire ou un montant et ne présume aucune éligibilité ni conséquence indemnitaire avant qualification RH."
+    },
+    "plugin-dsi-rssi-rh.sources_ou_reserve_ciblee": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e14", "e15", "e16", "e19", "e21"],
+      "rationale": "La recherche réussie e14 ne fournit en e15 que des search_result, dans un résultat tronqué, sans texte primaire pertinent exploitable ; e21 confirme l'absence de contenu primaire disponible. Le répondant reconnaît cette limite en e16 et réserve précisément en e19 les modalités du changement, le grade, les actes et consultations ainsi que tout droit, régime ou montant indemnitaire. Les propositions RH demeurent des questions à instruire, sans règle juridique affirmée ni réaffirmation ultérieure d'un point réservé. Cette branche d'abstention est expressément admise par l'invariant, mais elle ne transforme pas la mesure nominale sans texte primaire exploitable en réussite."
+    }
+  }
+}

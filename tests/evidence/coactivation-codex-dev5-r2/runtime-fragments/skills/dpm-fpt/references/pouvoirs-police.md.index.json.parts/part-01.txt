@@ -1,0 +1,149 @@
+# Branche — Pouvoirs de police (v0.2.0)
+
+> Structure conforme à `_gabarit-branche.md`. Aucune valeur datée ni numéro
+> d'article cité de mémoire hors ceux explicitement marqués « vérifié sur
+> Légifrance » ci-dessous : pour le reste, seules les **règles** figurent,
+> avec consigne de vérifier la version en vigueur.
+
+## Périmètre / Exclusions
+
+- **Périmètre** : fondements et titulaires des pouvoirs de police — maire,
+  préfet, agents de police municipale —, distinction police générale / polices
+  spéciales, et articulation de ces compétences avec l'État (contrôle
+  administratif, pouvoir de substitution du préfet).
+- **Exclusions** : la **réglementation sectorielle** de fond (route,
+  stationnement, débits de boissons, salubrité, domaine public, animaux
+  dangereux) → `reglementation-appliquee.md` ; la **procédure pénale**
+  applicable à la PM (qualification, flagrance, relations OPJ/procureur) →
+  `penal-procedure.md` ; le **contrôle de légalité préalable** d'un acte →
+  `controle-legalite.md` ; l'**anticipation contentieuse** d'une décision →
+  `contentieux.md` ; le **continuum de sécurité** (convention de
+  coordination, PSP) → `continuum-partenariats.md`.
+
+---
+
+## 1. Questions couvertes
+
+- Qui détient le pouvoir de police sur un fait donné : maire, préfet, OPJ ?
+- Police générale ou police spéciale : quel texte mobiliser ?
+- Le préfet peut-il / doit-il se substituer au maire ? À quelles conditions ?
+- Quel est le partage des pouvoirs dans une commune à police étatisée ?
+- Que peut faire un agent de police municipale **en propre**, par opposition
+  à ce qu'il exécute pour le compte de l'autorité de police ?
+- Conflit ou chevauchement de compétence maire / préfet : comment le
+  qualifier, le signaler, le faire trancher ?
+
+---
+
+## 2. Arbre de traitement
+
+`qualifier les faits → police générale ou spéciale (§4.2-4.3) → autorité
+compétente et régime de la commune (§4.4) → conflit de compétence ? signaler
+(§6.4) → pouvoir de substitution du préfet ? conditions testées (§4.5) → base
+légale vérifiée (§8) → rôle de l'agent PM comme exécutant (§4.6) → mesure
+proportionnée → vérification (§6) → écrit/livrable (§9)`
+
+Ne jamais sauter l'étape « conflit de compétence » : une mesure prise par une
+autorité incompétente est entachée d'illégalité, quel que soit son contenu.
+
+---
+
+## 3. Variables à lever
+
+- **Régime de police de la commune** : droit commun (maire) ou **police
+  étatisée** (partage légal des compétences, §4.4).
+- **Nature du trouble** : ordre, sûreté, sécurité, salubrité publiques
+  (police générale) ou matière nommément attribuée à une police spéciale.
+- **Périmètre territorial du trouble** : commune unique, plusieurs communes
+  limitrophes, ou ensemble du département.
+- **Gravité et urgence** : danger grave ou imminent justifiant une mesure
+  immédiate, ou trouble ordinaire.
+- **Carence ou inaction du maire** constatée ou alléguée (condition du
+  pouvoir de substitution du préfet).
+- **Rattachement éventuel à un EPCI** ayant reçu transfert de certaines
+  polices spéciales (à vérifier au cas par cas, hors détail de cette
+  branche).
+- **Qualité de l'agent intervenant** : agent PM (exécutant), garde champêtre,
+  OPJ/APJ de la police nationale ou de la gendarmerie.
+
+---
+
+## 4. Règles métier
+
+### 4.1 Titulaires du pouvoir de police
+
+- **Le maire** est chargé, sous le **contrôle administratif** du représentant
+  de l'État dans le département, de la police municipale (CGCT, art.
+  **L. 2212-1** — *vérifié sur Légifrance le 2026-06-30*). Ce contrôle est un
+  contrôle de légalité, pas un pouvoir hiérarchique : le préfet ne se
+  substitue au maire que dans les cas et conditions prévus par la loi (§4.5).
+  Le pouvoir de police générale est un pouvoir **propre** du maire, non
+  délégable à l'assemblée délibérante, et non transférable de plein droit à
+  l'EPCI.
+- **Le préfet** détient des pouvoirs de police propres (ordre public
+  départemental ou pluricommunal, polices spéciales d'État) et un **pouvoir
+  de substitution** au maire dans des conditions encadrées (CGCT, art.
+  **L. 2215-1** — *vérifié sur Légifrance le 2026-06-30*).
+- **Les agents de police municipale** ne détiennent **aucun pouvoir de police
+  propre**. Ils sont les **exécutants** des pouvoirs de police du maire (et,
+  selon le cas, de l'autorité préfectorale ou de l'EPCI compétent). Leur
+  action s'inscrit dans le cadre fixé par l'arrêté ou l'instruction de
+  l'autorité de police, et, pour le volet répressif, dans les limites de
+  leurs pouvoirs d'agent de police judiciaire adjoint (→
+  `penal-procedure.md`, ne pas dupliquer ici).
+- **Le président d'EPCI à fiscalité propre** peut être titulaire de
+  certaines polices spéciales transférées — **CGCT, art. L. 5211-9-2**,
+  `LEGIARTI000048850168`, version du 31/12/2023, vérifié au socle le
+  2026-06-30, recontrôlé le 2026-09-14 et le 2026-09-17. **L'article
+  distingue deux régimes, à ne pas traiter en bloc** :
+  - **I.A — transfert de plein droit** (assainissement, réglementation de la
+    collecte des déchets ménagers, aires d'accueil des gens du voyage, police
+    de la circulation et du stationnement, autorisations de stationnement
+    taxi, police de la publicité, habitat, selon la compétence de l'EPCI) :
+    chaque maire peut s'y opposer dans un délai de **six mois** (III).
+  - **I.B — transfert facultatif** (dont les prérogatives de **C. env.
+    L. 541-3** en matière de déchets, sécurité des manifestations
+    culturelles/sportives d'établissements communautaires, défense
+    extérieure contre l'incendie) : décidé par **arrêté du représentant de
+    l'État**, après **accord de tous les maires des communes membres et du
+    président de l'EPCI** (IV) — pas de transfert automatique, pas
+    d'opposition à six mois.
+  - **Question ouverte** : le texte ne dit pas que les agents PM constatent
+    par PV les contraventions à un arrêté **du président d'EPCI**. L'habilitation
+    générale de constatation (CSI R. 511-1) ne vise que les arrêtés « du
+    maire ou du préfet » (détail dans `reglementation-appliquee.md` §5.3)
+    — elle ne se transpose pas d'elle-même à un arrêté du président.
+    À vérifier via `recherche-juridique` avant tout acte fondé sur un tel
+    arrêté ; ne jamais présumer l'habilitation.
+- **OPJ / autorité judiciaire** : dès que la finalité bascule du préventif
+  (police administrative) au répressif (police judiciaire) → garde-fou APJA
+  (`SKILL.md` §5.2) et `penal-procedure.md`.
+
+### 4.2 Police générale du maire
+
+- **Objet de la police municipale** : assurer le **bon ordre, la sûreté, la
+  sécurité et la salubrité publiques** (CGCT, art. **L. 2212-2** — *vérifié
+  sur Légifrance le 2026-06-30*). C'est la formule-cadre de la police
+  générale : toute mesure doit pouvoir s'y rattacher, à défaut de police
+  spéciale applicable.
+- L'article énumère des illustrations (voirie et circulation, tranquillité
+  publique, sécurité des édifices et voies, salubrité, prévention des
+  accidents et fléaux, etc.) — liste **non limitative**, la formule générale
+  prévalant. Le détail exact des illustrations et leur portée précise : à
+  vérifier en version consolidée avant de fonder un acte dessus.
+- **En cas de danger grave ou imminent**, le maire **prescrit l'exécution des
+  mesures de sûreté exigées par les circonstances** (CGCT, art. L. 2212-2,
+  dernier alinéa — *vérifié sur Légifrance le 2026-06-30*). C'est le
+  fondement classique des mesures d'urgence (péril, événement climatique,
+  danger imminent pour les personnes).
+- Le pouvoir de police générale ne s'exerce pas dans le vide : il cède devant
+  toute **police spéciale** qui couvre nommément le même objet (§4.3).
+
+### 4.3 Polices spéciales
+
+- Une police spéciale est instituée par un **texte propre**, attribue la
+  compétence à une autorité **nommément désignée** (maire, préfet, président
+  d'EPCI selon le domaine) et **prime** la police générale sur son champ
+  (principe de spécialité, *lex specialis*).
+- Le maire ne peut pas se fonder sur sa police générale pour réglementer une
+  mati

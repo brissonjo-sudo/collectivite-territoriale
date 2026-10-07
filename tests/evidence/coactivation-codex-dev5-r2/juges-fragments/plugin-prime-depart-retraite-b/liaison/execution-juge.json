@@ -1,0 +1,82 @@
+{
+  "agent": "/root/juge_codex_dev5_r2_01b",
+  "thread_id": "01a1178e-c21b-7310-ad92-93aab2dfaabb",
+  "parent_thread_id": "01a1103e-0b49-70c1-8f4e-66a36b54916f",
+  "model": "gpt-6.1-sol",
+  "turn_id": "01a1178e-c269-7fc2-a42f-53683460a176",
+  "created_at": "2026-10-07T18:09:54.204Z",
+  "started_at": "2026-10-07T18:09:54.303Z",
+  "completed_at": "2026-10-07T18:11:17.601Z",
+  "fork_turns": "none",
+  "initial_message_verified": false,
+  "initial_message_sha256": "8cc341f75292602545524a26b1cb26caa55c239146a483ba1d60220c578bde97",
+  "case_id": "plugin-prime-depart-retraite",
+  "assessment": {
+    "case_id": "plugin-prime-depart-retraite",
+    "verdict": "bloque",
+    "technical_status": "passed",
+    "behavior_status": "incomplete",
+    "documentary_status": "incomplete",
+    "primary_content_available": true,
+    "release_ready": false
+  },
+  "host": "Codex",
+  "activation_kind": "file_read_fragments",
+  "actual_plugin_activation_verified": false,
+  "full_packet_context_verified": true,
+  "fragment_count": 7,
+  "judge_adapter_sha256": "e1e04cd4ab37425885d57861151c893a7b921999ac295ddc7d44c5a0443fdc0b",
+  "packet_sha256": "90590ab2af5fee0c9baf458a5da85fceaefe6a2d0ca076254c4de22580b8cd2a",
+  "response_sha256": "3cc4ef38f0595899681ca06142597c70ce9415af5cb299212859fce4c0127fc5",
+  "judgment_sha256": "97c65ec9d207faeb721066f7e30193e85de84e424d72f9f0733d07bc65e7c0ed",
+  "trace_sha256": "51c3b881b8f5c06675b2170bd21f4fa4df897194d0d8f18dda683d205f54cec7",
+  "rejected_creation_attempts": [],
+  "native_session_file": "rollout-2026-10-07T20-09-54-01a1178e-c21b-7310-ad92-93aab2dfaabb.jsonl",
+  "parent_session_file": "rollout-2026-10-06T10-04-24-01a1103e-0b49-70c1-8f4e-66a36b54916f.jsonl",
+  "presentation_wrapper_sha256": "b709a2641f5433f3336a916b67b115570e5d77ed17d58433d39a89634ce3c14b",
+  "exact_presentation_normalizations": [
+    {
+      "call_id": "call_ee2c3ffa1f554d9d9585fb3dcad99493",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-prime-depart-retraite-b/fragment-01.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_c5428c0e67854369adcf4232891a821d",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-prime-depart-retraite-b/fragment-02.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_90988c7b465c4f7aaac97c58b696139a",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-prime-depart-retraite-b/fragment-03.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_27fa76e3c65842a4aa8a4d95ebc7cf13",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-prime-depart-retraite-b/fragment-04.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_32b97176d9f944e2b752e3d4b3d0424a",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-prime-depart-retraite-b/fragment-05.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_287d7d18fabe411881b7da067fef6c8e",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-prime-depart-retraite-b/fragment-06.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_5b94f08783fa447ca71183f9d044fb20",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-prime-depart-retraite-b/fragment-07.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    }
+  ],
+  "normalization_scope": "only expected content plus one terminal CRLF; raw events unchanged"
+}

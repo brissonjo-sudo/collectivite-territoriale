@@ -1,0 +1,127 @@
+échappe à
+tout contrôle identifié, le signaler explicitement comme un point de
+vigilance, pas seulement le décrire.]
+
+VI. INDICATEURS DE SUIVI
+[Indicateurs retenus — étape 9]
+
+VII. RÉVISION
+Prochaine révision : [date ou déclencheur — étape 10]
+Fondement de la procédure (renvoi de fond, non recopié ici) :
+`../controle-interne-financier.md`, et branche métier du processus concerné
+(ex. `../execution-depense.md`, `../execution-recette.md`,
+`../budget-cycle.md` selon l'objet — à préciser).
+
+Rédigée par : [fonction du rédacteur]
+Validée par : [fonction du validateur, distincte du rédacteur si possible]
+Date : [date]
+```
+
+---
+
+## 3. Mentions obligatoires et contrôles de cohérence
+
+- [ ] Processus et périmètre précisément délimités (étapes 1 et 2).
+- [ ] Chaque acteur identifié par sa **fonction**, jamais par son identité
+  (étape 3).
+- [ ] Chaque étape du déroulé associée à un responsable et, si pertinent, un
+  délai (étape 5) — aucune étape sans responsable identifié.
+- [ ] **Chaque point de contrôle** de la table IV comporte une réponse
+  explicite « Oui » ou « Non » à la colonne « Distinct de l'exécutant ? » —
+  jamais laissée vide.
+- [ ] Toute réponse « Non » à cette colonne est accompagnée d'un point de
+  vigilance rédigé, jamais silencieuse.
+- [ ] Cas particuliers traités avec leur propre circuit de contrôle, ou
+  signalés comme non couverts (étape 8).
+- [ ] Date ou déclencheur de révision renseigné — jamais absent (étape 10).
+- [ ] Rédacteur et validateur distingués lorsque l'organisation le permet,
+  cohérent avec la logique de séparation des tâches portée par la fiche
+  elle-même.
+
+---
+
+## 4. Règle `[INCOMPLET]` — application stricte
+
+**Interdiction absolue d'halluciner une donnée manquante** : responsable
+d'une étape, délai, nature du contrôle, date de révision.
+
+1. Produire le brouillon avec les champs disponibles ; une étape ou une
+   section incomplète ne bloque pas la rédaction des autres.
+2. Marquer chaque champ manquant `[INCOMPLET — préciser : <nom du champ>]`.
+3. En fin de document, si au moins un champ est marqué `[INCOMPLET]`,
+   ajouter :
+
+```
+---
+## CHAMPS MANQUANTS — FICHE NON FINALISABLE EN L'ÉTAT
+
+Les informations suivantes sont requises avant validation et diffusion :
+- [champ manquant 1 — étape correspondante]
+- [champ manquant 2 — étape correspondante]
+- [...]
+
+Cette fiche ne doit être ni validée, ni diffusée comme procédure applicable,
+tant que ces champs ne sont pas renseignés.
+```
+
+4. **Demander explicitement** ces données à l'utilisateur, en reprenant la
+   formulation de la question d'étape correspondante (§1).
+5. Ne jamais marquer le document comme « validé » tant qu'une mention
+   `[INCOMPLET]` subsiste.
+6. **Cas particulier — séparation des tâches non renseignée (étape 6)** : ne
+   jamais présumer qu'un contrôle est distinct de l'exécution faute de
+   précision ; marquer `[INCOMPLET — préciser : contrôleur distinct de
+   l'exécutant, à confirmer]` plutôt que de cocher « Oui » par défaut.
+
+---
+
+## 5. Ce que la fiche doit rendre visible — rappel
+
+La fiche de procédure sert le **contrôle interne**. Elle échoue à son objet
+si, à la lecture, il n'est pas possible de répondre immédiatement à deux
+questions pour chaque étape sensible :
+- **Qui fait ?** (colonne « Responsable » du tableau III)
+- **Qui contrôle ?**, et **est-ce une personne différente ?** (tableau IV)
+
+Une fiche qui décrit un processus sans jamais répondre à la seconde
+question n'est pas une fiche de contrôle interne, seulement un mode
+opératoire — le générateur ne la considère pas complète tant que le tableau
+IV n'est pas rempli pour chaque étape identifiée comme sensible en séance
+(étape 6).
+
+---
+
+## 6. Double échelle [risque / confiance]
+
+| Point | Risque | Confiance |
+|---|---|---|
+| Absence de séparation des tâches sur une étape sensible | Élevé | Signalement obligatoire, jamais euphémisé |
+| Cas particulier sans circuit de contrôle identifié | Moyen à élevé | À traiter explicitement ou signaler l'absence de couverture |
+| Délai non fixé sur une étape critique | Moyen | Signaler l'absence de délai plutôt que d'en inventer un |
+| Fiche non révisée au-delà de sa date prévue | Moyen | Vérifier la date de révision avant tout usage |
+| Processus touchant une régie ou un circuit de recette | Élevé | Renvoi `../controle-interne-financier.md` et vérification du garde-fou `SKILL.md` §5.2 |
+
+---
+
+## 7. Checklist avant remise
+
+1. Garde-fou testé en premier (§0) : le processus décrit ne documente pas un
+   circuit de maniement de fonds irrégulier.
+2. Toutes les étapes du §1 parcourues une à une, avec confirmation à chaque
+   étape, y compris le déroulé détaillé (étape 5) traité pas à pas si le
+   processus est complexe.
+3. Chaque acteur désigné par sa fonction, jamais par son identité.
+4. Tableau des étapes complet : chaque étape a un responsable, et un délai
+   ou la mention explicite de son absence.
+5. **Tableau de séparation des tâches** rempli pour chaque étape sensible
+   identifiée, avec un point de vigilance rédigé pour chaque réponse
+   « Non ».
+6. Cas particuliers traités ou signalés comme non couverts (étape 8).
+7. Date ou déclencheur de révision renseigné (étape 10) — jamais absent.
+8. Aucune donnée manquante comblée par supposition — règle `[INCOMPLET]`
+   (§4) appliquée et champs listés explicitement si nécessaire.
+9. Aucune donnée nominative, aucun nom d'agent réel dans le document
+   produit.
+10. Mention finale claire : fiche **prête à validation** ou marquée
+    **`[INCOMPLET]`** avec demande explicite des champs manquants — jamais
+    d'état intermédiaire ambigu.

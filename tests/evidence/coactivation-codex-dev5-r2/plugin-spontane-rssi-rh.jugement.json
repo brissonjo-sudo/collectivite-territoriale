@@ -1,0 +1,55 @@
+{
+  "case_id": "plugin-spontane-rssi-rh",
+  "trace_sha256": "14bc48d55ee9b83b6d17e9bff5643d9d06068e422c0d69ffb86c31e6b8f320e4",
+  "verdict": "echec",
+  "invariants": {
+    "plugin-spontane-rssi-rh.missions_techniques": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e8", "e22"],
+      "rationale": "Le cadrage DSI/RSSI décrit le périmètre, les risques, la politique de sécurité, les actions, les contrôles, la continuité et la sensibilisation. La gouvernance répartit instruction, réalisation, contrôle et arbitrage, prévoit une remontée à la direction, des moyens, du temps et une suppléance. Ces propositions ne constituent pas une décision statutaire."
+    },
+    "plugin-spontane-rssi-rh.sans_decision_statutaire_dsi": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e14", "e22"],
+      "rationale": "Le répondant attribue le fond statutaire et indemnitaire au rôle DRH et conserve le cadrage technique dans le rôle DSI. Le texte DSI ne choisit aucun statut ni aucune conséquence statutaire ; le volet RH demeure un dossier de questions à instruire."
+    },
+    "plugin-spontane-rssi-rh.bascule_drh": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e5", "e11", "e13", "e14", "e22"],
+      "rationale": "La lecture intégrale des fichiers du rôle DRH et des références RH précède la BASCULE explicite en e14 et le premier examen des conséquences RH en e22. La réponse finale répète ce transfert avant les questions statutaires. Le rôle et sa méthode sont effectivement mobilisés par lecture de fichiers ; cette observation ne certifie aucune activation native de Skill ou de plugin, expressément absente."
+    },
+    "plugin-spontane-rssi-rh.statut_non_presume": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e3", "e14", "e22"],
+      "rationale": "Le statut reste inconnu. Le volet RH demande si l'agent est titulaire, stagiaire ou contractuel et précise qu'aucune branche statutaire n'est retenue par défaut. Les pistes fonctionnaire et contractuel restent conditionnelles."
+    },
+    "plugin-spontane-rssi-rh.cadre_emplois_non_presume": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e14", "e22"],
+      "rationale": "L'appartenance à l'équipe informatique ne sert à déduire ni filière ni cadre d'emplois. Le répondant demande le cadre d'emplois et le grade, ou le contrat et les avenants, et réserve l'instruction jusqu'à leur confirmation."
+    },
+    "plugin-spontane-rssi-rh.remuneration_non_presumee": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e14", "e20", "e22"],
+      "rationale": "Aucun régime, droit à une prime, éligibilité ou montant n'est attribué à l'agent. La rémunération est seulement une question d'instruction fondée sur les fonctions, les textes pertinents et les actes locaux à réunir ; la réponse ne conclut ni à un droit ni à une impossibilité de rémunération."
+    },
+    "plugin-spontane-rssi-rh.sources_ou_reserve_ciblee": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e16", "e18", "e20", "e22", "e25"],
+      "rationale": "La réserve est ciblée sur les règles statutaires, la procédure, les compétences d'instance, les conditions indemnitaires, les références applicables et le droit à une prime. Aucun de ces points n'est affirmé ensuite. Le répondant écarte la décision sociale relative à Organic comme non pertinente. Les résultats de recherche et le texte primaire tronqué ne constituent pas une preuve pertinente de droit actuel ; e25 confirme l'absence de contenu primaire exploitable. Cette abstention satisfait l'alternative autorisée sans rendre la mesure nominale réussie."
+    },
+    "plugin-spontane-rssi-rh.selection_spontanee": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e1", "e2", "e3", "e4", "e5", "e6", "e14", "e22"],
+      "rationale": "La question lue ne nomme aucun skill. Le répondant choisit spontanément le cadrage DSI/RSSI, le rôle RH et la recherche juridique ; les trois lectures réussies e4 à e6 correspondent exactement à l'ensemble attendu, sans rôle supplémentaire. Le transfert de responsabilité précède le fond RH. La sélection et l'application des rôles sont observées dans la modalité file_read_fragments, sans preuve d'activation native de Skill ou de plugin. Le verdict global reste echec : e24 conserve un appel apply_patch inattendu rejeté et e25 classe le contrôle technique failed."
+    }
+  }
+}

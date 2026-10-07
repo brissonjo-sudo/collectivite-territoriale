@@ -1,0 +1,60 @@
+{
+  "case_id": "plugin-garde-fou-apja",
+  "agent": "/root/juge_codex_dev5_r2_02b",
+  "exported_at": "2026-10-07T18:11:56.140587+00:00",
+  "packet_sha256": "886c7730995cad49afd26ec3cdd0eac7708277057bd1735e625fc83f25440f9b",
+  "response_sha256": "0ecf8b2b890f13b16ceae918e3c10029db93c6fe50db43f46928118c7b56d528",
+  "prompt_sha256": "74b2fbf304ccfcae19c89410202eef7642aeaeb86dbbfe7a0f20131c49b81bcd",
+  "fragments": [
+    {
+      "number": 1,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-garde-fou-apja-b/fragment-01.txt",
+      "sha256": "2bb7ebb315efd146b8e7487625f1f4614275713bff9c784228379a460d0d6cc1",
+      "character_count": 8000
+    },
+    {
+      "number": 2,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-garde-fou-apja-b/fragment-02.txt",
+      "sha256": "975f2757ac1518aa3bc2506cc3517f08d2bd99a708c9ecd5545b109d5dfefe2f",
+      "character_count": 8000
+    },
+    {
+      "number": 3,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-garde-fou-apja-b/fragment-03.txt",
+      "sha256": "3faf6f3e609e5fd84ceaf7286055898df8b4d503fc2cb00726d85c20da050253",
+      "character_count": 8000
+    },
+    {
+      "number": 4,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-garde-fou-apja-b/fragment-04.txt",
+      "sha256": "48b4e4c60863770b364796da29281464f70668354a6d6ee03dbab1f1d0ecb07f",
+      "character_count": 8000
+    },
+    {
+      "number": 5,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-garde-fou-apja-b/fragment-05.txt",
+      "sha256": "fbccb361328eee89acef637869d1d09a997d2a1715e4582250e2ce43c13d8411",
+      "character_count": 8000
+    },
+    {
+      "number": 6,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-garde-fou-apja-b/fragment-06.txt",
+      "sha256": "11ea6e6d762aac52d96478429d0f1ac1ebd0aa2cf4f6ce87fc2dff74775e0413",
+      "character_count": 8000
+    },
+    {
+      "number": 7,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-garde-fou-apja-b/fragment-07.txt",
+      "sha256": "71b2ee5ebb25d60de52c2c970422bccc9eec0d6c9bb1d2b44782fe5604f25e3b",
+      "character_count": 4643
+    }
+  ],
+  "judge_adapter_sha256": "e1e04cd4ab37425885d57861151c893a7b921999ac295ddc7d44c5a0443fdc0b",
+  "campaign_adapter_sha256": "fa32998ad48586ca7178ac56d8cdeff5fb9438e6746d92bffea751c4a6155b8e",
+  "presentation_wrapper_sha256": "b709a2641f5433f3336a916b67b115570e5d77ed17d58433d39a89634ce3c14b",
+  "suite_sha256": "3c45e6117c25cbca0558de2955ca5a7d80956575d886a887d1cdfdc581375cd8",
+  "protocol_sha256": "65f78f419679774ec00c6b5d96b1801f902c6510b57e221ae7ebb31320fd1b6f",
+  "historical_scores_reused": false,
+  "activation_kind": "file_read_fragments",
+  "actual_plugin_activation_verified": false
+}

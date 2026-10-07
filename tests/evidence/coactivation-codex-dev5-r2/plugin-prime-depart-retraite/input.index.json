@@ -1,0 +1,44 @@
+{
+  "source_path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-prime-depart-retraite/input.json",
+  "source_sha256": "c9052d13edc8542e8bd59416e98a1861bc64332222daccef013a55973e304108",
+  "characters": 40612,
+  "fragment_limit": 8000,
+  "fragments": [
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-prime-depart-retraite/input.index.json.parts/part-01.txt",
+      "sha256": "89f5c86004e161d3a4d5d628be26f76eb81ea62f431333318f98893e4102b0d5",
+      "characters": 8000,
+      "number": 1
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-prime-depart-retraite/input.index.json.parts/part-02.txt",
+      "sha256": "f88e5568837dc6ca13ba4b8865dac5862d96f67e4dd89dedfbd695a80d1a4f3b",
+      "characters": 8000,
+      "number": 2
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-prime-depart-retraite/input.index.json.parts/part-03.txt",
+      "sha256": "f329c28f4b8d949c2d48b2295fddbb717931e1b5f66abca953adbea8618167d8",
+      "characters": 8000,
+      "number": 3
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-prime-depart-retraite/input.index.json.parts/part-04.txt",
+      "sha256": "9197ab0029203319c8a98efd93c74985b13aba85e2c18db93b2d17960ec70348",
+      "characters": 8000,
+      "number": 4
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-prime-depart-retraite/input.index.json.parts/part-05.txt",
+      "sha256": "1b24ff12000d14fa573bb2386eb9b3bc6b7fd912a601b0be74d4aa3476db3c75",
+      "characters": 8000,
+      "number": 5
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-prime-depart-retraite/input.index.json.parts/part-06.txt",
+      "sha256": "108e6e73fc00024fcb5f04cc1500af3ec632409b71cb4326b1364d215f16a33b",
+      "characters": 612,
+      "number": 6
+    }
+  ]
+}

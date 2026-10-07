@@ -1,0 +1,44 @@
+{
+  "source_path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-dsi-budget/input.json",
+  "source_sha256": "df60f487187fc77b9f4dff126008d5458c802225fa41651c9e6345de6b0068be",
+  "characters": 40372,
+  "fragment_limit": 8000,
+  "fragments": [
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-dsi-budget/input.index.json.parts/part-01.txt",
+      "sha256": "6c061fb7d7160e47d7aeb8a190cf3080d0c0213722d9cac1497b3028e4a46d7f",
+      "characters": 8000,
+      "number": 1
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-dsi-budget/input.index.json.parts/part-02.txt",
+      "sha256": "ee5de7baee2224aee8720dc3a48a8fbe461c59530e77635bca9b58c095e093b7",
+      "characters": 8000,
+      "number": 2
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-dsi-budget/input.index.json.parts/part-03.txt",
+      "sha256": "395b37f80d94b599644c27acc98c35e5ebb1fd2aff1524e61f70027495d1ecaa",
+      "characters": 8000,
+      "number": 3
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-dsi-budget/input.index.json.parts/part-04.txt",
+      "sha256": "a1826571d1656f49bcfbf0b200c5f8116347d12ae2e40bd05a6d54ea5e13652a",
+      "characters": 8000,
+      "number": 4
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-dsi-budget/input.index.json.parts/part-05.txt",
+      "sha256": "45c290d799b855d73c41a6f1b2fa22181a9711cfde7fa8bf2595dcf8b582e039",
+      "characters": 8000,
+      "number": 5
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-dsi-budget/input.index.json.parts/part-06.txt",
+      "sha256": "9ff8768d5433c5e2dc953b9bb972cfa980e52a2a30519e848f1a34eeff8258e5",
+      "characters": 372,
+      "number": 6
+    }
+  ]
+}

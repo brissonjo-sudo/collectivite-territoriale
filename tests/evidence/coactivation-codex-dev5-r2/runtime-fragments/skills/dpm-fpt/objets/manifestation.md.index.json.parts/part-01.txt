@@ -1,0 +1,88 @@
+# Objet métier — Manifestation (événement public / rassemblement)
+
+> **Situation type** : préparation et encadrement d'une manifestation publique (événement communal, rassemblement revendicatif, regroupement occasionnel de population) — qualification juridique, dispositif sécurité, articulation entre autorités.
+>
+> **Couple dominant** [risque / confiance] : **[moyen à élevé / à vérifier]**. Le régime juridique varie selon la nature (communal vs revendicatif) et la qualification des pouvoirs compétents (maire en droit commun, préfet en police étatisée ou rassemblement occasionnel). Tout conflit de compétence expose à un vice de procédure.
+
+---
+
+## 1. Acteurs et autorités compétentes
+
+### Par type d'événement
+
+**Manifestation organisée par la commune** (kermesse, marché, fête, spectacle public)
+- **Autorité de police compétente** : le **maire** au titre de sa police générale (bon ordre, sûreté, sécurité, salubrité publiques).
+- **Décision maire** : peut définir les mesures de circulation, de fermeture de voies, de sécurité nécessaires.
+- **Rôle du PM (directeur et agents)** : exécution de l'arrêté municipal, dimensionnement du dispositif sécurité, coordination terrain.
+
+**Rassemblement revendicatif ou meeting politique**
+- **Régime déclaratif/préfectoral** : distinction à faire dès la déclaration (la manifestation relève d'un régime spécifique distinct de la police générale).
+- **Autorité de police compétente** : le **préfet** détient un rôle de direction (encadrement du rassemblement, mesures provisoires, autorisation ou interdiction dans des conditions à vérifier en version consolidée).
+- **Maire** : peut édicter des mesures de police générale (circulation auxiliaire, tranquillité publique alentour) dans son domaine propre, en cohérence avec le cadrage préfectoral.
+- **Rôle du PM** : exécution des directives préfectorales et des arrêtés du maire, constatation des infractions, lien avec les forces de l'État (Police Nationale / Gendarmerie si OPJ).
+
+**Rassemblement occasionnel de population en commune à police étatisée**
+- **Règle d'or** : dans les communes à police d'État, le maintien de l'ordre lors des **grands rassemblements occasionnels** relève **exclusivement de l'État** (Police Nationale).
+- **Maire** : conserve ses pouvoirs sur les troubles de voisinage et le reste de sa police générale (circulation ordinaire, ordre dans les lieux publics annexes).
+- **Rôle du PM** : support et coordination locale auprès des forces de l'État ; pas d'exercice du pouvoir de maintien d'ordre sur l'événement lui-même.
+
+### Partenaires obligatoires
+
+- **Préfecture** : validation de la nature de l'événement, régime applicable, coordination forces de l'État si rassemblement revendicatif.
+- **Procureur** : notification si l'événement risque des troubles à l'ordre public ou dérives pénales (pour la chaîne OPJ/gendarmes ou policiers).
+- **Services de secours (SDIS, SAMU)** : articulation via convention de coordination, postes de secours si affluence importante.
+- **Organisateur** (association, privé) : fournit les informations de déclaration (date, lieu, effectifs attendus, risques identifiés).
+
+### Distinction autorité organisatrice / autorité de police
+
+La commune peut **organiser** un événement ; cela ne transfère pas le pouvoir de **police** associé (qui reste au maire ou au préfet selon le régime). Ne jamais fusionner ces deux statuts en une seule décision.
+
+---
+
+## 2. Textes applicables
+
+| Domaine | Pointeur | Notes |
+|---------|----------|-------|
+| Pouvoirs de police, compétences maire/préfet, régimes spéciaux | [../references/pouvoirs-police.md](../references/pouvoirs-police.md) (§4.1, §4.2, §4.4, §4.5) | Qualification police générale vs spéciale ; identification autorité compétente ; régime police étatisée ; pouvoir de substitution préfet. |
+| Doctrine opérationnelle des dispositifs événementiels | [../references/doctrine-operationnelle.md](../references/doctrine-operationnelle.md) (§5.3, §6) | Construction du dispositif (effectifs, risque, articulation avec forces de l'État) ; procédures et délais ; vérifications. |
+| Autorisations administratives sous-jacentes (domaine public, débits temporaires, accès ERP) | [../references/reglementation-appliquee.md](../references/reglementation-appliquee.md) | Régime juridique de l'occupation du domaine public, débits de boissons temporaires, établissements recevant du public lors d'événement. |
+| Procédure pénale en contexte manifestation (constatation infractions, relation OPJ, flagrance) | [../references/penal-procedure.md](../references/penal-procedure.md) | Limites pouvoirs APJA en dispositif ; signalement OPJ ; cumul administratif/pénal. |
+| Continuum de sécurité, conventions, articulation forces de l'État | [../references/continuum-partenariats.md](../references/continuum-partenariats.md) | Convention de coordination ; CLSPD ; coopération Police Nationale / Gendarmerie ; modes opérationnels d'articulation. |
+| Contrôle de légalité des arrêtés édictés | [../references/controle-legalite.md](../references/controle-legalite.md) | Transmission au contrôle de légalité si acte faisant grief (interdiction, réglementation). |
+| Armement et équipements en contexte événement | [../references/armement-equipements.md](../references/armement-equipements.md) | Dotation, FIA, équipements de protection en cas de risque d'affrontement. |
+
+À confirmer en version consolidée : régimes détaillés de déclaration/autorisation des rassemblements revendicatifs (Code du travail, CSI), délais préfectoraux de traitement, conditions d'interdiction/limitation.
+
+---
+
+## 3. Procédures et délais
+
+### Phase 1 — Déclaration de l'événement (T-30 à T-60 jours avant)
+
+**Événement communal (organisateur = mairie ou association locale)**
+1. Mairie reçoit demande d'organisation (occupant domaine public, affichage, spectacle).
+2. **Responsable événementiel** (mairie) remplit dossier administratif : lieu, date, effectifs, risques identifiés.
+3. **DPM doit être saisi** pour avis sécurité : passage en commission de sécurité locale ou revue DPM directe selon protocole.
+4. Dossier transmis au **préfecture** si zone ZSP, classement particulier, ou événement à fort enjeu de sécurité (à adapter selon enjeu).
+
+**Rassemblement revendicatif (manifestation, meeting)**
+1. **Organisateur externe** transmet **déclaration à la préfecture** (régime spécifique, délai minimal à vérifier — à confirmer en version consolidée).
+2. Préfecture **notifie la mairie** et le DPM de la réception et des suites envisagées (autorisation, encadrement, interdiction).
+3. Mairie et DPM consultées par la préfecture sur les mesures proposées (délai de consultation court, en général 48h — à confirmer).
+4. DPM prépare son avis technique : risques identifiés, capacités PM de support, besoins en coordination avec l'État.
+
+**Délai de réaction**
+- Pas de délai légal strict pour la mairie sur avis sécurité (à adapter selon urgence et protocole local).
+- Délai préfectoral : dépend du régime déclaratif (à confirmer en version consolidée, typiquement J-3 à J-7 avant l'événement pour autorisation/interdiction).
+
+### Phase 2 — Validation et instruction du dispositif sécurité (T-20 à T-5 jours)
+
+**Pour tous événements**
+1. **DPM** valide la qualification juridique de l'événement (police générale du maire vs régime préfectoral ; identification de l'autorité compétente finale).
+2. **Instruction de l'arrêté municipal** (si maire compétent) :
+   - Objet : mesures de circulation, fermeture de voies, horaires, zones réservées, interdictions temporaires.
+   - Formalités : motivation en fait et en droit ; références légales vérifiées ; transmission au contrôle de légalité si acte faisant grief.
+3. **Construction du dispositif de sécurité** PM :
+   - Évaluation du risque (affluence attendue, configuration des lieux, antécédents, contexte de menace / Vigipirate).
+   - Dimensionnement des effectifs : présence dissuasive, filtrage des accès, régulation circulation, points de regroupement.
+   - Points de coordination : 

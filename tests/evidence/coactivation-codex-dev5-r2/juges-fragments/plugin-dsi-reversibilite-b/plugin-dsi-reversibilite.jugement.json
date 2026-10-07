@@ -1,0 +1,67 @@
+{
+  "case_id": "plugin-dsi-reversibilite",
+  "trace_sha256": "485114eaaff72e887e6191fd02bb23944cecd49d1d9a3c9ce495eb1ad2527a40",
+  "verdict": "echec",
+  "invariants": {
+    "plugin-dsi-reversibilite.inventaire_technique": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e20"],
+      "rationale": "Le tableau prévoit un inventaire des données, pièces jointes, configurations, formats, relations, interfaces, composants et licences, avec validation métier et écarts visibles. Il s'agit d'un travail proposé, sans prétention d'exécution."
+    },
+    "plugin-dsi-reversibilite.export_essai": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e8", "e20"],
+      "rationale": "Le plan à compléter prévoit un export d'essai documenté et un test dans un environnement autorisé avec des données fictives ou préparées. Les accès disponibles et la capacité de reprise sont explicitement inconnus et à clarifier ; la limite finale indique reprise non testée. L'essai reste donc une proposition dépendante des possibilités à établir."
+    },
+    "plugin-dsi-reversibilite.controles_export": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e20"],
+      "rationale": "La restitution proposée comprend dictionnaire, liens, pièces et paramètres, contrôles de complétude, cohérence et lisibilité, puis import et validation métier. Le texte précise qu'un fichier reçu ou un nombre de lignes importées ne démontre pas un service utilisable."
+    },
+    "plugin-dsi-reversibilite.continuite_technique": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e20"],
+      "rationale": "Le plan prévoit exploitation transitoire, accès et support, supervision, fonctionnement dégradé, priorités métier, traitement des modifications avant bascule, retour et contrôle après reprise. Les besoins techniques proposés restent expressément distincts des engagements souscrits à examiner."
+    },
+    "plugin-dsi-reversibilite.ccag_non_presume": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e20"],
+      "rationale": "Aucun CCAG n'est invoqué ou présumé applicable. Le régime contractuel est déclaré non établi, et les documents incorporés ainsi que les dérogations sont demandés pour examen avant de retenir une règle applicable."
+    },
+    "plugin-dsi-reversibilite.pieces_verifiees_ou_reserve": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e8", "e20"],
+      "rationale": "Le contrat et le refus écrit sont expressément déclarés non examinés. La réserve cible contrat signé, annexes, avenants, documents incorporés, dérogations, engagements de réversibilité, licences, demandes d'export, refus, tickets et chronologie. Aucun passage ultérieur ne présente ces pièces comme lues."
+    },
+    "plugin-dsi-reversibilite.volet_juridique_attribue": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e8", "e18", "e20"],
+      "rationale": "Le volet recherche-juridique est annoncé en e8 et une absence de fondement est formulée en e18. Cependant, e20 décrit une méthode et renvoie l'examen contractuel effectif au service juridique : faire examiner les pièces, demander une note sur les droits et faire valider après cette revue. Le titre Analyse recherche-juridique et les appels ne remplacent pas la tenue effective et expressément attribuée du volet contractuel avant ses conclusions ; le renvoi à une validation ultérieure est précisément insuffisant selon l'invariant."
+    },
+    "plugin-dsi-reversibilite.sans_droit_acquis_non_verifie": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e18", "e20"],
+      "rationale": "Le répondant ne retient aucun fondement pour une mise en demeure, affirme qu'aucune règle applicable au contrat n'est confirmée et s'abstient sur l'obligation de restitution, les frais et les délais. Les droits d'usage et les éléments exigibles sont des questions pour l'examen futur, sans droit acquis affirmé. E11 est une recherche et e13 un contenu tronqué manquant : aucune preuve primaire n'est promue."
+    },
+    "plugin-dsi-reversibilite.sans_penalite_non_verifiee": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e20"],
+      "rationale": "L'abstention explicite sur les sanctions couvre les pénalités. Aucun montant, mécanisme ou droit à pénalité n'est affirmé ailleurs dans le texte visible ; les suites demeurent suspendues à la revue contractuelle."
+    },
+    "plugin-dsi-reversibilite.sans_resiliation_non_verifiee": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e18", "e20"],
+      "rationale": "La réponse ne préconise ni n'affirme une possibilité ou un effet de résiliation. Elle suspend le volet contentieux, réserve les droits et les suites à la revue des pièces et n'envoie aucun acte. La fin du contrat provient de la question et n'est pas transformée en droit de résiliation vérifié."
+    }
+  }
+}

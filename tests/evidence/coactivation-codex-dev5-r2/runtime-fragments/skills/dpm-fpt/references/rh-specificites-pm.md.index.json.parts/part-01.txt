@@ -1,0 +1,147 @@
+# Branche — RH spécificités PM (v0.1.0)
+
+> Structure conforme à `_gabarit-branche.md`. Aucune valeur datée (montants,
+> durées, quotas, taux) n'est donnée de mémoire : seules les **règles**
+> figurent ici, avec la consigne de vérifier la version en vigueur. Cette
+> branche est la **frontière la plus sensible** du skill avec `drh-fpt` : elle
+> ne traite que ce que `SKILL.md` §5.4 conserve explicitement dans `dpm-fpt`.
+
+## Périmètre / Exclusions
+
+- **Périmètre** : spécificités RH propres au métier de police municipale
+  conservées dans `dpm-fpt` — **agrément préfectoral et assermentation** ;
+  **FIA et formation continue armement** (volet métier de la formation) ;
+  **cycles atypiques et régime indemnitaire propre (ISFE)** dans leur logique
+  opérationnelle ; **constat** du manquement déontologique (avant procédure) ;
+  **commandement opérationnel de terrain**.
+- **Exclusions** (délégué à `drh-fpt`) : **carrière, paie, avancement,
+  positions statutaires** ; **RIFSEEP général** (la PM en est **hors champ** —
+  voir §5.3) ; **instances et dialogue social** (CST, F3SCT) ; **PROCÉDURE
+  disciplinaire** (saisine du conseil de discipline, droits de la défense,
+  échelle des sanctions) ; **santé/QVT, masse salariale, SI RH,
+  recrutement/formation général**. Pour le détail de ces sujets : voir le
+  skill `drh-fpt` (branche carrière et paie, notamment son §5.7 sur l'ISFE
+  et son §5.5 sur l'échelle disciplinaire, et les autres branches).
+
+---
+
+## 1. Questions couvertes
+
+- Un agent peut-il exercer sans agrément préfectoral ou sans assermentation
+  préalable ? Que faire en cas de retrait ou de suspension ?
+- Quelle est la différence entre la **formation initiale d'application (FIA)**
+  et la formation continue obligatoire **armement**, et que couvre `dpm-fpt`
+  par rapport à `drh-fpt` sur ce point ?
+- Comment qualifier un **cycle horaire atypique** (nuit, week-end, jours
+  fériés, brigade canine, ASVP en horaires décalés) du point de vue métier, et
+  où s'arrête la compétence de cette branche sur le régime indemnitaire **ISFE**
+  qui y est lié ?
+- Un agent a un comportement qui pose question au regard du **code de
+  déontologie** : à quel moment `dpm-fpt` répond encore, à quel moment la main
+  passe-t-elle à `drh-fpt` ?
+- Qui exerce le **commandement opérationnel de terrain** lors d'une
+  intervention ou d'un dispositif, et comment cette autorité fonctionnelle
+  s'articule avec la hiérarchie statutaire ?
+- Une question m'arrive sur la **carrière, la paie ou une instance** d'un
+  agent PM : dois-je la traiter ici ?
+
+---
+
+## 2. Arbre de traitement
+
+`question → variables à lever (§4) → test frontière dpm-fpt / drh-fpt (§5.0) → décision → vérification (§7) → écrit/livrable (§10)`
+
+**Réflexe imposé avant toute réponse** : tester si la question relève d'une
+des **cinq poches conservées** (§0 du tableau ci-dessous) ou si elle bascule
+côté `drh-fpt`. Ne jamais traiter sur le fond un sujet de carrière, de paie,
+d'instance ou de procédure disciplinaire : renvoyer, sans reformuler le détail
+statutaire.
+
+---
+
+## 3. Variables à lever
+
+- **Nature de la question** : métier opérationnel (agrément, FIA armement,
+  cycle de service, constat déontologique, commandement) vs statutaire
+  (carrière, paie, instance, procédure) — détermine la branche compétente
+  avant tout développement.
+- **Stade du dossier** : simple **constat** d'un fait au regard du code de
+  déontologie, ou **ouverture d'une procédure** (déjà saisine, déjà notification
+  de griefs) — la règle de bascule (§5.0) en dépend directement.
+- **Statut d'agrément/assermentation de l'agent** : agréé et assermenté en
+  cours de validité, en cours d'instruction, suspendu, ou retiré — conditionne
+  toute habilitation à agir comme APJA.
+- **Cadre d'emplois et fonctions exactes** (chef de service, directeur,
+  agent, garde champêtre) : conditionne le régime indemnitaire ISFE et le
+  niveau de commandement.
+- **Existence d'une convention de coordination** PM/forces de l'État en
+  vigueur, et des plages horaires qu'elle fixe (`continuum-partenariats.md`) —
+  paramètre souvent imbriqué avec les cycles atypiques.
+- **Date de référence** des faits ou de l'acte (le cadre RH propre à la PM a
+  été modifié récemment, notamment par le décret n° 2024-614 du 26 juin 2024
+  sur l'ISFE — à confirmer pour la situation traitée).
+
+---
+
+## 4. Règles métier
+
+### 4.0 Règle de bascule dpm-fpt / drh-fpt — à tester en premier
+
+| Conservé ici (`dpm-fpt`) | Délégué à `drh-fpt` |
+|---|---|
+| Agrément préfectoral + assermentation | Carrière, paie, avancement, positions statutaires |
+| FIA et formation continue **armement** | RIFSEEP général |
+| Cycles atypiques + logique métier du régime indemnitaire propre (ISFE) | Instances et dialogue social (CST, F3SCT) |
+| **Constat** du manquement déontologique | **Procédure** disciplinaire (saisine conseil, droits de la défense, échelle des sanctions) |
+| Commandement opérationnel de terrain | Santé/QVT, masse salariale, SI RH, recrutement/formation général |
+
+**Règle pratique** : tant que la question porte sur le **texte applicable et
+le constat des faits au regard de ce texte**, `dpm-fpt` répond. Dès qu'elle
+porte sur la **conduite procédurale** (qui notifie, quels délais, quelle
+instance, quels droits de la défense, quelle sanction), passer la main à
+`drh-fpt` (branche carrière et paie, §5.5) **sans reformuler le
+détail procédural ici**, même partiellement.
+
+**Deux verrous qui rendent cette règle opposable** (`SKILL.md` §5.4) :
+
+1. **Non-autorisation** — que `drh-fpt` soit mobilisable dans la session
+   **ne vaut pas autorisation de produire**. Pouvoir répondre n'est pas être
+   compétent pour répondre. C'est une raison de basculer, jamais de traiter.
+2. **Format** — émettre le **bloc BASCULE** **avant** tout contenu statutaire,
+   en nommant `drh-fpt`. Écrire « la DRH » ou « votre service RH » désigne un
+   service de la collectivité et **ne vaut pas bascule**.
+
+Reste permis après la bascule : **nommer** l'étape sans la dérouler, signaler un
+enjeu de calendrier ou de preuve, rappeler la conséquence métier (perte de la
+qualité d'APJA, retrait d'habilitation).
+
+**Format de la bascule** : émettre le **bloc BASCULE** (`SKILL.md` §5.4) avant
+tout contenu statutaire. La bascule n'est pas une mention en fin de réponse :
+c'est un livrable prioritaire qui **remplace** le contenu délégué. Disposer de
+`drh-fpt` dans la session ne déplace pas la frontière.
+
+### 4.1 Agrément préfectoral et assermentation
+
+- **Double condition cumulative et personnelle** : un agent de police
+  municipale n'exerce légalement ses pouvoirs (notamment APJA) qu'une fois
+  **nommé** par le maire (ou le président de l'EPCI compétent), **agréé** par
+  le représentant de l'État dans le département et le procureur de la
+  République, **puis assermenté** (CSI, art. **L. 511-2**, *vérifié sur
+  Légifrance le 2026-06-30* — LEGIARTI000043540434). L'agrément et
+  l'assermentation **demeurent valables** tant que l'agent continue d'exercer
+  ses fonctions d'agent de police municipale — ils ne sont **pas** à renouveler
+  à échéance fixe, sauf changement de collectivité ou retrait.
+- **Autorités compétentes** : le maire (ou président d'EPCI) **nomme** ;
+  l'**État** (préfet) et le **procureur de la République** **agréent**,
+  conjointement — ce n'est ni un pouvoir municipal seul, ni un pouvoir
+  exclusivement étatique.
+- **Retrait ou suspension** : l'agrément peut être **retiré ou suspendu** par
+  le préfet ou le procureur, **après consultation** du maire ou du président
+  de l'EPCI ; **en cas d'urgence**, le procureur peut suspendre **sans cette
+  consultation préalable** (CSI, art. L. 511-2, *vérifié sur Légifrance le
+  2026-06-30*). Effet immédiat sur l'habilitation à agir : un agent dont
+  l'agrément est retiré ou suspendu **perd sa qualité d'APJA** et ne peut plus
+  exercer aucun acte qui en dépend.
+- **Cas particuliers** : l'agrément peut aussi être délivré à des agents
+  communaux habituellement affectés à d'autres fonctions, ou à des agents non
+  

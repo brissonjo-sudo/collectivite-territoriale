@@ -1,0 +1,76 @@
+{
+  "agent": "/root/juge_codex_dev5_r2_15b",
+  "thread_id": "01a117c8-44b3-7dd2-9b0e-6a4d699d3370",
+  "parent_thread_id": "01a1103e-0b49-70c1-8f4e-66a36b54916f",
+  "model": "gpt-6.1-sol",
+  "turn_id": "01a117c8-4520-7631-93be-5ca35e8e4f00",
+  "created_at": "2026-10-07T19:12:43.188Z",
+  "started_at": "2026-10-07T19:12:43.308Z",
+  "completed_at": "2026-10-07T19:15:46.847Z",
+  "fork_turns": "none",
+  "initial_message_verified": false,
+  "initial_message_sha256": "23de4458d126e3116eb072cb4d1f7e0d708cfdba9057f2defa693a27a9032042",
+  "case_id": "plugin-spontane-budget",
+  "assessment": {
+    "case_id": "plugin-spontane-budget",
+    "verdict": "echec",
+    "technical_status": "passed",
+    "behavior_status": "failed",
+    "documentary_status": "passed",
+    "primary_content_available": true,
+    "release_ready": false
+  },
+  "host": "Codex",
+  "activation_kind": "file_read_fragments",
+  "actual_plugin_activation_verified": false,
+  "full_packet_context_verified": true,
+  "fragment_count": 6,
+  "judge_adapter_sha256": "e1e04cd4ab37425885d57861151c893a7b921999ac295ddc7d44c5a0443fdc0b",
+  "packet_sha256": "d1f690c469d2fc20acfaa34fbfc48bd933f3f78e8e7748cca679087bb527b387",
+  "response_sha256": "3183cb12755a6442121065e53546928707d4eb70e2f06f4276baf6ce988cb502",
+  "judgment_sha256": "f1cf85185c454e244e3fea2166825b2860834ece11efb862f026f28f9285e278",
+  "trace_sha256": "a9fb3903b5aee8eec3c81e2051f1c9cc521d2fddfcbac8bc26177f129cd6320d",
+  "rejected_creation_attempts": [],
+  "native_session_file": "rollout-2026-10-07T21-12-43-01a117c8-44b3-7dd2-9b0e-6a4d699d3370.jsonl",
+  "parent_session_file": "rollout-2026-10-06T10-04-24-01a1103e-0b49-70c1-8f4e-66a36b54916f.jsonl",
+  "presentation_wrapper_sha256": "b709a2641f5433f3336a916b67b115570e5d77ed17d58433d39a89634ce3c14b",
+  "exact_presentation_normalizations": [
+    {
+      "call_id": "call_gmYcofJypz4qKyaJcvP9Q0kB",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-budget-b/fragment-01.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_o9QiBSxvWEdBYiggd7nzr7Zy",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-budget-b/fragment-02.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_4Oy5iP3jD1AnL3yiI6SZjY5Y",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-budget-b/fragment-03.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_qYPfL1Bn623Qhr4ydjeenPyO",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-budget-b/fragment-04.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_oKQpi2z1h9CMLl9KK9PKBuPw",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-budget-b/fragment-05.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_BKwb0I3HK5l2XMiWEWs0Dixv",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-budget-b/fragment-06.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    }
+  ],
+  "normalization_scope": "only expected content plus one terminal CRLF; raw events unchanged"
+}

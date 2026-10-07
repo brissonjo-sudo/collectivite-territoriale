@@ -1,0 +1,54 @@
+{
+  "case_id": "plugin-dsi-videoprotection",
+  "agent": "/root/juge_codex_dev5_r2_07b",
+  "exported_at": "2026-10-07T18:34:11.401539+00:00",
+  "packet_sha256": "79e4f2a96f5e523dfa6a35fd7bdf3c7e4045613bdcba8c57cf71d97bdf9eaa28",
+  "response_sha256": "e522c49455177296b4e96c4857d336da930edf030394fc1b0fe774cede79e11d",
+  "prompt_sha256": "c9d5fa1ff774673e3ca4266a4520215254b1b1d8fa32010860fe40c580353eb0",
+  "fragments": [
+    {
+      "number": 1,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-videoprotection-b/fragment-01.txt",
+      "sha256": "a592d574ddd6a5a11bd1ea0baa528dcda4ce4e0e2cdda4e9a9ad365a553f1d64",
+      "character_count": 8000
+    },
+    {
+      "number": 2,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-videoprotection-b/fragment-02.txt",
+      "sha256": "e6155ca2880b7a38d0aee926d0c72401049f477d89a16fdbb7bfe3cb8e14a689",
+      "character_count": 8000
+    },
+    {
+      "number": 3,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-videoprotection-b/fragment-03.txt",
+      "sha256": "1808daf2b9e050631094fc2d0bca77ed670e732c0ecf8931003186388771c82a",
+      "character_count": 8000
+    },
+    {
+      "number": 4,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-videoprotection-b/fragment-04.txt",
+      "sha256": "a1efc1757459b0a4a63ef25311ed6273b33fcdc41e4cfd5f2a8e21d96a4f226c",
+      "character_count": 8000
+    },
+    {
+      "number": 5,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-videoprotection-b/fragment-05.txt",
+      "sha256": "3ad9d6c2823b2918a281d13f79784a8bef1c94755dda808c30b54519dd749aaf",
+      "character_count": 8000
+    },
+    {
+      "number": 6,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-videoprotection-b/fragment-06.txt",
+      "sha256": "5c6bd45bc2ad3ce21a37fb6419b9d4a97122ffb8757807c52c94fe098116e4db",
+      "character_count": 2281
+    }
+  ],
+  "judge_adapter_sha256": "e1e04cd4ab37425885d57861151c893a7b921999ac295ddc7d44c5a0443fdc0b",
+  "campaign_adapter_sha256": "fa32998ad48586ca7178ac56d8cdeff5fb9438e6746d92bffea751c4a6155b8e",
+  "presentation_wrapper_sha256": "b709a2641f5433f3336a916b67b115570e5d77ed17d58433d39a89634ce3c14b",
+  "suite_sha256": "3c45e6117c25cbca0558de2955ca5a7d80956575d886a887d1cdfdc581375cd8",
+  "protocol_sha256": "65f78f419679774ec00c6b5d96b1801f902c6510b57e221ae7ebb31320fd1b6f",
+  "historical_scores_reused": false,
+  "activation_kind": "file_read_fragments",
+  "actual_plugin_activation_verified": false
+}

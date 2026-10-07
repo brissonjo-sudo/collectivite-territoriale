@@ -1,0 +1,66 @@
+on) : sujet spécifique, identité de l'agent, motif.
+
+### Écrits en cas de dimension pénale
+- Dès que l'agent risque une mise en cause pénale (usage de la force contesté, consultation de fichier hors cadre, violences) → activation du **garde-fou APJA** (`SKILL.md` §5.2) et passage à `penal-procedure.md` pour le compte rendu à l'OPJ et au maire.
+
+### Actes faisant grief
+- Un éventuel **retrait d'autorisation de port d'armes** par le préfet est un acte de l'État, non produit par cette branche → néanmoins, le DPM peut adresser une **note d'alerte au maire** sur le risque ou l'imminence d'une décision préfectorale, avec pièces justificatives (non-respect de l'entraînement, doute sur l'aptitude).
+- Toute décision communale défavorable à l'agent **relevant du métier** (refus de dotation, retrait d'une habilitation interne, refus d'affectation à une mission armée) : motivation + voies et délais de recours + vérifier le contrôle de légalité → `controle-legalite.md` avant production.
+- **Frontière RH (`SKILL.md` §5.4)** : la **suspension des fonctions**, toute **sanction** et toute mesure de la liste fermée des déclencheurs (conseil de discipline, droits de la défense, quantum, CAP…) ne sont **jamais produites depuis cette fiche**. Émettre le **bloc BASCULE `drh-fpt`** avant tout contenu statutaire, y compris si `drh-fpt` est mobilisable dans la session ; ce qui reste permis : nommer l'étape (« une suspension conservatoire devra être envisagée ») et sa conséquence métier (retrait d'habilitation, perte de la qualité d'APJA).
+
+---
+
+## 5. Jurisprudence clé
+
+Voir **`recherche-juridique`** pour :
+- **Contrôle de la proportionnalité de l'usage de la force** par les agents PM (standards du juge administratif et pénal).
+- **Irrégularité de procédure** sur la qualité d'APJA (absence d'agrément, assermentation non effectuée, absence d'autorisation de port d'armes) — jurisprudence de nullité d'actes de constatation.
+- **Faute personnelle détachable du service** vs **faute de service** en matière de responsabilité (usage abusif d'autorité, comportement contraire aux devoirs déontologiques).
+- **Indépendance des procédures** (administrative / pénale / disciplinaire) : cumul possible sans exclusion mutuelle.
+
+Thèmes sensibles à signaler en amont :
+- Qualification d'un **usage d'arme** (légitime défense vs usage disproportionné).
+- **Responsabilité de la commune** en cas de dommage causé par un agent arm&eacute; ; distinction avec la responsabilité personnelle de l'agent.
+
+---
+
+## 6. Check-list opérationnelle
+
+### Avant d'affirmer qu'un agent a la qualité d'APJA
+- [ ] **Agrément du préfet ET du procureur** en cours de validité et applicable à la date des faits ?
+- [ ] **Assermentation** effectuée et non levée (mutation sans nouvel agrément, retrait) ?
+- [ ] Vérifier auprès de la préfecture l'état exact de l'agrément (pas de suspension/retrait récent non notifié) ?
+- [ ] Si port d'armes : **autorisation préfectorale nominative** individuelle en cours de validité ?
+- [ ] Si port d'armes : **formation préalable** validée et **entraînement périodique** à jour (date et nature à vérifier) ?
+
+### En cas de constat de manquement déontologique
+- [ ] **Nature du fait** identifiée (comportement pur vs usage de la force vs consultation de fichier) ?
+- [ ] **Code de déontologie** (CSI R. 515-1 et s.) : article(s) potentiellement applicable(s) **à vérifier précisément** avant citation en acte (ne pas chiffrer de mémoire) ?
+- [ ] **Dimension pénale** testée (violences, abus, usage disproportionné de la force) → **garde-fou APJA** (l'agent peut être mis en cause) ?
+- [ ] Rapport de constat rédigé (faits, articles applicables sous réserve, pas de présomption de sanction) ?
+- [ ] **Point de bascule** identifié : dès notification de griefs ou saisine disciplinaire → main à `drh-fpt` ?
+- [ ] **Responsable de traitement RGPD** (le maire, pas le DPM) notifié en cas d'incident de données ?
+
+### Avant toute sortie — Garde-fou APJA
+- [ ] La situation décrite relève-t-elle **exclusivement des pouvoirs APJA** (art. 21 / 21-2 CPP) ou **dépasse-t-elle** ce cadre (garde à vue, audition formelle, perquisition, réquisition judiciaire) ?
+- [ ] Si dépassement détecté → **STOP** affiché **en priorité**, compte rendu immédiat à l'OPJ, puis qualification du seul fondement de contrainte possible : art. 53 + 73, art. 78-6, ou aucun.
+
+### Contrôles transverses
+- [ ] Autorités compétentes (maire / préfet / procureur) et leurs rôles respectifs correctement identifiées ?
+- [ ] Tout numéro d'article cité assorti de « à confirmer en version consolidée » ou « vérifié sur Légifrance le 2026-06-30 » ?
+- [ ] Références vers les branches partenaires (`rh-specificites-pm.md`, `armement-equipements.md`, `conformite-deontologie-donnees.md`, `penal-procedure.md`) effectuées sans duplication de contenu ?
+- [ ] Couple [risque / confiance] clairement indiqué si pertinent pour la décision ?
+- [ ] Cas journalisable (lacune procédurale, réforme récente, situation atypique) → prévu pour `JOURNAL.md` ?
+
+---
+
+## Références et remontées
+
+**Branche principale de frontière** : Tout sujet de carrière, paie, avancement, position statutaire ou procédure disciplinaire (saisine, notification de griefs, sanction) → `drh-fpt` (`SKILL.md` §5.4) sans reformulation ici.
+
+**Coordination impérative** : Les trois dimensions (agrément, déontologie, armement) d'un agent peuvent être liées — croiser systématiquement avant de conclure.
+
+**Mise à jour requise** : 
+- Révision du décret armement (n° 2020-511 du 2 mai 2020) et des suites.
+- Code de déontologie PM (CSI R. 515-1 et s.) en cas de refonte.
+- Régime de l'agrément et de l'assermentation (CSI L. 511-2) en cas de réforme législative.

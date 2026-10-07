@@ -1,0 +1,58 @@
+érer une API comme une autorisation de réutiliser toutes ses données.
+- Transformer une prescription technique de l'État en obligation locale.
+- Annoncer un régime ou un calendrier de transmission sans source applicable.
+- Utiliser les journaux nominatifs pour mesurer l'activité des agents :
+  garde-fou surveillance de `SKILL.md` avant toute extraction ou paramétrage.
+- Relancer un échange suspect ou nettoyer les erreurs pendant un incident :
+  garde-fou incident avant toute action.
+
+## 9. Données et valeurs à vérifier
+
+Nommer sans les chiffrer : versions du RGI et des spécifications d'interface,
+conditions de raccordement, calendrier et périmètre de facturation
+électronique, obligations de transmission et échéances de fin de contrat.
+Consulter `references/references-verifiees.md`, puis les sources officielles
+et opérateurs compétents ; ce qui n'y est pas confirmé reste réservé. Ne
+compléter aucun régime d'état civil ou d'élections de mémoire.
+
+## 10. Écrits et livrables
+
+- Cartographie des dépendances : finalités, propriétaires, données de
+  référence, flux et effets d'une interruption.
+- Contrat d'interface : sens métier, format, contrôle, accusés techniques et
+  métier, erreurs, reprise et responsabilité de correction.
+- Plan de migration : périmètre, rapprochements, recette, critères d'arrêt,
+  retour et décision de bascule.
+- Fiche projet → `references/templates/fiche-projet-si.md`, pilotée par
+  `objets/projet-si.md` ; exigences techniques →
+  `references/templates/cahier-des-charges-technique.md`.
+
+Les éléments ci-dessus sont opérationnels ; tout contenu dit obligatoire doit
+être sourcé. Produire un brouillon `[INCOMPLET]` lorsque formats, contrat ou
+validation métier manquent.
+
+## 11. Double échelle [risque / confiance]
+
+| Situation | Repère |
+|---|---|
+| Cartographie sans changement de production | [faible / stable] si le périmètre est connu |
+| Automatisation avec correction manuelle possible | [moyen / à vérifier] jusqu'à validation du sens métier |
+| Migration d'un service critique sans reprise démontrée | [élevé / abstention] sur la bascule ; proposer la recette manquante |
+| Transmission dont l'obligation ou le calendrier n'est pas confirmé | [élevé / à vérifier] ; ne pas affirmer le régime applicable |
+| Incident ou perte suspecte de données | [critique / à vérifier] ; garde-fou puis `references/crise-cyber-continuite.md` |
+
+Ajuster ces repères à l'enjeu réel selon `SKILL.md` ; une recette technique
+réussie n'augmente pas la confiance sur un texte non lu.
+
+## 12. Checklist de branche
+
+- Garde-fous incident et surveillance examinés, affichés en premier si requis ?
+- Frontières `dpo-ct`, `dirfi-fpt`, services métiers et hors périmètre tenues ?
+- Mode d'exercice, responsable métier et décideur de bascule identifiés ?
+- Données de référence, dépendances et rejets explicités ?
+- Export et reprise démontrés ; conditions de retour décidées ?
+- Obligation distincte de bonne pratique ; État distinct de collectivité ?
+- Applicabilité et provenance établies, réserves et date de référence visibles ?
+- Valeurs volatiles relues à la source ; aucune auto-attestation de session ?
+- Livrable fourni ou marqué `[INCOMPLET]`, sans données identifiantes ni secret ?
+- Chemins des fichiers mobilisés cités là où leur règle est utilisée ?

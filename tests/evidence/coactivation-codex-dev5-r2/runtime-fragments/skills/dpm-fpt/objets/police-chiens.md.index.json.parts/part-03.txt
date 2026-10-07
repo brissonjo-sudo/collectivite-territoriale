@@ -1,0 +1,139 @@
+gatoire** : un vétérinaire désigné par le préfet doit
+     établir un rapport d'évaluation conclus à la nécessité de l'euthanasie
+     (danger incontrôlable, pathologie insurmontable, bien-être animal
+     compromise, absence de possibilité de cession sécurisée).
+   - **Expiration du délai ouvré** : le délai ouvré fixé par la loi (à confirmer
+     en version consolidée) doit s'être écoulé depuis le placement en dépôt,
+     offrant au propriétaire une dernière opportunité de présenter les garanties.
+   - **Droit du propriétaire à présenter ses observations** : le propriétaire doit
+     recevoir une notification formelle, avec délai pour réagir, avant toute
+     euthanasie (point CRITIQUE : non-respect = vice procédural = annulation
+     administrative possible). Cette notification indique : lieu de dépôt de
+     l'animal, raison de la mesure envisagée, délai pour présenter observations
+     (ex. 5 jours à confirmer), coordonnées du maire ou de l'autorité
+     compétente.
+2. **Arrêté d'euthanasie** : signature du maire (ou du préfet si compétent)
+   prescrivant l'euthanasie de l'animal, avec motivation **en fait et en droit**
+   (faits d'agression ou de danger documentés, rapports vétérinaires cités,
+   défaut de garanties justifié, avis vétérinaire d'euthanasie annexé).
+   Formalisme obligatoire de motivation → `../references/controle-legalite.md`
+   avant signature.
+3. **Exécution** : le vétérinaire ou un professionnel agréé (refuge, fourrière)
+   procède à l'euthanasie en respectant la bien-traitance animale (léthane ou
+   autre méthode agréée — à vérifier selon la certification du lieu de dépôt).
+   Établir un **procès-verbal de décès** notant : date, heure, animal,
+   certificat du vétérinaire, signature. Transmettre une copie au propriétaire
+   et conserver en dossier.
+4. **Cession alternative** : avant euthanasie, explorer si le propriétaire
+   accepte une **cession de l'animal** à un refuge, une association de protection
+   ou tout tiers autorisé pouvant assurer une garde conforme (permis de détention,
+   capacités). Cession formalisée par écrit, signature du propriétaire et du
+   tiers récepteur. Cession doit être sécurisée légalement (sinon elle risque de
+   reporter le danger ailleurs).
+
+### 3.7 Divagation sans évaluation comportementale immédiate
+
+1. **Animal retrouvé divaguant** (sans antécédent de morsure documenté, ou première
+   divagation sans danger caractérisé) :
+   - Capture et placement en fourrière animale ou refuge.
+   - Identification du propriétaire par collier, microchip, ou signalement.
+   - Notification au propriétaire : où récupérer l'animal, délais de réclamation
+     gratuits (à confirmer en version consolidée — ex. 3 à 5 jours ?), frais
+     après délai gratuit.
+   - Restitution si le propriétaire réclame et paie les frais (procédure
+     analogue à celle des véhicules en fourrière — `objets/fourriere.md` §3.4).
+   - Aucune obligation d'évaluation comportementale ou d'arrêté du maire si simple
+     divagation sans incident.
+2. **Signalement de divagation récurrente** : si le même animal divague
+   régulièrement, documenter chaque incident et signaler au maire ; le maire peut
+   alors engager une procédure de mise en demeure du propriétaire (respect du
+   confinement), mais aucune mesure d'euthanasie sans danger documenté.
+
+### 3.8 Délais clés (à confirmer en version consolidée)
+
+- Délai ouvré avant euthanasie possible après placement en dépôt (art. L. 211-11).
+- Délai pour que le propriétaire présente ses observations.
+- Délai de régularisation accordé après notification d'une mise en demeure.
+- Délai maximal de garde en fourrière animale avant destruction ou cession d'office.
+- Délai de notification du propriétaire après morsure ou agression.
+- Délai d'accès du propriétaire à l'animal en dépôt (visite, recours à un vétérinaire personnel).
+
+---
+
+## 4. Écrits associés (pointeurs)
+
+- **Fiche de signalement ou rapport d'information** (constatation d'un animal
+  divaguant ou dangereux, agression, morsure) — transmi à l'autorité de police
+  (maire/DPM) avec tous les faits, photos si possible, identité du propriétaire
+  ou de la victime → `../references/templates/rapport-information.md`.
+
+- **PV de constatation** (si infractions pénales concomitantes : blessures
+  involontaires, vente d'une race interdite sans permis, mise en danger d'autrui
+  par défaut de garde) → `../references/templates/pv-contravention.md` et coordination avec
+  `../references/penal-procedure.md`.
+
+- **Arrêté municipal** prescrivant au propriétaire des mesures de prévention
+  (cage, muselière, assurance, formation) suite à évaluation vétérinaire — acte
+  faisant grief : motivation en fait et en droit, voies de recours, transmission
+  au contrôle de légalité obligatoires → `../references/controle-legalite.md`
+  avant signature, puis `../references/templates/arrete-modele.md`.
+
+- **Arrêté municipal** ordonnant le placement de l'animal en lieu de dépôt (cas
+  de défaut de garanties ou de danger grave immédiat) — motivation en fait et en
+  droit, notification au propriétaire avec délai de réaction → **même formalisme
+  que ci-dessus** (`controle-legalite.md` + `arrete-modele.md`).
+
+- **Arrêté municipal** prescrivant l'euthanasie ou la cession de l'animal (acte
+  des plus lourds) — **CRITIQUES** :
+  - Motivation en fait et en droit très détaillée (faits d'agression ou de
+    danger, rapports vétérinaires cités, défaut de garanties documenté, avis
+    vétérinaire d'euthanasie annexé).
+  - Notification préalable au propriétaire indiquant la décision envisagée, le
+    délai pour présenter observations (ex. 5 jours à confirmer), le délai ouvré
+    applicable avant exécution.
+  - Droit du propriétaire à consulter les documents du dossier (rapports
+    comportementaux, faits déclencheurs).
+  - Voies et délais de recours indiqués (délai de recours contentieux auprès du
+    tribunal administratif — à confirmer en version consolidée).
+  - Transmission au contrôle de légalité **impérative** avant toute exécution
+    (`../references/controle-legalite.md`), puis `../references/templates/arrete-modele.md`.
+
+- **Note au maire** (situation à fort enjeu contentieux : risque d'annulation,
+  doute sur la catégorisation, problème de procédure) — propositions d'arbitrage,
+  points de vigilance juridiques → `../references/templates/note-maire-modele.md`.
+
+- **Rapport de mise à disposition** seulement si les faits établissent une
+  route 53/73 ou 78-6 ; le seul basculement vers un acte réservé à l'OPJ ne
+  suffit pas → `../references/templates/rapport-mise-a-disposition.md` +
+  `../references/penal-procedure.md`.
+
+- **Procès-verbal de réception en lieu de dépôt** : établi conjointement avec
+  fourrière animale ou refuge, documentant l'état de l'animal, date/heure
+  d'arrivée, description, conditions de garde, signature du service PM et du
+  gestionnaire. À archiver en dossier.
+
+- **Procès-verbal de décès** : établi lors de l'euthanasie, documentant l'animal,
+  date/heure, certificat du vétérinaire, method d'euthanasie, signature. À
+  transmettre au propriétaire et archiver.
+
+---
+
+## 5. Jurisprudence clé (pointeur)
+
+> Le fond jurisprudentiel n'est pas reproduit ici — renvoi à
+> `recherche-juridique` pour toute recherche, vérification de vigueur et
+> citation traçable.
+
+Thèmes jurisprudentiels sensibles à signaler et à faire approfondir par
+`recherche-juridique` avant usage en acte contentieux ou en débat avec un
+propriétaire contestataire :
+
+- **Régularité procédurale de la notification d'euthanasie** : jurisprudence
+  administrative exigeant une notification formelle et claire au propriétaire,
+  avec indication du droit de présenter des observations dans un délai précis ;
+  absence de notification ou notification insuffisante = vice procédural =
+  annulation possible de l'arrêté d'euthanasie.
+
+- **Qualité et pertinence de l'avis vétérinaire** : jurisprudence mettant l'accent
+  sur la nécessité d'un avis professionnel motivé, indépendant et transparent ;
+  avis sommaire ou ne repo

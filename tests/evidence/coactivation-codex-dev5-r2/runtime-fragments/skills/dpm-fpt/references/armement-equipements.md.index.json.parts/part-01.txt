@@ -1,0 +1,145 @@
+# Branche — Armement & équipements (v0.1.0)
+
+> Structure conforme à `_gabarit-branche.md`. Aucune valeur datée (montants,
+> durées exactes de formation, quotas) n'est donnée de mémoire : seules les
+> **règles** figurent ici, avec la consigne de vérifier la version en vigueur.
+
+## Périmètre / Exclusions
+
+- **Périmètre** : doctrine d'armement des agents de police municipale
+  (catégories B et D), procédure d'autorisation préfectorale de port d'arme,
+  formation préalable et entraînement obligatoires, dotation et équipements
+  individuels et collectifs du service.
+- **Exclusions** : la **formation continue générale** (plan de formation,
+  obligations statutaires de formation hors armement, CNFPT générique) →
+  `drh-fpt` ; **seule la spécificité armement de la formation** (formation
+  préalable au port d'arme, entraînement régulier obligatoire, FIA) est
+  **conservée ici**, conformément à `SKILL.md` §5.4. L'**usage de la force**
+  en intervention (doctrine d'emploi, gestes et techniques professionnels
+  d'intervention hors arme) → `doctrine-operationnelle.md`. La **procédure
+  pénale** consécutive à un usage d'arme (compte rendu, saisine OPJ) →
+  `penal-procedure.md` et garde-fou APJA (`SKILL.md` §5.2). L'**agrément et
+  l'assermentation** de l'agent → `objets/agent.md` + `rh-specificites-pm.md`.
+  Le **constat déontologique** d'un usage disproportionné →
+  `conformite-deontologie-donnees.md` (la procédure disciplinaire → `drh-fpt`).
+
+---
+
+## 1. Questions couvertes
+
+- Quelles armes (catégories B, D) la police municipale peut-elle détenir et
+  porter, et à quelles conditions ?
+- Quelle est la procédure d'autorisation préfectorale de port d'arme ?
+- Quelles conditions préalables (convention de coordination, formation,
+  aptitude) conditionnent l'armement effectif d'un service ?
+- Quelle formation préalable et quel entraînement périodique sont exigés pour
+  conserver l'autorisation de port ?
+- Quelles sont les règles d'acquisition, de détention, de conservation des
+  armes par la commune, et de traçabilité de la dotation ?
+- Dans quels cas un agent armé peut-il faire usage de son arme ?
+- Quels équipements de protection et de signalisation (gilet pare-balles,
+  bâton de défense, générateur lacrymogène, caméra-piéton) sont mobilisables,
+  et sous quel régime (armement vs équipement non-arme) ?
+
+---
+
+## 2. Arbre de traitement
+
+`question → variables à lever (§4) → décision → vérification (§7) → écrit/livrable (§10)`
+
+Ne jamais affirmer qu'un armement est acquis tant que les trois conditions
+cumulatives n'ont pas été vérifiées : **convention de coordination en
+vigueur** + **autorisation préfectorale individuelle nominative** + **agent
+formé et apte** (§5.2).
+
+---
+
+## 3. Variables à lever
+
+- **Existence et état d'une convention de coordination** PM / forces de
+  l'État (condition préalable à l'armement — voir `continuum-partenariats.md`
+  pour le contenu de la convention elle-même).
+- **Délibération du conseil municipal** sur le principe de l'armement (le
+  choix d'armer est une **faculté communale**, pas une obligation).
+- **Catégorie d'arme visée** (B ou D) et **type de mission** invoquée
+  (surveillance générale, transport de fonds, missions de nuit, etc.), car le
+  texte réglementaire conditionne le port par type de mission et créneau
+  horaire.
+- **Statut individuel de l'agent** : aptitude médicale, formation préalable
+  suivie ou non, recyclage/entraînement à jour ou non.
+- **Autorisation préfectorale individuelle** : délivrée, en cours de validité,
+  ou à renouveler — elle est **nominative**, par agent, non transférable.
+- **Régime du matériel concerné** : arme soumise à autorisation (catégories
+  B/D visées par le CSI) vs équipement non-arme (caméra-piéton, gilet
+  pare-balles) relevant d'un régime distinct.
+- **Date de référence** des faits ou de l'acte (le cadre a été modifié à
+  plusieurs reprises, dont le décret n° 2020-511 du 2 mai 2020 — à confirmer
+  pour la situation traitée).
+
+---
+
+## 4. Règles métier
+
+### 4.1 Nature de la décision : faculté communale, jamais une obligation
+L'armement de la police municipale n'est **pas un droit acquis** ni une
+obligation : c'est une **faculté** ouverte à la commune, qui suppose une
+**délibération du conseil municipal**, puis une **autorisation préfectorale**
+individuelle par agent (CSI, art. **L. 511-5**, *vérifié sur Légifrance le
+2026-06-30* — LEGIARTI000041411486). Ne jamais présenter l'armement comme un
+droit de l'agent : c'est une décision locale, encadrée par l'État.
+
+### 4.2 Autorité compétente et rôle respectif
+- **Maire** : initie la demande motivée d'autorisation de port d'arme pour
+  ses agents ; organise (avec le conseil municipal) la dotation et
+  l'équipement du service ; reste responsable de l'usage qui en est fait
+  dans le cadre de ses pouvoirs de police générale.
+- **Représentant de l'État dans le département (préfet)** : délivre
+  l'**autorisation individuelle nominative** de port d'arme, sur demande
+  motivée du maire, **sous réserve de l'existence d'une convention de
+  coordination** PM / forces de l'État en vigueur (CSI, art. L. 511-5,
+  *vérifié sur Légifrance le 2026-06-30*). Le préfet peut retirer
+  l'autorisation.
+- **Conseil municipal** : délibère sur le principe de l'armement et sur les
+  modalités financières (acquisition, conservation des armes).
+- Ce n'est **ni une police spéciale du préfet seul, ni un pouvoir propre du
+  maire** : c'est un dispositif **conjoint**, sous condition cumulative.
+
+### 4.3 Catégories d'armes mobilisables (B et D)
+Le décret en Conseil d'État (codifié au CSI, partie réglementaire, **section
+« Port d'armes », art. R. 511-11 et s.**, dont la sous-section « Armement des
+agents de police municipale », art. **R. 511-12** et s., *rattachement
+vérifié sur Légifrance le 2026-06-30* — LEGIARTI000042957393) fixe :
+- les **catégories et types d'armes susceptibles d'être autorisées**
+  (catégorie B — armes à feu de poing notamment — et catégorie D — armes de
+  force intermédiaire telles que générateurs lacrymogènes de catégorie D
+  soumis, bâtons de défense, etc., selon la nomenclature en vigueur, **à
+  confirmer en version consolidée** car la classification des armes évolue) ;
+- les **munitions et systèmes d'approvisionnement** correspondants ;
+- les **missions** pouvant justifier le port (surveillance générale de la
+  voie publique en cas de risque identifié pour les personnes et les biens,
+  surveillance des transports en commun à la demande de l'exploitant,
+  gardes statiques de bâtiments communaux exposés à un risque particulier,
+  etc.) et les **créneaux horaires** associés (régime distinct jour/nuit) ;
+- les **conditions d'acquisition, de détention et de conservation** des
+  armes par la commune (armurerie municipale sécurisée, registre, traçabilité).
+
+> Ne jamais énumérer une liste figée d'armes autorisées sans vérifier la
+> version consolidée : la nomenclature et les types précis évoluent par
+> décret.
+
+### 4.4 Usage de l'arme — cadre légal strict
+L'agent de police municipale autorisé à porter une arme dans les conditions
+de l'art. L. 511-5 CSI ne peut en faire usage que dans le cadre fixé par le
+CSI :
+- **Légitime défense** (art. **122-5** du code pénal — *vérifié sur Légifrance
+  le 2026-09-06*, `LEGIARTI000006417218`, en vigueur depuis le 01/03/1994) :
+  fondement constant et **autonome**, distinct du cadre d'usage des armes de
+  l'art. L. 435-1 CSI ; il suppose la **proportionnalité** entre les moyens de
+  défense employés et la gravité de l'atteinte.
+- **Cas d'usage des armes à feu prévus à l'art. L. 435-1, premier alinéa, et
+  au 1° du même article, CSI** (régime applicable aux agents de police
+  municipale autorisés au port, *vérifié sur Légifrance le 2026-06-30* —
+  LEGIARTI000034107970) : absolue nécessité, usage strictement proportionné,
+  atteinte à la vie ou à l'intégrité physique dirigée contre l'agent ou
+  autrui. **Ne pas étendre aux autres cas de l'art. L. 435-1** (sommations,
+  immobilisation de véhicule, etc.) sans vérifier précisément le

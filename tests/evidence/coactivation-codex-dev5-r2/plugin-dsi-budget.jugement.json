@@ -1,0 +1,55 @@
+{
+  "case_id": "plugin-dsi-budget",
+  "trace_sha256": "0891485b8080df0153c3dc7a84a3de5cb8f3d1d268db0113ddd39a5140888c42",
+  "verdict": "echec",
+  "invariants": {
+    "plugin-dsi-budget.besoins_techniques": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e23"],
+      "rationale": "Le cadrage DSI demande l'inventaire des services et actifs, les usages, le support, la capacité, les dépendances réseau et applicatives ainsi que les exigences d'exploitation et d'hébergement. Les responsables métiers valident le besoin et les scénarios sont comparés sur un périmètre commun."
+    },
+    "plugin-dsi-budget.continuite_technique": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e23"],
+      "rationale": "Le volet Continuité traite les interruptions acceptables, les possibilités de reprise, les dépendances communes et le retour arrière. La réponse demande de fixer les objectifs avec les métiers puis de consigner des essais autorisés."
+    },
+    "plugin-dsi-budget.reversibilite_technique": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e23"],
+      "rationale": "Le volet Hébergement et sortie demande les moyens de récupération et de réutilisation, un essai sur données synthétiques et la validation métier de la reprise dans la cible. Il constitue une expression observable de la réversibilité technique."
+    },
+    "plugin-dsi-budget.bascule_dirfi": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e1", "e5", "e23"],
+      "rationale": "La réponse attribue explicitement le volet financier aux finances et place BASCULE dirfi-fpt avant la comparaison détaillée du coût et la qualification comptable. Cependant l'exigence cumulative d'activation réelle n'est pas satisfaite : e5 décrit une lecture par fragments avec actual_plugin_activation_verified=false, et e23 déclare expressément un chargement de fichiers sans activation native de Skill ou de plugin. Une attribution correcte des rôles ne remplace pas cette activation."
+    },
+    "plugin-dsi-budget.sans_engagement_dsi": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e3", "e23"],
+      "rationale": "La réponse suspend l'engagement et limite la DSI à préparer le besoin, les exigences et les scénarios. Elle propose un arbitrage documenté par l'autorité dont l'habilitation reste à vérifier ; aucun engagement de dépense n'est décidé par la DSI."
+    },
+    "plugin-dsi-budget.sans_imputation_dsi": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e23"],
+      "rationale": "La qualification comptable est confiée au volet financier après la bascule. La réponse indique qu'aucune imputation n'est présumée et ne choisit aucun compte ou imputation pour la DSI."
+    },
+    "plugin-dsi-budget.sans_procedure_passation": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e23"],
+      "rationale": "La contribution DSI reste un dossier de besoin et de preuves techniques. La réponse renvoie la passation au service de la commande publique et ne fournit ni procédure de marché ni critères de sélection ; le passage légal cité ne devient pas une procédure proposée."
+    },
+    "plugin-dsi-budget.obligations_source_ou_reserve": {
+      "status": true,
+      "basis": "retrieval",
+      "evidence_refs": ["e16", "e17", "e19", "e23"],
+      "rationale": "L'appel réussi e16 est relié au texte primaire disponible et non tronqué e17. Son article L2122-22, 4°, prévoit les décisions relatives aux marchés par délégation du conseil municipal au maire lorsque les crédits sont inscrits au budget, ce qui étaye l'affirmation limitée aux communes dans e23. Les métadonnées indiquent VIGUEUR, applicable_at_as_of_date=true, une date de référence au 07/10/2026 et une version du 23/02/2022 au 01/01/2999 ; l'extrait seul n'est donc pas utilisé pour certifier la vigueur. La réponse réserve précisément la catégorie de l'organisme, la délégation locale, le signataire, l'habilitation de la DSI et le circuit financier complet, sans les affirmer ensuite. L'arbitrage proposé est qualifié de mesure conservatoire et de proposition d'organisation, sans qualification d'irrégularité budgétaire."
+    }
+  }
+}

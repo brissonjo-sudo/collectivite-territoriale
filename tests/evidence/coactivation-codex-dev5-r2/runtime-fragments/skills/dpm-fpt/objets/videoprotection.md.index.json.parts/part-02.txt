@@ -1,0 +1,75 @@
+isées.
+- **Réduction de durée de conservation** : demande de modification simplifiée possible (vérifier le régime).
+- **Augmentation de la durée de conservation** : nouvelle demande (plus restrictive que la réduction).
+
+### 3.4 Exploitation du CSU — accès et traçabilité
+
+1. **Habilitations nominatives** : chaque agent autorisé à visionner doit être **individuellement désigné** dans une liste tracée (pas d'habilitation générique au service) ; habilitation donnée par écrit, mentionnant l'identité, la fonction, la date de début/fin éventuelle.
+2. **Journal des accès** : enregistrement de chaque connexion au système (identité de l'agent, date, heure, durée, actions effectuées — consultation, extraction, téléchargement) ; conservation du journal selon un délai (à vérifier, en général plus long que celui des images).
+3. **Accès des forces de l'État** : selon la convention de coordination et l'arrêté préfectoral, les agents de police nationale ou de gendarmerie peuvent accéder en temps réel ou sur demande — modalités à formaliser.
+4. **Extraction pour une procédure judiciaire** : sur réquisition (ordonnance du juge d'instruction ou demande du procureur), extraction des images concernées, transmission sous enveloppe fermée, accusé de réception ; la réquisition **suspend la destruction** des images extractées jusqu'à fin de la procédure.
+5. **Destruction des images** : à l'échéance fixée par l'autorisation, **sauf réquisition en cours** ; destruction documentée (date, modalités) ; attestation de destruction conservée.
+
+### 3.5 Accès des personnes filmées
+
+- **Droit de droit** : une personne intéressée peut demander l'accès aux images la concernant ou vérifier leur destruction → réponse dans un délai (à vérifier, potentiellement 1-2 mois).
+- **Motifs de refus limitatifs** : sûreté de l'État, défense nationale, sécurité publique, procédure judiciaire en cours, droits des tiers (autres personnes filmées) → tout refus doit être motivé sur l'un de ces motifs.
+- **Recours** : la personne peut saisir la **commission départementale de vidéoprotection** ou la **CNIL**, ou le juge (recours gracieux, puis en référé).
+
+---
+
+## 4. Écrits associés
+
+### Écrits de demande et de projet
+- **Dossier de demande d'autorisation préfectorale** : à constituer selon les pièces réglementaires (parties réglementaires CSI) ; brouillon `[INCOMPLET]` si une pièce manque (plan de situation, note de présentation, estimation de durée de conservation, calendrier, budget, sécurité du CSU).
+- **Note au maire** — `../references/templates/note-maire-modele.md` : opportunité du projet, choix de la finalité (avec justification du risque identifié), articulation avec la convention de coordination existante, impacts RGPD, coût d'exploitation, calendrier de demande d'autorisation.
+
+### Écrits opérationnels du CSU
+- **Fiche de procédure CSU** : organisation du centre (locaux, accès physiques, droits informatiques), habilitations individuelles (liste nominative tracée), traçabilité des accès (journal, modalités, conservation), modalités de transmission aux forces de l'État, procédure d'extraction sur réquisition, destruction programée des images.
+- **Registre de traitement (RGPD)** : partie du registre des traitements de la commune, détaillant le traitement « vidéoprotection » (finalités, données, destinataires, durée, mesures de sécurité, DPO).
+- **Analyse d'impact (AIPD)** — si obligatoire : description du système, évaluation des risques pour les droits et libertés, mesures pour les mitiger, validation avant mise en service → renvoi à `../references/conformite-deontologie-donnees.md` pour la méthodologie CNIL.
+
+### Écrits de réponse aux demandes d'accès et recours
+- **Réponse à une demande d'accès aux images** (art. L. 253-5 CSI) : accès de droit si aucun motif de refus limitatif ne s'applique ; sinon, courrier de refus **motivé** sur l'un des motifs légaux ; information des voies de recours (commission départementale, CNIL, juge).
+- **Réponse à une demande d'accès CRPA** : distinction entre demandeur (administré tiers, ou personne intéressée cherchant accès à ses propres données) ; application de la grille CRPA (exceptions sécurité publique, procédure judiciaire) + droit d'accès RGPD.
+- **Signalement RGPD au DPO** : en cas d'incident (accès non autorisé, extraction hors cadre, destruction hors délai), fiche d'incident adressée au délégué à la protection des données (DPO).
+
+### Actes faisant grief (le cas échéant)
+- Un éventuel **arrêté municipal limitant l'accès au CSU** ou fixant des modalités restrictives : motivation + voies et délais de recours + vérification du contrôle de légalité → `controle-legalite.md` avant production.
+
+---
+
+## 5. Jurisprudence clé
+
+Voir **`recherche-juridique`** pour :
+- **Contrôle de la légalité d'une autorisation préfectorale** : défaut de motivation, incompatibilité de la finalité invoquée avec le projet réel, périmètre disproportionné au risque identifié.
+- **Contentieux du droit d'accès** : refus de communication d'images jugé infondé (motif de refus non applicable), délai de réponse dépassé.
+- **Responsabilité du service** en cas de fuite ou d'utilisation abusive des images : violation du RGPD, exploitation à titre personnel, transmission non autorisée.
+- **Proportionnalité du système** : un système excessivement intrusif par rapport à la finalité pourrait être annulé (jurisprudence administrative sur les atteintes aux libertés).
+- **Exploitation algorithmique** (reconnaissance faciale, LAPI) : fondement distinct et plus restrictif que la vidéoprotection seule → ne pas présumer la légalité d'un algorithme du seul fait de l'autorisation vidéoprotection.
+
+Thèmes sensibles à signaler en amont :
+- **Articulation avec la présomption d'innocence** : un système de vidéoprotection ne crée pas de culpabilité ; les images restent des éléments de preuve dont l'interprétation relève de l'autorité judiciaire.
+- **Protection des données sensibles** : les images peuvent révéler des données sensibles (santé, identité religieuse, etc.) → exigence de sécurité renforcée du CSU.
+
+---
+
+## 6. Check-list opérationnelle
+
+### Avant de demander l'autorisation préfectorale
+- [ ] **Finalité légale** identifiée parmi la liste fermée (CSI L. 251-2) et justifiée par un risque réel et proportionné ?
+- [ ] **Autorité compétente** : préfet du département (ou préfet de police à Paris) — pas le maire seul ?
+- [ ] **Périmètre** (lieux filmés) délimité avec précision sur un plan (voie publique ? lieu ouvert au public ? combien de caméras ?) ?
+- [ ] **Dossier de demande** complet selon la partie réglementaire CSI (à vérifier pièces exactes : ne pas affirmer de mémoire) ?
+- [ ] **Durée de conservation** envisagée cohérente avec la finalité et inférieure au plafond légal (à vérifier le plafond, jamais affirmer de mémoire) ?
+- [ ] **CSU et sécurité du système** : accès physiques sécurisés, droits informatiques restreints, sauvegarde des journaux de traçabilité ?
+- [ ] **Convention de coordination** avec les forces de l'État existante ou en cours de négociation (si transmission en temps réel prévue) ?
+- [ ] **AIPD** envisagée ou en cours de conduite si le système présente un risque élevé (vidéoprotection étendue, reconnaissance faciale) ?
+
+### En cours d'exploitation
+- [ ] **Habilitations nominatives** de chaque agent du CSU mises à jour et tracées (liste signée, dates de début/fin) ?
+- [ ] **Journal des accès** conservé et audité régulièrement (identité, date, action, durée) ?
+- [ ] **Arrêté préfectoral** consulté avant chaque action (périmètre, finalités autorisées, destinataires, durée de conservation) ?
+- [ ] **Modification substantielle** de périmètre, finalité ou durée : nouvelle demande d'autorisation demandée **avant** mise en œuvre, jamais après ?
+- [ ] **Réquisitions judiciaires** reçues et exécutées : copie des images transmise sous enveloppe fermée, accusé de réception, durée de conservation suspendue jusqu'à fin de procédure ?
+- [ ] **Destruction des images** effectuée à l'échéance, documentée 

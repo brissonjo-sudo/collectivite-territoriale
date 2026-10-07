@@ -1,0 +1,100 @@
+ble | Sans délai indu |
+| Communication aux personnes | Responsable de traitement | Sans délai indu | Seulement si risque élevé |
+| RETEX + remédiation | DPO + DSI | À froid | Renvoi securite-traitements.md |
+
+Délais et exceptions : à vérifier en version consolidée avant tout usage en
+acte (matrice §2.2 du `SKILL.md`).
+
+---
+
+## 7. Déclencheurs de vérification (socle-sources)
+
+Vérifier la source officielle avant de conclure sur :
+- le contenu obligatoire de la notification et du registre interne ;
+- les exceptions à la communication aux personnes (art. 34) ;
+- le régime de notification en Police-Justice (titre III loi 78-17 —
+  **jamais de mémoire**) ;
+- les obligations de déclaration cyber applicables à la collectivité ;
+- la version en vigueur de la méthodologie ENISA / doctrine CNIL de gravité.
+
+---
+
+## 8. Pièges & confusions fréquentes
+
+- **Attendre d'avoir « tout compris »** et dépasser les 72 h : notifier par
+  étapes.
+- **Confondre incident de sécurité et violation** : un scan de ports sans
+  accès aux données n'est pas une violation ; une clé USB perdue en est une.
+- **Sur-notifier** (tout envoyer à la CNIL sans évaluation) ou
+  **sous-notifier** (ne jamais notifier « pour ne pas s'exposer ») : les
+  deux sont fautifs. Évaluer, documenter, décider.
+- **Oublier le registre interne** quand on ne notifie pas : l'absence de
+  notification se **documente**.
+- **Laisser le sous-traitant notifier « à la place »** de la collectivité.
+- Faire courir le délai depuis la connaissance par le **DPO** au lieu du
+  responsable de traitement.
+- Communiquer aux personnes sans évaluation du seuil « risque élevé » — ou
+  refuser de communiquer alors qu'il est atteint.
+- Oublier que le CCAS est un responsable de traitement distinct.
+
+---
+
+## 9. Données / références à vérifier
+
+- Art. 33, 33.5, 34 RGPD : citables avec la réserve « à confirmer en
+  version consolidée ».
+- Titre III loi 78-17 (violations en régime Police-Justice) : **jamais de
+  mémoire** — vérification en session obligatoire.
+- Formulaire et téléservice CNIL de notification : vérifier l'état en ligne.
+- Méthodologie ENISA de gravité et doctrine CNIL violations : **dater la
+  version citée**.
+- Lignes directrices CEPD sur la notification des violations : dater la
+  version.
+- Régimes de déclaration d'incident cyber (ANSSI) applicables : à vérifier
+  au cas d'espèce.
+
+---
+
+## 10. Livrables
+
+- **Notification de violation + registre des violations** →
+  `assets/notification-violation-modele.md`. Éléments obligatoires :
+  chronologie datée (dont T0 de connaissance), nature de la violation,
+  catégories et volumes de données et de personnes, conséquences probables,
+  mesures prises et proposées, coordonnées du DPO, évaluation du risque
+  documentée, décision du responsable de traitement.
+- Communication aux personnes : langage clair, mêmes éléments adaptés.
+
+---
+
+## 11. Double échelle [risque / confiance]
+
+- Qualification « violation ou non » : risque moyen — vérification
+  ponctuelle ; en cas de doute, traiter comme violation et documenter.
+- Décision de notifier / ne pas notifier : risque **élevé** — citation de
+  source et évaluation documentée obligatoires.
+- Communication aux personnes (données sensibles, CCAS, mineurs) : risque
+  **critique** — abstention si doute persistant : recommander la notification
+  et signaler le point à trancher par le responsable de traitement.
+- Régime Police-Justice : confiance « à vérifier » systématique.
+
+---
+
+## 12. Checklist de branche
+
+1. T0 de connaissance daté et tracé ?
+2. Régime identifié (RGPD / Police-Justice) — STOP RÉGIME affiché si
+   frontière proche ?
+3. Responsable de traitement correctement désigné (commune / CCAS / EPCI) ?
+4. Registre interne alimenté, **même sans notification** ?
+5. Les deux seuils (notification / communication) évalués séparément et
+   documentés ?
+6. Sous-traitant : notification reçue, éléments factuels exigés, pas de
+   notification « à la place » ?
+7. Articulations traitées : ANSSI/cyber, plainte, assurance — et aucun
+   conseil de paiement de rançon ?
+8. Décision formellement renvoyée au responsable de traitement
+   (garde-fou §5.2.a) ?
+9. Renvois faits : securite-traitements.md (fond technique),
+   relations-cnil.md (suites) ?
+10. RETEX proposé + entrée `JOURNAL.md` si cas significatif ?

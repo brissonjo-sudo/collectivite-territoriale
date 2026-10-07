@@ -1,0 +1,159 @@
+ande la réponse » constitue la même
+faute que de le supposer en silence — aggravée par la conscience du
+problème. **Signal d'alarme** : si le skill se surprend à écrire qu'un
+point est « déterminant », « central », « commande toute la réponse »,
+« point pivot » ou équivalent, c'est le marqueur d'une **question
+obligatoire**, pas d'une hypothèse à déclarer.
+
+**Économie du questionnement** (pour éviter la question rituelle, qui
+est elle-même un défaut — complétion spéculative en mode interrogatif) :
+- **Pas de question si l'étape 0 est complète** et qu'aucune information
+  décisionnelle ne manque. Procéder directement.
+- **Une seule question par défaut**, portant sur le point **le plus
+  décisionnel**. Si plusieurs points décisionnels coexistent, les
+  hiérarchiser ; plafond indicatif : **trois**, jamais davantage.
+- **Question fermée ou à choix** chaque fois que possible, pour
+  minimiser la charge de l'utilisateur.
+- **Réservée à ce que seul l'utilisateur détient.** Si l'information
+  est vérifiable en source primaire (Légifrance, etc.), la **chercher**
+  au lieu de la demander. La question ne sert pas à se décharger de la
+  recherche autonome.
+
+**Esquisse conditionnelle bornée.** Tant qu'une information décisionnelle
+reste sans réponse, **aucune analyse de fond complète n'est produite**.
+Au plus, une esquisse strictement bornée de la forme « si (a) … / si
+(b) … » en quelques lignes, pour montrer l'enjeu de la clarification —
+jamais un gabarit B déployé sur une seule branche présumée.
+
+**Critère de sortie** : toute information manquante est classée
+(décisionnelle / non décisionnelle) ; chaque information décisionnelle
+a fait l'objet d'une question **ou** la recherche de fond est suspendue
+dans l'attente de la réponse ; chaque hypothèse déclarée porte
+exclusivement sur un point non décisionnel ; aucune analyse complète
+n'a été déployée sur une branche décisionnelle non confirmée.
+
+→ Renforce P2 (régime/date applicables) et P7 (abstention informée
+portée à l'entrée) ; bloque en amont les modes 10 et 14 (analyse du
+mauvais régime ou du mauvais champ par hypothèse décisionnelle non
+levée).
+
+### Étape 1 — Cartographie des sources nécessaires
+
+Lister explicitement, avant toute requête, les sources à consulter :
+quel(s) article(s) de quel code, quelle juridiction pour la
+jurisprudence, quelle circulaire éventuelle, quel décret de renvoi
+attendu.
+
+**Critère de sortie** : liste écrite, hiérarchisée selon P3.
+
+### Étape 2 — Récupération en source primaire avec suivi des renvois
+
+Pour chaque source listée :
+- lecture documentée (article visé **plus** chapitre/section qui le
+  chapeaute, pour contextualiser sans saturer),
+- capture de l'**identifiant officiel** et de la **date d'entrée en
+  vigueur**,
+- **suivi systématique des renvois normatifs** présents dans le texte
+  (« dans les conditions prévues par décret », « tel que défini à
+  l'article… », « selon les modalités fixées par arrêté ») **jusqu'à
+  leur source ultime**. Une analyse qui s'arrête à l'article principal
+  sans avoir vérifié les renvois est incomplète et signalée comme telle.
+
+**Test cumulatif / alternatif** : les conditions d'application
+sont-elles liées par « et » (cumulatives) ou par « ou » (alternatives) ?
+Existe-t-il des exceptions, des exemptions, des seuils ? Identification
+**explicite** dans la réponse.
+
+#### Échelle de récupération — capacités disponibles, détection silencieuse
+
+La voie de récupération n'est pas un choix soumis à l'utilisateur : elle se
+**constate**, par le code de sortie de l'outil.
+
+1. **Outil officiel disponible dans l'environnement** — utiliser en priorité
+   le connecteur MCP Légifrance/Judilibre s'il est exposé. Sinon utiliser
+   [`scripts/legifrance.py`](scripts/legifrance.py) : `article` / `search`
+   (textes), `ceta` / `constit` (Conseil d'État, Conseil constitutionnel),
+   `juri` puis `decision` (jurisprudence judiciaire). Un résultat de recherche
+   identifie une ressource ; la lecture de cette ressource confirme son contenu.
+2. **Voie de repli web** — outil indisponible ou identifiants PISTE absents :
+   basculer sur les gabarits `web_search` / `web_fetch`, domaines officiels
+   exclusivement, **sans l'annoncer et sans poser de question**. Demander à
+   l'utilisateur s'il dispose d'une clé API est une **question rituelle
+   prohibée** (étape 0 bis, économie du questionnement) : l'information est
+   constatable par l'outil, donc elle se constate. La clé est un confort,
+   jamais une condition d'exercice.
+3. **Abstention** — les voies disponibles échouent (notamment sorties **3**,
+   **4** ou **5** du script et source inaccessible côté web) : aucune
+   citation, déclencheur d'abstention §7.
+
+**Invariant de provenance.** La voie empruntée ne modifie **en rien**
+l'exigence P1 : sur la voie de repli comme sur la voie outillée, tout
+identifiant cité provient d'une récupération réussie **dans la session
+courante**. Le repli dégrade le confort et le déterminisme, **jamais** le
+niveau de preuve exigé.
+
+Gabarits de requêtes → [`references/gabarits-requetes.md`](references/gabarits-requetes.md).
+
+**Critère de sortie** : pour chaque source, identifiant et date sont
+notés ; chaque renvoi normatif est résolu ou explicitement marqué
+non résolu. Si identifiant manquant → retour étape 1 ou abstention.
+
+→ Bloque modes 1, 12, 13.
+
+### Étape 3 — Vérification de fraîcheur et de droit transitoire
+
+Pour chaque texte, vérifier :
+- mention « **Modifié par** … du JJ/MM/AAAA » ?
+- mention « **Abrogé par** … » ?
+- champ « **Version en vigueur depuis le** JJ/MM/AAAA » ?
+- existence d'une version postérieure non encore entrée en vigueur
+  (vacatio legis) ?
+- **dispositions transitoires** de la loi ou du décret modificateur
+  (« applicable aux procédures ouvertes à compter du… », « les
+  dispositions antérieures demeurent applicables aux situations en
+  cours… ») : un texte peut être formellement en vigueur sans être
+  **applicable** à la situation analysée si une disposition
+  transitoire maintient l'ancien régime.
+- **décisions QPC** ayant abrogé ou réservé l'interprétation de la
+  disposition (lorsque mentionnées sur Légifrance).
+
+Checklist détaillée → [`references/checklist-vigueur.md`](references/checklist-vigueur.md).
+
+**Critère de sortie** : pour chaque texte cité, l'état d'application
+à la date de référence est confirmé, dispositions transitoires
+incluses. Sinon → abstention motivée (P7) ou sortie dégradée balisée.
+
+→ Bloque modes 2, 3, 11.
+
+### Étape 4 — Croisement jurisprudentiel et triangulation
+
+Si la question dépend de l'interprétation d'un texte :
+- identifier l'arrêt ou les arrêts de principe,
+- vérifier l'absence de revirement postérieur,
+- qualifier la décision : Cass. Bulletin / inédit ; CE Lebon / Tables /
+  inédit ; ratio decidendi vs obiter dictum (P4).
+
+**Règle de triangulation — règle unifiée**
+
+Obligatoire dans les cas suivants :
+- qualification pénale destinée à motiver un acte ou un PV (cf.
+  module PÉNAL §6 ci-dessous) **lorsqu'une interprétation est en jeu**
+  (élément constitutif discutable, qualification concurrente plausible,
+  application analogique apparente, jurisprudence connue de divergence
+  ou de revirement),
+- motivation d'un acte administratif faisant grief lorsqu'une interprétation,
+  une articulation de compétences ou une mesure de proportionnalité est en jeu,
+- citation destinée à un acte officiel lorsqu'elle porte une interprétation
+  discutable plutôt que la reproduction d'une règle claire.
+
+**Non requise** pour la simple constatation matérielle d'une infraction
+dont le texte d'incrimination s'applique sans ambiguïté aux faits
+constatés (constatation contraventionnelle de routine, infraction
+flagrante au Code de la route, infraction au stationnement, etc.),
+ainsi que pour la lecture-référence d'un article non controversé
+(« quel article réprime X ? »).
+
+**Règle conservatrice** : en cas de doute sur le caractère
+interprétatif ou non de la qualification, la triangulation s'applique.
+
+**Exigence en triangulation obligatoire** : vérifier la sour

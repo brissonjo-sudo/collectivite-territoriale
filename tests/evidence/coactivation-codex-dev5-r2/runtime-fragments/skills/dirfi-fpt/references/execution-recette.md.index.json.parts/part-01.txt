@@ -1,0 +1,152 @@
+# Branche — Exécution de la recette (v0.1.0)
+
+> Structure conforme à `_gabarit-branche.md`. Aucun numéro d'article, aucun
+> délai de prescription chiffré, aucun seuil, taux ou montant n'est cité de
+> mémoire : seules les **règles**, les **méthodes** et la consigne de
+> vérifier la version en vigueur figurent ici.
+
+## 1. Périmètre / Exclusions
+
+- **Périmètre** : le **circuit d'exécution de la recette** — constatation des
+  droits, liquidation, émission du titre, prise en charge et recouvrement par
+  le comptable, mentions obligatoires et voies de recours, recouvrement
+  amiable puis contentieux, admissions en non-valeur et créances éteintes,
+  prescription de l'action en recouvrement, régies de recettes (principe),
+  tarification des services publics locaux, produits des services, du
+  domaine, redevances d'occupation, annulation et réduction de titre.
+- **Exclusions** : la **fiscalité locale** et les **dotations** →
+  `fiscalite-locale.md` et `dotations-perequation.md` ; le **détail
+  opérationnel de la régie** (acte constitutif, nomination, cautionnement,
+  contrôles) → `objets/regie.md` (pointer, ne pas dupliquer) ; l'**ouverture
+  budgétaire** des recettes et le calendrier → `budget-cycle.md` ; les
+  **règles d'imputation** → `nomenclature-m57.md`.
+
+---
+
+## 2. Questions couvertes
+
+- Quelles sont les étapes de l'exécution d'une recette, de la constatation du
+  droit au recouvrement ?
+- Que doit obligatoirement mentionner un titre de recettes, et quelles voies
+  de recours ouvre-t-il ?
+- Comment s'enchaînent recouvrement amiable et recouvrement contentieux, et
+  quels actes de poursuite le comptable peut-il engager ?
+- Quelle différence entre admission en non-valeur et créance éteinte, et qui
+  décide de laquelle ?
+- Dans quel délai l'action en recouvrement d'une créance se prescrit-elle ?
+- Comment instituer et faire fonctionner une régie de recettes, à un niveau de
+  principe ?
+- Comment fixer le tarif d'un service public local, dans le respect du
+  principe d'égalité, et peut-on le moduler ?
+- Que recouvrent les produits des services, du domaine, et les redevances
+  d'occupation ?
+- Comment annuler ou réduire un titre déjà émis, et quels en sont les effets ?
+
+---
+
+## 3. Arbre de traitement
+
+`identifier la nature de la recette (fiscale exclue, produit de service,
+redevance, produit domanial, subvention reçue) → vérifier la constatation du
+droit → liquider le montant exact → émettre le titre avec ses mentions
+obligatoires → transmettre au comptable pour prise en charge → suivre le
+recouvrement (amiable puis contentieux si nécessaire) → détecter un
+encaissement hors circuit du comptable (garde-fou §5.2 SKILL) → en cas
+d'échec du recouvrement, qualifier admission en non-valeur ou créance éteinte
+→ vérifier la prescription applicable → orienter vers l'écrit (§10)`.
+
+Ne jamais recommander l'abandon d'une créance (non-valeur, extinction, remise
+gracieuse) sans avoir d'abord vérifié que les actes de poursuite utiles ont
+été engagés et que la prescription n'a pas été négligée par carence.
+
+---
+
+## 4. Variables à lever
+
+- **Nature de la recette** : produit d'un service public (redevance pour
+  service rendu), produit domanial, subvention ou participation reçue,
+  produit financier — chaque nature obéit à des règles de fixation et de
+  recouvrement distinctes.
+- **Qualité du débiteur** : usager, tiers de droit privé, autre personne
+  publique — conditionne les actes de poursuite mobilisables.
+- **Stade du recouvrement** atteint : amiable, contentieux engagé, poursuites
+  déjà tentées et infructueuses.
+- **Motif de non-recouvrement invoqué** : insolvabilité du débiteur
+  (non-valeur), disparition juridique de la dette (extinction), négligence de
+  poursuite (à ne jamais couvrir par une non-valeur de confort).
+- **Existence d'une régie de recettes** habilitée à encaisser directement,
+  par opposition à un circuit de titre classique.
+- **Mode de tarification retenu** pour un service public local (tarif unique,
+  modulé selon critères objectifs, gratuité) et son fondement.
+- **Existence d'une convention ou d'un titre d'occupation** du domaine public
+  fondant une redevance.
+
+---
+
+## 5. Règles métier
+
+### 5.1 Constatation des droits, liquidation, émission, prise en charge
+
+- **Constatation des droits** : identification du fait générateur de la
+  créance (prestation rendue, occupation autorisée, participation due) et de
+  son fondement juridique (texte, délibération, convention, décision
+  individuelle).
+- **Liquidation** : détermination du **montant exact** dû, sur la base du
+  tarif ou de la formule applicable — jamais un montant estimé sans base
+  documentée.
+- **Émission du titre de recettes** : acte par lequel l'ordonnateur **rend
+  exécutoire** la créance et ordonne au comptable de la recouvrer. Le titre
+  peut être individuel ou collectif (rôle).
+- **Prise en charge par le comptable** : le comptable contrôle la régularité
+  formelle du titre (autorité compétente, pièces justificatives requises,
+  exacte imputation) avant de le prendre en charge et d'engager le
+  recouvrement — un titre irrégulier peut être rejeté par le comptable au même
+  titre qu'un mandat (→ `execution-depense.md` §5.3 pour la méthode, transposée
+  ici au titre).
+- **Recouvrement** : diligences engagées par le comptable pour obtenir le
+  paiement, d'abord amiables puis, à défaut, contentieuses (§5.3).
+
+### 5.2 Mentions obligatoires du titre et voies de recours
+
+- Un titre de recettes exécutoire doit comporter des **mentions obligatoires**
+  fixées par un texte propre — a minima l'identification du débiteur, le
+  fondement et le montant de la créance, l'autorité émettrice, et
+  l'**indication des voies et délais de recours** contre le titre. Liste
+  exacte et complète : **à vérifier**, jamais reconstituée de mémoire pour un
+  titre destiné à être notifié.
+- L'**absence ou l'inexactitude** d'une mention obligatoire, notamment relative
+  aux voies de recours, peut faire obstacle à l'opposabilité des délais de
+  recours au débiteur — signaler ce risque avant toute émission en série d'un
+  titre nouveau.
+- **Voies de recours** : le débiteur peut contester le bien-fondé de la
+  créance (recours devant le juge compétent selon la nature de la créance) et,
+  séparément, la régularité des actes de poursuite engagés pour la recouvrer —
+  ces deux contentieux obéissent à des règles et des délais distincts, à
+  vérifier au cas par cas.
+
+### 5.3 Recouvrement amiable, recouvrement contentieux, actes de poursuite
+
+- **Recouvrement amiable** : relance du débiteur par le comptable, sans acte
+  de contrainte, dans un délai raisonnable après l'exigibilité de la créance.
+- **Recouvrement contentieux** : à défaut de paiement amiable, le comptable
+  peut engager des **actes de poursuite** (mise en demeure formelle,
+  opposition à tiers détenteur, saisie selon la nature de la créance et du
+  patrimoine du débiteur) — nature exacte des actes mobilisables et
+  conditions de mise en œuvre **à vérifier**, variables selon la qualité du
+  débiteur (personne privée, autre personne publique) et le montant en jeu.
+- **Opposition** : le débiteur peut former **opposition** à un acte de
+  poursuite, dans un délai et selon des formes à vérifier ; cette contestation
+  ne suspend pas nécessairement la poursuite sauf décision contraire de
+  l'autorité compétente.
+- **Rôle de l'ordonnateur** : l'ordonnateur ne recouvre pas lui-même (c'est le
+  monopole du comptable) mais **appuie** le recouvrement en produisant les
+  éléments de fond nécessaires (justification de la créance, informations sur
+  le débiteur) et en décidant, le cas échéant, d'une remise gracieuse dans les
+  conditions où elle est possible.
+
+### 5.4 Admissions en non-valeur et créances éteintes
+
+- **Admission en non-valeur** : décision, prise par l'**assemblée
+  délibérante** sur proposition du comptable, de sortir une créance non
+  recouvrée des **restes à recouvrer**, faute de perspective réaliste de
+  recouvrement (insolvabilité du débiteur, disparition, coût

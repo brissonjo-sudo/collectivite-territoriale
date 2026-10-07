@@ -1,0 +1,149 @@
+/note-impact-financier.md`.
+- **Note de cadrage budgétaire** : rédigée par le DirFi pour fixer les
+  hypothèses et les enveloppes d'un exercice ou d'une prospective (renvoi
+  `references/prospective-analyse.md`). Même nature qu'une note d'impact :
+  outil de pilotage, pas un acte.
+- **Rapport d'orientation budgétaire (ROB)** : rédigé sous l'autorité de
+  l'**exécutif**, présenté à l'assemblée en vue du **débat d'orientation
+  budgétaire** lorsque ce débat est obligatoire selon la strate de la
+  collectivité (seuil à vérifier). Mentions attendues : orientations
+  budgétaires, engagements pluriannuels envisagés, structure et gestion de
+  la dette (renvoi `references/dette-tresorerie.md`), et, selon le seuil de
+  population applicable, présentation de la structure des effectifs et de
+  l'évolution des dépenses de personnel — **jonction obligatoire avec
+  `drh-fpt`** pour le chiffrage RH détaillé (§5.8). Le rapport donne lieu à
+  un **débat**, dont **acte est pris par une délibération spécifique** :
+  ne pas confondre la présentation du rapport et la délibération actant le
+  débat, deux formalités distinctes. Générateur :
+  `references/templates/rapport-orientation-budgetaire.md`.
+
+### 5.5 Écrit conventionnel et écrit de procédure
+
+- **Convention de subvention** : engagement contractuel entre la
+  collectivité (exécutif, sur habilitation de la délibération d'attribution)
+  et le bénéficiaire. Mentions obligatoires : objet précis de la
+  subvention, montant, modalités de versement, obligations du bénéficiaire
+  (compte rendu financier, contrôle sur place le cas échéant), durée.
+  Renvoi `references/subventions.md` pour le fond du régime applicable.
+  Générateur : `references/templates/convention-subvention.md`.
+- **Convention financière** (partenariat DGFiP, convention avec un
+  satellite) : mentions obligatoires variables selon l'objet, toujours
+  vérifiées dans la branche de fond concernée
+  (`references/controle-interne-financier.md` pour une convention DGFiP).
+  Pas de générateur dédié parmi les cinq : construire à partir de la
+  logique interactive commune (§5.6) en s'appuyant sur la branche de fond.
+- **Fiche de procédure financière** (interne) : document d'organisation
+  décrivant un processus (plan de trésorerie, cartographie des risques,
+  circuit de validation) pour la traçabilité et le contrôle interne
+  (renvoi `references/controle-interne-financier.md`). Pas d'acte
+  externe : validation interne (DirFi, ordonnateur selon le processus).
+  Générateur : `references/templates/fiche-procedure-financiere.md`.
+
+### 5.6 Logique interactive obligatoire
+
+- **Détecter le type d'écrit** attendu à partir de la décision ou de
+  l'opération décrite (§5.1), avant toute question de détail.
+- **Poser les questions une à une** : objet, exercice, montant, imputation,
+  section, autorité compétente, calendrier — un champ à la fois,
+  confirmation avant de passer au suivant (`SKILL.md` §6).
+- **Interdiction absolue d'halluciner une donnée manquante** — ni un
+  montant, ni une imputation, ni une date de délibération, ni un nom
+  d'autorité compétente.
+- **Cas incomplet** : produire le brouillon avec les champs disponibles,
+  marquer explicitement chaque champ manquant par `[INCOMPLET — préciser :
+  <nom du champ>]`, lister ces champs en fin de document, et les demander
+  explicitement avant de considérer l'écrit comme finalisé.
+- Ne jamais transmettre, viser, ni présenter comme définitif un document
+  portant une mention `[INCOMPLET]` non résolue.
+
+### 5.7 Règles de rédaction communes
+
+- **Précision de l'imputation** : toute mention d'imputation budgétaire
+  (section, chapitre, article) doit être cohérente avec la nomenclature
+  applicable à la collectivité — renvoi `references/nomenclature-m57.md`
+  pour le détail, jamais improvisée ici.
+- **Cohérence des montants entre le corps et les annexes** : un montant
+  cité dans le corps d'un écrit doit être **strictement identique** à celui
+  figurant dans toute annexe ou tableau récapitulatif joint. Un écart,
+  même minime, doit être corrigé avant transmission, jamais laissé en
+  l'état avec une réserve.
+- **Anonymisation** : aucun écrit produit par cette branche n'expose de
+  donnée nominative inutile (agent, administré, bénéficiaire personne
+  physique identifié) au-delà de ce qui est strictement requis par la
+  nature de l'acte (par exemple, une convention de subvention à une
+  personne physique peut légitimement la nommer ; un tableau
+  d'illustration de méthode ne le doit jamais).
+
+### 5.8 Motivation et voies de recours des actes faisant grief
+
+- Un acte financier **fait grief** lorsqu'il modifie directement la
+  situation juridique d'un tiers ou crée une obligation à sa charge
+  (délibération de garantie d'emprunt affectant un tiers, délibération
+  fiscale créant une imposition, décision de rejet d'une demande de
+  subvention motivée).
+- Un tel acte doit être **motivé en fait et en droit** : exposer les
+  circonstances qui le justifient et la base précise sur laquelle il
+  s'appuie (renvoi à la branche de fond pour la base exacte, jamais
+  inventée ici).
+- Il doit indiquer les **voies et délais de recours** applicables
+  (recours administratif préalable le cas échéant, recours contentieux),
+  dont le contenu exact est à vérifier avant toute mention chiffrée de
+  délai.
+- Passage **obligatoire** par `references/controle-budgetaire.md` avant
+  toute production d'un acte soumis au contrôle de légalité, pour vérifier
+  la compétence de l'organe, la présence des mentions obligatoires et les
+  délais de transmission applicables (`SKILL.md` §6).
+
+### 5.9 Jonction obligatoire avec `drh-fpt`
+
+Dès qu'un écrit financier (typiquement le rapport d'orientation budgétaire,
+§5.4) doit intégrer un volet relatif aux effectifs, à la structure des
+emplois ou à l'évolution détaillée des dépenses de personnel au-delà du
+simple montant global, appliquer le **bloc BASCULE** du `SKILL.md` §5.5
+avant tout contenu statutaire : cette branche assemble l'écrit et y
+intègre l'enveloppe globale chiffrée, mais ne rédige jamais elle-même le
+détail des effectifs, des grades ou du régime indemnitaire.
+
+---
+
+## 6. Calculs et procédures
+
+1. **Identification du type d'écrit** (§5.1) — première étape, avant toute
+   collecte de donnée.
+2. **Vérification préalable des garde-fous** (`SKILL.md` §5.2, §5.3) —
+   toute opération sous-jacente à l'écrit est testée avant assemblage.
+3. **Recueil interactif** (§5.6) — un champ à la fois, jamais en bloc.
+4. **Vérification de la compétence et des mentions obligatoires** (§5.2 à
+   §5.5) avant assemblage final.
+5. **Vérification de la cohérence des montants** entre corps et annexes
+   (§5.7) avant toute transmission.
+6. **Transmission** — selon le type d'écrit : contrôle de légalité pour un
+   acte décisionnel soumis à cette obligation, comptable pour un acte
+   d'exécution, bénéficiaire pour un écrit conventionnel, archivage interne
+   pour une fiche de procédure.
+7. **Archivage et traçabilité** — conserver la version transmise et, pour
+   un acte faisant grief, la preuve de la notification des voies de
+   recours.
+
+---
+
+## 7. Déclencheurs de vérification
+
+Appliquer le socle-sources (matrice §2.2 du `SKILL.md`) dès que :
+- la **compétence exacte** pour adopter ou signer l'écrit est en cause ;
+- une **mention obligatoire** ou un **délai de transmission** au contrôle
+  de légalité conditionne la régularité de l'acte ;
+- un **seuil démographique** conditionne l'obligation d'un rapport
+  d'orientation budgétaire ou son contenu détaillé ;
+- l'écrit produit **fait grief** et nécessite une motivation ou des voies
+  de recours précises ;
+- un **identifiant Légifrance (LEGIARTI/JORFTEXT/NOR)** doit figurer dans
+  l'écrit produit (règle de provenance, `SKILL.md` §5.4).
+
+---
+
+## 8. Pièges & confusions fréquentes
+
+1. Produire une **délibération** sans vérifier que l'organe compétent est
+   bien l'assemblée et non l'exécutif (ou l'inverse en cas de délégation).
+2. Confondre la **présentation du rapport d'orientation budgétair

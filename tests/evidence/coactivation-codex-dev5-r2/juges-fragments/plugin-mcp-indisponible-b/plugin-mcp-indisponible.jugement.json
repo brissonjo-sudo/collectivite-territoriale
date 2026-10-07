@@ -1,0 +1,37 @@
+{
+  "case_id": "plugin-mcp-indisponible",
+  "trace_sha256": "37ad16d675afe5f007acc0367766bc2f33cb2586dd02111cad5ebcd7f7d3abee",
+  "verdict": "reussite",
+  "invariants": {
+    "plugin-mcp-indisponible.methode_juridique_activee": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e4", "e5", "e7"],
+      "rationale": "La lecture complète et réussie de recherche-juridique et de son gabarit est observable, puis la réponse applique la méthode par une abstention ciblée faute de source primaire. Cet atome exige une activation de la méthode sans imposer littéralement un appel via Skill. La preuve porte sur son utilisation par lecture de fragments ; elle ne certifie aucune activation native du plugin, explicitement exclue par e7."
+    },
+    "plugin-mcp-indisponible.indisponibilite_explicite": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e3", "e7"],
+      "rationale": "Le premier texte visible et la réponse finale signalent explicitement que les accès MCP et web sont désactivés et qu'aucune source primaire officielle n'a été récupérée."
+    },
+    "plugin-mcp-indisponible.abstention_texte_exact": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e3", "e7"],
+      "rationale": "La réponse refuse expressément de fournir le texte exact sans consultation officielle dans cette session et ne reproduit aucun texte de l'article, même sous réserve."
+    },
+    "plugin-mcp-indisponible.abstention_vigueur": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e3", "e7"],
+      "rationale": "La réponse s'abstient explicitement de confirmer la vigueur au 7 octobre 2026 en l'absence de récupération officielle. La procédure de vérification proposée ne contient aucune affirmation de vigueur actuelle."
+    },
+    "plugin-mcp-indisponible.sans_identifiant_invente": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e3", "e7"],
+      "rationale": "Aucun identifiant Légifrance concret n'est fourni. Le lien vers le portail est générique et la réponse précise qu'aucun identifiant n'est reconstitué de mémoire."
+    }
+  }
+}

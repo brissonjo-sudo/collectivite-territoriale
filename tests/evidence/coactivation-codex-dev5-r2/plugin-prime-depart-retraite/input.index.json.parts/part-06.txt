@@ -1,0 +1,6 @@
+pr5/skills/drh-fpt/SKILL.md",
+    "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/Collectivite-corrections-pr5/skills/recherche-juridique/SKILL.md"
+  ],
+  "runtime_fragment_root": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/runtime-fragments",
+  "runtime_fragment_rule": "For a permitted original runtime path, take its path relative to candidate root and append .index.json under runtime_fragment_root. Read that small index, then all its fragments in order. Never read the original large runtime file."
+}

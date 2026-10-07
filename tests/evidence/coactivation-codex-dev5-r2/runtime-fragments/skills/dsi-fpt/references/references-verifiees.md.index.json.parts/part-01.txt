@@ -1,0 +1,85 @@
+# Références vérifiées
+
+> **Ce fichier est le seul du dépôt autorisé à contenir des identifiants
+> officiels en dur** (`LEGIARTI`, `JORFTEXT`, numéros CELEX), parce qu'ils y
+> sont **vérifiés et datés**. Toute référence absente d'ici se **réserve**
+> (« à confirmer en version consolidée ») ou se **retire** d'une réponse : un
+> identifiant ne se reconstitue jamais de mémoire.
+>
+> **Aucune valeur chiffrée ici** (montant, seuil, délai, date d'échéance) :
+> le cache daté est conservé dans le seul dépôt source, hors paquet runtime.
+> Ne pas tenter de le charger ; revenir à la source primaire pour toute valeur.
+>
+> **Vérification du 2026-10-05.** Droit français : API Légifrance (outils
+> `Droit_Francais`, `search_articles` et `get_article`), texte de chaque article
+> lu. Textes entiers non codifiés (`JORFTEXT`) : page Légifrance lue par
+> WebFetch, signalé. Droit de l'Union : textes officiels en français lus sur
+> CELLAR (Office des publications de l'Union européenne). Les fichiers de
+> travail détaillés sont dans `docs/socle/`.
+>
+> **Colonne « Collectivités »** : `oui` · `non` · `sous conditions`, avec le
+> fondement lu. `inférence` signale une applicabilité déduite d'un terme
+> général (« personnes morales de droit public », « autorités
+> administratives ») et non d'une mention expresse.
+>
+> **Statuts** : `vérifié` (lu à la date indiquée) · `⚠️ non vérifié` (la
+> référence reste utilisable par son objet, jamais par un identifiant ou un
+> contenu non lu).
+
+---
+
+## 1. Administration, usagers et saisine par voie électronique (CRPA)
+
+| Objet | Référence | Identifiant | En vigueur depuis | Statut | Collectivités |
+|---|---|---|---|---|---|
+| Définition de l'« administration » pour tout le code | CRPA, art. L. 100-3 | LEGIARTI000031367308 | 2016-01-01 | vérifié | **Oui, expressément** : « les collectivités territoriales, leurs établissements publics administratifs » |
+| Droit de saisir une administration par voie électronique | CRPA, art. L. 112-8 | LEGIARTI000031367348 | 2016-01-01 | vérifié | Oui, sauf démarches exclues (décret 2016-1491) |
+| Téléservices ; le téléservice dédié devient la voie régulière de saisine | CRPA, art. L. 112-9 | LEGIARTI000031367350 | 2016-01-01 | vérifié | Oui, sauf démarches exclues |
+| Exclusion de certaines démarches par décret en Conseil d'État | CRPA, art. L. 112-10 | LEGIARTI000033221175 | 2018-05-25 | vérifié | Oui (base des exceptions) |
+| Identification de la personne qui saisit par voie électronique | CRPA, art. R. 112-9-1 | LEGIARTI000033288123 | 2016-11-07 | vérifié | Oui |
+| Information du public sur les téléservices ; à défaut, tout envoi électronique vaut saisine | CRPA, art. R. 112-9-2 | LEGIARTI000033288120 | 2016-11-07 | vérifié | Oui |
+| Accusé de réception électronique de tout envoi et paiement par téléservice | CRPA, art. L. 112-11 | LEGIARTI000033219980 | 2016-10-09 | vérifié | Oui ; exception pour envois abusifs ou menaçant la sécurité du SI |
+| Exceptions à la saisine électronique propres aux collectivités | Décret n° 2016-1491 du 4 novembre 2016, art. 1 ; annexe 1 (exceptions définitives) ; annexe 2 (transitoires, échues) | JORFTEXT000033342129 (WebFetch) ; art. 1 : LEGIARTI000033343854 ; annexe 1 : LEGIARTI000033343812 ; annexe 2 : LEGIARTI000037563558 | 2016-11-07 (annexe 2 : 2018-11-07) | vérifié (articles) ; texte entier par WebFetch | **Sous conditions** : seules les démarches listées en annexe 1 restent exclues |
+
+## 2. Algorithmes publics et documents communicables (CRPA)
+
+| Objet | Référence | Identifiant | En vigueur depuis | Statut | Collectivités |
+|---|---|---|---|---|---|
+| Mention explicite sur une décision individuelle fondée sur un traitement algorithmique ; communication des règles sur demande | CRPA, art. L. 311-3-1 | LEGIARTI000033205535 | 2016-10-09 | vérifié | Oui ; réserve des secrets protégés (L. 311-5, 2°) |
+| Contenu de la mention explicite | CRPA, art. R. 311-3-1-1 | LEGIARTI000034195878 | 2017-09-01 | vérifié | Oui |
+| Informations communiquées sur demande (contribution du traitement, données, paramètres, opérations) | CRPA, art. R. 311-3-1-2 | LEGIARTI000034195881 | 2017-09-01 | vérifié | Oui ; réserve des secrets protégés |
+| Publication en ligne des règles des principaux traitements algorithmiques | CRPA, art. L. 312-1-3 | LEGIARTI000033205516 | 2016-10-09 | vérifié (article) ; **⚠️ seuil d'effectif non vérifié** | **Sous conditions** : exception sous un seuil d'agents fixé par décret, **décret non identifié** |
+| Documents administratifs communicables, dont les codes sources | CRPA, art. L. 300-2 | LEGIARTI000033218936 | 2016-10-09 | vérifié | **Oui, expressément** : documents produits ou reçus « par l'Etat, les collectivités territoriales » |
+
+## 3. Échanges de données entre administrations (CRPA)
+
+| Objet | Référence | Identifiant | En vigueur depuis | Statut | Collectivités |
+|---|---|---|---|---|---|
+| Échange des données nécessaires entre administrations (« dites-le-nous une fois ») | CRPA, art. L. 114-8 | LEGIARTI000045213315 | 2022-02-23 | vérifié | Oui, avec dérogation en cas d'impossibilité technique |
+| Modalités des échanges renvoyées à un décret en Conseil d'État | CRPA, art. L. 114-9 | LEGIARTI000045213308 | 2022-02-23 | vérifié | Oui |
+| Données fournies par la personne quand l'échange est impossible | CRPA, art. L. 114-10 | LEGIARTI000037313148 | 2018-08-12 | vérifié | Oui |
+
+## 4. Sécurité des systèmes d'information des autorités administratives (RGS)
+
+| Objet | Référence | Identifiant | En vigueur depuis | Statut | Collectivités |
+|---|---|---|---|---|---|
+| Ordonnance sur les échanges électroniques (texte) | Ordonnance n° 2005-1516 du 8 décembre 2005 | JORFTEXT000000636232 (WebFetch) | — | vérifié par WebFetch ; ⚠️ LEGITEXT non confirmé | — |
+| Définition des « autorités administratives » | Ordonnance n° 2005-1516, art. 1 | LEGIARTI000033974978 | 2017-01-29 | vérifié | **Oui, expressément** : « les collectivités territoriales » |
+| Création du RGS ; l'autorité qui met en place un SI en détermine les fonctions de sécurité et respecte le RGS | Ordonnance n° 2005-1516, art. 9 | LEGIARTI000006317203 | 2005-12-09 | vérifié | Oui (via art. 1) |
+| Décret RGS (texte) | Décret n° 2010-112 du 2 février 2010 | JORFTEXT000021779444 (WebFetch) | — | vérifié par WebFetch | — |
+| Objet du RGS | Décret n° 2010-112, art. 1 | LEGIARTI000021780146 | 2010-02-05 | vérifié | Oui (inférence) |
+| Approbation du RGS par arrêté du Premier ministre | Décret n° 2010-112, art. 2 | LEGIARTI000039286010 | 2019-10-28 | vérifié | Sans objet direct |
+| Analyse de risques, objectifs et fonctions de sécurité, réexamen régulier | Décret n° 2010-112, art. 3 | LEGIARTI000021780150 | 2010-02-05 | vérifié | Oui (inférence) |
+| Recours à des produits et prestataires qualifiés ou conformes | Décret n° 2010-112, art. 4 | LEGIARTI000021780154 | 2010-02-05 | vérifié | Oui (inférence) |
+| **Attestation formelle** de sécurité par l'autorité elle-même ; rendue accessible aux usagers d'un téléservice | Décret n° 2010-112, art. 5 | LEGIARTI000033232490 | 2016-03-19 | vérifié | **Oui (inférence)** : c'est la collectivité qui atteste ; voir encadré |
+| Qualification des produits de sécurité par l'ANSSI | Décret n° 2010-112, art. 6 et 9 | LEGIARTI000021780156 ; LEGIARTI000039353401 | 2010-02-05 ; 2019-11-09 | vérifié | Sans objet direct (produits, pas systèmes) |
+
+> **Vocabulaire opposable, à deux niveaux.** Le **décret** n° 2010-112 (articles
+> lus) prévoit que l'autorité administrative **atteste formellement** la
+> sécurité de son système (art. 5). Le **référentiel** RGS (document approuvé
+> par arrêté, publié par l'ANSSI, section 15) décrit la démarche qui y conduit
+> sous le nom d'**homologation de sécurité**. Les deux termes sont exacts à leur
+> niveau ; c'est la collectivité qui homologue et atteste pour ses propres
+> systèmes. L'ANSSI **qualifie des produits** : elle n'homologue pas les
+> systèmes d'une collectivité. Les articles 7, 8 et 10 à 24 du décret n'ont pas
+> été relus (⚠️). L'art. 5 renvoie à l

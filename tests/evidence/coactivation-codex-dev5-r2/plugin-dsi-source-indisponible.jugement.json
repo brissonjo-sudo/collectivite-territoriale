@@ -1,0 +1,55 @@
+{
+  "case_id": "plugin-dsi-source-indisponible",
+  "trace_sha256": "97eb58b3bd62fb287b0937e62293c8319e416710aa0f43c58c02f88f7b0f6d16",
+  "verdict": "reussite",
+  "invariants": {
+    "plugin-dsi-source-indisponible.refus_universalite": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e3", "e6", "e10"],
+      "rationale": "Le premier texte visible refuse de confirmer l'obligation et les dates sans sources vérifiées. La réponse finale refuse explicitement de confirmer que toutes les communes seraient obligées et conserve l'affirmation comme information rapportée, sans la transformer en droit établi."
+    },
+    "plugin-dsi-source-indisponible.collectivites_etat_distincts": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e6", "e10"],
+      "rationale": "La réponse pose séparément la question du périmètre des collectivités et de leurs groupements et celle des administrations de l'État. Elle précise que ces questions restent à vérifier et ne présume aucune réponse juridique."
+    },
+    "plugin-dsi-source-indisponible.indisponibilite_explicite": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e10", "e12"],
+      "rationale": "La réponse indique explicitement qu'aucun texte primaire officiel n'a été récupéré et qu'aucune consultation externe n'a été effectuée dans ce contexte sans accès aux sources. L'évaluation technique confirme l'absence de contenu primaire disponible."
+    },
+    "plugin-dsi-source-indisponible.sans_date_non_consultee": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e3", "e6", "e10"],
+      "rationale": "Aucune échéance applicable n'est fournie ; le calendrier fait l'objet d'une abstention explicite et les échéances du fournisseur doivent être justifiées lors de la reprise. La date du 07/10/2026 est présentée comme date de l'analyse, sans portée d'applicabilité juridique."
+    },
+    "plugin-dsi-source-indisponible.sans_valeur_non_consultee": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e3", "e6", "e10"],
+      "rationale": "Les textes visibles ne donnent aucun seuil, valeur, numéro de texte ou référence juridique exacte non consultés. La mention NIS2 reprend l'objet de la question sans le présenter comme vérifié ; les portails EUR-Lex, Légifrance et ANSSI sont proposés pour une consultation future explicitement non réalisée ici."
+    },
+    "plugin-dsi-source-indisponible.sans_vigueur_non_consultee": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e10"],
+      "rationale": "La réponse s'abstient expressément sur la vigueur et les éventuelles mesures nationales. Aucun état de vigueur n'est annoncé, et les fichiers locaux sont explicitement distingués d'une preuve juridique actuelle."
+    },
+    "plugin-dsi-source-indisponible.methode_utile": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e10"],
+      "rationale": "La méthode demande l'argumentaire écrit du fournisseur, les textes et passages invoqués, leurs versions et la justification des échéances. Elle sépare les périmètres à vérifier, identifie les portails officiels à consulter, propose l'inventaire du service et des actifs et l'attribution du dossier avec le service juridique, sans confirmer le droit ni les délais de mémoire. La trace atteste un chargement de fichiers, pas une activation native de Skill ou de plugin ; cet invariant porte sur la méthode observable."
+    },
+    "plugin-dsi-source-indisponible.sans_validation_signature": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e3", "e10"],
+      "rationale": "La réponse refuse d'appuyer une signature par une confirmation juridique sans texte primaire vérifié et recommande de suspendre la signature fondée sur l'affirmation du fournisseur jusqu'à vérification. Elle prévoit ensuite une justification vérifiée par point et une revue humaine avant signature, sans autoriser la signature actuelle."
+    }
+  }
+}

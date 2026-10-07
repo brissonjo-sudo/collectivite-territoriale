@@ -1,0 +1,172 @@
+e part,
+
+Et :
+[Bénéficiaire — nature juridique précisée à l'étape 1],
+d'autre part,
+
+Il est convenu ce qui suit :
+
+Préambule
+[Rappel de la qualification du flux opérée au §0 : « la présente convention
+a pour objet de soutenir une action à l'initiative du bénéficiaire, sans
+contrepartie directe équivalente au bénéfice de la collectivité » —
+formulation à adapter, jamais supprimée.]
+
+Article 1er — Objet
+[Objet précis de l'action soutenue — étape 2, formulé comme un soutien,
+jamais comme une commande de prestation.]
+
+Article 2 — Montant et pluriannualité
+[Montant [ ] au titre de l'exercice [ ] — étape 3. Si pluriannuel :
+répartition par exercice, sous réserve du vote annuel des crédits
+correspondants par l'assemblée délibérante.]
+
+Article 3 — Références de l'acte d'attribution
+[Délibération n° [ ] du [date], ou délégation à l'exécutif référencée
+[ ] — étape 4.]
+
+Article 4 — Modalités de versement
+[Versement en une fois / en plusieurs fractions, avance le cas échéant et
+sa base — étape 5.]
+
+Article 5 — Obligations du bénéficiaire
+[Réalisation de l'action dans les conditions annoncées, mention de la
+collectivité, autres obligations précisées — étape 6.]
+
+Article 6 — Justificatifs et compte rendu financier
+[Nature des pièces, périodicité — étape 7.]
+
+Article 7 — Contrôle et droit de visite
+[Modalités de contrôle sur pièces et, le cas échéant, sur place — étape 8.]
+
+Article 8 — Reversement
+[Cas et modalités de reversement en cas de non-exécution, non-conformité ou
+dissolution — étape 9.]
+
+Article 9 — Durée
+[Durée de la convention, reconduction éventuelle — étape 10.]
+
+Article 10 — Résiliation
+[Cas et modalités de résiliation — étape 11.]
+
+Article 11 — Assurances
+[Obligation de couverture d'assurance du bénéficiaire — étape 12.]
+
+Article 12 — Communication
+[Obligations de communication du bénéficiaire — étape 13.]
+
+Article 13 — Litiges
+[Juridiction compétente en cas de litige — [INCOMPLET] si non précisée.]
+
+Fait à [lieu], en [nombre] exemplaires, le [date].
+
+Pour [COLLECTIVITÉ] : [autorité habilitée]
+Pour [Bénéficiaire] : [représentant habilité]
+```
+
+---
+
+## 3. Mentions obligatoires et contrôles de cohérence
+
+- [ ] Qualification du flux (subvention / commande publique) tranchée en
+  premier (§0), avec refus explicite si la réponse est « commande
+  publique ».
+- [ ] Risque d'association transparente testé et écarté ou signalé (§0,
+  renvoi `../../objets/satellites.md`).
+- [ ] Nature juridique du bénéficiaire précisée (étape 1).
+- [ ] Objet formulé comme un soutien à l'action du bénéficiaire, jamais
+  comme une commande de prestation (étape 2, cohérence avec §0).
+- [ ] Montant et durée cohérents entre l'article 2 (montant) et l'article 9
+  (durée) — pas de contradiction entre un montant présenté comme annuel et
+  une durée présentée comme pluriannuelle sans répartition.
+- [ ] Compétence et acte d'attribution référencés (délibération ou
+  délégation) — jamais présumés (étape 4).
+- [ ] Clause de reversement présente si le montant ou la durée le
+  justifient (étape 9).
+- [ ] Justificatifs et modalités de contrôle précisés (étapes 7 et 8).
+- [ ] Aucune contrepartie directe équivalente au bénéfice de la
+  collectivité ne figure dans le corps de la convention (au-delà de la
+  communication, étape 13) — tout ajout de ce type est un signal de
+  requalification à revérifier au §0.
+
+---
+
+## 4. Renvoi à `deliberation-budgetaire.md`
+
+La convention **ne se substitue jamais** à la délibération d'attribution.
+Si celle-ci n'existe pas encore, le signaler explicitement et proposer de
+l'assembler en parallèle via `deliberation-budgetaire.md`, avec vérification
+de la compétence de l'assemblée et, au-delà du seuil de conventionnement, de
+la transmission au contrôle de légalité (`../controle-budgetaire.md`).
+
+---
+
+## 5. Règle `[INCOMPLET]` — application stricte
+
+**Interdiction absolue d'halluciner une donnée manquante** : montant, seuil
+de conventionnement, référence de délibération, délai de reversement, durée.
+
+1. Produire le brouillon avec les champs disponibles ; un champ manquant ne
+   bloque pas la rédaction des autres articles.
+2. Marquer chaque champ manquant `[INCOMPLET — préciser : <nom du champ>]`.
+3. En fin de document, si au moins un champ est marqué `[INCOMPLET]`,
+   ajouter :
+
+```
+---
+## CHAMPS MANQUANTS — CONVENTION NON FINALISABLE EN L'ÉTAT
+
+Les informations suivantes sont requises avant signature :
+- [champ manquant 1 — étape correspondante]
+- [champ manquant 2 — étape correspondante]
+- [...]
+
+Cette convention ne doit être ni signée, ni transmise, tant que ces champs
+ne sont pas renseignés — et tant que la qualification du flux (§0) n'est
+pas confirmée « subvention ».
+```
+
+4. **Demander explicitement** ces données à l'utilisateur, en reprenant la
+   formulation de la question d'étape correspondante (§1).
+5. Ne jamais marquer le document comme « prêt à signer » tant qu'une mention
+   `[INCOMPLET]` subsiste, ou tant que le §0 n'a pas été explicitement
+   tranché en faveur de la qualification « subvention ».
+
+---
+
+## 6. Double échelle [risque / confiance]
+
+| Point | Risque | Confiance |
+|---|---|---|
+| Qualification subvention / commande publique | Critique | À trancher avant toute rédaction — jamais présumée |
+| Risque d'association transparente | Critique | Renvoi impératif `SKILL.md` §5.2 et `../../objets/satellites.md` |
+| Compétence de l'assemblée / délégation | Élevé | À vérifier systématiquement |
+| Seuil de conventionnement obligatoire | Élevé | Jamais cité de mémoire — à vérifier |
+| Clause de reversement | Moyen à élevé | Délai à vérifier si convention silencieuse |
+| Aides à une entreprise (le cas échéant) | Élevé | Renvoi `../subventions.md` §5.10 — compétence régionale, encadrement européen |
+
+---
+
+## 7. Checklist avant remise
+
+1. **Contrôle préalable de qualification (§0)** effectué en premier, avant
+   toute autre question — refus explicite si le flux qualifie une commande
+   publique.
+2. Risque d'association transparente testé (§0) — renvoi
+   `../../objets/satellites.md` si un doute subsiste.
+3. Toutes les étapes du §1 parcourues une à une, avec confirmation à chaque
+   étape.
+4. Nature juridique du bénéficiaire précisée (étape 1).
+5. Objet formulé comme un soutien, jamais comme une commande de prestation
+   (étape 2).
+6. Compétence et acte d'attribution référencés, ou renvoi explicite vers
+   `deliberation-budgetaire.md` si l'acte reste à produire (§4).
+7. Montant, versement, justificatifs, contrôle et reversement tous traités
+   (étapes 3, 5, 7, 8, 9).
+8. Aucune donnée manquante comblée par supposition — règle `[INCOMPLET]`
+   (§5) appliquée et champs listés explicitement si nécessaire.
+9. Aucune donnée nominative, aucun nom d'organisme réel dans le document
+   produit.
+10. Mention finale claire : convention **prête à signer** ou marquée
+    **`[INCOMPLET]`**, ou **refusée** si la qualification du §0 l'impose —
+    jamais d'état intermédiaire ambigu.

@@ -1,0 +1,134 @@
+s la règle de
+   division du risque par bénéficiaire ; jamais de seuil chiffré non
+   vérifié (§7, §9).
+5. **Suivi de l'encours de dette** — pour chaque emprunt : capital restant
+   dû, taux, durée résiduelle, prêteur, classification (charte Gissler),
+   pour alimenter l'annexe budgétaire et `references/prospective-analyse.md`.
+6. **Tirage sur ligne de trésorerie** — vérifier préavis contractuel et
+   montant minimal, exécuter dans la limite du plafond, tracer chaque
+   mouvement.
+
+---
+
+## 7. Déclencheurs de vérification
+
+Appliquer le socle-sources (matrice §2.2 du `SKILL.md`) dès que :
+- la **compétence** exacte de délégation en matière d'emprunt ou de
+  garantie est en cause ;
+- un **plafond**, une **quotité** ou un **ratio prudentiel** de garantie
+  d'emprunt est cité ;
+- le **plafond** d'une ligne de trésorerie ou ses conditions de
+  mobilisation conditionnent une décision ;
+- une **dérogation** à l'obligation de dépôt des fonds au Trésor est
+  invoquée ;
+- la **classification** exacte d'un produit dans la grille de la charte
+  Gissler est disputée ou sert de fondement à une décision de souscription ;
+- un **délai** (compte rendu de délégation, transmission au contrôle de
+  légalité d'une délibération de garantie) conditionne la régularité de
+  l'acte ;
+- une **indemnité de remboursement anticipé** est calculée pour servir de
+  base à une décision.
+
+---
+
+## 8. Pièges & confusions fréquentes
+
+1. Confondre **ligne de trésorerie** et **emprunt** : la première ne
+   finance pas un investissement durable et ne relève pas du même régime
+   d'imputation.
+2. Présenter un emprunt comme finançant une dépense de **fonctionnement** :
+   garde-fou budgétaire immédiat (§5.2).
+3. Comparer des offres bancaires sur le seul **taux nominal**, en ignorant
+   commissions, frais et TEG (§5.4).
+4. Qualifier un produit structuré dans la grille de la charte Gissler sans
+   disposer du **descriptif contractuel complet** de la formule
+   d'indexation.
+5. Décider d'une opération de gestion active sans avoir chiffré
+   **l'indemnité compensatrice**, ou en la supposant nulle par défaut.
+6. Accorder une garantie d'emprunt sans vérifier le **ratio prudentiel**
+   applicable et la **division du risque** entre bénéficiaires.
+7. Omettre le **compte rendu à l'assemblée** des décisions de dette prises
+   par délégation.
+8. Utiliser durablement une ligne de trésorerie pour couvrir un déficit
+   structurel plutôt qu'un besoin ponctuel : signal de déséquilibre à
+   traiter comme tel (renvoi §5.7 et `references/controle-budgetaire.md`).
+9. Recourir à un encaissement ou un décaissement hors du circuit du
+   comptable pour lisser une tension de trésorerie : gestion de fait
+   (`SKILL.md` §5.2).
+10. Oublier l'annexe **état de la dette** ou la produire incomplète (encours
+    par type de produit, garanties données non recensées).
+
+---
+
+## 9. Données / valeurs à vérifier
+
+- **Jamais de mémoire** : taux d'intérêt proposés ou légaux, TEG d'une
+  offre, commissions et frais, plafond d'une ligne de trésorerie, quotité
+  et ratios prudentiels de garantie, liste exacte des dérogations au dépôt
+  des fonds au Trésor, délai de compte rendu des décisions par délégation,
+  délai de transmission au contrôle de légalité d'une délibération de
+  garantie.
+- **Références structurelles stables, citables avec la réserve « à
+  confirmer en version consolidée »** : le **CGCT** (compétence d'emprunt,
+  délégation, garanties) ; le **décret relatif à la gestion budgétaire et
+  comptable publique** (décret GBCP, déjà nommé au `SKILL.md`) ; la
+  **charte de bonne conduite entre les établissements bancaires et les
+  collectivités locales** (charte Gissler), pour son nom et l'architecture
+  de sa grille ; le principe de l'**obligation de dépôt des fonds au
+  Trésor**, dont le périmètre exact des dérogations reste à confirmer.
+- **Aucun numéro d'article, identifiant Légifrance (LEGIARTI/JORFTEXT/NOR)
+  ni valeur chiffrée** n'est avancé sans vérification préalable dans la
+  session : à défaut, s'en tenir à la règle et signaler le point à
+  vérifier.
+
+---
+
+## 10. Écrits & livrables
+
+| Écrit | Nature | Compétence | Générateur / renvoi |
+|---|---|---|---|
+| Délibération autorisant le recours à l'emprunt, ou déléguant cette compétence | Acte décisionnel | Assemblée délibérante | `references/templates/deliberation-budgetaire.md` |
+| Délibération de garantie d'emprunt | Acte décisionnel, acte faisant grief potentiel | Assemblée délibérante | `references/templates/deliberation-budgetaire.md` ; passer par `references/controle-budgetaire.md` avant production |
+| Contrat de prêt / avenant de renégociation | Acte conventionnel signé par l'exécutif (dans le cadre de sa délégation ou d'une autorisation spécifique) | Exécutif (délégation vérifiée) | Hors générateurs couche 4 ; pièce annexée au dossier de délibération |
+| Convention de garantie avec l'organisme bénéficiaire | Écrit conventionnel | Exécutif, sur habilitation de la délibération | `references/templates/convention-subvention.md` non adapté ; convention spécifique, cf. `references/ecrits-financiers.md` §10 |
+| Note d'impact financier sur une opération de dette (nouvel emprunt, gestion active, garantie) | Écrit de pilotage | DirFi | `references/templates/note-impact-financier.md` |
+| Fiche de procédure interne (plan de trésorerie, tirage sur ligne, suivi de l'encours garanti) | Écrit de procédure | DirFi | `references/templates/fiche-procedure-financiere.md` |
+| État de la dette (annexe budgétaire) et état des garanties d'emprunt | Annexe obligatoire | Services financiers | Contenu détaillé renvoyé à `references/nomenclature-m57.md` pour l'imputation ; forme renvoyée à `references/ecrits-financiers.md` |
+
+Objet métier associé : `../objets/emprunt.md` (situation type, acteurs,
+procédures détaillées, sans duplication du fond ici). Il couvre aussi la
+**garantie d'emprunt** accordée à un tiers. La **ligne de trésorerie** n'a pas
+d'objet dédié en v1.0.0 : son régime est traité ici, en §5.
+
+---
+
+## 11. Double échelle [risque / confiance]
+
+| Sous-domaine | Risque | Confiance | Repère |
+|---|---|---|---|
+| Distinction emprunt / ligne de trésorerie | Moyen | Stable | Réponse directe, rappel de la règle |
+| Interdiction de financer du fonctionnement par l'emprunt | Élevé | Stable | Garde-fou budgétaire si franchi (§5.2 SKILL) |
+| Classification d'un produit (charte Gissler) | Élevé | À vérifier selon le descriptif contractuel | Citation + réserve, jamais de qualification sans descriptif complet |
+| Comparaison d'offres bancaires (TEG, commissions) | Moyen | Stable sur la méthode | Vérification ponctuelle des chiffres transmis par les banques |
+| Gestion active (renégociation, remboursement anticipé) | Élevé | À vérifier (indemnité contractuelle) | Chiffrage obligatoire avant décision |
+| Plafond et mobilisation de la ligne de trésorerie | Élevé | Stable sur le principe, à vérifier sur le plafond retenu | Citation du plafond en vigueur obligatoire |
+| Garantie d'emprunt à un tiers | Critique | À vérifier systématiquement | Citation du ratio prudentiel + vérification de la division du risque |
+| Dépôt des fonds au Trésor et dérogations | Élevé | À vérifier | Abstention si dérogation invoquée sans confirmation |
+
+---
+
+## 12. Checklist de branche
+
+1. **Compétence** vérifiée : assemblée délibérante ou exécutif par
+   délégation régulière et encadrée, pour l'opération concernée ?
+2. Emprunt bien qualifié comme **recette d'investissement non affectée**,
+   jamais présenté comme finançant du fonctionnement ? Sinon, garde-fou
+   budgétaire (§5.2 SKILL) affiché avant tout contenu.
+3. **Classification du produit** (charte Gissler) posée seulement si le
+   descriptif contractuel complet est connu, sinon signalée comme à
+   compléter ?
+4. Comparaison d'offres bancaires effectuée sur **TEG, commissions et
+   frais**, pas sur le seul taux nominal ?
+5. Opération de gestion active chiffrée (**indemnité vs gain actualisé**)
+   avant toute recommandation ?
+6. **Ligne de trésorerie** distinguée de l'

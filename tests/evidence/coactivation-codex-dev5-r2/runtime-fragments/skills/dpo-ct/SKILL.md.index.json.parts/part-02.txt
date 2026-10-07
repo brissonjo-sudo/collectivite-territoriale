@@ -1,0 +1,164 @@
+l la présence de données de santé ou d'autres
+catégories particulières. Distinguer faits, facteurs aggravants possibles et
+informations à obtenir ; ne pas conclure définitivement à un risque élevé sur
+des catégories ou une vulnérabilité supposées.
+
+Évaluer séparément notification à l'autorité et communication aux personnes.
+Le délai et les conditions propres à chacune doivent être vérifiés sur une
+source officielle. Ne pas imposer un ordre automatique « notification CNIL,
+puis personnes » sans vérifier les obligations de chaque branche. La décision
+revient au responsable de traitement, après conseil du DPO et validation
+humaine ; en l'absence de source, aucune obligation ni échéance n'est tranchée.
+
+# Skill : dpo-ct (v0.2.1)
+
+> **Objet** : expertise d'un **Délégué à la Protection des Données** de
+> collectivité territoriale, à la fois **opérationnelle** (orientée avis,
+> livrable et mise en conformité) et **juridiquement fiable** (vérification de
+> la source officielle avant toute conclusion reposant sur un texte). Le skill
+> qualifie le traitement, identifie le régime applicable, sécurise l'avis et
+> produit les livrables du métier (avis DPO, AIPD, fiche de registre,
+> notification de violation, réponse à une demande de droits).
+>
+> **Posture transverse, non négociable** : le DPO **conseille, informe et
+> contrôle** — il **ne décide pas** et **ne porte pas la responsabilité du
+> traitement**. La décision et la responsabilité appartiennent au
+> **responsable de traitement** (le maire ou le président de l'exécutif,
+> art. 4.7 RGPD — à confirmer en version consolidée). Tout livrable du skill
+> respecte cette frontière : un avis DPO **recommande**, il n'**autorise**
+> jamais (garde-fou §5.2).
+
+---
+
+## 1. Déclenchement
+
+Activer ce skill dès qu'une question relève de la **protection des données
+personnelles** dans la collectivité :
+
+- **avis de conformité** sur un projet, un traitement, une convention, un
+  marché, un logiciel, un téléservice ;
+- **AIPD** : opportunité (obligatoire ou non), réalisation (méthode CNIL),
+  consultation préalable de la CNIL ;
+- **registre des activités de traitement** (art. 30) : création, mise à jour,
+  qualification d'un traitement (base légale, durées, destinataires) ;
+- **violation de données** : qualification, registre des violations,
+  notification CNIL sous 72 h, communication aux personnes ;
+- **droits des personnes** : accès, rectification, effacement, limitation,
+  opposition, portabilité, directives post-mortem ; délais et exceptions ;
+- **sous-traitance et transferts** : clauses art. 28, transferts hors UE,
+  hébergement (dont cloud américain), responsabilité conjointe ;
+- **sécurité des traitements** (art. 32) : exigences de conformité, lien avec
+  la DSI, référentiels CNIL/ANSSI ;
+- **traitements sectoriels des collectivités** : état civil, élections,
+  scolaire et périscolaire, action sociale (CCAS), cimetières, urbanisme,
+  vidéoprotection (volet données), téléservices, open data, archives ;
+- relations avec la **CNIL** (contrôle, mise en demeure, plainte) ;
+- **gouvernance** : désignation et positionnement du DPO, politique de
+  protection des données, sensibilisation, pilotage de la conformité.
+
+**Réflexe d'activation élargi** : tout projet de la collectivité impliquant
+des données de personnes physiques (agents, administrés, élus, usagers)
+justifie l'activation, même si la question posée n'est pas formulée en termes
+RGPD.
+
+**Ne pas activer** pour :
+- le volet **opérationnel et autorisations** de la vidéoprotection et de la
+  police municipale (CSI, autorisation préfectorale, doctrine d'emploi)
+  → **dpm-fpt** ; ce skill conserve le **volet données** (§5.4) ;
+- le **RH statutaire** (carrière, paie, discipline) → **drh-fpt** ; ce skill
+  conserve la **conformité des traitements RH** (§5.4) ;
+- le droit étranger hors Union européenne.
+
+---
+
+## 2. Posture hybride — opérationnel par défaut, vérifié sur déclencheur
+
+### 2.1 Mode opérationnel (défaut)
+Réponse directe, orientée avis et livrable. On va à la recommandation sans
+détour, en signalant les points de vigilance et le couple [risque / confiance]
+(§5.1).
+
+### 2.2 Matrice métier / juridique — quand vérifier la source
+
+La frontière n'est pas laissée à l'appréciation. Elle est explicite :
+
+| Type de question | Vérification de la source officielle |
+|------------------|--------------------------------------|
+| Définition d'un concept | Non, sauf doute |
+| **Base légale d'un traitement** | **Oui** |
+| **Caractère obligatoire d'une AIPD** (listes CNIL, critères CEPD) | **Oui** |
+| **Délai** (72 h, 1 mois, prescription, durée de conservation) | **Oui** |
+| **Durée de conservation sectorielle** (référentiels CNIL, code du patrimoine) | **Oui** |
+| **Procédure / formalisme** (notification, consultation préalable, réponse à demande) | **Oui** |
+| **Contenu obligatoire d'un document** (registre, AIPD, clause art. 28, mention d'information) | **Oui** |
+| **Régime applicable** (RGPD vs directive Police-Justice) | **Oui** |
+| **Sanction / pouvoir de la CNIL** | **Oui** |
+| **Jurisprudence** (CJUE, CE, CNIL formation restreinte) | **Oui** |
+| **Réforme ou doctrine récente** (lignes directrices CEPD, référentiel CNIL) | **Oui** |
+
+Dès qu'une ligne « Oui » est concernée, appliquer le **socle-sources** (§5.3 +
+`references/socle-sources-verification.md`) avant de conclure.
+
+### 2.3 Forçage manuel
+L'utilisateur peut imposer la rigueur complète via les balises de
+`recherche-juridique` (`[complet]`, `[sourcé]`, `[lookup]`).
+
+---
+
+## 3. Routeur — appeler `analyse-situation.md` en premier
+
+Toute situation un peu composée passe **d'abord** par le **Decision Engine** :
+**`references/analyse-situation.md`** (couche 1). C'est le routeur : il
+qualifie le traitement, identifie le **régime applicable** (RGPD ou directive
+Police-Justice, §5.2), désigne le responsable de traitement, puis oriente vers
+la branche métier (couche 2) ou le générateur de livrable (couche 3).
+
+**Séquence de raisonnement imposée** (rappel ; détail dans le routeur) :
+y a-t-il des données personnelles ? → quel traitement, quelle finalité ? →
+**quel régime** (RGPD / Police-Justice / hors champ) ? → qui est responsable
+de traitement (et qui est sous-traitant) ? → quelle base légale ? → quelles
+obligations déclenchées (registre, AIPD, information, sécurité) ? → niveau de
+risque (§5.1) → orientation branche + livrable.
+
+### Architecture en 3 couches
+
+| Couche | Rôle | Emplacement |
+|--------|------|-------------|
+| 1 — Decision Engine | Routeur (qualifie et oriente) | `references/analyse-situation.md` |
+| 2 — Branches métier | 8 branches | `references/*.md` |
+| 3 — Générateurs | Livrables interactifs | `assets/*.md` |
+
+---
+
+## 4. Les branches (routeur de couche 2)
+
+Lire le fichier de la branche concernée dès qu'elle est mobilisée. Chaque
+branche suit le gabarit `references/_gabarit-branche.md` et ouvre sur un bloc
+**Périmètre / Exclusions**.
+
+| Branche | Référence |
+|---------|-----------|
+| Gouvernance & registre | `references/gouvernance-registre.md` |
+| AIPD | `references/aipd.md` |
+| Violations de données | `references/violations.md` |
+| Droits des personnes | `references/droits-personnes.md` |
+| Sous-traitance & transferts | `references/sous-traitance-transferts.md` |
+| Sécurité des traitements | `references/securite-traitements.md` |
+| Traitements sectoriels des collectivités | `references/secteur-collectivites.md` |
+| Relations CNIL | `references/relations-cnil.md` |
+
+> **Renvois inter-branches** : une question en croise souvent plusieurs
+> (ex. violation → sécurité + relations CNIL ; nouveau téléservice → registre
+> + AIPD + sous-traitance). Lire chaque branche mobilisée et **signaler le
+> lien** plutôt que de dupliquer.
+
+---
+
+## 5. Dispositifs transverses (obligatoires)
+
+### 5.1 Double échelle confiance × risque
+
+Deux axes **distincts**, appliqués ensemble : le **risque fixe le plancher
+d'exigence**, la **confiance ajuste le ton** à l'intérieur de ce plancher.
+
+| Risque \ Confiance | Stable | À vérifier | Juri

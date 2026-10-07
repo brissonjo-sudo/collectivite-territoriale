@@ -1,0 +1,152 @@
+# Générateur interactif — Délibération budgétaire (v1.0.0)
+
+> Couche 4 (`references/templates/`), piloté par `references/ecrits-financiers.md`
+> et par `SKILL.md` §6. Mécanique de dialogue alignée sur les générateurs du
+> skill frère dpm-fpt : questions posées **une à une**, aucune donnée inventée,
+> règle `[INCOMPLET]` stricte, checklist finale avant remise. Le contenu métier
+> propre aux finances locales est développé ici.
+>
+> **Nature de l'écrit** : la délibération budgétaire est un **acte
+> administratif** de l'assemblée délibérante, susceptible de **faire grief**
+> et **soumis au contrôle de légalité** dès qu'elle relève de la liste des
+> actes transmissibles. Ce générateur est **subordonné** à
+> `../controle-budgetaire.md` : la compétence de l'organe, l'équilibre réel et
+> les conditions de régularité doivent être vérifiées **avant** toute
+> rédaction. Branches de rattachement : `../budget-cycle.md` (fond de l'acte
+> budgétaire concerné) et `../controle-budgetaire.md` (régularité, saisine,
+> régularisation).
+>
+> **Ce fichier ne tranche jamais seul** l'imputation comptable de fond
+> (renvoi `../nomenclature-m57.md`), ni la régularité d'un acte déjà pris
+> (renvoi `../controle-budgetaire.md`) : il **assemble** le document à partir
+> de données vérifiées et **signale** les points non levés.
+
+---
+
+## 0. Quand utiliser ce générateur
+
+Une **délibération budgétaire ou financière** est l'acte par lequel
+l'assemblée délibérante (ou l'exécutif par délégation régulière) décide en
+matière de budget : budget primitif, décision modificative, budget
+supplémentaire, affectation du résultat, garantie d'emprunt, admission en
+non-valeur, création d'une régie, attribution d'une subvention, virement de
+crédits relevant de sa compétence.
+
+**Avant d'ouvrir ce générateur**, vérifier que l'écrit demandé est bien une
+délibération et non un autre document :
+
+1. **S'agit-il d'éclairer une décision sans la formaliser (note d'aide à la
+   décision) ?** Oui → `note-impact-financier.md`, pas ce générateur.
+2. **S'agit-il du rapport préalable au débat d'orientation budgétaire, sans
+   dispositif décisionnel ?** Oui → `rapport-orientation-budgetaire.md`, pas
+   ce générateur.
+3. **S'agit-il d'une convention avec un tiers (organisme bénéficiaire d'une
+   subvention) ?** Oui → `convention-subvention.md`. La délibération
+   d'attribution reste toutefois nécessaire en amont ou en parallèle : les
+   deux écrits sont complémentaires, pas substituables l'un à l'autre.
+4. **La situation décrit-elle un maniement de deniers publics hors circuit du
+   comptable (§5.2 `SKILL.md`) ou un acte budgétaire déjà irrégulier
+   (§5.3 `SKILL.md`) ?** Oui → afficher le **STOP** ou l'**ALERTE
+   BUDGÉTAIRE** correspondant **avant tout autre contenu**, puis orienter vers
+   `../controle-budgetaire.md`. Ne jamais rédiger de délibération destinée à
+   couvrir a posteriori un tel montage.
+
+Si aucun de ces cas ne redirige ailleurs : la **délibération budgétaire** est
+le bon écrit. Poursuivre au §1.
+
+---
+
+## 1. Séquence interactive obligatoire
+
+**Principe directeur** (`SKILL.md` §6) : les questions sont posées **une à
+une**, jamais en bloc. Confirmer chaque réponse avant de passer au champ
+suivant. Ne jamais pré-remplir un champ non fourni : appliquer la règle
+`[INCOMPLET]` (§4).
+
+### Étape 1 — Objet exact de la délibération
+- Q1 : « Quel est l'objet précis de cette délibération (budget primitif,
+  décision modificative, affectation du résultat, garantie d'emprunt,
+  admission en non-valeur, création de régie, attribution de subvention,
+  autre) ? »
+- Pourquoi : l'objet commande le régime juridique applicable (formalisme,
+  majorité requise, transmission) — renvoi `../budget-cycle.md` selon le cas.
+- Si la réponse manque : impossible d'assembler quoi que ce soit d'utile ;
+  marquer `[INCOMPLET — préciser : objet de la délibération]` et redemander
+  en priorité avant de poursuivre les autres étapes.
+
+### Étape 2 — Organe compétent et quorum
+- Q2 : « Quel est l'organe appelé à délibérer (conseil municipal,
+  communautaire, départemental, régional, autre assemblée), et l'objet
+  relève-t-il d'une délégation déjà consentie à l'exécutif ? »
+- Pourquoi : la compétence de l'organe est une ligne « Oui » de la matrice
+  `SKILL.md` §2.2 — jamais présumée. Une délibération prise par un organe
+  incompétent, ou par l'exécutif sans délégation régulière, est entachée
+  d'incompétence.
+- Si la délégation est incertaine : marquer `[INCOMPLET — préciser :
+  existence et périmètre de la délégation]` et signaler le risque
+  d'incompétence plutôt que de la présumer.
+
+### Étape 3 — Date de la séance et convocation
+- Q3 : « Quelle est la date de la séance, et la convocation a-t-elle été
+  adressée dans le délai applicable, avec la note de synthèse ou le rapport
+  requis pour ce type d'objet ? »
+- Pourquoi : un vice de convocation ou l'absence de note explicative expose
+  la délibération à l'annulation pour vice de procédure.
+- Si la date ou les conditions de convocation manquent : `[INCOMPLET —
+  préciser : date de séance / conditions de convocation]`.
+
+### Étape 4 — Visas
+- Q4 : « Quels textes souhaitez-vous viser (CGCT, code applicable au budget
+  concerné, délibération antérieure sur le même objet, avis ou rapport
+  préalable) ? »
+- Pourquoi : chaque visa engage une provenance vérifiée. Ce générateur ne
+  complète **jamais** un visa de mémoire.
+- Chaque texte cité sans vérification dans la session est marqué `[Vu ... —
+  à confirmer en version consolidée]`. Refuser tout visa générique du type
+  « vu le CGCT » sans article précis.
+
+### Étape 5 — Exposé des motifs
+- Q5 : « Quel est le contexte et le motif de cette délibération (situation
+  budgétaire, événement déclencheur, obligation réglementaire, projet à
+  financer) ? »
+- Pourquoi : l'exposé des motifs éclaire le contrôle de légalité et
+  l'assemblée elle-même ; son absence ou son caractère stéréotypé fragilise
+  l'acte, notamment s'il fait grief.
+
+### Étape 6 — Dispositif article par article
+- Q6 : « Que doit décider précisément chaque article (montant, affectation,
+  bénéficiaire, condition, entrée en vigueur) ? Formulez la mesure exacte de
+  chaque article envisagé. »
+- Pourquoi : le dispositif est la seule partie opposable de la délibération ;
+  toute imprécision (montant arrondi, bénéficiaire non identifié, condition
+  implicite) est un risque contentieux ou d'exécution.
+
+### Étape 7 — Incidence financière
+- Q7 : « Quelle est l'incidence financière de cette délibération : section
+  concernée (fonctionnement ou investissement), chapitre, article,
+  imputation précise, montant ? »
+- Pourquoi : la section et l'imputation conditionnent l'équilibre réel du
+  budget (`../controle-budgetaire.md`) et la régularité de l'exécution qui
+  suivra (`../nomenclature-m57.md`).
+- **Aucun montant ni imputation ne se déduit ni ne s'arrondit** : si la
+  donnée manque, marquer `[INCOMPLET — préciser : montant / imputation]` et
+  ne jamais proposer un chiffre de substitution, même « pour l'exemple ».
+- **Contrôle de cohérence obligatoire** : si des annexes chiffrées
+  accompagnent la délibération (état de la dette, tableau des effectifs,
+  liste des subventions, annexes du budget), le montant figurant dans le
+  corps de la délibération doit être **strictement cohérent** avec celui des
+  annexes. Signaler tout écart identifié et ne jamais le corriger de
+  sa propre initiative.
+
+### Étape 8 — Transmission au contrôle de légalité
+- Q8 : « Cette délibération figure-t-elle dans la liste des actes soumis à
+  transmission obligatoire au représentant de l'État, et par quel circuit
+  (dématérialisé ou autre) ? »
+- Pourquoi : le caractère exécutoire de l'acte est conditionné à sa
+  publicité et, pour les actes concernés, à sa transmission — vérifier via
+  `../controle-budgetaire.md`, jamais présumer une dispense.
+- Si la réponse est incertaine : rappeler que la posture la plus sûre reste
+  de transmettre, sans affirmer l'obligation comme acquise si elle n'a pas
+  été vérifiée.
+
+### Étape 9 — Voies

@@ -1,0 +1,117 @@
+# Liste des règlements sanitaires départementaux (RSD) — liens de récupération
+
+> **Objet** : lever la référence « non confirmée » qu'était le **RSD** dans
+> `references-verifiees.md`. Le RSD n'est **pas consolidé sur Légifrance** : il
+> reste un **arrêté préfectoral propre à chaque département** (fondement :
+> **CSP art. L. 1311-1 et L. 1311-2** — pouvoir réglementaire sanitaire ;
+> modèle du **RSD type**, circulaire du 9 août 1978 modifiée). Ce fichier
+> fournit, pour chaque département, un **lien de récupération vérifié** vers la
+> source officielle.
+>
+> **Provenance (règle P1 du socle)** : chaque URL ci-dessous a été **récupérée
+> par appel d'outil** (fetch de la page ARS/préfecture ou résultat de recherche)
+> le **2026-07-01**. Aucun lien n'est reconstitué de mémoire. Les liens non
+> localisés sur une source officielle sont marqués `non trouvé` avec la voie de
+> récupération alternative.
+
+---
+
+## 1. Cadre et mode d'emploi
+
+- **Nature** : le RSD est un **acte réglementaire local** (arrêté préfectoral).
+  Sa **mise en application relève du maire** (CGCT art. L. 2212-2 ; CSP
+  art. L. 1421-4 — police de la salubrité). C'est pourquoi il intéresse
+  directement le DPM (bruit de voisinage, déchets, insalubrité, animaux,
+  propreté, occupation).
+- **Deux niveaux d'agrégation officiels** :
+  1. **ARS régionale** (`*.ars.sante.fr`) — plusieurs régions publient une
+     **page d'agrégation** listant le RSD de chaque département (liens
+     `/media/<id>/download`). C'est la source à privilégier quand elle existe.
+  2. **Préfecture** (`www.<departement>.gouv.fr`) — lorsque l'ARS régionale
+     n'agrège pas, le RSD est publié sur le site de la préfecture.
+- **Réserve de version** : un RSD peut avoir été **modifié par arrêtés
+  successifs**. Vérifier la **date de la version** et l'existence d'arrêtés
+  modificatifs (bruit, brûlage, etc.) avant de fonder un acte. Plusieurs
+  départements diffusent le RSD **en plusieurs fichiers/titres** : le lien
+  pointe alors vers la **page d'agrégation officielle** (signalé en note).
+- **Recontrôle** : les liens ARS/préfecture peuvent changer lors des refontes
+  de sites. En cas de lien mort, repartir de la page d'agrégation régionale ou
+  d'une recherche « règlement sanitaire départemental <département> gouv.fr ».
+
+---
+
+## 2. Liens par région (agrégation ARS lorsqu'elle existe)
+
+### Auvergne-Rhône-Alpes — *ARS agrège (12/12)*
+Page : `https://www.auvergne-rhone-alpes.ars.sante.fr/les-reglements-sanitaires-departementaux-en-auvergne-rhone-alpes`
+
+| N° | Département | Lien de récupération | Source |
+|----|-------------|----------------------|--------|
+| 01 | Ain | https://www.auvergne-rhone-alpes.ars.sante.fr/media/1262/download?inline | ARS |
+| 03 | Allier | https://www.auvergne-rhone-alpes.ars.sante.fr/media/1263/download?inline | ARS |
+| 07 | Ardèche | https://www.auvergne-rhone-alpes.ars.sante.fr/media/1264/download?inline | ARS |
+| 15 | Cantal | https://www.auvergne-rhone-alpes.ars.sante.fr/media/1265/download?inline | ARS |
+| 26 | Drôme | https://www.auvergne-rhone-alpes.ars.sante.fr/media/94020/download?inline | ARS — en 9 titres (`/media/94020` à `/media/94028`) |
+| 38 | Isère | https://www.auvergne-rhone-alpes.ars.sante.fr/media/17064/download?inline | ARS — + art. 105-169 : `/media/61999/download?inline` |
+| 42 | Loire | https://www.auvergne-rhone-alpes.ars.sante.fr/media/1272/download?inline | ARS |
+| 43 | Haute-Loire | https://www.auvergne-rhone-alpes.ars.sante.fr/media/1273/download?inline | ARS |
+| 63 | Puy-de-Dôme | https://www.auvergne-rhone-alpes.ars.sante.fr/media/1274/download?inline | ARS — en plusieurs titres (`/media/1275…1293`) |
+| 69 | Rhône | https://www.auvergne-rhone-alpes.ars.sante.fr/media/17065/download?inline | ARS |
+| 73 | Savoie | https://www.auvergne-rhone-alpes.ars.sante.fr/media/17063/download?inline | ARS |
+| 74 | Haute-Savoie | https://www.auvergne-rhone-alpes.ars.sante.fr/media/17062/download?inline | ARS |
+
+### Bourgogne-Franche-Comté — *préfectures (8/8)*
+*(Pas de page d'agrégation ARS par département.)*
+
+| N° | Département | Lien de récupération | Source |
+|----|-------------|----------------------|--------|
+| 21 | Côte-d'Or | https://www.cote-dor.gouv.fr/contenu/telechargement/19616/150329/file/Règlement%20Sanitaire%20Départemental-RSD.pdf | Préfecture |
+| 25 | Doubs | https://www.doubs.gouv.fr/contenu/telechargement/37510/232014/file/RSD25+Modifi%C3%A9+2022.pdf | Préfecture (version modifiée 2022) |
+| 39 | Jura | https://www.jura.gouv.fr/content/download/2797/18049/file/R%C3%A8glement%20sanitaire%20d%C3%A9partemental.pdf | Préfecture |
+| 58 | Nièvre | https://www.nievre.gouv.fr/IMG/pdf/reglement_sanitaire_departemental.pdf | Préfecture |
+| 70 | Haute-Saône | https://www.haute-saone.gouv.fr/content/download/1300/8655/file/RSD_1ere_partie.pdf | Préfecture — RSD en plusieurs parties (page : `/Actions-de-l-Etat/Environnement/Reglement-sanitaire-departemental`) |
+| 71 | Saône-et-Loire | https://www.saone-et-loire.gouv.fr/contenu/telechargement/11220/135147/file/rsd71.pdf | Préfecture |
+| 89 | Yonne | https://www.yonne.gouv.fr/contenu/telechargement/22287/182909/file/RSD+2002.pdf | Préfecture (version 2002) |
+| 90 | Territoire de Belfort | https://www.territoire-de-belfort.gouv.fr/content/download/3868/25892/file/rds.pdf | Préfecture |
+
+### Bretagne — *ARS agrège (4/4)*
+
+| N° | Département | Lien de récupération | Source |
+|----|-------------|----------------------|--------|
+| 22 | Côtes-d'Armor | https://www.bretagne.ars.sante.fr/media/2079/download | ARS |
+| 29 | Finistère | https://www.bretagne.ars.sante.fr/media/2080/download | ARS |
+| 35 | Ille-et-Vilaine | https://www.bretagne.ars.sante.fr/media/2081/download | ARS |
+| 56 | Morbihan | https://www.bretagne.ars.sante.fr/media/2082/download | ARS |
+
+### Centre-Val de Loire — *ARS agrège (6/6)*
+
+| N° | Département | Lien de récupération | Source |
+|----|-------------|----------------------|--------|
+| 18 | Cher | http://www.cher.gouv.fr/Politiques-publiques/Environnement-eau-foret-chasse-peche-reserves-naturelles/Reglement-Sanitaire-Departemental | Préfecture (via page ARS CVL) |
+| 28 | Eure-et-Loir | http://www.eure-et-loir.gouv.fr/Politiques-publiques/Environnement/Reglement-sanitaire-departemental | Préfecture (via page ARS CVL) |
+| 36 | Indre | https://www.centre-val-de-loire.ars.sante.fr/media/2445/download | ARS |
+| 37 | Indre-et-Loire | https://www.centre-val-de-loire.ars.sante.fr/media/2446/download | ARS |
+| 41 | Loir-et-Cher | https://www.centre-val-de-loire.ars.sante.fr/media/2449/download | ARS |
+| 45 | Loiret | https://www.centre-val-de-loire.ars.sante.fr/media/2450/download | ARS |
+
+### Corse — *partiel (voir §4)*
+
+Il existe **deux RSD distincts** (un pour la Corse-du-Sud, un pour la
+Haute-Corse — confirmé par les métadonnées de copies), mais aucun lien n'est à
+la fois **officiel et attribuable par département** avec certitude.
+
+| N° | Département | Lien de récupération | Source |
+|----|-------------|----------------------|--------|
+| 2A/2B | Corse (doc ARS unique) | https://www.corse.ars.sante.fr/media/100726/download | ARS Corse — **officiel** mais **attribution 2A/2B indéterminée** ; renvoie 403 en accès automatisé (probable géo-blocage US — accessible depuis une IP française). Voir §4 |
+| 2A | Corse-du-Sud | `non trouvé (officiel)` | Voir §4 (copie tierce étiquetée « Préfet de la Corse-du-Sud », non officielle) |
+| 2B | Haute-Corse | `non trouvé (officiel)` | Voir §4 (RSD 2B distinct confirmé par copies tierces, non officielles) |
+
+### Grand Est — *ARS agrège (10/10)*
+Page : `https://www.grand-est.ars.sante.fr/reglements-sanitaires-departementaux-4`
+
+| N° | Département | Lien de récupération | Source |
+|----|-------------|----------------------|--------|
+| 08 | Ardennes | https://www.grand-est.ars.sante.fr/media/109424/download?inline | ARS |
+| 10 | Aube | https://www.grand-est.ars.sante.fr/media/9922/download?inline | ARS |
+| 51 | Marne | https://www.grand-est.ars.sante.fr/media/9923/download?inline | ARS |
+| 52 | H

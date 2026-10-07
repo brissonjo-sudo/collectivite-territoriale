@@ -1,0 +1,155 @@
+ administrés** : données sur l'auteur ET la personne
+  visée ; information des deux à examiner (art. 14 — à confirmer) ; durées
+  courtes ; finalité répressive → STOP RÉGIME (`analyse-situation.md` §2).
+- **GRU et courriers** : minimiser les champs libres (proscrire les
+  commentaires subjectifs) ; durées liées à la demande, référentiels CNIL
+  datés ; formulaires et hébergement → §5.9.
+
+### 5.6 Vidéoprotection et sécurité
+
+- **Renvoi principal** : autorisation préfectorale (CSI), doctrine d'emploi,
+  déport aux forces de l'État → skill **dpm-fpt**. Ne pas dérouler ici.
+- Volet données traité ici : **registre** (→ `gouvernance-registre.md`) ;
+  **information du public** (panneaux + mention complète — doctrine CNIL, à
+  dater) ; **durées** (fixées par l'autorisation et les textes — aucune
+  valeur de mémoire) ; **droits des personnes filmées**
+  (→ `droits-personnes.md`) ; **AIPD** (surveillance systématique d'un lieu
+  public = risque élevé, listes CNIL à vérifier → `aipd.md`).
+- **Caméras-piétons et vidéoverbalisation** : régime **Police-Justice**
+  probable → `analyse-situation.md` §2 ; opérationnel → **dpm-fpt**. Un
+  même parc peut relever de **deux régimes selon la finalité** : découper.
+
+### 5.7 Ressources humaines
+
+- **Renvoi principal** : fond statutaire (carrière, paie, discipline) →
+  skill **drh-fpt**. Ne pas dérouler ce fond ici.
+- Conformité RH traitée ici : **SIRH et dossiers agents** (registre,
+  durées — référentiels CNIL datés + archives §5.11, habilitations) ;
+  **badgeage** (finalité, proportionnalité) ; **géolocalisation des
+  véhicules** (finalités admises limitées, désactivation hors service —
+  doctrine CNIL à dater) ; **vidéosurveillance des locaux** (pas de
+  surveillance permanente des postes) ; **données syndicales** = **données
+  sensibles** (art. 9 — à confirmer) — cloisonner, hors dossier de carrière.
+- Tout dispositif de contrôle : **information individuelle des agents** et
+  consultation des instances compétentes (compétence exacte → **drh-fpt**).
+  Accès de l'agent à son dossier → `droits-personnes.md`.
+
+### 5.8 Cimetières et funéraire
+
+- **Concessions et registres** : encadrés par le CGCT (à vérifier) ; durées
+  longues (concessions + archives §5.11) — pas de minimisation standard.
+- Le RGPD protège les **vivants** ; les données des défunts relèvent d'un
+  régime particulier (directives post-mortem, loi 78-17 — à vérifier) et
+  révèlent souvent des données sur les vivants (filiation).
+- **Généalogistes** : distinguer archives publiques communicables (délais
+  du code du patrimoine — à vérifier) et fichiers vivants de gestion.
+  Tracer les communications.
+
+### 5.9 Téléservices, site web, communication
+
+- **Cookies et traceurs** : consentement préalable sauf exemptions —
+  doctrine CNIL à citer **avec sa date de version** ; auditer le site réel,
+  pas la promesse de l'éditeur.
+- **Formulaires en ligne** : minimisation, mention d'information (art. 13 —
+  à confirmer) au point de collecte, champs facultatifs signalés.
+- **Newsletters** : cas où le **consentement est la bonne base légale**
+  (exception au socle §4) — inscription libre, pas de pré-cochage.
+- **Photos et vidéos d'événements** : **droit à l'image ET protection des
+  données cumulés** (piège §8) ; autorisation par support ; mineurs → §5.3.
+- **Réseaux sociaux de la commune** : la commune répond de ses pages
+  (statistiques d'audience — jurisprudence CJUE via `recherche-juridique`) ;
+  modérer les commentaires nominatifs ; aucun ciblage depuis les fichiers.
+- **Bulletin municipal** : publications nominatives à fonder ; la rubrique
+  état civil suppose l'accord des intéressés — doctrine à vérifier et dater.
+- Renvois : hébergeur, éditeur, emailing → `sous-traitance-transferts.md` ;
+  sécurité du site → `securite-traitements.md`.
+
+### 5.10 Open data et réutilisation
+
+- **Obligation d'ouverture** : CRPA et loi pour une République numérique —
+  périmètre et seuils à vérifier. L'ouverture ne neutralise **jamais** la
+  protection des données ; les deux corpus s'articulent.
+- **Règle d'or avant publication** : anonymisation réelle (démontrable —
+  doctrine CNIL/CEPD à dater), occultation, ou texte permettant la
+  diffusion — à vérifier au cas par cas.
+- **Délibérations et actes en ligne** : occulter les données personnelles
+  avant mise en ligne — doctrine CNIL/CADA à dater. La transparence de
+  l'acte n'exige pas l'exposition des personnes.
+- **Subventions** : publication des données essentielles encadrée par des
+  textes propres (à vérifier) ; distinguer personnes morales et physiques.
+- Vigilance : un jeu « pseudonymisé » reste personnel ; la réidentification
+  par croisement est le risque central à l'échelle communale.
+
+### 5.11 Archives
+
+- **Renvoi sans duplication** : appliquer le réflexe « archives publiques »
+  du socle (`socle-sources-verification.md` §4) — effacement RGPD articulé
+  avec le code du patrimoine et le visa d'élimination (à confirmer).
+- Une seule consigne ici : **aucune conclusion « supprimer / purger » sans
+  ce croisement**. Une durée d'utilité courante débouche sur un sort final
+  (élimination visée ou versement), pas sur une suppression sèche.
+
+---
+
+## 6. Procédures et délais
+
+- Pas de délai propre : 72 h, 1 mois, consultation → branches transverses.
+- Séquence **mise en conformité d'un service existant** : cartographier →
+  registre → bases légales et durées (textes sectoriels d'abord) →
+  information → sous-traitants et sécurité → prioriser par risque (§11).
+  Annoncer les hypothèses ; demander ce qui manque.
+
+---
+
+## 7. Déclencheurs de vérification
+
+Appliquer le socle-sources (matrice §2.2 du `SKILL.md`) avant de conclure
+sur :
+
+- la **base légale** et toute **durée de conservation** d'un traitement
+  sectoriel (texte imposant le traitement, référentiel CNIL daté) ;
+- le **régime de publicité ou de communication** d'un document (état civil,
+  listes électorales, urbanisme, actes en ligne) ;
+- la **répartition des responsabilités** commune / État / CCAS / EPCI ;
+- le caractère **obligatoire d'une AIPD** (listes CNIL en vigueur) ;
+- toute **doctrine CNIL ou CADA** mobilisée (version à dater) ;
+- la **qualification de régime** aux frontières PM (`analyse-situation.md`).
+
+---
+
+## 8. Pièges & confusions fréquentes
+
+- **« Traitement imposé par l'État = commune dispensée »** : faux. La
+  commune conserve des obligations sur son périmètre (registre, sécurité,
+  information). Déterminer qui fait quoi, jamais « personne ».
+- **Publier des délibérations ou arrêtés nominatifs sans occultation**
+  (§5.10) : transparence de l'acte ≠ exposition des personnes.
+- **Réutiliser un fichier de service pour la communication ou les vœux du
+  maire** : détournement de finalité, aggravé en période électorale (§5.2).
+  Bloquer ; proposer la voie licite (consentement dédié).
+- **Confondre droit à l'image et protection des données** : les deux
+  s'appliquent — une autorisation d'image ne vaut pas conformité RGPD, et
+  inversement.
+- **Fondre le CCAS dans la commune** (§5.4) : registres, mentions et
+  réponses aux personnes erronés en cascade.
+- **Retenir le consentement pour un service public obligatoire** :
+  requalifier (socle §4) ; pertinent pour le seul facultatif.
+- **Conclure « supprimer » sans le croisement archives** (§5.11).
+- **Analyser la vidéoverbalisation sous le seul RGPD** : erreur de régime →
+  `analyse-situation.md` §2.
+
+---
+
+## 9. Données / références à vérifier
+
+Ne jamais citer de mémoire ; vérifier en version consolidée ou dater :
+
+- Code civil et IGREC (état civil : tenue, publicité, délivrance).
+- Code électoral (REU, communication des listes, conditions).
+- Code de l'éducation (transmissions scolaires, ONDE).
+- CGCT (registre canicule, cimetières, publicité des actes).
+- CASF (domiciliation, aide sociale, partage d'informations).
+- Code de l'urbanisme + CRPA (SVE, ADS, publicité, open data) ; loi pour
+  une République numérique (seuils).
+- CSI (vidéoprotection, caméras-piétons — via `dpm-fpt`).
+- Code du patrimoine (communicabilité, élimin

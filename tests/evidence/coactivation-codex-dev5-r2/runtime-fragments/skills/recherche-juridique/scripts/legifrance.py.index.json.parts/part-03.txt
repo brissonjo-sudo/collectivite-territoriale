@@ -1,0 +1,210 @@
+ non déduites de la documentation :
+
+    * la facette ``NOM_CODE`` attend le **libellé** du code, jamais son
+      identifiant LEGITEXT — un LEGITEXT y renvoie zéro résultat *sans
+      erreur*, panne silencieuse dont on ne peut pas distinguer l'absence
+      réelle de résultat ;
+    * les facettes ``TEXT_LEGAL_STATUS``, ``ARTICLE_LEGAL_STATUS`` et
+      ``CODE`` déclenchent un **HTTP 500** sur ce fond : ne pas les y
+      remettre pour restreindre à ce qui est en vigueur ;
+    * ``DATE_VERSION`` n'est pas facultative en pratique : sans elle, le
+      moteur rend une entrée par version historique du code — près de 900
+      doublons pour un seul article — et la restriction à la version
+      applicable est justement ce que le skill exige (§ vigueur).
+    """
+    nom_code = None
+    if args.code:
+        key = args.code.upper().replace(" ", "_")
+        entree = CODES.get(key)
+        if not entree:
+            raise LegifranceError(
+                f"Code inconnu : {args.code!r}. Codes connus : "
+                f"{', '.join(sorted(CODES))}.",
+                exit_code=2,
+            )
+        nom_code = entree[1]
+
+    date_version = args.date or _aujourdhui()
+    variantes = _num_variantes(args.numero)
+    # Borne unique, appliquée à la fois à la requête et à l'affichage : un
+    # --limit nul ou négatif tronquerait sinon la liste affichée à vide tout
+    # en annonçant des résultats. 100 est le plafond de pageSize.
+    limite = max(1, min(args.limit, 100))
+    # Un critère isolé se combine en ET ; plusieurs formes concurrentes du
+    # même numéro s'excluent mutuellement, donc OU.
+    operateur = "OU" if len(variantes) > 1 else "ET"
+
+    filtres: list[dict] = [
+        {"facette": "DATE_VERSION", "singleDate": _epoch_ms(date_version)}
+    ]
+    if nom_code:
+        filtres.append({"facette": "NOM_CODE", "valeurs": [nom_code]})
+
+    body = {
+        "fond": "CODE_DATE",
+        "recherche": {
+            "champs": [
+                {
+                    "typeChamp": "NUM_ARTICLE",
+                    "criteres": [
+                        {
+                            "typeRecherche": "EXACTE",
+                            "valeur": valeur,
+                            "operateur": operateur,
+                        }
+                        for valeur in variantes
+                    ],
+                    "operateur": operateur,
+                }
+            ],
+            "filtres": filtres,
+            "pageNumber": 1,
+            # La pagination porte sur les codes, pas sur les articles : un
+            # même code peut rendre plusieurs articles (L… et R… homonymes).
+            "pageSize": limite,
+            "operateur": "ET",
+            "sort": "PERTINENCE",
+            "typePagination": "ARTICLE",
+        },
+    }
+
+    token = get_token()
+    data = api_call("/search", body, token)
+    if args.json:
+        print(json.dumps(data, ensure_ascii=False, indent=2))
+        return 0
+
+    articles = _articles_trouves(data, variantes)
+    if not articles:
+        print(
+            f"Aucun article « {args.numero} »"
+            + (f" dans {args.code}" if args.code else "")
+            + f" dans la version en vigueur au {_fr_date(date_version)}.\n"
+            "Vérifier le numéro (forme attendue : « 2212-2 » ou « L2212-2 »), "
+            "élargir en retirant --code, ou interroger une autre date avec "
+            "--date. Si l'identifiant est déjà connu, passer par "
+            "« article <LEGIARTI> ».",
+            file=sys.stderr,
+        )
+        return 5
+
+    affiches = articles[:limite]
+    print(
+        f"{len(articles)} article(s) trouvé(s) au {_fr_date(date_version)} "
+        f"— confirmer avec « article <LEGIARTI> » :"
+    )
+    for art in affiches:
+        print("─" * 60)
+        print(f"  Article     : {art['num']}")
+        print(f"  Identifiant : {art['id']}")
+        print(f"  Code        : {art['code']}")
+        if art["section"]:
+            print(f"  Emplacement : {art['section']}")
+        print(f"  Statut      : {art['etat']}   (depuis le {art['date_debut']})")
+    print("─" * 60)
+    if len(articles) > len(affiches):
+        print(f"({len(articles) - len(affiches)} autre(s) non affiché(s) — "
+              "augmenter --limit.)")
+
+    hors_vigueur = [a for a in affiches if str(a["etat"]).upper() != "VIGUEUR"]
+    if hors_vigueur:
+        print(
+            "⚠️  "
+            + ", ".join(f"{a['num']} ({a['etat']})" for a in hors_vigueur)
+            + " : ne pas citer comme droit positif sans vérification "
+            "(voir checklist-vigueur.md).",
+            file=sys.stderr,
+        )
+
+    print(
+        "\nNote : un résultat de recherche ne vaut pas lecture. Récupérer "
+        "l'article par « article <LEGIARTI> » avant toute citation "
+        "(règle de provenance)."
+    )
+    return 0
+
+
+def cmd_jurisprudence(args) -> int:
+    """Recherche une décision par numéro dans un fond de jurisprudence Légifrance.
+
+    Alias : `ceta` (Conseil d'État, fond CETAT), `constit` (Conseil
+    constitutionnel, fond CONSTIT). Pour la jurisprudence judiciaire
+    (Cass., CA, TJ), utiliser `juri` puis `decision` — Judilibre.
+
+    Best-effort (comme `search`) : renvoie l'identifiant officiel de la
+    décision (CETATEXT / CONSTEXT), à confirmer avant citation.
+    """
+    cfg = FONDS_JURIS[args.command]
+    token = get_token_cached()
+    champ = {
+        "typeChamp": "ALL",
+        "criteres": [
+            {"typeRecherche": "EXACTE", "valeur": args.numero, "operateur": "ET"}
+        ],
+        "operateur": "ET",
+    }
+    recherche = {
+        "champs": [champ],
+        "pageNumber": 1,
+        "pageSize": args.limit,
+        "operateur": "ET",
+        "sort": "PERTINENCE",
+        "typePagination": "DEFAUT",
+    }
+    body = {"recherche": recherche, "fond": cfg["fond"]}
+    data = api_call("/search", body, token)
+    if args.json:
+        print(json.dumps(data, ensure_ascii=False, indent=2))
+        return 0
+
+    results = data.get("results") or []
+    if not results:
+        print(
+            f"Aucune décision pour « {args.numero} » dans le fond {cfg['fond']} "
+            f"({cfg['label']}). Affiner le numéro ou vérifier via la source "
+            "officielle.",
+            file=sys.stderr,
+        )
+        return 5
+    print(f"{len(results)} résultat(s) — {cfg['label']} — fond {cfg['fond']} :")
+    for r in results[: args.limit]:
+        dec_id = _first_id_with_prefix(r, (cfg["prefix"],)) or r.get("id") or "?"
+        titles = r.get("titles") or []
+        # Les titres renvoyés par /search contiennent le balisage <mark> de
+        # surlignage des termes recherchés : le retirer avant affichage.
+        title = _strip_html(
+            (titles[0].get("title") if titles else None) or r.get("title") or ""
+        )
+        print(f"  • {dec_id}  {title}".rstrip())
+    print(
+        "\nNote (best-effort) : la recherche jurisprudence dépend du fond et du "
+        "format du numéro. L'identifiant ci-dessus est une source de "
+        "provenance ; confirmer la décision (formation, date, publication au "
+        "Lebon / au recueil) sur la source officielle avant citation "
+        "(règle de provenance)."
+    )
+    return 0
+
+
+# --------------------------------------------------------------------------- #
+# Commandes Judilibre
+# --------------------------------------------------------------------------- #
+def cmd_juri(args) -> int:
+    """Recherche de jurisprudence sur Judilibre (Cour de cassation et fonds CA/TJ)."""
+    params = {
+        "query": args.query,
+        "operator": args.operator,
+        "field": args.field,
+        "type": args.type,
+        "jurisdiction": args.jurisdiction,
+        "chamber": args.chamber,
+        "formation": args.formation,
+        "theme": args.theme,
+        "publication": args.publication,
+        "solution": args.solution,
+        "date_start": args.date_start,
+        "date_end": args.date_end,
+        "sort": args.sort,
+        "order": args.order,
+        "page": args.page,
+        "page_size"

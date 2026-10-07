@@ -1,0 +1,59 @@
+tes/arrete-modele.md`) — passer la grille §4 avant
+  rédaction ; intégrer motivation + voies de recours si acte faisant grief.
+- **Note au maire** (`references/templates/note-maire-modele.md`) — signaler les points de
+  fragilité identifiés par la grille, même si la décision finale appartient
+  au maire.
+- **Règlement / décision** — même grille, adaptée au caractère réglementaire
+  (motivation allégée pour les actes non visés par l'art. L. 211-2 CRPA, mais
+  base légale et proportionnalité toujours contrôlées).
+
+**Sortie attendue de l'audit** : soit l'acte est prêt à produire, soit une
+**liste de réserves précises** (point de la grille § concerné, correction
+demandée) est restituée avant toute rédaction, sans halluciner la correction
+si une donnée manque (cf. SKILL.md §6, cas `[INCOMPLET]`).
+
+---
+
+## 10. Double échelle [risque / confiance]
+
+| Point de contrôle | Risque | Confiance |
+|---|---|---|
+| Compétence / délégation de signature | Élevé | Stable (principe), à vérifier (fait) |
+| Motivation CRPA (existence de l'obligation) | Élevé | Stable |
+| Contenu précis de la motivation (suffisance) | Élevé | À vérifier (casuistique) |
+| Proportionnalité | Élevé à critique selon l'atteinte aux libertés | Jurisprudentiel (principe stable, application casuistique) |
+| Transmission au contrôle de légalité (obligation) | Élevé | Stable (principe), à vérifier (liste exacte / délai) |
+| Voies et délais de recours | Moyen à élevé | Stable |
+| Base légale de police spéciale invoquée | Élevé | À vérifier branche par branche |
+
+---
+
+## 11. Checklist de branche
+
+1. Nature de l'acte qualifiée (individuel/réglementaire, faisant grief ou
+   non) ?
+2. Autorité signataire et délégation éventuelle vérifiées (existence,
+   publication, périmètre) ?
+3. Base légale citée avec article précis, police générale/spéciale
+   distinguée ?
+4. Procédure préalable (consultation, contradictoire, publicité) tracée ?
+5. Motivation en fait et en droit conforme à l'art. L. 211-2 CRPA si l'acte
+   est visé ?
+6. Test de proportionnalité (nécessité / adaptation / mesure la moins
+   attentatoire) explicitement passé, avec alternative envisagée et écartée
+   si pertinent ?
+7. Voies et délais de recours mentionnés si acte faisant grief ?
+8. Obligation de transmission au contrôle de légalité vérifiée (liste
+   art. L. 2131-2 CGCT) et délai identifié ?
+9. Conflit de compétence (maire/préfet/OPJ) écarté ou signalé
+   (`analyse-situation.md` §3) ?
+10. Frontière RH respectée (acte statutaire individuel → `drh-fpt`) ?
+11. Toute référence numérotée porte sa réserve « à confirmer en version
+    consolidée » ou la mention « vérifié sur Légifrance le JJ/MM/AAAA » ?
+12. Couple **[risque / confiance]** restitué pour les points fragiles avant
+    transmission du livrable ?
+
+[risque : élevé par défaut sur cette brique — elle conditionne la validité
+d'actes faisant grief / confiance : stable sur les principes (compétence,
+motivation, proportionnalité, transmission), à vérifier sur les valeurs
+chiffrées (délais, seuils, liste exacte des actes transmissibles)]

@@ -1,0 +1,149 @@
+ent PM** :
+- L'agent PM peut appréhender l'auteur d'un crime ou délit flagrant puni
+  d'emprisonnement, **au même titre que tout citoyen** — ce pouvoir ne
+  dérive pas de sa qualité d'APJA mais du droit commun de l'art. 73 CPP.
+- Une fois l'appréhension faite, l'obligation est de conduire la personne
+  **devant l'OPJ le plus proche**, sans délai indu. Les modalités pratiques
+  locales ne créent aucun pouvoir supplémentaire et ne peuvent retarder cette
+  conduite.
+- La rétention de la personne dans l'attente de l'OPJ doit être **strictement
+  limitée au temps nécessaire** à cette mise à disposition. Au-delà, ou en
+  cas de contrainte prolongée, on bascule sur un acte réservé à l'OPJ
+  (placement en garde à vue) — hors du pouvoir APJA.
+- L'art. 73 CPP ne crée **aucun pouvoir de garde à vue, d'audition formelle
+  ou de fouille** : seul l'OPJ peut décider de ces mesures.
+
+#### Relevé d'identité et présentation — art. 78-6 CPP
+
+Ce régime est **distinct** de l'appréhension de l'art. 73. Il s'applique
+seulement lorsque l'agent relève l'identité d'un contrevenant pour dresser un
+PV entrant dans son champ légal de verbalisation.
+
+En cas de refus ou d'impossibilité de justifier l'identité :
+
+1. rendre compte immédiatement à l'OPJ territorialement compétent ;
+2. pendant le temps nécessaire à cette information et à la décision de l'OPJ,
+   informer la personne qu'elle est tenue de demeurer à disposition, dans les
+   limites du texte ;
+3. présenter sur-le-champ le contrevenant ou le retenir jusqu'à l'arrivée de
+   l'OPJ ou de l'APJ **uniquement si l'OPJ l'ordonne** ;
+4. à défaut d'ordre, ne pas prolonger la rétention.
+
+Ne jamais substituer l'art. 78-6 à l'art. 73, ni l'utiliser hors d'un relevé
+d'identité légalement autorisé.
+
+### 4.4 Actes hors pouvoir APJA — qualité d'OPJ et textes propres
+
+**Art. 16 du CPP** *(au socle, LEGIARTI000047052868, version du 26/01/2023,
+recontrôlé le 2026-09-14 : détermine la qualité d'officier de police
+judiciaire, dont les maires et leurs adjoints)*.
+Cet article **ne fonde pas à lui seul** chaque pouvoir d'enquête : vérifier la
+disposition procédurale propre à l'acte concerné.
+
+**Actes hors périmètre APJA, réservés à l'OPJ** (liste non exhaustive,
+détail des conditions à vérifier au cas par cas) :
+- **garde à vue** (décision, prolongation, notification des droits) ;
+- **audition formelle de suspect** (régime de l'audition libre ou de la
+  garde à vue, droits attachés) ;
+- **perquisition** : l'agent PM n'en réalise aucune, y compris en flagrance ;
+  l'art. 56 CPP confie la perquisition de flagrance à l'OPJ ;
+- **réquisition judiciaire** (réquisition à personne qualifiée, réquisition
+  d'information) ;
+- **enquête préliminaire ou de flagrance** au sens procédural (ouverture,
+  conduite, clôture) ;
+- toute mesure de **contrainte sur la personne** hors des conditions exactes
+  des art. 53 et 73 ou de l'art. 78-6 CPP ;
+- toute **fouille** d'une personne, de ses bagages ou d'un véhicule comme
+  acte d'enquête. **Seule exception, de sûreté et non d'enquête** : l'art.
+  **L. 511-1 CSI, al. 6** (au socle, LEGIARTI000041587492) autorise les
+  agents PM affectés par le maire à la sécurité d'une manifestation sportive,
+  récréative ou culturelle, d'un périmètre de protection (L. 226-1) ou de
+  l'accès à un bâtiment communal à procéder à l'**inspection visuelle des
+  bagages**, à leur **fouille avec le consentement** du propriétaire et à des
+  **palpations de sécurité avec le consentement exprès** de la personne, par
+  une personne de même sexe. Hors de ces trois cadres ou sans consentement :
+  aucune palpation, aucune fouille ;
+- le **menottage** : il ne se conçoit que dans une appréhension fondée
+  (art. 53 + 73) ou une rétention ordonnée par l'OPJ (art. 78-6), et aux
+  seules conditions de l'art. **803 CPP** (au socle §8,
+  LEGIARTI000006578404) — personne dangereuse pour autrui ou pour elle-même,
+  ou susceptible de prendre la fuite —, sans photographie ni enregistrement
+  de la personne menottée. Menotter sans fondement de rétention est une
+  contrainte illégale.
+
+**Qualification du recueil de paroles** : les seuls mots « entendu » ou « a
+avoué » ne permettent pas de décider si les propos ont été spontanés, s'ils
+constituent de simples observations recueillies lors d'une constatation, ou
+s'ils résultent d'un questionnement structuré relevant d'une audition. Demander
+les circonstances exactes : initiative des propos, questions posées, contrainte
+éventuelle, formalisation en questions-réponses et droits notifiés. Ne jamais
+requalifier rétroactivement et catégoriquement sans ces faits. Si une audition
+formelle est demandée ou apparaît, appliquer immédiatement le STOP (§4.5) ; un
+rapport licite peut seulement relater objectivement les circonstances et les
+propos effectivement perçus, sans reconstruire un échange d'audition.
+
+### 4.5 Garde-fou APJA — Hard Stop (rappel opérationnel de branche)
+
+Reprend `SKILL.md` §5.2, appliqué au pénal : dès qu'un fait constaté ou une
+demande **dépasse le périmètre des art. 21 / 21-2 CPP**, le **premier
+livrable**, avant tout autre contenu, est :
+
+```
+STOP — Cet acte dépasse les pouvoirs de l'agent de police municipale.
+Ne pas l'accomplir ni le formaliser.
+Rendre compte immédiatement à l'OPJ territorialement compétent.
+```
+
+Après ce STOP, la branche se limite à :
+1. **Constater** les faits dans le cadre strict de l'art. 21 CPP (ce qui est
+   déjà visible, sans provoquer ni interroger formellement).
+2. **Rendre compte** au maire et à l'OPJ (art. 21-2 CPP, §4.2).
+3. **Qualifier le fondement de la contrainte**, sans automatisme :
+   - art. 53 + 73 si crime flagrant ou délit flagrant puni d'emprisonnement ;
+   - art. 78-6 si relevé d'identité autorisé, refus ou impossibilité, puis
+     ordre de l'OPJ pour la présentation ou la rétention prolongée ;
+   - aucun de ces fondements : aucune rétention.
+4. **Préserver les traces et indices** de manière proportionnée, sans entrer,
+   fouiller, saisir ni déplacer ce que l'agent n'est pas autorisé à traiter.
+
+**Aucune formalisation d'acte réservé** (PV d'audition, procès-verbal de
+garde à vue, compte rendu de perquisition) ne doit être ni rédigée, ni
+esquissée, ni suggérée par l'agent PM ou par le skill.
+
+---
+
+## 5. Procédures et délais
+
+1. **Constatation** — l'agent PM constate ce qui est visible et accessible
+   sans acte de contrainte ; il consigne les éléments factuels (faits,
+   heure, lieu, témoins identifiés).
+2. **Test flagrance** — fait en train de se commettre ou venant de se
+   commettre, et gravité (crime ou délit puni d'emprisonnement) → ouvre la
+   faculté d'appréhension de l'art. 73 CPP.
+3. **Test relevé d'identité** — si contravention verbalisable et refus ou
+   impossibilité de justifier l'identité, appliquer l'art. 78-6 : information
+   immédiate de l'OPJ, puis présentation ou rétention selon son ordre.
+4. **Test garde-fou APJA** — le traitement de la suite (audition, fouille,
+   contrainte prolongée) excède-t-il l'art. 21 CPP ? Si oui → STOP (§4.5).
+5. **Présentation / conduite** — appliquer seulement le fondement qualifié :
+   art. 73 ou art. 78-6. À défaut, ne pas retenir la personne.
+   **Délai** : le code ne fixe pas de délai chiffré pour l'agent PM lui-même
+   au titre de l'art. 73 CPP — la contrainte doit rester **strictement
+   proportionnée au temps nécessaire** à la mise à disposition ; au-delà,
+   risque de voie de fait / séquestration arbitraire — *vérifier la
+   jurisprudence applicable via `recherche-juridique` en cas de doute*.
+6. **Compte rendu hiérarchique et judiciaire** — maire + OPJ territorialement
+   compétent (art. 21-2 CPP), **immédiatement**, sans attendre la rédaction
+   définitive de l'écrit.
+7. **Écrit** — rapport de mise à disposition ou rapport d'information selon
+   le cas (§10), transmis selon le circuit local.
+
+> Annoncer toute hypothèse retenue sur les délais et demander confirmation
+> du cadre local (convention de coordination, instructions du procureur) si
+> la donnée manque.
+
+---
+
+## 6. Déclencheurs de vérification
+
+A

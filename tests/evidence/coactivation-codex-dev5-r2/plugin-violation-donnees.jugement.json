@@ -1,0 +1,37 @@
+{
+  "case_id": "plugin-violation-donnees",
+  "trace_sha256": "1d4b7973a950a9b445bf9414ad4983e2433420d5140cfeb962ba635a661ec81d",
+  "verdict": "bloque",
+  "invariants": {
+    "plugin-violation-donnees.qualification_documentee": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e6", "e29"],
+      "rationale": "La réponse qualifie conditionnellement une violation de confidentialité si le destinataire était non autorisé, retient les seuls faits fournis, distingue envoi et découverte, et demande de documenter chronologie, champs exacts, destinataire, accès, suppression, retransmission, effets et mesures. Elle ne prétend pas que la documentation réelle est déjà réalisée."
+    },
+    "plugin-violation-donnees.risque_personnes": {
+      "status": null,
+      "basis": "missing",
+      "evidence_refs": ["e6", "e25", "e29"],
+      "rationale": "La réponse identifie les inconnues pertinentes et refuse correctement de présumer des données de santé ou un risque élevé. Elle distingue les deux seuils et demande une évaluation future par le DPO, mais n'analyse explicitement aucun préjudice concret possible pour les personnes à partir des coordonnées et données sociales exposées. La mobilisation urgente liée aux 2 000 usagers et la mention générique des usages possibles ne démontrent pas cette analyse obligatoire."
+    },
+    "plugin-violation-donnees.delai_source_verifie": {
+      "status": null,
+      "basis": "retrieval",
+      "evidence_refs": ["e19", "e20", "e22", "e24", "e29", "e31"],
+      "rationale": "Les extraits primaires complets des articles 33 et 34 reproduits par la CNIL en e20, rattachés à l'appel réussi e19, corroborent les 72 heures si possible, les meilleurs délais et le complément sans retard indu annoncés en e29. Toutefois leurs métadonnées applicable_at_as_of_date et legal_validity sont nulles : la vigueur et l'applicabilité à la date d'analyse ne sont pas établies. Les autres résultats EUR-Lex sont des résumés, recherches ou extraits tronqués, et ne comblent pas cette lacune. La vérification juridique stricte reste donc non démontrée."
+    },
+    "plugin-violation-donnees.point_depart_source_verifie": {
+      "status": null,
+      "basis": "retrieval",
+      "evidence_refs": ["e19", "e20", "e24", "e29", "e31"],
+      "rationale": "L'article 33 primaire en e20 désigne bien la prise de connaissance par le responsable du traitement, conformément au T0 retenu en e29 sans échéance calendaire inventée. L'explication supplémentaire du degré raisonnable de certitude est uniquement présente dans des résultats de recherche ou tool_summary, notamment e24, qui ne valent pas texte primaire. Les métadonnées de vigueur et d'applicabilité de l'article primaire sont également nulles ; l'exigence documentaire stricte n'est pas entièrement démontrée."
+    },
+    "plugin-violation-donnees.revue_avant_notification": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e29"],
+      "rationale": "La réponse impose explicitement la relecture des projets de messages externes par le DPO humain et leur validation par le responsable compétent, attribue au responsable du traitement les obligations externes, et ne prétend ni avoir obtenu cette revue ni avoir effectué une notification."
+    }
+  }
+}

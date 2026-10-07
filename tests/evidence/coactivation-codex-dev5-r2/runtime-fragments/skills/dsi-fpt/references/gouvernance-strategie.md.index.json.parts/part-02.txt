@@ -1,0 +1,51 @@
+uels : si la demande vise des personnes,
+  appliquer `SKILL.md` §5.3 avant toute réponse technique.
+- Répondre à un incident en cours par une réorganisation : déclencher d'abord
+  `SKILL.md` §5.2 et `references/crise-cyber-continuite.md`.
+
+## 9. Données et valeurs à vérifier
+
+Consulter `references/references-verifiees.md` : CGCT sur services communs et
+biens partagés ; loi relative au numérique responsable ; état de la
+transposition de la directive sur la cybersécurité si invoquée. Ces textes
+restent à confirmer en version consolidée pour la décision.
+
+Vérifier à la source la population retenue, les catégories visées, les seuils,
+le calendrier, le décret d'application, les pouvoirs du signataire et les
+dispositions de la convention. Le registre livré oriente ces vérifications.
+Le cache de maintenance du dépôt source est hors du paquet runtime : ne pas
+le charger ni reprendre ses valeurs.
+
+## 10. Écrits et livrables
+
+Produire une note d'arbitrage : problème de service, faits établis,
+incertitudes, options, recommandation, risques résiduels, besoins et décision
+attendue. Ajouter un portefeuille priorisé, une matrice de responsabilités ou
+une feuille de route selon le besoin. Aucun de ces formats de pilotage n'est
+présenté comme un contenu légal obligatoire sans vérification.
+
+Pour formaliser un projet, utiliser
+`references/templates/fiche-projet-si.md` via
+`references/ecrits-numerique.md` et `objets/projet-si.md`. Ne pas inventer les
+champs manquants : brouillon `[INCOMPLET]`.
+
+## 11. Double échelle [risque / confiance]
+
+Appliquer `SKILL.md` §5.1. Un tableau de pilotage sans effet engageant peut
+relever de [faible / stable]. Un arbitrage affectant un service essentiel ou
+une dépendance non maîtrisée appelle [élevé / à vérifier]. Une mutualisation
+dont les pouvoirs ou le régime ne sont pas établis ne se conclut pas :
+[élevé / abstention] sur ce point, avec options techniques conditionnelles.
+Le caractère courant d'une organisation n'augmente pas la confiance juridique.
+
+## 12. Checklist de branche
+
+- Garde-fous `SKILL.md` §5.2–5.3 appliqués avant tout contenu si déclenchés ?
+- Mode d'exercice, décideur et responsable métier identifiés ?
+- Recommandation liée à un service rendu et à une capacité réelle ?
+- Obligations sourcées et applicabilité testée avant conclusion ?
+- Responsabilités conservées malgré mutualisation ou externalisation ?
+- Frontières `dpo-ct`, `drh-fpt`, `dirfi-fpt` et passation respectées sans
+  illustration ?
+- Indicateurs utiles à une décision, sans données nominatives ?
+- Chemins internes cités ; livrable produit ou marqué `[INCOMPLET]` ?

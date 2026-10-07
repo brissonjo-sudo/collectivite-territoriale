@@ -1,0 +1,155 @@
+# Générateur interactif — Rapport de mise à disposition (v0.1.0)
+
+> Couche 4 (générateur d'écrit), piloté par `references/ecrits-professionnels.md`
+> §4 et §5 (branche de rattachement — lire avant tout usage), et par
+> `references/penal-procedure.md` §4.3 à §4.5 (art. 53/73 et 78-6 CPP,
+> garde-fou APJA — lire avant tout usage). Structure de dialogue alignée sur
+> `SKILL.md` §6. Gabarit de mise en forme inspiré de la discipline du
+> gabarit de décision du skill `drh-fpt` (champs entre `[ ]`, aucune donnée
+> nominative en clair dans le canevas, réserves « à confirmer en version
+> consolidée » sur tout visa).
+>
+> **Ce fichier ne tranche jamais la qualification pénale** (renvoi
+> `references/penal-procedure.md` / `references/reglementation-appliquee.md`)
+> et **ne formalise jamais un acte réservé à l'OPJ** (audition, garde à vue,
+> perquisition, réquisition judiciaire). Il documente strictement une mesure
+> ponctuelle fondée soit sur l'**appréhension** des art. 53/73 CPP, soit sur le
+> **relevé d'identité** et l'ordre de l'OPJ prévus à l'art. 78-6 CPP.
+
+---
+
+## 0. Quand utiliser ce générateur
+
+Le **rapport de mise à disposition** trace l'une des deux routes suivantes :
+
+- **Route A — art. 53 + 73 CPP** : appréhension de l'auteur d'un crime flagrant
+  ou d'un délit flagrant puni d'emprisonnement, puis conduite devant l'OPJ ;
+- **Route B — art. 78-6 CPP** : relevé d'identité entrant dans le champ légal,
+  refus ou impossibilité de justification, information de l'OPJ, puis
+  présentation ou rétention selon son ordre.
+
+Ne jamais fusionner ces fondements ni utiliser ce rapport lorsqu'aucune route
+n'est caractérisée.
+
+**Avant d'ouvrir ce générateur**, dérouler le test de
+`references/ecrits-professionnels.md` §5.1 et `references/penal-procedure.md`
+§4.3 :
+
+1. **Quelle route fonde la mesure : art. 53 + 73, ou art. 78-6 CPP ?**
+   Aucune → ce n'est **pas** le bon écrit. Réorienter vers
+   `references/templates/rapport-information.md` (simple compte rendu, sans appréhension)
+   ou `references/templates/pv-contravention.md` (constatation d'une contravention relevant
+   de la compétence de verbalisation de l'agent), selon la logique de
+   `references/ecrits-professionnels.md` §5.1.
+2. **Les conditions propres à la route sont-elles établies ?**
+   - Route A : crime flagrant ou délit flagrant puni d'emprisonnement.
+   - Route B : contravention verbalisable, relevé d'identité, refus ou
+     impossibilité de justification, information immédiate de l'OPJ et ordre
+     explicite pour la présentation ou la rétention au-delà de sa décision.
+   En cas de doute, marquer `[INCOMPLET]` et ne pas présenter la mesure comme
+   régulière.
+3. **Rappel du garde-fou APJA (`SKILL.md` §5.2,
+   `references/penal-procedure.md` §4.4-4.5)** : ce générateur **ne sert qu'à
+   documenter la mesure licite et la remise à l'OPJ**. Si, à un moment
+   quelconque du recueil, il apparaît qu'un acte réservé à l'OPJ a été
+   pratiqué ou s'apprête à l'être par l'agent PM lui-même (audition formelle,
+   fouille, garde à vue, perquisition, réquisition judiciaire), afficher **immédiatement** le bloc **STOP** ci-dessous, avant
+   tout autre contenu, et limiter la suite à l'action APJA conforme. Une
+   **palpation de sécurité** ou une **inspection visuelle de bagages**
+   consentie, dans les seuls cas de l'art. **L. 511-1 CSI** (manifestation,
+   périmètre de protection, accès à un bâtiment communal — au socle §3),
+   n'est pas une fouille : elle se **mentionne** dans le rapport avec son
+   fondement, le consentement recueilli et ses circonstances. Hors de ces
+   cas, une palpation est une fouille : STOP.
+
+```
+STOP — Cet acte dépasse les pouvoirs de l'agent de police municipale.
+Ne pas l'accomplir ni le formaliser.
+Rendre compte immédiatement à l'OPJ territorialement compétent.
+```
+
+**Rappel structurant** (`references/ecrits-professionnels.md` §5.4) : le STOP
+ne rend pas ce rapport automatiquement mobilisable. Après le compte rendu à
+l'OPJ, qualifier séparément la route A ou B. Si elle est établie, ce
+générateur documente uniquement la mesure conforme et sa chronologie, jamais
+l'acte réservé. Si aucune route n'est établie, ne retenir personne et produire
+seulement le rapport d'information ou le PV adapté.
+
+Si aucun blocage n'apparaît **et qu'une route A ou B est établie**, le rapport
+de mise à disposition est le bon écrit. Poursuivre au §1.
+
+---
+
+## 1. Séquence interactive obligatoire
+
+**Principe directeur** (`SKILL.md` §6, `ecrits-professionnels.md` §6.2) : les
+questions sont posées **une à une**, jamais en bloc. Confirmer chaque réponse
+avant de passer au champ suivant. Ne jamais pré-remplir un champ non fourni :
+appliquer la règle `[INCOMPLET]` (§4).
+
+Ordre imposé des questions :
+
+### Étape 1 — Identification du rédacteur (qui rapporte)
+- Nom, qualité (agent PM / chef de poste / DPM), n° d'agrément si exigé par
+  le texte applicable (à vérifier).
+> *Question posée* : « Qui rédige ce rapport ? Précisez nom, grade/qualité,
+> et n° d'agrément si applicable. »
+
+### Étape 2 — Fondement et date des faits
+- Route A : date et heure du crime ou délit flagrant.
+- Route B : contravention verbalisée, date et heure du relevé d'identité.
+> *Question posée* : « La mesure relève-t-elle des art. 53/73 ou de l'art.
+> 78-6 CPP ? Quels faits datés établissent les conditions de cette route ? »
+
+### Étape 3 — Lieu
+- Localisation précise du fait et, si différent, lieu du relevé d'identité ou
+  de l'appréhension.
+> *Question posée* : « Où le fait s'est-il produit, et où la mesure a-t-elle
+> débuté si le lieu est différent ? »
+
+### Étape 4 — Faits caractérisant la route
+- Route A : éléments personnellement constatés caractérisant la flagrance.
+- Route B : contravention verbalisable, relevé d'identité, refus ou
+  impossibilité de justification, heure du compte rendu à l'OPJ et teneur de
+  sa décision.
+> *Question posée* : « Quels faits établissent chacune des conditions du
+> fondement retenu, sans interprétation ni supposition ? »
+
+### Étape 5 — Qualification et base légale
+- Le rapport de mise à disposition **n'a pas vocation à trancher** la
+  qualification pénale (renvoi `references/penal-procedure.md` et
+  `references/reglementation-appliquee.md` pour le fond). Elle doit être
+  présentée comme une **hypothèse**, utile pour motiver l'appréhension, jamais
+  comme acquise.
+> *Question posée* : « Quelle qualification est envisagée et quel fondement
+> exact autorise la mesure : art. 53 + 73 ou art. 78-6 CPP ? »
+
+### Étape 6 — Heure exacte du début de la mesure
+- Route A : heure de l'appréhension.
+- Route B : heure du refus ou de l'impossibilité, heure de l'information de
+  l'OPJ et heure de son ordre éventuel.
+> *Question posée* : « À quelles heures exactes la mesure a-t-elle commencé,
+> l'OPJ a-t-il été informé et a-t-il donné sa décision ? »
+
+### Étape 7 — Description de la contrainte exercée
+- Description strictement limitée à ce que permet le fondement retenu.
+  Pour l'art. 78-6, distinguer le temps nécessaire à l'information et à la
+  décision de l'OPJ de la présentation ou rétention ordonnée. **Ne jamais**
+  consigner de questions-réponses
+  circonstanciées, de fouille, ni tout élément pouvant
+  s'apparenter à une audition ou à un acte d'enquête — cela relève
+  exclusivement de l'OPJ (`references/penal-procedure.md` §4.3-4.4).
+> *Question posée* : « Quelle contrainte avez-vous exercée sur la personne,
+> et seulement celle-là (ex. interpellation, maintien, escorte) ? Confirmez
+> qu'aucune audition ni fouille n'a été pratiquée. »
+
+### Étape 8 — Personne concernée
+- Identité si connue (jamais de donnée nominative en clair dans le canevas —
+  voir §3), à défaut éléments de signalement objectifs.
+> *Question posée* : « La personne concernée est-elle identifiée ? Si oui,
+> précisez son identité (restera anonymisée dans le canevas tant qu'elle
+> n'est pas confirmée pour la version consolidée). »
+
+### Étape 9 — Témoins
+- Présence de témoins de la mesure ou des faits, identifiés ou non.
+> *Question posée* : « Y a-t-il des témoins de

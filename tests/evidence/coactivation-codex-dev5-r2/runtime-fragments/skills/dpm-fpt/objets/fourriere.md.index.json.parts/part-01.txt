@@ -1,0 +1,138 @@
+# Objet — Enlèvement et mise en fourrière d'un véhicule (v0.1.0)
+
+> Structure conforme à `_gabarit-objet.md`. Cet objet **agrège et pointe** ; le
+> fond juridique reste dans `references/`, la jurisprudence reste renvoyée à
+> `recherche-juridique`. Aucune référence numérotée ou valeur datée citée de
+> mémoire : tout numéro d'article ou délai est marqué « à confirmer en version
+> consolidée » sauf vérification effective en session.
+
+**Situation type** : Constatation d'un stationnement gênant ou abusif; injonction
+aux conducteur/propriétaire; enlèvement et mise en fourrière du véhicule;
+gardiennage et restitution, frais associés.
+
+**[Risque / Confiance] dominant** : **Moyen à élevé / Stable dans son principe,
+modalités de garde et restitution à vérifier**. L'enlèvement est un acte
+d'exécution administrative direct (sans saisine judiciaire préalable), assez
+encadré par le code de la route mais relevant d'une décision de l'autorité de
+police avant mise en œuvre opérationnelle. Erreur de qualité du stationnement
+incriminé, absence d'injonction préalable, ou irrégularité dans la saisine de la
+fourrière peuvent fragiliser l'acte et exposer à un recours administratif
+(restitution, dommages et intérêts).
+
+---
+
+## 1. Acteurs et autorités compétentes
+
+- **Le maire** : titulaire de la **police spéciale de la circulation et du
+  stationnement** dans les limites de sa compétence territoriale (voirie
+  communale, hors agglomération sous certaines conditions — à confirmer). Il
+  fixe les conditions du stationnement par arrêté (emplacements réservés,
+  horaires, interdictions sectorielles) : ce sont ses arrêtés qui fondent la
+  qualification de l'infraction. Il **n'est pas l'autorité qui prescrit** la
+  mise en fourrière d'un véhicule donné (voir ci-dessous, R. 325-14).
+- **Le préfet** : compétent sur les routes à circulation importante, hors
+  agglomération, et pouvant se substituer au maire en cas de carence
+  (→ `../references/pouvoirs-police.md` §4.5). Attention : clarifier la voirie
+  exacte (voie communale / voie préfectorale / route nationale) avant d'engager
+  l'action.
+- **La police municipale (PM)** : l'agent **constate** la violation
+  (stationnement gênant ou abusif, qualification aux art. R. 417-10 et s. du
+  code de la route — R. 417-10 au socle), **intègre le constat** dans un PV de
+  contravention, **adresse une injonction verbale ou écrite** au
+  conducteur/propriétaire et, si elle ne suffit pas, **propose** la mise en
+  fourrière. **Qui prescrit** (code de la route, art. **R. 325-14**, au socle,
+  `references-verifiees.md` §8, vérifié le 2026-09-14) : un **OPJ**
+  territorialement compétent **ou l'APJA chef de la police municipale (ou
+  l'agent occupant ces fonctions)**, de sa propre initiative ou sur
+  proposition de l'agent verbalisateur. L'agent de terrain ne prescrit donc
+  jamais seul ; le **chef de service** le peut. **Réserve d'OPJ** : véhicule
+  volé, propriétaire non identifié ou fausses plaques → OPJ seul (ou accord
+  préalable exprès). L'exécution matérielle (enlèvement) suit la prescription.
+- **Le gestionnaire de fourrière** : une structure (commune, groupement,
+  prestataire privé sous convention) qui reçoit le véhicule, l'entrepose, le
+  garde, informe le propriétaire, accepte les réclamations, restitue sur ordre.
+  Il **n'intervient pas** dans la décision de mise en fourrière ; il **exécute**
+  le gardiennage.
+- **Le propriétaire/conducteur du véhicule** : destinataire de l'injonction,
+  tiers affecté par l'enlèvement. Droit de réclamation et de restitution sous
+  conditions (paiement des frais de gardiennage, délai de réaction) — à
+  vérifier.
+
+**Conflit de compétence à signaler** : maire vs préfet selon la voirie. En cas
+de doute sur la nature de la voie (communale vs nationale, agglomération vs hors
+agglomération), consulter la préfecture et documenter le choix avant
+enlèvement. Une mise en fourrière engagée sur une voie qui ne relève pas de
+l'autorité qui l'a prescrite peut être contestée en recours de plein
+contentieux.
+
+---
+
+## 2. Textes applicables (pointeurs)
+
+> Le fond juridique n'est pas reproduit ici. Pointeurs vers les branches
+> concernées :
+
+- **`../references/reglementation-appliquee.md`** §5.1 (stationnement gênant,
+  qualifications, enlèvement et mise en fourrière, rôle d'exécutant de l'agent
+  PM) ; contient les références exactes aux codes applicables (art. R. 417-10
+  pour la qualification du stationnement gênant ; art. L. 325-1 et s. pour la
+  mise en fourrière — à confirmer en version consolidée).
+- **`../references/pouvoirs-police.md`** §4.1 à §4.3 (police générale vs police
+  spéciale ; titulaires du pouvoir ; maire / préfet selon la voirie) et §4.6
+  (rôle d'exécutant de l'agent PM).
+- **`../references/penal-procedure.md`** (en parallèle, si le stationnement est
+  constaté dans le cadre d'une infractions pénale plus grave : conduite sous
+  emprise, défaut de permis, circulation sans assurance — distinction entre
+  verbalisation simple et actes réservés à l'OPJ).
+- **Codes clés à vérifier en version consolidée avant tout acte** :
+  - **Code de la route**, articles L. 325-1 à L. 325-3 (mise en fourrière — en
+    vigueur, à confirmer pour les textes réglementaires détaillés) ;
+  - **Code de la route**, articles R. 325-1 et s. (modalités d'exécution,
+    garde, restitution, frais — à confirmer en version consolidée) ;
+  - **Code de la route**, article R. 417-10 et s. (définition du stationnement
+    gênant — à confirmer en version consolidée).
+  - **Code de procédure pénale**, articles 21 / 21-2 (pouvoirs APJA de l'agent
+    PM — à confirmer).
+- **Arrêtés locaux** : arrêté municipal fixant les emplacements réservés,
+  horaires de stationnement, voies ou zones interdites — ces actes de
+  l'autorité de police fondent et précisent la qualification d'un stationnement
+  gênant (ex. : double file interdite, emplacement réservé au chargement,
+  etc.) — **à consulter avant tout constat**.
+
+**Réserve systématique** : durée minimale de garde en fourrière avant
+restitution de droit, délai maximal de garde avant saisie du véhicule, délai
+de notification au propriétaire, tarif de frais, procédure de réclamation :
+aucun de ces éléments ne se cite de mémoire. Tous sont marqués « à confirmer en
+version consolidée » ou vérifiés auprès du gestionnaire de fourrière et de la
+préfecture avant communication au public.
+
+---
+
+## 3. Procédures (étapes, délais)
+
+### 3.1 Constatation et qualification du stationnement gênant
+
+1. **Patrouille et repérage** : l'agent PM observe un véhicule stationné en
+   violation des conditions locales (trottoir, double file, devant accès
+   carrossable, emplacement réservé, voie spécialement désignée par l'arrêté
+   municipal, ou empêchant l'accès ou la sortie d'un autre véhicule).
+2. **Qualification** : vérifier que le stationnement correspond à un cas de
+   l'article R. 417-10 du code de la route (ou son équivalent exact en version
+   consolidée). Ne pas qualifier de mémoire ; consulter l'arrêté municipal ou
+   un responsable hiérarchique en cas de doute (ex. : zone réservée ? horaires
+   applicables ? urgence particulière de dégagement ?).
+3. **Identification du véhicule** : relever la plaque d'immatriculation, le
+   modèle, la couleur, le lieu exact, l'heure du constat.
+4. **Tentative de contact du conducteur ou du propriétaire** : si le conducteur
+   est présent ou localisable rapidement, lui notifier verbalement
+   l'interdiction de stationner et lui donner un **délai raisonnable** (à définir
+   localement, ex. 10 à 30 minutes selon l'urgence) pour faire cesser la
+   violation. Documenter cette injonction (heure, temoin le cas échéant).
+5. **Rédaction du PV de contravention** : si le conducteur ne s'exécute pas ou
+   ne peut pas être joint, consigner le constat détaillé dans un PV (date,
+   heure, lieu, plaque, fait précis, articles applicables, tentatives de
+   contact) → `../references/templates/pv-contravention.md`.
+
+### 3.2 Décision d'enlèvement (acte de l'autorité de police)
+
+1. **Qualification

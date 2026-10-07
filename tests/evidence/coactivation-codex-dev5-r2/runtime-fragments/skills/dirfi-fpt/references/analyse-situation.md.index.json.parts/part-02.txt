@@ -1,0 +1,72 @@
+a **matrice §2.2 du `SKILL.md`**. Dès qu'une ligne
+« Oui » est touchée, la vérification intervient **avant la première réponse
+chiffrée ou juridiquement engageante**.
+
+Points qui déclenchent systématiquement la vérification dans ce métier :
+
+- toute **valeur** (taux, seuil, plafond, montant, barème, index) ;
+- tout **délai** ou date limite ;
+- toute **règle d'imputation** M57 ;
+- toute **condition d'éligibilité** à une dotation, une subvention, le FCTVA ;
+- toute **compétence** d'organe ;
+- toute **mention obligatoire** d'un acte.
+
+**Aucune valeur volatile ne se cite de mémoire.** Si elle n'a pas été vérifiée
+en séance, elle ne figure pas dans la réponse — ou elle y figure marquée
+`⚠️ non vérifié`.
+
+---
+
+## 7. Fixer le couple [risque / confiance]
+
+Le **risque** se lit sur l'enjeu, pas sur la difficulté :
+
+| Enjeu présent | Risque plancher |
+|---|---|
+| Question de méthode, aucun acte en jeu | Faible |
+| Acte interne, régularisable sans tiers | Moyen |
+| Acte faisant grief, engagement d'un tiers, montant significatif | Élevé |
+| Responsabilité personnelle, gestion de fait, saisine CRC, équilibre du budget | **Critique** |
+
+Appliquer ensuite la grille `SKILL.md` §5.1 et indiquer le couple en sortie
+quand il est utile à la décision.
+
+---
+
+## 8. Hiérarchiser l'urgence et le calendrier
+
+Les finances locales sont un métier de **dates**. Avant de conclure, situer la
+demande dans le calendrier :
+
+1. Y a-t-il une **date limite légale** (vote, transmission, notification,
+   déclaration) ? Si oui, la nommer et la faire vérifier.
+2. Y a-t-il un **délai de paiement** en cours qui court ?
+3. L'opération doit-elle être rattachée à l'**exercice** en cours ou au
+   suivant ?
+4. La **journée complémentaire** est-elle encore ouverte ?
+5. Une **délibération préalable** est-elle nécessaire, et l'assemblée se
+   réunit-elle à temps ?
+
+Signaler tout risque de forclusion **avant** de dérouler la solution technique.
+
+---
+
+## 9. Orienter vers l'écrit (couche 4)
+
+Si la demande appelle un livrable, passer par `ecrits-financiers.md` qui route
+vers le bon générateur de `templates/`. Appliquer la **logique interactive** :
+poser les questions **une à une**, ne jamais inventer un montant, une imputation
+ou une date ; à défaut, produire un brouillon marqué `[INCOMPLET]` listant les
+champs manquants.
+
+---
+
+## 10. Sortie du routeur — ordre imposé
+
+1. **STOP** gestion de fait (§5.2) si détecteur A ;
+2. **ALERTE BUDGÉTAIRE** (§5.3) si détecteur B ;
+3. **BASCULE `drh-fpt`** (§5.5) si frontière statutaire touchée ;
+4. réponse métier, sourcée selon §6 ci-dessus ;
+5. couple **[risque / confiance]** si utile ;
+6. **écrit** ou brouillon `[INCOMPLET]` si demandé ;
+7. proposition d'entrée `JOURNAL.md` si le cas est journalisable.

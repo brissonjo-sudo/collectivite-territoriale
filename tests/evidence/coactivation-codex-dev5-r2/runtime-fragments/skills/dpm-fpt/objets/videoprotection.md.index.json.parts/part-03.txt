@@ -1,0 +1,47 @@
+(date, preuve de destruction technique), sauf procédure en cours ?
+
+### En cas de demande d'accès d'une personne filmée
+- [ ] **Demandeur** identifié : personne intéressée par les images ou tiers cherchant accès à un document administratif ?
+- [ ] **Motif de refus** (si applicable) parmi la liste fermée (sûreté de l'État, défense, sécurité publique, procédure judiciaire, droits des tiers) et bien motivé ?
+- [ ] **Délai de réponse** respecté (à vérifier le délai exact réglementaire, ne pas le donner de mémoire) ?
+- [ ] **Information** sur les voies de recours (commission départementale, CNIL, juge) fournie en cas de refus ?
+
+### En cas d'incident RGPD ou manquement
+- [ ] **Incident qualifié** : accès non autorisé ? extraction hors cadre ? destruction prématurée ? visionnage sans habilitation ?
+- [ ] **DPO notifié** immédiatement (violation potentielle de données, délai de notification à vérifier : ordre de grandeur 72 heures) ?
+- [ ] **Journal des accès** et **dossier système** conservés pour enquête interne ?
+- [ ] **Garde-fou APJA** testé si l'exploitation active du CSU dépasse la simple constatation/transmission (rapprochement de plaques, analyses biométriques) ?
+
+### Avant toute sortie — Garde-fou APJA
+- [ ] L'exploitation du CSU relève-t-elle **uniquement de la constatation et de la transmission** (rôle APJA) ou franchit-elle ce cadre (analyse poussée, rapprochement actif, demande à l'OPJ d'effectuer des actes réservés) ?
+- [ ] Si **dépassement détecté** (exploitation pénale active hors cadre APJA) → **STOP** affiché **en priorité**, compte rendu immédiat à l'OPJ et aucune contrainte sur une personne en l'absence d'un fondement distinct vérifié.
+
+### Contrôles transverses
+- [ ] **Commission départementale de vidéoprotection** : composition et modalités de saisine vérifiées à la préfecture (ne pas inventer de mémoire) ?
+- [ ] **Tout numéro d'article cité** assorti de « à confirmer en version consolidée » ou « vérifié sur Légifrance le 30/06/2026 » (identifiants LEGIARTI cités) ?
+- [ ] **Références vers les branches partenaires** (`videoprotection.md`, `conformite-deontologie-donnees.md`, `continuum-partenariats.md`, `penal-procedure.md`) effectuées sans duplication ?
+- [ ] **Couple [risque / confiance]** clairement indiqué dans les conclusions ?
+- [ ] **Cas journalisable** (lacune dans les délais, extension non autorisée détectée, incident de destruction prématurée) → identifié pour `JOURNAL.md` ?
+
+---
+
+## Références et remontées
+
+**Branche principale** : La vidéoprotection repose sur trois socles indissociables :
+1. **Cadre d'autorisation** (CSI, branche `videoprotection.md`) — c'est l'ossature.
+2. **Conformité données** (RGPD, AIPD, CRPA, branche `conformite-deontologie-donnees.md`) — c'est le contrôle interne.
+3. **Procédure judiciaire** (extraction sur réquisition, suspension de destruction, branche `penal-procedure.md`) — c'est le basculement vers l'OPJ.
+
+Ne jamais traiter un de ces trois volets en isolation.
+
+**Coordination impérative** :
+- Avant chaque **modification substantielle** du système : passer par la demande préfectorale complète (ne pas présumer que l'extension est mineure).
+- En cas de **demande d'accès** : croiser CRPA + droit d'accès RGPD + régime CSI spécifique (trois grilles, une seule réponse).
+- En cas d'**incident RGPD** : notification immédiate du DPO et évaluation de la nécessité d'informer la CNIL (délai à vérifier).
+- En cas de **réquisition judiciaire** : transmission immédiate, suspension de destruction, archivage de la réquisition comme justificatif de conservation.
+
+**Mise à jour requise** :
+- **Régime d'autorisation CSI** (articles L. 251 à L. 253) : révision lors de réformes législatives (évolutions fréquentes sur ce titre).
+- **Partie réglementaire** (articles R. 251 et s., R. 252 et s., R. 253 et s.) : composition de la commission, pièces du dossier, délais — à vérifier chaque année.
+- **AIPD et méthodologie CNIL** : mise à jour des référentiels CNIL en cas d'évolution des critères de risque.
+- **Convention de coordination PM / forces de l'État** : renouvellement au minimum tous les 2-3 ans ; articulation avec le CSU à clarifier à chaque révision.

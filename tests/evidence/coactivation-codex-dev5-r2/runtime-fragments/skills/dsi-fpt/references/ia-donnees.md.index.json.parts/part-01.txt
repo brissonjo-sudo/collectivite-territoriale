@@ -1,0 +1,138 @@
+# Branche — IA et données
+
+## 1. Périmètre / Exclusions
+
+Organiser la gouvernance technique des données et encadrer l'usage de l'IA,
+y compris générative, par la collectivité. Préparer l'analyse d'un usage,
+la maîtrise du système et la transparence des traitements algorithmiques
+dans le champ de la DSI.
+
+**Exclusions** : base légale, AIPD et droit des données personnelles →
+`BASCULE dpo-ct` ; fond RH, adoption et opposabilité d'une charte →
+`BASCULE drh-fpt` ; vidéoprotection algorithmique → garde-fou surveillance
+de `SKILL.md` et `BASCULE dpm-fpt`. Ouverture des données → service compétent,
+hors périmètre ; passation → service de la commande publique, hors périmètre.
+Arrêter ces volets sans les illustrer. Hébergement →
+`references/cloud-hebergement.md` ; interfaces et données de référence →
+`references/applications-interoperabilite.md`.
+
+## 2. Questions couvertes
+
+- Encadrer l'usage d'un assistant génératif par les agents.
+- Évaluer un pilote avant d'en faire un outil de production.
+- Déterminer ce qu'il faut vérifier avant de qualifier un système à haut risque.
+- Préparer les informations techniques nécessaires à la transparence d'un
+  traitement algorithmique intervenant dans une décision individuelle.
+- Préserver la maîtrise des données et de l'outil face à l'éditeur.
+- Définir une charte technique, les rôles et les conditions d'arrêt d'un usage.
+
+## 3. Arbre de traitement
+
+Lire `references/analyse-situation.md` avant l'analyse. Surveillance de
+personnes ou incident suspecté impose le garde-fou de `SKILL.md` en premier ;
+le caractère « expérimental » ne le suspend pas.
+
+| Question | Variables à lever | Décision | Vérification | Livrable |
+|---|---|---|---|---|
+| Assistant génératif pour rédiger | Finalité, données envoyées, diffusion du résultat, fournisseur | Usage borné sur données fictives ou autorisées, avec contrôle humain ; différer si les conditions manquent | Conditions de service, sécurité et exigences de `dpo-ct` | Fiche d'usage et charte technique |
+| Trier ou recommander sur des demandes | Effet sur l'usager, autonomie, service public, rôle de l'humain | Réserver le déploiement tant que risque et conditions ne sont pas établis | Usage réel, catégorie réglementaire et régime en vigueur | Dossier d'évaluation et décision de déploiement |
+| Qualifier le haut risque | Destination du système, rôle de la collectivité, personnes affectées, date | Décrire la qualification à instruire, sans déduire du nom commercial | Règlement publié et modificatifs applicables | Fiche de qualification sourcée ou réservée |
+| Expliquer une décision algorithmique | Contribution de l'outil, paramètres, données et opérations | Réunir les éléments techniques pour le service responsable | CRPA, portée de l'obligation et limites légales | Dossier technique de transparence |
+
+## 4. Variables à lever
+
+- Mode internalisé, mutualisé ou externalisé ; responsable métier, exploitant,
+  décideur du déploiement et capacité à arrêter l'outil.
+- Catégorie de collectivité, service et personnes concernés ; taille si une
+  obligation en dépend ; date de référence.
+- Finalité réelle, système utilisé, rôle de la collectivité, degré d'autonomie
+  et influence du résultat sur une action ou une décision.
+- Origine, qualité et sensibilité des données ; données transmises au
+  fournisseur, réutilisation annoncée et exigences de `dpo-ct`.
+- Criticité, possibilité d'une reprise humaine, erreurs acceptables définies
+  par le métier et mécanisme de contestation à faire traiter au bon niveau.
+- Prestataire, contrat, hébergement, documentation, changement du modèle ou
+  des règles et moyens de vérifier le résultat sans dépendre de l'éditeur.
+
+## 5. Règles métier
+
+### Décider à partir de l'usage
+
+Décrire **entrée → traitement → résultat → destinataire → effet réel**.
+Ne qualifier ni le système ni le risque à partir de l'étiquette « assistant »
+ou « simple recommandation ». Vérifier si l'humain comprend, peut corriger
+et peut écarter le résultat : une validation systématique ne démontre pas
+un contrôle effectif.
+
+Pour la qualification réglementaire, partir de
+`references/references-verifiees.md` : règlement européen sur l'IA,
+**à confirmer en version consolidée**. Le registre rattache le déployeur à
+une autorité publique ; l'applicabilité d'une obligation particulière dépend
+ensuite du rôle, du système, de l'usage et de la date. La collectivité peut
+avoir d'autres rôles qu'un déployeur selon sa contribution : les faire
+instruire avant de conclure. Ne pas généraliser depuis un seul cas d'annexe.
+
+Relire l'acte publié et les éventuels modificatifs pour les catégories et
+calendriers ; la consolidation et la lecture historique ne prouvent pas
+l'état du droit dans la session. L'analyse d'impact sur les droits
+fondamentaux ne se confond pas avec l'AIPD, dont le fond relève de `dpo-ct`.
+La DSI fournit la description technique au responsable de l'analyse requise.
+
+### IA générative et maîtrise des données
+
+Définir les usages autorisés et les données admises avant d'ouvrir l'outil.
+Ne pas transmettre de donnée nominative, secret ou architecture réelle à
+l'assistant pour obtenir la réponse de ce skill. Pour un usage de production,
+faire établir les exigences de données par `dpo-ct`, puis traduire celles-ci
+en configuration technique et contrôles.
+
+Prévoir vérification du contenu, références et calculs par une personne
+compétente avant utilisation. Tester les réponses inventées, les documents
+contenant des instructions parasites et la divulgation indue, avec données
+fictives et sans mode opératoire offensif. Ne pas exposer un résultat à
+l'usager ou déclencher une action à conséquence avant que les conditions de
+validation et d'arrêt soient démontrées.
+
+Exiger de la documentation sur accès, réutilisation des entrées, évolution
+du service et restitution des éléments utiles. Dépendances d'hébergement →
+`references/cloud-hebergement.md` ; engagements exécutables →
+`references/contrats-prestataires.md`. Ces contrôles sont des bonnes
+pratiques ; ne pas les présenter comme une liste d'obligations réglementaires.
+
+### Gouvernance et évaluation
+
+Désigner le propriétaire métier des données et le responsable de qualité ;
+renvoyer la source faisant autorité à
+`references/applications-interoperabilite.md`. Évaluer le système sur des
+situations représentatives, avec résultats attendus et erreurs recensées.
+Faire décider la mise en production sur cette preuve et le risque résiduel,
+pas sur une démonstration commerciale. Refaire l'évaluation pertinente quand
+modèle, données, règles ou finalité changent.
+
+### Transparence algorithmique
+
+Distinguer l'information relative à une décision individuelle et la
+publication des règles des principaux traitements. Le registre contient
+les entrées CRPA correspondantes, **à confirmer en version consolidée**, avec
+une réserve sur le seuil de publication non vérifié. Ne pas inventer le seuil
+ni conclure qu'il dispense d'information sur une décision individuelle.
+
+Recueillir contribution du traitement, données utilisées, paramètres et
+opérations décrites par le système pour préparer la réponse du service
+responsable. Ne promettre ni publication intégrale ni refus de communication
+sans vérifier le champ et les limites du texte ; la résolution juridique
+relève de `recherche-juridique`. L'ouverture générale des données reste hors
+périmètre. Ne transposer aucune charte de l'État à la collectivité comme une
+obligation.
+
+## 6. Procédures
+
+**Hypothèse : nouveau pilote sans données réelles, sans incident ni surveillance.**
+
+1. Le métier exprime la finalité, l'effet du résultat et le fonctionnement
+   sans l'outil. Demander les variables manquantes avant de recommander son
+   déploiement ; une finalité inconnue empêche la qualification.
+2. La DSI décrit système, données et dépendances ; le responsable compétent
+   fait instruire rôle, catégorie et obligations sur source officielle.
+   Transmettre le volet de conformité des données à `dpo-ct`.
+3. Définir les critères de réussite et d'arrêt, la 

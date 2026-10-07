@@ -1,0 +1,44 @@
+{
+  "source_path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-spontane-budget/input.json",
+  "source_sha256": "915791a28de907eabefbfad852d19b05b46a975ad7994f8af6981aea5e0da6cc",
+  "characters": 45433,
+  "fragment_limit": 8000,
+  "fragments": [
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-spontane-budget/input.index.json.parts/part-01.txt",
+      "sha256": "a50cc7453fe8540cf688f7fa74721196fc3e560e23b56b5e84e7387539a1c963",
+      "characters": 8000,
+      "number": 1
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-spontane-budget/input.index.json.parts/part-02.txt",
+      "sha256": "ae51f651c8ffab8efaf53f14fb559e3117b5f9e884435ff1648faea42d33cc57",
+      "characters": 8000,
+      "number": 2
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-spontane-budget/input.index.json.parts/part-03.txt",
+      "sha256": "c75ef0a209a16e6aa9e5d6aafba14cc89804cb47b085f29a49f7dd890b8b5804",
+      "characters": 8000,
+      "number": 3
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-spontane-budget/input.index.json.parts/part-04.txt",
+      "sha256": "13e36801d331e7c6fedc12a8b2ebe794e7fad2eb6d0d649a78f5c1032874513b",
+      "characters": 8000,
+      "number": 4
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-spontane-budget/input.index.json.parts/part-05.txt",
+      "sha256": "30fbb213f57e940c1042f13fdea1677706ca78c98345b1441226b1b49a7fbf37",
+      "characters": 8000,
+      "number": 5
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-spontane-budget/input.index.json.parts/part-06.txt",
+      "sha256": "926a59cbee422bac617f620d802972982f35b82cc4957b421f03814a4bff348e",
+      "characters": 5433,
+      "number": 6
+    }
+  ]
+}

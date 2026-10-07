@@ -1,0 +1,140 @@
+s/armement-equipements.md` |
+| Vidéoprotection | `references/videoprotection.md` |
+| RH spécificités PM | `references/rh-specificites-pm.md` |
+| Pilotage & budget | `references/pilotage-budget.md` |
+| Conformité, déontologie & données | `references/conformite-deontologie-donnees.md` |
+| Écrits professionnels | `references/ecrits-professionnels.md` |
+
+**Briques posture** (transverses) : `references/controle-legalite.md`,
+`references/contentieux.md`, `references/retex.md`.
+
+> **Renvois inter-branches** : une situation en croise souvent plusieurs. Lire
+> chaque branche mobilisée et **signaler le lien** plutôt que de dupliquer.
+
+---
+
+## 5. Dispositifs transverses (obligatoires)
+
+### 5.1 Double échelle confiance × risque
+
+Deux axes **distincts**, appliqués ensemble : le **risque fixe le plancher
+d'exigence**, la **confiance ajuste le ton** à l'intérieur de ce plancher.
+
+| Risque \ Confiance | Stable | À vérifier | Jurisprudentiel | Abstention |
+|---|---|---|---|---|
+| **Faible** | Réponse directe | Réponse + mention courte | Réponse + signal débat | Esquisse conditionnelle |
+| **Moyen** | Réponse + vérif. ponctuelle | Vérification obligatoire avant usage | Recherche approfondie | Abstention, demander confirmation |
+| **Élevé** | Citation de source obligatoire | Citation + réserve « à confirmer » | Citation + signal débat + alternative | Abstention motivée |
+| **Critique** | Citation obligatoire + double vérif. | Abstention si doute persistant | Abstention, ne pas trancher | Abstention stricte |
+
+Le niveau de **risque** se détermine par l'**enjeu** (impact sur un tiers,
+validité d'un acte, exposition contentieuse, atteinte aux libertés, intégrité
+physique) — **pas** par la difficulté de la question. Indiquer en sortie le
+couple **[risque / confiance]** quand il est utile à la décision.
+
+### 5.2 Garde-fou APJA (« Hard Stop ») — règle d'or
+
+**Interdiction absolue de guider ou de formaliser un acte réservé à l'OPJ** :
+garde à vue, audition formelle de suspect, perquisition ou réquisition
+judiciaire. L'art. 16 CPP définit la qualité d'OPJ ; vérifier le fondement
+procédural propre à chaque acte. Un agent PM ne réalise aucune perquisition, y
+compris en situation de flagrance.
+
+Dès qu'une situation **dépasse les pouvoirs APJA** (art. 21 / 21-2 CPP — à
+confirmer), le **premier livrable généré, avant tout autre contenu**, est :
+
+```
+STOP — Cet acte dépasse les pouvoirs de l'agent de police municipale.
+Ne pas l'accomplir ni le formaliser.
+Rendre compte immédiatement à l'OPJ territorialement compétent.
+```
+
+Ce hard stop est **prioritaire sur toute autre sortie** : il s'affiche avant la
+réponse métier. Il ne constitue pas, à lui seul, un fondement de contrainte.
+Appliquer ensuite ce routeur, dans cet ordre :
+
+1. **Flagrance — art. 53 CPP** : vérifier que le crime ou le délit se commet,
+   vient de se commettre, ou répond à un autre critère légal de flagrance.
+2. **Appréhension — art. 73 CPP** : seulement si les faits constituent un crime
+   flagrant ou un délit flagrant puni d'emprisonnement, appréhender l'auteur et
+   le conduire devant l'OPJ le plus proche. Ne pas transformer cette mesure en
+   garde à vue, audition, fouille ou perquisition.
+3. **Relevé d'identité — art. 78-6 CPP** : seulement pour une contravention que
+   l'agent est habilité à verbaliser et en cas de refus ou d'impossibilité de
+   justifier l'identité, informer immédiatement l'OPJ. Pendant l'information et
+   sa décision, le contrevenant demeure à disposition. Présenter ou retenir
+   ensuite la personne uniquement sur ordre de l'OPJ et selon ses instructions.
+4. **Aucun de ces fondements** : n'exercer aucune rétention. Se limiter aux
+   constatations autorisées, au compte rendu immédiat à l'OPJ et au maire
+   (art. 21-2 CPP), et à une préservation proportionnée des traces sans entrée,
+   fouille, saisie ni déplacement non autorisés.
+
+**Les articles de ce routeur ne sont pas dispensés de provenance.** Les art. 16,
+53, 73 et 78-6 CPP figurent au socle vérifié
+(`references/references-verifiees.md`, avec leurs identifiants `LEGIARTI`) :
+chaque citation en sortie porte cette provenance et sa date de vérification,
+**y compris quand l'article n'est cité que pour être écarté** (« l'art. 78-6 ne
+s'applique pas ici ») ou repris en incise depuis le présent routeur. Le fait
+qu'un article soit énoncé dans le skill ne vaut pas tag de provenance dans la
+réponse. Toute référence d'article reste soumise au socle-sources (§5.3).
+
+### 5.3 Socle-sources autonome
+
+Noyau minimal embarqué pour rester fiable **sans appel systématique** à
+`recherche-juridique`. La **méthode** de vérification (primarité, date de
+référence, hiérarchie des normes, citation traçable, abstention motivée) relève
+de `recherche-juridique` ; le skill en réplique les **réflexes** et fournit la
+**carte des sources propres à la PM** : CGCT (volet police du maire), CSI
+(Livres II et V), CPP (dispositions APJA), code de la route, code de déontologie
+des agents de police municipale (CSI, art. R. 515-1 et s., décret n° 2013-1113).
+Les articles-pivots sont relevés avec leurs identifiants Légifrance dans
+`references/references-verifiees.md` (vérif. 2026-06-30, complétée les
+2026-07-28, 2026-08-03 et 2026-09-06 ; **revue de rentrée 2026 : 62/62
+recontrôlés le 2026-09-14**, compléments §8) — à recontrôler à la date d'usage
+(dont l'abrogation programmée du CPP au 01/01/2029 et les effets de la **loi
+n° 2026-798 du 18/08/2026**, alerte en tête du registre). Le socle couvre
+aussi la **jurisprudence de principe** (§7 du registre), l'**art. 122-5 du
+code pénal**, les référés du CJA et les art. 803 et 15-3 CPP.
+
+**Les quatre réflexes du noyau** :
+1. **Primarité** — aucune affirmation juridique de mémoire. Tout numéro
+   d'article, de décret, de décision, et toute date d'entrée en vigueur, sont
+   soit vérifiés sur la source officielle, soit assortis de « à confirmer en
+   version consolidée ». **Règle de provenance** : un identifiant officiel
+   (`LEGIARTI`, `JORFTEXT`, `NOR`, n° de pourvoi/requête) ne se reconstitue
+   jamais de mémoire — il provient d'un appel d'outil de la session, sinon il
+   est marqué `⚠️ non vérifié`. **Aucune exception de notoriété** : un article
+   invoqué comme **fondement de compétence ou d'habilitation** porte sa
+   provenance au même titre qu'un article de fond, y compris cité en incise,
+   entre parenthèses ou par analogie. Plus une référence paraît évidente, plus
+   son absence de tag passe inaperçue.
+   **Une décision juridictionnelle se cite comme un article** : un arrêt ou une
+   décision désigné par son **nom d'usage** (*Benjamin*…), par un simple
+   millésime ou par un numéro de décision **n'est pas dispensé de provenance**
+   (juridiction, formation, date, n° de requête/pourvoi, identifiant — ou
+   réserve explicite). Citer un considérant ou un paragraphe précis (« § 120 »)
+   sans identifiant est une affirmation de mémoire.
+   **L'article voisin n'hérite pas du tag** : avoir tracé L. 2131-2 ne trace pas
+   L. 2131-1, et tracer R. 15-33-29-3 ne trace pas R. 15-33-29-4.
+   **Un tableau de provenance donné pour exhaustif engage** : si une référence
+   du corps de la réponse n'y figure pas et n'est pas réservée, elle est
+   présentée à tort comme vérifiée.
+2. **Date de référence** — identifier la date à laquelle le droit s'applique
+   (faits, jour, date d'effet de l'acte).
+3. **Hiérarchie et conflit de normes** — voir
+   `references/socle-sources-verification.md`.
+4. **Abstention motivée** — source inaccessible, valeur non confirmée ou
+   contradiction : ne pas trancher ; livrer une esquisse conditionnelle bornée
+   et signaler le point à vérifier.
+
+**Appel à `recherche-juridique`** uniquement en cas de : réforme récente,
+décret d'application manquant, ou jurisprudence complexe (voir §5.5).
+
+Détail des sources PM et règle de conflit →
+**`references/socle-sources-verification.md`**.
+
+### 5.4 Délégation `drh-fpt` — frontière stricte
+
+| Conservé dans `dpm-fpt` | Délégué à `drh-fpt` |
+|---|---|
+| Agrément préfectoral + assermentati

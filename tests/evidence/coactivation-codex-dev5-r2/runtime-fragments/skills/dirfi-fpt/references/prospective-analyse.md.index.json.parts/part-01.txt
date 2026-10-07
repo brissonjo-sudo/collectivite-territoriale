@@ -1,0 +1,156 @@
+# Branche — Prospective & analyse financière (v1.0.0)
+
+> Structure conforme à `_gabarit-branche.md`. Les ratios sont donnés en
+> **formule** (numérateur / dénominateur), jamais avec un seuil d'alerte
+> chiffré : le seuil est toujours à vérifier à la source.
+
+## 1. Périmètre / Exclusions
+
+**Périmètre** : lecture de la **chaîne de l'épargne** (épargne de gestion,
+brute, nette) ; **capacité de désendettement** ; ratios de structure
+(**taux d'épargne brute**, **effort d'équipement**, **taux de rigidité des
+charges structurelles**, **coefficient de mobilisation du potentiel
+fiscal**) ; ratios obligatoires annexés au budget ; **fonds de roulement**,
+**besoin en fonds de roulement**, **trésorerie nette** ; construction d'une
+**prospective pluriannuelle** et d'une **programmation pluriannuelle des
+investissements (PPI)** ; **analyse rétrospective** ; sources de données de
+comparaison ; pilotage de la **masse salariale sous l'angle budgétaire**.
+
+**Exclusions** :
+- La **gestion de la dette elle-même** (compétence, produits, couverture,
+  ligne de trésorerie, garanties) → `references/dette-tresorerie.md`. Cette
+  branche lit et projette l'endettement, elle ne le gère pas.
+- Les **règles statutaires et indemnitaires** des agents (carrière, régime
+  indemnitaire, GVT au sens du droit individuel) → **`drh-fpt`**. Cette
+  branche ne traite la masse salariale que comme une **masse budgétaire**
+  (cadrage, enveloppe, glissement global), jamais comme un droit individuel.
+- L'**imputation comptable** des opérations entrant dans le calcul des
+  ratios → `references/nomenclature-m57.md`.
+
+---
+
+## 2. Questions couvertes
+
+- Comment se lit la chaîne de l'épargne, et que signale une dégradation de
+  l'épargne nette ?
+- Comment calculer la capacité de désendettement, et quelles sont ses
+  limites méthodologiques ?
+- Comment interpréter le taux d'épargne brute, l'effort d'équipement, le
+  taux de rigidité des charges structurelles, le coefficient de
+  mobilisation du potentiel fiscal ?
+- Quels ratios sont obligatoirement annexés au budget ?
+- Comment calculer le fonds de roulement, le besoin en fonds de roulement
+  et la trésorerie nette, et que signale chacun ?
+- Comment construire une prospective financière pluriannuelle fiable, avec
+  quelles hypothèses et quelle sensibilité ?
+- Comment articuler une PPI avec les autorisations de programme / crédits
+  de paiement (AP/CP) et un plan de financement ?
+- Comment mener une analyse rétrospective robuste, avec quels retraitements
+  et quelle comparaison à la strate ?
+- Où trouver des données de comparaison fiables, et quelles en sont les
+  limites ?
+- Comment cadrer la masse salariale d'un point de vue budgétaire sans
+  empiéter sur le champ RH ?
+
+---
+
+## 3. Arbre de traitement
+
+`question → variables à lever (§4) → décision → vérification (§7) →
+écrit/livrable (§10)`
+
+Avant tout calcul ou toute lecture de ratio, lever : l'**exercice ou la
+série d'exercices** concernés, le **périmètre** budgétaire retenu (budget
+principal seul, ou consolidé avec les budgets annexes), et l'**origine des
+données** (comptes de gestion réalisés, budget primitif, projection). Sans
+ces trois éléments, marquer l'analyse `[INCOMPLET]` et les demander
+explicitement plutôt que de supposer un périmètre par défaut.
+
+---
+
+## 4. Variables à lever
+
+- **Exercice(s) analysé(s)** : un seul exercice (photographie) ou une série
+  (rétrospective, §5.7) — la méthode et la lecture diffèrent.
+- **Périmètre budgétaire** : budget principal seul, ou consolidation avec
+  budgets annexes et satellites significatifs.
+- **Origine des données** : compte de gestion / compte financier unique
+  (réalisé), budget primitif (prévisionnel), ou projection (hypothèses de
+  travail) — ne jamais mélanger sans le signaler.
+- **Régime comptable** (M57 de droit commun ou abrégé, selon la strate) :
+  conditionne certains agrégats et leur comparabilité — à vérifier.
+- **Horizon de la prospective demandée** : nombre d'exercices, et
+  articulation ou non avec un mandat ou une PPI déjà engagée.
+- **Hypothèses macro-budgétaires disponibles** : évolution attendue des
+  bases fiscales, des dotations, de l'inflation appliquée aux charges — à
+  demander explicitement, jamais supposées par défaut sans le signaler.
+- **Existence d'une PPI ou d'AP/CP déjà votées** dont la prospective doit
+  tenir compte.
+- **Source de comparaison souhaitée** (données nationales de la strate,
+  observatoire local, réseau de pairs) et son degré d'actualité.
+
+---
+
+## 5. Règles métier
+
+### 5.1 La chaîne de l'épargne
+
+- **Épargne de gestion** : différence entre les recettes réelles de
+  fonctionnement et les dépenses réelles de fonctionnement **hors intérêts
+  de la dette**. Elle mesure la capacité de gestion courante, indépendamment
+  du poids de la dette.
+- **Épargne brute** (ou autofinancement brut) : épargne de gestion **moins
+  les intérêts de la dette**. Elle mesure ce qui reste du fonctionnement
+  pour couvrir le remboursement du capital de la dette et contribuer au
+  financement de l'investissement.
+- **Épargne nette** : épargne brute **moins le remboursement en capital de
+  la dette** de l'exercice. Elle mesure la capacité résiduelle
+  d'autofinancement des investissements une fois la dette servie.
+- **Lecture** : une épargne de gestion stable mais une épargne brute qui se
+  dégrade signale un poids croissant de la charge d'intérêts. Une épargne
+  brute stable mais une épargne nette qui se dégrade signale un poids
+  croissant du remboursement en capital, donc de l'encours de dette.
+  L'épargne nette négative signale une incapacité à autofinancer
+  l'investissement sans recette exceptionnelle ou nouvel emprunt — point de
+  vigilance à signaler explicitement, sans en tirer seul une conclusion de
+  déséquilibre budgétaire (renvoi `references/controle-budgetaire.md`
+  uniquement si un déséquilibre réel de la section est établi).
+
+### 5.2 Capacité de désendettement
+
+- **Formule** : `encours de dette au 31 décembre / épargne brute de
+  l'exercice`. Le résultat s'exprime en nombre d'années : le nombre
+  d'exercices qu'il faudrait, en théorie, pour rembourser l'intégralité de
+  l'encours si toute l'épargne brute y était consacrée.
+- **Seuils d'alerte** : des repères existent et sont utilisés dans le débat
+  public et par certains textes ou pratiques de contrôle. **Ne jamais les
+  citer de mémoire** : vérifier la valeur en vigueur et sa source exacte
+  avant toute conclusion présentée comme engageante.
+- **Limites de l'indicateur** :
+  - il suppose une épargne brute **stable dans le temps**, hypothèse
+    rarement vérifiée ;
+  - il ne dit rien du **profil d'amortissement** de la dette (un encours
+    concentré sur des échéances proches pèse différemment d'un encours
+    lissé) ;
+  - il est sensible à un **effet de ciseau ponctuel** (recette
+    exceptionnelle ou dépense exceptionnelle sur l'exercice de calcul), qui
+    peut fausser la lecture d'une seule année ;
+  - il ignore la **qualité** de la dette (taux, structure au sens de la
+    charte Gissler, renvoi `references/dette-tresorerie.md`) ;
+  - il doit se lire en **tendance sur plusieurs exercices**, pas sur une
+    seule année isolée.
+
+### 5.3 Ratios de structure
+
+- **Taux d'épargne brute** : `épargne brute / recettes réelles de
+  fonctionnement`. Mesure la part des recettes de fonctionnement
+  transformée en capacité d'autofinancement.
+- **Effort d'équipement** : `dépenses d'équipement de l'exercice / recettes
+  réelles de fonctionnement` (ou parfois rapporté à la population, selon la
+  convention retenue — préciser laquelle avant toute comparaison). Mesure
+  l'intensité de l'investissement rapportée à la richesse de fonctionnement.
+- **Taux de rigidité des charges structurelles** : `(charges de personnel +
+  charges financières + contingents et participations obligatoires) /
+  recettes réelles de fonctionnement`. Mesure la part des charges peu ou
+  pas pilotables à court terme dans le total des recettes de
+  fonctionnement — un taux élevé signale une marge de manœuvre

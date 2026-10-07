@@ -1,0 +1,54 @@
+ Jurisprudence clé
+
+> Pointeur uniquement — voir **`recherche-juridique`**. Aucune décision n'est
+> citée ici par son nom d'usage, son millésime ou son numéro.
+
+Thèmes appelant une recherche avant conclusion :
+- Conséquences d'une **discordance persistante** entre inventaire et état de
+  l'actif sur la fiabilité des comptes.
+- Contentieux relatifs à la **qualification des biens de retour** en
+  délégation de service public.
+- Conditions d'**éligibilité au FCTVA** contestées par le représentant de
+  l'État.
+- Régime de responsabilité en cas d'**absence d'amortissement obligatoire**.
+
+---
+
+## 6. Check-list opérationnelle
+
+- [ ] Modalité d'entrée à l'actif identifiée (acquisition, production, mise
+      à disposition, affectation, don) et valorisée selon la méthode
+      correspondante ?
+- [ ] Inventaire mis à jour et **rapproché de l'état de l'actif** tenu par le
+      comptable, toute divergence documentée et régularisée ?
+- [ ] Bien identifié comme relevant ou non de l'amortissement, sans
+      présomption ?
+- [ ] Durée d'amortissement fixée par délibération, jamais citée de mémoire ?
+- [ ] Point de départ de l'amortissement vérifié avant toute écriture ?
+- [ ] Dépréciation obligatoire non omise — sinon **garde-fou budgétaire**
+      (`SKILL.md` §5.3) à envisager ?
+- [ ] Sortie (cession ou réforme) traitée par l'écriture correspondante et
+      répercutée sur l'inventaire ?
+- [ ] Éligibilité au FCTVA vérifiée avant toute annonce de recette attendue ?
+- [ ] Régime des biens de retour en DSP vérifié dans le contrat avant toute
+      affirmation sur la propriété ou l'amortissement ?
+- [ ] Couple [risque / confiance] indiqué si utile à la décision.
+- [ ] Cas journalisable (discordance récurrente, éligibilité FCTVA
+      contestée) → proposé pour `JOURNAL.md`.
+
+---
+
+## Références et remontées
+
+**Branches mobilisées** : `nomenclature-m57.md` (fond), `execution-depense.md`
+et `commande-publique-financiere.md` (acquisition), `execution-recette.md`
+(cession), `dotations-perequation.md` (FCTVA).
+
+**Objets liés** : `../objets/operation-investissement.md` (entrée à l'actif
+d'une opération pluriannuelle), `../objets/satellites.md` (biens de retour en
+DSP), `../objets/cloture-exercice.md` (rapprochement de fin d'exercice).
+
+**Point de mise à jour requis** : fourchettes de durées d'amortissement par
+catégorie de biens, catégories dispensées d'amortissement, taux et
+calendrier du FCTVA — valeurs et seuils à réviser à chaque évolution
+réglementaire.

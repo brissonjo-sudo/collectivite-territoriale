@@ -1,0 +1,137 @@
+{
+  "agent": "/root/repondant_codex_dev5_r2_04",
+  "thread_id": "01a11789-a5ea-7233-b79c-98c7c5223780",
+  "parent_thread_id": "01a1103e-0b49-70c1-8f4e-66a36b54916f",
+  "model": "gpt-6.1-sol",
+  "turn_id": "01a11789-a64b-7cf3-a439-158a5aa424b2",
+  "created_at": "2026-10-07T18:04:19.306Z",
+  "started_at": "2026-10-07T18:04:19.421Z",
+  "completed_at": "2026-10-07T18:06:25.632Z",
+  "fork_turns": "none",
+  "initial_message_verified": false,
+  "initial_message_sha256": "c52c2bfd5940a9104fe1b24a6af69d11816a276a25e7fe53f7df73cf6d47eeb0",
+  "case_id": "plugin-mcp-indisponible",
+  "host": "Codex",
+  "activation_kind": "file_read_fragments",
+  "actual_plugin_activation_verified": false,
+  "full_runtime_context_verified": true,
+  "full_question_context_verified": true,
+  "export_pre_spawn": true,
+  "adapter_sha256": "fa32998ad48586ca7178ac56d8cdeff5fb9438e6746d92bffea751c4a6155b8e",
+  "response_sha256": "fb762e0f0860c0a7a9bffd8ed28b77f3abb6b17df65eb64b88e4194eec67f3b3",
+  "trace_sha256": "37ad16d675afe5f007acc0367766bc2f33cb2586dd02111cad5ebcd7f7d3abee",
+  "native_filtered_sha256": "d54b6eb4548d52802133b31ada0cde724530c0b81a86f9c213344e41b446aa9b",
+  "native_session_file": "rollout-2026-10-07T20-04-19-01a11789-a5ea-7233-b79c-98c7c5223780.jsonl",
+  "parent_session_file": "rollout-2026-10-06T10-04-24-01a1103e-0b49-70c1-8f4e-66a36b54916f.jsonl",
+  "loaded_skills": [
+    "recherche-juridique"
+  ],
+  "entry_fragment_reads": [
+    {
+      "call_id": "call_01e2b58f4b5d4320b13921946ccc4fab",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-mcp-indisponible/input.index.json.parts/part-01.txt",
+      "sha256": "ef1983a93d2c796806882e6c60c4a3b547f58af8a2bdb505844aa4aea2c74921",
+      "presentation_suffix": "CRLF",
+      "timestamp": "2026-10-07T18:04:26.049Z"
+    },
+    {
+      "call_id": "call_ba6121eeb5a24ccebe0b3646564cdf3a",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-mcp-indisponible/input.index.json.parts/part-02.txt",
+      "sha256": "298455617db42987c4d72060d9d7b88ee0502a56a2494289423a2d73ad2fe8b3",
+      "presentation_suffix": "CRLF",
+      "timestamp": "2026-10-07T18:04:30.896Z"
+    },
+    {
+      "call_id": "call_541aeee543614e1f9b210419044d1a13",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-mcp-indisponible/input.index.json.parts/part-03.txt",
+      "sha256": "94d1e1ea9288aa6bfa38ed75cd897d997e0d2eb636ae3f09322ad3b76a222b43",
+      "presentation_suffix": "CRLF",
+      "timestamp": "2026-10-07T18:04:37.759Z"
+    },
+    {
+      "call_id": "call_3c397e57f44c48a48f7ef39cf4ccf0d5",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-mcp-indisponible/input.index.json.parts/part-04.txt",
+      "sha256": "ae51cf0405a6b1f3b792b15a0f91ff727f884c66d9c85c543375093bc7944462",
+      "presentation_suffix": "CRLF",
+      "timestamp": "2026-10-07T18:04:43.348Z"
+    },
+    {
+      "call_id": "call_6039a67544eb46c0a17a06820ca16bf2",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-mcp-indisponible/input.index.json.parts/part-05.txt",
+      "sha256": "ca884c8c410fa6b6faba3fa0d88899c9ce36720e37e3e4b0727c040563fe8da2",
+      "presentation_suffix": "CRLF",
+      "timestamp": "2026-10-07T18:04:47.548Z"
+    },
+    {
+      "call_id": "call_de3cdc83097b4af0be603fbd430456b6",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-mcp-indisponible/input.index.json.parts/part-06.txt",
+      "sha256": "6ad50ad288a4e732ff88215161112ef551bda687ebad3e9f6d19b22d4984b68f",
+      "presentation_suffix": "CRLF",
+      "timestamp": "2026-10-07T18:04:55.966Z"
+    }
+  ],
+  "runtime_fragment_groups": [
+    {
+      "original_path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/Collectivite-corrections-pr5/skills/recherche-juridique/SKILL.md",
+      "source_sha256": "9341a05ae1ea004f9426744a2633e30bfecd4bc9b7400322a95bfc4d181419d3",
+      "index_call_id": "call_68ee2106ee754f5d9f708e94c3fceddf",
+      "fragment_reads": [
+        {
+          "call_id": "call_ecb2e10be49c448aa172a94d9fd3682e",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/runtime-fragments/skills/recherche-juridique/SKILL.md.index.json.parts/part-01.txt",
+          "sha256": "09010656048027c6cc99be59e5d214a1876a89d72cc73f08d4a74c4af0d4afa7",
+          "presentation_suffix": "CRLF"
+        },
+        {
+          "call_id": "call_146ce2ab590c45e28fa583d7062fc085",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/runtime-fragments/skills/recherche-juridique/SKILL.md.index.json.parts/part-02.txt",
+          "sha256": "4f50bf0c17080b14d35ae60ef873ec585d79ba4c16edb093e27eadc1725cdfac",
+          "presentation_suffix": "CRLF"
+        },
+        {
+          "call_id": "call_c1b8332e57ae49fe95869d552a9ad545",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/runtime-fragments/skills/recherche-juridique/SKILL.md.index.json.parts/part-03.txt",
+          "sha256": "3ee002ecebac99d37ebc7ba42276951aff990bba346e37074ecffbc0dfa7bbbf",
+          "presentation_suffix": "CRLF"
+        },
+        {
+          "call_id": "call_7a0d2b97ba124427a2e746fd50714693",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/runtime-fragments/skills/recherche-juridique/SKILL.md.index.json.parts/part-04.txt",
+          "sha256": "0bc09e7f165fa81bb33df9c9cc577351f690bc144859778826c669feb45c6f51",
+          "presentation_suffix": "CRLF"
+        },
+        {
+          "call_id": "call_3410d64229f14a969305e61b0d67af80",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/runtime-fragments/skills/recherche-juridique/SKILL.md.index.json.parts/part-05.txt",
+          "sha256": "d338e5576d43b7ec5847bf266ddd6ca06b45efeee3475447d958ef29c1f047b6",
+          "presentation_suffix": "CRLF"
+        },
+        {
+          "call_id": "call_1fbd871d563e4b0f8bd4071cf6cbae09",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/runtime-fragments/skills/recherche-juridique/SKILL.md.index.json.parts/part-06.txt",
+          "sha256": "06fd23aae02deb4cb32848d782e94ff4010a807e8efb2a7c902ce1368b216c0a",
+          "presentation_suffix": "CRLF"
+        },
+        {
+          "call_id": "call_97de57011db64690a90766824878cf2a",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/runtime-fragments/skills/recherche-juridique/SKILL.md.index.json.parts/part-07.txt",
+          "sha256": "2428e52483367db0311050db46049395cb134f3d19799ea7be78c68fb39cdb27",
+          "presentation_suffix": "CRLF"
+        }
+      ]
+    },
+    {
+      "original_path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/Collectivite-corrections-pr5/skills/recherche-juridique/references/gabarits-sortie.md",
+      "source_sha256": "c4d83e364f45631810d9b361b013d542436986197a3d43f4970eea3e3033b88f",
+      "index_call_id": "call_8e09079c2dfc4050b6b1ee49f29bb988",
+      "fragment_reads": [
+        {
+          "call_id": "call_0d3632c8b2d6408daeccf2841a147d13",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/runtime-fragments/skills/recherche-juridique/references/gabarits-sortie.md.index.json.parts/part-01.txt",
+          "sha256": "c4d83e364f45631810d9b361b013d542436986197a3d43f4970eea3e3033b88f",
+          "presentation_suffix": "CRLF"
+        }
+      ]
+    }
+  ]
+}

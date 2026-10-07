@@ -1,0 +1,126 @@
+ions/activités **politiques, syndicales, religieuses** ;
+  **droit d'accès** de l'agent à tout moment (à distinguer du droit de
+  communication renforcé propre à la discipline, carriere-paie §5.5).
+- **Durées de conservation** : suivre le **référentiel CNIL RH secteur
+  public** en vigueur — jamais de durée précise de mémoire.
+- **Données de santé** : circuit **cloisonné** via la médecine de
+  prévention/du travail ; le RH ne reçoit que les conclusions utiles
+  (aptitude, aménagement), jamais le détail médical.
+- **Registre des traitements** : SIRH et traitements annexes (paie,
+  dispositif de signalement) inscrits au registre, avec base légale, finalité
+  et durée. **Violation de données** : analyser l'obligation de
+  **notification CNIL** et d'**information des agents** si risque élevé —
+  délais à vérifier au texte européen en vigueur, jamais de mémoire.
+
+### 5.5 Renvois inter-branches
+
+**Discipline et suspension conservatoire** → `carriere-paie` §5.5 (cette
+branche traite seulement l'articulation enquête/discipline, pas la
+procédure). **Santé au travail, RPS** → `qvt-sante` (volet médical et
+prévention d'un signalement). **Diffusion interne** du dispositif de
+signalement et des référents → `communication-interne` (fond ici, publicité
+là-bas).
+
+## 6. Calculs
+
+Sans objet : pas de calcul chiffré. Aucun montant de prise en charge au
+titre de la protection fonctionnelle ne doit être avancé de mémoire :
+renvoyer au contrat d'assurance statutaire ou à la décision d'espèce.
+
+## 7. Déclencheurs de vérification
+
+Appliquer le noyau de vérification (matrice §2.2 du SKILL.md) dès que :
+- un **refus de protection fonctionnelle** est envisagé → qualification de
+  faute personnelle détachable, motivation, voies de recours ;
+- une **demande de cumul** est instruite → liste réglementaire en vigueur,
+  périmètre HATVP si emploi exposé ;
+- un **signalement** est reçu → circuit applicable, art. 40 CPP si
+  pertinent, protection immédiate du signalant ;
+- une question porte sur une **durée de conservation** → référentiel CNIL en
+  vigueur, jamais de mémoire ;
+- une **réforme récente** conditionne la réponse (décrets/lois cités) →
+  signaler « à confirmer » tant que non vérifié sur Légifrance.
+
+## 8. Pièges & confusions fréquentes
+
+1. Subordonner la **protection fonctionnelle** à une condamnation pénale
+   préalable — faux, dispositif autonome.
+2. Refuser la protection sans **motivation** ni **voies de recours**.
+3. Accorder la protection sans écarter la **faute personnelle détachable**.
+4. Traiter le cumul comme automatiquement interdit ou libre — **liste fermée**
+   de dérogations à vérifier au cas par cas.
+5. Ignorer le **contrôle différencié** selon l'exposition de l'emploi
+   (interne vs HATVP).
+6. Confondre **référent déontologue** (cumul, conflits d'intérêts) et
+   **référent laïcité** (neutralité) — obligations distinctes.
+7. Appliquer l'obéissance hiérarchique malgré un ordre manifestement illégal
+   **et** compromettant gravement un intérêt public — conditions
+   **cumulatives**, pas alternatives.
+8. Traiter le **dispositif de signalement** comme facultatif — obligation
+   légale. Rester **inactif** en attendant l'issue pénale — engage la
+   responsabilité de la collectivité.
+9. Confondre **enquête administrative** et **procédure disciplinaire**.
+10. Mentions **politiques/syndicales/religieuses** au dossier — interdiction
+    absolue. Donner une **durée de conservation** de mémoire au lieu du
+    texte applicable — et appliquer par erreur le référentiel CNIL RH
+    généraliste au **dossier individuel** de l'agent public, qu'il exclut
+    explicitement (régi par l'arrêté du 21 décembre 2012).
+11. Confondre l'accès **ordinaire** au dossier et le droit de **communication
+    intégrale** propre à la discipline (carriere-paie §5.5).
+
+## 9. Données volatiles à vérifier
+
+Pas de valeur d'indexation propre à la branche. **À confirmer en version
+consolidée** : CGFP art. R123-7 à R123-13 (activités accessoires, ex-décret
+n° 2020-69), CGFP art. R135-1 à R135-10 (dispositif de signalement,
+ex-décret n° 2020-256), loi n° 2022-401 (lanceurs d'alerte), loi
+n° 2021-1109 (CRPR, référent laïcité), périmètre des emplois soumis à HATVP,
+seuils d'effectifs du dispositif d'alerte. Le **dossier individuel de
+l'agent public** relève de l'**arrêté du 21 décembre 2012**, et non du
+référentiel CNIL généraliste « gestion des ressources humaines » (qui
+l'exclut explicitement) — ne pas appliquer par erreur les durées de
+conservation de ce dernier au dossier individuel.
+des données RH, délais de notification CNIL en cas de violation de données.
+
+## 10. Livrables (classés par niveau)
+
+1. **Décision** — octroi/refus de protection fonctionnelle (motivation +
+   recours si refus) ; autorisation/refus de cumul ou de temps partiel pour
+   création d'entreprise (idem si refus).
+2. **Organisation** — fiche de procédure du dispositif de signalement ;
+   procédure d'enquête administrative interne ; circuit de saisine des
+   référents déontologue/laïcité.
+3. **Pilotage** — note au DGS/Maire sur une situation sensible ; bilan annuel
+   du dispositif de signalement ; cartographie des emplois exposés.
+4. **Communication** — courrier de réponse à une demande de protection ou de
+   cumul ; information des agents sur les référents et le dispositif de
+   signalement (articuler avec `communication-interne`).
+
+Gabarits → `assets/`.
+
+## 11. Niveau de confiance (repères de la branche)
+
+- **Stable** : obligation de protection fonctionnelle et son autonomie
+  vis-à-vis du pénal ; principe d'exclusivité et dérogations encadrées ;
+  obligation de référents déontologue et laïcité ; double condition
+  cumulative de la désobéissance légitime ; art. 40 CPP ; interdiction des
+  mentions politiques/syndicales/religieuses au dossier.
+- **À vérifier** : numéros exacts des décrets/lois cités ; périmètre HATVP ;
+  seuils d'effectifs du dispositif d'alerte ; durées CNIL ; modalités de
+  prise en charge financière de la protection fonctionnelle.
+- **Débattu** : frontière de la faute personnelle détachable — casuistique,
+  éviter toute synthèse péremptoire.
+
+## 12. Checklist de branche
+
+1. Qualité du demandeur et nature des faits (victime/mis en cause)
+   identifiées avant toute protection fonctionnelle ?
+2. Faute personnelle détachable explicitement écartée ou identifiée ?
+3. Si refus (protection, cumul) : motivation et voies de recours présentes ?
+4. Emploi qualifié d'« exposé » avant de statuer sur cumul/départ privé
+   (interne vs HATVP) ?
+5. Circuit de signalement et référents identifiés (propre ou mutualisé) ?
+6. Enquête administrative distinguée de la discipline, articulation art. 40
+   CPP vérifiée si nécessaire ?
+7. Aucune durée de conservation ni numéro de décret donné de mémoire sans
+   réserve « à confirmer » ?

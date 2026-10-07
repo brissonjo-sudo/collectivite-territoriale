@@ -1,0 +1,183 @@
+apes et un calendrier indicatif (ex. projet d'arrêté à
+> instruire, consultation à mener, communication à prévoir) ? »
+
+**À l'issue de l'étape 10** : si toutes les réponses nécessaires ont été
+recueillies, passer à l'assemblage (§2). Sinon, appliquer la règle
+`[INCOMPLET]` (§4).
+
+---
+
+## 2. Gabarit d'assemblage
+
+> Champs à compléter entre `[ ]`. **Aucune donnée nominative** ne doit
+> figurer en clair dans ce canevas tant qu'elle n'a pas été expressément
+> fournie et confirmée par l'utilisateur pour la version consolidée finale ;
+> dans le canevas de travail, préférer un identifiant neutre (« le riverain
+> A », « le partenaire B ») si la donnée doit rester anonymisée pour
+> l'échange avec l'assistant.
+>
+> ⚠️ **Avant transmission au maire** : si la note évoque une base légale ou
+> réglementaire conditionnant une décision, vérifier en version consolidée
+> ce visa (renvoi `references/pouvoirs-police.md` /
+> `references/reglementation-appliquee.md`) et signaler tout point de
+> fragilité identifié par `references/controle-legalite.md` (§4 de cette
+> brique), notamment compétence, base légale précise et proportionnalité —
+> même si cette note elle-même n'est pas un acte faisant grief.
+
+```
+[COLLECTIVITÉ — en-tête / service de police municipale]
+
+NOTE AU MAIRE N° [numéro] / [année]
+[Mention facultative : destinataire précis si adjoint délégué — préciser la
+délégation]
+
+Rédigée par : [nom, qualité]
+Date : [date]
+Objet : [intitulé synthétique de la question traitée]
+Échéance de décision : [date ou « sans échéance fixée » — étape 2]
+
+I. CONTEXTE
+[Périmètre concerné (étape 3) et faits ou situation motivant la note,
+exposés de façon factuelle — étape 4. Citer les éléments objectifs
+disponibles (signalements, statistiques, antécédents) sans
+interprétation excessive.]
+
+II. ANALYSE
+[Base légale ou réglementaire envisageable pour une éventuelle décision
+(étape 5), avec la réserve obligatoire : « qualification non tranchée par
+la présente note, à vérifier — renvoi pouvoirs-police.md /
+reglementation-appliquee.md ». Préciser si la police mobilisée est générale
+ou spéciale et signaler tout risque de conflit de compétence
+(maire/préfet) identifié.
+
+Avis déjà recueillis et tiers concernés, le cas échéant (étape 7), sans
+donnée nominative en clair.]
+
+III. OPTIONS
+[Pour chaque option recensée à l'étape 6 :]
+
+Option [n°] — [intitulé]
+- Description : [...]
+- Avantages : [...]
+- Inconvénients : [...]
+- Moyens / coût estimé : [si connu, sinon « [INCOMPLET — préciser : coût
+  estimé de l'option n° ... ]» ou « non chiffré à ce stade »]
+- Risque(s) identifié(s) : [étape 8]
+- [risque : Faible / Moyen / Élevé / Critique — confiance : Stable / À
+  vérifier / Jurisprudentiel / Abstention] (`SKILL.md` §5.1)
+
+[Répéter pour chaque option, y compris l'option « ne rien faire » ou
+« différer » si elle a été envisagée.]
+
+IV. POINTS DE VIGILANCE — CONTRÔLE DE LÉGALITÉ (le cas échéant)
+[Si une option recommandée est susceptible de déboucher sur un acte
+faisant grief : reprendre ici les points de fragilité identifiés via
+references/controle-legalite.md §4 — compétence et délégation, procédure
+préalable, base légale précise, proportionnalité, obligation de
+motivation et de transmission au contrôle de légalité de l'acte à venir.
+Cette note elle-même n'est pas un acte et n'est pas soumise à ces
+obligations, mais les anticiper ici sécurise la décision du maire.
+Si aucune option n'aboutit à un acte faisant grief : « sans objet à ce
+stade ».]
+
+V. RECOMMANDATION
+[Option recommandée et justification synthétique — étape 9. Rappel
+explicite : « Cette recommandation n'engage pas le maire ; la décision lui
+appartient. »]
+
+VI. SUITES ET CALENDRIER PROPOSÉ
+[Étapes suivantes si la recommandation est suivie, calendrier indicatif —
+étape 10. Si une option implique la rédaction d'un arrêté : rappel que ce
+projet d'acte devra être instruit séparément via references/templates/arrete-modele.md,
+après passage obligatoire par references/controle-legalite.md.]
+
+Fait à [lieu], le [date].
+[Signature du rédacteur]
+```
+
+---
+
+## 3. Discipline de rédaction (rappel, non négociable)
+
+- **Champs entre `[ ]`** tant qu'ils ne sont pas confirmés par
+  l'utilisateur.
+- **Aucune donnée nominative** générée ou supposée par l'assistant : toute
+  identité doit être fournie explicitement par l'utilisateur ; en son
+  absence, laisser `[INCOMPLET — préciser : identité de …]`.
+- **Pas de décision déguisée** : la note **ne décide pas** ; elle
+  **recommande**. La formulation doit toujours laisser explicite que la
+  décision appartient au maire (étape 9, section V du gabarit).
+- **Toute référence de texte** (base légale envisagée pour une décision)
+  porte la réserve « à confirmer en version consolidée » sauf identifiant
+  déjà vérifié dans la session courante (règle de provenance, `SKILL.md`
+  §5.3).
+- **Pas de qualification pénale ou réglementaire tranchée** dans ce
+  document : renvoi systématique aux branches compétentes (§0, §1 étape 5).
+- **Au moins deux options** présentées, y compris l'option de ne pas agir
+  ou de différer si elle est pertinente : une note à option unique masque
+  l'aide à la décision attendue par le maire.
+- **Risque par option** explicitement qualifié (§1 étape 8, couple
+  [risque/confiance] `SKILL.md` §5.1), pas seulement pour l'option
+  recommandée.
+
+---
+
+## 4. Règle `[INCOMPLET]` — application stricte
+
+**Interdiction absolue d'halluciner une donnée manquante** (contexte, base
+légale envisagée, option, risque, recommandation, destinataire).
+
+Si une information nécessaire à une étape du §1 n'a pas été fournie :
+
+1. Ne **pas** combler le champ par une supposition, même plausible.
+2. Marquer le champ correspondant dans le gabarit `[INCOMPLET — préciser :
+   <nom du champ>]`.
+3. Poursuivre l'assemblage avec les champs disponibles (un champ manquant
+   ne bloque pas la rédaction des autres sections ; en particulier, des
+   options déjà recueillies peuvent être assemblées même si une autre
+   reste à préciser).
+4. En fin de document, ajouter la section suivante, systématiquement si au
+   moins un champ est marqué `[INCOMPLET]` :
+
+```
+---
+## CHAMPS MANQUANTS — DOCUMENT NON FINALISABLE EN L'ÉTAT
+
+Les informations suivantes sont requises avant transmission au maire :
+- [champ manquant 1 — étape correspondante]
+- [champ manquant 2 — étape correspondante]
+- [...]
+
+Merci de fournir ces éléments pour finaliser la note. Ce document ne doit
+être ni transmis, ni présenté comme définitif tant que ces champs ne sont
+pas renseignés.
+```
+
+5. **Demander explicitement** ces données à l'utilisateur dans la réponse,
+   en reprenant la formulation de la question d'étape correspondante (§1).
+6. Ne jamais marquer le document comme « final » ou « prêt à transmettre »
+   tant qu'une mention `[INCOMPLET]` subsiste.
+7. **Cas particulier — base légale incertaine (étape 5)** : si le
+   rédacteur ne sait pas quelle base légale envisager, ne **jamais**
+   l'inventer ; marquer `[INCOMPLET — préciser : base légale envisagée, ou
+   indiquer "à déterminer via pouvoirs-police.md / reglementation-appliquee.md"]`
+   et signaler que ce point devra être levé avant toute instruction d'un
+   éventuel acte.
+
+---
+
+## 5. Transmission et articulation avec l'acte éventuel
+
+- **Destinataire** : le maire (ou l'adjoint délégué identifié à l'étape 1,
+  délégation précisée).
+- La note au maire **n'est pas un acte** : elle n'est ni motivée au sens du
+  CRPA, ni assortie de voies et délais de recours, ni soumise par
+  elle-même à l'obligation de transmission au contrôle de légalité
+  (`references/controle-legalite.md` §9). Ne jamais présenter cette note
+  comme tenant lieu d'un arrêté ou d'une décision.
+- Si la **recommandation retenue** par le maire implique la rédaction d'un
+  acte (typiquement un arrêté) : ce projet d'acte doit être instruit
+  **séparément** via `references/templates/arrete-modele.md`, **après passage
+  obligatoire** par `references/controle-legalite.md` (grille de contrôle
+  a priori §4 : compétence et délégation, procédure préalable, base
+  lég

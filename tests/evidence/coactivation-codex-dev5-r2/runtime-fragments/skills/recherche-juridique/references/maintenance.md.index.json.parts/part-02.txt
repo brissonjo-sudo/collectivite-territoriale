@@ -1,0 +1,71 @@
+on est fourni.
+
+---
+
+## 5. Mise à jour des métadonnées
+
+- Mettre à jour `version` selon le caractère des changements :
+  - **MAJEUR** : refonte structurelle (ex. v1 → v2.0.0).
+  - **MINEUR** : ajout d'un module, d'une technique, d'un déclencheur,
+    sans remise en cause de l'architecture.
+  - **PATCH** : correction de coquille, ajustement de référence,
+    clarification rédactionnelle.
+- Mettre à jour `date_derniere_revue_methodologique` à la date du jour
+  (1er septembre AAAA).
+- Mettre à jour `date_derniere_verification_sources` à la date du jour.
+
+---
+
+## 6. Entrée CHANGELOG
+
+Format Keep a Changelog 1.1.0. Sections : *Ajouté*, *Modifié*,
+*Déprécié*, *Retiré*, *Corrigé*, *Sécurité*. Référencer le commit
+si la revue donne lieu à un commit.
+
+---
+
+## 7. Test fonctionnel de fin de revue
+
+Faire tourner le skill, après mise à jour, sur **quatre requêtes témoins**
+représentatives :
+
+1. **Mode A standard, aucun module** — requête simple de référence
+   d'article (ex. « quel article du CGCT définit les pouvoirs généraux
+   du maire ? »). Vérifier l'identifiant récupéré en source primaire et
+   la version applicable, l'absence de module activé et l'affichage
+   proportionné (`SKILL.md`, « Traçabilité proportionnée » et §3) :
+   sources, date applicable, réserves utiles et confiance, sans
+   récitation des étapes 0, 0 bis et 7 ni encart récapitulatif.
+
+2. **Mode A + PÉNAL + ACTE-ADMIN** — requête de qualification + acte
+   (ex. « qualification de dépôt sauvage et possibilité d'arrêté de
+   mise en demeure »). Vérifier la décomposition élémentaire de
+   l'infraction, le contrôle de proportionnalité Benjamin, la
+   triangulation appliquée à juste mesure.
+
+3. **Mode B `[complet]`** — requête institutionnelle exigeante
+   (ex. « `[complet]` note sur l'articulation police générale du maire
+   et police spéciale environnementale »). Vérifier que tous les
+   modules sont activés, certains marqués « sans objet à cette
+   espèce » avec justification, et que la synthèse des étapes 0 et 7
+   et l'encart récapitulatif sont présents.
+
+4. **DOC-AUDIT** — corpus de deux documents contenant un article exact mais
+   une conséquence opérationnelle excessive, un montant périmé et une
+   divergence d'acteur ou d'indicateur. Vérifier le registre complet, le
+   contrôle à 100 % du risque élevé, la matrice
+   acteur–lieu–propriétaire–pouvoir, le test séparé de l'exécution forcée
+   d'office et la distinction maximum légal / classe / amende forfaitaire
+   (`audit-documentaire.md` §8), la recherche post-correction, l'encart
+   récapitulatif, et l'absence de toute formule « conforme » tant que le
+   critère de clôture (§10) n'est pas rempli.
+
+Si l'un des tests révèle un défaut de cohérence ou d'application →
+correction immédiate avant clôture de la revue.
+
+---
+
+## 8. Clôture
+
+- Commit avec message format : `chore(skill): revue annuelle AAAA-MM-JJ`.
+- Mettre à jour les métadonnées de suivi dans votre projet (version et date).

@@ -1,0 +1,60 @@
+étence, mentions obligatoires et
+transmission via `../references/controle-budgetaire.md`.
+
+---
+
+## 5. Jurisprudence clé
+
+> Pointeur uniquement — voir **`recherche-juridique`**. Aucune décision n'est
+> citée ici par son nom d'usage, son millésime ou son numéro.
+
+Thèmes appelant une recherche avant conclusion :
+- Effets d'un **emprunt contracté hors délégation** ou au-delà de ses
+  limites sur la régularité de l'engagement.
+- Contentieux relatifs aux **produits structurés** et à l'information de
+  l'emprunteur sur le risque encouru.
+- Conditions de mise en jeu d'une **garantie d'emprunt** en cas de
+  défaillance du débiteur principal.
+- Portée exacte de l'obligation de **compte rendu** des décisions prises par
+  délégation.
+
+---
+
+## 6. Check-list opérationnelle
+
+- [ ] Compétence identifiée : assemblée, ou exécutif dans les limites d'une
+      délégation vérifiée (montant, nature du produit, durée) ?
+- [ ] Compte rendu des décisions prises par délégation prévu et à jour ?
+- [ ] Recette d'emprunt qualifiée comme **non affectée** et **d'investissement** — aucun financement de fonctionnement détecté ? Si un tel financement apparaît → **ALERTE BUDGÉTAIRE** (`SKILL.md` §5.3) avant toute autre recommandation.
+- [ ] Consultation bancaire réalisée et comparaison des offres documentée ?
+- [ ] Classification de risque du produit envisagé qualifiée, sans valeur
+      citée de mémoire ?
+- [ ] Soutenabilité vérifiée par renvoi à `prospective-analyse.md` §5.2
+      (capacité de désendettement) avant recommandation de contracter ?
+- [ ] Mobilisation des fonds calée sur le besoin réel de trésorerie ?
+- [ ] Annexes de l'état de la dette renseignées et cohérentes avec les
+      écritures comptables ?
+- [ ] Toute opération de gestion active (renégociation, remboursement
+      anticipé) resituée dans le périmètre de compétence identifié ?
+- [ ] Garantie d'emprunt à un tiers : délibération spécifique, quotité et
+      plafond vérifiés, exposition cumulée suivie ?
+- [ ] Couple [risque / confiance] indiqué si utile à la décision.
+- [ ] Cas journalisable (produit atypique, délégation dépassée, garantie à
+      risque) → proposé pour `JOURNAL.md`.
+
+---
+
+## Références et remontées
+
+**Branches mobilisées** : `dette-tresorerie.md` (fond), `budget-cycle.md`
+(compétence et délégation), `prospective-analyse.md` (soutenabilité),
+`nomenclature-m57.md` (imputation et annexes), `contentieux-financier.md`
+(conséquences d'une irrégularité).
+
+**Objet lié** : `../objets/operation-investissement.md` lorsque l'emprunt
+finance une opération identifiée en AP/CP.
+
+**Point de mise à jour requis** : grille de classification de risque des
+produits, charte de bonne conduite applicable, plafonds et quotités des
+garanties d'emprunt — valeurs et références à réviser en cas d'évolution du
+cadre applicable à la dette locale.

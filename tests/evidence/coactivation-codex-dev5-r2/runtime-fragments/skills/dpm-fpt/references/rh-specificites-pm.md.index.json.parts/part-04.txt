@@ -1,0 +1,57 @@
+drh-fpt`.
+
+---
+
+## 10. Double échelle [risque / confiance]
+
+- **Existence et conditions de l'agrément/assermentation** (CSI L. 511-2) :
+  confiance **stable**, risque **élevé** (condition d'exercice de la qualité
+  d'APJA — toute irrégularité expose l'acte à la nullité).
+- **Frontière constat / procédure disciplinaire** : confiance **stable** sur
+  le principe de répartition, risque **moyen à élevé** sur le tri d'un cas
+  limite (un constat mal calibré peut vicier une procédure ultérieure ou, à
+  l'inverse, priver l'agent de garanties).
+- **Logique métier des cycles atypiques** : confiance **stable**, risque
+  **faible à moyen** (organisationnel, sauf si la question dérive vers le
+  régime juridique du temps de travail → `drh-fpt`).
+- **ISFE — volet métier (cette branche)** : confiance **stable** sur le
+  principe (hors RIFSEEP, régime propre) ; **toute valeur chiffrée ou
+  procédure d'institution** → renvoyer à `drh-fpt`, ne pas trancher ici.
+- **Commandement opérationnel de terrain** : confiance **à vérifier** au cas
+  par cas (dépend de l'organisation locale du service, pas d'un texte unique
+  et stable), risque **moyen** (organisationnel) à **élevé** si la question
+  touche à une délégation formalisée de pouvoir.
+
+---
+
+## 11. Checklist de branche
+
+1. La question a-t-elle été **testée contre le tableau de bascule (§4.0)**
+   avant toute réponse sur le fond ?
+2. Si la question est **statutaire** (carrière, paie, instance, procédure
+   disciplinaire) : a-t-elle été **renvoyée à `drh-fpt`** sans en
+   redévelopper le détail ?
+3. **Agrément et assermentation** vérifiés avant d'affirmer la validité d'un
+   acte APJA de l'agent concerné ?
+4. **Constat vs procédure** déontologique : le point de bascule a-t-il été
+   identifié, et la main passée à `drh-fpt` dès le premier acte procédural ?
+5. Dimension **pénale** d'un manquement testée en priorité via le
+   **garde-fou APJA** (`SKILL.md` §5.2) ?
+6. **Formation armement** renvoyée à `armement-equipements.md` sans
+   duplication de contenu ?
+7. **ISFE** : seule la logique métier traitée ici, le détail chiffré et
+   procédural renvoyé à `drh-fpt` ?
+8. **Commandement opérationnel** distingué de la **hiérarchie statutaire** ?
+9. Tout identifiant `LEGIARTI`/`JORFTEXT` cité provient-il d'un appel d'outil
+   de la session, et non de la mémoire (règle de provenance, `SKILL.md`
+   §5.3) ?
+
+[risque / confiance] — Risque **élevé** sur l'agrément/assermentation
+(condition d'exercice de la qualité d'APJA) et sur le tri constat/procédure
+disciplinaire (vice de procédure possible des deux côtés) ; risque **moyen**
+sur les cycles atypiques et le commandement opérationnel (organisationnel,
+sauf dérive vers un acte formalisé). Confiance **stable** sur l'architecture
+de la frontière `dpm-fpt`/`drh-fpt` elle-même (posée par `SKILL.md` §5.4) et
+sur le principe de l'agrément CSI L. 511-2 ; **à vérifier systématiquement**
+sur le numéro exact d'article du code de déontologie applicable à un cas
+donné et sur toute valeur chiffrée ISFE (renvoyée à `drh-fpt`).

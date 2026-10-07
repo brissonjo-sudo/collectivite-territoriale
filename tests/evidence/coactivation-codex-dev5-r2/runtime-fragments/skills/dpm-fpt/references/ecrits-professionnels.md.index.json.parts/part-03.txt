@@ -1,0 +1,119 @@
+e hypothèse retenue sur le circuit de transmission local et
+> demander confirmation si la donnée manque (organisation propre à la
+> collectivité, convention de coordination).
+
+---
+
+## 7. Déclencheurs de vérification
+
+Appliquer la matrice §2.2 du `SKILL.md` — vérification **obligatoire**
+avant de conclure dès que :
+- le **contenu exact d'un acte** (PV, rapport) doit être produit ou
+  finalisé pour transmission ;
+- la **qualification pénale** visée dans l'écrit est en jeu → renvoyer à
+  `penal-procedure.md` / `reglementation-appliquee.md`, ne pas trancher
+  ici ;
+- la **valeur probante** du PV est contestée ou questionnée pour un cas
+  précis (jurisprudence sur l'art. 537 CPP, exigence de précision) ;
+- un **délai de transmission** ou un **circuit procédural** (verbalisation
+  électronique, OMP) conditionne la réponse ;
+- un **identifiant LEGIARTI/JORFTEXT/NOR** doit figurer dans l'écrit
+  produit (règle de provenance, `SKILL.md` §5.3).
+
+---
+
+## 8. Pièges & confusions fréquentes
+
+1. Produire un **PV** pour un fait que l'agent n'a pas constaté
+   personnellement, ou hors du champ de sa compétence matérielle de
+   verbalisation (vérifier `reglementation-appliquee.md` avant).
+2. Confondre **rapport d'information** et **rapport de mise à
+   disposition** : seul le second documente une **appréhension**.
+3. Croire que tout écrit de l'agent PM a la **force probante** de
+   l'art. 537 CPP : seul le **PV de contravention** régulièrement établi
+   en bénéficie ; un simple rapport est apprécié selon le régime de preuve
+   ordinaire.
+4. Omettre la **localisation précise** dans un PV : risque de perte de la
+   force probante renforcée (exigence jurisprudentielle, à vérifier au cas
+   par cas).
+5. Rédiger ou compléter un champ manquant **par supposition** plutôt que
+   de marquer `[INCOMPLET]` et de le demander.
+6. Fusionner le **compte rendu au maire** et le **compte rendu à l'OPJ**
+   sans préciser la double transmission (`penal-procedure.md` §4.2).
+7. Esquisser, dans un rapport de mise à disposition, des éléments relevant
+   d'une **audition formelle** (questions-réponses circonstanciées) :
+   bascule vers un acte réservé OPJ, interdit (§5.4).
+8. Oublier de vérifier, pour un **arrêté** ou une **note au maire**, le
+   passage préalable par `controle-legalite.md` (acte faisant grief).
+
+---
+
+## 9. Données / références à vérifier
+
+| Référence | Statut dans cette session |
+|---|---|
+| **Art. 537 CPP** (force probante des PV et rapports de contravention jusqu'à preuve contraire) | **Vérifié sur Légifrance le 2026-06-30**, identifiant LEGIARTI000006576893 ; version en vigueur à la date des faits à reconfirmer au cas d'usage |
+| **Art. 21 et 21-2 CPP** (qualité APJA, compte rendu maire/OPJ) | Vérifiés sur Légifrance le 2026-06-30 — détail complet dans `penal-procedure.md` §4.1–4.2, pas de duplication ici |
+| **Art. 53 et 73 CPP** (qualification de la flagrance et appréhension) | Vérifiés sur Légifrance le 2026-07-28 ; identifiants LEGIARTI000006575016 et LEGIARTI000029000766 — détail dans `penal-procedure.md` §4.3 |
+| **Art. 78-6 CPP** (relevé d'identité, compte rendu à l'OPJ, présentation ou rétention sur ordre) | Vérifié sur Légifrance le 2026-07-28 ; identifiant LEGIARTI000034114850 — détail dans `penal-procedure.md` §4.3 |
+| **Art. 16 CPP** (qualité d'OPJ) | Vérifié sur Légifrance le 2026-07-28 ; identifiant LEGIARTI000047052868. Cet article ne fonde pas à lui seul tous les actes réservés ; citer le texte propre à l'acte concerné |
+| **Art. 56 CPP** (perquisition de flagrance par l'OPJ) | Vérifié sur Légifrance le 2026-07-28 ; identifiant LEGIARTI000049778813 — aucune perquisition par l'agent de police municipale, y compris en flagrance |
+| **Art. L. 130-4 du code de la route** (catégories d'agents habilités à constater les contraventions routières par PV, dont les agents PM) | **Au socle** (`references-verifiees.md` §4), identifiant LEGIARTI000045072417, version du 26/01/2022, recontrôlé le 2026-09-14 ; la **liste des contraventions** constatables par catégorie d'agent relève du texte réglementaire d'application (décret en Conseil d'État, art. 21 CPP) — **à confirmer en version consolidée** avant citation |
+| **Art. L. 511-1 CSI** (missions des agents de police municipale) | **Au socle** (§3), LEGIARTI000041587492, version du 01/07/2021, recontrôlé le 2026-09-14 |
+| Jurisprudence sur l'exigence de précision (localisation) conditionnant la force probante du PV (art. 537 CPP) | À vérifier au cas par cas via `recherche-juridique` avant citation en acte — aucune décision nommément citée de mémoire dans cette branche |
+| Modalités et délais exacts de transmission (verbalisation électronique, OMP) | À confirmer en version consolidée et selon l'organisation locale |
+
+---
+
+## 10. Écrits & livrables — pilotage des générateurs `references/templates/`
+
+Cette branche **pilote** les générateurs interactifs de la couche 4. Elle
+ne contient pas elle-même les gabarits de document : ceux-ci vivent dans
+`references/templates/`, qui n'est pas encore peuplé à ce stade du skill (couche 4,
+phase ultérieure). Quand `references/templates/` sera produit, chaque générateur devra
+respecter :
+
+1. **PV de contravention** — `references/templates/pv-contravention.md`.
+   Vérifier au préalable la base légale de l'infraction
+   (`reglementation-appliquee.md`) et la compétence de constatation de
+   l'agent (art. 21 CPP + texte spécial, ex. art. L. 130-4 code de la
+   route, §5.3, §9). Respecter les mentions de §5.3 et l'exigence de
+   précision conditionnant l'art. 537 CPP (§5.2).
+2. **Rapport d'information** — `references/templates/rapport-information.md`. Préciser
+   l'absence de route 53/73 ou 78-6 ; double destinataire maire/OPJ
+   (`penal-procedure.md` §4.2).
+3. **Rapport de mise à disposition** — `references/templates/rapport-mise-a-disposition.md`.
+   Mentionner systématiquement la route 53/73 ou 78-6, les faits qui en
+   établissent les conditions, la chronologie complète, la décision de l'OPJ
+   lorsque l'art. 78-6 est mobilisé, et le destinataire ; articulation
+   garde-fou §5.4.
+4. **Arrêté (modèle)** — `references/templates/arrete-modele.md`. Acte faisant grief le
+   cas échéant : motivation en fait et en droit + voies et délais de
+   recours + vérification de la transmission au contrôle de légalité
+   (CGCT — à confirmer) ; passage **obligatoire** par
+   `controle-legalite.md` avant production.
+5. **Note au maire (modèle)** — `references/templates/note-maire-modele.md`. Note de
+   pilotage, pas un acte ; pas de voies de recours, mais rigueur sur la
+   base légale citée si elle conditionne une décision du maire.
+
+**Logique interactive obligatoire** (rappel `SKILL.md` §6) : détecter le
+type d'écrit → poser les questions une à une → assembler le document.
+**Cas incomplets** : jamais d'hallucination, brouillon `[INCOMPLET]` listant
+les champs manquants (§5.5).
+
+---
+
+## 11. Double échelle [risque / confiance]
+
+| Sous-domaine | Risque | Confiance | Repère |
+|---|---|---|---|
+| Choix du bon type d'écrit | Moyen | Stable | Vérification ponctuelle si situation mixte (PV + appréhension) |
+| Valeur probante du PV (art. 537 CPP) | Élevé | Stable sur le principe (vérifié), à vérifier sur l'exigence de précision au cas d'espèce | Citation obligatoire + réserve « à confirmer » sur la jurisprudence |
+| Mentions obligatoires d'un écrit transmis | Élevé | À vérifier selon le texte d'incrimination et le circuit local | Citation + vérification ponctuelle obligatoire avant transmission |
+| Compétence de constatation (texte spécial, ex. L. 130-4 code de la route) | Élevé | Stable sur le principe (vérifié), à confirmer sur le détail par catégorie d'agent | Citation obligatoire + réserve « à confirmer en version consolidée » |
+| Production d'un acte faisant grief (arrêté) | Critique | À vérifier systématiquement | Citation + motivation + voies de recours + contrôle de légalité obligatoires |
+| Donnée manquante dans un écrit | Élevé | N/A | `[INCOMPLET]` obligatoire, jamais d'hallucination |
+
+---
+
+## 12. Chec

@@ -1,0 +1,44 @@
+{
+  "source_path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-mcp-indisponible/input.json",
+  "source_sha256": "db44c5e627a5c4fad834f1db9f1600ca5a21e5c2b697d79d63cdbc4144895a50",
+  "characters": 40059,
+  "fragment_limit": 8000,
+  "fragments": [
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-mcp-indisponible/input.index.json.parts/part-01.txt",
+      "sha256": "ef1983a93d2c796806882e6c60c4a3b547f58af8a2bdb505844aa4aea2c74921",
+      "characters": 8000,
+      "number": 1
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-mcp-indisponible/input.index.json.parts/part-02.txt",
+      "sha256": "298455617db42987c4d72060d9d7b88ee0502a56a2494289423a2d73ad2fe8b3",
+      "characters": 8000,
+      "number": 2
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-mcp-indisponible/input.index.json.parts/part-03.txt",
+      "sha256": "94d1e1ea9288aa6bfa38ed75cd897d997e0d2eb636ae3f09322ad3b76a222b43",
+      "characters": 8000,
+      "number": 3
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-mcp-indisponible/input.index.json.parts/part-04.txt",
+      "sha256": "ae51cf0405a6b1f3b792b15a0f91ff727f884c66d9c85c543375093bc7944462",
+      "characters": 8000,
+      "number": 4
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-mcp-indisponible/input.index.json.parts/part-05.txt",
+      "sha256": "ca884c8c410fa6b6faba3fa0d88899c9ce36720e37e3e4b0727c040563fe8da2",
+      "characters": 8000,
+      "number": 5
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-mcp-indisponible/input.index.json.parts/part-06.txt",
+      "sha256": "6ad50ad288a4e732ff88215161112ef551bda687ebad3e9f6d19b22d4984b68f",
+      "characters": 59,
+      "number": 6
+    }
+  ]
+}

@@ -1,0 +1,154 @@
+{
+  "agent": "/root/juge_codex_dev5_r2_13c",
+  "thread_id": "01a117ce-fa0b-7c23-82a0-6df33bce39fa",
+  "parent_thread_id": "01a1103e-0b49-70c1-8f4e-66a36b54916f",
+  "model": "gpt-6.1-sol",
+  "turn_id": "01a117ce-fa64-7603-b40f-fcd00135132f",
+  "created_at": "2026-10-07T19:20:02.828Z",
+  "started_at": "2026-10-07T19:20:02.946Z",
+  "completed_at": "2026-10-07T19:26:33.941Z",
+  "fork_turns": "none",
+  "initial_message_verified": false,
+  "initial_message_sha256": "f3a7a0b2a14b541b14945109b5f8bc747a6fef03a6aef01b0d9cf4598ad61528",
+  "case_id": "plugin-spontane-incident-donnees",
+  "assessment": {
+    "case_id": "plugin-spontane-incident-donnees",
+    "verdict": "reussite",
+    "technical_status": "passed",
+    "behavior_status": "passed",
+    "documentary_status": "passed",
+    "primary_content_available": true,
+    "release_ready": false
+  },
+  "host": "Codex",
+  "activation_kind": "file_read_fragments",
+  "actual_plugin_activation_verified": false,
+  "full_packet_context_verified": true,
+  "fragment_count": 19,
+  "judge_adapter_sha256": "e1e04cd4ab37425885d57861151c893a7b921999ac295ddc7d44c5a0443fdc0b",
+  "packet_sha256": "949445a42354c3cd0f33586975d998c3530dc01b49be416036250d65aa06aa3d",
+  "response_sha256": "feeca8985e9aa7b4aeef6053da37bdc809945b963cca0328e9ebe1d0f525307d",
+  "judgment_sha256": "f16d5a1890e6bfac3a62ad37c64557554a0e0fba0300dd022d0c581c7465110f",
+  "trace_sha256": "d720307838d1b42ffb32e61f8ebff2651a1d035d3fe7c39fe53b6417f404472f",
+  "rejected_creation_attempts": [],
+  "native_session_file": "rollout-2026-10-07T21-20-02-01a117ce-fa0b-7c23-82a0-6df33bce39fa.jsonl",
+  "parent_session_file": "rollout-2026-10-06T10-04-24-01a1103e-0b49-70c1-8f4e-66a36b54916f.jsonl",
+  "presentation_wrapper_sha256": "b709a2641f5433f3336a916b67b115570e5d77ed17d58433d39a89634ce3c14b",
+  "exact_presentation_normalizations": [
+    {
+      "call_id": "call_9ct6bwNjikIUn52sHRlYm3eT",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-incident-donnees-c/fragment-01.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_uKj94QkcqWgXsrp7dFvwmUTU",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-incident-donnees-c/fragment-02.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_axEJCOr16BHjp37RZSEAivKU",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-incident-donnees-c/fragment-03.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_fT7blH7kTdHGUo4uGygTSIiU",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-incident-donnees-c/fragment-04.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_EWqfQhiuc9mIOHvYPZPh0U8A",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-incident-donnees-c/fragment-05.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_qHkxiaO9r2pC23hvDHSZXRPC",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-incident-donnees-c/fragment-06.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_9mRz7QWEJ4cGDPhNBgfWTbjq",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-incident-donnees-c/fragment-07.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_X1WJuWySfl15QPRprigGUz1j",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-incident-donnees-c/fragment-08.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_uAoO6LfmwkjRuttMEJ25u8N6",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-incident-donnees-c/fragment-09.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_ziINJR4aZaT8w3wdOZjjNJqQ",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-incident-donnees-c/fragment-10.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_LngfPhuc6m0WRb1ytSZJXJDS",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-incident-donnees-c/fragment-11.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_6vpJHBHviiuPwFl7yK0eT8kN",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-incident-donnees-c/fragment-12.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_HWygbj7h15nGtairqcQV3zdk",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-incident-donnees-c/fragment-13.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_A4BfyldgcyfNjlapX3ke0Mzy",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-incident-donnees-c/fragment-14.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_2EPPzd5jmaYdQXDJbNpSwvVO",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-incident-donnees-c/fragment-15.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_fNxZEUJn8DEcg9Ga9dV43xYh",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-incident-donnees-c/fragment-16.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_jn19WJ3E5LTciqSx8XMCuhlt",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-incident-donnees-c/fragment-17.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_XyWzCHYK5SbGk9QZk2BSALch",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-incident-donnees-c/fragment-18.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_dBD3elKKfJHNUF1UNwp034nS",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-incident-donnees-c/fragment-19.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    }
+  ],
+  "normalization_scope": "only expected content plus one terminal CRLF; raw events unchanged"
+}

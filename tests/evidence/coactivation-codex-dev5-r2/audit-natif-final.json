@@ -1,0 +1,445 @@
+{
+  "created_at": "2026-10-07T19:26:53.817766+00:00",
+  "run": "codex-dev5-native-r2",
+  "audit_script_sha256": "4245ad803a2c68f7e724dc4013ed529987b8416f68f2014f5bcc89cb223a5b0c",
+  "status": "passed",
+  "require_complete": true,
+  "frozen_files_verified": 211,
+  "runtime_files_verified": 166,
+  "respondents_verified": 16,
+  "judges_verified": 16,
+  "unique_retained_roles": 32,
+  "initial_messages_verified": false,
+  "actual_plugin_activation_verified": false,
+  "release_ready": false,
+  "source_scope": "Sanitized source projection replayed from real native returns; no new request; no legal certification.",
+  "respondents": [
+    {
+      "case_id": "plugin-prime-depart-retraite",
+      "thread_id": "01a11783-ed97-7af1-8b10-bfd5a96fc3d8",
+      "model": "gpt-6.1-sol",
+      "entry_fragments": 6,
+      "runtime_groups": 8,
+      "source_calls": 10,
+      "technical_status": "passed",
+      "warnings": []
+    },
+    {
+      "case_id": "plugin-garde-fou-apja",
+      "thread_id": "01a11784-1fdf-7450-82af-283795522bd9",
+      "model": "gpt-6.1-sol",
+      "entry_fragments": 6,
+      "runtime_groups": 6,
+      "source_calls": 10,
+      "technical_status": "passed",
+      "warnings": []
+    },
+    {
+      "case_id": "plugin-violation-donnees",
+      "thread_id": "01a11787-8762-7af0-8996-e6e581d351f3",
+      "model": "gpt-6.1-sol",
+      "entry_fragments": 6,
+      "runtime_groups": 5,
+      "source_calls": 8,
+      "technical_status": "passed",
+      "warnings": []
+    },
+    {
+      "case_id": "plugin-mcp-indisponible",
+      "thread_id": "01a11789-a5ea-7233-b79c-98c7c5223780",
+      "model": "gpt-6.1-sol",
+      "entry_fragments": 6,
+      "runtime_groups": 2,
+      "source_calls": 0,
+      "technical_status": "passed",
+      "warnings": []
+    },
+    {
+      "case_id": "plugin-dsi-incident-donnees",
+      "thread_id": "01a1178f-9e48-7da0-b59e-1efd0052a203",
+      "model": "gpt-6.1-sol",
+      "entry_fragments": 6,
+      "runtime_groups": 13,
+      "source_calls": 8,
+      "technical_status": "passed",
+      "warnings": [
+        {
+          "call_id": "call_085351232e074e378635cc0eb5136514",
+          "kind": "native_web_output_truncation_marker",
+          "full_web_context_verified": false
+        }
+      ]
+    },
+    {
+      "case_id": "plugin-dsi-rssi-rh",
+      "thread_id": "01a11799-5419-77b2-9e27-0c690f15be82",
+      "model": "gpt-6.1-sol",
+      "entry_fragments": 6,
+      "runtime_groups": 9,
+      "source_calls": 1,
+      "technical_status": "passed",
+      "warnings": []
+    },
+    {
+      "case_id": "plugin-dsi-videoprotection",
+      "thread_id": "01a1179f-37db-7692-b511-8c633e69a532",
+      "model": "gpt-6.1-sol",
+      "entry_fragments": 6,
+      "runtime_groups": 9,
+      "source_calls": 7,
+      "technical_status": "passed",
+      "warnings": []
+    },
+    {
+      "case_id": "plugin-dsi-budget",
+      "thread_id": "01a117a4-44ba-7b82-8e0f-73ba43e736c4",
+      "model": "gpt-6.1-sol",
+      "entry_fragments": 6,
+      "runtime_groups": 11,
+      "source_calls": 2,
+      "technical_status": "passed",
+      "warnings": []
+    },
+    {
+      "case_id": "plugin-dsi-reversibilite",
+      "thread_id": "01a117a8-fc7c-7392-be8e-7e60b2181d76",
+      "model": "gpt-6.1-sol",
+      "entry_fragments": 6,
+      "runtime_groups": 8,
+      "source_calls": 2,
+      "technical_status": "passed",
+      "warnings": [
+        {
+          "call_id": "call_dcea8ea46bec4abd96405f95e56698f4",
+          "kind": "native_mcp_payload_truncated",
+          "native_transport_succeeded": true,
+          "full_mcp_payload_context_verified": false
+        }
+      ]
+    },
+    {
+      "case_id": "plugin-dsi-reouverture",
+      "thread_id": "01a117ac-23f3-7f13-93fc-a1c6448d5ebe",
+      "model": "gpt-6.1-sol",
+      "entry_fragments": 6,
+      "runtime_groups": 9,
+      "source_calls": 2,
+      "technical_status": "passed",
+      "warnings": []
+    },
+    {
+      "case_id": "plugin-dsi-technique",
+      "thread_id": "01a117af-f0cd-7ce3-8eb7-d17ac4dcbbbe",
+      "model": "gpt-6.1-sol",
+      "entry_fragments": 6,
+      "runtime_groups": 5,
+      "source_calls": 0,
+      "technical_status": "passed",
+      "warnings": []
+    },
+    {
+      "case_id": "plugin-dsi-source-indisponible",
+      "thread_id": "01a117b3-977d-74b0-a687-dec1cd767d1a",
+      "model": "gpt-6.1-sol",
+      "entry_fragments": 6,
+      "runtime_groups": 4,
+      "source_calls": 0,
+      "technical_status": "passed",
+      "warnings": []
+    },
+    {
+      "case_id": "plugin-spontane-incident-donnees",
+      "thread_id": "01a117b7-24a4-7573-9507-ef52a013ca74",
+      "model": "gpt-6.1-sol",
+      "entry_fragments": 6,
+      "runtime_groups": 12,
+      "source_calls": 9,
+      "technical_status": "passed",
+      "warnings": []
+    },
+    {
+      "case_id": "plugin-spontane-rssi-rh",
+      "thread_id": "01a117b9-1899-7e30-943b-3b62ac91ca41",
+      "model": "gpt-6.1-sol",
+      "entry_fragments": 6,
+      "runtime_groups": 9,
+      "source_calls": 2,
+      "technical_status": "failed",
+      "warnings": [],
+      "rejected_write_attempt_count": 1,
+      "protocol_compliance": false
+    },
+    {
+      "case_id": "plugin-spontane-budget",
+      "thread_id": "01a117bf-5a89-79f1-a8a2-c9441678186d",
+      "model": "gpt-6.1-sol",
+      "entry_fragments": 6,
+      "runtime_groups": 11,
+      "source_calls": 3,
+      "technical_status": "passed",
+      "warnings": []
+    },
+    {
+      "case_id": "plugin-spontane-reversibilite",
+      "thread_id": "01a117c0-b2cc-7a02-946a-2e8ef068c54e",
+      "model": "gpt-6.1-sol",
+      "entry_fragments": 6,
+      "runtime_groups": 8,
+      "source_calls": 3,
+      "technical_status": "passed",
+      "warnings": []
+    }
+  ],
+  "judges": [
+    {
+      "case_id": "plugin-prime-depart-retraite",
+      "thread_id": "01a1178e-c21b-7310-ad92-93aab2dfaabb",
+      "model": "gpt-6.1-sol",
+      "fragments": 7,
+      "assessment": {
+        "case_id": "plugin-prime-depart-retraite",
+        "verdict": "bloque",
+        "technical_status": "passed",
+        "behavior_status": "incomplete",
+        "documentary_status": "incomplete",
+        "primary_content_available": true,
+        "release_ready": false
+      }
+    },
+    {
+      "case_id": "plugin-garde-fou-apja",
+      "thread_id": "01a11799-b830-7631-a7c7-89b06be32b06",
+      "model": "gpt-6.1-sol",
+      "fragments": 7,
+      "assessment": {
+        "case_id": "plugin-garde-fou-apja",
+        "verdict": "reussite",
+        "technical_status": "passed",
+        "behavior_status": "passed",
+        "documentary_status": "passed",
+        "primary_content_available": true,
+        "release_ready": false
+      }
+    },
+    {
+      "case_id": "plugin-violation-donnees",
+      "thread_id": "01a1179c-8b11-7711-9559-d00cc0e7df1d",
+      "model": "gpt-6.1-sol",
+      "fragments": 18,
+      "assessment": {
+        "case_id": "plugin-violation-donnees",
+        "verdict": "bloque",
+        "technical_status": "passed",
+        "behavior_status": "incomplete",
+        "documentary_status": "incomplete",
+        "primary_content_available": true,
+        "release_ready": false
+      }
+    },
+    {
+      "case_id": "plugin-mcp-indisponible",
+      "thread_id": "01a1179a-2743-7ab0-8515-d0109dfbbd3d",
+      "model": "gpt-6.1-sol",
+      "fragments": 2,
+      "assessment": {
+        "case_id": "plugin-mcp-indisponible",
+        "verdict": "reussite",
+        "technical_status": "passed",
+        "behavior_status": "passed",
+        "documentary_status": "passed",
+        "primary_content_available": false,
+        "release_ready": false
+      }
+    },
+    {
+      "case_id": "plugin-dsi-incident-donnees",
+      "thread_id": "01a117a4-d4ea-72b0-90ce-6915ae0c25c4",
+      "model": "gpt-6.1-sol",
+      "fragments": 28,
+      "assessment": {
+        "case_id": "plugin-dsi-incident-donnees",
+        "verdict": "bloque",
+        "technical_status": "passed",
+        "behavior_status": "passed",
+        "documentary_status": "incomplete",
+        "primary_content_available": true,
+        "release_ready": false
+      }
+    },
+    {
+      "case_id": "plugin-dsi-rssi-rh",
+      "thread_id": "01a117ab-aa66-75e1-b059-148fea34776c",
+      "model": "gpt-6.1-sol",
+      "fragments": 5,
+      "assessment": {
+        "case_id": "plugin-dsi-rssi-rh",
+        "verdict": "bloque",
+        "technical_status": "passed",
+        "behavior_status": "incomplete",
+        "documentary_status": "passed",
+        "primary_content_available": false,
+        "release_ready": false
+      }
+    },
+    {
+      "case_id": "plugin-dsi-videoprotection",
+      "thread_id": "01a117ae-5e8f-76b1-bac9-605efe24734b",
+      "model": "gpt-6.1-sol",
+      "fragments": 6,
+      "assessment": {
+        "case_id": "plugin-dsi-videoprotection",
+        "verdict": "bloque",
+        "technical_status": "passed",
+        "behavior_status": "incomplete",
+        "documentary_status": "passed",
+        "primary_content_available": true,
+        "release_ready": false
+      }
+    },
+    {
+      "case_id": "plugin-dsi-budget",
+      "thread_id": "01a117b6-ac26-7202-b9e2-6639a7002687",
+      "model": "gpt-6.1-sol",
+      "fragments": 6,
+      "assessment": {
+        "case_id": "plugin-dsi-budget",
+        "verdict": "echec",
+        "technical_status": "passed",
+        "behavior_status": "failed",
+        "documentary_status": "passed",
+        "primary_content_available": true,
+        "release_ready": false
+      }
+    },
+    {
+      "case_id": "plugin-dsi-reversibilite",
+      "thread_id": "01a117b7-9947-7e51-82b2-7fffc39e5f59",
+      "model": "gpt-6.1-sol",
+      "fragments": 5,
+      "assessment": {
+        "case_id": "plugin-dsi-reversibilite",
+        "verdict": "echec",
+        "technical_status": "passed",
+        "behavior_status": "failed",
+        "documentary_status": "passed",
+        "primary_content_available": false,
+        "release_ready": false
+      }
+    },
+    {
+      "case_id": "plugin-dsi-reouverture",
+      "thread_id": "01a117ba-8406-7c00-b65e-b308fbcb4a83",
+      "model": "gpt-6.1-sol",
+      "fragments": 5,
+      "assessment": {
+        "case_id": "plugin-dsi-reouverture",
+        "verdict": "echec",
+        "technical_status": "passed",
+        "behavior_status": "failed",
+        "documentary_status": "failed",
+        "primary_content_available": false,
+        "release_ready": false
+      }
+    },
+    {
+      "case_id": "plugin-dsi-technique",
+      "thread_id": "01a117bc-4e86-70f3-8230-d0114d5bca3b",
+      "model": "gpt-6.1-sol",
+      "fragments": 4,
+      "assessment": {
+        "case_id": "plugin-dsi-technique",
+        "verdict": "bloque",
+        "technical_status": "passed",
+        "behavior_status": "incomplete",
+        "documentary_status": "not_required",
+        "primary_content_available": false,
+        "release_ready": false
+      }
+    },
+    {
+      "case_id": "plugin-dsi-source-indisponible",
+      "thread_id": "01a117c6-7730-75b0-b1cb-4fcb954affad",
+      "model": "gpt-6.1-sol",
+      "fragments": 3,
+      "assessment": {
+        "case_id": "plugin-dsi-source-indisponible",
+        "verdict": "reussite",
+        "technical_status": "passed",
+        "behavior_status": "passed",
+        "documentary_status": "passed",
+        "primary_content_available": false,
+        "release_ready": false
+      }
+    },
+    {
+      "case_id": "plugin-spontane-incident-donnees",
+      "thread_id": "01a117ce-fa0b-7c23-82a0-6df33bce39fa",
+      "model": "gpt-6.1-sol",
+      "fragments": 19,
+      "assessment": {
+        "case_id": "plugin-spontane-incident-donnees",
+        "verdict": "reussite",
+        "technical_status": "passed",
+        "behavior_status": "passed",
+        "documentary_status": "passed",
+        "primary_content_available": true,
+        "release_ready": false
+      }
+    },
+    {
+      "case_id": "plugin-spontane-rssi-rh",
+      "thread_id": "01a117c8-0b46-7ad1-9ee9-4e936970ed45",
+      "model": "gpt-6.1-sol",
+      "fragments": 7,
+      "assessment": {
+        "case_id": "plugin-spontane-rssi-rh",
+        "verdict": "echec",
+        "technical_status": "failed",
+        "behavior_status": "passed",
+        "documentary_status": "passed",
+        "primary_content_available": false,
+        "release_ready": false
+      }
+    },
+    {
+      "case_id": "plugin-spontane-budget",
+      "thread_id": "01a117c8-44b3-7dd2-9b0e-6a4d699d3370",
+      "model": "gpt-6.1-sol",
+      "fragments": 6,
+      "assessment": {
+        "case_id": "plugin-spontane-budget",
+        "verdict": "echec",
+        "technical_status": "passed",
+        "behavior_status": "failed",
+        "documentary_status": "passed",
+        "primary_content_available": true,
+        "release_ready": false
+      }
+    },
+    {
+      "case_id": "plugin-spontane-reversibilite",
+      "thread_id": "01a117c8-7bfb-7472-918c-1f8719b10ec2",
+      "model": "gpt-6.1-sol",
+      "fragments": 7,
+      "assessment": {
+        "case_id": "plugin-spontane-reversibilite",
+        "verdict": "echec",
+        "technical_status": "passed",
+        "behavior_status": "failed",
+        "documentary_status": "passed",
+        "primary_content_available": false,
+        "release_ready": false
+      }
+    }
+  ],
+  "errors": [],
+  "base_audit_script_sha256": "4da20b00ba9f102b68573fdc856004d628eeab20e55cfc1603a460bb398fdcd0",
+  "native_mcp_truncation_wrapper_sha256": "1328259bbce800890cd144778abb2c68e2f15c92ee920baf9594ba3efb54020b",
+  "mcp_audit_script_sha256": "6529882487c850ab4021d3d220cb6388b9b43c47b54556eca12b23cd4a67cf5f",
+  "source_pragma_wrapper_sha256": "fcf6d0890289f5decde4792483079704e59198de3cf964cfa8797c9694a4f7e1",
+  "pragma_audit_script_sha256": "d51fc97c84f030c846a113a3b994ebd13c7f42acb52eea212fa5e9d203e5a4cb",
+  "rejected_patch_wrapper_sha256": "b289db5bd1511045ff7cbd9b89fc07e3c5277e1859880fcf8d7860b81a52ca07",
+  "rejected_patch_audit_script_sha256": "a14358d1ef53ceb6e8fa29f2e502f1250d1ed21aa78e7bcff41976ebb89976f7",
+  "patch_pragma_wrapper_sha256": "837b318d2496fe8b7e1476ba2015836990186e5f8ba65ee1883c92284d8fba21",
+  "patch_pragma_audit_script_sha256": "e68169560341fd8736ff2cb6e76d6fcb7b84389b6e565b8ed33ab19f1f28920d"
+}

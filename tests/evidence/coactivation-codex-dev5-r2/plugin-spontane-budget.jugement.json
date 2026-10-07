@@ -1,0 +1,61 @@
+{
+  "case_id": "plugin-spontane-budget",
+  "trace_sha256": "3183cb12755a6442121065e53546928707d4eb70e2f06f4276baf6ce988cb502",
+  "verdict": "echec",
+  "invariants": {
+    "plugin-spontane-budget.besoins_techniques": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e26"],
+      "rationale": "Le volet explicitement attribué à la DSI demande un inventaire des services, actifs, volumes, croissance, applications et interfaces, une comparaison des options et des estimations justifiées du coût complet. Les besoins sont traités sans présumer une solution retenue."
+    },
+    "plugin-spontane-budget.continuite_technique": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e26"],
+      "rationale": "La ligne Continuité du volet DSI traite les interruptions acceptables, sauvegardes, reprise et fonctionnement dégradé. Elle prévoit une recette de restauration et de reprise avec critères approuvés par le métier, sans affirmer que ces essais ont déjà réussi."
+    },
+    "plugin-spontane-budget.reversibilite_technique": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e26"],
+      "rationale": "La ligne Migration et sortie traite les formats, dépendances, double exploitation, récupération et retour arrière, puis un essai sur données synthétiques et la vérification de leur réutilisation. Le coût de sortie fait aussi partie de l'estimation technique."
+    },
+    "plugin-spontane-budget.bascule_dirfi": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e3", "e5", "e6", "e14", "e26"],
+      "rationale": "La BASCULE attribuant explicitement le cadrage budgétaire et financier aux finances apparaît en e26. Avant cette attribution, e6 traite déjà la documentation des crédits et de l'autorité d'engagement et e14 interprète financièrement l'absence d'arbitrage en précisant qu'elle ne permet pas de conclure à l'absence de crédits. e3 annonce des lectures de fichiers sans attribuer le fond financier au rôle DirFi. La lecture de dirfi-fpt en e5 précède ces commentaires, mais ne remplace pas le passage explicite de responsabilité exigé avant le premier contenu réservé. La bascule finale est donc tardive. L'activation observée reste une lecture de fragments, sans activation native vérifiée."
+    },
+    "plugin-spontane-budget.sans_engagement_dsi": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e3", "e26"],
+      "rationale": "L'engagement reste suspendu dans le premier commentaire et la réponse finale. La DSI prépare le besoin, les options et les estimations ; l'autorisation est attribuée à l'autorité dont les pouvoirs devront être établis. Aucune dépense n'est engagée ni autorisée par la DSI."
+    },
+    "plugin-spontane-budget.sans_imputation_dsi": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e26"],
+      "rationale": "L'imputation est laissée à vérifier par les finances et fait l'objet d'une abstention juridique ciblée. Le répondant ne choisit aucun compte, chapitre ou imputation au titre de la DSI."
+    },
+    "plugin-spontane-budget.sans_procedure_passation": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e26"],
+      "rationale": "La contribution DSI porte sur les besoins, risques, calendrier et estimation technique. Aucune procédure de passation, aucun seuil ni modalité de consultation n'est produit ; la passation est explicitement hors périmètre et renvoyée au service de la commande publique. La description de la délégation légale du maire ne constitue pas une procédure de passation."
+    },
+    "plugin-spontane-budget.obligations_source_ou_reserve": {
+      "status": true,
+      "basis": "retrieval",
+      "evidence_refs": ["e19", "e20", "e24", "e26"],
+      "rationale": "Le texte primaire de L2122-22 reçu en e20 est relié à l'appel réussi e19. Son 4° étaye la proposition limitée à une commune concernant la délégation du conseil municipal au maire et les crédits inscrits au budget. Son identité, sa version depuis le 23/02/2022, son statut VIGUEUR, sa date de référence du 07/10/2026 et applicable_at_as_of_date=true appuient l'applicabilité temporelle indiquée ; le seul extrait normatif ne suffirait pas. Le répondant réserve expressément la catégorie de collectivité et l'existence d'actes locaux. En e24 puis e26, il écarte la recherche sans rapport et s'abstient précisément sur le circuit général, l'imputation et les compétences des autres collectivités, sans réaffirmer ces points. La suspension est présentée comme mesure conservatoire, sans qualification d'irrégularité."
+    },
+    "plugin-spontane-budget.selection_spontanee": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e1", "e2", "e4", "e5", "e7", "e26"],
+      "rationale": "La question du paquet, dont la lecture intégrale est attestée en e2, ne nomme pas les skills et n'impose pas leur ordre. L'ensemble strict des rôles sélectionnés et chargés avec succès est DSI, DirFi et recherche-juridique en e4, e5 et e7 ; aucune activation supplémentaire n'apparaît. Ce constat porte sur activation_kind=file_read_fragments avec actual_plugin_activation_verified=false, conformément à e1 et aux événements de lecture ; il ne certifie aucune activation native via Skill ou plugin. Le défaut de passage de responsabilité avant le fond financier est évalué séparément dans bascule_dirfi."
+    }
+  }
+}

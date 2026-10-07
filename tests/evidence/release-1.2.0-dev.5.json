@@ -1,7 +1,7 @@
 {
   "plugin_version": "1.2.0-dev.5",
   "plugin_commit": "ebeee944e878b11177d5ccb85d9043c4c97260a9",
-  "candidate_commit_status": "committed_not_measured",
+  "candidate_commit_status": "committed_native_file_load_measured",
   "release_ready": false,
   "available_skills": [
     "dpm-fpt",
@@ -20,7 +20,7 @@
     "dsi-fpt": "704e5dd6a3d15994ed431b23585aabd72086ca75"
   },
   "historical_scores_reused": false,
-  "measurement_status": "not_measured",
+  "measurement_status": "native_file_load_measured_without_plugin_smoke",
   "runs": [],
   "review": {
     "human_legal_validation": false,
@@ -31,7 +31,7 @@
     "plugin_commit": null
   },
   "release_blockers": [
-    "Candidat 1.2.0-dev.5 non mesuré ; aucun résultat r7 ne se transfère",
+    "Résultats de la campagne native à examiner ; chargement de fichiers distinct de l’activation du plugin",
     "Relecture DSI/RSSI et juridique humaine non recueillie",
     "Smoke du candidat dans Codex non établi"
   ],
@@ -47,5 +47,24 @@
       "reussite": 1
     },
     "transferred": false
+  },
+  "native_codex_measurement": {
+    "summary_path": "tests/evidence/coactivation-codex-dev5-r2/synthese.json",
+    "candidate_commit": "3f0d34bd068e3427edc9335a4f1415aaf1c7c98d",
+    "runtime_source_commit": "ebeee944e878b11177d5ccb85d9043c4c97260a9",
+    "case_count": 16,
+    "fresh_role_count": 32,
+    "counts": {
+      "reussite": 4,
+      "echec": 6,
+      "bloque": 6
+    },
+    "atomic_results": {
+      "true": 107,
+      "false": 6,
+      "null": 11
+    },
+    "actual_plugin_activation_verified": false,
+    "historical_scores_reused": false
   }
 }

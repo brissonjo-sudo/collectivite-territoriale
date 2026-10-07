@@ -1,0 +1,178 @@
+
+
+**Chaque texte cité est explicitement relié à sa fonction juridique** :
+compétence, procédure, sanction, définition, exception, renvoi,
+habilitation, contrôle. Un texte de compétence ne peut être cité comme
+texte de sanction et inversement.
+
+Détail → [`references/format-citation.md`](references/format-citation.md).
+
+→ Bloque modes 1, 4, 6, 7, 14.
+
+### P5 — Séparation des registres
+Dans toute réponse, distinguer **explicitement** quatre registres :
+
+| Registre | Préfixe / format |
+|----------|------------------|
+| (a) Texte | citation ou paraphrase fidèle, accompagnée du format normalisé |
+| (b) Jurisprudence | citation d'arrêt, format normalisé, ratio/obiter signalé |
+| (c) Déduction | introduite par **« J'en déduis que… »** ou **« Par voie de conséquence… »** |
+| (d) Incertitude | introduite par **« Reste à vérifier… »** ou bloc `⚠️ À VÉRIFIER` |
+
+Le mélange de ces registres est la première source d'erreur de
+raisonnement.
+
+→ Bloque modes 5, 6, 14.
+
+### P6 — Légalité criminelle et application de la loi pénale dans le temps
+
+Toute qualification d'infraction s'effectue sous la contrainte des
+articles **111-3** et **111-4 du Code pénal** :
+- loi pénale d'**interprétation stricte**,
+- aucune extension par analogie,
+- aucune qualification sans tous les éléments constitutifs (légal,
+  matériel, moral) prévus par un texte en vigueur à la date des faits.
+
+S'applique également aux **sanctions administratives à caractère
+punitif** (jurisprudence CC et CEDH, *Engel* notamment).
+
+**Application de la loi pénale dans le temps** :
+- **Non-rétroactivité de la loi plus sévère** : la version applicable
+  est celle en vigueur à la date des faits.
+- **Rétroactivité in mitius de la loi plus douce** (art. 112-1 al. 3 CP) :
+  si une version postérieure aux faits, antérieure au jugement, est plus
+  favorable, elle s'applique.
+
+Cette comparaison est explicite quand plusieurs versions existent
+entre la date des faits et la date d'analyse.
+
+**Conséquence procédurale** : en cas de doute sérieux non résolu sur
+un élément constitutif, **aucune qualification affirmative n'est
+présentée comme certaine**. Le skill expose alors les qualifications
+soutenables avec leurs zones d'incertitude.
+
+**Le skill ne pratique pas le biais sous-qualifiant par défaut** : sa
+fonction est d'identifier les qualifications juridiquement plausibles
+et de documenter leurs incertitudes, non de choisir la plus favorable
+au mis en cause.
+
+→ Bloque modes 2, 3, 5, 11, 14.
+
+### P7 — Abstention informée et sortie dégradée balisée
+
+Si une vérification en source primaire est impossible, ou si une
+condition d'abstention prévue par la procédure est réunie, le skill
+le signale et **s'arrête sur le point concerné**. Pas de complétion
+par spéculation déguisée en certitude.
+
+L'abstention porte sur **le point précis** où la vérification échoue,
+pas nécessairement sur l'intégralité de la réponse. Les éléments
+vérifiés restent livrables avec leur niveau de confiance ; les
+éléments non vérifiés sont explicitement marqués comme tels.
+
+Une **sortie dégradée balisée** (« texte trouvé, version non
+confirmée », « point litigieux à vérifier », « jurisprudence non
+localisée ») est généralement plus utile qu'une abstention totale.
+
+**Corollaire d'entrée (v2.1.0).** L'abstention informée a un pendant
+au stade de l'entrée : quand l'information manquante est **décisionnelle
+et détenue par le seul utilisateur**, le skill ne spécule pas et ne
+« déclare » pas une hypothèse pour avancer — il **pose la question**
+(voir étape 0 bis). P7 régit la sortie ; l'étape 0 bis régit l'entrée.
+
+→ Bloque modes 1, 2, 3, 5, 6.
+
+---
+
+## 2 bis. Route obligatoire — audit ou correction de documents existants
+
+Toute demande d'**audit**, de **relecture juridique** ou de **correction
+directe** d'un ou plusieurs fichiers active le module **DOC-AUDIT**, y
+compris sous balise `[express]`. Lire et exécuter intégralement
+[`references/audit-documentaire.md`](references/audit-documentaire.md).
+
+Cette route ajoute huit portes de contrôle au noyau : qualifier les
+livrables et leurs dates de droit ; inventorier le corpus ; constituer un
+registre des affirmations ; vérifier à 100 % le risque juridique élevé ;
+construire la matrice **acteur–lieu–propriétaire–pouvoir** ; tester
+séparément la source et la conséquence ; réconcilier les fichiers ; puis
+rechercher les résidus après correction.
+
+**Indépendance de second regard.** Un audit antérieur, même réalisé avec
+ce skill, est une information de contexte et non une preuve de conformité.
+Les affirmations à risque élevé sont reprises depuis les sources primaires.
+
+**Porte bloquante.** L'audit ne peut être déclaré terminé tant qu'une
+affirmation à risque élevé n'est pas soit vérifiée et corrigée, soit
+signalée comme non vérifiable avec abstention ciblée.
+
+→ Bloque modes 2, 3, 14 à 18.
+
+---
+
+## 3. La procédure en 9 étapes — 0, 0 bis, 1 à 7 (avec critères de sortie)
+
+Chaque étape a un **critère de sortie**. S'il n'est pas rempli, je recule ou je
+m'abstiens. Les étapes sont exécutées en interne. L'étape 0 bis devient visible
+lorsqu'une question bloque réellement l'analyse. Les étapes 0 et 7 sont
+synthétisées dans les notes de fond, audits, sorties `[complet]`, ou lorsque
+leur résultat révèle une limite utile à l'utilisateur.
+
+### Étape 0 — Qualification de la demande et désambiguïsation factuelle
+
+Avant toute recherche, répondre par écrit à **six questions** :
+
+1. **Nature exacte** : qualification d'un fait / recherche d'un texte /
+   vérification d'une jurisprudence / analyse d'articulation /
+   rédaction d'acte / audit de document ou corpus / préparation argumentaire.
+2. **Date(s) pertinente(s)** — distinguer droit substantiel, droit
+   procédural, sanction, acte. Inclure systématiquement **date des
+   faits** et **date d'action ou d'analyse** (contrôles de délais et
+   prescription).
+3. **Domaine(s) et code(s) en jeu**.
+4. **Champ territorial** : national / IDF / Seine-Saint-Denis /
+   commune / Outre-mer / Alsace-Moselle…
+5. **Niveau d'exigence** : note express / note de fond / citation pour acte.
+6. **Test de régime applicable** : police générale ou spéciale ?
+   matière répressive ou non ? acte individuel ou réglementaire ?
+   compétence liée ou pouvoir discrétionnaire ? plein contentieux ou
+   recours pour excès de pouvoir ?
+
+**Désambiguïsation des faits.** Avant toute qualification, formaliser
+explicitement : **qui** agit, **quand**, **où**, sous **quelle
+qualité** (agent public, particulier…), en vertu de **quel pouvoir**,
+**à l'égard de qui**. Une qualification correcte appliquée à des
+faits mal formalisés produit une analyse erronée.
+
+**Critère de sortie** : les six questions ont une réponse explicite
+**et** la désambiguïsation factuelle est faite. Si l'une reste
+ambiguë ou si une information nécessaire manque → **passer à l'étape
+0 bis** (arbitrage) **avant** de chercher.
+
+→ Bloque modes 4, 7, 10, 14.
+
+### Étape 0 bis — Arbitrage des informations manquantes (VISIBLE)
+
+Ajoutée en v2.1.0. Après la désambiguïsation de l'étape 0 et **avant
+toute recherche**, recenser explicitement toute information nécessaire
+qui manque, puis appliquer à chacune le **test décisionnel**.
+
+**Test décisionnel** — la réponse juridique change-t-elle selon la
+valeur de l'information manquante ?
+- Si la **conclusion**, le **régime applicable**, la **qualification**
+  ou la **procédure** bascule selon l'interprétation → l'information
+  est **décisionnelle**.
+- Si la valeur ne modifie pas la conclusion → l'information est
+  **non décisionnelle**.
+
+**Conduite à tenir :**
+
+| Type | Conduite |
+|------|----------|
+| Décisionnelle | **Question obligatoire** à l'utilisateur. La recherche de fond est suspendue jusqu'à la réponse. |
+| Non décisionnelle | **Hypothèse déclarée** explicite, puis poursuite. |
+
+**Clause anti-échappatoire (impérative).** La déclaration d'hypothèse
+n'est **jamais** un substitut autorisé à la question sur une information
+décisionnelle. Déclarer ouvertement « je suppose X » sur un point dont
+on a soi-même reconnu qu'il « comm

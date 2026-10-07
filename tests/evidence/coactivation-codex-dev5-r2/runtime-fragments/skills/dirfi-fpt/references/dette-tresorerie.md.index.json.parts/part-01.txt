@@ -1,0 +1,157 @@
+# Branche — Dette & trésorerie (v1.0.0)
+
+> Structure conforme à `_gabarit-branche.md`. Aucune valeur datée (taux,
+> plafond, quotité, seuil prudentiel) n'est citée de mémoire : seules les
+> **règles**, les **formules** et la consigne de vérifier la valeur en
+> vigueur figurent ici.
+
+## 1. Périmètre / Exclusions
+
+**Périmètre** : compétence pour recourir à l'**emprunt** et sa délégation ;
+nature de l'emprunt comme recette d'**investissement** ; typologie des
+produits d'emprunt et lecture de la **charte de bonne conduite** (dite
+charte Gissler) ; **consultation bancaire** et comparaison des offres ;
+**gestion active de la dette** (renégociation, refinancement, remboursement
+anticipé) et instruments de **couverture** ; **ligne de trésorerie** ;
+**gestion de la trésorerie** au quotidien et obligation de dépôt des fonds
+au Trésor ; annexes obligatoires relatives à la dette ; **garanties
+d'emprunt** accordées à des tiers.
+
+**Exclusions** :
+- **Ratios d'endettement et capacité de désendettement** (lecture,
+  méthode, seuils d'alerte) → `references/prospective-analyse.md`. Cette
+  branche traite la **dette elle-même** (compétence, produits, gestion,
+  trésorerie), pas sa lecture prospective.
+- **Imputation comptable** des mouvements de dette et de trésorerie
+  (comptes de tiers, chapitres, opérations d'ordre) → `references/nomenclature-m57.md`.
+- **Procédure de contrôle budgétaire** en cas de déséquilibre lié à la
+  dette → `references/controle-budgetaire.md`.
+- **Contrôle interne** sur les flux de trésorerie et relations avec le
+  comptable public → `references/controle-interne-financier.md`.
+
+---
+
+## 2. Questions couvertes
+
+- Qui décide de recourir à l'emprunt, et jusqu'où l'exécutif peut-il agir
+  seul par délégation ?
+- Un emprunt peut-il financer une dépense de fonctionnement ?
+- Comment qualifier un produit d'emprunt (taux fixe, variable, structuré) et
+  le situer dans la classification de la charte Gissler ?
+- Comment organiser une consultation bancaire et comparer des offres de
+  façon homogène ?
+- Dans quelles conditions renégocier, refinancer ou rembourser par
+  anticipation un emprunt, et à quel coût ?
+- Un contrat de couverture de taux est-il un acte autonome ou l'accessoire
+  d'un emprunt ?
+- Qu'est-ce qu'une ligne de trésorerie, en quoi diffère-t-elle d'un
+  emprunt, et comment la mobiliser ?
+- Quelles sont les règles de dépôt des fonds des collectivités et leurs
+  dérogations ?
+- Que doit contenir l'annexe « état de la dette » du budget ?
+- Sous quelles conditions accorder une garantie d'emprunt à un tiers ?
+
+---
+
+## 3. Arbre de traitement
+
+`question → variables à lever (§4) → décision → vérification (§7) →
+écrit/livrable (§10)`
+
+Ne jamais qualifier une opération de dette ou de trésorerie sans avoir levé
+au préalable : la **nature exacte de l'opération** (emprunt nouveau, ligne
+de trésorerie, renégociation, couverture, garantie), l'**autorité
+compétente** pour la décider, et l'**imputation budgétaire** de principe
+(recette d'investissement, opération de trésorerie hors budget, ou
+engagement hors bilan pour une garantie). Si l'une de ces trois données
+manque, la demander et marquer l'analyse `[INCOMPLET]` avant de conclure.
+
+---
+
+## 4. Variables à lever
+
+- **Délégation consentie à l'exécutif** : nature, montant, durée. Sans
+  délégation, l'exécutif ne peut agir seul.
+- **Objet du financement** : dépense d'**investissement** confirmée ? Un
+  doute sur la section impose la vérification avant tout engagement.
+- **Nature du produit** : taux fixe, variable simple, indexé ou
+  structuré ; niveau de risque au sens de la charte Gissler.
+- **Encours de dette existant** : répartition par type de taux, durée
+  résiduelle moyenne, prêteurs.
+- **Ligne de trésorerie déjà ouverte** : plafond autorisé, taux
+  d'utilisation.
+- **Régime de dépôt des fonds** : droit commun (Trésor) ou dérogation
+  identifiée (nature à confirmer).
+- **Tiers bénéficiaire d'une garantie** : nature de l'organisme, objet du
+  prêt garanti, quotité sollicitée, encours déjà garanti.
+- **Instrument de couverture envisagé** : adossé à un emprunt existant ou
+  autonome — distinction déterminante pour sa qualification.
+
+---
+
+## 5. Règles métier
+
+### 5.1 Compétence pour recourir à l'emprunt
+
+- Le recours à l'emprunt est, par principe, une compétence de
+  l'**assemblée délibérante**, dans le cadre de l'autorisation budgétaire
+  (inscription de la recette d'emprunt au budget).
+- L'assemblée peut **déléguer** à l'exécutif tout ou partie des attributs de
+  cette compétence (souscription et gestion de la dette), dans un cadre
+  qu'elle fixe elle-même (CGCT, dispositions relatives aux délégations
+  consenties à l'exécutif — à confirmer en version consolidée).
+- Toute délégation doit être **encadrée** : nature des opérations
+  déléguées, plafonds éventuels, types de produits autorisés (notamment
+  exclusion ou encadrement des produits structurés les plus risqués).
+  L'absence d'encadrement explicite est un point de vigilance à signaler,
+  jamais à combler par supposition.
+- **Compte rendu obligatoire** : l'exécutif rend compte à l'assemblée des
+  décisions prises par délégation, selon une périodicité et des modalités
+  à vérifier. L'absence de compte rendu ne rend pas la décision nulle par
+  elle-même mais constitue un point de vigilance de contrôle interne
+  (renvoi `references/controle-interne-financier.md`) et de régularité
+  procédurale à signaler.
+- Sans délégation régulière, toute décision de recourir à l'emprunt prise
+  par le seul exécutif est **irrégulière** : orienter vers le garde-fou
+  budgétaire (`SKILL.md` §5.3) si l'opération est déjà engagée.
+
+### 5.2 L'emprunt, recette d'investissement non affectée
+
+- L'emprunt est une **recette de la section d'investissement**. Il ne peut,
+  par principe, financer une dépense de **fonctionnement**.
+- L'emprunt est une ressource **non affectée** : il finance l'équilibre
+  global de la section d'investissement, pas une dépense d'investissement
+  nommément désignée, sauf mention contraire prévue par un texte
+  spécifique (à vérifier au cas par cas).
+- Toute présentation d'un emprunt comme finançant du fonctionnement, ou
+  comme substitut à une recette de fonctionnement manquante, est un
+  déclencheur du **garde-fou budgétaire** (`SKILL.md` §5.3) : signaler
+  l'irrégularité avant toute autre recommandation.
+- L'emprunt s'inscrit dans le respect de l'**équilibre réel du budget** :
+  vérifier que le remboursement en capital de la dette (dépense
+  d'investissement) est bien couvert par des recettes définitives, hors
+  nouvel emprunt (règle de non-recours à l'emprunt pour rembourser du
+  capital d'emprunt).
+
+### 5.3 Typologie des produits et charte de bonne conduite
+
+- **Taux fixe** : constant sur toute la durée, exposition nulle après
+  souscription — produit le plus simple à piloter.
+- **Taux variable simple** : indexé sur un indice usuel, sans effet de
+  structure — exposition directe à la variation de l'indice.
+- **Index complexe / produit structuré** : combinaison de composantes
+  (barrières, effets de levier, formules multi-indices) — risque
+  potentiellement sans plafond, complexité de valorisation.
+- La **charte de bonne conduite** entre établissements bancaires et
+  collectivités (dite **charte Gissler** — à confirmer en version
+  consolidée) classe les produits en croisant le **risque d'indice** et le
+  **risque de structure**, dans une grille à double entrée dont chaque
+  case qualifie un niveau de risque croissant. **Lecture** : plus l'indice
+  est complexe et plus la structure comporte de leviers, plus la case est
+  risquée. Ne jamais qualifier un produit sans le **descriptif contractuel
+  complet** (indice, formule, barrières, levier) : sans lui, l'analyse
+  reste une esquisse conditionnelle.
+- La charte est un engagement de place, pas un texte de loi : vérifier son
+  statut exact avant toute conclusion juridique ferme.
+- **Principe de prudence** : privilégier les catégories les moins risquées
+  de la grille pour toute nouvelle souscription

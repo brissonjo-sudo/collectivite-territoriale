@@ -1,0 +1,151 @@
+lles, doctrine d'engagement, gestion de crise)
+  relève de `doctrine-operationnelle.md` — cette branche **ne fait que
+  poser le repère RH** : qui commande, à quel titre, et où s'arrête ce
+  commandement par rapport à la hiérarchie statutaire.
+- **Piège à éviter** : présenter le commandement opérationnel comme une
+  **délégation de pouvoir de police** au sens juridique (acte formalisé,
+  publié, qui engagerait la responsabilité du maire pour la décision
+  elle-même) sans vérifier s'il s'agit d'une simple **organisation interne du
+  service** (pas d'acte formalisé requis) ou d'une véritable **délégation de
+  signature/fonction** — distinction à trancher au cas par cas via
+  `pouvoirs-police.md` et `controle-legalite.md`.
+
+---
+
+## 5. Procédures et délais
+
+Cette branche **ne décrit pas de procédure complète** sur les sujets délégués
+(carrière, discipline) : se reporter à `drh-fpt`. Sur les sujets conservés :
+
+### 5.1 Agrément — étapes côté `dpm-fpt`
+1. **Nomination** par le maire ou le président de l'EPCI.
+2. **Demande d'agrément** transmise au préfet et au procureur de la
+   République.
+3. **Agrément** délivré conjointement (délai d'instruction à vérifier au cas
+   par cas, non figé ici).
+4. **Assermentation** devant le tribunal compétent (modalités à vérifier en
+   version consolidée).
+5. **Suivi de la validité** : pas de renouvellement périodique automatique,
+   mais vigilance en cas de mutation, de changement de collectivité, ou de
+   procédure de retrait/suspension en cours.
+
+### 5.2 Constat déontologique — points de bascule à surveiller
+- Observation/rapport initial → **constat** (cette branche).
+- Dès **notification de griefs** ou **saisine d'une instance** → bascule
+  immédiate `drh-fpt`, sans rédiger d'élément de procédure ici.
+- **Format imposé** : émettre le **bloc BASCULE** du `SKILL.md` §5.4 **avant**
+  tout contenu statutaire, en nommant `drh-fpt` (« la DRH » ne vaut pas
+  bascule). Que `drh-fpt` soit mobilisable dans la session **n'autorise pas** à
+  traiter le sujet ici.
+- Si dimension pénale → garde-fou APJA **avant** tout, puis
+  `penal-procedure.md`.
+
+---
+
+## 6. Déclencheurs de vérification
+
+Appliquer le socle-sources (`SKILL.md` §2.2 et §5.3) avant de conclure dès
+que :
+- le **statut d'agrément ou d'assermentation** d'un agent conditionne la
+  validité d'un acte APJA ;
+- une question porte sur le **contenu précis du code de déontologie** PM
+  (numéro d'article exact) ;
+- une question touche au **régime indemnitaire ISFE** au-delà de sa logique
+  métier (taux, plafonds, procédure) → orienter vers `drh-fpt` plutôt que de
+  vérifier ici ;
+- un doute existe sur le **point de bascule** constat / procédure
+  disciplinaire dans un dossier concret ;
+- une **réforme récente** touche l'agrément, l'assermentation, ou l'ISFE
+  (décret n° 2024-614 du 26 juin 2024 et ses suites).
+
+---
+
+## 7. Pièges & confusions fréquentes
+
+1. Traiter une question de **carrière, paie, avancement ou instance** sur
+   cette branche au lieu de renvoyer immédiatement à `drh-fpt`.
+2. Confondre **constat** déontologique (ici) et **procédure** disciplinaire
+   (`drh-fpt`) : le basculement intervient **dès le premier acte de
+   procédure**, pas seulement à la sanction.
+3. Croire l'agrément/l'assermentation **renouvelables périodiquement** :
+   ils sont valables **tant que l'agent exerce**, sauf retrait, suspension ou
+   changement de collectivité.
+4. Oublier que le **procureur peut suspendre seul, en urgence**, sans
+   consultation préalable du maire — ne pas présenter la consultation comme
+   systématiquement préalable.
+5. Traiter l'**ISFE en détail** (plafonds, calcul, procédure d'institution)
+   ici au lieu de renvoyer à `drh-fpt` (branche carrière/paie §5.7) — cette
+   branche n'en garde que la **logique métier** des cycles et sujétions.
+6. Confondre **hiérarchie statutaire** (grade) et **commandement
+   opérationnel de terrain** (autorité fonctionnelle) : un agent gradé
+   inférieur peut, selon l'organisation, diriger un dispositif ponctuel sans
+   que cela modifie sa position statutaire.
+7. Présenter le commandement opérationnel comme une **délégation de pouvoir
+   de police** formalisée sans vérifier s'il s'agit d'une simple
+   organisation interne.
+8. Redévelopper le contenu de la **formation armement** ici plutôt que de
+   renvoyer à `armement-equipements.md` (§4.7), qui en a la charge complète.
+9. Ignorer le **garde-fou APJA** lorsqu'un manquement déontologique a une
+   dimension pénale (usage de la force).
+
+---
+
+## 8. Données / références à vérifier
+
+- **CSI, art. L. 511-2** (nomination, agrément préfectoral et du procureur,
+  assermentation, retrait/suspension) — *vérifié sur Légifrance le
+  2026-06-30*, identifiant LEGIARTI000043540434 ; revérifier la version en
+  vigueur à la date des faits (l'article a été modifié, notamment par la loi
+  n° 2021-646 du 25 mai 2021 — à confirmer en version consolidée).
+- **CGCT, art. L. 2212-5** (missions des agents PM et organisation des
+  services : renvoi au titre Ier du livre V du CSI) — au socle §8,
+  LEGIARTI000025543324, version du 01/05/2012, vérifié le 2026-09-14.
+- **CSI, art. L. 512-4** (convention de coordination, au socle) et **L. 512-5
+  et s.** (plages horaires d'intervention, exceptions gardes
+  statiques/manifestations) — L. 512-2 (recrutement intercommunal, socle §8)
+  n'est pas le bon rattachement —
+  L. 512-5 est au socle §8 (convention **intercommunale**, LEGIARTI000043540455,
+  version du 27/05/2021 — l'identifiant `LEGIARTI000041411429` relevé le
+  2026-06-30 renvoie vers cette version) mais **ne fixe pas les plages
+  horaires** : la règle des interventions de nuit relève de la partie
+  réglementaire (R. 512-5 et s.) et de la convention type, **non consultées,
+  à confirmer en version consolidée**. Voir
+  `continuum-partenariats.md` pour le contenu de la convention.
+- **CGFP, art. L. 714-13**, fondement de l'ISFE — *référence reprise du
+  skill `drh-fpt` (branche carrière et paie, §5.7), non revérifiée dans
+  cette session* — à confirmer en version consolidée avant toute citation en
+  acte ; pour le détail (plafonds, procédure), se reporter à `drh-fpt`.
+- **Décret n° 2024-614 du 26 juin 2024** relatif à l'ISFE des agents de
+  police municipale et gardes champêtres — *référence reprise du skill
+  `drh-fpt` (branche carrière et paie, §5.7), non revérifiée dans cette
+  session* — à confirmer en version consolidée ; détail intégral dans
+  `drh-fpt`.
+- **Code de déontologie des agents de police municipale** (CSI, partie
+  réglementaire, Livre V) — rattachement général repris de
+  `socle-sources-verification.md` ; numéro précis d'article applicable à un
+  manquement donné — **à confirmer en version consolidée**, jamais de
+  mémoire.
+- **Décret armement PM** (formation préalable, entraînement périodique) —
+  voir `armement-equipements.md` (§8) pour les références déjà vérifiées,
+  ne pas dupliquer ici.
+
+---
+
+## 9. Écrits & livrables
+
+1. **Écrit de constatation / rapport** : **rapport d'information** ou
+   **compte rendu hiérarchique** documentant un constat déontologique —
+   `references/templates/rapport-information.md` (`ecrits-professionnels.md` pour le
+   choix du gabarit). Rester sur le **constat factuel et textuel**, ne pas
+   préjuger d'une sanction.
+2. **Note** : **note au maire** sur l'état des agréments du service
+   (agents agréés, agréments à surveiller, suspensions en cours), ou sur
+   l'organisation du commandement opérationnel — `references/templates/note-maire-modele.md`.
+3. **Transmission** : dès bascule en procédure disciplinaire ou en dimension
+   pénale, **transmettre le dossier** à `drh-fpt` ou activer le garde-fou
+   APJA — ne pas produire d'écrit de procédure ici.
+4. **Acte faisant grief** : un éventuel **retrait/suspension d'agrément**
+   relève de l'autorité préfectorale/du procureur, pas d'un acte produit par
+   cette branche ; le **suivi administratif local** (note d'alerte au maire)
+   reste possible. Pour tout acte communal faisant grief en matière RH
+   (sanction, refus), voir `

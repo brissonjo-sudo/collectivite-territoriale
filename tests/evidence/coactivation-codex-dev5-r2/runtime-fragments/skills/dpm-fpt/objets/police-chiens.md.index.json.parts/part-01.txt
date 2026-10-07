@@ -1,0 +1,131 @@
+# Objet — Chiens dangereux, divagation et morsure (v0.1.0)
+
+> Structure conforme à `_gabarit-objet.md`. Cet objet **agrège et pointe** ; le
+> fond juridique reste dans `references/`, la jurisprudence reste renvoyée à
+> `recherche-juridique`. Aucune référence numérotée ou valeur datée citée de
+> mémoire : tout numéro d'article ou délai est marqué « à confirmer en version
+> consolidée » sauf vérification effective en session.
+
+**Situation type** : Constatation d'un chien dangereux par les conditions de sa
+garde, divagation, morsure ou agression envers une personne ou un animal
+domestique, signalement d'un propriétaire non conforme, évaluation comportementale
+et mesures administratives (prescription de garde sécurisée, placement, euthanasie,
+ou permis de détention).
+
+**[Risque / Confiance] dominant** : **Élevé / Stable dans son principe,
+catégorisation des chiens et délais de procédure à vérifier**. Un acte
+d'euthanasie ou de cession d'un animal est une mesure extrême qui suppose le
+respect strict des formalités procédurales (droit du propriétaire à présenter ses
+observations, avis vétérinaire obligatoire), une qualification correcte du danger
+(catégories 1 et 2), et expose la collectivité et l'autorité à un contentieux
+administratif intense en cas d'erreur ou de violation de procédure.
+
+---
+
+## 1. Acteurs et autorités compétentes
+
+- **Le maire** : titulaire du **pouvoir de police sur les animaux dangereux**
+  (code rural et de la pêche maritime, art. L. 211-11 — vérifié sur Légifrance
+  le 2026-06-30). Il peut prescrire au propriétaire ou détenteur d'un animal
+  dangereux des **mesures de prévention** (cage, muselière, assurance, isolation)
+  et, en cas de **danger grave et immédiat**, ordonner le **placement en lieu de
+  dépôt** et, si nécessaire, l'**euthanasie** ou la **cession** après avis
+  vétérinaire. À défaut du maire, le **préfet** exerce ce pouvoir par
+  substitution (→ `../references/pouvoirs-police.md` §4.5).
+- **Le préfet** : compétent au titre de la substitution en cas de carence
+  manifeste du maire, ou directement sur les routes nationales et autres
+  dépendances de l'État. Peut aussi désigner le **vétérinaire sanitaire
+  officiel** chargé d'évaluer l'animal avant une décision d'euthanasie.
+- **La police municipale (PM)** : **constate** la situation (divagation,
+  signalement de danger, morsure, garde non conforme), **signale immédiatement**
+  l'autorité de police (le maire, généralement par la voie du DPM), **exécute**
+  les mesures décidées (capture, transport en lieu de dépôt), mais **ne décide
+  jamais seule** d'une mesure restrictive ou définitive (mise en demeure,
+  euthanasie, cession). L'agent PM n'a pas compétence pour placer ou euthanasier
+  l'animal de sa propre initiative, sauf en cas de **danger immédiat et grave**
+  pour les personnes (légitime défense ou état de nécessité — à vérifier auprès
+  du procureur).
+- **Le propriétaire ou détenteur de l'animal** : personne à qui incombe la
+  **garde conforme** de l'animal ; destinataire des mises en demeure ou arrêtés
+  du maire ; disposant d'un **droit de présenter ses observations** avant
+  euthanasie ou cession ; responsable des dommages causés par l'animal
+  (responsabilité civile, code civil art. 1243 — à confirmer en version
+  consolidée).
+- **Le vétérinaire** : expert désigné par le préfet ou agréé localement, chargé
+  d'établir un **rapport d'évaluation comportementale** si l'animal a mordu ou
+  agressé, de connaître la catégorisation des chiens (1re ou 2e catégorie), et
+  de motiver l'avis précédant une euthanasie (art. L. 211-11, même article —
+  vérifié). Son rapport est un document clé de la procédure ; absence d'avis ou
+  avis contraire à l'euthanasie peut invalider la décision administrative.
+- **Conflit de compétence à signaler** : maire vs préfet selon le domaine
+  territorial et le degré de carence. En cas de doute, documenter et consulter
+  la préfecture ; ne jamais engager une mesure d'euthanasie sans certitude
+  juridique de l'autorité compétente et sans avis vétérinaire.
+
+---
+
+## 2. Textes applicables (pointeurs)
+
+> Le fond juridique n'est pas reproduit ici. Pointeurs vers les branches
+> concernées :
+
+- **`../references/reglementation-appliquee.md`** §5.6 (animaux dangereux :
+  pouvoir du maire, danger grave et immédiat, mesures de prévention, placement,
+  euthanasie, défaut de garanties, divagation, catégorisation des chiens,
+  évaluation comportementale, rôle de l'agent PM).
+- **`../references/pouvoirs-police.md`** §4.1 à §4.3 (police générale et police
+  spéciale des animaux dangereux ; titulaires ; maire / préfet par substitution)
+  et §4.6 (rôle d'exécutant de l'agent PM).
+- **Codes clés à vérifier en version consolidée avant tout acte** :
+  - **Code rural et de la pêche maritime, art. L. 211-11** — pouvoir du maire
+    (ou du préfet) sur les animaux dangereux : mesures de prévention, placement
+    en cas de danger grave, euthanasie après défaut de garanties, droit aux
+    observations du propriétaire, avis vétérinaire obligatoire (*vérifié sur
+    Légifrance le 2026-06-30* — recontrôler la version en vigueur à la date des
+    faits ; délai ouvré exact et durée d'évaluation **à confirmer en version
+    consolidée**).
+  - **Code rural, catégorisation et permis de détention** — au
+    **socle vérifié** (`../references/references-verifiees.md`) : **L. 211-12**
+    définit les 1re et 2e catégories mais renvoie la liste des types de chiens
+    à un arrêté ministériel ; **l'arrêté du 27 avril 1999, art. 1 et 2** établit
+    cette liste et porte notamment la distinction entre American Staffordshire
+    terrier inscrit à un livre généalogique reconnu (2e catégorie) et type
+    morphologique non inscrit (1re catégorie). **L. 211-13-1** traite du permis
+    (attestation d'aptitude +
+    évaluation comportementale), **L. 211-14** (permis délivré par le maire ;
+    pièces, dont **stérilisation** pour la 1re catégorie), **L. 211-16** (accès
+    des chiens de 1re catégorie interdit aux lieux publics ; muselière + laisse
+    sur la voie publique pour 1re et 2e catégorie). L'**obligation de
+    déclaration en mairie** du chien catégorisé et le **régime transitoire
+    d'interdiction d'acquisition de la 1re catégorie (2008)** restent **à
+    confirmer en version consolidée** ; le **montant** de l'assurance et les
+    **délais** de régularisation sont des valeurs à vérifier au cas d'usage.
+  - **Refus de permis** : L. 211-14 autorise le maire à refuser la délivrance
+    lorsque les résultats de l'évaluation comportementale le justifient. Ce
+    refus d'autorisation est une **décision administrative individuelle
+    défavorable faisant grief**, à motiver notamment au titre de l'art.
+    **L. 211-2 CRPA**. Toute réponse évoquant un refus doit donc renvoyer à
+    `../references/controle-legalite.md` avant production de la décision.
+  - **Code civil, art. 1243 et suivants** (responsabilité civile du propriétaire
+    ou détenteur pour dommages causés par l'animal — à confirmer en version
+    consolidée).
+  - **Code pénal** : qualifications pénales possibles (blessures volontaires ou
+    involontaires, mise en danger d'autrui si l'animal est détenu sans
+    sécurisation — à vérifier ; ces qualifications relèvent du cumul pénal
+    possible avec la mesure administrative) — voir `../references/penal-procedure.md`.
+
+- **Réserve systématique** : aucune durée de délai ouvré avant euthanasie, aucun
+  délai maximal de garde en lieu de dépôt, aucune catégorie de chien ne se cite
+  de mémoire. Tous sont marqués « à confirmer en version consolidée » avant tout
+  acte ou écrit. Une erreur de catégorisation (confondre 1re et 2e catégories)
+  invalide l'ensemble de la procédure.
+
+---
+
+## 3. Procédures (étapes, délais)
+
+### 3.1 Constatation et signalement d'un animal dangereux
+
+1. **Repérage sur le terrain** : l'agent PM constate un chien divaguant, un
+   animal maintenu dans des conditions non sécurisées (pas de clôture,
+   enfermement nuisible, isolation prolongée), ou un signalement de 

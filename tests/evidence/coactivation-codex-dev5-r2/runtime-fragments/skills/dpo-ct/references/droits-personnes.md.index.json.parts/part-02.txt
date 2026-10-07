@@ -1,0 +1,101 @@
+lic |
+| Prolongation éventuelle | Responsable de traitement | Annoncée dans le 1er mois | Motivée — à confirmer |
+| Réponse | Responsable de traitement | 1 mois (+2 si complexité — à confirmer) | Pas de données de tiers ; refus motivé + recours |
+| Traçage | DPO | Au fil de l'eau | Registre des demandes |
+
+---
+
+## 7. Déclencheurs de vérification (socle-sources)
+
+Vérifier la source officielle avant de conclure sur :
+- le contenu obligatoire des mentions d'information (art. 13/14) ;
+- le délai exact et les conditions de prolongation ;
+- les directives post-mortem et droits des héritiers (loi 78-17 — jamais
+  de mémoire) ;
+- l'exercice des droits en régime Police-Justice (titre III) ;
+- la procédure d'élimination d'archives publiques (code du patrimoine) ;
+- la doctrine CNIL sur la vérification d'identité (version datée) ;
+- la frontière CADA/CRPA au cas d'espèce.
+
+---
+
+## 8. Pièges & confusions fréquentes
+
+- **Exiger systématiquement une pièce d'identité** : contraire à la
+  proportionnalité (doctrine CNIL — à dater).
+- **Laisser courir le délai** parce que « c'est le DPO qui gère » : le délai
+  engage la collectivité dès réception, par n'importe quel service.
+- **Effacer des archives publiques sans visa** des archives
+  départementales : l'effacement RGPD ne prime pas le code du patrimoine.
+- **Confondre CADA et RGPD** — ou répondre sous un seul régime à une demande
+  qui relève des deux.
+- **Divulguer des données de tiers** dans les documents communiqués :
+  occulter avant remise.
+- Promettre la **portabilité** pour un traitement en mission d'intérêt
+  public, ou accorder l'**opposition** contre un traitement obligatoire.
+- Refuser sans **motivation ni voies de recours**.
+- Répondre sur un fichier Police-Justice comme s'il relevait du RGPD.
+- Oublier que le CCAS répond pour ses propres traitements.
+
+---
+
+## 9. Données / références à vérifier
+
+- Art. 13, 14, 15 à 22 RGPD : citables avec la réserve « à confirmer en
+  version consolidée ».
+- Loi 78-17 (post-mortem, titre III, modalités nationales) : **jamais de
+  mémoire** — vérification en session obligatoire.
+- Décret 2019-536 (modalités d'exercice des droits) : à confirmer.
+- Code du patrimoine (élimination, visa) et CRPA (CADA) : à vérifier au
+  cas d'espèce.
+- Doctrine CNIL (vérification d'identité, droit d'accès, modèles de
+  mentions) et lignes directrices CEPD (droit d'accès, transparence) :
+  **dater la version citée**.
+
+---
+
+## 10. Livrables
+
+- **Réponse à une demande d'exercice de droits** →
+  `assets/reponse-droits-modele.md`. Éléments obligatoires : rappel de la
+  demande et de sa date de réception, droit(s) instruit(s), réponse
+  motivée, occultation des tiers, voies de recours (CNIL, juge) en cas de
+  refus, signature du responsable de traitement.
+- **Mention d'information** (deux niveaux) →
+  `assets/mention-information-modele.md`.
+
+---
+
+## 11. Double échelle [risque / confiance]
+
+- Mention d'information standard : risque faible — réponse directe, contenu
+  obligatoire vérifié avant usage en acte.
+- Instruction d'un droit courant (accès, rectification) : risque moyen —
+  vérifier délais et limites avant réponse.
+- Refus opposé à une personne, effacement d'archives, demande d'héritier :
+  risque **élevé** — citation de source obligatoire, réserve « à
+  confirmer » sinon.
+- Fichier Police-Justice, dossier social, mineur en contexte familial
+  conflictuel : risque **critique** — abstention si doute persistant,
+  vérification en session de la loi 78-17.
+
+---
+
+## 12. Checklist de branche
+
+1. Demande qualifiée (droit(s) réellement visé(s), RGPD / CADA / les deux) ?
+2. Régime identifié — STOP RÉGIME affiché si fichier PM ou finalité pénale ?
+3. Responsable de traitement correctement désigné (commune / CCAS / EPCI /
+   État) ?
+4. Date de réception tracée, délai calculé, prolongation motivée si besoin ?
+5. Identité / mandat vérifiés de façon **proportionnée** ?
+6. Limites du droit en contexte public appliquées (opposition, portabilité,
+   effacement vs archives) ?
+7. Aucune donnée de tiers divulguée dans la réponse ?
+8. Refus motivé + voies de recours mentionnées ?
+9. Décision formellement portée par le responsable de traitement
+   (garde-fou §5.2.a) ?
+10. Références loi 78-17 vérifiées en session (jamais de mémoire) ;
+    doctrine CNIL datée ?
+11. Livrable produit via le bon générateur (ou brouillon `[INCOMPLET]`) ?
+12. Cas significatif → entrée `JOURNAL.md` proposée ?

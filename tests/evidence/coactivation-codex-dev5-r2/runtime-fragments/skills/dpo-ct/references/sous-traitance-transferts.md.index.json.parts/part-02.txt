@@ -1,0 +1,70 @@
+; textes CRPA sur les échanges entre
+administrations ; toute réforme récente du cadre des transferts.
+
+## 8. Pièges & confusions fréquentes
+
+- Qualifier « sous-traitant » un **responsable conjoint** : éditeur qui
+  réutilise les données pour son compte, plateforme mutualisée codécidée.
+- **Contrat art. 28 absent du marché public** : la clause se prévoit au DCE,
+  pas après notification.
+- Croire qu'un hébergement « **en Europe** » d'une société américaine règle
+  la question du transfert : le droit applicable à la société compte autant
+  que la localisation des serveurs.
+- **Chaîne non tracée** : découvrir un sous-traitant ultérieur hors UE en
+  cours d'exécution.
+- **Convention absente entre commune et CCAS** : partage de SI ou d'agents
+  entre deux responsables de traitement distincts, sans encadrement.
+- Confondre **destinataire** et sous-traitant : imposer un contrat art. 28
+  à un organisme qui traite pour son propre compte.
+- Retenir une dérogation (art. 49 RGPD — à confirmer) comme outil
+  **structurel** : les dérogations restent résiduelles.
+
+## 9. Données / références à vérifier
+
+Ne jamais citer de mémoire ; vérifier en session ou assortir de la réserve :
+
+- Art. 26, 28, 44 et s. (chap. V) RGPD — « à confirmer en version consolidée ».
+- **Loi 78-17** et décret 2019-536 — jamais de mémoire, vérification en session.
+- **CCT** : décision d'exécution applicable et version — à dater.
+- **Décisions d'adéquation** (dont cadre UE–États-Unis) — validité en session.
+- **Jurisprudence CJUE** transferts, responsabilité — via `recherche-juridique`.
+- **Recommandations CEPD** mesures supplémentaires — version à dater.
+- **SecNumCloud / circulaires cloud de l'État** — version et champ à dater.
+- **CRPA** et textes dites-le-nous-une-fois — à vérifier.
+
+## 10. Livrables
+
+- **Avis DPO** (qualification, conformité contractuelle, transferts) →
+  `assets/avis-dpo-modele.md`. Intègre la **checklist contractuelle** du
+  §5.2 : chaque élément coché conforme / absent / à négocier.
+- Éléments obligatoires : qualification motivée de chaque acteur, analyse
+  de transfert (existence, outil, mesures), écarts contractuels, niveau de
+  risque, recommandation au responsable de traitement (garde-fou §5.2.a du
+  `SKILL.md`).
+
+## 11. Double échelle [risque / confiance]
+
+- **Risque élevé par défaut** : transfert hors UE sans outil identifié,
+  droit extraterritorial sur données sensibles ou d'action sociale, contrat
+  art. 28 absent d'un marché en cours.
+- **Risque critique** : données sensibles ou personnes vulnérables + chaîne
+  non tracée hors UE → citation obligatoire, abstention si doute persistant.
+- **Risque moyen** : qualification d'un prestataire classique, clause à
+  compléter avant notification.
+- **Confiance** : « à vérifier » sur toute version de CCT, adéquation ou
+  doctrine cloud non confirmée en session ; « jurisprudentiel » sur Schrems II.
+
+## 12. Checklist de branche
+
+1. Chaque acteur qualifié d'après les **faits**, pas l'intitulé du contrat ?
+2. Responsable de traitement nommé (commune / EPCI / CCAS / État) ?
+3. STOP RÉGIME appliqué si finalité pénale possible (`SKILL.md` §5.2.b) ?
+4. Checklist art. 28 passée intégralement, manquants listés ?
+5. **Transfert** analysé (stockage ET accès) ; outil et mesures
+   supplémentaires identifiés, versions datées ou « à vérifier » ?
+6. Chaîne de sous-traitance tracée ou signalée comme non tracée ?
+7. Commande publique : stade identifié, clauses au DCE ?
+8. Conventions inter-entités (CCAS, EPCI) vérifiées ?
+9. Sécurité de fond renvoyée à `securite-traitements.md`, sans duplication ?
+10. Avis conclu par une **recommandation** au responsable de traitement,
+    jamais par une autorisation (garde-fou §5.2.a) ?

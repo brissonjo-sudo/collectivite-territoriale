@@ -1,0 +1,148 @@
+# Branche — Conformité, déontologie & données (v0.1.0)
+
+> Structure conforme à `_gabarit-branche.md`. Aucune valeur datée ni numéro
+> d'article n'est donné de mémoire : seules les **règles** figurent ici, avec
+> la consigne de vérifier la version en vigueur. Branche de **fusion** :
+> déontologie professionnelle de l'agent PM + conformité données (RGPD, CRPA,
+> AIPD, traçabilité).
+
+## Périmètre / Exclusions
+
+- **Périmètre** : code de déontologie des agents de police municipale (CSI,
+  partie réglementaire — à confirmer), proportionnalité de l'usage de la
+  force, responsabilité de l'agent et du service (pénale / administrative),
+  contrôle interne ; volet données : RGPD, CRPA (accès aux documents
+  administratifs), AIPD, traçabilité des consultations de fichiers.
+- **Exclusions** : la **procédure disciplinaire** (saisine du conseil de
+  discipline, droits de la défense, échelle des sanctions, prescription) →
+  activer `drh-fpt` et consulter sa branche carrière/paie (§5.5). Cette branche
+  s'arrête au
+  **constat** du manquement déontologique ; dès que la **procédure**
+  disciplinaire s'engage, passer la main (`SKILL.md` §5.4).
+
+---
+
+## 1. Questions couvertes
+
+- Conformité d'un comportement ou d'un acte d'agent au code de déontologie PM.
+- Proportionnalité et légalité de l'usage de la force (contrainte, moyens de
+  force intermédiaire, arme).
+- Régime de responsabilité applicable à un fait dommageable ou fautif (agent /
+  commune / État).
+- Organisation du contrôle interne du service (inspection, signalement,
+  remontée hiérarchique, IGPM/IGA selon la taille du service).
+- Droit d'accès aux documents administratifs détenus par la PM (mains
+  courantes, rapports, images vidéoprotection) — articulation CRPA / RGPD.
+- Obligations RGPD du service PM en tant que responsable de traitement
+  (fichiers, mains courantes numériques, vidéoprotection, applications mobiles).
+- Nécessité et conduite d'une analyse d'impact relative à la protection des
+  données (AIPD).
+- Traçabilité des consultations de fichiers (TAJ, FOVeS, SIV/SNPC, etc.) par
+  les agents PM habilités.
+
+---
+
+## 2. Arbre de traitement
+
+`question → variables à lever (§4) → décision → vérification (§7) → écrit/livrable (§10)`
+
+1. Qualifier le fait : **comportement d'agent** (déontologie) ou **traitement
+   de données** (RGPD/CRPA) — souvent les deux sont liés (ex. consultation
+   irrégulière d'un fichier = manquement déontologique **et** incident RGPD).
+2. Situer le niveau : **constat** (cette branche) vs **procédure**
+   (`drh-fpt`) vs **pénale** (`penal-procedure.md` si l'agent ou un tiers est
+   mis en cause au pénal).
+3. Identifier l'autorité et le responsable de traitement compétents.
+4. Vérifier la source avant toute affirmation relevant de la matrice §2.2 du
+   `SKILL.md`.
+5. Orienter vers l'écrit (rapport de manquement, fiche de signalement RGPD,
+   registre AIPD, réponse CRPA).
+
+---
+
+## 3. Variables à lever
+
+- **Nature du fait** : manquement déontologique pur, usage de la force,
+  incident de traitement de données, ou cumul des trois.
+- **Qualité de la personne concernée** : agent PM (titulaire, stagiaire,
+  contractuel, garde champêtre), chef de service, ou tiers (administré dont
+  les données sont traitées).
+- **Stade** : avant tout signalement (constat) / signalement engagé / saisine
+  disciplinaire déjà décidée (→ bascule `drh-fpt`).
+- **Responsable de traitement** : commune (le plus souvent le maire) ou
+  établissement public de coopération ; identifier le **délégué à la
+  protection des données (DPO)** désigné, le cas échéant mutualisé au niveau
+  intercommunal ou du centre de gestion.
+- **Support du traitement** : main courante informatisée, logiciel métier PM,
+  vidéoprotection, terminaux mobiles, interconnexions avec des fichiers d'État
+  (TAJ, FOVeS, fichier des véhicules volés, etc.).
+- **Demandeur CRPA** : administré lui-même (droit d'accès aux données
+  personnelles, RGPD) ou tiers (accès à un document administratif, sous
+  réserve d'occultation des données personnelles).
+
+---
+
+## 4. Règles métier
+
+### 4.1 Code de déontologie des agents de police municipale
+
+- Source : partie réglementaire du CSI, **art. R. 515-1 à R. 515-21**
+  (*vérifié sur Légifrance le 2026-06-30*), créés par le **décret
+  n° 2013-1113 du 4 décembre 2013** (en vigueur au 01/01/2014) ; ce chapitre
+  constitue le code de déontologie des agents de police municipale et
+  s'applique aux agents, chefs de service et directeurs de police municipale.
+  L'ancien code autonome (décret n° 2003-735 du 1er août 2003) a été **abrogé
+  et recodifié** dans le CSI. ➜ Il n'existe **pas** de « décret déontologie
+  2022 ». Identifiants et versions consolidés → `references-verifiees.md` §3 ;
+  recontrôler l'article applicable au fait examiné avant citation en acte.
+- Contenu structurant (à vérifier article par article avant citation en
+  acte) : respect de la loi et des libertés publiques, impartialité, probité,
+  dignité en service et hors service, discrétion professionnelle, obéissance
+  hiérarchique sauf ordre manifestement illégal, rapport à la hiérarchie,
+  port de la tenue et des éléments d'identification, droits et devoirs
+  respectifs des agents et des autorités de commandement.
+- **Champ d'application** : tous les agents de police municipale, y compris
+  chefs de service et directeurs ; ne couvre pas les ASVP ni les gardes
+  champêtres au même titre (à vérifier le régime exact applicable à ces
+  derniers) → si la question porte sur le statut de l'agent plutôt que sur le
+  manquement, voir `rh-specificites-pm.md`.
+- **Sanction d'un manquement** : la violation des devoirs définis par ce
+  chapitre expose l'agent à une **sanction disciplinaire**, sans préjudice des
+  **peines pénales** éventuellement encourues — **double voie cumulative**, à
+  ne jamais présenter comme exclusive l'une de l'autre.
+
+### 4.2 Usage de la force — principes de proportionnalité
+
+- Distinguer deux fondements, à ne pas confondre :
+  - **légitime défense** (droit commun, code pénal — à confirmer en version
+    consolidée), ouverte à tout individu, agent ou non, dans les conditions
+    de nécessité, simultanéité et proportionnalité ;
+  - **usage de moyens de force dans le cadre des pouvoirs de police**
+    (maintien/rétablissement de l'ordre, dispersion d'attroupement après
+    sommations — CSI, livre II, ordre et sécurité publics — à confirmer),
+    réservé en principe aux représentants de la force publique selon des
+    conditions de nécessité absolue et de proportionnalité au trouble à faire
+    cesser, avec cessation de l'usage de la force dès le trouble disparu.
+- **Armement et moyens de force intermédiaire** des agents PM : autorisation
+  préfectorale, conditions de port et d'usage, formation préalable obligatoire
+  (FIA) → renvoi systématique à `armement-equipements.md` ; ne pas dupliquer
+  ici le régime d'armement.
+- **Principe de proportionnalité** : tout usage de la force doit être
+  **nécessaire** (absence d'alternative moins coercitive), **adapté** (moyen
+  proportionné à la menace) et **gradué** (cessation dès que le trouble
+  cesse). C'est le standard de contrôle du juge (administratif et pénal) sur
+  l'action de l'agent — jurisprudence de fond → `recherche-juridique`.
+- **Vidéoprotection / caméras-piétons** comme élément de preuve et de
+  contrôle de la proportionnalité de l'usage de la force : régime propre →
+  `videoprotection.md` (transverse avec RGPD, §4.5 ci-dessous).
+
+### 4.3 Responsabilité — pénale et administrative
+
+- **Responsabilité pénale personnelle de l'agent** : engagée pour toute
+  infraction commise (violences, abus d'autorité, atteinte aux libertés,
+  manquement au devoir de probité) ; ne disparaît pas du fait de l'exercice
+  des fonctions. La **faute personnelle détachable du service** reste
+  imputable à l'agent seul.
+- **Responsabilité administrative de la commune** : régime de la
+  **faute de service**, engagée devant le juge administratif lorsque le
+  dommage trouve son origine dans l'organisation ou le fonctionne

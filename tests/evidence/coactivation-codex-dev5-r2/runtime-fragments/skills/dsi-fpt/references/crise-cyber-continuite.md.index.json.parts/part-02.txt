@@ -1,0 +1,73 @@
+cessible si le SI est indisponible, puis éprouver une
+reprise autorisée. Faire un exercice de coordination sans effet réel sur les
+services ; le kit ANSSI est une **doctrine d'appui, non normative**.
+
+Les délais de plainte, d'assureur ou de signalement se vérifient à la source
+et dans le contrat ; ceux relevant de `dpo-ct` restent à cette frontière.
+
+## 7. Déclencheurs de vérification
+
+Appliquer `references/socle-sources-verification.md` pour toute obligation de
+signalement, condition d'assurance, délai, compétence de décision ou régime
+NIS2 invoqué. Vérifier la publication et le champ de la transposition ; ne
+pas traiter une version de projet comme applicable.
+
+Vérifier les dispositifs d'assistance sur leur source officielle à la date
+du besoin. Sans source accessible, nommer ce qu'il reste à vérifier et
+continuer l'organisation opérationnelle sans promettre un droit à assistance.
+
+## 8. Pièges et confusions fréquentes
+
+- Restaurer rapidement avant conservation des preuves ou évaluation des copies.
+- Rallumer un système touché pour « voir si cela fonctionne ».
+- Utiliser automatiquement la messagerie compromise pour coordonner la crise.
+- Confondre indisponibilité technique et décision d'arrêt d'un service public.
+- Déduire une obligation de plainte ou un délai d'un contrat non lu.
+- Affirmer que l'assurance autorise ou impose un paiement de rançon.
+- Dérouler une notification de données ou la procédure pénale dans cette branche.
+- Présenter un plan jamais exercé comme une capacité de reprise démontrée.
+- Fermer l'incident parce qu'une application fonctionne à nouveau.
+
+## 9. Données et valeurs à vérifier
+
+Consulter `references/references-verifiees.md` pour la condition d'assurance,
+les régimes de signalement et les sources des dispositifs d'assistance.
+Revérifier délais de plainte et de signalement, échéances contractuelles,
+calendriers de transposition et édition des guides utilisés à leur source.
+Le cache de maintenance est exclu du paquet runtime ; ne pas le charger ni
+en reproduire une valeur. Les objectifs de continuité propres au service
+sont des arbitrages à obtenir et à tester, pas des valeurs légales présumées.
+
+## 10. Écrits et livrables
+
+- Journal de crise : faits, incertitudes, décisions, acteurs fonctionnels,
+  autorisations et résultats, sans données sensibles.
+- Rapport factuel → `references/templates/rapport-incident.md` ; ne pas
+  qualifier juridiquement une violation ni présumer son contenu obligatoire.
+- PCA/PRA : service, mode dégradé, dépendances, responsables, moyens,
+  conditions de déclenchement, validation de reprise et essais.
+- Fiche de reprise : périmètre, preuves réunies, réserves, validation métier,
+  décision attendue et possibilité de retour au mode dégradé.
+- Plan d'amélioration après exercice ou incident → `references/retex.md`.
+
+## 11. Double échelle [risque / confiance]
+
+Appliquer `SKILL.md` §5.1. Incident actif, preuves ou reprise de service
+essentiel : risque **critique** ; confiance **à vérifier** tant que les faits
+ou les conditions de reprise sont incomplets, avec abstention sur les
+décisions non instruites. Préparation d'un plan : risque **élevé** si son
+échec interrompt un service essentiel ; confiance **stable** sur la méthode,
+pas sur une capacité non testée. Une obligation non confirmée conduit à une
+abstention précise sur ce point.
+
+## 12. Checklist de branche
+
+- [ ] `SKILL.md` §5.2 systématiquement testé ; STOP intégral en premier pour un incident en cours ou récent.
+- [ ] `SKILL.md` §5.3 appliqué avant toute demande sur les traces d'une personne.
+- [ ] Frontière `dpo-ct` tenue ; décisions de l'exécutif et procédure pénale seulement nommées.
+- [ ] Faits séparés des hypothèses ; mode d'exercice et acteurs identifiés.
+- [ ] Preuves préservées avant irréversible ; aucune intervention offensive.
+- [ ] Priorités métier et conditions de reprise explicites et démontrables.
+- [ ] Sources, applicabilité et délais vérifiés sans valeurs de mémoire.
+- [ ] Journal et rapport sans secret, donnée nominative ou architecture identifiable.
+- [ ] Livrable et chemins internes nommés ; écarts à traiter attribués.

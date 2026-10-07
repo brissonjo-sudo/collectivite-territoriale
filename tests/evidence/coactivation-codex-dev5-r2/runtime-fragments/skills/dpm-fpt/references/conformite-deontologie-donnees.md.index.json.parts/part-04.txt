@@ -1,0 +1,103 @@
+s générales — numéro d'article
+  à confirmer en version consolidée.
+- **Responsabilité administrative / faute de service** : construction
+  essentiellement jurisprudentielle (CE) — toute référence d'arrêt à vérifier
+  via `recherche-juridique`, ne jamais citer un numéro de requête de mémoire.
+- **Protection fonctionnelle** : régime statutaire (CGFP) — article à
+  confirmer en version consolidée, articulation avec `drh-fpt` pour
+  l'instruction de la demande.
+- **RGPD** : règlement (UE) 2016/679 + loi n° 78-17 du 6 janvier 1978 modifiée
+  (« Informatique et Libertés ») — articles précis et régime police-justice à
+  vérifier sur Légifrance/CNIL avant toute citation en acte.
+- **CRPA, droit d'accès aux documents administratifs** : titre Ier, articles
+  **L311-1 et suivants** (*vérifié sur Légifrance le 2026-06-30* pour la
+  localisation du titre ; numéro précis selon le point traité **à confirmer en
+  version consolidée**). Ne pas confondre avec le chapitre diffusion
+  (articles L312-1 et s., open data), distinct du droit d'accès.
+- **AIPD** : méthodologie et liste des traitements concernés — référentiels
+  CNIL, à consulter à jour, jamais reconstitués de mémoire.
+- **Notification de violation de données** : délai réglementaire (RGPD) — à
+  vérifier, ne pas chiffrer de mémoire.
+
+---
+
+## 9. Écrits & livrables
+
+1. **Constat** — rapport de manquement déontologique (description factuelle
+   des faits, articles du code de déontologie potentiellement concernés sous
+   réserve de vérification, transmission à la hiérarchie). Ne pas anticiper la
+   qualification disciplinaire finale, qui appartient à `drh-fpt`.
+2. **Signalement RGPD** — fiche d'incident à destination du DPO (nature de la
+   violation, données concernées, mesures immédiates, proposition de
+   notification CNIL).
+3. **Registre / fiche AIPD** — document préalable au déploiement d'un
+   traitement à risque, à associer au registre des traitements.
+4. **Réponse CRPA** — courrier de communication ou de refus motivé d'un
+   document administratif (occultation des données personnelles de tiers le
+   cas échéant, mention des voies de recours CADA).
+5. **Note au maire/DGS** — sur une situation de contrôle interne, un incident
+   de données, ou un usage de la force contesté, en vue d'arbitrage ou de
+   saisine d'instances externes.
+
+Acte faisant grief éventuel (ex. refus de communication CRPA) : motivation +
+voies et délais de recours + vérifier la transmission au contrôle de légalité
+le cas échéant → `controle-legalite.md` avant production.
+
+---
+
+## 10. Double échelle [risque / confiance]
+
+- **Manquement déontologique léger, sans incidence sur un tiers** :
+  [risque faible / confiance stable] — réponse directe sur le principe,
+  rapport de constat sans citation d'article précis si non nécessaire.
+- **Usage de la force contesté, dommage corporel ou matériel** :
+  [risque élevé / confiance à vérifier] — citation de source obligatoire,
+  réserve « à confirmer », orientation vers `recherche-juridique` pour la
+  jurisprudence de proportionnalité.
+- **Violation de données à caractère personnel (consultation hors cadre,
+  fuite, incident technique)** : [risque élevé à critique / confiance à
+  vérifier] — citation obligatoire, vérification du délai de notification
+  CNIL, abstention sur le chiffrage du délai si non vérifié en session.
+- **Refus de communication CRPA contesté** : [risque moyen / confiance à
+  vérifier] — vérification ponctuelle obligatoire avant réponse motivée.
+- **AIPD préalable à un nouveau dispositif** : [risque moyen à élevé selon le
+  dispositif / confiance à vérifier] — ne jamais affirmer qu'une AIPD n'est
+  pas requise sans vérification du référentiel CNIL à jour.
+
+---
+
+## 11. Checklist de branche
+
+1. Distinction posée entre **constat** (cette branche) et **procédure**
+   disciplinaire (`drh-fpt`) ? Test à charge (`SKILL.md` §7 point 8) : le
+   texte produit contient-il un délai, une instance, un droit de la défense,
+   un quantum ou une échelle de sanction ? Si oui, le **bloc BASCULE** a-t-il
+   été émis **avant**, `drh-fpt` nommé ? Sinon, supprimer ce contenu.
+2. Cumul **pénal / administratif / disciplinaire** signalé comme
+   indépendant et cumulable, pas exclusif ?
+3. Usage de la force qualifié sous le bon fondement (**légitime défense** vs
+   **pouvoir de police**), proportionnalité examinée ?
+4. Faute **personnelle détachable** vs faute **de service** distinguée avant
+   toute conclusion sur la responsabilité ?
+5. **Responsable de traitement** RGPD correctement identifié (maire / DPO),
+   pas le directeur PM par défaut ?
+6. Régime **police-justice** envisagé avant application mécanique du RGPD
+   général ?
+7. **CRPA** (accès document) et **droit d'accès RGPD** (données personnelles)
+   non confondus dans la réponse ?
+8. **AIPD** envisagée avant tout déploiement de nouveau dispositif de
+   captation/traitement ?
+9. **Traçabilité des consultations de fichiers** rappelée comme exigence
+   transverse (déontologie + RGPD + pénal potentiel) ?
+10. Toute référence d'article portée par la réserve « à confirmer en version
+    consolidée », sauf mention « vérifié sur Légifrance le 2026-06-30 » ?
+11. Renvois faits vers `armement-equipements.md`, `videoprotection.md`,
+    `controle-legalite.md`, `penal-procedure.md` et `drh-fpt` plutôt que
+    duplication de leur contenu ?
+12. Garde-fou APJA testé si la consultation/le fait dérive vers un acte
+    réservé à l'OPJ (`SKILL.md` §5.2) ?
+
+**[risque variable selon sous-domaine / confiance à vérifier]** — voir §10
+pour le détail par type de situation. Branche à forte sensibilité
+contentieuse (libertés publiques, données personnelles) : ne jamais conclure
+sur un numéro d'article sans vérification quand l'acte en dépend.

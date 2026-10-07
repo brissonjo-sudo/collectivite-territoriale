@@ -1,0 +1,165 @@
+# Branche — Droits des personnes
+
+---
+
+## 1. Périmètre / Exclusions
+
+**Couvre** : l'information des personnes (art. 13 et 14 RGPD — à confirmer
+en version consolidée), les droits d'accès, de rectification, d'effacement,
+de limitation, d'opposition et de portabilité, les directives post-mortem
+(loi 78-17 — à vérifier en session), l'encadrement des décisions
+individuelles automatisées (art. 22 — à confirmer) et l'instruction des
+demandes d'exercice de droits reçues par la collectivité.
+
+**Exclut** :
+- la plainte d'une personne auprès de la CNIL et ses suites →
+  `references/relations-cnil.md` ;
+- la rédaction des clauses d'information dans les contrats de
+  sous-traitance → `references/sous-traitance-transferts.md`.
+
+---
+
+## 2. Questions couvertes
+
+- « Un administré demande la copie de son dossier : que lui remettre ? »
+- « Peut-on refuser un effacement ? Une opposition ? »
+- « Quelle mention d'information sur ce formulaire / téléservice ? »
+- « Un avocat / un parent / un héritier demande pour un tiers : valide ? »
+- « Quel délai pour répondre ? Peut-on le prolonger ? »
+- « Faut-il exiger une pièce d'identité ? »
+- « CADA ou RGPD : quel régime pour cette demande de documents ? »
+
+---
+
+## 3. Arbre de traitement
+
+```
+1. QUALIFIER LA DEMANDE — quel(s) droit(s) invoqué(s) ? Demande RGPD,
+   demande CADA/CRPA, ou les deux (§5.8) ?
+2. DATER LA RÉCEPTION — le délai d'un mois court dès réception par la
+   collectivité, quel que soit le service destinataire.
+3. IDENTIFIER — régime applicable (RGPD / Police-Justice), responsable
+   de traitement concerné, traitements visés.
+4. VÉRIFIER L'IDENTITÉ — de façon proportionnée (§5.6) ; tiers → §5.7.
+5. INSTRUIRE — conditions et limites du droit invoqué en contexte
+   public (§5.2 à §5.5).
+6. DÉCIDER — faire droit, partiellement, ou refuser (motivé + voies de
+   recours). Décision du responsable de traitement ; le DPO instruit
+   et recommande.
+7. RÉPONDRE — dans le délai, sans divulguer de données de tiers →
+   assets/reponse-droits-modele.md.
+8. TRACER — registre des demandes, RETEX si lacune d'information.
+```
+
+---
+
+## 4. Variables à lever
+
+- **Droit(s) invoqué(s)** — la personne ne cite pas toujours le bon :
+  requalifier d'après ce qu'elle veut obtenir.
+- **Régime** : RGPD ou Police-Justice (fichier PM, vidéoverbalisation) ?
+  L'exercice des droits peut y être **indirect** (via la CNIL) — à vérifier
+  au titre III de la loi 78-17, jamais de mémoire (STOP RÉGIME).
+- **Responsable de traitement** : commune, CCAS, EPCI, État (état civil,
+  élections) ? La réponse en dépend.
+- **Date de réception** par la collectivité (tout canal, tout service).
+- **Demandeur** : personne concernée, parent d'un mineur, mandataire,
+  héritier ?
+- **Traitement visé** : base légale (conditionne opposition et
+  portabilité), statut d'archive publique (conditionne l'effacement).
+- Demande **manifestement infondée ou excessive** (répétitive) ?
+
+---
+
+## 5. Règles métier
+
+### 5.1 Information à deux niveaux (art. 13/14 — à confirmer)
+Informer **au moment de la collecte** (art. 13) ou dans un délai raisonnable
+si collecte indirecte (art. 14). Pratiquer l'information **à deux niveaux** :
+mention courte sur le support de collecte (finalité, responsable, droits,
+renvoi) + notice complète accessible (site, affichage, document remis).
+Contenus obligatoires : vérifier la liste des articles en version
+consolidée. Générateur → `assets/mention-information-modele.md`.
+
+### 5.2 Chaque droit avec ses limites en contexte public
+- **Accès** : confirmation du traitement + copie des données + informations
+  associées. Ne pas confondre avec la communication de documents (§5.8).
+- **Rectification** : données inexactes ou incomplètes. Attention aux actes
+  authentiques (état civil) : procédures sectorielles propres — vérifier.
+- **Effacement** : cède devant l'**obligation légale** et l'**archivage
+  public**. Tout document de la collectivité est une archive publique :
+  aucune élimination sans croisement avec le code du patrimoine et le visa
+  du directeur des archives départementales — à vérifier (renvoi
+  `references/socle-sources-verification.md` §4).
+- **Limitation** : gel temporaire, notamment pendant la vérification d'une
+  contestation d'exactitude.
+- **Opposition** : suppose des « raisons tenant à la situation
+  particulière » et **ne s'applique pas aux traitements obligatoires**
+  (obligation légale). Pour les traitements en mission d'intérêt public,
+  elle s'examine — elle ne s'accorde pas d'office.
+- **Portabilité** : vise les bases **consentement** et **contrat**, avec
+  traitement automatisé — **rare en collectivité**, où la base dominante est
+  la mission d'intérêt public. Ne pas la promettre par défaut.
+- **Directives post-mortem** et droits des héritiers : régime propre à la
+  loi 78-17 — **à vérifier en session**, jamais de mémoire.
+- **Décision individuelle automatisée** (art. 22 — à confirmer) : interdiction
+  de principe avec exceptions ; garanties (intervention humaine) à vérifier
+  avant tout téléservice à décision automatique.
+
+### 5.3 Délais
+Réponse dans **un mois** à compter de la réception par la collectivité,
+**prolongeable de deux mois** en cas de complexité ou de nombre de demandes
+— à confirmer en version consolidée. La prolongation s'annonce au demandeur
+**dans le premier mois**, motivée. Le délai court même si la demande arrive
+au mauvais service : organiser le circuit interne de remontée au DPO.
+
+### 5.4 Gratuité
+Réponse **gratuite**. Facturation ou refus possibles uniquement pour les
+demandes **manifestement infondées ou excessives** (notamment répétitives) —
+charge de la démonstration côté collectivité, à documenter.
+
+### 5.5 Refus
+Tout refus (total ou partiel) est **motivé** et mentionne les **voies de
+recours** : réclamation auprès de la CNIL et recours juridictionnel. Le
+refus est une décision du **responsable de traitement**, sur avis du DPO.
+
+### 5.6 Vérification d'identité proportionnée
+Pas de pièce d'identité **systématique** — doctrine CNIL, **à dater lors de
+la citation**. Proportionner au doute raisonnable et à la sensibilité des
+données : un usager connu répondant depuis son compte de téléservice n'a
+pas à rejustifier son identité ; une demande portant sur un dossier social
+justifie plus de précaution. Si une pièce est demandée : la strictement
+nécessaire, non conservée au-delà du besoin.
+
+### 5.7 Demande d'un tiers
+- **Parent / représentant légal d'un mineur** : vérifier la qualité et
+  l'autorité parentale ; attention aux situations familiales conflictuelles.
+- **Avocat / mandataire** : exiger un mandat exprès de la personne.
+- **Héritier** : pas de droit d'accès général aux données du défunt ;
+  régime des directives post-mortem et exceptions loi 78-17 — à vérifier
+  en session avant toute réponse.
+
+### 5.8 RGPD ≠ CADA
+Ne pas confondre le **droit d'accès RGPD** (la personne accède à **ses**
+données) et l'**accès aux documents administratifs** (CADA/CRPA : accès à
+des **documents**, y compris par des tiers, avec occultations). Les deux
+régimes **coexistent** : qualifier la demande d'après son objet, orienter
+vers le bon régime — ou traiter les deux si la demande les mêle. En régime
+CRPA, saisir le circuit PRADA/CADA de la collectivité. Dans tous les cas,
+**occulter les données de tiers** dans les documents communiqués.
+
+### 5.9 Droits en régime Police-Justice
+Pour les traitements relevant du titre III de la loi 78-17 (fichiers à
+finalité pénale), les droits peuvent s'exercer de façon **indirecte** (via
+la CNIL) et connaître des restrictions propres — **à vérifier en session**,
+jamais de mémoire. Afficher le STOP RÉGIME dès qu'un fichier PM est visé.
+
+---
+
+## 6. Procédures et délais
+
+| Étape | Acteur | Échéance | Point de contrôle |
+|---|---|---|---|
+| Réception + horodatage | Tout service → DPO | Immédiat | Circuit interne formalisé |
+| Vérification d'identité / mandat | DPO | Sans retarder l'instruction | Proportionnée (§5.6) |
+| Instruction | DPO + service métier | Dans le mois | Limites du droit en contexte pub

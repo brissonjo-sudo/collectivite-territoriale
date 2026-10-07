@@ -1,0 +1,129 @@
+apitres à régime
+  spécifique (personnel, dépenses imprévues — → `budget-cycle.md` §5.5 et
+  §5.9 pour l'articulation avec le niveau de vote).
+- La fongibilité ne dispense **jamais** du respect de la spécialité : un
+  crédit ouvert pour un objet déterminé ne finance que cet objet, même à
+  l'intérieur d'un chapitre fongible.
+
+### 5.5 Amortissements
+
+- **Biens amortissables** : immobilisations dont la valeur se déprécie de
+  manière certaine et irréversible avec le temps, l'usage ou l'obsolescence.
+  L'obligation d'amortir varie selon la **nature du bien** et la **section**
+  concernée (certaines catégories de biens, ou certaines strates pour la
+  section de fonctionnement, connaissent des régimes différenciés — à
+  vérifier avant de conclure à une obligation générale).
+- **Durée d'amortissement** : fixée par **l'assemblée délibérante**, par
+  catégorie de biens, dans le respect de bornes éventuellement fixées par le
+  CGCT ou l'instruction — durées et bornes **à vérifier**, jamais chiffrées de
+  mémoire. Une durée fixée doit être **appliquée de façon constante** d'un
+  exercice à l'autre, sauf délibération motivée de changement.
+- **Méthode** : identifier le bien → vérifier son caractère amortissable → vérifier l'existence d'une délibération fixant sa durée de catégorie → à défaut, alerter sur la lacune avant de proposer un taux ou une durée.
+- **Sortie de l'inventaire** : un bien cédé, détruit ou réformé doit être
+  sorti de façon **concordante** de l'inventaire et de l'état de l'actif, avec
+  traitement de la valeur nette comptable résiduelle par une opération
+  d'ordre appropriée (§5.9).
+
+### 5.6 Provisions et dépréciations
+
+- **Provision** : constatation comptable d'un **risque ou d'une charge**
+  probable, non certaine dans son montant ou son échéance (contentieux,
+  garantie donnée, risque financier identifié).
+- **Dépréciation** : constatation d'une **perte de valeur** d'un actif
+  (créance douteuse, immobilisation financière) sans disparition du bien
+  lui-même.
+- **Cas de provision obligatoire** (liste de principe, conditions exactes à
+  vérifier avant toute affirmation) : contentieux dans lequel la collectivité
+  est partie défenderesse dès lors qu'un risque est identifié ; créances dont
+  le recouvrement est compromis ; garantie d'emprunt accordée à un tiers
+  présentant un risque avéré ; ouverture d'une procédure collective
+  concernant un débiteur ou un organisme garanti. **Ne jamais présumer
+  l'absence d'obligation** sans avoir testé chacun de ces cas.
+- **Méthode** : identifier le risque ou la perte de valeur → qualifier son caractère probable et évaluable → vérifier s'il entre dans un cas de provision obligatoire → à défaut, apprécier l'opportunité d'une provision facultative → documenter le calcul et la délibération le cas échéant.
+- L'absence de provision dans un cas obligatoire est un **signal du
+  garde-fou budgétaire** (`SKILL.md` §5.3) : le signaler avant toute
+  recommandation d'exécution du budget en l'état.
+
+### 5.7 Rattachement des charges et produits à l'exercice
+
+- **Principe** : les charges et produits sont rattachés à l'exercice au titre
+  duquel ils ont été **juridiquement engagés ou constatés** (service fait pour
+  la dépense, droit constaté pour la recette), **indépendamment de la date de
+  paiement ou d'encaissement**. C'est une application du principe de
+  sincérité et d'indépendance des exercices.
+- **Méthode** : identifier la date du fait générateur (service fait,
+  livraison, prestation exécutée) → si elle se situe sur l'exercice clos mais
+  que le mandatement ou le titre intervient après la clôture → rattacher par
+  une écriture de rattachement, dans les conditions et limites fixées par
+  l'instruction (à vérifier, notamment le seuil de matérialité éventuel).
+- **À ne pas confondre avec la journée complémentaire** (`budget-cycle.md`
+  §5.10) : le rattachement est une **règle d'imputation comptable** fondée sur
+  le fait générateur ; la journée complémentaire est une **fenêtre
+  calendaire** pendant laquelle certaines opérations peuvent encore être
+  passées sur l'exercice clos. Les deux mécanismes se combinent mais ne se
+  substituent pas l'un à l'autre.
+
+### 5.8 Restes à réaliser (RAR)
+
+- **Définition** : en section d'investissement principalement, les **RAR en
+  dépenses** correspondent aux dépenses engagées mais non mandatées à la
+  clôture ; les **RAR en recettes** correspondent aux recettes certaines dans
+  leur principe mais non encore titrées ou encaissées à la clôture.
+- **Effet** : les RAR sont repris au budget de l'exercice suivant (budget
+  supplémentaire ou décision modificative) et **entrent dans le calcul du
+  besoin de financement** de la section d'investissement pour l'affectation
+  du résultat (→ `budget-cycle.md` §5.7).
+- **Méthode d'identification** : pour chaque dépense engagée mais non
+  mandatée à la clôture, vérifier l'existence d'un engagement juridique
+  valide ; pour chaque recette attendue, vérifier qu'elle est **certaine dans
+  son principe** (convention signée, décision notifiée), pas seulement
+  probable. Une **sous-évaluation ou omission** fausse l'affectation du
+  résultat et peut caractériser une insincérité budgétaire.
+
+### 5.9 Immobilisations, inventaire et opérations d'ordre / réelles
+
+- **Immobilisations** : biens destinés à servir de façon durable à l'activité
+  de la collectivité, suivis à la fois par l'**ordonnateur** (inventaire
+  physique et comptable) et par le **comptable public** (état de l'actif). La
+  **concordance** entre inventaire et état de l'actif est une obligation
+  permanente, pas seulement un exercice de clôture (§5.10).
+- **Opération réelle** : donne lieu à un **flux financier effectif** (encaisse
+  ou décaisse des fonds, ou modifie une créance/dette envers un tiers réel).
+- **Opération d'ordre** : écriture comptable **sans flux de trésorerie**,
+  destinée à retracer un mouvement patrimonial ou budgétaire interne
+  (amortissement, sortie d'inventaire, intégration de travaux en régie,
+  certaines opérations entre sections). On distingue les opérations d'ordre
+  **budgétaires** (mouvementent les deux sections) et **semi-budgétaires**
+  (mouvementent une seule section, l'autre écriture étant purement
+  comptable) — la qualification exacte d'une opération donnée est une donnée
+  technique à vérifier dans l'instruction, jamais présumée.
+- **Méthode** : une opération qui ne modifie ni la trésorerie ni une
+  créance/dette envers un tiers externe est, par construction, une opération
+  d'ordre, dont la **contrepartie** est fixée par l'instruction — ne jamais
+  l'inventer par analogie.
+
+### 5.10 État de l'actif et compte financier unique
+
+- **État de l'actif** : document tenu par le comptable public, recensant les
+  immobilisations de la collectivité valorisées à leur coût comptable, et
+  devant être **concordant** avec l'inventaire physique et comptable tenu par
+  l'ordonnateur.
+- Une **divergence** entre inventaire et état de l'actif doit être
+  **régularisée avant la clôture de l'exercice**, jamais laissée en l'état
+  d'un exercice sur l'autre : elle fausse à la fois le calcul des
+  amortissements et la fiabilité du bilan.
+- **Compte financier unique (CFU)** : sous son angle comptable, il intègre et
+  rend cohérents la balance générale, le bilan, le compte de résultat et
+  l'état de l'actif, établis conjointement par l'ordonnateur et le comptable —
+  volet **procédural** du vote du CFU renvoyé à `budget-cycle.md` §5.6, ne pas
+  le dupliquer ici.
+
+### 5.11 Budgets annexes et assujettissement à la TVA
+
+- Un budget annexe retraçant une activité de nature **industrielle et
+  commerciale** est, selon les cas, **assujetti à la TVA** — la qualification
+  exacte (assujettissement de plein droit, option, exonération) dépend de la
+  nature de l'activité et d'un texte fiscal à vérifier au cas par cas, sans
+  jamais présumer un régime par analogie avec un autre budget annexe.
+- L'assujettissement à la TVA a des conséquences comptables directes :
+  comptabilisation hors ta

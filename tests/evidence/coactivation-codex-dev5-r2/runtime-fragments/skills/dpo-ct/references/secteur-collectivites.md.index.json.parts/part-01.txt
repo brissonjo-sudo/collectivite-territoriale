@@ -1,0 +1,157 @@
+# Branche — Traitements sectoriels des collectivités
+
+> **Table des matières** — fichier long (350 lignes) : lire le §1 (périmètre)
+> puis aller **directement** à la sous-famille concernée en §5 plutôt que de
+> tout relire. Les §6 à 12 (procédures, pièges, livrables, checklist)
+> s'appliquent transversalement à toutes les familles.
+>
+> §1 Périmètre/exclusions · §2 Questions couvertes · §3 Arbre de traitement ·
+> §4 Variables à lever · **§5 Règles métier par famille** : 5.1 état civil ·
+> 5.2 élections · 5.3 scolaire/périscolaire · 5.4 action sociale (CCAS) ·
+> 5.5 urbanisme/GRU · 5.6 vidéoprotection · 5.7 RH · 5.8 cimetières ·
+> 5.9 téléservices/communication · 5.10 open data · 5.11 archives ·
+> §6 Procédures et délais · §7 Déclencheurs de vérification · §8 Pièges ·
+> §9 Données à vérifier · §10 Livrables · §11 [risque/confiance] ·
+> §12 Checklist.
+
+## 1. Périmètre / Exclusions
+
+**Couvre** : la conformité des familles de traitements communaux — état
+civil, élections, scolaire, action sociale, urbanisme et GRU,
+vidéoprotection (volet données), RH (volet conformité), funéraire,
+téléservices et communication, open data, archives. Branche « terrain » :
+elle applique les branches transverses aux métiers de la collectivité.
+
+**Exclut** : le fond des obligations transverses (registre →
+`gouvernance-registre.md` ; AIPD → `aipd.md` ; droits et information →
+`droits-personnes.md` ; sous-traitance → `sous-traitance-transferts.md` ;
+sécurité → `securite-traitements.md`) ; le volet autorisation et doctrine
+d'emploi de la vidéoprotection → skill **dpm-fpt** ; le fond statutaire RH →
+skill **drh-fpt** ; la qualification du régime → `analyse-situation.md`.
+
+---
+
+## 2. Questions couvertes
+
+- « Ce traitement communal est-il conforme ? Que régulariser ? »
+- « Qui est responsable de traitement (commune, CCAS, État) ? »
+- « Peut-on publier / transmettre / réutiliser ces données d'administrés ? »
+- « Faut-il une AIPD ? Quelle durée de conservation ? »
+- « Le maire / un élu peut-il utiliser ce fichier pour communiquer ? »
+
+---
+
+## 3. Arbre de traitement
+
+`question → variables à lever → décision → vérification → livrable`
+
+1. Passer par le routeur (`analyse-situation.md`) : données personnelles ?
+   finalité ? **régime** ? **responsable de traitement** ?
+2. Identifier la **famille sectorielle** (§5) et lire sa sous-section.
+3. Repérer le **texte sectoriel** qui impose ou encadre le traitement : il
+   peut fixer base légale, durées, destinataires, publicité.
+4. Dérouler les points de conformité (base légale, registre, information,
+   durées, destinataires, sécurité, AIPD) ; vérifier les points de la
+   matrice §2.2 du `SKILL.md` (déclencheurs §7).
+5. Conclure par le livrable adapté (§10) — recommandation, jamais décision
+   (garde-fou §5.2.a du `SKILL.md`).
+
+---
+
+## 4. Variables à lever
+
+- **Responsable de traitement réel** : commune, EPCI, CCAS (personne morale
+  distincte), État (maire agissant en son nom), responsabilité conjointe —
+  point décisif, source de la moitié des erreurs sectorielles.
+- **Régime** : RGPD ou Police-Justice → `analyse-situation.md` §2.
+- **Texte sectoriel applicable** et ce qu'il fixe (durée, publicité,
+  destinataires, caractère obligatoire).
+- **Personnes concernées** : mineurs, bénéficiaires de l'action sociale,
+  personnes âgées → risque relevé, AIPD probable.
+- **Catégories de données** : sensibles, infractions, NIR.
+- **Sous-traitants** : éditeur métier, portail familles, prestataire de
+  paiement, hébergeur — et localisation.
+- **Diffusion envisagée** : publication, transmission, open data →
+  occultation ou anonymisation préalable ?
+
+---
+
+## 5. Règles métier — par famille de traitements
+
+### 5.1 État civil et affaires générales
+
+- Le maire agit comme **officier d'état civil au nom de l'État** :
+  répartition des responsabilités État / commune à **vérifier au cas par
+  cas** — ne pas inscrire d'office la commune comme responsable unique.
+- Registres d'état civil : **textes propres** — code civil et IGREC
+  (durées, publicité, délivrance), à vérifier en version en vigueur. Le
+  RGPD ne les écrase pas (*lex specialis*, socle §1).
+- **COMEDEC** : dispositif national encadré — vérifier la convention et le
+  rôle de la commune. **Recensement citoyen** : traitement imposé, base
+  légale et transmission au ministère à situer dans les textes (à vérifier).
+- Vigilances : délivrance d'actes à des tiers (conditions strictes, à
+  vérifier), généalogistes (§5.8), sécurité des registres. Accès aux
+  actes ≠ droit d'accès RGPD → `droits-personnes.md`.
+
+### 5.2 Élections
+
+- **Listes électorales** : tenues via le répertoire électoral unique (REU) ;
+  répartition des rôles **INSEE / commune** à vérifier avant de qualifier.
+- **Communication des listes** : droit de communication organisé par le
+  code électoral (électeurs, candidats) sous conditions — finalité
+  électorale, non-usage commercial — à vérifier en version consolidée. Ce
+  régime spécial prime le raisonnement générique.
+- **Frontière stricte fichiers collectivité / usage politique** : les
+  fichiers de la collectivité (administrés, GRU, invités) ne servent
+  **jamais** la propagande d'un candidat ou d'un élu — **détournement de
+  finalité**. Doctrine CNIL élections : à citer **avec sa date de version**.
+- Vigilances : période préélectorale (tracer les demandes de listes) ; la
+  prospection par les candidats relève de leur propre conformité.
+
+### 5.3 Scolaire, périscolaire, petite enfance
+
+- **Mineurs = personnes vulnérables** : risque relevé d'office ; **AIPD
+  fréquente** — vérifier les listes CNIL → `aipd.md`.
+- Points de conformité : inscriptions, transports, cantine (régimes
+  alimentaires = données révélatrices possibles de convictions ou de
+  santé), **portails familles** et **paiement en ligne**
+  (→ `sous-traitance-transferts.md`).
+- **PAI et données de santé** : données sensibles (art. 9 RGPD — à
+  confirmer en version consolidée) ; accès limité au personnel habilité,
+  pas de diffusion large des protocoles.
+- **Photos des enfants** : autorisation parentale distincte par usage ;
+  cumul droit à l'image + données personnelles (§5.9, piège §8).
+- **Base élèves / ONDE** : traitement de l'Éducation nationale — la commune
+  reste responsable de ses fichiers et de ses transmissions (à vérifier).
+- Renvois : information des familles → `droits-personnes.md` ; durées →
+  référentiels CNIL datés + archives §5.11.
+
+### 5.4 Action sociale (CCAS / CIAS)
+
+- **Le CCAS est une personne morale distincte** : responsable de traitement
+  à part entière (registre, mentions propres) ; ne pas le fondre dans la
+  commune.
+- **Données sensibles par nature** (santé, précarité, vie familiale) :
+  risque élevé par défaut ; AIPD à examiner systématiquement → `aipd.md`.
+- **Registre canicule / personnes vulnérables** : base légale propre, CGCT
+  et textes du plan d'alerte — à vérifier. Information obligatoire ;
+  destinataires limités (transmission au préfet encadrée — à vérifier).
+- **Domiciliation** : procédure CASF (à vérifier) ; population très
+  vulnérable, confidentialité renforcée. **Aide sociale légale /
+  facultative** : distinguer — textes, destinataires et durées diffèrent.
+- **Secret professionnel des travailleurs sociaux** : s'ajoute au RGPD ; le
+  partage d'informations obéit à ses propres règles (CASF — à vérifier).
+  Les deux cadres se cumulent.
+- Renvois : demandes de tiers → `droits-personnes.md` ; logiciels métier
+  → `sous-traitance-transferts.md`.
+
+### 5.5 Urbanisme, logement, GRU
+
+- **Autorisations d'urbanisme** : téléservice SVE et dématérialisation ADS —
+  obligations issues du CRPA et des textes de dématérialisation, à
+  vérifier. Qualifier les rôles (commune, centre instructeur, plateformes).
+- **Publicité vs données des pétitionnaires** : documents publics dans les
+  conditions des textes, mais la mise en ligne impose l'**occultation des
+  données personnelles** non nécessaires (coordonnées, signatures) —
+  doctrine CNIL/CADA à dater. Ne jamais publier un dossier brut.
+- **Signalements des

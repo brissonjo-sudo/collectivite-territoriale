@@ -1,0 +1,60 @@
+{
+  "case_id": "plugin-spontane-reversibilite",
+  "agent": "/root/juge_codex_dev5_r2_16b",
+  "exported_at": "2026-10-07T19:11:39.806510+00:00",
+  "packet_sha256": "54683101e81b90153262ba1c00655deeac551d13fe094770786226e1d4617e9b",
+  "response_sha256": "a46b336f189f4b412a0cf9e184c17e864cd56587e626090837fb6f8cdc6d6890",
+  "prompt_sha256": "25391b47a22b1318ba27a2bf6eda16124b30deb6270e88cc15dbfb83688b1612",
+  "fragments": [
+    {
+      "number": 1,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-reversibilite-b/fragment-01.txt",
+      "sha256": "81a573ef7b1eae853ce2e36fb51b5235d13e9151a4ca0a2a9b0166ee0d4084b5",
+      "character_count": 8000
+    },
+    {
+      "number": 2,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-reversibilite-b/fragment-02.txt",
+      "sha256": "d240756d48fe2f5e2ce6e279ec1fdc6ebb6b5babbcf7074c67dfcaea3ce25756",
+      "character_count": 8000
+    },
+    {
+      "number": 3,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-reversibilite-b/fragment-03.txt",
+      "sha256": "0e5b5be726f8592c4933054ac8d29bc244b38879b8fa26261ea67716a863d35f",
+      "character_count": 8000
+    },
+    {
+      "number": 4,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-reversibilite-b/fragment-04.txt",
+      "sha256": "6894d618f5b2a3072072815e507259096d3b8b6b558b3ba066bd28bddca247f3",
+      "character_count": 8000
+    },
+    {
+      "number": 5,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-reversibilite-b/fragment-05.txt",
+      "sha256": "bc602eb9e5d5e64ff736c5743774a2770f5be87bf2ca257e013c3744e50aa770",
+      "character_count": 8000
+    },
+    {
+      "number": 6,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-reversibilite-b/fragment-06.txt",
+      "sha256": "cf3557e8547be333f8758fde4d638f9766c5b884944080340f94e1c91aea0ab3",
+      "character_count": 8000
+    },
+    {
+      "number": 7,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-spontane-reversibilite-b/fragment-07.txt",
+      "sha256": "bd132531fb3e4315dd1552ad67d200a8bff05064b71daf4ab97555ff8f324e88",
+      "character_count": 5103
+    }
+  ],
+  "judge_adapter_sha256": "e1e04cd4ab37425885d57861151c893a7b921999ac295ddc7d44c5a0443fdc0b",
+  "campaign_adapter_sha256": "fa32998ad48586ca7178ac56d8cdeff5fb9438e6746d92bffea751c4a6155b8e",
+  "presentation_wrapper_sha256": "b709a2641f5433f3336a916b67b115570e5d77ed17d58433d39a89634ce3c14b",
+  "suite_sha256": "3c45e6117c25cbca0558de2955ca5a7d80956575d886a887d1cdfdc581375cd8",
+  "protocol_sha256": "65f78f419679774ec00c6b5d96b1801f902c6510b57e221ae7ebb31320fd1b6f",
+  "historical_scores_reused": false,
+  "activation_kind": "file_read_fragments",
+  "actual_plugin_activation_verified": false
+}

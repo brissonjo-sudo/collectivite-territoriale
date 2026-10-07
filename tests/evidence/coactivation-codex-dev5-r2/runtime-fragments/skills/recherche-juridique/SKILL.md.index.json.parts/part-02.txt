@@ -1,0 +1,157 @@
+ aucun identifiant non récupéré dans la session,
+  y compris dans une commande suggérée ou une démarche de vérification.
+- **Source inaccessible** : si le texte exact ou l'état de vigueur est
+  demandé et n'est pas récupérable, s'abstenir sur ces deux éléments. Ne
+  remplacer ni le texte par une citation de mémoire, ni la vigueur par une
+  estimation (« vraisemblablement », « aucune abrogation connue »). Une
+  réserve de confiance ne rend pas cette spéculation acceptable. Proposer
+  une recherche sur le portail officiel sans compléter une référence de
+  mémoire. L'aide générale reste possible, sans prétendre résoudre le point.
+- **Faits manquants** : une date, une qualité ou un événement décisif absent
+  de la demande reste inconnu. Poser la question et donner seulement une
+  orientation conditionnelle ; ne pas traiter une hypothèse comme acquise
+  dans un tableau, une échéance ou la synthèse finale.
+- **Citation** : des guillemets exigent le libellé réellement récupéré.
+  Sans libellé exact, une paraphrase exige elle aussi un contenu primaire
+  suffisant récupéré ; sinon s'abstenir, sans faux extrait ni règle de mémoire.
+
+# Skill : recherche-juridique (v3.5.0)
+
+> **Objet** : encoder la méthodologie rigoureuse de recherche en droit
+> français applicable à tout usage professionnel — avocat, juriste,
+> agent des forces de l'ordre, cadre territorial, candidat aux concours.
+> Conçu contre **dix-huit modes d'erreur** identifiés du LLM en droit,
+> autour de **sept principes**, d'une **procédure en neuf étapes**
+> (étapes **0** et **0 bis** de cadrage, étapes **1 à 7** opératoires),
+> d'un **double mode opératoire A/B**, de **six modules activables** et
+> de **quatre techniques** de raisonnement juridique.
+>
+> **Public** : praticiens du droit français. Le métier de l'utilisateur
+> (contexte territorial, domaines prioritaires, 3ᵉ regard d'auto-critique)
+> se configure via un **profil** — voir `profil.md` et le dossier
+> [`profils/`](profils/) (§0, *Chargement du profil*). Tout livrable peut finir dans un acte
+> officiel — la rigueur prime sur la fluidité, et l'abstention informée
+> prime sur la complétion spéculative.
+
+---
+
+## Déclenchement
+
+Activer ce skill dès que l'utilisateur :
+- cite ou demande un article de loi, de code, un décret, un arrêté, une circulaire,
+- demande une qualification juridique (pénale, administrative, civile),
+- demande de vérifier si un texte est en vigueur, abrogé ou modifié,
+- demande une jurisprudence (Cass., CE, CC, CJUE, CEDH),
+- rédige un acte, une note, un mémoire, des conclusions ou une réponse
+  institutionnelle,
+- audite, relit ou corrige juridiquement un document existant ou un corpus,
+- prépare un oral ou écrit de concours impliquant des références juridiques.
+
+**Ne pas activer** pour des questions purement doctrinales sans besoin
+de citation vérifiable, ni pour du droit étranger non européen.
+
+---
+
+## Mise à jour — contrôle par session, automatique sur option
+
+Au premier déclenchement du skill dans une session, si le mode automatique
+n'est pas activé, vérifier discrètement si une mise à jour est disponible avec
+`npx skills check`, **uniquement** si `npx` est accessible. Ne pas relancer ce
+contrôle dans la même session et jamais avant une réponse urgente ou une simple
+clarification.
+
+- Si `recherche-juridique` est signalé comme périmé, l'indiquer en une phrase,
+  puis poursuivre immédiatement le travail :
+  « Une mise à jour de recherche-juridique est disponible ; vous pourrez
+  l'installer après cette réponse avec `npx skills update recherche-juridique`. »
+- Ne pas proposer de mise à jour si le contrôle ne signale rien, si le skill
+  n'est pas suivi par le CLI `skills`, ou si le contrôle échoue (réseau, Node,
+  droits). Ces situations ne sont pas un problème juridique et ne doivent pas
+  alourdir la réponse.
+- L'agent ne lance jamais `npx skills update` de sa propre initiative, sauf
+  si l'utilisateur a activé le mode automatique ci-dessous.
+
+Cette fonction concerne les installations réalisées avec le CLI `skills`.
+Pour une installation gérée par un hôte ou un marketplace, suivre son mécanisme
+de mise à jour ; ne pas présenter la commande `npx` comme un correctif universel.
+
+### Mode automatique explicite
+
+Ce mode est réservé à une installation **globale suivie par le CLI `skills`**.
+L'utilisateur l'active en créant, à la racine du skill, le fichier local non
+versionné `.recherche-juridique-update.json` :
+
+```json
+{ "automatic": true }
+```
+
+Au premier usage après un délai de 24 heures, exécuter à la place du contrôle
+manuel `npx skills check` :
+`scripts/update_skill.py`. Le script détermine le périmètre global, lance
+`npx skills update recherche-juridique -y -g`, conserve `profil.md` et
+`scripts/.env`, puis affiche seulement `UPDATE_APPLIED` quand la version a
+changé. Une panne réseau, l'absence de `npx`, une installation locale ou un
+emplacement ambigu ne bloque jamais le travail juridique et n'entraîne aucune
+mise à jour. Le fichier garde la date de la dernière tentative pour éviter les
+relances répétées.
+
+Pour désactiver le mode, remplacer son contenu par `{ "automatic": false }`
+ou supprimer ce fichier.
+
+---
+
+## 0. Architecture générale : double mode opératoire
+
+### Chargement du profil (`profil.md`) — avant toute analyse
+
+Le **noyau méthodologique est universel** ; le **métier de l'utilisateur
+est un paramètre**. Au déclenchement, si un fichier **`profil.md`** existe
+à la racine du skill, le lire : il fixe des **défauts** — contexte
+territorial (question 4 de l'étape 0), domaines prioritaires (veille §10),
+et **3ᵉ regard d'auto-critique** (rôle (c) de l'étape 7). Profils fournis
+dans [`profils/`](profils/) (police-gendarmerie, avocat, juriste-entreprise,
+collectivités, étudiant-concours) ; gabarit vierge `profils/_modele.md`.
+
+**Deux règles impératives :**
+1. **Un profil ne fournit que des défauts, jamais des certitudes.** Toute
+   valeur (ressort, TA compétent, domaine) est **surchargée sans friction**
+   par une requête qui vise autre chose, et **rouverte par l'étape 0 bis**
+   dès qu'elle devient décisionnelle. Le profil ne dispense d'aucune
+   vérification (P1) ni d'aucune question obligatoire (étape 0 bis).
+2. **Sans `profil.md` → profil neutre.** Aucune hypothèse territoriale ou
+   métier n'est présumée. Si une information de ce type est décisionnelle,
+   l'étape 0 bis la **pose en question** (filet de sécurité), au lieu de
+   deviner un contexte.
+
+### Double mode opératoire
+
+Le skill fonctionne selon deux modes **mutuellement exclusifs**.
+
+### Mode A — Noyau + modules activables (par défaut)
+
+Mode opératoire normal. Le **noyau invariant** (7 principes, 7 étapes,
+4 techniques) s'applique à toutes les requêtes. Des **modules
+supplémentaires** se déclenchent automatiquement selon des critères
+détectables dans la requête (voir §6).
+
+### Mode B — Exhaustif (dérogatoire)
+
+Mode qui exécute la **totalité des modules** sur toute requête, y
+compris ceux qui s'avèrent sans objet (qui répondent alors
+explicitement « **sans objet à cette espèce** » avec justification
+d'une ligne).
+
+Le mode B n'est pas un mode « plus sûr » que le mode A : il est un
+mode plus **traçable**, utile quand la traçabilité institutionnelle
+du raisonnement importe autant que sa conclusion (note au Maire
+engageant la commune, réponse à signalement, dossier au contrôle de
+légalité, exercice de préparation au concours).
+
+### Balises de bascule
+
+| Balise | Effet |
+|--------|-------|
+| `[complet]` | Force le mode B (tous modules activés). |
+| `[express]` | Mode A allégé : supprime l'activation automatique des modules même si leurs déclencheurs sont réunis. **Exceptions : PÉNAL reste actif** en matière répressive (P6) et **DOC-AUDIT reste actif** pour tout audit ou correction de documents. |
+| `[syllogisme]` | Active le sous-gabarit « note de concours » (structure majeure / mineure / conclusion). Surcouche du gabarit B. |
+| `[opérationnel]` | Active la section « Implications opérationnelles » du gabarit B et le rôle facultatif *responsable opérationne

@@ -1,0 +1,118 @@
+ appréciation, pas un
+   mécanisme automatique (§5.2).
+4. Confondre **gestion de fait** et **détournement pénal** (abus de
+   confiance, concussion, prise illégale d'intérêts) — qualification
+   financière objective, pouvant coexister avec des faits pénalement
+   qualifiables poursuivis par une voie distincte.
+5. Citer une décision de justice financière par son **nom d'usage**, son
+   **millésime** ou son **numéro** — interdit ici ; `recherche-juridique`
+   systématiquement.
+6. Inventer ou approximer un **montant de sanction** ou un **délai de
+   prescription** « à titre indicatif » — nommer la règle, marquer « à
+   vérifier ».
+7. Traiter le **contrôle budgétaire** (préventif, `controle-budgetaire.md`)
+   et la **responsabilité financière** (répressive, cette brique) comme une
+   seule procédure — objets et issues distincts.
+8. Oublier la **communication obligatoire à l'assemblée délibérante** des
+   observations définitives d'un examen de la gestion.
+
+---
+
+## 9. Données / valeurs à vérifier
+
+Aucune des valeurs suivantes n'est chiffrée dans ce document ; toutes sont à
+confirmer sur source officielle avant tout usage en acte, avec leur date de
+référence :
+
+- **Montant, mode de calcul et plafond** de la sanction pécuniaire du régime
+  unifié de responsabilité financière.
+- **Délai de prescription** de l'action devant le juge des comptes (gestion
+  de fait ou faute de gestion).
+- **Portée exacte des causes d'exonération** et leurs limites.
+- **Conséquences statutaires ou électorales précises** d'une déclaration
+  définitive de gestion de fait (notamment inéligibilité).
+- **Numérotation exacte**, au CJF, des articles définissant infractions,
+  sanctions et gestion de fait : non stabilisée dans
+  `references/references-verifiees.md` §5 (articles concurrents repérés,
+  aucun retenu avec certitude) — jamais de numéro précis sans revérification.
+- **Délais de recours** (droit commun, déféré préfectoral, référés).
+- **Référence structurelle stable**, citable avec la réserve « à confirmer en
+  version consolidée » : le **CJF**, dans son architecture générale.
+  L'**ordonnance de réforme (2023)** est, elle, **déjà vérifiée** — voir
+  `references/references-verifiees.md` §5 pour son numéro et sa date, à
+  relire avant citation dans un acte.
+- Toute **référence jurisprudentielle** : aucune vérifiée à ce jour
+  (`references/references-verifiees.md` §7) → `recherche-juridique`
+  systématiquement, jamais de nom d'usage, millésime ou numéro cité seul.
+
+---
+
+## 10. Écrits & livrables
+
+- **Note de risque contentieux financier** (interne, exécutif et DGS) :
+  qualification prudente du risque, éléments factuels tracés, options de
+  régularisation ou de réponse, sans anticiper la décision de la juridiction.
+- **Dossier de réponse à réquisitoire ou à observations provisoires** —
+  pièces justificatives et chronologie factuelle ; la rédaction de la réponse
+  relève du gestionnaire mis en cause, assisté le cas échéant d'un conseil —
+  cette brique prépare le dossier, elle ne plaide pas à sa place.
+- **Fiche de procédure financière** —
+  `references/templates/fiche-procedure-financiere.md`, pour un circuit
+  interne prévenant le risque identifié (double contrôle, visa systématique,
+  traçabilité du service fait).
+- **Signalement interne** dès qu'un risque de gestion de fait est détecté en
+  amont d'un montage envisagé : garde-fou `SKILL.md` §5.2 **avant** toute
+  autre production.
+- **Mémoire en défense** : hors périmètre ; la stratégie contentieuse relève
+  de l'avocat ou du conseil de la personne mise en cause.
+
+---
+
+## 11. Double échelle [risque / confiance]
+
+| Sous-cas | Risque | Confiance |
+|---|---|---|
+| Organisation des juridictions financières et voie d'appel unifiée | Moyen | Stable sur le principe de l'unification (2023), à vérifier sur le détail d'organisation |
+| Qualification d'une gestion de fait | Élevé à critique | Stable sur les éléments constitutifs, à vérifier sur les conséquences précises |
+| Mise en cause au titre du régime unifié de responsabilité financière | Élevé à critique | Stable sur l'architecture générale, à vérifier sur sanctions, prescriptions et exonérations |
+| Examen de la gestion (observations) | Moyen | Stable sur la procédure, à vérifier sur les délais de contradictoire |
+| Contentieux administratif d'un acte budgétaire ou fiscal | Élevé | Stable sur les voies de droit, à vérifier sur les délais et l'intérêt à agir |
+| Prévention interne (traçabilité, avis du comptable) | Faible à moyen | Stable sur la méthode |
+
+---
+
+## 12. Checklist de branche
+
+1. La **nature du risque** a-t-elle été qualifiée précisément (irrégularité
+   d'exécution, gestion de fait, fragilité d'acte), sans les mélanger ?
+2. La **juridiction ou la voie compétente** a-t-elle été identifiée sans
+   présumer l'organisation antérieure à 2023 ?
+3. Les **éléments constitutifs** d'une gestion de fait (immixtion, absence
+   de titre) ont-ils été vérifiés avant toute qualification affirmée ?
+4. Une éventuelle **cause d'exonération** (ordre écrit, circonstances) a-t-elle
+   été traitée comme une appréciation casuistique, pas comme un mécanisme
+   automatique ?
+5. Aucune **décision de justice** n'a-t-elle été citée par son nom d'usage,
+   son millésime ou son numéro ? Le renvoi à `recherche-juridique` a-t-il été
+   fait systématiquement pour toute jurisprudence ?
+6. Aucun **montant de sanction** ni **délai de prescription** n'a-t-il été
+   chiffré sans la mention « à vérifier » ?
+7. La distinction entre **examen de la gestion** (contrôle non
+   juridictionnel) et **procédure de responsabilité** (juridictionnelle)
+   a-t-elle été maintenue ?
+8. L'**articulation** avec `controle-budgetaire.md` (procédure préventive) et
+   avec le garde-fou `SKILL.md` §5.2 (montage envisagé) a-t-elle été
+   signalée quand pertinente ?
+9. La frontière avec `drh-fpt` (procédure disciplinaire individuelle) a-t-elle
+   été respectée dès qu'un agent nommément identifiable était en cause ?
+10. Aucune **donnée nominative** (agent, élu, administré) n'a-t-elle été
+    exposée inutilement ?
+11. Couple **[risque / confiance]** (§11) restitué pour le sous-cas traité ?
+12. Cas journalisable (nouveau motif de risque, question récurrente, lacune
+    identifiée) proposé pour `JOURNAL.md` (`SKILL.md` §9) ?
+
+[risque / confiance] : risque élevé à critique dès qu'une responsabilité
+personnelle ou une gestion de fait est en cause — confiance stable sur les
+principes et l'architecture générale, systématiquement à vérifier sur les
+montants, délais, conditions d'exonération et toute référence
+jurisprudentielle avant citation ou usage en acte.

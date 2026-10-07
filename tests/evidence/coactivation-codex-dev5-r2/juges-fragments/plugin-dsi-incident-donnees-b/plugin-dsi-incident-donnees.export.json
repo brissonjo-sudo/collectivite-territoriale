@@ -1,0 +1,186 @@
+{
+  "case_id": "plugin-dsi-incident-donnees",
+  "agent": "/root/juge_codex_dev5_r2_05b",
+  "exported_at": "2026-10-07T18:24:32.767445+00:00",
+  "packet_sha256": "776dd2471a00750f3179fa16032c2f15e21c6e7326fd09f839f5290ffaff612d",
+  "response_sha256": "f19de57e2ff09eeb6a69d48b54a1cdf76f17aaf2983e3ec346d47cb78f849c11",
+  "prompt_sha256": "87f278d5bfccc8c0eaf847eafd1be1ff296afbe51370322ba321c0b590791810",
+  "fragments": [
+    {
+      "number": 1,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-incident-donnees-b/fragment-01.txt",
+      "sha256": "5cedc25bb5fad58c70f265843bbcd88b4a9e1aa497be611b50eeeeebfd13dfec",
+      "character_count": 8000
+    },
+    {
+      "number": 2,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-incident-donnees-b/fragment-02.txt",
+      "sha256": "e0b493dd3f708e3f527f76212225bdb2d667d69d62af38470248aae00bf83930",
+      "character_count": 8000
+    },
+    {
+      "number": 3,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-incident-donnees-b/fragment-03.txt",
+      "sha256": "cbaec2018f4f6c744964922a23156dbeef002e76182fab96cda12e231c82b2bd",
+      "character_count": 8000
+    },
+    {
+      "number": 4,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-incident-donnees-b/fragment-04.txt",
+      "sha256": "9156ed3d4c4c07b03d64e9f2c17afc436e35911beb47885f5ff3b1ecf4876d40",
+      "character_count": 8000
+    },
+    {
+      "number": 5,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-incident-donnees-b/fragment-05.txt",
+      "sha256": "f1930a6271fb9f34a04c817e059ae58aaae144229095f07dba0a5fe0c1090c39",
+      "character_count": 8000
+    },
+    {
+      "number": 6,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-incident-donnees-b/fragment-06.txt",
+      "sha256": "6bf61afb29ad12938c47066f00ae0b5bd70f01b0a4d0de6429fe129007ee64f7",
+      "character_count": 8000
+    },
+    {
+      "number": 7,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-incident-donnees-b/fragment-07.txt",
+      "sha256": "c6a16c08a207969918186f0c2637e653d89ad71c93b71a92449fd4c6eb91e3a1",
+      "character_count": 8000
+    },
+    {
+      "number": 8,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-incident-donnees-b/fragment-08.txt",
+      "sha256": "8177607d29ac5c2bc744a5022355a3b5e79a7846877588178dfbbe7575b87d62",
+      "character_count": 8000
+    },
+    {
+      "number": 9,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-incident-donnees-b/fragment-09.txt",
+      "sha256": "be6e6f3b95f43b1eeba51dc2668cf6ca5137a74fea780e427506dde30cc83203",
+      "character_count": 8000
+    },
+    {
+      "number": 10,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-incident-donnees-b/fragment-10.txt",
+      "sha256": "31a00c0378f458f7c8dfe2a34691beb0b5330724de70b985a66b3476f806b3f9",
+      "character_count": 8000
+    },
+    {
+      "number": 11,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-incident-donnees-b/fragment-11.txt",
+      "sha256": "d16cb854a55f7d4cf36524939a41530927d5ddff076460446c36717680d5dbad",
+      "character_count": 8000
+    },
+    {
+      "number": 12,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-incident-donnees-b/fragment-12.txt",
+      "sha256": "f2ad40f5f182162e65028d1cffee47570d1abf17af3a83a266da6d00091a3b26",
+      "character_count": 8000
+    },
+    {
+      "number": 13,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-incident-donnees-b/fragment-13.txt",
+      "sha256": "dda22662928765ba0a7785d23b18eec0255fdb223ca825f21e5ff6f27d2496f5",
+      "character_count": 8000
+    },
+    {
+      "number": 14,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-incident-donnees-b/fragment-14.txt",
+      "sha256": "0e33cdad5cfd3f237f0238b42aa2d0aafa863ac254cd73927da767573107ab2e",
+      "character_count": 8000
+    },
+    {
+      "number": 15,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-incident-donnees-b/fragment-15.txt",
+      "sha256": "d582b214523212880b368b98ae9f32d6da8ef1153941dd07a4f8fa2fff6dbe23",
+      "character_count": 8000
+    },
+    {
+      "number": 16,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-incident-donnees-b/fragment-16.txt",
+      "sha256": "d67017b3bdce94292979628798641066149a864ba2431baa0799a7ab7ef1f086",
+      "character_count": 8000
+    },
+    {
+      "number": 17,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-incident-donnees-b/fragment-17.txt",
+      "sha256": "f3e68083247543d7db154a0c818888689a68689a5824faed7bdd16588c95b0b1",
+      "character_count": 8000
+    },
+    {
+      "number": 18,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-incident-donnees-b/fragment-18.txt",
+      "sha256": "8f9c9a06a79683ae58597effe431e746b0d277cf0f935095e1f75fb80a6ca2c4",
+      "character_count": 8000
+    },
+    {
+      "number": 19,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-incident-donnees-b/fragment-19.txt",
+      "sha256": "d4ae00c17be8d043110da11155947d6a5352734a1f9ec7411ead6470301313ab",
+      "character_count": 8000
+    },
+    {
+      "number": 20,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-incident-donnees-b/fragment-20.txt",
+      "sha256": "623195de13342b183c5e68355574c6481a9f68db58da375bfb6e7427a31fb7c5",
+      "character_count": 8000
+    },
+    {
+      "number": 21,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-incident-donnees-b/fragment-21.txt",
+      "sha256": "a9f3f14002994e88e7f3ec279c50e4ba28e41468d265c38c284969cdff6aa786",
+      "character_count": 8000
+    },
+    {
+      "number": 22,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-incident-donnees-b/fragment-22.txt",
+      "sha256": "181913d1997d1ce858b836e3c6974eb9dbe51f60da28879d1a34c7c4f461a0e8",
+      "character_count": 8000
+    },
+    {
+      "number": 23,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-incident-donnees-b/fragment-23.txt",
+      "sha256": "6799f22e57dcf3d8e710f8835c033e4904e496c7b3aab3422a5bb1771db7ea6a",
+      "character_count": 8000
+    },
+    {
+      "number": 24,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-incident-donnees-b/fragment-24.txt",
+      "sha256": "cadae23fba67a2c84315f84880cb02a56ea97fc4459132a9e4197258494fee49",
+      "character_count": 8000
+    },
+    {
+      "number": 25,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-incident-donnees-b/fragment-25.txt",
+      "sha256": "8aecd0259eba09bc7d4133546d7f65c9d4c96801f299cd4f7d667ec7249d9806",
+      "character_count": 8000
+    },
+    {
+      "number": 26,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-incident-donnees-b/fragment-26.txt",
+      "sha256": "cbe20433c69601d43e68a7d2ddd06febe66c1e19e89fb56ce071166e821309bc",
+      "character_count": 8000
+    },
+    {
+      "number": 27,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-incident-donnees-b/fragment-27.txt",
+      "sha256": "06878f334268e4be79da61faa7e14fb2144454816b24d082e91a67dc0a338ae0",
+      "character_count": 8000
+    },
+    {
+      "number": 28,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-incident-donnees-b/fragment-28.txt",
+      "sha256": "4d4101c908af5f5bb3ebcb86cfc2716f8447edca2db102e1a2b96e228e88c404",
+      "character_count": 5122
+    }
+  ],
+  "judge_adapter_sha256": "e1e04cd4ab37425885d57861151c893a7b921999ac295ddc7d44c5a0443fdc0b",
+  "campaign_adapter_sha256": "fa32998ad48586ca7178ac56d8cdeff5fb9438e6746d92bffea751c4a6155b8e",
+  "presentation_wrapper_sha256": "b709a2641f5433f3336a916b67b115570e5d77ed17d58433d39a89634ce3c14b",
+  "suite_sha256": "3c45e6117c25cbca0558de2955ca5a7d80956575d886a887d1cdfdc581375cd8",
+  "protocol_sha256": "65f78f419679774ec00c6b5d96b1801f902c6510b57e221ae7ebb31320fd1b6f",
+  "historical_scores_reused": false,
+  "activation_kind": "file_read_fragments",
+  "actual_plugin_activation_verified": false
+}

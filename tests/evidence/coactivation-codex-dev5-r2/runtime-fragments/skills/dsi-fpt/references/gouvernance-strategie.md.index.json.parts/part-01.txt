@@ -1,0 +1,155 @@
+# Branche — Gouvernance et stratégie
+
+## 1. Périmètre / Exclusions
+
+Construire le schéma directeur du SI, organiser les arbitrages et piloter le
+portefeuille de projets. Définir les responsabilités opérationnelles DSI,
+RSSI, DGS et services métiers, le fonctionnement mutualisé ou externalisé et
+la stratégie de numérique responsable.
+
+Budget et financement → `dirfi-fpt` ; organisation des services et emplois →
+`drh-fpt` ; désignation et missions du DPO → `dpo-ct`. Appliquer les bascules
+de `SKILL.md` §5.5–5.6 puis arrêter le volet concerné, sans illustration.
+Passation → hors périmètre, service de la commande publique. Sécurité →
+`references/securite-si.md` ; exécution des conventions et contrats
+informatiques → `references/contrats-prestataires.md`.
+
+## 2. Questions couvertes
+
+- Comment arbitrer des demandes métiers concurrentes et un SI vieillissant ?
+- Que doit contenir un schéma directeur utilisable par la DGS ?
+- Comment porter la fonction RSSI sans confondre décision et exploitation ?
+- Que conserver en propre lorsque le SI est mutualisé ou externalisé ?
+- Comment intégrer la sobriété numérique et mesurer les résultats ?
+
+## 3. Arbre de traitement
+
+Passer d'abord par `references/analyse-situation.md`. Incident ou surveillance
+→ afficher les garde-fous de `SKILL.md` §5.2–5.3 avant tout contenu métier.
+
+`demande d'arbitrage → services rendus, dépendances, mode d'exercice et capacité
+réelle → maintenir, différer, simplifier ou lancer → obligations et pouvoirs
+du décideur vérifiés → note de décision et portefeuille priorisé`.
+
+`mutualisation → périmètre, convention, responsabilités et capacité de sortie
+→ organisation technique proposée → régime applicable et convention vérifiés
+→ matrice de responsabilités et exigences de service`.
+
+`numérique responsable → périmètre matériel, applicatif et usages → actions
+mesurables → applicabilité de l'obligation vérifiée → feuille de route`.
+
+Un intitulé RSSI ne détermine ni filière, ni cadre d'emplois, ni titularité.
+Pour une demande RH, transmettre les faits connus à `drh-fpt` et laisser
+explicitement inconnus le statut et les critères non fournis.
+
+## 4. Variables à lever
+
+- Mode d'exercice : internalisé, mutualisé ou externalisé ; compétence
+  effectivement disponible dans la collectivité.
+- Catégorie de collectivité ou groupement ; taille seulement si un texte en
+  dépend ; date de référence.
+- Services publics concernés, criticité, contraintes métiers et solutions
+  de fonctionnement dégradé.
+- Nature et sensibilité des données, sans données nominatives ni architecture
+  exploitable ; exigences reçues du DPO.
+- Patrimoine existant, dépendances, contrats et conventions, engagements
+  connus et incertitudes documentées.
+- Capacité des équipes et des services métiers à conduire le changement ;
+  acteur habilité à arbitrer, à exécuter et à accepter le risque.
+
+## 5. Règles métier
+
+### Schéma directeur et arbitrages
+
+Partir des services rendus et de leurs difficultés, puis des composants
+techniques. Relier chaque projet à un résultat métier, un responsable et une
+condition de réussite ; écarter le catalogue de produits sans décision.
+Comparer le maintien de l'existant, sa simplification et son remplacement.
+Inclure les dépendances, le coût complet exprimé en besoins, la charge de
+changement et les conditions de sortie. Le traitement financier relève de
+`dirfi-fpt`.
+
+Prioriser selon la continuité du service, les risques non maîtrisés, les
+obligations vérifiées et la capacité de réalisation. Distinguer ce qui est
+indispensable pour fonctionner de ce qui améliore le service. Faire arbitrer
+les conflits par la DGS ou l'exécutif selon les compétences vérifiées ; la DSI
+instruit les options et ne s'attribue pas leur décision.
+
+### Responsabilités et pilotage
+
+Décrire la fonction RSSI par ses résultats : analyse des risques, exigence de
+sécurité, alerte et contrôle. Séparer autant que possible production d'une
+mesure et appréciation de son efficacité ; si les moyens imposent un cumul,
+documenter un regard indépendant et le circuit d'escalade. Ce sont des bonnes
+pratiques de gouvernance, pas l'affirmation d'une obligation générale de
+désigner un RSSI. Confier le contenu de sécurité à
+`references/securite-si.md` et les questions d'emplois à `drh-fpt`.
+
+Pour chaque décision, distinguer décideur, responsable métier, exécutant
+technique et contrôleur. Le DPO porte ses exigences sur son périmètre ; ne pas
+lui transférer la conduite technique du SI. Retenir peu d'indicateurs
+exploitables : services effectivement disponibles, incidents récurrents,
+actions de risque non closes, dépendances critiques, charge et résultats des
+projets. Associer chaque indicateur à une décision possible.
+
+### Mutualisation et externalisation
+
+La collectivité reste responsable de son SI. Lire la convention avant de
+supposer qu'un service mutualisé décide pour elle. Documenter les services
+couverts, les exclusions, les contacts fonctionnels, les escalades, les accès
+conservés, le contrôle et les conditions de sortie.
+
+Le CGCT sur les services communs est une piste de rattachement à confirmer en
+version consolidée : le registre `references/references-verifiees.md` le
+classe sous conditions liées à la catégorie d'EPCI et aux communes membres.
+Ne pas étendre ce régime à toute mutualisation. Vérifier la catégorie, la
+convention et les compétences avant toute conclusion juridique ; basculer
+les questions d'organisation des agents vers `drh-fpt`.
+
+### Numérique responsable
+
+Traiter la durée d'usage des équipements, les volumes stockés, la complexité
+applicative, les achats de capacité et les usages. Mesurer un état initial
+avant de promettre une réduction ; ne pas remplacer un équipement uniquement
+pour améliorer un indicateur théorique. Renvoyer le cycle de vie du parc à
+`references/infrastructures-reseaux.md` et l'hébergement à
+`references/cloud-hebergement.md`.
+
+La loi relative à la réduction de l'empreinte environnementale du numérique
+est à confirmer en version consolidée. Le registre réserve son obligation
+de stratégie à certaines communes et certains EPCI ; vérifier catégorie,
+seuil, calendrier et décret d'application avant de la présenter comme
+obligatoire. Les autres actions proposées restent de bonnes pratiques.
+
+## 6. Procédures
+
+Pour un schéma directeur, annoncer le périmètre connu et demander le service
+prioritaire si l'objectif n'est pas donné. Faire valider le diagnostic par les
+responsables métiers ; consolider les dépendances et les risques avec la DSI
+et le RSSI. Proposer des options avec bénéfice, limites et besoins ; obtenir
+l'arbitrage du décideur identifié. Transformer cet arbitrage en portefeuille
+avec responsable, résultat attendu, dépendances et point de réexamen.
+
+Pour une mutualisation, vérifier d'abord les services attendus et le texte
+de la convention. Tester le partage des responsabilités sur un incident,
+une demande d'accès et une fin de service, sans produire de données réelles.
+Faire confirmer les engagements par chaque partie ; confier leur suivi à
+`references/contrats-prestataires.md`. Les délais réglementaires éventuels
+restent à vérifier avant de fixer le calendrier.
+
+## 7. Déclencheurs de vérification
+
+Appliquer `references/socle-sources-verification.md` avant toute affirmation
+de compétence, délégation, obligation de désignation, régime de mutualisation,
+obligation de stratégie ou contenu juridiquement obligatoire d'une décision.
+Tester explicitement l'applicabilité à la catégorie de collectivité. Une
+doctrine de l'État et un guide ANSSI ne créent pas d'obligation locale.
+
+## 8. Pièges et confusions fréquentes
+
+- Confondre schéma directeur, plan d'achat et liste de souhaits métiers.
+- Confondre responsabilité de la collectivité et prestation externalisée.
+- Appeler « obligatoire » une fonction ou un comité conseillé par doctrine.
+- Traiter le RSSI comme le décideur unique du risque ou le DPO comme la DSI.
+- Présenter un régime de service commun comme valable pour tout groupement.
+- Utiliser des indicateurs individ

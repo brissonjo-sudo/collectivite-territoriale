@@ -1,0 +1,102 @@
+é ; revue globale au moins annuelle,
+  adossée au bilan.
+- **Communication du registre** : tenu à la disposition de la CNIL sur
+  demande. Son statut au regard du droit d'accès aux documents
+  administratifs (CRPA) est à vérifier avant toute communication à un
+  tiers.
+- Aucun autre délai réglementaire propre à cette branche : les délais
+  cités ailleurs (72 h, 1 mois) relèvent de `violations.md` et
+  `droits-personnes.md`.
+
+## 7. Déclencheurs de vérification
+
+Appliquer le socle-sources (`socle-sources-verification.md`) avant de
+conclure sur :
+
+- contenu **obligatoire** d'une fiche de registre ou du registre
+  sous-traitant (matrice §2.2 : contenu obligatoire d'un document) ;
+- portée exacte de la **dérogation art. 30.5** ;
+- règles d'**incompatibilité** et de positionnement du DPO (art. 38, lignes
+  directrices CEPD sur les DPO — à dater) ;
+- **procédure de désignation** CNIL en vigueur ;
+- communicabilité du registre (CRPA, doctrine CADA/CNIL — à dater) ;
+- toute question de base légale ou de durée portée par une fiche (matrice
+  §2.2).
+
+## 8. Pièges & confusions fréquentes
+
+- **DPO porteur de projet** : conflit d'intérêts. Le DPO ne peut pas
+  rendre un avis sur un traitement dont il détermine finalités ou moyens.
+  Signaler, proposer un portage alternatif.
+- **Registre = inventaire d'applications** : non. L'inventaire technique
+  est un intrant utile ; le registre recense des **traitements par
+  finalité**, y compris papier et hors logiciel.
+- **Une fiche par logiciel** : erreur symétrique. Repartir de la finalité.
+- **« Petite commune, registre facultatif »** : faux en pratique (§5.3).
+- **Oublier le CCAS** : personne morale distincte, responsable de ses
+  traitements, **son propre registre**, sa propre désignation de DPO. Même
+  vigilance pour la caisse des écoles.
+- **Oublier les traitements papier** (cahiers, dossiers, listes) : le RGPD
+  couvre les fichiers manuels structurés.
+- **Confondre registre et AIPD** : le registre décrit, l'AIPD évalue le
+  risque → `aipd.md`.
+- **Avis DPO présenté comme une autorisation** : reformuler (garde-fou
+  §5.2.a).
+
+## 9. Données / références à vérifier
+
+Ne jamais citer de mémoire sans réserve :
+
+- Art. 30, 37, 38, 39, 5.2, 24 RGPD — structure stable, citer avec
+  « à confirmer en version consolidée » sauf vérification en session.
+- Loi 78-17 : **aucun article de mémoire** (numérotation remaniée) —
+  vérifier en session toute disposition nationale invoquée.
+- Lignes directrices CEPD (ex-G29) sur les délégués à la protection des
+  données : **dater la version**.
+- Modèles, guides et téléservice de désignation CNIL : vérifier en ligne,
+  **dater**.
+- Doctrine CADA / CNIL sur la communicabilité du registre : à dater.
+
+## 10. Livrables
+
+- **Fiche de registre** (création ou mise à jour) →
+  `assets/fiche-registre-modele.md`. Éléments obligatoires : ceux de
+  l'art. 30.1 (§5.3), régime signalé, date de mise à jour.
+- **Avis DPO** (désignation, organisation, arbitrage de gouvernance) →
+  `assets/avis-dpo-modele.md`. Comporte toujours : rappel du rôle
+  consultatif, analyse, niveau de risque, recommandation au responsable de
+  traitement.
+- **Plan d'action / bilan annuel** : pas de générateur dédié ; structurer
+  selon §5.5 (état des lieux, priorités par risque, échéances, porteurs).
+- Cas incomplet → ne jamais halluciner : produire un brouillon marqué
+  `[INCOMPLET]` listant les champs manquants (`SKILL.md` §6).
+
+## 11. Double échelle [risque / confiance]
+
+- **Structure du registre, pédagogie accountability** : risque faible à
+  moyen, confiance stable → réponse directe.
+- **Contenu obligatoire d'une fiche, dérogations art. 30** : risque moyen,
+  confiance « à vérifier » → vérification avant usage.
+- **Conflit d'intérêts du DPO, positionnement contesté** : risque élevé
+  (exposition de la collectivité et du DPO) → citation de source, réserve
+  « à confirmer ».
+- **Registre absent lors d'un contrôle CNIL** : risque élevé →
+  croiser `relations-cnil.md`.
+
+## 12. Checklist de branche
+
+1. Responsable de traitement nommé — CCAS et satellites traités comme
+   personnes morales distinctes ?
+2. Régime identifié pour chaque traitement inscrit (STOP RÉGIME si
+   frontière proche) ?
+3. Fiche construite **par finalité**, pas par logiciel ?
+4. Contenu obligatoire complet ou champs manquants listés `[INCOMPLET]` ?
+5. Traitements papier et sous-traitances couverts ?
+6. Registre sous-traitant distinct si la collectivité traite pour un tiers ?
+7. Conflit d'intérêts DPO vérifié et signalé le cas échéant (§5.2.a) ?
+8. Références citées avec réserve « à confirmer en version consolidée » ;
+   doctrine CNIL/CEPD datée ?
+9. Sortie formulée en **recommandation** au responsable de traitement,
+   jamais en décision ?
+10. Renvois AIPD / sécurité / sous-traitance faits par pointeur, sans
+    duplication ?

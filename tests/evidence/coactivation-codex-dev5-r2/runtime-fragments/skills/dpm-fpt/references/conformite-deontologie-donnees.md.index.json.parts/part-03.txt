@@ -1,0 +1,140 @@
+**Contrôle interne** (§4.4) : audit régulier des journaux de consultation,
+  point de vigilance prioritaire pour le directeur de police municipale.
+- **Constat d'une consultation suspecte** : cette branche traite le constat
+  (qualification du manquement, déclenchement du contrôle interne, signalement
+  RGPD le cas échéant) ; dès que la voie disciplinaire est engagée → bascule
+  `drh-fpt` ; dès qu'une voie pénale est caractérisée → `penal-procedure.md`
+  et garde-fou APJA (`SKILL.md` §5.2) si les actes à accomplir dépassent les
+  pouvoirs APJA.
+
+### 4.9 Caméras individuelles (caméras-piétons) — régime propre
+
+**Ne pas confondre avec la vidéoprotection.** La caméra individuelle portée par
+l'agent relève d'un **régime distinct** de celui des caméras de voie publique
+(`videoprotection.md`, CSI Livre II **Titre V**) : c'est le **Titre IV « Caméras
+mobiles », Chapitre I<sup>er</sup> « Caméras individuelles » — art. L. 241-1 à
+L. 241-3 CSI** (partie réglementaire pour les traitements PM : **art. R. 241-8
+et s.**, issus d'un décret d'application). **Numéros et identifiants à confirmer
+en version consolidée** : le régime a été modifié plusieurs fois (loi de 2021
+sur la sécurité globale, décrets modificatifs) — **ne jamais citer un
+identifiant `LEGIARTI` ni une date de version sans l'avoir récupéré en session**
+(règle de provenance, `SKILL.md` §5.3).
+
+Règles structurantes (à vérifier au cas d'usage) :
+
+- **Enregistrement non permanent** : la captation n'est déclenchée que
+  **lorsqu'un incident se produit ou est susceptible de se produire**, jamais en
+  continu. Une consigne de service « filmer systématiquement tous les
+  contrôles » serait **illégale** — à proscrire de toute doctrine d'emploi.
+- **Conditions de déploiement cumulatives** : demande de la commune,
+  **autorisation préfectorale**, **convention de coordination** en vigueur, et
+  **information des personnes filmées** (signal visuel ; l'agent porte la caméra
+  de façon apparente).
+- **Accès et relecture** : **habilitation individuelle et nominative** (jamais
+  générique au service) ; **durée de conservation plafonnée** puis effacement
+  automatique (valeur à confirmer) ; **traçabilité** des consultations.
+- **Volet données** : le régime CSI **ne dispense pas** de l'AIPD (§4.7), du
+  registre des traitements et de l'information du public — responsable de
+  traitement = le maire. Extraction pour une procédure judiciaire = **sur
+  réquisition de l'OPJ** (garde-fou APJA, jamais de sa propre initiative).
+- **Usage disciplinaire des images — piège de dérive de périmètre** : le
+  contrôle de l'activité des agents ne figure pas parmi les finalités. Traiter
+  la ligne de partage (interdit de visionner pour chercher un manquement ;
+  extraction admise dans une procédure ouverte sur des faits déjà connus) relève
+  bien de cette branche. Mais **dès que la réponse aborde les garanties
+  statutaires** (communication du dossier, assistance d'un conseil, délai de
+  défense, échelle des sanctions), émettre le **bloc BASCULE `drh-fpt`**
+  (`SKILL.md` §5.4) **avant** ce contenu — même s'il ne s'agit que d'une incise
+  dans une réponse par ailleurs entièrement métier.
+
+> Si le besoin porte sur le **texte exact et les identifiants**, passer par
+> `recherche-juridique` ou un appel d'outil Légifrance avant toute citation en
+> acte : le régime évolue, et cette branche ne porte que les **règles**.
+
+---
+
+## 5. Procédures et délais
+
+- **Signalement d'un manquement déontologique** : remontée hiérarchique
+  immédiate, rapport circonstancié, préservation des éléments de preuve
+  (images, journaux de connexion, témoignages) avant toute décision sur la
+  suite — annoncer les hypothèses, demander les données manquantes (date,
+  agent concerné, nature exacte du fait).
+- **Violation de données (incident RGPD)** : obligation de notification à la
+  CNIL en cas de violation de données à caractère personnel susceptible
+  d'engendrer un risque pour les personnes concernées, dans un **délai
+  contraint** (délai exact à vérifier, de l'ordre de 72 heures à compter de la
+  prise de connaissance) ; information des personnes concernées si le risque
+  est élevé. Le DPO pilote cette procédure.
+- **Réponse à une demande CRPA** : délai de réponse de l'administration et
+  délai de saisine de la CADA en cas de refus ou de silence — **à vérifier**,
+  ne pas donner de délai de mémoire.
+- **AIPD** : à conduire **en amont** de la mise en œuvre du traitement, et à
+  réviser en cas de changement substantiel du traitement.
+- Pour toute échéance, signaler le délai comme **à vérifier** plutôt que de le
+  chiffrer de mémoire (matrice §2.2 du `SKILL.md`).
+
+---
+
+## 6. Déclencheurs de vérification
+
+Appliquer le socle-sources (`SKILL.md` §5.3 +
+`references/socle-sources-verification.md`) dès que :
+- un **numéro d'article précis** du code de déontologie PM est cité en acte
+  (rapport de manquement, courrier) ;
+- la **qualification pénale** d'un usage de la force ou d'une consultation de
+  fichier est en jeu ;
+- l'**étendue d'un pouvoir** (usage de la force, accès à un fichier) est
+  discutée ;
+- un **délai** (notification CNIL, réponse CRPA, saisine CADA, prescription)
+  conditionne la réponse ;
+- une **réforme récente** (RGPD, directive police-justice, refonte du code de
+  déontologie PM) est en cause ;
+- une **jurisprudence** (faute personnelle/faute de service, proportionnalité
+  de l'usage de la force) est invoquée.
+
+---
+
+## 7. Pièges & confusions fréquentes
+
+1. Confondre **légitime défense** (droit commun) et **usage de la force dans
+   le cadre des pouvoirs de police** (régime propre, conditions de nécessité
+   et proportionnalité distinctes) — §4.2.
+2. Traiter un manquement déontologique et la procédure disciplinaire comme un
+   seul et même sujet : cette branche s'arrête au **constat** ; la
+   **procédure** est `drh-fpt` (§5.4 du `SKILL.md`). Corollaire : **disposer de
+   `drh-fpt` dans la session n'autorise pas à produire ici** le détail
+   statutaire — la bascule est un livrable, pas une simple mention.
+3. Croire que la voie disciplinaire **exclut** la voie pénale, ou
+   inversement : elles sont **cumulables et indépendantes** (§4.3).
+4. Confondre **CRPA** (accès d'un tiers à un document) et **droit d'accès
+   RGPD** (la personne concernée accède à ses propres données) — §4.6.
+5. Appliquer le RGPD « général » sans examiner si le traitement relève en
+   réalité du régime spécial **police-justice** — §4.5.
+6. Oublier l'**AIPD préalable** avant déploiement d'un nouveau dispositif de
+   captation (vidéoprotection étendue, caméra-piéton, LAPI) — §4.7.
+7. Ne pas tracer une consultation de fichier, ou la justifier a posteriori
+   sans journal contemporain — §4.8.
+8. Présumer la **faute personnelle** de l'agent en cas de dommage, sans
+   distinguer faute de service / faute personnelle détachable — §4.3.
+9. Identifier le **directeur de police municipale** comme responsable de
+   traitement RGPD au lieu du **maire** (sauf délégation expresse à vérifier).
+10. Dupliquer ici le régime d'armement ou de vidéoprotection au lieu de
+    renvoyer vers `armement-equipements.md` / `videoprotection.md`.
+
+---
+
+## 8. Données / références à vérifier
+
+- **Code de déontologie des agents de police municipale** : CSI, partie
+  réglementaire, articles **R515-1 et suivants** (*vérifié sur Légifrance le
+  2026-06-30* pour la localisation du chapitre ; origine décret n° 2003-735 du
+  1er août 2003, depuis codifiée — numéro exact d'article applicable au fait
+  examiné et version en vigueur à la date des faits **à confirmer**).
+- **Usage de la force / dispersion d'attroupements** : CSI, livre II (ordre et
+  sécurité publics), notamment les dispositions relatives aux sommations et à
+  l'usage de la force par la force publique (*vérifié sur Légifrance le
+  2026-06-30* pour l'existence et la localisation de ce régime) — articulation
+  exacte avec le statut de l'agent PM et son armement **à confirmer en version
+  consolidée** avant tout acte.
+- **Légitime défense** : code pénal, disposition

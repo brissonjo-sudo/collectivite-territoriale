@@ -1,0 +1,87 @@
+ticuliers (biométrie scolaire, vidéoprotection —
+  textes à vérifier) ;
+- toute base légale ou durée reprise dans l'AIPD (matrice §2.2).
+
+## 8. Pièges & confusions fréquentes
+
+- **AIPD faite après le déploiement** : contraire à la logique de
+  l'art. 35. Régulariser, le dire, et corriger le circuit projet pour la
+  suite.
+- **AIPD confondue avec la fiche de registre** : la fiche décrit, l'AIPD
+  évalue les risques → `gouvernance-registre.md`.
+- **« On a toujours fait comme ça »** : l'ancienneté d'un traitement ne
+  dispense de rien ; les traitements antérieurs à 2018 restent soumis à
+  l'obligation si le risque est élevé.
+- **AIPD générique du sous-traitant** : un document éditeur non
+  contextualisé ne vaut pas AIPD du responsable de traitement. Il sert
+  d'intrant ; l'analyse se refait sur le traitement réel de la
+  collectivité.
+- **Oublier le régime Police-Justice** : analyse d'impact spécifique du
+  titre III (à vérifier) — ne pas plaquer la trame RGPD.
+- **DPO rédacteur-valideur** : cumul à écarter ; le DPO conseille et rend
+  un avis, le responsable de traitement porte et valide (§5.2.a).
+- **« Pas d'AIPD » sans trace écrite** : l'absence d'AIPD se motive et se
+  documente.
+
+## 9. Données / références à vérifier
+
+Ne jamais citer de mémoire sans réserve :
+
+- Art. 35 et 36 RGPD — structure stable, citer avec « à confirmer en
+  version consolidée » sauf vérification en session.
+- Loi 78-17 (analyse d'impact Police-Justice, titre III) : **aucun article
+  de mémoire** — vérification en session obligatoire.
+- **Listes CNIL** AIPD obligatoire / dispensée : délibérations à récupérer
+  en session (règle de provenance des identifiants), version **datée**.
+- **Lignes directrices G29/CEPD sur l'AIPD** : version et date à confirmer
+  avant d'invoquer les 9 critères.
+- Outil PIA et guides CNIL : version à dater.
+- Délais et modalités de la consultation préalable art. 36.
+
+## 10. Livrables
+
+- **Trame AIPD** (méthode CNIL, quatre parties) → `assets/aipd-modele.md`.
+  Éléments obligatoires : description, nécessité et proportionnalité,
+  risques, mesures, **avis du DPO**, décision du responsable de traitement.
+- **Avis DPO** (opportunité ou avis formalisé dans l'AIPD) →
+  `assets/avis-dpo-modele.md`. Comporte toujours : rappel du rôle
+  consultatif, analyse, niveau de risque, recommandation au responsable de
+  traitement.
+- **Note d'opportunité** (AIPD requise ou non) : pas de générateur dédié ;
+  motiver par listes CNIL datées + critères CEPD + conclusion tracée. Cas
+  incomplet → brouillon `[INCOMPLET]`, champs manquants listés
+  (`SKILL.md` §6).
+
+## 11. Double échelle [risque / confiance]
+
+- **Pédagogie de la méthode, outil PIA** : risque faible, confiance
+  stable → réponse directe.
+- **Opportunité d'une AIPD** : risque moyen à élevé (une AIPD manquante
+  expose à sanction), confiance « à vérifier » → listes CNIL vérifiées et
+  datées avant conclusion.
+- **AIPD sur données sensibles, mineurs, action sociale, surveillance** :
+  risque élevé → citation de source, réserve « à confirmer ».
+- **Consultation préalable, frontière Police-Justice** : risque critique →
+  double vérification ; abstention si le doute persiste ; croiser
+  `relations-cnil.md` et `recherche-juridique`.
+
+
+## 12. Checklist de branche
+
+1. Régime identifié — analyse d'impact Police-Justice envisagée si finalité
+   pénale (STOP RÉGIME) ?
+2. Responsable de traitement désigné — l'AIPD portée par lui, pas par le
+   DPO ni le sous-traitant ?
+3. Listes CNIL consultées et **datées** avant conclusion d'opportunité ?
+4. Critères CEPD comptés, version des lignes directrices datée ?
+5. Conclusion d'opportunité **tracée**, y compris négative ?
+6. AIPD menée (ou replanifiée) **avant** mise en œuvre — régularisation
+   signalée sinon ?
+7. Avis du DPO formalisé, distinct de la validation (garde-fou §5.2.a) ?
+8. Risque résiduel élevé → consultation préalable art. 36 envisagée,
+   modalités à vérifier ?
+9. Personnes vulnérables ou données sensibles → niveau de risque relevé
+   (échelle §5.1) ?
+10. Renvois registre / sécurité / sous-traitance faits par pointeur ;
+    références avec réserve « à confirmer en version consolidée » ; aucune
+    délibération CNIL citée sans récupération en session ?

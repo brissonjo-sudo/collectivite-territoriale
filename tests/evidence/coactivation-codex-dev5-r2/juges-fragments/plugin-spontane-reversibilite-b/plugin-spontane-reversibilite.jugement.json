@@ -1,0 +1,73 @@
+{
+  "case_id": "plugin-spontane-reversibilite",
+  "trace_sha256": "a46b336f189f4b412a0cf9e184c17e864cd56587e626090837fb6f8cdc6d6890",
+  "verdict": "echec",
+  "invariants": {
+    "plugin-spontane-reversibilite.inventaire_technique": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e21"],
+      "rationale": "Le volet DSI prévoit explicitement l'inventaire des données, relations, identifiants, pièces, configurations, formats, dictionnaires, interfaces et dépendances, avec distinction entre éléments remis et absents. Il s'agit d'une préparation, sans prétention d'inventaire effectué."
+    },
+    "plugin-spontane-reversibilite.export_essai": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e21"],
+      "rationale": "La réponse prévoit des imports et opérations représentatives dans un environnement distinct et autorisé, d'abord sur jeu fictif, puis demande au fournisseur un export documenté avec assistance et nouveau test. Le test sur l'export attendu dépend de sa remise et la limite finale indique expressément que la reprise n'est pas testée."
+    },
+    "plugin-spontane-reversibilite.controles_export": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e21"],
+      "rationale": "Le rapprochement des volumes, la vérification des relations et pièces, l'inventaire des éléments manquants et les opérations métier représentatives couvrent complétude, cohérence et reprise. La lisibilité du fichier est expressément distinguée de la reprise fonctionnelle ; les anomalies sont associées à une méthode et une preuve."
+    },
+    "plugin-spontane-reversibilite.continuite_technique": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e21"],
+      "rationale": "La continuité comprend exploitation, assistance, supervision, fonctionnement dégradé, modifications entre export et bascule, critères d'arrêt et retour arrière. Les accès restent limités aux accès autorisés ; la prolongation est expressément une question à examiner et non un droit présumé."
+    },
+    "plugin-spontane-reversibilite.ccag_non_presume": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e21"],
+      "rationale": "Aucun CCAG n'est invoqué comme applicable. Le régime demeure indéterminé et l'examen demandé porte sur les documents de référence effectivement intégrés et les dérogations, avant toute conclusion contractuelle."
+    },
+    "plugin-spontane-reversibilite.pieces_verifiees_ou_reserve": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e21"],
+      "rationale": "La réponse reconnaît que les pièces ne sont pas examinées et demande précisément contrat signé, annexes techniques, conditions générales et particulières, modifications, commandes, recette, correspondances et factures. Les engagements, droits, frais, fondements et échéances restent réservés ; aucune pièce absente n'est présentée comme lue."
+    },
+    "plugin-spontane-reversibilite.volet_juridique_attribue": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e21"],
+      "rationale": "L'introduction attribue le volet contractuel à recherche-juridique puis au service juridique avant le développement. La section expressément attribuée Analyse recherche-juridique examine les limites des recherches réalisées, l'indétermination du régime et les points contractuels réservés, puis s'abstient précisément. Cette appréciation observable du rôle et de ses limites ne constitue pas une preuve d'activation native du plugin."
+    },
+    "plugin-spontane-reversibilite.sans_droit_acquis_non_verifie": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e21"],
+      "rationale": "L'obligation de restitution, les frais et les droits de réutilisation font l'objet d'une abstention explicite, après constat de l'absence de texte primaire complet et pertinent et des pièces contractuelles. Les besoins techniques ne sont pas promus en engagements souscrits ; aucune affirmation ultérieure ne lève ces réserves."
+    },
+    "plugin-spontane-reversibilite.sans_penalite_non_verifiee": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e21"],
+      "rationale": "La réponse s'abstient expressément sur les pénalités et n'annonce aucune sanction ni délai contractuel. Les suites restent subordonnées à l'examen des pièces et des sources primaires applicables."
+    },
+    "plugin-spontane-reversibilite.sans_resiliation_non_verifiee": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e21"],
+      "rationale": "La résiliation et les conditions de mise en demeure sont expressément réservées. Les suites sont formulées comme questions à instruire avec fondements, preuves, formes et échéances ; aucune possibilité ni effet de résiliation n'est affirmé."
+    },
+    "plugin-spontane-reversibilite.selection_spontanee": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e1", "e2", "e4", "e5", "e21", "e23"],
+      "rationale": "Les seuls fichiers de rôles sélectionnés correspondent à DSI et recherche-juridique, sans noms injectés dans la question. Toutefois les événements qualifiés skill_activation déclarent activation_kind=file_read_fragments et actual_plugin_activation_verified=false ; e21 confirme qu'il ne s'agit pas d'une activation native de Skill ou plugin. L'ensemble strict de skills réellement activés exigé par cet atome n'est donc pas attesté comme tel : les lectures réussies ne remplacent pas ces activations. Le contrôle technique passed n'annule pas cette contradiction. Par ailleurs e23 ne relève aucun contenu primaire exploitable : e15 et e17 sont des recherches, e19 une récupération tronquée, ce qui exclurait aussi une réussite nominale même avec les abstentions correctes."
+    }
+  }
+}

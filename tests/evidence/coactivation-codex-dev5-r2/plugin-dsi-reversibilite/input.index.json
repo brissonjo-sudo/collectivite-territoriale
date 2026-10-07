@@ -1,0 +1,44 @@
+{
+  "source_path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-dsi-reversibilite/input.json",
+  "source_sha256": "b747c7a183824879554c4d5817d096f27966b3bc75bb4e24e9fd6e08d9bb260f",
+  "characters": 40197,
+  "fragment_limit": 8000,
+  "fragments": [
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-dsi-reversibilite/input.index.json.parts/part-01.txt",
+      "sha256": "758a2360e532665a45ee7e476137306aa579568f53d90c30c58ef2b0bf9e96f6",
+      "characters": 8000,
+      "number": 1
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-dsi-reversibilite/input.index.json.parts/part-02.txt",
+      "sha256": "298455617db42987c4d72060d9d7b88ee0502a56a2494289423a2d73ad2fe8b3",
+      "characters": 8000,
+      "number": 2
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-dsi-reversibilite/input.index.json.parts/part-03.txt",
+      "sha256": "94d1e1ea9288aa6bfa38ed75cd897d997e0d2eb636ae3f09322ad3b76a222b43",
+      "characters": 8000,
+      "number": 3
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-dsi-reversibilite/input.index.json.parts/part-04.txt",
+      "sha256": "ae51cf0405a6b1f3b792b15a0f91ff727f884c66d9c85c543375093bc7944462",
+      "characters": 8000,
+      "number": 4
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-dsi-reversibilite/input.index.json.parts/part-05.txt",
+      "sha256": "08c303bef9f891ca76cd1849e59aaa0acb19cef16ce4d90648bdeadc840ee259",
+      "characters": 8000,
+      "number": 5
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/plugin-dsi-reversibilite/input.index.json.parts/part-06.txt",
+      "sha256": "fa5945b4038dc9a6c1d58bf4123ec742867816cf4fd00c40b15bb0972a42b9e0",
+      "characters": 197,
+      "number": 6
+    }
+  ]
+}

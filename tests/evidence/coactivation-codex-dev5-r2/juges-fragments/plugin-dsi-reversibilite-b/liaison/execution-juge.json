@@ -1,0 +1,70 @@
+{
+  "agent": "/root/juge_codex_dev5_r2_09b",
+  "thread_id": "01a117b7-9947-7e51-82b2-7fffc39e5f59",
+  "parent_thread_id": "01a1103e-0b49-70c1-8f4e-66a36b54916f",
+  "model": "gpt-6.1-sol",
+  "turn_id": "01a117b7-99a9-7450-8c67-d88b176e2f54",
+  "created_at": "2026-10-07T18:54:30.728Z",
+  "started_at": "2026-10-07T18:54:30.839Z",
+  "completed_at": "2026-10-07T18:57:23.712Z",
+  "fork_turns": "none",
+  "initial_message_verified": false,
+  "initial_message_sha256": "339d020d0bcfbbc39f803f1b8472c60b90233efddb8056069a305940a22bbef8",
+  "case_id": "plugin-dsi-reversibilite",
+  "assessment": {
+    "case_id": "plugin-dsi-reversibilite",
+    "verdict": "echec",
+    "technical_status": "passed",
+    "behavior_status": "failed",
+    "documentary_status": "passed",
+    "primary_content_available": false,
+    "release_ready": false
+  },
+  "host": "Codex",
+  "activation_kind": "file_read_fragments",
+  "actual_plugin_activation_verified": false,
+  "full_packet_context_verified": true,
+  "fragment_count": 5,
+  "judge_adapter_sha256": "e1e04cd4ab37425885d57861151c893a7b921999ac295ddc7d44c5a0443fdc0b",
+  "packet_sha256": "169d1fd1bbbf57c28123e6e8865e1dc3b9bf751650ec3c65da7532b3896c123e",
+  "response_sha256": "485114eaaff72e887e6191fd02bb23944cecd49d1d9a3c9ce495eb1ad2527a40",
+  "judgment_sha256": "15d04b68142aa6d6971ca81d8de2bd6a30503f38b84c81d6f23572e8ccd700c8",
+  "trace_sha256": "845d15da170265979d333a71e91a9d9892df8fde3821a918f416a959c19f32a4",
+  "rejected_creation_attempts": [],
+  "native_session_file": "rollout-2026-10-07T20-54-30-01a117b7-9947-7e51-82b2-7fffc39e5f59.jsonl",
+  "parent_session_file": "rollout-2026-10-06T10-04-24-01a1103e-0b49-70c1-8f4e-66a36b54916f.jsonl",
+  "presentation_wrapper_sha256": "b709a2641f5433f3336a916b67b115570e5d77ed17d58433d39a89634ce3c14b",
+  "exact_presentation_normalizations": [
+    {
+      "call_id": "call_PCGlkTTFPmuZyEGiyq02NVP8",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-reversibilite-b/fragment-01.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_mgwVLNRo2raUaE0M3BhtBssU",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-reversibilite-b/fragment-02.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_k65MwQz1m1A73A3nsioXLz8D",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-reversibilite-b/fragment-03.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_8Fi6toin4E2fjaILO76BMbDl",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-reversibilite-b/fragment-04.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_Lz15D8uguaaj7WtGy5gvGpxN",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-dsi-reversibilite-b/fragment-05.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    }
+  ],
+  "normalization_scope": "only expected content plus one terminal CRLF; raw events unchanged"
+}

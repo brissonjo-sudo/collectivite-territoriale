@@ -1,0 +1,54 @@
+ation).
+- Référentiels et durées CNIL sectoriels (collectivités, GRU, RH, vidéo) ;
+  doctrine élections, cookies et traceurs, publication des documents
+  administratifs (CNIL/CADA) ; listes AIPD — **toujours dater la version**.
+
+---
+
+## 10. Livrables
+
+- **Avis DPO sectoriel** → `assets/avis-dpo-modele.md`.
+- **Fiche de registre** par traitement → `assets/fiche-registre-modele.md`.
+- **AIPD** (scolaire, action sociale, vidéo) → `assets/aipd-modele.md`.
+- **Mention d'information** → `assets/mention-information-modele.md`.
+- **Réponse à une demande de droits** → `assets/reponse-droits-modele.md`.
+- Éléments obligatoires communs : responsable de traitement exact, régime,
+  base légale sourcée ou « à vérifier », renvois aux branches mobilisées,
+  recommandation finale au responsable de traitement.
+
+---
+
+## 11. Double échelle [risque / confiance]
+
+Repères par famille (cf. `SKILL.md` §5.1) :
+
+- **Critique** : action sociale (données sensibles + personnes
+  vulnérables), données de santé scolaires (PAI), régime mal qualifié.
+- **Élevé** : scolaire et petite enfance (mineurs, grande échelle),
+  vidéoprotection, publication non occultée, fichiers en période
+  électorale, données syndicales.
+- **Moyen** : GRU, urbanisme courant, téléservices standard, funéraire.
+- **Faible** : traitements internes sans donnée sensible ni diffusion.
+- **Confiance** : « stable » pour les principes ; « à vérifier » pour toute
+  durée, publicité, répartition État/commune et doctrine non datée en
+  session ; « jurisprudentiel » pour réseaux sociaux et open data fins.
+
+---
+
+## 12. Checklist de branche
+
+1. Routeur passé : régime et **responsable de traitement** (commune, CCAS,
+   État, EPCI) désignés ?
+2. Texte sectoriel identifié — « à confirmer en version consolidée » si
+   non vérifié en session ?
+3. Base légale sans consentement par défaut (sauf facultatif réel) ?
+4. Personnes vulnérables ou données sensibles → risque relevé, AIPD
+   examinée ?
+5. Publication ou transmission → occultation / anonymisation traitée ?
+6. Frontière fichiers de service / usage politique vérifiée si élu en cause ?
+7. Cumul droit à l'image + données personnelles traité si images ?
+8. Croisement archives fait avant toute conclusion d'effacement ?
+9. Doctrine CNIL / CADA citée **avec sa date** ?
+10. Renvois `dpm-fpt` / `drh-fpt` et branches transverses sans duplication ?
+11. Sortie = recommandation au responsable de traitement, pas décision
+    (garde-fou §5.2.a) ?

@@ -1,0 +1,77 @@
+lates/note-impact-financier.md`.
+
+**Rappel de frontière** : aucun écrit relatif à la **passation** (avis de
+publicité, rapport d'analyse des offres, notification du rejet des
+candidatures) n'est produit ici — signaler la demande comme hors périmètre.
+
+---
+
+## 5. Jurisprudence clé
+
+> Pointeur uniquement — voir **`recherche-juridique`**. Aucune décision n'est
+> citée ici par son nom d'usage, son millésime ou son numéro.
+
+Thèmes appelant une recherche avant conclusion :
+- Portée exacte du **caractère définitif et exclusif de toute réclamation**
+  attaché au décompte général.
+- Modalités de computation du **délai global de paiement** et conditions de
+  déclenchement des intérêts moratoires.
+- Conditions de validité d'une **cession de créance** notifiée à la
+  collectivité.
+- Effets d'un **paiement direct** irrégulier du sous-traitant sur la
+  responsabilité du pouvoir adjudicateur.
+
+---
+
+## 6. Check-list opérationnelle
+
+### Frontière passation — à vérifier en premier
+
+- [ ] La question porte-t-elle, même partiellement, sur la **passation**
+      (allotissement, critères de sélection, publicité, recours
+      précontractuel) ? Si oui → **signaler explicitement comme hors
+      périmètre** (`SKILL.md` §5.6) et se limiter au volet financier de
+      l'exécution.
+
+### Exécution financière
+
+- [ ] Engagement comptable réalisé dès la notification, imputation
+      qualifiée ?
+- [ ] Conditions d'avance vérifiées (seuil, taux, modalités de
+      remboursement), jamais de mémoire ?
+- [ ] Acomptes adossés à un service fait réellement constaté ?
+- [ ] Clause de révision des prix identifiée et appliquée sur la base de
+      l'index en vigueur, jamais de mémoire ?
+- [ ] Choix retenue de garantie / garantie de substitution identifié et
+      restitution suivie ?
+- [ ] Pénalités calculées selon la formule contractuelle et notifiées avant
+      précompte ?
+- [ ] Sous-traitance : acceptation vérifiée, paiement direct organisé si le
+      seuil est atteint ?
+- [ ] Cession de créance : notification régulière vérifiée avant tout
+      paiement au cessionnaire ?
+- [ ] Décompte général et définitif : formalisme et délais de contestation
+      respectés avant d'affirmer son caractère définitif ?
+- [ ] Délai global de paiement suivi ; intérêts moratoires calculés en cas
+      de dépassement, sans taux cité de mémoire ?
+- [ ] Couple [risque / confiance] indiqué si utile à la décision.
+- [ ] Cas journalisable (contestation du DGD, dépassement récurrent du
+      délai de paiement) → proposé pour `JOURNAL.md`.
+
+---
+
+## Références et remontées
+
+**Branche mobilisée principale** : `commande-publique-financiere.md` (fond
+intégral du volet financier). Branches secondaires : `nomenclature-m57.md`
+(imputation), `execution-depense.md` (engagement, mandatement),
+`budget-cycle.md` (pluriannualité).
+
+**Frontière rappelée** : la passation reste hors périmètre en toute
+circonstance (`SKILL.md` §5.6) — ne jamais glisser du volet financier vers la
+passation, même à la demande de l'utilisateur.
+
+**Point de mise à jour requis** : taux et seuils d'avance, taux de retenue
+de garantie, index de révision, taux des intérêts moratoires, seuil de
+paiement direct du sous-traitant — valeurs volatiles à réviser
+périodiquement.

@@ -1,0 +1,122 @@
+Déclencheurs de vérification
+
+Appliquer le socle-sources (`SKILL.md` §5.4, matrice §2.2) avant de conclure
+dès que la question porte sur :
+
+- les **mentions obligatoires exactes** d'un titre de recettes et les délais
+  de recours applicables ;
+- la **nature exacte des actes de poursuite** mobilisables selon la qualité du
+  débiteur et le montant de la créance ;
+- le **délai de prescription** applicable à une catégorie de créance
+  déterminée, et les causes exactes d'interruption ou de suspension ;
+- la **compétence exacte** pour une admission en non-valeur ou pour la
+  fixation d'un tarif ;
+- la **conformité au principe d'égalité** d'une modulation tarifaire
+  contestée ou contestable ;
+- le **régime exact** (planchers, plafonds, méthode de calcul) d'une redevance
+  d'occupation du domaine public ;
+- toute **réforme récente** touchant le recouvrement des créances publiques
+  locales.
+
+---
+
+## 8. Pièges & confusions fréquentes
+
+1. Confondre **admission en non-valeur** (mesure de gestion, créance
+   juridiquement toujours due) et **créance éteinte** (disparition juridique
+   de la dette).
+2. Proposer une non-valeur **sans diligence de recouvrement documentée** au
+   préalable.
+3. Traiter une **réduction de titre** comme un moyen détourné d'abandonner une
+   créance devenue irrécouvrable, au lieu de passer par l'admission en
+   non-valeur.
+4. Oublier les **mentions obligatoires** (notamment les voies de recours) lors
+   de l'émission d'un titre, fragilisant l'opposabilité des délais.
+5. Laisser une créance en restes à recouvrer sans traiter la **prescription**,
+   par simple carence de suivi.
+6. Moduler un tarif de service public sans **critère objectif** en lien avec
+   le service, au risque d'une rupture d'égalité.
+7. Confondre **domaine public** et **domaine privé** de la collectivité pour
+   qualifier un produit ou une redevance, alors que les régimes diffèrent.
+8. Laisser un agent hors régie régulièrement instituée **encaisser des
+   fonds** : bascule immédiate vers le garde-fou ordonnateur/comptable
+   (`SKILL.md` §5.2).
+9. Présenter le rôle de l'ordonnateur dans le recouvrement contentieux comme
+   actif, alors qu'il **appuie** sans détenir le monopole du recouvrement,
+   réservé au comptable.
+10. Citer un **délai de prescription, un plafond ou un taux** de mémoire au
+    lieu de le marquer « à vérifier ».
+
+---
+
+## 9. Données / valeurs à vérifier
+
+| Donnée | Statut |
+|---|---|
+| Liste exacte des mentions obligatoires d'un titre de recettes | **À vérifier** |
+| Délais de recours contre un titre et contre un acte de poursuite | **À vérifier** |
+| Nature exacte des actes de poursuite mobilisables selon la qualité du débiteur | **À vérifier** |
+| Délai de prescription de l'action en recouvrement par catégorie de créance | **À vérifier** |
+| Causes exactes d'interruption et de suspension de la prescription | **À vérifier** |
+| Compétence exacte (assemblée/exécutif) pour une admission en non-valeur | **À vérifier** |
+| Méthode et éventuels planchers/plafonds de calcul d'une redevance d'occupation du domaine public | **À vérifier** |
+| Étendue exacte d'une délégation tarifaire consentie à l'exécutif | **À vérifier**, propre à chaque collectivité |
+| Conditions précises de qualification d'une créance éteinte | **À vérifier** |
+
+---
+
+## 10. Écrits & livrables
+
+| Écrit | Élément obligatoire | Générateur |
+|---|---|---|
+| Titre de recettes | Mentions obligatoires, fondement documenté, montant liquidé | Circuit métier / logiciel financier, hors gabarit `templates/` |
+| Délibération d'admission en non-valeur | Liste des créances, diligences de recouvrement documentées, proposition du comptable | `references/templates/deliberation-budgetaire.md` |
+| Délibération fixant ou modifiant un tarif de service public | Compétence, critère de modulation le cas échéant, publicité | `references/templates/deliberation-budgetaire.md` |
+| Acte d'annulation ou de réduction de titre | Motif exact, traçabilité, transmission au comptable | `references/templates/fiche-procedure-financiere.md` |
+| Note d'impact financier sur une évolution tarifaire | Hypothèses annoncées, données manquantes signalées | `references/templates/note-impact-financier.md` |
+
+Le détail opérationnel d'une régie de recettes (acte constitutif, régisseur,
+cautionnement) → `objets/regie.md`, ne pas le reproduire ici.
+
+---
+
+## 11. Double échelle [risque / confiance]
+
+| Sous-domaine | Risque | Confiance |
+|---|---|---|
+| Constatation du droit et liquidation | Moyen | Stable dans la méthode |
+| Mentions obligatoires du titre et voies de recours | Élevé | À vérifier |
+| Actes de poursuite selon la qualité du débiteur | Élevé | À vérifier |
+| Admission en non-valeur vs créance éteinte | Élevé | Stable dans la distinction, effets à vérifier |
+| Prescription de l'action en recouvrement | Élevé | À vérifier |
+| Régie de recettes hors cadre régulier | Critique | Bascule garde-fou ordonnateur/comptable |
+| Tarification et principe d'égalité | Élevé | Stable dans le principe, critère à documenter |
+| Domaine public vs domaine privé | Moyen à élevé | À qualifier au cas par cas |
+| Annulation / réduction de titre | Moyen | Stable dans la méthode |
+
+---
+
+## 12. Checklist de branche
+
+1. **Garde-fou ordonnateur/comptable (`SKILL.md` §5.2)** testé : un agent
+   encaisse-t-il des fonds hors régie régulièrement instituée ? Si oui, STOP
+   affiché avant tout contenu métier.
+2. **Fondement de la créance** (délibération tarifaire, titre d'occupation,
+   convention) identifié avant toute liquidation ?
+3. **Mentions obligatoires** du titre et **voies de recours** traitées comme
+   point de vigilance, non présumées complètes ?
+4. Si non-recouvrement en cause : **admission en non-valeur** ou **créance
+   éteinte** correctement distinguées, avec diligences documentées ?
+5. **Prescription** de l'action en recouvrement vérifiée avant toute
+   proposition d'abandon ou de poursuite ?
+6. Si tarification en cause : **critère de modulation** testé au regard du
+   principe d'égalité ?
+7. **Domaine public / domaine privé** correctement qualifié si un produit
+   domanial est en cause ?
+8. **Réduction de titre** distinguée d'un abandon de créance déguisé ?
+9. Renvoi fait vers `objets/regie.md` pour le détail opérationnel d'une régie
+   de recettes, sans duplication ?
+10. Renvoi fait vers `fiscalite-locale.md` / `dotations-perequation.md` si la
+    question glisse vers la fiscalité ou les dotations ?
+11. Couple **[risque / confiance]** (§11) indiqué quand utile à la décision ?
+12. **Écrit** demandé effectivement produit ?

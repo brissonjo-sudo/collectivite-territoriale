@@ -1,0 +1,170 @@
+# Générateur interactif — Rapport d'information (v0.1.0)
+
+> Couche 4 (générateur d'écrit), piloté par `references/ecrits-professionnels.md`
+> §4 et §5 (branche de rattachement — lire avant tout usage). Structure de
+> dialogue alignée sur `SKILL.md` §6. Gabarit de mise en forme inspiré de la
+> discipline du gabarit de décision du skill `drh-fpt` (champs entre `[ ]`,
+> aucune donnée nominative en clair dans le canevas, réserves « à confirmer en
+> version consolidée » sur tout visa).
+>
+> **Ce fichier ne tranche jamais la qualification pénale** (renvoi
+> `references/penal-procedure.md` / `references/reglementation-appliquee.md`)
+> et ne décide jamais seul si l'acte produit en aval (ex. arrêté) est légal
+> (renvoi `references/controle-legalite.md`).
+
+---
+
+## 0. Quand utiliser ce générateur
+
+Le **rapport d'information** est l'écrit de **compte rendu factuel** d'une
+situation ou d'une intervention, à destination du maire et/ou de la
+hiérarchie (et le cas échéant de l'OPJ territorialement compétent), **sans
+route 53/73 ou 78-6 établie** et **sans qu'un PV de contravention** ne soit
+nécessairement dressé sur les mêmes faits.
+
+**Avant d'ouvrir ce générateur**, dérouler le test de
+`references/ecrits-professionnels.md` §5.1 :
+
+1. **Une mesure sur la personne est-elle fondée sur une route 53/73 ou
+   78-6 ?**
+   Oui → ce n'est **pas** (seulement) un rapport d'information : ouvrir
+   `references/templates/rapport-mise-a-disposition.md`. Un rapport
+   d'information peut être produit **en complément** pour le contexte général,
+   mais ne se substitue pas au rapport de mise à disposition.
+2. **L'agent a-t-il personnellement constaté une contravention relevant de
+   sa compétence de verbalisation ?**
+   Oui, et seulement cela → orienter plutôt vers `references/templates/pv-contravention.md`.
+   Un rapport d'information reste possible **en parallèle** (ex. compte
+   rendu au maire d'un fait plus large que la seule contravention).
+3. **Le fait comporte-t-il une demande d'acte hors pouvoir APJA
+   (`SKILL.md` §5.2 ; l'art. 16 CPP définit notamment la qualité d'OPJ) ?**
+   Oui → afficher le **STOP** (bloc ci-dessous) **avant tout autre
+   contenu**, quelle que soit la réponse aux points 1 et 2. Le rapport
+   d'information reste alors limité à la trace de l'action APJA conforme
+   (constatation, préservation, compte rendu à l'OPJ et au maire) — jamais
+   un compte rendu d'audition ou d'acte réservé OPJ.
+   Le STOP ne déclenche pas automatiquement une rétention : qualifier
+   séparément les art. 53/73 ou 78-6 ; à défaut, ne pas retenir.
+
+```
+STOP — Cet acte dépasse les pouvoirs de l'agent de police municipale.
+Ne pas l'accomplir ni le formaliser.
+Rendre compte immédiatement à l'OPJ territorialement compétent.
+```
+
+Si aucun de ces trois cas ne s'applique en bloquant : le **rapport
+d'information** est le bon écrit. Poursuivre au §1.
+
+---
+
+## 1. Séquence interactive obligatoire
+
+**Principe directeur** (`SKILL.md` §6, `ecrits-professionnels.md` §6.2) : les
+questions sont posées **une à une**, jamais en bloc. Confirmer chaque
+réponse avant de passer au champ suivant. Ne jamais pré-remplir un champ non
+fourni : appliquer la règle `[INCOMPLET]` (§4).
+
+Ordre imposé des questions :
+
+### Étape 1 — Identification du rédacteur (qui rapporte)
+- Nom, qualité (agent PM / chef de poste / DPM), n° d'agrément si exigé par
+  le texte applicable (à vérifier).
+> *Question posée* : « Qui rédige ce rapport ? Précisez nom, grade/qualité,
+> et n° d'agrément si applicable. »
+
+### Étape 2 — Date et heure du fait
+- Date et heure précises de l'observation ou du fait rapporté (pas la date
+  de rédaction du rapport si elle diffère — préciser les deux si
+  pertinent).
+> *Question posée* : « À quelle date et à quelle heure le fait s'est-il
+> produit ou a-t-il été constaté ? »
+
+### Étape 3 — Lieu
+- Localisation précise (adresse, repère, le cas échéant secteur de
+  patrouille).
+> *Question posée* : « Où le fait s'est-il produit (adresse ou
+> localisation précise) ? »
+
+### Étape 4 — Faits (quoi / comment)
+- Description **factuelle**, au plus près de l'observation directe, sans
+  interprétation ni supposition. Distinguer ce qui a été **vu/entendu
+  personnellement** de ce qui a été **rapporté par un tiers**.
+> *Question posée* : « Que s'est-il passé ? Décrivez les faits que vous avez
+> personnellement constatés, puis, séparément, ce qui vous a été rapporté
+> par un tiers le cas échéant. »
+
+### Étape 5 — Pourquoi / contexte (mobile de l'intervention)
+- Origine de l'intervention ou de l'observation (appel, patrouille,
+  réquisition, signalement d'un administré, etc.).
+> *Question posée* : « Qu'est-ce qui a motivé votre présence ou votre
+> intervention sur place (appel, patrouille, signalement…) ? »
+
+### Étape 6 — Qualification envisagée (si pertinente)
+- Le rapport d'information **n'a pas vocation à trancher** une
+  qualification pénale (renvoi `references/penal-procedure.md` et
+  `references/reglementation-appliquee.md` pour le fond). Si une
+  qualification est néanmoins évoquée dans le rapport (ex. pour motiver la
+  transmission à l'OPJ), elle doit être présentée comme une **hypothèse**,
+  jamais comme acquise, avec la réserve de vérification.
+> *Question posée* : « Une qualification pénale ou réglementaire est-elle
+> envisagée pour ce fait ? Si oui, laquelle (à titre d'hypothèse, sans
+> trancher) ? »
+
+### Étape 7 — Personnes concernées
+- Mis en cause identifié ou non (jamais de donnée nominative en clair dans
+  le canevas — voir §3), victime éventuelle.
+> *Question posée* : « Une personne est-elle identifiée comme étant à
+> l'origine du fait ? Y a-t-il une victime identifiée ? »
+
+### Étape 8 — Témoins
+- Présence de témoins, identifiés ou non, et s'ils ont été entendus
+  informellement (jamais d'audition formelle dans ce générateur — bascule
+  vers acte réservé OPJ si formalisée, garde-fou §0 point 3).
+> *Question posée* : « Y a-t-il des témoins ? Ont-ils donné des
+> observations spontanées ? »
+
+### Étape 9 — Confirmation : absence de route de mise à disposition
+- Mention **obligatoire** distinguant ce rapport du rapport de mise à
+  disposition (`ecrits-professionnels.md` §5.3).
+> *Question posée* : « Confirmez-vous qu'aucune route 53/73 ou 78-6 n'est
+> établie sur ce fait ? » — Si la réponse est négative, interrompre ce
+> générateur et rediriger vers `references/templates/rapport-mise-a-disposition.md`.
+
+### Étape 10 — Suites données et destinataires
+- Suites déjà engagées (rien, signalement oral, transmission immédiate) et
+  suites proposées (ex. proposition d'arrêté, surveillance renforcée,
+  classement informatif).
+- Destinataire(s) du rapport : maire, OPJ territorialement compétent, ou
+  les deux (`references/penal-procedure.md` §4.2 — double transmission à
+  distinguer explicitement).
+> *Question posée* : « Quelles suites ont été données ou sont proposées, et
+> à qui ce rapport doit-il être transmis (maire / OPJ / les deux) ? »
+
+**À l'issue de l'étape 10** : si toutes les réponses nécessaires ont été
+recueillies, passer à l'assemblage (§2). Sinon, appliquer la règle
+`[INCOMPLET]` (§4).
+
+---
+
+## 2. Gabarit d'assemblage
+
+> Champs à compléter entre `[ ]`. **Aucune donnée nominative** ne doit
+> figurer en clair dans ce canevas tant qu'elle n'a pas été expressément
+> fournie et confirmée par l'utilisateur pour la version consolidée finale ;
+> dans le canevas de travail, préférer un identifiant neutre (« la
+> personne A », « le témoin 1 ») si la donnée doit rester anonymisée pour
+> l'échange avec l'assistant.
+>
+> ⚠️ **Avant transmission** : vérifier en version consolidée tout texte
+> d'incrimination évoqué (renvoi `references/reglementation-appliquee.md` /
+> `references/penal-procedure.md`), et confirmer le circuit local de
+> transmission (organisation propre à la collectivité, convention de
+> coordination — `references/continuum-partenariats.md`).
+
+```
+[COLLECTIVITÉ — en-tête / service de police municipale]
+
+RAPPORT D'INFORMATION N° [numéro] / [année]
+
+Rédigé par : [nom, qualité, n° d'agrément si exigé]
+Dat

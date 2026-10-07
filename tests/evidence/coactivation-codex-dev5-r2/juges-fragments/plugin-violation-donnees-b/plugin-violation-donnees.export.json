@@ -1,0 +1,126 @@
+{
+  "case_id": "plugin-violation-donnees",
+  "agent": "/root/juge_codex_dev5_r2_03b",
+  "exported_at": "2026-10-07T18:21:00.097715+00:00",
+  "packet_sha256": "8fb1210a14fdf6486c21141857c6fbc56dcf4a6872ff117fbb7ef5cd1f39acee",
+  "response_sha256": "1d4b7973a950a9b445bf9414ad4983e2433420d5140cfeb962ba635a661ec81d",
+  "prompt_sha256": "b269eb258596dc8a4b485447b931483dd4a7fbf62d71fc1440c28a8cea964f57",
+  "fragments": [
+    {
+      "number": 1,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-violation-donnees-b/fragment-01.txt",
+      "sha256": "dc3477ca422cdac894f04319ae9f0f38f878ae05209a0ced63bc2aad996ab2ce",
+      "character_count": 8000
+    },
+    {
+      "number": 2,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-violation-donnees-b/fragment-02.txt",
+      "sha256": "d80b6d20df86a80ac859a6a3766aa7bcaace064bf8fbf79c9402935f9f5d2c4a",
+      "character_count": 8000
+    },
+    {
+      "number": 3,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-violation-donnees-b/fragment-03.txt",
+      "sha256": "20d0f99149c9c351c48054f8ee2c6775b090406d38b37fcc8a2a9a6260d84553",
+      "character_count": 8000
+    },
+    {
+      "number": 4,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-violation-donnees-b/fragment-04.txt",
+      "sha256": "7ad51ea9aeca9c4c7c004b54fb6ce4e0357deec4fb9fd0dcac0dcf23960351ff",
+      "character_count": 8000
+    },
+    {
+      "number": 5,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-violation-donnees-b/fragment-05.txt",
+      "sha256": "ab65485f78720758307c14519eee17f3b3a18daead2eb918b3c4f50467e88477",
+      "character_count": 8000
+    },
+    {
+      "number": 6,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-violation-donnees-b/fragment-06.txt",
+      "sha256": "baf006ce46488488f19f0126f1648e09321265ebaac843eacfcfaceb8a40696b",
+      "character_count": 8000
+    },
+    {
+      "number": 7,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-violation-donnees-b/fragment-07.txt",
+      "sha256": "c3b80efa2d93e235505ac59bad85e1d7dfb208a26163a821dd029300ea556622",
+      "character_count": 8000
+    },
+    {
+      "number": 8,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-violation-donnees-b/fragment-08.txt",
+      "sha256": "4af558c30784a96bd1bcd7f00e975eda37f0ba2847aa7fee4f52454988e534a9",
+      "character_count": 8000
+    },
+    {
+      "number": 9,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-violation-donnees-b/fragment-09.txt",
+      "sha256": "b832e9a0a22ce46060fd33352322e45c1e5c31d62987c696050d3a06fc7e8be4",
+      "character_count": 8000
+    },
+    {
+      "number": 10,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-violation-donnees-b/fragment-10.txt",
+      "sha256": "0724f9f26571e3c5645af6596d3483924f96da490971f7345270db325986342e",
+      "character_count": 8000
+    },
+    {
+      "number": 11,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-violation-donnees-b/fragment-11.txt",
+      "sha256": "cfa4d7afe6248975c6840472d72f7c616e7a2404fcbbfc6563e19049d71368ba",
+      "character_count": 8000
+    },
+    {
+      "number": 12,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-violation-donnees-b/fragment-12.txt",
+      "sha256": "3607d3db31fe68594b18e1dcce4fbe66770a1c7968296c08892215c301b0a8f2",
+      "character_count": 8000
+    },
+    {
+      "number": 13,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-violation-donnees-b/fragment-13.txt",
+      "sha256": "c4df7b6b3a36b5bdab9769279491c9f17d9e10a6fb60c4eeaa9238d88ee1d47c",
+      "character_count": 8000
+    },
+    {
+      "number": 14,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-violation-donnees-b/fragment-14.txt",
+      "sha256": "b2deb2c8ab5cc86100b8a7600c0ff510f3f297bbc5a2f6f028371084fd62cabc",
+      "character_count": 8000
+    },
+    {
+      "number": 15,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-violation-donnees-b/fragment-15.txt",
+      "sha256": "ec7a51321a08c6f0a7da20dce5248ac2fb87ce01229f7afe173f59b8e3959a3f",
+      "character_count": 8000
+    },
+    {
+      "number": 16,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-violation-donnees-b/fragment-16.txt",
+      "sha256": "d2e805e9587efdd84eb6eed8c3898b3ec7023802803e7b560733e9008657932e",
+      "character_count": 8000
+    },
+    {
+      "number": 17,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-violation-donnees-b/fragment-17.txt",
+      "sha256": "5ac94346b23fddb856169b162dfee79bbd1f90b2ee4819ab126d3e9604e81517",
+      "character_count": 8000
+    },
+    {
+      "number": 18,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/juges-fragments/plugin-violation-donnees-b/fragment-18.txt",
+      "sha256": "ca40fd3136a5efe5253da6e3bc40ae49f0e331d6ea224318153452c7ccdeb4fc",
+      "character_count": 5365
+    }
+  ],
+  "judge_adapter_sha256": "e1e04cd4ab37425885d57861151c893a7b921999ac295ddc7d44c5a0443fdc0b",
+  "campaign_adapter_sha256": "fa32998ad48586ca7178ac56d8cdeff5fb9438e6746d92bffea751c4a6155b8e",
+  "presentation_wrapper_sha256": "b709a2641f5433f3336a916b67b115570e5d77ed17d58433d39a89634ce3c14b",
+  "suite_sha256": "3c45e6117c25cbca0558de2955ca5a7d80956575d886a887d1cdfdc581375cd8",
+  "protocol_sha256": "65f78f419679774ec00c6b5d96b1801f902c6510b57e221ae7ebb31320fd1b6f",
+  "historical_scores_reused": false,
+  "activation_kind": "file_read_fragments",
+  "actual_plugin_activation_verified": false
+}

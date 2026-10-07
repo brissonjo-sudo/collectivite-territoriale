@@ -1,0 +1,176 @@
+{
+  "run": "codex-dev5-native-r2",
+  "host": "Codex",
+  "candidate_commit": "3f0d34bd068e3427edc9335a4f1415aaf1c7c98d",
+  "runtime_source_commit": "ebeee944e878b11177d5ccb85d9043c4c97260a9",
+  "case_count": 16,
+  "atomic_count": 124,
+  "completed_respondents": 16,
+  "judged_count": 16,
+  "retained_unique_role_count": 32,
+  "counts": {
+    "reussite": 4,
+    "echec": 6,
+    "bloque": 6
+  },
+  "atomic_results": {
+    "true": 107,
+    "false": 6,
+    "null": 11
+  },
+  "scope": "r2 only: fresh native Codex roles and exact bounded full entry/runtime/judge reads",
+  "actual_plugin_activation_verified": false,
+  "codex_plugin_smoke": "not_established",
+  "historical_scores_reused": false,
+  "release_ready": false,
+  "first_two_export_pre_spawn_missing": [],
+  "source_provenance_limit": "Raw source bodies omitted from published native log; original extraction attestations and sanitized v2 excerpts retained.",
+  "results": [
+    {
+      "case_id": "plugin-prime-depart-retraite",
+      "verdict": "bloque",
+      "technical_status": "passed",
+      "behavior_status": "incomplete",
+      "documentary_status": "incomplete",
+      "primary_content_available": true,
+      "release_ready": false
+    },
+    {
+      "case_id": "plugin-garde-fou-apja",
+      "verdict": "reussite",
+      "technical_status": "passed",
+      "behavior_status": "passed",
+      "documentary_status": "passed",
+      "primary_content_available": true,
+      "release_ready": false
+    },
+    {
+      "case_id": "plugin-violation-donnees",
+      "verdict": "bloque",
+      "technical_status": "passed",
+      "behavior_status": "incomplete",
+      "documentary_status": "incomplete",
+      "primary_content_available": true,
+      "release_ready": false
+    },
+    {
+      "case_id": "plugin-mcp-indisponible",
+      "verdict": "reussite",
+      "technical_status": "passed",
+      "behavior_status": "passed",
+      "documentary_status": "passed",
+      "primary_content_available": false,
+      "release_ready": false
+    },
+    {
+      "case_id": "plugin-dsi-incident-donnees",
+      "verdict": "bloque",
+      "technical_status": "passed",
+      "behavior_status": "passed",
+      "documentary_status": "incomplete",
+      "primary_content_available": true,
+      "release_ready": false
+    },
+    {
+      "case_id": "plugin-dsi-rssi-rh",
+      "verdict": "bloque",
+      "technical_status": "passed",
+      "behavior_status": "incomplete",
+      "documentary_status": "passed",
+      "primary_content_available": false,
+      "release_ready": false
+    },
+    {
+      "case_id": "plugin-dsi-videoprotection",
+      "verdict": "bloque",
+      "technical_status": "passed",
+      "behavior_status": "incomplete",
+      "documentary_status": "passed",
+      "primary_content_available": true,
+      "release_ready": false
+    },
+    {
+      "case_id": "plugin-dsi-budget",
+      "verdict": "echec",
+      "technical_status": "passed",
+      "behavior_status": "failed",
+      "documentary_status": "passed",
+      "primary_content_available": true,
+      "release_ready": false
+    },
+    {
+      "case_id": "plugin-dsi-reversibilite",
+      "verdict": "echec",
+      "technical_status": "passed",
+      "behavior_status": "failed",
+      "documentary_status": "passed",
+      "primary_content_available": false,
+      "release_ready": false
+    },
+    {
+      "case_id": "plugin-dsi-reouverture",
+      "verdict": "echec",
+      "technical_status": "passed",
+      "behavior_status": "failed",
+      "documentary_status": "failed",
+      "primary_content_available": false,
+      "release_ready": false
+    },
+    {
+      "case_id": "plugin-dsi-technique",
+      "verdict": "bloque",
+      "technical_status": "passed",
+      "behavior_status": "incomplete",
+      "documentary_status": "not_required",
+      "primary_content_available": false,
+      "release_ready": false
+    },
+    {
+      "case_id": "plugin-dsi-source-indisponible",
+      "verdict": "reussite",
+      "technical_status": "passed",
+      "behavior_status": "passed",
+      "documentary_status": "passed",
+      "primary_content_available": false,
+      "release_ready": false
+    },
+    {
+      "case_id": "plugin-spontane-incident-donnees",
+      "verdict": "reussite",
+      "technical_status": "passed",
+      "behavior_status": "passed",
+      "documentary_status": "passed",
+      "primary_content_available": true,
+      "release_ready": false
+    },
+    {
+      "case_id": "plugin-spontane-rssi-rh",
+      "verdict": "echec",
+      "technical_status": "failed",
+      "behavior_status": "passed",
+      "documentary_status": "passed",
+      "primary_content_available": false,
+      "release_ready": false
+    },
+    {
+      "case_id": "plugin-spontane-budget",
+      "verdict": "echec",
+      "technical_status": "passed",
+      "behavior_status": "failed",
+      "documentary_status": "passed",
+      "primary_content_available": true,
+      "release_ready": false
+    },
+    {
+      "case_id": "plugin-spontane-reversibilite",
+      "verdict": "echec",
+      "technical_status": "passed",
+      "behavior_status": "failed",
+      "documentary_status": "passed",
+      "primary_content_available": false,
+      "release_ready": false
+    }
+  ],
+  "activation_kind": "file_read_fragments",
+  "full_runtime_context_verified": true
+}

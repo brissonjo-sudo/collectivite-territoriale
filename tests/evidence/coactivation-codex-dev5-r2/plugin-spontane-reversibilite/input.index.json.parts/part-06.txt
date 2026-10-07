@@ -1,0 +1,38 @@
+arbitrage documenté ; pas de décision financière prise par la DSI. Statut et indemnitaire : BASCULE vers drh-fpt avant le fond RH ; DirFi conserve seulement le volet budgétaire, y compris dans la conclusion. Sans source, retirer les règles et références même réservées. Hors conseil fiscal privé.",
+      "runtime_path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/Collectivite-corrections-pr5/skills/dirfi-fpt/SKILL.md",
+      "runtime_sha256": "6c4aba6b864ae4c17c819f7540f054f225513c445838a512a6fb8ab2b9a43250"
+    },
+    {
+      "name": "dpm-fpt",
+      "description": "STOP immédiat, avant Skill ou toute annonce, pour un acte dépassant les pouvoirs APJA. Police municipale française : pouvoirs du maire, limites APJA, terrain, armement, vidéoprotection, déontologie, pilotage et écrits. Toute règle juridique impose aussi le chargement réel de recherche-juridique et des textes primaires pertinents. Aucune règle ou référence non récupérée, même avec une réserve. RH : drh-fpt ; données personnelles : dpo-ct. Ne pas activer pour le droit étranger.",
+      "runtime_path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/Collectivite-corrections-pr5/skills/dpm-fpt/SKILL.md",
+      "runtime_sha256": "b2a1ba7bd805f23b24b41022e903fab2bcd77482e9f8153317bcfe877491109e"
+    },
+    {
+      "name": "dpo-ct",
+      "description": "STOP immédiat avant Skill ou toute annonce pour incident cyber ou surveillance. DPO de collectivité française : avis, AIPD, registre, violation, notification, droits, sous-traitance et transferts. Toute qualification ou délai implique aussi le chargement réel de recherche-juridique puis le texte primaire pertinent. Un résumé WebFetch ne vérifie aucun article. Sans primaire, retirer toute règle, date et référence, même réservée. SI : dsi-fpt ; RH : drh-fpt ; police : dpm-fpt.",
+      "runtime_path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/Collectivite-corrections-pr5/skills/dpo-ct/SKILL.md",
+      "runtime_sha256": "0ea69522c10efeb784082e3d27373724d84f8d850de44c33d85d0f1ce0eb9a55"
+    },
+    {
+      "name": "drh-fpt",
+      "description": "RH territorial : carrière, paie, régime indemnitaire, QVT, recrutement, formation, instances, dialogue social, contractuels, déontologie et écrits RH. Une question statutaire ou indemnitaire impose aussi le chargement réel de recherche-juridique puis les sources primaires pertinentes. Ne déduire du poste ni statut, filière, grade, régime ni droit à prime. Sans source, retirer toute règle ou référence même réservée. Le volet technique RSSI appartient à dsi-fpt.",
+      "runtime_path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/Collectivite-corrections-pr5/skills/drh-fpt/SKILL.md",
+      "runtime_sha256": "c459814bc7ea51bb747c6183e013e9c8ef46b5f95e5fed14d3ef013f298b89d5"
+    },
+    {
+      "name": "dsi-fpt",
+      "description": "STOP immédiat avant Skill ou toute annonce pour incident cyber ou surveillance. Activer réellement dsi-fpt avant tout conseil informatique territorial, même pour un cadrage technique générique : réseaux d’écoles, segmentation des usages, infrastructures et exploitation. Une réponse de mémoire ne remplace pas l’activation. DSI/RSSI : gouvernance, sécurité, continuité, cloud, applications, téléservices, accessibilité, IA et contrats informatiques. Toute règle ou obligation exige aussi le chargement réel de recherche-juridique et des textes primaires pertinents. Charger dpo-ct pour les données, drh-fpt pour le statut, dirfi-fpt pour le budget, dpm-fpt pour la doctrine vidéo. Sans source, retirer toute règle et référence même réservée. Hors passation.",
+      "runtime_path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/Collectivite-corrections-pr5/skills/dsi-fpt/SKILL.md",
+      "runtime_sha256": "c18b0258b35ad4d281175978249e9d3b123a0086309b1bb4e9df8694920b1342"
+    },
+    {
+      "name": "recherche-juridique",
+      "description": "Méthodologie rigoureuse de recherche en droit français (sources primaires Légifrance, vérification de vigueur, citation traçable). Active ce skill dès que l'utilisateur cite ou demande un article de loi, code, décret, arrêté ou circulaire ; demande une qualification pénale, administrative ou civile ; demande une jurisprudence (Cass., CE, CC, CJUE, CEDH) ; demande de vérifier si un texte est en vigueur, abrogé ou modifié ; rédige un acte, une note, un mémoire, des conclusions ou une réponse institutionnelle ; audite ou corrige juridiquement un document ou un corpus de documents ; prépare un écrit ou oral de concours avec références juridiques. Ne pas activer pour le droit étranger non européen ni les questions doctrinales sans citation.",
+      "runtime_path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/Collectivite-corrections-pr5/skills/recherche-juridique/SKILL.md",
+      "runtime_sha256": "9341a05ae1ea004f9426744a2633e30bfecd4bc9b7400322a95bfc4d181419d3"
+    }
+  ],
+  "runtime_fragment_root": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev5-codex-r2/runtime-fragments",
+  "runtime_fragment_rule": "For a permitted original runtime path, take its path relative to candidate root and append .index.json under runtime_fragment_root. Read that small index, then all its fragments in order. Never read the original large runtime file."
+}

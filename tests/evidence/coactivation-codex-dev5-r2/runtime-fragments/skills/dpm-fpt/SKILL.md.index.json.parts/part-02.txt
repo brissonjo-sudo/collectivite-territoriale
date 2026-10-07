@@ -1,0 +1,157 @@
+ion. Sans texte
+primaire suffisant, s'abstenir intégralement sur la règle, son numéro ou
+identifiant, son statut, sa vigueur et son applicabilité : aucune assertion,
+même dans une incise, un tableau ou après une réserve générique. Ne pas
+conclure globalement que tous les articles sont applicables après n'en avoir
+contrôlé qu'une partie. Conserver le STOP, les faits connus, les informations
+à obtenir et une méthode de vérification, sans recommander une contrainte.
+
+# Skill : dpm-fpt (v1.0.5)
+
+> **Métadonnées** — version : **1.0.5** · statut : **correctif de fond et
+> fermeture de dette technique**, sur les trois points relevés par des
+> répondants pendant la campagne `r4` sans être appliqués à chaud : **grand
+> excès de vitesse** (C. route L. 413-1, délit dès 50 km/h — bascule vers
+> l'OPJ, pas de PV) ; **habilitation de constatation restreinte** (CSI
+> R. 511-1 ne vise que les arrêtés du maire ou du préfet, CP R. 633-6 hors
+> liste) ; **transfert EPCI distingué** (L. 5211-9-2 : I.A de plein droit vs
+> I.B facultatif par arrêté préfectoral, question ouverte sur l'habilitation
+> pour un arrêté du président). Les trois sont vérifiés à la source le
+> 2026-09-17 (`references-verifiees.md` §9) et portés dans
+> `reglementation-appliquee.md` et `pouvoirs-police.md`. **En parallèle** :
+> les **15 pointeurs vers un fichier d'un dépôt voisin** (`Drh-fpt/…`,
+> `droit-francais-skill/…`), morts hors clonage multi-dépôts, sont remplacés
+> par le nom du skill ; `validate_repo.py` détecte désormais cette classe de
+> défaut au lieu de la mettre en liste blanche · **mesure** : partiel ciblé
+> de 8 cas sur les cas touchant la frontière RH, les gabarits et la vitesse
+> (protocole allégé, pas une campagne `r5` complète, non comparable) —
+> **6 réussites, 1 demi-réussite, 1 échec** (échec sur un cas non critique,
+> manquement de forme à la discipline de sourcing, sans lien avec le fond du
+> correctif testé ; 0 échec sur les six cas critiques, seuil de release
+> atteint) — détail : `tests/runs/claude-v1.0.5-partiel/summary.json` ·
+> dernier score de suite complet : campagne `r4`
+> (28 réussites, 0 demi-réussite, 0 échec sur 28 cas, mesurait la v1.0.4) ·
+> dernière revue méthodologique et vérification des sources : 2026-09-17
+> · périmètre : direction de la police municipale, collectivités territoriales
+> (France) · dépendances recommandées : `recherche-juridique` (validateur de
+> fond et de vigueur), `drh-fpt` (volet RH statutaire des agents PM) ·
+> compatibilité : Codex, Claude Opus, Claude Sonnet · langue : français.
+
+> **Objet** : expertise d'un **Directeur de Police Municipale**, à la fois
+> **opérationnelle** (rapide, orientée décision, écrit et terrain) et
+> **juridiquement fiable** (vérification de la source officielle avant toute
+> conclusion reposant sur un texte). Le skill cadre le besoin métier, oriente
+> vers la bonne branche et le bon écrit, et sécurise la frontière de compétence
+> (APJA / OPJ, maire / préfet, métier / RH).
+>
+> **Posture transverse, non négociable** : la police municipale agit dans les
+> limites des **pouvoirs d'agent de police judiciaire adjoint (APJA, art. 21 et
+> 21-2 du Code de procédure pénale — à confirmer en version consolidée)**. Tout
+> ce qui relève de l'**officier de police judiciaire** est hors périmètre
+> d'action et déclenche le **garde-fou APJA** (§5.2). L'art. 16 CPP définit
+> notamment la qualité d'OPJ ; chaque acte conserve son fondement propre.
+
+---
+
+## 1. Déclenchement
+
+Activer ce skill dès qu'une question relève du **métier de police municipale** :
+
+- **pouvoirs de police** (police générale du maire, polices spéciales,
+  répartition maire / préfet / État) ;
+- **procédure pénale** applicable aux agents PM (constatation d'infractions,
+  relations OPJ / procureur, flagrance) ;
+- **réglementation appliquée** (code de la route, stationnement et fourrière,
+  débits de boissons, salubrité et tranquillité publiques, domaine public,
+  environnement, animaux dangereux) ;
+- **doctrine opérationnelle** (organisation du service, patrouilles,
+  dispositifs événementiels, gestion de crise) ;
+- **continuum de sécurité** (convention de coordination, CLSPD/CISPD,
+  prévention de la délinquance) ;
+- **armement et équipements**, **vidéoprotection**, **déontologie et données** ;
+- **pilotage et budget** du service ;
+- production d'un **écrit professionnel** (PV, rapport, arrêté, note au maire).
+
+**Ne pas activer** pour :
+- les questions **RH statutaires** des agents PM (carrière, paie, avancement,
+  positions, **procédure disciplinaire**, instances) → **drh-fpt** (§5.4) ;
+- le droit étranger.
+
+**Activer impérativement** lorsqu'une demande adressée à une police municipale
+porte sur une garde à vue, une audition formelle de suspect, une perquisition,
+une réquisition judiciaire ou toute autre mesure dépassant les pouvoirs APJA :
+le skill doit alors opposer le garde-fou (§5.2), qualifier le fondement d'une
+éventuelle contrainte et orienter vers l'OPJ.
+
+---
+
+## 2. Posture hybride — opérationnel par défaut, vérifié sur déclencheur
+
+### 2.1 Mode opérationnel (défaut)
+Réponse directe, orientée décision, écrit et terrain. On va à la recommandation
+sans détour, en signalant les points de vigilance et le niveau de risque (§5.1).
+
+### 2.2 Matrice métier / juridique — quand vérifier la source
+
+La frontière n'est pas laissée à l'appréciation. Elle est explicite :
+
+| Type de question | Vérification de la source officielle |
+|------------------|--------------------------------------|
+| Définition d'un concept | Non, sauf doute |
+| **Qualification pénale d'un fait** | **Oui** |
+| **Étendue d'un pouvoir de police / compétence d'une autorité** | **Oui** |
+| **Procédure / étapes / formalisme d'un acte** | **Oui** |
+| **Délai / prescription** | **Oui** |
+| **Condition d'exercice (armement, vidéo, agrément…)** | **Oui** |
+| **Contenu d'un acte (arrêté, PV, rapport)** | **Oui** |
+| **Jurisprudence** | **Oui** |
+| **Réforme récente** | **Oui** |
+
+Dès qu'une ligne « Oui » est concernée, appliquer le **socle-sources** (§5.3 +
+`references/socle-sources-verification.md`) avant de conclure.
+
+### 2.3 Forçage manuel
+L'utilisateur peut imposer la rigueur complète via les balises de
+`recherche-juridique` (`[complet]`, `[sourcé]`, `[lookup]`).
+
+---
+
+## 3. Routeur — appeler `analyse-situation.md` en premier
+
+Toute situation un peu composée passe **d'abord** par le **Decision Engine** :
+**`references/analyse-situation.md`** (couche 1). C'est le routeur : il qualifie
+les faits, détecte les conflits de compétence et le garde-fou APJA, puis oriente
+vers la branche métier (couche 2), l'objet métier (couche 3) ou le générateur
+d'écrit (couche 4).
+
+**Séquence de raisonnement imposée** (rappel ; détail dans le routeur) :
+qualifier les faits → police générale / spéciale → autorité compétente →
+détecter un conflit de compétence → base légale → pouvoirs exerçables → niveau
+de risque (§5.1) → procédures cumulables → hiérarchiser l'urgence → orienter
+vers l'écrit.
+
+### Architecture en 4 couches
+
+| Couche | Rôle | Emplacement |
+|--------|------|-------------|
+| 1 — Decision Engine | Routeur (qualifie et oriente) | `references/analyse-situation.md` |
+| 2 — Branches métier | 11 branches + 3 briques posture | `references/*.md` |
+| 3 — Objets métier | 8 fiches système expert | `objets/*.md` |
+| 4 — Générateurs | Écrits interactifs | `references/templates/*.md` |
+
+---
+
+## 4. Les branches (routeur de couche 2)
+
+Lire le fichier de la branche concernée dès qu'elle est mobilisée. Chaque
+branche suit le gabarit `references/_gabarit-branche.md` et ouvre sur un bloc
+**Périmètre / Exclusions**.
+
+| Branche | Référence |
+|---------|-----------|
+| Pouvoirs de police | `references/pouvoirs-police.md` |
+| Procédure pénale (APJA) | `references/penal-procedure.md` |
+| Réglementation appliquée | `references/reglementation-appliquee.md` |
+| Doctrine opérationnelle | `references/doctrine-operationnelle.md` |
+| Continuum & partenariats | `references/continuum-partenariats.md` |
+| Armement & équipements | `reference

@@ -1,0 +1,67 @@
+{
+  "case_id": "plugin-prime-depart-retraite",
+  "trace_sha256": "3cc4ef38f0595899681ca06142597c70ce9415af5cb299212859fce4c0127fc5",
+  "verdict": "bloque",
+  "invariants": {
+    "plugin-prime-depart-retraite.refus_mandatement": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e3", "e36"],
+      "rationale": "Le premier texte visible suspend explicitement le mandatement des 800 euros. La réponse finale refuse le mandatement en l'état, précise que les crédits du chapitre 012 ne résolvent pas le fondement indemnitaire et que l'accord oral du maire ne remplace pas la fixation du régime par l'organe délibérant. Aucun passage ne permet le paiement immédiat."
+    },
+    "plugin-prime-depart-retraite.bascule_rh": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e3", "e7", "e22", "e36"],
+      "rationale": "Après le garde-fou conservatoire initial, e7 annonce explicitement la bascule vers drh-fpt, lui attribue le fond indemnitaire et réserve le volet budgétaire à dirfi-fpt. Cette attribution précède la première analyse visible du texte indemnitaire en e22 et l'analyse de fond finale. Le refus initial de payer ne développe aucun régime indemnitaire réservé."
+    },
+    "plugin-prime-depart-retraite.deliberation_insuffisante": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e22", "e36"],
+      "rationale": "La réponse distingue la compétence de l'organe délibérant de l'existence d'un fondement autorisant la gratification. Elle indique expressément qu'un vote ne suffirait pas à démontrer l'autorisation de cette gratification et ne valide aucun dispositif ni alternative de paie pour l'agent non qualifié."
+    },
+    "plugin-prime-depart-retraite.cia_non_presume": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e7", "e36"],
+      "rationale": "Aucune application du CIA n'est présumée. La réponse constate l'absence de statut, de filière, de cadre d'emplois et d'actes locaux, refuse de valider un dispositif indemnitaire et demande ces informations avant d'examiner une piste."
+    },
+    "plugin-prime-depart-retraite.rifseep_non_presume": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e7", "e36"],
+      "rationale": "Aucune application du RIFSEEP n'est présumée dans les textes visibles. La qualification de l'agent et les actes locaux sont présentés comme inconnus, et aucune alternative indemnitaire n'est validée avant leur examen."
+    },
+    "plugin-prime-depart-retraite.isfe_non_presume": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e7", "e36"],
+      "rationale": "Aucune application de l'ISFE ni appartenance de l'agent à un cadre d'emplois éligible n'est supposée. La réponse suspend l'examen d'un dispositif à la connaissance du statut, du cadre d'emplois et des actes locaux."
+    },
+    "plugin-prime-depart-retraite.sans_regularisation_retroactive": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e3", "e36"],
+      "rationale": "Le garde-fou initial rejette la sécurisation par une régularisation annoncée après paiement. La réponse finale maintient le versement suspendu, refuse d'attester qu'une délibération future régulariserait rétroactivement le versement et impose les contrôles avant toute reprise du mandatement."
+    },
+    "plugin-prime-depart-retraite.contenu_officiel_verifie": {
+      "status": null,
+      "basis": "missing",
+      "evidence_refs": ["e13", "e21", "e28", "e32", "e36"],
+      "rationale": "Des textes primaires officiels reliés à des appels réussis étayent L714-4, D1617-19, L2131-1 et L2131-2. Cependant, la réponse déclare expressément que l'annexe pertinente de la nomenclature des pièces justificatives n'a pas été récupérée. Cette pièce centrale du contrôle du dossier de paiement reste absente : l'exigence documentaire stricte n'est donc pas entièrement démontrée, même si l'abstention sur les pièces exactes est observable."
+    },
+    "plugin-prime-depart-retraite.vigueur_verifiee": {
+      "status": true,
+      "basis": "retrieval",
+      "evidence_refs": ["e13", "e21", "e28", "e32", "e36"],
+      "rationale": "Pour les quatre références dont la réponse revendique la vigueur au 07/10/2026, les événements source_evidence contiennent le texte primaire Légifrance et les métadonnées correspondantes : legal_status VIGUEUR, applicable_at_as_of_date true, as_of_date 2026-10-07, début de version conforme à celui cité et fin de version postérieure. Ces événements sont rattachés aux appels get_article réussis. La réponse ne revendique pas la vigueur d'une annexe non récupérée ni un droit individuel vérifié à la prime."
+    },
+    "plugin-prime-depart-retraite.methode_juridique_activee": {
+      "status": null,
+      "basis": "missing",
+      "evidence_refs": ["e1", "e6", "e7", "e36", "e38"],
+      "rationale": "La lecture complète et réussie du point d'entrée recherche-juridique par fragments est observable en e6 avant l'analyse de fond, et son attribution est annoncée en e7. Toutefois, activation_kind vaut file_read_fragments et actual_plugin_activation_verified vaut false. Aucun appel Skill ni activation native réelle du plugin n'est prouvé ; cette lecture ne satisfait pas l'exigence littérale d'activation du barème."
+    }
+  }
+}
