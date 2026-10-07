@@ -7,7 +7,7 @@ Le dépôt prépare cinq expertises métier, une méthode de recherche juridique
 sourcée et un accès optionnel à Légifrance/Judilibre. La distribution gelée
 1.1.1 expose encore quatre expertises métier et la méthode juridique.
 
-> **Statut :** `main` porte le candidat 1.2.0. DCP 0.1.0 a été mesuré sur Codex : 26 réussites, une demi-réussite, un échec selon le juge automatique ; **non relu par un praticien**. Le runtime figé conserve l'avertissement historique « non mesuré, non relu par un praticien ». Les catalogues distribuent toujours `v1.1.1`, **non qualifiée**. La relecture praticien intervient après intégration, avant qualification et publication : [docs/publication.md](docs/publication.md).
+> **Statut :** `main` porte le candidat 1.2.0 initial. Cette branche intègre le correctif DCP 0.1.1, **non mesuré, non relu par un praticien** avant sa nouvelle campagne. Les résultats 0.1.0 restent historiques et ne se transfèrent pas au correctif. Les catalogues distribuent toujours `v1.1.1`, **non qualifiée**. Relecture praticien avant qualification et publication : [docs/publication.md](docs/publication.md).
 
 Ce plugin aide à qualifier une situation, identifier les expertises à mobiliser et produire une réponse traçable. Il ne remplace ni la validation d'un juriste, ni le contrôle de l'autorité compétente, ni la vérification des textes officiels en vigueur.
 
@@ -19,7 +19,7 @@ Ce plugin aide à qualifier une situation, identifier les expertises à mobilise
 | `collectivite-territoriale:drh-fpt` | Ressources humaines territoriales | 0.6.0 |
 | `collectivite-territoriale:dpo-ct` | Protection des données | 0.2.1 |
 | `collectivite-territoriale:dirfi-fpt` | Finances locales | 1.0.4 |
-| `collectivite-territoriale:dcp-fpt` | Commande publique, mesurée sur Codex, non relue | 0.1.0 |
+| `collectivite-territoriale:dcp-fpt` | Commande publique, correctif à mesurer et relire | 0.1.1 |
 | `collectivite-territoriale:recherche-juridique` | Recherche et vérification du droit français | 3.5.0 |
 
 L'étiquette distribuée `v1.1.1` contient les cinq skills déjà présents,

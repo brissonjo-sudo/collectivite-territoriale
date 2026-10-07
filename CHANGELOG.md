@@ -1,5 +1,17 @@
 # Historique des versions
 
+## Correctif candidat — 2026-10-07
+
+- DCP 0.1.1 épinglé au commit `caef7fd` : seul son point d'entrée change,
+  pour préciser les frontières financières et l'ordre BASCULE/intertitre.
+- Preuves 0.1.0 et qualification initiale conservées comme historiques ;
+  aucune reprise de leur score pour le correctif.
+- Profil Codex v2 : refus des commandes mixtes ou lectures partielles,
+  vérification du texte complet des points d'entrée dans la sortie de lecture.
+- Installation locale isolée et découverte des six skills avec pluginId
+  réussies, 167 fichiers de skills comparés. Aucun compte ni appel modèle/MCP
+  dans ce smoke ; distribution et installation habituelle inchangées.
+
 ## Qualification candidate — 2026-10-07
 
 - Mesure autonome DCP complète : 26 réussites, une demi-réussite, un échec

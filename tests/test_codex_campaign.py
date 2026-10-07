@@ -9,6 +9,7 @@ from unittest.mock import patch
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import run_codex_campaign as campaign
+from support_preuves_historiques import runtime_at
 
 
 class CodexCampaignTests(unittest.TestCase):
@@ -51,6 +52,25 @@ class CodexCampaignTests(unittest.TestCase):
         self.assertEqual(code, 124)
         self.assertIn("result_error_or_absent", campaign.failures(clean, self.case, code))
 
+    def test_commande_mixte_ou_lecture_partielle_ne_vaut_pas_lecture_native(self):
+        path = ".agents/skills/dcp-fpt/SKILL.md"
+        for text in (f'Write-Output "Get-Content {path}"', f"Get-Content {path} -Tail 1",
+                     f"Get-Content {path}; Write-Output secret", "Get-Content .agents/skills/../../secret"):
+            with self.subTest(commande=text):
+                self.assertEqual(campaign.read_command_paths(text), [])
+        self.assertEqual(campaign.read_command_paths(f"Get-Content -LiteralPath '{path}'"), [path])
+
+    def test_sortie_tronquee_ne_prouve_pas_entree_complete(self):
+        path = ".agents/skills/dcp-fpt/SKILL.md"
+        event = {"type": "item.completed", "item": {"type": "command_execution",
+                 "command": f"Get-Content -LiteralPath '{path}'", "exit_code": 0,
+                 "status": "completed", "aggregated_output": "Extrait tronqué"}}
+        clean = campaign.sanitize([event])
+        self.assertIn("native_entry_content_unverified", campaign.failures(clean, self.case, 0))
+        event["item"]["aggregated_output"] = (campaign.ROOT / "skills/dcp-fpt/SKILL.md").read_text(encoding="utf-8")
+        clean = campaign.sanitize([event])
+        self.assertNotIn("native_entry_content_unverified", campaign.failures(clean, self.case, 0))
+
     def test_preuves_exportees_rattachees_aux_cas_et_runtime(self):
         root = campaign.ROOT
         folder = root / "tests/evidence/2026-10-07-codex-natif"
@@ -58,8 +78,7 @@ class CodexCampaignTests(unittest.TestCase):
         cases = {c["id"]: c for c in campaign.load_cases()}
         self.assertEqual({r["case_id"] for r in summary["runs"]}, set(cases))
         self.assertEqual(len(summary["runs"]), len(cases))
-        runtime = {p.relative_to(root).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
-                   for p in (root / "skills").rglob("*") if p.is_file()}
+        runtime = runtime_at(root, summary["plugin_commit"])
         for run in summary["runs"]:
             with self.subTest(cas=run["case_id"]):
                 path = root / run["evidence_path"]
@@ -78,11 +97,27 @@ class CodexCampaignTests(unittest.TestCase):
     def test_mesure_autonome_correspond_aux_octets_dcp_embarques(self):
         root = campaign.ROOT
         evidence = json.loads((root / "tests/evidence/2026-10-07-candidat/dcp-autonome.json").read_text(encoding="utf-8"))
-        upstream = json.loads((root / "upstream.json").read_text(encoding="utf-8"))
-        self.assertEqual(evidence["upstream_runtime_commit"], upstream["skills"]["dcp-fpt"]["commit"])
+        runtime = runtime_at(root, "85011f7f86b488330fe00ff7a30ce42d6dbe9a84")
         for name, digest in evidence["summary"]["runtime_sha256"].items():
-            self.assertEqual(hashlib.sha256((root / "skills/dcp-fpt" / name).read_bytes()).hexdigest(), digest)
+            self.assertEqual(runtime["skills/dcp-fpt/" + name], digest)
         self.assertFalse(evidence["human_legal_validation"])
+
+    def test_smoke_installe_charge_six_skills_et_conserve_leurs_octets(self):
+        root = campaign.ROOT
+        path = root / "tests/evidence/2026-10-07-correctif/installation-codex.json"
+        evidence = json.loads(path.read_text(encoding="utf-8"))
+        expected = {p.relative_to(root).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
+                    for p in (root / "skills").rglob("*") if p.is_file()}
+        self.assertEqual(evidence["runtime_sha256"], expected)
+        upstream = json.loads((root / "upstream.json").read_text(encoding="utf-8"))
+        self.assertEqual(evidence["source_dcp_commit"], upstream["skills"]["dcp-fpt"]["commit"])
+        self.assertEqual({s["name"] for s in evidence["skills"]},
+                         {"collectivite-territoriale:"+name for name in upstream["skills"]})
+        self.assertTrue(all(s["enabled"] and s["pluginId"] == "collectivite-territoriale@qualification-locale"
+                            for s in evidence["skills"]))
+        self.assertFalse(evidence["credentials_copied"])
+        self.assertFalse(evidence["global_installation_modified"])
+        self.assertFalse(evidence["model_called"])
 
 
 if __name__ == "__main__":

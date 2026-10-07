@@ -10,9 +10,9 @@ description: >-
   police municipale (dpm-fpt), les concessions et délégations de service public.
 ---
 
-# Skill : dcp-fpt (v0.1.0)
+# Skill : dcp-fpt (v0.1.1)
 
-> Métadonnées — version : **0.1.0** · langue : français · statut : **non mesuré, non relu par un praticien**.
+> Métadonnées — version : **0.1.1** · langue : français · statut : **non mesuré, non relu par un praticien**.
 > Aide à la décision ; aucune réponse ne vaut autorisation de signer ni source autonome de droit positif.
 
 ## 1. Déclenchement
@@ -183,6 +183,12 @@ de portée réservée sans nouvelle lecture officielle.
 
 Afficher le bloc correspondant puis arrêter ce volet :
 
+La méthode juridique d'estimation du besoin et le choix de procédure restent
+dans DCP. Le chiffrage, les crédits et la validation de l'engagement relèvent
+de `dirfi-fpt`. Dans une note d'estimation ou de montage, nommer cette
+séparation et afficher la BASCULE financière avant ce volet, même si les
+données manquent et qu'aucun calcul ne peut encore être produit.
+
 ```text
 BASCULE dirfi-fpt — Volet financier du marché.
 À reprendre : avances, acomptes, révision et actualisation, calcul et imputation
@@ -225,7 +231,9 @@ diagnostic autonome ni enquête.
 
 `dcp-fpt` conduit le volet achat ; les skills de frontière traitent chacun
 leur périmètre ; `recherche-juridique` vérifie le fond. Le bloc BASCULE reste
-obligatoire en co-activation. Un délégataire poursuit seulement si son point
+obligatoire en co-activation : il précède l'intertitre du délégataire,
+puis vient l'analyse de ce dernier. Ne pas placer le bloc sous cet intertitre.
+Un délégataire poursuit seulement si son point
 d'entrée a été effectivement chargé et ses références utiles lues, sous un
 intertitre explicite. Sinon, laisser le renvoi. Les skills d'accessibilité
 agissent sur la forme, sans modifier les règles.

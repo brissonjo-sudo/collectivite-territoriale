@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-07",
+  "plugin_version": "1.2.0",
+  "plugin_commit": "85011f7f86b488330fe00ff7a30ce42d6dbe9a84",
+  "release_ready": false,
+  "upstream_commits": {
+    "dpm-fpt": "1668c89798f1f50a829c0b94d3cf6bf33a3640fb",
+    "drh-fpt": "f81c9b955f7ebb47df7e93bdc41ac743d85a2973",
+    "dpo-ct": "f3406f412368199a33f47e7861eb450eab2b2cdb",
+    "dirfi-fpt": "d970fe530d3f50f6b4c330e3cfb85db35b7126ab",
+    "recherche-juridique": "e437d10a2d4bbf66ba7a9c1e9fb49e773166054e",
+    "dcp-fpt": "eeb1cb14a3ad94d78631661dce5ae11f1e071308"
+  },
+  "release_blockers": [
+    "Les neuf cas Codex natifs sont exécutés ; contrôles techniques et invariants humains restent distincts.",
+    "DCP autonome : 26 réussites, une demi-réussite, un échec. Frontières des cas 01/16 et douze citations dans sept cas à relire.",
+    "Les commandes de lecture natives ne prouvent ni activation Skill de Claude, ni déclenchement automatique, ni installation du plugin.",
+    "Relecture par un praticien non réalisée ; elle reste requise avant qualification et publication.",
+    "Smoke des copies natives réussi ; installation marketplace et chargement par le gestionnaire de plugins restent à qualifier.",
+    "Le candidat 1.2.0 reprend aussi drh-fpt 0.6.0 ; les invariants RH restent à relire.",
+    "Réserve observée sur le cas finance/données : les deux BASCULE figurent après leur intertitre, contrairement aux invariants attendus. Réponse conservée pour relecture, sans réécriture."
+  ],
+  "historical_evidence": "tests/evidence/2026-09-20-validation-locale.json",
+  "runs": [],
+  "skill_measurements": {
+    "dcp-fpt": {
+      "status": "completed_pending_review",
+      "upstream_commit": "eeb1cb14a3ad94d78631661dce5ae11f1e071308",
+      "evidence_path": "tests/evidence/2026-10-07-candidat/dcp-autonome.json"
+    }
+  },
+  "review": {
+    "human_legal_validation": false
+  },
+  "codex_smoke": {
+    "status": "partial",
+    "plugin_commit": "85011f7f86b488330fe00ff7a30ce42d6dbe9a84",
+    "evidence_path": "tests/evidence/2026-10-07-candidat/codex-smoke.json",
+    "scope": "Copies natives du checkout : réussi ; installation et MCP non qualifiés."
+  },
+  "native_campaign": {
+    "profile": "codex-copies-natives-mcp-v1",
+    "status": "completed_pending_review",
+    "evidence_path": "tests/evidence/2026-10-07-codex-natif/summary.json",
+    "technical_passed_count": 9,
+    "case_count": 9,
+    "plugin_commit": "85011f7f86b488330fe00ff7a30ce42d6dbe9a84"
+  }
+}

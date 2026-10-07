@@ -11,6 +11,7 @@ import hashlib
 import json
 import re
 import shutil
+import shlex
 import subprocess
 import sys
 import tempfile
@@ -21,7 +22,42 @@ from urllib.parse import urlsplit
 
 from run_plugin_campaign import ROOT, MCP_TOOLS, load_cases
 
-PROFILE = "codex-copies-natives-mcp-v1"
+PROFILE = "codex-copies-natives-mcp-v2"
+
+
+def read_command_paths(command_text: str) -> list[str]:
+    """Accepte uniquement une commande de lecture et des chemins natifs."""
+    body = command_text.replace("\\", "/").strip()
+    wrapper = re.search(r"\s-Command\s+(['\"])(.*)\1\s*$", body, re.S)
+    if wrapper:
+        body = wrapper.group(2)
+    if any(char in body for char in (";", "|", ">", "<", "&", "$", "`", "\n", "\r")):
+        return []
+    try:
+        tokens = shlex.split(body)
+    except ValueError:
+        return []
+    if not tokens or tokens.pop(0).lower() != "get-content":
+        return []
+    paths = []
+    index = 0
+    while index < len(tokens):
+        token = tokens[index]
+        index += 1
+        if token.lower() in {"-literalpath", "-path", "-raw"}:
+            continue
+        if token.lower() == "-encoding":
+            if index >= len(tokens) or tokens[index].lower() not in {"utf8", "utf-8"}:
+                return []
+            index += 1
+            continue
+        for path in token.split(","):
+            if not path:
+                continue
+            if not re.fullmatch(r"\.agents/skills/[\w./-]+", path) or ".." in path.split("/"):
+                return []
+            paths.append(path)
+    return paths
 
 
 def command(case: dict[str, Any], cli: str, model: str) -> list[str]:
@@ -77,11 +113,17 @@ def sanitize(events: list[dict[str, Any]]) -> list[dict[str, Any]]:
             continue
         kind = item.get("type")
         if kind == "command_execution":
-            cmd = item.get("command", "").replace("\\", "/")
-            paths = re.findall(r"\.agents/skills/[\w./-]+", cmd)
-            read_only = bool(re.search(r"\bGet-Content\b", cmd, re.I)) and bool(paths)
-            clean.append({"type": "native_read" if read_only else "unexpected_command",
-                          "paths": paths, "exit_code": item.get("exit_code"), "status": item.get("status")})
+            paths = read_command_paths(item.get("command", ""))
+            output = item.get("aggregated_output", "").replace("\r\n", "\n")
+            verified = []
+            for path in paths:
+                source = ROOT / "skills" / path.removeprefix(".agents/skills/")
+                if source.is_file() and source.read_text(encoding="utf-8").strip() in output:
+                    verified.append(path)
+            clean.append({"type": "native_read" if paths else "unexpected_command",
+                          "paths": paths, "complete_content_verified": verified,
+                          "output_sha256": hashlib.sha256(output.encode()).hexdigest(),
+                          "exit_code": item.get("exit_code"), "status": item.get("status")})
         elif kind == "mcp_tool_call":
             result = item.get("result") or {}
             serialized = json.dumps(result, sort_keys=True, ensure_ascii=False)
@@ -116,6 +158,13 @@ def failures(clean: list[dict[str, Any]], case: dict[str, Any], exit_code: int) 
         errors.append("native_read_sequence_mismatch")
     if any(e["type"] == "unexpected_command" for e in clean):
         errors.append("unexpected_command")
+    for event in clean:
+        if event["type"] != "native_read" or "complete_content_verified" not in event:
+            continue  # Les preuves v1 gardent leur portée historique.
+        entries = [p for p in event["paths"] if p.endswith("/SKILL.md")]
+        if entries and (len(entries) != 1 or any(p not in event["complete_content_verified"] for p in entries)):
+            if "native_entry_content_unverified" not in errors:
+                errors.append("native_entry_content_unverified")
     calls = [e for e in clean if e["type"] == "mcp_call"]
     if any(e["server"] != "droit-francais" or e["tool"] not in MCP_TOOLS for e in calls):
         errors.append("foreign_mcp_call")
