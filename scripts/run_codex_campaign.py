@@ -64,11 +64,27 @@ def read_chunk(command_text: str) -> dict[str, Any] | None:
     return {"path": path, "start": int(start), "count": int(count)}
 
 
+def read_reference_slice(command_text: str) -> dict[str, Any] | None:
+    """Une sélection bornée de référence est une lecture autorisée du runtime."""
+    match = re.fullmatch(
+        r"Get-Content -LiteralPath '(\.agents/skills/[\w-]+/(?:references|objets)/[\w./-]+\.md)' -Encoding utf8 \| Select-Object (?:-Skip (\d+) )?-First (\d+)",
+        read_body(command_text),re.I)
+    if not match:
+        return None
+    path,start,count = match.groups()
+    if ".." in path.split("/") or int(count) <= 0:
+        return None
+    return {"path":path,"start":int(start or 0),"count":int(count)}
+
+
 def read_command_paths(command_text: str) -> list[str]:
     """Accepte uniquement une commande de lecture et des chemins natifs."""
     chunk = read_chunk(command_text)
     if chunk:
         return [chunk["path"]]
+    reference = read_reference_slice(command_text)
+    if reference:
+        return [reference["path"]]
     body = read_body(command_text)
     if any(char in body for char in (";", "|", ">", "<", "&", "$", "`", "\n", "\r")):
         return []

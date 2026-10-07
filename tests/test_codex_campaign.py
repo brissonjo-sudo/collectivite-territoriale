@@ -96,6 +96,16 @@ class CodexCampaignTests(unittest.TestCase):
         for command in (f"Get-Content '{path}' | Write-Output", f"Get-Content -LiteralPath '{path}' -Encoding utf8 | Select-Object -Skip 0 -First 1; Write-Output secret"):
             self.assertEqual(campaign.read_command_paths(command), [])
 
+    def test_selection_de_reference_autorisee_sans_affaiblir_entree(self):
+        path = ".agents/skills/dcp-fpt/references/references-verifiees.md"
+        command = f"Get-Content -LiteralPath '{path}' -Encoding utf8 | Select-Object -First 65"
+        self.assertEqual(campaign.read_command_paths(command),[path])
+        self.assertEqual(campaign.read_reference_slice(command),{"path":path,"start":0,"count":65})
+        self.assertIsNone(campaign.read_chunk(command))
+        for suffix in ("; Write-Output secret"," | Invoke-Expression"):
+            self.assertEqual(campaign.read_command_paths(command+suffix),[])
+        self.assertEqual(campaign.read_command_paths(command.replace('/references/','/../../')),[])
+
     def test_preuves_exportees_rattachees_aux_cas_et_runtime(self):
         root = campaign.ROOT
         folder = root / "tests/evidence/2026-10-07-codex-natif"

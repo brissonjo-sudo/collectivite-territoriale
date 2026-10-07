@@ -1,0 +1,43 @@
+{
+  "plugin-dcp-acte-irreversible": [
+    {
+      "command": "Get-Content -LiteralPath '.agents/skills/dcp-fpt/references/references-verifiees.md' -Encoding utf8 | Select-Object -Skip 70 -First 125",
+      "source_rollout_sha256": "9282a875cc3c136538fd5ced0bd0fadac0c7387d4e1b260809b7ffde22c9da3c"
+    },
+    {
+      "command": "Get-Content -LiteralPath '.agents/skills/dcp-fpt/references/references-verifiees.md' -Encoding utf8 | Select-Object -Skip 132 -First 22",
+      "source_rollout_sha256": "9282a875cc3c136538fd5ced0bd0fadac0c7387d4e1b260809b7ffde22c9da3c"
+    },
+    {
+      "command": "Get-Content -LiteralPath '.agents/skills/dcp-fpt/references/references-verifiees.md' -Encoding utf8 | Select-Object -Skip 236 -First 36",
+      "source_rollout_sha256": "9282a875cc3c136538fd5ced0bd0fadac0c7387d4e1b260809b7ffde22c9da3c"
+    },
+    {
+      "command": "Get-Content -LiteralPath '.agents/skills/dcp-fpt/references/references-verifiees.md' -Encoding utf8 | Select-Object -Skip 218 -First 18",
+      "source_rollout_sha256": "9282a875cc3c136538fd5ced0bd0fadac0c7387d4e1b260809b7ffde22c9da3c"
+    }
+  ],
+  "plugin-dcp-egalite": [
+    {
+      "command": "Get-Content -LiteralPath '.agents/skills/dcp-fpt/references/references-verifiees.md' -Encoding utf8 | Select-Object -Skip 0 -First 85",
+      "source_rollout_sha256": "f4e4c5e56973e455301150fd930170e154c2e14d3a8c2cedcc1dedfc41cbf184"
+    }
+  ],
+  "plugin-dcp-frontiere-dsi-externe": [
+    {
+      "command": "Get-Content -LiteralPath '.agents/skills/dcp-fpt/references/references-verifiees.md' -Encoding utf8 | Select-Object -First 65",
+      "source_rollout_sha256": "1c53f2e5e69d3bbd22690eefa2423629aa3668f9170fdc1a8a713f53a7952e3d"
+    }
+  ],
+  "plugin-dcp-frontieres-finance-donnees": [],
+  "plugin-dcp-mcp-indisponible": [],
+  "plugin-garde-fou-apja": [
+    {
+      "command": "Get-Content -LiteralPath '.agents/skills/dpm-fpt/references/socle-sources-verification.md' -Encoding utf8 | Select-Object -Skip 85 -First 100",
+      "source_rollout_sha256": "2716d29eb9351d2cab0dba6bdacbe8c2d9f1ed208c54f50c9cdc191e9b716a85"
+    }
+  ],
+  "plugin-mcp-indisponible": [],
+  "plugin-prime-depart-retraite": [],
+  "plugin-violation-donnees": []
+}
