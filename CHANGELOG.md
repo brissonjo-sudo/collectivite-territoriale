@@ -1,5 +1,15 @@
 # Historique des versions
 
+## Qualification candidate — 2026-10-07
+
+- Mesure autonome DCP complète : 26 réussites, une demi-réussite, un échec
+  selon le juge ; huit cas critiques réussis. Relecture et sources réservées.
+- Précontrôle MCP Codex réussi avec connexion existante. Nouveau lanceur
+  séquentiel pour les neuf cas, copies natives et preuves d'outils filtrées.
+- Profil Codex distinct de l'activation Skill de Claude et de l'installation
+  marketplace ; ADR 0005. Timeout, mode dégradé explicite, preuves sans
+  écrasement ni raisonnement. Barrière de publication inchangée.
+
 ## Distribution — 2026-10-06 — Marketplaces épinglées (sans changement de version)
 
 - Les marketplaces Claude Code et Codex distribuent l'étiquette `v1.1.1`
