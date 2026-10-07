@@ -6,8 +6,19 @@
   pour préciser les frontières financières et l'ordre BASCULE/intertitre.
 - Preuves 0.1.0 et qualification initiale conservées comme historiques ;
   aucune reprise de leur score pour le correctif.
-- Profil Codex v2 : refus des commandes mixtes ou lectures partielles,
-  vérification du texte complet des points d'entrée dans la sortie de lecture.
+- DCP 0.1.1 mesuré autonomement : 27 réussites, une demi-réussite (cas-24),
+  aucun échec. Vingt alertes de citations dans huit cas ; relecture ouverte.
+- Essai Codex v2 conservé après deux cas : contenu brut complet mais
+  restitution tronquée déclarée par le modèle, visibilité non attestée.
+- Profil Codex v3 : segments contigus de 6000 octets maximum, ordre,
+  couverture et contenu contrôlés ; trous, doublons et pipelines libres refusés.
+- Neuf contrôles techniques vérifiés après audit de sept lectures ciblées
+  rejetées à tort ; cinq rapports initiaux réussis et quatre faux positifs
+  conservés. Reprise APJA supplémentaire, aucun remplacement des réponses.
+- Réserve de l'assistant sur la revue humaine avant notification externe
+  dans le cas DPO ; contrôle des sources et avis praticien toujours ouverts.
+- Lien personnel de dossier temporaire assaini avec original privé et
+  empreintes des deux réponses. 55 tests réussis hors verrou de publication.
 - Installation locale isolée et découverte des six skills avec pluginId
   réussies, 167 fichiers de skills comparés. Aucun compte ni appel modèle/MCP
   dans ce smoke ; distribution et installation habituelle inchangées.

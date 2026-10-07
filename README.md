@@ -7,7 +7,7 @@ Le dépôt prépare cinq expertises métier, une méthode de recherche juridique
 sourcée et un accès optionnel à Légifrance/Judilibre. La distribution gelée
 1.1.1 expose encore quatre expertises métier et la méthode juridique.
 
-> **Statut :** `main` porte le candidat 1.2.0 initial. Cette branche intègre le correctif DCP 0.1.1, **non mesuré, non relu par un praticien** avant sa nouvelle campagne. Les résultats 0.1.0 restent historiques et ne se transfèrent pas au correctif. Les catalogues distribuent toujours `v1.1.1`, **non qualifiée**. Relecture praticien avant qualification et publication : [docs/publication.md](docs/publication.md).
+> **Statut :** DCP 0.1.1 mesuré sur 28 cas autonomes : 27 réussites et une demi-réussite selon le juge automatique. Neuf contrôles de coactivation Codex vérifiés après correction de faux positifs du lanceur ; **non relu par un praticien**. Réserve DPO et sources à relire. Installation locale et découverte des six skills vérifiées séparément. Les catalogues distribuent toujours `v1.1.1`, **non qualifiée**. [Qualification du correctif](docs/qualification-correctif-2026-10-07.md) et [conditions de publication](docs/publication.md).
 
 Ce plugin aide à qualifier une situation, identifier les expertises à mobiliser et produire une réponse traçable. Il ne remplace ni la validation d'un juriste, ni le contrôle de l'autorité compétente, ni la vérification des textes officiels en vigueur.
 
@@ -19,7 +19,7 @@ Ce plugin aide à qualifier une situation, identifier les expertises à mobilise
 | `collectivite-territoriale:drh-fpt` | Ressources humaines territoriales | 0.6.0 |
 | `collectivite-territoriale:dpo-ct` | Protection des données | 0.2.1 |
 | `collectivite-territoriale:dirfi-fpt` | Finances locales | 1.0.4 |
-| `collectivite-territoriale:dcp-fpt` | Commande publique, correctif à mesurer et relire | 0.1.1 |
+| `collectivite-territoriale:dcp-fpt` | Commande publique, mesuré autonomement, à relire | 0.1.1 |
 | `collectivite-territoriale:recherche-juridique` | Recherche et vérification du droit français | 3.5.0 |
 
 L'étiquette distribuée `v1.1.1` contient les cinq skills déjà présents,
@@ -107,8 +107,8 @@ Chaque surcharge est liée à l'empreinte SHA-256 exacte de son fichier amont et
 
 Pour `recherche-juridique`, la racine canonique `skill/` est aplatie dans `skills/recherche-juridique/`. Sa licence est copiée avec le runtime ; aucun manifeste, serveur MCP, fichier `.env` ou autre fichier de dépôt amont n'est dupliqué. Le fichier `references/cache-taux-seuils.md` de `dirfi-fpt`, exclu de son propre paquet de distribution, n'est pas embarqué.
 
-Pour DCP, le commit de fusion de la PR #4 est figé :
-`eeb1cb14a3ad94d78631661dce5ae11f1e071308`. Les 30 fichiers de son paquet
+Pour DCP 0.1.1, le commit correctif est figé :
+`caef7fd9e680dc28056998532d24befa0e8680ec`. Les 30 fichiers de son paquet
 runtime et sa licence sont copiés ; le cache `references/cache-valeurs.md`,
 la conception, les scripts d'évaluation et les preuves amont sont exclus.
 Le registre daté reste une piste de recherche, jamais une preuve de lecture
@@ -158,7 +158,11 @@ Le manifeste Codex est également contrôlé avec le validateur du skill systèm
 - les deux STOP DCP, les frontières financières et données, la dépendance DSI
   externe et le comportement DCP sans accès aux sources officielles.
 
-Les fichiers présents prouvent l'intégration des runtimes, pas la coactivation effective. La release 1.2.0 exige donc aussi des traces comportementales en conversations fraîches, la mesure DCP et la relecture praticien. Le statut du candidat est conservé dans `tests/evidence/release-1.2.0.json` ; les preuves 1.1.0 et 1.1.1 restent historiques et ne qualifient pas cette intégration. Le test `test_barriere_de_release_comportementale` reste volontairement en échec tant que `release_ready` est faux ; les autres tests doivent réussir.
+La release 1.2.0 exige des traces comportementales en conversations fraîches,
+la mesure DCP et la relecture praticien. Le statut courant est conservé dans
+`tests/evidence/release-1.2.0.json`. Les preuves historiques ne qualifient pas
+le correctif. Le test `test_barriere_de_release_comportementale` reste en
+échec tant que `release_ready` est faux ; les autres tests doivent réussir.
 
 Le lanceur `scripts/run_plugin_campaign.py` exécute les neuf scénarios dans
 des sessions non persistées, impose les activations qualifiées attendues,
@@ -166,11 +170,15 @@ désactive les connecteurs juridiques globaux et ne conserve qu'une trace JSONL
 assainie dans `tests/evidence/.work/`. Cette sortie reste soumise à une revue
 humaine des invariants métier avant d'être promue en preuve de release.
 
-Les cinq scénarios DCP sont un contrat de campagne encore non exécuté :
-ils ne remplacent pas la suite métier amont à construire. L'accès MCP et les
-options réelles de la CLI restent à qualifier avant lancement. Le profil
-MCP du plugin diffère de celui du lanceur autonome DCP actuellement sans MCP ;
-leurs résultats ne doivent pas être présentés comme comparables par défaut.
+À la demande de l'auteur, la campagne actuelle utilise Codex et
+`scripts/run_codex_campaign.py` : copies natives en workspace frais,
+lectures ordonnées par segments vérifiés, MCP juridique propre au processus
+dans les sept cas nominaux, MCP absent dans les deux cas dégradés. La connexion
+Codex existante suffit ; aucune connexion Claude n'est requise pour ce profil.
+Le profil ne teste pas le déclenchement implicite ou l'activation Skill de
+Claude. L'installation locale avec CODEX_HOME distinct a été testée sans
+compte ; la réponse modèle/MCP depuis le plugin installé reste à qualifier.
+La mesure autonome DCP avec web garde son profil distinct.
 
 ## Architecture et décisions
 

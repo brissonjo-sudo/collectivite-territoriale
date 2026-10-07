@@ -41,3 +41,41 @@ installation marketplace, ni un chargement par le gestionnaire de plugins.
 Les résultats restent distincts des preuves Claude historiques et des
 28 cas DCP autonomes. Les invariants métier doivent être relus par un humain.
 La barrière de publication et la distribution v1.1.1 restent inchangées.
+
+## Complément du 2026-10-07 — restitution par segments
+
+Le profil v2 vérifie le contenu complet dans la sortie brute, mais le
+répondant signale une troncature de la sortie visible. Cet essai est arrêté
+après deux cas complets et conservé séparément ; il ne qualifie pas la
+lecture intégrale des points d'entrée.
+
+Le profil `codex-copies-natives-mcp-v3` remplace cette lecture monolithique
+par une partition contiguë de lignes de 6000 octets maximum par segment.
+Chaque segment fait l'objet d'un appel séparé. Ordre, contenu et couverture
+doivent correspondre à la partition calculée sur les fichiers figés ; trou,
+doublon, extrait différent ou pipeline non généré font échouer le contrôle.
+Les seules nouvelles expressions shell admises sont les pipelines de lecture
+Get-Content / Select-Object explicitement construits. Ce contrôle reste une
+vérification de restitution, sans preuve d'attention du modèle.
+
+L'installation locale par le gestionnaire de plugins est mesurée dans un
+CODEX_HOME distinct, sans compte ni copie d'identifiants. Six skills qualifiés
+avec pluginId sont découverts ; leurs 167 fichiers restent identiques. Aucun
+modèle ni MCP n'est appelé dans ce smoke. Cette preuve et la campagne avec
+copies natives conservent des portées distinctes, sans être présentées comme
+un test complet du plugin installé.
+
+Le contrôle v3 initial rejette aussi les pipelines de sélection de références.
+Cette restriction ne correspond pas au contrat de lecture des références
+utiles. Le vérificateur corrigé admet uniquement Get-Content / Select-Object
+sur un fichier Markdown de references/ ou objets/, sans commande additionnelle
+ni traversée de chemins. Pour les traces déjà produites, un audit distinct
+exige la correspondance exacte du SHA-256 de la sortie avec le segment du
+runtime figé. Les rapports initiaux restent inchangés ; aucun score métier
+n'est déduit de cette correction du contrôle technique.
+
+Les processus Codex ont conservé leurs journaux locaux. Le lanceur filtre
+ses sorties en mémoire et aucune pensée, signature ou sortie brute n'entre
+dans les artefacts publics. L'extracteur ne retient que les commandes de
+lecture des sessions identifiées par le workspace, le prompt et la fenêtre
+temporelle. Les identifiants de connexion ne sont ni copiés ni exportés.

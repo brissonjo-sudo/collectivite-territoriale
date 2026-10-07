@@ -7,8 +7,9 @@ des cinq autres bases, surcharges, MCP ou catalogues. Distribution v1.1.1.
 Les 28 cas autonomes sont achevés : 27 RÉUSSITE, une DEMI-RÉUSSITE (cas-24),
 zéro ÉCHEC. Le seuil automatique est atteint ; cas-01 et cas-16 réussis.
 Sept critiques réussis et un demi-réussi. Vingt alertes de citations dans
-huit cas restent à relire. Les neuf cas plugin sont rejoués séparément sur
-ces nouveaux octets, sans réécriture des réponses historiques.
+huit cas restent à relire. Les neuf cas plugin sont exécutés séparément sur
+ces nouveaux octets. Baseline d'exécution : `4dfec61aa81b54b21b347b2ebe077bdc54fc8940`.
+Vérificateur corrigé : `bf2e695fa752edf3ffd3c2f0d4d8c74d4a282698`.
 
 ## Contrôle d'installation réel
 
@@ -44,6 +45,51 @@ extérieurs sont refusés. Les traces ne conservent que chemins, plages,
 empreintes et résultats de contrôle. Cela contrôle la restitution native,
 sans attester l'attention du modèle ou le déclenchement implicite du skill.
 Les cas et invariants métier restent inchangés.
+
+## Résultats et audit des lectures
+
+Les neuf contrôles techniques passent après audit. Les rapports d'exécution
+initiaux comptent **cinq réussites et quatre faux positifs** : APJA, égalité,
+acte irréversible et frontière DSI. Le lanceur rejetait sept sélections de
+références réalisées avec Get-Content / Select-Object, alors que les références
+peuvent être consultées par passages. Le contrôle intégral des points
+d'entrée reste obligatoire et inchangé.
+
+Les commandes ont été extraites des seuls journaux locaux correspondant
+aux neuf sessions, puis chaque sortie a été confrontée byte pour byte au
+segment attendu du runtime figé. Aucun raisonnement n'est exporté. Un hash
+de chaque journal source rattache cette extraction ; ces journaux restent
+privés. Le correctif n'admet ni commande mixte ni chemin extérieur. Les
+contre-épreuves refusent une sortie différente ou une commande augmentée.
+
+Les réponses, statuts et empreintes d'exécution initiaux sont conservés.
+L'audit supplémentaire et le statut vérifié figurent séparément dans
+`audit-lectures.json` et `summary.json`. La reprise APJA, réalisée avant le
+diagnostic, reste supplémentaire et ne remplace pas la réponse initiale.
+Aucun nouveau contexte modèle ni attendu métier pour cette reclassification.
+
+Deuxième contrôle : BASCULE dirfi-fpt et dpo-ct avant leurs intertitres,
+STOP en première ligne des trois cas concernés, aucun identifiant cité
+sans récupération correspondante dans les métadonnées MCP. Ces constats
+mécaniques de l'assistant ne vérifient pas le texte, la vigueur ou la portée.
+**Réserve DPO :** la décision est attribuée au responsable de traitement,
+sans revue humaine explicitement demandée avant chaque notification externe.
+Voir `relecture-assistant.json` et la grille praticien.
+
+Certaines références complémentaires sont restituées avec troncature,
+signalée dans les réponses. Le contrôle intégral couvre les points d'entrée,
+pas toutes les références possibles. Un lien contenant le chemin personnel
+d'un dossier temporaire a été converti en chemin runtime relatif dans la
+preuve publique ; l'original filtré est conservé hors dépôt et les deux
+réponses sont empreintées dans le champ `redaction`.
+
+Preuves : `tests/evidence/2026-10-07-codex-natif-v3/`, reprise séparée,
+`tests/evidence/2026-10-07-correctif/dcp-autonome.json` et installation locale.
+Grille concrète : `docs/relecture-correctif-codex-2026-10-07.md`.
+**56 tests logiciels découverts : 55 réussis, seule barrière de publication
+sautée dans l'intégration.** Les six copies restent conformes à upstream.json.
+La barrière exécutée séparément reste en échec, `release_ready=false`.
+La CI du nouveau commit final reste à observer.
 
 La preuve initiale de publication est copiée byte pour byte dans
 `tests/evidence/2026-10-07-candidat/release-initial-0.1.0.json`. Les tests
