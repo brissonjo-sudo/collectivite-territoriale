@@ -15,6 +15,12 @@ Ajouter une ligne par étiquette distribuée ; ne jamais réécrire une ligne.
 Le test `test_distribution_epinglee_sur_etiquette` exige que l'étiquette et
 le commit épinglés figurent dans ce tableau.
 
+Le gel historique `v1.1.1` utilise une étiquette légère déjà existante,
+vérifiée sur le commit du tableau. C'est une exception à la procédure des
+nouvelles publications ci-dessous, qui exige une étiquette annotée. Cette
+étiquette historique ne doit être ni déplacée ni recréée ; son existence
+ne qualifie pas le contenu distribué.
+
 ## Publier une nouvelle version
 
 1. **Qualifier le candidat sur `main`** : `tests/evidence/release-<version>.json`

@@ -357,14 +357,6 @@ class CodexPluginTests(unittest.TestCase):
             and evidence["codex_smoke"]["plugin_commit"] == evidence["plugin_commit"],
         )
 
-    def test_barriere_de_release_comportementale(self) -> None:
-        manifest = load_json(".codex-plugin/plugin.json")
-        evidence = load_json(f"tests/evidence/release-{manifest['version']}.json")
-        self.assertTrue(
-            evidence["release_ready"],
-            "Release bloquée : " + " | ".join(evidence["release_blockers"]),
-        )
-
     def test_marketplace_distribue_la_racine_sans_copie(self) -> None:
         marketplace = load_json(".agents/plugins/marketplace.json")
         plugin = load_json(".codex-plugin/plugin.json")
@@ -381,6 +373,27 @@ class CodexPluginTests(unittest.TestCase):
         self.assertEqual(entry["policy"]["installation"], "AVAILABLE")
         self.assertEqual(entry["policy"]["authentication"], "ON_INSTALL")
         self.assertEqual(entry["category"], plugin["interface"]["category"])
+
+
+@unittest.skipIf(
+    os.environ.get("CT_SAUTER_BARRIERE") == "1",
+    "Barrière de publication contrôlée par le job « Qualification de publication »",
+)
+class ReleaseGateTests(unittest.TestCase):
+    """Verrou de publication distinct des contrôles d'intégration candidate.
+
+    Le job « Intégration candidate » lance toute la découverte avec
+    CT_SAUTER_BARRIERE=1 : toute nouvelle classe de tests y est donc exécutée
+    sans liste à tenir à jour. Seule cette classe y est sautée.
+    """
+
+    def test_barriere_de_release_comportementale(self) -> None:
+        manifest = load_json(".codex-plugin/plugin.json")
+        evidence = load_json(f"tests/evidence/release-{manifest['version']}.json")
+        self.assertTrue(
+            evidence["release_ready"],
+            "Release bloquée : " + " | ".join(evidence["release_blockers"]),
+        )
 
 
 if __name__ == "__main__":

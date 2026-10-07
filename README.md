@@ -108,6 +108,21 @@ python scripts/check_sync.py
 claude plugin validate .
 ```
 
+Pour contrôler l'intégration candidate sans qualifier une publication :
+
+```powershell
+$env:CT_EXIGER_ETIQUETTE="1"
+$env:CT_SAUTER_BARRIERE="1"
+python -m unittest discover -s tests
+$env:CT_SAUTER_BARRIERE="0"
+python -m unittest discover -s tests -k ReleaseGateTests
+```
+
+La CI découvre tous les tests dans le job **Intégration candidate** et ne
+saute que `ReleaseGateTests`. Le job **Qualification de publication** force
+`CT_SAUTER_BARRIERE=0` et conserve le verrou en échec pour une version non
+qualifiée. Sans cette variable, la découverte complète exécute aussi le verrou.
+
 Le manifeste Codex est également contrôlé avec le validateur du skill système `plugin-creator`. Les cas de `tests/cas-plugin.json` couvrent notamment :
 
 - le garde-fou APJA sur une demande d'acte réservé à l'OPJ ;
