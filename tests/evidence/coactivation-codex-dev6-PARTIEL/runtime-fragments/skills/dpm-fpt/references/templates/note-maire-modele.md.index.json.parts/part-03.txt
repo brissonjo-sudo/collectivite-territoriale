@@ -1,0 +1,73 @@
+ale précise, motivation en fait et en droit si l'acte fait grief,
+  proportionnalité, voies et délais de recours, vérification de la
+  transmission au contrôle de légalité — CGCT, art. L. 2131-2, au socle,
+  LEGIARTI000044190560).
+- **Archivage** : conserver une trace de la version transmise au maire
+  (`references/ecrits-professionnels.md` §6.6), utile pour la traçabilité
+  de la décision et en cas de contestation ultérieure de l'acte qui en
+  découlerait.
+
+---
+
+## 6. Articulation avec le garde-fou APJA (rappel)
+
+Si, à n'importe quelle étape du recueil (§1), il apparaît que la situation
+sous-jacente **dépasse le pouvoir APJA**, interrompre la
+séquence de questions et afficher immédiatement le bloc **STOP** (§0)
+**avant** de poursuivre quoi que ce soit d'autre. La suite se limite alors
+à :
+1. l'affichage du STOP en premier ;
+2. le rappel que la note au maire, si elle est néanmoins utile, se borne à
+   rendre compte de l'action APJA conforme (constatation, préservation,
+   compte rendu et, seulement sur fondement qualifié, présentation à l'OPJ) —
+   jamais à présenter des « options » sur un acte réservé à l'OPJ ;
+3. le renvoi au compte rendu déjà transmis à l'OPJ : rapport de mise à
+   disposition uniquement si une route 53/73 ou 78-6 est établie, sinon
+   rapport d'information. La note au maire n'ajoute qu'un éclairage de
+   pilotage en aval (ex. communication, mesures complémentaires relevant du
+   maire).
+
+---
+
+## 7. Double échelle [risque / confiance]
+
+| Point | Risque | Confiance |
+|---|---|---|
+| Choix de l'écrit (note vs acte vs rapport) | Moyen | Vérification ponctuelle si la situation appelle déjà une décision formalisée |
+| Base légale envisagée pour une éventuelle décision (étape 5) | Élevé | À vérifier — jamais tranchée ici, renvoi `pouvoirs-police.md` / `reglementation-appliquee.md` |
+| Pertinence et exhaustivité des options présentées | Moyen | Stable sur le principe (au moins deux options), vigilance rédactionnelle constante |
+| Qualification du risque par option (étape 8) | Élevé | À vérifier au cas par cas selon l'option |
+| Donnée manquante | Élevé | N/A — `[INCOMPLET]` obligatoire |
+| Recommandation présentée comme engageant le maire (au lieu de rester une proposition) | Élevé | Stable sur le principe — formulation à corriger systématiquement si ambiguë |
+| Option recommandée débouchant sur un acte faisant grief | Critique | Passage obligatoire par `controle-legalite.md` avant toute production de cet acte |
+
+---
+
+## 8. Checklist avant de considérer la note comme finalisée
+
+1. Garde-fou APJA testé en premier (§0, §6) : aucune « option » présentée
+   sur un fait réservé à l'OPJ.
+2. Toutes les étapes du §1 parcourues **une à une**, avec confirmation à
+   chaque étape.
+3. Au moins deux options présentées (§3), avec avantages, inconvénients et
+   risque qualifié pour chacune (§1 étape 8).
+4. Aucune donnée manquante comblée par supposition — règle `[INCOMPLET]`
+   (§4) appliquée et champs listés explicitement si nécessaire, y compris
+   le cas particulier de la base légale incertaine (§4 point 7).
+5. Base légale envisagée présentée comme **hypothèse à vérifier**, jamais
+   comme acquise ; renvoi explicite aux branches compétentes (§0, §1
+   étape 5).
+6. Recommandation clairement distinguée d'une décision : formulation
+   rappelant que la décision finale appartient au maire (§1 étape 9,
+   section V du gabarit, §3).
+7. Si une option aboutit à un acte faisant grief : section IV du gabarit
+   renseignée avec les points de fragilité identifiés via
+   `references/controle-legalite.md`, et rappel explicite que cette note
+   ne se substitue pas à l'instruction séparée de l'acte
+   (`references/templates/arrete-modele.md`).
+8. Aucune donnée nominative exposée inutilement (`SKILL.md` §7 point 11).
+9. Couple **[risque / confiance]** indiqué pour chaque option (§7), pas
+   seulement pour l'option recommandée.
+10. Mention finale claire : document **prêt à transmettre** ou **marqué
+    `[INCOMPLET]`** avec demande explicite des champs manquants — jamais
+    d'état intermédiaire ambigu.

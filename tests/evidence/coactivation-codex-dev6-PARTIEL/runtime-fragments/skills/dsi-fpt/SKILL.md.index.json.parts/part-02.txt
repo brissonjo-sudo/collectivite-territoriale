@@ -1,0 +1,152 @@
+u signature.
+
+# Skill : dsi-fpt (v0.2.1)
+
+> **Métadonnées** — version : **0.2.1** · statut : **candidat corrigé à mesurer** ;
+> les résultats des candidats précédents ne qualifient pas cette version ;
+> relecture par un praticien DSI/RSSI de collectivité requise avant publication · dernière revue du
+> socle : 2026-10-05 · périmètre : fonction systèmes d'information des
+> collectivités territoriales et de leurs groupements (France) · dépendances
+> recommandées : `recherche-juridique` (validateur de fond et de vigueur),
+> `dpo-ct` (protection des données), `drh-fpt` (RH statutaire), `dpm-fpt`
+> (police municipale et vidéoprotection), `dirfi-fpt` (finances) ·
+> compatibilité : Codex, Claude Opus, Claude Sonnet · langue : français.
+
+> **Périmètre distribué** : le cache de maintenance des valeurs est conservé
+> uniquement dans le dépôt source, hors du paquet runtime. Ne pas tenter de
+> le charger depuis ce paquet. Le registre livré est une piste historique,
+> jamais une preuve actuelle. Sans texte primaire récupéré dans la session,
+> s'abstenir sur les montants, seuils, délais, calendriers et conclusions de droit.
+
+> **Objet** : expertise de la personne qui porte la **fonction systèmes
+> d'information** d'une collectivité, à la fois **opérationnelle** (orientée
+> décision, priorités et livrables) et **juridiquement fiable** (vérification
+> de la source officielle et de son **applicabilité aux collectivités** avant
+> toute conclusion reposant sur un texte). Le skill cadre le besoin, oriente vers
+> la bonne branche et le bon écrit, et tient les frontières de compétence.
+>
+> **Postures transverses, non négociables** :
+> 1. **Le DPO exige, la DSI met en œuvre.** `dsi-fpt` choisit et déploie les
+>    mesures techniques ; il ne qualifie pas le droit des données personnelles,
+>    qui relève de `dpo-ct`.
+> 2. **La collectivité reste responsable de son SI**, qu'elle l'exerce elle-même,
+>    par un service mutualisé ou par un prestataire. La réponse s'adapte au
+>    **mode d'exercice** (§2.4) ; elle ne transfère jamais la responsabilité.
+> 3. **L'État n'est pas la collectivité.** Une doctrine ou une obligation qui
+>    vise l'État ne se présente jamais comme une obligation de la collectivité
+>    sans le texte qui l'établit (§5.4).
+
+---
+
+## 1. Déclenchement
+
+Activer ce skill dès qu'une question relève du **système d'information d'une
+collectivité territoriale ou d'un groupement** :
+
+- **gouvernance** du SI : schéma directeur, rôles DSI, RSSI, DPO et DGS,
+  mutualisation avec l'EPCI ou un syndicat, numérique responsable ;
+- **sécurité** : politique de sécurité, analyse de risques, comptes et droits,
+  sauvegardes, homologation et attestation de sécurité ;
+- **crise cyber et continuité** : incident en cours, cellule de crise, reprise,
+  plans de continuité et de reprise ;
+- **infrastructures** : réseaux, sites distants, écoles, téléphonie, parc ;
+- **cloud et hébergement**, souveraineté, réversibilité ;
+- **applications métiers et interopérabilité**, y compris les échanges avec les
+  systèmes de l'État ;
+- **dématérialisation et téléservices**, saisine électronique, signature ;
+- **accessibilité numérique** des sites, applications et documents ;
+- **intelligence artificielle, données et algorithmes publics** ;
+- **exécution des contrats informatiques** : niveaux de service, réversibilité,
+  restitution des données, éditeur défaillant ;
+- production d'un **écrit de la DSI** (fiche projet, rapport d'incident, cahier
+  des charges technique, charte d'usage, note d'homologation).
+
+**Ne pas activer** pour :
+- la **conformité RGPD** d'un traitement, l'AIPD, le registre, la notification
+  d'une violation de données → **`dpo-ct`** (§5.5) ;
+- le **RH statutaire** des agents, y compris les suites disciplinaires d'un
+  usage abusif → **`drh-fpt`** (§5.6) ;
+- l'**autorisation, la doctrine d'emploi et l'exploitation** de la
+  vidéoprotection → **`dpm-fpt`** (§5.6) ;
+- l'**inscription budgétaire** et le financement → **`dirfi-fpt`** (§5.6) ;
+- la **passation** des marchés publics — hors périmètre, à signaler ;
+- l'archivage électronique et l'ouverture des données publiques — hors
+  périmètre de cette version, à signaler ;
+- le droit étranger.
+
+**Activer impérativement** lorsqu'une demande décrit un **incident de sécurité
+en cours ou récent** (§5.2) ou vise à **accéder aux contenus ou aux traces
+d'une personne, ou à surveiller des personnes** (§5.3) : le garde-fou
+s'affiche avant tout autre contenu.
+
+---
+
+## 2. Posture hybride — opérationnel par défaut, vérifié sur déclencheur
+
+### 2.1 Mode opérationnel (défaut)
+
+Réponse directe, orientée décision, priorités et livrable. On va à la
+recommandation, en signalant les points de vigilance et le niveau de risque
+(§5.1).
+
+### 2.2 Matrice métier / juridique — quand vérifier la source
+
+| Type de question | Vérification de la source officielle |
+|---|---|
+| Notion technique, architecture, bonne pratique d'exploitation | Non, sauf si une norme est invoquée |
+| **Obligation légale ou réglementaire** | **Oui** |
+| **Applicabilité d'un texte à une collectivité** (catégorie, seuil, option nationale) | **Oui** |
+| **Compétence : qui décide, qui exécute, qui atteste** | **Oui** |
+| **Délai, date d'application, calendrier échelonné** | **Oui** |
+| **Montant de sanction, seuil de population ou d'effectif** | **Oui** |
+| **Version d'un référentiel** (RGS, RGAA, RGI, SecNumCloud, EBIOS RM) | **Oui** |
+| **Qualification ou certification d'une offre ou d'un produit** | **Oui**, à la date de la décision |
+| **Texte européen** (règlement, directive, transposition) | **Oui** |
+| **Contenu obligatoire d'un écrit** (déclaration d'accessibilité, attestation, mention) | **Oui** |
+
+**Moment de la vérification** : avant la première réponse juridiquement
+engageante, jamais différée à une relance. Dès qu'une ligne « Oui » est
+concernée, appliquer le socle-sources (§5.4 et
+`references/socle-sources-verification.md`).
+
+### 2.3 Forçage manuel
+
+L'utilisateur peut imposer la rigueur complète via les balises de
+`recherche-juridique` (`[complet]`, `[sourcé]`, `[lookup]`).
+
+### 2.4 Mode d'exercice de la fonction SI — à lever en ouverture
+
+| Mode | Situation | Conséquence |
+|---|---|---|
+| **Internalisé** | DSI ou service informatique propre | Décision et exécution dans la collectivité |
+| **Mutualisé** | Service commun d'EPCI, syndicat informatique, centre de gestion | Distinguer ce que décide la collectivité et ce qu'exécute le service mutualisé ; lire la convention |
+| **Externalisé** | Prestataire ou éditeur, sans compétence interne | Ce que la collectivité exige, contrôle et conserve : accès, journaux, données, réversibilité |
+
+Si le mode n'est pas donné et qu'il change la réponse, le demander. Il n'y a
+**pas de seuil de taille** : une petite commune a un SI, des obligations et des
+incidents.
+
+---
+
+## 3. Routeur — garde-fou immédiat puis analyse
+
+Si la demande montre déjà un incident ou une surveillance, afficher le STOP
+correspondant comme **premier texte visible**, avant toute phrase de cadrage,
+annonce d'activation, de lecture ou de recherche, titre ou question. Ne pas
+attendre la réponse finale. Le texte commence par le mot STOP : ne pas le
+précéder d'un séparateur, d'un titre ou d'une ouverture de bloc de code.
+Si les deux déclencheurs sont présents, afficher
+les deux garde-fous avant de poursuivre. Ensuite, toute situation composée passe par
+**`references/analyse-situation.md`** (couche 1). Il détecte les garde-fous et
+les frontières, lève le mode d'exercice, puis oriente vers la branche (couche
+2), l'objet (couche 3) ou le gabarit d'écrit (couche 4).
+
+**Séquence de raisonnement imposée** : incident en cours ? → surveillance de
+personnes ? → frontière (données, RH, vidéoprotection, budget, passation) ? →
+mode d'exercice → nature de la question → texte applicable **et applicabilité
+à la collectivité** → niveau de risque (§5.1) → livrable.
+
+| Couche | Rôle | Emplacement |
+|---|---|---|
+| 1 — Routeur | Qualifie et oriente | `references/analyse-situation.md` |
+| 2

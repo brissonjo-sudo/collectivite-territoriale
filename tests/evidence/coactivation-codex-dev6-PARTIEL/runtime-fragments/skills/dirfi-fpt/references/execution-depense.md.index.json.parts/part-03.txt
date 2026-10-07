@@ -1,0 +1,130 @@
+calcul des
+intérêts moratoires selon le taux en vigueur (**à vérifier**, valeur
+volatile).
+
+### 6.3 Méthode de traitement d'un rejet du comptable
+
+Lire le motif exact notifié → vérifier s'il porte sur une pièce manquante ou
+incohérente (régularisable) ou sur une irrégularité de fond (crédit
+insuffisant, créance non fondée) → si régularisable, compléter et
+retransmettre → si l'ordonnateur estime le rejet infondé, évaluer la
+réquisition (§5.3) en vérifiant d'abord qu'elle n'est pas exclue pour ce motif
+précis → documenter la décision et ses motifs.
+
+---
+
+## 7. Déclencheurs de vérification
+
+Appliquer le socle-sources (`SKILL.md` §5.4, matrice §2.2) avant de conclure
+dès que la question porte sur :
+
+- la **liste des pièces justificatives** exigibles pour une catégorie de
+  dépense précise ;
+- les **motifs de rejet** exacts du comptable et les cas **exclus de la
+  réquisition** ;
+- la **durée du délai global de paiement**, sa répartition, et le **taux des
+  intérêts moratoires** ;
+- les **limites chiffrées** applicables aux dépenses avant le vote du budget,
+  aux avances, ou au chapitre des dépenses imprévues ;
+- la **qualification d'une dépense obligatoire** dans un cas litigieux ;
+- l'**obligation de dématérialisation** (Chorus Pro, PES V2, niveau de
+  signature) applicable à une catégorie de créancier ou d'acte ;
+- le **périmètre exact** d'une convention de contrôle allégé en partenariat.
+
+---
+
+## 8. Pièges & confusions fréquentes
+
+1. Mandater sans **service fait certifié**, en anticipant une exécution
+   encore en cours, hors les cas d'avance ou d'acompte régulièrement prévus.
+2. Confondre **engagement juridique** et **engagement comptable** : les deux
+   sont distincts et doivent être concordants.
+3. Croire la **réquisition** toujours possible : certains motifs de rejet
+   l'excluent par principe (notamment l'absence de crédits disponibles).
+4. Présenter la réquisition comme **régularisant le fond** de l'irrégularité :
+   elle ne fait que transférer la responsabilité à l'ordonnateur.
+5. Oublier de **déduire une avance ou un acompte** déjà versé lors du paiement
+   final, au risque d'un double paiement.
+6. Utiliser le **chapitre des dépenses imprévues** pour une dépense
+   prévisible non budgétée par ailleurs.
+7. Considérer le **contrôle allégé en partenariat** comme une dispense des
+   règles de fond, alors qu'il ne modifie que l'intensité du contrôle a
+   priori.
+8. Laisser un agent hors régie régulièrement instituée **manier des fonds**
+   en paiement : bascule immédiate vers le garde-fou ordonnateur/comptable
+   (`SKILL.md` §5.2).
+9. Ignorer un **dépassement récurrent** du délai global de paiement au lieu
+   de le signaler comme point de contrôle interne.
+10. Citer un **délai, un taux ou un plafond** de mémoire au lieu de le
+    marquer « à vérifier ».
+
+---
+
+## 9. Données / valeurs à vérifier
+
+| Donnée | Statut |
+|---|---|
+| Durée du délai global de paiement et sa répartition ordonnateur/comptable | **À vérifier** |
+| Taux des intérêts moratoires applicables | **À vérifier** — valeur volatile |
+| Nomenclature réglementaire exacte des pièces justificatives par catégorie de dépense | **À vérifier** |
+| Liste exacte des motifs de rejet et des cas exclus de la réquisition | **À vérifier** |
+| Limite proportionnelle des dépenses d'investissement engageables avant le vote du budget | **À vérifier** |
+| Plafond du chapitre des dépenses imprévues | **À vérifier** |
+| Conditions et plafonds des avances par nature de dépense | **À vérifier** |
+| Obligation exacte de facturation par Chorus Pro selon le créancier | **À vérifier** |
+| Niveau de signature électronique exigé selon la nature de l'acte | **À vérifier** |
+| Périmètre de la convention de contrôle allégé en partenariat de la collectivité | **À vérifier**, propre à chaque collectivité |
+
+---
+
+## 10. Écrits & livrables
+
+| Écrit | Élément obligatoire | Générateur |
+|---|---|---|
+| Mandat de paiement | Pièces justificatives complètes, service fait certifié, imputation vérifiée | Circuit métier / logiciel financier, hors gabarit `templates/` |
+| Décision de réquisition du comptable | Motifs, engagement de responsabilité de l'ordonnateur, vérification préalable de non-exclusion | `references/templates/fiche-procedure-financiere.md` |
+| Note d'impact financier sur un régime dérogatoire (avant vote du budget, avance) | Hypothèses annoncées, données manquantes signalées | `references/templates/note-impact-financier.md` |
+| Fiche de procédure — circuit de la dépense, contrôle allégé en partenariat | Étapes, acteurs, points de contrôle | `references/templates/fiche-procedure-financiere.md` |
+
+---
+
+## 11. Double échelle [risque / confiance]
+
+| Sous-domaine | Risque | Confiance |
+|---|---|---|
+| Enchaînement engagement/liquidation/mandatement | Moyen | Stable dans la méthode |
+| Certification du service fait | Élevé | Stable dans le principe, habilitation à vérifier |
+| Pièces justificatives exigibles | Moyen à élevé | À vérifier par catégorie |
+| Motif de rejet et champ de la réquisition | Élevé | À vérifier avant toute réquisition |
+| Délai global de paiement et intérêts moratoires | Élevé | À vérifier, valeur volatile |
+| Dépenses avant le vote du budget | Élevé | Stable dans le principe, limite à vérifier |
+| Dépenses obligatoires non couvertes | Critique | Stable dans le principe — bascule garde-fou budgétaire |
+| Avances, acomptes | Moyen | Stable dans la méthode |
+| Régie d'avances hors cadre régulier | Critique | Bascule garde-fou ordonnateur/comptable |
+| Contrôle allégé en partenariat | Moyen | À vérifier selon la convention locale |
+
+---
+
+## 12. Checklist de branche
+
+1. **Garde-fou ordonnateur/comptable (`SKILL.md` §5.2)** testé : un agent
+   manie-t-il des fonds hors régie régulièrement instituée ? Si oui, STOP
+   affiché avant tout contenu métier.
+2. **Garde-fou budgétaire (`SKILL.md` §5.3)** testé : une dépense obligatoire
+   est-elle non couverte par des crédits suffisants ?
+3. **Trois temps de l'ordonnateur** respectés dans l'ordre, avant tout
+   mandatement recommandé ?
+4. **Service fait** certifié par une personne habilitée avant liquidation ?
+5. **Pièces justificatives** de la catégorie de dépense vérifiées, non
+   présumées ?
+6. Si rejet en cause : **motif exact** identifié et **champ de la
+   réquisition** vérifié avant toute recommandation de réquisition ?
+7. **Délai global de paiement** traité comme donnée à vérifier, jamais
+   chiffré de mémoire ?
+8. Si dépense avant le vote du budget : **autorisation expresse** de
+   l'assemblée vérifiée pour l'investissement ?
+9. Si avance ou acompte : **déduction lors du paiement final** rappelée ?
+10. Renvoi fait vers `objets/regie.md` pour le détail opérationnel d'une régie
+    d'avances, sans duplication ?
+11. Couple **[risque / confiance]** (§11) indiqué quand utile à la décision ?
+12. **Écrit** demandé effectivement produit ?

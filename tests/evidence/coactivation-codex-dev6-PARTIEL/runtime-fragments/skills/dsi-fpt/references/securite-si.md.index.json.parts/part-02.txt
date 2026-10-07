@@ -1,0 +1,93 @@
+ueillir de données identifiantes.
+2. Rapprocher inventaire, droits, maintenance et sauvegardes ; identifier les
+   écarts qui rendent une reprise impossible ou exposent l'administration.
+3. Recueillir les exigences du DPO et des métiers **avant** de choisir et
+   valider les mesures. Un avis tardif impose leur réexamen et, si nécessaire,
+   une nouvelle validation. Proposer des actions ordonnées par réduction du risque, dépendances et
+   capacité d'exploitation ; attribuer chacune à un acteur.
+4. Faire décider les exceptions : justification, compensation, responsable,
+   condition de réexamen. Un silence n'est pas une acceptation.
+5. Vérifier les mesures par une preuve adaptée : revue de droits, état de
+   maintenance, restauration autorisée, contrôle des accès prestataires.
+6. Mettre à jour le dossier et déclencher son réexamen après un changement
+   important. Les délais légaux éventuels se vérifient à la source.
+
+Pour l'homologation, délimiter le système, vérifier le champ du texte,
+réunir l'analyse et les preuves, instruire les risques résiduels puis
+soumettre le dossier à l'autorité compétente. Ne pas promettre une
+homologation sur une simple checklist technique.
+
+## 7. Déclencheurs de vérification
+
+Appliquer `references/socle-sources-verification.md` dès qu'une réponse
+conclut à une obligation, désigne un signataire, invoque le RGS, une
+qualification, un calendrier ou une sanction. Vérifier la transposition
+française et ses catégories à la date de la demande avant toute conclusion
+fondée sur NIS2. Ne figer ni « applicable » ni « non transposée » : vérifier
+les textes publiés, l'entité et le service concernés. Sans source récupérée,
+s'abstenir sur le statut et l'applicabilité ; une incise ne fait pas exception.
+
+Toute qualification revendiquée se vérifie sur la source ANSSI pour l'offre
+exacte, à la date de la décision. Le périmètre d'un certificat ne se déduit
+pas du nom du fournisseur.
+
+## 8. Pièges et confusions fréquentes
+
+- Présenter toutes les recommandations d'hygiène comme du droit positif.
+- Dire que toutes les collectivités sont soumises à NIS2 sans texte applicable.
+- Confondre audit favorable, qualification de produit et décision d'homologation.
+- Confier au prestataire l'acceptation des risques de la collectivité.
+- Retirer un compte technique sans identifier les services qui en dépendent.
+- Assimiler sauvegarde réussie et restauration réussie.
+- Justifier une extraction nominative par le seul objectif de sécurité :
+  le garde-fou `SKILL.md` §5.3 reste préalable.
+- Donner des instructions de remise en état à partir d'un signal d'incident
+  sans afficher d'abord `SKILL.md` §5.2.
+
+## 9. Données et valeurs à vérifier
+
+Consulter `references/references-verifiees.md` pour le champ du RGS,
+l'attestation et les catégories éventuellement soumises à un régime cyber.
+Vérifier la version du RGS, du guide d'hygiène et d'EBIOS Risk Manager,
+la validité et le périmètre des qualifications, les délais de réexamen
+invoqués et les calendriers de transposition. Le cache de maintenance est hors
+du paquet runtime : ne pas le charger ni en recopier les valeurs. Retourner
+à la source officielle.
+
+## 10. Écrits et livrables
+
+- PSSI : périmètre, responsabilités, règles d'accès, protection, contrôle,
+  exceptions et réexamen ; distinguer exigences textuelles et choix internes.
+- Plan de traitement : risque, action, responsable, dépendances, preuve et
+  décision sur l'écart restant.
+- Dossier d'homologation : périmètre, analyse, preuves, risques résiduels,
+  décision attendue → `references/templates/note-homologation.md`.
+- Exigences de sécurité à mettre en œuvre par un prestataire →
+  `references/templates/cahier-des-charges-technique.md`, puis
+  `references/contrats-prestataires.md` pour leur exécution.
+- Règles d'usage et d'alerte → `references/templates/charte-usage-si.md`.
+
+Ne qualifier un élément d'« obligatoire » qu'après vérification de son
+fondement et de son applicabilité. Les choix de contenu ci-dessus sont des
+repères opérationnels, pas un inventaire légal présumé.
+
+## 11. Double échelle [risque / confiance]
+
+Appliquer `SKILL.md` §5.1. Organisation préventive sans texte invoqué :
+**[moyen / stable]** si le périmètre est connu. Droits privilégiés,
+sauvegardes d'un service essentiel ou mise en production : risque **élevé**,
+confiance **à vérifier** sans preuves. Attestation engageante ou incident :
+risque **critique** selon l'enjeu ; ne pas trancher si la compétence, la
+source ou le constat reste douteux. La simplicité technique ne réduit pas
+l'enjeu.
+
+## 12. Checklist de branche
+
+- [ ] Garde-fous `SKILL.md` §5.2 et §5.3 testés et affichés en premier si déclenchés.
+- [ ] Frontières `dpo-ct` et `drh-fpt` tenues sans développement.
+- [ ] Mode d'exercice, service et responsabilité de la collectivité explicités.
+- [ ] Obligation distinguée de doctrine ; champ RGS et compétence vérifiés.
+- [ ] Qualification contrôlée sur l'offre exacte ; aucune présomption NIS2.
+- [ ] Action prioritaire, responsable, preuve et risque résiduel indiqués.
+- [ ] Aucune donnée nominative, aucun secret, aucun mode offensif.
+- [ ] Chemins des branches, objets et gabarits nommés là où ils sont mobilisés.

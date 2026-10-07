@@ -1,0 +1,122 @@
+chiffrée** sans vérifier l'arrêté
+   préfectoral applicable et la version en vigueur du plafond légal.
+5. Oublier que la **réquisition judiciaire** suspend la destruction : une
+   destruction automatique sur images sous procédure expose à un risque
+   pénal/disciplinaire — coordonner avec `penal-procedure.md`.
+6. Présumer la légalité d'un **traitement algorithmique additionnel**
+   (reconnaissance faciale, LAPI) du seul fait de l'autorisation
+   vidéoprotection existante : fondement distinct à vérifier.
+7. Traiter le sujet **RGPD/AIPD** dans cette branche au lieu de renvoyer à
+   `conformite-deontologie-donnees.md`.
+8. Oublier le **droit d'accès** des personnes filmées et ses motifs de refus
+   limitatifs (§4.8) lors d'une demande administrée.
+9. Exploiter le CSU au-delà de la simple **constatation et transmission**
+   (analyse, rapprochement actif) sans en mesurer la portée au regard du
+   garde-fou APJA (§5.2 SKILL.md).
+
+---
+
+## 8. Données / références à vérifier
+
+**Vérifiées sur Légifrance le 30/06/2026** (à recontrôler en version
+consolidée avant tout acte, car ce titre évolue fréquemment) :
+- **Art. L. 251-1 CSI** — disposition générale, identifiant Légifrance
+  LEGIARTI000047569469.
+- **Art. L. 251-2 CSI** — finalités légales et cas « commerçants »,
+  identifiant Légifrance LEGIARTI000041599395 (version relevée ; vérifier la
+  version applicable à la date des faits).
+- **Art. L. 252-1 CSI** — autorisation préfectorale et commission
+  départementale (référence de section confirmée ; identifiant LEGIARTI
+  précis de la version en vigueur à relever à nouveau au moment de l'usage).
+- **Art. L. 252-2 CSI** — conditions de visionnage et d'habilitation,
+  identifiant Légifrance LEGIARTI000047569434.
+- **Art. L. 252-3 CSI** — accès et transmission des enregistrements,
+  identifiant Légifrance LEGIARTI000043540807.
+- **Art. L. 252-5 CSI** — **destruction des enregistrements, délai maximum
+  d'un mois**, identifiant Légifrance LEGIARTI000025505435 (le plafond de
+  conservation relève de cet article, pas de L. 252-3).
+- **Art. L. 253-5 CSI** — droit d'accès des personnes filmées, identifiant
+  Légifrance LEGIARTI000038791144 (version en vigueur depuis le **21/05/2023**,
+  loi n° 2023-380 — *reconfirmé sur Légifrance le 2026-07-01* ; revérifier la
+  version en vigueur avant citation dans un acte).
+
+**Non vérifiées dans cette session — à confirmer en version consolidée avant
+usage** :
+- Partie réglementaire (articles R. 251 et s., R. 252 et s., R. 253 et s.) :
+  composition de la commission départementale, pièces du dossier de demande,
+  délais d'instruction.
+- Décret d'application le plus récent du régime (vu en résultat de recherche :
+  un décret de 2023 modifiant le régime vidéoprotection et caméras
+  aéroportées — **ne pas citer son numéro ou sa date de mémoire**, le
+  revérifier et le viser explicitement s'il est mobilisé dans un acte).
+- Durée précise du plafond légal de conservation et durée de validité de
+  l'autorisation (chiffres non confirmés dans cette session).
+- Régime des caméras individuelles et des drones (hors périmètre, fondement
+  distinct à vérifier séparément si la question se pose).
+
+---
+
+## 9. Écrits & livrables
+
+1. **Dossier de demande d'autorisation préfectorale** — pièces réglementaires
+   à vérifier ; produire un brouillon `[INCOMPLET]` si une pièce manque
+   (finalité, plan, périmètre, durée de conservation envisagée).
+2. **Note au maire** — opportunité d'un projet de vidéoprotection, choix de
+   la finalité, articulation avec le CSU existant → gabarit
+   `references/templates/note-maire-modele.md`.
+3. **Arrêté municipal connexe** (le cas échéant : réglementation d'usage
+   interne, organisation du CSU) — **acte faisant grief** seulement s'il
+   affecte des droits individuels ; sinon acte d'organisation interne.
+   Vérifier dans tous les cas via `controle-legalite.md` avant production.
+4. **Fiche de procédure CSU** (habilitations, traçabilité, modalités de
+   transmission aux forces de l'État) — articuler avec la convention de
+   coordination → `continuum-partenariats.md`.
+5. **Réponse à une demande d'accès aux images** (art. L. 253-5) — motiver tout
+   refus par l'un des motifs légaux limitatifs ; sinon accès de droit.
+6. **Volet RGPD/AIPD du projet** (registre, analyse d'impact, mentions
+   d'information) → ne pas produire ici, renvoyer à
+   `conformite-deontologie-donnees.md`.
+
+---
+
+## 10. Double échelle [risque / confiance]
+
+| Sous-domaine | Risque | Confiance | Repère |
+|---|---|---|---|
+| Existence du régime d'autorisation préfectorale | Élevé | Stable | Principe constant (§4.1) |
+| Liste des finalités légales | Élevé | À vérifier | Modifications législatives fréquentes (§4.2) |
+| Durée précise de conservation (chiffre) | Élevé | À vérifier | Valeur réglementaire, jamais de mémoire (§4.5, §9) |
+| Habilitation individuelle de visionnage | Élevé | Stable dans le principe | Modalités précises selon arrêté (§4.6) |
+| Droit d'accès des personnes filmées | Moyen | Stable | Motifs de refus limitatifs (§4.8) |
+| Dispositifs algorithmiques additionnels (LAPI, reconnaissance faciale) | Critique | À vérifier / débattu | Fondement distinct, contentieux sensible |
+| Articulation avec procédure judiciaire en cours | Critique | Stable dans le principe | Coordination obligatoire avec `penal-procedure.md` |
+
+---
+
+## 11. Checklist de branche
+
+1. Le système relève-t-il bien du **CSI Titre V** (voie publique / lieu
+   ouvert au public), et non d'un autre régime (locaux fermés, caméra
+   individuelle, drone) ?
+2. **Autorité compétente** correctement identifiée : préfet (préfet de police
+   à Paris), pas le maire — sauf cas « commerçants » (information du maire) ?
+3. **Finalité légale** précisément qualifiée et cohérente avec le projet ?
+4. **Durée de conservation** et **modalités de visionnage** renvoyées à
+   l'arrêté préfectoral applicable, jamais affirmées de mémoire ?
+5. **Habilitations individuelles** des agents du CSU vérifiées et tracées ?
+6. **Réquisition judiciaire en cours** détectée avant toute destruction
+   d'images → coordination `penal-procedure.md` ?
+7. **Garde-fou APJA (§5.2 SKILL.md)** testé si l'exploitation du CSU dépasse
+   la simple constatation/transmission ?
+8. **Volet RGPD/AIPD** renvoyé à `conformite-deontologie-donnees.md`, pas
+   traité ici ?
+9. **Droit d'accès** d'une personne filmée traité avec un motif de refus
+   limitatif si refus opposé ?
+10. Si **acte produit** (arrêté, note) : passage par `controle-legalite.md`,
+    motivation et voies de recours si acte faisant grief ?
+11. Toute référence d'article assortie de sa réserve « à confirmer en version
+    consolidée » sauf vérification explicite de cette session (§9) ?
+
+[risque : élevé sur le principe d'autorisation et les durées de conservation /
+confiance : stable sur l'architecture générale, à vérifier sur les valeurs
+chiffrées et les évolutions réglementaires récentes]

@@ -1,0 +1,142 @@
+amment dans le cadre d'une convention de partenariat, §5.5) et la
+  démarche de contrôle interne (§5.6). Ne jamais présenter un taux ou un
+  délai précis comme acquis sans l'avoir vérifié dans les données
+  effectivement disponibles de la collectivité.
+
+### 5.10 Relations avec les satellites et contrôle des organismes subventionnés
+
+- Un **satellite** (association, SEM, SPL, budget annexe, CCAS) qui gère
+  des fonds ou des missions pour le compte de la collectivité appelle une
+  vigilance particulière : vérifier que les flux respectent le circuit du
+  comptable public et ne contournent pas la séparation ordonnateur/comptable
+  (renvoi `../objets/satellites.md`).
+- Le **contrôle des organismes subventionnés** (justification de l'emploi
+  des fonds, compte rendu financier, contrôle sur place) relève de
+  `references/subventions.md` pour le fond ; cette branche n'en traite que
+  l'angle du **contrôle interne** (traçabilité des versements, absence de
+  confusion entre subvention et achat de prestation).
+
+---
+
+## 6. Calculs et procédures
+
+1. **Cycle rejet / régularisation** : contrôle du comptable → motif de
+   rejet notifié et précis → correction par l'ordonnateur → nouvelle
+   présentation. Documenter chaque itération.
+2. **Réquisition** : constater le rejet → vérifier que le motif n'entre pas
+   dans les cas d'exclusion (§5.4) → établir l'acte écrit et motivé →
+   notifier au comptable → tracer l'accusé de réception et l'effet sur la
+   responsabilité respective.
+3. **Cartographie des risques** : lister les processus → identifier les
+   points de vulnérabilité → coter probabilité et impact → prioriser →
+   décliner en plan d'action daté et attribué.
+4. **Habilitations SI financier** : établir la matrice fonctions/droits
+   souhaitée à partir de la séparation des tâches définie → comparer aux
+   habilitations réellement actives → corriger les écarts → revoir
+   périodiquement.
+5. **Détection d'une gestion de fait potentielle** : identifier le signal
+   d'alerte → appliquer immédiatement le garde-fou (`SKILL.md` §5.2) →
+   qualifier la voie de régularisation possible (régie) ou l'absence de
+   voie régulière → orienter vers le comptable assignataire.
+
+---
+
+## 7. Déclencheurs de vérification
+
+Appliquer le socle-sources (matrice §2.2 du `SKILL.md`) dès que :
+- la **procédure exacte de réquisition** (forme, délai, cas d'exclusion)
+  doit être appliquée à un cas concret ;
+- le **périmètre exact** d'une convention de partenariat DGFiP ou du
+  contrôle hiérarchisé de la dépense est invoqué pour justifier un niveau
+  de contrôle allégé ;
+- la **version en vigueur** du protocole d'échange dématérialisé (PES V2 ou
+  successeur) ou le niveau exigé de signature électronique est en cause ;
+- un **délai** (régularisation, archivage, conservation de pièces) est
+  invoqué pour justifier une décision ;
+- un signal d'alerte de **gestion de fait** est identifié : la
+  vérification porte alors sur la voie de régularisation, jamais sur une
+  tentative de justifier le montage en l'état.
+
+---
+
+## 8. Pièges & confusions fréquentes
+
+1. Croire que le comptable peut apprécier l'**opportunité** d'une dépense :
+   son contrôle porte sur la **régularité**, pas sur le fond politique.
+2. Considérer la réquisition comme un moyen systématique de **passer
+   outre** un rejet, sans vérifier les cas où le comptable doit refuser de
+   déférer (§5.4).
+3. Penser qu'une **convention de partenariat** ou un contrôle hiérarchisé
+   de la dépense **supprime** le contrôle du comptable : il en module
+   seulement l'intensité.
+4. Négliger la **traçabilité** des habilitations dans le système
+   d'information financier lors d'un changement de poste ou de service.
+5. Considérer la **dématérialisation** comme une garantie suffisante de
+   régularité, sans contrôle de fond sur le service fait.
+6. Ne pas reconnaître un **signal de gestion de fait** parce que le montage
+   est présenté comme temporaire, exceptionnel ou motivé par l'urgence.
+7. Confondre le **contrôle interne** de la collectivité sur un satellite ou
+   un organisme subventionné avec le contrôle de fond de la subvention
+   elle-même (renvoi `references/subventions.md`).
+8. Traiter une anomalie de **qualité comptable** comme un simple indicateur
+   statistique sans l'intégrer à la cartographie des risques.
+
+---
+
+## 9. Données / valeurs à vérifier
+
+- **Jamais de mémoire** : forme et délai exacts de la réquisition, liste
+  précise des motifs de rejet exclus de son champ, seuils du contrôle
+  hiérarchisé de la dépense, version en vigueur du protocole d'échange
+  dématérialisé, durée de conservation et modalités d'archivage des pièces
+  justificatives, niveau exigé de signature électronique selon l'acte.
+- **Références structurelles stables, citables avec la réserve « à
+  confirmer en version consolidée »** : le **décret GBCP**, pour le
+  principe de séparation et le cadre des contrôles ; le **code des
+  juridictions financières**, pour la responsabilité du comptable et la
+  gestion de fait (fond détaillé dans `references/contentieux-financier.md`) ;
+  les textes relatifs aux **pièces justificatives** exigibles par catégorie
+  de dépense.
+- **Aucun numéro d'article ni identifiant Légifrance
+  (LEGIARTI/JORFTEXT/NOR)** n'est cité de mémoire dans cette branche : à
+  défaut de vérification dans la session, s'en tenir au nom du texte et à
+  la réserve.
+
+---
+
+## 10. Écrits & livrables
+
+| Écrit | Nature | Compétence | Générateur / renvoi |
+|---|---|---|---|
+| Ordre de réquisition du comptable | Acte décisionnel de l'ordonnateur | Exécutif (ordonnateur) | Hors générateurs couche 4 à ce stade ; motivation et traçabilité selon §5.4 |
+| Fiche de procédure interne (cartographie des risques, plan d'action, habilitations SI) | Écrit de procédure | DirFi | `references/templates/fiche-procedure-financiere.md` |
+| Note d'impact financier sur une convention de partenariat DGFiP | Écrit de pilotage | DirFi | `references/templates/note-impact-financier.md` |
+| Convention de partenariat avec la DGFiP (SCF, contrôle allégé) | Écrit conventionnel | Exécutif, après validation de l'assemblée si requis | Convention spécifique, cf. `references/ecrits-financiers.md` §10 |
+| Compte rendu de contrôle interne (cartographie actualisée, suivi du plan d'action) | Écrit de pilotage | DirFi | `references/templates/note-impact-financier.md` ou fiche interne selon destinataire |
+
+---
+
+## 11. Double échelle [risque / confiance]
+
+| Sous-domaine | Risque | Confiance | Repère |
+|---|---|---|---|
+| Principe de séparation ordonnateur/comptable | Critique | Stable sur le principe | Rappel systématique, aucune exception construite |
+| Procédure de réquisition | Élevé | À vérifier (forme, délai, cas d'exclusion) | Citation obligatoire avant mise en œuvre |
+| Contrôle allégé en partenariat / CHD | Moyen | À vérifier selon la convention en vigueur | Vérification ponctuelle du périmètre exact |
+| Dématérialisation (PES, signature électronique, archivage) | Moyen à élevé selon l'acte | À vérifier | Citation de la version en vigueur avant affirmation |
+| Signal de gestion de fait | Critique | Stable sur la conduite à tenir | STOP immédiat, aucune exception (`SKILL.md` §5.2) |
+| Qualité comptable et indicateurs | Faible à moyen | Stable sur la méthode, à vérifier sur les données | Vérification des données réelles avant tout chiffre |
+| Contrôle des satellites et organismes subventionnés | Moyen à élevé | À vérifier selon la nature du satellite | Renvoi systématique aux branches de fond |
+
+---
+
+## 12. Checklist de branche
+
+1. **Séparation ordonnateur/comptable** rappelée et respectée dans toute
+   recommandation, sans aucune exception construite ?
+2. **Signal de gestion de fait** testé explicitement (§5.8) ? Si présent,
+   **STOP** (`SKILL.md` §5.2) affiché avant tout autre contenu, aucune
+   voie alternative construite hors régie régulière.
+3. **Contrôles du comptable** (dépense, recette) correctement distingués
+   d'une appréciation d'opportunité ?
+4. En cas de **rejet** : motif précis identifié

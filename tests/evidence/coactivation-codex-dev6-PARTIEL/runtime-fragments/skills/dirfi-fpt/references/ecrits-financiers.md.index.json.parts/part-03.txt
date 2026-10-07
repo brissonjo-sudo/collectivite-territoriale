@@ -1,0 +1,106 @@
+e** et la
+   **délibération actant le débat** : deux formalités distinctes,
+   toutes deux nécessaires.
+3. Halluciner un **montant ou une imputation manquante** plutôt que de
+   marquer `[INCOMPLET]` et de la demander.
+4. Laisser un **écart de montant** entre le corps d'un écrit et son
+   annexe sans le corriger avant transmission.
+5. Omettre la **motivation en fait et en droit** ou les **voies de
+   recours** d'un acte faisant grief.
+6. Rédiger le détail des **effectifs ou du régime indemnitaire** dans un
+   rapport d'orientation budgétaire au lieu de basculer vers `drh-fpt`.
+7. Exposer une **donnée nominative** non nécessaire à la nature de l'acte.
+8. Traiter une **note d'impact financier** comme un acte juridique
+   engageant, alors qu'elle n'est qu'un écrit de pilotage.
+9. Oublier le passage par `references/controle-budgetaire.md` avant de
+   produire un acte soumis au contrôle de légalité.
+
+---
+
+## 9. Données / valeurs à vérifier
+
+- **Jamais de mémoire** : délai de transmission au contrôle de légalité
+  d'une délibération budgétaire, fiscale ou de garantie ; seuil
+  démographique déclenchant le rapport d'orientation budgétaire et son
+  contenu renforcé (effectifs) ; délais et voies de recours exacts d'un
+  acte faisant grief ; niveau de vote budgétaire exact (chapitre ou
+  article) selon le régime applicable.
+- **Références structurelles stables, citables avec la réserve « à
+  confirmer en version consolidée »** : le **CGCT**, pour les dispositions
+  relatives aux délibérations budgétaires et fiscales, au débat
+  d'orientation budgétaire et au contrôle de légalité ; l'**instruction
+  budgétaire et comptable M57**, pour la présentation formelle des actes
+  budgétaires.
+- **Aucun numéro d'article ni identifiant Légifrance
+  (LEGIARTI/JORFTEXT/NOR)** n'est cité de mémoire dans cette branche : à
+  défaut de vérification dans la session, s'en tenir au nom du texte et à
+  la réserve.
+
+---
+
+## 10. Écrits & livrables — routage vers les générateurs
+
+| Écrit | Catégorie | Générateur |
+|---|---|---|
+| Délibération budgétaire, fiscale ou de garantie d'emprunt | Acte décisionnel | `references/templates/deliberation-budgetaire.md` |
+| Rapport d'orientation budgétaire | Écrit de pilotage | `references/templates/rapport-orientation-budgetaire.md` |
+| Note d'impact financier / note de cadrage budgétaire | Écrit de pilotage | `references/templates/note-impact-financier.md` |
+| Convention de subvention | Écrit conventionnel | `references/templates/convention-subvention.md` |
+| Fiche de procédure financière | Écrit de procédure | `references/templates/fiche-procedure-financiere.md` |
+
+**Écrits sans générateur dédié** (certificat administratif, état de
+mandatement, convention financière hors subvention) : appliquer la même
+logique interactive (§5.6) et les mêmes règles de rédaction (§5.7), en
+s'appuyant sur la branche de fond concernée pour les mentions obligatoires
+exactes.
+
+**Rappel** (`SKILL.md` §6) : détecter le type d'écrit → poser les
+questions une à une → assembler le document ; ne jamais halluciner une
+donnée manquante, brouillon `[INCOMPLET]` sinon.
+
+---
+
+## 11. Double échelle [risque / confiance]
+
+| Sous-domaine | Risque | Confiance | Repère |
+|---|---|---|---|
+| Choix du bon type d'écrit | Moyen | Stable | Vérification ponctuelle si situation mixte |
+| Compétence de l'autorité signataire ou délibérante | Élevé | À vérifier systématiquement | Citation obligatoire avant production |
+| Mentions obligatoires d'un acte décisionnel | Élevé | À vérifier selon le type d'acte | Citation + vérification avant transmission |
+| Délai de transmission au contrôle de légalité | Élevé | À vérifier | Abstention si délai non confirmé |
+| Acte faisant grief (motivation, voies de recours) | Critique | À vérifier systématiquement | Citation + motivation + voies de recours obligatoires |
+| Donnée manquante dans un écrit | Élevé | N/A | `[INCOMPLET]` obligatoire, jamais d'hallucination |
+| Volet effectifs d'un rapport d'orientation budgétaire | Élevé | Bascule `drh-fpt` obligatoire au-delà du montant global | Bloc BASCULE avant tout contenu statutaire |
+
+---
+
+## 12. Checklist de branche
+
+1. **Garde-fous testés** (`SKILL.md` §5.2, §5.3) : l'opération sous-jacente
+   à l'écrit fait-elle manier des fonds hors circuit du comptable, ou
+   exécute-t-elle un acte irrégulier ? Si oui, STOP ou ALERTE affiché
+   avant toute production.
+2. **Type d'écrit correctement identifié** selon la typologie (§5.1),
+   cumul d'écrits signalé si l'opération est complexe.
+3. **Compétence** de l'autorité (assemblée / exécutif / DirFi / service)
+   vérifiée et non supposée.
+4. **Mentions obligatoires** toutes présentes pour le type d'écrit
+   concerné (§5.2 à §5.5).
+5. **Aucune donnée manquante comblée par supposition** : règle
+   `[INCOMPLET]` appliquée et champs listés explicitement (§5.6).
+6. **Cohérence des montants** entre le corps et les annexes vérifiée
+   avant transmission (§5.7).
+7. **Acte faisant grief** : motivation en fait et en droit, voies et
+   délais de recours présents, passage par
+   `references/controle-budgetaire.md` effectué.
+8. **Aucune donnée nominative** exposée au-delà de ce que la nature de
+   l'acte impose.
+9. **Volet effectifs ou régime indemnitaire** : bloc BASCULE `drh-fpt` émis
+   avant tout contenu statutaire, `drh-fpt` nommé explicitement, si le
+   seuil de bascule est atteint.
+10. **Fond métier** de chaque domaine renvoyé à la branche compétente, non
+    improvisé dans cette branche.
+11. Toute référence citée porte-t-elle sa provenance ou la réserve « à
+    confirmer en version consolidée » (§9) ?
+12. Couple **[risque / confiance]** (§11) indiqué quand utile à la
+    décision ?

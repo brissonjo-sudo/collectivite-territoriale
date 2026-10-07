@@ -1,0 +1,54 @@
+{
+  "case_id": "plugin-dsi-reouverture",
+  "agent": "/root/juge_codex_dev6_r1_10b",
+  "exported_at": "2026-10-07T21:39:03.951944+00:00",
+  "packet_sha256": "98cd75c454ffab862848930d5d090ac6c66ae8d159c8b24f088ecf98a04d5023",
+  "response_sha256": "0fe343ac0a471cce362a69b9ce1048487f877bab2f5acf5ee1f61799cf1d13cb",
+  "prompt_sha256": "453fd454d4bdb7eefd8f1e322d3cffbac1f0ecfca45a56f472fb7216991702b5",
+  "fragments": [
+    {
+      "number": 1,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-dsi-reouverture-b/fragment-01.txt",
+      "sha256": "632fbc686bc84f5f49719e48904939a730531fb2781a868c55bb4dba1b6c9fee",
+      "character_count": 8000
+    },
+    {
+      "number": 2,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-dsi-reouverture-b/fragment-02.txt",
+      "sha256": "733b641c277aa00bb8077fe8145d79a1390fdc449fc3910a2ba5b0d15b34e3bd",
+      "character_count": 8000
+    },
+    {
+      "number": 3,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-dsi-reouverture-b/fragment-03.txt",
+      "sha256": "1ca47c0c732f907819fb074cb071ed21c8a6929aa1d298442c91eac648a50b11",
+      "character_count": 8000
+    },
+    {
+      "number": 4,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-dsi-reouverture-b/fragment-04.txt",
+      "sha256": "0cedaa71eeb01a079893dfaeb9b4d5ce6a65e02fbb7c2de74b5aece56b77eadf",
+      "character_count": 8000
+    },
+    {
+      "number": 5,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-dsi-reouverture-b/fragment-05.txt",
+      "sha256": "0b18c539532dc1eef7ea8819b2150b13af5b4132e6ef201e0f07594097f8fcba",
+      "character_count": 8000
+    },
+    {
+      "number": 6,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-dsi-reouverture-b/fragment-06.txt",
+      "sha256": "e007fce2fbd73af55c4b6216f79f6395fa6c2d20d410f6646738aebda9445e0c",
+      "character_count": 1115
+    }
+  ],
+  "judge_adapter_sha256": "60fdc580620f8c4d5ee950c5f1a3678b57b5a5c9db29f80557941db3df2a9c3e",
+  "campaign_adapter_sha256": "fe7b71c349834fe1623a26183ad78bad9978ab3d93855c1a44fcc70e0db52b4d",
+  "presentation_wrapper_sha256": "e7573fe2e5d43a5efc70431f8fa50e172b2a91f96b5037502b9c68218c4948f9",
+  "suite_sha256": "3c45e6117c25cbca0558de2955ca5a7d80956575d886a887d1cdfdc581375cd8",
+  "protocol_sha256": "65f78f419679774ec00c6b5d96b1801f902c6510b57e221ae7ebb31320fd1b6f",
+  "historical_scores_reused": false,
+  "activation_kind": "file_read_fragments",
+  "actual_plugin_activation_verified": false
+}

@@ -1,0 +1,69 @@
+valeurs locatives**
+  — valeur volatile, propre à chaque exercice.
+- **Tarifs de la taxe de séjour, de la TLPE et de la TEOM** — valeurs
+  votées localement, à vérifier délibération par délibération.
+- **Date limite annuelle de vote des taux et des tarifs** — fixée chaque
+  année, à revérifier systématiquement.
+- **Seuils et conditions d'éligibilité aux exonérations facultatives et de
+  droit** — à vérifier avant toute délibération ou toute simulation.
+- **Modalités précises de composition et de désignation de la CCID** — à
+  vérifier avant toute description opérationnelle.
+- **Règles de majorité pour la révision de l'attribution de compensation**
+  — à vérifier avant toute procédure.
+- **Jurisprudence relative à la requalification d'une AC ou à un
+  contentieux fiscal** — relève de `recherche-juridique` en cas de doute.
+
+---
+
+## 10. Écrits & livrables
+
+1. **Délibération fiscale** (vote des taux, institution ou modification d'un
+   tarif, exonération facultative) — utiliser le gabarit de
+   `templates/deliberation-budgetaire.md` en l'adaptant à l'objet fiscal ;
+   vérifier la compétence, les mentions obligatoires et la transmission au
+   contrôle de légalité (`controle-budgetaire.md`).
+2. **Note d'impact financier** (simulation d'une variation de taux, effet
+   d'une exonération nouvelle, révision d'une attribution de compensation)
+   → `templates/note-impact-financier.md`.
+3. **Fiche de procédure financière** (exploitation de l'état fiscal notifié,
+   contrôle des rôles supplémentaires) → `templates/fiche-procedure-financiere.md`.
+4. **Réponse à réclamation ou signalement de contentieux fiscal** : aucun
+   générateur dédié dans le socle actuel — signaler l'absence de gabarit et
+   construire la réponse au cas par cas, en orientant le contribuable vers
+   la voie de réclamation fiscale compétente.
+
+---
+
+## 11. Double échelle [risque / confiance]
+
+| Sous-domaine | Risque | Confiance |
+|---|---|---|
+| Vote annuel des taux dans le délai | Élevé (nullité ou reconduction en cas d'erreur) | Stable dans son principe, délai à vérifier chaque exercice |
+| Règle de lien entre les taux | Moyen à élevé | Stable dans son principe, modalités d'assouplissement à vérifier |
+| Exonération facultative | Moyen | À vérifier (portée et durée par délibération) |
+| Exonération de droit et compensation | Moyen à élevé | À vérifier (régime de compensation évolutif) |
+| Attribution de compensation et CLECT | Élevé | Stable dans son principe, règles de révision à vérifier |
+| Contentieux fiscal et dégrèvement | Moyen | Stable dans son principe (hors compétence de la collectivité) |
+| Exploitation de l'état fiscal notifié | Faible à moyen | Stable |
+
+---
+
+## 12. Checklist de branche
+
+1. Imposition exactement qualifiée et distinguée d'une redevance non fiscale
+   (§3, §8 piège 4) ?
+2. Strate bénéficiaire et autorité compétente identifiées sans confusion ?
+3. Règle de lien testée avant toute simulation de variation différenciée de
+   taux (§5.3) ?
+4. Exonération qualifiée comme facultative ou de droit, régime de
+   compensation précisé ou signalé à vérifier (§5.5) ?
+5. Aucun taux, tarif, coefficient ou montant énoncé sans vérification ou
+   sans réserve explicite (§9) ?
+6. Attribution de compensation distinguée de la dotation de solidarité
+   communautaire, renvoi fait à `dotations-perequation.md` si pertinent ?
+7. Dégrèvement traité comme relevant de l'administration fiscale, pas de la
+   collectivité ?
+8. Écrit demandé produit via le gabarit approprié, ou absence de gabarit
+   signalée explicitement (§10) ?
+9. Délai de vote et calendrier fiscal signalés comme « à vérifier », jamais
+   donnés de mémoire ?

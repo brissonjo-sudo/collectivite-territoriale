@@ -1,0 +1,93 @@
+isation ou contribution obligatoire** à
+   un groupement (nature juridique distincte).
+5. Oublier le **contrôle de l'emploi des fonds** et la **clause de
+   reversement** dans la convention.
+6. Sous-estimer l'**encadrement des aides économiques** aux entreprises et
+   la compétence de principe de la **région**.
+7. Attribuer une subvention à une **personne privée** sans motif d'intérêt
+   général objectivable, au risque d'une rupture d'égalité de traitement.
+8. Citer un **seuil de conventionnement ou un taux d'autofinancement
+   minimal de mémoire**.
+9. Oublier le **délai de caducité** d'une subvention reçue notifiée mais non
+   engagée.
+
+---
+
+## 9. Données / valeurs à vérifier
+
+- **Code général des collectivités territoriales (CGCT)** — compétence de
+  l'assemblée délibérante, régime général des subventions (« à confirmer en
+  version consolidée »).
+- **Code de la commande publique** — frontière entre subvention et marché
+  public (« à confirmer en version consolidée »), à mobiliser uniquement
+  pour qualifier le flux, jamais pour instruire une passation (hors
+  périmètre, voir `commande-publique-financiere.md`).
+- **Seuil réglementaire de conventionnement** — valeur volatile, jamais
+  citée de mémoire.
+- **Seuil de communication des comptes annuels des associations
+  subventionnées** — valeur volatile, à vérifier.
+- **Taux d'autofinancement minimal** applicable aux opérations
+  d'investissement subventionnées — valeur volatile, à vérifier avant tout
+  plan de financement.
+- **Régime européen des aides d'État** (plafonds, régimes d'exemption) — à
+  vérifier au cas par cas, jamais présumé.
+- **Délai de caducité** des subventions reçues et **délai de reversement**
+  — à vérifier acte attributif par acte attributif.
+- **Jurisprudence relative à la requalification subvention/marché et à
+  l'association transparente** — relève de `recherche-juridique` en cas de
+  doute.
+
+---
+
+## 10. Écrits & livrables
+
+1. **Convention de subvention** — générateur interactif dédié :
+   `templates/convention-subvention.md` (objet, montant, modalités de
+   versement, obligations de contrôle et clause de reversement posés
+   question par question).
+2. **Délibération d'attribution** → `templates/deliberation-budgetaire.md`,
+   avec vérification de la compétence et de la transmission au contrôle de
+   légalité (`controle-budgetaire.md`) au-delà du seuil de conventionnement.
+3. **Note d'impact financier** (impact pluriannuel d'une subvention,
+   simulation d'un plan de financement de subvention reçue) →
+   `templates/note-impact-financier.md`.
+4. **Fiche de procédure financière** (contrôle de l'emploi des fonds,
+   procédure de reversement) → `templates/fiche-procedure-financiere.md`.
+
+---
+
+## 11. Double échelle [risque / confiance]
+
+| Sous-domaine | Risque | Confiance |
+|---|---|---|
+| Qualification subvention / commande publique | Élevé | Stable dans son principe, appréciation au cas par cas |
+| Obligation de convention au-delà du seuil | Élevé | Stable dans son principe, seuil à vérifier |
+| Contrôle de l'emploi des fonds et reversement | Moyen à élevé | Stable dans son principe, délais à vérifier |
+| Subvention à une entreprise (aides économiques) | Élevé | À vérifier (compétence régionale, encadrement européen) |
+| Subvention à une personne privée | Moyen à élevé | Stable dans son principe (égalité de traitement) |
+| Risque d'association transparente | Critique | Renvoi impératif au garde-fou §5.2 et à `../objets/satellites.md` |
+| Subvention reçue — autofinancement et caducité | Moyen | À vérifier (taux et délais propres au dispositif) |
+
+---
+
+## 12. Checklist de branche
+
+1. Flux qualifié en premier comme subvention ou commande publique, avec
+   test du critère d'initiative et de définition du besoin (§5.1) ?
+2. Compétence de l'assemblée ou délégation à l'exécutif vérifiée avant
+   attribution (§5.2) ?
+3. Montant cumulé comparé au seuil réglementaire de conventionnement, sans
+   valeur chiffrée énoncée de mémoire (§5.3, §9) ?
+4. **Test à charge risque de gestion de fait / association transparente** :
+   la situation présente-t-elle un signal d'alerte (§5.12) ? Si oui, le
+   renvoi au garde-fou `SKILL.md` §5.2 et à `../objets/satellites.md` a-t-il
+   été fait **avant** toute autre recommandation ?
+5. Contrôle de l'emploi des fonds et clause de reversement traités (§5.6,
+   §5.8) ?
+6. Subvention à une entreprise : compétence régionale et encadrement
+   européen signalés (§5.10) ?
+7. Subvention reçue : autofinancement minimal et délai de caducité signalés
+   comme « à vérifier » (§5.13) ?
+8. Toute dérive vers la **passation** d'un marché signalée comme hors
+   périmètre plutôt que traitée ?
+9. Écrit demandé produit via le gabarit approprié (§10) ?

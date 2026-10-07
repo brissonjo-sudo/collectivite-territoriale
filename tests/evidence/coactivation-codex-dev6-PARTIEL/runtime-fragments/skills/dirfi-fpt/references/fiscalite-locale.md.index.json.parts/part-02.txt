@@ -1,0 +1,157 @@
+ **Rôle supplémentaire** : rectification d'une erreur, omission ou
+  changement constaté après l'émission du rôle général ; effet sur
+  l'exercice de rattachement de la recette à vérifier avec `execution-recette.md`.
+
+### 5.5 Abattements et exonérations
+
+- **Distinction structurante** :
+  - **facultatives sur délibération** — nécessitent un acte de l'assemblée
+    délibérante, produisent effet pour une durée et une portée définies par
+    la délibération, révisables ou reconductibles selon le texte ;
+  - **de droit** — s'appliquent sans délibération, dès lors que les
+    conditions légales sont réunies.
+- **Compensées ou non par l'État** : une exonération peut donner lieu à une
+  compensation budgétaire (à distinguer d'une recette fiscale réelle) ou
+  rester à la charge nette de la collectivité. Vérifier systématiquement ce
+  régime avant toute simulation d'impact budgétaire — variable d'ajustement
+  possible (voir `dotations-perequation.md` §5.8).
+- **Portée temporelle** : une exonération facultative a une durée
+  d'application et des règles de renouvellement propres ; ne jamais présumer
+  sa reconduction tacite sans vérifier le texte support.
+
+### 5.6 États fiscaux notifiés à la collectivité
+
+- **Contenu** : bases prévisionnelles par imposition, taux appliqués
+  l'exercice précédent, simulation de produit à taux constant, éléments
+  nécessaires à l'inscription budgétaire de la recette fiscale.
+- **Exploitation** : comparer les bases notifiées à celles de l'exercice
+  précédent, identifier les écarts significatifs (nouvelle construction,
+  fermeture d'activité, rôle supplémentaire), croiser avec la décision de
+  vote de taux avant inscription au budget.
+- **Vigilance** : la dénomination exacte et le support de cet état (papier
+  ou dématérialisé) évoluent ; vérifier le canal de notification en vigueur
+  auprès du service compétent (DDFIP) avant toute procédure.
+
+### 5.7 Commission communale des impôts directs (CCID)
+
+- **Rôle** : instance consultative associée à la détermination des valeurs
+  locatives des locaux, notamment pour les mises à jour et les
+  classifications.
+- **Composition** : commissaires désignés selon une procédure propre,
+  distincte de la composition de l'assemblée délibérante — **à vérifier**
+  avant toute description précise.
+- **Portée** : avis consultatif ; ne se substitue pas à la compétence
+  fiscale de l'assemblée délibérante sur le vote des taux.
+
+### 5.8 Reversements et attribution de compensation en intercommunalité
+
+- **Attribution de compensation (AC)** : mécanisme de neutralité budgétaire
+  lors du passage à la fiscalité professionnelle unique ou d'un transfert de
+  compétence, destiné à corriger les effets du transfert de la fiscalité
+  professionnelle entre l'EPCI et ses communes membres.
+- **Rôle de la CLECT** : la commission locale d'évaluation des charges
+  transférées évalue le coût net des charges transférées, sur la base
+  duquel l'AC est déterminée ou révisée.
+- **Révision** : l'AC peut être révisée par délibérations concordantes de
+  l'EPCI et des communes concernées, dans les conditions fixées par le
+  texte — **à vérifier**, notamment la majorité requise.
+- **Distinction avec la dotation de solidarité communautaire** : l'AC
+  neutralise un transfert de charges ; la dotation de solidarité
+  communautaire est un choix de péréquation interne à l'intercommunalité
+  (voir `dotations-perequation.md`) — ne pas confondre les deux mécanismes.
+
+### 5.9 Contentieux fiscal et dégrèvements
+
+- **Réclamation du contribuable** : portée devant l'administration fiscale
+  (DDFIP), non devant la collectivité, qui n'est pas décisionnaire du
+  dégrèvement.
+- **Dégrèvement** : décidé par l'État ; peut être total ou partiel, avec un
+  effet variable sur la recette communale selon que le dégrèvement est pris
+  en charge par l'État ou vient en déduction du produit perçu par la
+  collectivité — **à vérifier au cas par cas**.
+- **Rôle de l'ordonnateur** : suivre l'impact budgétaire des dégrèvements
+  notifiés, ne pas se substituer à l'administration fiscale sur le fond du
+  contentieux, orienter le contribuable vers la voie de réclamation fiscale
+  compétente.
+
+---
+
+## 6. Calculs et procédures
+
+- **Formule générale du produit attendu** : `produit = base nette × taux`,
+  imposition par imposition. Poser la méthode, jamais le résultat sur une
+  base ou un taux non vérifiés à la source.
+- **Procédure annuelle de vote des taux** :
+  1. réception de l'état fiscal notifié (§5.6) ;
+  2. simulation du produit à taux constant et à taux modifié ;
+  3. test de la règle de lien (§5.3) si une variation différenciée est
+     envisagée ;
+  4. délibération de l'assemblée dans le délai applicable (à vérifier) ;
+  5. transmission de la délibération au contrôle de légalité et au service
+     des impôts.
+- **Procédure de délibération d'exonération facultative** : détermination de
+  la portée (quelle imposition, quels biens ou quels redevables), de la
+  durée d'application, délibération avant l'échéance fixée par le texte pour
+  produire effet sur l'exercice suivant, transmission.
+- **Procédure de calcul de l'attribution de compensation** : rapport de la
+  CLECT évaluant les charges transférées, délibérations concordantes de
+  l'EPCI et des communes, notification du montant, révision selon la
+  procédure applicable.
+- **Signaler comme données manquantes** : le montant exact des bases, le
+  taux voté l'exercice précédent, la date limite de vote de l'exercice en
+  cours, la portée exacte d'une exonération déjà votée — ne jamais les
+  déduire par défaut.
+
+---
+
+## 7. Déclencheurs de vérification
+
+Appliquer le socle-sources (`SKILL.md` §5.4, matrice §2.2) avant de conclure
+dès que :
+- un **taux, un tarif, un coefficient de revalorisation ou un montant** doit
+  être cité ;
+- une **date limite de vote** ou un **délai de délibération** est en jeu ;
+- une **condition d'éligibilité à une exonération** doit être qualifiée ;
+- la **compétence** (assemblée / exécutif / DDFIP) est incertaine sur un
+  point précis ;
+- un **contentieux fiscal** ou une **jurisprudence** (CE, CRC) est invoqué ;
+- une **réforme récente** (loi de finances de l'année) touche l'une de ces
+  impositions.
+
+---
+
+## 8. Pièges & confusions fréquentes
+
+1. Confondre **exonération facultative** (sur délibération, portée choisie)
+   et **exonération de droit** (automatique) — impact différent sur la
+   compensation budgétaire.
+2. Voter le taux **après le délai limite** sans vérifier l'effet exact
+   (reconduction des taux antérieurs ou autre règle).
+3. Modifier un taux professionnel sans tester la **règle de lien** (§5.3).
+4. Confondre la **TEOM** (imposition, assise comme la TFPB) et la **REOM**
+   (redevance pour service rendu, non fiscale) → la REOM relève de
+   `execution-recette.md`, pas de cette branche.
+5. Confondre l'**attribution de compensation** (neutralité budgétaire d'un
+   transfert) et la **dotation de solidarité communautaire** (choix de
+   péréquation) — voir `dotations-perequation.md`.
+6. Traiter un **dégrèvement** comme une décision de la collectivité, alors
+   qu'il relève de l'administration fiscale.
+7. Présenter un **rôle supplémentaire** comme relevant du même exercice de
+   rattachement que le rôle général sans vérifier la règle applicable.
+8. Citer un **taux, un tarif ou un montant de mémoire**, y compris pour un
+   exercice déjà traité l'an dernier.
+
+---
+
+## 9. Données / valeurs à vérifier
+
+- **Code général des impôts (CGI)** — fondement de l'assiette, des taux
+  plafonds, des exonérations et du régime de chaque imposition directe
+  locale (« à confirmer en version consolidée » ; aucun article cité de
+  mémoire dans cette branche).
+- **Code général des collectivités territoriales (CGCT)** — compétence de
+  l'assemblée délibérante en matière fiscale (« à confirmer en version
+  consolidée »).
+- **Taux plafonds et règle de lien entre les taux** — valeurs volatiles,
+  jamais citées sans vérification et sans date d'effet.
+- **Coefficient annuel de revalorisation forfaitaire des 

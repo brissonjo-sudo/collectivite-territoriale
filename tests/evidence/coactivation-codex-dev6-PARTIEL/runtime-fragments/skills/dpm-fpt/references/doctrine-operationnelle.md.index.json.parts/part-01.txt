@@ -1,0 +1,153 @@
+# Branche — Doctrine opérationnelle
+
+> Structure conforme à `_gabarit-branche.md`. Branche **organisationnelle** :
+> elle traite le **comment commander, organiser et déployer le service**, pas
+> le contenu réglementaire de fond ni les partenariats institutionnels.
+
+## 1. Périmètre / Exclusions
+
+**Périmètre** : organisation du service (cycles, effectifs, doctrine
+d'emploi), patrouilles (modes d'action, secteurs), dispositifs événementiels
+(sécurisation de manifestations, gabarits de dispositif), gestion de crise
+(alerte, plan communal de sauvegarde, maincourante de crise, retour à la
+normale), articulation avec les zones de sécurité prioritaires (ZSP) et
+dispositifs territoriaux analogues.
+
+**Exclusions** :
+- **Contenu réglementaire de fond** (pouvoirs de police mobilisés, régime
+  juridique d'un attroupement, d'un débit de boissons temporaire, du
+  stationnement lors d'un événement) → `reglementation-appliquee.md` et
+  `pouvoirs-police.md`.
+- **Partenariats institutionnels** (convention de coordination, CLSPD/CISPD,
+  coopération avec les forces de l'État) → `continuum-partenariats.md`.
+- **Procédure pénale** (constatation d'infraction pendant un dispositif,
+  relations OPJ) → `penal-procedure.md`.
+- **RH statutaire** des agents (cycles de travail en tant que régime
+  statutaire, heures supplémentaires, astreintes en tant que droits) →
+  `drh-fpt` (§5.4 `SKILL.md`) ; ce qui reste ici, c'est l'**organisation
+  opérationnelle** du cycle, pas son régime indemnitaire ou statutaire.
+- **Armement et équipements** (dotation, FIA) → `armement-equipements.md`.
+- **Vidéoprotection / CSU** en tant qu'outil de surveillance fixe →
+  `videoprotection.md` ; reste ici son **articulation avec le dispositif de
+  patrouille ou d'événement** (renvoi, pas de doctrine vidéo).
+- **Budget et marchés** liés aux dispositifs (location de matériel,
+  prestataires) → `pilotage-budget.md`.
+
+---
+
+## 2. Questions couvertes
+
+- Construction d'un cycle de travail opérationnel (horaires, effectifs,
+  présence terrain vs astreinte fonctionnelle).
+- Doctrine de patrouille (pédestre, VTT, véhiculée, mixte ; secteurs ;
+  binômes vs solo).
+- Conception d'un dispositif événementiel (manifestation sportive, culturelle,
+  marché, brocante, feu d'artifice, fan-zone).
+- Gestion de crise communale (intempérie, accident majeur, attentat, événement
+  d'ordre public) : déclenchement, commandement, articulation avec le préfet.
+- Plan communal de sauvegarde (PCS) : rôle de la PM dans son activation.
+- Zones de sécurité prioritaires (ZSP) et dispositifs territoriaux analogues :
+  articulation du service PM avec un classement ZSP existant.
+- Continuité de service (jours fériés, période estivale, pics
+  saisonniers).
+
+---
+
+## 3. Arbre de traitement
+
+`question → variables à lever (§4) → décision → vérification (§7) → écrit/livrable (§10)`
+
+Ne jamais figer un dispositif (cycle, patrouille, événement, crise) sans avoir
+levé les variables de risque, d'effectif et de compétence engagée.
+
+---
+
+## 4. Variables à lever
+
+- **Nature du service** : effectifs disponibles, amplitude horaire actuelle,
+  existence d'une convention de coordination (conditionne les plages
+  horaires d'intervention de la PM hors convention — voir
+  `continuum-partenariats.md`).
+- **Qualification de l'événement** : manifestation revendicative (régime
+  déclaratif/préfectoral spécifique) vs événement organisé par la commune
+  (kermesse, marché) vs événement privé sur domaine public (autorisation
+  d'occupation).
+- **Niveau de risque de l'événement** : affluence attendue, configuration des
+  lieux, antécédents, contexte de menace (plan Vigipirate ou équivalent en
+  vigueur — à vérifier).
+- **Autorité organisatrice et autorité de police** : qui organise (mairie,
+  association, privé) n'est pas toujours qui exerce la police (maire, et le
+  cas échéant préfet pour une police spéciale ou un classement particulier).
+- **Classement ZSP ou dispositif territorial équivalent** : existe-t-il sur le
+  ressort de la commune ? Quelle gouvernance (état-major de sécurité,
+  copilotage préfet/procureur/maire) ?
+- **Niveau de crise** : événement courant (gérable par le service seul) vs
+  crise nécessitant l'activation du PCS et/ou la montée en commandement du
+  maire vs crise dépassant la compétence communale (bascule préfectorale,
+  ORSEC).
+- **Disponibilité d'un PCS** : existant, à jour, testé ou non (l'existence et
+  l'actualisation du PCS sont elles-mêmes des obligations à vérifier selon le
+  classement de risque de la commune — art. L. 731-3 CSI, vérifié sur
+  Légifrance le 2026-06-30).
+
+---
+
+## 5. Règles métier
+
+### 5.1 Doctrine d'emploi et organisation du service
+
+- L'organisation du service relève du pouvoir d'organisation du maire
+  (autorité territoriale) et du directeur de police municipale par
+  délégation/subdélégation. Le **cycle de travail** est d'abord un acte
+  d'organisation du service ; sa **conformité statutaire** (durée annuelle de
+  référence, régimes dérogatoires, cycles atypiques propres à la PM) relève
+  du volet RH → voir `rh-specificites-pm.md` (cycles atypiques) et `drh-fpt`
+  pour le régime général du temps de travail.
+- Principe à retenir : **dimensionner le service sur la doctrine d'emploi
+  avant le cycle**, pas l'inverse. Une doctrine d'emploi formalise : les
+  missions prioritaires du service (proximité, tranquillité publique,
+  circulation, événementiel), les plages de présence terrain attendues, le
+  niveau d'engagement en flagrance, et l'articulation avec les forces de
+  l'État (renvoi `continuum-partenariats.md`).
+- **Continuité de service** : le maire est responsable de l'ordre public en
+  continu sur sa commune (police générale, art. L. 2212-2 CGCT, vérifié sur
+  Légifrance le 2026-06-30) ; le dimensionnement du service PM est un choix
+  d'organisation locale, pas une obligation de couverture 24h/24 — distinguer
+  l'**obligation de résultat sur l'ordre public** (qui peut être assurée par
+  d'autres moyens : forces de l'État, astreinte, escalade) de l'**obligation
+  de moyens du service PM**, qui n'existe pas en tant que telle.
+
+### 5.2 Patrouilles
+
+- Le mode de patrouille (pédestre, VTT, véhiculée, mixte) est un choix
+  opérationnel, à motiver par : la doctrine de proximité retenue, la
+  configuration urbaine, le niveau de risque du secteur, et la sécurité des
+  agents (doctrine de binôme à privilégier en zone à risque ou de nuit —
+  point d'organisation interne, pas une obligation légale générale ; vérifier
+  toute consigne locale ou instruction propre avant de la présenter comme une
+  règle).
+- Le **sectorisé** est un outil de doctrine (zones de patrouille dédiées) à
+  distinguer du **classement ZSP** (§5.4), qui est un dispositif piloté par
+  l'État, pas un découpage interne du service PM.
+- Patrouille et **constatation d'infraction** : les pouvoirs exercés en
+  patrouille restent ceux de l'APJA (art. 21 et 21-2 CPP — au socle,
+  `references-verifiees.md` §2 ; art. 21 en version du 20/08/2026). Toute situation dépassant ce cadre déclenche le
+  garde-fou APJA → `penal-procedure.md`.
+
+### 5.3 Dispositifs événementiels
+
+- **Première question à trancher** : qui organise, qui autorise, qui exerce
+  la police. Un événement communal (kermesse, marché) relève en principe de
+  la police générale du maire (art. L. 2212-2 CGCT) ; un rassemblement
+  revendicatif relève d'un régime spécifique de déclaration/encadrement
+  préfectoral distinct → qualification à vérifier dans `pouvoirs-police.md`
+  avant tout dispositif.
+- Construction du dispositif (méthode, pas règle juridique) :
+  1. qualifier l'événement (nature, organisateur, affluence) ;
+  2. identifier l'autorité de police compétente et les autorisations
+     préalables requises (occupation du domaine public, débit de boissons
+     temporaire — renvoi `reglementation-appliquee.md`) ;
+  3. évaluer le risque (affluence, configuration des lieux, antécédents,
+     niveau de menace) ;
+  4. dimensionner les effectifs et les missions (filtrage, régulation
+     circulation, présen

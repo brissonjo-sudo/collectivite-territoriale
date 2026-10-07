@@ -1,0 +1,164 @@
+# Branche — Vidéoprotection (v0.1.0)
+
+> Structure conforme à `_gabarit-branche.md`. Aucune valeur datée (durée de
+> conservation, délai d'instruction, composition de la commission
+> départementale) n'est donnée de mémoire : seules les **règles** figurent ici,
+> avec la consigne de vérifier la version en vigueur.
+
+## Périmètre / Exclusions
+
+- **Périmètre** : cadre du **Code de la sécurité intérieure (CSI), Livre II,
+  Titre V** (vidéoprotection sur voie publique et lieux ouverts au public) ;
+  **régime d'autorisation préfectorale** ; **exploitation du centre de
+  supervision urbain (CSU)** par les agents de police municipale.
+- **Exclusions** :
+  - **RGPD / conformité données et AIPD générale** → renvoi exprès à
+    `references/conformite-deontologie-donnees.md` (le présent fichier ne
+    traite que le régime CSI propre à la vidéoprotection ; toute analyse
+    d'impact, registre de traitement ou doctrine CNIL transverse relève de
+    cette branche) ;
+  - **vidéosurveillance intérieure de locaux non ouverts au public** (relève
+    du droit du travail / RGPD général, hors CSI Titre V) → hors périmètre ;
+  - **caméras individuelles (caméras-piétons)** → hors présent fichier (régime
+    CSI distinct, à traiter dans `armement-equipements.md` ou fiche dédiée si
+    créée) ;
+  - **drones et caméras aéroportées** → régime CSI distinct (articles propres,
+    non couverts ici) ;
+  - le **fond opérationnel détaillé du CSU** (procédures de poste, doctrine de
+    visionnage, fiches réflexes) → objet **`objets/videoprotection.md`**
+    (fiche existante en couche 3, à lire pour le traitement opérationnel) ;
+  - la **jurisprudence de fond** (contentieux d'autorisation, contentieux
+    d'accès aux images) → `recherche-juridique`.
+
+---
+
+## 1. Questions couvertes
+
+- Mise en place ou extension d'un système de vidéoprotection sur voie publique
+  ou dans un lieu ouvert au public.
+- Demande, instruction et renouvellement de l'**autorisation préfectorale**.
+- Finalités légales mobilisables et leur adéquation au projet.
+- Durée de conservation des images et destruction.
+- Qui peut **visionner** (agents PM, policiers nationaux, gendarmes, agents
+  d'autres services) et sous quelles conditions d'habilitation.
+- Fonctionnement du **CSU** : accès, traçabilité, transmission aux forces de
+  l'État, réquisitions judiciaires sur images.
+- Droits des personnes filmées (information, accès, recours).
+- Articulation avec la vidéoprotection commerçants et la transmission vers les
+  forces de l'État.
+
+---
+
+## 2. Arbre de traitement
+
+`question → variables à lever (§4) → décision → vérification (§7) → écrit/livrable (§10)`
+
+Réflexe imposé :
+1. Identifier si le système relève du **CSI Titre V** (voie publique / lieux
+   ouverts au public) ou d'un autre régime (locaux fermés, caméras
+   individuelles, drones) → si autre régime, sortir de cette branche.
+2. Identifier la **finalité légale** invoquée et l'**autorité compétente**
+   (préfet, maire informé, commission départementale).
+3. Vérifier l'existence et la validité de l'**autorisation préfectorale**
+   (objet, périmètre, durée).
+4. Qualifier l'**exploitation** envisagée (qui visionne, qui transmet, durée
+   de conservation, traçabilité).
+5. Vérifier le socle-sources (§7) avant toute affirmation sur durée, délai ou
+   identifiant d'article.
+6. Orienter vers l'écrit adapté (dossier de demande, note au maire, fiche de
+   procédure CSU) ou vers `conformite-deontologie-donnees.md` pour le volet
+   RGPD/AIPD.
+
+---
+
+## 3. Variables à lever
+
+- **Nature du lieu filmé** : voie publique, abords d'un bâtiment public,
+  établissement recevant du public, commerce (régime « commerçants »
+  spécifique, sous condition d'information du maire).
+- **Finalité poursuivie** : protection de bâtiments publics, prévention
+  d'atteintes aux personnes et aux biens, prévention du trafic de stupéfiants,
+  prévention d'actes de terrorisme, régulation du trafic routier, etc. — la
+  finalité **conditionne** la légalité de l'autorisation.
+- **Porteur du projet** : commune (maire demandeur le plus fréquent), EPCI,
+  exploitant privé d'un lieu ouvert au public, commerçant.
+- **Autorité compétente pour délivrer l'autorisation** : préfet de
+  département ; **préfet de police à Paris** ; cas particulier d'un système
+  s'étendant sur plusieurs départements → préfet du département du siège du
+  demandeur.
+- **Composition et rôle de la commission départementale de vidéoprotection**
+  (avis préalable obligatoire) — à vérifier (composition réglementaire).
+- **Qui visionne** : agents de police municipale du CSU, policiers nationaux,
+  gendarmes, agents d'autres services mentionnés par les textes (douanes,
+  services d'incendie et de secours) — chacun sous condition d'être
+  **individuellement désigné et habilité**.
+- **Durée de conservation envisagée** et **destination** des enregistrements
+  (vidéoprotection courante vs réquisition judiciaire en cours).
+- **Existence d'une convention de coordination ou d'un protocole CSU /
+  forces de l'État** régissant la transmission d'images en temps réel →
+  `continuum-partenariats.md`.
+
+---
+
+## 4. Règles métier
+
+### 4.1 Régime d'autorisation préfectorale — principe
+
+Police spéciale de l'État. L'installation d'un système de vidéoprotection sur
+la voie publique ou dans un lieu ouvert au public **est soumise à
+autorisation** du représentant de l'État dans le département (préfet) et, à
+Paris, du préfet de police, donnée **après avis de la commission
+départementale de vidéoprotection** :
+
+> Art. L. 252-1, Code de la sécurité intérieure (vérifié sur Légifrance le
+> 30/06/2026, identifiant LEGIARTI relevé pour les articles cités au §9).
+
+Ce n'est **pas** un pouvoir du maire : le maire n'autorise pas le dispositif
+(sauf le cas particulier de l'information préalable pour le dispositif
+« commerçants », §4.2). Le maire est porteur de projet possible (demandeur),
+mais l'autorité de décision reste le préfet. Si la commune installe sans
+autorisation ou hors périmètre autorisé, c'est une irrégularité opposable.
+
+### 4.2 Finalités légales — liste fermée, à vérifier
+
+Le système ne peut être autorisé que pour l'une des **finalités limitativement
+énumérées** par le texte (assurer la sécurité des personnes, prévention des
+atteintes aux biens, régulation du trafic routier, protection des bâtiments
+publics, prévention d'actes de terrorisme, prévention du trafic de
+stupéfiants, etc.) :
+
+> Art. L. 251-2, Code de la sécurité intérieure (vérifié sur Légifrance le
+> 30/06/2026).
+
+Cas particulier **commerçants** : un commerçant peut installer un système sur
+la voie publique pour la protection des abords immédiats de son
+établissement, **après information du maire** de la commune concernée et sous
+autorisation de l'autorité publique compétente (préfet). L'information du
+maire **n'est pas une autorisation municipale** — ne pas confondre les deux
+rôles.
+
+**Piège de qualification** : si la finalité réelle du projet ne correspond
+à aucune des finalités listées (ex. surveillance générale sans lien avec un
+risque identifié), le dossier est fragile au contentieux → signaler avant
+rédaction de la demande.
+
+### 4.3 Procédure d'instruction et avis de la commission départementale
+
+L'autorisation est délivrée après avis (consultatif) de la **commission
+départementale de vidéoprotection**, présidée par un magistrat. Sa
+composition et ses modalités de saisine sont fixées par la partie
+réglementaire du CSI — **à vérifier en version consolidée**, ne pas citer de
+mémoire la composition exacte.
+
+L'arrêté d'autorisation **fixe lui-même** les conditions opérationnelles :
+qualité et habilitation des personnes en charge de l'exploitation et du
+visionnage, mesures assurant le respect des règles du titre :
+
+> Art. L. 252-2, al. 1, Code de la sécurité intérieure (vérifié sur
+> Légifrance le 30/06/2026).
+
+→ Conséquence pratique : **lire l'arrêté préfectoral lui-même** avant toute
+décision d'exploitation. Le CSI fixe le cadre, l'arrêté individualise les
+conditions (zones filmées, durée, accès).
+
+##

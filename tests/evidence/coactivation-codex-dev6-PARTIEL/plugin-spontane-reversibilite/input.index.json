@@ -1,0 +1,44 @@
+{
+  "source_path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/plugin-spontane-reversibilite/input.json",
+  "source_sha256": "ca3aa19a54bb7ebf02b157293c20d141d8deb8c7de3285b3448f11da1957649b",
+  "characters": 45571,
+  "fragment_limit": 8000,
+  "fragments": [
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/plugin-spontane-reversibilite/input.index.json.parts/part-01.txt",
+      "sha256": "1988a9fe2e78aa65525ed569dbc10c23c262b171ff40f62996100f9ad3621a02",
+      "characters": 8000,
+      "number": 1
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/plugin-spontane-reversibilite/input.index.json.parts/part-02.txt",
+      "sha256": "6d3d5e3669013d109e8bcfe0b84bb8954854b2eb4f89288d9db4eadcd7539b86",
+      "characters": 8000,
+      "number": 2
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/plugin-spontane-reversibilite/input.index.json.parts/part-03.txt",
+      "sha256": "5e338520769be29e3144188c6aa767ab8019f16dac3d643a049d5bd12f9f00f0",
+      "characters": 8000,
+      "number": 3
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/plugin-spontane-reversibilite/input.index.json.parts/part-04.txt",
+      "sha256": "ef80c3f88fdb207e403b71eae5dd6099a02154fdb731927f8c51363ced125886",
+      "characters": 8000,
+      "number": 4
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/plugin-spontane-reversibilite/input.index.json.parts/part-05.txt",
+      "sha256": "9e591adbf2273f87a970a68f0d48c4c98cc292b8b4f3a42879dd7cfba9eb143e",
+      "characters": 8000,
+      "number": 5
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/plugin-spontane-reversibilite/input.index.json.parts/part-06.txt",
+      "sha256": "6783f14c603be37aa6126bf7b47abff5424a94e8c3004009c2bb0dddc68687af",
+      "characters": 5571,
+      "number": 6
+    }
+  ]
+}

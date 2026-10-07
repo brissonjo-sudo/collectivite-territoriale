@@ -1,0 +1,152 @@
+el, actuel ou
+     suffisamment caractérisé) ?
+  2. Est-elle **limitée dans le temps et dans l'espace** au strict besoin
+     (pas d'interdiction générale et absolue quand une mesure ciblée suffit) ?
+  3. Existe-t-il une **mesure alternative moins restrictive** qui atteindrait
+     le même but ? Si oui, et qu'elle n'a pas été envisagée ni écartée
+     explicitement, risque élevé d'annulation pour disproportion.
+- **Interdiction générale et absolue** : signal d'alerte fort — quasi
+  systématiquement censurée si une mesure plus ciblée était possible
+  (principe constant, déclinaisons à vérifier selon l'objet via
+  `recherche-juridique` en cas de doute).
+
+### 4.6 Voies et délais de recours
+- Toute décision faisant grief doit mentionner les **voies de recours**
+  (recours gracieux, hiérarchique, contentieux) et le **délai** applicable, et
+  l'autorité ou la juridiction compétente.
+- L'**omission** de cette mention ne rend pas l'acte illégal mais **empêche le
+  délai de recours contentieux de courir** contre l'administré — risque
+  pratique majeur (contestation possible bien au-delà du délai usuel).
+
+### 4.7 Transmission au contrôle de légalité
+- Vérifier si l'acte figure dans la **liste des actes soumis à transmission
+  obligatoire** au représentant de l'État (préfet ou sous-préfet
+  d'arrondissement) — art. **L. 2131-2 du CGCT** *(vérifié sur Légifrance le
+  2026-06-30 : inclut notamment les actes réglementaires pris par les
+  autorités communales dans les matières où la loi leur attribue compétence,
+  et les décisions individuelles ; régime issu de l'ordonnance n° 2021-1310
+  du 7 octobre 2021, entrée en vigueur 1er juillet 2022 — liste précise et
+  seuils à reconfirmer en version consolidée selon l'objet exact de l'acte)*.
+- **Entrée en vigueur / caractère exécutoire** : un acte communal devient
+  exécutoire de plein droit dès qu'il a fait l'objet d'une **publicité**
+  (publication/affichage/notification) et, pour les actes de la liste
+  art. L. 2131-2, dès sa **transmission** au représentant de l'État —
+  art. **L. 2131-1 du CGCT** *(au socle §8, LEGIARTI000044190563, version du
+  01/07/2022, vérifié le 2026-09-14)*. Tant
+  que la transmission requise n'est pas faite, l'acte n'est **pas
+  exécutoire**, même signé et publié.
+- **Délai de transmission des décisions individuelles** : un délai court
+  s'applique à compter de la signature (ordre de grandeur : 15 jours — **à
+  confirmer en version consolidée**, l'art. exact étant fonction de la nature
+  de la décision).
+- **Actes non transmissibles** : certains actes (gestion interne, actes de
+  droit privé, actes pris au nom de l'État) sont hors champ — art.
+  **L. 2131-4 du CGCT** (au socle, `references-verifiees.md` §8,
+  LEGIARTI000044190553, version du 01/07/2022, vérifié le 2026-09-14) ; ne pas
+  sur-transmettre par excès de prudence sans vérifier, mais en cas de doute,
+  transmettre reste la posture la plus sûre.
+- **Déféré préfectoral** : le préfet dispose d'un délai pour défèrer l'acte
+  au tribunal administratif s'il l'estime illégal, et peut assortir le
+  recours d'une demande de suspension — détail procédural et délais exacts à
+  vérifier selon la nature de l'acte (`recherche-juridique` si contentieux
+  engagé → `contentieux.md`).
+
+---
+
+## 5. Renvois (pas de duplication)
+
+- Base légale de fond par police → `pouvoirs-police.md`,
+  `reglementation-appliquee.md`.
+- Frontière APJA / actes réservés à l'OPJ → garde-fou `SKILL.md` §5.2,
+  `penal-procedure.md`.
+- Conflit de compétence maire/préfet/OPJ → `analyse-situation.md` §3.
+- Jurisprudence de fond (recherche, triangulation, autorité d'une décision
+  autre que le principe de proportionnalité ci-dessus) → `recherche-juridique`
+  Mode B.
+- Anticipation des faiblesses après édiction de l'acte, stratégie de défense
+  en cas de recours → `contentieux.md`.
+- Production effective de l'écrit (gabarit interactif) → `references/templates/`, pilotée
+  par `ecrits-professionnels.md`.
+- Frontière RH (acte individuel concernant un agent : sanction, refus
+  d'avancement) → `drh-fpt` dès que la procédure RH statutaire est en jeu
+  (SKILL.md §5.4) ; ce fichier reste compétent pour le contrôle de légalité
+  de l'acte en tant que tel si demandé en miroir.
+
+---
+
+## 6. Déclencheurs de vérification
+
+Appliquer le socle-sources (matrice §2.2 du `SKILL.md`) systématiquement,
+car le contrôle de légalité porte par construction sur des lignes « Oui » :
+- toute **base légale** visée (article exact, pas de mémoire) ;
+- toute **mention d'obligation de motivation** (CRPA) ;
+- toute **liste d'actes transmissibles** (CGCT) et tout **délai** de
+  transmission ;
+- toute **référence jurisprudentielle** autre que le principe constant cité
+  en §4.5 (la fiche d'arrêt complète, sa portée actuelle et ses déclinaisons
+  → `recherche-juridique`) ;
+- toute **délégation de signature** : vérifier son existence réelle, pas la
+  présumer.
+
+---
+
+## 7. Pièges & confusions fréquentes
+
+1. Citer « vu le CGCT » sans article précis — non auditable, à corriger
+   systématiquement.
+2. Confondre **illégalité** (acte annulable) et **absence de caractère
+   exécutoire** (transmission manquante) — deux risques distincts, à
+   contrôler séparément.
+3. Omettre les **voies et délais de recours** sur un acte individuel
+   défavorable — n'invalide pas l'acte mais neutralise le délai de recours
+   contre l'administré, donc fragilise durablement la collectivité.
+4. Prendre une **mesure générale et absolue** quand une mesure ciblée dans le
+   temps ou l'espace suffirait — premier motif d'annulation en police
+   administrative.
+5. Invoquer la police générale du maire sur un objet couvert par une **police
+   spéciale** sans justifier de circonstances locales particulières.
+6. Présumer une **délégation de signature** valide sans vérifier sa
+   publication et son périmètre exact.
+7. Traiter un acte de **gestion RH individuelle** (sanction, refus
+   d'avancement) comme une simple question de contrôle de légalité générique
+   sans renvoyer à `drh-fpt` pour le volet procédure statutaire.
+8. Confondre le test de proportionnalité (nécessité/adaptation/mesure la
+   moins attentatoire) avec un simple contrôle de l'existence d'un motif —
+   le juge contrôle aussi l'**intensité** de la mesure.
+
+---
+
+## 8. Données / références à vérifier
+
+- **CRPA**, art. **L. 211-2** (motivation des décisions défavorables) —
+  *vérifié sur Légifrance le 2026-06-30* ; vérifier au cas par cas les
+  articles connexes (procédure contradictoire, décisions implicites) en
+  version consolidée.
+- **CGCT**, art. **L. 2131-1** (caractère exécutoire, publicité, transmission)
+  et **L. 2131-2** (liste des actes soumis à transmission obligatoire) —
+  *vérifiés sur Légifrance le 2026-06-30* ; régime issu de l'ordonnance
+  n° 2021-1310 du 7 octobre 2021 (entrée en vigueur 1er juillet 2022) — à
+  reconfirmer en version consolidée pour le détail des seuils et catégories
+  selon l'objet exact de l'acte.
+- **CGCT**, art. **L. 2131-4** (actes non transmissibles) — au socle (§8),
+  LEGIARTI000044190553, version du 01/07/2022, vérifié le 2026-09-14.
+- **CE, Sect., 19 mai 1933, *Benjamin*** (principe de proportionnalité des
+  mesures de police) — requêtes n° **17413** et **17520**, **Lebon p. 541**,
+  `CETATEXT000007636694`, **vérifié sur Légifrance le 2026-09-06** et porté au
+  socle (`references-verifiees.md` §7) : **le citer avec cette provenance**,
+  jamais de mémoire. Ses déclinaisons jurisprudentielles récentes relèvent de
+  `recherche-juridique`.
+- **Délai de transmission des décisions individuelles** (ordre de grandeur
+  15 jours) — à confirmer en version consolidée, article exact selon nature
+  de la décision.
+- Toute base légale de **police spéciale** invoquée dans l'acte audité — à
+  vérifier branche par branche (`pouvoirs-police.md`,
+  `reglementation-appliquee.md`).
+
+---
+
+## 9. Écrits & livrables
+
+Cette brique ne produit pas d'écrit en propre. Elle **conditionne** la
+production de tout acte via `references/templates/` :
+- **Arrêté** (`references/templa

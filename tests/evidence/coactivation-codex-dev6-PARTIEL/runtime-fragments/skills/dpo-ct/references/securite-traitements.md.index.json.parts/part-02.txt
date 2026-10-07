@@ -1,0 +1,62 @@
+mpte commun
+  d'accueil, session ouverte) : rend toute traçabilité impossible.
+- Accès de la hiérarchie « **parce que chef** » sans besoin d'en connaître :
+  le grade n'est pas une habilitation.
+- **Oublier le papier** : armoires ouvertes, parapheurs en circulation,
+  dossiers sociaux en libre accès.
+- Présenter les mesures socles CNIL comme des **obligations réglementaires
+  figées** : doctrine datée, à distinguer de l'exigence de proportionnalité.
+- Croire la sécurité réglée parce qu'un prestataire est « certifié » : la
+  conformité du responsable reste entière (→ `sous-traitance-transferts.md`).
+
+## 9. Données / références à vérifier
+
+- Art. 25 et 32 RGPD — « à confirmer en version consolidée ».
+- Dispositions correspondantes de la **loi 78-17** (dont Police-Justice,
+  journalisation) — jamais de mémoire, vérification en session obligatoire.
+- **Guide sécurité CNIL** — version à dater à chaque citation.
+- **Recommandations CNIL chiffrées** (mots de passe, journaux) — valeur et
+  version à vérifier.
+- **RGS** et textes d'application aux téléservices — champ et vigueur à vérifier.
+- **Référentiels ANSSI** mobilisés — version à dater, valeur non normative.
+- Toute **sanction CNIL** citée en illustration — à rechercher en session.
+
+## 10. Livrables
+
+- **Avis DPO** (exigences de sécurité, écarts, recommandations) →
+  `assets/avis-dpo-modele.md`.
+- Éléments obligatoires : rappel du risque pour les **personnes**, écarts
+  constatés vs mesures socles (doctrine datée), exigences hiérarchisées,
+  répartition DPO / DSI, niveau de risque, recommandation au responsable de
+  traitement — jamais de prescription d'outil (garde-fou §5.2.a du
+  `SKILL.md`).
+- Besoin d'AIPD ou de fiche de registre → `aipd.md` / `gouvernance-registre.md`.
+
+## 11. Double échelle [risque / confiance]
+
+- **Risque critique** : données sensibles ou personnes vulnérables sans
+  mesure socle (accès non tracés aux dossiers sociaux, poste nomade non
+  chiffré) → citation obligatoire, abstention si doute.
+- **Risque élevé** : téléservice sans authentification robuste, comptes
+  partagés sur un SI métier, absence de sauvegarde testée.
+- **Risque moyen** : écart ponctuel sur un traitement peu sensible, revue
+  d'habilitations en retard.
+- **Confiance** : « stable » sur la proportionnalité ; « à vérifier » sur
+  toute valeur chiffrée ou version de référentiel ; « jurisprudentiel » sur
+  l'appréciation du « niveau adapté » en sanction.
+
+## 12. Checklist de branche
+
+1. Risque évalué pour les **personnes**, pas seulement pour le SI ?
+2. STOP RÉGIME appliqué si finalité pénale possible (`SKILL.md` §5.2.b) ?
+3. Responsable de traitement et opérateur technique identifiés ?
+4. Mesures socles présentées comme **doctrine datée**, version du guide CNIL
+   précisée ou marquée « à vérifier » ?
+5. Aucune valeur chiffrée citée de mémoire ?
+6. Habilitations : besoin d'en connaître, revue, départs traités ?
+7. Le **papier** a-t-il été couvert ?
+8. Frontière DPO / DSI respectée : exigences formulées, aucune solution
+   technique prescrite (§5.4 du `SKILL.md`) ?
+9. Violation possible → `violations.md` ? AIPD requise → `aipd.md` ?
+10. Avis conclu par une **recommandation** au responsable de traitement
+    (garde-fou §5.2.a) ?

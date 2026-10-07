@@ -1,0 +1,150 @@
+# Branche — Continuum de sécurité & partenariats (v0.1.0)
+
+> Structure conforme à `_gabarit-branche.md`. Les valeurs datées (seuils,
+> effectifs, montants) ne sont jamais données de mémoire : seules les
+> **règles** figurent ici, avec la consigne de vérifier la valeur en vigueur.
+
+## Périmètre / Exclusions
+
+- **Périmètre** : convention de coordination police municipale / forces de
+  sécurité de l'État (police nationale, gendarmerie) ; conseils locaux et
+  intercommunaux de sécurité et de prévention de la délinquance (CLSPD /
+  CISPD) ; stratégie et instances de prévention de la délinquance ; partage
+  d'information entre partenaires du continuum.
+- **Exclusions** :
+  - **doctrine interne au service** (organisation des patrouilles, consignes
+    opérationnelles propres, gestion de crise) → `doctrine-operationnelle.md` ;
+  - **pouvoirs de police du maire** sur le fond (police générale / spéciale,
+    arrêtés) → `pouvoirs-police.md` ;
+  - **actes réservés à l'OPJ** dans le cadre d'une coopération opérationnelle
+    → `penal-procedure.md` + garde-fou APJA (`SKILL.md` §5.2) ;
+  - **vidéoprotection partagée** (centre de supervision urbain, transmission
+    d'images aux forces de l'État) → `videoprotection.md` ;
+  - **protection des données échangées** (RGPD, durées de conservation,
+    traçabilité des accès) → `conformite-deontologie-donnees.md` ;
+  - **armement et équipements** des agents PM → `armement-equipements.md` ;
+  - **budget des dispositifs partenariaux** (financement FIPD, subventions) →
+    `pilotage-budget.md`.
+
+---
+
+## 1. Questions couvertes
+
+- Faut-il une convention de coordination ? À partir de quel effectif ?
+  Qui la signe, que doit-elle contenir, combien de temps dure-t-elle ?
+- Composition, présidence et rôle du CLSPD / CISPD ; la PM y participe-t-elle
+  comme membre ou en appui technique ?
+- Quelle articulation entre stratégie locale de prévention de la délinquance,
+  plan départemental et zones de sécurité prioritaires (ZSP) ?
+- Quelles informations la PM peut-elle échanger avec les forces de l'État,
+  le maire, les partenaires sociaux (groupes de partage de l'information,
+  cellules de veille) — et sous quelle limite ?
+- Que faire en l'absence de convention de coordination, ou en cas de
+  convention obsolète / non renouvelée ?
+
+---
+
+## 2. Arbre de traitement
+
+`question → variables à lever (§4) → décision → vérification (§7) → écrit/livrable (§10)`
+
+Ne pas affirmer l'existence ou le contenu d'une obligation conventionnelle
+sans avoir vérifié l'effectif de la PM et l'état de la convention en vigueur
+dans la commune concernée.
+
+---
+
+## 3. Variables à lever
+
+- **Effectif de la police municipale** (postes d'agents de police
+  municipale, y compris mis à disposition par un EPCI) — conditionne le
+  caractère obligatoire ou facultatif de la convention de coordination.
+- **Périmètre territorial** : commune isolée, ou police municipale
+  intercommunale / mise à disposition par un EPCI.
+- **État de la convention existante** : présence, date de signature, durée
+  restant à courir, nécessité d'un avenant ou d'un renouvellement.
+- **Taille de la commune** (seuil démographique) — conditionne l'obligation
+  de désigner un coordonnateur CLSPD/CISPD et la nature du conseil
+  (communal ou intercommunal).
+- **Existence d'un EPCI compétent en prévention de la délinquance** — oriente
+  vers un CISPD plutôt qu'un CLSPD communal.
+- **Nature de l'information à partager** : information à caractère
+  opérationnel (sécurité immédiate) vs information nominative sensible
+  (situation sociale d'une personne) — conditionne le cadre du partage.
+- **Zone de sécurité prioritaire (ZSP) ou dispositif spécifique** éventuel
+  sur le territoire.
+
+---
+
+## 4. Règles métier
+
+### 4.1 Convention de coordination — fondement et seuil
+
+- **Distinction à expliciter dans toute réponse** : la convention de
+  coordination est un instrument bilatéral d'**organisation opérationnelle**
+  entre la police municipale et les forces de sécurité de l'État. Elle ne se
+  confond pas avec le **CLSPD/CISPD**, instance partenariale de concertation et
+  de prévention de la délinquance (§4.2). Traiter une convention impose donc de
+  nommer cette différence, même si le CLSPD/CISPD n'est pas demandé.
+- **Police générale du maire** articulée avec les **polices spéciales et
+  missions de l'État** : la convention de coordination organise la
+  **complémentarité** des interventions de la police municipale et des
+  forces de sécurité de l'État. Elle ne crée **aucun pouvoir de police
+  nouveau** : elle coordonne l'exercice des pouvoirs existants.
+- **Fondement** : Code de la sécurité intérieure (CSI), Livre V, Titre Ier,
+  section dédiée à la convention de coordination des interventions de la
+  police municipale et des forces de sécurité de l'État, **art. L. 512-4 et
+  s. CSI** *(vérifié sur Légifrance le 2026-06-30 — art. L. 512-4, identifiant
+  LEGIARTI000043540466)*.
+- **Obligation ou faculté** : la convention devient **obligatoire** au-delà
+  d'un **seuil d'effectif d'agents de police municipale** (le seuil exact a
+  évolué dans le temps — historiquement 5 postes, **abaissé** par une
+  réforme ultérieure ; **vérifier le seuil applicable à la date des faits**,
+  ne jamais le citer de mémoire). En deçà du seuil, la convention reste
+  **facultative**, à l'initiative du maire.
+- **Parties signataires** : le maire (et, le cas échéant, le président de
+  l'EPCI si mise à disposition d'agents intercommunaux), et le représentant
+  de l'État dans le département, **après avis du procureur de la
+  République**.
+- **Contenu attendu** (logique constante du dispositif, à vérifier dans la
+  version consolidée) :
+  - un **diagnostic local de sécurité** préalable ;
+  - les **missions prioritaires** confiées à la police municipale,
+    complémentaires de celles des forces de l'État ;
+  - la **nature et les lieux** des interventions de la PM ;
+  - les **modalités de coordination** opérationnelle avec police nationale
+    ou gendarmerie (échanges d'information, dispositifs communs, horaires) ;
+  - les conditions dans lesquelles la PM peut, le cas échéant, être armée
+    et les modalités de port d'arme hors service — point de jonction avec
+    `armement-equipements.md`.
+- **Absence de convention au-delà du seuil** : signaler le risque (fragilité
+  de l'articulation opérationnelle, point de vigilance en cas de contentieux
+  ou d'incident impliquant plusieurs forces) ; orienter vers une
+  régularisation, sans jamais affirmer de sanction automatique sans
+  vérification.
+- **Renouvellement / avenant** : vérifier la **durée de validité** prévue par
+  les textes et toute clause de tacite reconduction ; signaler l'échéance
+  si elle est proche ou dépassée.
+
+### 4.2 CLSPD / CISPD — composition et rôle
+
+- **Fondement** : CSI, Livre Ier, Titre III, chapitre prévention de la
+  délinquance, **art. L. 132-1 et s. CSI** *(vérifié sur Légifrance le
+  2026-06-30 — art. L. 132-1, identifiant LEGIARTI000025504999 ; art. L.
+  132-4, identifiant LEGIARTI000049313006 ; art. L. 132-5, identifiant
+  LEGIARTI000049313001)*.
+- **Rôle du maire** : il participe, par ses pouvoirs de police, à la
+  politique de prévention de la délinquance et de sécurité **(art. L. 132-1
+  CSI)**. Cette participation **ne doit pas être incompatible** avec le
+  **plan départemental de prévention de la délinquance** arrêté par le
+  représentant de l'État — point de **conflit de normes potentiel** à
+  signaler si une stratégie locale s'écarterait de la doctrine
+  départementale.
+- **CLSPD (conseil local de sécurité et de prévention de la délinquance)** :
+  instance présidée par le **maire**, réunissant les acteurs de la
+  prévention, de la sécurité, de la justice, de l'éducation, et de
+  l'action sociale du territoire communal. Elle est l'**enceinte de
+  concertation** et de coordination des dispositifs locaux ; elle n'exerce
+  **aucun pouvoir de police** par elle-même.
+- **CISPD (conseil intercommunal)** : équivalent au niveau de l'**EPCI**
+  compétent en matière de préve

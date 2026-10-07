@@ -1,0 +1,144 @@
+l et commercial (SPIC) ou d'une
+  activité assujettie à la TVA.
+- Chaque budget annexe suit son **propre cycle** (DOB le cas échéant, budget
+  primitif, DM, CA/CFU, affectation du résultat), articulé avec le budget
+  principal par des **flux financiers croisés** (subvention d'équilibre,
+  remboursement de frais) dont le régime et les limites sont à vérifier.
+- L'obligation de créer un budget annexe pour une activité donnée dépend de
+  critères fixés par le CGCT ou un texte sectoriel — à vérifier avant de
+  conclure. Régime de TVA propre aux budgets annexes → `nomenclature-m57.md`,
+  ne pas le dupliquer ici.
+
+---
+
+## 6. Calculs et procédures
+
+### 6.1 Méthode de contrôle de l'équilibre réel
+
+Ne jamais recalculer un équilibre à partir d'un solde global. Procéder
+section par section : **(1)** section de fonctionnement — recettes évaluées
+sincèrement ≥ dépenses évaluées sincèrement ; **(2)** section
+d'investissement — recettes (y compris virement de la section de
+fonctionnement et affectation du résultat) = dépenses ; **(3)** test de la
+dette — les ressources propres de la section d'investissement (hors emprunt
+nouveau) couvrent le remboursement du capital de la dette de l'exercice. Si
+l'un des trois tests échoue, signaler l'irrégularité potentielle et basculer
+vers le garde-fou budgétaire (`SKILL.md` §5.3, `controle-budgetaire.md`) avant
+toute autre recommandation.
+
+### 6.2 Séquence type d'un exercice
+
+Poser la séquence **sans dates chiffrées**, à faire positionner par
+l'utilisateur sur le calendrier réel de l'exercice, dates légales vérifiées à
+la source : préparation budgétaire → DOB/ROB et délibération de tenue du
+débat → vote du budget primitif et transmission au représentant de l'État →
+exécution (DM, virements, suivi des AP/CP) → budget supplémentaire éventuel →
+clôture au 31 décembre et journée complémentaire → vote du compte
+administratif et/ou du CFU en concordance avec le compte du comptable →
+délibération d'affectation du résultat.
+
+### 6.3 Méthode de qualification d'un virement
+
+Identifier le niveau de vote retenu (§5.9) → identifier l'étendue exacte
+d'une éventuelle délégation à l'exécutif → vérifier que le virement ne
+franchit pas une limite que le niveau de vote interdit → si le chapitre des
+dépenses imprévues est mobilisé, vérifier l'objet (dépense réellement
+imprévisible) et la limite légale (à vérifier) → documenter l'acte et sa
+publication.
+
+**Annoncer toute hypothèse** retenue sur le régime local (niveau de vote,
+délégation) et demander confirmation si la donnée manque : ne jamais présumer
+un régime par défaut.
+
+---
+
+## 7. Déclencheurs de vérification
+
+Appliquer le socle-sources (`SKILL.md` §5.4, matrice §2.2) avant de conclure
+dès que la question porte sur :
+
+- l'**obligation** du DOB pour une strate donnée, ou le **délai** exact avant
+  le vote du budget ;
+- la **date limite** de vote du budget primitif, du budget supplémentaire, du
+  CA/CFU, ou le **délai de transmission** au représentant de l'État ;
+- le **plafond** du chapitre des dépenses imprévues ou toute autre limite
+  chiffrée de virement ;
+- le **seuil** conditionnant l'obligation d'un budget annexe ou d'une
+  présentation croisée par fonction ;
+- l'**ordre de priorité** exact de l'affectation du résultat dans un cas
+  litigieux, ou l'articulation précise entre **CFU** et régime transitoire ;
+- toute **réforme récente** touchant le calendrier budgétaire, la M57 ou le
+  CFU.
+
+---
+
+## 8. Pièges & confusions fréquentes
+
+1. Confondre **budget supplémentaire** et **décision modificative** : le
+   premier reprend les résultats, la seconde ajuste des prévisions.
+2. Croire que le nombre de DM est illimité **sans limite de fond** : chaque DM
+   reste soumise à l'équilibre réel et à la sincérité.
+3. Oublier la **délibération distincte** actant la tenue du DOB, en la
+   confondant avec le vote du budget primitif lui-même.
+4. Vérifier l'équilibre sur un **solde global** au lieu de tester chaque
+   section séparément (§6.1) — masque un déséquilibre sectionnel réel.
+5. Utiliser un **virement de crédits** pour financer une dépense sans crédit
+   jamais ouvert sur le chapitre/article concerné, ou pour contourner
+   l'absence de crédit sur une dépense obligatoire.
+6. Confondre **journée complémentaire** et **rattachement des charges et
+   produits** : deux mécanismes distincts (§5.10).
+7. Oublier la **règle de retrait** de l'exécutif au vote du compte
+   administratif ou du CFU.
+8. Croire qu'une **AP/CP votée** dispense du contrôle annuel des CP ouverts
+   sur l'exercice en cours (§5.9 bis), ou qu'un **budget annexe** n'est qu'un
+   sous-compte du budget principal.
+9. Citer une **date limite** ou un **seuil** de mémoire au lieu de renvoyer à
+   la vérification (§9).
+
+---
+
+## 9. Données / valeurs à vérifier
+
+| Donnée | Statut |
+|---|---|
+| Délai légal entre le DOB et le vote du budget primitif | **À vérifier** — jamais chiffré de mémoire |
+| Date limite de vote du budget primitif (et régime dérogatoire une année de renouvellement de l'assemblée) | **À vérifier** |
+| Date limite de vote du compte administratif / CFU | **À vérifier** |
+| Contenu exact et destinataires de la transmission du rapport ROB | **À vérifier** |
+| Seuil de population conditionnant l'obligation du DOB | **À vérifier** |
+| Seuil conditionnant la présentation fonctionnelle croisée ou l'obligation de budget annexe | **À vérifier** |
+| Plafond légal du chapitre des dépenses imprévues | **À vérifier** |
+| Ordre de priorité exact et modalités chiffrées de l'affectation du résultat | **À vérifier** |
+| Durée et opérations éligibles de la journée complémentaire | **À vérifier** |
+| Nom du code régissant le budget des collectivités (CGCT), du décret GBCP (`SKILL.md` §Objet) et du référentiel M57 applicable | Références structurelles stables — **à confirmer en version consolidée** (détail M57 → `nomenclature-m57.md`) |
+| Date d'entrée effective de la collectivité dans le régime cible du CFU | **À vérifier**, propre à chaque collectivité |
+
+---
+
+## 10. Écrits & livrables
+
+| Écrit | Élément obligatoire | Générateur |
+|---|---|---|
+| Rapport d'orientation budgétaire (ROB) | Rubriques obligatoires (§5.1), transmission, délai avant vote | `references/templates/rapport-orientation-budgetaire.md` |
+| Délibération de tenue du DOB | Distincte du vote du budget | Non gabarité spécifiquement — produire en délibération courte via `references/templates/deliberation-budgetaire.md` |
+| Délibération de vote du budget primitif / budget supplémentaire / DM | Compétence, section, niveau de vote, équilibre réel démontré, mentions de transmission au contrôle de légalité | `references/templates/deliberation-budgetaire.md`, après passage par `controle-budgetaire.md` (`SKILL.md` §6) |
+| Décision ou délibération de virement de crédits | Base de compétence (délégation ou délibération), respect du niveau de vote | `references/templates/deliberation-budgetaire.md` (variante virement) |
+| Délibération arrêtant le compte administratif / le CFU | Règle de retrait de l'exécutif, concordance avec le compte du comptable | `references/templates/deliberation-budgetaire.md` |
+| Délibération d'affectation du résultat | Ordre de priorité respecté, montants issus du compte arrêté | `references/templates/deliberation-budgetaire.md` |
+
+Toute délibération budgétaire est un **acte soumis au contrôle de légalité** :
+vérifier compétence, mentions obligatoires et délai de transmission via
+`controle-budgetaire.md` avant production (`SKILL.md` §6).
+
+---
+
+## 11. Double échelle [risque / confiance]
+
+| Sous-domaine | Risque | Confiance |
+|---|---|---|
+| Existence et contenu obligatoire du DOB/ROB | Moyen à élevé | À vérifier |
+| Respect du délai DOB → vote du budget | Élevé | À vérifier |
+| Respect de la date limite de vote du budget primitif | Élevé | À vérifier |
+| Test de l'équilibre réel section par section | Élevé | Stable dans la méthode, chiffres à vérifier |
+| Niveau de vote et fongibilité des virements | Moyen à élevé | À vérifier (dépend de la délibération locale) |
+| 

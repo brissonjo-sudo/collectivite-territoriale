@@ -1,0 +1,84 @@
+ voir
+   `fiscalite-locale.md`) — deux logiques distinctes.
+6. Confondre le **FPIC** (péréquation horizontale, entre collectivités) et
+   la **péréquation verticale** de la DGF (DSU/DSR/DNP, financée par
+   l'État).
+7. Présumer l'**identité entre population DGF et population INSEE**.
+8. Citer un **montant, un taux ou un seuil de dotation de mémoire**, y
+   compris pour un exercice déjà traité l'an dernier.
+
+---
+
+## 9. Données / valeurs à vérifier
+
+- **Code général des collectivités territoriales (CGCT)** — architecture de
+  la DGF et du FPIC (« à confirmer en version consolidée »).
+- **Code général des impôts (CGI)** — base légale du FCTVA (« à confirmer en
+  version consolidée »).
+- **Taux forfaitaire de compensation du FCTVA** — valeur volatile, revue en
+  loi de finances.
+- **Montants et enveloppes DETR, DSIL, DPV** — valeurs volatiles, fixées
+  chaque exercice.
+- **Critères et seuils de classement DSU, DSR, DNP** — valeurs volatiles,
+  revues chaque exercice.
+- **Calendrier annuel de notification des dotations** — à revérifier chaque
+  exercice.
+- **Délais de contestation d'un montant notifié** — à vérifier avant toute
+  démarche.
+- **Liste annuelle des variables d'ajustement** — évolutive, à vérifier en
+  loi de finances de l'année.
+- **Méthode exacte de calcul du CIF et de la répartition dérogatoire du
+  FPIC** — à vérifier avant toute simulation.
+
+---
+
+## 10. Écrits & livrables
+
+1. **Note d'impact financier** (simulation de l'évolution d'une dotation,
+   effet d'une variable d'ajustement, impact du FCTVA sur un plan de
+   financement d'investissement) → `templates/note-impact-financier.md`.
+2. **Dossier de demande de subvention d'investissement** (DETR, DSIL, DPV) :
+   aucun générateur dédié dans le socle actuel des cinq gabarits — signaler
+   l'absence de gabarit et construire le dossier au cas par cas à partir des
+   pièces exigées par le service instructeur.
+3. **Recours ou demande de rectification** sur un montant notifié : aucun
+   générateur dédié — signaler l'absence de gabarit, produire une note
+   argumentée par comparaison des données de calcul (§5.10).
+4. **Fiche de procédure financière** (méthode de calcul du potentiel fiscal
+   ou du FCTVA, procédure de vérification d'une fiche individuelle) →
+   `templates/fiche-procedure-financiere.md`.
+
+---
+
+## 11. Double échelle [risque / confiance]
+
+| Sous-domaine | Risque | Confiance |
+|---|---|---|
+| Inscription budgétaire d'une dotation notifiée | Élevé (équilibre du budget) | Stable dans son principe, montant à vérifier chaque exercice |
+| FCTVA — assiette et régime de versement | Moyen à élevé | Stable dans son principe, taux et décalage à vérifier |
+| DSU / DSR / DNP — classement et éligibilité | Moyen | À vérifier chaque exercice (classement relatif) |
+| FPIC — calcul et répartition interne | Élevé | Stable dans son principe, clé de répartition à vérifier |
+| Dossier DETR / DSIL / DPV | Moyen | À vérifier (calendrier et critères propres à chaque dispositif) |
+| Variables d'ajustement | Moyen à élevé | À vérifier chaque loi de finances |
+| Contestation d'un montant notifié | Élevé | À vérifier (voies et délais propres) |
+
+---
+
+## 12. Checklist de branche
+
+1. Dotation ou dispositif exactement qualifié, niveau de calcul (commune /
+   EPCI / ensemble intercommunal) identifié ?
+2. FCTVA distingué d'une subvention d'investissement classique (§5.6, §8
+   piège 2) ?
+3. Baisse ou variation d'une dotation analysée à la lumière des variables
+   d'ajustement et des effets de classement, avant d'être présentée comme
+   une anomalie ?
+4. Dotation d'intercommunalité distinguée de l'attribution de compensation,
+   renvoi fait à `fiscalite-locale.md` si pertinent ?
+5. FPIC distingué de la péréquation verticale de la DGF ?
+6. Aucun montant, taux ou seuil de dotation énoncé sans vérification ou sans
+   réserve explicite (§9) ?
+7. Calendrier de notification ou de dépôt de dossier signalé comme « à
+   vérifier », jamais donné de mémoire ?
+8. Écrit demandé produit via le gabarit approprié, ou absence de gabarit
+   signalée explicitement (§10) ?

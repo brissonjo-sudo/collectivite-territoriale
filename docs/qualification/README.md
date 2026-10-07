@@ -1,59 +1,40 @@
-# Qualification de la coactivation au 7 octobre 2026
+# Qualification actuelle : dev.6 PARTIEL
 
-La campagne native Codex R2 est achevée : seize réponses et seize juges frais,
-soit 32 rôles distincts ; 4 réussites, 6 échecs et 6 cas bloqués. Les 124 exigences atomiques
-donnent 107 vraies, 6 fausses et 11 indéterminées.
-Onze cas imposent les rôles et cinq permettent leur sélection spontanée.
+Le pilote dev.6 est **PARTIEL** : seize cas et 124 exigences préparés,
+six cas exécutés, cinq réponses liées et cinq juges frais (dix rôles retenus).
+Le cas APJA est rejeté hors score : six lectures ont été regroupées dans un
+seul appel. Sa réponse et son journal natif sont conservés sans remplacement.
+Dix cas ne sont pas exécutés. Les seuls cinq cas jugés donnent
+1 réussites, 1 échecs et 3 bloqués.
+41 exigences sont effectivement jugées :
+37 vraies, 1 fausses et 3 indéterminées.
+Ce bilan ne constitue pas un résultat de la suite complète.
 
-Cette mesure porte exclusivement sur dev.5 au commit candidat
-`3f0d34bd068e3427edc9335a4f1415aaf1c7c98d`, runtime `ebeee944e878b11177d5ccb85d9043c4c97260a9`. L'audit indépendant rejoue les appels
-natifs, les lectures par fragments, les réponses et les jugements ; il contrôle
-les 211 fichiers gelés, dont 166 fichiers de runtime. Les messages initiaux
-opaques et l'isolation complète du système partagé ne sont pas vérifiés.
-Les séquences imposées et le rappel initial de STOP ne démontrent pas,
-à eux seuls, un déclenchement autonome par le plugin.
+Candidat mesuré : `1a12b347448809864ba6d14d5501585a4a038206` ; source runtime : `3f0df285898cf1e36d1ddda8d85d0c4cd5e0903b`,
+version `1.2.0-dev.6`. L'audit partiel contrôle cinq répondants et cinq juges,
+pas seize paires. Le contrôle complet reste non satisfait. Les acteurs chargent
+des fichiers candidats par fragments ; l'activation réelle du plugin n'est
+pas démontrée. Messages initiaux opaques, isolation absolue, sélections forcées,
+source primaire pertinente et vérification de vigueur restent distingués.
+Aucun score dev.5 ni DSI autonome n'est transféré.
 
-Les agents ont chargé les fichiers candidats. L'activation réelle du plugin
-n'est pas démontrée ; une exigence littérale « via Skill » ne peut donc pas
-être validée par cette seule lecture. Les sources retrouvées, leur pertinence
-pour chaque affirmation et leur vigueur sont des contrôles distincts.
-Certains retours de sources sont tronqués ; leur transport réel est conservé,
-sans prétendre que leur contenu complet a été disponible au répondant.
-La tentative d'écriture hors périmètre du cas spontané RSSI/RH a été refusée
-par Windows, conservée et classée comme échec technique. Aucune réponse
-n'a été réécrite ni relancée pour améliorer le score.
+Le contrôle isolé, hors campagne, a installé et comparé 214 fichiers, dont
+166 runtime. `codex debug prompt-input` a construit le catalogue contenant
+les six descriptions complètes du plugin. Cette découverte native ne démontre
+ni sélection ni chargement par un modèle, ni réponse métier. L'observation
+datée de `login status` indique `Not logged in` dans cet état isolé ; elle ne
+prouve pas un état d'authentification futur. Aucun modèle ni smoke d'usage n'a
+été lancé. Le MCP est configuré désactivé et son exposition effective reste
+non vérifiée. Le stdout développeur brut, l'état Codex et les fichiers
+d'authentification/configuration ne sont pas publiés. Une pièce dérivée ne
+contient que les six descriptions et chemins du plugin, reliés au SHA local.
 
-Le candidat courant `1.2.0-dev.6` est distinct et **non mesuré**. La campagne dev.5 reste historique et aucun de ses scores ne lui est transféré. Un nouveau gel, une mesure propre à ses octets et son smoke Codex restent nécessaires.
+La campagne utilise les sous-agents natifs Codex, sans lancement de Claude.
+Avis humains DSI/RSSI et juridiques, smoke d'usage et suite complète restent
+ouverts ; `release_ready=false`. Les PR restent brouillon, sans fusion ni release.
 
-Cette campagne a été exécutée ici avec les sous-agents natifs Codex, sans
-lancer Claude Code ni exiger son authentification. Les avis humains DSI/RSSI
-et juridiques, le smoke du candidat et la qualification de release restent
-ouverts ; `release_ready=false`. Ni fusion, ni publication n'est autorisée
-par la mesure ou par une CI seule.
+[Rapport partiel](../../tests/evidence/coactivation-codex-dev6-PARTIEL/rapport-PARTIEL.md) · [Synthèse partielle](../../tests/evidence/coactivation-codex-dev6-PARTIEL/synthese-PARTIELLE.json)
 
-Voir le [rapport R2](../../tests/evidence/coactivation-codex-dev5-r2/rapport.md),
-la [synthèse](../../tests/evidence/coactivation-codex-dev5-r2/synthese.json) et
-l'[audit natif complet](../../tests/evidence/coactivation-codex-dev5-r2/audit-natif-final.json).
-L'outillage et l'inventaire des octets sont archivés avec les preuves R2.
+Le [bilan dev.5 historique](README-dev5-r2-historique.md) conserve sa portée : 16 réponses/16 juges, 4 réussites, 6 échecs, 6 bloqués ; 107/6/11 atomes. Les preuves dev.4/r7 et antérieures restent conservées.
 
-La portée R1 exploratoire, les premières lectures tronquées et les tentatives
-rejetées sont conservées. Elles ne contribuent pas aux résultats R2.
-R7 dev.4 reste une mesure partielle : six réponses et six juges frais,
-une réussite et cinq échecs ; trois nominaux `needs-auth`, un cas interrompu
-sans réponse et neuf cas non exécutés. Voir le
-[rapport r7](../../tests/evidence/coactivation-corrigee/rapport-partiel-corrections-r7.md).
-R4, R5 et R6, leurs synthèses et leurs traces restent dans
-`tests/evidence/coactivation-corrigee`. Leurs scores ne sont pas transférés.
-
-Le script historique `Reprendre-coactivation-corrigee.ps1` et son outillage
-restent conservés pour reproductibilité de l'ancienne voie d'exécution.
-Ils ne sont pas un préalable à la campagne native Codex exécutée ici.
-Une future mesure devra utiliser le candidat courant figé, des rôles frais
-et une nouvelle portée de preuve ; aucun dossier achevé ne doit être complété
-après changement de candidat ou d'authentification.
-
-La [PR DSI #5](https://github.com/brissonjo-sudo/DSI-fpt/pull/5) porte le bilan
-et la présentation. La
-[PR plugin #11](https://github.com/brissonjo-sudo/collectivite-territoriale/pull/11)
-reste brouillon. Le contrôle local, la CI, la mesure, les avis humains, le smoke
-et la publication sont rapportés séparément.
+Le diagnostic explicite du 7 octobre à 21:47 UTC conserve le marqueur `$collectivite-territoriale:dsi-fpt` comme texte utilisateur. Aucun bloc contenant les instructions complètes DSI n’est attesté ; seule la découverte est confirmée. Aucune inférence ni connexion demandée. Voir les pièces distinctes `smoke-dev6-explicite-diagnostic-2026-10-07.md/json`. Les reçus antérieurs restent des snapshots datés.

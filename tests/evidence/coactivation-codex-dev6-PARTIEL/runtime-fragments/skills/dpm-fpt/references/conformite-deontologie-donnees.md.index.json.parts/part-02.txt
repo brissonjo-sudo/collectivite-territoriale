@@ -1,0 +1,132 @@
+ment du
+  service (faute simple en principe pour la PM, hors régimes spéciaux à
+  vérifier). Distinguer faute de service (commune répond) et faute personnelle
+  détachable (agent répond, la commune peut néanmoins indemniser la victime
+  puis exercer une action récursoire contre l'agent — mécanisme à vérifier).
+- **Cumul de fautes** : possible (faute personnelle commise à l'occasion du
+  service et non dépourvue de tout lien avec lui) → la victime peut engager la
+  responsabilité de l'administration, qui peut ensuite agir contre l'agent.
+- **Protection fonctionnelle** : l'agent mis en cause (pénalement ou
+  civilement) pour des faits commis dans l'exercice de ses fonctions peut
+  solliciter la **protection fonctionnelle** de la collectivité. Cette
+  branche se borne à **nommer ce droit** : ses conditions, ses exclusions et
+  l'instruction de la demande relèvent de `drh-fpt` — dès que la question
+  porte sur ce régime, émettre le **bloc BASCULE** (`SKILL.md` §5.4) avant
+  tout contenu.
+- **Cumul procédures administrative / pénale / disciplinaire** : ces trois
+  voies sont **indépendantes** (principe d'indépendance des procédures) et
+  **cumulables** ; un classement sans suite pénal n'empêche pas une sanction
+  disciplinaire, et inversement.
+
+### 4.4 Contrôle interne
+
+- Le contrôle interne du service relève du **directeur de police municipale**
+  et de la chaîne hiérarchique : remontée systématique des incidents,
+  signalement des manquements suspectés, traçabilité des décisions
+  d'engagement de la force.
+- Selon la taille et l'organisation du service : inspection interne, référent
+  déontologie, ou saisine d'instances externes (IGA, déontologue de la
+  collectivité) — modalités à vérifier au cas par cas, pas de cadre légal
+  uniforme imposant une structure type pour la PM (à la différence de l'IGPN
+  pour la police nationale).
+- Le contrôle interne est le point d'entrée du **constat** du manquement
+  (cette branche) avant toute éventuelle ouverture de **procédure
+  disciplinaire** (`drh-fpt`).
+- Articuler avec le déontologue compétent (si la collectivité en a désigné un
+  au titre du droit de la fonction publique — référent déontologue, dispositif
+  distinct du code de déontologie PM lui-même) — à vérifier.
+
+### 4.5 RGPD — le service PM comme responsable de traitement
+
+- Le RGPD (règlement UE 2016/679) et la loi Informatique et Libertés
+  s'appliquent à tout traitement de données à caractère personnel opéré par le
+  service PM (main courante informatisée, logiciel métier, vidéoprotection,
+  applications de verbalisation mobile, fichiers locaux).
+- **Responsable de traitement** : en principe le **maire** (ou le président de
+  l'EPCI en cas de mutualisation), pas le directeur de police municipale à
+  titre personnel — à vérifier selon l'organisation et les actes de
+  délégation.
+- **DPO** : désignation obligatoire pour les autorités publiques ; souvent
+  mutualisée au niveau intercommunal ou via le centre de gestion. Vérifier
+  l'identité du DPO compétent avant toute formalité.
+- **Principes structurants à appliquer systématiquement** : finalité
+  déterminée et légitime, minimisation des données collectées, durée de
+  conservation limitée et documentée, sécurisation des accès, information des
+  personnes concernées, droits d'accès/rectification/opposition (sous réserve
+  des exceptions tenant à la sécurité publique et aux missions de police).
+- **Régime spécifique « directive police-justice »** (traitements à finalité
+  de prévention et de répression des infractions) : un sous-régime distinct du
+  RGPD général peut s'appliquer aux traitements de la PM lorsqu'ils
+  poursuivent une finalité de police judiciaire (ex. main courante alimentant
+  des éléments transmis au parquet) — **vérifier le régime exact applicable
+  par traitement avant toute conclusion**, ne pas appliquer mécaniquement le
+  RGPD général sans examiner cette distinction.
+- Articulation avec la vidéoprotection : régime d'autorisation propre
+  (CSI) + RGPD/police-justice pour le traitement des images → ne pas dupliquer
+  ici, voir `videoprotection.md`.
+
+### 4.6 CRPA — accès aux documents administratifs
+
+- Le **droit d'accès aux documents administratifs** (mains courantes,
+  rapports, PV, images de vidéoprotection en tant que documents) relève du
+  **Code des relations entre le public et l'administration (CRPA), titre Ier**
+  (droit d'accès aux documents administratifs — articles L311-1 et suivants —
+  *vérifié sur Légifrance le 2026-06-30* quant à la localisation du titre ;
+  numéro d'article précis à confirmer en version consolidée selon la date des
+  faits).
+- **Distinguer deux logiques** à ne jamais confondre :
+  - **CRPA** : droit d'accès du public/de l'administré à un document
+    administratif détenu par la PM, sous réserve des exceptions (sécurité
+    publique, procédure judiciaire en cours, protection des données
+    personnelles de tiers) et de l'**occultation** des données personnelles
+    avant communication à un tiers ;
+  - **RGPD** : droit d'accès de la **personne concernée** à ses **propres**
+    données personnelles, exercé directement auprès du responsable de
+    traitement (procédure distincte de la saisine CRPA/CADA).
+- **CADA** : commission compétente en cas de refus de communication d'un
+  document administratif — saisine préalable obligatoire avant tout recours
+  contentieux (à vérifier le délai et les modalités exactes).
+- **Cas fréquent en PM** : demande d'images de vidéoprotection par un
+  administré impliqué dans un événement. Articulation CRPA (accès au document)
+  / RGPD (droit d'accès aux données le concernant) / régime spécial CSI de la
+  vidéoprotection (délai de conservation, destinataires autorisés) → traiter
+  les trois grilles ensemble, ne pas répondre sur un seul fondement → voir
+  aussi `videoprotection.md`.
+
+### 4.7 AIPD — analyse d'impact relative à la protection des données
+
+- L'**AIPD** est **obligatoire** lorsque le traitement est susceptible
+  d'engendrer un risque élevé pour les droits et libertés des personnes —
+  critères et liste de traitements concernés fixés par la CNIL, **à vérifier**
+  au cas par cas (la vidéoprotection étendue, la reconnaissance faciale ou
+  tout dispositif de captation systématique sont des candidats typiques à
+  examiner en priorité).
+- Conduite de l'AIPD : description du traitement et de ses finalités,
+  évaluation de la nécessité et de la proportionnalité, identification des
+  risques pour les personnes concernées, mesures pour traiter ces risques —
+  méthodologie CNIL, à mobiliser sans la reconstituer de mémoire.
+- **Avant tout déploiement** d'un nouveau dispositif de captation ou de
+  traitement de données par le service PM (extension de vidéoprotection,
+  nouveau logiciel métier, caméra-piéton, lecture automatisée de plaques
+  d'immatriculation) : vérifier si l'AIPD est requise **avant** la mise en
+  service, pas après.
+- Articulation avec le contrôle de légalité et l'autorisation préfectorale de
+  vidéoprotection : l'AIPD ne se substitue pas à l'autorisation CSI, elle s'y
+  ajoute → `videoprotection.md`.
+
+### 4.8 Traçabilité des consultations de fichiers
+
+- Tout agent PM habilité à consulter un fichier d'État (TAJ, FOVeS, fichier
+  des véhicules volés, SIV, etc., selon les habilitations effectivement
+  accordées au service) doit le faire dans le **cadre strict de sa
+  finalité légale** et de ses **habilitations personnelles** — pas de
+  consultation de confort ou hors cadre de mission.
+- **Traçabilité obligatoire** : chaque consultation doit être journalisée
+  (identité de l'agent, date, motif, fichier consulté) — exigence
+  structurante tant pour le RGPD que pour la déontologie professionnelle. Une
+  consultation hors cadre constitue un **manquement déontologique**
+  (probité, respect de la loi) **et** une **violation potentielle du RGPD**
+  (détournement de finalité), pouvant aussi caractériser une infraction
+  pénale (atteinte au secret, détournement de fichier informatique) → cumul
+  des trois voies (§4.3).
+- 

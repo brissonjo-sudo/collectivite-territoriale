@@ -1,0 +1,147 @@
+{
+  "created_at": "2026-10-07T21:47:51.747478+00:00",
+  "run": "codex-dev6-native-r1",
+  "audit_script_sha256": "554919a0214bd4b86708285dbd86ae26cdb2e018edc3a26d0bd5e9ba9510735f",
+  "status": "failed",
+  "require_complete": false,
+  "frozen_files_verified": 213,
+  "runtime_files_verified": 166,
+  "respondents_verified": 4,
+  "judges_verified": 4,
+  "unique_retained_roles": 8,
+  "initial_messages_verified": false,
+  "actual_plugin_activation_verified": false,
+  "release_ready": false,
+  "source_scope": "Sanitized source projection replayed from real native returns; no new request; no legal certification.",
+  "respondents": [
+    {
+      "case_id": "plugin-prime-depart-retraite",
+      "thread_id": "01a1183c-a9ac-7592-a77c-70d17cac635e",
+      "model": "gpt-6.1-sol",
+      "entry_fragments": 6,
+      "runtime_groups": 9,
+      "source_calls": 6,
+      "technical_status": "passed",
+      "warnings": []
+    },
+    {
+      "case_id": "plugin-dsi-reouverture",
+      "thread_id": "01a11847-a341-7032-ab40-304d224711b1",
+      "model": "gpt-6.1-sol",
+      "entry_fragments": 6,
+      "runtime_groups": 11,
+      "source_calls": 2,
+      "technical_status": "passed",
+      "warnings": []
+    },
+    {
+      "case_id": "plugin-spontane-budget",
+      "thread_id": "01a11849-0647-7a73-9762-54906f7acd63",
+      "model": "gpt-6.1-sol",
+      "entry_fragments": 6,
+      "runtime_groups": 11,
+      "source_calls": 3,
+      "technical_status": "passed",
+      "warnings": []
+    },
+    {
+      "case_id": "plugin-spontane-reversibilite",
+      "thread_id": "01a1184b-8e50-7562-b52d-58a8da6dd0c5",
+      "model": "gpt-6.1-sol",
+      "entry_fragments": 6,
+      "runtime_groups": 8,
+      "source_calls": 2,
+      "technical_status": "passed",
+      "warnings": []
+    }
+  ],
+  "judges": [
+    {
+      "case_id": "plugin-prime-depart-retraite",
+      "thread_id": "01a11844-6264-7793-9b23-6c9ddda8f0b7",
+      "model": "gpt-6.1-sol",
+      "fragments": 6,
+      "assessment": {
+        "case_id": "plugin-prime-depart-retraite",
+        "verdict": "bloque",
+        "technical_status": "passed",
+        "behavior_status": "passed",
+        "documentary_status": "incomplete",
+        "primary_content_available": true,
+        "release_ready": false
+      }
+    },
+    {
+      "case_id": "plugin-dsi-reouverture",
+      "thread_id": "01a11850-6b98-7573-a3c2-d3f2098222ba",
+      "model": "gpt-6.1-sol",
+      "fragments": 6,
+      "assessment": {
+        "case_id": "plugin-dsi-reouverture",
+        "verdict": "echec",
+        "technical_status": "passed",
+        "behavior_status": "failed",
+        "documentary_status": "passed",
+        "primary_content_available": false,
+        "release_ready": false
+      }
+    },
+    {
+      "case_id": "plugin-spontane-budget",
+      "thread_id": "01a11850-f712-7bc2-8465-96f9c5014ea6",
+      "model": "gpt-6.1-sol",
+      "fragments": 6,
+      "assessment": {
+        "case_id": "plugin-spontane-budget",
+        "verdict": "reussite",
+        "technical_status": "passed",
+        "behavior_status": "passed",
+        "documentary_status": "passed",
+        "primary_content_available": true,
+        "release_ready": false
+      }
+    },
+    {
+      "case_id": "plugin-spontane-reversibilite",
+      "thread_id": "01a11853-37b4-7611-b9d5-ed1c87b2ba02",
+      "model": "gpt-6.1-sol",
+      "fragments": 7,
+      "assessment": {
+        "case_id": "plugin-spontane-reversibilite",
+        "verdict": "bloque",
+        "technical_status": "passed",
+        "behavior_status": "passed",
+        "documentary_status": "passed",
+        "primary_content_available": false,
+        "release_ready": false
+      }
+    }
+  ],
+  "errors": [
+    {
+      "case_id": "plugin-violation-donnees",
+      "error": "Appel source hors grammaire littérale"
+    }
+  ],
+  "base_audit_script_sha256": "e2b70d154cd99d8066e162ac0951cc96011fb374871b78adbb6a183bd7a01584",
+  "native_mcp_truncation_wrapper_sha256": "30e5d164771b9e0b6d58470a268081ae4549321b9a22f3be8559060b5c14290e",
+  "inner_audit_script_sha256": "6a6045ecbdc88b2fb12be9cfef964ae77c889cbc34ae29577b471d14e09c0666",
+  "grammar_predeclared": true,
+  "outillage_sha256": {
+    "audit_natif_codex_dev6_final.py": "554919a0214bd4b86708285dbd86ae26cdb2e018edc3a26d0bd5e9ba9510735f",
+    "audit_natif_codex_dev6_r1.py": "e2b70d154cd99d8066e162ac0951cc96011fb374871b78adbb6a183bd7a01584",
+    "audit_natif_codex_dev6_r1_mcp_tronque.py": "6a6045ecbdc88b2fb12be9cfef964ae77c889cbc34ae29577b471d14e09c0666",
+    "campagne_codex_dev6_r1.py": "fe7b71c349834fe1623a26183ad78bad9978ab3d93855c1a44fcc70e0db52b4d",
+    "configuration_codex_dev6.py": "da65a6f17f93fafd6d40722dfa6c6a0ad2c9cbcd693030c13b5ab14ce6777fe9",
+    "controler_codex_dev6.py": "1239c08d193ec2458a4602162f919e72567e6d02ee8c83dea5b1fc7b9720ba12",
+    "controler_codex_dev6_fragments_crlf.py": "e7573fe2e5d43a5efc70431f8fa50e172b2a91f96b5037502b9c68218c4948f9",
+    "controler_codex_dev6_r1_mcp_tronque.py": "30e5d164771b9e0b6d58470a268081ae4549321b9a22f3be8559060b5c14290e",
+    "controler_codex_dev6_r1_site_literal.py": "f5867e7b2cf78fde66a37eca6b76ec2f914fdc2a1f5944d3d45884c064a17814",
+    "grammaire_codex_dev6.py": "398bcf7846e7c1f39366f25faa6f531e88119ddd9ae92eb1dd38d67e8486ba27",
+    "jugements_codex_dev6_r1.py": "60fdc580620f8c4d5ee950c5f1a3678b57b5a5c9db29f80557941db3df2a9c3e",
+    "preuves_codex_dev6.py": "c5f3d025241b130750fb5ca5068e7d61805fdc7c2f5ef1097a7a5ca73e046b07",
+    "preuves_codex_dev6_fragments.py": "6a9aebf4058b89b621f4eddc66fe2510fb75bdb1a4190b3025002b5aa49893cb",
+    "preuves_codex_dev6_web.py": "20376d00e0049681fc6b2ce33a36ddd73b4896c8bd4acc3d438b16db592a4385",
+    "rapport_codex_dev6.py": "9482978be799c523d28ef5f726cc08aba96bf3843ff8ee52c33a78c05a814cee"
+  }
+}

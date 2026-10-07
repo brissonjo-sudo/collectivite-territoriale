@@ -1,0 +1,34 @@
+klist de branche
+
+1. **Garde-fou APJA testé** : la demande comporte-t-elle un acte réservé à
+   l'OPJ ? Si oui, STOP affiché avant toute production d'écrit et compte rendu
+   immédiat à l'OPJ. Le rapport de mise à disposition ne reste mobilisable
+   que si une route 53/73 ou 78-6 est établie (§5.4).
+2. **Type d'écrit correctement choisi** selon la logique de décision (§5.1) :
+   PV / rapport d'information / rapport de mise à disposition, non
+   exclusifs les uns des autres.
+3. **Qualification pénale renvoyée à `penal-procedure.md` /
+   `reglementation-appliquee.md`**, jamais tranchée dans cette branche.
+4. **Mentions obligatoires** du type d'écrit concerné toutes présentes
+   (§5.3), y compris l'exigence de localisation précise pour le PV.
+5. **Valeur probante** correctement qualifiée (force probante renforcée du
+   PV vs régime ordinaire des rapports, §5.2) — ne pas la présenter comme
+   acquise sans vérifier que le texte d'incrimination attribue bien le
+   pouvoir de constatation par PV à l'agent.
+6. **Aucune donnée manquante comblée par supposition** : règle
+   `[INCOMPLET]` appliquée et champs listés explicitement (§5.5).
+7. **Double transmission** maire + OPJ territorialement compétent
+   correctement distinguée pour les rapports (`penal-procedure.md` §4.2).
+8. Si **acte faisant grief** (arrêté) : passage par `controle-legalite.md`
+   vérifié avant toute production.
+9. Références citées avec leur statut de vérification exact (§9), jamais
+   un identifiant inventé.
+10. Couple **[risque / confiance]** (§11) indiqué quand utile à la
+    décision.
+
+[risque : élevé sur la valeur probante du PV et la compétence de
+constatation, critique si acte faisant grief associé / confiance : stable
+sur l'art. 537 CPP et l'art. L. 130-4 du code de la route (vérifiés sur
+Légifrance le 2026-06-30), à confirmer en version consolidée pour le détail
+des compétences par catégorie d'agent et pour la jurisprudence d'espèce sur
+l'exigence de précision]

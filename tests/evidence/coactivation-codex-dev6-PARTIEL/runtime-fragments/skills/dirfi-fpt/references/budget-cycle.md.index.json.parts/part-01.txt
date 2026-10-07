@@ -1,0 +1,149 @@
+# Branche — Cycle budgétaire (v0.1.0)
+
+> Structure conforme à `_gabarit-branche.md`. Aucun numéro d'article, aucune
+> date limite chiffrée, aucun seuil ni montant n'est cité de mémoire : seules
+> les **règles**, les **formules** et la consigne de vérifier la version en
+> vigueur figurent ici. Les références structurelles stables (nom du code, du
+> décret fondateur, de l'instruction) sont citées avec la réserve « à
+> confirmer en version consolidée ».
+
+## 1. Périmètre / Exclusions
+
+- **Périmètre** : la mécanique du **cycle budgétaire annuel** d'une
+  collectivité — débat et rapport d'orientation budgétaire, budget primitif,
+  budget supplémentaire, décisions modificatives, virements de crédits,
+  compte administratif et compte financier unique, affectation du résultat,
+  principes budgétaires, autorisations de programme/crédits de paiement
+  (AP/CP) et autorisations d'engagement/crédits de paiement (AE/CP), journée
+  complémentaire, calendrier légal, vote par nature ou par fonction, niveau de
+  vote des crédits, budgets annexes.
+- **Exclusions** : les **règles d'imputation comptable** et le détail du plan
+  de comptes → `nomenclature-m57.md` ; l'**irrégularité budgétaire** et la
+  **saisine de la chambre régionale des comptes** → `controle-budgetaire.md` ;
+  la **prospective pluriannuelle** (épargne, capacité de désendettement, PPI)
+  → `prospective-analyse.md` ; le **circuit d'exécution** de la dépense et de
+  la recette une fois les crédits ouverts → `execution-depense.md` et
+  `execution-recette.md`.
+
+---
+
+## 2. Questions couvertes
+
+- Le DOB est-il obligatoire pour cette collectivité, quel doit être le
+  contenu du rapport ROB, et dans quel délai doit-il précéder le vote du
+  budget ?
+- Quelle différence entre budget primitif, budget supplémentaire et décision
+  modificative, et lequel mobiliser selon le besoin ?
+- Comment opérer un virement de crédits, et quelles en sont les limites selon
+  le niveau de vote retenu ?
+- Quand voter le compte administratif et le CFU, et qui ne prend pas part au
+  vote ?
+- Comment affecter le résultat de l'exercice clos ?
+- Quels sont les principes budgétaires opposables, et que signifie
+  concrètement l'équilibre réel ?
+- Comment fonctionnent une AP/CP ou une AE/CP ?
+- Qu'est-ce que la journée complémentaire, et en quoi diffère-t-elle du
+  rattachement des charges et produits ?
+- Faut-il voter par nature ou par fonction, à quel niveau ouvrir les crédits,
+  et un budget annexe est-il obligatoire pour telle activité ?
+
+---
+
+## 3. Arbre de traitement
+
+`qualifier l'acte budgétaire en cause (DOB / BP / BS / DM / virement / CA-CFU
+/ affectation du résultat) → situer l'exercice concerné et la position dans le
+calendrier légal (à vérifier, §9) → identifier l'autorité compétente
+(assemblée délibérante / exécutif par délégation expresse) → tester les
+principes budgétaires, en priorité l'équilibre réel et la sincérité → vérifier
+le niveau de vote choisi et la marge de fongibilité qui en découle →
+rechercher un signe d'irrégularité (déséquilibre, dépense obligatoire non
+couverte, vote hors délai) → si signe positif, appliquer le garde-fou
+budgétaire (`SKILL.md` §5.3) et renvoyer à `controle-budgetaire.md` avant tout
+autre contenu → sinon, vérifier les délais et seuils applicables → orienter
+vers l'écrit (§10)`.
+
+Ne jamais proposer une manœuvre budgétaire avant d'avoir testé l'équilibre
+réel et la compétence de l'autorité qui signerait l'acte.
+
+---
+
+## 4. Variables à lever
+
+- **Strate et population** de la collectivité — conditionne certaines
+  obligations (existence du DOB, présentation fonctionnelle croisée,
+  obligation de budget annexe) : seuils à vérifier, jamais présumés.
+- **Régime de nomenclature** applicable (M57 de droit commun, développée,
+  abrégée ou simplifiée) → conditionne le niveau de détail exigé, sans changer
+  la mécanique du cycle décrite ici (→ `nomenclature-m57.md`).
+- **Existence de budgets annexes** et leur régime (autonomie financière,
+  assujettissement à la TVA) : chaque budget annexe suit son propre cycle,
+  distinct du budget principal.
+- **Délégation consentie par l'assemblée à l'exécutif** — conditionne qui peut
+  décider un virement de crédits ou un acte d'exécution sans délibération
+  nouvelle. Toujours vérifier l'étendue exacte de la délégation en vigueur, pas
+  sa seule existence.
+- **Exercice concerné** (N-1 clos, N en cours, N+1 préparé) — une même
+  question n'appelle pas la même réponse selon l'exercice visé.
+- **Stade du cycle** au moment de la question : avant le vote du budget
+  primitif (régime des dépenses par douzièmes), en cours d'exercice (DM,
+  virements), ou après la clôture (CA/CFU, affectation du résultat).
+- **AP/CP ou AE/CP déjà votées** — leur existence contraint l'ouverture des
+  crédits de paiement de l'exercice et la lecture du budget de l'année.
+- **Mode de vote retenu** (par nature ou par fonction) et **niveau de vote**
+  choisi par l'assemblée (chapitre ou article) : ce sont des choix de la
+  collectivité, à vérifier au cas par cas, pas des données universelles.
+
+---
+
+## 5. Règles métier
+
+### 5.1 Débat et rapport d'orientation budgétaire (DOB/ROB)
+
+- Le DOB est un temps politique **obligatoire** pour les collectivités
+  concernées, préalable au vote du budget primitif. L'obligation est fonction
+  de critères (notamment de strate) fixés par le CGCT — **à vérifier**, elle
+  n'est pas universelle.
+- Il donne lieu à un **débat**, sanctionné par une **délibération distincte**
+  du vote du budget lui-même — cette délibération prend acte de la tenue du
+  débat, elle n'ouvre aucun crédit.
+- Le **rapport d'orientation budgétaire (ROB)** support du débat doit exposer,
+  a minima : les orientations budgétaires envisagées portant sur les
+  évolutions prévisionnelles des dépenses et des recettes (fonctionnement et
+  investissement), les engagements pluriannuels envisagés, des informations
+  relatives à la structure et à la gestion de l'encours de dette, et une
+  présentation de la structure et de l'évolution des dépenses et des effectifs
+  — ce dernier point s'arrête à l'**enveloppe et à la trajectoire**, sans
+  entrer dans le statutaire individuel (→ garde-fou RH, `SKILL.md` §5.5).
+- **Délai avant le vote du budget** : le DOB doit se tenir dans un délai
+  **fixé par le CGCT avant le vote du budget primitif** — délai à vérifier,
+  jamais reconstitué de mémoire.
+- **Transmission** : le rapport est transmis selon des modalités et à des
+  destinataires fixés par le CGCT (représentant de l'État, mise à disposition
+  du public) — modalités à vérifier, en particulier pour les EPCI concernés
+  par une obligation de publication renforcée.
+- L'absence de DOB obligatoire, ou un rapport manifestement incomplet,
+  expose le budget primitif voté ensuite à un risque contentieux (vice de
+  procédure) — signaler ce risque avant de conseiller un vote en l'état.
+
+### 5.2 Budget primitif
+
+- Acte **prévisionnel et autorisation** : il prévoit et autorise, pour
+  l'exercice, l'ensemble des recettes et des dépenses de la collectivité.
+- Voté par **l'assemblée délibérante**, avant une **date limite fixée par le
+  CGCT** — date à vérifier, jamais présumée identique d'une année sur
+  l'autre (elle peut être décalée par un texte spécifique certaines années).
+- Se prononce par **section** (fonctionnement, investissement) et respecte le **niveau de vote** choisi (§5.9).
+- Avant le vote (ou en année de renouvellement de l'assemblée), l'exécution
+  de la dépense obéit à un régime dérogatoire → `execution-depense.md`, ne
+  pas le détailler ici.
+
+### 5.3 Budget supplémentaire
+
+- Acte **facultatif**, voté en cours d'exercice, qui **reprend les résultats**
+  de l'exercice précédent (excédents ou déficits, restes à réaliser) et
+  ajuste les prévisions du budget primitif.
+- Suit le **même formalisme de vote** que le budget primitif (compétence,
+  section, niveau de vote).
+- À ne pas confondre avec la **décision modificative** (§5.4), qui n'a pas
+  vocation première à reprendre les résultats mais à ajuster des prévis

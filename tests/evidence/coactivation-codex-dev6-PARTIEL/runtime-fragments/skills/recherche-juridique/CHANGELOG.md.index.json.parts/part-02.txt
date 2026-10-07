@@ -1,0 +1,160 @@
+-gemini] — 2026-09-06
+
+Déclinaison **Gemini** (Google) de la méthodologie, dans `gemini_skill/`. Elle
+ne modifie pas le noyau `skill/`, qui reste la source de vérité.
+
+#### Ajouté
+- `gemini_skill/SKILL.md` : noyau condensé reprenant les principes P1 à P7, la
+  procédure interne en 8 étapes, la traçabilité proportionnée et la triangulation
+  ciblée de la 3.3.0, adapté aux agents de l'écosystème Google (Antigravity,
+  Gemini CLI).
+- `gemini_skill/references/{sources-autorisees,modules.md}` : ordre de recherche
+  et autorité des sources ; six modules activables.
+- `gemini_skill/README.md` : ce que la déclinaison conserve, remplace et
+  laisse de côté par rapport au noyau, installation sous Antigravity et
+  Gemini CLI.
+- `tests/test_gemini_skill.py` : tests automatisés de conformité du frontmatter,
+  des principes invariants P1 à P7 et des modules.
+
+#### Modifié
+- L'échelle de récupération privilégie le **connecteur MCP officiel** du dépôt
+  (`mcp_server/server.py`), compatible nativement avec Google Antigravity et
+  Gemini CLI. La recherche institutionnelle via grounding Google Search restreint
+  aux sources officielles sert de repli, l'exécution Python SDK (`gemini_agent/`)
+  permet l'intégration programmatique, et l'abstention informée (P7) s'applique si
+  la source est inaccessible.
+- `gemini_agent/legal_agent_config.py` : prompt système réaligné sur les 7
+  principes invariants P1–P7 de la méthodologie v3.3.0 du droit français.
+
+### [3.3.0-manus] — 2026-09-06
+
+Déclinaison **Manus** de la méthodologie, dans `manus_skill/`. Elle ne modifie
+pas le noyau `skill/`, qui reste la source de vérité.
+
+#### Ajouté
+- `manus_skill/SKILL.md` : noyau condensé reprenant les principes P1 à P7, la
+  procédure interne, la traçabilité proportionnée et la triangulation ciblée
+  de la 3.3.0.
+- `manus_skill/references/{sources-autorisees,modules.md}` : ordre de
+  recherche et autorité des sources ; six modules activables.
+- `manus_skill/README.md` : ce que la déclinaison conserve, remplace et
+  laisse de côté par rapport au noyau.
+
+#### Modifié
+- L'échelle de récupération privilégie le **connecteur MCP personnalisé**
+  de Manus (Settings → Integrations → Custom MCP Servers), qui permet de
+  connecter le serveur MCP de ce dépôt avec ses six outils exacts, vérifiés
+  dans `mcp_server/server.py`. La capacité web native de Manus sert de repli,
+  sans nom d'outil supposé — Manus ne publie pas ce nom dans sa documentation
+  publique, contrairement au registre ouvert de Vibe Code.
+
+### [3.3.0-vibe] — 2026-09-05
+
+Déclinaison **Vibe** (Mistral) de la méthodologie, dans `vibe_skill/`. Elle
+ne modifie pas le noyau `skill/`, qui reste la source de vérité.
+
+#### Ajouté
+- `vibe_skill/SKILL.md` : noyau condensé reprenant les principes P1 à P7, la
+  procédure interne, la traçabilité proportionnée et la triangulation ciblée
+  de la 3.3.0.
+- `vibe_skill/README.md` : installation sous `.vibe/skills/`,
+  `.agents/skills/` ou `~/.vibe/skills/`, un dossier par skill nommé comme
+  le champ `name:` du frontmatter.
+- `vibe_skill/tools/` : squelette non connecté de normalisation, avec
+  avertissement explicite sur ce qu'il ne fait pas.
+
+#### Modifié
+- L'échelle de récupération utilise les outils natifs de Vibe Code,
+  `web_search` (paramètre `query`) et `web_fetch` (paramètre `url`), vérifiés
+  contre le registre public `mistralai/mistral-vibe`. Poussée initialement
+  avec des noms d'outils inexistants (`web_search_web_search`,
+  `web_search_open_url`) et une installation qui ne correspondait pas à la
+  découverte réelle des skills par Vibe ; corrigé après vérification.
+
+### [3.3.0-grok] — 2026-09-05
+
+Déclinaison **Grok** de la méthodologie, dans `grok_skill/`. Elle ne modifie
+pas le noyau `skill/`, qui reste la source de vérité.
+
+#### Ajouté
+- `grok_skill/SKILL.md` : noyau condensé reprenant les principes P1 à P7, la
+  procédure en interne, la traçabilité proportionnée et la triangulation
+  ciblée de la 3.3.0.
+- `grok_skill/references/{sources-autorisees,modules.md}` : ordre de recherche
+  et autorité des sources ; six modules activables.
+- `grok_skill/README.md` : ce que la déclinaison conserve, remplace et laisse
+  de côté par rapport au noyau.
+
+#### Modifié
+- L'échelle de récupération est remplacée par les outils natifs de la
+  plateforme — `web_search` restreint aux domaines officiels, `open_page`,
+  `browser_tab` — faute de connecteur MCP et d'accès PISTE. L'invariant de
+  provenance et le déclencheur d'abstention sont inchangés.
+
+### [3.3.0] — 2026-09-05
+
+#### Modifié
+- Les contrôles restent obligatoires, mais leur affichage devient proportionné
+  au livrable : les réponses simples ne récitent plus les étapes internes ni
+  une auto-critique vide.
+- L'ordre de recherche est distingué de la hiérarchie des normes et de l'effet
+  des décisions juridictionnelles.
+- L'échelle de récupération reconnaît désormais le connecteur MCP lorsqu'il est
+  disponible, avant le script local et le repli web.
+- La triangulation renforcée cible les interprétations discutables. L'absence
+  de jurisprudence ne rend plus automatiquement incertain un texte clair.
+- Le vault de navigation (`vault/`) est réaligné sur ces règles : P3, échelle de
+  récupération, affichage des étapes et exigence de triangulation.
+
+### [plugin-v0.8.2] — 2026-09-05
+
+#### Corrigé
+- `get_article` distingue la provenance officielle de l'applicabilité de la
+  version à la date évaluée et signale une version historique.
+- `search` vérifie un identifiant `LEGIARTI` fourni avant de le retourner.
+- Le routeur conserve le code et la date reconnus et accepte les références
+  usuelles telles que `L. 2212-2 CGCT`. Une date exprimée à côté d'un
+  identifiant `LEGIARTI` est transmise à la lecture de l'article, au lieu
+  d'évaluer la version à la date du serveur.
+- La sonde de production contrôle la **présence** de
+  `applicable_at_as_of_date` et non sa valeur de vérité : `False` (version
+  historique) et `None` (date de début manquante) sont des réponses correctes.
+
+#### Tests
+- Ajout de régressions sur la datation d'une version historique, la provenance
+  d'un identifiant fourni, la conservation du code et de la date et le routage
+  d'une référence préfixée sans le mot « article ».
+
+### [3.2.1] — 2026-09-04
+
+Issue d'un audit de fraîcheur juridique portant sur ce skill et sur
+`drh-fpt`, mené par des agents indépendants vérifiant chaque source et
+identifiant citée contre l'état réel en ligne. Aucune évolution
+méthodologique ; correction de sources devenues fausses ou périmées.
+
+#### Corrigé
+- **`references/sources-autorisees.md`** : trois adresses erronées —
+  `journal-officiel.gouv.fr` (site DILA des annonces légales, pas le JORF —
+  remplacé par `legifrance.gouv.fr/jorf/jo`, seule adresse qui répond
+  effectivement), `judilibre.fr` (domaine inexistant — Judilibre n'est
+  accessible que via `courdecassation.fr/recherche-judilibre`),
+  `arianeweb.conseil-etat.fr` (URL périmée — remplacée par
+  `conseil-etat.fr/arianeweb/`). `circulaires.legifrance.gouv.fr` redirige
+  désormais vers le site principal (refonte Légifrance d'avril 2026) ;
+  corrigé également dans `SKILL.md` (P1, P3) et dans les deux gabarits de
+  requête `site:circulaires.legifrance.gouv.fr` de
+  `references/gabarits-requetes.md`, repérés lors de la revue de merge.
+- **`references/modules.md`** (module ACTE-ADMIN) : le contrôle de
+  motivation visait encore la loi du 11 juillet 1979, recodifiée au CRPA
+  (art. L.211-2 et s.) par l'ordonnance n° 2015-1341 depuis le 1/01/2016 —
+  dix ans de retard sur ce point précis.
+- **`references/sources-autorisees.md`** : ajout de vie-publique.fr comme
+  source des dossiers législatifs/travaux parlementaires postérieurs au
+  1/04/2026, migrés hors Légifrance.
+- `date_derniere_verification_sources` portée à 2026-09-04.
+
+#### Vérifié sans changement
+Domaines Légifrance, Cour de cassation, Conseil d'État, Conseil
+constitutionnel, EUR-Lex ; formats d'identifiants (LEGIARTI, JORFTEXT,
+CETATEXT, CONSTEXT) ; formats de citation (Bull./inédit, Lebon/Tables) ;
+a

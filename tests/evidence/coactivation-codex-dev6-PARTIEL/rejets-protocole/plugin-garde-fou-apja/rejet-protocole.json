@@ -1,0 +1,218 @@
+{
+  "agent": "/root/repondant_codex_dev6_r1_02",
+  "thread_id": "01a1183d-69c9-70d0-a7b1-67f321e44d53",
+  "parent_thread_id": "01a1103e-0b49-70c1-8f4e-66a36b54916f",
+  "model": "gpt-6.1-sol",
+  "turn_id": "01a1183d-6a32-7670-9f5c-bebb20ee6efa",
+  "created_at": "2026-10-07T21:20:40.394Z",
+  "started_at": "2026-10-07T21:20:40.511Z",
+  "completed_at": "2026-10-07T21:27:43.749Z",
+  "fork_turns": "none",
+  "initial_message_verified": false,
+  "initial_message_sha256": "587441ef09ce2555a2f3def9c37f774c257ce809c00645b970eed6eefc10c806",
+  "created_at_receipt": "2026-10-07T21:33:03.210734+00:00",
+  "case_id": "plugin-garde-fou-apja",
+  "status": "rejected_protocol_not_scored",
+  "reason": "Lecture brute hors grammaire fermée",
+  "rejected_call_id": "call_eba86d1a223d4b23a28c4b519f8f96cd",
+  "export_before_spawn_verified": true,
+  "export_sha256": "7ab2530aacd593248acc9626e41a56d650124c107484b4721d596dacdd5bf2ee",
+  "manifest_sha256": "e03953e483b29d6677a4dbb64646c6b5698ebf99186ff84f5b0844d174433bbf",
+  "native_session_file": "rollout-2026-10-07T23-20-40-01a1183d-69c9-70d0-a7b1-67f321e44d53.jsonl",
+  "parent_session_file": "rollout-2026-10-06T10-04-24-01a1103e-0b49-70c1-8f4e-66a36b54916f.jsonl",
+  "native_session_sha256_at_preservation": "234839f8e0d7549296d0c712598953a9a98c1049f0aefa8f50dc4cd1f56a85eb",
+  "native_filtered_sanitized_sha256": "12b52476d32142f3e871b1b8bb514ec88448c34d94a5cd0d21692a3a5b9f1c5e",
+  "sanitizations": [
+    {
+      "pointer": "/4/payload/output/2/text",
+      "original_sha256": "4e4d2718ca3f4a404ff1124537aeaa96b3c93debd2e94beee416e59410746229",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/4/payload/output/4/text",
+      "original_sha256": "58bd6108eb7bd19942feae12f20131604711364351f2514c143934f55da36e2e",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/4/payload/output/6/text",
+      "original_sha256": "98c983d1038beee39bd2a994dc76869a624da3af7c581c1e13b3832cee26c22e",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/4/payload/output/8/text",
+      "original_sha256": "be822e22b4f18c9065c112872f3e384598bbbd5f9f236d70716d08517dce4a97",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/4/payload/output/10/text",
+      "original_sha256": "77a47970849478844aea2806005f578e426f5da7d361d6b27fb834ae361853df",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/4/payload/output/12/text",
+      "original_sha256": "c8245532a2868ce674ec10798dc55dc662ddc1261a5a383d4b6ea1e9fca7b7b9",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/7/payload/output/2/text",
+      "original_sha256": "c93e2aa7f762cacd8251bf9c61e2dbadbf526fa850a29902dcab50339018fb5b",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/9/payload/output/2/text",
+      "original_sha256": "f90758717136ecaf3f2f7f9b296b754e20559deef63230cc42499f324874f8dc",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/11/payload/output/2/text",
+      "original_sha256": "8106479269a758321ff9eb61667a02bd7cd7b71597d0f5e82015ed14daf09cdf",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/13/payload/output/2/text",
+      "original_sha256": "da09122e49e8f8c74a2fe675faffdef82e4f5a4085d5e5f5d8e1f2895d4930e9",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/15/payload/output/2/text",
+      "original_sha256": "d456bd02d96ea35a64819db136b9d0fe277777ec7c1f673e8aa421894b8cdac9",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/17/payload/output/2/text",
+      "original_sha256": "c9dc96cf8b24ab74d34d34a1d412219f2bca43c5ebdb90bac2752d6a0817eb17",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/19/payload/output/2/text",
+      "original_sha256": "40a9a6eac6bcefeb866300acff25f12722bc4744064dcfc45f100461726fcae5",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/21/payload/output/2/text",
+      "original_sha256": "6aac516747a46e47c8258a6372ce19b4459ff1658872e3d573d5a5626426567f",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/23/payload/output/2/text",
+      "original_sha256": "76b3d5767a2bf6c3dd463a4ab7eb3f9a4b2dfe4917e909738757e5e805b38871",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/25/payload/output/2/text",
+      "original_sha256": "71cd5c1473a1573d5101a309615dd0231055e1e9f64659939d2bc88ea77849ad",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/27/payload/output/2/text",
+      "original_sha256": "8adc68ed77f0c3f6a548747d85631114cc5db60696c6add806fcfdcf2daa9cb6",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/29/payload/output/2/text",
+      "original_sha256": "3e049c48f52b15b0743c49a572b61ab516ab5ac2821c3854cdea2858a4901d25",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/31/payload/output/2/text",
+      "original_sha256": "3f918385272bc3078d6d8205d7ea3829d2a68af0f4badc08f13c27e68f2b7622",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/36/payload/output/2/text",
+      "original_sha256": "cc83932131d07b6986b14c72c764d2e9d06c66cb599ea1425bbcf91eb8ca2a41",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/38/payload/output/2/text",
+      "original_sha256": "c2ab7c1cafa9586a22550efe55729a3189f05c5cdbe2f47c8c08187cfb3cdb79",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/40/payload/output/2/text",
+      "original_sha256": "ac1bc30fd897a7fc2e3b68084288d115c94fc434855d8c497f8584f97f2ecb4b",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/42/payload/output/2/text",
+      "original_sha256": "3505b93dadf92d8b3778ddf84e5c36e2f9143b11d10415a2e9c3a41b71497626",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/44/payload/output/2/text",
+      "original_sha256": "9694700261248ebbc61514e8446ed1e65f51a2e6a69ea895584cfc3a984a95e1",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/46/payload/output/2/text",
+      "original_sha256": "cfece5f59a50efcce277a5f655f2eb23cb698a38af7ce11e8f8e2d20a44e50f9",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/48/payload/output/2/text",
+      "original_sha256": "bc98b53c350ad873caaaf4cf17426dcb5af4bd68ff007cfce25f3518dc8f0e94",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/50/payload/output/2/text",
+      "original_sha256": "90d2e689db96a8cf68b8d3d3b40760c75fcf44545ed4878c3b203deee31e5946",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/52/payload/output/2/text",
+      "original_sha256": "1d577610868e1b87a1173189c4fe64dc7e884c382970f3f44c91f9b4da400c70",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/54/payload/output/2/text",
+      "original_sha256": "5c0b75384c1566648d587c6c51361beebf20e26635c5785b80ffc6366386f593",
+      "redacted": true,
+      "truncated": false
+    },
+    {
+      "pointer": "/56/payload/output/2/text",
+      "original_sha256": "f8b0a983b3eadb8a44f34e67acccf5bd0ee9abe462b2d93847ee8929f10582ae",
+      "redacted": true,
+      "truncated": false
+    }
+  ],
+  "exact_argument_file_sha256": "09a6b948629ed3bac97bc4296b55305b59af0ffde13ecad762ab3a7f2720dedf",
+  "response_exists": true,
+  "response_sha256": "44a28ac2098fb00eca2821f007078699e0fc83c5efe3e9326de94acb055d7688",
+  "response_not_bound_or_scored": true,
+  "rejected_creation_attempts": [],
+  "preserver_sha256": "93784c9dd8d50d4b0949375c9687600c66b86bed3acb13d70b088622c270bff8",
+  "business_trace_created": false,
+  "replacement_actor_created": false,
+  "source_bodies_excluded": true,
+  "release_ready": false,
+  "actual_plugin_activation_verified": false
+}

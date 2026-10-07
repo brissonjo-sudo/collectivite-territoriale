@@ -1,0 +1,43 @@
+Préparer un **dossier de reprise et d’écart [INCOMPLET]**, puis faire examiner le contrat avant de décider d’une mise en demeure. À ce stade, « export inexploitable » est un constat rapporté par l’équipe informatique ; les engagements souscrits et un éventuel manquement restent à établir.
+
+Date d’analyse : 07/10/2026. Dates du contrat, de sortie et des constats : inconnues. Cadre : scénario fictif, contexte territorial français à préciser. Régime contractuel : non déterminé. Niveau : cadrage opérationnel et note express, mode A standard.
+
+**Volet DSI — préparer une reprise démontrable**
+
+Le cadrage suit `dsi-fpt/references/analyse-situation.md` ; la sortie et les contrôles relèvent de `dsi-fpt/references/contrats-prestataires.md` et `dsi-fpt/references/applications-interoperabilite.md`. Les consignes ont été chargées par fichiers, sans activation native du plugin.
+
+| Volet | Inconnues et preuves à réunir | Action et recette attendue | Responsable à désigner |
+|---|---|---|---|
+| Périmètre | Applications, données, volumes, pièces jointes, configurations, interfaces, composants et licences nécessaires | Inventaire des éléments à reprendre, avec leur utilité métier et leurs dépendances | DSI avec propriétaires métiers |
+| Exploitabilité | Export réellement livré ou seulement proposé ; formats, dictionnaire, identifiants, relations, encodage, documentation | Test reproductible dans un environnement autorisé : lecture, import, rapprochement et opérations métier | Équipe de reprise ; validation par le métier |
+| Support et exploitation | Assistance disponible pendant la sortie, accès autorisés, maintenance, interlocuteurs et capacité du futur exploitant | Plan d’exploitation : gestion des erreurs, supervision, sauvegarde et restauration testée, assistance et transmission des connaissances | Responsable d’exploitation, interne, mutualisé ou prestataire |
+| Continuité | Service concerné, criticité, date de fermeture prévue, fonctionnement dégradé et cible de reprise | Plan de bascule avec critères d’arrêt, retour préparé, traitement des modifications entre export et bascule et contrôle après reprise | DSI et métier ; décideur de bascule à identifier |
+
+Conserver l’export reçu intact, sa date, sa version et les échanges associés ; travailler sur une copie. Décrire chaque anomalie avec résultat attendu, résultat obtenu, méthode de test et impact métier. Ne pas transformer une appréciation générale en preuve d’un défaut précis.
+
+La recette doit montrer la complétude des éléments attendus, la cohérence des liens et des pièces associées, la lisibilité et la possibilité d’effectuer les opérations essentielles. Le seul nombre de lignes importées ne démontre pas une reprise réussie. Employer un jeu fictif ou préparé selon les exigences reçues, sans joindre de données nominatives au dossier diffusé.
+
+Préparer une demande technique au fournisseur : expliquer les anomalies observées, demander le dictionnaire et la documentation manquants, un export d’essai corrigé, son assistance à la reprise et une proposition de calendrier. Ces demandes constituent des besoins à examiner ; elles ne sont pas présentées comme des obligations déjà établies. Ne pas figer la bascule ni retirer prématurément les anciens accès avant les preuves de recette et une décision tracée.
+
+**Analyse recherche-juridique — pièces absentes et abstention ciblée**
+
+J’attribue à `recherche-juridique` les constats documentaires, la vérification des droits et les limites suivantes. **Aucune pièce contractuelle n’a été fournie ni examinée.** La recherche juridique MCP a réellement été effectuée dans cette session, puis une décision officielle a été récupérée. Elle ne fournit pas un fondement pertinent suffisant pour établir les droits de restitution et les suites de ce scénario. La recherche ne vaut donc pas validation juridique du contrat.
+
+Ce rôle s’abstient ici de confirmer une obligation d’export exploitable, des droits de réutilisation, l’attribution des frais, un droit à pénalité ou résiliation, une indemnisation, ainsi que la procédure et les délais d’une mise en demeure. Aucun fondement juridique non vérifié n’est reproduit. Méthode : `recherche-juridique/SKILL.md`, `recherche-juridique/references/modules.md` et `dsi-fpt/references/socle-sources-verification.md`.
+
+Faire réunir le contrat signé, annexes techniques, documents généraux auxquels il renvoie, modifications, licences, engagements de sortie, comptes rendus de réception et échanges avec le fournisseur. Constituer une matrice **constat technique → pièce et clause exacte → preuve → question juridique → conclusion vérifiée ou abstention**.
+
+Demander au service juridique ou au conseil compétent d’examiner :
+
+- quels engagements de restitution, de format, de documentation et d’assistance ont été souscrits ; quelles contradictions entre pièces subsistent ;
+- quels éléments peuvent être repris, utilisés ou transmis après la sortie, et quelles pièces établissent ces droits ;
+- quelles corrections ou suites peuvent être demandées sur les faits documentés, avec quel fondement et quelles conditions ;
+- qui peut décider et signer, selon quelle forme et quel canal, avec quelles échéances vérifiées et quels risques pour la continuité.
+
+La revue humaine complète ce travail ; elle ne remplace pas la récupération des sources primaires pertinentes dans le volet `recherche-juridique`. Aucun acte n’est rédigé comme définitif, signé ou envoyé ici.
+
+**Précisions nécessaires avant de conclure ou de figer le plan :** quelle entité porte le contrat, quelles sont ses dates de signature et de sortie, et quelles pièces encadrent la restitution ? Le SI est-il exploité en interne, mutualisé ou externalisé, et qui validera la reprise métier ?
+
+Le dossier à soumettre comporte l’inventaire, les anomalies reproductibles, les preuves de recette attendues, le plan de continuité et la matrice contractuelle encore incomplète. Une décision sur la mise en demeure reste suspendue à l’examen documenté des droits et des conditions d’action.
+
+Traçabilité : recherche effectuée le 07/10/2026 ; module CONTENTIEUX mobilisé pour repérer les questions de suites, sans conclusion procédurale. Les autres modules ne sont pas appliqués : aucun audit de pièces ni acte n’a été réalisé. Confiance juridique : abstention sur les points précités ; reprise technique : non démontrée. Limites : pièces, dates, périmètre et validation métier manquants ; aucune source informelle utilisée.

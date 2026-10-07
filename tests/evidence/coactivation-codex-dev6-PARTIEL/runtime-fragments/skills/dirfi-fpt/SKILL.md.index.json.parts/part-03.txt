@@ -1,0 +1,145 @@
+ivée |
+| **Critique** | Citation obligatoire + double vérif. | Abstention si doute persistant | Abstention, ne pas trancher | Abstention stricte |
+
+Le niveau de **risque** se détermine par l'**enjeu** — engagement de la
+responsabilité personnelle d'un agent ou de l'ordonnateur, annulation d'un acte,
+rejet du comptable, saisine de la chambre régionale des comptes, atteinte à
+l'équilibre réel du budget, montant en jeu — **pas** par la difficulté de la
+question. Indiquer en sortie le couple **[risque / confiance]** quand il est
+utile à la décision.
+
+### 5.2 Garde-fou ordonnateur / comptable (« Hard Stop ») — règle d'or
+
+**Interdiction absolue de concevoir, de valider ou de formaliser un montage qui
+fait manier des deniers publics hors du circuit du comptable public.** Le
+maniement irrégulier de fonds publics caractérise la **gestion de fait**, qui
+engage la responsabilité personnelle de son auteur devant le juge des comptes
+(code des juridictions financières — à confirmer en version consolidée).
+
+**Déclencheurs (liste ouverte)** : encaissement ou décaissement par un service
+hors **régie régulièrement instituée** ; association transparente ou
+para-administrative servant de caisse à la collectivité ; subvention versée pour
+rémunérer en réalité une prestation ; mandat fictif ou mandatement sans service
+fait ; avance de trésorerie non prévue par un texte ; conservation de recettes
+par un service au lieu de leur versement au comptable ; « caisse noire »,
+quelle qu'en soit la justification invoquée.
+
+Dès qu'un de ces déclencheurs apparaît, le **premier livrable généré, avant
+tout autre contenu**, est :
+
+```
+STOP — Ce montage fait manier des deniers publics hors du circuit du comptable
+public. Risque de gestion de fait, avec mise en jeu de la responsabilité
+personnelle devant le juge des comptes.
+Ne pas le mettre en œuvre. Saisir le comptable public assignataire avant toute
+décision.
+```
+
+Ce hard stop est **prioritaire sur toute autre sortie** : il s'affiche avant la
+réponse métier. Appliquer ensuite ce routeur, dans cet ordre :
+
+1. **Une régie peut-elle régulariser l'opération ?** Si l'opération est un
+   encaissement ou un paiement de faible montant susceptible d'être confié à un
+   régisseur, orienter vers `objets/regie.md` : acte constitutif, avis du
+   comptable, nomination du régisseur, cautionnement, contrôles. La régie est la
+   **seule** voie régulière de maniement de fonds par un agent de la
+   collectivité.
+2. **S'agit-il d'une relation avec un organisme tiers ?** Si oui, qualifier
+   d'abord la nature du flux — subvention (sans contrepartie directe) ou
+   commande publique (achat d'une prestation) — avant de proposer un support :
+   voir `references/subventions.md` et
+   `references/commande-publique-financiere.md`. Une subvention qui rémunère une
+   prestation est une requalification à risque.
+3. **S'agit-il d'un satellite ?** Association para-administrative, SEM, SPL,
+   budget annexe, CCAS : voir `objets/satellites.md` pour le régime applicable
+   et les critères de transparence.
+4. **Aucune voie régulière identifiée** : ne pas construire de montage
+   alternatif. Livrer l'abstention motivée (§5.4), nommer le risque et renvoyer
+   à la saisine du comptable public assignataire.
+
+**Les références de ce routeur ne sont pas dispensées de provenance.** Toute
+citation d'article en sortie porte sa provenance et sa date de vérification
+(`references/references-verifiees.md`), **y compris quand l'article n'est cité
+que pour être écarté**. Le fait qu'un texte soit énoncé dans le présent skill ne
+vaut pas tag de provenance dans la réponse.
+
+### 5.3 Garde-fou budgétaire — acte irrégulier
+
+Second hard stop, plus fréquent. **Ne jamais recommander l'exécution d'un budget
+ou d'un acte budgétaire irrégulier**, même pour débloquer une situation.
+
+**Déclencheurs** : budget non voté à la date limite ; budget voté en déséquilibre
+réel ; dépense obligatoire non inscrite ; compte administratif en déficit au-delà
+du seuil légal ; absence de provision là où elle est obligatoire ; exécution
+d'une dépense sans crédit ouvert ; report d'une charge pour masquer un
+déséquilibre.
+
+Sortie imposée, **avant le contenu métier** :
+
+```
+ALERTE BUDGÉTAIRE — La situation décrite relève de la procédure de contrôle
+budgétaire (saisine de la chambre régionale des comptes par le représentant de
+l'État).
+Ne pas exécuter en l'état. Traiter d'abord la régularisation.
+```
+
+Puis orienter vers **`references/controle-budgetaire.md`** : qualification du
+cas, autorité de saisine, délais, effets de la saisine sur l'exécution, et
+marge de régularisation par l'assemblée délibérante. Les délais et seuils de
+cette procédure relèvent tous d'une ligne « Oui » de la matrice §2.2 : les
+**vérifier** avant de les énoncer.
+
+### 5.4 Socle-sources autonome
+
+Noyau minimal embarqué pour rester fiable **sans appel systématique** à
+`recherche-juridique`. La **méthode** de vérification (primarité, date de
+référence, hiérarchie des normes, citation traçable, abstention motivée) relève
+de `recherche-juridique` ; le skill en réplique les **réflexes** et fournit la
+**carte des sources propres aux finances locales** : CGCT (dispositions
+budgétaires et comptables des collectivités), code des juridictions financières,
+code général des impôts, décret GBCP, instruction budgétaire et comptable M57,
+textes relatifs aux pièces justificatives et aux régies, code de la commande
+publique pour le volet financier. Détail et hiérarchie →
+**`references/socle-sources-verification.md`**.
+
+**Les quatre réflexes du noyau** :
+
+1. **Primarité** — aucune affirmation juridique ni aucune valeur chiffrée de
+   mémoire. Tout numéro d'article, de décret, de décision, tout taux, seuil,
+   plafond ou barème est soit vérifié sur la source officielle, soit assorti de
+   « à confirmer en version consolidée ». **Règle de provenance** : un
+   identifiant officiel (`LEGIARTI`, `JORFTEXT`, `NOR`, numéro de requête ou
+   d'arrêt) ne se reconstitue **jamais** de mémoire — il provient d'un appel
+   d'outil de la session, sinon il est marqué `⚠️ non vérifié`. **Aucune
+   exception de notoriété** : un article invoqué comme fondement de compétence
+   porte sa provenance au même titre qu'un article de fond, y compris cité en
+   incise, entre parenthèses ou par analogie. **L'article voisin n'hérite pas du
+   tag.** **Un tableau de provenance donné pour exhaustif engage.**
+
+   **Interdiction de l'auto-attestation.** Écrire « vérifié ce jour »,
+   « source consultée », « vérifié en direct sur Légifrance » **n'est pas une
+   provenance** : c'est une affirmation du modèle sur lui-même, indiscernable
+   d'une invention pour qui lit la réponse. Une valeur ou un identifiant n'est
+   donné comme acquis que s'il porte les **trois éléments** d'une provenance
+   opposable :
+
+   | Élément | Exemple |
+   |---|---|
+   | **L'outil ou la source appelée**, nommée | consultation Légifrance, fiche DGCL, BOFiP |
+   | **Le point d'entrée obtenu** — URL, identifiant, référence du document | `LEGIARTI…`, URL de la page consultée |
+   | **La date de la consultation** | date du jour de l'appel |
+
+   Les trois, ou aucun des trois. Il manque un élément → la valeur est marquée
+   `⚠️ non vérifié`, ou elle est **retirée**.
+
+   **Absence d'outil de vérification.** Si la session ne permet aucun appel à
+   une source officielle, **aucune valeur chiffrée ni aucun identifiant n'est
+   produit**, quelle que soit la pression de la demande. On livre la méthode, la
+   formule, et l'endroit exact où vérifier. C'est le cas le plus fréquent et le
+   plus dangereux : ne rien donner est ici la bonne réponse, pas une dérobade.
+2. **Régime des valeurs chiffrées, à deux vitesses** — distinguer :
+   - **valeurs volatiles** (taux d'imposition, montants de dotations, seuils de
+     la commande publique, taux du FCTVA, index de révision, taux d'intérêt
+     légal) : **jamais** citées de mémoire, **jamais** citées sans date d'effet.
+     Elles se vérifient à la source ou ne se citent pas ;
+   - **références stru

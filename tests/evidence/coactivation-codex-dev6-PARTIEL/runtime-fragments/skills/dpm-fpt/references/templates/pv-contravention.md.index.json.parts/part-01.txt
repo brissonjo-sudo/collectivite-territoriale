@@ -1,0 +1,141 @@
+# Générateur interactif — PV de contravention (v0.1.0)
+
+> Couche 4 (`references/templates/`), piloté par `references/ecrits-professionnels.md`
+> (§4, §5, §6, §10). Avant tout usage de ce générateur, le routeur
+> `references/analyse-situation.md` et le test du **garde-fou APJA**
+> (`SKILL.md` §5.2) doivent déjà avoir validé que la situation relève bien
+> d'un **PV de contravention** au sens de `ecrits-professionnels.md` §5.1
+> (constatation directe d'une contravention, dans le champ de compétence
+> matérielle de l'agent — art. 21 CPP + texte spécial, ex. art. L. 130-4
+> code de la route, à confirmer en version consolidée).
+>
+> **Discipline d'écriture** : champs à compléter entre `[ ]`. **Aucune
+> donnée nominative** ne doit apparaître dans ce gabarit ni dans un
+> brouillon produit en session — seuls des espaces réservés
+> (`[NOM Prénom]`, `[adresse]`, `[plaque]`…). Tout visa d'article et toute
+> référence numérotée portent la réserve **« à confirmer en version
+> consolidée »** tant qu'ils n'ont pas été vérifiés sur la source officielle
+> dans la session en cours (socle-sources, `SKILL.md` §5.3).
+
+---
+
+## 0. Pré-requis avant d'ouvrir le générateur
+
+1. **Garde-fou APJA testé** (`SKILL.md` §5.2, `penal-procedure.md` §4.4-4.5) :
+   le fait constaté reste-t-il dans le périmètre de l'art. 21 CPP (à
+   confirmer en version consolidée) ? Si la situation bascule vers un acte
+   réservé à l'OPJ, afficher le **STOP** avant toute chose et
+   rendre compte immédiatement à l'OPJ. Ne réorienter vers
+   `references/templates/rapport-mise-a-disposition.md` que si une route 53/73 ou 78-6 est
+   établie ; sinon ne retenir personne et utiliser le rapport d'information
+   adapté. Ce générateur ne produit **pas** de PV d'acte réservé.
+2. **Choix de l'écrit confirmé** (`ecrits-professionnels.md` §5.1) :
+   constatation **directe** d'une **contravention**, dans le champ de
+   compétence matérielle de l'agent. En cas de doute sur la compétence de
+   constatation, renvoyer à `references/reglementation-appliquee.md` (et,
+   pour les contraventions routières, à l'art. L. 130-4 du code de la
+   route — vérifié sur Légifrance le 2026-06-30, identifiant
+   LEGIARTI000045072417, périmètre exact par catégorie d'agent à confirmer
+   en version consolidée) **avant** de poursuivre.
+3. Si une mesure sur la personne a également eu lieu sur un fondement
+   établi (art. 53 + 73 CPP, ou art. 78-6) : ce PV se cumule avec un
+   `references/templates/rapport-mise-a-disposition.md` distinct — ne pas fusionner les
+   deux écrits (`ecrits-professionnels.md` §5.1, point 1).
+
+---
+
+## 1. Séquence de questions — une à une, jamais en bloc
+
+**Règle de conduite** (`SKILL.md` §6, `ecrits-professionnels.md` §6.2) :
+poser **un champ à la fois**, attendre la réponse, **confirmer** la valeur
+reçue avant de passer au champ suivant. Ne jamais enchaîner plusieurs
+questions dans le même tour. Si une réponse manque ou reste vague,
+**relancer une fois** sur ce champ précis, puis, si elle reste indisponible,
+basculer ce champ en `[INCOMPLET]` (§3) et continuer la séquence sur les
+champs suivants plutôt que de bloquer tout l'entretien.
+
+L'ordre ci-dessous suit la trame **qui / quand / où / pourquoi /
+qualification / témoins / suites** imposée par `SKILL.md` §6 et
+`ecrits-professionnels.md` §5.3.
+
+### Étape 1 — Identité et qualité du rédacteur (« qui » constate)
+- Q1.1 : « Quel est votre nom, prénom et qualité (agent de police
+  municipale, chef de service de police municipale…) ? »
+- Q1.2 : « Quel est votre numéro d'agrément préfectoral / d'assermentation,
+  si exigé pour cette catégorie de contravention (à vérifier selon le texte
+  applicable) ? »
+- Q1.3 : « Dans quelle commune et au titre de quel service exercez-vous ? »
+
+### Étape 2 — Date et heure de la constatation (« quand »)
+- Q2.1 : « À quelle date avez-vous constaté les faits ? »
+- Q2.2 : « À quelle heure précise (heure de constatation, pas une
+  estimation) ? »
+- Si l'infraction dépend d'un **appareil de contrôle homologué** (radar,
+  cinémomètre, horodateur) : Q2.3 : « L'heure provient-elle directement de
+  l'appareil, ou d'une observation distincte de l'agent ? Préciser le type
+  d'appareil et, si connu, sa référence d'homologation. »
+
+### Étape 3 — Lieu précis de l'infraction (« où »)
+- Q3.1 : « Quelle est l'adresse ou la localisation exacte des faits (voie,
+  numéro ou portion de voie, point kilométrique, commune) ? »
+- **Rappel impératif** (`ecrits-professionnels.md` §5.2) : une localisation
+  imprécise fait perdre au PV sa force probante renforcée (art. 537 CPP).
+  Si la réponse reste vague (« dans le centre-ville », « vers la place »),
+  **relancer explicitement** pour obtenir une localisation exploitable
+  avant de continuer.
+
+### Étape 4 — Faits matériellement constatés (« pourquoi » / quoi)
+- Q4.1 : « Que avez-vous personnellement constaté, en décrivant uniquement
+  les éléments matériels observés (pas d'interprétation, pas de
+  supposition) ? »
+- Q4.2 : « Avez-vous constaté ces faits par observation directe, ou
+  via un appareil de contrôle ? Si appareil, le lien avec Q2.3 est-il
+  cohérent ? »
+- **Garde-fou rédactionnel** : si la réponse contient des éléments qui ne
+  relèvent pas de l'observation directe de l'agent (rapporté par un tiers,
+  déduction), les signaler et les isoler explicitement — la force probante
+  de l'art. 537 CPP ne couvre que la matérialité constatée personnellement
+  (`ecrits-professionnels.md` §5.2).
+
+### Étape 5 — Qualification retenue
+- Q5.1 : « Quel texte d'incrimination souhaitez-vous viser (code, article) ? »
+- **Ce générateur ne tranche jamais la qualification lui-même** — renvoi
+  obligatoire :
+  - contenu de l'infraction par domaine → `references/reglementation-appliquee.md` ;
+  - pouvoir de constatation mobilisé (art. 21 CPP et texte spécial) →
+    `references/penal-procedure.md`.
+  Si la qualification proposée par l'utilisateur n'a pas été confirmée dans
+  la session contre une source officielle, la marquer `⚠️ non vérifié —
+  qualification à confirmer en version consolidée avant transmission`
+  plutôt que de l'affirmer comme acquise.
+- Q5.2 (le cas échéant) : « Cette contravention est-elle prévue par un
+  texte qui attribue explicitement aux agents de police municipale le
+  pouvoir de la constater par procès-verbal (ex. art. L. 130-4 du code de
+  la route pour le domaine routier) ? » — si la réponse est négative ou
+  incertaine, signaler que la force probante renforcée de l'art. 537 CPP
+  n'est pas acquise (`ecrits-professionnels.md` §5.2) et que l'écrit
+  pertinent pourrait être un rapport d'information.
+
+### Étape 6 — Personne(s) concernée(s) et témoins
+- Q6.1 : « L'identité du contrevenant est-elle connue ? Si oui, sur quel
+  fondement (pièce d'identité présentée, immatriculation, déclaration) ? »
+  — ne **jamais** inscrire de donnée nominative réelle dans un brouillon de
+  travail ; utiliser `[NOM Prénom]`, `[date de naissance]`, `[adresse]` en
+  espace réservé.
+- Q6.2 : « Y a-t-il eu des témoins ? Si oui, combien et selon quelle
+  qualité (autre agent, tiers présent) ? » — mêmes réserves nominatives.
+- Q6.3 : « Le contrevenant a-t-il formulé des observations au moment de la
+  constatation ? » — rappel : leur recueil est une **faculté**, pas une
+  obligation, dans le cadre de l'art. 21 CPP (`ecrits-professionnels.md`
+  §5.3). **Garde-fou** : on retranscrit des observations **spontanées**,
+  telles quelles ; aucune question sur les faits, aucune confrontation, aucun
+  recueil orienté — ce serait une audition, acte réservé à l'OPJ (`SKILL.md`
+  §5.2). Si le contrevenant veut « s'expliquer » longuement, noter qu'il a
+  souhaité formuler des observations et renvoyer à l'OPJ.
+
+### Étape 7 — Suites données
+- Q7.1 : « Une notification ou un avis a-t-il été remis au contrevenant
+  (PV papier remis sur place, avis de contravention différé, verbalisation
+  électronique) ? Selon quelle procédure locale ? »
+- Q7.2 : « Une route 53/73 ou 78-6 est-elle établie en plus de la
+  constatation ? » — si oui, ne pas documenter

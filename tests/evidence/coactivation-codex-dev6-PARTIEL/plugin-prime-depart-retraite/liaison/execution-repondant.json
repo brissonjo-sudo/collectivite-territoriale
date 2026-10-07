@@ -1,0 +1,320 @@
+{
+  "agent": "/root/repondant_codex_dev6_r1_01",
+  "thread_id": "01a1183c-a9ac-7592-a77c-70d17cac635e",
+  "parent_thread_id": "01a1103e-0b49-70c1-8f4e-66a36b54916f",
+  "model": "gpt-6.1-sol",
+  "turn_id": "01a1183c-aa1a-7191-a1c5-75f52bf72a88",
+  "created_at": "2026-10-07T21:19:51.212Z",
+  "started_at": "2026-10-07T21:19:51.335Z",
+  "completed_at": "2026-10-07T21:27:27.572Z",
+  "fork_turns": "none",
+  "initial_message_verified": false,
+  "initial_message_sha256": "4f22f74e5c9233af1fdd7a8d4339136b225a1415dfa5737eca056b13f2e92dd3",
+  "case_id": "plugin-prime-depart-retraite",
+  "host": "Codex",
+  "activation_kind": "file_read_fragments",
+  "actual_plugin_activation_verified": false,
+  "full_runtime_context_verified": true,
+  "full_question_context_verified": true,
+  "export_pre_spawn": true,
+  "adapter_sha256": "fe7b71c349834fe1623a26183ad78bad9978ab3d93855c1a44fcc70e0db52b4d",
+  "response_sha256": "fbe7d2151a39cf55f7bad5d5fe78501e8033fd59673cbb49d760fc5bce26fc98",
+  "trace_sha256": "402b7ca8c598d24b1f2a79821fb317099b7d6fd3b9e53f34353dbb95e55cf373",
+  "native_filtered_sha256": "0f1d5da9a6cc1befd20248c4de5a6f78a900a6f0e23f07d9fd5d8eb38d1e3d6c",
+  "native_session_file": "rollout-2026-10-07T23-19-51-01a1183c-a9ac-7592-a77c-70d17cac635e.jsonl",
+  "parent_session_file": "rollout-2026-10-06T10-04-24-01a1103e-0b49-70c1-8f4e-66a36b54916f.jsonl",
+  "loaded_skills": [
+    "dirfi-fpt",
+    "drh-fpt",
+    "recherche-juridique"
+  ],
+  "entry_fragment_reads": [
+    {
+      "call_id": "call_69041d1a145e46ec85f8dbbc2389a07b",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/plugin-prime-depart-retraite/input.index.json.parts/part-01.txt",
+      "sha256": "4935fee064adb535f4fbee7262a02b2e12f608c0381789fc3af702f9dfd53416",
+      "presentation_suffix": "CRLF",
+      "timestamp": "2026-10-07T21:19:59.149Z"
+    },
+    {
+      "call_id": "call_80ee39245f064458a4fefe58a7b7e262",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/plugin-prime-depart-retraite/input.index.json.parts/part-02.txt",
+      "sha256": "75c7211d3402a8cf4f838c6943368a3313db7565368f839e6d79e8980c568ea5",
+      "presentation_suffix": "CRLF",
+      "timestamp": "2026-10-07T21:20:03.379Z"
+    },
+    {
+      "call_id": "call_95b315d932fb43f3b3c638b1ff63b6f2",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/plugin-prime-depart-retraite/input.index.json.parts/part-03.txt",
+      "sha256": "da20803febb31e7dbcba179d4ebba50f4da14a29b9cab21cd10f2ff5146d43ad",
+      "presentation_suffix": "CRLF",
+      "timestamp": "2026-10-07T21:20:10.604Z"
+    },
+    {
+      "call_id": "call_c2f7f516e94a47a5b9e0faacb1ea0a47",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/plugin-prime-depart-retraite/input.index.json.parts/part-04.txt",
+      "sha256": "40f79286b496c9a9dac69bad174f6d2b37c0fb2ccc6b0b5d494877fa2a07fa2f",
+      "presentation_suffix": "CRLF",
+      "timestamp": "2026-10-07T21:20:15.684Z"
+    },
+    {
+      "call_id": "call_a025ce11d90044c89c583c3de200ebfa",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/plugin-prime-depart-retraite/input.index.json.parts/part-05.txt",
+      "sha256": "a7a57478724ebbf27e574234c43020c5b409199cbb314afa18347892e6d02fe7",
+      "presentation_suffix": "CRLF",
+      "timestamp": "2026-10-07T21:20:21.695Z"
+    },
+    {
+      "call_id": "call_158ab61ed4324f4490f29ee27b5cf261",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/plugin-prime-depart-retraite/input.index.json.parts/part-06.txt",
+      "sha256": "7f1d4a8d6d5a3a35634bb5f01101baf2524b5492005c4af217f88582c4160e7a",
+      "presentation_suffix": "CRLF",
+      "timestamp": "2026-10-07T21:20:27.774Z"
+    }
+  ],
+  "runtime_fragment_groups": [
+    {
+      "original_path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/Collectivite-corrections-pr5/skills/dirfi-fpt/SKILL.md",
+      "source_sha256": "6c4aba6b864ae4c17c819f7540f054f225513c445838a512a6fb8ab2b9a43250",
+      "index_call_id": "call_6ed76f8afb2841fbbc26a7ba8100d936",
+      "fragment_reads": [
+        {
+          "call_id": "call_2c81caeaaf2648cbae0693ff554a4207",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/dirfi-fpt/SKILL.md.index.json.parts/part-01.txt",
+          "sha256": "0ec078660d3710212db08d375139988fda9fe6ab9f7891e3b4b4aeddc21df4ab",
+          "presentation_suffix": "CRLF"
+        },
+        {
+          "call_id": "call_596ce0120af049c08afcf85b630cca95",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/dirfi-fpt/SKILL.md.index.json.parts/part-02.txt",
+          "sha256": "366cea817ba37308fe8b5cfb47e3797cfefec8b34fe48c6e9870c17473f0ab05",
+          "presentation_suffix": "CRLF"
+        },
+        {
+          "call_id": "call_5b03d4a29d644780819e6012c543e28e",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/dirfi-fpt/SKILL.md.index.json.parts/part-03.txt",
+          "sha256": "e4559f2591d332851d0f78b73c318f92178fb532a2a4f06b6a6c7b403c3958dc",
+          "presentation_suffix": "CRLF"
+        },
+        {
+          "call_id": "call_64a00654745142d79640aa1b33838295",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/dirfi-fpt/SKILL.md.index.json.parts/part-04.txt",
+          "sha256": "dffe57bff6822f43fdeb5dffdb1c440b548ae050ad88f4c6035af860b96cd540",
+          "presentation_suffix": "CRLF"
+        },
+        {
+          "call_id": "call_a4f6dcef46e64f29a9a17157494b2102",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/dirfi-fpt/SKILL.md.index.json.parts/part-05.txt",
+          "sha256": "d08d23df7c8ca3e311db9545321074e4e89d4ab3f7bf08d687a0b5b72fa62474",
+          "presentation_suffix": "CRLF"
+        }
+      ]
+    },
+    {
+      "original_path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/Collectivite-corrections-pr5/skills/drh-fpt/SKILL.md",
+      "source_sha256": "c459814bc7ea51bb747c6183e013e9c8ef46b5f95e5fed14d3ef013f298b89d5",
+      "index_call_id": "call_0a47a79867264dc9b6a823b99e9a7e47",
+      "fragment_reads": [
+        {
+          "call_id": "call_1af76dc1c06c4314a81c7db0d3ff77fd",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/drh-fpt/SKILL.md.index.json.parts/part-01.txt",
+          "sha256": "885e00cbc7e52ebd27255d6a847d94a88cf61273927f79b303e04e7ee831cef8",
+          "presentation_suffix": "CRLF"
+        },
+        {
+          "call_id": "call_bf726a1c60b84215b0f47d32f40f4780",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/drh-fpt/SKILL.md.index.json.parts/part-02.txt",
+          "sha256": "ad40459e9c6df9a152f475008e7f9d4ec9cff8066df8009577895717ee942c54",
+          "presentation_suffix": "CRLF"
+        },
+        {
+          "call_id": "call_8d83df51379b4d17b524704a51a7ec36",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/drh-fpt/SKILL.md.index.json.parts/part-03.txt",
+          "sha256": "3ca29c2303e9ff925806a7ecc10026b29a71d9f628f064c623b5262767c203f4",
+          "presentation_suffix": "CRLF"
+        }
+      ]
+    },
+    {
+      "original_path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/Collectivite-corrections-pr5/skills/recherche-juridique/SKILL.md",
+      "source_sha256": "9341a05ae1ea004f9426744a2633e30bfecd4bc9b7400322a95bfc4d181419d3",
+      "index_call_id": "call_565531e1144f4954a91e1def949e2a93",
+      "fragment_reads": [
+        {
+          "call_id": "call_595342e4d20943dba66443f820a02cd9",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/recherche-juridique/SKILL.md.index.json.parts/part-01.txt",
+          "sha256": "09010656048027c6cc99be59e5d214a1876a89d72cc73f08d4a74c4af0d4afa7",
+          "presentation_suffix": "CRLF"
+        },
+        {
+          "call_id": "call_af2b7df43ab24bbfb6fee6f541b22d0c",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/recherche-juridique/SKILL.md.index.json.parts/part-02.txt",
+          "sha256": "4f50bf0c17080b14d35ae60ef873ec585d79ba4c16edb093e27eadc1725cdfac",
+          "presentation_suffix": "CRLF"
+        },
+        {
+          "call_id": "call_3f8baf3c3f3c4d3ca992909a92c07de6",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/recherche-juridique/SKILL.md.index.json.parts/part-03.txt",
+          "sha256": "3ee002ecebac99d37ebc7ba42276951aff990bba346e37074ecffbc0dfa7bbbf",
+          "presentation_suffix": "CRLF"
+        },
+        {
+          "call_id": "call_b6b10d9f24964fdb9abf309ade2a13c8",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/recherche-juridique/SKILL.md.index.json.parts/part-04.txt",
+          "sha256": "0bc09e7f165fa81bb33df9c9cc577351f690bc144859778826c669feb45c6f51",
+          "presentation_suffix": "CRLF"
+        },
+        {
+          "call_id": "call_52b2088892d34ae9b885fa1f6525c8d6",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/recherche-juridique/SKILL.md.index.json.parts/part-05.txt",
+          "sha256": "d338e5576d43b7ec5847bf266ddd6ca06b45efeee3475447d958ef29c1f047b6",
+          "presentation_suffix": "CRLF"
+        },
+        {
+          "call_id": "call_cba615f1ab734ec3b5d637bb74913faf",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/recherche-juridique/SKILL.md.index.json.parts/part-06.txt",
+          "sha256": "06fd23aae02deb4cb32848d782e94ff4010a807e8efb2a7c902ce1368b216c0a",
+          "presentation_suffix": "CRLF"
+        },
+        {
+          "call_id": "call_ca8de332cd2046f98bb6bcab4bdde124",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/recherche-juridique/SKILL.md.index.json.parts/part-07.txt",
+          "sha256": "2428e52483367db0311050db46049395cb134f3d19799ea7be78c68fb39cdb27",
+          "presentation_suffix": "CRLF"
+        }
+      ]
+    },
+    {
+      "original_path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/Collectivite-corrections-pr5/skills/dirfi-fpt/references/analyse-situation.md",
+      "source_sha256": "558618b77323ff06eaedaa8eb281f1c5b4857f8e871efde9a78dc5782cce5358",
+      "index_call_id": "call_a4b3c957af7945c9bd0c69c7801c4ae3",
+      "fragment_reads": [
+        {
+          "call_id": "call_b960aacc04ff455e9564097a02adf5e7",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/dirfi-fpt/references/analyse-situation.md.index.json.parts/part-01.txt",
+          "sha256": "0b47946cc9474b61822e04a91d0e0dbe8881f6e13f9f65941798a67ff61b07d0",
+          "presentation_suffix": "CRLF"
+        },
+        {
+          "call_id": "call_49c0f737717645bf917a58eb6fa373b3",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/dirfi-fpt/references/analyse-situation.md.index.json.parts/part-02.txt",
+          "sha256": "141274af714cfaed2bac0c7410a5b36b79a3acbef0b5401674b9fe568d13833f",
+          "presentation_suffix": "CRLF"
+        }
+      ]
+    },
+    {
+      "original_path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/Collectivite-corrections-pr5/skills/dirfi-fpt/references/execution-depense.md",
+      "source_sha256": "3d0fb81220e2f72134cd2ce40c53e70959417489551e1b2b76a0e46acc70f122",
+      "index_call_id": "call_0cb43f6e2c754391a0c7173b210a773e",
+      "fragment_reads": [
+        {
+          "call_id": "call_e805a148a8874867af7764ce697af64e",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/dirfi-fpt/references/execution-depense.md.index.json.parts/part-01.txt",
+          "sha256": "29aa41d0569937fe2bc3c02a6dccea4c07cd16bbc6c4565c0e639f0e9eb5e7ee",
+          "presentation_suffix": "CRLF"
+        },
+        {
+          "call_id": "call_55b8d58bf4184625945a5fb17ed96295",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/dirfi-fpt/references/execution-depense.md.index.json.parts/part-02.txt",
+          "sha256": "400f511d9fddd18722914bfecc5e071b04a0394cc19dc58c829b0af28a67775a",
+          "presentation_suffix": "CRLF"
+        },
+        {
+          "call_id": "call_25ee26eb8b5a4579866db36293aea81b",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/dirfi-fpt/references/execution-depense.md.index.json.parts/part-03.txt",
+          "sha256": "47007d16bb40b0a9550807b2e032f1c1cf1677ae7640a995c48749fa92e5964d",
+          "presentation_suffix": "CRLF"
+        }
+      ]
+    },
+    {
+      "original_path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/Collectivite-corrections-pr5/skills/drh-fpt/references/carriere-paie.md",
+      "source_sha256": "e0890737636e140db6429cd2142e159c755a6836a539923db7378c64e752767c",
+      "index_call_id": "call_c371d87479ba4359bbbd2a58b022cfcd",
+      "fragment_reads": [
+        {
+          "call_id": "call_13075d0ed931478a9ea5285cdb0991bf",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/drh-fpt/references/carriere-paie.md.index.json.parts/part-01.txt",
+          "sha256": "71513d4c878f5d05922b71db689605948d84374e9cfb60a28e74a22441870c71",
+          "presentation_suffix": "CRLF"
+        },
+        {
+          "call_id": "call_8a97a36fa8bd4fb6af4ce35b22e39a70",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/drh-fpt/references/carriere-paie.md.index.json.parts/part-02.txt",
+          "sha256": "c0ea11a3c9c80e6a9b1a6c2aa887f3a70216b42fdcca65729c4d203b06fec77d",
+          "presentation_suffix": "CRLF"
+        },
+        {
+          "call_id": "call_e08c59b942dd4e13ae25ea2c2ddd7c07",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/drh-fpt/references/carriere-paie.md.index.json.parts/part-03.txt",
+          "sha256": "0226a3b6ed97e7e235d0320d58393cb28ed50d54573adce075b4af2f0b4ce8ff",
+          "presentation_suffix": "CRLF"
+        },
+        {
+          "call_id": "call_30a3ae85d88e4853b7c79839e017f3e2",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/drh-fpt/references/carriere-paie.md.index.json.parts/part-04.txt",
+          "sha256": "ab58f5dd4723d6f8eccfb49d7f96922eadad9f0ff055f9735fcaf4cb0b8db54f",
+          "presentation_suffix": "CRLF"
+        },
+        {
+          "call_id": "call_3ffd4f96bfc2457eb3e30ba75239c8d5",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/drh-fpt/references/carriere-paie.md.index.json.parts/part-05.txt",
+          "sha256": "d9d093804b73eca4cbbc53c64058882b2c98715f02865e9fe8eeb8b5f581a75e",
+          "presentation_suffix": "CRLF"
+        },
+        {
+          "call_id": "call_6ba9ec1b1a8b404f80e70fed4488203c",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/drh-fpt/references/carriere-paie.md.index.json.parts/part-06.txt",
+          "sha256": "89e0f2ce200f2828507912faedb9428b84fda311c3adc67607b0cbdb5e9fa3fc",
+          "presentation_suffix": "CRLF"
+        }
+      ]
+    },
+    {
+      "original_path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/Collectivite-corrections-pr5/skills/drh-fpt/references/socle-sources-verification.md",
+      "source_sha256": "fe7887aa6d83ff4d3f382c7e6adc10f32828a23eef1a73138217d943d535681e",
+      "index_call_id": "call_e7c4c564996d4723885f91cc65c4e114",
+      "fragment_reads": [
+        {
+          "call_id": "call_3c6e77ea0392491ea55d5d3e2efdfcfb",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/drh-fpt/references/socle-sources-verification.md.index.json.parts/part-01.txt",
+          "sha256": "89dc3fbd254a3f03d1fd6ec33d0062dc0adfdbe6c793fd5515b2938dc9a0de08",
+          "presentation_suffix": "CRLF"
+        },
+        {
+          "call_id": "call_26c792a1ec9f418182b0238badf2be2f",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/drh-fpt/references/socle-sources-verification.md.index.json.parts/part-02.txt",
+          "sha256": "ee8def71c3301da1a43d015d3b47a0a78b152ce7dba09b2df58d00024bc472f4",
+          "presentation_suffix": "CRLF"
+        }
+      ]
+    },
+    {
+      "original_path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/Collectivite-corrections-pr5/skills/recherche-juridique/references/gabarits-sortie.md",
+      "source_sha256": "c4d83e364f45631810d9b361b013d542436986197a3d43f4970eea3e3033b88f",
+      "index_call_id": "call_12c1dc6670ee436f93d110a9035fc3bd",
+      "fragment_reads": [
+        {
+          "call_id": "call_cddf34e8af894581bafc9db22069a980",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/recherche-juridique/references/gabarits-sortie.md.index.json.parts/part-01.txt",
+          "sha256": "c4d83e364f45631810d9b361b013d542436986197a3d43f4970eea3e3033b88f",
+          "presentation_suffix": "CRLF"
+        }
+      ]
+    },
+    {
+      "original_path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/Collectivite-corrections-pr5/skills/recherche-juridique/references/modules.md",
+      "source_sha256": "4dfaccd0fb0d1e2da83bf1ea753ef0adaceb61f5eacfffaf765ebd67dbb6e71a",
+      "index_call_id": "call_eaf50cf6f5a7419a9c998a9cfa2169da",
+      "fragment_reads": [
+        {
+          "call_id": "call_0cf5c050b30e4e119f27fbeb144e54df",
+          "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/runtime-fragments/skills/recherche-juridique/references/modules.md.index.json.parts/part-01.txt",
+          "sha256": "4dfaccd0fb0d1e2da83bf1ea753ef0adaceb61f5eacfffaf765ebd67dbb6e71a",
+          "presentation_suffix": "CRLF"
+        }
+      ]
+    }
+  ]
+}

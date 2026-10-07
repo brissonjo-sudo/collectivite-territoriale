@@ -1,0 +1,145 @@
+ de poursuite
+  disproportionné). Elle **ne libère pas juridiquement** le débiteur : si sa
+  situation s'améliore, la créance reste en principe recouvrable tant que la
+  prescription n'est pas acquise.
+- **Créance éteinte** : situation dans laquelle la créance a **disparu
+  juridiquement** (effacement de dette dans le cadre d'une procédure de
+  traitement du surendettement ou d'une liquidation judiciaire clôturée pour
+  insuffisance d'actif, notamment) : le comptable **ne peut plus** en
+  poursuivre le recouvrement, quelle que soit l'évolution ultérieure de la
+  situation du débiteur.
+- **Distinction et compétence** : l'admission en non-valeur est une décision
+  de gestion de l'**assemblée délibérante**, la créance éteinte est une
+  **conséquence automatique** d'une décision extérieure (juridictionnelle ou
+  d'une commission de surendettement) que l'ordonnateur **constate**, sans
+  pouvoir d'appréciation sur le fond.
+- **Effets** : dans les deux cas, la créance sort de la comptabilité des
+  restes à recouvrer ; seule la créance éteinte emporte disparition
+  définitive du droit de la collectivité, l'admission en non-valeur n'étant
+  qu'une mesure d'ordre budgétaire et comptable.
+
+### 5.5 Prescription de l'action en recouvrement
+
+- L'action en recouvrement d'une créance publique se **prescrit** à
+  l'expiration d'un délai fixé par un texte, propre à la nature de la créance
+  (produit du domaine, produit de service, créance de droit commun) — durée
+  exacte **à vérifier**, jamais présumée uniforme entre catégories de
+  créances.
+- La prescription peut être **interrompue** par un acte de poursuite régulier
+  ou une reconnaissance de dette du débiteur, et **suspendue** dans des cas
+  déterminés — conditions exactes à vérifier avant d'écarter ou d'invoquer une
+  prescription.
+- Une créance **prescrite** ne peut plus être recouvrée par le comptable : la
+  laisser en restes à recouvrer sans traitement n'est pas une option neutre,
+  c'est une carence de gestion à signaler.
+
+### 5.6 Régies de recettes — principe
+
+- Une **régie de recettes** permet à un agent habilité (le régisseur)
+  d'encaisser directement certaines recettes, pour le compte de
+  l'ordonnateur, sous le contrôle du comptable, par dérogation au circuit
+  normal titre → prise en charge → recouvrement.
+- **Acte constitutif**, **nomination du régisseur**, **cautionnement** et
+  **contrôles** : mécanique détaillée et partagée avec la régie d'avances →
+  `objets/regie.md` (pointer, ne pas dupliquer ici).
+- La régie de recettes est la **seule voie régulière** pour qu'un agent autre
+  que le comptable encaisse des fonds publics : tout encaissement direct hors
+  régie régulièrement instituée déclenche le garde-fou ordonnateur/comptable
+  (`SKILL.md` §5.2).
+
+### 5.7 Tarification des services publics locaux
+
+- **Compétence** : la fixation du tarif d'un service public local relève, en
+  principe, de l'**assemblée délibérante**, sauf délégation régulièrement
+  consentie à l'exécutif pour certaines catégories de tarifs — étendue de la
+  délégation à vérifier au cas par cas.
+- **Principe d'égalité** devant le service public : les usagers placés dans
+  une situation identique au regard du service doivent être traités de
+  manière identique. Ce principe **n'interdit pas** toute différenciation :
+  il l'encadre.
+- **Modulation admise**, sous conditions à documenter et à vérifier au cas
+  d'espèce : différences de situation objectives entre usagers (résidence,
+  quotient familial pour certains services, utilisation différenciée du
+  service), nécessité d'intérêt général en rapport avec les conditions
+  d'exploitation du service. Une modulation sans critère objectif et sans
+  lien avec l'objet du service expose à une rupture d'égalité.
+- **Méthode de contrôle d'un tarif envisagé** : identifier le critère de
+  modulation proposé → vérifier qu'il repose sur une différence de situation
+  objective ou un motif d'intérêt général en lien avec le service → vérifier
+  que le tarif est fixé par l'autorité compétente → vérifier sa base légale
+  ou réglementaire, et l'existence d'une délibération.
+
+### 5.8 Produits des services, du domaine, redevances d'occupation
+
+- **Produits des services** : recettes perçues en contrepartie d'un service
+  rendu à l'usager (cantine, activités périscolaires, équipements sportifs et
+  culturels), fixées selon le principe de tarification (§5.7).
+- **Produits du domaine** : recettes tirées de la gestion du patrimoine de la
+  collectivité (location, vente, produits d'exploitation d'un bien du domaine
+  privé notamment) — régime distinct selon que le bien relève du domaine
+  public ou du domaine privé, à qualifier avant toute recommandation.
+- **Redevances d'occupation du domaine public** : dues par tout occupant
+  privatif du domaine public en vertu d'un titre d'occupation (autorisation
+  ou convention), fixées en tenant compte des avantages procurés à
+  l'occupant — méthode et éventuels planchers/plafonds **à vérifier**, jamais
+  chiffrés de mémoire.
+- Dans les trois cas, l'existence d'un **fondement** (délibération tarifaire,
+  titre d'occupation, convention) est un préalable à toute émission de titre :
+  ne jamais liquider une recette sans identifier ce fondement.
+
+### 5.9 Annulation et réduction de titre
+
+- **Annulation de titre** : suppression totale d'un titre déjà émis, pour un
+  motif tenant à l'absence de fondement de la créance (erreur de débiteur,
+  double émission, créance inexistante) — donne lieu à une écriture
+  d'annulation, distincte d'une remise gracieuse (qui suppose une créance
+  fondée mais dont le recouvrement est abandonné pour un motif de gestion).
+- **Réduction de titre** : diminution du montant d'un titre déjà émis, pour un
+  motif tenant à une **erreur de liquidation** (montant erroné, tarif
+  mal appliqué) ou à un **événement postérieur** justifiant une créance moins
+  élevée que celle initialement émise.
+- **Compétence et traçabilité** : annulation et réduction sont des actes de
+  l'**ordonnateur**, documentés et transmis au comptable pour ajustement de la
+  prise en charge — jamais une simple correction informelle sans trace dans
+  la comptabilité des restes à recouvrer.
+- Ne jamais confondre une réduction de titre justifiée par une erreur de
+  liquidation avec un **abandon de créance déguisé** : si le motif réel est
+  l'absence de perspective de recouvrement, la voie régulière est l'admission
+  en non-valeur (§5.4), pas la réduction.
+
+---
+
+## 6. Calculs et procédures
+
+### 6.1 Séquence normale d'une recette
+
+Constatation du droit (fait générateur, fondement) → liquidation (montant
+exact sur base documentée) → émission du titre (mentions obligatoires
+complètes) → transmission au comptable → prise en charge après contrôle de
+régularité → recouvrement amiable → à défaut, recouvrement contentieux (actes
+de poursuite adaptés à la qualité du débiteur) → si échec documenté :
+qualification non-valeur ou créance éteinte (§5.4), sous réserve de la
+prescription (§5.5).
+
+### 6.2 Méthode de qualification non-valeur / créance éteinte
+
+Vérifier d'abord si un **événement juridique extérieur** (surendettement,
+liquidation judiciaire clôturée) a **éteint** la créance : si oui, créance
+éteinte, constatation sans marge d'appréciation. Sinon, apprécier si les
+diligences de recouvrement ont été **épuisées ou disproportionnées** au
+regard du montant et de la situation du débiteur : si oui, proposer
+l'admission en non-valeur à l'assemblée délibérante, en identifiant
+explicitement les diligences déjà menées. Ne jamais proposer une non-valeur
+en l'absence de toute diligence de recouvrement documentée.
+
+### 6.3 Méthode de contrôle d'un tarif de service public
+
+Identifier l'autorité compétente pour fixer le tarif → identifier le critère
+de modulation envisagé → tester sa conformité au principe d'égalité (§5.7) →
+vérifier l'existence d'une délibération et sa publicité → vérifier la
+cohérence entre le tarif et le fondement budgétaire de la recette (produit de
+service, redevance).
+
+---
+
+## 7. 

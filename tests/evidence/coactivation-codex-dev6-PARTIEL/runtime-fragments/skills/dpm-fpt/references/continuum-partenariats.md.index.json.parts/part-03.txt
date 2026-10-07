@@ -1,0 +1,95 @@
+és de
+  renouvellement / avenant (art. L. 512-4 à L. 512-7 CSI, identifiés sur
+  Légifrance, section dédiée — *vérifié sur Légifrance le 2026-06-30 quant
+  à l'existence et au périmètre de la section ; détail des durées à
+  confirmer en version consolidée*).
+- **Seuil démographique** déclenchant l'obligation de désignation d'un
+  coordonnateur CLSPD (art. L. 132-4 CSI).
+- **Régime exact du partage d'information à caractère secret** dans le
+  cadre des CLSPD/CISPD (articles spécifiques du CSI relatifs au partage
+  d'informations confidentielles) — à identifier et vérifier avant toute
+  réponse engageante.
+- **Liste à jour des dispositifs annexes** (ZSP, CDDF, FIPD) et de leurs
+  textes fondateurs propres.
+
+Références déjà vérifiées dans cette session (à recontrôler si le dossier
+est traité à une date ultérieure, car le droit évolue) :
+- Art. L. 132-1 CSI, identifiant Légifrance LEGIARTI000025504999 — rôle du
+  maire en prévention de la délinquance, articulation avec le plan
+  départemental (vérifié sur Légifrance le 2026-06-30).
+- Art. L. 132-4 CSI, identifiant Légifrance LEGIARTI000049313006 —
+  désignation du coordonnateur CLSPD, suppléance préfectorale (vérifié sur
+  Légifrance le 2026-06-30).
+- Art. L. 132-5 CSI, identifiant Légifrance LEGIARTI000049313001 — à
+  recouper avec le contenu exact lors d'un usage en acte (existence
+  confirmée, contenu détaillé à reconfirmer).
+- Art. L. 512-4 CSI, identifiant Légifrance LEGIARTI000043540466 — seuil et
+  parties de la convention de coordination (vérifié sur Légifrance le
+  2026-06-30 ; **le chiffre exact du seuil doit être relu dans la version en
+  vigueur à la date des faits**, des versions successives ayant modifié ce
+  seuil).
+
+---
+
+## 9. Écrits & livrables
+
+1. **Convention** — projet de convention de coordination (ou avenant) :
+   diagnostic, missions prioritaires, modalités de coordination, signataires
+   identifiés. Acte conventionnel bilatéral : pas de gabarit dédié dans
+   `references/templates/` à ce stade ; mobiliser `references/templates/note-maire-modele.md` pour la
+   note de préparation au maire et `controle-legalite.md` pour la
+   sécurisation préalable.
+2. **Note au maire** — sur l'opportunité d'une convention, le bilan d'un
+   CLSPD, ou un point de partage d'information sensible → renvoyer à
+   `references/templates/note-maire-modele.md`.
+3. **Compte rendu / bilan CLSPD-CISPD** — synthèse périodique d'activité du
+   conseil ; vérifier le destinataire et la diffusion (donnée parfois
+   sensible, cf. `conformite-deontologie-donnees.md`).
+4. **Acte d'installation ou de désignation** (coordonnateur CLSPD) : acte
+   faisant grief potentiel limité, mais vérifier la **motivation** s'il
+   s'agit d'un retrait ou d'une modification ; transmission au contrôle de
+   légalité à vérifier selon la nature de l'acte (→ `controle-legalite.md`).
+
+---
+
+## 10. Double échelle [risque / confiance]
+
+- **Existence et logique générale du dispositif** (convention, CLSPD/CISPD,
+  rôle du maire) : [risque faible / confiance stable].
+- **Seuils chiffrés** (effectif PM, seuil démographique, durée de
+  validité) : [risque moyen / confiance à vérifier] — citation de source
+  obligatoire avant tout usage en acte ou conseil engageant.
+- **Régime du partage d'information sensible** (secret partagé, données
+  nominatives) : [risque élevé / confiance à vérifier] — abstention si le
+  texte précis n'est pas confirmé, renvoi à
+  `conformite-deontologie-donnees.md`.
+- **Articulation stratégie locale / plan départemental** en cas de tension
+  (désaccord maire / préfet sur la doctrine de prévention) : [risque élevé /
+  confiance jurisprudentielle ou débattue selon le cas] — signaler le
+  conflit, ne pas trancher seul.
+
+---
+
+## 11. Checklist de branche
+
+1. Effectif de la PM et état de la convention de coordination identifiés
+   avant toute affirmation sur le caractère obligatoire ou facultatif ?
+2. Convention de coordination explicitement distinguée du CLSPD/CISPD
+   (coordination opérationnelle bilatérale vs concertation partenariale) ?
+3. Niveau institutionnel correct distingué (CLSPD communal vs CISPD
+   intercommunal, maire-président vs président d'EPCI) ?
+4. Rôle du CLSPD/CISPD rappelé comme **concertation**, pas comme pouvoir de
+   décision de police ?
+5. Seuils et durées chiffrés vérifiés en version consolidée, jamais de
+   mémoire ?
+6. Partage d'information distingué entre information opérationnelle
+   immédiate et donnée nominative sensible, avec renvoi à
+   `conformite-deontologie-donnees.md` pour le régime de fond ?
+6. Garde-fou APJA rappelé si le partage d'information frôle un acte de
+   police judiciaire ?
+7. Renvoi fait vers `doctrine-operationnelle.md` pour tout ce qui relève de
+   l'organisation interne du service, sans duplication ?
+8. Si acte conventionnel ou de désignation produit : passage par
+   `controle-legalite.md` avant finalisation ?
+9. Couple [risque / confiance] indiqué pour les points sensibles (seuils,
+   partage de données, conflit stratégie locale / préfet) ?

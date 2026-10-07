@@ -1,0 +1,62 @@
+ant d'imposer un délai ou un contenu obligatoire.
+Vérifier l'applicabilité du texte à la collectivité et au type de contrat,
+puis son incorporation éventuelle. Une fiche commerciale et un guide ne
+remplacent ni le contrat ni un texte officiel.
+
+## 8. Pièges et confusions fréquentes
+
+- Appliquer le CCAG sans référence contractuelle ni lecture des dérogations.
+- Confondre engagement annoncé, engagement souscrit et résultat constaté.
+- Confondre propriété des données, droits de licence et export exploitable.
+- Accepter une réversibilité sans test ou sans documentation de reprise.
+- Annoncer une pénalité ou une résiliation sur le seul constat d'une panne.
+- Traiter une passation ou une clause RGPD après un renvoi : arrêter le volet.
+- Collecter des journaux nominatifs pour démontrer un écart sans appliquer
+  `SKILL.md` §5.3 ; restaurer après un incident sans `SKILL.md` §5.2.
+
+## 9. Données et valeurs à vérifier
+
+Consulter `references/references-verifiees.md` pour le CCAG informatique,
+le code de la commande publique limité à l'exécution et la modification, et
+le règlement européen sur les données. Confirmer la version applicable,
+les dispositions effectivement vérifiées et les limites signalées.
+
+Relire les délais de réclamation, correction et sortie, conditions de
+pénalité, frais, préavis, durées de maintenance et calendrier des droits
+invoqués. Ne citer aucune valeur sans source datée ;
+le registre livré oriente la recherche des textes primaires. Le cache de
+maintenance du dépôt source est exclu du paquet runtime et ne se charge pas.
+
+## 10. Écrits et livrables
+
+Produire selon le besoin : dossier d'écart, exigences techniques de
+réversibilité, plan de sortie, inventaire des éléments remis ou compte rendu
+de contrôle de reprise. Séparer faits établis, pièces manquantes, engagements
+contractuels et exigences proposées. Une exigence nouvelle n'est pas un
+engagement déjà opposable.
+
+Utiliser `references/templates/cahier-des-charges-technique.md` via
+`references/ecrits-numerique.md` pour formaliser le besoin technique,
+sans traiter la passation. Pour une solution en ligne, mobiliser
+`objets/solution-saas.md`. Produire `[INCOMPLET]` si contrat ou éléments
+essentiels manquent ; ne pas simuler une mise en demeure définitive.
+
+## 11. Double échelle [risque / confiance]
+
+Appliquer `SKILL.md` §5.1. Le suivi technique d'un service non critique peut
+relever de [moyen / stable]. Le refus de restitution ou une sortie sans
+solution de reprise appelle [élevé / à vérifier]. Un service public essentiel
+menacé et une décision contractuelle incertaine peuvent être critiques :
+double vérification, puis abstention sur le droit si le doute persiste.
+Le constat technique fiable ne donne pas une confiance juridique stable.
+
+## 12. Checklist de branche
+
+- Garde-fous incident et surveillance appliqués en premier si déclenchés ?
+- Contrat, incorporation du CCAG et dérogations effectivement lus ?
+- Écart relié à un engagement et à une preuve, sans données nominatives ?
+- Décideur et canal contractuel identifiés ; mesure engageante vérifiée ?
+- Applicabilité et calendrier des textes vérifiés avant annonce d'un droit ?
+- Sortie testable, données exploitables, licences et continuité prises en compte ?
+- Frontières passation, `dpo-ct`, `dirfi-fpt` respectées sans illustration ?
+- Livrable produit ou `[INCOMPLET]` ; références internes nommées par chemin ?

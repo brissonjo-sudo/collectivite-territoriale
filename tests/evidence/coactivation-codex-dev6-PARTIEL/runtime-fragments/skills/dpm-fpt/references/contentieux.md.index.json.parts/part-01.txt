@@ -1,0 +1,149 @@
+# Brique posture — Contentieux (anticipation adversariale)
+
+> Structure adaptée de `_gabarit-branche.md` (brique posture transverse, pas une
+> branche métier complète). Les valeurs datées et identifiants non vérifiés ne
+> sont jamais donnés de mémoire : seules les **règles** figurent ici, avec la
+> consigne de vérifier la version en vigueur.
+
+## Périmètre / Exclusions
+
+- **Périmètre** : anticiper les **faiblesses d'une décision** (arrêté, mesure
+  de police, acte individuel) selon trois angles adversariaux — **l'avocat**
+  du requérant, **le juge administratif**, **le préfet** (déféré). Objectif :
+  identifier les points de fragilité **avant** la production de l'acte ou
+  avant un contentieux déclaré, et proposer des consolidations.
+- **Exclusions** : la **recherche de jurisprudence** elle-même (identification,
+  triangulation, fond d'un arrêt) → `recherche-juridique` (Mode B). Le
+  **contrôle de légalité préalable** d'un acte avant sa production (posture
+  « relecture interne ») → `controle-legalite.md`. Le **retour d'expérience**
+  post-intervention (hors contentieux) → `retex.md`. Le fond des pouvoirs de
+  police mobilisés → `pouvoirs-police.md`. La procédure pénale et le garde-fou
+  APJA → `penal-procedure.md` (`SKILL.md` §5.2).
+
+> **Articulation avec `controle-legalite.md`** : `controle-legalite.md` relit
+> l'acte **avant** sa signature avec la grille du contrôle préfectoral
+> (compétence, procédure, motivation, base légale). `contentieux.md` se
+> positionne **après** — ou en simulation préventive — sur l'acte déjà pris ou
+> sur le point d'être pris, en élargissant l'angle à l'avocat requérant et à
+> l'office du juge. Les deux briques sont complémentaires, pas redondantes :
+> utiliser `controle-legalite.md` pour fabriquer l'acte, `contentieux.md` pour
+> le stress-tester.
+
+---
+
+## 1. Questions couvertes
+
+- « Cette décision (arrêté, mesure de police, refus, sanction) tient-elle si
+  elle est attaquée ? »
+- « Quels moyens un avocat soulèverait-il contre cet acte ? »
+- « Le préfet peut-il déférer cet acte ? Sur quel fondement, dans quel délai ? »
+- « Quel est l'office du juge administratif sur ce type de mesure
+  (contrôle normal, restreint, entier) ? »
+- « Faut-il craindre un référé (suspension, liberté) ? »
+- « Comment consolider l'acte avant ou après contestation ? »
+
+---
+
+## 2. Arbre de traitement
+
+`acte ou décision identifié → qualifier sa nature (réglementaire / individuel,
+faisant grief ou non) → dérouler les trois angles (§5) → identifier les
+points de fragilité (§6) → vérifier les références mobilisées (§7) →
+proposer les consolidations (§8) → livrable (§9)`
+
+Ne pas conclure « l'acte est solide » sans avoir testé explicitement les trois
+angles. Une décision qui « semble correcte » peut être fragile sur un seul
+moyen suffisant à l'annulation.
+
+---
+
+## 3. Variables à lever
+
+- **Nature de l'acte** : réglementaire (arrêté de portée générale) ou
+  individuel (faisant grief à une personne identifiée). Conditionne les
+  délais, les voies de recours, et l'intérêt à agir des tiers.
+- **Auteur et compétence** : qui a signé (maire, président d'EPCI,
+  délégataire) ? Délégation de signature/fonction régulière et publiée ?
+- **Date de l'acte et formalités de publicité** : transmission au contrôle de
+  légalité, affichage, notification — point de départ des délais de recours.
+- **Base légale invoquée** : police générale (CGCT) ou police spéciale
+  (texte propre) ? Norme correctement visée dans les visas ?
+- **Existence d'un précédent comparable** (jurisprudence locale ou nationale
+  connue) → si recherche de fond nécessaire, renvoyer à
+  `recherche-juridique` (Mode B), ne pas l'improviser ici.
+- **Urgence du contexte** (mesure restrictive de liberté en cours
+  d'exécution) → déclenche l'hypothèse référé (§5.2).
+
+---
+
+## 4. Règles métier — cadrage des trois angles
+
+### 4.1 Distinction structurante : légalité externe / légalité interne
+Tout moyen contentieux contre un acte administratif se classe en deux
+familles. Tester systématiquement les deux, dans cet ordre (le juge examine
+souvent l'externe en premier) :
+
+- **Légalité externe** : compétence de l'auteur, procédure suivie (consultation
+  préalable obligatoire, avis requis, contradictoire), forme de l'acte
+  (motivation écrite quand exigée, visas).
+- **Légalité interne** : existence et exactitude matérielle des faits, base
+  légale, exacte qualification juridique des faits, erreur de droit,
+  détournement de pouvoir, proportionnalité de la mesure au but poursuivi
+  (police administrative).
+
+### 4.2 Office du juge administratif — intensité du contrôle
+L'intensité varie selon la nature de la mesure. Ne jamais traiter tous les
+actes de police avec le même niveau d'exigence :
+
+- **Contrôle normal** : régime de droit commun pour la plupart des mesures de
+  police administrative générale (légalité, exactitude matérielle des faits,
+  qualification juridique, proportionnalité).
+- **Contrôle restreint** (erreur manifeste d'appréciation) : certaines
+  décisions où le juge laisse une marge d'appréciation à l'autorité
+  administrative — champ à vérifier au cas par cas, ne pas présumer.
+- **Contrôle entier de proportionnalité** : mesures de police restrictives de
+  libertés fondamentales (réunion, manifestation, circulation, couvre-feu
+  local) — le juge vérifie que la mesure est nécessaire, adaptée et
+  proportionnée, et qu'aucune mesure moins attentatoire ne permettait
+  d'atteindre le même but d'intérêt général (logique du contrôle de
+  proportionnalité des mesures de police, jurisprudence constante — fond à
+  vérifier via `recherche-juridique`).
+
+> Ne jamais affirmer le niveau de contrôle applicable à une mesure précise
+> sans vérification : c'est une ligne « Oui » de la matrice §2.2 du
+> `SKILL.md` (étendue d'un pouvoir / jurisprudence).
+
+### 4.3 Angle de l'avocat requérant
+Logique adversariale : chercher activement la faille, pas seulement
+constater la conformité apparente.
+- Examiner d'abord la **légalité externe** (souvent le terrain le plus
+  rentable pour un requérant : vice de procédure ou de compétence emporte
+  l'annulation sans débat sur le fond).
+- Tester l'**intérêt à agir** du requérant potentiel (administré visé,
+  voisin, association agréée, contribuable local selon l'acte).
+- Tester le **moyen de fond le plus probable** compte tenu de la nature de la
+  mesure (proportionnalité pour une mesure de police restrictive, erreur de
+  qualification pour une sanction, défaut de base légale pour un acte
+  innovant).
+- Identifier si un **référé** est probable en parallèle du recours au fond
+  (§4.4) — accroît la pression temporelle sur l'administration.
+
+### 4.4 Angle du juge administratif
+- Qualifier le **recours pour excès de pouvoir** (légalité) par opposition au
+  plein contentieux (indemnitaire, contractuel) — la nature du recours
+  conditionne les pouvoirs du juge.
+- Délai de recours contentieux de droit commun : **deux mois** à compter de
+  la notification ou de la publication de la décision attaquée (art.
+  **R. 421-1** du code de justice administrative — au socle,
+  `references-verifiees.md` §8, LEGIARTI000039807005, vérifié le 2026-09-14). Vérifier le point de départ exact (notification individuelle
+  vs publication/affichage) et les éventuelles prorogations.
+- **Référé-suspension** (art. **L. 521-1** CJA — au socle §8,
+  LEGIARTI000006449326, vérifié le 2026-09-14) : suspension de l'exécution de l'acte si la requête au fond est
+  recevable, l'**urgence** est caractérisée, et il existe un moyen propre à
+  créer, en l'état de l'instruction, un **doute sérieux** sur la légalité de
+  l'acte. Toujours associé à un recours principal en annulation.
+- **Référé-liberté** (art. **L. 521-2** CJA — au socle §8,
+  LEGIARTI000006449327, vérifié le 2026-09-14) : mesure utile en cas d'**atteinte grave et manifestement
+  illégale** à une liberté fondamentale dans l'exercice d'un pouvoir de
+  l'administration ; juge statuant en **48 heures** ; appel devant le Conseil
+  d'État dans un délai resserré (à confirmer 

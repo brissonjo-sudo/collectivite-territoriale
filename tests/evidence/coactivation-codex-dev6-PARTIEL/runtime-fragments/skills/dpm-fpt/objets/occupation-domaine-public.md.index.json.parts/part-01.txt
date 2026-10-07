@@ -1,0 +1,97 @@
+# Objet — Occupation du domaine public
+
+> **Situation type** : Terrasse non autorisée, étal hors emplacement, dépôt, épave, chantier sur voirie — occupation sans titre ou non conforme. **Couple dominant** : [risque moyen / confiance stable dans son principe, modalités locales à vérifier].
+
+---
+
+## 1. Acteurs et autorités compétentes
+
+**Gestionnaire du domaine** : personne publique propriétaire ou gardienne de la dépendance concernée.
+- Domaine public communal → **maire** (gestionnaire administratif ; compétence de police conjointe).
+- Domaine public routier départemental → **président du conseil départemental** (gestionnaire) ; Police Nationale/Gendarmerie ou préfet selon le contexte routier.
+- Domaine public de l'État ou établissement public → autorité de tutelle identifiée (SNCF, port autonome, etc.).
+
+**Autorité de police compétente** :
+- **Maire** : titulaire de la police générale du bon ordre et de la salubrité publiques ; également compétent sur les polices spéciales de circulation et stationnement si la voirie communale est concernée (CGCT, art. L. 2212-2 — renvoi `pouvoirs-police.md` §4.2, ne pas dupliquer).
+- **Préfet** : si domaine public départemental ou si ordre public pluricommunal menacé (substitution aux maires selon conditions strictes, renvoi `pouvoirs-police.md` §4.5).
+- **Agent PM** : exécutant des mesures de l'autorité ; constate l'occupation sans titre ou non conforme, **ne décide pas** de l'autorisation ni du retrait d'office — rend compte à l'autorité compétente.
+
+**Occupant** : toute personne physique ou morale détenant un titre (terrasse, marché, chantier) ou occupant sans titre.
+
+**Conflit de compétence possible** : gestionnaire (personne publique propriétaire) vs autorité de police (maire ou préfet sur le même terrain). Distinguer nettement : le gestionnaire administre et perçoit la redevance ; l'autorité de police garantit le bon ordre et la circulation. Les deux agissent sur des fondements différents ; signaler tout chevauchement (cf. section 6).
+
+---
+
+## 2. Textes applicables — pointeurs vers les branches
+
+**Branche référence : `../references/pouvoirs-police.md`**
+- Police générale du maire (bon ordre, salubrité, §4.2).
+- Police de la circulation et du stationnement (illustrations, §4.3).
+- Autorité compétente en commune à police étatisée (§4.4 — si applicable).
+- Conflit de compétence maire/préfet (§6.4 — traitement imposé).
+
+**Branche référence : `../references/reglementation-appliquee.md`**
+- Domaine public : principe du titre d'occupation (§5.4), caractère précaire et révocable, occupation sans titre qualifiée en contravention de voirie, constat PM vs mesures de l'autorité.
+- Police de la circulation et du stationnement (§5.1) — chevauchement fréquent avec occupation domaine public routier.
+
+**Textes clés identifiés** (à confirmer en version consolidée si non vérifiés ici) :
+- **Code général de la propriété des personnes publiques (CG3P), art. L. 2122-1** — principe d'occupation soumise à titre précaire et révocable (*vérifié sur Légifrance le 2026-06-30*).
+- **CGCT, art. L. 2212-2** — police générale du maire (*vérifié sur Légifrance le 2026-06-30*).
+- **Code de la route, art. R. 417-10** — stationnement gênant (chevauche souvent l'occupation domaine public routier) (*vérifié sur Légifrance le 2026-06-30*).
+- **Réglement local d'occupation du domaine public**, **arrêtés municipaux** d'autorisation d'occupation, **cahiers des charges** — textes propres à chaque collectivité, à vérifier systématiquement avant acte.
+- **Droit de passage, droit de gésine, droit d'accès** — droits patrimoniaux distincts de l'autorisation d'occupation, hors périmètre mais à détecter si pertinent.
+
+---
+
+## 3. Procédures, étapes et délais
+
+### 3.1 Demande d'autorisation d'occupation (voie administrative ordinaire)
+
+1. **Occupant adresse une demande** à l'autorité gestionnaire (maire, conseil départemental selon le domaine) ou à ses services (direction générale, urbanisme, domaine public).
+2. **Instruction** : vérification de la conformité (localisation, encombrement, usage demandé, durée), avis des services de police municipale/Gendarmerie si circulation en jeu.
+3. **Octroi ou refus** : arrêté municipal ou décision administrative, assorti(e) d'une redevance et de conditions (accès aux tiers, assurance, durée, conditions de retrait).
+4. **Caractère du titre** : **précaire et révocable** — le gestionnaire peut le retirer à tout moment (CG3P, art. L. 2122-1 et L. 2122-3), sans délai de rétractation obligatoire sauf dispositions locales spéciales ; il n'existe pas de droit acquis à l'occupation.
+5. **Durée de l'autorisation** : fixée par le titre (temporaire : saison estivale pour terrasse, marché, durée du chantier) ou sans terme. À préciser systématiquement dans l'acte.
+6. **Paiement de la redevance d'occupation** : fixée par arrêté municipal ou règlement local. Redevance due dès l'octroi du titre.
+
+### 3.2 Constat d'occupation sans titre ou non conforme (voie pénale/administrative concomitante)
+
+1. **Agent PM constate** sur le terrain : terrasse, étal, dépôt, épave ou tout encombrement du domaine public sans titre visible ou sortant du périmètre autorisé.
+2. **Rédaction du rapport** : identification précise (localisation, nature du trouble, durée observée si possible, photographies, identification de l'occupant).
+3. **Transmission à l'autorité de police compétente** (maire via hiérarchie, ou préfet selon régime).
+
+### 3.3 Mise en demeure de régularisation ou de retrait (voie administrative)
+
+1. **Mise en demeure écrite** adressée à l'occupant identifié, émanant de l'autorité gestionnaire ou de la police, précisant :
+   - nature du trouble (occupation sans titre ou non conforme au titre) ;
+   - délai de régularisation ou de retrait (durée variable selon contexte — dangerosité de la circulation, salubrité, urgence ; **délai exact à confirmer en version consolidée**) ;
+   - menace d'enlèvement d'office si délai non respecté.
+2. **Régularisation** : l'occupant demande un titre dans le délai imparti ; instruction accélérée possible selon les circonstances.
+3. **Retrait volontaire** : l'occupant obtempère et enlève son bien.
+4. **Inertie** : procédure d'enlèvement d'office engagée (cf. 3.4).
+
+### 3.4 Enlèvement d'office (voie administrative exécutée)
+
+1. **Constat d'absence de suite** à la mise en demeure après expiration du délai.
+2. **Décision d'enlèvement d'office** (arrêté municipal, ordre de la police ou du gestionnaire selon les compétences locales).
+3. **Exécution matérielle** : mise en œuvre d'une équipe de retrait ; bien enlevé et mis en dépôt ou destruction selon nature.
+4. **Frais d'enlèvement et de gardiennage** : à la charge de l'occupant (tarif fixé par arrêté local) ; mise en œuvre de la recouvrement.
+5. **Délai de réclamation / droit du propriétaire** : l'occupant peut contester l'enlèvement par la voie administrative (recours gracieux) ou contentieuse. **Délai exact à confirmer en version consolidée**. Pendant le délai de contestation possible, le bien est gardé.
+
+### 3.5 Voies de recours
+
+Tout acte de retrait du titre d'occupation ou d'enlèvement d'office ouvre un droit de recours : contentieux administratif, recours gracieux, recours pour excès de pouvoir. **Délais à vérifier** avant tout acte.
+
+### 3.6 Cumul : occupation sans titre + nuisances (bruit, salubrité, circulation)
+
+L'occupation du domaine public croise souvent d'autres polices spéciales :
+- Nuisance sonore → police de l'environnement (code de l'environnement) ; cumul possible.
+- Défaut de salubrité → police générale ou RSD ; cumul possible.
+- Obstruction de la circulation → police de la circulation et du stationnement ; cumul possible.
+
+**Signaler tout cumul explicitement** : l'occupation sans titre est **un** motif d'intervention ; ne pas l'isoler si d'autres fondements s'ajoutent.
+
+### 3.7 Cas particuliers d'occupation (déclinaison par type)
+
+- **Terrasse de restaurant** : demande auprès du maire (gestionnaire) ; avis
+  de l'autorité de police (circulation) ; red

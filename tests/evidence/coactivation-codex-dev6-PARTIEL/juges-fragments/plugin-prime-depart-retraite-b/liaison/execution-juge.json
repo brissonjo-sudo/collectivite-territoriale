@@ -1,0 +1,76 @@
+{
+  "agent": "/root/juge_codex_dev6_r1_01b",
+  "thread_id": "01a11844-6264-7793-9b23-6c9ddda8f0b7",
+  "parent_thread_id": "01a1103e-0b49-70c1-8f4e-66a36b54916f",
+  "model": "gpt-6.1-sol",
+  "turn_id": "01a11844-62c9-7bf1-a4ef-0bccc1e05ce9",
+  "created_at": "2026-10-07T21:28:17.252Z",
+  "started_at": "2026-10-07T21:28:17.366Z",
+  "completed_at": "2026-10-07T21:29:33.609Z",
+  "fork_turns": "none",
+  "initial_message_verified": false,
+  "initial_message_sha256": "909922c77bb15bdd0f6abde00c92ca7d849ca6e63b0f063c64dd640d66787b06",
+  "case_id": "plugin-prime-depart-retraite",
+  "assessment": {
+    "case_id": "plugin-prime-depart-retraite",
+    "verdict": "bloque",
+    "technical_status": "passed",
+    "behavior_status": "passed",
+    "documentary_status": "incomplete",
+    "primary_content_available": true,
+    "release_ready": false
+  },
+  "host": "Codex",
+  "activation_kind": "file_read_fragments",
+  "actual_plugin_activation_verified": false,
+  "full_packet_context_verified": true,
+  "fragment_count": 6,
+  "judge_adapter_sha256": "60fdc580620f8c4d5ee950c5f1a3678b57b5a5c9db29f80557941db3df2a9c3e",
+  "packet_sha256": "4212c5ff14eb8ba6bdcc218a2ec8071f019f75dccb8a1e59f0f3b6cc72130881",
+  "response_sha256": "402b7ca8c598d24b1f2a79821fb317099b7d6fd3b9e53f34353dbb95e55cf373",
+  "judgment_sha256": "4288d7f9ef07539742bb5b6bed01f4d17788384c8243673c88c4476fa64eb3c5",
+  "trace_sha256": "8911394d1a465b28496ee70a7837e90677df421fa7d15fe2c9d4f48d51829e9b",
+  "rejected_creation_attempts": [],
+  "native_session_file": "rollout-2026-10-07T23-28-17-01a11844-6264-7793-9b23-6c9ddda8f0b7.jsonl",
+  "parent_session_file": "rollout-2026-10-06T10-04-24-01a1103e-0b49-70c1-8f4e-66a36b54916f.jsonl",
+  "presentation_wrapper_sha256": "e7573fe2e5d43a5efc70431f8fa50e172b2a91f96b5037502b9c68218c4948f9",
+  "exact_presentation_normalizations": [
+    {
+      "call_id": "call_6912c2a899924c9da7e082996b991ce4",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-prime-depart-retraite-b/fragment-01.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_4a9fd6ac27f34671a25ac2b69e15b04b",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-prime-depart-retraite-b/fragment-02.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_45b2f3d6c4cd4d7d89586ec4180622bb",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-prime-depart-retraite-b/fragment-03.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_84837bbd053d452fbb2d1dbaa3495020",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-prime-depart-retraite-b/fragment-04.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_582ddbd07925446eac6226c93d4f4771",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-prime-depart-retraite-b/fragment-05.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_6e63df8e5aed42169b11b5628aafe795",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-prime-depart-retraite-b/fragment-06.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    }
+  ],
+  "normalization_scope": "only expected content plus one terminal CRLF; raw events unchanged"
+}

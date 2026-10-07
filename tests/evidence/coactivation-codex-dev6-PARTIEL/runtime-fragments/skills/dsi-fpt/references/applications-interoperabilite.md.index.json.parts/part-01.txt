@@ -1,0 +1,142 @@
+# Branche — Applications et interopérabilité
+
+## 1. Périmètre / Exclusions
+
+Piloter le portefeuille applicatif, les données de référence et les échanges
+entre applications métiers. Préparer les migrations et les interfaces avec les
+systèmes de l'État sans interrompre les services qui en dépendent.
+
+**Exclusions** : fond comptable → `BASCULE dirfi-fpt` ; fond de l'état civil
+et des élections → service métier compétent ; droit des données personnelles
+→ `BASCULE dpo-ct`. Passation → service de la commande publique, hors
+périmètre ; archivage électronique et ouverture des données → services
+compétents, hors périmètre. Arrêter le volet concerné, sans l'illustrer.
+Hébergement → `references/cloud-hebergement.md` ; exécution du contrat →
+`references/contrats-prestataires.md` ; parcours usager →
+`references/dematerialisation-teleservices.md`.
+
+## 2. Questions couvertes
+
+- Changer d'éditeur tout en conservant les données et le service.
+- Identifier les applications à maintenir, remplacer ou retirer.
+- Fiabiliser un référentiel utilisé par plusieurs services.
+- Remplacer les ressaisies par un échange maîtrisé.
+- Préparer un raccordement aux systèmes de l'État et sa recette technique.
+- Distinguer une interface techniquement disponible d'un échange obligatoire.
+
+## 3. Arbre de traitement
+
+Avant l'analyse, passer par `references/analyse-situation.md`. Si un incident
+ou une surveillance de personnes apparaît, afficher d'abord le garde-fou
+correspondant de `SKILL.md` ; ne pas engager une migration pour effacer les
+effets d'un incident.
+
+| Question | Variables à lever | Décision | Vérification | Livrable |
+|---|---|---|---|---|
+| Changer d'éditeur | Données exportables, dépendances, disponibilité requise, contrat | Migration progressive ou bascule avec retour préparé ; différer si l'export n'est pas exploitable | Export réel sur jeu fictif, import, rapprochement et engagements contractuels | Plan de migration et décision de bascule |
+| Supprimer une ressaisie | Source faisant autorité, destinataire, erreurs possibles | Automatiser le flux validé par les métiers ; conserver une file d'anomalies | Sens des champs, rejets, reprises et exigences de `dpo-ct` | Contrat d'interface |
+| Fiabiliser un référentiel | Producteur, doublons, consommateurs, règle de mise à jour | Désigner le propriétaire métier ; une source de référence par donnée | Effets des corrections sur les consommateurs | Dictionnaire et circuit de validation |
+| Raccorder un SI de l'État | Service concerné, statut de la collectivité, protocole publié | Organiser le raccordement ; réserver toute conclusion d'obligation | Source officielle applicable et spécifications de l'opérateur | Fiche de raccordement et procès-verbal de recette |
+
+## 4. Variables à lever
+
+- Mode internalisé, mutualisé ou externalisé ; qui dispose des droits
+  d'administration, qui arbitre et qui valide les résultats métier.
+- Catégorie de collectivité et compétence exercée lorsque le régime de
+  l'échange en dépend ; date de référence de la question.
+- Applications productrices et consommatrices, dépendances et responsable
+  métier de chaque flux, sans détail d'architecture réelle identifiable.
+- Nature et sensibilité des données ; exigences transmises par `dpo-ct`.
+- Criticité du service, fonctionnement dégradé possible et contraintes de
+  disponibilité exprimées par le métier.
+- Prestataire, contrat, formats d'export, documentation disponible et capacité
+  de la collectivité à tester une reprise sans l'éditeur sortant.
+
+## 5. Règles métier
+
+### Cartographie utile à la décision
+
+Pour chaque application, relier **service rendu → propriétaire métier →
+données de référence → dépendances → fournisseur → possibilité de sortie**.
+Une liste de logiciels ne permet pas de mesurer l'effet d'un retrait.
+Prioriser le remplacement selon le risque de rupture et de dépendance, avec
+`references/gouvernance-strategie.md`, plutôt que selon la seule ancienneté.
+
+### Interfaces et qualité des données
+
+Faire valider le sens métier avant de choisir le format technique. Décrire
+l'origine de chaque champ, sa transformation, ses contrôles et le traitement
+des rejets. Prévoir les doublons, messages reçus dans le désordre, reprise
+après interruption et modifications de schéma. Une confirmation de transport
+ne démontre pas que l'opération métier a été acceptée.
+
+Désigner une source faisant autorité et un responsable de correction. Éviter
+que deux applications modifient la même donnée sans règle de résolution.
+Tester avec des données fictives ; ne pas joindre des fichiers nominatifs à
+la réponse ou au livrable.
+
+### Migration et indépendance de l'éditeur
+
+Exiger un export exploitable, son dictionnaire et les liens entre données.
+Vérifier que pièces jointes, statuts et dépendances utiles au fonctionnement
+sont repris ; l'archivage reste hors périmètre. La reprise se juge sur les
+résultats métier, pas sur le seul nombre de lignes importées. Ne retirer
+l'ancien accès qu'après recette et décision tracée du responsable compétent.
+Les engagements de restitution relèvent de
+`references/contrats-prestataires.md`.
+
+### Échanges avec l'État et portée normative
+
+État civil, élections, contrôle de légalité, chaîne financière et facturation
+n'ont pas un régime unique. Pour chaque interface, identifier l'opérateur,
+le service métier et les spécifications officielles. Ne conclure à une
+obligation que si le texte et le champ d'application sont établis.
+
+Pour le RGI, partir du registre `references/references-verifiees.md` et
+qualifier la portée de la règle invoquée ; la lecture du document ne vaut
+pas lecture de son arrêté. Pour les échanges entre administrations et la
+facturation, utiliser les entrées correspondantes du registre, **à confirmer
+en version consolidée**. Distinguer obligation du fournisseur et obligation
+de la collectivité. Ne transposer aucune instruction adressée à l'État.
+Les contrôles d'interface ci-dessus sont des bonnes pratiques techniques,
+sans présumer une obligation légale.
+
+## 6. Procédures
+
+**Hypothèse : migration préparée, sans incident en cours.**
+
+1. Le métier décrit les opérations indispensables et les résultats attendus ;
+   la DSI relève dépendances et exigences techniques. Demander tout élément
+   manquant avant de fixer la bascule.
+2. Le prestataire fournit un export d'essai documenté. La DSI teste la reprise
+   dans un environnement distinct ; le métier contrôle les résultats.
+3. Recetter les interfaces entrantes et sortantes, les droits et le service
+   dégradé ; traiter la sécurité via `references/securite-si.md`.
+4. Définir les conditions d'arrêt, le retour à l'ancien fonctionnement et le
+   responsable de la décision. Préparer le traitement des modifications
+   survenues entre export et bascule.
+5. Faire décider la bascule sur les preuves de recette, les anomalies restantes
+   et le risque résiduel. Pour un mode mutualisé, préciser ce que valide la
+   collectivité et ce qu'exécute le service commun.
+6. Contrôler le service après bascule et fermer les interfaces inutiles selon
+   la décision validée. Les échéances contractuelles ou réglementaires se
+   vérifient à la source, sans durée proposée de mémoire.
+
+## 7. Déclencheurs de vérification
+
+Appliquer `references/socle-sources-verification.md` avant de répondre sur
+un échange obligatoire, une compétence, une portée opposable du RGI, une
+condition de raccordement, un calendrier de facturation ou une version de
+protocole imposée. Pour une qualification juridique de l'échange de données,
+basculer vers `dpo-ct` ; la DSI conserve la description technique.
+
+Le registre est une provenance datée, pas une vérification effectuée dans la
+session. Relire la source officielle pour les valeurs volatiles et pour tout
+point marqué non vérifié ; à défaut, réserver la conclusion précise.
+
+## 8. Pièges et confusions fréquentes
+
+- Promettre une migration parce que l'éditeur annonce un export « standard ».
+- Confondre compatibilité de format, sens métier et acceptation par le système
+  destinataire.
+- Consid

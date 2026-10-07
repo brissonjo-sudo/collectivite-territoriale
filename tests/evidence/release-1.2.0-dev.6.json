@@ -1,7 +1,7 @@
 {
   "plugin_version": "1.2.0-dev.6",
   "plugin_commit": "3f0df285898cf1e36d1ddda8d85d0c4cd5e0903b",
-  "candidate_commit_status": "committed_not_measured",
+  "candidate_commit_status": "committed_partially_measured_native_file_load",
   "release_ready": false,
   "available_skills": [
     "dpm-fpt",
@@ -20,7 +20,7 @@
     "dsi-fpt": "704e5dd6a3d15994ed431b23585aabd72086ca75"
   },
   "historical_scores_reused": false,
-  "measurement_status": "not_measured",
+  "measurement_status": "partial_native_file_load_pilot",
   "runs": [],
   "review": {
     "human_legal_validation": false,
@@ -31,9 +31,9 @@
     "plugin_commit": null
   },
   "release_blockers": [
-    "Candidat 1.2.0-dev.6 non mesuré ; aucun score dev.5 transféré",
-    "Relecture DSI/RSSI et juridique humaine non recueillie",
-    "Smoke natif du candidat dans Codex non établi"
+    "Pilote dev.6 partiel : un rejet hors score et dix cas non exécutés",
+    "Activation réelle et smoke d'usage du candidat non établis",
+    "Avis DSI/RSSI et juridique humains non recueillis"
   ],
   "preceding_measurement": {
     "summary_path": "tests/evidence/coactivation-codex-dev5-r2/synthese.json",
@@ -41,5 +41,35 @@
     "activation_kind": "file_read_fragments",
     "transferred": false
   },
-  "frozen_inventory_path": "docs/qualification/gel-dev6-non-mesure.json"
+  "frozen_inventory_path": "docs/qualification/gel-dev6-non-mesure.json",
+  "native_codex_partial_measurement": {
+    "summary_path": "tests/evidence/coactivation-codex-dev6-PARTIEL/synthese-PARTIELLE.json",
+    "candidate_commit": "1a12b347448809864ba6d14d5501585a4a038206",
+    "runtime_source_commit": "3f0df285898cf1e36d1ddda8d85d0c4cd5e0903b",
+    "prepared_cases": 16,
+    "executed_cases": 6,
+    "bound_cases": 5,
+    "judged_cases": 5,
+    "retained_roles": 10,
+    "rejected_protocol_cases": 1,
+    "not_executed_cases": 10,
+    "counts_bound_only": {
+      "reussite": 1,
+      "echec": 1,
+      "bloque": 3
+    },
+    "effectively_judged_atoms": 41,
+    "full_suite_complete": false,
+    "actual_plugin_activation_verified": false,
+    "historical_scores_reused": false
+  },
+  "native_discovery": {
+    "status": "catalogue_constructed_without_inference",
+    "plugin_skill_count": 6,
+    "runtime_source_commit": "3f0df285898cf1e36d1ddda8d85d0c4cd5e0903b",
+    "receipt_sha256": "2d05b24cda3f3e340ab5df20c7ef1997bdbe5999a8d873e386fe538c8a22800e",
+    "actual_plugin_activation_verified": false,
+    "authentication_verified": false,
+    "usage_smoke_complete": false
+  }
 }

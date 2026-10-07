@@ -1,0 +1,154 @@
+# Générateur interactif — Note au maire (modèle) (v0.1.0)
+
+> Couche 4 (générateur d'écrit), piloté par `references/ecrits-professionnels.md`
+> §4 et §10 (branche de rattachement — lire avant tout usage). Structure de
+> dialogue alignée sur `SKILL.md` §6. Gabarit de mise en forme inspiré de la
+> discipline du gabarit de décision du skill `drh-fpt` (champs entre `[ ]`,
+> aucune donnée nominative en clair dans le canevas, réserves « à confirmer en
+> version consolidée » sur tout visa).
+>
+> **Nature de l'écrit** : la note au maire est une **note de pilotage / aide
+> à la décision** — **pas un acte administratif**. Elle ne produit aucun
+> effet de droit par elle-même, ne fait pas grief, et n'est donc **ni motivée
+> au sens du CRPA, ni assortie de voies et délais de recours, ni soumise à
+> transmission au contrôle de légalité** en tant que telle
+> (`references/controle-legalite.md` §9). En revanche, si la note recommande
+> une **décision** du maire qui prendra ensuite la forme d'un arrêté ou d'une
+> autre décision faisant grief, la **base légale citée dans la note doit être
+> rigoureuse** dès ce stade, car elle conditionne la suite : passage
+> obligatoire par `references/controle-legalite.md` avant toute production
+> de l'acte qui en découlerait (`references/templates/arrete-modele.md`).
+>
+> **Ce fichier ne tranche jamais seul** la qualification pénale ou
+> réglementaire d'un fait (renvoi `references/penal-procedure.md` /
+> `references/reglementation-appliquee.md`), ni la légalité d'un projet
+> d'acte (renvoi `references/controle-legalite.md`) : il **signale** les
+> points de fragilité identifiés par la grille de contrôle, la décision
+> finale appartenant au maire.
+
+---
+
+## 0. Quand utiliser ce générateur
+
+La **note au maire** sert à éclairer une décision du maire : elle expose un
+**contexte**, une **analyse**, des **options** chiffrées/qualifiées avec
+leurs **risques**, et une **recommandation** du DPM (ou du rédacteur
+habilité), sans décider à sa place.
+
+**Avant d'ouvrir ce générateur**, vérifier que l'écrit demandé est bien une
+note de pilotage et non un autre type de document :
+
+1. **S'agit-il de constater un fait avec valeur probante (contravention) ?**
+   Oui → `references/templates/pv-contravention.md`, pas ce générateur.
+2. **S'agit-il de rendre compte d'une intervention ou d'une appréhension ?**
+   Oui → `references/templates/rapport-information.md` ou
+   `references/templates/rapport-mise-a-disposition.md` selon le cas
+   (`references/ecrits-professionnels.md` §5.1), pas ce générateur.
+3. **S'agit-il de rédiger directement l'acte décisionnel (arrêté) ?**
+   Oui → `references/templates/arrete-modele.md`, après passage par
+   `references/controle-legalite.md`. La note au maire peut **précéder**
+   cette rédaction (note d'aide à la décision en amont de l'arrêté), mais
+   ne s'y substitue jamais.
+4. **Le fait sous-jacent comporte-t-il une demande d'acte hors pouvoir APJA
+   (`SKILL.md` §5.2 ; l'art. 16 CPP définit notamment la qualité d'OPJ) ?**
+   Oui → afficher le **STOP** (bloc ci-dessous) **avant tout autre
+   contenu**. La note au maire, si elle est néanmoins produite, se limite
+   alors à rendre compte de l'action APJA conforme et, si un fondement a été
+   qualifié, de la présentation réalisée au titre des art. 53/73 ou 78-6 —
+   jamais à présenter des options sur un acte réservé à l'OPJ.
+
+```
+STOP — Cet acte dépasse les pouvoirs de l'agent de police municipale.
+Ne pas l'accomplir ni le formaliser.
+Rendre compte immédiatement à l'OPJ territorialement compétent.
+```
+
+Si aucun de ces quatre cas ne redirige ailleurs : la **note au maire** est
+le bon écrit. Poursuivre au §1.
+
+---
+
+## 1. Séquence interactive obligatoire
+
+**Principe directeur** (`SKILL.md` §6, `ecrits-professionnels.md` §6.2) : les
+questions sont posées **une à une**, jamais en bloc. Confirmer chaque
+réponse avant de passer au champ suivant. Ne jamais pré-remplir un champ non
+fourni : appliquer la règle `[INCOMPLET]` (§4).
+
+Ordre imposé des questions :
+
+### Étape 1 — Identification du rédacteur et destinataire (qui)
+- Nom, qualité du rédacteur (DPM / chef de service / agent habilité) ;
+  confirmation que le destinataire est bien le maire (ou, le cas échéant,
+  un adjoint délégué — préciser la délégation).
+> *Question posée* : « Qui rédige cette note, et à qui est-elle adressée
+> (le maire, ou un adjoint délégué — dans ce cas, sur quelle délégation) ? »
+
+### Étape 2 — Date de la note et échéance de la décision (quand)
+- Date de rédaction de la note ; échéance à laquelle une décision est
+  attendue, si elle existe (urgence, échéance réglementaire, événement
+  programmé).
+> *Question posée* : « À quelle date rédigez-vous cette note, et existe-t-il
+> une échéance à laquelle une décision est attendue ? »
+
+### Étape 3 — Périmètre et localisation (où)
+- Périmètre concerné par la question traitée (ensemble de la commune,
+  quartier, voie, établissement, événement précis — selon l'objet).
+> *Question posée* : « Quel est le périmètre concerné (toute la commune, un
+> secteur précis, un établissement, un événement) ? »
+
+### Étape 4 — Contexte et faits motivant la note (pourquoi)
+- Exposé des faits ou de la situation à l'origine de la note, formulé de
+  façon factuelle (statistiques, signalements, incidents, évolution
+  réglementaire, demande d'un tiers).
+> *Question posée* : « Quel est le contexte ou quels sont les faits qui
+> motivent cette note (situation observée, signalements, évolution
+> réglementaire, demande reçue) ? »
+
+### Étape 5 — Base légale ou réglementaire mobilisée (qualification)
+- Texte(s) susceptible(s) de fonder une décision du maire sur ce sujet
+  (police générale CGCT, police spéciale identifiée — renvoi
+  `references/pouvoirs-police.md` pour le fond ; ce générateur **ne
+  tranche pas** lui-même la qualification).
+> *Question posée* : « Quelle base légale ou réglementaire envisagez-vous
+> pour une éventuelle décision (police générale du maire, police spéciale
+> — laquelle) ? Si vous ne savez pas, indiquez-le : ce point sera signalé
+> comme à vérifier. »
+
+### Étape 6 — Options envisageables
+- Recenser les **options** réalistes ouvertes au maire, y compris l'option
+  « ne rien faire » ou « différer », avec pour chacune : description
+  succincte, avantages, inconvénients, coût/moyens nécessaires si connus.
+> *Question posée* : « Quelles sont les options envisageables (au moins
+> deux, y compris l'absence d'action si pertinente) ? Pour chacune, quels
+> avantages et inconvénients identifiez-vous ? »
+
+### Étape 7 — Personnes ou tiers concernés / témoins ou avis recueillis
+- Tiers dont la situation serait affectée par une décision (administrés,
+  professionnels, riverains), et avis déjà recueillis (services, partenaires
+  du continuum de sécurité, instances consultatives) — jamais de donnée
+  nominative en clair dans le canevas (§3).
+> *Question posée* : « Des tiers sont-ils directement concernés par une
+> décision sur ce sujet ? Des avis ont-ils déjà été recueillis (services,
+> partenaires, instances) ? »
+
+### Étape 8 — Risques par option
+- Pour chaque option retenue à l'étape 6, identifier le ou les risques
+  (juridique/contentieux, opérationnel, sécuritaire, financier, image) et
+  qualifier le couple **[risque / confiance]** (`SKILL.md` §5.1).
+> *Question posée* : « Pour chaque option, quels risques identifiez-vous
+> (contentieux, opérationnel, sécuritaire, financier, image), et avec quel
+> niveau de confiance dans l'analyse ? »
+
+### Étape 9 — Recommandation du rédacteur
+- Option recommandée par le DPM/rédacteur, avec justification synthétique ;
+  préciser que la décision finale appartient au maire.
+> *Question posée* : « Quelle option recommandez-vous, et pourquoi,
+> succinctement ? »
+
+### Étape 10 — Suites et calendrier proposé
+- Étapes suivantes si la recommandation est suivie (ex. instruction d'un
+  projet d'arrêté, consultation complémentaire, communication), et
+  calendrier indicatif.
+> *Question posée* : « Si la recommandation est suivie, quelles sont les
+> prochaines ét

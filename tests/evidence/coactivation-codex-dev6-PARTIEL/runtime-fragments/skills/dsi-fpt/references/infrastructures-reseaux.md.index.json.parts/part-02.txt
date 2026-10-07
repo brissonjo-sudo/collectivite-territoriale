@@ -1,0 +1,97 @@
+tion ou de modification
+sans incident actif ; sinon appliquer le STOP en premier.
+
+1. Décrire les usages, services, responsables et dépendances, en termes
+   abstraits ; demander le mode d'exercice s'il change l'option.
+2. Dessiner les zones fonctionnelles et les échanges nécessaires sans
+   architecture identifiable ; faire valider le besoin par les métiers.
+3. Comparer les options sur exploitabilité, panne commune, accès,
+   maintenabilité et capacité de retour à l'état précédent.
+4. Planifier une modification réversible, ses contrôles et les personnes
+   qui autorisent l'intervention et valident le service.
+5. Réceptionner avec des essais de fonctionnement et, si prévu, de bascule
+   dans un périmètre autorisé ; consigner les réserves.
+6. Remettre le dossier d'exploitation et attribuer les écarts non levés.
+
+Pour la fin de vie, établir destination et présence de supports, faire
+valider la récupération et le traitement des données par les personnes
+compétentes, contrôler les preuves puis mettre à jour l'inventaire. Vérifier
+à la source toute obligation invoquée et ses délais avant de conclure.
+
+## 7. Déclencheurs de vérification
+
+Appliquer `references/socle-sources-verification.md` lorsqu'une réponse
+invoque réemploi, déchets, règle de sécurité physique, prescription de
+téléphonie ou exigence sectorielle. Ne pas étendre une doctrine de l'État à
+la collectivité ni transformer un conseil ANSSI en obligation.
+
+Pour les références absentes de `references/references-verifiees.md`, ne
+pas affirmer le régime. Fournir le point à faire vérifier sur la source
+officielle et l'analyse technique indépendante de ce régime. Les versions
+de référentiels et qualifications citées déclenchent aussi une vérification.
+
+## 8. Pièges et confusions fréquentes
+
+- Assimiler noms de réseaux différents et séparation effective des usages.
+- Supposer que tous les équipements d'une école ont le même responsable.
+- Appeler « redondance » deux moyens dépendant d'une même panne.
+- Ajouter du matériel sans prévoir maintenance et accès de secours.
+- Déduire une capacité de bascule d'une documentation commerciale.
+- Prolonger un équipement non maintenable au seul nom de la sobriété.
+- Confondre réinitialisation d'un poste et traitement démontré des supports.
+- Inventer des taux de réemploi ou un régime DEEE sans source lue.
+- Développer la doctrine de vidéoprotection ou la passation d'un marché.
+- Demander un plan réseau réel ou une extraction nominative pour cadrer un besoin.
+
+## 9. Données et valeurs à vérifier
+
+Consulter `references/references-verifiees.md` pour les sources autorisées
+de doctrine et la stratégie de numérique responsable. Les textes DEEE,
+réemploi et prescriptions sectorielles non présents au registre restent à
+vérifier avant usage. Vérifier seuils, taux, échéances, périmètre des
+équipements et versions de référentiels à leur source, sans les produire de
+mémoire. Le registre livré oriente la recherche de sources primaires ; le cache
+de maintenance du dépôt source est hors runtime et ne se charge pas.
+
+Les capacités techniques et dates de fin de support se contrôlent auprès
+de leur source compétente et du dossier d'exploitation ; ne pas en déduire
+un délai légal de remplacement.
+
+## 10. Écrits et livrables
+
+- Dossier de site via `objets/site-reseau.md` : usages, responsables,
+  dépendances, zones fonctionnelles et critères de réception abstraits.
+- Fiche de choix → `references/templates/fiche-projet-si.md` : options,
+  exploitabilité, panne commune, risques et décision attendue.
+- Exigences et contrôles de réception →
+  `references/templates/cahier-des-charges-technique.md` ; exécution du
+  contrat → `references/contrats-prestataires.md`.
+- Plan de parc : équipements par familles, maintien, remplacement,
+  réaffectation et preuve de sortie, sans détails identifiants.
+- Dossier d'exploitation : responsabilités, changements, essais et réserves ;
+  les informations sensibles restent dans les circuits internes autorisés.
+
+Ce contenu est opérationnel ; vérifier séparément tout élément présenté
+comme obligatoire.
+
+## 11. Double échelle [risque / confiance]
+
+Appliquer `SKILL.md` §5.1. Inventaire et choix de parc courant : risque
+**moyen**, confiance **stable** sur la méthode. Modification d'un réseau
+soutenant plusieurs services ou dépendance partagée : risque **élevé**,
+confiance **à vérifier** sans cartographie et essais. Sortie de supports
+sensibles ou service essentiel sans solution de repli : risque **élevé** ou
+**critique** selon l'effet ; ne pas autoriser un geste irréversible sur un
+constat incomplet. Régime sectoriel non sourcé : abstention sur le droit.
+
+## 12. Checklist de branche
+
+- [ ] Garde-fous `SKILL.md` §5.2 et §5.3 testés et affichés avant le contenu si déclenchés.
+- [ ] Mode d'exercice, responsabilités de site et besoins métier levés.
+- [ ] Frontières cloud, sécurité, crise et `dpm-fpt` respectées ; passation exclue.
+- [ ] Dépendances et pannes communes examinées ; exploitabilité démontrable.
+- [ ] Contrôles, réception, réserves et retour au fonctionnement normal prévus.
+- [ ] Fin de vie précédée d'une validation et de preuves, sans geste irréversible ici.
+- [ ] Doctrine distinguée d'obligation ; DEEE/réemploi non vérifiés réservés.
+- [ ] Aucun secret, détail d'architecture identifiable ou donnée nominative.
+- [ ] Livrable, responsable et chemins internes nommés.

@@ -1,0 +1,166 @@
+{
+  "agent": "/root/juge_codex_dev6_r1_03b",
+  "thread_id": "01a11846-3546-71b3-932f-3dba0297ff42",
+  "parent_thread_id": "01a1103e-0b49-70c1-8f4e-66a36b54916f",
+  "model": "gpt-6.1-sol",
+  "turn_id": "01a11846-3597-71a1-aee8-b8a933a15d9a",
+  "created_at": "2026-10-07T21:30:16.774Z",
+  "started_at": "2026-10-07T21:30:16.869Z",
+  "completed_at": "2026-10-07T21:32:46.952Z",
+  "fork_turns": "none",
+  "initial_message_verified": false,
+  "initial_message_sha256": "d049619e4466ef706db2ca13a0978d1739594ca52e3bed09f3056e896087c772",
+  "case_id": "plugin-violation-donnees",
+  "assessment": {
+    "case_id": "plugin-violation-donnees",
+    "verdict": "bloque",
+    "technical_status": "passed",
+    "behavior_status": "passed",
+    "documentary_status": "incomplete",
+    "primary_content_available": true,
+    "release_ready": false
+  },
+  "host": "Codex",
+  "activation_kind": "file_read_fragments",
+  "actual_plugin_activation_verified": false,
+  "full_packet_context_verified": true,
+  "fragment_count": 21,
+  "judge_adapter_sha256": "60fdc580620f8c4d5ee950c5f1a3678b57b5a5c9db29f80557941db3df2a9c3e",
+  "packet_sha256": "e942920de5f9c5e4a3d321976e3fd6a7db5b61902e1dbc8fd45169d02478781b",
+  "response_sha256": "940ac51bee7f93df06402667ab9691ca9b253e81b0aebc64b1dc6391d3b9c600",
+  "judgment_sha256": "9ab624be861deba1349a4cf2cd15954b5d8f5ad6b9f7709a0c9d40d316ba30fa",
+  "trace_sha256": "30af1fb48517db6e1ed49fee7209d697744f258d7ebba2260a87a189bd188e8a",
+  "rejected_creation_attempts": [],
+  "native_session_file": "rollout-2026-10-07T23-30-16-01a11846-3546-71b3-932f-3dba0297ff42.jsonl",
+  "parent_session_file": "rollout-2026-10-06T10-04-24-01a1103e-0b49-70c1-8f4e-66a36b54916f.jsonl",
+  "presentation_wrapper_sha256": "e7573fe2e5d43a5efc70431f8fa50e172b2a91f96b5037502b9c68218c4948f9",
+  "exact_presentation_normalizations": [
+    {
+      "call_id": "call_29bb12e311f8437089aa888f5543a7a7",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-violation-donnees-b/fragment-01.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_70cc7fdcbf774e108e0adeb5c185619e",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-violation-donnees-b/fragment-02.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_f9436c8770b446ccb91ea980b72992bb",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-violation-donnees-b/fragment-03.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_ac7216faa35a4619a58e18ec87e3c36d",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-violation-donnees-b/fragment-04.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_3257995aff6d4a1fb1b6bddd9e965a29",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-violation-donnees-b/fragment-05.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_90605d4be39b43759f2030d4da1badb9",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-violation-donnees-b/fragment-06.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_de497966aa464bfcb21b98f325d5075f",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-violation-donnees-b/fragment-07.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_674b10fbd04d4bee9a577f8360a9f867",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-violation-donnees-b/fragment-08.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_da45aa4ebfcf456fbdb6cee45fa6cb9d",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-violation-donnees-b/fragment-09.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_6f0ffa5444b44c818ddca65c31b9a24e",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-violation-donnees-b/fragment-10.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_a6fbe0681e684ff1a6cb91e992289039",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-violation-donnees-b/fragment-11.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_16a92a1bdf134088a5b86d8e41ae4257",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-violation-donnees-b/fragment-12.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_144c7ccdc239470d845b0db37807e11c",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-violation-donnees-b/fragment-13.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_9803e2a18da54dc590f568c57cfd14af",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-violation-donnees-b/fragment-14.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_920ed158e5be482186506f7d5d68495b",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-violation-donnees-b/fragment-15.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_9fb88444e5d34418b0337416caa7081f",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-violation-donnees-b/fragment-16.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_d897ce65249c47ac938072722a7af797",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-violation-donnees-b/fragment-17.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_9b52bd07f74b439fb116857f73f78c7b",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-violation-donnees-b/fragment-18.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_4d1c3b02e5484c349194ce32b2b8272e",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-violation-donnees-b/fragment-19.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_da2185f365cf4a0c8fff54087bd2bd49",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-violation-donnees-b/fragment-20.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_329217a6287047b9ad22267cfbfe55c3",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-violation-donnees-b/fragment-21.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    }
+  ],
+  "normalization_scope": "only expected content plus one terminal CRLF; raw events unchanged"
+}

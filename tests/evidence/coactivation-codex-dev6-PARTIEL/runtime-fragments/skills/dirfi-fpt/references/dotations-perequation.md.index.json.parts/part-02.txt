@@ -1,0 +1,154 @@
+ssible sous condition de respect
+  de règles de cumul et de plafonnement du financement public total — voir
+  aussi `subventions.md` pour le régime général des subventions reçues.
+
+### 5.6 Fonds de compensation pour la TVA (FCTVA)
+
+- **Champ d'application** : dépenses d'investissement de la collectivité
+  grevées de TVA que celle-ci ne peut récupérer par la voie fiscale
+  classique (non-assujettissement à la TVA sur l'opération concernée).
+- **Assiette** : dépenses éligibles, définies par nature et par exclusion de
+  certaines catégories de dépenses — **liste des exclusions à vérifier**
+  avant toute anticipation.
+- **Taux forfaitaire de compensation** : valeur volatile, revue en loi de
+  finances — **jamais citée de mémoire, jamais sans date d'effet**.
+- **Régime de versement** : décalage possible entre l'exercice de la dépense
+  et l'exercice de versement de la compensation, ou dispositif automatisé
+  selon le régime propre à la collectivité — **à vérifier avant toute
+  prévision de trésorerie**.
+- **Distinction avec une subvention d'investissement** : le FCTVA compense
+  une charge de TVA non récupérable, ce n'est pas une subvention affectée à
+  un projet particulier — ne pas le présenter comme un financement de projet
+  au même titre qu'une DETR ou une DSIL.
+
+### 5.7 Compensations d'exonérations fiscales
+
+- L'État compense pour tout ou partie certaines exonérations de fiscalité
+  directe locale, décidées par délibération ou de droit (voir
+  `fiscalite-locale.md` §5.5).
+- Ces compensations sont **notifiées distinctement** de la recette fiscale
+  elle-même ; leur montant suit souvent des règles d'évolution différentes
+  du produit fiscal réel, et peut être concerné par les variables
+  d'ajustement (§5.8).
+
+### 5.8 Variables d'ajustement
+
+- **Mécanisme** : au sein d'une enveloppe globale dont la progression est
+  arbitrée en loi de finances, certaines composantes (notamment des
+  compensations d'exonérations) sont minorées pour financer la progression
+  d'autres dotations, en particulier les dotations de péréquation.
+- **Effet pratique** : une compensation peut diminuer d'une année sur
+  l'autre sans changement de la situation de la collectivité, du seul fait
+  du mécanisme d'ajustement — signaler ce point avant toute analyse d'écart.
+- **Liste des composantes concernées** : évolutive chaque année en loi de
+  finances — **à vérifier systématiquement**, ne jamais présumer une liste
+  stable d'un exercice sur l'autre.
+
+### 5.9 Notification des dotations
+
+- **Fiches individuelles** : document notifié à chaque collectivité,
+  détaillant les montants par dotation et les données de calcul mobilisées
+  (population, potentiel fiscal, effort fiscal, CIF selon le cas).
+- **Calendrier** : la notification intervient selon un calendrier propre à
+  chaque exercice — **à vérifier avant toute anticipation budgétaire**,
+  notamment pour l'inscription au budget primitif.
+- **Exploitation** : comparer la fiche individuelle de l'exercice à celle de
+  l'exercice précédent, identifier les écarts (effet population, effet
+  variable d'ajustement, effet changement de classement en péréquation) avant
+  toute inscription budgétaire définitive.
+
+### 5.10 Contestation d'un montant notifié
+
+- **Première étape** : demande de rectification auprès du service ayant
+  notifié la fiche individuelle, en cas d'erreur matérielle apparente
+  (donnée de population, erreur de calcul).
+- **Voies de recours** : recours administratif puis, le cas échéant,
+  recours contentieux — autorités et délais **à vérifier** avant toute
+  démarche, ne jamais présumer un délai identique à celui d'un contentieux
+  fiscal ou budgétaire.
+- **Vigilance** : distinguer une contestation sur une **donnée de calcul**
+  (population, potentiel fiscal) d'une contestation sur l'**application de
+  la règle** (mauvaise catégorie, mauvaise fraction de dotation) — la
+  démarche et l'interlocuteur diffèrent.
+
+### 5.11 Effet des indicateurs financiers sur les attributions
+
+- **Potentiel fiscal** : mesure théorique de la richesse fiscale d'une
+  collectivité, obtenue en appliquant aux bases d'imposition un taux moyen
+  national, indépendamment des taux réellement votés localement.
+- **Potentiel financier** : potentiel fiscal complété par d'autres
+  ressources stables (notamment une fraction de la dotation forfaitaire
+  selon la méthode en vigueur), utilisé pour affiner les comparaisons entre
+  collectivités.
+- **Effort fiscal** : rapport entre le produit fiscal effectivement voté par
+  la collectivité et un produit de référence théorique ; mesure la pression
+  fiscale relative exercée par la collectivité sur ses propres bases.
+- **Revenu par habitant** : indicateur socio-économique utilisé en
+  complément des indicateurs de richesse fiscale pour certaines dotations et
+  pour le FPIC.
+- **Usage combiné** : ces indicateurs interviennent à la fois en
+  **éligibilité** (seuil d'accès à une dotation) et en **pondération** (montant
+  attribué), selon des méthodes propres à chaque dispositif — ne jamais
+  transposer la méthode d'un dispositif à un autre sans vérification.
+
+---
+
+## 6. Calculs et procédures
+
+- **Méthode de calcul du potentiel fiscal** : `bases d'imposition de la
+  collectivité × taux moyen national par imposition`, sommé sur les
+  impositions concernées. Poser la méthode, jamais un montant sans
+  vérification du taux moyen national de l'exercice concerné.
+- **Méthode de calcul du FCTVA** : `assiette des dépenses éligibles × taux
+  forfaitaire de compensation en vigueur`, puis application du régime de
+  versement propre à la collectivité (décalage ou automatisation).
+- **Procédure de vérification d'une fiche individuelle de notification** :
+  1. rapprocher les données de calcul (population, indicateurs) de
+     l'exercice précédent ;
+  2. identifier les écarts et leur origine (effet population, effet
+     classement, effet variable d'ajustement) ;
+  3. signaler toute anomalie apparente avant inscription budgétaire ;
+  4. engager, si nécessaire, la procédure de contestation (§5.10).
+- **Procédure de dossier DETR/DSIL/DPV** :
+  1. identification de l'éligibilité géographique et catégorielle du
+     projet ;
+  2. dépôt du dossier dans le calendrier fixé par le représentant de
+     l'État ;
+  3. avis de la commission compétente lorsqu'elle existe (DETR) ;
+  4. décision attributive, versement selon un rythme lié à l'avancement de
+     l'opération (acomptes, solde) — modalités à vérifier.
+- **Signaler comme données manquantes** : le montant exact d'une dotation
+  notifiée, le taux du FCTVA en vigueur, le calendrier précis de dépôt d'un
+  dossier — ne jamais les déduire par défaut.
+
+---
+
+## 7. Déclencheurs de vérification
+
+Appliquer le socle-sources (`SKILL.md` §5.4, matrice §2.2) avant de conclure
+dès que :
+- un **montant de dotation, un taux du FCTVA ou un seuil d'éligibilité**
+  doit être cité ;
+- une **date de notification ou un délai de dépôt de dossier** est en jeu ;
+- une **condition d'éligibilité** (zonage DETR, quartier DPV, classement
+  DSU/DSR) doit être qualifiée ;
+- un **montant notifié** est contesté ;
+- la **liste des variables d'ajustement** de l'exercice doit être établie ;
+- une **réforme récente** (loi de finances de l'année) touche l'une de ces
+  dotations.
+
+---
+
+## 8. Pièges & confusions fréquentes
+
+1. Confondre **potentiel fiscal** (richesse théorique standardisée) et
+   **produit fiscal réellement perçu** par la collectivité.
+2. Présenter le **FCTVA** comme une subvention d'investissement classique,
+   alors qu'il compense une charge de TVA non récupérable.
+3. Oublier le **décalage de versement** du FCTVA propre au régime de la
+   collectivité, avec un risque d'erreur de prévision de trésorerie.
+4. Traiter une **baisse de DGF** comme une anomalie systématique, alors
+   qu'elle peut résulter d'une variable d'ajustement ou d'un effet de
+   classement en péréquation.
+5. Confondre la **dotation d'intercommunalité** (perçue par l'EPCI) et
+   l'**attribution de compensation** (mécanisme de fiscalité locale,

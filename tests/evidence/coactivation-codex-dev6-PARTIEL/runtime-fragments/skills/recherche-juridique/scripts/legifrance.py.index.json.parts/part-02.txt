@@ -1,0 +1,188 @@
+e (constantes plus haut) couvre le judiciaire : Cass., CA, TJ, tcom.
+# Le Conseil d'État et le Conseil constitutionnel n'y figurent pas et restent
+# accessibles par le moteur /search de Légifrance. Ne pas fusionner ces deux
+# ensembles : c'est leur confusion qui a fait disparaître `ceta` et `constit`.
+# Les clés sont les noms de sous-commandes (cf. build_parser / args.command).
+FONDS_JURIS = {
+    "ceta": {"fond": "CETAT", "prefix": "CETATEXT", "label": "Conseil d'État"},
+    "constit": {"fond": "CONSTIT", "prefix": "CONSTEXT",
+                "label": "Conseil constitutionnel"},
+}
+
+
+# --------------------------------------------------------------------------- #
+# Commandes
+# --------------------------------------------------------------------------- #
+def cmd_ping(args) -> int:
+    """Vérifie l'authentification et la disponibilité de l'API."""
+    token = get_token()
+    print("✅ Authentification PISTE réussie (jeton obtenu).")
+    print(f"   Environnement : {os.environ.get('LEGIFRANCE_ENV', 'prod')}")
+    print(f"   API : {_env()['api']}")
+    # Sonde légère : récupération d'un article connu et stable (art. 1 CP-like).
+    try:
+        api_call("/consult/getArticle", {"id": "LEGIARTI000006419288"}, token)
+        print("✅ Endpoint /consult/getArticle joignable.")
+    except LegifranceError as exc:
+        print(f"⚠️  Jeton OK mais endpoint en erreur : {exc}", file=sys.stderr)
+        return 4
+
+    # Sonde Judilibre — non bloquante : l'application PISTE peut n'être
+    # abonnée qu'à Légifrance. Le fond jurisprudence est alors indisponible,
+    # ce qui doit être visible sans faire échouer le ping. Le jeton obtenu
+    # ci-dessus est déjà en cache : Judilibre le réutilise en repli OAuth.
+    print(f"   Judilibre : {_judilibre_base()}")
+    try:
+        judilibre_get("/taxonomy", {"id": "jurisdiction"})
+        print("✅ Endpoint Judilibre /taxonomy joignable.")
+    except LegifranceError as exc:
+        print(
+            f"⚠️  Judilibre indisponible ({exc}).\n"
+            "   Vérifier l'abonnement à l'API « Judilibre » sur piste.gouv.fr, "
+            "ou renseigner JUDILIBRE_KEY_ID.\n"
+            "   Légifrance reste utilisable ; la jurisprudence non.",
+            file=sys.stderr,
+        )
+    return 0
+
+
+def _extract_article(data: dict) -> dict | None:
+    """Normalise la charge utile de getArticle, robuste aux variantes de schéma."""
+    art = data.get("article")
+    if art is None and isinstance(data.get("listArticle"), list) and data["listArticle"]:
+        art = data["listArticle"][0]
+    return art
+
+
+def cmd_article(args) -> int:
+    """Récupère un article par identifiant LEGIARTI et restitue ses métadonnées."""
+    art_id = args.id.strip()
+    if not art_id.upper().startswith("LEGIARTI"):
+        raise LegifranceError(
+            f"Identifiant attendu LEGIARTI… (reçu {art_id!r}). "
+            "Pour rechercher par numéro d'article, utiliser la commande 'search'.",
+            exit_code=2,
+        )
+    token = get_token()
+    body: dict = {"id": art_id}
+    if args.date:
+        body["date"] = args.date  # AAAA-MM-JJ — version applicable à cette date
+    data = api_call("/consult/getArticle", body, token)
+
+    if args.json:
+        print(json.dumps(data, ensure_ascii=False, indent=2))
+        return 0
+
+    art = _extract_article(data)
+    if not art:
+        raise LegifranceError(
+            f"Article {art_id} introuvable (réponse vide).", exit_code=5
+        )
+
+    etat = art.get("etat") or art.get("etatJuridique") or "?"
+    num = art.get("num") or "?"
+    date_debut = _fmt_date(art.get("dateDebut"))
+    date_fin = _fmt_date(art.get("dateFin"))
+    texte = (art.get("texte") or art.get("texteHtml") or "").strip()
+    texte_plein = _strip_html(texte)
+
+    print("─" * 60)
+    print(f"Article            : {num}")
+    print(f"Identifiant        : {art.get('id', art_id)}   (← provenance vérifiée)")
+    print(f"Statut             : {etat}")
+    print(f"En vigueur depuis  : {date_debut}")
+    if date_fin and date_fin not in ("?", "2999-01-01", "9999-12-31"):
+        print(f"En vigueur jusqu'au: {date_fin}")
+    if args.date:
+        print(f"Version demandée au: {args.date}")
+    print("─" * 60)
+    if texte_plein:
+        print(texte_plein)
+    else:
+        print("(texte non renvoyé par l'API — consulter la fiche manuellement)")
+    print("─" * 60)
+
+    if str(etat).upper() not in ("VIGUEUR", "VIGUEUR_DIFF"):
+        print(
+            f"⚠️  Statut « {etat} » : ne pas citer comme droit positif sans "
+            "vérification (voir checklist-vigueur.md).",
+            file=sys.stderr,
+        )
+    # Citation prête à coller (gabarit format-citation.md).
+    print()
+    print("Citation normalisée (à compléter avec la date de consultation) :")
+    print(
+        f"  Art. {num}, [code], version en vigueur depuis le "
+        f"{_fr_date(date_debut)}, identifiant Légifrance {art.get('id', art_id)}, "
+        f"consulté le JJ/MM/AAAA"
+    )
+    return 0
+
+
+def _num_variantes(numero: str) -> list[str]:
+    """Formes canoniques du numéro à soumettre à `NUM_ARTICLE`, en une requête.
+
+    Le moteur n'indexe qu'une seule écriture : la lettre de partie collée au
+    numéro, sans point ni espace (« L2212-2 »). Les écritures usuelles à
+    l'écrit juridique — « L. 2212-2 », « L 2212-2 » — n'y renvoient rien, pas
+    plus que le numéro nu « 2212-2 » d'un code divisé en parties.
+
+    Quand l'utilisateur donne la lettre, une seule forme suffit. Quand il ne
+    la donne pas, le numéro nu est tenté tel quel — c'est l'écriture des
+    codes non divisés, tel le code civil — puis préfixé de chaque partie
+    usuelle ; les critères sont ensuite combinés par OU dans le même champ,
+    ce qui coûte un seul appel.
+    """
+    import re
+
+    compact = "".join(numero.split())
+    # Le chiffre exigé après la lettre évite de prendre pour une partie
+    # l'initiale d'un mot (« Annexe 1 » n'est pas l'article A-nnexe 1).
+    m = re.match(r"^([LRDA])\.?(\d\S*)$", compact, flags=re.IGNORECASE)
+    if m:
+        return [f"{m.group(1).upper()}{m.group(2)}"]
+    return [compact] + [f"{p}{compact}" for p in PARTIES_CODE]
+
+
+def _articles_trouves(data: dict, variantes: list[str]) -> list[dict]:
+    """Aplatit une réponse `/search` du fond CODE_DATE en liste d'articles.
+
+    Sur ce fond, `results[i]["id"]` vaut `None` : les identifiants d'articles
+    ne vivent que dans `results[].sections[].extracts[]`. Un extrait dont le
+    numéro ne correspond à aucune variante demandée est écarté — une section
+    pertinente en rapporte d'autres au passage, qu'il serait faux de
+    présenter comme le résultat de la recherche.
+    """
+    attendus = {v.upper() for v in variantes}
+    trouves: list[dict] = []
+    vus: set[str] = set()
+    for resultat in data.get("results") or []:
+        titres = resultat.get("titles") or []
+        code_titre = (titres[0].get("title") if titres else None) or "?"
+        for section in resultat.get("sections") or []:
+            for extrait in section.get("extracts") or []:
+                art_id = extrait.get("id") or ""
+                num = (extrait.get("num") or extrait.get("title") or "").strip()
+                if not art_id.startswith("LEGIARTI") or art_id in vus:
+                    continue
+                if num.upper() not in attendus:
+                    continue
+                vus.add(art_id)
+                trouves.append(
+                    {
+                        "num": num,
+                        "id": art_id,
+                        "code": code_titre,
+                        "section": (section.get("title") or "").strip(),
+                        "etat": extrait.get("legalStatus") or "?",
+                        "date_debut": _fmt_date(extrait.get("dateDebut")),
+                    }
+                )
+    return trouves
+
+
+def cmd_search(args) -> int:
+    """Recherche un article par numéro, optionnellement filtré sur un code.
+
+    Payload du fond CODE_DATE. Trois contraintes de l'API, établies contre
+    l'environnement de production et

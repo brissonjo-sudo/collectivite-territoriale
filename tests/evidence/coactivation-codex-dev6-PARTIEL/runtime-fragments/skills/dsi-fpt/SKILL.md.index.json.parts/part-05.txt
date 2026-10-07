@@ -1,0 +1,56 @@
+d'application, version de référentiel), y compris en incise ou pour être
+   écartée, porte-t-elle une preuve primaire datée effectivement récupérée ?
+   Une réserve ne permet pas de conserver un fondement non vérifié.
+7. **Auto-attestation** : pour chaque valeur donnée comme acquise, une source
+   primaire a-t-elle **réellement** été récupérée dans la session ? Sinon,
+   retrait de la conclusion ; le registre ou une recherche seuls ne suffisent pas.
+8. **Frontière `dpo-ct` (§5.5)** : le texte qualifie-t-il le droit des données,
+   un délai de notification, une base légale ? Si oui, la **BASCULE** précède-t-elle
+   ce contenu, avec **`dpo-ct` nommé** ? À défaut, supprimer le contenu.
+9. **Autres frontières (§5.6)** : contenu statutaire, doctrine de
+   vidéoprotection, imputation budgétaire ou passation traités ici ? Si oui,
+   bascule ou retrait.
+10. **Frontière non illustrée** : un sujet signalé hors périmètre a-t-il été
+    esquissé ? Si oui, supprimer l'esquisse.
+11. **Aucun mode opératoire offensif**, aucun contournement de protection.
+12. **Aucun secret** ni détail d'architecture exploitable dans le texte ou
+    l'écrit.
+13. **Date de référence** identifiée pour les textes à calendrier échelonné ?
+14. Couple **[risque / confiance]** indiqué quand utile ?
+15. **Écrit** demandé produit (ou brouillon `[INCOMPLET]`) ?
+16. **Traçabilité de la source interne (§4)** : chaque fichier mobilisé est-il
+    nommé par son chemin, là où sa règle est utilisée ?
+17. **Cas journalisable** apparu → proposé pour `JOURNAL.md` ?
+
+---
+
+## 8. Limites et précautions
+
+- Ne remplace ni le RSSI, ni un prestataire de réponse à incident, ni le CSIRT
+  territorial, ni les autorités compétentes, ni un conseil juridique pour les
+  décisions à fort enjeu.
+- Ne guide jamais une action offensive, un contournement de protection, ni une
+  surveillance de personnes sans base établie (§5.2, §5.3).
+- La fiabilité dépend de l'accessibilité des sources officielles au moment de
+  la requête.
+- Le droit du numérique évolue vite : transpositions en attente, calendriers
+  européens échelonnés et parfois repoussés, référentiels révisés. Confirmer la
+  version en vigueur avant tout usage en acte.
+- Candidat corrigé : **mesure propre requise**, **non relu par un praticien** ; à
+  utiliser avec un regard critique jusqu'à la v1.0.0.
+
+---
+
+## 9. Apprentissage et maintenance
+
+- **`JOURNAL.md`** — une entrée par cas significatif, anonymisée (ni agent, ni
+  administré, ni détail d'architecture identifiable).
+- **`CHANGELOG.md`** — versionnage sémantique.
+- **`docs/adr/`** — une ADR par décision structurante.
+- **Revue du socle** : à chaque étape d'un texte suivi (transposition de NIS2,
+  calendrier du règlement sur l'IA, nouvelle version du RGAA ou du RGS), et au
+  moins à chaque rentrée de septembre ; reporter les dates dans
+  `references/references-verifiees.md` et, dans le seul dépôt source, le cache
+  de maintenance exclu du paquet runtime.
+
+> Historique → `CHANGELOG.md` · Décisions d'architecture → `docs/adr/`

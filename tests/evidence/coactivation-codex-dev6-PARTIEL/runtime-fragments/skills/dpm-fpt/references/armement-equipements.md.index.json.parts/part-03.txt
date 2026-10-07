@@ -1,0 +1,131 @@
+anche) comme relevant intégralement de `drh-fpt` : seule la formation
+   continue **générale** est déléguée ; la formation et l'entraînement
+   **propres à l'armement** restent ici (§5.4 SKILL.md).
+6. Décrire un **usage d'arme disproportionné** comme un simple manquement
+   déontologique sans tester d'abord le **garde-fou APJA** (l'agent peut
+   devenir mis en cause pénalement) — toujours vérifier ce basculement avant
+   de qualifier.
+7. Citer une **liste figée d'armes ou de munitions** de mémoire : la
+   nomenclature réglementaire est révisée par décret, jamais à reconstituer
+   sans vérification.
+
+---
+
+## 8. Données / références à vérifier
+
+- **CSI, art. L. 511-5** (port d'arme, autorisation préfectorale,
+  conditionnement à la convention de coordination) — *vérifié sur
+  Légifrance le 2026-06-30*, identifiant LEGIARTI000041411486 ; revérifier
+  la version en vigueur à la date des faits.
+- **CSI, art. L. 511-5-1** (dispositions complémentaires, notamment sur les
+  conditions liées à l'armement ou aux gardes champêtres selon le texte) — à
+  confirmer en version consolidée, identifiant à relever au cas par cas.
+- **CSI, partie réglementaire, section « Port d'armes », sous-section
+  « Armement des agents de police municipale », art. R. 511-12 et s.**
+  (catégories et types d'armes, munitions, missions justifiant le port,
+  créneaux horaires, conditions d'acquisition et de conservation par la
+  commune) — *rattachement vérifié sur Légifrance le 2026-06-30*,
+  identifiant de l'art. R. 511-12 : LEGIARTI000042957393 ; le numéro exact
+  d'article applicable à chaque sous-point (missions, catégories, formation,
+  conservation) est à reconfirmer en version consolidée avant tout acte.
+- **CSI, art. L. 435-1** (règles d'usage des armes à feu, renvoi partiel
+  applicable aux agents PM autorisés) — *vérifié sur Légifrance le
+  2026-06-30*, identifiant LEGIARTI000034107970 ; vérifier précisément
+  l'alinéa/cas applicable aux agents PM avant toute affirmation.
+- **Code pénal, art. 122-5** (légitime défense des personnes et des biens) —
+  *vérifié sur Légifrance le 2026-09-06*, identifiant `LEGIARTI000006417218`,
+  en vigueur depuis le 01/03/1994 (aucune abrogation programmée signalée) ;
+  au socle `references-verifiees.md` §5.
+- **Décret n° 2013-1113 du 4 décembre 2013** relatif à l'armement des agents
+  de police municipale (texte fondateur du dispositif codifié) — *identifié
+  via recherche Légifrance*, à confirmer en version consolidée et croiser
+  avec sa codification actuelle au CSI avant citation en acte.
+- **Décret n° 2020-511 du 2 mai 2020** modifiant le CSI et portant diverses
+  dispositions relatives aux agents de police municipale (réforme touchant
+  notamment l'armement) — *identifié via recherche Légifrance*
+  (JORFTEXT000041842314), à confirmer en version consolidée pour son contenu
+  précis applicable.
+- **Périodicité de l'entraînement et du recyclage obligatoires**, **contenu
+  exact de la formation préalable**, **liste précise des armes et munitions
+  par catégorie autorisées** : valeurs et listes **volatiles**, jamais de
+  mémoire — vérifier systématiquement la version consolidée en vigueur à la
+  date utile.
+
+---
+
+## 9. Écrits & livrables
+
+1. **Décision/acte** :
+   - **Délibération du conseil municipal** sur le principe de l'armement —
+     non couverte par un générateur dédié dans cette version ; s'appuyer sur
+     `references/templates/arrete-modele.md` à adapter et passer par
+     `controle-legalite.md` avant production.
+   - **Demande motivée du maire au préfet** (autorisation de port d'arme) —
+     courrier motivé, identité de l'agent, catégorie d'arme visée, mission
+     justifiant la demande, référence à la convention de coordination en
+     vigueur.
+2. **Écrit de constatation** : en cas d'usage d'une arme, le compte rendu à
+   l'OPJ et au maire suit le régime de `penal-procedure.md` (art. 21-2 CPP) —
+   ne pas improviser un format ici.
+3. **Note** : note au maire sur l'état de l'armement du service (agents
+   autorisés, autorisations à renouveler, échéances d'entraînement) —
+   `references/templates/note-maire-modele.md`.
+4. **Acte faisant grief** : un éventuel **retrait d'autorisation** par le
+   préfet ou une décision communale défavorable à un agent (refus de
+   dotation individuelle) doit être **motivé**, assorti des **voies et
+   délais de recours**, et vérifié sous l'angle du **contrôle de légalité**
+   si l'acte en relève → `controle-legalite.md`.
+
+---
+
+## 10. Double échelle [risque / confiance]
+
+- **Existence du dispositif** (faculté communale, conditions cumulatives,
+  autorité préfectorale) : confiance **stable**, risque **moyen à élevé**
+  selon l'acte produit.
+- **Nomenclature précise des armes/munitions autorisées par catégorie** :
+  confiance **à vérifier** systématiquement, risque **élevé** (condition
+  d'exercice d'un pouvoir attentatoire potentiel à l'intégrité physique —
+  matrice §2.2 SKILL.md).
+- **Usage de l'arme et sa qualification** (légitime défense ou non) :
+  confiance **jurisprudentielle**, risque **critique** — articulation
+  obligatoire avec le garde-fou APJA et `penal-procedure.md`, citation de
+  source obligatoire, abstention si doute persistant.
+- **Périodicité de la formation/entraînement obligatoire** : confiance **à
+  vérifier**, risque **élevé** (condition d'exercice — perte du droit de
+  port en cas de non-respect).
+- **Frontière avec `drh-fpt`** (formation générale vs formation armement) :
+  confiance **stable** sur le principe de répartition, risque **moyen** sur
+  le tri d'un cas limite.
+
+---
+
+## 11. Checklist de branche
+
+1. Les **trois conditions cumulatives** de l'armement (convention de
+   coordination + autorisation préfectorale nominative + formation/aptitude
+   à jour) ont-elles été vérifiées avant toute affirmation de couverture ?
+2. La distinction **arme soumise à autorisation (catégorie B/D)** vs
+   **équipement non-arme** est-elle posée avant de qualifier le matériel en
+   cause ?
+3. En cas d'**usage de l'arme** : le **garde-fou APJA** a-t-il été testé en
+   premier si l'agent risque une mise en cause pénale (`SKILL.md` §5.2) ?
+4. La **nomenclature précise des armes/munitions** et la **périodicité de
+   l'entraînement** ont-elles été renvoyées à vérification en version
+   consolidée plutôt qu'affirmées de mémoire ?
+5. La **frontière avec `drh-fpt`** est-elle respectée : formation armement
+   conservée ici, formation continue générale renvoyée (§5.4 SKILL.md) ?
+6. Si **acte faisant grief** (retrait d'autorisation, refus de dotation) :
+   motivation, voies de recours, contrôle de légalité traités via
+   `controle-legalite.md` ?
+7. Tout identifiant `LEGIARTI`/`JORFTEXT` cité provient-il d'un appel
+   d'outil de la session, et non de la mémoire (règle de provenance,
+   `SKILL.md` §5.3) ?
+
+[risque / confiance] — Risque **élevé à critique** selon le sous-sujet
+(usage de l'arme = critique ; existence et conditions du dispositif =
+moyen). Confiance **stable** sur l'architecture du dispositif (faculté
+communale, double condition préfecture/formation), **à vérifier
+systématiquement** sur les valeurs chiffrées et listes réglementaires
+(nomenclature, périodicités), **jurisprudentielle** sur la qualification
+d'un usage d'arme donné.

@@ -1,0 +1,91 @@
+validation humaine et la
+   reprise du service ; intégrer les engagements du fournisseur.
+4. Évaluer sur des jeux fictifs, documenter erreurs et limites ; ne pas
+   annoncer de performance sans résultats démontrés.
+5. La direction compétente décide de poursuivre, corriger ou arrêter sur les
+   preuves disponibles. La DSI met en œuvre les mesures retenues, sans se
+   substituer au métier pour la décision à effet sur l'usager.
+6. Suivre les changements, incidents et conditions d'arrêt. Pour une charte,
+   limiter le livrable au contenu technique ; adoption → `drh-fpt`.
+   Les dates d'application et échéances se vérifient à la source.
+
+## 7. Déclencheurs de vérification
+
+Appliquer `references/socle-sources-verification.md` avant de qualifier le
+système, un rôle, une catégorie de haut risque, une pratique interdite,
+une analyse requise, une obligation de transparence, un seuil ou une échéance.
+Sources : EUR-Lex pour règlement et modificatifs, Légifrance pour le CRPA.
+Les chartes et guides publics sont de la doctrine sauf texte qui les rend
+opposables à la collectivité.
+
+Si la source ou le champ ne peut être confirmé, réserver la qualification et
+livrer le dossier à instruire. Aucun calendrier contenu dans le registre ou
+un cache ne vaut une vérification de session.
+
+## 8. Pièges et confusions fréquentes
+
+- Déclarer un outil à faible risque parce qu'il est génératif ou expérimental.
+- Croire qu'un résultat validé mécaniquement par un agent est sous contrôle.
+- Autoriser les données réelles parce que le fournisseur promet de ne pas
+  les réutiliser, sans exigences établies ni contrôle du contrat.
+- Confondre l'AIPD et l'analyse d'impact sur les droits fondamentaux.
+- Assimiler toutes les décisions algorithmisées à une même obligation.
+- Inventer le seuil de publication ou recopier un calendrier ancien.
+- Mesurer ou surveiller les personnes avec l'IA : garde-fou surveillance
+  avant tout contenu technique et bascules de `SKILL.md`.
+- Une divulgation suspecte via l'assistant relève d'abord du garde-fou
+  incident ; ne pas effacer les traces pour désactiver rapidement l'outil.
+
+## 9. Données et valeurs à vérifier
+
+Catégories réglementaires, rôles, obligations du déployeur public, analyses
+requises, actes modificatifs, calendrier d'application, seuil de publication
+des règles algorithmiques et contenu de l'information sur une décision.
+Nommer sans valeurs ; consulter `references/references-verifiees.md` puis
+les sources officielles. Une entrée limitée à un passage lu ne prouve pas
+toutes les pratiques interdites ni toutes les catégories de haut risque.
+
+## 10. Écrits et livrables
+
+- Fiche d'usage : finalité, données, résultat, effet, responsable, limites et
+  contrôles avant utilisation.
+- Dossier d'évaluation : cas fictifs, résultats, erreurs, conditions d'arrêt,
+  changement nécessitant réévaluation et décision du responsable compétent.
+- Dossier technique de transparence : contribution du traitement, origine des
+  données, paramètres et opérations, limites de documentation ; contenu légal
+  obligatoire vérifié avant toute publication ou réponse.
+- Fiche projet → `references/templates/fiche-projet-si.md` ; exigences →
+  `references/templates/cahier-des-charges-technique.md` ; charte technique
+  → `references/templates/charte-usage-si.md`, avec
+  `references/ecrits-numerique.md`.
+
+Marquer `[INCOMPLET]` finalité, catégorie, documentation ou preuve manquante.
+N'insérer ni données nominatives, ni secret, ni exemples de surveillance.
+
+## 11. Double échelle [risque / confiance]
+
+| Situation | Repère |
+|---|---|
+| Essai borné sur données fictives, sans effet externe | [faible / stable] sur les conditions de l'essai |
+| Assistance avec validation humaine démontrée | [moyen / à vérifier] sur qualité et conditions du fournisseur |
+| Influence sur une décision individuelle ou service essentiel | [élevé / à vérifier] ; qualification et preuves avant déploiement |
+| Finalité, régime ou calendrier non confirmés | [élevé / abstention] sur la qualification juridique |
+| Surveillance ou divulgation suspecte | [critique / à vérifier] ; garde-fou correspondant en premier |
+
+Adapter à `SKILL.md` ; une sortie convaincante ne constitue ni preuve de
+fiabilité ni source de droit.
+
+## 12. Checklist de branche
+
+- Incident et surveillance recherchés ; garde-fou en premier si déclenché ?
+- Bascules `dpo-ct`, `drh-fpt`, `dpm-fpt` et hors périmètre tenus ?
+- Mode d'exercice, finalité, effet réel et responsable du déploiement établis ?
+- Rôle et catégorie instruits sur les textes applicables à la date demandée ?
+- Calendrier, actes modificatifs et seuils vérifiés ou réservés ?
+- Données admises, fournisseur, hébergement et conditions d'arrêt documentés ?
+- Contrôle humain et reprise démontrés, erreurs recensées sur cas fictifs ?
+- Transparence sur décision et publication générale distinguées ?
+- Obligation, doctrine et collectivité distinctes ; aucun contenu d'État importé ?
+- Provenance datée visible, aucune auto-attestation de lecture de session ?
+- Livrable complet ou `[INCOMPLET]`, sans secret ni donnée nominative ?
+- Chemins des fichiers mobilisés cités à l'endroit utile ?

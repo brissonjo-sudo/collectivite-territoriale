@@ -1,0 +1,61 @@
+{
+  "case_id": "plugin-spontane-budget",
+  "trace_sha256": "d59f1b31c232ef30687f2e64662a8c22218b91812158ea8f0ce21c8d1738a29f",
+  "verdict": "reussite",
+  "invariants": {
+    "plugin-spontane-budget.besoins_techniques": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e26"],
+      "rationale": "Le cadrage explicitement attribué à la DSI demande le périmètre des services, les capacités utilisées, la croissance, les actifs, les interfaces, les dépendances et les modes de support et d'exploitation. Il exige inventaire, mesures et dimensionnement, sans présumer une validation déjà obtenue."
+    },
+    "plugin-spontane-budget.continuite_technique": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e26"],
+      "rationale": "La ligne Continuité du cadrage DSI traite interruptions acceptables, moyens de reprise, dépendances communes, migration et retour arrière. Elle prévoit des essais autorisés de reprise et une validation du service par les métiers sous coordination DSI."
+    },
+    "plugin-spontane-budget.reversibilite_technique": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e26"],
+      "rationale": "La DSI doit examiner la capacité de récupération et de réutilisation dans le volet Hébergement et sortie, prévoir un essai sur données synthétiques et inclure les coûts de sortie dans la comparaison. Le retour arrière de migration est également explicité."
+    },
+    "plugin-spontane-budget.bascule_dirfi": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e3", "e5", "e6", "e8", "e26"],
+      "rationale": "L'annonce initiale distingue instruction technique et autorisation financière sans effectuer de qualification budgétaire. La BASCULE explicite e5 attribue ensuite le volet budgétaire et financier à dirfi-fpt ; sa lecture intégrale réussie est attestée en e6, avant les développements sur montants, crédits, habilitations et arbitrage. Cette activation est prouvée selon la méthode file_read_fragments du cas ; elle ne démontre aucun appel Skill ni activation native du plugin."
+    },
+    "plugin-spontane-budget.sans_engagement_dsi": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e5", "e21", "e26"],
+      "rationale": "La DSI conserve l'expression du besoin et l'estimation du coût complet, sans autoriser de commande. La réponse maintient l'engagement en attente de l'arbitrage documenté et demande d'identifier le décideur compétent sur pièces ; elle précise que ni validation technique ni intervention de DirFi ne prouvent une habilitation à signer."
+    },
+    "plugin-spontane-budget.sans_imputation_dsi": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e26"],
+      "rationale": "Aucune imputation n'est choisie. L'imputation à examiner est placée dans le dossier préparé par DirFi ; recherche-juridique s'abstient sur l'imputation effective faute de pièces locales. Le cadrage DSI ne comporte aucune décision comptable."
+    },
+    "plugin-spontane-budget.sans_procedure_passation": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e26"],
+      "rationale": "La réponse ne produit ni seuil, ni procédure, ni calendrier de passation. La DSI fournit des besoins, options, exigences et estimations techniques. La mention du 4° de L2122-22 décrit seulement la compétence potentiellement déléguée ; la passation est expressément laissée au service de la commande publique hors du périmètre traité."
+    },
+    "plugin-spontane-budget.obligations_source_ou_reserve": {
+      "status": true,
+      "basis": "retrieval",
+      "evidence_refs": ["e18", "e19", "e21", "e26"],
+      "rationale": "L'appel get_article réussi e18 est relié au texte primaire complet et non tronqué e19 de L2122-22 sur l'URL officielle Légifrance. Son 4° étaye la proposition limitée à une délégation du conseil municipal au maire lorsque les crédits sont inscrits au budget ; les métadonnées indiquent la version du 23/02/2022 et son applicabilité au 07/10/2026. La réponse ne transforme pas ce texte en preuve des pièces locales : elle réserve expressément la catégorie d'entité, la délégation effective, les crédits, l'autorité habilitée, l'imputation et la régularité de l'engagement. Le point d'arrêt sur l'arbitrage est présenté comme une proposition conservatoire de méthode, sans qualification juridique. Les recherches e13 et e17 ne sont pas utilisées comme texte primaire."
+    },
+    "plugin-spontane-budget.selection_spontanee": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e2", "e3", "e4", "e5", "e6", "e7", "e8"],
+      "rationale": "La question reproduite dans le paquet décrit le besoin et l'absence d'arbitrage sans nommer de skill ; e2 atteste sa lecture complète. La sélection annoncée e3 correspond exactement à dsi-fpt, dirfi-fpt et recherche-juridique, dont les lectures intégrales réussies sont attestées en e4, e6 et e7, sans activation supplémentaire. Les responsabilités financières et juridiques sont attribuées avant le fond réservé. Cette conclusion porte sur la sélection et les activations par file_read_fragments observées ; aucune activation native du plugin ou via Skill n'est attestée."
+    }
+  }
+}

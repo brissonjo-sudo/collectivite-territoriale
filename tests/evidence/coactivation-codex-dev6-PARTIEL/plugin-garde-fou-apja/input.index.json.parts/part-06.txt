@@ -1,0 +1,2 @@
+itted original runtime path, take its path relative to candidate root and append .index.json under runtime_fragment_root. Read that small index, then all its fragments in order. Never read the original large runtime file."
+}

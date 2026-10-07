@@ -1,0 +1,150 @@
+# Branche — Réglementation appliquée (v0.1.0)
+
+> Structure conforme à `_gabarit-branche.md`. Panorama des **polices
+> spéciales** appliquées par la PM. Aucun numéro d'article cité de mémoire
+> hors ceux explicitement marqués « vérifié sur Légifrance » ci-dessous : pour
+> le reste, seules les **règles** figurent, avec consigne de vérifier la
+> version en vigueur.
+
+## Périmètre / Exclusions
+
+- **Périmètre** : panorama des polices spéciales effectivement mises en
+  œuvre par la police municipale — code de la route, stationnement et
+  fourrière, débits de boissons, salubrité, domaine public, environnement
+  (dont bruit), animaux dangereux.
+- **Exclusions** : la **doctrine d'organisation du service** (patrouilles,
+  dispositifs événementiels, gestion de crise) → `doctrine-operationnelle.md` ;
+  les **fondements et l'articulation générale** des pouvoirs de police
+  (titulaires, police générale/spéciale, substitution du préfet) →
+  `pouvoirs-police.md` (ne pas dupliquer ici) ; la **procédure pénale**
+  applicable à la PM (qualification, flagrance, relations OPJ/procureur) →
+  `penal-procedure.md` ; le **contrôle de légalité préalable** d'un acte →
+  `controle-legalite.md` ; le détail opérationnel **fourrière**, **débits de
+  boissons / commerce**, **chiens dangereux** et **occupation du domaine
+  public** → objets dédiés (`objets/fourriere.md`, `objets/commerce.md`,
+  `objets/police-chiens.md`, `objets/occupation-domaine-public.md`, à
+  dérouler en couche 3 — non encore rédigés à ce stade du skill).
+
+---
+
+## 1. Questions couvertes
+
+- Stationnement gênant, abusif ou dangereux : qualification, verbalisation,
+  immobilisation, mise en fourrière.
+- Conduite sous emprise, défaut de permis ou d'assurance constatés par la PM :
+  limites de compétence APJA.
+- Nuisances d'un débit de boissons (horaires, tapage, vente d'alcool aux
+  mineurs) : qui peut fermer, sur quel fondement, pour combien de temps.
+- Salubrité d'un logement, d'un commerce ou de la voie publique : qui agit
+  (maire, ARS, préfet) et avec quel pouvoir.
+- Occupation sans titre ou non conforme du domaine public (terrasse, étal,
+  dépôt, épave).
+- Bruit de voisinage, de chantier, d'activité ou d'animal : quel texte,
+  quelle preuve, quelle autorité.
+- Chien ou animal dangereux, divagation, morsure : mesures administratives
+  mobilisables par le maire et rôle d'exécution de l'agent PM.
+
+---
+
+## 2. Arbre de traitement
+
+`qualifier le fait → identifier le domaine sectoriel concerné (§5) → police
+générale ou police spéciale, et quel texte (§5) → autorité compétente : maire
+/ préfet / ARS (§5) → pouvoir exerçable par l'agent PM en tant qu'APJA, ou
+acte réservé OPJ ? (garde-fou §6) → procédure et délai applicables (§6) →
+vérification des références (§7) → écrit/livrable (§9)`
+
+Toujours commencer par qualifier le **domaine sectoriel** : un même fait
+(ex. nuisance sonore d'un bar) peut relever simultanément de plusieurs
+polices spéciales (débits de boissons + bruit) et de la police générale en
+complément. Ne pas s'arrêter au premier texte trouvé.
+
+---
+
+## 3. Variables à lever
+
+- **Domaine sectoriel exact** du trouble (route, salubrité, débits de
+  boissons, domaine public, environnement, animaux) — souvent plusieurs à la
+  fois.
+- **Autorité titulaire de la police spéciale concernée** : maire, préfet, ARS
+  (selon le domaine — voir §5), car elle diffère de la police générale.
+- **Texte de référence** : code de la route, code de la santé publique (CSP),
+  code de l'environnement, code rural et de la pêche maritime, code général
+  de la propriété des personnes publiques (CG3P), règlement sanitaire
+  départemental (RSD — nature réglementaire locale, à vérifier).
+- **Gravité et urgence** : trouble ordinaire ou danger grave/imminent
+  justifiant une mesure immédiate.
+- **Régime de la commune** : police étatisée ou non (incidence sur la
+  tranquillité publique et certains grands rassemblements — voir
+  `pouvoirs-police.md` §4.4, ne pas redévelopper ici).
+- **Qualité du fait constaté** : contravention simple relevant des pouvoirs
+  APJA de l'agent PM, ou élément nécessitant un acte réservé à l'OPJ
+  (garde-fou, §6).
+
+---
+
+## 4. Renvois aux objets métier (couche 3)
+
+Cette branche pose le **cadre réglementaire** par domaine. Le **traitement
+opérationnel détaillé** (checklist de terrain, formulaires, étapes
+pratiques) relève des objets dédiés, à consulter en complément :
+
+| Domaine | Objet (couche 3) |
+|---|---|
+| Stationnement gênant/abusif, enlèvement, mise en fourrière | `objets/fourriere.md` |
+| Débit de boissons, fermeture administrative, autres commerces réglementés | `objets/commerce.md` |
+| Chien dangereux, divagation, morsure | `objets/police-chiens.md` |
+| Occupation du domaine public (terrasse, marché, chantier, manifestation) | `objets/occupation-domaine-public.md` |
+
+> Ces quatre fiches existent (couche 3, `objets/`). Le routeur
+> (`analyse-situation.md`) y pointe. Lire l'objet dès qu'une checklist
+> opérationnelle fine est demandée ; la présente branche pose le cadre de
+> fond et ne le duplique pas.
+
+---
+
+## 5. Règles métier (par domaine)
+
+### 5.1 Code de la route — circulation, stationnement, fourrière
+
+- **Police spéciale de la circulation et du stationnement** : pouvoirs de
+  police répartis entre le maire (voirie communale, hors agglomération sur
+  certaines voies selon le texte — à confirmer en version consolidée) et le
+  préfet (routes à grande circulation, hors agglomération). Toujours
+  identifier la voirie concernée avant de fonder une mesure.
+- **Grand excès de vitesse — bascule en délit** : dépasser la vitesse
+  maximale autorisée de **50 km/h ou plus** est un **délit dès la première
+  infraction** (trois mois d'emprisonnement, 3 750 € d'amende, confiscation
+  du véhicule possible, suspension du permis jusqu'à trois ans) — **art.
+  L. 413-1, code de la route** (`LEGIARTI000051877176`, en vigueur depuis le
+  31/12/2025, *vérifié le 2026-09-17*). **Conséquence pour l'agent PM** :
+  **pas de PV de simple contravention** — l'agent constate, rend compte
+  immédiatement à l'OPJ (art. 21-2 CPP, jamais directement au procureur) et
+  n'entreprend aucun acte relevant de la garde à vue ou de l'enquête. Cette
+  bascule est distincte de la simple contravention de vitesse (classe
+  fonction de l'écart, hors délit) : vérifier l'écart avant toute
+  qualification.
+- **Stationnement gênant** : qualifié par une liste de situations (notamment
+  trottoirs, double file, devant un accès carrossable, sur emplacement
+  réservé, espace empêchant l'accès à un autre véhicule ou sa sortie, voies
+  spécialement désignées par l'autorité de police) — **art. R. 417-10, code
+  de la route** (*vérifié sur Légifrance le 2026-06-30*). Sanctionné de
+  l'amende prévue pour les contraventions de la classe afférente (classe à
+  confirmer en version consolidée).
+- **Stationnement gênant persistant** : en cas d'absence ou de refus du
+  conducteur/propriétaire de faire cesser le stationnement gênant malgré
+  l'injonction des agents, **immobilisation et mise en fourrière** peuvent
+  être prescrites dans les conditions des art. **L. 325-1 à L. 325-3, code de
+  la route** (*art. L. 325-1 vérifié sur Légifrance le 2026-06-30*).
+- **Mise en fourrière** : cas et conditions fixés par le code de la route —
+  **art. L. 325-1 et s.** (police de fond, *L. 325-1 au socle*) et **art.
+  R. 325-1 et s.** (modalités d'exécution, garde, restitution, frais — *à
+  confirmer en version consolidée pour le détail*). **Qui la prescrit** :
+  **art. R. 325-14** (au socle, `references-verifiees.md` §8,
+  LEGIARTI000042039259, version du 01/04/2021, vérifié le 2026-09-14) — soit
+  un **OPJ** territorialement compétent, soit **l'APJA chef de la police
+  municipale (ou l'agent occupant ces fonctions)**, de sa propre initiative ou
+  sur proposition de l'agent verbalisateur. **Exception** : véhicule volé,
+  propriétaire non identifié ou fausses plaques → prescription par un **OPJ
+  seul**, ou avec son accord préalable exprès.
+- **Rôle de l'agent PM** : l'agent verbali

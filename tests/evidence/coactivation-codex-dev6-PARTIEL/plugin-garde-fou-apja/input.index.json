@@ -1,0 +1,44 @@
+{
+  "source_path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/plugin-garde-fou-apja/input.json",
+  "source_sha256": "cf6b3524cb4c9929c6d3664fce563d4b2ae3412c9931d07b95f1fa2a7fc1e397",
+  "characters": 40225,
+  "fragment_limit": 8000,
+  "fragments": [
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/plugin-garde-fou-apja/input.index.json.parts/part-01.txt",
+      "sha256": "7fd614c2c9580b459f9898b973b94306c7af6648423692e4cd92816cca578228",
+      "characters": 8000,
+      "number": 1
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/plugin-garde-fou-apja/input.index.json.parts/part-02.txt",
+      "sha256": "42d826d35e4d587309a140fd530e687a88a9d0e1e69ebafce3c1c9da8b711201",
+      "characters": 8000,
+      "number": 2
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/plugin-garde-fou-apja/input.index.json.parts/part-03.txt",
+      "sha256": "1e5da3cd9ca7e9502f620a3d95cb23450d9e73086b707796fee65e915cc4ba3a",
+      "characters": 8000,
+      "number": 3
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/plugin-garde-fou-apja/input.index.json.parts/part-04.txt",
+      "sha256": "9c195e4686886ae5cae43ba7521a5f970eabec1272995e8fffb39d5f206ed619",
+      "characters": 8000,
+      "number": 4
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/plugin-garde-fou-apja/input.index.json.parts/part-05.txt",
+      "sha256": "7b4c04350b683db08347923c2798a664f8a265706dc76dbc082e9024755b016e",
+      "characters": 8000,
+      "number": 5
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/plugin-garde-fou-apja/input.index.json.parts/part-06.txt",
+      "sha256": "4acc081b6eca4c72a5a4cbb7ba6a4eab8de59fad7615c254afab119c8e798512",
+      "characters": 225,
+      "number": 6
+    }
+  ]
+}

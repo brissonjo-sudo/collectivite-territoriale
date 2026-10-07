@@ -1,0 +1,135 @@
+rt. 21 CPP (constatation,
+recueil de renseignements, certaines contraventions) ou bascule-t-il vers un
+acte que l'agent PM n'est pas habilité à accomplir (garde à vue, audition
+formelle de suspect, perquisition, réquisition judiciaire) ? L'art. 16 définit
+la qualité d'OPJ ; vérifier le texte propre à chaque acte. Voir le garde-fou
+APJA et le routeur art. 53/73/78-6, `SKILL.md` §5.2.
+
+### Distinguer obligation et faculté
+Beaucoup de dispositifs PM sont **facultatifs** côté commune (armement,
+vidéoprotection, brigade cynophile, conventionnement) mais deviennent
+**contraignants** une fois la décision locale prise (conditions de
+formation, d'autorisation, de renouvellement). Ne jamais présenter une
+faculté comme une obligation, ni l'inverse.
+
+### Suivre le renvoi jusqu'au décret ou à l'autorisation locale
+Le CSI et le CGCT renvoient souvent à un décret d'application (armement,
+déontologie, vidéoprotection) ou à un acte local (délibération du conseil
+municipal, arrêté préfectoral d'autorisation, convention de coordination).
+Une réponse complète suit ce renvoi jusqu'à la source qui contient
+réellement la règle opposable.
+
+### Vérifier le champ d'application territorial et organisationnel
+Une règle PM peut dépendre du **régime de la commune** (police étatisée ou
+non), de l'**existence d'une police pluricommunale ou intercommunale**, du
+**transfert ou non d'une police spéciale à l'EPCI**, et de l'**existence
+d'une convention de coordination** avec les forces de l'État. Confirmer ces
+paramètres avant de conclure.
+
+### Toujours dater
+Le droit de la police municipale évolue vite (armement, vidéoprotection,
+continuum de sécurité, pouvoirs de constatation). Préciser la date de la
+version sur laquelle repose la réponse et signaler toute réforme
+postérieure susceptible de l'avoir modifiée.
+
+### Croiser systématiquement avec le volet pénal
+Toute règle relative aux pouvoirs de constatation ou de contrôle d'un agent
+PM doit être recoupée avec sa qualité d'APJA (CPP) : un pouvoir énoncé par
+un texte de police spéciale ne s'exerce que dans les limites procédurales
+fixées par le CPP.
+
+---
+
+## 5. Quand appeler `recherche-juridique`
+
+Reprendre les déclencheurs du socle autonome (`SKILL.md` §5.3) ; pour la PM,
+en particulier :
+
+- **Réforme récente** touchant l'armement, la vidéoprotection, le continuum
+  de sécurité, l'extension des pouvoirs de police municipale, ou la
+  procédure pénale applicable aux agents PM.
+- **Décret d'application manquant ou non identifié** (ex. texte de loi
+  renvoyant à un décret non encore localisé ou dont la version n'est pas
+  confirmée).
+- **Jurisprudence complexe** : proportionnalité d'une mesure de police
+  contestée, répartition de compétence litigieuse (maire/préfet/EPCI),
+  régularité d'un acte de constatation APJA contestée devant le juge pénal.
+- **Identifiant officiel non récupéré** dans la session (`LEGIARTI`,
+  `JORFTEXT`, `NOR`, n° de pourvoi/requête) : ne jamais le reconstituer de
+  mémoire ; passer par `recherche-juridique` ou par un appel d'outil
+  (WebSearch/Légifrance) avant de citer.
+- **Doute sur le champ d'application** d'un texte à un cas particulier
+  (police étatisée, transfert EPCI, convention de coordination atypique).
+
+---
+
+## 6. Résolution des conflits de normes
+
+1. **Hiérarchie des normes** : Constitution > traités > loi (CGCT, CSI, CPP,
+   code de la route) > décret > arrêté (préfectoral ou municipal). Une norme
+   inférieure contraire à une norme supérieure est inapplicable.
+2. **À niveau égal** : le texte **spécial** prime sur le général (*lex
+   specialis* — ex. une police spéciale prime la police générale du maire
+   dans son champ ; le code de la route prime le pouvoir général de
+   circulation du maire pour ce qu'il régit) ; à défaut, le texte **le plus
+   récent** prime (*lex posterior*).
+3. **Police administrative vs police judiciaire** : ce n'est pas un conflit
+   de normes mais un conflit de **finalité** — basculer en garde-fou APJA dès
+   que la finalité répressive domine (`SKILL.md` §5.2).
+4. **Rôle de la jurisprudence** : le juge interprète les textes et peut
+   écarter une norme illégale ou une mesure disproportionnée. Une
+   **circulaire** contraire à la jurisprudence ou au texte qu'elle prétend
+   interpréter n'a pas de valeur contraignante.
+
+**Signaler explicitement** tout conflit détecté plutôt que de le masquer
+derrière une réponse lisse : indiquer les sources en présence et la règle de
+résolution appliquée.
+
+---
+
+## 7. Règle de provenance des identifiants
+
+Tout identifiant officiel (`LEGIARTI`, `JORFTEXT`, `NOR`, n° de pourvoi ou de
+requête) cité dans une sortie du skill **provient obligatoirement d'un appel
+d'outil effectué dans la session** (WebSearch sur domaine officiel,
+consultation directe de Légifrance). Un identifiant jamais récupéré :
+- **ne se reconstitue jamais de mémoire** ;
+- est **omis**, ou marqué `⚠️ non vérifié — identifiant non récupéré` ;
+- **interdit** l'usage du gabarit de citation pour acte (cf. skill
+  `recherche-juridique`, règle de format de citation, provenance P1).
+
+Un numéro d'article (ex. « L. 2212-2 CGCT ») peut être cité sans appel
+d'outil **uniquement** assorti de la réserve « à confirmer en version
+consolidée », sauf s'il a été vérifié dans la session en cours, auquel cas
+porter la mention « (vérifié sur Légifrance le JJ/MM/AAAA) ».
+
+**Extension aux décisions juridictionnelles** (correctif issu de la campagne
+`r3`) : la règle vaut à l'identique pour la **jurisprudence**. Un arrêt cité par
+son **nom d'usage** (*Benjamin*…), par un millésime ou par un numéro de décision
+(« n° 2021-817 DC ») est une référence comme une autre : soit il est repris du
+socle avec sa date de vérification (`references-verifiees.md` §7 pour la
+jurisprudence vérifiée), soit il porte une réserve explicite. **Citer un
+considérant ou un paragraphe précis sans identifiant est une affirmation de
+mémoire**, et le fait qu'un arrêt soit un « grand arrêt » n'y change rien.
+Deux angles morts constatés en test, à surveiller explicitement :
+- **l'article voisin n'hérite pas du tag** de celui qui a été tracé ;
+- **un tableau de provenance présenté comme exhaustif engage** : toute
+  référence du corps de la réponse qui n'y figure pas et n'est pas réservée est
+  présentée à tort comme vérifiée.
+
+---
+
+## 8. Abstention motivée
+
+- Référence non vérifiable à la date utile → ne pas citer de mémoire ;
+  signaler « à vérifier sur Légifrance ».
+- Pouvoir ou compétence contesté(e) entre deux autorités sans élément
+  suffisant pour trancher → signaler le conflit, ne pas inventer une
+  répartition.
+- Question touchant un acte réservé à l'OPJ → abstention stricte, garde-fou
+  APJA (`SKILL.md` §5.2), pas d'esquisse de procédure.
+- Réforme récente dont l'entrée en vigueur n'est pas confirmée → poser la
+  réserve explicitement et borner la réponse à ce qui est stable.
+
+L'abstention est **ciblée** : elle porte sur le point incertain et n'empêche
+pas de livrer le reste de l'analyse.

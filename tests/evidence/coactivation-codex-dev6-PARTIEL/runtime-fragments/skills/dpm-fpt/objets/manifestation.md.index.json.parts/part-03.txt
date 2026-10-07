@@ -1,0 +1,72 @@
+ue via balise [sourcé]] | Risque contentieux si maire/PM n'ont pas prévu un dispositif adapté au risque identifié ou si conflit de compétence non clarifié. |
+| **Police d'État et grands rassemblements** (communes à police étatisée) | [Consulter recherche-juridique via balise [lookup]] | CGCT L. 2214-4 stable ; mais jurisprudence administrative sur la notion « grands rassemblements occasionnels » à vérifier (cas d'espèce). |
+
+Ne pas citer de jurisprudence de mémoire ; utiliser les balises `[sourcé]` et `[lookup]` pour tracer la demande vers `recherche-juridique`.
+
+---
+
+## 6. Check-list opérationnelle
+
+### Avant la décision (qualification événement)
+
+- [ ] **Événement clairement qualifié** : communal (police générale maire) vs revendicatif (régime préfectoral) vs rassemblement occasionnel en commune à police étatisée ?
+- [ ] **Préfecture informée** (en cas de doute) et avis reçu sur le régime applicable ?
+- [ ] **Organisateur identifié** et demande formelle reçue (déclaration, autorisation d'occupant) ?
+- [ ] **Conflit potentiel de compétence détecté** (maire/préfet, communes limitrophes, police étatisée) ? → Escalade vers mayor/préfet si flou.
+
+### Avant la signature de l'arrêté
+
+- [ ] **Objet de l'arrêté strictement limité** au pouvoir compétent : si maire → police générale du maire ; si commune étatisée + grand rassemblement → ne pas émettre arrêté sur ce périmètre.
+- [ ] **Motivation en fait et en droit présente** : spécificités de l'événement, risques identifiés, références légales vérifiées.
+- [ ] **Mesures proportionnées** : ni trop étendues ni insuffisantes au regard du risque.
+- [ ] **Références légales vérifiées** : CGCT L. 2212-1, L. 2212-2 (au socle) ; si circulation, L. 2213-1 et s. (à confirmer en version consolidée) ; L. 2212-3 uniquement pour une commune riveraine de la mer (au socle) — pas de mémoire.
+- [ ] **Transmission au contrôle de légalité** prévue si acte soumis (CGCT L. 2131-2 — à vérifier en version consolidée) ; timing : **avant expédition**, pas après.
+- [ ] **Consultation préfecture effectuée** si événement majeur ou enjeu pluricommunal ?
+
+### Avant l'exécution du dispositif (J-3 à J-1)
+
+- [ ] **Ordre d'opération PM finalisé** : effectifs confirmés, secteurs de présence, missions, responsabilité de chaîne de commandement.
+- [ ] **Articulation avec forces de l'État formalisée** : si rassemblement revendicatif, date/heure réunion de coordination + résultats documentés.
+- [ ] **Autorisations administratives sous-jacentes validées** : occupation domaine public approuvée, débits temporaires autorisés, ERP vérifiés.
+- [ ] **Effectifs PM confirmés** : agents affectés, équipements en place, FIA à jour pour les équipements engagés.
+- [ ] **Procédure d'escalade calibrée** : évacuation, alerte, repli défini en cas d'incident ; points d'appel vers maire/préfet/SDIS clairs.
+- [ ] **Brieffing agents PM fait** : connaissance de l'arrêté, missions assignées, limites APJA, protocole de signalement OPJ si infraction pénale.
+
+### Pendant l'événement
+
+- [ ] **Positionnement du dispositif conforme** aux horaires et zones définies ?
+- [ ] **Constatations d'infractions** (si s'applique) : procédure APJA respectée, lien OPJ établi si infraction pénale dépassant cadre APJA ?
+- [ ] **Liaison continue** avec autorité décisionnelle (maire ou préfet selon régime) et partenaires (SDIS, forces de l'État) maintenue ?
+- [ ] **Incident survenu** : escalade décidée et mise en œuvre conforme au plan ?
+
+### Après l'événement (J+1 à J+5)
+
+- [ ] **Rapport d'événement remis au maire** : bilan sécurité, infractions, retours partenaires.
+- [ ] **Signalement à la préfecture fait** (si rassemblement revendicatif ou tensions rencontrées) ?
+- [ ] **Constats d'infraction transmis** aux autorités compétentes (communes, procureur si infractions pénales) dans les délais (CPP — à vérifier) ?
+- [ ] **Retex programmé** (si événement majeur) et calendrier d'amélioration doctrine initié ?
+
+### Garde-fou APJA
+
+**Rappel critique** : aucun pouvoir APJA n'est étendu par la présence renforcée d'agents PM en dispositif événementiel.
+- [ ] **Situation impliquant garde à vue, audition formelle de suspect, perquisition ou réquisition judiciaire** ? → **STOP immédiat**. Laisser l'OPJ compétent exercer. PM = constatation et liaison ; aucune contrainte sans qualification des art. 53/73 ou 78-6.
+- [ ] **Infraction constatée lors du dispositif** : qualifiée pour APJA (art. 21/21-2 CPP) ou dépassant ce cadre ? → Signalement OPJ sans poursuite unilaterale.
+
+### Conflit de compétence détecté
+
+- [ ] **Deux autorités en présence** (maire/préfet, communes limitrophes) identifiées ?
+- [ ] **Fondement de chacune** clairement posé (police générale, police spéciale d'État, substitution du préfet) ?
+- [ ] **Conditions du pouvoir de substitution vérifiées** (carence municipale, mise en demeure, ou menace pluricommunale avec arrêté motivé) ?
+- [ ] **Signalement immédiat au maire et, si besoin, à la préfecture** pour clarification sans délai ?
+
+---
+
+## Références croisées
+
+- **Pouvoirs-police.md** : identification autorité compétente, régime police étatisée, substitution préfet.
+- **Doctrine-operationnelle.md** : construction dispositif événementiel, gestion de crise communale, patrouilles.
+- **Reglementation-appliquee.md** : domaine public, débits de boissons temporaires, ERP, circulation/stationnement.
+- **Penal-procedure.md** : limites APJA en contexte manifestation, relations OPJ, cumul administratif/pénal.
+- **Continuum-partenariats.md** : convention de coordination, articulation forces de l'État, CLSPD.
+- **Controle-legalite.md** : obligation transmission arrêtés faisant grief avant signature.
+- **Analyse-situation.md** (routeur couche 1) : qualification situation initiale, détection conflit compétence, orientation.

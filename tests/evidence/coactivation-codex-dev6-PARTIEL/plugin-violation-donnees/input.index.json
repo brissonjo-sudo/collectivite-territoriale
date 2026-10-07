@@ -1,0 +1,44 @@
+{
+  "source_path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/plugin-violation-donnees/input.json",
+  "source_sha256": "6a88cc4a68df29f418328dbc9ba62014e9e9542ae0585cb821b39bafacca6579",
+  "characters": 40307,
+  "fragment_limit": 8000,
+  "fragments": [
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/plugin-violation-donnees/input.index.json.parts/part-01.txt",
+      "sha256": "89472f5594962315c48f2ac6aefb859cf806d8c3a520d396f15e7c88cc141d67",
+      "characters": 8000,
+      "number": 1
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/plugin-violation-donnees/input.index.json.parts/part-02.txt",
+      "sha256": "16f1b02e6904e6cc0c84ca16aa2e688ba03cb489a1d3832376090ab2676a3a1c",
+      "characters": 8000,
+      "number": 2
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/plugin-violation-donnees/input.index.json.parts/part-03.txt",
+      "sha256": "e551d39983af4f94991e040940fc64b73420bd00bdeefe40f693c515f518c019",
+      "characters": 8000,
+      "number": 3
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/plugin-violation-donnees/input.index.json.parts/part-04.txt",
+      "sha256": "341ddf54bade2095f3c818a448686d4a3f7f2c3040c49afb1e2fa0aa3800ea56",
+      "characters": 8000,
+      "number": 4
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/plugin-violation-donnees/input.index.json.parts/part-05.txt",
+      "sha256": "39a69de239e977b53743241109ac97bfdf7b1381c34343d1c0f89a484c3af62e",
+      "characters": 8000,
+      "number": 5
+    },
+    {
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/plugin-violation-donnees/input.index.json.parts/part-06.txt",
+      "sha256": "f114e05d704652b3603954bbedb311de3cac250d11cc277929bc11b534fb6dec",
+      "characters": 307,
+      "number": 6
+    }
+  ]
+}

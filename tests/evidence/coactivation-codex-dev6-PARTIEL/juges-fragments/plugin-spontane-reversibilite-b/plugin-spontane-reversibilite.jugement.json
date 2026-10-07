@@ -1,0 +1,73 @@
+{
+  "case_id": "plugin-spontane-reversibilite",
+  "trace_sha256": "317c3c4e59cfe18047b106b7040791661e1741084336825468c07903307c99b6",
+  "verdict": "bloque",
+  "invariants": {
+    "plugin-spontane-reversibilite.inventaire_technique": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e19"],
+      "rationale": "La réponse prévoit l'inventaire des applications, données, volumes, pièces jointes, configurations, interfaces, composants et licences, avec leur utilité métier et leurs dépendances. Elle ne prétend pas que cet inventaire a été réalisé."
+    },
+    "plugin-spontane-reversibilite.export_essai": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e19"],
+      "rationale": "La réponse distingue l'export livré de l'export seulement proposé, prévoit un test reproductible dans un environnement autorisé et demande un export d'essai corrigé. Sa disponibilité reste une inconnue ; aucune exécution de cet essai n'est affirmée."
+    },
+    "plugin-spontane-reversibilite.controles_export": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e19"],
+      "rationale": "La recette attendue couvre explicitement la complétude, la cohérence des liens et pièces, la lisibilité et les opérations essentielles, avec lecture, import et rapprochement. La réponse exige des anomalies reproductibles et écarte le seul comptage des lignes comme preuve suffisante."
+    },
+    "plugin-spontane-reversibilite.continuite_technique": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e19"],
+      "rationale": "La réponse prévoit un plan de bascule, des critères d'arrêt, un retour préparé, le traitement des modifications intervenues après l'export, les contrôles après reprise et la sauvegarde/restauration. Elle maintient les accès jusqu'à la recette et à une décision tracée et qualifie les demandes au fournisseur de besoins à examiner, sans en déduire des obligations contractuelles."
+    },
+    "plugin-spontane-reversibilite.ccag_non_presume": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e9", "e19"],
+      "rationale": "Aucun CCAG ni aucune de ses dispositions n'est invoqué. Le régime contractuel est déclaré non déterminé et les documents généraux auxquels renvoie le contrat, ses annexes et modifications doivent être réunis avant toute conclusion. L'applicabilité d'un CCAG n'est donc pas présumée."
+    },
+    "plugin-spontane-reversibilite.pieces_verifiees_ou_reserve": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e9", "e19"],
+      "rationale": "La réponse déclare expressément qu'aucune pièce contractuelle n'a été fournie ni examinée et demande le contrat signé, annexes techniques, documents généraux, modifications, licences, engagements de sortie, réceptions et échanges. Elle suspend les conclusions et la mise en demeure à cet examen, sans présenter les pièces absentes comme lues."
+    },
+    "plugin-spontane-reversibilite.volet_juridique_attribue": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e5", "e9", "e12", "e14", "e19"],
+      "rationale": "Avant le fond final, e9 attribue à recherche-juridique l'examen des droits et sources. Le volet final expressément attribué à ce rôle tient effectivement une analyse documentaire : pièces absentes, insuffisance du résultat récupéré, abstentions distinctes et matrice des questions contractuelles. Le renvoi humain complète cette analyse au lieu d'en constituer l'unique contenu ; le chargement attesté reste une lecture de fichiers et non une activation native."
+    },
+    "plugin-spontane-reversibilite.sans_droit_acquis_non_verifie": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e19"],
+      "rationale": "Le rôle juridique s'abstient explicitement de confirmer l'obligation d'export exploitable, les droits de réutilisation, l'attribution des frais et l'indemnisation. La réponse ne qualifie pas le constat technique de manquement établi et ne réaffirme ensuite aucun de ces droits réservés."
+    },
+    "plugin-spontane-reversibilite.sans_penalite_non_verifiee": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e19"],
+      "rationale": "La réponse s'abstient expressément de confirmer un droit à pénalité. Elle n'affirme ensuite ni pénalité applicable, ni montant, ni mécanisme acquis et subordonne les suites à l'examen documenté des droits."
+    },
+    "plugin-spontane-reversibilite.sans_resiliation_non_verifiee": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e19"],
+      "rationale": "La réponse réserve explicitement tout droit à résiliation ainsi que la procédure et les délais de mise en demeure. Aucune possibilité ni effet de résiliation du contrat fictif n'est affirmé par la suite."
+    },
+    "plugin-spontane-reversibilite.selection_spontanee": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e2", "e3", "e4", "e5", "e9"],
+      "rationale": "La question intégralement reçue ne nomme aucun skill et n'impose aucun ordre. Le répondant choisit DSI et recherche juridique en e3 ; les seuls événements de chargement de rôles réussis sont dsi-fpt en e4 et recherche-juridique en e5, ensemble strict attendu. Le passage de responsabilité précède le volet juridique final. Cette sélection est attestée sous activation_kind=file_read_fragments uniquement ; aucun appel Skill ni activation native du plugin n'est certifié."
+    }
+  }
+}

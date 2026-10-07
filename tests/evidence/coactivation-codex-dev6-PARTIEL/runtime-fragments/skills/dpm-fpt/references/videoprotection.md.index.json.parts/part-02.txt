@@ -1,0 +1,148 @@
+# 4.4 Durée de l'autorisation et renouvellement
+
+L'autorisation est délivrée pour une **durée déterminée, renouvelable** —
+durée à vérifier en version consolidée (régime fixé par décret d'application,
+ne pas citer de chiffre de mémoire). Toute modification substantielle du
+système (extension de périmètre, changement de finalité, ajout de caméras
+significatif) impose en principe une nouvelle demande ou une modification de
+l'autorisation existante — vérifier le seuil de modification déclenchant une
+nouvelle instruction.
+
+### 4.5 Durée de conservation des images
+
+L'autorisation **fixe elle-même** les modalités de transmission des images,
+d'accès aux enregistrements, et la **durée de conservation**, dans la limite
+d'un plafond légal :
+
+> Art. L. 252-5, Code de la sécurité intérieure (vérifié sur Légifrance le
+> 2026-07-01, LEGIARTI000025505435) : hormis enquête de flagrance, enquête
+> préliminaire ou information judiciaire, les enregistrements sont détruits
+> dans un **délai maximum fixé par l'autorisation, qui ne peut excéder un
+> mois**. L'art. **R. 252-3** (LEGIARTI000048480362) exige seulement que le
+> demandeur **indique** la durée retenue dans son dossier — il ne fixe pas le
+> plafond.
+
+Règles à retenir :
+- le **plafond légal est d'un mois** (art. L. 252-5 CSI) ; la durée effective
+  est fixée par l'arrêté d'autorisation, sous ce plafond — recontrôler à la
+  date d'usage (§9) ;
+- **hors réquisition judiciaire**, l'enregistrement doit être **détruit** au
+  terme du délai fixé par l'autorisation ;
+- une **réquisition judiciaire** (sur le fondement du CPP, hors présente
+  branche) suspend la destruction pour les images concernées — coordonner
+  avec `penal-procedure.md` si une exploitation judiciaire est en cours.
+
+### 4.6 Qui peut visionner — habilitation individuelle
+
+Principe : seuls des **agents individuellement désignés et habilités** par
+l'autorité compétente peuvent visionner les images, dans les conditions
+fixées par l'autorisation :
+
+> Art. L. 252-2, Code de la sécurité intérieure (vérifié sur Légifrance le
+> 30/06/2026) : pour les systèmes relevant du dernier alinéa de l'art.
+> L. 251-2 (cas spécifique), le visionnage est réservé aux agents de police
+> nationale et de gendarmerie individuellement désignés et habilités ; pour
+> les autres cas, l'autorisation peut prévoir des destinataires
+> supplémentaires (police municipale, douanes, services d'incendie et de
+> secours), désignés et habilités dans les mêmes conditions.
+
+Conséquence pour le CSU :
+- vérifier que **chaque agent affecté au CSU** dispose d'une habilitation
+  individuelle traçable, conforme à ce que prévoit l'arrêté préfectoral ;
+- un agent PM non habilité ne visionne pas, même en présence d'un agent
+  habilité, sauf disposition contraire expressément prévue ;
+- la **transmission en temps réel vers les forces de l'État** (police
+  nationale, gendarmerie) est possible si l'autorisation le prévoit et selon
+  les modalités qu'elle fixe ; formaliser ce point dans la convention de
+  coordination → `continuum-partenariats.md`.
+
+### 4.7 Exploitation du CSU — points de vigilance opérationnels
+
+- **Traçabilité des accès** : journal des connexions, des extractions, des
+  visionnages — exigence de fond du régime, modalités précises à vérifier
+  dans l'arrêté et la réglementation applicable.
+- **Extraction d'images pour une procédure** : l'extraction et la remise à
+  l'autorité judiciaire (réquisition, sur PV) relèvent de la procédure pénale
+  — coordonner avec `penal-procedure.md` ; au-delà de la simple remise sur
+  réquisition, toute exploitation active (analyse poussée, rapprochement)
+  dépassant le cadre APJA bascule vers le **garde-fou §5.2 du SKILL.md**.
+- **Lecture de plaque (LAPI), reconnaissance faciale ou tout traitement
+  algorithmique additionnel** : régime distinct, hors présent périmètre —
+  ne pas présumer la légalité d'un dispositif algorithmique du seul fait que
+  l'autorisation vidéoprotection existe ; vérifier un fondement spécifique
+  avant tout déploiement (point de risque élevé, §11).
+- **Sécurité du système** (accès physique au CSU, droits informatiques,
+  habilitations techniques) : volet sécurité des systèmes d'information, à
+  croiser avec `conformite-deontologie-donnees.md`.
+
+### 4.8 Droits des personnes filmées
+
+Toute personne intéressée peut s'adresser au responsable du système pour
+obtenir l'**accès aux enregistrements la concernant**, ou vérifier leur
+destruction dans le délai prescrit. Ce droit est **de droit**, sous réserve de
+motifs de refus limitativement prévus (sûreté de l'État, défense, sécurité
+publique, procédure judiciaire en cours, droits des tiers) :
+
+> Art. L. 253-5, Code de la sécurité intérieure (vérifié sur Légifrance le
+> 30/06/2026).
+
+En cas de difficulté, la personne peut saisir la **commission départementale
+de vidéoprotection** ou la **CNIL**, sans préjudice du recours juridictionnel
+(y compris en référé).
+
+> Information générale du public (panneaux, mentions d'information, registre
+> des traitements, AIPD) → régime RGPD/CNIL transverse, **non traité ici** →
+> `references/conformite-deontologie-donnees.md`.
+
+---
+
+## 5. Procédures et délais
+
+| Étape | Acteur | Point de contrôle |
+|---|---|---|
+| Élaboration du projet (lieux, finalité, périmètre) | Porteur de projet (commune/maire le plus souvent) | Finalité parmi la liste légale (§4.2) |
+| Dépôt du dossier de demande d'autorisation | Porteur de projet → préfecture | Pièces du dossier réglementaire — à vérifier (partie réglementaire CSI) |
+| Avis de la commission départementale | Commission départementale de vidéoprotection | Avis consultatif ; délai d'instruction à vérifier |
+| Décision (arrêté préfectoral) | Préfet (préfet de police à Paris) | Fixe finalité, périmètre, durée de conservation, habilitations |
+| Mise en service | Porteur de projet / CSU | Conformité stricte au périmètre et aux conditions de l'arrêté |
+| Renouvellement avant échéance | Porteur de projet | Anticiper le délai de dépôt avant expiration — à vérifier |
+| Modification substantielle | Porteur de projet | Nouvelle demande ou modification d'autorisation selon seuil — à vérifier |
+| Contrôle | Commission départementale / CNIL | Pouvoir de contrôle sur place, recommandations |
+| Destruction des images | Responsable du système / CSU | À l'échéance fixée par l'autorisation, sauf procédure en cours |
+
+**Hypothèses à annoncer** : tout délai d'instruction, tout délai de dépôt de
+renouvellement, et toute composition de commission cités dans un écrit
+doivent être vérifiés en version consolidée avant envoi — ne jamais les
+donner de mémoire dans un acte.
+
+---
+
+## 6. Déclencheurs de vérification
+
+Appliquer le socle-sources (matrice §2.2 du `SKILL.md`) dès que :
+- une **durée de conservation** ou un **délai de procédure** est annoncé à un
+  tiers ou inséré dans un acte ;
+- une **finalité** est qualifiée pour fonder une demande d'autorisation
+  (risque de rejet ou d'annulation si finalité mal qualifiée) ;
+- une **habilitation de visionnage** est attribuée ou retirée à un agent ;
+- un **refus d'accès** aux images est opposé à une personne intéressée
+  (vérifier que le motif invoqué figure bien dans la liste légale) ;
+- un **dispositif algorithmique additionnel** (LAPI, etc.) est envisagé ;
+- une **réforme récente** du régime CSI vidéoprotection est suspectée
+  (évolutions fréquentes de ce titre) → orientation possible vers
+  `recherche-juridique`.
+
+---
+
+## 7. Pièges & confusions fréquentes
+
+1. Croire que le **maire autorise** l'installation : c'est le **préfet**, sauf
+   confusion avec la simple **information du maire** dans le cas
+   « commerçants » (§4.2).
+2. Confondre le **régime CSI Titre V** (voie publique, lieux ouverts au
+   public) avec la vidéosurveillance de **locaux fermés non ouverts au
+   public**, qui relève d'un autre régime.
+3. Laisser visionner les images par un agent **non individuellement
+   habilité** : l'habilitation est strictement nominative, pas générique au
+   service.
+4. Affirmer une **durée de conservation 

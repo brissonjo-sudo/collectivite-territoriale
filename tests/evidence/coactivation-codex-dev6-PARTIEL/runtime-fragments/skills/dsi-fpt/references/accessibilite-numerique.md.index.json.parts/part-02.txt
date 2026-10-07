@@ -1,0 +1,60 @@
+ère la collectivité de son pilotage.
+- Substituer une déclaration ou une surcouche à la correction démontrée.
+- Réutiliser un audit après une refonte sans vérifier son périmètre.
+- Invoquer une exception générale parce que le service est ancien ou le coût
+  élevé, sans lecture du régime applicable.
+- Appliquer un seuil d'entreprise à une personne morale de droit public.
+- Transformer un guide d'organisation de l'État en obligation locale.
+- Répondre à une plainte d'accessibilité par une extraction des traces d'une
+  personne : garde-fou surveillance avant tout paramétrage ou extraction.
+
+## 9. Données et valeurs à vérifier
+
+Version du RGAA, références de son approbation, normes applicables, exclusions,
+modalités et contenu des publications, durée et rythme des documents de
+progression, délais de réponse ou de mise en demeure et montants des sanctions.
+Nommer ces points sans leurs valeurs ; consulter
+`references/references-verifiees.md` puis les sources officielles à la date
+de référence. Un calendrier annoncé ou un cache ne suffit pas à conclure.
+
+## 10. Écrits et livrables
+
+- Inventaire : supports, responsables, parcours critiques et état des preuves.
+- Plan de correction : obstacle, composant, responsable, priorité, preuve
+  attendue et état de recette.
+- Déclaration et documents de progression : brouillons dont le contenu légal
+  obligatoire reste subordonné à la vérification officielle.
+- Exigences d'accessibilité et protocole de recette →
+  `references/templates/cahier-des-charges-technique.md` ; projet de mise
+  en conformité → `references/templates/fiche-projet-si.md`, avec
+  `references/ecrits-numerique.md`.
+
+Marquer `[INCOMPLET]` les résultats ou champs non établis ; ne pas attribuer
+un taux ou un statut fictif. Ne pas joindre de réclamation nominative.
+
+## 11. Double échelle [risque / confiance]
+
+| Situation | Repère |
+|---|---|
+| Inventaire des supports sans qualification de conformité | [faible / stable] si le périmètre est connu |
+| Correction locale avec parcours recetté | [moyen / stable] sur cette correction seulement |
+| Démarche publique bloquée ou déclaration sans audit | [élevé / à vérifier] ; prioriser la preuve et la correction |
+| Sanction, exception ou procédure officielle non relue | [élevé / abstention] sur montant ou conclusion juridique |
+
+Appliquer `SKILL.md` : un audit ancien ou limité réduit la confiance ;
+l'absence de preuve ne réduit pas l'enjeu d'un obstacle au service public.
+
+## 12. Checklist de branche
+
+- Garde-fous incident et surveillance examinés avant tout contenu technique ?
+- Frontières données, contenu éditorial, médiation et passation tenues ?
+- Mode d'exercice et responsables des supports et corrections identifiés ?
+- Applicabilité établie pour l'organisme et le service concerné ?
+- Référentiel en vigueur vérifié ; périmètre et limites de l'audit visibles ?
+- Résultats humains et automatiques distingués, sans conformité inventée ?
+- Parcours critiques, composants partagés et documents pris en compte ?
+- Publication fidèle aux preuves, contenu obligatoire sourcé ou réservé ?
+- Obligation, doctrine et contrat distingués ; aucun seuil d'entreprise importé ?
+- Valeurs relues à la source en session ou réservées, sans auto-attestation ?
+- Livrable complet ou `[INCOMPLET]`, sans donnée nominative ni secret ?
+- Chemins des fichiers mobilisés cités là où leur règle est utilisée ?

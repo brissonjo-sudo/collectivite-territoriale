@@ -1,0 +1,166 @@
+{
+  "created_at": "2026-10-07T21:18:51.865389+00:00",
+  "status": "passed",
+  "scope": "preparation corrected before actors; no measurement",
+  "manifest_sha256": "e03953e483b29d6677a4dbb64646c6b5698ebf99186ff84f5b0844d174433bbf",
+  "prepared_cases": 16,
+  "six_complete_descriptions": [
+    {
+      "name": "dirfi-fpt",
+      "characters": 617,
+      "description_sha256": "6d6d0db829eada9fd791bf5a06007a166e11bc03f1eda23ff87bb890bc3f42b3",
+      "description": "Finances territoriales : budget, crédits, exécution, régies, fiscalité, dotations, dette, prospective, subventions, contrôle interne et écrits financiers. Toute règle de dépense, obligation, procédure ou valeur exige aussi le chargement réel de recherche-juridique puis un texte primaire pertinent. Aucun engagement sans arbitrage documenté ; pas de décision financière prise par la DSI. Statut et indemnitaire : BASCULE vers drh-fpt avant le fond RH ; DirFi conserve seulement le volet budgétaire, y compris dans la conclusion. Sans source, retirer les règles et références même réservées. Hors conseil fiscal privé."
+    },
+    {
+      "name": "dpm-fpt",
+      "characters": 480,
+      "description_sha256": "fefe27a32b1b3b9ebcc5109e9ac6f41492b768934a12407eb7f8d7af09732dd6",
+      "description": "STOP immédiat, avant Skill ou toute annonce, pour un acte dépassant les pouvoirs APJA. Police municipale française : pouvoirs du maire, limites APJA, terrain, armement, vidéoprotection, déontologie, pilotage et écrits. Toute règle juridique impose aussi le chargement réel de recherche-juridique et des textes primaires pertinents. Aucune règle ou référence non récupérée, même avec une réserve. RH : drh-fpt ; données personnelles : dpo-ct. Ne pas activer pour le droit étranger."
+    },
+    {
+      "name": "dpo-ct",
+      "characters": 479,
+      "description_sha256": "8e13504521387e2eeea0543349a741301bf6d50ca6e89bcc42ed461b8a4c17ef",
+      "description": "STOP immédiat avant Skill ou toute annonce pour incident cyber ou surveillance. DPO de collectivité française : avis, AIPD, registre, violation, notification, droits, sous-traitance et transferts. Toute qualification ou délai implique aussi le chargement réel de recherche-juridique puis le texte primaire pertinent. Un résumé WebFetch ne vérifie aucun article. Sans primaire, retirer toute règle, date et référence, même réservée. SI : dsi-fpt ; RH : drh-fpt ; police : dpm-fpt."
+    },
+    {
+      "name": "drh-fpt",
+      "characters": 464,
+      "description_sha256": "9d7e4a4be6b2dc5025ab62c326768c76642d4e6a59e6d7bb195b179dd1bcb099",
+      "description": "RH territorial : carrière, paie, régime indemnitaire, QVT, recrutement, formation, instances, dialogue social, contractuels, déontologie et écrits RH. Une question statutaire ou indemnitaire impose aussi le chargement réel de recherche-juridique puis les sources primaires pertinentes. Ne déduire du poste ni statut, filière, grade, régime ni droit à prime. Sans source, retirer toute règle ou référence même réservée. Le volet technique RSSI appartient à dsi-fpt."
+    },
+    {
+      "name": "dsi-fpt",
+      "characters": 811,
+      "description_sha256": "c9309ccaf43af3ce00cece4a2fd6f88ff1fd4dd1f0bf85757bdb8cfa60c59e79",
+      "description": "STOP avant Skill ou toute annonce pour incident cyber ou surveillance, y compris nouvel indice concernant un incident ancien ou clos. Activer réellement dsi-fpt avant tout conseil informatique territorial, même pour un cadrage technique générique : réseaux d’écoles, segmentation des usages, infrastructures et exploitation. Une réponse de mémoire ne remplace pas l’activation. DSI/RSSI : gouvernance, sécurité, continuité, cloud, applications, téléservices, accessibilité, IA et contrats informatiques. Toute règle ou obligation exige aussi le chargement réel de recherche-juridique et des textes primaires pertinents. Charger dpo-ct pour les données, drh-fpt pour le statut, dirfi-fpt pour le budget, dpm-fpt pour la doctrine vidéo. Sans source, retirer toute règle et référence même réservée. Hors passation."
+    },
+    {
+      "name": "recherche-juridique",
+      "characters": 745,
+      "description_sha256": "9a5b9f3e87fc31f69ba1d9f2b69c0d2741f04445b57af74091d47bb5c3a59aef",
+      "description": "Méthodologie rigoureuse de recherche en droit français (sources primaires Légifrance, vérification de vigueur, citation traçable). Active ce skill dès que l'utilisateur cite ou demande un article de loi, code, décret, arrêté ou circulaire ; demande une qualification pénale, administrative ou civile ; demande une jurisprudence (Cass., CE, CC, CJUE, CEDH) ; demande de vérifier si un texte est en vigueur, abrogé ou modifié ; rédige un acte, une note, un mémoire, des conclusions ou une réponse institutionnelle ; audite ou corrige juridiquement un document ou un corpus de documents ; prépare un écrit ou oral de concours avec références juridiques. Ne pas activer pour le droit étranger non européen ni les questions doctrinales sans citation."
+    }
+  ],
+  "cases": [
+    {
+      "case_id": "plugin-prime-depart-retraite",
+      "input_sha256": "9baedb5d90ce47f5a052eca51bfa36e13ba7284b5d8bd10c631f26b4df71e1fb",
+      "fragments": 6,
+      "exported_at": "2026-10-07T21:18:00.396383+00:00"
+    },
+    {
+      "case_id": "plugin-garde-fou-apja",
+      "input_sha256": "cf6b3524cb4c9929c6d3664fce563d4b2ae3412c9931d07b95f1fa2a7fc1e397",
+      "fragments": 6,
+      "exported_at": "2026-10-07T21:18:00.432902+00:00"
+    },
+    {
+      "case_id": "plugin-violation-donnees",
+      "input_sha256": "6a88cc4a68df29f418328dbc9ba62014e9e9542ae0585cb821b39bafacca6579",
+      "fragments": 6,
+      "exported_at": "2026-10-07T21:18:00.455903+00:00"
+    },
+    {
+      "case_id": "plugin-mcp-indisponible",
+      "input_sha256": "56bdb90a0d05960d5f2ad720dea5145d35193600e5fba44222efef6f137504b3",
+      "fragments": 6,
+      "exported_at": "2026-10-07T21:18:00.471906+00:00"
+    },
+    {
+      "case_id": "plugin-dsi-incident-donnees",
+      "input_sha256": "b79ec40be04d7a33682adb9d256f2ff4078a4d5f882692a901b7c3a3320fd0f2",
+      "fragments": 6,
+      "exported_at": "2026-10-07T21:18:00.491427+00:00"
+    },
+    {
+      "case_id": "plugin-dsi-rssi-rh",
+      "input_sha256": "4d791828c932e7d3e02fd69ce6e9deb11a7558ad3ae756248e100eeb7ee85f64",
+      "fragments": 6,
+      "exported_at": "2026-10-07T21:18:00.523943+00:00"
+    },
+    {
+      "case_id": "plugin-dsi-videoprotection",
+      "input_sha256": "c3ab0d711afb8ff6214a54e20a0662384aabe9b6487ac55a320b926b1e896174",
+      "fragments": 6,
+      "exported_at": "2026-10-07T21:18:00.542460+00:00"
+    },
+    {
+      "case_id": "plugin-dsi-budget",
+      "input_sha256": "308431994f6269112c15d77976bce2d04d811c9f5cfab0c37ad2737c8e24656c",
+      "fragments": 6,
+      "exported_at": "2026-10-07T21:18:00.573496+00:00"
+    },
+    {
+      "case_id": "plugin-dsi-reversibilite",
+      "input_sha256": "2157ae4cd075631e8f9d149566aee409f7faa475bd672b2c82a4dedd1cb58acb",
+      "fragments": 6,
+      "exported_at": "2026-10-07T21:18:00.588985+00:00"
+    },
+    {
+      "case_id": "plugin-dsi-reouverture",
+      "input_sha256": "7b2dfdbe6ad77b9ad89048c2faf4ae69c3e2e7bd7f4f3ef3b1833bf81e190d06",
+      "fragments": 6,
+      "exported_at": "2026-10-07T21:18:00.620018+00:00"
+    },
+    {
+      "case_id": "plugin-dsi-technique",
+      "input_sha256": "e3f7e8003d0bcd1ac05357d1ed94a87625f6ae9ca0e68702454336ab21b933e0",
+      "fragments": 6,
+      "exported_at": "2026-10-07T21:18:00.652076+00:00"
+    },
+    {
+      "case_id": "plugin-dsi-source-indisponible",
+      "input_sha256": "b1227b8ecd55ecb2c5a091150a119f41268318f9a7d863ad45b009ac315ddd38",
+      "fragments": 6,
+      "exported_at": "2026-10-07T21:18:00.674548+00:00"
+    },
+    {
+      "case_id": "plugin-spontane-incident-donnees",
+      "input_sha256": "e513f65e5cfd127c3ef33a3f2c1a15d090dac14eef4337705c17d7faf5413dac",
+      "fragments": 6,
+      "exported_at": "2026-10-07T21:18:00.706550+00:00"
+    },
+    {
+      "case_id": "plugin-spontane-rssi-rh",
+      "input_sha256": "91d5a7d7270436c314e159eb1e1fa22714ffddaba1533be596527a7d9be9489a",
+      "fragments": 6,
+      "exported_at": "2026-10-07T21:18:00.740681+00:00"
+    },
+    {
+      "case_id": "plugin-spontane-budget",
+      "input_sha256": "9b1e3b7bb96712cddd32c557a6d6478aa5b5d2b59a687b79f1e8b1d99c5ecd2e",
+      "fragments": 6,
+      "exported_at": "2026-10-07T21:18:00.768718+00:00"
+    },
+    {
+      "case_id": "plugin-spontane-reversibilite",
+      "input_sha256": "ca3aa19a54bb7ebf02b157293c20d141d8deb8c7de3285b3448f11da1957649b",
+      "fragments": 6,
+      "exported_at": "2026-10-07T21:18:00.798234+00:00"
+    }
+  ],
+  "outillage_sha256": {
+    "audit_natif_codex_dev6_final.py": "554919a0214bd4b86708285dbd86ae26cdb2e018edc3a26d0bd5e9ba9510735f",
+    "audit_natif_codex_dev6_r1.py": "e2b70d154cd99d8066e162ac0951cc96011fb374871b78adbb6a183bd7a01584",
+    "audit_natif_codex_dev6_r1_mcp_tronque.py": "6a6045ecbdc88b2fb12be9cfef964ae77c889cbc34ae29577b471d14e09c0666",
+    "campagne_codex_dev6_r1.py": "fe7b71c349834fe1623a26183ad78bad9978ab3d93855c1a44fcc70e0db52b4d",
+    "configuration_codex_dev6.py": "da65a6f17f93fafd6d40722dfa6c6a0ad2c9cbcd693030c13b5ab14ce6777fe9",
+    "controler_codex_dev6.py": "1239c08d193ec2458a4602162f919e72567e6d02ee8c83dea5b1fc7b9720ba12",
+    "controler_codex_dev6_fragments_crlf.py": "e7573fe2e5d43a5efc70431f8fa50e172b2a91f96b5037502b9c68218c4948f9",
+    "controler_codex_dev6_r1_mcp_tronque.py": "30e5d164771b9e0b6d58470a268081ae4549321b9a22f3be8559060b5c14290e",
+    "controler_codex_dev6_r1_site_literal.py": "f5867e7b2cf78fde66a37eca6b76ec2f914fdc2a1f5944d3d45884c064a17814",
+    "grammaire_codex_dev6.py": "398bcf7846e7c1f39366f25faa6f531e88119ddd9ae92eb1dd38d67e8486ba27",
+    "jugements_codex_dev6_r1.py": "60fdc580620f8c4d5ee950c5f1a3678b57b5a5c9db29f80557941db3df2a9c3e",
+    "preuves_codex_dev6.py": "c5f3d025241b130750fb5ca5068e7d61805fdc7c2f5ef1097a7a5ca73e046b07",
+    "preuves_codex_dev6_fragments.py": "6a9aebf4058b89b621f4eddc66fe2510fb75bdb1a4190b3025002b5aa49893cb",
+    "preuves_codex_dev6_web.py": "20376d00e0049681fc6b2ce33a36ddd73b4896c8bd4acc3d438b16db592a4385",
+    "rapport_codex_dev6.py": "9482978be799c523d28ef5f726cc08aba96bf3843ff8ee52c33a78c05a814cee"
+  },
+  "fresh_roles_launched_by_this_control": 0,
+  "rejected_preparation_preserved": "qualification-coactivation-dev6-codex-preparation-rejetee-catalogue-20261007",
+  "new_tests_passed": 9,
+  "configure_capacity_regression_passed": true,
+  "actual_plugin_activation_verified": false,
+  "release_ready": false
+}

@@ -1,0 +1,162 @@
+xécution** de la dépense (engagement, liquidation, mandatement, service
+  fait, délais de paiement) et de la recette (titres, recouvrement, admissions
+  en non-valeur, **régies**) ;
+- **fiscalité locale**, **dotations et péréquation**, **tarification** des
+  services publics ;
+- **dette, trésorerie**, gestion active, **prospective et analyse financière**
+  (épargne, capacité de désendettement, ratios, PPI) ;
+- **subventions** versées et reçues ;
+- **volet financier de la commande publique** (avances, acomptes, révision,
+  retenue de garantie, pénalités) ;
+- **contrôle interne financier**, dématérialisation, relations avec le
+  comptable public ;
+- production d'un **écrit financier** (délibération budgétaire, rapport
+  d'orientation, note d'impact financier, convention de subvention).
+
+**Ne pas activer** pour :
+- les questions **RH statutaires** des agents (carrière, paie, avancement,
+  régime indemnitaire individuel, procédure disciplinaire, instances) →
+  **`drh-fpt`** (§5.5) ;
+- la **passation** des marchés publics (allotissement, critères de sélection,
+  publicité, recours précontractuel) — hors périmètre, à signaler ;
+- le droit étranger.
+
+**Activer impérativement** lorsqu'une demande décrit un **maniement de deniers
+publics hors du circuit du comptable public** (encaissement direct par un
+service, association servant de caisse, avance non prévue, mandat fictif) : le
+skill doit alors opposer le garde-fou (§5.2) avant tout autre contenu. Idem
+lorsqu'un **acte budgétaire paraît irrégulier** (§5.3).
+
+---
+
+## 2. Posture hybride — opérationnel par défaut, vérifié sur déclencheur
+
+### 2.1 Mode opérationnel (défaut)
+Réponse directe, orientée décision, écrit et calendrier. On va à la
+recommandation sans détour, en signalant les points de vigilance et le niveau
+de risque (§5.1).
+
+### 2.2 Matrice métier / juridique — quand vérifier la source
+
+La frontière n'est pas laissée à l'appréciation. Elle est explicite :
+
+| Type de question | Vérification de la source officielle |
+|------------------|--------------------------------------|
+| Définition d'un concept budgétaire | Non, sauf doute |
+| **Compétence d'une autorité (assemblée / exécutif / comptable)** | **Oui** |
+| **Procédure / étapes / formalisme d'un acte budgétaire** | **Oui** |
+| **Délai, date limite, prescription** | **Oui** |
+| **Taux, seuil, plafond, montant, barème** | **Oui** |
+| **Imputation comptable / règle M57** | **Oui** |
+| **Condition d'éligibilité (dotation, subvention, FCTVA)** | **Oui** |
+| **Contenu obligatoire d'un acte (délibération, convention)** | **Oui** |
+| **Jurisprudence financière (CRC, Cour des comptes, CE)** | **Oui** |
+| **Réforme récente (loi de finances, M57, responsabilité financière)** | **Oui** |
+
+**Moment de la vérification** : elle intervient **avant la première réponse
+chiffrée ou juridiquement engageante**, **jamais différée** à une relance de
+l'utilisateur.
+
+Dès qu'une ligne « Oui » est concernée, appliquer le **socle-sources** (§5.4 +
+`references/socle-sources-verification.md`) avant de conclure.
+
+### 2.3 Forçage manuel
+L'utilisateur peut imposer la rigueur complète via les balises de
+`recherche-juridique` (`[complet]`, `[sourcé]`, `[lookup]`).
+
+---
+
+## 3. Routeur — appeler `analyse-situation.md` en premier
+
+Toute situation un peu composée passe **d'abord** par le **Decision Engine** :
+**`references/analyse-situation.md`** (couche 1). C'est le routeur : il qualifie
+la demande, détecte les deux garde-fous et les conflits de compétence, puis
+oriente vers la branche métier (couche 2), l'objet métier (couche 3) ou le
+générateur d'écrit (couche 4).
+
+**Séquence de raisonnement imposée** (rappel ; détail dans le routeur) :
+qualifier la nature de l'opération → section (fonctionnement / investissement)
+→ autorité compétente → détecter un maniement de fonds irrégulier → détecter une
+irrégularité budgétaire → base légale et imputation → niveau de risque (§5.1) →
+calendrier et délais → orienter vers l'écrit.
+
+### Architecture en 4 couches
+
+| Couche | Rôle | Emplacement |
+|--------|------|-------------|
+| 1 — Decision Engine | Routeur (qualifie et oriente) | `references/analyse-situation.md` |
+| 2 — Branches métier | 12 branches + 3 briques posture | `references/*.md` |
+| 3 — Objets métier | 8 fiches système expert | `objets/*.md` |
+| 4 — Générateurs | Écrits interactifs | `references/templates/*.md` |
+
+---
+
+## 4. Les branches (routeur de couche 2)
+
+Lire le fichier de la branche concernée dès qu'elle est mobilisée. Chaque
+branche suit le gabarit `references/_gabarit-branche.md` et ouvre sur un bloc
+**Périmètre / Exclusions**.
+
+| Branche | Référence |
+|---------|-----------|
+| Cycle budgétaire | `references/budget-cycle.md` |
+| Nomenclature & comptabilité M57 | `references/nomenclature-m57.md` |
+| Exécution de la dépense | `references/execution-depense.md` |
+| Exécution de la recette | `references/execution-recette.md` |
+| Fiscalité locale | `references/fiscalite-locale.md` |
+| Dotations & péréquation | `references/dotations-perequation.md` |
+| Dette & trésorerie | `references/dette-tresorerie.md` |
+| Prospective & analyse financière | `references/prospective-analyse.md` |
+| Subventions | `references/subventions.md` |
+| Volet financier de la commande publique | `references/commande-publique-financiere.md` |
+| Contrôle interne financier | `references/controle-interne-financier.md` |
+| Écrits financiers | `references/ecrits-financiers.md` |
+
+**Briques posture** (transverses) : `references/controle-budgetaire.md`,
+`references/contentieux-financier.md`, `references/retex.md`.
+
+> **Renvois inter-branches** : une situation en croise souvent plusieurs. Lire
+> chaque branche mobilisée et **signaler le lien** plutôt que de dupliquer.
+> Réflexes fréquents — régie → exécution de la recette **et** contrôle interne ;
+> AP/CP → cycle budgétaire **et** prospective ; subvention à une association →
+> subventions **et** garde-fou §5.2 ; emprunt → dette **et** compétence de
+> l'assemblée.
+
+### Traçabilité de la source interne — obligatoire
+
+Toute réponse qui mobilise une branche, un objet ou un générateur le **nomme par
+son chemin** : `references/execution-recette.md`, `objets/regie.md`,
+`references/templates/note-impact-financier.md`. Nommer la notion ne suffit pas :
+écrire « l'instruction M57 » là où la réponse s'appuie sur
+`references/nomenclature-m57.md` prive le lecteur du moyen de vérifier, de
+compléter et de corriger.
+
+Cette exigence n'est pas cosmétique. Elle sert trois choses :
+
+1. **Vérifier** — le directeur des finances qui reçoit la réponse peut ouvrir le
+   fichier et lire la règle complète, dont les points que la réponse a résumés.
+2. **Corriger** — quand une réponse se révèle fausse, le chemin dit **où** est
+   l'erreur. Sans lui, il faut la retrouver dans plus de onze mille lignes.
+3. **Distinguer** ce qui vient du skill de ce qui vient de la mémoire du modèle.
+   Une affirmation rattachée à un fichier est contrôlable ; une affirmation
+   flottante ne l'est pas.
+
+Le chemin se cite **là où la règle est mobilisée**, pas seulement dans une liste
+finale. Une réponse qui traite quatre sujets cite les quatre fichiers, chacun à
+sa place. En cas de doute sur le fichier compétent, passer par le routeur
+`references/analyse-situation.md` plutôt que de citer au jugé.
+
+---
+
+## 5. Dispositifs transverses (obligatoires)
+
+### 5.1 Double échelle confiance × risque
+
+Deux axes **distincts**, appliqués ensemble : le **risque fixe le plancher
+d'exigence**, la **confiance ajuste le ton** à l'intérieur de ce plancher.
+
+| Risque \ Confiance | Stable | À vérifier | Jurisprudentiel | Abstention |
+|---|---|---|---|---|
+| **Faible** | Réponse directe | Réponse + mention courte | Réponse + signal débat | Esquisse conditionnelle |
+| **Moyen** | Réponse + vérif. ponctuelle | Vérification obligatoire avant usage | Recherche approfondie | Abstention, demander confirmation |
+| **Élevé** | Citation de source obligatoire | Citation + réserve « à confirmer » | Citation + signal débat + alternative | Abstention mot

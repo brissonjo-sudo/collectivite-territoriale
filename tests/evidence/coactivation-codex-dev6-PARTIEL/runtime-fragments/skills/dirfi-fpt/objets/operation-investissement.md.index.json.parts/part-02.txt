@@ -1,0 +1,47 @@
+rche avant conclusion :
+- Conséquences d'un **engagement au-delà du montant de l'AP** non révisée.
+- Portée d'une **décision attributive de subvention non notifiée** sur la
+  régularité de l'engagement de la dépense.
+- Contentieux liés à la **valorisation d'entrée à l'actif** d'un bien issu
+  d'une opération pluriannuelle.
+
+---
+
+## 6. Check-list opérationnelle
+
+- [ ] Opération définie comme un ensemble homogène et pluriannuel, distinct
+      de crédits d'investissement courants ?
+- [ ] AP votée et CP annuels cohérents avec l'échéancier prévisionnel ?
+- [ ] Plan de financement distinguant montants acquis et montants sollicités,
+      sans présentation trompeuse ?
+- [ ] Taux d'autofinancement minimal vérifié, jamais chiffré de mémoire ?
+- [ ] Cohérence avec la programmation pluriannuelle des investissements
+      vérifiée ?
+- [ ] Phasage et échéancier des CP ajustés sur l'avancement réel ?
+- [ ] Volet financier du marché suivi via `../objets/marche-public.md`, et
+      **passation signalée comme hors périmètre** si la question l'aborde ?
+- [ ] Toute variation significative du coût traitée par une **révision d'AP**
+      délibérée, avant poursuite de l'engagement ?
+- [ ] Entrée du bien à l'actif organisée et cohérente avec le coût mandaté ?
+- [ ] Clôture de l'opération formalisée (AP soldée, restes à réaliser
+      traités, dossier archivé) ?
+- [ ] Couple [risque / confiance] indiqué si utile à la décision.
+- [ ] Cas journalisable (dépassement d'AP non révisé, financement caduc
+      découvert tardivement) → proposé pour `JOURNAL.md`.
+
+---
+
+## Références et remontées
+
+**Branches mobilisées** : `budget-cycle.md` (AP/CP), `prospective-analyse.md`
+(PPI), `subventions.md` et `dotations-perequation.md` (financement externe),
+`dette-tresorerie.md` (emprunt), `commande-publique-financiere.md` (volet
+financier du marché), `nomenclature-m57.md` (entrée à l'actif).
+
+**Objets liés** : `../objets/emprunt.md` (financement par emprunt),
+`../objets/marche-public.md` (volet financier du marché support),
+`../objets/immobilisation.md` (entrée à l'actif), `../objets/cloture-exercice.md` (restes à réaliser en fin d'exercice).
+
+**Point de mise à jour requis** : taux du FCTVA, taux de subvention par
+financeur, plafonds des dotations d'investissement (DETR, DSIL, DPV) —
+valeurs volatiles à réviser à chaque loi de finances.

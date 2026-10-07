@@ -1,0 +1,171 @@
+ la mesure ou des faits ?
+> Si oui, sont-ils identifiés ? »
+
+### Étape 10 — Issue de la mesure et heure exacte
+- **Route A** : heure précise à laquelle la personne a été conduite devant ou
+  remise à l'OPJ.
+- **Route B** : heure et contenu de la décision de l'OPJ ; selon son ordre,
+  heure de la présentation, du début et de la fin de la rétention, ou heure à
+  laquelle la personne a été laissée libre de partir.
+- Si l'issue n'est pas encore connue au moment de la rédaction, le signaler
+  explicitement : le document ne peut pas être considéré comme finalisé.
+> *Question posée* : « Quelle décision l'OPJ a-t-il prise, à quelle heure, et
+> quelle a été l'issue exacte de la mesure ? »
+
+### Étape 11 — Identité ou qualité de l'OPJ destinataire
+- Identité ou, à défaut, qualité/service de l'OPJ destinataire (police
+  nationale ou gendarmerie territorialement compétente), et lieu de remise
+  (commissariat, brigade).
+> *Question posée* : « À quel OPJ (nom et/ou service) et à quel lieu la
+> personne a-t-elle été remise ? »
+
+### Étape 12 — Suites données et destinataires du présent rapport
+- Suites déjà engagées (compte rendu oral immédiat à l'OPJ, information du
+  maire) et destinataire(s) du présent écrit : maire **et** OPJ
+  territorialement compétent — double transmission à distinguer
+  explicitement (`references/penal-procedure.md` §4.2).
+> *Question posée* : « Le compte rendu oral immédiat a-t-il déjà été fait à
+> l'OPJ et au maire ? À qui ce rapport écrit doit-il être transmis (maire,
+> OPJ, les deux) ? »
+
+**À l'issue de l'étape 12** : si toutes les réponses nécessaires ont été
+recueillies, passer à l'assemblage (§2). Sinon, appliquer la règle
+`[INCOMPLET]` (§4).
+
+---
+
+## 2. Gabarit d'assemblage
+
+> Champs à compléter entre `[ ]`. **Aucune donnée nominative** ne doit
+> figurer en clair dans ce canevas tant qu'elle n'a pas été expressément
+> fournie et confirmée par l'utilisateur pour la version consolidée finale ;
+> dans le canevas de travail, préférer un identifiant neutre (« la personne
+> concernée », « le témoin 1 ») si la donnée doit rester anonymisée pour
+> l'échange avec l'assistant.
+>
+> ⚠️ **Avant transmission** : vérifier en version consolidée tout texte
+> d'incrimination évoqué et le régime exact retenu (art. 53/73 ou 78-6 CPP —
+> renvoi `references/penal-procedure.md` §4.3), et confirmer le
+> circuit local de transmission (organisation propre à la collectivité,
+> convention de coordination — `references/continuum-partenariats.md`).
+
+```
+[COLLECTIVITÉ — en-tête / service de police municipale]
+
+RAPPORT DE MISE À DISPOSITION N° [numéro] / [année]
+(fondement : [art. 53 + 73 / art. 78-6 du Code de procédure pénale])
+
+Rédigé par : [nom, qualité, n° d'agrément si exigé]
+Date et heure de rédaction : [date] à [heure]
+
+I. FAITS À L'ORIGINE DE LA MESURE
+Date et heure des faits : [date] à [heure] — étape 2
+Lieu des faits : [adresse ou localisation précise] — étape 3
+[Description strictement factuelle des éléments personnellement constatés
+caractérisant chacune des conditions du fondement retenu — étape 4.
+Pas d'interprétation, pas de supposition.]
+
+II. QUALIFICATION ET FONDEMENT
+[Texte d'incrimination évoqué — étape 5. Mention obligatoire : « qualification
+non tranchée par le présent rapport, à vérifier — renvoi
+reglementation-appliquee.md / penal-procedure.md ».]
+Fondement de la mesure : [Route A — art. 53 + 73 / Route B — art. 78-6]
+Conditions vérifiées : [liste factuelle / `[INCOMPLET]`]
+
+III. MESURE
+Lieu de la mesure : [adresse ou « identique au lieu des faits »] — étape 3
+Heure exacte du début : [heure] — étape 6
+Personne concernée : [identité ou « non identifiée » / éléments de
+signalement objectifs] — étape 8
+
+[ROUTE A — ART. 53 + 73]
+Heure de l'appréhension : [heure]
+
+[ROUTE B — ART. 78-6]
+Contravention verbalisée : [nature et texte habilitant]
+Refus ou impossibilité de justifier l'identité : [faits]
+Information de l'OPJ : [date/heure]
+Décision et ordre de l'OPJ : [teneur, date/heure, identité/service]
+
+Description de la contrainte exercée, strictement limitée à ce qui a été
+autorisé par le fondement retenu : [description — étape 7]
+Il est précisé qu'aucune audition formelle, fouille,
+ni mesure assimilable à un acte réservé à l'officier de police judiciaire
+n'a été pratiquée par le rédacteur.
+
+IV. TÉMOINS
+[Identité(s) ou « néant » ; précisions le cas échéant — étape 9]
+
+V. ISSUE DE LA MESURE ET DÉCISION DE L'OFFICIER DE POLICE JUDICIAIRE
+Décision de l'OPJ, si route 78-6 : [contenu et heure / sans objet] — étape 10
+Issue exacte : [conduite ou remise devant l'OPJ / présentation / rétention
+ordonnée / personne laissée libre de partir / issue non encore connue —
+voir section CHAMPS MANQUANTS] — étape 10
+Heure(s) correspondante(s) : [heure(s)] — étape 10
+OPJ destinataire (identité et/ou service) : [nom / qualité / service —
+étape 11]
+Lieu de remise : [commissariat / brigade — étape 11]
+
+VI. COMPTE RENDU ET DESTINATAIRES
+Compte rendu oral immédiat effectué : [oui / non, précisions] — étape 12
+Destinataire(s) du présent rapport écrit : [maire / OPJ territorialement
+compétent / les deux — étape 12]. Si double destinataire : la transmission
+au maire et la transmission à l'OPJ sont deux démarches distinctes
+(`references/penal-procedure.md` §4.2) ; le présent écrit formalise la
+trace du compte rendu oral immédiat déjà effectué, le cas échéant, sur le
+terrain.
+
+Fait à [lieu], le [date].
+[Signature du rédacteur]
+```
+
+---
+
+## 3. Discipline de rédaction (rappel, non négociable)
+
+- **Champs entre `[ ]`** tant qu'ils ne sont pas confirmés par l'utilisateur.
+- **Aucune donnée nominative** générée ou supposée par l'assistant : toute
+  identité doit être fournie explicitement par l'utilisateur ; en son
+  absence, laisser `[INCOMPLET — préciser : identité de …]`.
+- **Objectivité stricte** sur les faits à l'origine de la mesure :
+  description des éléments personnellement constatés, pas de jugement de
+  valeur ni de supposition sur les intentions.
+- **Toute référence de texte** (incrimination, régime de flagrance) porte la
+  réserve « à confirmer en version consolidée » sauf identifiant déjà
+  vérifié dans la session courante (règle de provenance, `SKILL.md` §5.3).
+- **Pas de qualification pénale tranchée** dans ce document : renvoi
+  systématique aux branches compétentes (§0, §1 étape 5).
+- **Chronologie distincte et obligatoire** : début de la mesure, information
+  et décision de l'OPJ pour la route B, puis issue horodatée.
+  Ne jamais fusionner ni approximer ces heures.
+- **Contrainte strictement limitée** : la section III ne décrit que ce qui a
+  été autorisé par la route A ou B et nécessaire à la conduite ou présentation
+  devant l'OPJ. **Aucune
+  trace d'audition, de questions-réponses circonstanciées, de fouille hors
+  cadre de sécurité, ni de toute autre mesure hors pouvoir APJA** ne
+  doit apparaître dans ce rapport — c'est le cœur du **garde-fou APJA**
+  appliqué à cet écrit (`references/ecrits-professionnels.md` §5.4, §8 point
+  7).
+- **L'acte d'enquête reste à l'OPJ** : ce rapport documente la **mesure et la
+  remise**, il
+  ne préjuge ni ne décrit aucune suite procédurale (garde à vue, audition,
+  classement) qui relève de la seule décision de l'OPJ et, le cas échéant, du
+  procureur de la République. Ne jamais anticiper ni suggérer cette suite
+  dans le corps du rapport.
+
+---
+
+## 4. Règle `[INCOMPLET]` — application stricte
+
+**Interdiction absolue d'halluciner une donnée manquante** (date, heure,
+lieu, identité, texte d'incrimination, heure de début de la mesure, décision
+de l'OPJ, issue et heure correspondante, identité/qualité de l'OPJ).
+
+Si une information nécessaire à une étape du §1 n'a pas été fournie, et **en
+particulier** si l'heure exacte de début de la mesure (étape 6), la décision
+de l'OPJ requise pour la route B ou l'heure de l'issue (étape 10) manque :
+
+1. Ne **pas** combler le champ par une supposition, même plausible.
+2. Marquer le champ correspondant dans le gabarit `[INCOMPLET — préciser :
+   <nom du champ>]`.
+3. Poursuivre l'assemblage ave

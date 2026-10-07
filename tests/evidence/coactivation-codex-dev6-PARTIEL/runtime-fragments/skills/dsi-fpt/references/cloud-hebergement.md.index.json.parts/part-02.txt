@@ -1,0 +1,94 @@
+blir le service attendu et les exigences métier ; lever mode
+   d'exercice, données et criticité.
+2. Comparer interne, mutualisé et offre cloud exacte sur accès, maintenance,
+   continuité, dépendances et capacité de contrôle.
+3. Dresser la matrice des responsabilités : collectivité, service mutualisé,
+   fournisseur et intervenants ; identifier les tâches sans responsable.
+4. Vérifier qualification, champs juridiques invoqués et pièces de
+   localisation ; réserver tout régime non confirmé.
+5. Éprouver récupération et réutilisation de données synthétiques,
+   récupération des accès et fonctionnement dégradé dans un cadre autorisé.
+6. Présenter options, risques résiduels, points bloquants et décision attendue ;
+   transmettre les engagements à `references/contrats-prestataires.md`.
+
+Pour une sortie, obtenir la cible et les dépendances, vérifier les engagements
+applicables, contrôler l'essai puis faire valider la bascule par le métier.
+Ne pas supprimer la source avant validation de la récupération **et du
+fonctionnement métier dans la cible**, fermeture du besoin de retour arrière
+et contrôle des preuves à conserver. Demander alors la clôture des accès et
+la preuve de suppression selon les exigences établies par les rôles compétents.
+Le téléchargement d'un export ne déclenche jamais à lui seul la suppression. Les échéances se vérifient dans le
+texte applicable et le contrat ; ne pas inventer un délai de sortie.
+
+## 7. Déclencheurs de vérification
+
+Appliquer `references/socle-sources-verification.md` pour toute obligation
+de localisation, qualification, certification spécialisée, compétence,
+restriction ou règle sur les frais de changement. Vérifier la catégorie de
+l'entité et les destinataires du texte avant « la collectivité doit ».
+
+Vérifier sur l'ANSSI le statut de l'offre exacte ; sur les sources officielles
+des textes, la portée et la date des dispositions cloud invoquées. Sans
+preuve accessible, ne pas qualifier l'offre ni valider un régime spécialisé.
+Les points de fond des données personnelles restent à `dpo-ct`.
+
+## 8. Pièges et confusions fréquentes
+
+- Présenter « cloud au centre » comme une obligation des collectivités.
+- Déduire une obligation SecNumCloud de son référentiel de qualification.
+- Confondre fournisseur qualifié, offre qualifiée et service de la collectivité sécurisé.
+- Assimiler candidature à une qualification obtenue.
+- Confondre stockage localisé et maîtrise de tous les accès.
+- Déduire le droit des données de la nationalité du fournisseur.
+- Traiter une réplication fournie par le cloud comme une sauvegarde indépendante.
+- Croire qu'un fichier exporté démontre la reprise dans une autre application.
+- Affirmer un régime de données de santé absent du socle vérifié.
+- Confondre suppression de certains frais de changement et absence de coût de migration.
+
+## 9. Données et valeurs à vérifier
+
+Consulter `references/references-verifiees.md` pour le champ des dispositions
+cloud, le règlement européen sur les données et les sources ANSSI/DINUM.
+Vérifier version de SecNumCloud, validité et périmètre de qualification,
+dates d'application des frais de changement, textes modificatifs et
+échéances contractuelles. Le régime de données de santé reste non vérifié.
+Le cache de maintenance est hors du paquet runtime ; reprendre la source
+officielle à la date du besoin, sans charger ni copier ce cache.
+
+## 10. Écrits et livrables
+
+- Fiche de choix → `references/templates/fiche-projet-si.md` : même besoin,
+  options, responsabilités, preuves, risques résiduels et décision attendue.
+- Fiche d'offre via `objets/solution-saas.md` : périmètre exact, qualification
+  vérifiée, localisation documentée, dépendances et points restant à lever.
+- Exigences techniques →
+  `references/templates/cahier-des-charges-technique.md` ; leur exécution
+  et la réversibilité contractuelle → `references/contrats-prestataires.md`.
+- Compte rendu d'essai de sortie : jeu synthétique, données attendues,
+  récupération obtenue, réutilisation contrôlée et écarts attribués.
+
+Vérifier avant de qualifier un élément de contenu obligatoire. Ne pas
+produire de conclusion de conformité générale ou de document de frontière.
+
+## 11. Double échelle [risque / confiance]
+
+Appliquer `SKILL.md` §5.1. Comparaison technique exploratoire :
+**[moyen / stable]** sur la méthode si les hypothèses sont explicites.
+Service essentiel, accès privilégiés ou sortie difficile : risque **élevé**,
+confiance **à vérifier** sans pièces ni essais. Données particulières et
+régime non vérifié : abstention sur l'obligation ; ne pas valider le choix
+si ce point est bloquant. Une qualification revendiquée reste **à vérifier**
+tant que l'offre exacte n'est pas confirmée officiellement.
+
+## 12. Checklist de branche
+
+- [ ] Garde-fous `SKILL.md` §5.2 et §5.3 testés et affichés avant le contenu si déclenchés.
+- [ ] Mode d'exercice, service, données et responsabilité de la collectivité levés.
+- [ ] Frontières `dpo-ct`, contrats, budget et passation tenues sans développement.
+- [ ] État / collectivité et obligation / doctrine distingués explicitement.
+- [ ] Offre exacte et qualification contrôlées ; aucune conclusion sur une étiquette.
+- [ ] Localisation et accès documentés ; régime spécialisé non vérifié réservé.
+- [ ] Responsabilités, dépendances, sauvegarde et reprise identifiées par renvoi.
+- [ ] Réversibilité démontrable ; règle sur les frais vérifiée sans valeur de mémoire.
+- [ ] Aucun secret, donnée nominative ou détail d'architecture identifiable.
+- [ ] Options, point bloquant, preuve et livrable nommés avec leurs chemins.

@@ -1,0 +1,146 @@
+ ; documenter tout écart
+  dans l'acte de délégation ou la délibération.
+
+### 5.4 Consultation bancaire et comparaison des offres
+
+- Fixer, avant l'envoi des demandes de prix, un **cahier des charges
+  homogène** : montant, durée, profil d'amortissement (linéaire,
+  progressif, in fine), type de taux attendu, périodicité des échéances.
+- Comparer les offres sur une base **strictement comparable** : le **taux
+  effectif global** (TEG, qui intègre l'ensemble des frais et commissions
+  obligatoires, pas le seul taux nominal), les **commissions**
+  (engagement, non-utilisation, gestion) et leur mode de calcul, les
+  **frais annexes** (garantie, dossier), les **clauses de remboursement
+  anticipé** et leur coût potentiel (§5.5).
+- Ne jamais comparer sur le seul taux nominal : deux offres identiques sur
+  ce point peuvent avoir un coût global très différent une fois frais et
+  commissions intégrés.
+- Documenter la consultation (établissements sollicités, critères et motif
+  du choix) pour la traçabilité, utile en contrôle interne ou en cas de
+  question de l'assemblée.
+
+### 5.5 Gestion active de la dette
+
+- **Renégociation** : modification des conditions d'un emprunt existant
+  avec le même prêteur (taux, durée, profil), sans changement de
+  contrepartie.
+- **Refinancement** : souscription d'un nouvel emprunt, éventuellement
+  auprès d'un autre prêteur, servant à rembourser un ou plusieurs emprunts
+  existants.
+- **Remboursement anticipé** : remboursement total ou partiel d'un capital
+  restant dû avant l'échéance contractuelle.
+- Ces opérations peuvent donner lieu à une **indemnité compensatrice** due
+  au prêteur, dont le principe de calcul (méthode actuarielle usuelle :
+  différentiel entre le taux du contrat et un taux de marché de référence,
+  appliqué au capital restant dû sur la durée résiduelle) doit être
+  **vérifié dans le contrat lui-même**, jamais supposé.
+- Comparer systématiquement le **coût total de l'opération** (indemnité +
+  frais de la nouvelle opération) au **gain actualisé attendu** (économie
+  d'intérêts sur la durée résiduelle) avant toute décision : un coût
+  supérieur au gain n'est rationnel que si un objectif autre que financier
+  est explicitement assumé (sécurisation du profil de risque, par ex.).
+- Compétence : même régime que pour emprunter (§5.1) — assemblée ou
+  exécutif par délégation expressément encadrée.
+
+### 5.6 Instruments de couverture
+
+- Un instrument de **couverture de taux** (échange de taux, plafonnement)
+  a pour objet de modifier l'exposition au risque de taux d'un encours
+  existant, sans changer le capital emprunté lui-même.
+- Distinguer la couverture **adossée** à un emprunt identifié (qui en
+  modifie le profil de risque) de tout produit qui s'apparenterait à une
+  opération spéculative autonome, exclue pour une collectivité.
+- L'encadrement de ces instruments suit la même logique de classification
+  que les produits d'emprunt eux-mêmes (§5.3, charte Gissler) et la même
+  exigence de compétence (§5.1).
+- Ne jamais recommander un instrument de couverture sans en avoir fait
+  vérifier la qualification exacte au regard des textes applicables aux
+  contrats financiers des collectivités : point à vérification obligatoire
+  (§7).
+
+### 5.7 Ligne de trésorerie
+
+- La **ligne de trésorerie** est une ouverture de crédit à court terme
+  destinée à couvrir des besoins **temporaires**, jamais un besoin de
+  financement durable.
+- Elle se distingue de l'**emprunt** sur trois points : sa **finalité**
+  (décalage temporaire, non un investissement durable), son
+  **imputation** (opération de trésorerie retracée en comptabilité de
+  tiers, détail renvoyé à `references/nomenclature-m57.md`) et sa
+  **réversibilité** (tirages et remboursements multiples dans la limite
+  d'un plafond, sans nouvel acte à chaque mouvement).
+- La ligne est ouverte dans la limite d'un **plafond** fixé par la
+  décision qui l'autorise (délibération ou exécutif par délégation), non
+  dépassable sans nouvelle décision.
+- **Mobilisation** : tirages et remboursements dans la limite du plafond,
+  selon les modalités du contrat (préavis, montant minimal). Documenter
+  chaque mouvement pour la traçabilité et le suivi du plan de trésorerie
+  (§5.8).
+- Une ligne utilisée pour financer un **besoin structurel** (déficit
+  récurrent de fonctionnement) est un signal d'alerte : elle masque un
+  déséquilibre et peut relever du garde-fou budgétaire (`SKILL.md` §5.3).
+
+### 5.8 Gestion de la trésorerie au quotidien
+
+- Principe de l'**obligation de dépôt des fonds** des collectivités
+  auprès du Trésor (unité de caisse de l'État) : la collectivité ne place
+  pas librement ses excédents sur le marché bancaire ordinaire, sauf
+  **dérogation** prévue par un texte. Le périmètre exact de ces
+  dérogations est **à vérifier avant toute conclusion**, jamais énoncé de
+  mémoire.
+- Le **plan de trésorerie** projette, sur un horizon court (infra-annuel),
+  les encaissements et décaissements attendus, pour anticiper les besoins
+  de tirage et éviter tout décalage non couvert.
+- **Méthode de construction** :
+  1. Recenser les flux **certains et datés** (échéances de dette,
+     dotations connues, paie, gros marchés).
+  2. Estimer les flux **probables** (recouvrement fiscal, calendrier de
+     mandatement).
+  3. Positionner chaque flux sur l'échéancier (semaine ou décade).
+  4. Identifier les **points bas** prévisionnels et déterminer le tirage
+     nécessaire, dans la limite du plafond ouvert.
+  5. Réviser le plan à échéance régulière au vu des réalisations.
+- **Tirages et remboursements** : documenter chaque tirage (motif, montant,
+  échéance de remboursement) et rapprocher régulièrement l'encours mobilisé
+  du plan actualisé.
+- Une gestion de trésorerie qui recourt à un encaissement ou un
+  décaissement hors du circuit du comptable public pour gagner du temps
+  déclenche immédiatement le garde-fou ordonnateur/comptable
+  (`SKILL.md` §5.2).
+
+### 5.9 Garanties d'emprunt accordées à des tiers
+
+- La collectivité peut, sous conditions, **garantir** l'emprunt souscrit
+  par un tiers (bailleur social, organisme, association selon les cas), en
+  s'engageant à se substituer à lui en cas de défaillance.
+- **Compétence** : délibération de l'**assemblée délibérante**. Elle ne se
+  délègue pas dans les mêmes conditions qu'une opération de dette propre :
+  vérifier le régime exact et l'éventuelle interdiction de délégation.
+- **Ratios prudentiels** : l'octroi est encadré par des règles de
+  plafonnement du **risque hors bilan** cumulé, exprimées usuellement par
+  un ratio `encours garanti (ou annuité garantie) / recettes réelles de
+  fonctionnement` et par une règle de **division du risque** entre
+  bénéficiaires (aucune contrepartie ne doit en concentrer une part
+  excessive). **Ne jamais citer le seuil chiffré de mémoire** : poser la
+  formule et renvoyer à la vérification de la valeur en vigueur.
+- **Risque** : engagement **hors bilan** qui ne pèse sur le budget qu'en
+  cas d'appel, mais à suivre comme un risque financier à part entière et à
+  faire figurer dans l'état récapitulatif (§10) et la lecture prospective
+  (`references/prospective-analyse.md`).
+- Avant tout octroi, vérifier la **capacité de remboursement** du
+  bénéficiaire, sans se substituer à l'analyse de solvabilité du prêteur.
+
+---
+
+## 6. Calculs et procédures
+
+1. **TEG** — actualisation de l'ensemble des flux du prêt (capital versé,
+   échéances, commissions et frais obligatoires) au taux qui les égalise ;
+   ne jamais comparer sur le seul taux nominal (§5.4).
+2. **Coût d'une gestion active** — `coût total = indemnité de
+   remboursement anticipé + frais de la nouvelle opération` à comparer au
+   `gain = économie d'intérêts actualisée sur la durée résiduelle`.
+3. **Plan de trésorerie** — méthode en cinq étapes (§5.8) ; toute donnée
+   manquante se signale, ne se comble jamais par estimation silencieuse.
+4. **Ratio prudentiel de garantie** — `encours garanti (ou annuité
+   garantie) / recettes réelles de fonctionnement`, plu

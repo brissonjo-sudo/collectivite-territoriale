@@ -1,0 +1,147 @@
+# Branche — Agents contractuels
+
+> Structure conforme à `_gabarit-branche.md`. Valeurs chiffrées : régime du
+> socle §6 — indexations (point, cotisations) jamais de mémoire ; plafonds
+> réglementaires citables si datés et « à confirmer en version consolidée ».
+
+## 1. Périmètre
+
+Régime propre de l'agent contractuel de droit public de la FPT : recrutement,
+CDIsation, rémunération, discipline, fin de contrat, licenciement. Constat
+d'audit : 20-25 % des effectifs d'une grande collectivité, part
+disproportionnée des contentieux, sujet sous-traité au profit du régime du
+fonctionnaire. Cette branche comble ce vide.
+
+## 2. Questions couvertes
+
+Forme du contrat et mentions obligatoires, période d'essai, CDIsation (règle
+des 6 ans), portabilité du CDI, réévaluation triennale, non-renouvellement,
+délai de prévenance, indemnité de fin de contrat, démission, licenciement
+(motifs, procédure, reclassement, indemnité), discipline propre (décret
+88-145), CCP, entretien professionnel, requalification de CDD successifs,
+frontière droit public / droit privé.
+
+## 3. Arbre de traitement
+
+`question → variables à lever (§4) → décision → vérification (§7) → livrable (§10)`
+
+Le contractuel n'est **pas un sous-régime dégradé** du fonctionnaire : régime
+**autonome**, texte d'application propre (décret 88-145), échelle
+disciplinaire propre. Ne jamais plaquer un raisonnement « titulaire » sans
+vérifier la règle propre.
+
+## 4. Variables à lever
+
+- **Nature et fondement du contrat** (CDD/CDI, article de recours) → renvoi
+  `recrutement-formation.md` §5.2.
+- **Ancienneté de services publics** sur fonctions de même catégorie
+  hiérarchique : conditionne CDIsation et réévaluation triennale ;
+  interruptions et changements de fonctions à examiner (§5.3).
+- **Durée du contrat en cours** (≤ 1 an / > 1 an / CDI) : conditionne
+  entretien professionnel et indemnité de fin de contrat.
+- **Motif de rupture envisagé** : non-renouvellement (pas de motivation de
+  principe) vs licenciement (motivation et procédure renforcées).
+- **Employeur d'origine** en cas de mobilité (portabilité du CDI, §5.3).
+- **Affiliation au CDG** : conditionne l'organisation de la CCP.
+
+## 5. Règles métier
+
+### 5.1 Texte pivot
+
+**Décret n° 88-145 du 15 février 1988**, relatif aux agents contractuels de
+la FPT — **n'est plus le texte unique** : sa recodification progressive dans
+la partie réglementaire du CGFP est en cours depuis 2024, par vagues. Le
+volet **recrutement** (contrat écrit, mentions obligatoires, période
+d'essai) est passé au **Livre III réglementaire du CGFP** (décret
+n° 2025-695 du 24 juillet 2025, en vigueur depuis le 1er octobre 2025) —
+voir §5.2. **Rémunération, réévaluation, fin de contrat, licenciement et
+discipline** (§5.3 à 5.7) demeurent, à ce jour, dans le décret 88-145
+stricto sensu, mais un **Livre V** du CGFP réglementaire est annoncé et
+pourrait les déplacer à son tour — **vérifier à chaque usage** si la
+disposition concernée a été recodifiée. Il détaille forme du
+contrat, période d'essai, rémunération et réévaluation, discipline, fin de
+contrat, indemnité de licenciement — s'y reporter systématiquement, comme au
+décret statutaire d'un cadre d'emplois pour un titulaire.
+
+Fondements légaux du recours : **CGFP, art. L. 332-8 et s.**, cas élargis par
+la loi n° 2019-828. Détail des cas de recours → `recrutement-formation.md`
+§5.2 (ne pas dupliquer ici).
+
+### 5.2 Recrutement — spécificités contractuelles
+
+**Contrat écrit obligatoire** (**CGFP, Livre III réglementaire**, art. R33x
+— ex-décret 88-145, recodifié depuis le 1er octobre 2025, décret
+n° 2025-695) : un arrêté seul ou un engagement verbal est irrégulier.
+**Mentions obligatoires** (**liste précise et numérotation exacte des
+articles à vérifier en version consolidée**) : a minima article de
+fondement du
+recours, définition du poste, catégorie hiérarchique, durée, rémunération,
+lieu — l'absence de l'article de fondement est un vice fréquent en
+contentieux. **Période d'essai** possible, durée modulée selon la durée du
+contrat — **aucune durée chiffrée sans vérification**. Modification
+substantielle (temps de travail, fonctions, lieu) → **avenant écrit** ; un
+refus de l'agent peut fonder un licenciement (§5.6).
+
+### 5.3 CDIsation et portabilité (point de vigilance majeur)
+
+**Règle des 6 ans** : un agent en CDD ayant accompli au moins **6 ans de
+services publics effectifs** sur des fonctions de **même catégorie
+hiérarchique**, chez le **même employeur**, doit se voir proposer un **CDI**
+au renouvellement. Base CGFP (codifiant l'ex-art. 21 de la loi 84-53) —
+**article exact et conditions précises (computation, régime après 55 ans,
+temps complet/incomplet) à vérifier avant toute réponse ferme**.
+**Portabilité du CDI** : un agent déjà en CDI peut, sous conditions, se voir
+proposer un CDI par un **nouvel employeur public** (y compris autre versant),
+sans repasser par un CDD — **faculté du nouvel employeur**, pas un droit
+automatique ; conditions d'éligibilité **à vérifier**. **Pièges** : une
+**interruption de service** au-delà d'un seuil **à vérifier** peut remettre
+le compteur à zéro ; un changement de **catégorie ou de filière** peut
+rompre la continuité même à fonctions proches ; CDIsation **≠**
+titularisation, elle ne confère jamais la qualité de fonctionnaire.
+
+### 5.4 Rémunération
+
+- Fixée par référence aux **grilles indiciaires** (pas d'indice propre :
+  l'employeur positionne la rémunération par rapport à un cadre d'emplois de
+  référence).
+- **Réévaluation obligatoire au moins tous les 3 ans**, pour les CDI et, sous
+  conditions, les **CDD > 3 ans** (décret 88-145, renforcé après 2019) —
+  **champ exact d'application, notamment traitement des CDD successifs, à
+  vérifier**. Obligatoire dans son **principe** ; le **montant** de la
+  revalorisation reste à la main de l'employeur.
+- **Pas d'avancement automatique** : aucune mécanique d'échelon de plein
+  droit ; toute évolution procède d'une décision expresse (réévaluation
+  triennale, revalorisation volontaire, changement de fonctions).
+- Régime indemnitaire : RIFSEEP possible par équivalence si la délibération
+  vise explicitement les contractuels (cf. `carriere-paie.md` §5.7).
+
+### 5.5 Fin de contrat (hors licenciement)
+
+**Non-renouvellement** : **pas un licenciement**, en principe **pas de
+motivation exigée** — sauf retrait d'un avantage, motif disciplinaire déguisé,
+ou **entretien préalable** requis par le texte au-delà d'une certaine
+ancienneté (**à vérifier**). **Délai de prévenance**, modulé selon
+l'ancienneté de services continus, ordres de grandeur usuels **à vérifier
+avant toute réponse ferme** : de l'ordre de **8 jours** pour les services
+courts, puis paliers croissants de l'ordre de **1 mois / 2 mois / 3 mois**.
+Ne jamais notifier sans confirmer le palier en version consolidée.
+**Indemnité de fin de contrat** (« prime de précarité ») : vise certains
+**CDD ≤ 1 an**, exclusions (poursuite en CDI, refus de CDI équivalent,
+saisonniers… — **liste à vérifier**), **taux plafonné** de la rémunération
+brute globale (ordre de 10 %, versement soumis à un **plafond de
+rémunération** de l'ordre de 2 fois le SMIC — **taux et plafond à vérifier
+en version consolidée**) avant tout calcul. **Démission** : préavis modulé selon l'ancienneté (**durées à
+vérifier**) ; l'employeur en prend acte, sans pouvoir discrétionnaire
+d'acceptation (à la différence du titulaire).
+
+### 5.6 Licenciement d'un contractuel
+
+**Motifs** : insuffisance professionnelle, faute (licenciement disciplinaire
+→ §5.7), inaptitude (avis du conseil médical, cf. `qvt-sante.md`),
+suppression d'emploi, refus d'une modification substantielle du contrat.
+**Procédure** (hors motif disciplinaire) : (1) **entretien préalable** ;
+(2) **consultation de la CCP** pour le licenciement intervenant après la
+période d'essai, sous les exceptions prévues par le CGFP réglementaire
+(article R272-19, version applicable à vérifier) ; (3) examen du
+**reclassement uniquement lorsque le motif et le texte l'imposent** ;
+(4) **notification motivée** + v

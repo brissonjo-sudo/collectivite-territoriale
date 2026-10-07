@@ -1,0 +1,77 @@
+rent, vente
+  litigieuse) → `../references/templates/rapport-information.md`.
+- **Arrêté de fermeture administrative** (maire ou préfet) — acte faisant
+  grief : motivation en fait et en droit + voies de recours + contrôle de
+  légalité obligatoires → `../references/controle-legalite.md` puis
+  `../references/templates/arrete-modele.md`.
+- **Note au maire** (conflit de compétence maire/préfet, carence exposant à
+  une substitution, situation à fort enjeu nécessitant un arbitrage rapide) →
+  `../references/templates/note-maire-modele.md`.
+- **Rapport de mise à disposition** — seulement si une route 53/73 ou 78-6
+  est établie ; le seul basculement vers un acte réservé à l'OPJ ne suffit
+  pas → `../references/templates/rapport-mise-a-disposition.md` (→ §6).
+
+---
+
+## 5. Jurisprudence clé (pointeur)
+
+> Le fond jurisprudentiel n'est pas reproduit ici — renvoi à
+> `recherche-juridique` pour toute recherche, vérification de vigueur et
+> citation traçable.
+
+Thèmes jurisprudentiels sensibles à signaler et à faire approfondir par
+`recherche-juridique` avant usage en acte contentieux :
+- **Proportionnalité** de la durée et du motif de fermeture au regard des
+  faits (principe général de proportionnalité des mesures de police —
+  `CE, Sect., 19 mai 1933, Benjamin`, req. n° 17413 et 17520, Lebon p. 541,
+  `CETATEXT000007636694`, **vérifié le 2026-09-06**, socle
+  `../references/references-verifiees.md` §7 : citer avec cette provenance).
+- **Motivation insuffisante** d'un arrêté de fermeture (faits non assez
+  circonstanciés, texte de fondement imprécis) comme cause classique
+  d'annulation contentieuse.
+- **Articulation police générale / police spéciale** appliquée à un débit de
+  boissons : conditions strictes de recours à la police générale du maire en
+  présence d'une police spéciale déjà couvrante (carence avérée, péril grave).
+- **Cumul fermeture administrative / poursuite pénale** : absence de violation
+  du principe non bis in idem entre voie administrative et voie pénale — point
+  de principe à vérifier et sourcer avant toute communication écrite à un
+  exploitant ou un avocat.
+
+---
+
+## 6. Check-list opérationnelle
+
+1. **Domaine sectoriel exact identifié** : débit de boissons stricto sensu, ou
+   cumul avec bruit/salubrité/occupation du domaine public (terrasse) — ne pas
+   s'arrêter au premier texte trouvé (→ `../references/reglementation-appliquee.md`).
+2. **Autorité compétente déterminée** : maire ou préfet, sur quel motif précis
+   — pas de fermeture engagée sans avoir tranché ce point et sans avoir
+   documenté le choix.
+3. **Police générale vs police spéciale** : vérifié que la mesure envisagée ne
+   relève pas exclusivement de la police spéciale du CSP avant d'invoquer la
+   police générale du maire.
+4. **Régime de police de la commune** vérifié si la tranquillité publique est
+   en cause (commune à police étatisée → orientation vers le commissariat
+   plutôt qu'un arrêté municipal sur ce champ, → `../references/pouvoirs-police.md` §4.4).
+5. **Motivation en fait et en droit** préparée pour tout projet de fermeture,
+   avec **voies et délais de recours** et **transmission au contrôle de
+   légalité** vérifiée (→ `../references/controle-legalite.md`).
+6. **Cumul administratif/pénal** repéré et signalé explicitement si des
+   infractions concomitantes sont constatées (vente à mineur, ivresse
+   publique, tapage).
+7. **Délais et durées** (durée de fermeture, délai de transmission au préfet,
+   délai de recours) marqués « à confirmer en version consolidée » — jamais
+   donnés de mémoire dans un écrit ou à l'exploitant.
+8. **Garde-fou APJA** : si le contrôle dérive vers un acte réservé à l'OPJ
+   (vérification approfondie d'imprégnation, audition formelle d'un suspect,
+   interpellation prolongée, perquisition), afficher en premier le **STOP**
+   (`SKILL.md` §5.2), rendre compte à l'OPJ, puis qualifier séparément le
+   fondement d'une éventuelle contrainte : art. 53 + 73, art. 78-6, ou aucun.
+   Se limiter à l'action APJA conforme et renvoyer à
+   `../references/penal-procedure.md`.
+9. **Écrit produit** correspondant à la situation (§4), ou brouillon
+   `[INCOMPLET]` si une donnée manquante empêche de le finaliser — ne jamais
+   halluciner une donnée absente (identité, horaire, texte de fondement).
+10. **Information du maire** assurée en parallèle de toute mesure préfectorale
+    et inversement, pour la coordination locale et la traçabilité de la
+    décision.

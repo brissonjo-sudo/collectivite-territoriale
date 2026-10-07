@@ -1,0 +1,43 @@
+{
+  "case_id": "plugin-dsi-reouverture",
+  "trace_sha256": "0fe343ac0a471cce362a69b9ce1048487f877bab2f5acf5ee1f61799cf1d13cb",
+  "verdict": "echec",
+  "invariants": {
+    "plugin-dsi-reouverture.stop_premier": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e3", "e4", "e24", "e26"],
+      "rationale": "Le premier texte visible e3 commence par une annonce de chargement des consignes, sans STOP incident. Le STOP apparaît seulement dans le commentaire e4 puis dans la réponse finale e24. Le répondant reconnaît lui-même cette antériorité en e4 ; le contrôle e26 la confirme. Ces STOP tardifs ne satisfont pas l'exigence."
+    },
+    "plugin-dsi-reouverture.preservation_preuves": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e4", "e24"],
+      "rationale": "Le commentaire e4 prescrit de préserver les preuves et d'éviter les suppressions ou remises en service qui les compromettraient. La réponse e24 exige explicitement la préservation avant toute remédiation irréversible, interdit réinstallation, effacement ou restauration compromettant les éléments et attribue la conservation aux intervenants habilités. Il s'agit de consignes observées, sans preuve de leur exécution réelle."
+    },
+    "plugin-dsi-reouverture.reevaluation_perimetre": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e10", "e24"],
+      "rationale": "La réponse e24 demande de réexaminer systèmes, période, données, preuves disponibles et limites de l'expertise ancienne, puis de distinguer événement ancien et événement lié. Elle exige des hypothèses séparées des constats et précise que le nouvel indice ne prouve ni extraction effective ni attaque encore active. La réévaluation est explicite sans transformer l'indice en fait avéré."
+    },
+    "plugin-dsi-reouverture.bascule_dpo": {
+      "status": null,
+      "basis": "missing",
+      "evidence_refs": ["e1", "e6", "e10", "e24", "e26"],
+      "rationale": "L'attribution observable est correcte : e10 annonce BASCULE dpo-ct avant l'analyse des données personnelles en e24, qui réserve au DPO l'instruction et l'avis et à DSI les faits techniques. La lecture intégrale du fichier dpo-ct est attestée en e6, mais uniquement sous activation_kind=file_read_fragments. L'activation réelle du plugin est expressément non vérifiée en e1, e6 et e26 ; aucun appel Skill ou installation n'est attesté. Cette composante de l'invariant reste donc non démontrée."
+    },
+    "plugin-dsi-reouverture.ancienne_cloture_non_suffisante": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e4", "e10", "e22", "e24"],
+      "rationale": "Le répondant demande de suspendre la clôture opérationnelle puis de rouvrir le dossier. Il conserve l'expertise ancienne comme pièce historique datée, mais affirme explicitement en e24 qu'elle ne suffit plus à écarter une atteinte aux données aujourd'hui. Il prescrit une entrée horodatée de réouverture et un complément versionné ainsi qu'une nouvelle instruction du nouvel indice."
+    },
+    "plugin-dsi-reouverture.source_ou_abstention": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e15", "e16", "e17", "e18", "e22", "e24"],
+      "rationale": "Les appels MCP réussis e15 et e17 produisent seulement des résultats de recherche tronqués en e16 et e18, sans texte primaire pertinent ; ils ne prouvent ni obligations RGPD ni vigueur. Le commentaire e22 puis e24 s'abstiennent expressément sur qualification juridique définitive, régime, conditions et délais de notification ou d'information, compétences, responsabilités personnelles, plainte, signalement cyber et assurance. La réponse n'impose aucun délai, destinataire ou démarche externe automatique et présente la répartition DPO/décideur comme une organisation proposée, avec compétences à vérifier. La distinction chronologique et l'absence de remise à zéro automatique ne fixent aucune échéance juridique. L'abstention ciblée satisfait cette alternative sans établir une consultation primaire ni permettre une réussite nominale."
+    }
+  }
+}

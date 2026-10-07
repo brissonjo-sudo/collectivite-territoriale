@@ -1,0 +1,92 @@
+position de commandement, liaison préfecture / forces de l'État, protocole d'escalade.
+   - Procédure dégradée : évacuation, confinement, repli des agents (proportionné au risque identifié).
+4. **Articulation avec forces de l'État** (si rassemblement revendicatif ou contexte sensible) :
+   - Réunion de coordination préfectorale associant DPM, commissaire/commandant de gendarmerie, SDIS, services municipaux.
+   - Fixation des chaînes de commandement (maire ou préfet pilote, délégation de fonction si crise).
+   - Cas des communes à police étatisée : clarification du rôle de la PM (support coordination, pas maintien d'ordre sur l'événement).
+5. **Autorisations administratives sous-jacentes** (vérification concomitante) :
+   - Occupation du domaine public : autorisation accordée par DGS/services domaine public.
+   - Débits de boissons temporaires : demande déposée auprès de la mairie avec respect délai instruction (renvoi reglementation-appliquee.md).
+   - ERP (établissement recevant du public) : vérification accès pompiers, évacuation si nécessaire.
+
+**Délai**
+- T-20 à T-5 jours : fenêtre d'instruction confortable pour tous les partenaires.
+- En cas d'urgence (événement annoncé tardivement), adapter la fenêtre ; signaler tout délai insuffisant au maire/préfet (risque de qualité dégradée du dispositif).
+
+### Phase 3 — Arrêté municipal (T-5 à T-1 jour avant)
+
+1. **Arrêté du maire** édictant les mesures de police générales applicables à l'événement (circulation, stationnement interdit, horaires, zones réservées).
+   - Signature : maire seul (pouvoir propre, non délégable).
+   - Motivation : en fait (spécificités de l'événement, risques) et en droit (CGCT L. 2212-2 au socle ; pour la circulation et le stationnement, articles L. 2213-1 et s. — à confirmer en version consolidée ; L. 2212-3 ne concerne que les communes riveraines de la mer).
+   - Publication : affichage mairie et lieux pertinents, mention dans presse locale le cas échéant.
+   - **Transmission contrôle de légalité** : si acte soumis à obligation (CGCT à confirmer en version consolidée) → via `controle-legalite.md` avant envoi.
+   - Copie au DPM pour exécution opérationnelle.
+
+2. **Ordre d'opération PM** (document interne du DPM) :
+   - Fiche de dispositif synthétisant : effectifs engagés, secteurs de présence, missions (filtrage, circulation, dissuasion, protection).
+   - Responsabilité chaîne de commandement terrain (OPJ/responsable d'équipe, si présence OPJ de la PN/gendarmes, clarifier le lien de commandement sur l'événement).
+   - Points de regroupement, fréquence de liaison (radio, face-à-face) avec forces de l'État.
+   - Procédure d'alerte interne et escalade (vers maire, préfet, SDIS).
+   - Cas rassemblement revendicatif : instructions spéciales de constatation d'infractions (garder le rôle APJA, ne pas prolonger au-delà du cadre légal).
+
+3. **Consignes spéciales sécurité** (si contexte sensible ou menace spécifique) :
+   - Arrêté ou instruction préfectorale de substitution du maire (si communes limitrophes affectées ou police étatisée) → transmis au DPM pour application immédiate.
+
+**Délai**
+- T-5 à T-1 jour : publication et connaissance des mesures par le public et les services.
+- Arrêté en vigueur : le jour J ou à la date indiquée explicitement.
+
+### Phase 4 — Exécution et gestion opérationnelle (jour J et jours adjacents)
+
+1. **Positionnement du dispositif** : respect des horaires, couverture des zones, écoute radio permanente.
+2. **Constatation d'infractions** :
+   - Pouvoirs APJA appliqués dans les limites légales (art. 21 et 21-2 CPP — à confirmer en version consolidée).
+   - Infractions à l'arrêté : verbalisation si conditions.
+   - Infractions à loi pénale : signalement OPJ (Police Nationale / Gendarmerie) sans intervention unilaterale APJA.
+   - **Garde-fou APJA** : aucune extension des pouvoirs APJA en contexte manifestation.
+3. **Compte rendu continu** : remontée d'information au DPM de terrain / état-major de crise, puis auprès du maire et de la préfecture si incident.
+4. **Escalade dégradée** : activation procédure déclenchée (alerte, évacuation, confinement) si besoin.
+
+**Délai**
+- Durée : horaires définis dans l'arrêté et l'ordre d'opération (typiquement 8h à 22h ou adapté).
+- Fin du dispositif : désengagement progressif après l'événement, pas de retrait brutal.
+
+### Phase 5 — Clôture et retour d'expérience (T+3 à T+15 jours)
+
+1. **Rapport d'événement** (DPM) :
+   - Effectifs engagés, nombre de patrouilles, durée totale.
+   - Incidents rencontrés et réaction du dispositif.
+   - Infractions constatées, poursuites envisagées ou non.
+   - Retours partenaires (forces de l'État, SDIS, mairie).
+   - Points positifs et pistes d'amélioration.
+2. **Transmission mairie** et, si rassemblement revendicatif avec tensions, **information préfecture**.
+3. **Retex formel** (si événement majeur à enjeu) → via `retex.md` : synthèse apprentissages, révision doctrine si besoin.
+
+**Délai**
+- Rapport dans les 5 jours après l'événement.
+- Retex : réunion dans les 10 à 15 jours si nécessaire.
+
+---
+
+## 4. Écrits associés
+
+| Écrit | Pointeur assets | Contenu clé | Responsabilité |
+|-------|--------|---------|-----------------|
+| **Arrêté de police** | [../references/templates/arrete-modele.md](../references/templates/arrete-modele.md) | Mesures de circulation, fermeture de voies, horaires, zones, interdictions temporaires. Motivation en fait/droit. Transmission contrôle de légalité. | Maire (signature) ; DPM (draft) |
+| **Note au maire** | [../references/templates/note-maire-modele.md](../references/templates/note-maire-modele.md) | Enjeu sécurité de l'événement, recommandations sur mesures d'ordre public, conflit de compétence détecté (si s'applique). | DPM |
+| **Ordre d'opération PM** | Interne DPM | Fiche de dispositif : effectifs, secteurs, missions, chaînes de commandement, procédure d'escalade. | DPM / responsable opérationnel |
+| **Constatations / PV** | [../references/templates/pv-contravention.md](../references/templates/pv-contravention.md) | Infractions constatées à l'arrêté municipal ou à lois/règlements pertinents (circulation, ordre public). Lien avec OPJ si infraction pénale parallèle. | Agent PM (constatation) |
+| **Rapport d'information / événement** | [../references/templates/rapport-information.md](../references/templates/rapport-information.md) | Bilan sécurité de l'événement, incidents, réaction du dispositif. | DPM |
+
+Pas de générateur particulier pour « fiche de qualification événement » ni « ordre de coordination préfectorale » : ces documents sont produits par la mairie (qualification) et la préfecture (coordination). Le DPM fournit l'avis technique à l'appui.
+
+---
+
+## 5. Jurisprudence clé
+
+| Thème | Pointeur recherche-juridique | Enjeu |
+|-------|--------|---------|
+| **Régime des rassemblements revendicatifs** (déclaration, autorisation, interdiction) | [Consulter recherche-juridique via balise [sourcé]] | Distinction régime préfectoral (spécifique aux manifestations) vs police générale du maire. Délai de réaction, conditions légales d'interdiction. |
+| **Proportionnalité des mesures de police** (CE, Sect., 19 mai 1933, *Benjamin*) | **Au socle vérifié** : req. n° 17413 et 17520, Lebon p. 541, `CETATEXT000007636694`, vérifié le 2026-09-06 (`../references/references-verifiees.md` §7) — citer avec cette provenance. Déclinaisons récentes : [recherche-juridique via balise [lookup]] | Tout arrêté de police doit être motivé, nécessaire et proportionné. Principe stable, mais jurisprudence en évolution sur liberté d'expression / de manifestation. |
+| **Cumul police administrative / police judiciaire en contexte manifestation** | [Consulter recherche-juridique via balise [lookup]] | Une mesure de police administrative (interdiction, fermeture) n'empêche pas poursuite pénale parallèle ; distinction impérative entre la finalité préventive (maire) et la finalité répressive (OPJ). |
+| **Responsabilité commune en cas de carence dispositif événementiel** | [Consulter recherche-juridiq

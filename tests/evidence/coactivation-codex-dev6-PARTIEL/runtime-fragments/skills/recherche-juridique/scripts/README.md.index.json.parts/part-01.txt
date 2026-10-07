@@ -1,0 +1,179 @@
+# `scripts/` — outillage de récupération en source primaire
+
+Ce dossier matérialise le **Palier 3** du skill `recherche-juridique` :
+remplacer le scraping fragile de Légifrance par un accès **aux API
+officielles**, de sorte que P1 (primarité) et la **règle de provenance**
+(v2.3.0) soient satisfaits par un appel d'outil déterministe plutôt que par
+la mémoire du modèle.
+
+Deux API, souscrites sur la même plateforme PISTE, se partagent la matière :
+
+| API | Couvre | Commandes |
+|-----|--------|-----------|
+| **Légifrance** (DILA) | codes, lois, décrets, arrêtés, JORF | `article`, `search` |
+| **Légifrance** (fonds `CETAT` / `CONSTIT`) | Conseil d'État, Conseil constitutionnel | `ceta`, `constit` |
+| **Judilibre** (Cour de cassation) | Cass., cours d'appel, tribunaux judiciaires et de commerce | `juri`, `decision`, `taxonomy` |
+
+**Judilibre ne couvre ni le Conseil d'État ni le Conseil constitutionnel** :
+ces deux juridictions passent par les fonds Légifrance. Confondre les deux
+périmètres, c'est retirer au skill toute voie outillée vers la jurisprudence
+administrative et constitutionnelle.
+
+> **Modèle « apporte ta clé » (BYOK).** Le skill est distribué publiquement :
+> il n'embarque **aucune** clé. Chaque utilisateur configure **sa propre**
+> clé PISTE (gratuite). Une clé partagée dans un paquet public ne serait plus
+> un secret — voir la note de sécurité en bas de page.
+
+> **La clé est optionnelle.** Sans identifiants PISTE, le skill reste
+> pleinement opérationnel : il bascule sur la **voie de repli web**
+> (`web_search` / `web_fetch` sur domaines officiels,
+> [`references/gabarits-requetes.md`](../references/gabarits-requetes.md)),
+> et la **règle de provenance s'y applique à l'identique**. La clé apporte le
+> déterminisme et les métadonnées officielles, jamais un droit de citer plus
+> librement. Ordre des voies : SKILL.md, étape 2, *échelle de récupération*.
+
+---
+
+## Démarrage en 2 minutes
+
+```bash
+# 1. Obtenir une clé PISTE (gratuit) — voir l'étape détaillée plus bas
+# 2. Renseigner ses identifiants
+cp skill/scripts/.env.example skill/scripts/.env
+$EDITOR skill/scripts/.env         # coller CLIENT_ID et CLIENT_SECRET
+
+# 3. Vérifier que tout répond
+python skill/scripts/legifrance.py ping
+```
+
+Si `ping` affiche « ✅ Authentification PISTE réussie », c'est prêt.
+
+---
+
+## `legifrance.py`
+
+CLI Python (bibliothèque standard uniquement, Python 3.8+) interrogeant les API
+Légifrance et Judilibre exposées via la plateforme **PISTE** de la DILA.
+
+### Architecture interne
+
+`legifrance.py` reste le point d'entrée public et conserve ses commandes et
+codes de sortie. Les fondations partagées sont progressivement extraites dans
+le paquet voisin `droit_francais/`, inclus dans toute copie autonome de
+`skill/` :
+
+- `errors.py` — exception commune et codes de sortie ;
+- `config.py` — endpoints, sélection prod/sandbox et chargement `.env` ;
+- `transport.py` — requêtes HTTP et décodage JSON ;
+- `legifrance.py` — OAuth2 et appels POST Légifrance ;
+- `judilibre.py` — appels GET, cache et bascule `KeyId` vers OAuth2 ;
+- `tools.py` — opérations structurées réutilisées par le serveur MCP.
+
+Les tests historiques hors réseau se lancent depuis la racine du dépôt avec :
+
+```bash
+python tests/test_tools.py
+```
+
+Le CLI actuel reste la façade de compatibilité : ses huit commandes, ses codes
+de sortie et ses variables d'environnement sont inchangés. Le serveur MCP à la
+racine consomme `tools.py` ; il ne déplace donc aucun fichier nécessaire à une
+installation autonome du dossier `skill/`.
+
+### Étape 1 — Obtenir des identifiants PISTE (gratuit)
+
+1. Créer un compte sur <https://piste.gouv.fr>.
+2. Menu **« Applications »** → créer une application.
+3. L'**abonner à l'API « Légifrance »** (catalogue des API → Légifrance →
+   souscrire). L'abonnement peut demander une courte validation.
+4. Dans la fiche de l'application, relever le **`client_id`** et le
+   **`client_secret`**.
+5. *Pour la jurisprudence judiciaire* — accepter les **CGU JUDILIBRE**, puis
+   cocher l'API JUDILIBRE (**Applications → Modifier l'application →
+   Sélectionner les API**). Relever ensuite la **clé d'API « `KeyId` »** sur
+   la fiche de l'application : ce n'est **pas** le `client_secret`.
+   L'abonnement Judilibre est **distinct** de l'abonnement Légifrance ; une
+   application peut souscrire aux deux.
+
+Un environnement **bac à sable** (`sandbox`) est disponible pour tester sans
+toucher la production : mettre `LEGIFRANCE_ENV=sandbox`. Attention, les
+identifiants sandbox et production sont **distincts** (des identifiants
+sandbox contre l'endpoint prod renvoient `invalid_client`), et les données du
+bac à sable **ne reflètent pas le droit en vigueur** : ne jamais conclure sur
+la vigueur d'un texte depuis la sandbox.
+
+### Étape 2 — Configurer les identifiants
+
+Deux méthodes, au choix. Dans les deux cas, **le secret ne doit jamais entrer
+dans le dépôt**.
+
+**A. Fichier `.env` (recommandé — rien à réexporter à chaque session)**
+
+```bash
+cp skill/scripts/.env.example skill/scripts/.env
+# éditer .env et coller les deux identifiants
+```
+
+Le script charge automatiquement un `.env` trouvé (dans l'ordre) via
+`$LEGIFRANCE_DOTENV`, puis dans le dossier courant, puis à côté du script.
+`.env` est **déjà gitignoré**.
+
+**B. Variables d'environnement (sessions ponctuelles, CI)**
+
+```bash
+export LEGIFRANCE_CLIENT_ID="votre_client_id"
+export LEGIFRANCE_CLIENT_SECRET="votre_client_secret"
+export LEGIFRANCE_ENV="prod"        # ou "sandbox" (défaut : prod)
+export JUDILIBRE_KEY_ID="votre_cle_api"   # optionnel — jurisprudence judiciaire
+export JUDILIBRE_ENV="prod"               # optionnel — défaut : LEGIFRANCE_ENV
+```
+
+> Une variable déjà exportée **prime** sur la valeur du `.env` : pratique pour
+> surcharger ponctuellement sans éditer le fichier.
+
+**Authentification Judilibre — deux modes, essayés dans l'ordre.** Selon la
+façon dont l'application PISTE a été déclarée, Judilibre accepte soit
+l'en-tête `KeyId` documenté par la Cour de cassation, soit le jeton OAuth 2.0
+`Authorization: Bearer` commun aux API PISTE. Le script tente `KeyId` en
+premier si `JUDILIBRE_KEY_ID` est défini, puis **bascule automatiquement** sur
+le jeton OAuth en cas de 401/403. Aucune configuration supplémentaire n'est
+nécessaire si l'application est abonnée à Judilibre avec les mêmes
+identifiants que Légifrance.
+
+**Jeton PISTE — un seul cache, sensible à l'expiration.** Le jeton OAuth est
+conservé en mémoire jusqu'à `expires_in` moins une marge de sécurité, et
+partagé par Légifrance et Judilibre : une exécution n'en redemande pas un à
+chaque appel, et une indisponibilité passagère du serveur d'authentification
+ne casse pas une session dont le jeton reste valide. Un `401` amont déclenche
+**un seul** renouvellement puis une seconde tentative — jamais une boucle.
+
+`JUDILIBRE_ENV` permet de viser un environnement différent pour chaque API —
+par exemple Légifrance en production et Judilibre en bac à sable. Laissée
+vide, elle reprend `LEGIFRANCE_ENV`.
+
+### Étape 3 — Utiliser
+
+```bash
+# Vérifier l'authentification et la disponibilité de l'API
+python legifrance.py ping
+
+# Récupérer un article par identifiant LEGIARTI (métadonnées + texte)
+python legifrance.py article LEGIARTI000006419288
+
+# Version applicable à une date donnée
+python legifrance.py article --date 2024-01-01 LEGIARTI000006419288
+
+# Rechercher un article par numéro, filtré sur un code
+# La lettre de partie est facultative : « 2212-2 » teste aussi L/R/D/A.
+python legifrance.py search "2212-2" --code CGCT
+
+# Même recherche dans la version du code en vigueur à une date passée
+python legifrance.py search "2212-2" --code CGCT --date 2010-01-01
+
+# Jurisprudence administrative / constitutionnelle — recherche PAR NUMÉRO,
+# renvoie l'identifiant officiel de la décision (best-effort)
+python legifrance.py ceta "440258"           # Conseil d'État (fond CETAT)
+python legifrance.py constit "2021-940 QPC"  # Conseil constitutionnel (CONSTIT)
+
+# Jurisprudence judiciaire (Judilibre) — recherche PLEIN TEXTE, pas par numéro
+pytho

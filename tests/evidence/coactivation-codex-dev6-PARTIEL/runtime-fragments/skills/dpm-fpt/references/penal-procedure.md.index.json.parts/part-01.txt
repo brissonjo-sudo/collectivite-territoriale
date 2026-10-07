@@ -1,0 +1,158 @@
+# Branche — Procédure pénale (APJA) (v0.1.0)
+
+> Structure conforme à `_gabarit-branche.md`. Aucune valeur datée ni numéro
+> d'article cité de mémoire hors ceux explicitement marqués « vérifié sur
+> Légifrance » ci-dessous : pour le reste, seules les **règles** figurent,
+> avec consigne de vérifier la version en vigueur à la date des faits.
+
+## Périmètre / Exclusions
+
+- **Périmètre** : qualification pénale d'un fait constaté par un agent de
+  police municipale, étendue et limites des **pouvoirs d'agent de police
+  judiciaire adjoint (APJA, art. 21 et 21-2 CPP)**, relations avec l'**OPJ**
+  et le **procureur de la République**, et application du **garde-fou APJA**
+  (`SKILL.md` §5.2) dès qu'un acte réservé à l'OPJ est en jeu.
+- **Exclusions** : le **formalisme rédactionnel des écrits** (structure d'un
+  PV, d'un rapport) → `ecrits-professionnels.md` (lien croisé sur les
+  références CPP **uniquement**, pas de duplication du fond procédural) ; le
+  **pouvoir de police administrative** du maire (mesure préventive, arrêté)
+  → `pouvoirs-police.md` ; le **contenu réglementaire** d'une infraction par
+  domaine (route, débits de boissons, salubrité, animaux) →
+  `reglementation-appliquee.md` ; la **jurisprudence de fond** sur la
+  régularité d'un acte APJA → `recherche-juridique` ; le **constat d'un
+  manquement déontologique d'un agent PM** (par opposition à l'infraction
+  pénale d'un tiers) → `conformite-deontologie-donnees.md`.
+
+---
+
+## 1. Questions couvertes
+
+- Le fait constaté est-il une infraction pénale, et de quelle nature
+  (contravention, délit, crime) ?
+- L'agent PM peut-il agir seul (pouvoir APJA, art. 21 CPP) ou doit-il
+  immédiatement passer la main à un OPJ (art. 16 CPP) ?
+- Le fait est-il en **flagrance** ? Que peut faire l'agent PM, que peut faire
+  « toute personne » (art. 73 CPP) ?
+- Comment et à qui rendre compte (maire, OPJ territorialement compétent,
+  procureur) ?
+- Une interpellation, une rétention, un contrôle d'identité, une fouille
+  sont-ils dans le périmètre APJA ou basculent-ils en acte réservé OPJ ?
+- Que faire d'une personne appréhendée en flagrance jusqu'à l'arrivée de
+  l'OPJ (mise à disposition) ?
+
+---
+
+## 2. Arbre de traitement
+
+`qualifier le fait → identifier l'infraction (nature, gravité) → situer le
+pouvoir mobilisé sur l'échelle APJA (art. 21/21-2 CPP) → tester le garde-fou
+APJA → si dépassement : STOP + compte rendu OPJ → qualifier séparément le
+fondement d'une contrainte : flagrance art. 53 + conditions art. 73, relevé
+d'identité art. 78-6, ou aucun → constater et préserver sans acte réservé →
+orienter vers l'écrit licite`.
+
+Ne jamais inverser l'ordre : le test du garde-fou APJA précède toute
+description du pouvoir d'action (cf. `analyse-situation.md` §2).
+
+---
+
+## 3. Variables à lever
+
+- **Nature du fait** : contravention, délit, crime — conditionne le pouvoir
+  exerçable et l'urgence de la mise à disposition.
+- **Flagrance ou non** : le fait vient-il de se commettre ou est-il en train
+  de se commettre (flagrance), ou s'agit-il d'un fait antérieur rapporté
+  (hors flagrance) ?
+- **Qualité de l'agent** : agent de police municipale (APJA de plein droit
+  sous condition d'agrément et d'assermentation — vérifier ces conditions,
+  `rh-specificites-pm.md`) ou garde champêtre (régime propre, à vérifier).
+- **Présence ou délai d'arrivée d'un OPJ territorialement compétent**
+  (police nationale ou gendarmerie) — conditionne le séquençage du compte
+  rendu et, lorsqu'un texte l'autorise, de la présentation.
+- **Existence et contenu d'une convention de coordination** PM/forces de
+  l'État (modalités pratiques de transmission, pas créatrice de pouvoir) →
+  `continuum-partenariats.md`.
+- **Fondement précis d'une contrainte éventuelle** : appréhension de droit
+  commun (art. 53 + 73 CPP), relevé d'identité avec refus ou impossibilité
+  de justification (art. 78-6 CPP), ou aucun.
+
+---
+
+## 4. Règles métier
+
+### 4.1 Qualité d'agent de police judiciaire adjoint (APJA) — art. 21 CPP
+
+Les agents de police municipale sont, sous certaines conditions (agrément du
+procureur de la République et du préfet, assermentation — détail à
+`rh-specificites-pm.md`), **agents de police judiciaire adjoints** au sens
+de l'**art. 21 du Code de procédure pénale** *(vérifié sur Légifrance le
+2026-06-30 : article confirmant que les agents de police municipale figurent
+parmi les agents de police judiciaire adjoints)*.
+
+En cette qualité, l'agent PM :
+- **seconde** les officiers de police judiciaire dans l'exercice de leurs
+  fonctions ;
+- **rend compte** à ses chefs hiérarchiques de tous crimes, délits ou
+  contraventions dont il a connaissance ;
+- **constate**, dans le cadre des lois qui lui sont propres, les infractions
+  à la loi pénale et **rassemble tous renseignements** en vue de découvrir
+  les auteurs de ces infractions, **dans le cadre et les formes prévus par
+  les lois organiques ou spéciales** qui leur sont propres ;
+- lorsqu'il constate une infraction par procès-verbal, peut **recueillir les
+  éventuelles observations du contrevenant**. Cette faculté limitée ne doit pas
+  être transformée en audition formelle de suspect.
+
+> **Réforme récente — loi n° 2026-798 du 18 août 2026 (art. 55), en vigueur
+> au 20/08/2026.** L'art. 21 CPP (nouvelle version, LEGIARTI000054725485) et
+> l'art. 15-3 CPP ouvrent aux APJA des **1° à 1° ter** (police nationale,
+> gendarmerie, policiers adjoints, réservistes), sous le contrôle d'un OPJ et
+> après formation, la **réception de plaintes** et le **recueil par
+> procès-verbal des déclarations** de témoins et personnes utiles. **Les
+> agents de police municipale (2° de l'art. 21) n'y sont pas inclus** : aucune
+> réception de plainte, aucun PV de déclarations, aucune audition. Une demande
+> qui s'appuie sur cette réforme pour faire recueillir des déclarations par un
+> agent PM déclenche le garde-fou (§4.5) : rediriger vers l'OPJ ou un APJA
+> habilité des forces de l'État.
+
+**Faculté / obligation** : le compte rendu hiérarchique et le compte rendu
+judiciaire (§4.2) sont une **obligation**, pas une faculté. La constatation
+elle-même s'exerce dans le **cadre strict** des textes propres à l'agent
+(pas de pouvoir général d'enquête).
+
+### 4.2 Compte rendu — maire, OPJ, procureur — art. 21-2 CPP
+
+L'**art. 21-2 du CPP** *(vérifié sur Légifrance le 2026-06-30)* impose à
+l'agent de police municipale, **sans préjudice** de son obligation de
+rendre compte au **maire** :
+
+- de rendre compte **immédiatement**, par l'intermédiaire ou en l'absence du
+  maire, à **tout officier de police judiciaire de la police nationale ou
+  de la gendarmerie territorialement compétent**, de tous crimes, délits ou
+  contraventions dont il a connaissance.
+
+**Double destinataire, séquençage à respecter** :
+1. **Maire** — autorité hiérarchique et de police générale, toujours
+   informé.
+2. **OPJ territorialement compétent** (police nationale ou gendarmerie) —
+   destinataire judiciaire immédiat ; c'est l'OPJ qui assure ensuite, le cas
+   échéant, la liaison avec le **procureur de la République**.
+
+L'agent PM ne rend pas compte directement au procureur : la chaîne passe par
+l'OPJ. Ne jamais présenter l'agent PM comme interlocuteur direct du parquet.
+
+### 4.3 Flagrance et appréhension — art. 53 et 73 CPP
+
+**Flagrance — art. 53 CPP** *(vérifié sur Légifrance le 2026-07-28 ;
+LEGIARTI000006575016)* : est notamment qualifié de flagrant le crime ou le
+délit qui se commet actuellement ou qui vient de se commettre. La condition
+tenant, pour un délit, à une peine d'emprisonnement relève ensuite de
+l'art. 73 pour autoriser l'appréhension ; elle ne doit pas être ajoutée à la
+définition de l'art. 53.
+
+**Art. 73 du CPP** *(vérifié sur Légifrance le 2026-07-28 ;
+LEGIARTI000029000766)* : en cas de crime flagrant ou de délit flagrant puni
+d'une peine d'emprisonnement, **toute personne** — donc pas seulement l'OPJ
+ou l'APJA — a qualité pour **appréhender l'auteur** et le **conduire devant
+l'officier de police judiciaire le plus proche**.
+
+**Ce que cela signifie pour l'ag

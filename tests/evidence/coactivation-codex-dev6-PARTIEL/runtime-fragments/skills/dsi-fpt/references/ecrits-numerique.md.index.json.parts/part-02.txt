@@ -1,0 +1,54 @@
+assation après bascule.
+- Commencer le rapport avant les garde-fous applicables de `SKILL.md`.
+
+## 9. Données et valeurs à vérifier
+
+Vérifier les sources de la branche de fond dans
+`references/references-verifiees.md`, leurs limites et leur applicabilité.
+Pour une note d'homologation, consulter le rattachement officiel au RGS et
+son vocabulaire ; pour un engagement contractuel, le contrat effectivement
+incorporé. Confirmer versions, dates d'application, mentions exigées,
+signataire habilité, délais et niveaux de service avant de les écrire.
+
+Le registre livré fournit des pistes à relire sur la source primaire ; le cache
+de maintenance est exclu du paquet runtime et ne se charge pas. Aucune valeur
+ne se recopie sans une source datée. Si la source manque, retirer la conclusion
+engageante et marquer le point `⚠️ non vérifié`.
+
+## 10. Écrits et livrables
+
+Choisir le gabarit selon l'objectif :
+
+- Projet → `references/templates/fiche-projet-si.md`.
+- Incident → `references/templates/rapport-incident.md`.
+- Besoin technique → `references/templates/cahier-des-charges-technique.md`.
+- Usages du SI → `references/templates/charte-usage-si.md`.
+- Sécurité à soumettre à décision → `references/templates/note-homologation.md`.
+
+Pour une note de décision ou une communication interne, appliquer les règles
+de cette branche sans inventer un gabarit supplémentaire. Les éléments
+présentés comme obligatoires doivent être vérifiés ; les autres sont les
+éléments utiles à la décision. Livrer le texte demandé, son statut et les
+champs encore manquants, sans le qualifier d'acte validé.
+
+## 11. Double échelle [risque / confiance]
+
+Appliquer `SKILL.md` §5.1 à l'usage de l'écrit, pas à sa seule forme. Une
+information interne courante peut relever de [faible / stable]. Un arbitrage
+de continuité ou une note d'homologation appelle [élevé / à vérifier] si des
+preuves manquent. Un rapport portant sur un incident actif ou une pièce
+engageant fortement la collectivité peut être critique. Une rédaction
+fluide n'augmente pas la confiance ; l'absence de vérification impose réserve
+ou abstention sur le point concerné.
+
+## 12. Checklist de branche
+
+- Garde-fous de `SKILL.md` §5.2–5.3 affichés avant contenu si déclenchés ?
+- Destinataire, objectif, décideur et mode d'exercice identifiés ?
+- Branche de fond et gabarit lus puis cités par chemin ?
+- Faits, déclarations, hypothèses et décisions distingués ?
+- Données manquantes explicites ; brouillon `[INCOMPLET]` si nécessaire ?
+- Source et applicabilité contrôlées avant toute affirmation engageante ?
+- Frontières respectées sans illustration ni annexe de contournement ?
+- Aucun secret, aucune donnée nominative ni architecture exploitable ?
+- Écrit demandé effectivement livré avec son statut et ses points ouverts ?

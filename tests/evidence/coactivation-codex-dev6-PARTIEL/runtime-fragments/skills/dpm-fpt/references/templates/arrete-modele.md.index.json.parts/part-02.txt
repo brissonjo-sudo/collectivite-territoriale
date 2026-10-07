@@ -1,0 +1,150 @@
+  `CETATEXT000007636694` — vérifié le 2026-09-06, socle
+  `references-verifiees.md` §7 ; déclinaisons récentes à vérifier via
+  `recherche-juridique` en cas de doute).
+  Si la mesure est générale et absolue dans le temps ou l'espace alors
+  qu'une mesure ciblée suffirait, **signaler le risque élevé
+  d'annulation** avant de poursuivre.
+
+### Étape 5 — Procédure préalable et tiers concernés (équivalent « témoins »)
+- Q5.1 : « Une consultation préalable obligatoire était-elle requise
+  (commission, organisme consultatif selon l'objet) ? A-t-elle eu lieu et
+  est-elle tracée ? » — propre à chaque police spéciale, à vérifier
+  branche concernée (`controle-legalite.md` §4.2).
+- Q5.2 (si acte individuel défavorable) : « La personne visée a-t-elle été
+  mise en mesure de présenter des observations préalables (procédure
+  contradictoire), sauf urgence ou exception légale ? » — si la réponse
+  est négative sans justification claire, signaler le risque de vice de
+  procédure.
+- Q5.3 : « Quelles formalités de publicité sont prévues (affichage,
+  publication au recueil des actes administratifs, notification
+  individuelle) ? » — selon que l'acte est réglementaire ou individuel.
+
+### Étape 6 — Dispositif et conséquences (suites — partie 1)
+- Q6.1 : « Que doit décider précisément le dispositif (article 1er) ?
+  Formuler la mesure exacte, datée et délimitée. »
+- Q6.2 : « Y a-t-il des conséquences administratives ou financières
+  associées (article 2) ? »
+- Q6.3 : « Qui est chargé de l'exécution (DGS, chef de service de police
+  municipale, autre) ? »
+
+### Étape 7 — Voies de recours et transmission (suites — partie 2)
+- Q7.1 : « Cet acte fait-il grief à un administré identifié ou à une
+  catégorie d'administrés (mesure individuelle ou réglementaire
+  défavorable) ? » — si **oui**, les voies et délais de recours sont
+  **obligatoires** dans le dispositif (`controle-legalite.md` §4.6) ; leur
+  omission n'invalide pas l'acte mais **empêche le délai de recours
+  contentieux de courir** contre l'administré — risque pratique majeur à
+  signaler explicitement si la réponse à cette question reste incertaine.
+- Q7.2 : « L'acte figure-t-il dans la liste des actes soumis à
+  transmission obligatoire au représentant de l'État (art. L. 2131-2
+  CGCT, vérifié sur Légifrance le 2026-06-30 — liste précise et seuils à
+  reconfirmer en version consolidée selon l'objet exact) ? » — en cas de
+  doute, rappeler que la posture la plus sûre reste de transmettre
+  (`controle-legalite.md` §4.7), sans pour autant affirmer l'obligation
+  comme acquise si elle n'a pas été vérifiée.
+- Q7.3 : « Quel circuit de transmission et de notification est applicable
+  localement (transmission dématérialisée au contrôle de légalité,
+  notification LRAR ou décharge à l'administré) ? » — si la donnée
+  manque, marquer `[INCOMPLET — préciser : circuit de transmission /
+  notification]` plutôt que de la deviner.
+
+---
+
+## 2. Garde-fous transverses pendant la séquence
+
+- Si, à l'**Étape 1** ou à l'**Étape 4**, il apparaît un **conflit de
+  compétence** (objet relevant en réalité du préfet, ou d'une police
+  spéciale dont le maire n'est pas titulaire) : suspendre l'assemblage,
+  signaler le conflit, renvoyer à `analyse-situation.md` §3 et
+  `pouvoirs-police.md` avant de poursuivre.
+- Si, à l'**Étape 1**, il apparaît que l'acte est en réalité une **mesure
+  RH individuelle** concernant un agent (sanction, refus d'avancement,
+  fin de fonctions) : ce générateur reste compétent pour le contrôle de
+  légalité de l'acte en tant que tel, mais la **conduite de la
+  procédure** statutaire relève de `drh-fpt` (`SKILL.md` §5.4) — le
+  signaler explicitement et orienter l'utilisateur.
+- Si, à l'**Étape 4**, le contexte motivant l'arrêté révèle une situation
+  dépassant le pouvoir APJA (acte réservé à l'OPJ ; l'art. 16 CPP définit
+  notamment la qualité d'OPJ, mais le texte propre à l'acte doit être cité) :
+  afficher le
+  **STOP** (`SKILL.md` §5.2) avant toute chose ; l'arrêté de police ne
+  peut pas se substituer à l'action pénale requise.
+
+---
+
+## 3. Grille de contrôle a priori — à dérouler avant rédaction
+
+Reprise opérationnelle de `controle-legalite.md` §4, **dans cet ordre**,
+posture « juge administratif » (légalité externe avant légalité interne).
+Aucune ligne ne peut être cochée par défaut : chacune doit être levée par
+une réponse explicite obtenue en §1, ou listée comme réserve.
+
+1. **Compétence** (§4.1) — autorité signataire détentrice du pouvoir
+   exercé ? Délégation vérifiée (existence, publication, périmètre,
+   non-retrait) si signataire ≠ maire ? Compétence territoriale
+   respectée ? Pas d'incompétence négative (l'autorité ne s'est pas crue
+   liée alors qu'elle disposait d'un pouvoir d'appréciation) ?
+2. **Procédure** (§4.2) — consultations obligatoires tracées ?
+   Procédure contradictoire respectée pour une mesure individuelle
+   défavorable, sauf urgence/exception justifiée ? Formalités de
+   publicité identifiées ? Acte daté et signé ?
+3. **Base légale** (§4.3) — texte fondateur cité avec article exact (pas
+   de visa générique) ? Police générale/spéciale correctement
+   distinguées, primauté de la spéciale respectée ou circonstances
+   locales particulières motivées ? Absence de détournement de pouvoir
+   (motif réel = finalité légale du texte) ? Faits visés exacts et
+   matériellement établis ?
+4. **Motivation CRPA** (§4.4) — si la décision relève de l'art. L. 211-2
+   du CRPA *(vérifié sur Légifrance le 2026-06-30)* (mesure de police,
+   décision restreignant une liberté publique, refus d'autorisation,
+   retrait/abrogation d'une décision créatrice de droits) : motivation
+   en fait **et** en droit complète, non stéréotypée, permettant à un
+   tiers de comprendre pourquoi cette mesure précise — et pas une mesure
+   moins contraignante — a été prise.
+5. **Proportionnalité** (§4.5) — mesure strictement nécessaire, limitée
+   dans le temps et l'espace, alternative moins restrictive envisagée et
+   écartée si pertinent ? Signal d'alerte si interdiction générale et
+   absolue.
+6. **Voies et délais de recours** (§4.6) — mentionnés si l'acte fait
+   grief : recours gracieux, hiérarchique, contentieux, délai, autorité
+   ou juridiction compétente.
+7. **Transmission au contrôle de légalité** (§4.7) — acte inclus dans la
+   liste de l'art. L. 2131-2 CGCT ? Caractère exécutoire conditionné à la
+   publicité et, le cas échéant, à la transmission (art. L. 2131-1 CGCT,
+   vérifiés sur Légifrance le 2026-06-30) ? Délai de transmission
+   identifié (ordre de grandeur 15 jours pour une décision individuelle —
+   à confirmer en version consolidée) ?
+
+**Décision à l'issue de la grille** : produire / corriger / abstenir
+(`controle-legalite.md` §2). Si un point reste non levé, ne **jamais**
+le combler par supposition : le reporter en réserve explicite dans le
+brouillon (§5) et, si la décision finale appartient au maire, le
+signaler clairement comme un risque accepté à assumer en connaissance de
+cause.
+
+---
+
+## 4. Mentions obligatoires — grille de vérification avant assemblage
+
+Avant d'assembler le document final, vérifier que chacune des mentions
+suivantes est renseignée ou explicitement marquée `[INCOMPLET]` :
+
+**Visas et procédure :**
+- [ ] Autorité signataire identifiée, délégation vérifiée si applicable
+- [ ] Visas précis (texte + article exact), pas de visa générique
+- [ ] Consultations préalables obligatoires tracées, le cas échéant
+- [ ] Procédure contradictoire tracée pour une mesure individuelle
+      défavorable, sauf urgence/exception justifiée
+
+**Considérants (motivation en fait et en droit) :**
+- [ ] Exposé des faits précis et datés
+- [ ] Motif de droit rattaché au texte visé
+- [ ] Test de proportionnalité explicitement passé (nécessité,
+      adaptation, mesure la moins attentatoire, alternative envisagée)
+
+**Dispositif :**
+- [ ] Mesure décidée formulée précisément, datée, délimitée dans le temps
+      et l'espace
+- [ ] Date d'effet = notification pour un acte défavorable (pas de
+      rétroactivité)
+- [ ]

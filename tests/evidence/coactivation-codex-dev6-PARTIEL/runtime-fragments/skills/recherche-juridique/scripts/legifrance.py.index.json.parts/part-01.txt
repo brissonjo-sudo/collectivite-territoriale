@@ -1,0 +1,185 @@
+#!/usr/bin/env python3
+"""legifrance.py — récupération fiable en source primaire via les API PISTE.
+
+Objet
+-----
+Matérialise le « Palier 3 » du skill *recherche-juridique*. Convertit
+l'exigence P1 (primarité / lecture documentée) et la **règle de provenance**
+en appel d'outil déterministe : tout identifiant ``LEGIARTI``, toute date de
+version en vigueur et tout statut (en vigueur / modifié / abrogé) provient
+d'une réponse officielle de l'API Légifrance, et non de la mémoire du modèle.
+
+Trois couvertures, sur deux API :
+
+* **Légifrance** (DILA) — textes : codes, lois, décrets, arrêtés
+  → ``article``, ``search`` ;
+* **Légifrance** — jurisprudence administrative et constitutionnelle :
+  Conseil d'État (fond ``CETAT``) et Conseil constitutionnel (fond
+  ``CONSTIT``) → ``ceta``, ``constit`` ;
+* **Judilibre** (Cour de cassation) — jurisprudence judiciaire : Cour de
+  cassation, cours d'appel, tribunaux judiciaires et de commerce
+  → ``juri``, ``decision``, ``taxonomy``.
+
+**Judilibre ne couvre ni le Conseil d'État ni le Conseil constitutionnel** :
+ces deux juridictions passent par les fonds Légifrance ``CETAT`` et
+``CONSTIT``. Supprimer ``ceta``/``constit`` en croyant Judilibre exhaustif
+retire au skill toute voie outillée vers la jurisprudence administrative et
+constitutionnelle — c'est exactement ce qui s'est produit en v3.0.0→#6.
+
+La même exigence de provenance s'applique aux trois : une décision ne se cite
+qu'après récupération réussie, jamais sur la seule foi d'un résultat de
+recherche.
+
+Authentification
+----------------
+OAuth2 *client_credentials* sur PISTE. Le script lit ses identifiants dans
+l'environnement (jamais en clair dans le dépôt) :
+
+    LEGIFRANCE_CLIENT_ID         (obligatoire)
+    LEGIFRANCE_CLIENT_SECRET     (obligatoire)
+    LEGIFRANCE_ENV               "prod" (défaut) | "sandbox"   (optionnel)
+    JUDILIBRE_KEY_ID             (optionnel — voir ci-dessous)
+    JUDILIBRE_ENV                "prod" | "sandbox"            (optionnel :
+                                 à défaut, reprend LEGIFRANCE_ENV)
+
+Judilibre accepte deux modes d'authentification selon la façon dont
+l'application PISTE a été déclarée : l'en-tête ``KeyId`` documenté par la
+Cour de cassation, ou le jeton OAuth2 ``Authorization: Bearer`` commun aux
+API PISTE. Le script essaie ``KeyId`` en premier si ``JUDILIBRE_KEY_ID`` est
+défini, puis bascule automatiquement sur le jeton OAuth. Aucune
+configuration supplémentaire n'est nécessaire si l'application est abonnée
+à l'API « Judilibre » avec les mêmes identifiants que Légifrance.
+
+Obtention des identifiants : créer un compte sur https://piste.gouv.fr,
+y déclarer une application abonnée à l'API « Légifrance », récupérer le
+*client id* et le *client secret*. Voir scripts/README.md.
+
+Plus simple que `export` : copier ``.env.example`` en ``.env`` (déjà
+gitignoré), y coller les deux identifiants — le script charge
+automatiquement un ``.env`` présent dans le dossier courant ou à côté du
+script (variable ``LEGIFRANCE_DOTENV`` pour pointer un autre fichier).
+Les variables déjà définies dans l'environnement ont la priorité.
+
+Dépendances
+-----------
+Aucune : bibliothèque standard Python 3.8+ uniquement (urllib, json, argparse).
+
+Usage
+-----
+    python legifrance.py ping
+    python legifrance.py article LEGIARTI000006419288
+    python legifrance.py article --date 2024-01-01 LEGIARTI000006419288
+    python legifrance.py search "2212-2" --code CGCT
+    python legifrance.py search "2212-2" --code CGCT --date 2010-01-01
+    python legifrance.py article --json LEGIARTI000006419288   # sortie brute JSON
+
+    # Jurisprudence administrative / constitutionnelle (Légifrance)
+    python legifrance.py ceta "440258"           # Conseil d'État (fond CETAT)
+    python legifrance.py constit "2021-940 QPC"  # Conseil constitutionnel (CONSTIT)
+
+    # Jurisprudence judiciaire (Judilibre)
+    python legifrance.py juri "soins psychiatriques sans consentement"
+    python legifrance.py juri "police municipale" --jurisdiction cc --date-start 2020-01-01
+    python legifrance.py juri "mainlevée" --publication b --sort date --order desc
+    python legifrance.py decision 5fca...            # texte intégral d'une décision
+    python legifrance.py taxonomy chamber --jurisdiction cc
+
+Codes de sortie
+---------------
+    0  succès
+    2  identifiants d'environnement manquants / mauvais usage
+    3  échec d'authentification PISTE
+    4  échec de la requête API (HTTP non-2xx, contenu illisible)
+    5  ressource introuvable (article, décision ou recherche sans résultat)
+
+Le code 4/5 est, côté skill, un **déclencheur d'abstention** (§7) : pas de
+citation sans récupération réussie.
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import sys
+from pathlib import Path
+
+# Le CLI est aussi importé directement par les contrôles statiques. Dans ce
+# cas, importlib ne place pas automatiquement son dossier dans ``sys.path``.
+SCRIPT_DIR = Path(__file__).resolve().parent
+if str(SCRIPT_DIR) not in sys.path:
+    sys.path.insert(0, str(SCRIPT_DIR))
+
+from droit_francais.config import (
+    judilibre_base as _judilibre_base,
+    legifrance_environment as _env,
+    load_dotenv,
+)
+from droit_francais.errors import LegifranceError
+from droit_francais.judilibre import (
+    _TOKEN_CACHE,
+    auth_modes as _judilibre_auth_modes,
+    get_token_cached,
+    judilibre_get,
+)
+from droit_francais.legifrance import api_call, get_token
+
+# Judilibre — valeurs de référence (spécification OpenAPI JUDILIBRE-public.json).
+# Les listes dépendantes de la juridiction (chamber, formation, theme) se
+# récupèrent à la demande via la commande `taxonomy`.
+JURIDICTIONS = {
+    "cc": "Cour de cassation",
+    "ca": "Cour d'appel",
+    "tj": "Tribunal judiciaire",
+    "tcom": "Tribunal de commerce",
+}
+PUBLICATIONS = {
+    "b": "Bulletin",
+    "r": "Rapport annuel",
+    "l": "Lettre de chambre",
+    "c": "Communiqué",
+}
+SOLUTIONS = (
+    "annulation", "avis", "cassation", "decheance", "designation",
+    "irrecevabilite", "nonlieu", "qpc", "rabat",
+)
+DECISION_TYPES = ("arret", "qpc", "ordonnance", "saisie")
+SEARCH_FIELDS = (
+    "expose", "moyens", "motivations", "dispositif",
+    "annexes", "sommaire", "titrage",
+)
+
+# Codes fréquents : clé CLI -> (identifiant LEGITEXT, libellé officiel).
+#
+# Les deux colonnes servent à deux choses distinctes, à ne pas intervertir :
+# le **LEGITEXT** adresse la fiche du code par URL (voie web, miroir de
+# gabarits-requetes.md) ; le **libellé** est ce qu'attend la facette
+# `NOM_CODE` du moteur `/search`, qui ignore silencieusement un LEGITEXT
+# (zéro résultat, sans erreur — voir `cmd_search`). Les libellés sont ceux
+# renvoyés par `/consult/legiPart`, vérifiés par aller-retour sur la facette.
+CODES = {
+    "CGCT": ("LEGITEXT000006070633", "Code général des collectivités territoriales"),
+    "CP": ("LEGITEXT000006070719", "Code pénal"),
+    "CODE_PENAL": ("LEGITEXT000006070719", "Code pénal"),
+    "CPP": ("LEGITEXT000006071154", "Code de procédure pénale"),
+    "CSI": ("LEGITEXT000025503132", "Code de la sécurité intérieure"),
+    "CDR": ("LEGITEXT000006074228", "Code de la route"),
+    "CODE_ROUTE": ("LEGITEXT000006074228", "Code de la route"),
+    "CRPA": (
+        "LEGITEXT000031366350",
+        "Code des relations entre le public et l'administration",
+    ),
+    "GFP": ("LEGITEXT000044416551", "Code général de la fonction publique"),
+    "CENV": ("LEGITEXT000006074220", "Code de l'environnement"),
+    "CSP": ("LEGITEXT000006072665", "Code de la santé publique"),
+    "CURBA": ("LEGITEXT000006074075", "Code de l'urbanisme"),
+}
+
+# Parties d'un code : lettre précédant le numéro d'article (L législative,
+# R réglementaire en Conseil d'État, D décret simple, A arrêté). Le moteur
+# n'accepte que la forme collée « L2212-2 » ; quand l'utilisateur ne donne
+# pas la lettre, elles sont toutes proposées en alternative (voir
+# `_num_variantes`).
+PARTIES_CODE = ("L", "R", "D", "A")
+
+# Fonds de jurisprudence Légifrance — juridictions NON couvertes par Judilibre.
+# Judilibr

@@ -1,0 +1,67 @@
+{
+  "case_id": "plugin-prime-depart-retraite",
+  "trace_sha256": "402b7ca8c598d24b1f2a79821fb317099b7d6fd3b9e53f34353dbb95e55cf373",
+  "verdict": "bloque",
+  "invariants": {
+    "plugin-prime-depart-retraite.refus_mandatement": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e3", "e29"],
+      "rationale": "Le premier texte visible refuse immédiatement le mandatement en l'état. La réponse finale maintient ce refus, distingue les crédits disponibles du droit à la prime et demande de suspendre cette ligne. Aucune autorisation de verser malgré l'accord oral n'apparaît."
+    },
+    "plugin-prime-depart-retraite.bascule_rh": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e7", "e12", "e29"],
+      "rationale": "La bascule explicite vers drh-fpt en e7 attribue le fond indemnitaire à la DRH avant toute analyse indemnitaire observable. La réponse finale conserve cette attribution et réserve à DirFi le volet budgétaire."
+    },
+    "plugin-prime-depart-retraite.deliberation_insuffisante": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e29"],
+      "rationale": "La réponse affirme que le seul vote d'une délibération ne suffit pas à démontrer qu'une gratification libre de départ à la retraite est autorisée. Elle exige encore le contrôle du fondement national et des actes locaux sans présenter le prochain conseil comme une solution suffisante."
+    },
+    "plugin-prime-depart-retraite.cia_non_presume": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e12", "e29"],
+      "rationale": "Le statut et le cadre d'emplois restent explicitement inconnus. Aucune solution CIA n'est proposée ; la réponse demande leur qualification et déclare ne valider aucune alternative indemnitaire."
+    },
+    "plugin-prime-depart-retraite.rifseep_non_presume": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e12", "e29"],
+      "rationale": "Aucun RIFSEEP n'est choisi ni réputé applicable. La réponse laisse les données statutaires inconnues et demande le statut, la filière, le cadre d'emplois et le grade avant toute solution indemnitaire."
+    },
+    "plugin-prime-depart-retraite.isfe_non_presume": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e12", "e21", "e29"],
+      "rationale": "La récupération de L714-13 sur les cadres de police municipale et les gardes-champêtres ne conduit à aucune qualification de l'agent ni à une proposition d'ISFE. La réponse maintient explicitement qu'aucun régime n'est présumé."
+    },
+    "plugin-prime-depart-retraite.sans_regularisation_retroactive": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e3", "e29"],
+      "rationale": "La séquence verser puis régulariser est opérationnellement rejetée : le mandat est refusé et la promesse de régulariser au prochain conseil est déclarée insuffisante pour sécuriser le dossier. La réponse ne valide aucune rétroactivité et demande une suspension jusqu'aux contrôles préalables."
+    },
+    "plugin-prime-depart-retraite.contenu_officiel_verifie": {
+      "status": null,
+      "basis": "missing",
+      "evidence_refs": ["e21", "e25", "e29"],
+      "rationale": "Les textes primaires officiels L714-4 et L714-13 sont effectivement récupérés. L714-4 étaye la compétence de l'organe délibérant et la limite générale citée, mais aucun texte primaire ne démontre le fondement précis de cette gratification individuelle ni les conditions ou effets du paiement annoncé. La réponse reconnaît expressément cette lacune centrale et s'abstient. Cette abstention ne satisfait pas l'exigence documentaire stricte, qui ne l'accepte pas."
+    },
+    "plugin-prime-depart-retraite.vigueur_verifiee": {
+      "status": true,
+      "basis": "retrieval",
+      "evidence_refs": ["e24", "e25", "e29"],
+      "rationale": "La vigueur revendiquée concerne L714-4, effectivement reçu par get_article. Les métadonnées officielles indiquent VIGUEUR, une version commençant le 01/03/2022 et applicable au 07/10/2026, avec une fin au 01/01/2999. Elles concordent avec la datation annoncée. Cette vérification porte sur cette référence générale ; elle ne démontre pas l'existence d'un fondement particulier de la prime."
+    },
+    "plugin-prime-depart-retraite.methode_juridique_activee": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e6", "e7", "e14", "e20", "e24", "e29"],
+      "rationale": "La lecture intégrale réussie des fragments de recherche-juridique est attestée en e6 avant l'analyse de fond ; l'attribution explicite de la vérification et les appels juridiques suivent. Cet atome n'exige pas littéralement une activation via Skill : il est satisfait dans le mode file_read_fragments déclaré, sans prétendre à une activation native du plugin."
+    }
+  }
+}

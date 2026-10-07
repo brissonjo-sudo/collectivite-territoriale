@@ -1,0 +1,110 @@
+ibération de garantie, délai global de
+  paiement, contestation du DGD) doit être chiffré ;
+- un **index de révision** doit être identifié ou son mode de publication
+  vérifié ;
+- la **compétence** pour accorder une remise gracieuse de pénalités ou pour
+  signer un avenant est incertaine ;
+- une **jurisprudence** (CE, CRC) sur l'exécution financière d'un marché est
+  invoquée.
+
+---
+
+## 8. Pièges & confusions fréquentes
+
+1. Confondre **avance** (versée sans service fait) et **acompte** (versé sur
+   prestations déjà réalisées).
+2. Confondre **retenue de garantie** (prélèvement direct sur les paiements)
+   et **garantie à première demande** (engagement d'un tiers garant) — la
+   nature du prélèvement et le moment de restitution diffèrent.
+3. Confondre **prix ferme actualisable** (actualisation avant exécution
+   seulement) et **prix révisable** (variation pendant toute l'exécution).
+4. Appliquer une pénalité de retard sans vérifier la **clause contractuelle
+   exacte** et le **calendrier contractuel** applicable.
+5. Payer un sous-traitant **non déclaré ou non accepté**, ou méconnaître son
+   droit au **paiement direct** au-delà du seuil applicable.
+6. Ignorer le **délai global de paiement propre aux marchés publics** et les
+   **intérêts moratoires dus de plein droit** en cas de dépassement.
+7. Traiter un **avenant** comme un acte budgétairement neutre, sans vérifier
+   la disponibilité des crédits.
+8. Confondre le **montant maximum d'un accord-cadre** (plafond contractuel)
+   et le **montant réellement engagé** comptablement.
+9. **Répondre au fond à une question de passation** (choix du titulaire,
+   critères, allotissement) au lieu de signaler la limite de périmètre —
+   piège à bloquer systématiquement dans cette branche.
+
+---
+
+## 9. Données / valeurs à vérifier
+
+- **Code de la commande publique** — fondement de l'ensemble des règles
+  d'exécution financière des marchés (« à confirmer en version consolidée »
+  ; aucun article cité de mémoire dans cette branche).
+- **Seuil de montant déclenchant l'avance obligatoire** — valeur volatile,
+  jamais citée de mémoire.
+- **Taux et montant maximal de l'avance** — valeurs volatiles.
+- **Plafond de la retenue de garantie** — valeur volatile.
+- **Délai d'actualisation applicable au prix ferme** — valeur volatile.
+- **Index de révision de prix et leur mode de publication** — à identifier
+  au cas par cas selon l'objet du marché, jamais présumés.
+- **Délai global de paiement propre aux marchés publics** — valeur
+  volatile, à vérifier avant toute mention.
+- **Taux des intérêts moratoires et montant de l'indemnité forfaitaire pour
+  frais de recouvrement** — valeurs volatiles.
+- **Seuil de paiement direct du sous-traitant** — valeur volatile.
+- **Délai de contestation du décompte général** — à vérifier marché par
+  marché et selon le texte applicable.
+
+---
+
+## 10. Écrits & livrables
+
+1. **Note d'impact financier** (impact budgétaire d'un avenant, simulation
+   d'une révision de prix) → `templates/note-impact-financier.md`.
+2. **Fiche de procédure financière** (méthode de calcul des pénalités de
+   retard, procédure du décompte général et définitif, engagement comptable
+   d'un accord-cadre) → `templates/fiche-procedure-financiere.md`.
+3. **Délibération** requise pour un avenant relevant de la compétence de
+   l'assemblée (hors délégation à l'exécutif) → `templates/deliberation-budgetaire.md`.
+4. **Aucun écrit relatif à la passation** n'est produit par cette branche
+   (choix du titulaire, publicité, critères) — rappel systématique de la
+   limite de périmètre plutôt que production d'un livrable de passation.
+
+---
+
+## 11. Double échelle [risque / confiance]
+
+| Sous-domaine | Risque | Confiance |
+|---|---|---|
+| Avance obligatoire et son remboursement | Moyen | Stable dans son principe, seuil et taux à vérifier |
+| Retenue de garantie / garantie à première demande | Moyen | Stable dans son principe, plafond à vérifier |
+| Révision et actualisation des prix | Moyen à élevé | Stable dans sa méthode, index et mois de référence à vérifier |
+| Pénalités de retard et leur imputation | Moyen | Stable dans son principe, taux contractuel à vérifier |
+| Décompte général et définitif | Élevé (effet de cristallisation) | Stable dans son principe, délais à vérifier |
+| Paiement direct du sous-traitant | Élevé | Stable dans son principe, seuil à vérifier |
+| Délai global de paiement et intérêts moratoires | Élevé | Stable dans son principe, durée et taux à vérifier |
+| Avenant et impact budgétaire | Élevé | Stable dans son principe (disponibilité des crédits) |
+
+---
+
+## 12. Checklist de branche
+
+1. **Test de périmètre en premier** : la question porte-t-elle sur la
+   passation (allotissement, publicité, critères, choix du titulaire) ? Si
+   oui, la limite de périmètre a-t-elle été signalée **avant** toute autre
+   analyse (§1) ?
+2. Avance distinguée de l'acompte, seuil et taux renvoyés à vérification
+   (§5.1, §5.2) ?
+3. Retenue de garantie distinguée de la garantie à première demande, mode
+   de libération précisé (§5.3) ?
+4. Mode de prix (ferme / ferme actualisable / révisable) identifié avant
+   toute méthode de révision (§5.5) ?
+5. Pénalités de retard calculées selon la clause contractuelle exacte, pas
+   par défaut (§5.6) ?
+6. Sous-traitance : déclaration, acceptation et ACAP vérifiées avant tout
+   paiement direct (§5.8) ?
+7. Délai global de paiement et intérêts moratoires signalés comme
+   applicables de plein droit, avec durée et taux à vérifier (§5.10) ?
+8. Imputation comptable et disponibilité des crédits vérifiées avant tout
+   avenant (§5.14) ?
+9. Aucun seuil, taux, plafond ou délai chiffré énoncé sans vérification ou
+   sans réserve explicite (§9) ?

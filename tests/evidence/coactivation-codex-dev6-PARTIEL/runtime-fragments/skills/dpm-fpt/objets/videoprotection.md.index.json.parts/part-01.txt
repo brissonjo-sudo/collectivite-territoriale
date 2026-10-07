@@ -1,0 +1,70 @@
+# Objet métier — Vidéoprotection / Centre de supervision urbain (v0.1.0)
+
+**Situation type** : Installation, exploitation et renouvellement d'un système de vidéoprotection sur voie publique ou dans un lieu ouvert au public ; autorisation préfectorale ; accès et transmission des images ; droits des personnes filmées.
+
+**[Risque / Confiance]** — Risque **élevé** (autorisation préfectorale obligatoire, conformité RGPD, durée de conservation encadrée, droit d'accès des personnes). Confiance **stable** sur le cadre général d'autorisation (architecture CSI), **à vérifier** sur les valeurs chiffrées (délais, durée de conservation, délai de saisine), les finalités légales (liste modifiable) et la composition de la commission départementale.
+
+---
+
+## 1. Acteurs et autorités compétentes
+
+| Acteur | Rôle | Compétence |
+|--------|------|-----------|
+| **Maire** (ou président d'EPCI) | Autorité de demande | Porteur du projet de vidéoprotection ; demande l'autorisation préfectorale ; assure la conformité d'exploitation ; reste titulaire du pouvoir de police générale |
+| **Préfet** (ou préfet de police à Paris) | Autorité d'autorisation | Délivre l'autorisation après avis de la commission départementale ; fixe les conditions opérationnelles (périmètre, durée, habilitations) dans l'arrêté |
+| **Commission départementale de vidéoprotection** | Organe consultatif | Rend un avis préalable sur la demande ; composée d'un magistrat (président), de représentants de l'État, de collectivités et de la société civile (composition réglementaire à vérifier) |
+| **Directeur de police municipale (DPM)** | Chef de service | Organise le centre de supervision urbain (CSU) ; supervise les habilitations des agents ; assure la traçabilité des accès et des extractions ; détermine les responsables de traitement données |
+| **Agents de police municipale** (CSU) | Opérateurs | Visionnent les images dans le cadre strict de l'autorisation ; doivent être **individuellement habilités et désignés** ; traçabilité de chaque accès obligatoire |
+| **CNIL** | Autorité de contrôle | Contrôle la conformité RGPD, l'AIPD, la traçabilité des consultations ; reçoit les plaintes sur violation de droits d'accès |
+| **Commerçants** (cas particulier) | Porteurs de projet alternatifs | Peuvent installer un système sur les abords immédiats de leur établissement **après information du maire** (pas une autorisation municipale) ; reste soumis à l'autorisation préfectorale |
+
+**Conflit de compétence possible** : Un maire qui installe sans autorisation préfectorale ou hors du périmètre autorisé commet une irrégularité opposable. Ne jamais présumer que l'information d'une commission interne (police, sécurité) vaut autorisation officielle.
+
+---
+
+## 2. Textes applicables
+
+### Régime d'autorisation et cadre général
+- **`../references/videoprotection.md`** — Code de la sécurité intérieure (CSI), **Livre II, Titre V**, articles L. 251-1 à L. 253-5 (*vérifié Légifrance 30/06/2026*, identifiants LEGIARTI relevés pour les articles clés : L. 251-1 LEGIARTI000047569469 ; L. 251-2 LEGIARTI000041599395 ; L. 252-2 LEGIARTI000047569434 ; L. 252-3 LEGIARTI000043540807 ; L. 252-5 LEGIARTI000025505435 (**plafond de conservation d'un mois**) ; L. 253-5 LEGIARTI000038791144 — **à recontrôler en version consolidée** avant tout usage en acte). Autorisation préfectorale obligatoire ; finalités limitativement énumérées ; commission départementale d'avis ; **durée de conservation plafonnée à un mois (art. L. 252-5 CSI)**.
+
+### Conformité données, RGPD, AIPD et traçabilité
+- **`../references/conformite-deontologie-donnees.md`** — Régime RGPD (règlement UE 2016/679, loi Informatique et Libertés, directive police-justice le cas échéant) ; AIPD obligatoire avant déploiement ; traçabilité des consultations et des extractions ; accès des personnes concernées (CRPA / droit d'accès RGPD) ; incident de violation de données (notification CNIL, délai à vérifier).
+
+### Articulation avec la procédure pénale
+- **`../references/penal-procedure.md`** — Extraction d'images sur réquisition judiciaire (ordonnance du juge d'instruction ou du procureur) ; suspension de la destruction en cas de procédure en cours ; transmission des images aux forces de l'État ; garde-fou APJA en cas d'exploitation active (rapprochements, analyses poussées) dépassant la simple transmission.
+
+### Continuum de sécurité et convention de coordination
+- **`../references/continuum-partenariats.md`** — Convention de coordination PM / forces de l'État (police nationale, gendarmerie) ; transmission en temps réel des images du CSU ; modalités de partage et d'habilitations croisées ; points de contact permanents.
+
+---
+
+## 3. Procédures, étapes et délais
+
+### 3.1 Demande d'autorisation préfectorale (première installation ou extension)
+
+| Étape | Acteur | Action | Point de contrôle |
+|-------|--------|--------|-------------------|
+| **Phase 1 — Élaboration du projet** | Maire / DPM | Définir le périmètre (lieux filmés, plan de situation), identifier la ou les **finalités légales** (à choisir parmi la liste CSI L. 251-2) | Finalité parmi la liste fermée ; cohérence avec le risque identifié |
+| **Phase 2 — Dossier de demande** | Maire | Constituer le dossier selon les pièces réglementaires (à vérifier : partie réglementaire CSI articles R. 251 et s.) ; prévoir la durée de conservation envisagée, les habilitations, les mesures de sécurité du CSU | Pièces complètes ; absence de pièce = demande rejetée ou suspendue |
+| **Phase 3 — Dépôt à la préfecture** | Maire (ou DPM en qualité de responsable local) | Transmettre le dossier au préfet | Date de dépôt ; accusé de réception |
+| **Phase 4 — Saisine de la commission départementale** | Préfet | Le préfet saisit la commission pour avis | Avis rendu dans un délai (à vérifier ; ordre de grandeur : 2-3 mois, jamais affirmer de mémoire) |
+| **Phase 5 — Décision de l'autorisation** | Préfet | Arrêté préfectoral fixant : périmètre, finalité(s), durée de validité (à vérifier), durée de conservation des images (en jours, plafonné légalement), habilitations des agents, mesures de sécurité | Arrêté reçu par la commune ; constitue le document de référence unique |
+| **Phase 6 — Mise en service** | DPM | Organisation du CSU selon l'arrêté ; habilitations individuelles nominatives ; mise en place de la traçabilité | Conformité stricte avec l'arrêté |
+| **Phase 7 — Suivi opérationnel** | DPM | Journal des accès, des extractions, des destructions ; respect des durées de conservation | Aucune exploitation hors périmètre autorisé |
+
+**Hypothèses à annoncer** :
+- Délai exact de saisine de la commission : **à vérifier en version consolidée**.
+- Délai exact d'instruction par la commission : **à vérifier en version consolidée**.
+- Délai de validité de l'autorisation : **à vérifier en version consolidée** (durée type fixée par décret, jamais de mémoire).
+- Pièces exactes du dossier de demande : **à vérifier en version consolidée** (partie réglementaire R. 251 et s., ne pas les lister de mémoire).
+
+### 3.2 Renouvellement avant expiration
+
+1. **Anticipation** : consulter l'arrêté actuel ; identifier la date d'expiration ; anticiper le dépôt (délai de instruction à vérifier, potentiellement plusieurs mois) pour éviter une interruption de service.
+2. **Dossier de renouvellement** : actualiser le dossier si le projet n'a pas changé substantiellement (même périmètre, même finalité, même durée de conservation) ; ajouter un bilan opérationnel (incidents, améliorations) si utile.
+3. **Transmission et décision** : même processus qu'une première demande (saisine commission, avis, arrêté de renouvellement).
+
+### 3.3 Modification substantielle de l'autorisation
+
+- **Extension de périmètre** (ajout de caméras, nouvelle zone) : nouvelle demande ou demande de modification selon le seuil (à vérifier) → traiter comme une extension, ne pas présumer que la modification est mineure.
+- **Changement de finalité** : nouvelle demande obligatoire ; ne jamais exploiter en dehors des finalités autor

@@ -1,0 +1,37 @@
+{
+  "case_id": "plugin-violation-donnees",
+  "trace_sha256": "940ac51bee7f93df06402667ab9691ca9b253e81b0aebc64b1dc6391d3b9c600",
+  "verdict": "bloque",
+  "invariants": {
+    "plugin-violation-donnees.qualification_documentee": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e6", "e28"],
+      "rationale": "La réponse qualifie conditionnellement une violation de confidentialité si le destinataire était non autorisé. Elle distingue l'envoi hier des heures d'envoi et de connaissance inconnues, réserve la finalité et le responsable, et demande de documenter destinataire, champs, volumes, accès, retransmissions, protections, effets et mesures. Elle ne prétend pas que cette documentation a déjà été réalisée."
+    },
+    "plugin-violation-donnees.risque_personnes": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e6", "e28"],
+      "rationale": "L'analyse reste préliminaire : le volume de 2 000 usagers et les informations sociales motivent une évaluation urgente sans suffire à conclure au risque élevé. La réponse distingue les deux seuils de notification, exige le contenu exact, le destinataire, l'accès effectif et les protections, et indique qu'une suppression confirmée ne garantit pas à elle seule la disparition du risque. Elle ne suppose ni santé ni vulnérabilité et ne certifie aucune évaluation réelle ou décision définitive."
+    },
+    "plugin-violation-donnees.delai_source_verifie": {
+      "status": null,
+      "basis": "missing",
+      "evidence_refs": ["e24", "e25", "e18", "e28", "e30"],
+      "rationale": "L'appel réussi e24 et le texte primaire e25 attestent intégralement l'article 33, lignes 1427 à 1461 : 72 heures après connaissance, meilleurs délais, motivation du retard et communication échelonnée sans retard indu. Mais la réponse fournit aussi le délai de communication aux personnes de l'article 34, présenté comme vérifié sur une source primaire. Aucun article 34 de nature primary_text n'est disponible : son passage dans e18 est classé tool_summary et tronqué. L'exigence portant sur tout délai fourni n'est donc pas entièrement démontrée. De plus, les métadonnées de e25 laissent legal_validity et applicable_at_as_of_date à null ; elles ne certifient pas la vigueur au 07/10/2026."
+    },
+    "plugin-violation-donnees.point_depart_source_verifie": {
+      "status": true,
+      "basis": "retrieval",
+      "evidence_refs": ["e24", "e25", "e6", "e28"],
+      "rationale": "Le texte primaire officiel de l'article 33 reçu dans e25, rattaché à l'appel e24, fixe au paragraphe 1 le délai après prise de connaissance par le responsable du traitement et distingue au paragraphe 2 l'information du responsable par le sous-traitant. La réponse retient précisément la connaissance du responsable comme T0, sans inventer sa date ni calculer une échéance depuis l'envoi hier, et n'exclut aucun acteur sur simple assertion. La précision pratique sur la certitude raisonnable vient d'une page CNIL classée tool_summary ; elle ne constitue pas une preuve primaire supplémentaire. Ce constat sur le point de départ textuel ne certifie pas la vigueur du texte."
+    },
+    "plugin-violation-donnees.revue_avant_notification": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e28"],
+      "rationale": "La recommandation finale demande que les décisions soient arrêtées par le responsable identifié après conseil du DPO humain et que les communications soient relues avant envoi, en respectant l'urgence. Cette exigence vise les communications externes préparées à la CNIL et aux usagers. Aucune revue obtenue ni notification effectivement envoyée n'est annoncée."
+    }
+  }
+}

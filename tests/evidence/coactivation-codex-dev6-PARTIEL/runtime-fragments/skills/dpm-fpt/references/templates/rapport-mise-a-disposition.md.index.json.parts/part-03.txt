@@ -1,0 +1,133 @@
+c les champs disponibles (un champ manquant ne
+   bloque pas la rédaction des autres sections).
+4. En fin de document, ajouter la section suivante, systématiquement si au
+   moins un champ est marqué `[INCOMPLET]` :
+
+```
+---
+## CHAMPS MANQUANTS — DOCUMENT NON FINALISABLE EN L'ÉTAT
+
+Les informations suivantes sont requises avant transmission :
+- [champ manquant 1 — étape correspondante]
+- [champ manquant 2 — étape correspondante]
+- [...]
+
+Point de vigilance particulier : le début de la mesure, la décision de l'OPJ
+lorsqu'elle est requise et l'issue horodatée sont des mentions structurantes
+de cet écrit (`references/ecrits-professionnels.md` §5.3). Leur absence
+empêche de documenter la conformité de la route 53/73 ou 78-6
+(`references/penal-procedure.md` §4.3).
+
+Merci de fournir ces éléments pour finaliser le rapport. Ce document ne doit
+être ni transmis, ni visé, ni présenté comme définitif tant que ces champs
+ne sont pas renseignés.
+```
+
+5. **Demander explicitement** ces données à l'utilisateur dans la réponse,
+   en reprenant la formulation de la question d'étape correspondante (§1).
+6. Ne jamais marquer le document comme « final » ou « prêt à transmettre »
+   tant qu'une mention `[INCOMPLET]` subsiste — **a fortiori** si la mise à
+   disposition elle-même n'a pas encore eu lieu (étape 10) : dans ce cas, le
+   document reste un brouillon de compte rendu en cours, jamais un rapport
+   clos.
+
+---
+
+## 5. Transmission
+
+- **Destinataires** : maire **et** OPJ territorialement compétent, sans
+  exception, conformément à la double transmission de
+  `references/penal-procedure.md` §4.2 — ce n'est pas une option laissée au
+  choix du rédacteur, à la différence du rapport d'information.
+- Le **compte rendu oral immédiat** à l'OPJ intervient sans attendre la
+  rédaction : dès l'appréhension pour la route A et dès le refus ou
+  l'impossibilité de justifier l'identité pour la route B. L'écrit formalise
+  la trace après coup et ne s'y substitue pas.
+- **Aucun délai chiffré** n'est donné de mémoire pour la rédaction de ce
+  rapport. Route A : conduire devant l'OPJ sans délai indu. Route B : respecter
+  strictement la chronologie de l'art. 78-6, notamment l'information et la
+  décision de l'OPJ puis son ordre éventuel. L'écrit suit dès que possible,
+  sans retarder le compte rendu oral.
+- **Archivage** : conserver une trace de la version transmise
+  (`references/ecrits-professionnels.md` §6.6), utile en cas de contestation
+  ultérieure de la régularité de la mesure ou de reconstitution chronologique
+  exacte des faits, de l'information, de la décision de l'OPJ et de l'issue.
+
+---
+
+## 6. Articulation avec le garde-fou APJA (rappel)
+
+Ce générateur est, par construction, **l'écrit de la mesure licite**
+(`references/ecrits-professionnels.md` §5.4, `references/penal-procedure.md`
+§4.5) : il documente précisément la route A ou B et la remise à l'OPJ. Le
+déclenchement du garde-fou ne suffit jamais, à lui seul, à ouvrir ce générateur.
+
+Si, à n'importe quelle étape du recueil (§1), il apparaît que l'agent PM a
+pratiqué ou s'apprête à pratiquer un acte hors de ses pouvoirs (audition
+formelle, fouille, garde à vue, perquisition,
+réquisition judiciaire —
+`references/penal-procedure.md` §4.4), interrompre la séquence de questions
+et afficher immédiatement le bloc **STOP** (§0) **avant** de poursuivre quoi
+que ce soit d'autre. La suite se limite alors à :
+1. l'affichage du STOP en premier ;
+2. la qualification de la route A, de la route B, ou de l'absence de fondement ;
+3. seulement si une route est établie, la consignation des informations
+   relevant de la mesure et de la remise (sections I à III et V du gabarit) ;
+4. la **non-rédaction** de toute section qui décrirait un acte réservé —
+   préférer `[INCOMPLET — hors champ APJA, acte réservé OPJ, ne pas
+   formaliser]` plutôt que de décrire l'acte ;
+5. le compte rendu à l'OPJ et au maire, sans attendre la rédaction définitive
+   de l'écrit.
+
+**Rappel de cohérence avec `references/ecrits-professionnels.md` §8 point
+7** : ne jamais esquisser, dans ce rapport, des éléments relevant d'une
+audition formelle (questions-réponses circonstanciées) — c'est le piège le
+plus fréquent identifié pour cet écrit.
+
+---
+
+## 7. Double échelle [risque / confiance]
+
+| Point | Risque | Confiance |
+|---|---|---|
+| Choix de l'écrit (vs rapport d'information / PV) | Moyen | Vérification ponctuelle si situation mixte (§0) |
+| Qualification de la route 53/73 ou 78-6 | Critique | Toutes les conditions doivent être vérifiées ; sinon aucune rétention |
+| Chronologie de la mesure / décision OPJ / mise à disposition | Élevé | `[INCOMPLET]` obligatoire si absente — mentions structurantes de l'écrit |
+| Description de la contrainte exercée (limitée au strict nécessaire) | Critique | Vigilance rédactionnelle constante — bascule vers garde-fou si dépassement |
+| Qualification évoquée à titre d'hypothèse | Élevé | À vérifier — jamais tranchée ici |
+| Donnée manquante (tout champ) | Élevé | N/A — `[INCOMPLET]` obligatoire |
+| Double transmission maire / OPJ | Élevé | Obligatoire, non optionnelle pour cet écrit (à la différence du rapport d'information) |
+
+---
+
+## 8. Checklist avant de considérer le rapport comme finalisé
+
+1. Garde-fou APJA testé en premier et à chaque étape (§0, §6) : aucun acte
+   réservé OPJ reconstitué ou décrit comme s'il relevait de l'APJA.
+2. Toutes les étapes du §1 parcourues **une à une**, avec confirmation à
+   chaque étape.
+3. Route 53/73 ou 78-6 explicitement confirmée comme déclencheur de cet écrit
+   — sinon, aucune rétention et redirection vers
+   `references/templates/rapport-information.md` ou
+   `references/templates/pv-contravention.md` selon le cas (§0).
+4. **Heure exacte de début**, **information et décision de l'OPJ** lorsque
+   requises, et **issue horodatée** renseignées ou marquées `[INCOMPLET]`
+   avec demande explicite (§4).
+5. **Identité ou qualité de l'OPJ destinataire** renseignée, ou marquée
+   `[INCOMPLET]`.
+6. **Description de la contrainte exercée** strictement limitée à la route
+   établie et, pour la route 78-6, à la décision de l'OPJ : aucune trace
+   d'audition, de fouille, ni d'acte d'enquête.
+7. Qualification, si évoquée, présentée comme hypothèse non tranchée, avec
+   renvoi aux branches compétentes (`penal-procedure.md`,
+   `reglementation-appliquee.md`).
+8. Aucune donnée manquante comblée par supposition — règle `[INCOMPLET]`
+   (§4) appliquée et champs listés explicitement si nécessaire.
+9. **Double transmission maire + OPJ territorialement compétent**
+   correctement distinguée et toutes deux mentionnées (`penal-procedure.md`
+   §4.2) — non optionnelle pour cet écrit.
+10. Aucune donnée nominative exposée inutilement (`SKILL.md` §7 point 11).
+11. Mention finale claire : document **prêt à transmettre** ou marqué
+    `[INCOMPLET]` avec demande explicite des champs manquants — jamais d'état
+    intermédiaire ambigu, et jamais « prêt à transmettre » si la mise à
+    disposition elle-même n'a pas encore eu lieu.

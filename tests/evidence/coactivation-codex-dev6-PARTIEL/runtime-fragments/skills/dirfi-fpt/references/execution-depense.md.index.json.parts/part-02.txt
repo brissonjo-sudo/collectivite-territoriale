@@ -1,0 +1,145 @@
+ait toujours exclue de la réquisition)
+  — liste exacte des cas où le comptable **doit refuser d'obtempérer** même
+  requis, **à vérifier avant toute réquisition envisagée**. La réquisition
+  transfère la responsabilité de la dépense à l'ordonnateur, elle ne
+  régularise pas le fond de l'irrégularité.
+
+### 5.4 Délai global de paiement et intérêts moratoires
+
+- **Délai global de paiement** : durée maximale, courant de la réception de la
+  demande de paiement (ou du service fait si postérieur) jusqu'au paiement
+  effectif, se répartissant entre le **délai de l'ordonnateur** (jusqu'au
+  mandatement) et le **délai du comptable** (jusqu'au paiement) — durée exacte
+  et répartition **à vérifier**, jamais chiffrées de mémoire.
+- **Intérêts moratoires** : dus de plein droit au créancier en cas de
+  dépassement du délai global de paiement, sans mise en demeure préalable
+  nécessaire ; taux et modalités de calcul **à vérifier**, valeur volatile par
+  nature (régime des intérêts légaux).
+- **Suspension du délai** : certains événements suspendent le décompte du
+  délai (demande de pièces complémentaires régulière, litige sur le service
+  fait) — conditions exactes à vérifier avant d'opposer une suspension à un
+  fournisseur.
+- Un dépassement systématique du délai global de paiement est un **signal de
+  contrôle interne** à faire remonter, indépendamment du traitement du cas
+  d'espèce (→ `controle-interne-financier.md`).
+
+### 5.5 Dématérialisation
+
+- **PES V2** : protocole d'échange dématérialisé entre l'ordonnateur et le
+  comptable pour la transmission des flux comptables et des pièces
+  justificatives — généralisation et modalités exactes à vérifier selon la
+  catégorie de collectivité.
+- **Chorus Pro** : portail de facturation électronique par lequel les
+  fournisseurs déposent leurs factures destinées aux personnes publiques —
+  obligation de réception par ce canal à vérifier selon le type de créancier
+  et le seuil éventuellement applicable.
+- **Signature électronique** : les actes et pièces dématérialisés doivent
+  porter une signature dont le niveau de fiabilité (simple, avancée,
+  qualifiée) est fixé par un texte propre à la nature de l'acte — niveau exact
+  à vérifier, ne jamais présumer qu'une simple image de signature suffit.
+- La dématérialisation ne change **aucune règle de fond** du circuit de la
+  dépense (engagement, liquidation, mandatement, contrôle du comptable) : elle
+  n'en modifie que le support et la traçabilité.
+
+### 5.6 Dépenses avant le vote du budget
+
+- **Avant le vote du budget primitif** (début d'exercice, ou année de
+  renouvellement de l'assemblée), l'exécutif peut engager, liquider et
+  mandater certaines dépenses de fonctionnement dans la limite des crédits
+  ouverts l'exercice précédent (hors crédits afférents au remboursement de la
+  dette), et certaines dépenses d'investissement dans une limite fixée en
+  proportion des crédits ouverts au budget précédent — proportion et
+  modalités **à vérifier**, jamais chiffrées de mémoire.
+- Cette faculté suppose, pour l'investissement, une **autorisation expresse**
+  de l'assemblée délibérante (délibération distincte) précisant le montant et
+  l'affectation des crédits — vérifier l'existence de cette délibération avant
+  toute exécution en investissement sur ce régime.
+- Ce régime dérogatoire prend fin au vote du budget primitif ; les dépenses
+  engagées à ce titre s'imputent ensuite sur les crédits du budget voté.
+
+### 5.7 Dépenses obligatoires
+
+- Une **dépense obligatoire** est une dépense que la collectivité est tenue
+  d'inscrire et d'exécuter en vertu d'un texte ou d'une décision de justice
+  devenue définitive (remboursement de la dette, dépenses de personnel
+  statutaires, exécution d'une décision juridictionnelle, notamment) — liste
+  précise et régime à vérifier, non limitée aux exemples cités.
+- L'**absence d'inscription** d'une dépense obligatoire au budget, ou son
+  inscription pour un montant manifestement insuffisant, est un signe du
+  **garde-fou budgétaire** (`SKILL.md` §5.3) : procédure spécifique
+  d'inscription d'office par le représentant de l'État, sur saisine de la
+  chambre régionale des comptes — détail et déclenchement → renvoyer à
+  `controle-budgetaire.md`, ne pas le traiter ici.
+
+### 5.8 Avances et acomptes
+
+- **Avance** : paiement effectué **avant tout commencement d'exécution** de la
+  prestation, par dérogation au principe du service fait — encadrée par des
+  conditions et des plafonds propres à la nature de la dépense (marché
+  public notamment, → `commande-publique-financiere.md` pour le volet
+  marché) — conditions générales à vérifier avant toute recommandation.
+- **Acompte** : paiement correspondant à un service **partiellement fait**,
+  proportionné à l'exécution réellement constatée à la date du paiement.
+- Toute avance ou acompte doit être **régularisé** lors du paiement final, par
+  déduction du montant déjà versé — l'absence de suivi de cette déduction
+  expose à un double paiement.
+
+### 5.9 Régies d'avances
+
+- Une **régie d'avances** permet à un agent habilité (le régisseur) de payer
+  directement certaines dépenses de faible montant ou nécessitant une
+  rapidité d'exécution incompatible avec le circuit normal de mandatement,
+  pour le compte de l'ordonnateur, sous le contrôle du comptable.
+- Institution, nomination du régisseur, cautionnement et contrôles :
+  mécanique **partagée** avec la régie de recettes → `objets/regie.md`
+  (pointer, ne pas dupliquer ici le détail opérationnel).
+- Une régie d'avances est la **seule voie régulière** pour qu'un agent autre
+  que le comptable manie des fonds publics en paiement : toute pratique
+  équivalente hors régie régulièrement instituée déclenche le garde-fou
+  ordonnateur/comptable (`SKILL.md` §5.2).
+
+### 5.10 Dépenses imprévues
+
+- Le **chapitre des dépenses imprévues**, lorsqu'il est ouvert au budget,
+  permet de financer des dépenses **imprévisibles au moment du vote**, dans
+  une limite fixée par le CGCT — limite et conditions de virement vers un
+  chapitre ordinaire à vérifier, jamais chiffrées de mémoire (→
+  `budget-cycle.md` §5.5).
+- Le virement d'un crédit de ce chapitre vers un chapitre de dépense
+  effective doit être **documenté et notifié** dans les conditions fixées par
+  le texte applicable — ne jamais l'utiliser pour couvrir une dépense
+  prévisible non budgétée par ailleurs.
+
+### 5.11 Contrôle allégé en partenariat
+
+- Dispositif conventionnel entre l'ordonnateur et le comptable, organisant un
+  **contrôle par échantillonnage** de certaines catégories de dépenses
+  jugées à faible risque, en contrepartie d'un **renforcement du contrôle
+  interne** de l'ordonnateur sur ces mêmes catégories.
+- Ne dispense **jamais** du respect des règles de fond (service fait, pièces
+  justificatives, disponibilité des crédits) : il modifie l'**intensité du
+  contrôle a priori** du comptable, pas les obligations de l'ordonnateur.
+- Le périmètre exact (catégories de dépenses, taux d'échantillonnage) est
+  fixé par la convention propre à chaque collectivité — à vérifier, jamais
+  présumé identique d'une collectivité à l'autre. Organisation générale du
+  contrôle interne → `controle-interne-financier.md`, ne pas la dupliquer
+  ici.
+
+---
+
+## 6. Calculs et procédures
+
+### 6.1 Séquence normale d'une dépense
+
+Engagement juridique et comptable (crédit réservé) → exécution de la
+prestation → constat et certification du service fait → liquidation (montant
+exact arrêté) → mandatement (pièces justificatives jointes) → transmission au
+comptable → contrôle du comptable → paiement, ou rejet motivé (§5.3).
+
+### 6.2 Méthode de calcul du délai global de paiement
+
+Poser la **méthode**, sans chiffrer : point de départ (réception de la
+demande de paiement ou service fait si postérieur) → décompte des journées
+courant jusqu'au paiement effectif → déduction des périodes de suspension
+régulières → répartition entre part ordonnateur et part comptable → comparaison
+à la durée maximale applicable (**à vérifier**) → si dépassement, 

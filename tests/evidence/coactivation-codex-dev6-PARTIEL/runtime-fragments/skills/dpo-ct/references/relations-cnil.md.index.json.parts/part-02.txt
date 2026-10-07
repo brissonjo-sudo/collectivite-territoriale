@@ -1,0 +1,66 @@
+éponse tardive ou défensive** à une plainte transmise : transformer une
+  demande d'explications en début de contentieux.
+- **Minimiser un contrôle en ligne** : ses constats sont opposables comme
+  ceux d'un contrôle sur place.
+- **Laisser le DPO répondre seul**, sans mandat ni information de
+  l'exécutif : la CNIL dialogue avec le responsable de traitement.
+- **Promettre un plan d'action intenable** : un engagement non tenu aggrave
+  la position lors du contrôle de la mise en demeure.
+- Croire la collectivité **à l'abri des amendes** ou, à l'inverse, citer
+  un plafond de mémoire : le régime du secteur public se vérifie (§5.4).
+- Confondre **notification de violation** (obligation spontanée →
+  `violations.md`) et réponse à une procédure CNIL.
+- Tenir le DPO pour **personnellement responsable** ou le laisser se
+  positionner comme tel.
+
+## 9. Données / références à vérifier
+
+- Art. 36 RGPD et articles relatifs aux pouvoirs des autorités de contrôle —
+  « à confirmer en version consolidée ».
+- **Loi 78-17** : contrôle, mise en demeure, formation restreinte,
+  procédure simplifiée, **plafonds d'amende secteur public**, sanction de
+  l'entrave — **jamais de mémoire**, vérification en session obligatoire.
+- Décret 2019-536 (modalités procédurales) — à confirmer.
+- **Décisions et sanctions CNIL** concernant des collectivités — registre
+  des sanctions, recherche en session uniquement.
+- Doctrine CNIL « collectivités », service dédié, charte des contrôles —
+  versions à dater (cnil.fr).
+
+## 10. Livrables
+
+- **Avis DPO** et **note à l'exécutif** (premier courrier, préparation de
+  contrôle, projet de réponse, plan d'action) → `assets/avis-dpo-modele.md`.
+- Éléments obligatoires de la note : nature et portée de l'acte CNIL, délai
+  opposable relevé sur l'acte, état de conformité mobilisable, risques
+  (sanction, publicité, réputation), plan d'action réaliste et daté,
+  recommandation — la **réponse à la CNIL est signée par le responsable de
+  traitement**, le DPO coordonne (garde-fou §5.2.a du `SKILL.md`).
+- Pièces de fond (registre, AIPD, notification) → générateurs des branches
+  concernées, par pointeur.
+
+## 11. Double échelle [risque / confiance]
+
+- **Par défaut** : tout courrier CNIL = risque **élevé** ; mise en demeure,
+  procédure de sanction ou entrave possible = **critique** → citation
+  obligatoire, double vérification, abstention si doute persistant.
+- **Risque moyen** : demande de conseil en amont, consultation spontanée.
+- **Confiance** : « stable » sur la posture (loyauté, délais, rôle du DPO) ;
+  « à vérifier » sur toute règle de procédure et tout plafond de sanction
+  (loi 78-17) ; « jurisprudentiel » sur la pratique décisionnelle de la
+  formation restreinte — jamais de décision citée de mémoire.
+
+## 12. Checklist de branche
+
+1. Nature exacte de l'acte CNIL qualifiée d'après le courrier lui-même ?
+2. Délai relevé sur l'acte (jamais reconstitué) et rétroplanning posé ?
+3. **Exécutif et direction générale associés dès le premier courrier** ?
+4. Responsable de traitement signataire identifié ; mandat du DPO clarifié ?
+5. Niveau de risque fixé à élevé ou critique par défaut (§11) ?
+6. Branche(s) de fond mobilisée(s) par pointeur, sans duplication ?
+7. Tout pouvoir, plafond ou procédure CNIL cité vérifié en session ou marqué
+   « à vérifier » (dont plafond secteur public) ?
+8. Aucune sanction ni décision citée de mémoire ?
+9. Plan d'action réaliste, daté, avec responsables et preuves ?
+10. Rôle consultatif du DPO préservé : il coordonne et recommande, le
+    responsable de traitement décide et signe (garde-fou §5.2.a) ?
+11. Cas significatif proposé pour `JOURNAL.md` ?

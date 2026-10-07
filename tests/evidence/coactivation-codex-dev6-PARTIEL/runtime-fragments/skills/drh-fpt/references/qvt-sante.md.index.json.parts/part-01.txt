@@ -1,0 +1,153 @@
+# Branche — QVT & santé au travail
+
+> Structure conforme à `_gabarit-branche.md`. Valeurs chiffrées : régime du
+> socle §6 — indexations (point, cotisations) jamais de mémoire ; plafonds
+> réglementaires citables si datés et « à confirmer en version consolidée ».
+
+## 1. Périmètre
+
+Santé, sécurité et qualité de vie au travail des agents : prévention,
+suivi médical, congés liés à la santé, handicap, télétravail, action sociale,
+protection sociale complémentaire, égalité professionnelle.
+
+## 2. Questions couvertes
+
+Prévention des risques (DUERP, RPS), médecine de prévention, conseil médical,
+congés maladie (CMO, CLM, CLD) et CITIS, temps partiel thérapeutique, handicap
+(obligation d'emploi, FIPHFP), télétravail, action sociale, PSC (prévoyance et
+santé), égalité femmes-hommes, inaptitude et reclassement, période de
+préparation au reclassement (PPR), disponibilité d'office, retraite pour
+invalidité ; égalité professionnelle (plan d'action, nominations
+équilibrées).
+
+## 3. Arbre de traitement
+
+`question → variables à lever (§4) → décision → vérification (§7) → livrable (§10)`
+
+## 4. Variables à lever
+
+- **Statut de l'agent** (titulaire / contractuel) : régimes de congés distincts.
+- **Origine de l'affection** : maladie ordinaire vs imputable au service (CITIS).
+- **Organisation locale** : médecine de prévention interne ou conventionnée ;
+  délibération télétravail ; offre d'action sociale (CNAS, COS).
+- **Effectif** : la formation spécialisée en SSCT est obligatoire à 200 agents
+  (acquise au-dessus de 350) → voir branche CST.
+
+## 5. Règles métier
+
+### 5.1 Prévention
+- **DUERP** (document unique d'évaluation des risques professionnels) :
+  obligatoire, mis à jour régulièrement, accessible aux agents.
+- **RPS** (risques psychosociaux) : démarche de prévention intégrée au DUERP.
+- Acteurs : assistant et conseiller de prévention, médecine de prévention,
+  formation spécialisée du CST.
+
+### 5.2 Suivi médical et instances
+- **Médecine de prévention** : suivi des agents (visites), action sur le milieu
+  de travail.
+- **Conseil médical** : depuis le 1er février 2022, **fusion** du comité
+  médical et de la commission de réforme (décret n° 2022-350). Formations
+  restreinte et plénière. En matière d'**imputabilité au service**, lorsqu'un
+  avis du conseil médical est requis, il siège en **formation plénière**
+  (ancienne compétence de la commission de réforme), jamais en formation
+  restreinte. L'autorité territoriale reste compétente pour décider de
+  l'imputabilité ; la saisine du conseil n'est pas systématique.
+
+### 5.3 Congés liés à la santé
+- **CMO** (maladie ordinaire), **CLM** (longue maladie), **CLD** (longue durée) ;
+  pour les contractuels, congé de grave maladie. Durées, plein/demi-traitement
+  et conditions : **à vérifier** (régime distinct titulaires / contractuels).
+- **CITIS** (congé pour invalidité temporaire imputable au service) :
+  accident de service, de trajet, maladie professionnelle. Présomption
+  d'imputabilité dans certains cas. Base FPT : **CGFP, art. L. 822-18 et s.**
+  et **décret n° 2019-301 du 10 avril 2019** (CITIS dans la FPT) — *ne pas
+  viser le décret n° 2019-122 du 21 février 2019, propre à la fonction publique
+  d'État*.
+- **Temps partiel thérapeutique** : reprise progressive, sur avis médical.
+
+### 5.4 Handicap
+- **Obligation d'emploi** de travailleurs handicapés : taux légal, applicable
+  au-dessus du seuil d'effectif (franchi ici).
+- **FIPHFP** : contribution si l'obligation n'est pas atteinte ; financements et
+  aides. **DOETH** : déclaration annuelle.
+
+### 5.5 Télétravail et action sociale
+- **Télétravail** : mis en place par délibération après avis du CST ; cadre
+  national (décret 2016-151 modifié) ; possible indemnité forfaitaire
+  (montant **à vérifier**).
+- **Action sociale** : prestations facultatives (titres-restaurant, CNAS, COS,
+  aides diverses). L'action sociale est une **dépense obligatoire dans son
+  principe**, mais son contenu relève du **choix local**.
+
+### 5.6 Protection sociale complémentaire (PSC) — point d'actualité
+Participation employeur **obligatoire** (ordonnance n° 2021-175, décret
+n° 2022-581, loi n° 2025-1251 du 22 décembre 2025) :
+- **Prévoyance** (incapacité, invalidité, décès) : obligatoire **depuis le
+  1er janvier 2025**.
+- **Santé** (mutuelle) : obligatoire **depuis le 1er janvier 2026**.
+- La **loi du 22 décembre 2025** généralise les **contrats collectifs de
+  prévoyance à adhésion obligatoire** (échéance **1er janvier 2029**) et relève
+  la participation employeur en prévoyance.
+
+> Montants planchers et taux de participation **évoluent** → données volatiles,
+> à vérifier (§9). Débat préalable obligatoire en assemblée et association du CST.
+
+### 5.7 Égalité professionnelle
+
+- **Plan d'action relatif à l'égalité professionnelle** : obligatoire pour
+  les collectivités et EPCI de **plus de 20 000 habitants** (décret
+  n° 2020-528 du 4 mai 2020, en vigueur dès sa publication ; le mécanisme
+  de pénalité financière n'est devenu opérationnel qu'à l'issue du délai
+  de mise en demeure, au 1er octobre 2021 — seuil stable, à confirmer en
+  version consolidée avant tout acte). Quatre axes réglementaires :
+  1. évaluation, prévention et, le cas échéant, résorption des écarts de
+     rémunération ;
+  2. garantie de l'égal accès aux corps, cadres d'emplois et grades ;
+  3. favoriser l'articulation entre activité professionnelle et vie
+     personnelle et familiale ;
+  4. prévention et lutte contre les violences sexuelles, sexistes et le
+     harcèlement.
+  Durée maximale **3 ans**, renouvelable. Absence de plan : **pénalité
+  financière** plafonnée à **1 % de la rémunération brute annuelle
+  globale** (décret n° 2020-528), ramenée à **0,5 %** si l'employeur
+  justifie d'un **engagement effectif d'élaboration** du plan avant la
+  fin de la mise en demeure — taux stables depuis 2020, à confirmer en
+  version consolidée avant toute réponse chiffrée dans un acte.
+- **Nominations équilibrées aux emplois de direction** : proportion
+  minimale par sexe des primo-nominations, avec pénalité en cas de
+  non-respect. **Renforcé par la loi n° 2023-623 du 19 juillet 2023** :
+  taux cible porté de 40 % à **50 %** ; pour les employeurs sous les 37 %
+  (moyenne 2020-2022), trajectoire de +3 points dès le 20 juillet 2023
+  jusqu'au 1er janvier 2027 puis tous les 3 ans jusqu'à 40 % ; suppression
+  de la dispense de pénalité à compter du 1er janvier 2027 ; contribution
+  forfaitaire par unité manquante (90 000 € au-delà de 80 000 habitants,
+  50 000 € entre 40 000 et 80 000 habitants) — **taux, montants, jalons de
+  trajectoire et périmètre exact (FPT distinctement de la FPE/FPH) à
+  recouper sur CGFP art. L.132-5 avant citation dans un acte**, la
+  prochaine échéance (1er janvier 2027) restant à venir.
+- **Index de l'égalité professionnelle dans la fonction publique** :
+  introduit par cette même loi, décrets d'application **n° 2024-801 et
+  n° 2024-802 du 13 juillet 2024** (en vigueur depuis le 15 juillet 2024) :
+  concerne régions, départements, communes et EPCI de **plus de 40 000
+  habitants gérant au moins 50 agents permanents**, ainsi que le CNFPT.
+  Note sur 100 points, seuil cible 75 points, publication annuelle
+  (objectifs de progression exigés si score < 75).
+- **Rapport de situation comparée / indicateurs** : intégrés au **RSU**
+  (rapport social unique, voir branche SI RH) ; alimentent le suivi du
+  plan d'action.
+
+**Piège.** Présenter le plan d'action égalité comme une simple faculté de
+communication : c'est une **obligation** assortie d'une pénalité
+financière au-dessus du seuil.
+
+### 5.8 Inaptitude, reclassement, PPR
+
+Sujet majeur des grandes collectivités : rarement traité comme une
+**chaîne complète**, souvent réduit à un acte isolé. Dérouler les étapes
+dans l'ordre.
+
+**Étape 1 — épuisement des droits à congé.**
+- Bornes de durée : **CMO 12 mois**, **CLM 3 ans**, **CLD 5 ans** (sur
+  périodes de référence propres à chaque congé) — **stable** dans leur
+  principe.
+- Modalités plein traitement / dem

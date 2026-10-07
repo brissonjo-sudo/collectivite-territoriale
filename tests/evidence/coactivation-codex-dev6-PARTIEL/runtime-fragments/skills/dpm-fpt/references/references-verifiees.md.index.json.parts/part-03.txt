@@ -1,0 +1,89 @@
+2023-380) — la note « version 16/10/2020 » qui figurait dans la branche
+> vidéoprotection a été actualisée.
+> **Note art. 537 CPP** : l'audit du 2026-07-01 a détecté un identifiant
+> divergent (`LEGIARTI000006576892`, version antérieure) dans deux générateurs ;
+> ils ont été réalignés sur la valeur du registre (`LEGIARTI000006576893`,
+> version en vigueur 01/04/2005, reconfirmée le 2026-07-01).
+
+---
+
+## 7. Jurisprudence vérifiée
+
+> **Pourquoi cette section existe** : le socle ne couvrait que des articles de
+> codes. Les arrêts de principe, cités par leur **nom d'usage**, échappaient de
+> ce fait au dispositif de provenance et se retrouvaient affirmés sans réserve —
+> cause directe d'échecs de sourcing sur deux campagnes de test (cas 01 de
+> l'exécution du 2026-08-03, cas 15 de la campagne `r3`). Une décision
+> juridictionnelle se cite **comme un article** : avec sa référence et sa date
+> de vérification, ou avec sa réserve.
+
+| Décision | Objet | Références | Identifiant |
+|---|---|---|---|
+| **CE, Sect., 19 mai 1933, *Benjamin*** | Principe de **proportionnalité des mesures de police administrative** : le maire doit concilier ses pouvoirs de police avec la liberté de réunion et ne peut interdire une réunion dont les troubles pouvaient être prévenus par des mesures moins attentatoires | Requêtes n° **17413** et **17520** ; publié au **recueil Lebon, p. 541** ; annulation sur recours pour excès de pouvoir | CETATEXT000007636694 (Légifrance, consulté le **2026-09-06** ; recoupé sur ArianeWeb — Conseil d'État) |
+
+> **Portée** : cet arrêt est le **fondement du test de proportionnalité** appliqué
+> par `controle-legalite.md` avant toute production d'acte de police. Il est
+> désormais citable avec sa provenance. Ses **déclinaisons jurisprudentielles
+> récentes** (application à un cas d'espèce, évolutions sur la liberté
+> d'expression ou de manifestation) restent hors socle et relèvent de
+> `recherche-juridique`.
+
+---
+
+## 8. Compléments consolidés à l'audit du 2026-09-14
+
+Références citées avec un numéro précis dans les branches, objets ou
+générateurs sans figurer au socle (constat de l'audit), **vérifiées par
+consultation directe de Légifrance le 2026-09-14** et portées ici.
+
+| Référence | Objet | En vigueur depuis | Identifiant |
+|---|---|---|---|
+| **CGCT L. 2131-4** | Actes **exclus** de l'obligation de transmission au contrôle de légalité (actes pris au nom de l'État, actes de droit privé) | 01/07/2022 | LEGIARTI000044190553 |
+| **CGCT L. 2212-3** | Police municipale des communes **riveraines de la mer** (rivage jusqu'à la limite des eaux) — ne concerne pas la circulation | 24/02/1996 | LEGIARTI000006390154 |
+| **CSI L. 512-2** | **Recrutement d'agents PM par un EPCI** à fiscalité propre, mis à disposition des communes membres — ne porte pas sur les plages horaires d'intervention (voir L. 512-4 pour la convention de coordination) | 29/12/2019 | LEGIARTI000041411493 |
+| **CSI L. 241-2** | **Caméras individuelles des agents PM** : autorisation préfectorale sur demande du maire, convention de coordination, enregistrement non permanent, finalités, conservation | 26/01/2022 | LEGIARTI000045071841 (non modifié par la loi n° 2026-798, qui ne touche que L. 241-1) |
+| **CG3P L. 2122-3** | L'autorisation d'occupation du domaine public présente un **caractère précaire et révocable** | 01/07/2006 | LEGIARTI000006361202 |
+| **Code de la route R. 325-14** | **Autorité qui prescrit la mise en fourrière** : OPJ territorialement compétent, **ou APJA chef de la police municipale (ou occupant ces fonctions)**, de sa propre initiative ou sur proposition de l'agent verbalisateur ; véhicule volé, propriétaire non identifié ou fausses plaques → **OPJ seul** ou accord préalable exprès | 01/04/2021 (décret n° 2020-775 du 24/06/2020) | LEGIARTI000042039259 |
+| **Décret n° 2013-1113 du 4 décembre 2013** | Partie réglementaire du CSI (livres I, II, IV et V), dont le **code de déontologie des agents PM** (R. 515-1 à R. 515-21) | 06/12/2013 (JORF n° 0283) | JORFTEXT000028276865 |
+| **Loi n° 2026-798 du 18 août 2026** | Loi « Ripost » — voir l'alerte de vigueur en tête de fichier | 20/08/2026 | JORFTEXT000054707332 |
+| **CPP art. 15-3** | Réception des plaintes par les OPJ et APJ ; depuis le 20/08/2026, **APJA des 1° à 1° ter de l'art. 21 seulement** (formation, contrôle OPJ, exclusions) — **jamais un agent PM** ; abrogation programmée au 01/01/2029 | 20/08/2026 (loi n° 2026-798, art. 55) | LEGIARTI000054725475 |
+| **CPP art. 803** | **Menottes ou entraves** : uniquement si la personne est dangereuse pour autrui ou pour elle-même, ou susceptible de prendre la fuite ; mesures pour éviter qu'elle soit photographiée ou filmée ; abrogation programmée au 01/01/2029 | 16/06/2000 (loi n° 2000-516) | LEGIARTI000006578404 (ne pas confondre avec `…403`, version 1993-2000) |
+| **CJA R. 421-1** | Délai de recours contentieux de **deux mois** à compter de la notification ou de la publication | 01/01/2020 (décret n° 2019-1502) | LEGIARTI000039807005 |
+| **CJA L. 521-1** | **Référé-suspension** (urgence + doute sérieux sur la légalité) | 01/01/2001 | LEGIARTI000006449326 |
+| **CJA L. 521-2** | **Référé-liberté** (atteinte grave et manifestement illégale à une liberté fondamentale, 48 h) | 01/01/2001 | LEGIARTI000006449327 |
+| **CGCT L. 2131-1** | **Caractère exécutoire** des actes des communes : publication ou notification et, pour les actes de L. 2131-2, transmission au préfet | 01/07/2022 (ord. n° 2021-1310) | LEGIARTI000044190563 |
+| **CGCT L. 2131-6** | **Déféré préfectoral** : le préfet défère au tribunal administratif les actes de L. 2131-2 qu'il estime contraires à la légalité, dans les **deux mois** de leur transmission | 01/07/2022 (texte modificateur non lu explicitement sur la page — probable ord. n° 2021-1310) | LEGIARTI000044190539 |
+| **CGCT L. 2212-5** | Missions des agents PM et organisation des services : **renvoi au titre Ier du livre V du CSI** | 01/05/2012 (ord. n° 2012-351) | LEGIARTI000025543324 |
+| **CSI L. 512-5** | **Convention intercommunale de coordination**, en substitution de L. 512-4, quand des agents PM sont mis à disposition de plusieurs communes — ne fixe pas les plages horaires d'intervention | 27/05/2021 (loi n° 2021-646) | LEGIARTI000043540455 (l'identifiant `LEGIARTI000041411429` cité en branche renvoie vers cette version courante) |
+
+> **Pointe de vigilance L. 512-2 / L. 512-4 / L. 512-5** : deux branches
+> rattachaient les plages horaires d'intervention de la PM à « L. 512-2 et
+> s. ». L. 512-2 traite du recrutement intercommunal ; L. 512-4 impose la
+> convention de coordination (seuil de trois emplois) ; L. 512-5 régit la
+> convention **intercommunale**. **Aucun de ces articles ne fixe les plages
+> horaires** (intervention de nuit, 23 h – 6 h) : cette règle relève de la
+> partie réglementaire (R. 512-5 et s.) et de la convention type annexée au
+> CSI — **non consultées en source primaire, identifiants non obtenus,
+> réserve maintenue**.
+>
+> **Palpations de sécurité (CSI L. 511-1, al. 6, au socle §3)** : les agents
+> PM affectés par le maire à la sécurité d'une manifestation sportive,
+> récréative ou culturelle, d'un périmètre de protection (L. 226-1) ou de
+> l'accès à un bâtiment communal peuvent procéder à l'**inspection visuelle
+> des bagages**, à leur **fouille avec le consentement** du propriétaire et
+> à des **palpations de sécurité avec le consentement exprès** de la personne
+> (par une personne de même sexe). Hors ces cas et hors consentement, **aucune
+> fouille ni palpation** : c'est une mesure de sûreté, jamais un acte
+> d'enquête.
+
+---
+
+## 9. Compléments v1.0.5 — points relevés par des répondants pendant `r4`
+
+Trois points de fond signalés pendant la campagne `r4` (non appliqués à
+chaud, cf. `CHANGELOG.md`), **vérifiés par consultation directe de
+Légifrance le 2026-09-17** et portés ici.
+
+| Référence | Objet | En vigueur depuis | Identifiant |
+|---|---|---|---|
+| **Code de la route L. 413-1** | **Grand excès de vitesse** : dépasser la vitesse maxi

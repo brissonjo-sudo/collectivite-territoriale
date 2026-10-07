@@ -1,0 +1,26 @@
+able dans son principe |
+| Conflit maire / préfet / EPCI | Élevé | À vérifier |
+| Proportionnalité d'une mesure restrictive de liberté | Élevé | Jurisprudentiel |
+| Rôle d'exécutant de l'agent PM | Moyen | Stable |
+
+---
+
+## 11. Checklist de branche
+
+1. Garde-fou APJA testé si le fait bascule vers le judiciaire (§4.7) ?
+2. Police générale ou spéciale correctement qualifiée (§4.2-4.3) ?
+3. Régime de police de la commune (droit commun / étatisée) vérifié (§4.4) ?
+4. Autorité compétente identifiée et conflit signalé le cas échéant
+   (§4.1, §6.4) ?
+5. Conditions du pouvoir de substitution du préfet testées si invoqué
+   (§4.5) ?
+6. Rôle de l'agent PM correctement limité à l'exécution, sans pouvoir de
+   décision propre (§4.6) ?
+7. Mesure envisagée proportionnée et motivée ?
+8. Articles cités avec leur statut (« vérifié sur Légifrance le 2026-06-30 »
+   ou « à confirmer en version consolidée ») ?
+9. Si acte faisant grief : motivation, voies de recours, contrôle de
+   légalité traités via `controle-legalite.md` ?
+10. Cumul de procédures (administrative/pénale) repéré et signalé ?
+
+**[risque variable selon sous-domaine — voir §10 / confiance variable, voir §10]**

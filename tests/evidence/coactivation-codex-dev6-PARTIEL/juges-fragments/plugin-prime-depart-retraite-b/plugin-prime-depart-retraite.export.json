@@ -1,0 +1,54 @@
+{
+  "case_id": "plugin-prime-depart-retraite",
+  "agent": "/root/juge_codex_dev6_r1_01b",
+  "exported_at": "2026-10-07T21:27:41.533541+00:00",
+  "packet_sha256": "4212c5ff14eb8ba6bdcc218a2ec8071f019f75dccb8a1e59f0f3b6cc72130881",
+  "response_sha256": "402b7ca8c598d24b1f2a79821fb317099b7d6fd3b9e53f34353dbb95e55cf373",
+  "prompt_sha256": "5d1040bf366366c2e291dab2f27929f4c42301676f89523ec6d2b2b408024eef",
+  "fragments": [
+    {
+      "number": 1,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-prime-depart-retraite-b/fragment-01.txt",
+      "sha256": "ae8110ac716151c5a45c899c2e4a723b1e681672ad6c69bc7515edd9bee3411d",
+      "character_count": 8000
+    },
+    {
+      "number": 2,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-prime-depart-retraite-b/fragment-02.txt",
+      "sha256": "3f76325b4905a9a79d8f2a87111fe2f7fdc814db4f634acaf9e4c37d36faa337",
+      "character_count": 8000
+    },
+    {
+      "number": 3,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-prime-depart-retraite-b/fragment-03.txt",
+      "sha256": "4ecb783bf63dc1c783eaaf03d59aa5c36a3ee704abab4063fcf5c5e16fe28e82",
+      "character_count": 8000
+    },
+    {
+      "number": 4,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-prime-depart-retraite-b/fragment-04.txt",
+      "sha256": "c99592c2b4a80e4df85214cd1a6f254f0568c8e9f5ee64ca71a5cfe96afbfb13",
+      "character_count": 8000
+    },
+    {
+      "number": 5,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-prime-depart-retraite-b/fragment-05.txt",
+      "sha256": "44d61cdbf20de990158b19ceed7060a8a0341ec322d1c1d0c8c1a81f6977b07a",
+      "character_count": 8000
+    },
+    {
+      "number": 6,
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-prime-depart-retraite-b/fragment-06.txt",
+      "sha256": "9ec372f237bce2b3288d46eec33fd05d763e22d2fc227b7014bd446bbe81861c",
+      "character_count": 3186
+    }
+  ],
+  "judge_adapter_sha256": "60fdc580620f8c4d5ee950c5f1a3678b57b5a5c9db29f80557941db3df2a9c3e",
+  "campaign_adapter_sha256": "fe7b71c349834fe1623a26183ad78bad9978ab3d93855c1a44fcc70e0db52b4d",
+  "presentation_wrapper_sha256": "e7573fe2e5d43a5efc70431f8fa50e172b2a91f96b5037502b9c68218c4948f9",
+  "suite_sha256": "3c45e6117c25cbca0558de2955ca5a7d80956575d886a887d1cdfdc581375cd8",
+  "protocol_sha256": "65f78f419679774ec00c6b5d96b1801f902c6510b57e221ae7ebb31320fd1b6f",
+  "historical_scores_reused": false,
+  "activation_kind": "file_read_fragments",
+  "actual_plugin_activation_verified": false
+}

@@ -1,0 +1,142 @@
+# Branche — Pilotage & budget (v0.1.0)
+
+> Structure conforme à `_gabarit-branche.md`. Les valeurs datées (seuils,
+> montants, taux) ne sont jamais données de mémoire : seules les **règles**
+> figurent ici, avec la consigne de vérifier la valeur en vigueur.
+
+## 1. Périmètre / Exclusions
+
+**Périmètre** : projet de service de police municipale ; construction et
+exécution du budget du service ; marchés publics du service (équipements,
+véhicules, armement) ; indicateurs d'activité et reporting au maire.
+
+**Exclusions** :
+- **Masse salariale** (traitement, régime indemnitaire, effectifs au sens RH,
+  GVT) → `drh-fpt` (carrière-paie). La présente branche traite la masse
+  salariale **uniquement comme une ligne du budget global du service**, sans
+  jamais en détailler le calcul (renvoi systématique).
+- **Armement et équipements** : le **choix doctrinal et l'autorisation
+  préfectorale** relèvent de `references/armement-equipements.md` ; cette
+  branche traite l'**achat** (procédure de marché) une fois la doctrine fixée.
+- **Vidéoprotection** : l'**autorisation préfectorale et le régime CNIL**
+  relèvent de `references/videoprotection.md` ; cette branche traite
+  l'**achat et le financement** de l'équipement.
+- **Légalité de l'acte** (délibération, marché) avant signature →
+  `references/controle-legalite.md`.
+
+## 2. Questions couvertes
+
+Élaboration d'un projet de service pluriannuel ; construction budgétaire
+(BP, DM, CA) ; débat d'orientation budgétaire ; choix de la procédure de
+marché public selon le montant ; computation des seuils (achat de
+véhicules, gilets pare-balles, armement, uniformes, radio, vidéoprotection,
+logiciels métier) ; allotissement ; subventions et cofinancements (FIPD,
+dotations) ; tableau de bord d'activité (PV, interventions, taux
+d'élucidation locale) ; reporting au maire et au conseil municipal.
+
+## 3. Arbre de traitement
+
+`question → variables à lever (§4) → décision → vérification (§7) → écrit/livrable (§10)`
+
+Ne pas chiffrer ni qualifier une procédure de marché tant que les quatre
+données suivantes ne sont pas connues : **nature de l'achat**
+(fournitures/services ou travaux), **montant HT total sur toute la durée**,
+**périmètre homogène du besoin** et **allotissement envisagé**. Si l'une manque,
+la demander, marquer l'analyse `[INCOMPLET]` et s'abstenir de conclure sur la
+procédure applicable.
+
+## 4. Variables à lever
+
+- **Taille de la commune / EPCI** (seuils CGCT déclenchant des obligations :
+  rapport d'orientation budgétaire, débat, présentation des effectifs —
+  à vérifier selon strate démographique).
+- **Montant estimé du besoin HT**, sur la durée totale envisagée du contrat
+  (et non le seul exercice annuel) — détermine le régime de publicité et de
+  mise en concurrence.
+- **Nature de l'achat** : fournitures/services ou travaux (seuils distincts).
+- **Allotissement envisagé** : lot par lot ou marché global (computation du
+  seuil par lot vs valeur totale estimée du besoin).
+- **Source de financement** : budget propre, subvention fléchée (FIPD,
+  dotation armement, fonds européens), cofinancement EPCI.
+- **Régime budgétaire de la collectivité** : nomenclature comptable
+  applicable (M57 généralisée ou autre selon strate — à vérifier),
+  autorisations de programme / crédits de paiement si pluriannuel.
+- **Existence d'un projet de service formalisé** (référentiel
+  stratégique préalable) conditionnant la cohérence des achats et des
+  indicateurs avec les priorités affichées au maire.
+
+## 5. Règles métier
+
+### 5.1 Projet de service de police municipale
+
+- Document de **pilotage stratégique**, non un acte juridique formel : pas de
+  base légale imposant son contenu en tant que tel pour la PM (à la différence
+  d'autres administrations). Sa **légitimité** vient de sa validation par le
+  maire (autorité hiérarchique du service) et, le cas échéant, de sa
+  présentation au conseil municipal.
+- Structure recommandée : diagnostic de sécurité locale, priorités
+  opérationnelles, organisation cible (effectifs, équipements, doctrine —
+  renvoi `doctrine-operationnelle.md`), trajectoire budgétaire pluriannuelle,
+  indicateurs de suivi (§5.4).
+- Le projet de service **n'emporte pas par lui-même** d'engagement budgétaire :
+  il oriente le **vote annuel du budget** par le conseil municipal, seul acte
+  juridiquement engageant.
+- Cohérence à vérifier avec la **convention de coordination** (renvoi
+  `continuum-partenariats.md`) et les éventuelles **LDG RH** du volet
+  recrutement (renvoi `drh-fpt`).
+
+### 5.2 Construction et exécution budgétaire
+
+- **Cadre général** : budget communal régi par le CGCT (Livre III, finances
+  communales). Principes budgétaires (annualité, universalité, unité,
+  équilibre réel, spécialité) — règles stables dans leur architecture,
+  modalités d'application à vérifier au cas par cas.
+- **Rapport et débat d'orientation budgétaire (DOB)** : dans les communes
+  dont la population atteint le seuil fixé par la loi, le maire présente au
+  conseil municipal, dans le délai précédant l'examen du budget, un rapport
+  sur les orientations budgétaires, les engagements pluriannuels envisagés
+  et la structure/gestion de la dette ; ce rapport donne lieu à un **débat**,
+  dont **acte est pris par une délibération spécifique**
+  (Art. L. 2312-1 CGCT — *vérifié sur Légifrance le 2026-06-30*,
+  identifiant `LEGIARTI000051731867`). Dans les communes dépassant un second
+  seuil démographique, le rapport intègre en outre une présentation de la
+  structure des effectifs et de l'évolution des dépenses de personnel — point
+  de **jonction obligatoire avec `drh-fpt`** pour le chiffrage RH, le DPM ne
+  fournissant que les éléments de doctrine et d'organisation du service.
+  > **Point de vigilance daté** : une réforme de la nomenclature budgétaire
+  et comptable locale (ordonnance n° 2025-526 du 12 juin 2025) modifie ce
+  cadre **à compter de l'exercice 2026** — vérifier la version consolidée
+  applicable à l'exercice budgétaire concerné avant toute présentation au
+  conseil municipal.
+- **Cycle budgétaire annuel** : DOB (si seuil atteint) → vote du budget
+  primitif (BP) → décisions modificatives (DM) en cours d'exercice → compte
+  administratif (CA) en clôture. Le budget du service PM (fonctionnement et
+  investissement) s'inscrit dans le budget général de la commune ; il n'a pas
+  d'autonomie juridique propre (sauf régie ou budget annexe, cas rare pour la
+  PM).
+- **Pluriannualité** : pour les investissements lourds (flotte de véhicules,
+  centre de supervision urbain, armement), recourir aux **autorisations de
+  programme / crédits de paiement (AP/CP)** si la nomenclature applicable le
+  permet — vérifier l'éligibilité selon la strate et le référentiel comptable
+  en vigueur.
+- **Exécution** : engagement → liquidation → ordonnancement → paiement
+  (séparation ordonnateur/comptable). Le DPM, en tant que service prescripteur,
+  engage la dépense dans la limite des crédits votés et de sa délégation de
+  signature (vérifier l'arrêté de délégation du maire).
+
+### 5.3 Marchés publics (équipements, véhicules, armement)
+
+- **Code de la commande publique (CCP)** : texte de référence. Distinguer
+  toujours le **seuil de dispense de procédure** (marché passé sans
+  publicité ni mise en concurrence préalables) du **seuil de procédure
+  adaptée (MAPA)** et du **seuil de procédure formalisée** (appel d'offres) —
+  ces trois seuils sont **périodiquement révisés** (révision biennale liée
+  aux seuils européens) : ne jamais les citer de mémoire, vérifier la valeur
+  en vigueur à la date de lancement de la consultation.
+  - **Gré à gré sans publicité ni mise en concurrence** : possible pour un
+    besoin dont la valeur estimée est inférieure à un seuil fixé par voie
+    réglementaire, ou dans les cas limitativement énumérés (urgence,
+    infructuosité, exclusivité — liste fermée) (Art. L. 2122-1 CCP —
+    *vérifié sur Légifrance le 2026-06-30*, identifiant
+    `LEGIARTI000042657232` ; cas détaillés aux art. R. 2122-1 et s. CCP, à
+    confirmer en version

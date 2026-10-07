@@ -1,0 +1,45 @@
+ + trajectoire budgétaire) ; rapport d'orientation budgétaire
+   (volet PM) pour alimenter le DOB du maire.
+2. **Acte budgétaire** — le DPM **n'élabore pas seul** l'acte (délibération
+   de budget), il fournit les éléments du service ; vérifier la procédure de
+   consolidation avec les finances de la collectivité.
+3. **Marché public** — pièces de la consultation (CCTP technique relevant du
+   DPM, RC et CCAP relevant souvent du service achats/finances) ; **acte
+   d'engagement et choix de procédure** : motivation du choix de procédure
+   selon le seuil retenu, à documenter pour traçabilité contentieuse (renvoi
+   `contentieux.md`).
+4. **Reporting** — tableau de bord d'indicateurs d'activité (périodicité à
+   définir avec le maire) ; note de synthèse annuelle au maire et, si
+   présentée, au conseil municipal.
+
+Gabarits → `references/templates/` (note au maire : `references/templates/note-maire-modele.md`).
+
+## 11. Double échelle [risque / confiance]
+
+- **Stable** : architecture du cycle budgétaire (DOB → BP → DM → CA),
+  distinction des trois régimes de procédure de marché (dispense / adaptée /
+  formalisée), principe d'interdiction du saucissonnage.
+- **À vérifier (risque moyen à élevé selon enjeu)** : tout seuil chiffré
+  (commande publique, démographique CGCT), tout délai légal, la nomenclature
+  comptable applicable à la strate, le calendrier d'une réforme en cours
+  (ordonnance 2025-526).
+- **Risque élevé** : choix de procédure de marché sur achat sensible
+  (armement) sans articulation vérifiée avec l'autorisation préfectorale —
+  citation de source obligatoire avant engagement (§5.1 du `SKILL.md`).
+
+## 12. Checklist de branche
+
+1. Masse salariale exclue du chiffrage détaillé et renvoyée à `drh-fpt` ?
+2. Nature de l'achat, montant HT total sur la durée, périmètre homogène du
+   besoin et allotissement envisagé levés avant de qualifier la procédure ?
+3. Seuil de procédure (dispense / MAPA / formalisée) vérifié en version
+   consolidée à la date de lancement, pas cité de mémoire ?
+4. Absence de saucissonnage du besoin vérifiée ?
+5. Pour un achat d'armement : articulation avec l'autorisation préfectorale
+   (`armement-equipements.md`) vérifiée avant engagement ?
+6. DOB : seuil démographique, délai et contenu (effectifs si seuil atteint)
+   vérifiés, jonction `drh-fpt` faite pour le volet RH ?
+7. Indicateurs distingués d'une statistique officielle de délinquance et
+   d'une évaluation individuelle d'agent ?
+8. Si acte faisant grief ou marché contesté : renvoi `controle-legalite.md` /
+   `contentieux.md` effectué ?

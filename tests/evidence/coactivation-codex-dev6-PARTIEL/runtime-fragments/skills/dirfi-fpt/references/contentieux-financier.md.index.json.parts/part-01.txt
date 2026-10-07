@@ -1,0 +1,146 @@
+# Brique posture — Contentieux financier et responsabilité (v0.1.0)
+
+> Brique transverse, pas une branche métier. Structure adaptée du gabarit
+> `_gabarit-branche.md` : les 12 sections sont conservées, dans l'ordre.
+> **Aucune décision de justice n'est citée ici par son nom d'usage, son
+> millésime ou son numéro** : toute recherche de jurisprudence financière
+> relève de `recherche-juridique`. **Aucun montant de sanction ni délai de
+> prescription n'est chiffré** : chacun est nommé, marqué « à vérifier ».
+
+## 1. Périmètre / Exclusions
+
+- **Périmètre** : l'organisation des **juridictions financières**, le
+  **régime unifié de responsabilité financière des gestionnaires publics**
+  (réforme entrée en vigueur en 2023), la **gestion de fait**, les
+  **contrôles non juridictionnels** (examen de la gestion), le **contentieux
+  administratif** des actes budgétaires et fiscaux, et les réflexes de
+  prévention côté direction des finances.
+- **Exclusions** : la **procédure de contrôle budgétaire** proprement dite
+  (saisine préventive de la CRC par le préfet sur les quatre cas limitatifs)
+  → `controle-budgetaire.md`. Le **maniement de fonds hors circuit du
+  comptable**, en tant que garde-fou opposable **avant** tout montage →
+  `SKILL.md` §5.2 (cette brique traite ce qui se passe **après**, une fois la
+  gestion de fait déjà caractérisée ou alléguée). La **recherche de
+  jurisprudence** elle-même → `recherche-juridique`. La **procédure
+  disciplinaire** individuelle d'un agent → `drh-fpt` (`SKILL.md` §5.5). Le
+  **retour d'expérience** méthodologique après un cas → `retex.md`.
+
+---
+
+## 2. Questions couvertes
+
+- « Qui juge les comptables publics et les gestionnaires publics
+  aujourd'hui ? Est-ce toujours comme avant 2023 ? »
+- « Cette situation peut-elle être qualifiée de gestion de fait ? Pour qui,
+  avec quelles conséquences ? »
+- « Quelles infractions financières sont réprimées, et par quelle
+  juridiction ? »
+- « Un ordre écrit de l'autorité hiérarchique exonère-t-il l'agent ou
+  l'élu ? »
+- « Que se passe-t-il lors d'un examen de la gestion ? Est-ce une
+  sanction ? »
+- « Un tiers peut-il attaquer une délibération budgétaire ou fiscale devant
+  le juge administratif ? »
+- « Comment prévenir, dans nos pratiques internes, un risque de mise en
+  cause devant le juge des comptes ? »
+
+---
+
+## 3. Arbre de traitement
+
+`situation signalée → qualifier la nature du risque (§5) — irrégularité
+d'exécution, gestion de fait, ou fragilité d'un acte budgétaire/fiscal →
+identifier la juridiction ou la voie compétente (§5.1, §5.5) → vérifier les
+éléments constitutifs avant toute qualification ferme (§5.2, §5.3) →
+identifier les causes d'exonération éventuelles (§5.2) → vérifier les
+valeurs et références mobilisées (§7) → orienter vers l'écrit adapté (§10),
+sans jamais rédiger une argumentation contentieuse de fond à la place de
+l'avocat de la collectivité ou du conseil du gestionnaire mis en cause`
+
+Ne jamais qualifier une situation de « gestion de fait » ou de « faute
+grave » comme un verdict : cette brique **oriente et prépare**, elle ne
+**juge** pas. La qualification définitive appartient à la juridiction
+financière compétente.
+
+---
+
+## 4. Variables à lever
+
+- **Qualité de la personne visée** : ordonnateur, élu, agent, régisseur,
+  comptable public — le régime applicable et la juridiction compétente en
+  dépendent.
+- **Nature du fait allégué** : irrégularité d'exécution, maniement de fonds
+  sans titre (gestion de fait), ou faute de gestion ayant causé un préjudice
+  financier — qualifications distinctes, non exclusives.
+- **Existence d'un ordre écrit préalable** de l'autorité hiérarchique ou d'une
+  délibération couvrant l'opération — élément central pour l'exonération (§5.2).
+- **Caractère significatif du préjudice financier allégué** — condition
+  posée par le régime unifié pour certaines qualifications ; appréciation
+  casuistique, jamais présumée.
+- **Stade de la procédure** : risque identifié en interne, contrôle ou examen
+  de la gestion en cours, réquisitoire déjà émis, instruction ouverte, ou
+  décision déjà rendue.
+- **Volet parallèle éventuel** : procédure disciplinaire (`drh-fpt`), pénale,
+  ou contrôle budgétaire (`controle-budgetaire.md`) — voies autonomes, cumulables.
+
+---
+
+## 5. Règles métier
+
+### 5.1 Organisation des juridictions financières
+
+- **Chambres régionales des comptes (CRC)** : juridictions financières de
+  premier ressort, territorialement compétentes ; elles jugent les comptes
+  des comptables publics de leur ressort, exercent le contrôle budgétaire
+  (`controle-budgetaire.md`) et l'examen de la gestion, et jugent les
+  affaires relevant du régime de responsabilité financière pour les
+  collectivités et organismes de leur ressort.
+- **Cour des comptes** : juridiction financière nationale ; elle juge
+  notamment les comptables et gestionnaires de l'État et des organismes
+  nationaux, et exerce des missions de contrôle et de certification propres.
+- **Juridiction d'appel unifiée** : depuis la réforme entrée en vigueur en
+  2023 (ordonnance de réforme du régime de responsabilité financière des
+  gestionnaires publics — **vérifiée dans `references/references-verifiees.md`
+  §5**, à relire avant toute citation dans un acte), les décisions relatives à
+  la responsabilité financière relèvent d'une **voie d'appel unifiée** devant
+  une chambre spécialisée de la Cour des comptes, avec pourvoi en cassation
+  devant le **Conseil d'État** — fin de la coexistence antérieure de
+  juridictions distinctes pour les comptables et pour les autres
+  gestionnaires. La **codification précise** des infractions, sanctions et de
+  la gestion de fait au CJF n'est, elle, **pas stabilisée** dans ce même
+  registre : jamais d'article précis sans revérification immédiate.
+- **Ministère public** près les juridictions financières : engage les
+  poursuites (réquisitoire) et représente l'intérêt de la loi à l'audience,
+  distinct de la formation de jugement.
+
+### 5.2 Le régime unifié de responsabilité financière des gestionnaires publics
+
+- **Ce qui change par rapport à l'ancien régime** : avant la réforme, le
+  comptable public relevait d'une **responsabilité personnelle et pécuniaire
+  (RPP)** spécifique, distincte du régime applicable à l'ordonnateur et aux
+  autres gestionnaires (essentiellement disciplinaire). Le régime unifié fait
+  relever, en principe, **l'ensemble des gestionnaires publics** — ordonnateurs,
+  agents publics agissant sur délégation, comptables publics — d'un même corps
+  de règles devant la même famille de juridictions, avec une même échelle de
+  sanctions. Portée exacte (cas résiduels, entrée en vigueur par type
+  d'organisme) **à vérifier** avant affirmation catégorique.
+- **Qui est justiciable** : tout **gestionnaire public** au sens large —
+  ordonnateur, élu local dans ses fonctions d'ordonnateur ou de gestionnaire,
+  agent public, comptable public — dès lors qu'il a personnellement pris part
+  aux faits reprochés. Exceptions et régimes particuliers à vérifier au cas
+  par cas.
+- **Infractions réprimées** (catégories, sans préjuger de la qualification
+  exacte dans un cas donné) : **infraction aux règles d'exécution des
+  recettes et des dépenses**, ou plus largement aux règles de gestion des
+  biens publics ; **gestion de fait** (§5.3) ; **faute grave ayant causé un
+  préjudice financier significatif** à l'organisme public concerné ou à un
+  tiers — le caractère « grave » et « significatif » est une appréciation
+  casuistique de la juridiction, jamais présumée par cette brique.
+- **Sanctions** : le régime prévoit une sanction pécuniaire (amende), dont
+  montant, mode de calcul et critères de modulation ne sont **jamais** cités
+  de mémoire — à vérifier avant tout chiffrage.
+- **Procédure type** : voir §6.1.
+- **Causes d'exonération** — à apprécier au cas par cas, jamais présumées
+  automatiques : un **ordre écrit préalable** de l'autorité hiérarchique ou de
+  l'assemblée délibérante peut atténuer ou exonérer l'agent qui l'a exécuté,
+  sauf 

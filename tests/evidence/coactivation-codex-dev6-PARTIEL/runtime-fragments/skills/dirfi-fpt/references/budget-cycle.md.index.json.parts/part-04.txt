@@ -1,0 +1,34 @@
+Plafond du chapitre des dépenses imprévues | Élevé | À vérifier |
+| Règle de retrait au vote du CA/CFU | Élevé | Stable dans le principe, modalité à vérifier |
+| Ordre de priorité de l'affectation du résultat | Élevé | Stable dans le principe, montants à vérifier |
+| AP/CP, AE/CP — contrôle annuel des CP | Moyen | Stable dans la méthode |
+| Obligation de budget annexe pour une activité donnée | Moyen à élevé | À vérifier |
+
+---
+
+## 12. Checklist de branche
+
+1. **Garde-fou budgétaire (`SKILL.md` §5.3)** testé : un signe de
+   déséquilibre, de vote hors délai ou de dépense obligatoire non couverte
+   est-il présent ? Si oui, l'ALERTE BUDGÉTAIRE précède-t-elle tout contenu
+   métier, et le renvoi vers `controle-budgetaire.md` est-il fait ?
+2. **Acte budgétaire correctement qualifié** (DOB, BP, BS, DM, virement,
+   CA/CFU, affectation du résultat) ?
+3. **Compétence** identifiée (assemblée délibérante ou exécutif par
+   délégation expresse) et la délégation vérifiée dans son étendue exacte ?
+4. **Section** (fonctionnement/investissement) et **niveau de vote**
+   (chapitre/article) qualifiés ?
+5. **Équilibre réel** testé section par section (§6.1), pas sur un solde
+   global ?
+6. **Calendrier** (délai DOB, date limite de vote) traité comme « à vérifier »
+   et non chiffré de mémoire ?
+7. Si affectation du résultat en cause : **ordre de priorité** respecté ?
+8. Si AP/CP ou AE/CP en cause : rappel du **contrôle annuel des CP** fait ?
+9. Si budget annexe en cause : cycle propre rappelé, sans confusion avec le
+   budget principal ?
+10. **Écrit** demandé effectivement produit, avec passage par
+    `controle-budgetaire.md` pour le contrôle de légalité si l'acte y est
+    soumis ?
+11. Couple **[risque / confiance]** (§11) indiqué quand utile à la décision ?
+12. Aucune donnée chiffrée (délai, seuil, plafond, montant) énoncée sans
+    réserve « à vérifier » ou « à confirmer en version consolidée » ?

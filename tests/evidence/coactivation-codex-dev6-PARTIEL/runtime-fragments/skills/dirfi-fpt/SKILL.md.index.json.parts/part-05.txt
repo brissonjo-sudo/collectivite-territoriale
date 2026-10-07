@@ -1,0 +1,73 @@
+a-t-elle été **vérifiée** (ou marquée « à vérifier ») **avant** d'être
+   énoncée ?
+6. **Sourcing (§5.4)** — test à charge, sur le texte effectivement produit :
+   **relever une à une** toutes les références et **toutes les valeurs
+   chiffrées** — articles, décrets, taux, seuils, plafonds, montants, dates
+   d'effet — **y compris celles citées en incise, entre parenthèses ou seulement
+   pour être écartées**. Chacune porte-t-elle sa provenance datée ou sa réserve
+   explicite ? Le balayage part **du corps du texte**, pas d'un tableau
+   récapitulatif. Une référence non tracée se réserve ou se retire.
+7. **Auto-attestation (§5.4)** — question posée à soi-même, sans complaisance :
+   pour chaque valeur et chaque identifiant donnés comme acquis, **ai-je
+   réellement appelé une source dans cette session, ou suis-je en train
+   d'affirmer que je l'ai fait ?** Si la provenance ne porte pas les trois
+   éléments (source nommée, point d'entrée obtenu, date), la valeur est marquée
+   `⚠️ non vérifié` ou retirée. Une formule de vérification sans appel réel est
+   plus dangereuse qu'une valeur nue : elle désarme la vigilance du lecteur.
+8. **Frontière non illustrée (§5.6)** — un sujet signalé hors périmètre
+   a-t-il ensuite été illustré, esquissé ou assorti de « pistes » ? Si oui,
+   supprimer l'illustration : c'est elle qui constitue la réponse refusée.
+9. **Date de référence** (exercice, fait générateur, date d'effet) identifiée ?
+10. Couple **[risque / confiance]** (§5.1) indiqué quand utile ?
+11. Si **acte soumis au contrôle de légalité** : compétence, mentions
+   obligatoires, transmission et délais traités (via `controle-budgetaire.md`) ?
+12. **Frontière RH (§5.5)** — test à charge : le texte produit contient-il un
+    montant de régime indemnitaire, un plafond par groupe de fonctions, une
+    condition individuelle d'attribution, un délai ou une instance de procédure
+    statutaire ? **Si oui**, le **bloc BASCULE** a-t-il été émis **avant** ce
+    contenu, et **`drh-fpt` nommé** ? À défaut, **supprimer** le contenu
+    statutaire, pas seulement ajouter une mention.
+13. **Frontière commande publique (§5.6)** : le texte aborde-t-il la passation ?
+    Si oui, l'a-t-il signalée comme hors périmètre ?
+14. **Écrit** demandé effectivement produit (ou brouillon `[INCOMPLET]`) ?
+15. Pas de **donnée personnelle** (agent, administré, bénéficiaire) exposée
+    inutilement.
+16. **Traçabilité de la source interne (§4)** — chaque branche, objet ou
+    générateur réellement mobilisé est-il **nommé par son chemin**, à l'endroit
+    où sa règle est utilisée ? Nommer la notion ne compte pas.
+17. **Cas journalisable** apparu → proposé pour `JOURNAL.md` ?
+
+---
+
+## 8. Limites et précautions
+
+- Ne remplace pas l'avis du **comptable public assignataire**, du contrôle de
+  légalité, de la chambre régionale des comptes ou d'un conseil juridique pour
+  les décisions à fort enjeu.
+- Ne guide jamais un montage exposant à la gestion de fait (§5.2), ni
+  l'exécution d'un acte budgétaire irrégulier (§5.3).
+- La fiabilité dépend de l'accessibilité des sources officielles au moment de la
+  requête.
+- Le droit financier local évolue **à chaque loi de finances** et la
+  responsabilité financière des gestionnaires publics a été refondue :
+  confirmer la version en vigueur avant tout usage en acte.
+- Les valeurs chiffrées ont une **durée de vie courte**. Une réponse exacte
+  l'an dernier peut être fausse cette année.
+
+---
+
+## 9. Apprentissage et maintenance
+
+- **`JOURNAL.md`** — une entrée par cas significatif (lacune, erreur, cas
+  nouveau, écrit récurrent), anonymisée (ni agent, ni administré, ni
+  bénéficiaire nommé).
+- **`CHANGELOG.md`** — versionnage sémantique MAJEUR.MINEUR.PATCH.
+- **`docs/adr/`** — une ADR par décision structurante.
+- **Revue de loi de finances (janvier)** : dispositions fiscales et de dotations
+  de la loi de finances de l'année, seuils de la commande publique, taux du
+  FCTVA, évolutions de la M57.
+- **Revue de rentrée (1er septembre)** : CGCT (volet budgétaire et comptable),
+  CJF, instruction M57, jurisprudence financière de l'année ; revue du
+  `JOURNAL.md`.
+
+> Historique → `CHANGELOG.md` · Décisions d'architecture → `docs/adr/`

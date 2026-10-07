@@ -1,0 +1,107 @@
+or ""), suppressed)
+        ),
+    }
+
+
+def get_decision(decision_id: str) -> dict[str, Any]:
+    """Récupère le texte intégral d'une décision Judilibre."""
+    decision_id = decision_id.strip()
+    if not decision_id:
+        raise LegifranceError("L'identifiant de décision est obligatoire.", exit_code=2)
+    _ensure_decision_available(decision_id)
+    decision = judilibre_get(
+        "/decision",
+        {"id": decision_id, "resolve_references": "true"},
+    )
+    if not decision or not decision.get("id"):
+        raise LegifranceError(f"Décision {decision_id} introuvable.", exit_code=5)
+    canonical_id = str(decision["id"])
+    _ensure_decision_available(canonical_id)
+    jurisdiction = decision.get("jurisdiction") or "Juridiction inconnue"
+    date = decision.get("decision_date") or "date inconnue"
+    number = decision.get("number") or "sans numéro"
+    return {
+        "id": canonical_id,
+        "title": f"{jurisdiction}, {date}, n° {number}",
+        "text": _clean_text(decision.get("text")),
+        "url": DECISION_URL.format(id=canonical_id),
+        "metadata": {
+            "jurisdiction": jurisdiction,
+            "chamber": decision.get("chamber"),
+            "decision_date": decision.get("decision_date"),
+            "number": decision.get("number"),
+            "ecli": decision.get("ecli"),
+            "formation": decision.get("formation"),
+            "seat": decision.get("seat") or decision.get("location"),
+            "solution": decision.get("solution"),
+            "publication": decision.get("publication") or [],
+            "source_update_date": (
+                decision.get("update_date")
+                or decision.get("update")
+                or decision.get("publication_date")
+            ),
+            **_judilibre_provenance(),
+        },
+    }
+
+
+def search(query: str) -> dict[str, Any]:
+    """Recherche standard en préservant le code et la date exprimés."""
+    query = query.strip()
+    if not query:
+        raise LegifranceError("La requête est obligatoire.", exit_code=2)
+    article_id_match = _ARTICLE_ID.search(query)
+    if article_id_match:
+        article_id = article_id_match.group(0).upper()
+        # Une date exprimée dans la requête vise la version évaluée : la perdre
+        # ferait juger à la date du serveur une version demandée à une autre.
+        article = get_article(article_id, date=_query_date(query))
+        return {
+            "results": [
+                {
+                    "id": article["id"],
+                    "title": article["title"],
+                    "url": article["url"],
+                }
+            ],
+            "provenance": {
+                "source": "Légifrance API",
+                "verified": True,
+                "content_trust": UNTRUSTED_CONTENT,
+            },
+        }
+    if ARTICLE_ID_PREFIX in query.upper():
+        raise LegifranceError(
+            f"Identifiant {ARTICLE_ID_PREFIX} mal formé dans la requête.", exit_code=2
+        )
+    match = _ARTICLE_QUERY.search(query) or _BARE_ARTICLE_QUERY.search(query)
+    if match:
+        found = search_articles(
+            match.group(1),
+            code=_query_code(query),
+            date=_query_date(query),
+        )
+        return {
+            "results": [
+                {"id": item["id"], "title": item["title"], "url": item["url"]}
+                for item in found["results"]
+            ],
+            "query": found.get("query"),
+            "dating": found.get("dating"),
+            "provenance": found.get("provenance"),
+        }
+    found = search_case_law(query)
+    return {
+        "results": [
+            {"id": item["id"], "title": item["title"], "url": item["url"]}
+            for item in found["results"]
+        ]
+    }
+
+
+def fetch(identifier: str) -> dict[str, Any]:
+    """Récupération standard d'un résultat précédemment renvoyé par search."""
+    identifier = identifier.strip()
+    if identifier.upper().startswith(ARTICLE_ID_PREFIX):
+        return get_article(identifier)
+    return get_decision(identifier)

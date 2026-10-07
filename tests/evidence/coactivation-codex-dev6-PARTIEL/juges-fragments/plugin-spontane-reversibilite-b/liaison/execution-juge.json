@@ -1,0 +1,82 @@
+{
+  "agent": "/root/juge_codex_dev6_r1_16b",
+  "thread_id": "01a11853-37b4-7611-b9d5-ed1c87b2ba02",
+  "parent_thread_id": "01a1103e-0b49-70c1-8f4e-66a36b54916f",
+  "model": "gpt-6.1-sol",
+  "turn_id": "01a11853-3811-7802-87f0-2da38c63d580",
+  "created_at": "2026-10-07T21:44:29.364Z",
+  "started_at": "2026-10-07T21:44:29.470Z",
+  "completed_at": "2026-10-07T21:46:04.335Z",
+  "fork_turns": "none",
+  "initial_message_verified": false,
+  "initial_message_sha256": "78bcc4b7925b036d0b15bb6c8ca3760b9feb7f22413919019e26ceb03f43eeb3",
+  "case_id": "plugin-spontane-reversibilite",
+  "assessment": {
+    "case_id": "plugin-spontane-reversibilite",
+    "verdict": "bloque",
+    "technical_status": "passed",
+    "behavior_status": "passed",
+    "documentary_status": "passed",
+    "primary_content_available": false,
+    "release_ready": false
+  },
+  "host": "Codex",
+  "activation_kind": "file_read_fragments",
+  "actual_plugin_activation_verified": false,
+  "full_packet_context_verified": true,
+  "fragment_count": 7,
+  "judge_adapter_sha256": "60fdc580620f8c4d5ee950c5f1a3678b57b5a5c9db29f80557941db3df2a9c3e",
+  "packet_sha256": "45ecc8f9d299304c8804319fbaaa3de607d06c6f0b9ba539c522abc94b4049d6",
+  "response_sha256": "317c3c4e59cfe18047b106b7040791661e1741084336825468c07903307c99b6",
+  "judgment_sha256": "9fac4437da3bff983dce9af33bc37e1c4c03b7fac42b98163ae60fc8038c84c1",
+  "trace_sha256": "0c21097e4f5c922b2c45f97d1f46275f9454c5f75ed1f35821b53f507e9cdb8f",
+  "rejected_creation_attempts": [],
+  "native_session_file": "rollout-2026-10-07T23-44-29-01a11853-37b4-7611-b9d5-ed1c87b2ba02.jsonl",
+  "parent_session_file": "rollout-2026-10-06T10-04-24-01a1103e-0b49-70c1-8f4e-66a36b54916f.jsonl",
+  "presentation_wrapper_sha256": "e7573fe2e5d43a5efc70431f8fa50e172b2a91f96b5037502b9c68218c4948f9",
+  "exact_presentation_normalizations": [
+    {
+      "call_id": "call_99221c1c52184fd0b2968d032001a75c",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-spontane-reversibilite-b/fragment-01.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_a83f4fcc3137446d8069244576d100e3",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-spontane-reversibilite-b/fragment-02.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_190f63d028394995a7f7de24c6a6fa20",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-spontane-reversibilite-b/fragment-03.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_3e981ed8bb7d4001a8cce447dc66c894",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-spontane-reversibilite-b/fragment-04.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_55d0420addec4f1bbc6c7d98919b41ee",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-spontane-reversibilite-b/fragment-05.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_3c0b843ffce948f9a13946522211c781",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-spontane-reversibilite-b/fragment-06.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    },
+    {
+      "call_id": "call_1a98b579aa9b41c3a9d7ad25c70803f6",
+      "path": "C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/qualification-coactivation-dev6-codex-r1/juges-fragments/plugin-spontane-reversibilite-b/fragment-07.txt",
+      "removed_presentation_suffix": "CRLF",
+      "native_output_modified": false
+    }
+  ],
+  "normalization_scope": "only expected content plus one terminal CRLF; raw events unchanged"
+}

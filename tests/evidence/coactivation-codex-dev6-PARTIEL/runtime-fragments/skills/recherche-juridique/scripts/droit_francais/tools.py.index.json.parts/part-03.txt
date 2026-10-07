@@ -1,0 +1,209 @@
+: dict[str, Any]) -> dict[str, Any] | None:
+    article = payload.get("article")
+    if isinstance(article, dict):
+        return article
+    articles = payload.get("listArticle")
+    if isinstance(articles, list) and articles and isinstance(articles[0], dict):
+        return articles[0]
+    return None
+
+
+def search_articles(
+    number: str,
+    code: str | None = None,
+    date: str | None = None,
+    limit: int = 10,
+) -> dict[str, Any]:
+    """Recherche des articles applicables à une date par numéro."""
+    number = number.strip()
+    if not number:
+        raise LegifranceError("Le numéro d'article est obligatoire.", exit_code=2)
+    date_version = _iso_date(date)
+    variants = _article_number_variants(number)
+    operator = "OU" if len(variants) > 1 else "ET"
+    safe_limit = max(1, min(int(limit), 50))
+    filters: list[dict[str, Any]] = [
+        {"facette": "DATE_VERSION", "singleDate": _epoch_ms(date_version)}
+    ]
+    if code and code.strip():
+        filters.append({"facette": "NOM_CODE", "valeurs": [code.strip()]})
+    body = {
+        "fond": "CODE_DATE",
+        "recherche": {
+            "champs": [
+                {
+                    "typeChamp": "NUM_ARTICLE",
+                    "criteres": [
+                        {
+                            "typeRecherche": "EXACTE",
+                            "valeur": variant,
+                            "operateur": operator,
+                        }
+                        for variant in variants
+                    ],
+                    "operateur": operator,
+                }
+            ],
+            "filtres": filters,
+            "pageNumber": 1,
+            "pageSize": safe_limit,
+            "operateur": "ET",
+            "sort": "PERTINENCE",
+            "typePagination": "ARTICLE",
+        },
+    }
+    payload = api_call("/search", body, get_token())
+    expected = {variant.upper() for variant in variants}
+    results: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    for result in payload.get("results") or []:
+        titles = result.get("titles") or []
+        code_title = _clean_text(titles[0].get("title")) if titles else ""
+        for section in result.get("sections") or []:
+            for extract in section.get("extracts") or []:
+                article_id = extract.get("id") or ""
+                article_number = _clean_text(extract.get("num") or extract.get("title"))
+                if (
+                    not article_id.startswith(ARTICLE_ID_PREFIX)
+                    or article_id in seen
+                    or article_number.upper() not in expected
+                ):
+                    continue
+                seen.add(article_id)
+                results.append(
+                    {
+                        "id": article_id,
+                        "title": f"Article {article_number} — {code_title}".strip(" —"),
+                        "url": ARTICLE_URL.format(id=article_id),
+                        "number": article_number,
+                        "code": code_title,
+                        "section": _clean_text(section.get("title")),
+                        "legal_status": extract.get("legalStatus") or "UNKNOWN",
+                        "start_date": extract.get("dateDebut"),
+                    }
+                )
+    return {
+        "results": results[:safe_limit],
+        "query": {"number": number, "code": code, "date": date_version},
+        "dating": _dating(date),
+        "provenance": {
+            "source": "Légifrance API",
+            "verified": True,
+            "content_trust": UNTRUSTED_CONTENT,
+        },
+    }
+
+
+def get_article(article_id: str, date: str | None = None) -> dict[str, Any]:
+    """Récupère une version d'article et évalue sa validité à la date visée."""
+    article_id = article_id.strip().upper()
+    if not _ARTICLE_ID.fullmatch(article_id):
+        raise LegifranceError(
+            f"Identifiant attendu {ARTICLE_ID_PREFIX} suivi de 12 chiffres "
+            f"(reçu {article_id!r}).",
+            exit_code=2,
+        )
+    body: dict[str, Any] = {"id": article_id}
+    if date:
+        body["date"] = _iso_date(date)
+    payload = api_call("/consult/getArticle", body, get_token())
+    article = _extract_article(payload)
+    if not article:
+        raise LegifranceError(f"Article {article_id} introuvable.", exit_code=5)
+    canonical_id = article.get("id") or article_id
+    number = _clean_text(article.get("num")) or "?"
+    text = _clean_text(article.get("texte") or article.get("texteHtml"))
+    start_date = article.get("dateDebut")
+    end_date = article.get("dateFin")
+    return {
+        "id": canonical_id,
+        "title": f"Article {number}",
+        "text": text,
+        "url": ARTICLE_URL.format(id=canonical_id),
+        "metadata": {
+            "number": number,
+            "legal_status": article.get("etat") or article.get("etatJuridique") or "UNKNOWN",
+            "start_date": start_date,
+            "end_date": end_date,
+            "source": "Légifrance API",
+            "verified": True,
+            "content_trust": UNTRUSTED_CONTENT,
+            **_article_dating(start_date, end_date, date),
+        },
+    }
+
+
+def search_case_law(
+    query: str,
+    jurisdiction: str | None = None,
+    date_start: str | None = None,
+    date_end: str | None = None,
+    limit: int = 10,
+    sort: str = "relevance",
+) -> dict[str, Any]:
+    """Recherche la jurisprudence judiciaire dans Judilibre.
+
+    ``sort`` est ajouté en dernier, avec le mode qui reproduit le tri
+    historique : les appels positionnels existants gardent leur comportement.
+    """
+    query = query.strip()
+    if not query:
+        raise LegifranceError("La requête de jurisprudence est obligatoire.", exit_code=2)
+    if date_start:
+        _iso_date(date_start)
+    if date_end:
+        _iso_date(date_end)
+    jurisdiction_code = _validate_jurisdiction(jurisdiction)
+    sort_field, sort_order = _judilibre_sort(sort)
+    safe_limit = max(1, min(int(limit), 50))
+    payload = judilibre_get(
+        "/search",
+        {
+            "query": query,
+            "jurisdiction": jurisdiction_code,
+            "date_start": date_start,
+            "date_end": date_end,
+            "page": 0,
+            "page_size": safe_limit,
+            "sort": sort_field,
+            "order": sort_order,
+        },
+    )
+    results: list[dict[str, Any]] = []
+    suppressed = _suppressed_decision_ids()
+    source_results = payload.get("results") or []
+    for decision in source_results:
+        decision_id = str(decision.get("id") or "").strip()
+        if not decision_id or _is_suppressed(decision_id, suppressed):
+            continue
+        jurisdiction_name = decision.get("jurisdiction") or "Juridiction inconnue"
+        date = decision.get("decision_date") or "date inconnue"
+        number = decision.get("number") or "sans numéro"
+        results.append(
+            {
+                "id": decision_id,
+                "title": f"{jurisdiction_name}, {date}, n° {number}",
+                "url": DECISION_URL.format(id=decision_id),
+                "summary": _clean_text(decision.get("summary")),
+                "jurisdiction": jurisdiction_name,
+                "decision_date": decision.get("decision_date"),
+                "number": decision.get("number"),
+                "ecli": decision.get("ecli"),
+                "formation": decision.get("formation"),
+                "seat": decision.get("seat") or decision.get("location"),
+                "source_update_date": (
+                    decision.get("update_date")
+                    or decision.get("update")
+                    or decision.get("publication_date")
+                ),
+            }
+        )
+    return {
+        "results": results,
+        "total": payload.get("total", len(results)),
+        "query": query,
+        "provenance": _judilibre_provenance(),
+        "temporarily_suppressed_results": sum(
+            1
+            for item in source_results
+            if _is_suppressed(str(item.get("id") 
