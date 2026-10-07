@@ -23,3 +23,9 @@ Ne pas présenter la notification CNIL préalable comme condition de
 l'information des personnes, ni attendre son achèvement lorsque l'information
 des personnes doit intervenir dans les meilleurs délais. La décision revient
 au responsable de traitement, après conseil du DPO et validation humaine.
+
+Dans la réponse, rappeler explicitement cette validation humaine avant toute
+notification externe à l'autorité ou communication aux personnes. L'assistant
+prépare un brouillon et les points à décider ; il ne valide ni ne déclenche
+ces envois. Ce contrôle ne justifie pas de différer les mesures immédiates
+ni de dépasser le délai applicable vérifié à la source.

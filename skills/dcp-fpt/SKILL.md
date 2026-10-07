@@ -10,9 +10,9 @@ description: >-
   police municipale (dpm-fpt), les concessions et délégations de service public.
 ---
 
-# Skill : dcp-fpt (v0.1.1)
+# Skill : dcp-fpt (v0.1.2)
 
-> Métadonnées — version : **0.1.1** · langue : français · statut : **non mesuré, non relu par un praticien**.
+> Métadonnées — version : **0.1.2** · langue : français · statut : **non mesuré, non relu par un praticien**.
 > Aide à la décision ; aucune réponse ne vaut autorisation de signer ni source autonome de droit positif.
 
 ## 1. Déclenchement
@@ -233,6 +233,10 @@ diagnostic autonome ni enquête.
 leur périmètre ; `recherche-juridique` vérifie le fond. Le bloc BASCULE reste
 obligatoire en co-activation : il précède l'intertitre du délégataire,
 puis vient l'analyse de ce dernier. Ne pas placer le bloc sous cet intertitre.
+Après le renvoi, DCP peut demander les pièces manquantes et préciser le point
+juridique du marché qui reste à vérifier. Il ne prescrit ni circuit
+d'instruction ou de validation financière, ni acteur du paiement : ce volet
+reste arrêté tant que le délégataire n'est pas chargé.
 Un délégataire poursuit seulement si son point
 d'entrée a été effectivement chargé et ses références utiles lues, sous un
 intertitre explicite. Sinon, laisser le renvoi. Les skills d'accessibilité

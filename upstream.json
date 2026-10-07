@@ -44,7 +44,7 @@
           "target": "SKILL.md",
           "source": "overlays/dpo-ct.md",
           "base_sha256": "41e4f3b262f8bbd3e7ca568613c57ad053399311a946a4aec3bb0fa1adc602b7",
-          "source_sha256": "01e06632f376a5b6cf7a5ff1304312709db9ba9fba0da91d64851ed0cdada3d5",
+          "source_sha256": "a611c4057cd988f7fdb49b9a98853dc8194e522fe5d3b528d6dc49605262b532",
           "anchor": "## 1. Déclenchement"
         }
       ]
@@ -93,8 +93,8 @@
     },
     "dcp-fpt": {
       "repository": "https://github.com/brissonjo-sudo/DCP-fpt.git",
-      "commit": "caef7fd9e680dc28056998532d24befa0e8680ec",
-      "version": "0.1.1",
+      "commit": "554db579aaa9c4dda0aafa27d164416e0e4959a7",
+      "version": "0.1.2",
       "paths": [
         "SKILL.md",
         "agents/openai.yaml",

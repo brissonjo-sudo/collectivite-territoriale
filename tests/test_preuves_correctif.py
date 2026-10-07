@@ -4,13 +4,15 @@ import json
 import subprocess
 import sys
 import unittest
+import tempfile
+from unittest.mock import patch
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import run_codex_campaign as campaign
 import audit_native_reads as read_audit
-from support_preuves_historiques import runtime_at
+from support_preuves_historiques import runtime_at, files_at
 
 
 def load(name):
@@ -25,6 +27,18 @@ class PreuvesCorrectifTests(unittest.TestCase):
         self.assertEqual({r["case_id"] for r in summary["runs"]}, set(cases))
         self.assertEqual(len(summary["runs"]), len(cases))
         runtime = runtime_at(ROOT, summary["plugin_commit"])
+        # Les plans de lecture et sélections restent ceux des octets mesurés.
+        temporary = tempfile.TemporaryDirectory()
+        self.addCleanup(temporary.cleanup)
+        frozen = Path(temporary.name)
+        for name, content in files_at(ROOT, summary["plugin_commit"]).items():
+            target = frozen / name
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes(content)
+        for module in (campaign, read_audit):
+            context = patch.object(module, "ROOT", frozen)
+            context.start()
+            self.addCleanup(context.stop)
         runner = subprocess.run(["git","show",summary["plugin_commit"]+":scripts/run_codex_campaign.py"],
             cwd=ROOT,check=True,capture_output=True).stdout
         self.assertEqual(hashlib.sha256(runner).hexdigest(),summary["runner_sha256"])
@@ -67,13 +81,16 @@ class PreuvesCorrectifTests(unittest.TestCase):
         self.assertFalse(summary["human_legal_validation"])
         self.assertFalse(summary["publication_ready"])
 
-    def test_mesure_autonome_porte_sur_le_dcp_courant_sans_avis_humain(self):
+    def test_mesure_autonome_historique_sans_transfert_au_candidat(self):
         evidence = load("tests/evidence/2026-10-07-correctif/dcp-autonome.json")
         upstream = load("upstream.json")["skills"]["dcp-fpt"]
-        self.assertEqual(evidence["upstream_runtime_commit"],upstream["commit"])
-        self.assertEqual(upstream["version"],"0.1.1")
-        runtime = {p.relative_to(ROOT/"skills/dcp-fpt").as_posix():hashlib.sha256(p.read_bytes()).hexdigest()
-            for p in (ROOT/"skills/dcp-fpt").rglob("*") if p.is_file() and p.name!="LICENSE"}
+        source = load("tests/evidence/2026-10-07-codex-natif-v3/summary.json")["plugin_commit"]
+        upstream_old = json.loads(subprocess.run(["git", "show", source+":upstream.json"], cwd=ROOT,
+            check=True, capture_output=True).stdout)["skills"]["dcp-fpt"]
+        self.assertEqual(evidence["upstream_runtime_commit"],upstream_old["commit"])
+        runtime = {name.removeprefix("skills/dcp-fpt/"):digest
+            for name, digest in runtime_at(ROOT, source).items()
+            if name.startswith("skills/dcp-fpt/") and not name.endswith("/LICENSE")}
         self.assertEqual(evidence["summary"]["runtime_sha256"],runtime)
         serialized = json.dumps(evidence["summary"],ensure_ascii=False,indent=2)+"\n"
         self.assertEqual(hashlib.sha256(serialized.encode()).hexdigest(),evidence["source_summary_sha256"])

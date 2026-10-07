@@ -141,10 +141,11 @@ class CodexCampaignTests(unittest.TestCase):
         root = campaign.ROOT
         path = root / "tests/evidence/2026-10-07-correctif/installation-codex.json"
         evidence = json.loads(path.read_text(encoding="utf-8"))
-        expected = {p.relative_to(root).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
-                    for p in (root / "skills").rglob("*") if p.is_file()}
+        source = "4dfec61aa81b54b21b347b2ebe077bdc54fc8940"
+        expected = runtime_at(root, source)
         self.assertEqual(evidence["runtime_sha256"], expected)
-        upstream = json.loads((root / "upstream.json").read_text(encoding="utf-8"))
+        upstream = json.loads(subprocess.run(["git", "show", source+":upstream.json"], cwd=root,
+            check=True, capture_output=True).stdout)
         self.assertEqual(evidence["source_dcp_commit"], upstream["skills"]["dcp-fpt"]["commit"])
         self.assertEqual({s["name"] for s in evidence["skills"]},
                          {"collectivite-territoriale:"+name for name in upstream["skills"]})

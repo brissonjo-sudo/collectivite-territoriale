@@ -4,8 +4,8 @@ import subprocess
 from pathlib import Path
 
 
-def runtime_at(root: Path, commit: str) -> dict[str, str]:
-    """Compare les preuves historiques à leur commit, jamais au candidat courant."""
+def files_at(root: Path, commit: str) -> dict[str, bytes]:
+    """Récupère les blobs historiques sans conversion des lignes."""
     listing = subprocess.run(["git", "ls-tree", "-r", "-z", commit, "--", "skills"],
                              cwd=root, check=True, capture_output=True).stdout
     entries = []
@@ -27,8 +27,13 @@ def runtime_at(root: Path, commit: str) -> dict[str, str]:
             raise ValueError("Objet Git historique inattendu")
         start = end + 1
         stop = start + int(size)
-        result[name] = hashlib.sha256(data[start:stop]).hexdigest()
+        result[name] = data[start:stop]
         offset = stop + 1
     if offset != len(data):
         raise ValueError("Réponse Git historique incomplète")
     return result
+
+
+def runtime_at(root: Path, commit: str) -> dict[str, str]:
+    """Compare les preuves historiques à leur commit, jamais au candidat courant."""
+    return {name: hashlib.sha256(data).hexdigest() for name, data in files_at(root, commit).items()}
