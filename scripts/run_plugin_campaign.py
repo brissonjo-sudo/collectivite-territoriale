@@ -308,31 +308,35 @@ def technical_failures(clean: list[dict[str, Any]], case: dict[str, Any]) -> lis
     return failures
 
 
-def execute(case: dict[str, Any], claude: str) -> tuple[list[dict[str, Any]], int]:
+def execute(case: dict[str, Any], claude: str, timeout: int = 300) -> tuple[list[dict[str, Any]], int]:
     """Exécute un cas et conserve son flux brut seulement en mémoire."""
 
     environment = os.environ.copy()
     environment["ENABLE_CLAUDEAI_MCP_SERVERS"] = "false"
-    completed = subprocess.run(
-        build_command(case, claude),
-        cwd=ROOT,
-        env=environment,
-        stdout=subprocess.PIPE,
-        stderr=subprocess.STDOUT,
-        text=True,
-        encoding="utf-8",
-        errors="replace",
-        check=False,
-    )
+    if timeout <= 0:
+        raise ValueError("Le délai d'exécution doit être positif")
+    try:
+        completed = subprocess.run(
+            build_command(case, claude), cwd=ROOT, env=environment,
+            stdout=subprocess.PIPE, stderr=subprocess.STDOUT,
+            text=True, encoding="utf-8", errors="replace", check=False,
+            timeout=timeout,
+        )
+        raw, exit_code = completed.stdout, completed.returncode
+    except subprocess.TimeoutExpired as error:
+        raw = error.stdout or ""
+        if isinstance(raw, bytes):
+            raw = raw.decode("utf-8", errors="replace")
+        exit_code = 124
     events: list[dict[str, Any]] = []
-    for line in completed.stdout.splitlines():
+    for line in raw.splitlines():
         try:
             event = json.loads(line)
         except json.JSONDecodeError:
             continue
         if isinstance(event, dict):
             events.append(event)
-    return sanitize(events, case), completed.returncode
+    return sanitize(events, case), exit_code
 
 
 def main() -> int:
@@ -345,7 +349,11 @@ def main() -> int:
         default=ROOT / "tests/evidence/.work",
     )
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--timeout", type=int, default=300)
+    parser.add_argument("--stop-on-failure", action="store_true")
     args = parser.parse_args()
+    if args.timeout <= 0:
+        parser.error("--timeout doit être positif")
 
     cases = load_cases()
     selected = [
@@ -360,10 +368,12 @@ def main() -> int:
         if args.dry_run:
             print(json.dumps(build_command(case, args.claude), ensure_ascii=False))
             continue
-        clean, process_exit = execute(case, args.claude)
+        clean, process_exit = execute(case, args.claude, args.timeout)
         failures = technical_failures(clean, case)
         if process_exit:
             failures.append("process_exit_nonzero")
+            if process_exit == 124:
+                failures.append("process_timeout")
         summary = {
             "type": "technical_assessment",
             "case_id": case["id"],
@@ -382,6 +392,8 @@ def main() -> int:
         print(f"[{summary['status'].upper()}] {case['id']} -> {destination}")
         if failures:
             exit_code = 1
+            if args.stop_on_failure:
+                break
     return exit_code
 
 

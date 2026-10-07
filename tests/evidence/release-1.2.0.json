@@ -1,7 +1,7 @@
 {
-  "date": "2026-10-06",
+  "date": "2026-10-07",
   "plugin_version": "1.2.0",
-  "plugin_commit": null,
+  "plugin_commit": "85011f7f86b488330fe00ff7a30ce42d6dbe9a84",
   "release_ready": false,
   "upstream_commits": {
     "dpm-fpt": "1668c89798f1f50a829c0b94d3cf6bf33a3640fb",
@@ -13,17 +13,17 @@
   },
   "release_blockers": [
     "La campagne comportementale du candidat 1.2.0, dont les scénarios DCP, reste à exécuter.",
-    "La suite métier et la mesure DCP 0.1.0 restent à construire et à exécuter.",
-    "L'accès MCP et les options de la CLI réelle doivent être qualifiés avant campagne.",
+    "Suite autonome DCP de 28 cas rédigée ; mesure et contrôle des traces en cours, sans preuve promue.",
+    "Claude : quota de session et MCP needs-auth. La connexion Codex principale ne qualifie pas le répondant Claude.",
     "La relecture par un praticien est différée après l'intégration candidate ; elle reste requise avant qualification et publication.",
-    "Le smoke Codex du commit candidat reste à réaliser.",
+    "Smoke Codex des copies natives réussi ; installation marketplace et chargement complet avec MCP restent à qualifier.",
     "La campagne 1.2.0 qualifie aussi l'alignement drh-fpt 0.6.0 repris du candidat 1.1.1 abandonné."
   ],
   "historical_evidence": "tests/evidence/2026-09-20-validation-locale.json",
   "runs": [],
   "skill_measurements": {
     "dcp-fpt": {
-      "status": "not_run",
+      "status": "in_progress",
       "upstream_commit": "eeb1cb14a3ad94d78631661dce5ae11f1e071308",
       "evidence_path": null
     }
@@ -32,7 +32,9 @@
     "human_legal_validation": false
   },
   "codex_smoke": {
-    "status": "not_run",
-    "plugin_commit": null
+    "status": "partial",
+    "plugin_commit": "85011f7f86b488330fe00ff7a30ce42d6dbe9a84",
+    "evidence_path": "tests/evidence/2026-10-07-candidat/codex-smoke.json",
+    "scope": "Copies natives du checkout : réussi ; installation et MCP non qualifiés."
   }
 }

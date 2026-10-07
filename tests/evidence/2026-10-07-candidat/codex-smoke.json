@@ -1,0 +1,56 @@
+{
+  "plugin_commit": "85011f7f86b488330fe00ff7a30ce42d6dbe9a84",
+  "status": "passed",
+  "scope": "copies natives du checkout et contrat local ; sans marketplace ni MCP",
+  "host": "Codex CLI 0.160.0",
+  "requested_model": "gpt-6.1-sol",
+  "fresh_process": true,
+  "fresh_workspace": true,
+  "sandbox": "read-only",
+  "windows_backend": "elevated",
+  "web": false,
+  "mcp": false,
+  "input_sha256": "ca6677a9c6f2471891cd6b8d8cf376ca2ef4993ae2722d2732fb4d11b7fb9f41",
+  "source_commits": {
+    "dpm-fpt": "1668c89798f1f50a829c0b94d3cf6bf33a3640fb",
+    "drh-fpt": "f81c9b955f7ebb47df7e93bdc41ac743d85a2973",
+    "dpo-ct": "f3406f412368199a33f47e7861eb450eab2b2cdb",
+    "dirfi-fpt": "d970fe530d3f50f6b4c330e3cfb85db35b7126ab",
+    "recherche-juridique": "e437d10a2d4bbf66ba7a9c1e9fb49e773166054e",
+    "dcp-fpt": "eeb1cb14a3ad94d78631661dce5ae11f1e071308"
+  },
+  "successful_read_commands": 2,
+  "failures": [],
+  "observations": {
+    "skills": [
+      {
+        "name": "dcp-fpt",
+        "version": "0.1.0"
+      },
+      {
+        "name": "dirfi-fpt",
+        "version": "1.0.4"
+      },
+      {
+        "name": "dpm-fpt",
+        "version": "1.0.5"
+      },
+      {
+        "name": "dpo-ct",
+        "version": "0.2.1"
+      },
+      {
+        "name": "drh-fpt",
+        "version": "0.6.0"
+      },
+      {
+        "name": "recherche-juridique",
+        "version": "3.5.0"
+      }
+    ],
+    "stop_egalite": true,
+    "stop_acte_irreversible": true,
+    "drh_lu": true,
+    "limitations": "Contrôle documentaire local en lecture seule. plugin.json lu (collectivite-territoriale, 1.2.0), DCP lu intégralement, posture et coactivation DRH lues. Aucun accès extérieur, web ou MCP ; aucun skill global utilisé. Aucune validation juridique, mesure métier ou vérification d’installation."
+  }
+}
