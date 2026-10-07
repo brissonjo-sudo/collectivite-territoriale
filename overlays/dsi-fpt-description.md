@@ -1,5 +1,6 @@
 description: >-
-  STOP immédiat avant Skill ou toute annonce pour incident cyber ou surveillance.
+  STOP avant Skill ou toute annonce pour incident cyber ou surveillance,
+  y compris nouvel indice concernant un incident ancien ou clos.
   Activer réellement dsi-fpt avant tout conseil informatique territorial,
   même pour un cadrage technique générique : réseaux d’écoles, segmentation
   des usages, infrastructures et exploitation. Une réponse de mémoire

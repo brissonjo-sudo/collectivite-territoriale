@@ -159,16 +159,24 @@
           "target": "SKILL.md",
           "source": "overlays/dsi-fpt.md",
           "base_sha256": "4522f18710d8e3d9ecc8183a86ed2f8a2b96b4212fabbc3ab1ad4619fb51be76",
-          "source_sha256": "6221428c9a6d31fbebda1425ed5fc019c7a90e8f9043ac965e9e63fe8bfeb3a4",
+          "source_sha256": "9b67a5d890936f4f4ef0692c481930b853c7496d195d0f4fef5148dfaac06530",
           "anchor": "# Skill : dsi-fpt (v0.2.1)"
         },
         {
           "target": "SKILL.md",
           "source": "overlays/dsi-fpt-description.md",
           "operation": "replace-description",
-          "base_sha256": "ab779de47616dbb2abd91e5adb190294a328e563f1725c8db6c6cf6f32a2e7db",
-          "source_sha256": "f0f127bdcee665b7163615313b0f1dedb723bcffd710e481adde6ea7fd237af8",
+          "base_sha256": "88fb8e4c7138b85d91263e64d61e435653bd3d177d31ae57e81f85efc3055cdb",
+          "source_sha256": "2e33328f777957777c065c6e123f3ecfbf518aa9bce67c47f41b6a6f46d4173a",
           "anchor": "description: >-\n  Incident cyber ou surveillance : le premier texte visible commence par STOP,\n  avant toute annonce d'activation. Aide à la décision DSI/RSSI en collectivité française.\n  Activer pour les questions de gouvernance du SI, sécurité et\n  homologation, crise cyber et continuité, réseaux et infrastructures, cloud et\n  hébergement, applications métiers et interopérabilité, dématérialisation et\n  téléservices, accessibilité numérique, intelligence artificielle et\n  algorithmes publics, contrats informatiques. Toute question de droit exige\n  l'activation réelle de recherche-juridique et un texte primaire récupéré,\n  sinon abstention sur le fond. Ne pas activer pour la conformité\n  RGPD, l'AIPD ou la notification de violation (dpo-ct), le RH statutaire\n  (drh-fpt), la doctrine de vidéoprotection (dpm-fpt), le budget (dirfi-fpt),\n  ni la passation des marchés.\n"
+        },
+        {
+          "target": "SKILL.md",
+          "source": "overlays/dsi-fpt-incident-stop.md",
+          "operation": "replace-block",
+          "base_sha256": "1fac98d6e3afab38b5efd2e324ac2aebf390be4519c8232571971607bdd34878",
+          "source_sha256": "5fd3ba4df8b527bfea67d9368867d2ca74899b7babfddf23d92b7ab75ff77a89",
+          "anchor": "### 5.2 Garde-fou « incident cyber » — règle d'or\n\n**Déclencheurs (liste ouverte)** : rançongiciel, chiffrement de fichiers,\ncompromission de compte, fuite ou exfiltration de données, indisponibilité\nsuspecte, intrusion constatée, demande de rançon, alerte d'un tiers sur une\nattaque.\n\nDès qu'un déclencheur apparaît, le **premier livrable, avant tout autre\ncontenu**, est :\n\n```\nSTOP — Incident de sécurité en cours ou récent.\n1. Ne rien faire d'irréversible avant de préserver les preuves : ne pas\n   réinstaller, effacer, restaurer ni rallumer ce qui a été touché ; isoler.\n2. Ne rien taire : signaler l'incident dans les circuits prévus (autorité\n   territoriale, assureur, plainte, autorités compétentes) ; les délais se\n   vérifient à la source.\n3. Ne pas décider seul de ce qui revient à l'exécutif : paiement d'une rançon,\n   communication publique, arrêt d'un service public.\n4. Aucune contre-mesure offensive, aucun accès à un système tiers.\n5. Données personnelles possiblement touchées → BASCULE dpo-ct.\n```\n\nEnsuite seulement, orienter vers `references/crise-cyber-continuite.md` et\n`objets/incident-securite.md`. Le skill aide à **organiser, documenter et\nreprendre** ; il ne remplace ni l'appui d'un CSIRT territorial ou d'un\nprestataire de réponse à incident, ni les autorités compétentes.\n\n**Les références de ce garde-fou ne sont pas dispensées de provenance** : une\nobligation de plainte, de signalement ou de notification se cite avec sa\nsource et sa date, ou ne se cite pas.\n\n"
         }
       ]
     }

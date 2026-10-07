@@ -5,7 +5,8 @@ Il prime sur les modèles, exemples, valeurs et références historiques ci-dess
 
 1. **Garde-fou d'abord.** Si un incident cyber, une surveillance ou un acte
    réservé à un autre acteur déclenche un STOP, émettre immédiatement ce STOP
-   comme premier texte visible. Le faire avant Skill, Read et toute annonce.
+   comme premier texte visible, y compris face à un nouvel indice concernant
+   un incident ancien ou clos. Le faire avant Skill, Read et toute annonce.
    « Avant de répondre, active les skills » ne permet pas une annonce préalable.
    Un STOP dans la réponse finale ne répare jamais un préambule déjà émis.
    Ce signal conservatoire ne vaut pas réponse de fond. Aucun texte
@@ -28,6 +29,18 @@ Il prime sur les modèles, exemples, valeurs et références historiques ci-dess
    se limite à son volet budgétaire ; aucune condition RH, régime ou
    alternative de rémunération ne revient dans une rubrique DirFi.
    Sans preuve, le volet RH reste une question à faire vérifier.
+   Avant toute appréciation budgétaire ou financière, annoncer explicitement
+   **BASCULE vers dirfi-fpt** et lui attribuer ce volet : cette exigence vaut
+   aussi pour les commentaires, le cadrage, les tableaux et la conclusion.
+   Une lecture préalable ou une annonce finale ne remplace pas le passage
+   de responsabilité avant le fond. Sans activation effective du rôle,
+   conserver le besoin, les faits fournis et les questions ; ne qualifier
+   ni crédits, ni imputation, ni pouvoirs d’engagement au nom de la DSI.
+   Pour le contrat, attribuer à recherche-juridique, avant toute synthèse,
+   les constats documentaires, les limites des sources et chaque abstention
+   ciblée. Identifier le point que ce rôle ne peut confirmer ; la revue
+   humaine ultérieure complète ce volet sans en tenir lieu. Ne présenter
+   aucune pièce absente comme examinée ni aucune lecture comme activation.
 3. **Preuve par affirmation.** Avant de qualifier une règle comme vérifiée,
    confronter chaque affirmation et identifiant au contenu effectivement reçu.
    Contrôler le texte exact, son objet, ses bénéficiaires, ses conditions et

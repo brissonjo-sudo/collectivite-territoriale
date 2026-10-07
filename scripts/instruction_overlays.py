@@ -40,6 +40,30 @@ def replace_description(base: bytes, anchor: bytes, content: bytes) -> bytes:
     return base[:field_start] + content + base[field_end:]
 
 
+def replace_block(base: bytes, anchor: bytes, content: bytes) -> bytes:
+    """Remplace une section ### complète et unique, hors frontmatter."""
+    anchor.decode("utf-8")
+    content.decode("utf-8")
+    if (not anchor.startswith(b"### ") or not anchor.endswith(b"\n")
+            or b"\n### " in anchor or not content.endswith(b"\n")
+            or content.split(b"\n", 1)[0] != anchor.split(b"\n", 1)[0]
+            or b"\n### " in content):
+        raise ValueError("Surcharge : section complète de même titre attendue")
+    if base.count(anchor) != 1:
+        raise ValueError("Surcharge : ancre absente ou ambiguë")
+    start = base.index(anchor)
+    frontmatter = FRONTMATTER.match(base)
+    if frontmatter is None or start < frontmatter.end():
+        raise ValueError("Surcharge : replace-block ne peut pas modifier le frontmatter")
+    if start and base[start - 1:start] != b"\n":
+        raise ValueError("Surcharge : début de section invalide")
+    next_section = base.find(b"\n### ", start + len(b"### "))
+    end = next_section + 1 if next_section >= 0 else len(base)
+    if base[start:end] != anchor:
+        raise ValueError("Surcharge : ancre différente de la section complète")
+    return base[:start] + content + base[end:]
+
+
 def validate_overlays(overlays: list[dict]) -> None:
     """Refuse les chemins dangereux et les opérations non bornées ou dupliquées."""
     if not isinstance(overlays, list):
@@ -50,7 +74,7 @@ def validate_overlays(overlays: list[dict]) -> None:
         if not isinstance(overlay, dict) or set(overlay) not in (required, required | {"operation"}):
             raise ValueError("Surcharge : contrat invalide")
         operation = overlay.get("operation", "insert-before")
-        if operation not in ("insert-before", "replace-description"):
+        if operation not in ("insert-before", "replace-description", "replace-block"):
             raise ValueError("Surcharge : opération inconnue")
         for field in ("target", "source"):
             value = overlay[field]
@@ -69,6 +93,9 @@ def validate_overlays(overlays: list[dict]) -> None:
         if operation == "replace-description":
             if overlay["target"] != "SKILL.md" or not overlay["source"].endswith(".md"):
                 raise ValueError("Surcharge : description limitée à SKILL.md et à une source Markdown")
+        if operation == "replace-block":
+            if overlay["target"] != "SKILL.md" or not overlay["source"].endswith(".md"):
+                raise ValueError("Surcharge : bloc limité à SKILL.md et à une source Markdown")
         if any(not isinstance(overlay[key], str) or not HASH.fullmatch(overlay[key])
                for key in ("base_sha256", "source_sha256")):
             raise ValueError("Surcharge : empreinte invalide")
@@ -102,6 +129,8 @@ def apply_overlays(root: Path, files: dict[str, bytes], overlays: list[dict]) ->
             raise ValueError("Surcharge : ancre absente ou ambiguë")
         if overlay.get("operation", "insert-before") == "replace-description":
             result[target] = replace_description(base, anchor, content)
+        elif overlay.get("operation") == "replace-block":
+            result[target] = replace_block(base, anchor, content)
         else:
             frontmatter = FRONTMATTER.match(base)
             if frontmatter and base.index(anchor) < frontmatter.end():
