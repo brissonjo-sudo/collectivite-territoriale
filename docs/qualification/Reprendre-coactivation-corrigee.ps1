@@ -22,11 +22,14 @@ $Output = Join-Path $Evidence "campagne-$Revision"
 if ((Test-Path -LiteralPath $Manifest) -or (Test-Path -LiteralPath $Output)) {
     throw 'Gel ou dossier de mesure existant : choisir une nouvelle révision. Aucun écrasement.'
 }
-$Reference = Get-Content -LiteralPath (Join-Path $Evidence 'gel-dev4.json') -Raw | ConvertFrom-Json
+$Version = (Get-Content -LiteralPath (Join-Path $Root '.codex-plugin\plugin.json') -Raw | ConvertFrom-Json).version
+if ($Version -notmatch '^1\.2\.0-dev\.([0-9]+)$') { throw 'Candidat de reprise non reconnu.' }
+$ReferenceName = "gel-dev$($Matches[1]).json"
+$Reference = Get-Content -LiteralPath (Join-Path $Evidence $ReferenceName) -Raw | ConvertFrom-Json
 foreach ($Entry in $Reference.files.PSObject.Properties) {
     $Source = Join-Path $Root $Entry.Name
     if ((Get-FileHash -LiteralPath $Source -Algorithm SHA256).Hash.ToLowerInvariant() -ne $Entry.Value) {
-        throw "Runtime, harnais ou suite différents du candidat dev.4 : $($Entry.Name). Qualifier ce changement séparément."
+        throw "Runtime, harnais ou suite différents du candidat $Version : $($Entry.Name). Qualifier ce changement séparément."
     }
 }
 $PreviousUtf8 = $env:PYTHONUTF8

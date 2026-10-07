@@ -1,5 +1,20 @@
 # Historique des versions
 
+## 1.2.0-dev.5 — 2026-10-07 — Correctif après mesure partielle r7
+
+- STOP conservatoire sans annonce préalable et décision explicite entre preuve
+  primaire reçue et voie sans source, limitée aux faits, inconnues et questions.
+- Transfert RH persistant dans toutes les rubriques et dans la conclusion.
+- Activation DSI demandée dès la description, même pour un cadrage technique
+  générique ; questions distinctes sur les collectivités et l'État, sans droit
+  confirmé de mémoire.
+- Six pins et onze opérations de surcharge inchangés. Aucun scénario, oracle,
+  barème ou harnais de mesure modifié.
+- R7 dev.4 conservée : six réponses et six juges, une réussite et cinq échecs.
+  Un cas interrompu sans réponse et neuf non exécutés. Dev.5 n'en reçoit aucun
+  score et reste entièrement non mesuré ; OAuth juridique à renouveler.
+- Lanceur arrêté dès qu'un cas nominal constate un MCP non connecté.
+
 ## 1.2.0-dev.4 — 2026-10-06 — Correctif méthodologique non mesuré
 
 - Confrontation mot à mot des catégories, qualités, interlocuteurs et conditions

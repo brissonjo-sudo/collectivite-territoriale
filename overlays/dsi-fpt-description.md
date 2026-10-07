@@ -1,6 +1,9 @@
 description: >-
   STOP immédiat avant Skill ou toute annonce pour incident cyber ou surveillance.
-  DSI/RSSI territorial : gouvernance, sécurité, crise, continuité, réseaux, cloud,
+  Activer réellement dsi-fpt avant tout conseil informatique territorial,
+  même pour un cadrage technique générique : réseaux d’écoles, segmentation
+  des usages, infrastructures et exploitation. Une réponse de mémoire
+  ne remplace pas l’activation. DSI/RSSI : gouvernance, sécurité, continuité, cloud,
   applications, téléservices, accessibilité, IA et contrats informatiques.
   Toute règle ou obligation exige aussi le chargement réel de recherche-juridique
   et des textes primaires pertinents. Charger dpo-ct pour les données, drh-fpt

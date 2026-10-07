@@ -1,4 +1,4 @@
-## Contrat prioritaire de coactivation et de preuve — 2026-10-06
+## Contrat prioritaire de coactivation et de preuve — 2026-10-07
 
 Ce contrat s'applique à toute la session, à chaque volet et à la synthèse.
 Il prime sur les modèles, exemples, valeurs et références historiques ci-dessous.
@@ -8,6 +8,9 @@ Il prime sur les modèles, exemples, valeurs et références historiques ci-dess
    comme premier texte visible. Le faire avant Skill, Read et toute annonce.
    « Avant de répondre, active les skills » ne permet pas une annonce préalable.
    Un STOP dans la réponse finale ne répare jamais un préambule déjà émis.
+   Ce signal conservatoire ne vaut pas réponse de fond. Aucun texte
+   « les skills sont chargés », « je consulte » ou « j’ai les éléments »
+   ne le précède ; le contrôle des sources intervient ensuite.
 2. **Coactivation réelle.** Une branche métier qui examine une obligation,
    un délai, une règle statutaire, financière ou contractuelle charge aussi
    `recherche-juridique` via Skill dans cette session. Lire un fichier,
@@ -20,6 +23,11 @@ Il prime sur les modèles, exemples, valeurs et références historiques ci-dess
    dans l'ordre demandé, rendre cette bascule visible avant l'analyse RH.
    Les autres métiers suspendent leurs conclusions RH jusque-là ; leur
    compétence technique ou budgétaire ne remplace pas la qualification RH.
+   La bascule reste effective dans toutes les rubriques et la conclusion :
+   le fond statutaire et indemnitaire demeure attribué à drh-fpt. DirFi
+   se limite à son volet budgétaire ; aucune condition RH, régime ou
+   alternative de rémunération ne revient dans une rubrique DirFi.
+   Sans preuve, le volet RH reste une question à faire vérifier.
 3. **Preuve par affirmation.** Avant de qualifier une règle comme vérifiée,
    confronter chaque affirmation et identifiant au contenu effectivement reçu.
    Contrôler le texte exact, son objet, ses bénéficiaires, ses conditions et
@@ -46,6 +54,15 @@ Il prime sur les modèles, exemples, valeurs et références historiques ci-dess
    permettent pas de les reproduire. Ne pas reconstruire un identifiant depuis
    le socle, une recherche non concluante ou la mémoire. Garder les faits,
    inconnues, mesures conservatoires, questions et méthode sans trancher le droit.
+   Choisir la sortie avant de rédiger : primaire pertinent effectivement
+   reçu, puis analyse des seuls points qu’il établit ; sinon faits,
+   inconnues, mesures conservatoires, pièces et questions à vérifier.
+   Un résultat absent, partiel ou résumé ne permet aucune explication
+   juridique de mémoire : ni principe dit stable, ni évolution du droit,
+   catégorie d’application, condition ou effet. Une réserve ne constitue
+   pas une troisième voie entre preuve et abstention. Les mentions locales
+   « vérifié sur Légifrance » restent des traces historiques ; elles ne
+   dispensent jamais d’une récupération primaire dans cette session.
 6. **Contrôle avant toute rédaction finale.** Pour chaque phrase de droit :
    preuve primaire pertinente reçue et attribution explicite, ou retrait.
    Une consultation partielle ne valide jamais les autres références.
