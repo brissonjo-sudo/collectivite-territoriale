@@ -10,9 +10,9 @@ description: >-
   police municipale (dpm-fpt), les concessions et délégations de service public.
 ---
 
-# Skill : dcp-fpt (v0.1.2)
+# Skill : dcp-fpt (v0.1.3)
 
-> Métadonnées — version : **0.1.2** · langue : français · statut : **non mesuré, non relu par un praticien**.
+> Métadonnées — version : **0.1.3** · langue : français · statut : **non mesuré, non relu par un praticien**.
 > Aide à la décision ; aucune réponse ne vaut autorisation de signer ni source autonome de droit positif.
 
 ## 1. Déclenchement
@@ -164,6 +164,12 @@ et la section pertinente de
 Le registre est daté et ne prouve pas une lecture en session. Pour chaque
 référence utilisée : source officielle, identifiant ou URL obtenu de la source,
 date de lecture et statut. « Vérifié ce jour » sans preuve n'est pas une provenance.
+
+Une réserve finale ne permet pas d'affirmer une règle dont la lecture
+officielle a échoué. Sur ce point, présenter la règle comme une question à
+vérifier, sans conclure sur son contenu ni l'utiliser comme prémisse acquise.
+La poursuite se limite au recensement des faits et pièces, aux recommandations
+de préparation explicitement non normatives et aux garde-fous du skill.
 
 Aucun identifiant officiel hors du registre dans les fichiers runtime.
 Aucun seuil, montant, délai, pourcentage ou peine chiffré dans les branches,

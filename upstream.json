@@ -93,8 +93,8 @@
     },
     "dcp-fpt": {
       "repository": "https://github.com/brissonjo-sudo/DCP-fpt.git",
-      "commit": "554db579aaa9c4dda0aafa27d164416e0e4959a7",
-      "version": "0.1.2",
+      "commit": "129f374e6ab8ea3b47bcfd9de9ddd52a2d3d9498",
+      "version": "0.1.3",
       "paths": [
         "SKILL.md",
         "agents/openai.yaml",

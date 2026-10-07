@@ -22,7 +22,7 @@ from urllib.parse import urlsplit
 
 from run_plugin_campaign import ROOT, MCP_TOOLS, load_cases
 
-PROFILE = "codex-copies-natives-mcp-v3"
+PROFILE = "codex-copies-natives-mcp-v4"
 CHUNK_BYTES = 6000
 
 
@@ -158,6 +158,9 @@ def prompt(case: dict[str, Any]) -> str:
         + reads + "\nChaque segment contient au plus 6000 octets. Demande max_output_tokens=8000 à l'outil "
         "de commande pour chacun. Si une restitution reste tronquée, signale cette limite. "
         "Lis ensuite les références nécessaires uniquement sous .agents/skills/ avec Get-Content. "
+        "Pour ces références, utilise soit Get-Content -LiteralPath 'chemin' -Encoding utf8, "
+        "soit ce même appel suivi de | Select-Object -Skip N -First M avec N et M entiers positifs. "
+        "Select-String et les autres pipelines ne font pas partie de ce protocole de mesure. "
         "N'exécute aucune autre commande, aucun script, aucune requête réseau par shell. "
         + source_rule + " " + web_rule + "\nProduis une réponse finale unique à la demande :\n\n" + case["prompt"]
     )
