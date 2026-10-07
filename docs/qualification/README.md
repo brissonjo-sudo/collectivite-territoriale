@@ -1,6 +1,7 @@
 # Qualification des corrections
 
-Dernier candidat : dev.5, entièrement non mesuré. Il précise l'activation DSI,
+Dernier candidat : dev.5 au commit `ebeee944e878b11177d5ccb85d9043c4c97260a9`,
+entièrement non mesuré. Il précise l'activation DSI,
 le STOP conservatoire, le transfert RH persistant et la voie sans source.
 Le runtime dev.4 précédent est `36cbbd67fa02240cb723f4236c25d4340bcd85ee`.
 Mesure partielle r7 au HEAD `d1ab287376c8ae3605b0459850210be4a4e91bf9` :

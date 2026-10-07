@@ -1,0 +1,15 @@
+{
+  "gel-r7.json": {
+    "candidate_commit": "d1ab287376c8ae3605b0459850210be4a4e91bf9",
+    "verified_git_blobs": 211,
+    "current_runtime_checked": false
+  },
+  "gel-dev5.json": {
+    "candidate_commit": "ebeee944e878b11177d5ccb85d9043c4c97260a9",
+    "verified_git_blobs": 211,
+    "current_runtime_checked": true
+  },
+  "r7_proof_files_unchanged": 49,
+  "dev5_measurement_status": "not_measured",
+  "release_ready": false
+}
