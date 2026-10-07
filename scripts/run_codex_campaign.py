@@ -22,15 +22,54 @@ from urllib.parse import urlsplit
 
 from run_plugin_campaign import ROOT, MCP_TOOLS, load_cases
 
-PROFILE = "codex-copies-natives-mcp-v2"
+PROFILE = "codex-copies-natives-mcp-v3"
+CHUNK_BYTES = 6000
+
+
+def entry_chunks(path: str) -> list[dict[str, Any]]:
+    """Découpe le point d'entrée en plages contiguës sans changer ses octets."""
+    source = ROOT / "skills" / path.removeprefix(".agents/skills/")
+    lines = source.read_text(encoding="utf-8").splitlines(keepends=True)
+    chunks = []
+    start = 0
+    while start < len(lines):
+        end, size = start, 0
+        while end < len(lines) and size + len(lines[end].encode()) <= CHUNK_BYTES:
+            size += len(lines[end].encode())
+            end += 1
+        if end == start:
+            raise ValueError("Ligne trop longue pour une restitution bornée : " + path)
+        chunks.append({"path": path, "start": start, "count": end-start,
+                       "content": "".join(lines[start:end])})
+        start = end
+    return chunks
+
+
+def read_body(command_text: str) -> str:
+    body = command_text.replace("\\", "/").strip()
+    wrapper = re.search(r"\s-Command\s+(['\"])(.*)\1\s*$", body, re.S)
+    return wrapper.group(2) if wrapper else body
+
+
+def read_chunk(command_text: str) -> dict[str, Any] | None:
+    """Autorise seulement le pipeline de lecture généré, sans expression libre."""
+    match = re.fullmatch(
+        r"Get-Content -LiteralPath '([\w./-]+)' -Encoding utf8 \| Select-Object -Skip (\d+) -First (\d+)",
+        read_body(command_text), re.I)
+    if not match:
+        return None
+    path, start, count = match.groups()
+    if not re.fullmatch(r"\.agents/skills/[\w-]+/SKILL\.md", path):
+        return None
+    return {"path": path, "start": int(start), "count": int(count)}
 
 
 def read_command_paths(command_text: str) -> list[str]:
     """Accepte uniquement une commande de lecture et des chemins natifs."""
-    body = command_text.replace("\\", "/").strip()
-    wrapper = re.search(r"\s-Command\s+(['\"])(.*)\1\s*$", body, re.S)
-    if wrapper:
-        body = wrapper.group(2)
+    chunk = read_chunk(command_text)
+    if chunk:
+        return [chunk["path"]]
+    body = read_body(command_text)
     if any(char in body for char in (";", "|", ">", "<", "&", "$", "`", "\n", "\r")):
         return []
     try:
@@ -82,7 +121,10 @@ def command(case: dict[str, Any], cli: str, model: str) -> list[str]:
 
 def prompt(case: dict[str, Any]) -> str:
     paths = [f".agents/skills/{name}/SKILL.md" for name in case["activation_sequence"]]
-    reads = "\n".join(f"{i+1}. Get-Content -LiteralPath '{path}' -Raw -Encoding utf8" for i, path in enumerate(paths))
+    plan = [chunk for path in paths for chunk in entry_chunks(path)]
+    reads = "\n".join(
+        f"{i+1}. Get-Content -LiteralPath '{c['path']}' -Encoding utf8 | Select-Object -Skip {c['start']} -First {c['count']}"
+        for i, c in enumerate(plan))
     source_rule = (
         "Appelle au moins un outil du seul MCP droit-francais disponible ; une mention ne vaut pas un appel réussi."
         if case["mcp_mode"] == "required" else
@@ -94,10 +136,11 @@ def prompt(case: dict[str, Any]) -> str:
     )
     return (
         "Contrat technique de campagne Codex, en français. Les six skills sont des copies natives du candidat. "
-        "Avant de répondre, lis intégralement exactement une fois chaque SKILL.md ci-dessous, avec une commande "
-        "séparée, dans l'ordre suivant. Ne groupe pas les lectures et ne remplace pas une lecture par une mention :\n"
-        + reads + "\nPour chaque lecture de SKILL.md, demande max_output_tokens=24000 à l'outil de commande "
-        "afin que le point d'entrée soit restitué en entier, sans troncature. "
+        "Avant de répondre, lis intégralement chaque SKILL.md, une fois, par les segments contigus ci-dessous. "
+        "Exécute chaque segment dans un appel d'outil séparé, dans l'ordre exact. Ne groupe pas les appels, "
+        "ne remplace pas ces lectures par une mention et ne relis pas le fichier entier :\n"
+        + reads + "\nChaque segment contient au plus 6000 octets. Demande max_output_tokens=8000 à l'outil "
+        "de commande pour chacun. Si une restitution reste tronquée, signale cette limite. "
         "Lis ensuite les références nécessaires uniquement sous .agents/skills/ avec Get-Content. "
         "N'exécute aucune autre commande, aucun script, aucune requête réseau par shell. "
         + source_rule + " " + web_rule + "\nProduis une réponse finale unique à la demande :\n\n" + case["prompt"]
@@ -116,16 +159,25 @@ def sanitize(events: list[dict[str, Any]]) -> list[dict[str, Any]]:
         kind = item.get("type")
         if kind == "command_execution":
             paths = read_command_paths(item.get("command", ""))
+            chunk = read_chunk(item.get("command", ""))
             output = item.get("aggregated_output", "").replace("\r\n", "\n")
             verified = []
             for path in paths:
                 source = ROOT / "skills" / path.removeprefix(".agents/skills/")
                 if source.is_file() and source.read_text(encoding="utf-8").strip() in output:
                     verified.append(path)
-            clean.append({"type": "native_read" if paths else "unexpected_command",
+            record = {"type": "native_read" if paths else "unexpected_command",
                           "paths": paths, "complete_content_verified": verified,
                           "output_sha256": hashlib.sha256(output.encode()).hexdigest(),
-                          "exit_code": item.get("exit_code"), "status": item.get("status")})
+                          "exit_code": item.get("exit_code"), "status": item.get("status")}
+            if chunk:
+                chunk_source = ROOT / "skills" / chunk["path"].removeprefix(".agents/skills/")
+                expected = next((c for c in entry_chunks(chunk["path"])
+                                 if c["start"] == chunk["start"] and c["count"] == chunk["count"]), None) if chunk_source.is_file() else None
+                record["chunk"] = {**chunk, "content_verified": bool(expected and expected["content"].strip() in output),
+                    "expected_content_sha256": hashlib.sha256(expected["content"].encode()).hexdigest() if expected else None,
+                    "source_bytes": len(expected["content"].encode()) if expected else None}
+            clean.append(record)
         elif kind == "mcp_tool_call":
             result = item.get("result") or {}
             serialized = json.dumps(result, sort_keys=True, ensure_ascii=False)
@@ -148,7 +200,8 @@ def sanitize(events: list[dict[str, Any]]) -> list[dict[str, Any]]:
     return clean
 
 
-def failures(clean: list[dict[str, Any]], case: dict[str, Any], exit_code: int) -> list[str]:
+def failures(clean: list[dict[str, Any]], case: dict[str, Any], exit_code: int,
+             profile: str | None = None) -> list[str]:
     """Évalue la traçabilité technique, sans noter le fond juridique."""
     errors = []
     if exit_code:
@@ -156,12 +209,25 @@ def failures(clean: list[dict[str, Any]], case: dict[str, Any], exit_code: int) 
     reads = [path.split("/")[2] for e in clean if e["type"] == "native_read"
              and e["exit_code"] == 0 and e["status"] == "completed"
              for path in e["paths"] if path.endswith("/SKILL.md")]
-    if reads != case["activation_sequence"]:
+    segmented = profile == PROFILE or any("chunk" in e for e in clean)
+    if segmented:
+        expected = [(c["path"],c["start"],c["count"])
+                    for name in case["activation_sequence"]
+                    for c in entry_chunks(f".agents/skills/{name}/SKILL.md")]
+        entries = [e for e in clean if e["type"] == "native_read"
+                   and any(p.endswith("/SKILL.md") for p in e["paths"])]
+        observed = [(e["chunk"]["path"],e["chunk"]["start"],e["chunk"]["count"])
+                    for e in entries if "chunk" in e and e["exit_code"] == 0 and e["status"] == "completed"]
+        if observed != expected or len(entries) != len(expected):
+            errors.append("native_entry_coverage_mismatch")
+        if any(not e.get("chunk", {}).get("content_verified") for e in entries):
+            errors.append("native_entry_content_unverified")
+    elif reads != case["activation_sequence"]:
         errors.append("native_read_sequence_mismatch")
     if any(e["type"] == "unexpected_command" for e in clean):
         errors.append("unexpected_command")
     for event in clean:
-        if event["type"] != "native_read" or "complete_content_verified" not in event:
+        if segmented or event["type"] != "native_read" or "complete_content_verified" not in event:
             continue  # Les preuves v1 gardent leur portée historique.
         entries = [p for p in event["paths"] if p.endswith("/SKILL.md")]
         if entries and (len(entries) != 1 or any(p not in event["complete_content_verified"] for p in entries)):
@@ -239,7 +305,7 @@ def main() -> int:
     for case, destination in zip(selected, destinations):
         print(f"[EN COURS] {case['id']}", flush=True)
         clean, code = execute(case, args.codex, args.model, args.timeout)
-        errors = failures(clean, case, code)
+        errors = failures(clean, case, code, PROFILE)
         evidence = {"profile": PROFILE, "case_id": case["id"], "model_requested": args.model,
                     "completed_at": datetime.now(timezone.utc).isoformat(),
                     "runner_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),

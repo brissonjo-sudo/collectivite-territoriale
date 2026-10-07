@@ -1,0 +1,19 @@
+{
+  "profile": "codex-copies-natives-mcp-v2",
+  "status": "essai_arrete_restitution_modele_non_attestee",
+  "planned_case_count": 9,
+  "completed_count": 2,
+  "runs": [
+    {
+      "case_id": "plugin-dcp-frontieres-finance-donnees",
+      "evidence_sha256": "cc41977f77ec9d0e7803dd69c53802251c33db83500b18258c71e960ebed6557"
+    },
+    {
+      "case_id": "plugin-prime-depart-retraite",
+      "evidence_sha256": "8c110e62ed1f0fc0d54a463feb7671a2c010b97f262e402398f210d4d5b604c3"
+    }
+  ],
+  "limitation": "Sortie brute complète mais troncature déclarée par le répondant ; nouvelle campagne v3 par segments requise.",
+  "human_legal_validation": false,
+  "publication_ready": false
+}

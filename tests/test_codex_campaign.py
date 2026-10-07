@@ -71,6 +71,31 @@ class CodexCampaignTests(unittest.TestCase):
         clean = campaign.sanitize([event])
         self.assertNotIn("native_entry_content_unverified", campaign.failures(clean, self.case, 0))
 
+    def test_segments_couvrent_toute_entree_et_refusent_trou_ou_doublon(self):
+        case = next(c for c in campaign.load_cases() if c["id"] == "plugin-dcp-mcp-indisponible")
+        clean = []
+        for name in case["activation_sequence"]:
+            path = f".agents/skills/{name}/SKILL.md"
+            chunks = campaign.entry_chunks(path)
+            self.assertEqual("".join(c["content"] for c in chunks), (campaign.ROOT / "skills" / name / "SKILL.md").read_text(encoding="utf-8"))
+            for chunk in chunks:
+                self.assertLessEqual(len(chunk["content"].encode()), campaign.CHUNK_BYTES)
+                command = f"Get-Content -LiteralPath '{path}' -Encoding utf8 | Select-Object -Skip {chunk['start']} -First {chunk['count']}"
+                events = [{"type":"item.completed", "item":{"type":"command_execution",
+                    "command":command,"aggregated_output":chunk["content"],"status":"completed","exit_code":0}}]
+                clean.extend(campaign.sanitize(events))
+        clean += [{"type":"reply","text":"Réponse factice, aucun score"},{"type":"turn_completed"}]
+        self.assertEqual(campaign.failures(clean, case, 0, campaign.PROFILE), [])
+        self.assertIn("native_entry_coverage_mismatch", campaign.failures(clean[1:], case, 0, campaign.PROFILE))
+        self.assertIn("native_entry_coverage_mismatch", campaign.failures([clean[0]]+clean, case, 0, campaign.PROFILE))
+        clean[0]["chunk"]["content_verified"] = False
+        self.assertIn("native_entry_content_unverified", campaign.failures(clean, case, 0, campaign.PROFILE))
+
+    def test_pipeline_libre_ne_vaut_pas_segment(self):
+        path = ".agents/skills/dcp-fpt/SKILL.md"
+        for command in (f"Get-Content '{path}' | Write-Output", f"Get-Content -LiteralPath '{path}' -Encoding utf8 | Select-Object -Skip 0 -First 1; Write-Output secret"):
+            self.assertEqual(campaign.read_command_paths(command), [])
+
     def test_preuves_exportees_rattachees_aux_cas_et_runtime(self):
         root = campaign.ROOT
         folder = root / "tests/evidence/2026-10-07-codex-natif"
