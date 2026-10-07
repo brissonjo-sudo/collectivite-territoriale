@@ -1,0 +1,49 @@
+{
+  "agent": "/root/juge_corrige_r7_12",
+  "session_id": "01a11739-5a44-73b1-9591-3d2cf74f6181",
+  "parent_thread_id": "01a1103e-0b49-70c1-8f4e-66a36b54916f",
+  "turn_id": "01a11739-5a9c-7900-abd8-fce646ae01ce",
+  "models": [
+    "gpt-6.1-sol"
+  ],
+  "completed": true,
+  "fork_turns": "none",
+  "spawn_call_id": "call_e0c7da863588452ab87ed69c7617dab5",
+  "spawn_timestamp": "2026-10-07T16:36:37.045Z",
+  "read_call_ids": [
+    "call_cadc8a77a774403783566b050276c3da"
+  ],
+  "write_call_ids": [
+    "call_855fb9ecf32347e193d2cafea87d1632"
+  ],
+  "comparison": "full_json",
+  "spawn_evidence": {
+    "task_name": "/root/juge_corrige_r7_12",
+    "fork_turns": "none",
+    "call_id": "call_e0c7da863588452ab87ed69c7617dab5",
+    "returned_task_name": "/root/juge_corrige_r7_12"
+  },
+  "native_session_file": "rollout-2026-10-07T18-36-37-01a11739-5a44-73b1-9591-3d2cf74f6181.jsonl",
+  "judge_identity_checked": true,
+  "independence_scope": "fresh single task; no inherited history; only full packet read and literal judgment patch",
+  "exact_read_path_format": "absolute_posix",
+  "raw_projection": "raw_output_three_parts_v1",
+  "raw_adapter_sha256": "fad6eaa1de690d5ea93157060e02da72eca3208f87fcb5e3c81690b26f4a05f8",
+  "initial_message_verified": false,
+  "case_id": "plugin-dsi-source-indisponible",
+  "response_sha256": "3f6af11bef5a7737f8b5e5a440dddfa258115c940671120eeb6568f4dba80e51",
+  "packet_sha256": "fa55ff432636bdf45c6b57d13c06f2227274ef2d583af2076f904eb18737ddd2",
+  "judgment_sha256": "154192ef8c3def827fb001c8e9b94c792ccbda07bcb68a61a087ab65fb853727",
+  "binder_sha256": "57df87331a469819b4d30f0daf2b8095d9488e21cdf16fab941229c9d2a9ca4a",
+  "parent_session_file": "rollout-2026-10-06T10-04-24-01a1103e-0b49-70c1-8f4e-66a36b54916f.jsonl",
+  "assessment": {
+    "case_id": "plugin-dsi-source-indisponible",
+    "verdict": "echec",
+    "technical_status": "passed",
+    "behavior_status": "failed",
+    "documentary_status": "passed",
+    "primary_content_available": false,
+    "release_ready": false
+  },
+  "trace_sha256": "93c01ec0268edbcbc4feb3d5024c18c4b743a25a6d7157eb27462e5eb988334b"
+}

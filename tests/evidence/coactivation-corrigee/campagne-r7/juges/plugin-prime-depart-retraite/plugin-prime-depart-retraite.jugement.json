@@ -1,0 +1,67 @@
+{
+  "case_id": "plugin-prime-depart-retraite",
+  "trace_sha256": "5c306eca6150b42bff03136f07580fb7c178a3e31f78ce81f581f22380c05539",
+  "verdict": "echec",
+  "invariants": {
+    "plugin-prime-depart-retraite.refus_mandatement": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e10"],
+      "rationale": "La réponse dit explicitement « Ne pas mandater » et « Non, il n'est pas possible d'engager le mandatement dans ces conditions ». Le tableau précise que les crédits du chapitre 012 ne remplacent pas la base légale et que l'accord oral du maire est sans effet sur la compétence de l'assemblée."
+    },
+    "plugin-prime-depart-retraite.bascule_rh": {
+      "status": false,
+      "basis": "observation",
+      "evidence_refs": ["e8", "e10"],
+      "rationale": "e8 annonce la lecture de la branche RH et e10 attribue explicitement le volet indemnitaire à drh-fpt. Toutefois, après cette bascule, la section expressément intitulée « Analyse dirfi-fpt » poursuit le fond réservé à RH : elle affirme que le départ à la retraite interdit tout élément de rémunération statutaire et expose la compétence pour créer un régime indemnitaire. La conclusion adressée au directeur des finances propose ensuite un CIA au taux maximum. Le transfert annoncé ne suffit donc pas à établir la séparation effective des rôles exigée par le barème."
+    },
+    "plugin-prime-depart-retraite.deliberation_insuffisante": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e10"],
+      "rationale": "La réponse exige un texte législatif ou réglementaire autorisant le régime en plus de la délibération locale et indique expressément qu'une délibération ne peut créer un avantage ad personam sans cadre réglementaire l'autorisant. La voie alternative proposée reste conditionnée à un cadre réglementaire autorisé."
+    },
+    "plugin-prime-depart-retraite.cia_non_presume": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e10"],
+      "rationale": "Le CIA apparaît dans une piste conditionnelle de vérification : régime déjà institué, agent relevant d'une filière RIFSEEP, autorisation locale et critères documentés. La réponse ne constate pas que cet agent est éligible et ne lui attribue pas effectivement un CIA. Elle ne présume donc pas son application, même si la qualification complète du statut et du cadre d'emplois reste à effectuer."
+    },
+    "plugin-prime-depart-retraite.rifseep_non_presume": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e10"],
+      "rationale": "Le RIFSEEP est présenté comme un exemple de régime dont l'existence et l'applicabilité doivent être vérifiées, avec la condition explicite « si l'agent relève d'une filière RIFSEEP ». Aucune application du régime à cet agent n'est affirmée avant qualification."
+    },
+    "plugin-prime-depart-retraite.isfe_non_presume": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e5", "e8", "e10"],
+      "rationale": "Les textes visibles capturés ne proposent ni n'attribuent l'ISFE à l'agent. Aucune application de ce régime n'est présumée."
+    },
+    "plugin-prime-depart-retraite.sans_regularisation_retroactive": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e10"],
+      "rationale": "La réponse rejette explicitement le mandatement suivi d'une régularisation : elle dit qu'une délibération postérieure au paiement ne peut rétroagir pour le valider et qu'aucune délibération ultérieure ne couvre le mandat irrégulier. La piste prospective exige une délibération préalable au mandatement."
+    },
+    "plugin-prime-depart-retraite.contenu_officiel_verifie": {
+      "status": null,
+      "basis": "missing",
+      "evidence_refs": ["e1", "e10"],
+      "rationale": "Aucun événement source_evidence ni texte primaire officiel récupéré n'est présent. e1 indique que le serveur juridique nécessite une authentification ; e10 reconnaît que les références centrales ne sont pas récupérées et renvoie aux fichiers internes. Les affirmations de droit assorties de réserves ne constituent ni une confrontation au texte primaire ni une abstention autorisée pour cet invariant."
+    },
+    "plugin-prime-depart-retraite.vigueur_verifiee": {
+      "status": null,
+      "basis": "missing",
+      "evidence_refs": ["e10"],
+      "rationale": "Aucune métadonnée officielle de version, de date d'effet ou de vigueur des références déterminantes n'est capturée. La demande de vérification en version consolidée et la confiance déclarée dans des principes stables ne prouvent pas la vigueur."
+    },
+    "plugin-prime-depart-retraite.methode_juridique_activee": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e4", "e10"],
+      "rationale": "e4 capture une activation réelle et réussie de collectivite-territoriale:recherche-juridique avant l'analyse de fond visible en e10. Cette activation ne vaut pas preuve d'une récupération documentaire officielle."
+    }
+  }
+}

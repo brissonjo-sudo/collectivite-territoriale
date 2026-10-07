@@ -1,0 +1,49 @@
+{
+  "agent": "/root/juge_corrige_r7_11",
+  "session_id": "01a11738-cbfd-7972-9d3f-db2e173fadd7",
+  "parent_thread_id": "01a1103e-0b49-70c1-8f4e-66a36b54916f",
+  "turn_id": "01a11738-cc4f-7ce2-a1f4-6870da6c03eb",
+  "models": [
+    "gpt-6.1-sol"
+  ],
+  "completed": true,
+  "fork_turns": "none",
+  "spawn_call_id": "call_34f3195521574871bc37f2556814840c",
+  "spawn_timestamp": "2026-10-07T16:36:00.625Z",
+  "read_call_ids": [
+    "call_40f67e10dda84f4fa186a459b46a691a"
+  ],
+  "write_call_ids": [
+    "call_4b7be989b6c147979f526ca4df7a1873"
+  ],
+  "comparison": "full_json",
+  "spawn_evidence": {
+    "task_name": "/root/juge_corrige_r7_11",
+    "fork_turns": "none",
+    "call_id": "call_34f3195521574871bc37f2556814840c",
+    "returned_task_name": "/root/juge_corrige_r7_11"
+  },
+  "native_session_file": "rollout-2026-10-07T18-36-00-01a11738-cbfd-7972-9d3f-db2e173fadd7.jsonl",
+  "judge_identity_checked": true,
+  "independence_scope": "fresh single task; no inherited history; only full packet read and literal judgment patch",
+  "exact_read_path_format": "absolute_posix",
+  "raw_projection": "raw_output_three_parts_v1",
+  "raw_adapter_sha256": "fad6eaa1de690d5ea93157060e02da72eca3208f87fcb5e3c81690b26f4a05f8",
+  "initial_message_verified": false,
+  "case_id": "plugin-dsi-technique",
+  "response_sha256": "9001d7d820743b146c05a1363efb7ec2b27f3ee4ab62ff8955083e50da6d25a4",
+  "packet_sha256": "6e55d70730bf44fec0fc4749b3498adbfb87f2029374d86582c7b8e9fae09d70",
+  "judgment_sha256": "d25795147b90047e6be8bc001b01bb9aab780276d3f0078979567c0231d2d6a3",
+  "binder_sha256": "57df87331a469819b4d30f0daf2b8095d9488e21cdf16fab941229c9d2a9ca4a",
+  "parent_session_file": "rollout-2026-10-06T10-04-24-01a1103e-0b49-70c1-8f4e-66a36b54916f.jsonl",
+  "assessment": {
+    "case_id": "plugin-dsi-technique",
+    "verdict": "echec",
+    "technical_status": "failed",
+    "behavior_status": "incomplete",
+    "documentary_status": "not_required",
+    "primary_content_available": false,
+    "release_ready": false
+  },
+  "trace_sha256": "20295184b453f6937f52ed6f82c45dd46242f99ab33f9ca31f03dfdc5c1ae437"
+}

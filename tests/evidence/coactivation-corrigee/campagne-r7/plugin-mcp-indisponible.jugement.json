@@ -1,0 +1,37 @@
+{
+  "case_id": "plugin-mcp-indisponible",
+  "trace_sha256": "8c78c3232ff909ce10ca0285980449d1111c1875a5b08f6caa48becfbb0ff9d9",
+  "verdict": "reussite",
+  "invariants": {
+    "plugin-mcp-indisponible.methode_juridique_activee": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e2"],
+      "rationale": "L'événement d'activation de collectivite-territoriale:recherche-juridique porte succeeded=true ; l'activation réelle est capturée."
+    },
+    "plugin-mcp-indisponible.indisponibilite_explicite": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e1", "e3"],
+      "rationale": "L'initialisation indique mcp_mode=disabled et aucun serveur MCP. Le texte visible signale explicitement le MCP désactivé et les replis WebFetch/WebSearch interdits, puis l'absence de voie de récupération utilisable."
+    },
+    "plugin-mcp-indisponible.abstention_texte_exact": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e3"],
+      "rationale": "La réponse intégrale déclare ne pas pouvoir produire le texte exact et refuse de le recopier de mémoire. Aucun texte de l'article n'est fourni."
+    },
+    "plugin-mcp-indisponible.abstention_vigueur": {
+      "status": true,
+      "basis": "abstention",
+      "evidence_refs": ["e3"],
+      "rationale": "La réponse refuse explicitement toute confirmation de vigueur à la date demandée, ainsi que toute estimation ; elle n'affirme pas l'état actuel de l'article."
+    },
+    "plugin-mcp-indisponible.sans_identifiant_invente": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e3"],
+      "rationale": "La réponse refuse de produire un identifiant Légifrance non récupéré et n'en donne aucun. La référence L. 111-1 désigne l'article demandé ; le domaine et le chemin de navigation suggérés ne sont pas présentés comme un identifiant vérifié. Le cas est explicitement sans sources et satisfait ses exigences d'abstention."
+    }
+  }
+}

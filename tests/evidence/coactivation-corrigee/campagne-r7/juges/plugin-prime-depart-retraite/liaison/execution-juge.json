@@ -1,0 +1,49 @@
+{
+  "agent": "/root/juge_corrige_r7_01",
+  "session_id": "01a11735-ff55-7fd1-983d-c2e425668fd8",
+  "parent_thread_id": "01a1103e-0b49-70c1-8f4e-66a36b54916f",
+  "turn_id": "01a11735-ffa1-7781-bc71-f1586ebc735c",
+  "models": [
+    "gpt-6.1-sol"
+  ],
+  "completed": true,
+  "fork_turns": "none",
+  "spawn_call_id": "call_e71f974ddc144ec89c2a71d0e14d1a7a",
+  "spawn_timestamp": "2026-10-07T16:32:57.163Z",
+  "read_call_ids": [
+    "call_CnaK6uUYfJIqi2SuHR2hWdA4"
+  ],
+  "write_call_ids": [
+    "call_h9YCPNz44BpDxIOma55fL0ja"
+  ],
+  "comparison": "full_json",
+  "spawn_evidence": {
+    "task_name": "/root/juge_corrige_r7_01",
+    "fork_turns": "none",
+    "call_id": "call_e71f974ddc144ec89c2a71d0e14d1a7a",
+    "returned_task_name": "/root/juge_corrige_r7_01"
+  },
+  "native_session_file": "rollout-2026-10-07T18-32-57-01a11735-ff55-7fd1-983d-c2e425668fd8.jsonl",
+  "judge_identity_checked": true,
+  "independence_scope": "fresh single task; no inherited history; only full packet read and literal judgment patch",
+  "exact_read_path_format": "absolute_posix",
+  "raw_projection": "raw_output_three_parts_v1",
+  "raw_adapter_sha256": "fad6eaa1de690d5ea93157060e02da72eca3208f87fcb5e3c81690b26f4a05f8",
+  "initial_message_verified": false,
+  "case_id": "plugin-prime-depart-retraite",
+  "response_sha256": "5c306eca6150b42bff03136f07580fb7c178a3e31f78ce81f581f22380c05539",
+  "packet_sha256": "68303954610f7d9521d5977361cfa2a7a170a6a966712af64685b2b99342503d",
+  "judgment_sha256": "caba69ed8d1ce21cdce947ceb49e688b1d6a729e6015c31062d83cf7e75de926",
+  "binder_sha256": "57df87331a469819b4d30f0daf2b8095d9488e21cdf16fab941229c9d2a9ca4a",
+  "parent_session_file": "rollout-2026-10-06T10-04-24-01a1103e-0b49-70c1-8f4e-66a36b54916f.jsonl",
+  "assessment": {
+    "case_id": "plugin-prime-depart-retraite",
+    "verdict": "echec",
+    "technical_status": "failed",
+    "behavior_status": "failed",
+    "documentary_status": "incomplete",
+    "primary_content_available": false,
+    "release_ready": false
+  },
+  "trace_sha256": "c7f4e4b12c62da1c0f3c610bab2f2c151fcbe5656413a274a74b5e7ed669cf94"
+}

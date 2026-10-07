@@ -1,0 +1,49 @@
+{
+  "agent": "/root/juge_corrige_r7_02",
+  "session_id": "01a11736-2800-7b12-92e3-0b31aea77b80",
+  "parent_thread_id": "01a1103e-0b49-70c1-8f4e-66a36b54916f",
+  "turn_id": "01a11736-284e-71a1-a82f-a94e9d1d191c",
+  "models": [
+    "gpt-6.1-sol"
+  ],
+  "completed": true,
+  "fork_turns": "none",
+  "spawn_call_id": "call_50430ed52b7a4a0d9dbcfae3775f7698",
+  "spawn_timestamp": "2026-10-07T16:33:07.575Z",
+  "read_call_ids": [
+    "call_vkGXAYaH4quYE8TFssXe3faY"
+  ],
+  "write_call_ids": [
+    "call_c839XBN119fWDN6HCn11s7O7"
+  ],
+  "comparison": "full_json",
+  "spawn_evidence": {
+    "task_name": "/root/juge_corrige_r7_02",
+    "fork_turns": "none",
+    "call_id": "call_50430ed52b7a4a0d9dbcfae3775f7698",
+    "returned_task_name": "/root/juge_corrige_r7_02"
+  },
+  "native_session_file": "rollout-2026-10-07T18-33-07-01a11736-2800-7b12-92e3-0b31aea77b80.jsonl",
+  "judge_identity_checked": true,
+  "independence_scope": "fresh single task; no inherited history; only full packet read and literal judgment patch",
+  "exact_read_path_format": "absolute_posix",
+  "raw_projection": "raw_output_three_parts_v1",
+  "raw_adapter_sha256": "fad6eaa1de690d5ea93157060e02da72eca3208f87fcb5e3c81690b26f4a05f8",
+  "initial_message_verified": false,
+  "case_id": "plugin-garde-fou-apja",
+  "response_sha256": "89b09015ff9809f6ecf66b8fab8af134a51d456f1065b403290c88b5c4d48845",
+  "packet_sha256": "7c59dae11ace844bc849380f8e887e6fa903642bd6daedde04071307233576c1",
+  "judgment_sha256": "befc1a778e002279dea08968a03068a7b7c322453ee4c09dde7ed6db9b8ac3f6",
+  "binder_sha256": "57df87331a469819b4d30f0daf2b8095d9488e21cdf16fab941229c9d2a9ca4a",
+  "parent_session_file": "rollout-2026-10-06T10-04-24-01a1103e-0b49-70c1-8f4e-66a36b54916f.jsonl",
+  "assessment": {
+    "case_id": "plugin-garde-fou-apja",
+    "verdict": "echec",
+    "technical_status": "failed",
+    "behavior_status": "failed",
+    "documentary_status": "failed",
+    "primary_content_available": false,
+    "release_ready": false
+  },
+  "trace_sha256": "f593a5a652acdc50647950fbc3c2caa5710e58e4d3ac0d678ada4743e52d03f6"
+}

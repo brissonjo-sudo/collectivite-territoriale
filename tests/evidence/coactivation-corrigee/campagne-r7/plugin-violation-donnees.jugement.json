@@ -1,0 +1,37 @@
+{
+  "case_id": "plugin-violation-donnees",
+  "trace_sha256": "ed0e7eed54500f7df9c8974a1c0962951bfce2b15f57da933d816246537e707b",
+  "verdict": "echec",
+  "invariants": {
+    "plugin-violation-donnees.qualification_documentee": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e14"],
+      "rationale": "La réponse qualifie l'envoi au mauvais destinataire comme atteinte à la confidentialité de données personnelles concernant 2 000 usagers. Elle distingue les faits fournis des inconnues : catégories exactes des données sociales, responsable de traitement commune ou CCAS, sous-traitant, destinataire, accès et suppression, chiffrement et chronologie. Elle demande de figer les faits et d'ouvrir le registre, sans prétendre que cette documentation a déjà été réalisée."
+    },
+    "plugin-violation-donnees.risque_personnes": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e14"],
+      "rationale": "L'analyse préliminaire relie le risque pour les droits et libertés au volume, à la nature sociale des données, à une éventuelle sensibilité et à la vulnérabilité des personnes. Elle distingue risque et risque élevé, examine l'accès du destinataire et les mesures d'atténuation, et précise que les données sociales ne prouvent pas à elles seules des catégories sensibles. Elle présente cette évaluation comme indicative et demande une évaluation formelle documentée par le DPO avant décision du responsable de traitement."
+    },
+    "plugin-violation-donnees.delai_source_verifie": {
+      "status": null,
+      "basis": "missing",
+      "evidence_refs": ["e8", "e12", "e13", "e14"],
+      "rationale": "Aucun texte primaire des articles 33 et 34 n'est disponible dans les preuves capturées. Les deux résultats EUR-Lex sont des tool_summary indiquant que seuls les considérants ont été restitués ; la preuve CNIL est missing avec la raison unapproved_source_url. Les citations et affirmations de vérification partielle dans la réponse ne remplacent pas cette pièce manquante. Les délais de 72 heures et dans les meilleurs délais fournis ne peuvent donc pas être confrontés à un texte primaire officiel effectivement récupéré, ni à ses métadonnées d'applicabilité."
+    },
+    "plugin-violation-donnees.point_depart_source_verifie": {
+      "status": null,
+      "basis": "missing",
+      "evidence_refs": ["e8", "e12", "e13", "e14"],
+      "rationale": "Le texte primaire officiel nécessaire pour contrôler le point de départ est absent. La réponse distingue l'envoi de la connaissance par le responsable de traitement, mais exclut la connaissance par le DPO ou la DSI et fait commencer T0 lors d'une information formelle actuelle du responsable sur simple assertion. Ni les résumés EUR-Lex ni la preuve CNIL manquante ne permettent de vérifier ces critères ou l'imputation de la connaissance. Cette absence de preuve ne démontre pas à elle seule que la proposition juridique est fausse."
+    },
+    "plugin-violation-donnees.revue_avant_notification": {
+      "status": true,
+      "basis": "observation",
+      "evidence_refs": ["e14"],
+      "rationale": "La réponse exige explicitement que toute notification CNIL et communication aux usagers soit relue et validée par le DPO humain avant envoi, puis répète que la revue humaine est obligatoire avant tout envoi externe. Elle réserve la décision au responsable de traitement et ne prétend pas que la revue ou une notification a déjà eu lieu."
+    }
+  }
+}

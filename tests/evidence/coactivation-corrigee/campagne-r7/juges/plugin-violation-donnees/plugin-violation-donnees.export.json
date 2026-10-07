@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "case_id": "plugin-violation-donnees",
+  "exported_at": "2026-10-07T16:32:19.250748+00:00",
+  "packet_sha256": "415c5ab009414499c7f1815a169c761bd6ac49b613bd118679905828a5cbd4e5",
+  "prompt_sha256": "5f63ab3aa19797e051977af054003caf5c288a4be11852718e130e0844383b2f",
+  "response_sha256": "ed0e7eed54500f7df9c8974a1c0962951bfce2b15f57da933d816246537e707b",
+  "suite_sha256": "3c45e6117c25cbca0558de2955ca5a7d80956575d886a887d1cdfdc581375cd8",
+  "protocol_sha256": "65f78f419679774ec00c6b5d96b1801f902c6510b57e221ae7ebb31320fd1b6f",
+  "raw_adapter_sha256": "fad6eaa1de690d5ea93157060e02da72eca3208f87fcb5e3c81690b26f4a05f8",
+  "raw_projection": "raw_output_three_parts_v1",
+  "external_read_output_tokens": 55000,
+  "compact_packet": true
+}

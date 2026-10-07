@@ -1,10 +1,10 @@
-# À copier dans docs/qualification ; lancement manuel après la levée du quota.
+# Lancement manuel après vérification de la connexion juridique.
 [CmdletBinding()]
 param(
     [Parameter(Mandatory = $true)][string]$PluginRoot,
     [string]$Python = 'C:\Users\Krn\.cache\codex-runtimes\codex-primary-runtime\dependencies\python\python.exe',
     [string]$Claude = 'C:\Users\Krn\.local\bin\claude.exe',
-    [string]$Revision = 'r7'
+    [string]$Revision = 'r8'
 )
 $ErrorActionPreference = 'Stop'
 if ($Revision -notmatch '^r[0-9]+$') { throw 'Révision invalide.' }
@@ -44,9 +44,17 @@ try {
         Write-Host "$($Case.id) : code technique $TechnicalExit ; aucun verdict comportemental déduit."
         $Trace = Join-Path $Output "$($Case.id).jsonl"
         if (Test-Path -LiteralPath $Trace -PathType Leaf) {
-            $Results = @(Get-Content -LiteralPath $Trace | ForEach-Object { $_ | ConvertFrom-Json } | Where-Object { $_.type -eq 'result' })
+            $Events = @(Get-Content -LiteralPath $Trace | ForEach-Object { $_ | ConvertFrom-Json })
+            $Results = @($Events | Where-Object { $_.type -eq 'result' })
             if ($Results.Count -eq 1 -and $Results[0].is_error -eq $true -and $Results[0].result -match "^You've hit your session limit") {
                 Write-Warning 'Quota toujours actif : arrêt de la tentative. Traces conservées ; nouvelle révision requise pour une reprise.'
+                break
+            }
+            $UnavailableMcp = @($Events | Where-Object {
+                $_.type -eq 'technical_assessment' -and 'mcp_not_connected' -in $_.failures
+            })
+            if ($Case.mcp_mode -eq 'required' -and $UnavailableMcp.Count -gt 0) {
+                Write-Warning 'MCP juridique non connecté : arrêt des appels nominaux. Réauthentifier avec /mcp, puis choisir une nouvelle révision. Réponse conservée pour jugement indépendant.'
                 break
             }
         }

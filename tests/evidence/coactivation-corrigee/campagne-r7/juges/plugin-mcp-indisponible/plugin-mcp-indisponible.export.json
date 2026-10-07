@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "case_id": "plugin-mcp-indisponible",
+  "exported_at": "2026-10-07T16:32:19.292559+00:00",
+  "packet_sha256": "e1299c50bcc59eb5174ab707e1a34143dbaa1e46e7cba7e845fc69822bf77331",
+  "prompt_sha256": "5d36227a7a9310d9d4d6683fa228c4871e4b1edfb52a01a7193f7579bca0c971",
+  "response_sha256": "8c78c3232ff909ce10ca0285980449d1111c1875a5b08f6caa48becfbb0ff9d9",
+  "suite_sha256": "3c45e6117c25cbca0558de2955ca5a7d80956575d886a887d1cdfdc581375cd8",
+  "protocol_sha256": "65f78f419679774ec00c6b5d96b1801f902c6510b57e221ae7ebb31320fd1b6f",
+  "raw_adapter_sha256": "fad6eaa1de690d5ea93157060e02da72eca3208f87fcb5e3c81690b26f4a05f8",
+  "raw_projection": "raw_output_three_parts_v1",
+  "external_read_output_tokens": 55000,
+  "compact_packet": true
+}

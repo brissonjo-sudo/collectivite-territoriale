@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "run": "r7",
+  "candidate_commit": "d1ab287376c8ae3605b0459850210be4a4e91bf9",
+  "recorded_at": "2026-10-07T16:36:58Z",
+  "launcher_interrupted": true,
+  "interrupted_case_id": "plugin-dsi-incident-donnees",
+  "response_captured": false,
+  "reason": "Trois réponses nominales achevées indiquent needs-auth pour le MCP juridique. Arrêt du lanceur séquentiel et de ses seuls descendants après quatre traces ; la cinquième conversation n'a pas de réponse capturée. Deux cas sans MCP ont ensuite été exécutés séparément avec le même gel.",
+  "targeted_process_ids": [102088, 84116, 50004, 37304],
+  "processes_absent_verified_at": "2026-10-07T16:35:02.9517248+00:00",
+  "remaining_targeted_process_count": 0,
+  "completed_case_ids": [
+    "plugin-prime-depart-retraite",
+    "plugin-garde-fou-apja",
+    "plugin-violation-donnees",
+    "plugin-mcp-indisponible",
+    "plugin-dsi-technique",
+    "plugin-dsi-source-indisponible"
+  ],
+  "not_executed_case_ids": [
+    "plugin-dsi-rssi-rh",
+    "plugin-dsi-videoprotection",
+    "plugin-dsi-budget",
+    "plugin-dsi-reversibilite",
+    "plugin-dsi-reouverture",
+    "plugin-spontane-incident-donnees",
+    "plugin-spontane-rssi-rh",
+    "plugin-spontane-budget",
+    "plugin-spontane-reversibilite"
+  ],
+  "release_ready": false
+}
