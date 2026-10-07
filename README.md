@@ -4,6 +4,11 @@
 
 Plugin Claude Code et Codex destiné aux collectivités territoriales françaises. Une seule installation réunit quatre expertises métier, une méthode de recherche juridique sourcée et un accès optionnel à Légifrance/Judilibre.
 
+Une [adaptation expérimentale pour Vibe 2.26.0](docs/vibe.md) utilise les mêmes
+skills et traduit la configuration OAuth, sans modifier les manifestes
+Claude/Codex. La compatibilité locale est contrôlée ; les appels authentifiés
+et la campagne comportementale Vibe restent à qualifier.
+
 > **Statut :** la version 1.1.1 est un candidat d'alignement DRH, sans validation comportementale ni publication. La marketplace suit `main` : elle distribue le contenu fusionné, même sans tag. La fusion et l'installation ne prouvent pas la qualification d'une release.
 
 Ce plugin aide à qualifier une situation, identifier les expertises à mobiliser et produire une réponse traçable. Il ne remplace ni la validation d'un juriste, ni le contrôle de l'autorité compétente, ni la vérification des textes officiels en vigueur.
