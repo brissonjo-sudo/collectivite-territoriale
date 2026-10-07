@@ -4,7 +4,7 @@
 
 Plugin Claude Code et Codex destiné aux collectivités territoriales françaises. Une seule installation réunit quatre expertises métier, une méthode de recherche juridique sourcée et un accès optionnel à Légifrance/Judilibre.
 
-> **Statut :** la version 1.1.1 est un candidat d'alignement DRH, sans validation comportementale ni publication. La marketplace suit `main` : elle distribue le contenu fusionné, même sans tag. La fusion et l'installation ne prouvent pas la qualification d'une release.
+> **Statut :** la marketplace distribue l'étiquette `v1.1.1`, candidat d'alignement DRH **non qualifié**, distribué par défaut jusqu'à la qualification de la version suivante. Elle ne suit plus `main` : une fusion ne publie rien. Procédure et registre des étiquettes : [docs/publication.md](docs/publication.md).
 
 Ce plugin aide à qualifier une situation, identifier les expertises à mobiliser et produire une réponse traçable. Il ne remplace ni la validation d'un juriste, ni le contrôle de l'autorité compétente, ni la vérification des textes officiels en vigueur.
 
@@ -49,7 +49,7 @@ La collecte et la transmission éventuelles de données sont décrites dans la [
 /plugin install collectivite-territoriale@collectivite-territoriale
 ```
 
-Après une nouvelle version publiée :
+Après une nouvelle version publiée (nouvelle étiquette distribuée, voir [docs/publication.md](docs/publication.md)) :
 
 ```text
 /plugin marketplace update collectivite-territoriale
@@ -64,7 +64,7 @@ est public : aucun secret client ne doit être demandé ou ajouté localement.
 
 ## Installation dans Codex
 
-La marketplace Codex est déclarée dans `.agents/plugins/marketplace.json` et référence directement ce dépôt Git :
+La marketplace Codex est déclarée dans `.agents/plugins/marketplace.json`. Le catalogue est lu sur `main`, mais le plugin est récupéré à l'étiquette publiée qu'il désigne :
 
 ```text
 codex plugin marketplace add brissonjo-sudo/collectivite-territoriale --ref main
@@ -107,6 +107,21 @@ python -m unittest discover -s tests
 python scripts/check_sync.py
 claude plugin validate .
 ```
+
+Pour contrôler l'intégration candidate sans qualifier une publication :
+
+```powershell
+$env:CT_EXIGER_ETIQUETTE="1"
+$env:CT_SAUTER_BARRIERE="1"
+python -m unittest discover -s tests
+$env:CT_SAUTER_BARRIERE="0"
+python -m unittest discover -s tests -k ReleaseGateTests
+```
+
+La CI découvre tous les tests dans le job **Intégration candidate** et ne
+saute que `ReleaseGateTests`. Le job **Qualification de publication** force
+`CT_SAUTER_BARRIERE=0` et conserve le verrou en échec pour une version non
+qualifiée. Sans cette variable, la découverte complète exécute aussi le verrou.
 
 Le manifeste Codex est également contrôlé avec le validateur du skill système `plugin-creator`. Les cas de `tests/cas-plugin.json` couvrent notamment :
 
