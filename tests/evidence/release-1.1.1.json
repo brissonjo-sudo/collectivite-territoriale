@@ -23,5 +23,10 @@
   "codex_smoke": {
     "status": "not_run",
     "plugin_commit": null
-  }
+  },
+  "status": "abandonné comme cible de qualification",
+  "superseded_by": "1.2.0",
+  "distribution": "Étiquette v1.1.1 (cad8bbd), non qualifiée, distribuée par défaut jusqu'à la distribution d'une nouvelle version.",
+  "decision_updated_on": "2026-10-07",
+  "decision": "Candidat abandonné comme cible de qualification le 2026-10-06 ; drh-fpt 0.6.0 repris et à qualifier dans 1.2.0. Le gel distribué v1.1.1 reste non qualifié (docs/adr/0003-integration-candidate-dcp.md, ADR 0004)."
 }

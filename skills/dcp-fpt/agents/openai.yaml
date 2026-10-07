@@ -1,0 +1,4 @@
+interface:
+  display_name: "DCP — Commande publique territoriale"
+  short_description: "Décider en commande publique territoriale"
+  default_prompt: "Utilise $dcp-fpt pour analyser cette situation de marché public et préciser les conditions, autorités et vérifications nécessaires."

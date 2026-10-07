@@ -11,7 +11,28 @@
 - CI : vérification obligatoire que l'étiquette distribuée existe et désigne
   le commit épinglé.
 
-## 1.1.1 — 2026-10-03 — Candidat d'alignement DRH
+## 1.2.0 — 2026-10-06 — Candidat d'intégration DCP
+
+- Ajout de `dcp-fpt` 0.1.0 au commit de fusion amont
+  `eeb1cb14a3ad94d78631661dce5ae11f1e071308`, sans surcharge locale.
+- Copie des 30 fichiers runtime et de la licence ; cache de valeurs,
+  conception, outillage et preuves amont exclus.
+- Conservation des cinq autres bases, des trois surcharges et du MCP unique.
+- Manifestes Claude/Codex et présentation adaptés aux six skills.
+- Cinq scénarios DCP ajoutés au contrat de campagne : égalité, acte
+  irréversible, frontières financières/données, DSI externe et mode dégradé.
+- Nouvelle preuve de candidat avec `release_ready=false`. Mesure, smoke et
+  relecture praticien restent à faire après l'intégration candidate.
+- Les preuves historiques conservent leur inventaire d'origine ; elles
+  n'attestent aucune activation DCP.
+- Reprise du candidat 1.1.1 abandonné (`drh-fpt` 0.6.0) : la qualification
+  1.2.0 couvre aussi cet alignement.
+
+## 1.1.1 — 2026-10-03 — Candidat d'alignement DRH (cible de qualification abandonnée, distribution gelée)
+
+- **Abandonné comme cible de qualification le 2026-10-06** par décision du propriétaire ;
+  ses changements restent à qualifier dans 1.2.0. L'étiquette `v1.1.1`
+  demeure distribuée par défaut, non qualifiée, jusqu'à une nouvelle distribution.
 
 - Mise à jour de `drh-fpt` vers 0.6.0 depuis `main`, au commit
   `f81c9b955f7ebb47df7e93bdc41ac743d85a2973` : dix fichiers modifiés et

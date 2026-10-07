@@ -5,6 +5,7 @@ from __future__ import annotations
 import hashlib
 import json
 import os
+import re
 import struct
 import subprocess
 import unittest
@@ -23,7 +24,7 @@ def load_json(path: str) -> dict:
 
 
 class CodexPluginTests(unittest.TestCase):
-    def test_les_cinq_skills_amont_sont_exposes(self) -> None:
+    def test_les_skills_amont_sont_exposes(self) -> None:
         manifest = load_json(".codex-plugin/plugin.json")
         pinned = load_json("upstream.json")["skills"]
         self.assertEqual(manifest["skills"], "./skills/")
@@ -103,6 +104,7 @@ class CodexPluginTests(unittest.TestCase):
         registre = (ROOT / "docs/publication.md").read_text(encoding="utf-8")
         self.assertIn(f"| `{source['ref']}` | `{source['sha']}` |", registre)
 
+
     def test_etiquette_designe_le_commit_epingle(self) -> None:
         """L'étiquette distribuée existe et désigne le commit épinglé.
 
@@ -121,6 +123,7 @@ class CodexPluginTests(unittest.TestCase):
                 self.fail(message)
             self.skipTest(message)
         self.assertEqual(result.stdout.strip(), source["sha"])
+
 
     def test_metadonnees_publiques_et_iconographie(self) -> None:
         manifest = load_json(".codex-plugin/plugin.json")
@@ -162,7 +165,7 @@ class CodexPluginTests(unittest.TestCase):
 
     def test_cas_plugin_couvrent_les_coactivations_juridiques(self) -> None:
         cases = load_json("tests/cas-plugin.json")
-        self.assertEqual(len(cases), 4)
+        self.assertEqual(len(cases), 9)
         by_id = {case["id"]: case for case in cases}
         self.assertEqual(
             by_id["plugin-prime-depart-retraite"]["skills"],
@@ -242,7 +245,10 @@ class CodexPluginTests(unittest.TestCase):
         self.assertNotIn("NOT_TO_RETAIN", json.dumps(clean))
 
     def test_mcp_desactive_refuse_meme_un_appel_en_echec(self) -> None:
-        case = load_json("tests/cas-plugin.json")[-1]
+        case = next(
+            case for case in load_json("tests/cas-plugin.json")
+            if case["id"] == "plugin-mcp-indisponible"
+        )
         self.assertIn("plugin_mcp_call_unexpected", technical_failures([
             {"type": "plugin_mcp_call", "succeeded": False}
         ], case))
@@ -283,10 +289,16 @@ class CodexPluginTests(unittest.TestCase):
         self.assertRegex(evidence["plugin_commit"], r"^[0-9a-f]{40}$")
         self.assertEqual(
             set(evidence["available_skills"]),
-            set(load_json("upstream.json")["skills"]),
+            {"dirfi-fpt", "dpm-fpt", "dpo-ct", "drh-fpt", "recherche-juridique"},
         )
+        historical_ids = {
+            "plugin-prime-depart-retraite", "plugin-garde-fou-apja",
+            "plugin-violation-donnees", "plugin-mcp-indisponible",
+        }
         runs = {run["case_id"]: run for run in evidence["runs"]}
-        self.assertEqual(set(runs), set(cases))
+        # L'inventaire historique reste celui de sa version, sans ajouter DCP.
+        self.assertEqual(set(runs), historical_ids)
+        self.assertTrue(historical_ids.issubset(cases))
         for case_id, run in runs.items():
             with self.subTest(case=case_id):
                 self.assertIn(run["status"], {"passed", "failed", "blocked"})
@@ -349,13 +361,76 @@ class CodexPluginTests(unittest.TestCase):
             and len(evidence["plugin_commit"]) == 40
             and all(char in "0123456789abcdef" for char in evidence["plugin_commit"])
         )
+        dcp_measure = evidence["skill_measurements"]["dcp-fpt"]
+        self.assertEqual(
+            dcp_measure["upstream_commit"],
+            load_json("upstream.json")["skills"]["dcp-fpt"]["commit"],
+        )
+        qualified_dcp = (
+            dcp_measure["status"] == "passed"
+            and isinstance(dcp_measure["evidence_path"], str)
+            and (ROOT / dcp_measure["evidence_path"]).is_file()
+        )
         self.assertEqual(
             evidence["release_ready"],
-            qualified_runs and qualified_commit
+            qualified_runs and qualified_commit and qualified_dcp
             and evidence["review"]["human_legal_validation"] is True
             and evidence["codex_smoke"]["status"] == "passed"
             and evidence["codex_smoke"]["plugin_commit"] == evidence["plugin_commit"],
         )
+
+    def test_dcp_distribution_sans_cache_ni_conception(self) -> None:
+        spec = load_json("upstream.json")["skills"]["dcp-fpt"]
+        version = spec["version"]
+        self.assertRegex(version, r"^\d+\.\d+\.\d+$")
+        self.assertIn("references/cache-valeurs.md", spec["exclude"])
+        skill = ROOT / "skills/dcp-fpt"
+        for excluded in ("references/cache-valeurs.md", "docs", "tests", "scripts", "vault"):
+            with self.subTest(chemin=excluded):
+                self.assertFalse((skill / excluded).exists())
+        self.assertTrue((skill / "agents/openai.yaml").is_file())
+        self.assertEqual(
+            (skill / "LICENSE").read_text(encoding="utf-8"),
+            (ROOT / "LICENSE").read_text(encoding="utf-8"),
+        )
+        entrypoint = (skill / "SKILL.md").read_text(encoding="utf-8")
+        # La version déclarée doit être celle du titre de la copie figée :
+        # le test suit la promotion (0.x vers 1.0.0) sans constante à réécrire.
+        self.assertRegex(entrypoint, rf"(?m)^# Skill : dcp-fpt \(v{re.escape(version)}\)$")
+        if version.startswith("0."):
+            # Tant que le skill n'a pas passé le seuil de mesure, l'avertissement reste obligatoire.
+            self.assertIn("non mesuré, non relu par un praticien", entrypoint)
+        self.assertNotIn("instruction_overlays", spec)
+
+    def test_cas_dcp_orchestration_et_outils(self) -> None:
+        cases = load_json("tests/cas-plugin.json")
+        pinned = set(load_json("upstream.json")["skills"])
+        for case in cases:
+            self.assertTrue(set(case["skills"]).issubset(pinned))
+        dcp_cases = {case["id"]: case for case in cases if case["id"].startswith("plugin-dcp-")}
+        self.assertEqual(len(dcp_cases), 5)
+        for case in dcp_cases.values():
+            with self.subTest(cas=case["id"]):
+                self.assertEqual(case["activation_sequence"], case["skills"])
+                self.assertEqual(case["skills"][0], "dcp-fpt")
+                self.assertIn("recherche-juridique", case["skills"])
+                self.assertGreaterEqual(len(case["invariants"]), 4)
+                self.assertIn("collectivite-territoriale:dcp-fpt", build_prompt(case))
+        mixed = dcp_cases["plugin-dcp-frontieres-finance-donnees"]
+        self.assertEqual(mixed["skills"], ["dcp-fpt", "dirfi-fpt", "dpo-ct", "recherche-juridique"])
+        degraded = dcp_cases["plugin-dcp-mcp-indisponible"]
+        command = build_command(degraded, "claude")
+        self.assertIsNone(degraded["mcp"])
+        self.assertEqual(degraded["mcp_mode"], "disabled")
+        self.assertEqual(command[command.index("--mcp-config") + 1], '{"mcpServers":{}}')
+        self.assertNotIn("mcp__droit-francais__", command[command.index("--allowedTools") + 1])
+
+    def test_frontiere_dsi_externe_est_signalee(self) -> None:
+        pinned = load_json("upstream.json")["skills"]
+        self.assertNotIn("dsi-fpt", pinned)
+        self.assertIn("dsi-fpt", (ROOT / "skills/dcp-fpt/SKILL.md").read_text(encoding="utf-8"))
+        readme = (ROOT / "README.md").read_text(encoding="utf-8")
+        self.assertIn("`dsi-fpt` reste externe", readme)
 
     def test_marketplace_distribue_la_racine_sans_copie(self) -> None:
         marketplace = load_json(".agents/plugins/marketplace.json")

@@ -90,6 +90,26 @@
           "anchor": "## Déclenchement"
         }
       ]
+    },
+    "dcp-fpt": {
+      "repository": "https://github.com/brissonjo-sudo/DCP-fpt.git",
+      "commit": "eeb1cb14a3ad94d78631661dce5ae11f1e071308",
+      "version": "0.1.0",
+      "paths": [
+        "SKILL.md",
+        "agents/openai.yaml",
+        "references/",
+        "objets/"
+      ],
+      "exclude": [
+        "references/cache-valeurs.md"
+      ],
+      "additional_files": [
+        {
+          "source": "LICENSE",
+          "target": "LICENSE"
+        }
+      ]
     }
   }
 }
