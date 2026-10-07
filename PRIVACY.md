@@ -1,6 +1,6 @@
 # Politique de confidentialité — Collectivité territoriale
 
-Dernière mise à jour : 29 septembre 2026
+Dernière mise à jour : 7 octobre 2026
 
 ## Responsable et contact
 
@@ -19,10 +19,18 @@ territoriales et un accès optionnel au serveur MCP `droit-francais`. Les skills
 sont des fichiers statiques exécutés par le client de l'utilisateur. Ils
 n'exploitent aucune base de données propre et n'ajoutent aucune télémétrie.
 
-Le client utilisé, notamment ChatGPT, Codex ou Claude Code, peut traiter et
+Le client utilisé, notamment ChatGPT, Codex, Claude Code ou Mistral Vibe, peut traiter et
 conserver la conversation selon les paramètres, la politique et les conditions
 du compte de l'utilisateur. Ces traitements sont distincts de ceux du présent
 plugin.
+
+L'adaptation Vibe génère un profil local dédié et peut enregistrer, à la
+demande de l'utilisateur, des preuves d'essai assainies : paramètres du test,
+empreintes, noms d'outils, état des appels et réponse produite. Ces preuves
+doivent être revues avant tout versement au dépôt public. Le profil généré
+désactive la télémétrie et la persistance des conversations Vibe ; cela ne
+détermine pas la conservation côté fournisseur du modèle. Il ne copie aucun
+secret ni fichier `.env` et ne modifie pas les réglages du profil habituel.
 
 ## Données traitées
 
