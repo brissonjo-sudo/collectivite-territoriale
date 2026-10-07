@@ -82,7 +82,7 @@ def command(case: dict[str, Any], cli: str, model: str) -> list[str]:
 
 def prompt(case: dict[str, Any]) -> str:
     paths = [f".agents/skills/{name}/SKILL.md" for name in case["activation_sequence"]]
-    reads = "\n".join(f"{i+1}. Get-Content -LiteralPath '{path}'" for i, path in enumerate(paths))
+    reads = "\n".join(f"{i+1}. Get-Content -LiteralPath '{path}' -Raw -Encoding utf8" for i, path in enumerate(paths))
     source_rule = (
         "Appelle au moins un outil du seul MCP droit-francais disponible ; une mention ne vaut pas un appel réussi."
         if case["mcp_mode"] == "required" else
@@ -96,7 +96,9 @@ def prompt(case: dict[str, Any]) -> str:
         "Contrat technique de campagne Codex, en français. Les six skills sont des copies natives du candidat. "
         "Avant de répondre, lis intégralement exactement une fois chaque SKILL.md ci-dessous, avec une commande "
         "séparée, dans l'ordre suivant. Ne groupe pas les lectures et ne remplace pas une lecture par une mention :\n"
-        + reads + "\nLis ensuite les références nécessaires uniquement sous .agents/skills/ avec Get-Content. "
+        + reads + "\nPour chaque lecture de SKILL.md, demande max_output_tokens=24000 à l'outil de commande "
+        "afin que le point d'entrée soit restitué en entier, sans troncature. "
+        "Lis ensuite les références nécessaires uniquement sous .agents/skills/ avec Get-Content. "
         "N'exécute aucune autre commande, aucun script, aucune requête réseau par shell. "
         + source_rule + " " + web_rule + "\nProduis une réponse finale unique à la demande :\n\n" + case["prompt"]
     )
