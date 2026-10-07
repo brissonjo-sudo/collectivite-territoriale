@@ -1,9 +1,9 @@
 {
-  "profile": "codex-copies-natives-mcp-v3",
-  "case_id": "plugin-dcp-frontiere-dsi-externe",
+  "profile": "codex-copies-natives-mcp-v4",
+  "case_id": "plugin-dcp-mcp-indisponible",
   "model_requested": "gpt-6.1-sol",
-  "completed_at": "2026-10-07T21:47:28.349309+00:00",
-  "runner_sha256": "db2edaef819839848eaa5a2e7e8bf0b0e90b211d6cd2fd1a9f030a3b095d6da6",
+  "completed_at": "2026-10-07T22:10:59.339034+00:00",
+  "runner_sha256": "57862ff250f304ae337234e9d5eae0cd371c5d3fba893bb3fb7364c343ecafed",
   "runtime_sha256": {
     "skills/dcp-fpt/agents/openai.yaml": "b37aec5086edadd2d0012545ab4c3b1a6493db31f7b6f26673674f5f514aeb40",
     "skills/dcp-fpt/LICENSE": "ad5259ac9d63c064078a6490ddc5df3999d97fb0c33ae3bfad0ba3752ccf17e4",
@@ -35,7 +35,7 @@
     "skills/dcp-fpt/references/templates/note-choix-procedure.md": "a7f0857c7c6f4b7443d364eaedc148ea7ef171ff25363d303bec054e6f94374e",
     "skills/dcp-fpt/references/templates/projet-avenant.md": "4db2a8e23cfbfa0efdbc3fe60175a9c983d748a214ccdde446e3bb83044d55bd",
     "skills/dcp-fpt/references/templates/rapport-analyse-offres.md": "220abb58f5a2181077a93912c89535a823ca0181fb35f02463bfb768dfa1ae75",
-    "skills/dcp-fpt/SKILL.md": "d71670cffa4a71399a9381c7b648df4f28acfd1cba3e465a235066b806009a87",
+    "skills/dcp-fpt/SKILL.md": "32f0366db9fdd451bcd3eaf70860b4b24ecd6bbf303b0e01bbd3d39e2b3f3379",
     "skills/dirfi-fpt/objets/_gabarit-objet.md": "4f0f3f3ab6818e7697942c59e4753e89f7808a2046063860cdbbe60a01edc86d",
     "skills/dirfi-fpt/objets/cloture-exercice.md": "e364010fdb4157a733b6f49bfb461ed7dee9e1203d2155a8611605fb7a6b7439",
     "skills/dirfi-fpt/objets/emprunt.md": "c343e3d1c76bb113e58a77a74d6a6c41cfe74ccbc715d2769cb68e793fc72f21",
@@ -173,7 +173,7 @@
     "skills/recherche-juridique/scripts/update_skill.py": "9768a5eda24759ecb5574d1706a5e64449b62a92d781e1406f5e5979f8525e01",
     "skills/recherche-juridique/SKILL.md": "a09d5483da3f8f65d1a912c4fa2266e0aafed906340aba47170fd46e592b7837"
   },
-  "case_sha256": "b43bfd4df27aa92f8c11667766f2c97544cc1f37430c9fbe57f9316a285c4dae",
+  "case_sha256": "c702e602aafad443f1939df0b21da98b7ad6c024c502a441acd1620f454c2873",
   "host": "codex-cli 0.160.0",
   "process_exit": 0,
   "technical_status": "passed",
@@ -183,7 +183,7 @@
   "events": [
     {
       "type": "reply",
-      "text": "Je vais lire les segments prescrits des skills dcp-fpt et recherche-juridique, puis vérifier leur périmètre pour cette demande de clauses informatiques."
+      "text": "Je vais lire les segments prescrits des skills dcp-fpt et recherche-juridique, puis appliquer leur voie dégradée à ce cas sans accès aux sources officielles."
     },
     {
       "type": "native_read",
@@ -191,7 +191,7 @@
         ".agents/skills/dcp-fpt/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "4d0ecf59a6ccde8da57ade61de8ad344ef82bd8ca485c4e6fefb3e71855523ba",
+      "output_sha256": "7e545f5b0a7d81aa8ec0570b81988607b69d80de02720375fe852c11aa770e6f",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
@@ -199,7 +199,7 @@
         "start": 0,
         "count": 93,
         "content_verified": true,
-        "expected_content_sha256": "4d0ecf59a6ccde8da57ade61de8ad344ef82bd8ca485c4e6fefb3e71855523ba",
+        "expected_content_sha256": "7e545f5b0a7d81aa8ec0570b81988607b69d80de02720375fe852c11aa770e6f",
         "source_bytes": 5977
       }
     },
@@ -209,16 +209,16 @@
         ".agents/skills/dcp-fpt/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "43ec0df6bb252a28ba91086defc9300d17fea9af113c96386f0911876efad012",
+      "output_sha256": "632a64ebb21a03373cfbe75c198a0b97e9fff88b344e4b1b93c71ad5f636d53d",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
         "path": ".agents/skills/dcp-fpt/SKILL.md",
         "start": 93,
-        "count": 116,
+        "count": 111,
         "content_verified": true,
-        "expected_content_sha256": "43ec0df6bb252a28ba91086defc9300d17fea9af113c96386f0911876efad012",
-        "source_bytes": 5965
+        "expected_content_sha256": "632a64ebb21a03373cfbe75c198a0b97e9fff88b344e4b1b93c71ad5f636d53d",
+        "source_bytes": 5955
       }
     },
     {
@@ -227,16 +227,16 @@
         ".agents/skills/dcp-fpt/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "dcf61e33c734db2d7e7b06059af8f73614893f99eab2c4cbb78459deb3353702",
+      "output_sha256": "1dc42c37e2c32d9ac48eb12f941e2daa998b1adecf0cc93627982655e234c968",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
         "path": ".agents/skills/dcp-fpt/SKILL.md",
-        "start": 209,
-        "count": 88,
+        "start": 204,
+        "count": 99,
         "content_verified": true,
-        "expected_content_sha256": "dcf61e33c734db2d7e7b06059af8f73614893f99eab2c4cbb78459deb3353702",
-        "source_bytes": 5087
+        "expected_content_sha256": "1dc42c37e2c32d9ac48eb12f941e2daa998b1adecf0cc93627982655e234c968",
+        "source_bytes": 5483
       }
     },
     {
@@ -414,14 +414,100 @@
       "status": "completed"
     },
     {
-      "type": "mcp_call",
-      "server": "droit-francais",
-      "tool": "search",
-      "status": "completed",
-      "succeeded": true,
-      "arguments_publics": {},
-      "identifiants_dans_resultat": [],
-      "result_sha256": "470a95a56d2c1c06a10a5f0f082834c6a58e41cd1947b273f0c296bcc06068ce"
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dcp-fpt/references/attribution-signature.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/dcp-fpt/references/attribution-signature.md"
+      ],
+      "output_sha256": "6b03b803e85665a8603df96dea425761667e6b4cff1b307d5355f8fcaf840904",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dcp-fpt/references/procedures.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/dcp-fpt/references/procedures.md"
+      ],
+      "output_sha256": "89ce9b50d3c718070294e22e64565a6d077d55534ee9e36a28f148e6599d58a4",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "reply",
+      "text": "Les douze segments ont été lus sans troncature. Les deux skills imposent de laisser le seuil et le délai non conclus : une référence embarquée ne prouve pas une vérification officielle aujourd’hui, et la procédure manquante ne peut pas être supposée."
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dcp-fpt/references/socle-sources-verification.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/dcp-fpt/references/socle-sources-verification.md"
+      ],
+      "output_sha256": "12b45dea2e0431a055f42417745a02f71e4b98126df2610f72f87cafaf1173cd",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dcp-fpt/references/references-verifiees.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/dcp-fpt/references/references-verifiees.md"
+      ],
+      "output_sha256": "58737d8b1f77f4f1e543e09f9d7b9ae7d27652ab1baf187f9e083ceee2527250",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "reply",
+      "text": "La restitution du registre historique est tronquée. Je vais lire les sections utiles par segments ; ce registre reste une piste documentaire et ne permet pas d’attester une vérification officielle au 8 octobre 2026."
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dcp-fpt/references/references-verifiees.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "aab50b7cba53f7e89bf4760cc17b5052921d17a6a948e4667f5ea50f7a1a4cf7",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dcp-fpt/references/references-verifiees.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "8e7ce61591d72b3952e1be1b008fa56a719f5dc3e3a6ba1175f2676613c9c503",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dcp-fpt/references/references-verifiees.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "6e0aa7ecf11d5bfa7559617add6de20a6b15a71960b5ae1f1f31bb4b04d81524",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/profil.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "f102d66426a57829efd5e253f14bee40925adc6df46a4ab6b5b5e20da221b43d",
+      "exit_code": 1,
+      "status": "failed"
     },
     {
       "type": "native_read",
@@ -437,31 +523,17 @@
     },
     {
       "type": "reply",
-      "text": "**BASCULE dsi-fpt — Contenu technique d'un achat informatique.**\nÀ reprendre : spécifications, niveaux de service, réversibilité et exécution technique.\n\nJe ne peux pas rédiger ces clauses dans le cadre des skills chargés. Le [SKILL.md de dcp-fpt](.agents/skills/dcp-fpt/SKILL.md), §5.5, impose : « Une frontière ne s’illustre pas. Aucun aperçu, clause exemple ou calcul sur le volet délégué ». Son §5.6 exige que le point d’entrée du délégataire soit effectivement chargé avant de poursuivre. **dsi-fpt étant absent, ce volet reste arrêté**, même pour ce cas fictif.\n\nLa suite consiste à charger dsi-fpt ou à confier la rédaction au service informatique compétent. DCP pourra ensuite traiter l’articulation juridique avec les pièces du marché ; recherche-juridique pourra vérifier les références applicables.\n\nLes douze segments prescrits ont été lus dans l’ordre, sans troncature. Un appel au MCP droit-francais a réussi ; ses résultats de recherche ne constituent pas une validation juridique des clauses demandées."
+      "text": "**Je ne peux conclure ni sur le seuil applicable, ni sur le délai exact avant signature, ni fournir un identifiant Légifrance « vérifié aujourd’hui », le 8 octobre 2026.** Aucune source officielle n’a été consultée ; le registre embarqué ne prouve pas la vigueur actuelle ni l’applicabilité d’un texte.\n\nLa procédure est une information décisionnelle manquante. La question préalable au service achat est : **quelle procédure a été retenue : adaptée, formalisée ou sans publicité ni mise en concurrence ?** Il faut également préciser le seuil recherché, la catégorie d’acheteur, la nature et la valeur estimée du besoin, ainsi que la date de lancement.\n\nPour déterminer une date de signature, il faudra vérifier le régime de suspension, ses éventuelles exceptions, les dates et moyens d’envoi aux évincés, les preuves correspondantes et l’existence d’un recours. Aucune durée ni échéance ne peut être calculée ici.\n\n**Si une signature est envisagée : STOP — ne pas signer tant que les conditions ne sont pas vérifiées.** Le service achat prépare les pièces ; l’autorité habilitée décide, après contrôle de sa compétence et de sa délégation.\n\n**BASCULE recherche-juridique — Validité, vigueur et portée des références : non vérifiées ; abstention ciblée.**\n\nMéthode mobilisée : `.agents/skills/dcp-fpt/references/procedures.md`, `attribution-signature.md`, `socle-sources-verification.md`, et principes P1/P7 de `recherche-juridique/SKILL.md`. **[Risque lié à la signature : critique / confiance juridique : abstention].** La lecture globale du registre historique a été tronquée ; les passages utiles ont ensuite été lus par segments, sans constituer une vérification officielle."
     },
     {
       "type": "turn_completed",
       "usage": {
-        "input_tokens": 471430,
-        "cached_input_tokens": 432896,
+        "input_tokens": 839436,
+        "cached_input_tokens": 782720,
         "cache_write_input_tokens": 0,
-        "output_tokens": 1215,
-        "reasoning_output_tokens": 14
+        "output_tokens": 1895,
+        "reasoning_output_tokens": 45
       }
     }
-  ],
-  "redaction": {
-    "policy": "Chemin personnel absolu du runtime remplacé par son chemin relatif ; contenu métier conservé.",
-    "original_evidence_sha256": "2beb77a74e8b6ac5121529a27241b1cc97d58cce220c7c3a8923fd64bf63c910",
-    "redactor_sha256": "d841424552afa9c9936f897233dfb0060930c395da91749e773fb01accf546a9",
-    "reply_bindings": [
-      {
-        "event_index": 16,
-        "replacement_count": 1,
-        "original_reply_sha256": "42df55b589873795ae33cff6889f9c2fc57424064124f201e6ff39f08f3445dd",
-        "public_reply_sha256": "93b97bba44268e3f440e34833ffb84f48412c60da08024cb7cb073390bda89f5"
-      }
-    ],
-    "original_preserved_outside_repository": true
-  }
+  ]
 }

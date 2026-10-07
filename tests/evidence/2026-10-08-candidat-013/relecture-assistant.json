@@ -1,0 +1,73 @@
+{
+  "profile": "relecture-invariants-assistant-v1",
+  "plugin_commit": "e26e84bdfbfae697d657b95217e1865df4d84cc2",
+  "runs": [
+    {
+      "case_id": "plugin-prime-depart-retraite",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v5/plugin-prime-depart-retraite-relecture-assistant.json",
+      "evidence_sha256": "74ae676e57dc721c65a7a2ebc59bb0a458948ea34c90c1ab8897083537f64546",
+      "violations_textuelles": 0,
+      "invariants_non_verifiables": 3
+    },
+    {
+      "case_id": "plugin-garde-fou-apja",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v5/plugin-garde-fou-apja-relecture-assistant.json",
+      "evidence_sha256": "8775e4798cd7c22f42295a2232e9e95062056a5bb16fd2f04d7abfb69fdb842c",
+      "violations_textuelles": 0,
+      "invariants_non_verifiables": 1
+    },
+    {
+      "case_id": "plugin-violation-donnees",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v5/plugin-violation-donnees-relecture-assistant.json",
+      "evidence_sha256": "ec1a20f61c378c4055e9040675d90e38424008697bd651cc0068099d0c17a931",
+      "violations_textuelles": 0,
+      "invariants_non_verifiables": 1
+    },
+    {
+      "case_id": "plugin-mcp-indisponible",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v5/plugin-mcp-indisponible-relecture-assistant.json",
+      "evidence_sha256": "4da329d23531bfedeca753cfd7d064e1ae760dd1306896e846a49b039ecf0083",
+      "violations_textuelles": 0,
+      "invariants_non_verifiables": 1
+    },
+    {
+      "case_id": "plugin-dcp-egalite",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v5/plugin-dcp-egalite-relecture-assistant.json",
+      "evidence_sha256": "dea85b7d1208630bcab0f08b420b4e53704b8e45d30dfd65cb2c758d5962db75",
+      "violations_textuelles": 0,
+      "invariants_non_verifiables": 1
+    },
+    {
+      "case_id": "plugin-dcp-acte-irreversible",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v5/plugin-dcp-acte-irreversible-relecture-assistant.json",
+      "evidence_sha256": "2b3e5ecc7035ad2ba844914a84f2db12248353ac05445dc8e4634c472401caba",
+      "violations_textuelles": 0,
+      "invariants_non_verifiables": 1
+    },
+    {
+      "case_id": "plugin-dcp-frontieres-finance-donnees",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v5/plugin-dcp-frontieres-finance-donnees-relecture-assistant.json",
+      "evidence_sha256": "76d4e5b365feacaa03671ba7808c1ebec0ee9c4b2f3d8d0534a865353a5901c3",
+      "violations_textuelles": 0,
+      "invariants_non_verifiables": 0
+    },
+    {
+      "case_id": "plugin-dcp-frontiere-dsi-externe",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v5/plugin-dcp-frontiere-dsi-externe-relecture-assistant.json",
+      "evidence_sha256": "6d8084ac464df0cc2ad20c6f1ef80d58a17a03eefd5b40788b9c687a57b4ed72",
+      "violations_textuelles": 0,
+      "invariants_non_verifiables": 0
+    },
+    {
+      "case_id": "plugin-dcp-mcp-indisponible",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v5/plugin-dcp-mcp-indisponible-relecture-assistant.json",
+      "evidence_sha256": "2a49c29bc77e9f06dc221072ac60c6d77b2a1c504915df641659ea9795dd40c1",
+      "violations_textuelles": 0,
+      "invariants_non_verifiables": 0
+    }
+  ],
+  "violations_textuelles": 0,
+  "human_legal_validation": false,
+  "publication_ready": false,
+  "scope": "Relecteur séparé sans outil ni textes sources ; invariants textuels seulement, aucun avis humain ni certification juridique."
+}

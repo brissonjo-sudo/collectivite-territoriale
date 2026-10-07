@@ -1,9 +1,9 @@
 {
-  "profile": "codex-copies-natives-mcp-v3",
-  "case_id": "plugin-dcp-frontiere-dsi-externe",
+  "profile": "codex-copies-natives-mcp-v4",
+  "case_id": "plugin-prime-depart-retraite",
   "model_requested": "gpt-6.1-sol",
-  "completed_at": "2026-10-07T21:47:28.349309+00:00",
-  "runner_sha256": "db2edaef819839848eaa5a2e7e8bf0b0e90b211d6cd2fd1a9f030a3b095d6da6",
+  "completed_at": "2026-10-07T21:57:23.925932+00:00",
+  "runner_sha256": "57862ff250f304ae337234e9d5eae0cd371c5d3fba893bb3fb7364c343ecafed",
   "runtime_sha256": {
     "skills/dcp-fpt/agents/openai.yaml": "b37aec5086edadd2d0012545ab4c3b1a6493db31f7b6f26673674f5f514aeb40",
     "skills/dcp-fpt/LICENSE": "ad5259ac9d63c064078a6490ddc5df3999d97fb0c33ae3bfad0ba3752ccf17e4",
@@ -35,7 +35,7 @@
     "skills/dcp-fpt/references/templates/note-choix-procedure.md": "a7f0857c7c6f4b7443d364eaedc148ea7ef171ff25363d303bec054e6f94374e",
     "skills/dcp-fpt/references/templates/projet-avenant.md": "4db2a8e23cfbfa0efdbc3fe60175a9c983d748a214ccdde446e3bb83044d55bd",
     "skills/dcp-fpt/references/templates/rapport-analyse-offres.md": "220abb58f5a2181077a93912c89535a823ca0181fb35f02463bfb768dfa1ae75",
-    "skills/dcp-fpt/SKILL.md": "d71670cffa4a71399a9381c7b648df4f28acfd1cba3e465a235066b806009a87",
+    "skills/dcp-fpt/SKILL.md": "32f0366db9fdd451bcd3eaf70860b4b24ecd6bbf303b0e01bbd3d39e2b3f3379",
     "skills/dirfi-fpt/objets/_gabarit-objet.md": "4f0f3f3ab6818e7697942c59e4753e89f7808a2046063860cdbbe60a01edc86d",
     "skills/dirfi-fpt/objets/cloture-exercice.md": "e364010fdb4157a733b6f49bfb461ed7dee9e1203d2155a8611605fb7a6b7439",
     "skills/dirfi-fpt/objets/emprunt.md": "c343e3d1c76bb113e58a77a74d6a6c41cfe74ccbc715d2769cb68e793fc72f21",
@@ -173,7 +173,7 @@
     "skills/recherche-juridique/scripts/update_skill.py": "9768a5eda24759ecb5574d1706a5e64449b62a92d781e1406f5e5979f8525e01",
     "skills/recherche-juridique/SKILL.md": "a09d5483da3f8f65d1a912c4fa2266e0aafed906340aba47170fd46e592b7837"
   },
-  "case_sha256": "b43bfd4df27aa92f8c11667766f2c97544cc1f37430c9fbe57f9316a285c4dae",
+  "case_sha256": "c22d78a6921f8c0ba9cca4f9d2af51a5b3250df9e8b98c51e006b30bdff4dbf3",
   "host": "codex-cli 0.160.0",
   "process_exit": 0,
   "technical_status": "passed",
@@ -183,60 +183,168 @@
   "events": [
     {
       "type": "reply",
-      "text": "Je vais lire les segments prescrits des skills dcp-fpt et recherche-juridique, puis vérifier leur périmètre pour cette demande de clauses informatiques."
+      "text": "Je vais lire les skills selon les segments imposés, puis vérifier le cadre juridique avec le MCP droit-francais avant de répondre sur le mandatement.\n"
     },
     {
       "type": "native_read",
       "paths": [
-        ".agents/skills/dcp-fpt/SKILL.md"
+        ".agents/skills/dirfi-fpt/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "4d0ecf59a6ccde8da57ade61de8ad344ef82bd8ca485c4e6fefb3e71855523ba",
+      "output_sha256": "f6663f1e8904c2b34a6168ffe9c6f6a1f178e32fe5ef6b244a53968008f4201e",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
-        "path": ".agents/skills/dcp-fpt/SKILL.md",
+        "path": ".agents/skills/dirfi-fpt/SKILL.md",
         "start": 0,
-        "count": 93,
+        "count": 112,
         "content_verified": true,
-        "expected_content_sha256": "4d0ecf59a6ccde8da57ade61de8ad344ef82bd8ca485c4e6fefb3e71855523ba",
-        "source_bytes": 5977
+        "expected_content_sha256": "f6663f1e8904c2b34a6168ffe9c6f6a1f178e32fe5ef6b244a53968008f4201e",
+        "source_bytes": 5981
       }
     },
     {
       "type": "native_read",
       "paths": [
-        ".agents/skills/dcp-fpt/SKILL.md"
+        ".agents/skills/dirfi-fpt/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "43ec0df6bb252a28ba91086defc9300d17fea9af113c96386f0911876efad012",
+      "output_sha256": "0c5f16208af1ab57ce7dc7963b07fc8b46841dd13935f8f7b724d4451c2f8851",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
-        "path": ".agents/skills/dcp-fpt/SKILL.md",
-        "start": 93,
-        "count": 116,
+        "path": ".agents/skills/dirfi-fpt/SKILL.md",
+        "start": 112,
+        "count": 114,
         "content_verified": true,
-        "expected_content_sha256": "43ec0df6bb252a28ba91086defc9300d17fea9af113c96386f0911876efad012",
-        "source_bytes": 5965
+        "expected_content_sha256": "0c5f16208af1ab57ce7dc7963b07fc8b46841dd13935f8f7b724d4451c2f8851",
+        "source_bytes": 5881
       }
     },
     {
       "type": "native_read",
       "paths": [
-        ".agents/skills/dcp-fpt/SKILL.md"
+        ".agents/skills/dirfi-fpt/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "dcf61e33c734db2d7e7b06059af8f73614893f99eab2c4cbb78459deb3353702",
+      "output_sha256": "9fc4eeb6a700af7d2c03cbb596d55a7e9fce98220bfb3c4c061d1f3697fb2c30",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
-        "path": ".agents/skills/dcp-fpt/SKILL.md",
-        "start": 209,
-        "count": 88,
+        "path": ".agents/skills/dirfi-fpt/SKILL.md",
+        "start": 226,
+        "count": 108,
         "content_verified": true,
-        "expected_content_sha256": "dcf61e33c734db2d7e7b06059af8f73614893f99eab2c4cbb78459deb3353702",
-        "source_bytes": 5087
+        "expected_content_sha256": "9fc4eeb6a700af7d2c03cbb596d55a7e9fce98220bfb3c4c061d1f3697fb2c30",
+        "source_bytes": 5966
+      }
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dirfi-fpt/SKILL.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "95f7b666fef63227774d496a309d24546f7fa21b7ec57fe5a8a9f442daa12e59",
+      "exit_code": 0,
+      "status": "completed",
+      "chunk": {
+        "path": ".agents/skills/dirfi-fpt/SKILL.md",
+        "start": 334,
+        "count": 99,
+        "content_verified": true,
+        "expected_content_sha256": "95f7b666fef63227774d496a309d24546f7fa21b7ec57fe5a8a9f442daa12e59",
+        "source_bytes": 5988
+      }
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dirfi-fpt/SKILL.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "e7027dcab37c5cc6c7d2ac3587e54a8f18ab7ae62385cf618d81418a5028397a",
+      "exit_code": 0,
+      "status": "completed",
+      "chunk": {
+        "path": ".agents/skills/dirfi-fpt/SKILL.md",
+        "start": 433,
+        "count": 101,
+        "content_verified": true,
+        "expected_content_sha256": "e7027dcab37c5cc6c7d2ac3587e54a8f18ab7ae62385cf618d81418a5028397a",
+        "source_bytes": 5923
+      }
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dirfi-fpt/SKILL.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "fe39f5d406994d2b743bf567459fb0f29fde55ac21dd18377a6382d55f935a05",
+      "exit_code": 0,
+      "status": "completed",
+      "chunk": {
+        "path": ".agents/skills/dirfi-fpt/SKILL.md",
+        "start": 534,
+        "count": 56,
+        "content_verified": true,
+        "expected_content_sha256": "fe39f5d406994d2b743bf567459fb0f29fde55ac21dd18377a6382d55f935a05",
+        "source_bytes": 3100
+      }
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/drh-fpt/SKILL.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "292de3740c53a732b10694bc07a77f35b424fa87b36c76f995e049b041b054a8",
+      "exit_code": 0,
+      "status": "completed",
+      "chunk": {
+        "path": ".agents/skills/drh-fpt/SKILL.md",
+        "start": 0,
+        "count": 122,
+        "content_verified": true,
+        "expected_content_sha256": "292de3740c53a732b10694bc07a77f35b424fa87b36c76f995e049b041b054a8",
+        "source_bytes": 5946
+      }
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/drh-fpt/SKILL.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "faced5db2fd9ff0602a728349d7624cbf98a94125c63a48b1be1b6d7b9066cdc",
+      "exit_code": 0,
+      "status": "completed",
+      "chunk": {
+        "path": ".agents/skills/drh-fpt/SKILL.md",
+        "start": 122,
+        "count": 126,
+        "content_verified": true,
+        "expected_content_sha256": "faced5db2fd9ff0602a728349d7624cbf98a94125c63a48b1be1b6d7b9066cdc",
+        "source_bytes": 5995
+      }
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/drh-fpt/SKILL.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "8c6aad6f0a5eb2315c65f43264bae9043f1e25e06db14107927fc537983daadf",
+      "exit_code": 0,
+      "status": "completed",
+      "chunk": {
+        "path": ".agents/skills/drh-fpt/SKILL.md",
+        "start": 248,
+        "count": 79,
+        "content_verified": true,
+        "expected_content_sha256": "8c6aad6f0a5eb2315c65f43264bae9043f1e25e06db14107927fc537983daadf",
+        "source_bytes": 3736
       }
     },
     {
@@ -404,24 +512,64 @@
     {
       "type": "native_read",
       "paths": [
-        ".agents/skills/dcp-fpt/references/analyse-situation.md"
+        ".agents/skills/dirfi-fpt/references/analyse-situation.md"
       ],
       "complete_content_verified": [
-        ".agents/skills/dcp-fpt/references/analyse-situation.md"
+        ".agents/skills/dirfi-fpt/references/analyse-situation.md"
       ],
-      "output_sha256": "5ff8cf6921bcd31a7de4503a0cc617124aaab099e57ab7e938e0f1c0f375f206",
+      "output_sha256": "558618b77323ff06eaedaa8eb281f1c5b4857f8e871efde9a78dc5782cce5358",
       "exit_code": 0,
       "status": "completed"
     },
     {
-      "type": "mcp_call",
-      "server": "droit-francais",
-      "tool": "search",
-      "status": "completed",
-      "succeeded": true,
-      "arguments_publics": {},
-      "identifiants_dans_resultat": [],
-      "result_sha256": "470a95a56d2c1c06a10a5f0f082834c6a58e41cd1947b273f0c296bcc06068ce"
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dirfi-fpt/references/execution-depense.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/dirfi-fpt/references/execution-depense.md"
+      ],
+      "output_sha256": "3d0fb81220e2f72134cd2ce40c53e70959417489551e1b2b76a0e46acc70f122",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/drh-fpt/references/carriere-paie.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/drh-fpt/references/carriere-paie.md"
+      ],
+      "output_sha256": "e0890737636e140db6429cd2142e159c755a6836a539923db7378c64e752767c",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "reply",
+      "text": "Les 18 segments imposés ont été restitués sans troncature. La référence complémentaire « carrière-paie » a été partiellement tronquée ; son passage sur le régime indemnitaire est toutefois visible. J’applique dirfi-fpt, drh-fpt et recherche-juridique pour distinguer les crédits disponibles du droit de verser la prime.\n"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dirfi-fpt/references/socle-sources-verification.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/dirfi-fpt/references/socle-sources-verification.md"
+      ],
+      "output_sha256": "fdc543f05c5a02befb1c090975ebaf988fd08f7f473bc9fc0bb86f6b73e48c68",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/profil.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "f102d66426a57829efd5e253f14bee40925adc6df46a4ab6b5b5e20da221b43d",
+      "exit_code": 1,
+      "status": "failed"
     },
     {
       "type": "native_read",
@@ -436,32 +584,82 @@
       "status": "completed"
     },
     {
+      "type": "mcp_call",
+      "server": "droit-francais",
+      "tool": "search",
+      "status": "completed",
+      "succeeded": true,
+      "arguments_publics": {},
+      "identifiants_dans_resultat": [
+        "LEGIARTI000044424763"
+      ],
+      "result_sha256": "c4fbfa2e7bfe23256456c0deb058985c80e70cec0db7ecb3a06e40f54910d8e2"
+    },
+    {
+      "type": "mcp_call",
+      "server": "droit-francais",
+      "tool": "get_article",
+      "status": "completed",
+      "succeeded": true,
+      "arguments_publics": {
+        "id": "LEGIARTI000044424763"
+      },
+      "identifiants_dans_resultat": [
+        "LEGIARTI000044424763"
+      ],
+      "result_sha256": "5244ce6fb4845eb8b592d607e3b45cb8e95c02c06d1a0ea306865eb5241c3ef6"
+    },
+    {
+      "type": "mcp_call",
+      "server": "droit-francais",
+      "tool": "search",
+      "status": "completed",
+      "succeeded": true,
+      "arguments_publics": {},
+      "identifiants_dans_resultat": [
+        "LEGIARTI000031367549"
+      ],
+      "result_sha256": "687a78b314857e4dd5289ebf1340b246ead83b97bd90ad2d04ebcf538bc9a770"
+    },
+    {
+      "type": "mcp_call",
+      "server": "droit-francais",
+      "tool": "get_article",
+      "status": "completed",
+      "succeeded": true,
+      "arguments_publics": {
+        "id": "LEGIARTI000031367549"
+      },
+      "identifiants_dans_resultat": [
+        "LEGIARTI000031367549"
+      ],
+      "result_sha256": "b8187af31f2d2ce1313e8831840f595ffb696d3ac898e694fc04ac86fc231470"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/drh-fpt/references/socle-sources-verification.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/drh-fpt/references/socle-sources-verification.md"
+      ],
+      "output_sha256": "fe7887aa6d83ff4d3f382c7e6adc10f32828a23eef1a73138217d943d535681e",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
       "type": "reply",
-      "text": "**BASCULE dsi-fpt — Contenu technique d'un achat informatique.**\nÀ reprendre : spécifications, niveaux de service, réversibilité et exécution technique.\n\nJe ne peux pas rédiger ces clauses dans le cadre des skills chargés. Le [SKILL.md de dcp-fpt](.agents/skills/dcp-fpt/SKILL.md), §5.5, impose : « Une frontière ne s’illustre pas. Aucun aperçu, clause exemple ou calcul sur le volet délégué ». Son §5.6 exige que le point d’entrée du délégataire soit effectivement chargé avant de poursuivre. **dsi-fpt étant absent, ce volet reste arrêté**, même pour ce cas fictif.\n\nLa suite consiste à charger dsi-fpt ou à confier la rédaction au service informatique compétent. DCP pourra ensuite traiter l’articulation juridique avec les pièces du marché ; recherche-juridique pourra vérifier les références applicables.\n\nLes douze segments prescrits ont été lus dans l’ordre, sans troncature. Un appel au MCP droit-francais a réussi ; ses résultats de recherche ne constituent pas une validation juridique des clauses demandées."
+      "text": "**BASCULE drh-fpt — Cette demande porte sur le droit indemnitaire de l’agent. Le volet financier relève de dirfi-fpt ; le fondement de la prime est examiné ci-dessous côté drh-fpt.**\n\n**Non : n’engagez pas le mandatement en l’état.** Les crédits disponibles au chapitre 012 permettent de financer une dépense régulièrement autorisée ; ils ne créent pas le droit à cette prime. L’accord oral du maire et l’instruction du DGS ne remplacent pas son fondement juridique préalable. C’est la distinction appliquée dans `.agents/skills/dirfi-fpt/references/execution-depense.md`.\n\n### Analyse drh-fpt\n\nLe régime indemnitaire relève de l’assemblée délibérante, dans les limites des régimes de référence de l’État : **article L714-4 du CGFP**, version en vigueur depuis le 01/03/2022, [LEGIARTI000044424763](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044424763), récupéré par le MCP droit-francais — Légifrance API le **07/10/2026**, avec applicabilité confirmée.\n\n**J’en déduis que la prime décrite ne peut pas être mandatée sur la promesse d’un vote ultérieur.** Une délibération future ne doit pas être utilisée comme justification actuelle du versement. La nouvelle réglementation ne s’applique pas, sauf disposition législative contraire, aux situations définitivement constituées avant son entrée en vigueur : **article L221-4 du CRPA**, version depuis le 01/01/2016, [LEGIARTI000031367549](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000031367549), récupéré par le même MCP le **07/10/2026**, avec applicabilité confirmée.\n\n**Même votée avant le départ, une délibération ne suffirait pas à rendre légale une gratification créée uniquement pour remercier cet agent.** Selon le contrôle prévu dans `.agents/skills/drh-fpt/references/carriere-paie.md`, faites vérifier :\n\n- son statut et son cadre d’emplois ;\n- l’existence d’un dispositif indemnitaire autorisé et d’une délibération locale déjà applicable ;\n- les critères, plafonds et modalités permettant éventuellement cette attribution ;\n- la décision individuelle et les pièces nécessaires au mandatement.\n\nLa voie à examiner immédiatement avec la DRH est donc **une attribution permise par un dispositif existant**, si ses conditions sont réellement remplies. Je ne peux pas confirmer cette possibilité sans les informations sur l’agent et les actes locaux.\n\nVous pouvez répondre au DGS : « Les crédits sont disponibles, mais le fondement juridique préalable de cette prime manque. Je suspends sa mise en paie jusqu’à validation par la DRH et vérification des pièces avec le comptable public. »\n\n**Confiance élevée sur l’absence d’autorisation de mandater en l’état ; alternative indemnitaire à vérifier.** La lecture complémentaire de `carriere-paie.md` a été partiellement tronquée, mais le passage pertinent sur le régime indemnitaire a été restitué."
     },
     {
       "type": "turn_completed",
       "usage": {
-        "input_tokens": 471430,
-        "cached_input_tokens": 432896,
+        "input_tokens": 1545561,
+        "cached_input_tokens": 1437312,
         "cache_write_input_tokens": 0,
-        "output_tokens": 1215,
-        "reasoning_output_tokens": 14
+        "output_tokens": 2571,
+        "reasoning_output_tokens": 82
       }
     }
-  ],
-  "redaction": {
-    "policy": "Chemin personnel absolu du runtime remplacé par son chemin relatif ; contenu métier conservé.",
-    "original_evidence_sha256": "2beb77a74e8b6ac5121529a27241b1cc97d58cce220c7c3a8923fd64bf63c910",
-    "redactor_sha256": "d841424552afa9c9936f897233dfb0060930c395da91749e773fb01accf546a9",
-    "reply_bindings": [
-      {
-        "event_index": 16,
-        "replacement_count": 1,
-        "original_reply_sha256": "42df55b589873795ae33cff6889f9c2fc57424064124f201e6ff39f08f3445dd",
-        "public_reply_sha256": "93b97bba44268e3f440e34833ffb84f48412c60da08024cb7cb073390bda89f5"
-      }
-    ],
-    "original_preserved_outside_repository": true
-  }
+  ]
 }

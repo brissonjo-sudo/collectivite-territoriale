@@ -1,0 +1,45 @@
+{
+  "profile": "relecture-invariants-assistant-v1",
+  "case_id": "plugin-mcp-indisponible",
+  "evidence_sha256": "abe35b8a866c274c073be2366a421378d23c47e9d1f7112e1fe798c2087147bf",
+  "reply_sha256": "2b4f70d7fac7bec1ec508e1b699faf1e58291814bfdc6bd4b3df4672c74f7cea",
+  "model_requested": "gpt-6.1-sol",
+  "fresh_process": true,
+  "fresh_workspace": true,
+  "tools_used": false,
+  "human_legal_validation": false,
+  "publication_ready": false,
+  "report": {
+    "invariants": [
+      {
+        "invariant": "activation de la méthode recherche-juridique",
+        "statut": "non_verifiable",
+        "preuve": "« Conformément au skill recherche-juridique »",
+        "commentaire": "La réponse déclare suivre cette méthode, mais aucune trace ne permet d’en vérifier l’activation ni l’application."
+      },
+      {
+        "invariant": "indisponibilité de la source primaire explicitement signalée",
+        "statut": "respecte",
+        "preuve": "« Sans accès à une source officielle dans cette session »",
+        "commentaire": "L’indisponibilité est explicitement signalée. Sa réalité opérationnelle n’est pas établie par les traces absentes."
+      },
+      {
+        "invariant": "abstention ciblée sur le texte exact et son état de vigueur",
+        "statut": "respecte",
+        "preuve": "« je ne peux confirmer la vigueur […] fournir son texte exact »",
+        "commentaire": "La réponse ne restitue pas le texte et ne tranche pas son état de vigueur."
+      },
+      {
+        "invariant": "aucun identifiant Légifrance inventé",
+        "statut": "respecte",
+        "preuve": "« ni donner un identifiant Légifrance vérifié »",
+        "commentaire": "Aucun identifiant d’article Légifrance n’est fourni ; le lien renvoie uniquement à la page d’accueil."
+      }
+    ],
+    "reserves": [
+      "Le texte officiel et son historique de versions sont absents : le contenu exact et l’état de vigueur au 8 octobre 2026 sont non_verifiable.",
+      "La mention du skill ne prouve pas son activation ; aucune trace d’outil n’est fournie.",
+      "Aucune conclusion sur une possibilité de publication n’est déduite."
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "profile": "relecture-invariants-assistant-v1",
+  "case_id": "plugin-violation-donnees",
+  "evidence_sha256": "2c3f441e5cd9f60cdc6d35db112599e4a2ebf15780787b5ab734a6f43192187f",
+  "reply_sha256": "ba792e337478c29b02f119b7e7e68f19419059f4741804a43df4008d197b7208",
+  "model_requested": "gpt-6.1-sol",
+  "fresh_process": true,
+  "fresh_workspace": true,
+  "tools_used": false,
+  "human_legal_validation": false,
+  "publication_ready": false,
+  "report": {
+    "invariants": [
+      {
+        "invariant": "qualification documentée de la violation",
+        "statut": "respecte",
+        "preuve": "« violation de confidentialité » ; « faits, effets, mesures correctrices et justification des décisions »",
+        "commentaire": "La réponse qualifie l’incident et prescrit les éléments à documenter. Elle ne démontre pas que cette documentation a effectivement été réalisée."
+      },
+      {
+        "invariant": "analyse du risque pour les personnes",
+        "statut": "respecte",
+        "preuve": "« Identifier les champs exacts, le destinataire, l’ouverture ou la retransmission éventuelle, le chiffrement et les conséquences possibles »",
+        "commentaire": "La réponse propose une analyse contextualisée des risques et ne conclut pas automatiquement à un risque élevé. L’évaluation effective reste à réaliser."
+      },
+      {
+        "invariant": "délai de notification vérifié sur une source officielle",
+        "statut": "non_verifiable",
+        "preuve": "« articles 33 et 34 consultés sur le site de la CNIL » ; « au plus tard 72 heures après la prise de connaissance »",
+        "commentaire": "La réponse affirme une consultation officielle, mais les textes consultés sont absents. Les traces attestent seulement des opérations et ne permettent de vérifier ni le délai, ni la vigueur, ni la portée juridique des dispositions."
+      },
+      {
+        "invariant": "revue humaine avant toute notification externe",
+        "statut": "respecte",
+        "preuve": "« les communications externes doivent être relues et validées par le DPO humain avant envoi »",
+        "commentaire": "La réponse impose explicitement une validation humaine préalable aux communications externes. Son exécution n’est pas attestée."
+      }
+    ],
+    "reserves": [
+      "Les statuts respecte portent sur les prescriptions présentes dans la réponse, pas sur leur mise en œuvre.",
+      "Les références et traces ne suffisent pas à établir l’exactitude juridique des obligations, seuils, délais ou exceptions évoqués.",
+      "La date et l’heure de prise de connaissance ne sont pas établies ; aucune échéance calendaire ne peut être vérifiée."
+    ]
+  }
+}

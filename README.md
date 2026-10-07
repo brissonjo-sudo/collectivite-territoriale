@@ -7,7 +7,7 @@ Le dépôt prépare cinq expertises métier, une méthode de recherche juridique
 sourcée et un accès optionnel à Légifrance/Judilibre. La distribution gelée
 1.1.1 expose encore quatre expertises métier et la méthode juridique.
 
-> **Statut :** DCP 0.1.1 mesuré sur 28 cas autonomes : 27 réussites et une demi-réussite selon le juge automatique. Neuf contrôles de coactivation Codex vérifiés après correction de faux positifs du lanceur ; **non relu par un praticien**. Réserve DPO et sources à relire. Installation locale et découverte des six skills vérifiées séparément. Les catalogues distribuent toujours `v1.1.1`, **non qualifiée**. [Qualification du correctif](docs/qualification-correctif-2026-10-07.md) et [conditions de publication](docs/publication.md).
+> **Statut :** DCP 0.1.3 : 27 réussites, une demi-réussite, zéro échec et huit critiques réussis. Neuf cas plugin techniquement réussis ; smoke installé depuis Git avec modèle, MCP et demande sans nom de skill réussi. **Non relu par un praticien**, publication non qualifiée. Les catalogues distribuent toujours `v1.1.1`. [Qualification actuelle](docs/qualification-013-2026-10-08.md) et [conditions de publication](docs/publication.md).
 
 Ce plugin aide à qualifier une situation, identifier les expertises à mobiliser et produire une réponse traçable. Il ne remplace ni la validation d'un juriste, ni le contrôle de l'autorité compétente, ni la vérification des textes officiels en vigueur.
 
@@ -19,7 +19,7 @@ Ce plugin aide à qualifier une situation, identifier les expertises à mobilise
 | `collectivite-territoriale:drh-fpt` | Ressources humaines territoriales | 0.6.0 |
 | `collectivite-territoriale:dpo-ct` | Protection des données | 0.2.1 |
 | `collectivite-territoriale:dirfi-fpt` | Finances locales | 1.0.4 |
-| `collectivite-territoriale:dcp-fpt` | Commande publique, mesuré autonomement, à relire | 0.1.1 |
+| `collectivite-territoriale:dcp-fpt` | Commande publique, mesuré autonomement, à relire | 0.1.3 |
 | `collectivite-territoriale:recherche-juridique` | Recherche et vérification du droit français | 3.5.0 |
 
 L'étiquette distribuée `v1.1.1` contient les cinq skills déjà présents,
@@ -107,8 +107,8 @@ Chaque surcharge est liée à l'empreinte SHA-256 exacte de son fichier amont et
 
 Pour `recherche-juridique`, la racine canonique `skill/` est aplatie dans `skills/recherche-juridique/`. Sa licence est copiée avec le runtime ; aucun manifeste, serveur MCP, fichier `.env` ou autre fichier de dépôt amont n'est dupliqué. Le fichier `references/cache-taux-seuils.md` de `dirfi-fpt`, exclu de son propre paquet de distribution, n'est pas embarqué.
 
-Pour DCP 0.1.1, le commit correctif est figé :
-`caef7fd9e680dc28056998532d24befa0e8680ec`. Les 30 fichiers de son paquet
+Pour DCP 0.1.3, le commit correctif est figé :
+`129f374e6ab8ea3b47bcfd9de9ddd52a2d3d9498`. Les 30 fichiers de son paquet
 runtime et sa licence sont copiés ; le cache `references/cache-valeurs.md`,
 la conception, les scripts d'évaluation et les preuves amont sont exclus.
 Le registre daté reste une piste de recherche, jamais une preuve de lecture
@@ -175,10 +175,13 @@ humaine des invariants métier avant d'être promue en preuve de release.
 lectures ordonnées par segments vérifiés, MCP juridique propre au processus
 dans les sept cas nominaux, MCP absent dans les deux cas dégradés. La connexion
 Codex existante suffit ; aucune connexion Claude n'est requise pour ce profil.
-Le profil ne teste pas le déclenchement implicite ou l'activation Skill de
-Claude. L'installation locale avec CODEX_HOME distinct a été testée sans
-compte ; la réponse modèle/MCP depuis le plugin installé reste à qualifier.
-La mesure autonome DCP avec web garde son profil distinct.
+La campagne native ne teste pas le déclenchement implicite ou l'activation
+Skill de Claude. Un smoke distinct installe le candidat exact depuis Git,
+vérifie les six skills dans le contexte modèle et leurs octets, puis mesure
+des réponses et appels MCP depuis ce cache, sans copie native en workspace.
+Une demande sans nom de skill déclenche des lectures DCP/juridique et un STOP ;
+la mémoire et les instructions utilisateur restent présentes, sans attribution
+causale exclusive. La mesure autonome DCP avec web/MCP garde son profil distinct.
 
 ## Architecture et décisions
 
