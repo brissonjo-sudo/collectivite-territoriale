@@ -4,6 +4,8 @@
 - Statut : accepté pour préparer le candidat ; qualification non acquise
 - Autorisation : l'utilisateur demande de poursuivre l'intégration et diffère
   la relecture praticien à après cette intégration.
+- Alignement du 2026-10-07 : le gel distribué de l'ADR 0004 supersède les
+  formulations antérieures « jamais publié » et « fusionner distribue ».
 
 ## Décision
 
@@ -53,13 +55,18 @@ job de publication force `CT_SAUTER_BARRIERE=0`. Aucun passage au vert n'est
 attribué à la publication avant mesure, smoke et relecture.
 
 L'intégration candidate sur une branche ne met pas à jour les installations.
-La marketplace suivant `main`, une fusion distribuerait le candidat : cette
-fusion et la publication restent des décisions distinctes, sans automatisme.
+La fusion sur `main` intègre le candidat sans le distribuer. Les catalogues
+restent lus sur `main`, mais épinglent la source du plugin sur `v1.1.1`.
+La distribution de 1.2.0 exigera qualification, étiquette et PR de distribution
+selon `docs/publication.md` et l'ADR 0004.
 
 ## Sort du candidat 1.1.1
 
-Décision du propriétaire du 2026-10-06 : le candidat 1.1.1 est **abandonné**
-et ne sera jamais publié. Il n'avait pas été qualifié. Ses changements
+Décision du propriétaire du 2026-10-06, précisée par le gel distribué :
+le candidat 1.1.1 est **abandonné comme cible de qualification** ; il ne sera
+pas qualifié pour lui-même. Il reste **distribué par défaut, non qualifié**,
+via l'étiquette `v1.1.1`, jusqu'à une nouvelle distribution (ADR 0004).
+Ses changements
 (`drh-fpt` 0.6.0) sont repris tels quels dans le candidat 1.2.0, dont la
 qualification couvre donc deux évolutions : DCP et l'alignement DRH. La
 campagne 1.2.0 porte sur les neuf scénarios, y compris ceux qui mobilisent

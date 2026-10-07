@@ -4,14 +4,19 @@
     "name": "brissonjo-sudo",
     "url": "https://github.com/brissonjo-sudo"
   },
-  "description": "Cinq skills métier, une méthode juridique transverse et un serveur juridique pour les collectivités territoriales françaises.",
+  "description": "Quatre skills métier, une méthode juridique transverse et un serveur juridique pour les collectivités territoriales françaises.",
   "plugins": [
     {
       "name": "collectivite-territoriale",
-      "source": "./",
+      "source": {
+        "source": "github",
+        "repo": "brissonjo-sudo/collectivite-territoriale",
+        "ref": "v1.1.1",
+        "sha": "cad8bbdbc1db2163c758fb46ef3e745a18c9c957"
+      },
       "displayName": "Collectivité territoriale",
-      "description": "Police municipale, RH, DPO, finances locales, commande publique candidate et recherche juridique avec accès Légifrance/Judilibre.",
-      "version": "1.2.0",
+      "description": "Police municipale, RH, DPO, finances locales et recherche juridique avec accès Légifrance/Judilibre.",
+      "version": "1.1.1",
       "repository": "https://github.com/brissonjo-sudo/collectivite-territoriale"
     }
   ]

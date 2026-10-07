@@ -1,5 +1,16 @@
 # Historique des versions
 
+## Distribution — 2026-10-06 — Marketplaces épinglées (sans changement de version)
+
+- Les marketplaces Claude Code et Codex distribuent l'étiquette `v1.1.1`
+  (`cad8bbd`), et non plus `main` : une fusion ne publie plus rien.
+- `v1.1.1` est consignée comme non qualifiée, distribuée par défaut jusqu'à
+  la qualification de la version suivante.
+- Procédure de publication et registre des étiquettes : `docs/publication.md` ;
+  décision : `docs/adr/0004-distribution-epinglee.md`.
+- CI : vérification obligatoire que l'étiquette distribuée existe et désigne
+  le commit épinglé.
+
 ## 1.2.0 — 2026-10-06 — Candidat d'intégration DCP
 
 - Ajout de `dcp-fpt` 0.1.0 au commit de fusion amont
@@ -17,10 +28,11 @@
 - Reprise du candidat 1.1.1 abandonné (`drh-fpt` 0.6.0) : la qualification
   1.2.0 couvre aussi cet alignement.
 
-## 1.1.1 — 2026-10-03 — Candidat d'alignement DRH (abandonné, jamais publié)
+## 1.1.1 — 2026-10-03 — Candidat d'alignement DRH (cible de qualification abandonnée, distribution gelée)
 
-- **Abandonné le 2026-10-06** par décision du propriétaire, sans qualification ;
-  ses changements sont repris dans le candidat 1.2.0.
+- **Abandonné comme cible de qualification le 2026-10-06** par décision du propriétaire ;
+  ses changements restent à qualifier dans 1.2.0. L'étiquette `v1.1.1`
+  demeure distribuée par défaut, non qualifiée, jusqu'à une nouvelle distribution.
 
 - Mise à jour de `drh-fpt` vers 0.6.0 depuis `main`, au commit
   `f81c9b955f7ebb47df7e93bdc41ac743d85a2973` : dix fichiers modifiés et

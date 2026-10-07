@@ -2,13 +2,16 @@
 
 [![Validation du plugin](https://github.com/brissonjo-sudo/collectivite-territoriale/actions/workflows/ci.yml/badge.svg)](https://github.com/brissonjo-sudo/collectivite-territoriale/actions/workflows/ci.yml)
 
-Plugin Claude Code et Codex destiné aux collectivités territoriales françaises. Une seule installation réunit cinq expertises métier, une méthode de recherche juridique sourcée et un accès optionnel à Légifrance/Judilibre.
+Plugin Claude Code et Codex destiné aux collectivités territoriales françaises.
+Le dépôt prépare cinq expertises métier, une méthode de recherche juridique
+sourcée et un accès optionnel à Légifrance/Judilibre. La distribution gelée
+1.1.1 expose encore quatre expertises métier et la méthode juridique.
 
-> **Statut :** la version 1.2.0 est un candidat d'intégration de la commande publique. `dcp-fpt` 0.1.0 reste **non mesuré, non relu par un praticien**. La relecture praticien intervient après l'intégration candidate, avant qualification et publication. La marketplace suit `main` : elle distribue le contenu fusionné, même sans tag. La fusion et l'installation ne prouvent pas la qualification d'une release.
+> **Statut :** `main` porte le candidat 1.2.0 ; `dcp-fpt` 0.1.0 reste **non mesuré, non relu par un praticien**. Les catalogues sont lus sur `main`, mais distribuent l'étiquette `v1.1.1`, **non qualifiée**, gelée par défaut jusqu'à une nouvelle distribution. Une fusion du candidat ne le distribue pas. La relecture praticien intervient après intégration, avant qualification et publication : [docs/publication.md](docs/publication.md).
 
 Ce plugin aide à qualifier une situation, identifier les expertises à mobiliser et produire une réponse traçable. Il ne remplace ni la validation d'un juriste, ni le contrôle de l'autorité compétente, ni la vérification des textes officiels en vigueur.
 
-## Contenu
+## Contenu du candidat 1.2.0
 
 | Skill | Domaine | Version embarquée |
 |---|---|---:|
@@ -18,6 +21,10 @@ Ce plugin aide à qualifier une situation, identifier les expertises à mobilise
 | `collectivite-territoriale:dirfi-fpt` | Finances locales | 1.0.4 |
 | `collectivite-territoriale:dcp-fpt` | Commande publique, candidate non mesurée et non relue | 0.1.0 |
 | `collectivite-territoriale:recherche-juridique` | Recherche et vérification du droit français | 3.5.0 |
+
+L'étiquette distribuée `v1.1.1` contient les cinq skills déjà présents,
+sans DCP. Les essais DCP doivent charger le checkout candidat local ; une
+mise à jour de la marketplace continue de récupérer le runtime gelé 1.1.1.
 
 Le serveur MCP `droit-francais`, déclaré une seule fois dans `.mcp.json`, fournit l'accès aux sources Légifrance/Judilibre. Le skill `recherche-juridique` apporte la méthode de vérification de vigueur, de provenance et de citation. Le serveur et la méthode sont complémentaires.
 
@@ -58,7 +65,7 @@ La collecte et la transmission éventuelles de données sont décrites dans la [
 /plugin install collectivite-territoriale@collectivite-territoriale
 ```
 
-Après une nouvelle version publiée :
+Après une nouvelle version publiée (nouvelle étiquette distribuée, voir [docs/publication.md](docs/publication.md)) :
 
 ```text
 /plugin marketplace update collectivite-territoriale
@@ -73,7 +80,7 @@ est public : aucun secret client ne doit être demandé ou ajouté localement.
 
 ## Installation dans Codex
 
-La marketplace Codex est déclarée dans `.agents/plugins/marketplace.json` et référence directement ce dépôt Git :
+La marketplace Codex est déclarée dans `.agents/plugins/marketplace.json`. Le catalogue est lu sur `main`, mais le plugin est récupéré à l'étiquette publiée qu'il désigne :
 
 ```text
 codex plugin marketplace add brissonjo-sudo/collectivite-territoriale --ref main
@@ -119,19 +126,28 @@ Sans `--local-repos`, les scripts clonent les dépôts GitHub et vérifient les 
 ## Validation
 
 ```text
-python -m unittest discover -s tests -k SyncCheckTests -k CodexPluginTests -k InstructionOverlayTests
 python scripts/check_sync.py
 claude plugin validate .claude-plugin/plugin.json
 claude plugin validate .claude-plugin/marketplace.json
+```
+
+Pour contrôler l'intégration candidate sans qualifier une publication :
+
+```powershell
+$env:CT_EXIGER_ETIQUETTE="1"
+$env:CT_SAUTER_BARRIERE="1"
+python -m unittest discover -s tests
+$env:CT_SAUTER_BARRIERE="0"
 python -m unittest discover -s tests -k ReleaseGateTests
 ```
 
-La CI sépare le job **Intégration candidate** du job **Qualification de
-publication**. Le premier doit réussir ; le second conserve la barrière
-comportementale et humaine. La découverte complète (`python -m unittest
-discover -s tests`) continue d'inclure ce verrou et reste en échec tant que
-la publication n'est pas qualifiée. Aucun test n'est ignoré ni marqué comme
-échec attendu dans le harnais.
+La CI découvre tous les tests dans le job **Intégration candidate** et ne
+saute que `ReleaseGateTests`. Le job **Qualification de publication** force
+`CT_SAUTER_BARRIERE=0` et conserve le verrou en échec pour une version non
+qualifiée. Sans cette variable, la découverte complète exécute aussi le verrou.
+
+Sous un shell Unix, l'équivalent pour l'intégration est
+`CT_EXIGER_ETIQUETTE=1 CT_SAUTER_BARRIERE=1 python -m unittest discover -s tests`.
 
 Le manifeste Codex est également contrôlé avec le validateur du skill système `plugin-creator`. Les cas de `tests/cas-plugin.json` couvrent notamment :
 

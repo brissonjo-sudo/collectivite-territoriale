@@ -7,6 +7,7 @@ import json
 import os
 import re
 import struct
+import subprocess
 import unittest
 from pathlib import Path
 import sys
@@ -74,8 +75,6 @@ class CodexPluginTests(unittest.TestCase):
         claude = load_json(".claude-plugin/plugin.json")
         self.assertEqual(codex["name"], claude["name"])
         self.assertEqual(codex["version"], claude["version"])
-        marketplace = load_json(".claude-plugin/marketplace.json")
-        self.assertEqual(marketplace["plugins"][0]["version"], codex["version"])
         self.assertEqual(codex["repository"], claude["repository"])
         self.assertEqual(codex["homepage"], claude["homepage"])
         self.assertEqual(codex["license"], "CC-BY-SA-4.0")
@@ -85,6 +84,46 @@ class CodexPluginTests(unittest.TestCase):
             "Creative Commons Attribution-ShareAlike 4.0 International",
             license_text,
         )
+
+    def test_distribution_epinglee_sur_etiquette(self) -> None:
+        """La marketplace distribue une étiquette publiée, pas l'état de main."""
+        manifest = load_json(".codex-plugin/plugin.json")
+        entry = load_json(".claude-plugin/marketplace.json")["plugins"][0]
+        published = entry["version"]
+        source = entry["source"]
+        self.assertEqual(source["source"], "github")
+        self.assertEqual("https://github.com/" + source["repo"], manifest["repository"])
+        self.assertEqual(source["ref"], f"v{published}")
+        self.assertRegex(source["sha"], r"^[0-9a-f]{40}$")
+        # main peut porter un candidat plus récent que la version distribuée,
+        # jamais une version plus ancienne.
+        self.assertLessEqual(
+            tuple(int(part) for part in published.split(".")),
+            tuple(int(part) for part in manifest["version"].split(".")),
+        )
+        registre = (ROOT / "docs/publication.md").read_text(encoding="utf-8")
+        self.assertIn(f"| `{source['ref']}` | `{source['sha']}` |", registre)
+
+
+    def test_etiquette_designe_le_commit_epingle(self) -> None:
+        """L'étiquette distribuée existe et désigne le commit épinglé.
+
+        Hors CI, l'absence de l'étiquette locale saute le test ; en CI
+        (CT_EXIGER_ETIQUETTE=1, historique complet), elle le fait échouer, ce
+        qui empêche de fusionner un épinglage vers une étiquette inexistante.
+        """
+        source = load_json(".claude-plugin/marketplace.json")["plugins"][0]["source"]
+        result = subprocess.run(
+            ["git", "rev-parse", "--verify", "--quiet", f"refs/tags/{source['ref']}^{{commit}}"],
+            cwd=ROOT, capture_output=True, text=True, check=False,
+        )
+        if result.returncode != 0:
+            message = f"Étiquette {source['ref']} absente : la créer sur {source['sha']} avant fusion"
+            if os.environ.get("CT_EXIGER_ETIQUETTE") == "1":
+                self.fail(message)
+            self.skipTest(message)
+        self.assertEqual(result.stdout.strip(), source["sha"])
+
 
     def test_metadonnees_publiques_et_iconographie(self) -> None:
         manifest = load_json(".codex-plugin/plugin.json")
@@ -396,13 +435,15 @@ class CodexPluginTests(unittest.TestCase):
     def test_marketplace_distribue_la_racine_sans_copie(self) -> None:
         marketplace = load_json(".agents/plugins/marketplace.json")
         plugin = load_json(".codex-plugin/plugin.json")
+        published = load_json(".claude-plugin/marketplace.json")["plugins"][0]["version"]
         self.assertEqual(marketplace["name"], plugin["name"])
         self.assertEqual(len(marketplace["plugins"]), 1)
         entry = marketplace["plugins"][0]
         self.assertEqual(entry["name"], plugin["name"])
+        # Codex suit la même étiquette publiée que Claude, jamais main.
         self.assertEqual(
             entry["source"],
-            {"source": "url", "url": plugin["repository"] + ".git", "ref": "main"},
+            {"source": "url", "url": plugin["repository"] + ".git", "ref": f"v{published}"},
         )
         self.assertEqual(entry["policy"]["installation"], "AVAILABLE")
         self.assertEqual(entry["policy"]["authentication"], "ON_INSTALL")

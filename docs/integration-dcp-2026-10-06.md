@@ -63,7 +63,7 @@ L'aide de Claude Code 2.1.288 annonce les options `--restricted`,
 `--setting-sources`, `--no-session-persistence` et `--plugin-dir`. Cette
 présence dans l'aide ne prouve pas leur comportement en campagne réelle.
 
-## Suite et limites
+## Suite et limites du lot du 2026-10-06
 
 La relecture par un acheteur/juriste est différée après l'intégration
 candidate par décision de l'utilisateur. Elle reste due avant qualification
@@ -79,3 +79,32 @@ ne sont pas automatiquement comparables à ceux du plugin.
 `dsi-fpt` reste une compétence externe : le renvoi se termine au signalement
 de cette frontière si le skill n'est pas disponible. Les frontières des
 autres skills n'ont pas été modifiées dans cette intégration candidate.
+
+## Alignement du 2026-10-07 après relecture
+
+La PR #10 est fusionnée dans `main` au commit
+`d69c7dbaef6037b6803ca4b97d63df4aff9604e9` ; elle découple catalogue et runtime
+distribué. Son historique est intégré par une fusion dans cette branche,
+sans rebasage ni réécriture des corrections `f647bed` et `2cab952`.
+
+Les deux catalogues restent ceux de #10 : `v1.1.1` sur `cad8bbd`, sans DCP.
+Les manifestes du candidat restent en 1.2.0. Le gel 1.1.1 est abandonné comme
+cible de qualification, mais demeure distribué et non qualifié ; l'alignement
+DRH est repris et reste à qualifier dans 1.2.0.
+
+La CI conserve historique complet, contrôle obligatoire de l'étiquette et
+découverte de tous les tests. `CT_SAUTER_BARRIERE=1` ne saute que
+`ReleaseGateTests` dans l'intégration ; la publication force cette variable à
+zéro. Les résultats ci-dessus restent les preuves historiques du 2026-10-06.
+
+Contrôles locaux de l'alignement du 2026-10-07 : découverte de 34 tests,
+33 réussis et uniquement la barrière de publication ignorée dans le profil
+d'intégration. La barrière exécutée séparément reste en échec, conformément
+à l'absence de qualification. `check_sync.py` confirme les six skills ; les
+deux manifestes Claude passent `claude plugin validate`. Ces contrôles ne
+constituent ni une mesure comportementale, ni une relecture métier.
+
+La relecture praticien reste après intégration candidate, avant qualification
+et distribution de 1.2.0. Aucune mesure, installation ou nouvelle étiquette
+n'est effectuée dans cet alignement. L'étiquette légère historique `v1.1.1`
+est conservée telle quelle ; son exception est documentée dans la procédure.
