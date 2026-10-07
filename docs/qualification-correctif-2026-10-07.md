@@ -89,7 +89,11 @@ Grille concrète : `docs/relecture-correctif-codex-2026-10-07.md`.
 **56 tests logiciels découverts : 55 réussis, seule barrière de publication
 sautée dans l'intégration.** Les six copies restent conformes à upstream.json.
 La barrière exécutée séparément reste en échec, `release_ready=false`.
-La CI du nouveau commit final reste à observer.
+CI du commit `e45159ea461f62244ec32718c25e45f6b5dee02a` observée :
+[Intégration candidate réussie](https://github.com/brissonjo-sudo/collectivite-territoriale/actions/runs/37685851391).
+Le seul échec du job Qualification de publication est le test de barrière
+sur `release_ready=false`, avec les réserves ci-dessus ; son journal a été
+contrôlé. L'auto-review reste sautée pour la PR brouillon, sans avis humain.
 
 La preuve initiale de publication est copiée byte pour byte dans
 `tests/evidence/2026-10-07-candidat/release-initial-0.1.0.json`. Les tests
