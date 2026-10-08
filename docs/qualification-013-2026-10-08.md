@@ -55,7 +55,32 @@ Preuves : `tests/evidence/2026-10-07-codex-natif-v5/` et
 `tests/evidence/release-1.2.0.json` garde `release_ready: false` et distingue
 les contrôles techniques réussis des invariants non attestés humainement.
 La [grille praticien](relecture-candidat-013-2026-10-08.md) reste vierge.
-La barrière de publication doit rester en échec jusqu'aux avis requis.
+Cette conclusion de publication est supersédée par la décision de périmètre
+du 2026-10-08 ci-dessous ; les résultats et limites de mesure restent inchangés.
 
 Contrôles locaux : soixante tests logiciels réussis, un contrôle de publication
 écarté de l'intégration candidate. La synchronisation des six skills réussit.
+
+## Décision du 2026-10-08 — Distribution open source
+
+À la demande explicite de l'auteur, l'[ADR 0007](adr/0007-distribution-open-source-et-deploiement.md)
+distingue la distribution du plugin open source et son déploiement dans une
+collectivité ou une structure tierce. Les relectures praticien sont conservées
+pour cette seconde étape dans la [note dédiée](deploiement-collectivite.md).
+
+Le manifeste de qualification ajoute `distribution.ready: true` sur les
+preuves techniques existantes et `deployment.ready: false`. `release_ready`
+garde son sens historique de qualification métier complète et reste faux.
+Les neuf statuts `blocked` et invariants faux restent des avis humains non
+attestés, sans effacement ni conversion en réussites métier.
+
+Le contrôle de distribution recalcule les empreintes des preuves, des réponses,
+du runtime et de la configuration installée. Il refuse toute divergence,
+campagne incomplète, échec technique, violation textuelle identifiée ou seuil
+DCP non atteint. Aucun score n'est transféré à un runtime modifié. Les catalogues
+restent sur v1.1.1 jusqu'à une publication explicite suivant la procédure.
+
+Vérification de cette décision : 72 tests logiciels réussis, barrière de
+distribution incluse, et six copies amont conformes. Onze contre-épreuves
+contrôlent notamment les échecs techniques, les changements de runtime,
+les preuves modifiées et le maintien de la note praticien différée.

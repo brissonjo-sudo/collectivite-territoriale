@@ -7,7 +7,7 @@ Le dépôt prépare cinq expertises métier, une méthode de recherche juridique
 sourcée et un accès optionnel à Légifrance/Judilibre. La distribution gelée
 1.1.1 expose encore quatre expertises métier et la méthode juridique.
 
-> **Statut :** DCP 0.1.3 : 27 réussites, une demi-réussite, zéro échec et huit critiques réussis. Neuf cas plugin techniquement réussis ; smoke installé depuis Git avec modèle, MCP et demande sans nom de skill réussi. **Non relu par un praticien**, publication non qualifiée. Les catalogues distribuent toujours `v1.1.1`. [Qualification actuelle](docs/qualification-013-2026-10-08.md) et [conditions de publication](docs/publication.md).
+> **Statut :** intégration DCP 0.1.3 techniquement qualifiée pour la distribution open source : 27 réussites, une demi-réussite, zéro échec et huit critiques réussis ; neuf cas plugin techniques et smoke Git avec modèle/MCP réussis. La relecture praticien est conservée pour un futur déploiement en collectivité ou chez un tiers. Les catalogues distribuent encore `v1.1.1`, jusqu'à la publication de 1.2.0. [Qualification actuelle](docs/qualification-013-2026-10-08.md), [publication](docs/publication.md) et [note praticien différée](docs/deploiement-collectivite.md).
 
 Ce plugin aide à qualifier une situation, identifier les expertises à mobiliser et produire une réponse traçable. Il ne remplace ni la validation d'un juriste, ni le contrôle de l'autorité compétente, ni la vérification des textes officiels en vigueur.
 
@@ -142,9 +142,10 @@ python -m unittest discover -s tests -k ReleaseGateTests
 ```
 
 La CI découvre tous les tests dans le job **Intégration candidate** et ne
-saute que `ReleaseGateTests`. Le job **Qualification de publication** force
-`CT_SAUTER_BARRIERE=0` et conserve le verrou en échec pour une version non
-qualifiée. Sans cette variable, la découverte complète exécute aussi le verrou.
+saute que `ReleaseGateTests`. Le job **Qualification de distribution open source**
+force `CT_SAUTER_BARRIERE=0` et contrôle les preuves techniques, leurs empreintes,
+le runtime et la configuration installée. Sans cette variable, la découverte
+complète exécute aussi ce contrôle.
 
 Sous un shell Unix, l'équivalent pour l'intégration est
 `CT_EXIGER_ETIQUETTE=1 CT_SAUTER_BARRIERE=1 python -m unittest discover -s tests`.
@@ -158,17 +159,20 @@ Le manifeste Codex est également contrôlé avec le validateur du skill systèm
 - les deux STOP DCP, les frontières financières et données, la dépendance DSI
   externe et le comportement DCP sans accès aux sources officielles.
 
-La release 1.2.0 exige des traces comportementales en conversations fraîches,
-la mesure DCP et la relecture praticien. Le statut courant est conservé dans
-`tests/evidence/release-1.2.0.json`. Les preuves historiques ne qualifient pas
-le correctif. Le test `test_barriere_de_release_comportementale` reste en
-échec tant que `release_ready` est faux ; les autres tests doivent réussir.
+La distribution open source 1.2.0 exige des traces comportementales en
+conversations fraîches, le seuil de mesure DCP et un smoke installé réussi.
+Le statut courant est conservé dans `tests/evidence/release-1.2.0.json` :
+`distribution.ready` concerne cette distribution ; `deployment.ready` et
+le champ historique `release_ready` restent faux sans qualification métier.
+La relecture praticien devient une condition du déploiement opérationnel
+dans une collectivité ou une structure tierce, selon l'[ADR 0007](docs/adr/0007-distribution-open-source-et-deploiement.md).
+Les preuves historiques et avis humains non réalisés restent inchangés.
 
 Le lanceur `scripts/run_plugin_campaign.py` exécute les neuf scénarios dans
 des sessions non persistées, impose les activations qualifiées attendues,
 désactive les connecteurs juridiques globaux et ne conserve qu'une trace JSONL
-assainie dans `tests/evidence/.work/`. Cette sortie reste soumise à une revue
-humaine des invariants métier avant d'être promue en preuve de release.
+assainie dans `tests/evidence/.work/`. La revue humaine des invariants métier
+reste distincte et requise avant le déploiement opérationnel chez un tiers.
 
 À la demande de l'auteur, la campagne actuelle utilise Codex et
 `scripts/run_codex_campaign.py` : copies natives en workspace frais,
@@ -182,6 +186,11 @@ des réponses et appels MCP depuis ce cache, sans copie native en workspace.
 Une demande sans nom de skill déclenche des lectures DCP/juridique et un STOP ;
 la mémoire et les instructions utilisateur restent présentes, sans attribution
 causale exclusive. La mesure autonome DCP avec web/MCP garde son profil distinct.
+
+Les avertissements antérieurs à la mesure dans les entrées et manifestes sont
+conservés pour préserver les octets du candidat testé. Le présent statut et
+le rapport de qualification donnent les résultats actuels ; aucune relecture
+humaine ni validation juridique n'est déclarée acquise.
 
 ## Architecture et décisions
 

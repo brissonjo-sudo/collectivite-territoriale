@@ -1,5 +1,15 @@
 # Historique des versions
 
+## Préparation de distribution open source — 2026-10-08
+
+- DCP 0.1.3 et les six skills restent identiques au runtime mesuré.
+- Distribution technique séparée du déploiement opérationnel en collectivité
+  ou dans une structure tierce, à la demande de l'auteur ; ADR 0007.
+- Relecture praticien différée, note et grilles conservées, réserves inchangées.
+- Barrière de distribution recalculée sur les preuves et empreintes ; avis
+  humains et qualification métier restent non acquis.
+- Aucune nouvelle étiquette ni bascule de marketplace dans ce changement.
+
 ## Correctif candidat — 2026-10-07
 
 - DCP 0.1.1 épinglé au commit `caef7fd` : seul son point d'entrée change,

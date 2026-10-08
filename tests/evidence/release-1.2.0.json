@@ -13,8 +13,7 @@
   },
   "release_blockers": [
     "Relecture praticien des 28 réponses DCP, dont cas-06 et quinze alertes de provenance dans quatre cas.",
-    "Relecture et validation humaine des neuf cas plugin, dont RH et communications externes DPO.",
-    "Accord de publication puis qualification de la nouvelle distribution, selon docs/publication.md."
+    "Relecture et validation humaine des neuf cas plugin, dont RH et communications externes DPO."
   ],
   "historical_evidence": "tests/evidence/2026-09-20-validation-locale.json",
   "runs": [
@@ -282,5 +281,39 @@
   },
   "historical_qualification": "tests/evidence/2026-10-07-candidat/release-initial-0.1.0.json",
   "historical_correctif_0_1_1": "tests/evidence/2026-10-07-correctif/release-0.1.1-historique.json",
-  "historical_correctif_0_1_2": "tests/evidence/2026-10-07-correctif/release-0.1.2-historique.json"
+  "historical_correctif_0_1_2": "tests/evidence/2026-10-07-correctif/release-0.1.2-historique.json",
+  "distribution": {
+    "scope": "open_source",
+    "ready": true,
+    "blockers": [],
+    "decision_path": "docs/adr/0007-distribution-open-source-et-deploiement.md",
+    "proofs": {
+      "native_campaign": {
+        "evidence_path": "tests/evidence/2026-10-07-codex-natif-v5/summary.json",
+        "sha256": "c16d72a62754f0b9e0ce561fdbd9b90efaf0cc2fc19aca7e85841ace7dd9541a"
+      },
+      "codex_smoke": {
+        "evidence_path": "tests/evidence/2026-10-08-candidat-013/installation-codex.json",
+        "sha256": "836be4c3f6061781226c33c432261915bb237030eae49132e640d4ace081a248"
+      },
+      "dcp_measurement": {
+        "evidence_path": "tests/evidence/2026-10-08-candidat-013/dcp-autonome.json",
+        "sha256": "9b23cd811ee4aef6cebfae129e6baa006f7269b76d623f7e7fc6a994dff61375"
+      },
+      "assistant_review": {
+        "evidence_path": "tests/evidence/2026-10-08-candidat-013/relecture-assistant.json",
+        "sha256": "4ab4df5154ddd28f50a5614d90d108c26eb73afca2dba6b5970b0d22e0ecc420"
+      }
+    }
+  },
+  "deployment": {
+    "ready": false,
+    "scope": "collectivite_ou_structure_tierce",
+    "note_path": "docs/deploiement-collectivite.md",
+    "blockers": [
+      "Relecture praticien des 28 réponses DCP, dont cas-06 et quinze alertes de provenance dans quatre cas.",
+      "Relecture et validation humaine des neuf cas plugin, dont RH et communications externes DPO."
+    ],
+    "review_status": "deferred_not_performed"
+  }
 }

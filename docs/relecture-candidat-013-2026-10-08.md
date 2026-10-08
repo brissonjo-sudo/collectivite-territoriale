@@ -20,7 +20,10 @@ vérifier à partir des traces. Elles ne renseignent aucun avis ci-dessous.
 La vigueur, l'applicabilité au dossier et les conséquences des sources
 restent à contrôler sur leur contenu et leurs versions.
 
-État : **relecture praticien non réalisée, publication non autorisée**.
+État : **relecture praticien non réalisée, différée jusqu'au déploiement tiers**.
+Depuis le 2026-10-08, elle ne bloque plus la distribution open source :
+[ADR 0007](adr/0007-distribution-open-source-et-deploiement.md).
+La [note conservée](deploiement-collectivite.md) reprend le périmètre à examiner.
 
 ## plugin-prime-depart-retraite
 

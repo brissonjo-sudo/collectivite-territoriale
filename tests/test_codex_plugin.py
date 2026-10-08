@@ -17,6 +17,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 
 from run_plugin_campaign import build_command, build_prompt, technical_failures, sanitize  # noqa: E402
+from qualify_distribution import distribution_errors  # noqa: E402
 
 
 def load_json(path: str) -> dict:
@@ -465,10 +466,7 @@ class ReleaseGateTests(unittest.TestCase):
     def test_barriere_de_release_comportementale(self) -> None:
         manifest = load_json(".codex-plugin/plugin.json")
         evidence = load_json(f"tests/evidence/release-{manifest['version']}.json")
-        self.assertTrue(
-            evidence["release_ready"],
-            "Release bloquée : " + " | ".join(evidence["release_blockers"]),
-        )
+        self.assertEqual(distribution_errors(ROOT, evidence), [])
 
 
 if __name__ == "__main__":
