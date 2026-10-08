@@ -1,0 +1,79 @@
+{
+  "created_at": "2026-10-08T17:46:09.534123+00:00",
+  "effective_cli_overrides": [
+    "-c",
+    "windows.sandbox=\"elevated\"",
+    "-c",
+    "sandbox_mode=\"read-only\"",
+    "-c",
+    "approval_policy=\"never\"",
+    "-c",
+    "web_search=\"disabled\"",
+    "-c",
+    "plugins.collectivite-territoriale@smoke-dev6.enabled=false",
+    "-c",
+    "plugins.collectivite-territoriale@campagne-dev7-20261008.enabled=false",
+    "-c",
+    "plugins.collectivite-territoriale@campagne-dev7-20261008-r3.enabled=true",
+    "-c",
+    "plugins.collectivite-territoriale@smoke-dev6.mcp_servers.droit-francais.enabled=false",
+    "-c",
+    "plugins.collectivite-territoriale@campagne-dev7-20261008.mcp_servers.droit-francais.enabled=false",
+    "-c",
+    "plugins.collectivite-territoriale@campagne-dev7-20261008-r3.mcp_servers.droit-francais.enabled=false"
+  ],
+  "config_sha256": "bda370aac798c7cb9677f3cbca2a37c6c942effa2e88497e634f542763015dcd",
+  "effective_config_selected": {
+    "approval_policy": "never",
+    "sandbox_mode": "read-only",
+    "permissions": null,
+    "web_search": "disabled",
+    "windows": {
+      "sandbox": "elevated"
+    },
+    "features": {
+      "api_key_cyber_access_programs": false,
+      "api_key_model_discovery": true,
+      "auth_elicitation": true,
+      "background_paginated_rollout_migration": false,
+      "codex_apps_mcp_2026_07_28": false,
+      "mcp_2026_07_28": false,
+      "memories": false,
+      "mentions_v2": true,
+      "remote_control": false,
+      "remote_plugin": true,
+      "tool_suggest": true,
+      "windows_sandbox_service": false
+    }
+  },
+  "effective_plugins_selected": {
+    "collectivite-territoriale@smoke-dev6": {
+      "enabled": false,
+      "mcp_servers": {
+        "droit-francais": {
+          "enabled": false
+        }
+      }
+    },
+    "collectivite-territoriale@campagne-dev7-20261008": {
+      "enabled": false,
+      "mcp_servers": {
+        "droit-francais": {
+          "enabled": false
+        }
+      }
+    },
+    "collectivite-territoriale@campagne-dev7-20261008-r3": {
+      "enabled": true,
+      "mcp_servers": {
+        "droit-francais": {
+          "enabled": false
+        }
+      }
+    }
+  },
+  "success": true,
+  "model_inference": false,
+  "setup_attempted": false,
+  "auth_secrets_read": false
+}

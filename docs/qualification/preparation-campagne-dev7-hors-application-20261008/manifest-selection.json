@@ -1,0 +1,184 @@
+{
+  "status": "prepared_not_measured",
+  "runtime_source_commit": "fb186b4951b95adabf05904f8a34995720588be3",
+  "runtime_source_tree": "367440f629417bd33b6a52a0f4af261bae4a971f",
+  "plugin_version": "1.2.0-dev.7",
+  "installed_file_count": 214,
+  "frozen_file_count": 213,
+  "runtime_file_count": 166,
+  "cli_sha256": "3553cd6e7df5a093d8cb8301cd8088a57e0971aba71ddbe0e67f7f44a15cdf68",
+  "cli_version": "codex-cli 0.162.0-alpha.2",
+  "config_sha256": "bda370aac798c7cb9677f3cbca2a37c6c942effa2e88497e634f542763015dcd",
+  "protocol_sha256": "e985f2a97e04d00bb852eca0a6ff50fa6903bc99060a2148a94ef1835b2dc9c5",
+  "suite_sha256": "3c45e6117c25cbca0558de2955ca5a7d80956575d886a887d1cdfdc581375cd8",
+  "rubric_sha256": "65f78f419679774ec00c6b5d96b1801f902c6510b57e221ae7ebb31320fd1b6f",
+  "tools_sha256": {
+    "campagne_native_dev7_20261008.py": "4581e12a083d3ec59b38af699f55a905a5be40b638ef27176f80db9023f8ea36",
+    "socle_campagne_native_dev7_20261008.py": "b2c3c4a2b943997b79960d512628a8d3da5daccf18038eceeeda7b8ce4bc555f",
+    "tests_campagne_native_dev7_20261008.py": "8ab2a69fa6b76c384df619f609b6180bad3a61d4078c63ac0533bb597aca672c",
+    "extraire_campagne_native_dev7_20261008.py": "fa47656e8edb2f4cf76f7bf64b019ea941f2853146e44570ca5d769402fb7f05",
+    "tests_extraire_campagne_native_dev7_20261008.py": "de958af6e0e084623a2d927d1a75d95567f533968f0f948e3fd1132d2d579b10"
+  },
+  "effective_cli_overrides": [
+    "-c",
+    "windows.sandbox=\"elevated\"",
+    "-c",
+    "sandbox_mode=\"read-only\"",
+    "-c",
+    "approval_policy=\"never\"",
+    "-c",
+    "web_search=\"disabled\"",
+    "-c",
+    "plugins.collectivite-territoriale@smoke-dev6.enabled=false",
+    "-c",
+    "plugins.collectivite-territoriale@campagne-dev7-20261008.enabled=false",
+    "-c",
+    "plugins.collectivite-territoriale@campagne-dev7-20261008-r3.enabled=true",
+    "-c",
+    "plugins.collectivite-territoriale@smoke-dev6.mcp_servers.droit-francais.enabled=false",
+    "-c",
+    "plugins.collectivite-territoriale@campagne-dev7-20261008.mcp_servers.droit-francais.enabled=false",
+    "-c",
+    "plugins.collectivite-territoriale@campagne-dev7-20261008-r3.mcp_servers.droit-francais.enabled=false"
+  ],
+  "catalogue": {
+    "native_catalogue_sha256": "91b4401fd829f8663bed87ae0dc0b105c05e03d1874160df50610a0f474ffeaf",
+    "six_candidate_paths_observed": [
+      "skills/dirfi-fpt/SKILL.md",
+      "skills/dpm-fpt/SKILL.md",
+      "skills/dpo-ct/SKILL.md",
+      "skills/drh-fpt/SKILL.md",
+      "skills/dsi-fpt/SKILL.md",
+      "skills/recherche-juridique/SKILL.md"
+    ],
+    "candidate_aliases_resolved": [
+      "r1"
+    ],
+    "dev6_skill_references_absent": true,
+    "global_discovery_completely_isolated": false,
+    "foreign_discovery_possible": true,
+    "actual_global_mcp_exposure": "unknown",
+    "native_skill_activation_proven": false,
+    "raw_context_local_only": true
+  },
+  "case_count": 16,
+  "atomic_count": 124,
+  "execution_allowed_count": 3,
+  "preflight_blocked_count": 13,
+  "cases": [
+    {
+      "id": "plugin-prime-depart-retraite",
+      "prompt_sha256": "9d546265d864cf8852fe34de8198a0a9f673a78704bff9d30d417727c218e956",
+      "execution_allowed": false,
+      "preflight_status": "blocked_primary_mcp_web_unavailable",
+      "judge_input_sha256": "4bab5ff6e5ab8a1390969c5c14d3ea51d2bd50eaee1997a1d09376747dc37d0c"
+    },
+    {
+      "id": "plugin-garde-fou-apja",
+      "prompt_sha256": "e677d84edfc497764d1b1643c16418c274c0592d41f6f58ddf63a49e74c159e2",
+      "execution_allowed": false,
+      "preflight_status": "blocked_primary_mcp_web_unavailable",
+      "judge_input_sha256": "0b72e5996ab1498fef048bb8d104e87336736380e37d5ebf34d03859895f830a"
+    },
+    {
+      "id": "plugin-violation-donnees",
+      "prompt_sha256": "f7c0514aeafa5b24403fd69f810ff4674133db704074c127661ce86c041dcfc4",
+      "execution_allowed": false,
+      "preflight_status": "blocked_primary_mcp_web_unavailable",
+      "judge_input_sha256": "452983f740c4303971bb4e9e1229b3909754673af33b3c68bb0d73f447a83e7e"
+    },
+    {
+      "id": "plugin-mcp-indisponible",
+      "prompt_sha256": "a4fca8293e9044acf893f3d9443174b83a52c582d481feacfe53ccc089b0b83e",
+      "execution_allowed": true,
+      "preflight_status": "eligible_no_sources",
+      "judge_input_sha256": "9686ed64ff4c80185bfddf02711f9d5ff551ecab351e20b50300c93ce76fb84b"
+    },
+    {
+      "id": "plugin-dsi-incident-donnees",
+      "prompt_sha256": "9e693622291c4fdbe9cc70a5b97872f50e2d132cf373cc79b2f07e6207ffdfd7",
+      "execution_allowed": false,
+      "preflight_status": "blocked_primary_mcp_web_unavailable",
+      "judge_input_sha256": "0d154721ea1a939aacb87e7ff8f4aa9c7b0dd8716accfc68f947ebe57308f409"
+    },
+    {
+      "id": "plugin-dsi-rssi-rh",
+      "prompt_sha256": "96ae2271e2d7b521dcce9402e2c2002c255935eb7470cfa3586af35a22bfa8d3",
+      "execution_allowed": false,
+      "preflight_status": "blocked_primary_mcp_web_unavailable",
+      "judge_input_sha256": "79eb361b35449af2dd85cf975a8d14ba14583a762c602f9adfff967a7bdbfee5"
+    },
+    {
+      "id": "plugin-dsi-videoprotection",
+      "prompt_sha256": "2a8aeb9de0d34292cf88ec899b0685cff76e9837e3ff646a261c03a8237929c9",
+      "execution_allowed": false,
+      "preflight_status": "blocked_primary_mcp_web_unavailable",
+      "judge_input_sha256": "662849e675e1ee02593d3cdc3003950491ba611b8c1c551b09e696d0d3322a55"
+    },
+    {
+      "id": "plugin-dsi-budget",
+      "prompt_sha256": "e036c1ff73518f0176708d76744b7d700a283a056b8bac2ed89093778737b868",
+      "execution_allowed": false,
+      "preflight_status": "blocked_primary_mcp_web_unavailable",
+      "judge_input_sha256": "95e9cd1ab0ef1051eec2ebcf739749ff9063617f35e3a48f54d2e1cf3acfbe3a"
+    },
+    {
+      "id": "plugin-dsi-reversibilite",
+      "prompt_sha256": "0caabdd46fc29d86cdbd3db6325a7b9f371aa0ed9a1d62f794e49fa4cb8256f6",
+      "execution_allowed": false,
+      "preflight_status": "blocked_primary_mcp_web_unavailable",
+      "judge_input_sha256": "0330ff2e9b8b3f876024c2ab6a47f80e394f29cf8a527d71472ca6a5d0dad42a"
+    },
+    {
+      "id": "plugin-dsi-reouverture",
+      "prompt_sha256": "cf9d7defb791879ea9c16fba1c921ef44168cd03acd8f57a1c5923d601bfb12f",
+      "execution_allowed": false,
+      "preflight_status": "blocked_primary_mcp_web_unavailable",
+      "judge_input_sha256": "34a6437b2cabe418b687dc532617ac5bb6873be2a5c227ecd0f67ff48d856ab0"
+    },
+    {
+      "id": "plugin-dsi-technique",
+      "prompt_sha256": "8d2f497d8a132d1f88bb03a95d8e5fcd30007edbb955cfee8beaec365b4ce22b",
+      "execution_allowed": true,
+      "preflight_status": "eligible_no_sources",
+      "judge_input_sha256": "7a976359158082436223a77c61523dddcc996d4231a1ae0340f6eac06d08c361"
+    },
+    {
+      "id": "plugin-dsi-source-indisponible",
+      "prompt_sha256": "8d4943ef9c207f72e5dbf3f90225912286244eb670ff90f8d82694612c33940c",
+      "execution_allowed": true,
+      "preflight_status": "eligible_no_sources",
+      "judge_input_sha256": "92254ff547fa4714b8b6704f36121ae40a26dde726b309f3979986bda2991075"
+    },
+    {
+      "id": "plugin-spontane-incident-donnees",
+      "prompt_sha256": "888c9c826bbecb1b94aacaff8984015484bfc41ef4545d4d34a4b4773ff33678",
+      "execution_allowed": false,
+      "preflight_status": "blocked_primary_mcp_web_unavailable",
+      "judge_input_sha256": "ee37e7c342848ed6d4dfa15c23fd31bfcf2f4097a01526690d75b4d57256e862"
+    },
+    {
+      "id": "plugin-spontane-rssi-rh",
+      "prompt_sha256": "aedaeadfd20bede6b497984af4e6da1879a6649b42794654f8d53a7ae6deb951",
+      "execution_allowed": false,
+      "preflight_status": "blocked_primary_mcp_web_unavailable",
+      "judge_input_sha256": "9ce5568621417a77752d702235d57b9ebeac60a7ddb7dad1f0dd07e1e496df2f"
+    },
+    {
+      "id": "plugin-spontane-budget",
+      "prompt_sha256": "45c1c3c351b3ba7a22b4516edf67913753c54256c3990a56af613cfc1b7fb5ee",
+      "execution_allowed": false,
+      "preflight_status": "blocked_primary_mcp_web_unavailable",
+      "judge_input_sha256": "32cdae0d55e3b51b1195bb90043f3ff736b7660a568600d23c7dddbc366c0e27"
+    },
+    {
+      "id": "plugin-spontane-reversibilite",
+      "prompt_sha256": "02ddce9311702e35fc8619fabd17df9c66005e364cdc933245aebf5a1e78c65f",
+      "execution_allowed": false,
+      "preflight_status": "blocked_primary_mcp_web_unavailable",
+      "judge_input_sha256": "9a837498e86f5273ab06dc9b0c92d352e9cba0fcf901db65e4044c96409db86d"
+    }
+  ],
+  "historical_scores_reused": false,
+  "release_ready": false
+}

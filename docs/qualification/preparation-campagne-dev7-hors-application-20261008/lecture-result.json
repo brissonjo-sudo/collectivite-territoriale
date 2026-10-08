@@ -1,0 +1,31 @@
+{
+  "created_at": "2026-10-08T17:33:46.965024+00:00",
+  "request": {
+    "command": [
+      "C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+      "-NoLogo",
+      "-NoProfile",
+      "-NonInteractive",
+      "-Command",
+      "$ErrorActionPreference='Stop'; Get-Content -LiteralPath 'C:\\Users\\Krn\\Documents\\Codex\\2026-10-06\\reprends-le-travail-de-cette-session\\configuration-sandbox-isole-reprise-20261008-173328-4e55874e\\workspace\\lecture-synthetique.txt'; (Get-FileHash -LiteralPath 'C:\\Users\\Krn\\Documents\\Codex\\2026-10-06\\reprends-le-travail-de-cette-session\\smoke-dev6-isole-20261007-211629-4dc9cd90\\codex-state\\plugins\\cache\\smoke-dev6\\collectivite-territoriale\\1.2.0-dev.6\\skills\\dsi-fpt\\SKILL.md' -Algorithm SHA256).Hash"
+    ],
+    "cwd": "C:\\Users\\Krn\\Documents\\Codex\\2026-10-06\\reprends-le-travail-de-cette-session\\configuration-sandbox-isole-reprise-20261008-173328-4e55874e\\workspace",
+    "sandboxPolicy": {
+      "type": "readOnly"
+    },
+    "timeoutMs": 20000
+  },
+  "response": {
+    "id": 2,
+    "result": {
+      "exitCode": 0,
+      "stdout": "LECTURE_SANDBOX_ISOLE_20261008\r\n072147C7CF481C50BA009B20324A7EFAEAFA5F6090D40325A7AD24697FB435DE\r\n",
+      "stderr": ""
+    }
+  },
+  "success": true,
+  "expected_skill_sha256": "072147c7cf481c50ba009b20324a7efaeafa5f6090d40325a7ad24697fb435de",
+  "model_inference": false,
+  "auth_secrets_read": false,
+  "release_ready": false
+}

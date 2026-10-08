@@ -1,0 +1,47 @@
+{
+  "created_at": "2026-10-08T17:47:26.759453+00:00",
+  "status": "prepared_not_executed",
+  "run": "qualification-coactivation-dev7-cli-r3",
+  "run_manifest_sha256": "bc7a40b58836b626c97ab157ad2bc8072325ad25fc0507ef6db8d205fbe31f43",
+  "files_sha256": {
+    "lancer-campagne-dev7-hors-codex.ps1": "82418d09809fd98595c3c324f1a502459c6571ebad454e4111ae21d5182dd1ef",
+    "executer_campagne_dev7_hors_codex_20261008.py": "7e7e3164105cbbbf3d7897eb882cc3ad2cf53590ae81e6ee8b98c4d92413f9c4"
+  },
+  "frozen_modules_preserved": true,
+  "validation": {
+    "python_ast": "passed",
+    "powershell_7_6_5_parser_errors": 0,
+    "windows_powershell_5_1_26100_9444_parser_errors": 0,
+    "ps_utf8_bom_crlf": true,
+    "control_only_ps": {
+      "exit_code": 2,
+      "blocked_pids": [
+        68348,
+        101732
+      ]
+    },
+    "control_only_python": {
+      "exit_code": 2,
+      "reason": "runtime_present_or_inaccessible_path"
+    },
+    "model_execution": false,
+    "setup_called": false,
+    "profile_cache_auth_modified": false
+  },
+  "fresh_probe_future": {
+    "client_api": "base.Client optional overrides",
+    "override_source": "socle.overrides()",
+    "required_permissions": [
+      "windows=elevated",
+      "sandbox=read-only",
+      "web=disabled",
+      "three droit-francais MCP=false",
+      "dev6 and olddev7 disabled",
+      "r3dev7 enabled"
+    ],
+    "real_read_required": true
+  },
+  "campaign_result": null,
+  "judges_started": false,
+  "release_ready": false
+}
