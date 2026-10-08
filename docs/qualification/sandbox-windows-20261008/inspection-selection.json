@@ -1,0 +1,45 @@
+{
+  "cli_version": "codex-cli 0.162.0-alpha.2",
+  "cli_sha256": "3553cd6e7df5a093d8cb8301cd8088a57e0971aba71ddbe0e67f7f44a15cdf68",
+  "config_before_sha256": "b4ab3a160d50df5792f937403a4cfde881a1929f2c3d2c0f3216a6ad0cf9a3b6",
+  "requirements": {
+    "id": 2,
+    "result": {
+      "requirements": null
+    }
+  },
+  "readiness": {
+    "id": 4,
+    "result": {
+      "status": "notConfigured"
+    }
+  },
+  "effective_config_selected": {
+    "approval_policy": "on-request",
+    "sandbox_mode": "read-only",
+    "permissions": null,
+    "web_search": "disabled",
+    "windows": null,
+    "features": {
+      "api_key_cyber_access_programs": false,
+      "api_key_model_discovery": true,
+      "auth_elicitation": true,
+      "background_paginated_rollout_migration": false,
+      "codex_apps_mcp_2026_07_28": false,
+      "mcp_2026_07_28": false,
+      "memories": false,
+      "mentions_v2": true,
+      "remote_control": false,
+      "remote_plugin": true,
+      "tool_suggest": true,
+      "windows_sandbox_service": false
+    }
+  },
+  "environment_identity_names_removed": [
+    "CODEX_CI",
+    "CODEX_SESSION_ID",
+    "CODEX_THREAD_ID",
+    "CODEX_VERSION"
+  ],
+  "model_inference": false
+}

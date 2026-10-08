@@ -1,0 +1,42 @@
+{
+  "created_at": "2026-10-08T11:15:17.016267+00:00",
+  "user_authorized_setup": true,
+  "scope": "windows_native_elevated_setup_only_in_isolated_authenticated_profile",
+  "official_api": "windowsSandbox/setupStart",
+  "attempt_count": 1,
+  "setup_started": true,
+  "setup_success": false,
+  "exact_error": "orchestrator_helper_launch_canceled: ShellExecuteExW failed to launch setup helper: 1223",
+  "readiness_before": "notConfigured",
+  "readiness_after": "notConfigured",
+  "synthetic_read_executed": false,
+  "model_inference": false,
+  "dev7_campaign_started": false,
+  "dev7_measurement": "not_measured",
+  "config_unchanged": true,
+  "cache_214_files_unchanged": true,
+  "selected_system_metadata_unchanged": {
+    "users": true,
+    "firewall": true,
+    "acl": true
+  },
+  "system_observation_scope": "2 technical Codex users, 6 Codex firewall rules, ACL of profile and synthetic workspace; local-policy rights and other system state not audited",
+  "system_changes_fully_audited": false,
+  "authentication_secrets_read_or_copied": false,
+  "manual_launcher_syntax_validated": [
+    "PowerShell 7",
+    "Windows PowerShell 5.1",
+    "Python compile"
+  ],
+  "manual_launcher_executed": false,
+  "web_and_mcp_local_remain_disabled": true,
+  "nominal_cases_prepared": 16,
+  "nominal_cases_requiring_mcp_blocked_preflight": 13,
+  "nominal_cases_without_sources": [
+    "plugin-mcp-indisponible",
+    "plugin-dsi-technique",
+    "plugin-dsi-source-indisponible"
+  ],
+  "historical_evidence_preserved": true,
+  "release_ready": false
+}
