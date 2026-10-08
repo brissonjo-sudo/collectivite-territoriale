@@ -1,0 +1,26 @@
+{
+  "source_log_sha256": "26af4e04154fd3c6bf9a5ef28d09b85a813a51ba2f1538f3f59011d48663c6f6",
+  "excerpts": [
+    {
+      "native_line": 7,
+      "native_line_sha256": "a7c947ba3120c18d7d922190bbd8b0c3e1fdf0056957313e8cde0a052af88521",
+      "excerpt": "[2026-10-08T15:06:12.525628600+00:00] WFP setup succeeded for CodexSandboxOffline with 12 installed filters"
+    },
+    {
+      "native_line": 8,
+      "native_line_sha256": "3fa1c3766c5d56c1971b7d5a41aa8edb39708ba7281939342fff77a1afcf6104",
+      "excerpt": "[2026-10-08 17:06:12.527 codex-windows-sandbox-setup.exe] setup provisioning binary completed"
+    },
+    {
+      "native_line": 13,
+      "native_line_sha256": "75a6d662b95264817e0e1f0c3dd6bd0cde27a6a1a46eaa3394d4a770ea84842d",
+      "excerpt": "[2026-10-08T15:06:12.620357100+00:00] runtime read/execute validation failed: validate runtime read/execute access on <LOCALAPPDATA>\\OpenAI\\Codex\\runtimes\\cua_node\\3dd31cfff853001c\\bin\\node_repl.exe: open ACL target for root-only update: Le processus ne peut pas accéder au fichier car ce fichier est utilisé par un autre processus. (os error 32)"
+    },
+    {
+      "native_line": 19,
+      "native_line_sha256": "63dabf84ca8a8cf7e8fe8ee1bffb47f3d89830da93b158f8c857ad43a9c2829f",
+      "excerpt": "[2026-10-08 17:06:12.623 codex.exe] setup refresh: exited with status ExitStatus(ExitStatus(1))"
+    }
+  ],
+  "raw_log_published": false
+}

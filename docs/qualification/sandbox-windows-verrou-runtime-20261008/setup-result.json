@@ -1,0 +1,52 @@
+{
+  "started_at": "2026-10-08T15:06:08.995490+00:00",
+  "mode": "elevated",
+  "success": false,
+  "model_inference": false,
+  "auth_secrets_read": false,
+  "setup_start_response": {
+    "id": 2,
+    "result": {
+      "started": true
+    }
+  },
+  "setup_completed": {
+    "mode": "elevated",
+    "success": false,
+    "error": "helper_unknown_error: setup refresh had errors"
+  },
+  "readiness_after": {
+    "id": 3,
+    "result": {
+      "status": "notConfigured"
+    }
+  },
+  "effective_config_after_selected": {
+    "approval_policy": "on-request",
+    "sandbox_mode": "read-only",
+    "permissions": null,
+    "web_search": "disabled",
+    "windows": null,
+    "features": {
+      "api_key_cyber_access_programs": false,
+      "api_key_model_discovery": true,
+      "auth_elicitation": true,
+      "background_paginated_rollout_migration": false,
+      "codex_apps_mcp_2026_07_28": false,
+      "mcp_2026_07_28": false,
+      "memories": false,
+      "mentions_v2": true,
+      "remote_control": false,
+      "remote_plugin": true,
+      "tool_suggest": true,
+      "windows_sandbox_service": false
+    }
+  },
+  "completed_at": "2026-10-08T15:06:12.641027+00:00",
+  "config_after_sha256": "b4ab3a160d50df5792f937403a4cfde881a1929f2c3d2c0f3216a6ad0cf9a3b6",
+  "cache_unchanged": true,
+  "persisted_windows_sandbox": null,
+  "persisted_sandbox_mode": "read-only",
+  "persisted_web_search": "disabled",
+  "system_changes_audited": false
+}
