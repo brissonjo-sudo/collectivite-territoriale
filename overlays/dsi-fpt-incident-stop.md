@@ -5,8 +5,9 @@ compromission de compte, fuite ou exfiltration de données, indisponibilité
 suspecte, intrusion constatée, demande de rançon, alerte d'un tiers sur une
 attaque ; nouvel indice concernant un incident ancien ou clos.
 
-Dès qu'un déclencheur apparaît, le **premier livrable, avant tout autre
-contenu**, est :
+Dès qu'un déclencheur apparaît, le **premier texte visible de la session**,
+y compris le commentaire de progression avant outils, commence par le STOP
+ci-dessous. Les annonces de chargement viennent seulement ensuite :
 
 ```
 STOP — Incident de sécurité suspecté, en cours, récent ou rouvert.

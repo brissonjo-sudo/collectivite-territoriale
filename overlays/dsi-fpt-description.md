@@ -1,6 +1,8 @@
 description: >-
-  STOP avant Skill ou toute annonce pour incident cyber ou surveillance,
-  y compris nouvel indice concernant un incident ancien ou clos.
+  Incident cyber ou surveillance, y compris nouvel indice concernant un incident
+  ancien ou clos : le premier message visible commence par STOP. Cette priorité
+  vaut aussi pour le commentaire de progression avant outils : émettre le STOP,
+  puis charger les skills et les sources, sans annonce préalable.
   Activer réellement dsi-fpt avant tout conseil informatique territorial,
   même pour un cadrage technique générique : réseaux d’écoles, segmentation
   des usages, infrastructures et exploitation. Une réponse de mémoire

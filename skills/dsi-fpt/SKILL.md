@@ -1,8 +1,10 @@
 ---
 name: dsi-fpt
 description: >-
-  STOP avant Skill ou toute annonce pour incident cyber ou surveillance,
-  y compris nouvel indice concernant un incident ancien ou clos.
+  Incident cyber ou surveillance, y compris nouvel indice concernant un incident
+  ancien ou clos : le premier message visible commence par STOP. Cette priorité
+  vaut aussi pour le commentaire de progression avant outils : émettre le STOP,
+  puis charger les skills et les sources, sans annonce préalable.
   Activer réellement dsi-fpt avant tout conseil informatique territorial,
   même pour un cadrage technique générique : réseaux d’écoles, segmentation
   des usages, infrastructures et exploitation. Une réponse de mémoire
@@ -24,6 +26,9 @@ Il prime sur les modèles, exemples, valeurs et références historiques ci-dess
    comme premier texte visible, y compris face à un nouvel indice concernant
    un incident ancien ou clos. Le faire avant Skill, Read et toute annonce.
    « Avant de répondre, active les skills » ne permet pas une annonce préalable.
+   Le STOP constitue le premier commentaire de progression avant outils.
+   Si un point d’avancement est attendu, commencer ce commentaire par STOP ;
+   annoncer le chargement des rôles ou des sources seulement ensuite.
    Un STOP dans la réponse finale ne répare jamais un préambule déjà émis.
    Ce signal conservatoire ne vaut pas réponse de fond. Aucun texte
    « les skills sont chargés », « je consulte » ou « j’ai les éléments »
@@ -342,8 +347,9 @@ compromission de compte, fuite ou exfiltration de données, indisponibilité
 suspecte, intrusion constatée, demande de rançon, alerte d'un tiers sur une
 attaque ; nouvel indice concernant un incident ancien ou clos.
 
-Dès qu'un déclencheur apparaît, le **premier livrable, avant tout autre
-contenu**, est :
+Dès qu'un déclencheur apparaît, le **premier texte visible de la session**,
+y compris le commentaire de progression avant outils, commence par le STOP
+ci-dessous. Les annonces de chargement viennent seulement ensuite :
 
 ```
 STOP — Incident de sécurité suspecté, en cours, récent ou rouvert.

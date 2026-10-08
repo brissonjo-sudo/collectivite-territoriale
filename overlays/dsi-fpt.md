@@ -8,6 +8,9 @@ Il prime sur les modèles, exemples, valeurs et références historiques ci-dess
    comme premier texte visible, y compris face à un nouvel indice concernant
    un incident ancien ou clos. Le faire avant Skill, Read et toute annonce.
    « Avant de répondre, active les skills » ne permet pas une annonce préalable.
+   Le STOP constitue le premier commentaire de progression avant outils.
+   Si un point d’avancement est attendu, commencer ce commentaire par STOP ;
+   annoncer le chargement des rôles ou des sources seulement ensuite.
    Un STOP dans la réponse finale ne répare jamais un préambule déjà émis.
    Ce signal conservatoire ne vaut pas réponse de fond. Aucun texte
    « les skills sont chargés », « je consulte » ou « j’ai les éléments »
