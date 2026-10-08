@@ -1,0 +1,96 @@
+{
+  "started_at": "2026-10-08T22:02:09.627295+00:00",
+  "scope": "precontrole_mcp_juridique_dev7",
+  "model_inference": false,
+  "setup_attempted": false,
+  "oauth_login_attempted": false,
+  "auth_secrets_read": false,
+  "automatic_retry": false,
+  "status_deadline_seconds": 45,
+  "cli_sha256": "3553cd6e7df5a093d8cb8301cd8088a57e0971aba71ddbe0e67f7f44a15cdf68",
+  "candidate_plugin_id": "collectivite-territoriale@campagne-dev7-20261008-r3",
+  "effective_overrides": [
+    "-c",
+    "windows.sandbox=\"elevated\"",
+    "-c",
+    "sandbox_mode=\"read-only\"",
+    "-c",
+    "approval_policy=\"never\"",
+    "-c",
+    "web_search=\"disabled\"",
+    "-c",
+    "plugins.collectivite-territoriale@smoke-dev6.enabled=false",
+    "-c",
+    "plugins.collectivite-territoriale@campagne-dev7-20261008.enabled=false",
+    "-c",
+    "plugins.collectivite-territoriale@campagne-dev7-20261008-r3.enabled=true",
+    "-c",
+    "plugins.collectivite-territoriale@smoke-dev6.mcp_servers.droit-francais.enabled=false",
+    "-c",
+    "plugins.collectivite-territoriale@campagne-dev7-20261008.mcp_servers.droit-francais.enabled=false",
+    "-c",
+    "plugins.collectivite-territoriale@campagne-dev7-20261008-r3.mcp_servers.droit-francais.enabled=false",
+    "-c",
+    "features.apps=false",
+    "-c",
+    "plugins.collectivite-territoriale@campagne-dev7-20261008-r3.mcp_servers.droit-francais.enabled=true"
+  ],
+  "context7": "Monthly quota exceeded",
+  "official_documentation": "https://learn.chatgpt.com/docs/app-server",
+  "primary_text_retrieved": false,
+  "release_ready": false,
+  "effective_configuration_verified": true,
+  "effective_selected": {
+    "windows_sandbox": "elevated",
+    "sandbox_mode": "read-only",
+    "approval_policy": "never",
+    "web_search": "disabled",
+    "apps": false,
+    "candidate_plugin_enabled": true,
+    "droit_francais_enabled": true
+  },
+  "discovery_error": null,
+  "servers": [
+    {
+      "name": "droit-francais",
+      "pluginId": "collectivite-territoriale@campagne-dev7-20261008-r3",
+      "authStatus": "notLoggedIn",
+      "runtimeStatus": null,
+      "tool_count": 0,
+      "tool_names": [],
+      "tools_error": {
+        "code": null,
+        "markers": [
+          "Auth required"
+        ],
+        "message_sha256": "eb884a671c65e31c666eb317aba5bf65dfb886bce1029e42381f1ded39dbc933",
+        "message_exported": false
+      }
+    }
+  ],
+  "discovery_paginated": false,
+  "candidate_server_match_count": 1,
+  "targeted_error": null,
+  "targeted_servers": [
+    {
+      "name": "droit-francais",
+      "pluginId": "collectivite-territoriale@campagne-dev7-20261008-r3",
+      "authStatus": "notLoggedIn",
+      "runtimeStatus": null,
+      "tool_count": 0,
+      "tool_names": [],
+      "tools_error": {
+        "code": null,
+        "markers": [
+          "Auth required"
+        ],
+        "message_sha256": "eb884a671c65e31c666eb317aba5bf65dfb886bce1029e42381f1ded39dbc933",
+        "message_exported": false
+      }
+    }
+  ],
+  "selected_legal_tool_schema_count": 0,
+  "completed_at": "2026-10-08T22:02:10.359549+00:00",
+  "config_unchanged": true,
+  "candidate_cache_unchanged": true
+}

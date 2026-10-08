@@ -1,0 +1,15 @@
+{
+  "started_at": "2026-10-08T22:04:59.906949+00:00",
+  "model_inference": false,
+  "auth_secrets_read": false,
+  "oauth_login_attempted": true,
+  "automatic_retry": false,
+  "release_ready": false,
+  "server": "droit-francais",
+  "completed": false,
+  "authorization_url_received": true,
+  "start_error": null,
+  "flow_timeout": true,
+  "completed_at": "2026-10-08T22:15:00.166311+00:00",
+  "configuration_file_unchanged": true
+}

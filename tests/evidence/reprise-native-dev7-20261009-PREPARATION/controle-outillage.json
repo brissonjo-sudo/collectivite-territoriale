@@ -1,0 +1,45 @@
+{
+  "verified_at": "2026-10-08T22:23:57.736022+00:00",
+  "tools_sha256": {
+    "campagne_native_complete_dev7_20261009.py": "376a4243480146ef64118bac4528c579e862cbf2e15c20bb30ed6311c8b9cdd6",
+    "normaliseur_native_complete_dev7_20261009.py": "f07de2215b3dd6891dd9067918843b01e3b62f7c91f9c22a196b9b7bdb2671cd",
+    "tests_native_complete_dev7_20261009.py": "f96edb6c324b46c236acb4e8ea467e7efe18b36e4117948abffc4e909dceaea2",
+    "lancer-campagne-native-dev7-complet-20261009.ps1": "6f89307e755a8370690ef2d60c06512793eaddcb6bb3bfbba5a68caee860407b",
+    "protocole-native-dev7-complet-20261009.json": "46b4e6f7f6ae59decf0257adbab575c61be220e5f8610889e87094dbb44c6947",
+    "connexion_juridique_dev7_20261009.py": "fc7e5cda782efef39ae8283eaf67ac1cc1ee8aae394a86d80f57f4faf4e1e360",
+    "tests_connexion_juridique_dev7_20261009.py": "95828fade2cac3b26468ab51a464621659f78e65132d2e062c84d2352eca0488"
+  },
+  "candidate_commit": "fb186b4951b95adabf05904f8a34995720588be3",
+  "case_count": 16,
+  "atomic_count": 124,
+  "source_case_count": 13,
+  "official_web_case_count": 3,
+  "checks": [
+    {
+      "test_file": "tests_native_complete_dev7_20261009.py",
+      "tests": 24,
+      "passed": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "cda29263002b135bdbc7a27193283fc1dab001a669c0a9b55ecfbc8f33ba3ca2"
+    },
+    {
+      "test_file": "tests_connexion_juridique_dev7_20261009.py",
+      "tests": 6,
+      "passed": true,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "cd99160710fc38123c01af0cce16079178bdeb6476a1f65e5268b71612050b60"
+    }
+  ],
+  "test_count": 30,
+  "old_tools_unchanged": true,
+  "suite_rubric_unchanged": true,
+  "installed_cache_unchanged": true,
+  "campaign_prepared": false,
+  "new_respondents_started": 0,
+  "judges_created": 0,
+  "auth_verified": false,
+  "sandbox_read_verified": false,
+  "model_inference": false,
+  "runtime_fix_verified": false,
+  "release_ready": false
+}
