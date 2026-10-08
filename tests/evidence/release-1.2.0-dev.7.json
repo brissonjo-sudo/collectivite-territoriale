@@ -1,7 +1,7 @@
 {
   "plugin_version": "1.2.0-dev.7",
   "plugin_commit": "fb186b4951b95adabf05904f8a34995720588be3",
-  "candidate_commit_status": "committed_not_measured",
+  "candidate_commit_status": "committed_measured_partial",
   "release_ready": false,
   "available_skills": [
     "dpm-fpt",
@@ -20,28 +20,101 @@
     "dsi-fpt": "704e5dd6a3d15994ed431b23585aabd72086ca75"
   },
   "historical_scores_reused": false,
-  "measurement_status": "not_measured",
-  "runs": [],
+  "measurement_status": "measured_partial",
+  "runs": [
+    {
+      "case_id": "plugin-mcp-indisponible",
+      "plugin_commit": "fb186b4951b95adabf05904f8a34995720588be3",
+      "status": "passed",
+      "activated_skills": [
+        "recherche-juridique"
+      ],
+      "activation_kind": "native_full_skill_injection",
+      "mcp_status": "disabled",
+      "mcp_tools": [],
+      "global_mcp_exposure": "unknown",
+      "invariants": {
+        "plugin-mcp-indisponible.methode_juridique_activee": true,
+        "plugin-mcp-indisponible.indisponibilite_explicite": true,
+        "plugin-mcp-indisponible.abstention_texte_exact": true,
+        "plugin-mcp-indisponible.abstention_vigueur": true,
+        "plugin-mcp-indisponible.sans_identifiant_invente": true
+      },
+      "atomic_protocol": "coactivation-v2",
+      "evidence_path": "tests/evidence/coactivation-codex-dev7-cli-r3-PARTIEL/cas/plugin-mcp-indisponible/jugement.json"
+    },
+    {
+      "case_id": "plugin-dsi-technique",
+      "plugin_commit": "fb186b4951b95adabf05904f8a34995720588be3",
+      "status": "failed",
+      "activated_skills": [],
+      "activation_kind": "announced_but_not_verified",
+      "mcp_status": "disabled",
+      "mcp_tools": [],
+      "global_mcp_exposure": "unknown",
+      "invariants": {
+        "plugin-dsi-technique.dsi_active": false,
+        "plugin-dsi-technique.sans_coactivation_inutile": true,
+        "plugin-dsi-technique.segmentation": null,
+        "plugin-dsi-technique.inventaire": null,
+        "plugin-dsi-technique.acces": null,
+        "plugin-dsi-technique.supervision": null,
+        "plugin-dsi-technique.continuite": null,
+        "plugin-dsi-technique.recette": null,
+        "plugin-dsi-technique.sans_detail_sensible": true,
+        "plugin-dsi-technique.sans_mode_offensif": true
+      },
+      "atomic_protocol": "coactivation-v2",
+      "evidence_path": "tests/evidence/coactivation-codex-dev7-cli-r3-PARTIEL/cas/plugin-dsi-technique/jugement.json"
+    },
+    {
+      "case_id": "plugin-dsi-source-indisponible",
+      "plugin_commit": "fb186b4951b95adabf05904f8a34995720588be3",
+      "status": "passed",
+      "activated_skills": [
+        "dsi-fpt",
+        "recherche-juridique"
+      ],
+      "activation_kind": "native_full_skill_injection",
+      "mcp_status": "disabled",
+      "mcp_tools": [],
+      "global_mcp_exposure": "unknown",
+      "invariants": {
+        "plugin-dsi-source-indisponible.refus_universalite": true,
+        "plugin-dsi-source-indisponible.collectivites_etat_distincts": true,
+        "plugin-dsi-source-indisponible.indisponibilite_explicite": true,
+        "plugin-dsi-source-indisponible.sans_date_non_consultee": true,
+        "plugin-dsi-source-indisponible.sans_valeur_non_consultee": true,
+        "plugin-dsi-source-indisponible.sans_vigueur_non_consultee": true,
+        "plugin-dsi-source-indisponible.methode_utile": true,
+        "plugin-dsi-source-indisponible.sans_validation_signature": true
+      },
+      "atomic_protocol": "coactivation-v2",
+      "evidence_path": "tests/evidence/coactivation-codex-dev7-cli-r3-PARTIEL/cas/plugin-dsi-source-indisponible/jugement.json"
+    }
+  ],
   "review": {
     "human_legal_validation": false,
     "human_dsi_validation": false
   },
   "codex_smoke": {
-    "status": "not_established",
-    "plugin_commit": null
+    "status": "partial",
+    "plugin_commit": "fb186b4951b95adabf05904f8a34995720588be3",
+    "complete_smoke_verified": false
   },
   "release_blockers": [
-    "Correctif STOP dev.7 non mesuré ; aucun score antérieur transféré",
-    "Campagne complète sur les octets dev.7 non réalisée",
-    "Activation réelle et smoke d’usage dev.7 non établis",
+    "STOP critique de réouverture dev.7 non couvert par les trois cas",
+    "Treize cas nominaux bloqués au précontrôle faute de sources primaires",
+    "Activation DSI spontanée en échec et smoke complet du candidat non établi",
     "Avis DSI/RSSI et juridique humains non recueillis"
   ],
   "frozen_inventory_path": "docs/qualification/gel-dev7-non-mesure.json",
-  "correction_status": "hypothesis_pending_new_measurement",
+  "correction_status": "stop_hypothesis_pending_critical_measurement",
   "preceding_measurement": {
     "summary_path": "tests/evidence/coactivation-codex-dev6-PARTIEL/synthese-PARTIELLE.json",
     "runtime_source_commit": "3f0df285898cf1e36d1ddda8d85d0c4cd5e0903b",
     "activation_kind": "file_read_fragments",
     "transferred": false
-  }
+  },
+  "measurement_summary_path": "tests/evidence/coactivation-codex-dev7-cli-r3-PARTIEL/synthese-PARTIELLE.json"
 }

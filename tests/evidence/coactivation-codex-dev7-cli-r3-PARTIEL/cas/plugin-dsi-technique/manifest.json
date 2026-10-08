@@ -1,0 +1,33 @@
+{
+  "schema_version": "dev7-native-judge-export-v2-postexecution-export-repair",
+  "case_id": "plugin-dsi-technique",
+  "exported_at": "2026-10-08T21:26:33.834560+00:00",
+  "packet_sha256": "057de8277f3a26cdd2d3655076f6350d9fcdfbd9b2b2c8e4afa58db3954a4c47",
+  "trace_file_sha256": "f01e8f6d29ad93ee7efde7f37d1796a43e145548982a2a431c91db25ad56e24c",
+  "trace_sha256": "ebdc005caee0f134ebcc8ec130159d1484a4838c8175bc4fb82060b50a39036e",
+  "prompt_sha256": "c33dc7f0b39143cc82725ed27a9a2345134d9dee00962406bdf752df6d811d6e",
+  "execution_sha256": "a2ef95d584973a3930a8f1d6401747bcf6bdf866289193c2d8f31414d4af58dd",
+  "native_file_sha256": "d4541813076c1dc847bc0da94402bd36ad38fad3ee180bf54e6fa027259804c5",
+  "run_manifest_sha256": "bc7a40b58836b626c97ab157ad2bc8072325ad25fc0507ef6db8d205fbe31f43",
+  "proposal_sha256": "e985f2a97e04d00bb852eca0a6ff50fa6903bc99060a2148a94ef1835b2dc9c5",
+  "extractor_sha256": "fa47656e8edb2f4cf76f7bf64b019ea941f2853146e44570ca5d769402fb7f05",
+  "atom_count": 10,
+  "judge_identity": null,
+  "judge_identity_status": "awaiting_new_agent_after_export",
+  "required_fork_turns": "none",
+  "model_override": null,
+  "historical_scores_reused": false,
+  "release_ready": false,
+  "original_export_manifest_sha256": "a1f9fabe1cf5d80458a6b9339479dd2fc0d6cc2af04c024bce576f8f51cfbb7c",
+  "correction_module_sha256": "d58fa1b64a6f88b5f2a4b4bd5f8c24d20aac16e0d00a20eb00ff1a9efb05fb63",
+  "correction_tests_sha256": "dd2fa9709f3dcbde98d6a91c8cf6ee81f683b30b2350e035800b71d3a8d4989e",
+  "frozen_modules_sha256": {
+    "campagne_native_dev7_20261008.py": "4581e12a083d3ec59b38af699f55a905a5be40b638ef27176f80db9023f8ea36",
+    "socle_campagne_native_dev7_20261008.py": "b2c3c4a2b943997b79960d512628a8d3da5daccf18038eceeeda7b8ce4bc555f",
+    "tests_campagne_native_dev7_20261008.py": "8ab2a69fa6b76c384df619f609b6180bad3a61d4078c63ac0533bb597aca672c",
+    "extraire_campagne_native_dev7_20261008.py": "fa47656e8edb2f4cf76f7bf64b019ea941f2853146e44570ca5d769402fb7f05",
+    "tests_extraire_campagne_native_dev7_20261008.py": "de958af6e0e084623a2d927d1a75d95567f533968f0f948e3fd1132d2d579b10"
+  },
+  "postexecution_derivative_only": true,
+  "respondent_reexecuted": false
+}

@@ -1,0 +1,23 @@
+{
+  "started_at": "2026-10-08T19:35:48.762533+00:00",
+  "completed_at": "2026-10-08T19:37:14.694088+00:00",
+  "fresh_read_success": true,
+  "judges_started": false,
+  "setup_requested": false,
+  "auth_secrets_read": false,
+  "release_ready": false,
+  "automatic_retry": false,
+  "original_receipt_sha256": "c797954b9634ae3f920b2669f5566f92fe7740199bc13196d08f0de911f50172",
+  "respondents": 3,
+  "extractions": 3,
+  "execution_exit_codes": [
+    0,
+    0,
+    0
+  ],
+  "extraction_exit_codes": [
+    0,
+    0,
+    0
+  ]
+}

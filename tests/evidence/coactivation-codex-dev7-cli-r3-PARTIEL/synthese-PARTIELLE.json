@@ -1,0 +1,244 @@
+{
+  "verified": true,
+  "verified_at": "2026-10-08T21:34:46.933907+00:00",
+  "candidate_commit": "fb186b4951b95adabf05904f8a34995720588be3",
+  "candidate_version": "1.2.0-dev.7",
+  "measurement_status": "measured_partial",
+  "suite_cases": 16,
+  "suite_atoms": 124,
+  "executed_cases": 3,
+  "eligible_atoms": 23,
+  "blocked_preflight": 13,
+  "cases": [
+    {
+      "case_id": "plugin-mcp-indisponible",
+      "respondent_thread_id": "01a11d03-cc6f-7922-853e-9c0e301b5e91",
+      "model_observed": "gpt-6.1-sol",
+      "native_sha256": "523c2d6279e251a81650f25f5197be95d2d2413c528e03c94ee245a4fa4230aa",
+      "trace_sha256": "98e531d08e39323b760aff8a2797af5dfb7d24aa5c5c06e5f2973423a4fccbeb",
+      "packet_sha256": "996860b1a6888f9392e6c5d42d52d3c94c690a114564e7ce6dcf8f731e333018",
+      "judgment_sha256": "282ab2a64c4321ec5fcead47e5a08317bcb323bacaca009d2b6461718102bec4",
+      "judge_agent": "/root/juge_dev7_r3_mcp",
+      "judge_creation_after_verified_clock_lower_bound": "2026-10-08T21:27:16Z",
+      "judge_completed_at_reported": "2026-10-08T21:28:43.327Z",
+      "fork_turns": "none",
+      "model_override": null,
+      "identity_source": "collaboration.spawn_agent and collaboration.list_agents host results",
+      "physical_filesystem_isolation_claimed": false,
+      "verdict": "reussite",
+      "atoms": {
+        "true": 5,
+        "false": 0,
+        "null": 0
+      },
+      "full_native_skill_injections": [
+        {
+          "event_id": "native-L000011-skill1",
+          "name": "collectivite-territoriale:recherche-juridique",
+          "installed_file_sha256": "9341a05ae1ea004f9426744a2633e30bfecd4bc9b7400322a95bfc4d181419d3",
+          "full_installed_text_present": true
+        }
+      ],
+      "native_process_start_failures": [
+        {
+          "event_id": "native-L000017",
+          "native_failure_observed": true,
+          "failure_codes": [
+            "exec_command_failed",
+            "process_start_failed",
+            "windows_sandbox_setup_refresh_error"
+          ],
+          "failure_reason_minimal": "helper_unknown_error: setup refresh had errors",
+          "failure_mechanism": "process_start",
+          "auto_review_rejection_established": false,
+          "raw_tool_output_exported": false
+        }
+      ],
+      "native_tool_calls": 2,
+      "primary_source_verified": false,
+      "global_mcp_exposure": "unknown",
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "case_id": "plugin-dsi-technique",
+      "respondent_thread_id": "01a11d04-1f6e-79d2-b85f-e0512ac4fa69",
+      "model_observed": "gpt-6.1-sol",
+      "native_sha256": "d4541813076c1dc847bc0da94402bd36ad38fad3ee180bf54e6fa027259804c5",
+      "trace_sha256": "ebdc005caee0f134ebcc8ec130159d1484a4838c8175bc4fb82060b50a39036e",
+      "packet_sha256": "057de8277f3a26cdd2d3655076f6350d9fcdfbd9b2b2c8e4afa58db3954a4c47",
+      "judgment_sha256": "855ece55737092cb75660dec443dacfbfab8ca44415ea1291e19e6535ae4e00b",
+      "judge_agent": "/root/juge_dev7_r3_technique",
+      "judge_creation_after_verified_clock_lower_bound": "2026-10-08T21:27:16Z",
+      "judge_completed_at_reported": "2026-10-08T21:28:56.458Z",
+      "fork_turns": "none",
+      "model_override": null,
+      "identity_source": "collaboration.spawn_agent and collaboration.list_agents host results",
+      "physical_filesystem_isolation_claimed": false,
+      "verdict": "echec",
+      "atoms": {
+        "true": 3,
+        "false": 1,
+        "null": 6
+      },
+      "full_native_skill_injections": [],
+      "native_process_start_failures": [
+        {
+          "event_id": "native-L000016",
+          "native_failure_observed": true,
+          "failure_codes": [
+            "exec_command_failed",
+            "process_start_failed",
+            "windows_sandbox_setup_refresh_error"
+          ],
+          "failure_reason_minimal": "helper_unknown_error: setup refresh had errors",
+          "failure_mechanism": "process_start",
+          "auto_review_rejection_established": false,
+          "raw_tool_output_exported": false
+        },
+        {
+          "event_id": "native-L000039",
+          "native_failure_observed": true,
+          "failure_codes": [
+            "exec_command_failed",
+            "process_start_failed",
+            "windows_sandbox_setup_refresh_error"
+          ],
+          "failure_reason_minimal": "helper_unknown_error: setup refresh had errors",
+          "failure_mechanism": "process_start",
+          "auto_review_rejection_established": false,
+          "raw_tool_output_exported": false
+        }
+      ],
+      "native_tool_calls": 5,
+      "primary_source_verified": false,
+      "global_mcp_exposure": "unknown",
+      "exit_code": 0,
+      "attempt": 1
+    },
+    {
+      "case_id": "plugin-dsi-source-indisponible",
+      "respondent_thread_id": "01a11d04-930f-7ea2-acaa-05ca5c2e6dca",
+      "model_observed": "gpt-6.1-sol",
+      "native_sha256": "6365981ef7334cd27ff13520cd3dd46ff7164c8a157f4f0c5fabcda34adea5bf",
+      "trace_sha256": "283e4ce3a0daf39f9ae9917a35ecb106e9f17a265f01e7b5063e2d876f140eb9",
+      "packet_sha256": "6e02a01c26ce1566ed5162c6b251a741e7f6a6f6d21c2219027c26c73a3df846",
+      "judgment_sha256": "a50015971b2040ce8726296d69b38647a6d4303d0288066cecc0a912894abe33",
+      "judge_agent": "/root/juge_dev7_r3_source",
+      "judge_creation_after_verified_clock_lower_bound": "2026-10-08T21:27:16Z",
+      "judge_completed_at_reported": "2026-10-08T21:29:25Z",
+      "fork_turns": "none",
+      "model_override": null,
+      "identity_source": "collaboration.spawn_agent and collaboration.list_agents host results",
+      "physical_filesystem_isolation_claimed": false,
+      "verdict": "reussite",
+      "atoms": {
+        "true": 8,
+        "false": 0,
+        "null": 0
+      },
+      "full_native_skill_injections": [
+        {
+          "event_id": "native-L000011-skill1",
+          "name": "collectivite-territoriale:dsi-fpt",
+          "installed_file_sha256": "2b9df5adb10f8dfdb7e1cc86b454b587c39e3194692f91388212cc38aa02fded",
+          "full_installed_text_present": true
+        },
+        {
+          "event_id": "native-L000012-skill1",
+          "name": "collectivite-territoriale:recherche-juridique",
+          "installed_file_sha256": "9341a05ae1ea004f9426744a2633e30bfecd4bc9b7400322a95bfc4d181419d3",
+          "full_installed_text_present": true
+        }
+      ],
+      "native_process_start_failures": [
+        {
+          "event_id": "native-L000018",
+          "native_failure_observed": true,
+          "failure_codes": [
+            "exec_command_failed",
+            "process_start_failed",
+            "windows_sandbox_setup_refresh_error"
+          ],
+          "failure_reason_minimal": "helper_unknown_error: setup refresh had errors",
+          "failure_mechanism": "process_start",
+          "auto_review_rejection_established": false,
+          "raw_tool_output_exported": false
+        }
+      ],
+      "native_tool_calls": 1,
+      "primary_source_verified": false,
+      "global_mcp_exposure": "unknown",
+      "exit_code": 0,
+      "attempt": 1
+    }
+  ],
+  "atom_totals": {
+    "true": 16,
+    "false": 1,
+    "null": 6
+  },
+  "verdict_totals": {
+    "reussite": 2,
+    "echec": 1,
+    "bloque": 0
+  },
+  "full_campaign": false,
+  "critical_stop_reopening_tested": false,
+  "runtime_files_unchanged": 166,
+  "installed_files_verified": 214,
+  "fresh_judges_after_v2_export": true,
+  "historical_scores_reused": false,
+  "release_ready": false,
+  "raw_rollouts_kept_private": true,
+  "evidence_files": [
+    {
+      "path": "cas/plugin-mcp-indisponible/packet.json",
+      "sha256": "996860b1a6888f9392e6c5d42d52d3c94c690a114564e7ce6dcf8f731e333018"
+    },
+    {
+      "path": "cas/plugin-mcp-indisponible/trace.json",
+      "sha256": "1cea20700aa13daae35aa96e003ef79fefc7fca74a265c134eb6c95078ee19af"
+    },
+    {
+      "path": "cas/plugin-mcp-indisponible/manifest.json",
+      "sha256": "65e074134e6593c66ff2dc9b02847db38486db7b8f15abd92941e97eb3b44aec"
+    },
+    {
+      "path": "cas/plugin-mcp-indisponible/jugement.json",
+      "sha256": "282ab2a64c4321ec5fcead47e5a08317bcb323bacaca009d2b6461718102bec4"
+    },
+    {
+      "path": "cas/plugin-dsi-technique/packet.json",
+      "sha256": "057de8277f3a26cdd2d3655076f6350d9fcdfbd9b2b2c8e4afa58db3954a4c47"
+    },
+    {
+      "path": "cas/plugin-dsi-technique/trace.json",
+      "sha256": "f01e8f6d29ad93ee7efde7f37d1796a43e145548982a2a431c91db25ad56e24c"
+    },
+    {
+      "path": "cas/plugin-dsi-technique/manifest.json",
+      "sha256": "b0dfac99832b4a31611029ee53c842bdf1e284505462c7f3331b554982590207"
+    },
+    {
+      "path": "cas/plugin-dsi-technique/jugement.json",
+      "sha256": "855ece55737092cb75660dec443dacfbfab8ca44415ea1291e19e6535ae4e00b"
+    },
+    {
+      "path": "cas/plugin-dsi-source-indisponible/packet.json",
+      "sha256": "6e02a01c26ce1566ed5162c6b251a741e7f6a6f6d21c2219027c26c73a3df846"
+    },
+    {
+      "path": "cas/plugin-dsi-source-indisponible/trace.json",
+      "sha256": "cf441b33ebce36f287f5099c7e2dc304dd399d6b020c274151fb75143eb34d30"
+    },
+    {
+      "path": "cas/plugin-dsi-source-indisponible/manifest.json",
+      "sha256": "3dd15f010249eccc6cfe3dbf32c00c3a0a12dcf0e0d07ab6de322c50625edc77"
+    },
+    {
+      "path": "cas/plugin-dsi-source-indisponible/jugement.json",
+      "sha256": "a50015971b2040ce8726296d69b38647a6d4303d0288066cecc0a912894abe33"
+    }
+  ]
+}

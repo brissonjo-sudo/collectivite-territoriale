@@ -1,0 +1,307 @@
+{
+  "schema_version": "dev7-native-derived-v2-postexecution-export-repair",
+  "thread_id": "01a11d03-cc6f-7922-853e-9c0e301b5e91",
+  "native_file_sha256": "523c2d6279e251a81650f25f5197be95d2d2413c528e03c94ee245a4fa4230aa",
+  "native_line_count": 31,
+  "events": [
+    {
+      "event_id": "native-L000001",
+      "native_line": 1,
+      "native_line_sha256": "bc830fe39567462f91aec19ba84219d9bc248af243be9cd824a408a2aa9de157",
+      "timestamp": "2026-10-08T19:35:51.032Z",
+      "type": "derived_session_identity",
+      "thread_id": "01a11d03-cc6f-7922-853e-9c0e301b5e91",
+      "cli_version": "0.162.0-alpha.2",
+      "source": "exec"
+    },
+    {
+      "event_id": "native-L000008",
+      "native_line": 8,
+      "native_line_sha256": "02e58d180e086385715cc2e5bb8839d1f26e55b81c4c6f1567d440982f9b8550",
+      "timestamp": "2026-10-08T19:35:51.936Z",
+      "type": "derived_execution_parameters",
+      "model": "gpt-6.1-sol",
+      "approval_policy": "never",
+      "sandbox_type": "read-only"
+    },
+    {
+      "event_id": "native-L000009",
+      "native_line": 9,
+      "native_line_sha256": "abf635d567b74d183bf38f41da3383edcf0810bf387a997b65f14d6a4b37138c",
+      "timestamp": "2026-10-08T19:35:51.946Z",
+      "type": "derived_submitted_prompt",
+      "prompt_sha256": "a4fca8293e9044acf893f3d9443174b83a52c582d481feacfe53ccc089b0b83e"
+    },
+    {
+      "event_id": "native-L000011-skill1",
+      "native_line": 11,
+      "native_line_sha256": "1766ac16a05828baa5b7ef7dc6f87d13b4f3bae88d4a2e519b7b39d3e0fede96",
+      "timestamp": "2026-10-08T19:35:51.961Z",
+      "type": "derived_native_skill_injection",
+      "name": "collectivite-territoriale:recherche-juridique",
+      "path_relative_to_installed_plugin": "skills/recherche-juridique/SKILL.md",
+      "installed_file_sha256": "9341a05ae1ea004f9426744a2633e30bfecd4bc9b7400322a95bfc4d181419d3",
+      "full_installed_text_present": true,
+      "native_input_text_sha256": "430440b11411945497fda2396080d4145936d150e4f800dc68b564dededaf881",
+      "native_text_block": 1,
+      "skill_body_omitted": true
+    },
+    {
+      "event_id": "native-L000013",
+      "native_line": 13,
+      "native_line_sha256": "23a064620f2e13839d3747cdd444e9aa748df150f6dc0a58199c6de07b0b1917",
+      "timestamp": "2026-10-08T19:35:55.346Z",
+      "type": "derived_visible_assistant_text",
+      "phase": "commentary",
+      "text": "J’applique le skill `recherche-juridique` pour vérifier le texte, son identifiant et sa vigueur au 8 octobre 2026, uniquement avec les capacités de lecture et de recherche disponibles.\n",
+      "complete": true,
+      "starts_STOP": false
+    },
+    {
+      "event_id": "native-L000014",
+      "native_line": 14,
+      "native_line_sha256": "1d49c6fe34cbf66d7234f7e1fcf44acab2c8c19b07b0934c35186272cf0d17ba",
+      "timestamp": "2026-10-08T19:35:58.197Z",
+      "type": "derived_native_tool_call",
+      "call_id": "call_08f712c052544df987bee9248e5c9b88",
+      "tool": "exec",
+      "arguments": null,
+      "arguments_sha256": "dfa601a9ee702e0d85a5511b6996f48a8a4e2b2a0c253b5f87373d7a21968ef5",
+      "arguments_complete": false,
+      "tool_inventory_request": true
+    },
+    {
+      "event_id": "native-L000017",
+      "native_line": 17,
+      "native_line_sha256": "2f5064b0ac57c147835fc69e22779704081d508f765a7e9144a573c9c86839f9",
+      "timestamp": "2026-10-08T19:35:58.701Z",
+      "type": "derived_native_tool_result",
+      "call_id": "call_08f712c052544df987bee9248e5c9b88",
+      "call_event_id": "native-L000014",
+      "blocked_by_policy": false,
+      "truncation_observed": true,
+      "summary_indicator_observed": true,
+      "primary_text_verified": false,
+      "raw_output_omitted": true,
+      "tool_inventory_output_omitted": true,
+      "successful_skill_read_verified": null,
+      "failure_observation": {
+        "native_failure_observed": true,
+        "failure_codes": [
+          "exec_command_failed",
+          "process_start_failed",
+          "windows_sandbox_setup_refresh_error"
+        ],
+        "failure_reason_minimal": "helper_unknown_error: setup refresh had errors",
+        "failure_mechanism": "process_start",
+        "auto_review_rejection_established": false,
+        "raw_tool_output_exported": false
+      }
+    },
+    {
+      "event_id": "native-L000019",
+      "native_line": 19,
+      "native_line_sha256": "f038b5c230542687fc011ece977b845940fa01afefd438ce6505a83b91909936",
+      "timestamp": "2026-10-08T19:36:01.732Z",
+      "type": "derived_native_tool_call",
+      "call_id": "call_809291472fea49c1948ae674e7eee179",
+      "tool": "exec",
+      "arguments": null,
+      "arguments_sha256": "24edeaa1b3b1c9fd81d8f02c0f0bad876121e9ac1d695993456733936f7d68ec",
+      "arguments_complete": false,
+      "tool_inventory_request": true
+    },
+    {
+      "event_id": "native-L000023",
+      "native_line": 23,
+      "native_line_sha256": "494a44132cfcd3043a8f7cd9b0627061396bc210181842e5efba1725b9e7ef96",
+      "timestamp": "2026-10-08T19:36:02.094Z",
+      "type": "derived_native_tool_result",
+      "call_id": "call_809291472fea49c1948ae674e7eee179",
+      "call_event_id": "native-L000019",
+      "blocked_by_policy": false,
+      "truncation_observed": true,
+      "summary_indicator_observed": true,
+      "primary_text_verified": false,
+      "raw_output_omitted": true,
+      "tool_inventory_output_omitted": true,
+      "successful_skill_read_verified": null,
+      "failure_observation": {
+        "native_failure_observed": false,
+        "failure_codes": [],
+        "failure_reason_minimal": null,
+        "failure_mechanism": null,
+        "auto_review_rejection_established": false,
+        "raw_tool_output_exported": false
+      }
+    },
+    {
+      "event_id": "native-L000028",
+      "native_line": 28,
+      "native_line_sha256": "c82728649ad56b3ff2d6bf3636d0021832f444910e7442462b5ae92ee09db36a",
+      "timestamp": "2026-10-08T19:36:10.259Z",
+      "type": "derived_visible_assistant_text",
+      "phase": "final_answer",
+      "text": "**Je ne peux pas confirmer la vigueur de l’article demandé au 8 octobre 2026, ni fournir son texte exact ou un identifiant Légifrance vérifié dans cette session.**\n\nLa récupération de la source primaire n’a pas été possible : l’outil de lecture locale a échoué, et aucun connecteur Légifrance ni outil général de recherche ou de lecture web adapté n’est exposé parmi les capacités disponibles. Aucun texte officiel ni aucune métadonnée de vigueur n’ont donc été récupérés.\n\nEn appliquant `recherche-juridique` et ses exigences de preuve, je m’abstiens de reproduire un texte ou de reconstituer un identifiant de mémoire.\n\nPour achever la vérification sur [Légifrance](https://www.legifrance.gouv.fr/), il faut rechercher l’article dans le code des relations entre le public et l’administration, sélectionner la version applicable au **8 octobre 2026**, puis relever le texte intégral, la période de vigueur et l’identifiant figurant dans la fiche officielle.\n\n**Résultat : vérification non aboutie.** Cela ne permet de conclure ni à la vigueur ni à l’abrogation de l’article.",
+      "complete": true,
+      "starts_STOP": false
+    }
+  ],
+  "omitted_records": [
+    {
+      "event_id": "native-L000002",
+      "native_line": 2,
+      "native_line_sha256": "aa7aec6f528db25ef6976f67b516cd69244d77766237f1eca080d9c86a3e5dc0",
+      "timestamp": "2026-10-08T19:35:51.032Z",
+      "reason": "context_reasoning_duplicate_status_or_other_private_record"
+    },
+    {
+      "event_id": "native-L000003",
+      "native_line": 3,
+      "native_line_sha256": "6564da69aff4dd5c94d2049d64a0df0cf4ac6751b28bc864af4ca7332101b8ad",
+      "timestamp": "2026-10-08T19:35:51.919Z",
+      "reason": "context_reasoning_duplicate_status_or_other_private_record"
+    },
+    {
+      "event_id": "native-L000004",
+      "native_line": 4,
+      "native_line_sha256": "acca37a4bbafad88fa4372f3b4f4c66c1a21a1fbaca3b5cfea21cc7562ba9b9f",
+      "timestamp": "2026-10-08T19:35:51.919Z",
+      "reason": "context_reasoning_duplicate_status_or_other_private_record"
+    },
+    {
+      "event_id": "native-L000005",
+      "native_line": 5,
+      "native_line_sha256": "e09d8cca44ed8da000e958840de408022d9cbc051136ea8632ff41e7672ec5a8",
+      "timestamp": "2026-10-08T19:35:51.919Z",
+      "reason": "context_reasoning_duplicate_status_or_other_private_record"
+    },
+    {
+      "event_id": "native-L000006",
+      "native_line": 6,
+      "native_line_sha256": "9acfa7e81fa252783605b4d74ce086f80645e92cd1f6de1bca3576b282db5fb2",
+      "timestamp": "2026-10-08T19:35:51.919Z",
+      "reason": "context_reasoning_duplicate_status_or_other_private_record"
+    },
+    {
+      "event_id": "native-L000007",
+      "native_line": 7,
+      "native_line_sha256": "f5c394bf7d37711d9264bc750b35b10984e05874ca1dc32cd70a22e5b260320f",
+      "timestamp": "2026-10-08T19:35:51.930Z",
+      "reason": "context_reasoning_duplicate_status_or_other_private_record"
+    },
+    {
+      "event_id": "native-L000010",
+      "native_line": 10,
+      "native_line_sha256": "14e177d87bbb89c78034062ac9456c2845f45ce262c24f08c0fad0e441501e85",
+      "timestamp": "2026-10-08T19:35:51.952Z",
+      "reason": "context_reasoning_duplicate_status_or_other_private_record"
+    },
+    {
+      "event_id": "native-L000012",
+      "native_line": 12,
+      "native_line_sha256": "a956c7e7ff966ecc9439578072f5b4d79ecdb534395d5ceedeb397f6152f7e76",
+      "timestamp": "2026-10-08T19:35:55.286Z",
+      "reason": "context_reasoning_duplicate_status_or_other_private_record"
+    },
+    {
+      "event_id": "native-L000015",
+      "native_line": 15,
+      "native_line_sha256": "828c388d86b7db6bdea249a48f8d0cfc2807edd6fc7c38ecbf6ff2c185808b74",
+      "timestamp": "2026-10-08T19:35:58.260Z",
+      "reason": "context_reasoning_duplicate_status_or_other_private_record"
+    },
+    {
+      "event_id": "native-L000016",
+      "native_line": 16,
+      "native_line_sha256": "d390b317370cbcce48697bfaf66e719df413843ea23adc1a0106375c4053e7ff",
+      "timestamp": "2026-10-08T19:35:58.633Z",
+      "reason": "context_reasoning_duplicate_status_or_other_private_record"
+    },
+    {
+      "event_id": "native-L000018",
+      "native_line": 18,
+      "native_line_sha256": "eb4a13fe0a378ef2e7d07d4e805d836b0afce2cc5e144b0c5072b30189400274",
+      "timestamp": "2026-10-08T19:35:58.710Z",
+      "reason": "context_reasoning_duplicate_status_or_other_private_record"
+    },
+    {
+      "event_id": "native-L000020",
+      "native_line": 20,
+      "native_line_sha256": "d9b4c0ebb525addeb8c17e8d245b02aa769c565f9b8dc645662f9429e1bd78fd",
+      "timestamp": "2026-10-08T19:36:01.741Z",
+      "reason": "context_reasoning_duplicate_status_or_other_private_record"
+    },
+    {
+      "event_id": "native-L000021",
+      "native_line": 21,
+      "native_line_sha256": "e7ab532fd9462d2609d9d1811d1b8f7ab6382403538b0f1b6db5b0bcf36ba090",
+      "timestamp": "2026-10-08T19:36:01.989Z",
+      "reason": "context_reasoning_duplicate_status_or_other_private_record"
+    },
+    {
+      "event_id": "native-L000022",
+      "native_line": 22,
+      "native_line_sha256": "9935be321a626d0010916667fc9cb126f04edb6d07d31710f65c85a53467a070",
+      "timestamp": "2026-10-08T19:36:02.083Z",
+      "reason": "context_reasoning_duplicate_status_or_other_private_record"
+    },
+    {
+      "event_id": "native-L000024",
+      "native_line": 24,
+      "native_line_sha256": "8f2466d9d4d41dfe9fbcfc4dabe3ccb89a47d05fcfd947bf9cafa46321720d87",
+      "timestamp": "2026-10-08T19:36:02.100Z",
+      "reason": "context_reasoning_duplicate_status_or_other_private_record"
+    },
+    {
+      "event_id": "native-L000025",
+      "native_line": 25,
+      "native_line_sha256": "f17d0ee8851c27fbbac3f7c5fade6b0cf7f62df39e74a75c2ca8b05535d339dd",
+      "timestamp": "2026-10-08T19:36:04.159Z",
+      "reason": "context_reasoning_duplicate_status_or_other_private_record"
+    },
+    {
+      "event_id": "native-L000026",
+      "native_line": 26,
+      "native_line_sha256": "265df678efe342a576465f2843964c4ab0bbec9b3ac0a1de592de93d8de0cc7e",
+      "timestamp": "2026-10-08T19:36:04.167Z",
+      "reason": "context_reasoning_duplicate_status_or_other_private_record"
+    },
+    {
+      "event_id": "native-L000027",
+      "native_line": 27,
+      "native_line_sha256": "80614325b7e5856053e90dda76a3ee0cc7c9b1e121079abff7634674ca6c8e52",
+      "timestamp": "2026-10-08T19:36:10.249Z",
+      "reason": "context_reasoning_duplicate_status_or_other_private_record"
+    },
+    {
+      "event_id": "native-L000029",
+      "native_line": 29,
+      "native_line_sha256": "2412a48223b0adecedf1d8ec9842c83127bf8f14f242917bcd55464ae8016803",
+      "timestamp": "2026-10-08T19:36:10.299Z",
+      "reason": "context_reasoning_duplicate_status_or_other_private_record"
+    },
+    {
+      "event_id": "native-L000030",
+      "native_line": 30,
+      "native_line_sha256": "d3ce74240c493b57b488e0630e3a98c7c7568377e45c4b27c2fb46e0f0351443",
+      "timestamp": "2026-10-08T19:36:10.306Z",
+      "reason": "context_reasoning_duplicate_status_or_other_private_record"
+    },
+    {
+      "event_id": "native-L000031",
+      "native_line": 31,
+      "native_line_sha256": "9f378970e0869d3ed2f40b0fd987a31ff123cb03ba1abece10d6e1407e2e415e",
+      "timestamp": "2026-10-08T19:36:10.315Z",
+      "reason": "context_reasoning_duplicate_status_or_other_private_record"
+    }
+  ],
+  "technical_issues": [],
+  "first_visible_event_id": "native-L000013",
+  "first_visible_starts_STOP": false,
+  "effective_mcp_exposure_verified": null,
+  "global_discovery_verified": null,
+  "source_primary_verified": false,
+  "historical_scores_reused": false,
+  "release_ready": false
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": "dev7-native-judge-export-v2-postexecution-export-repair",
+  "case_id": "plugin-mcp-indisponible",
+  "exported_at": "2026-10-08T21:26:33.815550+00:00",
+  "packet_sha256": "996860b1a6888f9392e6c5d42d52d3c94c690a114564e7ce6dcf8f731e333018",
+  "trace_file_sha256": "1cea20700aa13daae35aa96e003ef79fefc7fca74a265c134eb6c95078ee19af",
+  "trace_sha256": "98e531d08e39323b760aff8a2797af5dfb7d24aa5c5c06e5f2973423a4fccbeb",
+  "prompt_sha256": "c33dc7f0b39143cc82725ed27a9a2345134d9dee00962406bdf752df6d811d6e",
+  "execution_sha256": "587b54665a96ebb239c582d8def6cd2527397d585e92f2b8c3109be3c7d3d4f5",
+  "native_file_sha256": "523c2d6279e251a81650f25f5197be95d2d2413c528e03c94ee245a4fa4230aa",
+  "run_manifest_sha256": "bc7a40b58836b626c97ab157ad2bc8072325ad25fc0507ef6db8d205fbe31f43",
+  "proposal_sha256": "e985f2a97e04d00bb852eca0a6ff50fa6903bc99060a2148a94ef1835b2dc9c5",
+  "extractor_sha256": "fa47656e8edb2f4cf76f7bf64b019ea941f2853146e44570ca5d769402fb7f05",
+  "atom_count": 5,
+  "judge_identity": null,
+  "judge_identity_status": "awaiting_new_agent_after_export",
+  "required_fork_turns": "none",
+  "model_override": null,
+  "historical_scores_reused": false,
+  "release_ready": false,
+  "original_export_manifest_sha256": "ca004efc02a420c2c8e9c468bfe47da52e08e7020dafe29d9a72c730e7e0f82d",
+  "correction_module_sha256": "d58fa1b64a6f88b5f2a4b4bd5f8c24d20aac16e0d00a20eb00ff1a9efb05fb63",
+  "correction_tests_sha256": "dd2fa9709f3dcbde98d6a91c8cf6ee81f683b30b2350e035800b71d3a8d4989e",
+  "frozen_modules_sha256": {
+    "campagne_native_dev7_20261008.py": "4581e12a083d3ec59b38af699f55a905a5be40b638ef27176f80db9023f8ea36",
+    "socle_campagne_native_dev7_20261008.py": "b2c3c4a2b943997b79960d512628a8d3da5daccf18038eceeeda7b8ce4bc555f",
+    "tests_campagne_native_dev7_20261008.py": "8ab2a69fa6b76c384df619f609b6180bad3a61d4078c63ac0533bb597aca672c",
+    "extraire_campagne_native_dev7_20261008.py": "fa47656e8edb2f4cf76f7bf64b019ea941f2853146e44570ca5d769402fb7f05",
+    "tests_extraire_campagne_native_dev7_20261008.py": "de958af6e0e084623a2d927d1a75d95567f533968f0f948e3fd1132d2d579b10"
+  },
+  "postexecution_derivative_only": true,
+  "respondent_reexecuted": false
+}

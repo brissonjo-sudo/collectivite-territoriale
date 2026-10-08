@@ -1,0 +1,17 @@
+{
+  "completed_at": "2026-10-08T19:36:11.028444+00:00",
+  "exit_code": 0,
+  "timed_out": false,
+  "launch_error": null,
+  "elapsed_seconds": 20.437,
+  "attempt": 1,
+  "thread_id": "01a11d03-cc6f-7922-853e-9c0e301b5e91",
+  "candidate_cache_config_unchanged": true,
+  "stdout_sha256": "1740b68701256b91aa48ecb6720c098244ac598af9aa3c292a47ad355a016f65",
+  "stderr_sha256": "0886e754ee3b4f5f50438cefc22f1101a75fe8db5fc992fd3db56208b665d028",
+  "response_sha256": "e3e4c9b661587b5b081f7deab5bc4c12513b93d1fd7653b0887b665a60e1318b",
+  "native_rollout_sha256": "523c2d6279e251a81650f25f5197be95d2d2413c528e03c94ee245a4fa4230aa",
+  "upstream_authentication_verified": true,
+  "strict_activation_verified": null,
+  "release_ready": false
+}
