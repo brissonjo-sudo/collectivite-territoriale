@@ -3,15 +3,14 @@
 [![Validation du plugin](https://github.com/brissonjo-sudo/collectivite-territoriale/actions/workflows/ci.yml/badge.svg)](https://github.com/brissonjo-sudo/collectivite-territoriale/actions/workflows/ci.yml)
 
 Plugin Claude Code et Codex destiné aux collectivités territoriales françaises.
-Le dépôt prépare cinq expertises métier, une méthode de recherche juridique
-sourcée et un accès optionnel à Légifrance/Judilibre. La distribution gelée
-1.1.1 expose encore quatre expertises métier et la méthode juridique.
+La distribution open source 1.2.0 expose cinq expertises métier, une méthode
+de recherche juridique sourcée et un accès optionnel à Légifrance/Judilibre.
 
-> **Statut :** intégration DCP 0.1.3 techniquement qualifiée pour la distribution open source : 27 réussites, une demi-réussite, zéro échec et huit critiques réussis ; neuf cas plugin techniques et smoke Git avec modèle/MCP réussis. La relecture praticien est conservée pour un futur déploiement en collectivité ou chez un tiers. Les catalogues distribuent encore `v1.1.1`, jusqu'à la publication de 1.2.0. [Qualification actuelle](docs/qualification-013-2026-10-08.md), [publication](docs/publication.md) et [note praticien différée](docs/deploiement-collectivite.md).
+> **Statut :** intégration DCP 0.1.3 techniquement qualifiée pour la distribution open source : 27 réussites, une demi-réussite, zéro échec et huit critiques réussis ; neuf cas plugin techniques et smoke Git avec modèle/MCP réussis. La relecture praticien est conservée pour un futur déploiement en collectivité ou chez un tiers. Les catalogues distribuent `v1.2.0`, avec DCP. [Qualification actuelle](docs/qualification-013-2026-10-08.md), [publication](docs/publication.md) et [note praticien différée](docs/deploiement-collectivite.md).
 
 Ce plugin aide à qualifier une situation, identifier les expertises à mobiliser et produire une réponse traçable. Il ne remplace ni la validation d'un juriste, ni le contrôle de l'autorité compétente, ni la vérification des textes officiels en vigueur.
 
-## Contenu du candidat 1.2.0
+## Contenu de la distribution 1.2.0
 
 | Skill | Domaine | Version embarquée |
 |---|---|---:|
@@ -22,9 +21,9 @@ Ce plugin aide à qualifier une situation, identifier les expertises à mobilise
 | `collectivite-territoriale:dcp-fpt` | Commande publique, mesuré autonomement, à relire | 0.1.3 |
 | `collectivite-territoriale:recherche-juridique` | Recherche et vérification du droit français | 3.5.0 |
 
-L'étiquette distribuée `v1.1.1` contient les cinq skills déjà présents,
-sans DCP. Les essais DCP doivent charger le checkout candidat local ; une
-mise à jour de la marketplace continue de récupérer le runtime gelé 1.1.1.
+L'étiquette distribuée `v1.2.0` contient les six skills, dont DCP 0.1.3.
+Les deux marketplaces récupèrent le même commit figé. Une mise à jour
+de la marketplace permet d'installer cette version.
 
 Le serveur MCP `droit-francais`, déclaré une seule fois dans `.mcp.json`, fournit l'accès aux sources Légifrance/Judilibre. Le skill `recherche-juridique` apporte la méthode de vérification de vigueur, de provenance et de citation. Le serveur et la méthode sont complémentaires.
 
