@@ -11,6 +11,8 @@
 |---|---|---|---|---|
 | `v1.1.1` | `cad8bbdbc1db2163c758fb46ef3e745a18c9c957` | 2026-10-06 | **non qualifiée**, distribuée par défaut | Gel de ce que la marketplace distribuait en suivant `main`, en attendant la qualification de 1.2.0 |
 
+| `v1.2.0` | `640a86911195747dfbb0bdff75b0acae44810a29` | 2026-10-08 | **distribution open source qualifiée techniquement**, déploiement tiers non qualifié | DCP 0.1.3 et six skills ; avis praticien différé selon ADR 0007 |
+
 Ajouter une ligne par étiquette distribuée ; ne jamais réécrire une ligne.
 Le test `test_distribution_epinglee_sur_etiquette` exige que l'étiquette et
 le commit épinglés figurent dans ce tableau.
