@@ -1,5 +1,48 @@
 # Historique des versions
 
+## Préparation de distribution open source — 2026-10-08
+
+- DCP 0.1.3 et les six skills restent identiques au runtime mesuré.
+- Distribution technique séparée du déploiement opérationnel en collectivité
+  ou dans une structure tierce, à la demande de l'auteur ; ADR 0007.
+- Relecture praticien différée, note et grilles conservées, réserves inchangées.
+- Barrière de distribution recalculée sur les preuves et empreintes ; avis
+  humains et qualification métier restent non acquis.
+- Aucune nouvelle étiquette ni bascule de marketplace dans ce changement.
+
+## Correctif candidat — 2026-10-07
+
+- DCP 0.1.1 épinglé au commit `caef7fd` : seul son point d'entrée change,
+  pour préciser les frontières financières et l'ordre BASCULE/intertitre.
+- Preuves 0.1.0 et qualification initiale conservées comme historiques ;
+  aucune reprise de leur score pour le correctif.
+- DCP 0.1.1 mesuré autonomement : 27 réussites, une demi-réussite (cas-24),
+  aucun échec. Vingt alertes de citations dans huit cas ; relecture ouverte.
+- Essai Codex v2 conservé après deux cas : contenu brut complet mais
+  restitution tronquée déclarée par le modèle, visibilité non attestée.
+- Profil Codex v3 : segments contigus de 6000 octets maximum, ordre,
+  couverture et contenu contrôlés ; trous, doublons et pipelines libres refusés.
+- Neuf contrôles techniques vérifiés après audit de sept lectures ciblées
+  rejetées à tort ; cinq rapports initiaux réussis et quatre faux positifs
+  conservés. Reprise APJA supplémentaire, aucun remplacement des réponses.
+- Réserve de l'assistant sur la revue humaine avant notification externe
+  dans le cas DPO ; contrôle des sources et avis praticien toujours ouverts.
+- Lien personnel de dossier temporaire assaini avec original privé et
+  empreintes des deux réponses. 55 tests réussis hors verrou de publication.
+- Installation locale isolée et découverte des six skills avec pluginId
+  réussies, 167 fichiers de skills comparés. Aucun compte ni appel modèle/MCP
+  dans ce smoke ; distribution et installation habituelle inchangées.
+
+## Qualification candidate — 2026-10-07
+
+- Mesure autonome DCP complète : 26 réussites, une demi-réussite, un échec
+  selon le juge ; huit cas critiques réussis. Relecture et sources réservées.
+- Précontrôle MCP Codex réussi avec connexion existante. Nouveau lanceur
+  séquentiel pour les neuf cas, copies natives et preuves d'outils filtrées.
+- Profil Codex distinct de l'activation Skill de Claude et de l'installation
+  marketplace ; ADR 0005. Timeout, mode dégradé explicite, preuves sans
+  écrasement ni raisonnement. Barrière de publication inchangée.
+
 ## Distribution — 2026-10-06 — Marketplaces épinglées (sans changement de version)
 
 - Les marketplaces Claude Code et Codex distribuent l'étiquette `v1.1.1`

@@ -1,0 +1,25 @@
+{
+  "case_id": "plugin-dcp-frontieres-finance-donnees",
+  "evidence_sha256": "b2e923aed6ed9f9786c7066c4f7e8419d3d1460cde88046926ba63fea347d167",
+  "final_reply_sha256": "8ed87f7c5410ee7e6d696708ceda468a1d7dca915f482dc5fca5983e50be55e2",
+  "findings": [
+    {
+      "skill": "dirfi-fpt",
+      "observation": "BASCULE affichée après son intertitre dédié",
+      "expected": "BASCULE avant le volet et son intertitre dédié",
+      "title_offset": 2395,
+      "marker_offset": 2431,
+      "status": "reserve_assistant_a_relire"
+    },
+    {
+      "skill": "dpo-ct",
+      "observation": "BASCULE affichée après son intertitre dédié",
+      "expected": "BASCULE avant le volet et son intertitre dédié",
+      "title_offset": 3091,
+      "marker_offset": 3142,
+      "status": "reserve_assistant_a_relire"
+    }
+  ],
+  "human_legal_validation": false,
+  "technical_status_unchanged": "passed"
+}

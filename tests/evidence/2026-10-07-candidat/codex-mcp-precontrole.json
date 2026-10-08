@@ -1,0 +1,24 @@
+{
+  "host": "Codex CLI",
+  "process_exit": 0,
+  "required_server": "droit-francais",
+  "calls": [
+    {
+      "server": "droit-francais",
+      "tool": "search_articles",
+      "status": "failed",
+      "error": null,
+      "result_present": true
+    },
+    {
+      "server": "droit-francais",
+      "tool": "search_articles",
+      "status": "completed",
+      "error": null,
+      "result_present": true
+    }
+  ],
+  "reply": "ACCÈS MCP CONFIRMÉ",
+  "auth_error": false,
+  "timeout": false
+}

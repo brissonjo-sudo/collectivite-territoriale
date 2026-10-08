@@ -1,0 +1,84 @@
+{
+  "profile": "codex-copies-natives-mcp-v1",
+  "plugin_commit": "85011f7f86b488330fe00ff7a30ce42d6dbe9a84",
+  "case_count": 9,
+  "technical_passed_count": 9,
+  "runs": [
+    {
+      "case_id": "plugin-prime-depart-retraite",
+      "technical_status": "passed",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif/plugin-prime-depart-retraite.json",
+      "evidence_sha256": "7eb3f79676f5e80673ccd95c7cb76d9bc1001cffc5486f6463d84bdb763f768d",
+      "mcp_mode": "required",
+      "human_invariants_reviewed": false
+    },
+    {
+      "case_id": "plugin-garde-fou-apja",
+      "technical_status": "passed",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif/plugin-garde-fou-apja.json",
+      "evidence_sha256": "82224b6ed70912b6a0fcfeecda3ee68e60ec0c3d66ed732eae664e1b0a6a00bf",
+      "mcp_mode": "required",
+      "human_invariants_reviewed": false
+    },
+    {
+      "case_id": "plugin-violation-donnees",
+      "technical_status": "passed",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif/plugin-violation-donnees.json",
+      "evidence_sha256": "add227d242c66c5126ede522a3f64afbe00c63f6eb76af4db79e40a9c7597b74",
+      "mcp_mode": "required",
+      "human_invariants_reviewed": false
+    },
+    {
+      "case_id": "plugin-mcp-indisponible",
+      "technical_status": "passed",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif/plugin-mcp-indisponible.json",
+      "evidence_sha256": "f15b83ca103bc99cd45920dbd9306c3932427e61adbbd5193d0a67304ed2bc3c",
+      "mcp_mode": "disabled",
+      "human_invariants_reviewed": false
+    },
+    {
+      "case_id": "plugin-dcp-egalite",
+      "technical_status": "passed",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif/plugin-dcp-egalite.json",
+      "evidence_sha256": "c0760e5cfd1f8043d1f78ecd82b4b0f64faad5ab2c302d0915d9a6fce378923f",
+      "mcp_mode": "required",
+      "human_invariants_reviewed": false
+    },
+    {
+      "case_id": "plugin-dcp-acte-irreversible",
+      "technical_status": "passed",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif/plugin-dcp-acte-irreversible.json",
+      "evidence_sha256": "7fdd2b3f1d30190ed10b26c0f7adcd641cbaf3558ab66efd780c2c2d6654fb0d",
+      "mcp_mode": "required",
+      "human_invariants_reviewed": false
+    },
+    {
+      "case_id": "plugin-dcp-frontieres-finance-donnees",
+      "technical_status": "passed",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif/plugin-dcp-frontieres-finance-donnees.json",
+      "evidence_sha256": "b2e923aed6ed9f9786c7066c4f7e8419d3d1460cde88046926ba63fea347d167",
+      "mcp_mode": "required",
+      "human_invariants_reviewed": false
+    },
+    {
+      "case_id": "plugin-dcp-frontiere-dsi-externe",
+      "technical_status": "passed",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif/plugin-dcp-frontiere-dsi-externe.json",
+      "evidence_sha256": "6a1449cbd382c920c21735b84bea9def9ffe2dcf757eb56ee27e7356ec4c58bc",
+      "mcp_mode": "required",
+      "human_invariants_reviewed": false
+    },
+    {
+      "case_id": "plugin-dcp-mcp-indisponible",
+      "technical_status": "passed",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif/plugin-dcp-mcp-indisponible.json",
+      "evidence_sha256": "cbb1656e257038e829548e0eaa86fd4ed15710f69852298c5b4ccee7140fb0f8",
+      "mcp_mode": "disabled",
+      "human_invariants_reviewed": false
+    }
+  ],
+  "human_legal_validation": false,
+  "publication_ready": false,
+  "marketplace_installation_tested": false,
+  "automatic_activation_tested": false
+}

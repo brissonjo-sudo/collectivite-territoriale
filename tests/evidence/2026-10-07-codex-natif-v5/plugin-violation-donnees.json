@@ -1,0 +1,538 @@
+{
+  "profile": "codex-copies-natives-mcp-v4",
+  "case_id": "plugin-violation-donnees",
+  "model_requested": "gpt-6.1-sol",
+  "completed_at": "2026-10-07T22:01:32.597356+00:00",
+  "runner_sha256": "57862ff250f304ae337234e9d5eae0cd371c5d3fba893bb3fb7364c343ecafed",
+  "runtime_sha256": {
+    "skills/dcp-fpt/agents/openai.yaml": "b37aec5086edadd2d0012545ab4c3b1a6493db31f7b6f26673674f5f514aeb40",
+    "skills/dcp-fpt/LICENSE": "ad5259ac9d63c064078a6490ddc5df3999d97fb0c33ae3bfad0ba3752ccf17e4",
+    "skills/dcp-fpt/objets/_gabarit-objet.md": "c9c58839c41874c9d9b02f297e7fd821c649482f73a17c62cf146113566af164",
+    "skills/dcp-fpt/objets/accord-cadre.md": "9998f78327aecd60c3e92bcd5aa63e1f25ea2874952af1eabac1f15dfa6abf3a",
+    "skills/dcp-fpt/objets/achat-sous-seuil.md": "e92388d586bd712b1308ee864797e2739206028f71bbb9d3f6f72f9571bfb834",
+    "skills/dcp-fpt/objets/candidat-evince.md": "1b1ed25608cf7b3e1611c52f1e60e004665f3a13f15da03b9f0ff9cb09a8e322",
+    "skills/dcp-fpt/objets/marche-services-recurrent.md": "17a777c955fd5b775b99f1527d781c579fc8e6bbef44e33b6d5c2d88420978a2",
+    "skills/dcp-fpt/objets/marche-travaux.md": "41cc81101647498a655b00d675dedcc7599ab83071507070c5b65cfcf85d222c",
+    "skills/dcp-fpt/objets/titulaire-defaillant.md": "61a126356496e9feacedfe6ea462f64d1eda3c4800d30eabc483cbd5abc5b4be",
+    "skills/dcp-fpt/references/_gabarit-branche.md": "5f4b10bc0942ba2936ff3d1a5479e5d903e873eee27614227c00c1938beeb524",
+    "skills/dcp-fpt/references/analyse-situation.md": "5ff8cf6921bcd31a7de4503a0cc617124aaab099e57ab7e938e0f1c0f375f206",
+    "skills/dcp-fpt/references/attribution-signature.md": "6b03b803e85665a8603df96dea425761667e6b4cff1b307d5355f8fcaf840904",
+    "skills/dcp-fpt/references/besoin-strategie-achat.md": "78537d272033bfb10e5a31d86604edac452f27a950639c6133d0e6f2ee1f08b4",
+    "skills/dcp-fpt/references/candidatures-offres.md": "b0742b8e098c8d4c509a4766aa711a5d7a7ae0b487fcc88a2d7f151b1a90cf9c",
+    "skills/dcp-fpt/references/contentieux.md": "dc8e88af165873e78d7495f22b41c2c572b4f0431cbda481367504994fe0ef8f",
+    "skills/dcp-fpt/references/ecrits-commande-publique.md": "cb137e33a796823de2797a505a842cc5b34c61f7ca4010de47797eeb697a7d0d",
+    "skills/dcp-fpt/references/execution-juridique.md": "8c33645351117c6a0da13d87ddf53949d3181f3b909039a186b2c89ba5673f0a",
+    "skills/dcp-fpt/references/modifications.md": "77fde478ea875069eb1752e14c9d510025838746b78ef973bdd09ee439bdf333",
+    "skills/dcp-fpt/references/procedures.md": "89ce9b50d3c718070294e22e64565a6d077d55534ee9e36a28f148e6599d58a4",
+    "skills/dcp-fpt/references/publicite-consultation.md": "7ed81cf30315bc37142865aed2858045ee0815ecbb24bc6a847ab79458c6a8bf",
+    "skills/dcp-fpt/references/references-verifiees.md": "58737d8b1f77f4f1e543e09f9d7b9ae7d27652ab1baf187f9e083ceee2527250",
+    "skills/dcp-fpt/references/resiliation-difficultes.md": "01515aa5d5bad782099cc7ba824f70e519be7b18b79c306ba67e3a7ef3f724df",
+    "skills/dcp-fpt/references/retex.md": "36dc627b2caf794b53af9b159dababf78464364f22c7ea6c9708e912427c8f09",
+    "skills/dcp-fpt/references/socle-sources-verification.md": "12b45dea2e0431a055f42417745a02f71e4b98126df2610f72f87cafaf1173cd",
+    "skills/dcp-fpt/references/techniques-achat.md": "452030a6e1ecbfcf76a213917fa6f2949e90916f49142b8eca7ecb00364b57e6",
+    "skills/dcp-fpt/references/templates/lettre-rejet.md": "2c6eeae1575222c61b3c667018f1a4650f90e6a4a7dee12867523bc8bc3676d4",
+    "skills/dcp-fpt/references/templates/mise-en-demeure.md": "334624a24e19114fca57a5f97e19cf7c7d2a6d2247a954857ffb410ef840f507",
+    "skills/dcp-fpt/references/templates/note-choix-procedure.md": "a7f0857c7c6f4b7443d364eaedc148ea7ef171ff25363d303bec054e6f94374e",
+    "skills/dcp-fpt/references/templates/projet-avenant.md": "4db2a8e23cfbfa0efdbc3fe60175a9c983d748a214ccdde446e3bb83044d55bd",
+    "skills/dcp-fpt/references/templates/rapport-analyse-offres.md": "220abb58f5a2181077a93912c89535a823ca0181fb35f02463bfb768dfa1ae75",
+    "skills/dcp-fpt/SKILL.md": "32f0366db9fdd451bcd3eaf70860b4b24ecd6bbf303b0e01bbd3d39e2b3f3379",
+    "skills/dirfi-fpt/objets/_gabarit-objet.md": "4f0f3f3ab6818e7697942c59e4753e89f7808a2046063860cdbbe60a01edc86d",
+    "skills/dirfi-fpt/objets/cloture-exercice.md": "e364010fdb4157a733b6f49bfb461ed7dee9e1203d2155a8611605fb7a6b7439",
+    "skills/dirfi-fpt/objets/emprunt.md": "c343e3d1c76bb113e58a77a74d6a6c41cfe74ccbc715d2769cb68e793fc72f21",
+    "skills/dirfi-fpt/objets/immobilisation.md": "5f313366ed9f64d46a117dffef682bde68b74c3b7ec0be9d2ec1aff6f3bd44c6",
+    "skills/dirfi-fpt/objets/marche-public.md": "7c545af13e8f6aed1dfd481c3d2a4d73f2a101cf5beddfba3c1ca8e58471eef4",
+    "skills/dirfi-fpt/objets/operation-investissement.md": "18f2dfd97990532f0233ecf41f890d24357f10f8999d96b67a28f7ae5b333d6d",
+    "skills/dirfi-fpt/objets/regie.md": "6022650c90a02c24cec0b8f4f82513a96abdc5cb0e5e6005613be09d814529d4",
+    "skills/dirfi-fpt/objets/satellites.md": "32a2eb86179c483f2fb6ebdc8a8db4e7244ba8e2ee9b1de480fc51de9a86b2a7",
+    "skills/dirfi-fpt/objets/subvention-association.md": "16a5871b04750783f5d757ab82e3c49ebf915aed54f9fd7900deb60c7a29c21c",
+    "skills/dirfi-fpt/references/_gabarit-branche.md": "a9e644060c7796d2f92f334ee4da6cb8fb421e6174a5720073a22ad9723f2d9c",
+    "skills/dirfi-fpt/references/analyse-situation.md": "558618b77323ff06eaedaa8eb281f1c5b4857f8e871efde9a78dc5782cce5358",
+    "skills/dirfi-fpt/references/budget-cycle.md": "9d4e0d7b8ec1e7257c8830984da8b21dc236c39d29d2d02202e1bbe80676da4d",
+    "skills/dirfi-fpt/references/commande-publique-financiere.md": "d0cf7b152effbfea8544dc9a8359f79d86a2c8b50d766ccbdce355fe78e9d68a",
+    "skills/dirfi-fpt/references/contentieux-financier.md": "435cdaf11a0083bc6444708b5626674c036a99ce7edd6f63f7c819231510e752",
+    "skills/dirfi-fpt/references/controle-budgetaire.md": "cafbb2913ff7f4afc85503571ca3a13d18e3e5b37d64f934196e7f7f115d3e4f",
+    "skills/dirfi-fpt/references/controle-interne-financier.md": "934aa20b9c59d4e5c78612057ef9ef0b86ead946580b83d8144610b3b5d117d8",
+    "skills/dirfi-fpt/references/dette-tresorerie.md": "7f9c0858091d924bab52c23ea7063ccd8b8e130acb8fcd648967229b6fcfc68b",
+    "skills/dirfi-fpt/references/dotations-perequation.md": "65eadaafeeadd32693043f0afce697c483d2ffca1db54693d6f274bd851cd340",
+    "skills/dirfi-fpt/references/ecrits-financiers.md": "b17b1cba611e564699c21871435699c67b10ddc0cedfdedfd06aa2509ee2d868",
+    "skills/dirfi-fpt/references/execution-depense.md": "3d0fb81220e2f72134cd2ce40c53e70959417489551e1b2b76a0e46acc70f122",
+    "skills/dirfi-fpt/references/execution-recette.md": "d6ea38fe8176f5446d0a74d5170e97517ea30a671b2307507c702e44ddfcc170",
+    "skills/dirfi-fpt/references/fiscalite-locale.md": "b7e1ffccec6245e95fdedfed6bf8289197b5559a695c0aa6a72eeb2ae831998e",
+    "skills/dirfi-fpt/references/nomenclature-m57.md": "e7d40fe8d89a641d1afd9e9d44c4768868a578ae13e925366749936d89019e36",
+    "skills/dirfi-fpt/references/prospective-analyse.md": "1c6b0a3754cbe458dfbc72f9cfff8d97514cefb55d83bbfcac1c14a7652b76c4",
+    "skills/dirfi-fpt/references/references-verifiees.md": "362909cd758581119341b333fc5da46616b2ad45d60fd0f237d7f4c909fc79a6",
+    "skills/dirfi-fpt/references/retex.md": "4d6e6ee3e842b5e25810083956d0600fb0f5292259545911651c967cda926212",
+    "skills/dirfi-fpt/references/socle-sources-verification.md": "fdc543f05c5a02befb1c090975ebaf988fd08f7f473bc9fc0bb86f6b73e48c68",
+    "skills/dirfi-fpt/references/subventions.md": "242c3a03c7da541572d58a9c3547164b3b236300ffcde4ac37c1582308b1b558",
+    "skills/dirfi-fpt/references/templates/convention-subvention.md": "d8af3712f18dadc5f441bd36aafe7ab7c080775dfa24d78d84adb33c34fa8cc1",
+    "skills/dirfi-fpt/references/templates/deliberation-budgetaire.md": "be035762b9d5a901a79408aefc09dd39ba55f8a22eb92f8f10d86fe23f4a5659",
+    "skills/dirfi-fpt/references/templates/fiche-procedure-financiere.md": "5b50650f166deb2ef213892fcbc8b93a2b129395226e977026fd3c9d43f0851b",
+    "skills/dirfi-fpt/references/templates/note-impact-financier.md": "ade65528e66a950f57f1e6c7af6eee38004aa9bdee09662f42e7b0a98dad713a",
+    "skills/dirfi-fpt/references/templates/rapport-orientation-budgetaire.md": "b7d9989724040ac3411aadb1006fcd4e288849a5e5fdc762cc8c87144dd6fbdc",
+    "skills/dirfi-fpt/SKILL.md": "b9ea140e83a02f8fb7bcfae9b3ad038b5576256977c51b749f63265dfdc1c59b",
+    "skills/dpm-fpt/objets/_gabarit-objet.md": "0c1800b87497e4ded6e78d8f669fd4994a34c8e2ad60d2c4629874827c066185",
+    "skills/dpm-fpt/objets/accident.md": "f7a80126fbb8030060e5d7bb4a9fead060c50c217ab31b9a78b8cf5bb4f998fe",
+    "skills/dpm-fpt/objets/agent.md": "f2e1cdfa9257c3b71ea43eedc59c26c56e6affe07e5ab9fdef98ca655fdba314",
+    "skills/dpm-fpt/objets/commerce.md": "5031e120e7de2f1d6aaef41ed058ee0fc37f33418fe0b0b3af7a149311d4dc27",
+    "skills/dpm-fpt/objets/fourriere.md": "c726245ced2fb2ff542aba0c50a33c0d1a9dcc25c93bdddd62f93d4b576f2aac",
+    "skills/dpm-fpt/objets/manifestation.md": "5f729a8a26c23bd6e73fd4201934e7af411319409428ededf6b21a5a5792c6a5",
+    "skills/dpm-fpt/objets/occupation-domaine-public.md": "31ffdd580c5d6b9d7b27e791861b70cc03c92321c16f515b8cc2e989c4f7434c",
+    "skills/dpm-fpt/objets/police-chiens.md": "5699e42881ea3b602a3c0414fb0f8a7779f682f1d82f77b7cded4ceefd1fbb11",
+    "skills/dpm-fpt/objets/videoprotection.md": "13bd44edb733f383570b2954976e0162225b8a83d620e60711280a613bf9d0b2",
+    "skills/dpm-fpt/references/_gabarit-branche.md": "f85fe7b19f9baa9a17bc044d421af21a3e40d86d2c836827d89a3226e1f5f29c",
+    "skills/dpm-fpt/references/analyse-situation.md": "2dccd9b1b41bcbf39b56153563156398b516add1c87478e35b61b312623a0d3d",
+    "skills/dpm-fpt/references/armement-equipements.md": "0f95fb88ac0a1aa853df7d14fa4f55f1199f729c6805455345c344708ccd20f0",
+    "skills/dpm-fpt/references/conformite-deontologie-donnees.md": "0571af310545603667a54c1a772688571f35daa8fd45c7419c80c9496d76fb44",
+    "skills/dpm-fpt/references/contentieux.md": "bb0a091e24e9ec032b8c045d593ab2f83b4b5734e04fb543846752044fc864f5",
+    "skills/dpm-fpt/references/continuum-partenariats.md": "31af9387451b6ef488a469c07f465b220c3fe4877a1cab49fb9dd06dcff032cb",
+    "skills/dpm-fpt/references/controle-legalite.md": "6b601c373a963462f20f16cc9f179ff69df5017a2af15dede28ee428d042d0f6",
+    "skills/dpm-fpt/references/doctrine-operationnelle.md": "20841eb570fd8f68c6bb9968fde5312d891b163a1a207d1ca11efcdcb6593edb",
+    "skills/dpm-fpt/references/ecrits-professionnels.md": "7d9755508711f914fe2123de1f41c7f22607ad836acb54866c83d8ca3a83f220",
+    "skills/dpm-fpt/references/liste-RSD.md": "b9ee020fd9e9b72b044bc069b914b65be508bfdbe7de91102deba2fb3cad9cf9",
+    "skills/dpm-fpt/references/penal-procedure.md": "4ee9b40aef79ffa257683c85a6e98c2320bf7d47e2323afc97c84e9bbac34bbf",
+    "skills/dpm-fpt/references/pilotage-budget.md": "3073cb9ac01a13522933fa889faad952d296102299a36d51b957460d44f4e3df",
+    "skills/dpm-fpt/references/pouvoirs-police.md": "7872a7a5fcdbf9f677b831086c4d2fe88a5552430804d65ed9f1b0dfeb9b9ae4",
+    "skills/dpm-fpt/references/references-verifiees.md": "14872998c25723e1e7aa5c0b5acd1c8bdc86fdb79f7ee453eccdb2f33da7cb92",
+    "skills/dpm-fpt/references/reglementation-appliquee.md": "c2e24dd6c674bfc2e76caf039887068db336f1a2ea5547820ce6dac52698ffac",
+    "skills/dpm-fpt/references/retex.md": "5299174252a47a5d755978497d9730c3033148c44e85d5720dbd915c5e97014e",
+    "skills/dpm-fpt/references/rh-specificites-pm.md": "a9fbcbdf6e0f4fc5e093d949455e1bafcd21d575bb1f06d278c2a351fe93077e",
+    "skills/dpm-fpt/references/socle-sources-verification.md": "f3f700e30f7048512ada12969b8bf889f984d80601ecf1b12434890912215912",
+    "skills/dpm-fpt/references/templates/arrete-modele.md": "45e26a1064dadfdd52b12c8961c440573753f800c92364d0074def5ccf324347",
+    "skills/dpm-fpt/references/templates/note-maire-modele.md": "07f407427f7face1e0a858ba267172e68b99151bfd2c092e18bef70b1399b4a9",
+    "skills/dpm-fpt/references/templates/pv-contravention.md": "a648891f8d84cb9f9eb80031e7949fb5965157895daa68b677d691ab8f4a6d22",
+    "skills/dpm-fpt/references/templates/rapport-information.md": "c5516d3159c263ca0a2caca3cd61685fe56658fdf384506e3263667232425042",
+    "skills/dpm-fpt/references/templates/rapport-mise-a-disposition.md": "575f5768e3f3bbbeaf8d9f6a2817fcc508ab2e0f3791179ea7e58f26c56db76b",
+    "skills/dpm-fpt/references/videoprotection.md": "ec44f6900a3ca8827339e0863a32b10bff791f372eaba264e11ad93b018d95d2",
+    "skills/dpm-fpt/SKILL.md": "3bda70bd88ee49f5cdbc199f0c532deac825cc2e20ea0f639f88b2312b257c57",
+    "skills/dpo-ct/assets/aipd-modele.md": "6a8aa2b71b2c2f5f5b3daa7ab3ca1b90d0cbad8a0b0b34a5bcad4cbca0bb2f76",
+    "skills/dpo-ct/assets/avis-dpo-modele.md": "ad0f9b6fad04cf61d5b4b3debf056f738c0993734a022874434c908690ed7789",
+    "skills/dpo-ct/assets/fiche-registre-modele.md": "ecb38a779f443679a10ab9568992a6dada246b849beeb3bcb3947dd43631a0e0",
+    "skills/dpo-ct/assets/mention-information-modele.md": "c773379075964b94704048fbac63b30c604813cbb151063a004a942d658e52d6",
+    "skills/dpo-ct/assets/notification-violation-modele.md": "53be4c33ad3555858f64b1f16ee2d4aca1b5a3d1c15a418d8b91232de8b8b9eb",
+    "skills/dpo-ct/assets/reponse-droits-modele.md": "787badfa12d96d8d10dcd495ed343dec81ecb0aa00309db960d72a7f7fa096f6",
+    "skills/dpo-ct/references/_gabarit-branche.md": "92635fe3ceff65610d80447af42da1d93362bd61726b21a9842f5447dd340862",
+    "skills/dpo-ct/references/aipd.md": "ca972436541c4610513c42545f3b5156bb1f79399f6644cd59306f5b1a8e2ab0",
+    "skills/dpo-ct/references/analyse-situation.md": "b80d8904e4e621c9d43e46cc4e9a6db4671758779539abc019a34cf73cb2035e",
+    "skills/dpo-ct/references/droits-personnes.md": "ab4ead25e58ec45969ce00dfa538256a52041691bed334ea0a3a915f94c25253",
+    "skills/dpo-ct/references/gouvernance-registre.md": "37d3261320d4467c8a22fbee2ef3da3d1198b949707ac2cb00756ce85ec7a965",
+    "skills/dpo-ct/references/relations-cnil.md": "31be197a517f8ca224911a5b4b421658aa1dd4730171af3bd51a8927a8285f03",
+    "skills/dpo-ct/references/secteur-collectivites.md": "bca5a432a88fb8a811534edd13019d4ee2bbfc6bb7d8ba7130f48ed7227d1486",
+    "skills/dpo-ct/references/securite-traitements.md": "0d764af7840300b21ac5f2c8f603547122ef515b78d7934a1e7151dd5916c94e",
+    "skills/dpo-ct/references/socle-sources-verification.md": "2f52edf8026d922c197d24a5c84bd17ae5f875e7a061f478e3361e79bc8d482d",
+    "skills/dpo-ct/references/sous-traitance-transferts.md": "4367d32970a4a19d6373b9d0a0cd5d3adb93d46aa24a86453fc6857a2d5b95c2",
+    "skills/dpo-ct/references/violations.md": "dbd0779833f1deef052d343e978d14987309dc4cd0917e045fa9fb5337a75c6c",
+    "skills/dpo-ct/SKILL.md": "5bea684ddc54f548c1cfc928ab1eb32e926a7039ec4749c86f99d24c1dc5431f",
+    "skills/drh-fpt/assets/courrier-modele.md": "3ae21c22d857460147fdddf5c46c9c38d5019cbfe5b2495e4b21030119f63b87",
+    "skills/drh-fpt/assets/decision-modele.md": "8b90ed411dd7cc30e595c6085de62cf156af6238863b525cd4d803caff9d854b",
+    "skills/drh-fpt/assets/deliberation-modele.md": "85d21ed882159176761271227eed9262d81deb87360c4edaf1f1903d002eb42b",
+    "skills/drh-fpt/assets/fiche-profil-collectivite.md": "fd3f3071d5b7cae67287fbbb70d1d4cd77cc6c5e11d7dda03ef31e41052a14bc",
+    "skills/drh-fpt/assets/note-modele.md": "a5437f2e0b587dd19a215ce591b9071bd4c9e0e33889adf2da8268c972142df2",
+    "skills/drh-fpt/assets/procedure-modele.md": "e43053064c410c2b819d4c2c8ed3087e96b3f9a11cefd9599dc03d43878dcbbc",
+    "skills/drh-fpt/assets/README.md": "8dc8f83cf3d78d7072931aeadc575c6222a7773db3024096fc161ea188c428e3",
+    "skills/drh-fpt/references/_gabarit-branche.md": "99c4aab5fe2618804158e7b282c8e57ac0d00957707968d917fac96a50aa78b8",
+    "skills/drh-fpt/references/cache-plafonds-regime-indemnitaire.md": "480b8e51e03fffea723169014db606076bea1558a2a8eb6c35154afc0c1c32e7",
+    "skills/drh-fpt/references/carriere-paie.md": "e0890737636e140db6429cd2142e159c755a6836a539923db7378c64e752767c",
+    "skills/drh-fpt/references/communication-interne.md": "6e752e567fc04a68d56e353f05865716a8b8bc552db34e5a72280130af937764",
+    "skills/drh-fpt/references/contractuels.md": "2778879942eac95c42add104df5c548d1716e29d7a330cd223a58a9b2a9cac26",
+    "skills/drh-fpt/references/contrat-execution.md": "c647da45d6156f2b82d33ce69ffe9387e509dcb0affe246debec339b8d1962a4",
+    "skills/drh-fpt/references/cst-dialogue-social.md": "1fb1139d09f208379fe81d7780588593e447a235688570345b8649bf5aa659fd",
+    "skills/drh-fpt/references/parametres-collectivite.md": "6a6ddfacf8c7cba8c3bf082d6137c3bdbe08c67372f46c0098103d047d2c1cd2",
+    "skills/drh-fpt/references/qvt-sante.md": "3f36f2abfe0446e1ac59e4354d2fbe1e0e143f0a0dfbb6984cd634fa502c48f8",
+    "skills/drh-fpt/references/recrutement-formation.md": "511c78f3b1e3edf7a06ea858d4e5df1a5dcdc536c522887b214f900b5e4e4f65",
+    "skills/drh-fpt/references/si-rh-masse-salariale.md": "06e8f36523dab602c6257a559d71ed7b67202507fd0f7c67891c1a4439b60322",
+    "skills/drh-fpt/references/socle-sources-verification.md": "fe7887aa6d83ff4d3f382c7e6adc10f32828a23eef1a73138217d943d535681e",
+    "skills/drh-fpt/references/statut-garanties.md": "5ef4c2344730d46b1840908c9ada4d964438ddbbb7a0ca68e10172134edcb073",
+    "skills/drh-fpt/SKILL.md": "b1e5ba27f8d4fb73ee78ddfc575d87c435132f98d755e808fc5794d6c30b44aa",
+    "skills/recherche-juridique/CHANGELOG.md": "41d686ae885c2aba343d0321f3ffbaae2aef30fd4d34136336909f0cdaf2b53e",
+    "skills/recherche-juridique/LICENSE": "ad5259ac9d63c064078a6490ddc5df3999d97fb0c33ae3bfad0ba3752ccf17e4",
+    "skills/recherche-juridique/profils/_modele.md": "2ebc6568ea90eade980129a5320535918f2a794cdec789449f85c8dfc53f5524",
+    "skills/recherche-juridique/profils/avocat.md": "2ba16f6efcf217551d0f7e72d85590f9081bd2a90ab1b5f50ced5c3c5288d371",
+    "skills/recherche-juridique/profils/collectivites.md": "091c102af3b89a478e51cf2f14c7c012e86dbcda1a07fddaa41cf1e1d3939f61",
+    "skills/recherche-juridique/profils/etudiant-concours.md": "8ff54e86502b7a64f6a6587189ddac859718d300159b537ead0a121a57134f52",
+    "skills/recherche-juridique/profils/juriste-entreprise.md": "0bfbee7d7f2fde519a126039c9d2f31b2a11ee440cf60fb95642af78512b7881",
+    "skills/recherche-juridique/profils/police-gendarmerie.md": "1a01f47bdc28ca3fa7085c2aa4679429586e9252d2506f376a106b77e0e7d3ff",
+    "skills/recherche-juridique/references/audit-documentaire.md": "4a2e7e325e4fb256c2d9db96a9c3ae46e5c04ea8a73cfae5e39a6b956c5891f8",
+    "skills/recherche-juridique/references/checklist-vigueur.md": "dc8112f669145c1ebb61455dff785848f8547024e3ab945889a2cc3f3aaf4669",
+    "skills/recherche-juridique/references/format-citation.md": "5b3d640b278828ea88b0d77e7668b18007426009bb211970210d0b6e79207225",
+    "skills/recherche-juridique/references/gabarits-requetes.md": "0eec509123af574faa01161bec8e0c6a8f50d90e2f9dcb26329c992c0bc9efe8",
+    "skills/recherche-juridique/references/gabarits-sortie.md": "c4d83e364f45631810d9b361b013d542436986197a3d43f4970eea3e3033b88f",
+    "skills/recherche-juridique/references/maintenance.md": "32fe716276fdd0b38b5b494fd7d298a00735a522eb9e975aeba056d60070e195",
+    "skills/recherche-juridique/references/modes-erreur.md": "b1611915389db644b6192b78b5b18d963d4a22223e8db23fdeb79887e863c996",
+    "skills/recherche-juridique/references/modules.md": "4dfaccd0fb0d1e2da83bf1ea753ef0adaceb61f5eacfffaf765ebd67dbb6e71a",
+    "skills/recherche-juridique/references/sources-autorisees.md": "9ebd961a8078307d4f45b1c8bf59072d2dd79794f87dc85ec7d0f87628b4df47",
+    "skills/recherche-juridique/scripts/.env.example": "e2eff87c4e15168d97e034bf36aafdc3a43dfb4cd5f60f415e1305019ca16ea0",
+    "skills/recherche-juridique/scripts/droit_francais/__init__.py": "3421a7775cd9a2a8b9bf64e3980531b33e66ecda5c8814d8cf0da4a54ef32720",
+    "skills/recherche-juridique/scripts/droit_francais/config.py": "71bc65d83b742b76e36337d25a03df19514b803febdbe7612ab34a851bb98e98",
+    "skills/recherche-juridique/scripts/droit_francais/errors.py": "fa186ef69d7bc1fab66f003ade8677fc4e53689bd500d28a527cf93f021d8435",
+    "skills/recherche-juridique/scripts/droit_francais/judilibre.py": "5aba0c795fb88315ce8b7b3bffac6ea4dcc7e7ed7106efac26407e8544bf13fc",
+    "skills/recherche-juridique/scripts/droit_francais/legifrance.py": "baea37a064031a11cd60359cf98061c4483507ab4c10651f29d5c27aab293f83",
+    "skills/recherche-juridique/scripts/droit_francais/tools.py": "7f5dd7d2b4405ac7dc686e5492c230cb979866419b0b25721cfbb1493c6a69fb",
+    "skills/recherche-juridique/scripts/droit_francais/transport.py": "3c0a4514e302494be9cc78bc2efd3d5084e42a0d438f48e87f375958a57c7003",
+    "skills/recherche-juridique/scripts/legifrance.py": "b3e40305a5ca9407d39ea3142c888f879d4926956328d3d586752427190a1bba",
+    "skills/recherche-juridique/scripts/README.md": "a73f2f8377b33079fefaffa8afbb656626cba75fb76f7350a3747caed6255e0d",
+    "skills/recherche-juridique/scripts/update_skill.py": "9768a5eda24759ecb5574d1706a5e64449b62a92d781e1406f5e5979f8525e01",
+    "skills/recherche-juridique/SKILL.md": "a09d5483da3f8f65d1a912c4fa2266e0aafed906340aba47170fd46e592b7837"
+  },
+  "case_sha256": "76601be7d6bc1c11012f2ff07ea9ea6d73323d60f0f20ed38d6e2ac3961a2a1f",
+  "host": "codex-cli 0.160.0",
+  "process_exit": 0,
+  "technical_status": "passed",
+  "failures": [],
+  "human_legal_validation": false,
+  "marketplace_installation_tested": false,
+  "events": [
+    {
+      "type": "reply",
+      "text": "Je vais lire les skills DPO et recherche juridique selon le protocole demandé, puis vérifier les articles 33 et 34 du RGPD sur une source officielle.\n"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dpo-ct/SKILL.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "2de943cdee2c8adb41652a85a411498a939961c64f68c5b7d76a241af0ec22be",
+      "exit_code": 0,
+      "status": "completed",
+      "chunk": {
+        "path": ".agents/skills/dpo-ct/SKILL.md",
+        "start": 0,
+        "count": 106,
+        "content_verified": true,
+        "expected_content_sha256": "2de943cdee2c8adb41652a85a411498a939961c64f68c5b7d76a241af0ec22be",
+        "source_bytes": 5995
+      }
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dpo-ct/SKILL.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "1a79bb4d6c484818a72dde0d2231c86f1d8a1819d536d7df9f1d1e4900e643ea",
+      "exit_code": 0,
+      "status": "completed",
+      "chunk": {
+        "path": ".agents/skills/dpo-ct/SKILL.md",
+        "start": 106,
+        "count": 119,
+        "content_verified": true,
+        "expected_content_sha256": "1a79bb4d6c484818a72dde0d2231c86f1d8a1819d536d7df9f1d1e4900e643ea",
+        "source_bytes": 5993
+      }
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dpo-ct/SKILL.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "a5fa584c7064b0f6bbd281fb5736133edde669ee16c2ac437f84d156d14ebefb",
+      "exit_code": 0,
+      "status": "completed",
+      "chunk": {
+        "path": ".agents/skills/dpo-ct/SKILL.md",
+        "start": 225,
+        "count": 104,
+        "content_verified": true,
+        "expected_content_sha256": "a5fa584c7064b0f6bbd281fb5736133edde669ee16c2ac437f84d156d14ebefb",
+        "source_bytes": 5952
+      }
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dpo-ct/SKILL.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "e3eab6d1a49fd2de2ee3bad39669e078ffbbf191605649fe4e31abbf3658c7de",
+      "exit_code": 0,
+      "status": "completed",
+      "chunk": {
+        "path": ".agents/skills/dpo-ct/SKILL.md",
+        "start": 329,
+        "count": 86,
+        "content_verified": true,
+        "expected_content_sha256": "e3eab6d1a49fd2de2ee3bad39669e078ffbbf191605649fe4e31abbf3658c7de",
+        "source_bytes": 4581
+      }
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/SKILL.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "b97cfeedcb926fdc00d476fe35d0f8b060d575148d08d3ed2b63a5b13c32940f",
+      "exit_code": 0,
+      "status": "completed",
+      "chunk": {
+        "path": ".agents/skills/recherche-juridique/SKILL.md",
+        "start": 0,
+        "count": 104,
+        "content_verified": true,
+        "expected_content_sha256": "b97cfeedcb926fdc00d476fe35d0f8b060d575148d08d3ed2b63a5b13c32940f",
+        "source_bytes": 5925
+      }
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/SKILL.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "43eeebe2f32f5d58b25ed276f32121affc334f104b02e0b8827ebc2a51cd2a97",
+      "exit_code": 0,
+      "status": "completed",
+      "chunk": {
+        "path": ".agents/skills/recherche-juridique/SKILL.md",
+        "start": 104,
+        "count": 115,
+        "content_verified": true,
+        "expected_content_sha256": "43eeebe2f32f5d58b25ed276f32121affc334f104b02e0b8827ebc2a51cd2a97",
+        "source_bytes": 5977
+      }
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/SKILL.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "ea1f161ac00aee17ada9d91008bc62ac81f0332ac4a2dfd701743ee3a0962526",
+      "exit_code": 0,
+      "status": "completed",
+      "chunk": {
+        "path": ".agents/skills/recherche-juridique/SKILL.md",
+        "start": 219,
+        "count": 125,
+        "content_verified": true,
+        "expected_content_sha256": "ea1f161ac00aee17ada9d91008bc62ac81f0332ac4a2dfd701743ee3a0962526",
+        "source_bytes": 5984
+      }
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/SKILL.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "b88a18c422c3d4f2e678c89a7e0ff8d2c0942b63ee53a82eb9497082dec95101",
+      "exit_code": 0,
+      "status": "completed",
+      "chunk": {
+        "path": ".agents/skills/recherche-juridique/SKILL.md",
+        "start": 344,
+        "count": 135,
+        "content_verified": true,
+        "expected_content_sha256": "b88a18c422c3d4f2e678c89a7e0ff8d2c0942b63ee53a82eb9497082dec95101",
+        "source_bytes": 5939
+      }
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/SKILL.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "7d95b5127f3484aacdd8626f83b3ac6f3a13385510a6965af0e61a87b7baaea9",
+      "exit_code": 0,
+      "status": "completed",
+      "chunk": {
+        "path": ".agents/skills/recherche-juridique/SKILL.md",
+        "start": 479,
+        "count": 117,
+        "content_verified": true,
+        "expected_content_sha256": "7d95b5127f3484aacdd8626f83b3ac6f3a13385510a6965af0e61a87b7baaea9",
+        "source_bytes": 5990
+      }
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/SKILL.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "2e88683022b1d3d6f538bc48337c7956f1f66e47bc90517559bf298822dc6e34",
+      "exit_code": 0,
+      "status": "completed",
+      "chunk": {
+        "path": ".agents/skills/recherche-juridique/SKILL.md",
+        "start": 596,
+        "count": 112,
+        "content_verified": true,
+        "expected_content_sha256": "2e88683022b1d3d6f538bc48337c7956f1f66e47bc90517559bf298822dc6e34",
+        "source_bytes": 5999
+      }
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/SKILL.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "4259014bc401709b9e3f60162d70a99602e64ec630f68521067554af6593d79b",
+      "exit_code": 0,
+      "status": "completed",
+      "chunk": {
+        "path": ".agents/skills/recherche-juridique/SKILL.md",
+        "start": 708,
+        "count": 126,
+        "content_verified": true,
+        "expected_content_sha256": "4259014bc401709b9e3f60162d70a99602e64ec630f68521067554af6593d79b",
+        "source_bytes": 5982
+      }
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/SKILL.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "22023a6061f34e95b5aa0760423e97d4ce673a86ce2622bbb93372e368cdbec2",
+      "exit_code": 0,
+      "status": "completed",
+      "chunk": {
+        "path": ".agents/skills/recherche-juridique/SKILL.md",
+        "start": 834,
+        "count": 127,
+        "content_verified": true,
+        "expected_content_sha256": "22023a6061f34e95b5aa0760423e97d4ce673a86ce2622bbb93372e368cdbec2",
+        "source_bytes": 5939
+      }
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/SKILL.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "6f8341aafaa80f02dee937f6e2538354c13cb441f0e3358c31cc3fdb0d9f5ffb",
+      "exit_code": 0,
+      "status": "completed",
+      "chunk": {
+        "path": ".agents/skills/recherche-juridique/SKILL.md",
+        "start": 961,
+        "count": 71,
+        "content_verified": true,
+        "expected_content_sha256": "6f8341aafaa80f02dee937f6e2538354c13cb441f0e3358c31cc3fdb0d9f5ffb",
+        "source_bytes": 3369
+      }
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dpo-ct/references/analyse-situation.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/dpo-ct/references/analyse-situation.md"
+      ],
+      "output_sha256": "b80d8904e4e621c9d43e46cc4e9a6db4671758779539abc019a34cf73cb2035e",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dpo-ct/references/violations.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/dpo-ct/references/violations.md"
+      ],
+      "output_sha256": "dbd0779833f1deef052d343e978d14987309dc4cd0917e045fa9fb5337a75c6c",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "mcp_call",
+      "server": "droit-francais",
+      "tool": "search",
+      "status": "completed",
+      "succeeded": true,
+      "arguments_publics": {},
+      "identifiants_dans_resultat": [
+        "LEGIARTI000006293464",
+        "LEGIARTI000006350077",
+        "LEGIARTI000006350284",
+        "LEGIARTI000006354484",
+        "LEGIARTI000006410130",
+        "LEGIARTI000006420781",
+        "LEGIARTI000006555675",
+        "LEGIARTI000006574915",
+        "LEGIARTI000039345207",
+        "LEGIARTI000054359238"
+      ],
+      "result_sha256": "91e38779c4469872029432ecb408b3eb1231c1ccf3235d0e65edde91f7a166b3"
+    },
+    {
+      "type": "web_call",
+      "action": "open_page",
+      "hosts": [
+        "www.cnil.fr"
+      ],
+      "status": null,
+      "result_present": true
+    },
+    {
+      "type": "reply",
+      "text": "Les 13 segments ont été lus sans troncature. Une restitution regroupant les références et les sources a ensuite été tronquée ; je récupère à nouveau les passages utiles. Le point clé est la date de connaissance de la violation : « envoyé hier » ne suffit pas à fixer l’échéance juridique.\n"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dpo-ct/references/socle-sources-verification.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/dpo-ct/references/socle-sources-verification.md"
+      ],
+      "output_sha256": "2f52edf8026d922c197d24a5c84bd17ae5f875e7a061f478e3361e79bc8d482d",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/profil.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "f102d66426a57829efd5e253f14bee40925adc6df46a4ab6b5b5e20da221b43d",
+      "exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/references/gabarits-sortie.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/recherche-juridique/references/gabarits-sortie.md"
+      ],
+      "output_sha256": "c4d83e364f45631810d9b361b013d542436986197a3d43f4970eea3e3033b88f",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "web_call",
+      "action": "open_page",
+      "hosts": [
+        "www.cnil.fr"
+      ],
+      "status": null,
+      "result_present": true
+    },
+    {
+      "type": "reply",
+      "text": "**La collectivité doit traiter cet envoi comme une violation de confidentialité et agir immédiatement.** La notification à la CNIL et l’information des usagers répondent à deux seuils différents.\n\nAnalyse au 8 octobre 2026, sous le régime RGPD ; articles 33 et 34 consultés sur le site de la CNIL.\n\n1. **Contenir l’incident dès maintenant.** Alerter le DPO, la DSI et la direction ; révoquer le lien de partage éventuel ; contacter le destinataire pour demander l’absence d’utilisation ou de transmission, la suppression des copies et une confirmation écrite. Conserver les preuves de l’envoi et des mesures prises. Un rappel de courriel ne garantit pas la suppression.\n\n2. **Évaluer le risque sans attendre.** Identifier les champs exacts, le destinataire, l’ouverture ou la retransmission éventuelle, le chiffrement et les conséquences possibles : fraude, discrimination, exposition de la situation sociale. Les 2 000 usagers et les données sociales justifient une vigilance forte, mais **« données sociales » ne prouve pas la présence de données de santé ni automatiquement un risque élevé**.\n\n3. **Documenter toute violation**, même si elle n’est pas notifiée : faits, effets, mesures correctrices et justification des décisions. C’est l’obligation de l’article 33 §5. [RGPD, article 33 — CNIL](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4)\n\n| Démarche | Condition et délai juridique |\n|---|---|\n| **Notification à la CNIL — article 33** | Sauf absence de risque pour les droits et libertés : dans les meilleurs délais et, si possible, **au plus tard 72 heures après la prise de connaissance** par le responsable du traitement. |\n| **Informations encore incomplètes** | Notification initiale, puis compléments sans retard indu. Tout dépassement des 72 heures doit être motivé. |\n| **Information des usagers — article 34** | Si un **risque élevé** est susceptible de résulter de la violation : **dans les meilleurs délais**, sans délai chiffré spécifique et sans attendre la notification CNIL. |\n\nCes délais et seuils sont distincts. [RGPD, articles 33 et 34 — CNIL](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4)\n\nLa notification expose la nature de l’incident, les catégories et volumes concernés, le contact DPO, les conséquences probables et les mesures prises. L’information des usagers présente clairement l’incident, ses conséquences, les mesures et le contact utile. Des exceptions à cette information existent, notamment si un chiffrement effectif rend les données illisibles ou si des mesures ultérieures écartent le risque élevé ; une simple promesse de suppression ne suffit pas automatiquement. [RGPD, articles 33 §3 et 34 — CNIL](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4)\n\n**À quelle date et heure la collectivité a-t-elle acquis une certitude raisonnable de cet envoi erroné ?** « Hier » date l’envoi, pas nécessairement sa découverte : aucune échéance calendaire fiable ne peut être fixée sans ce **T0**. L’échéance de référence est **T0 + 72 heures**, sans attendre son expiration pour agir.\n\nJe recommande de préparer dès maintenant la [notification via le téléservice CNIL](https://www.cnil.fr/fr/services-en-ligne/notifier-une-violation-de-donnees-personnelles), puis de décider rapidement sur l’évaluation documentée. Le responsable du traitement concerné prend la décision, sur conseil du DPO ; **les communications externes doivent être relues et validées par le DPO humain avant envoi**, sans dépasser les délais applicables."
+    },
+    {
+      "type": "turn_completed",
+      "usage": {
+        "input_tokens": 834259,
+        "cached_input_tokens": 770816,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 2202,
+        "reasoning_output_tokens": 20
+      }
+    }
+  ]
+}

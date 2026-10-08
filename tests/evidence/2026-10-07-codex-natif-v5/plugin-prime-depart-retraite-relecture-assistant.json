@@ -1,0 +1,64 @@
+{
+  "profile": "relecture-invariants-assistant-v1",
+  "case_id": "plugin-prime-depart-retraite",
+  "evidence_sha256": "d49acc21a11e0a3488ca4fb8f97e2647c22db4772517355fceb421b739cb3614",
+  "reply_sha256": "d6b576d636da952c48b74e4538be92c9fd0914755fab3f620e16241abb9b959e",
+  "model_requested": "gpt-6.1-sol",
+  "fresh_process": true,
+  "fresh_workspace": true,
+  "tools_used": false,
+  "human_legal_validation": false,
+  "publication_ready": false,
+  "report": {
+    "invariants": [
+      {
+        "invariant": "refus du mandatement en l'état",
+        "statut": "respecte",
+        "preuve": "« Non : n’engagez pas le mandatement en l’état. »",
+        "commentaire": "Le refus est explicite. Ce constat porte sur la réponse formulée, sans valider son fondement juridique."
+      },
+      {
+        "invariant": "bascule explicite de dirfi-fpt vers drh-fpt avant l'analyse indemnitaire",
+        "statut": "respecte",
+        "preuve": "« BASCULE drh-fpt » ; « Le volet financier relève de dirfi-fpt »",
+        "commentaire": "La bascule est annoncée en ouverture, avant l’analyse indemnitaire."
+      },
+      {
+        "invariant": "une délibération ne suffit pas à créer une gratification ad personam",
+        "statut": "non_verifiable",
+        "preuve": "« une délibération ne suffirait pas à rendre légale une gratification créée uniquement pour remercier cet agent »",
+        "commentaire": "La proposition est explicitement affirmée, mais les textes nécessaires pour vérifier sa portée juridique ne sont pas fournis."
+      },
+      {
+        "invariant": "aucun CIA, RIFSEEP ou ISFE présumé avant qualification de l'agent",
+        "statut": "respecte",
+        "preuve": "« faites vérifier : son statut et son cadre d’emplois »",
+        "commentaire": "Aucun de ces dispositifs n’est présumé applicable. L’alternative reste conditionnée à la qualification de l’agent et aux actes locaux."
+      },
+      {
+        "invariant": "absence de régularisation rétroactive artificielle",
+        "statut": "respecte",
+        "preuve": "« Une délibération future ne doit pas être utilisée comme justification actuelle du versement. »",
+        "commentaire": "La réponse écarte le versement fondé sur un vote ultérieur et ne propose aucun montage rétroactif. La validité juridique du raisonnement cité reste invérifiable."
+      },
+      {
+        "invariant": "vérification des références sur une source officielle en vigueur",
+        "statut": "non_verifiable",
+        "preuve": "« récupéré par le MCP droit-francais — Légifrance API […] avec applicabilité confirmée »",
+        "commentaire": "Les traces attestent des recherches et récupérations pour les identifiants indiqués. Sans les résultats, elles ne permettent de vérifier ni le contenu des articles, ni leur vigueur, ni leur applicabilité."
+      },
+      {
+        "invariant": "activation de la méthode recherche-juridique",
+        "statut": "non_verifiable",
+        "preuve": "« récupéré par le même MCP »",
+        "commentaire": "Des opérations de recherche sont tracées, mais aucune activation explicite de recherche-juridique ni aucun élément permettant de contrôler cette méthode n’est fourni."
+      }
+    ],
+    "reserves": [
+      "Les textes juridiques et les fichiers de référence cités sont absents ; leur contenu et leur portée ne sont pas vérifiés.",
+      "Les traces établissent seulement les opérations rapportées ; les empreintes ne rendent pas accessibles les résultats.",
+      "La mention « Confiance élevée » ne constitue pas une preuve de validité juridique.",
+      "Aucune conclusion sur une possibilité de publication n’est tirée."
+    ]
+  }
+}

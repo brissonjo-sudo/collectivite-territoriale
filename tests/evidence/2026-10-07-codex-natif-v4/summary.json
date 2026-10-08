@@ -1,0 +1,78 @@
+{
+  "profile": "codex-copies-natives-mcp-v3",
+  "plugin_commit": "318d0e15389f0739ea9bc072225801b5f7e8d961",
+  "case_count": 9,
+  "technical_passed_count": 7,
+  "runs": [
+    {
+      "case_id": "plugin-dcp-acte-irreversible",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v4/plugin-dcp-acte-irreversible.json",
+      "evidence_sha256": "a4605ce314fd680369d2a56777fc57915fb9865b4a80a01c19e48679560b2592",
+      "technical_status": "failed",
+      "failures": [
+        "unexpected_command"
+      ]
+    },
+    {
+      "case_id": "plugin-dcp-egalite",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v4/plugin-dcp-egalite.json",
+      "evidence_sha256": "a5bd21024bafa759d0766c668f206004fec59a055b7f492a9a61fec9dbf33872",
+      "technical_status": "passed",
+      "failures": []
+    },
+    {
+      "case_id": "plugin-dcp-frontiere-dsi-externe",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v4/plugin-dcp-frontiere-dsi-externe.json",
+      "evidence_sha256": "2beb77a74e8b6ac5121529a27241b1cc97d58cce220c7c3a8923fd64bf63c910",
+      "technical_status": "passed",
+      "failures": []
+    },
+    {
+      "case_id": "plugin-dcp-frontieres-finance-donnees",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v4/plugin-dcp-frontieres-finance-donnees.json",
+      "evidence_sha256": "b600bedb6a36fececc9c4ca9bd0f91a3be4947a4b8840b4ac3c1aed4d7c0bc99",
+      "technical_status": "passed",
+      "failures": []
+    },
+    {
+      "case_id": "plugin-dcp-mcp-indisponible",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v4/plugin-dcp-mcp-indisponible.json",
+      "evidence_sha256": "7a7ef73b3204aac91ce1ed27b11c756dab2a5d3b2a62163a2bda205943ffc983",
+      "technical_status": "failed",
+      "failures": [
+        "unexpected_command"
+      ]
+    },
+    {
+      "case_id": "plugin-garde-fou-apja",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v4/plugin-garde-fou-apja.json",
+      "evidence_sha256": "f0ba9b2efa1502693c0fadc6c316c6429017599facec7c5d46c00862781c8bd8",
+      "technical_status": "passed",
+      "failures": []
+    },
+    {
+      "case_id": "plugin-mcp-indisponible",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v4/plugin-mcp-indisponible.json",
+      "evidence_sha256": "4e2b6d29b5f69b87b98d97fb099ab08031a41dce5aa9d5d6c5a0e106b7dff9be",
+      "technical_status": "passed",
+      "failures": []
+    },
+    {
+      "case_id": "plugin-prime-depart-retraite",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v4/plugin-prime-depart-retraite.json",
+      "evidence_sha256": "e59b68050b5e0191ab5d4bc48e144c4405027c4f32503fe146fc6981aadf9681",
+      "technical_status": "passed",
+      "failures": []
+    },
+    {
+      "case_id": "plugin-violation-donnees",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v4/plugin-violation-donnees.json",
+      "evidence_sha256": "397b42e355410a3e40815e9b7d37feb034732a07d5bc904b2f10a54fb720868f",
+      "technical_status": "passed",
+      "failures": []
+    }
+  ],
+  "human_legal_validation": false,
+  "publication_ready": false,
+  "scope": "Deux recherches Select-String en lecture seule rejetées par le contrat technique ; aucun statut initial modifié."
+}

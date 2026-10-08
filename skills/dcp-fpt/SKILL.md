@@ -10,9 +10,9 @@ description: >-
   police municipale (dpm-fpt), les concessions et délégations de service public.
 ---
 
-# Skill : dcp-fpt (v0.1.0)
+# Skill : dcp-fpt (v0.1.3)
 
-> Métadonnées — version : **0.1.0** · langue : français · statut : **non mesuré, non relu par un praticien**.
+> Métadonnées — version : **0.1.3** · langue : français · statut : **non mesuré, non relu par un praticien**.
 > Aide à la décision ; aucune réponse ne vaut autorisation de signer ni source autonome de droit positif.
 
 ## 1. Déclenchement
@@ -165,6 +165,12 @@ Le registre est daté et ne prouve pas une lecture en session. Pour chaque
 référence utilisée : source officielle, identifiant ou URL obtenu de la source,
 date de lecture et statut. « Vérifié ce jour » sans preuve n'est pas une provenance.
 
+Une réserve finale ne permet pas d'affirmer une règle dont la lecture
+officielle a échoué. Sur ce point, présenter la règle comme une question à
+vérifier, sans conclure sur son contenu ni l'utiliser comme prémisse acquise.
+La poursuite se limite au recensement des faits et pièces, aux recommandations
+de préparation explicitement non normatives et aux garde-fous du skill.
+
 Aucun identifiant officiel hors du registre dans les fichiers runtime.
 Aucun seuil, montant, délai, pourcentage ou peine chiffré dans les branches,
 objets ou écrits. Le cache est un artefact de maintenance **exclu du paquet** :
@@ -182,6 +188,12 @@ de portée réservée sans nouvelle lecture officielle.
 ### 5.5 Frontières opposables
 
 Afficher le bloc correspondant puis arrêter ce volet :
+
+La méthode juridique d'estimation du besoin et le choix de procédure restent
+dans DCP. Le chiffrage, les crédits et la validation de l'engagement relèvent
+de `dirfi-fpt`. Dans une note d'estimation ou de montage, nommer cette
+séparation et afficher la BASCULE financière avant ce volet, même si les
+données manquent et qu'aucun calcul ne peut encore être produit.
 
 ```text
 BASCULE dirfi-fpt — Volet financier du marché.
@@ -225,7 +237,13 @@ diagnostic autonome ni enquête.
 
 `dcp-fpt` conduit le volet achat ; les skills de frontière traitent chacun
 leur périmètre ; `recherche-juridique` vérifie le fond. Le bloc BASCULE reste
-obligatoire en co-activation. Un délégataire poursuit seulement si son point
+obligatoire en co-activation : il précède l'intertitre du délégataire,
+puis vient l'analyse de ce dernier. Ne pas placer le bloc sous cet intertitre.
+Après le renvoi, DCP peut demander les pièces manquantes et préciser le point
+juridique du marché qui reste à vérifier. Il ne prescrit ni circuit
+d'instruction ou de validation financière, ni acteur du paiement : ce volet
+reste arrêté tant que le délégataire n'est pas chargé.
+Un délégataire poursuit seulement si son point
 d'entrée a été effectivement chargé et ses références utiles lues, sous un
 intertitre explicite. Sinon, laisser le renvoi. Les skills d'accessibilité
 agissent sur la forme, sans modifier les règles.

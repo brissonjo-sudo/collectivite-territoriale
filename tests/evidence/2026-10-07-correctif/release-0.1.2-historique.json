@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-07",
+  "plugin_version": "1.2.0",
+  "plugin_commit": null,
+  "release_ready": false,
+  "upstream_commits": {
+    "dpm-fpt": "1668c89798f1f50a829c0b94d3cf6bf33a3640fb",
+    "drh-fpt": "f81c9b955f7ebb47df7e93bdc41ac743d85a2973",
+    "dpo-ct": "f3406f412368199a33f47e7861eb450eab2b2cdb",
+    "dirfi-fpt": "d970fe530d3f50f6b4c330e3cfb85db35b7126ab",
+    "recherche-juridique": "e437d10a2d4bbf66ba7a9c1e9fb49e773166054e",
+    "dcp-fpt": "554db579aaa9c4dda0aafa27d164416e0e4959a7"
+  },
+  "release_blockers": [
+    "Nouvelle mesure DCP 0.1.2 et campagne plugin à exécuter.",
+    "Relecture praticien et validation humaine, dont RH, encore requises.",
+    "Smoke du plugin installé avec modèle/MCP et activation implicite à exécuter."
+  ],
+  "historical_evidence": "tests/evidence/2026-09-20-validation-locale.json",
+  "runs": [],
+  "skill_measurements": {
+    "dcp-fpt": {
+      "status": "not_run",
+      "upstream_commit": "554db579aaa9c4dda0aafa27d164416e0e4959a7",
+      "evidence_path": null
+    }
+  },
+  "review": {
+    "human_legal_validation": false
+  },
+  "codex_smoke": {
+    "status": "not_run",
+    "plugin_commit": null
+  },
+  "native_campaign": {
+    "status": "not_run",
+    "plugin_commit": null
+  },
+  "historical_qualification": "tests/evidence/2026-10-07-candidat/release-initial-0.1.0.json",
+  "historical_correctif_0_1_1": "tests/evidence/2026-10-07-correctif/release-0.1.1-historique.json"
+}

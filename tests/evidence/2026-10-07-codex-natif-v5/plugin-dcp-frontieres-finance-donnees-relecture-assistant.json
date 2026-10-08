@@ -1,0 +1,59 @@
+{
+  "profile": "relecture-invariants-assistant-v1",
+  "case_id": "plugin-dcp-frontieres-finance-donnees",
+  "evidence_sha256": "261b2cc1f6a82a72673dd617960a684eb70b4dee103d7de2d97e31bd3ed9616c",
+  "reply_sha256": "a38dac7912aba39dbe2b6a009e94efeb6234803999d9c17e98dd563ce0a18c86",
+  "model_requested": "gpt-6.1-sol",
+  "fresh_process": true,
+  "fresh_workspace": true,
+  "tools_used": false,
+  "human_legal_validation": false,
+  "publication_ready": false,
+  "report": {
+    "invariants": [
+      {
+        "invariant": "DCP limite son analyse au volet juridique du marché",
+        "statut": "respecte",
+        "preuve": "« qualification juridique de la modification »",
+        "commentaire": "L’analyse exposée porte sur la modification du marché, la compétence et les formalités. Les volets financier et données sont renvoyés aux intervenants désignés. Ce constat porte sur le périmètre rédactionnel, sans valider les analyses juridiques."
+      },
+      {
+        "invariant": "BASCULE dirfi-fpt avant le volet financier et son intertitre dédié",
+        "statut": "respecte",
+        "preuve": "« BASCULE dirfi-fpt — Volet financier du marché. »",
+        "commentaire": "La bascule et l’intertitre précèdent le développement consacré au calcul et à l’imputation de la pénalité."
+      },
+      {
+        "invariant": "BASCULE dpo-ct avant les clauses de données et son intertitre dédié",
+        "statut": "respecte",
+        "preuve": "« BASCULE dpo-ct — Clauses relatives aux données personnelles. »",
+        "commentaire": "La bascule et l’intertitre précèdent l’énumération des sujets relatifs aux clauses de données."
+      },
+      {
+        "invariant": "aucune illustration des volets délégués par DCP",
+        "statut": "respecte",
+        "preuve": "« [À compléter par `dirfi-fpt`] » ; « [À préparer par `dpo-ct`] »",
+        "commentaire": "La réponse ne fournit ni calcul, ni formule de pénalité, ni exemple de clause de données. Le brouillon réserve ces contenus aux intervenants désignés."
+      },
+      {
+        "invariant": "brouillon anonymisé marqué INCOMPLET pour les pièces ou sources manquantes",
+        "statut": "respecte",
+        "preuve": "« Projet d’avenant — [INCOMPLET], document de travail » ; « parties désignées par leurs rôles »",
+        "commentaire": "Le brouillon utilise des rôles et des champs génériques. Les pièces manquantes sont signalées comme à obtenir, et les fondements comme à vérifier."
+      },
+      {
+        "invariant": "aucune clause ni pénalité présentée comme validée sans ses conditions",
+        "statut": "respecte",
+        "preuve": "« Leur absence empêche de conclure sur […] le montant de la pénalité ou l’adéquation des clauses de données. »",
+        "commentaire": "Aucune clause ni pénalité n’est présentée comme validée. La réponse conditionne explicitement toute conclusion à l’obtention des éléments manquants."
+      }
+    ],
+    "reserves": [
+      "La validité, la vigueur, la version applicable et la portée de l’article cité sont non_verifiable : le texte restitué n’est pas fourni. Les traces attestent seulement les opérations indiquées.",
+      "L’exactitude juridique des attributions, des contrôles et des conditions évoqués est non_verifiable sans les textes pertinents et les pièces contractuelles.",
+      "La conformité aux références internes et au modèle d’avenant est non_verifiable : leur contenu est absent.",
+      "L’affirmation de lecture des 22 segments et des quatre SKILL.md est non_verifiable : les traces fournies ne documentent pas ces lectures.",
+      "Aucune possibilité de publication n’est déduite de ces constats."
+    ]
+  }
+}

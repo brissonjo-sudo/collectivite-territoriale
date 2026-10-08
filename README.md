@@ -7,7 +7,7 @@ Le dépôt prépare cinq expertises métier, une méthode de recherche juridique
 sourcée et un accès optionnel à Légifrance/Judilibre. La distribution gelée
 1.1.1 expose encore quatre expertises métier et la méthode juridique.
 
-> **Statut :** `main` porte le candidat 1.2.0 ; `dcp-fpt` 0.1.0 reste **non mesuré, non relu par un praticien**. Les catalogues sont lus sur `main`, mais distribuent l'étiquette `v1.1.1`, **non qualifiée**, gelée par défaut jusqu'à une nouvelle distribution. Une fusion du candidat ne le distribue pas. La relecture praticien intervient après intégration, avant qualification et publication : [docs/publication.md](docs/publication.md).
+> **Statut :** intégration DCP 0.1.3 techniquement qualifiée pour la distribution open source : 27 réussites, une demi-réussite, zéro échec et huit critiques réussis ; neuf cas plugin techniques et smoke Git avec modèle/MCP réussis. La relecture praticien est conservée pour un futur déploiement en collectivité ou chez un tiers. Les catalogues distribuent encore `v1.1.1`, jusqu'à la publication de 1.2.0. [Qualification actuelle](docs/qualification-013-2026-10-08.md), [publication](docs/publication.md) et [note praticien différée](docs/deploiement-collectivite.md).
 
 Ce plugin aide à qualifier une situation, identifier les expertises à mobiliser et produire une réponse traçable. Il ne remplace ni la validation d'un juriste, ni le contrôle de l'autorité compétente, ni la vérification des textes officiels en vigueur.
 
@@ -19,7 +19,7 @@ Ce plugin aide à qualifier une situation, identifier les expertises à mobilise
 | `collectivite-territoriale:drh-fpt` | Ressources humaines territoriales | 0.6.0 |
 | `collectivite-territoriale:dpo-ct` | Protection des données | 0.2.1 |
 | `collectivite-territoriale:dirfi-fpt` | Finances locales | 1.0.4 |
-| `collectivite-territoriale:dcp-fpt` | Commande publique, candidate non mesurée et non relue | 0.1.0 |
+| `collectivite-territoriale:dcp-fpt` | Commande publique, mesuré autonomement, à relire | 0.1.3 |
 | `collectivite-territoriale:recherche-juridique` | Recherche et vérification du droit français | 3.5.0 |
 
 L'étiquette distribuée `v1.1.1` contient les cinq skills déjà présents,
@@ -107,8 +107,8 @@ Chaque surcharge est liée à l'empreinte SHA-256 exacte de son fichier amont et
 
 Pour `recherche-juridique`, la racine canonique `skill/` est aplatie dans `skills/recherche-juridique/`. Sa licence est copiée avec le runtime ; aucun manifeste, serveur MCP, fichier `.env` ou autre fichier de dépôt amont n'est dupliqué. Le fichier `references/cache-taux-seuils.md` de `dirfi-fpt`, exclu de son propre paquet de distribution, n'est pas embarqué.
 
-Pour DCP, le commit de fusion de la PR #4 est figé :
-`eeb1cb14a3ad94d78631661dce5ae11f1e071308`. Les 30 fichiers de son paquet
+Pour DCP 0.1.3, le commit correctif est figé :
+`129f374e6ab8ea3b47bcfd9de9ddd52a2d3d9498`. Les 30 fichiers de son paquet
 runtime et sa licence sont copiés ; le cache `references/cache-valeurs.md`,
 la conception, les scripts d'évaluation et les preuves amont sont exclus.
 Le registre daté reste une piste de recherche, jamais une preuve de lecture
@@ -142,9 +142,10 @@ python -m unittest discover -s tests -k ReleaseGateTests
 ```
 
 La CI découvre tous les tests dans le job **Intégration candidate** et ne
-saute que `ReleaseGateTests`. Le job **Qualification de publication** force
-`CT_SAUTER_BARRIERE=0` et conserve le verrou en échec pour une version non
-qualifiée. Sans cette variable, la découverte complète exécute aussi le verrou.
+saute que `ReleaseGateTests`. Le job **Qualification de distribution open source**
+force `CT_SAUTER_BARRIERE=0` et contrôle les preuves techniques, leurs empreintes,
+le runtime et la configuration installée. Sans cette variable, la découverte
+complète exécute aussi ce contrôle.
 
 Sous un shell Unix, l'équivalent pour l'intégration est
 `CT_EXIGER_ETIQUETTE=1 CT_SAUTER_BARRIERE=1 python -m unittest discover -s tests`.
@@ -158,19 +159,38 @@ Le manifeste Codex est également contrôlé avec le validateur du skill systèm
 - les deux STOP DCP, les frontières financières et données, la dépendance DSI
   externe et le comportement DCP sans accès aux sources officielles.
 
-Les fichiers présents prouvent l'intégration des runtimes, pas la coactivation effective. La release 1.2.0 exige donc aussi des traces comportementales en conversations fraîches, la mesure DCP et la relecture praticien. Le statut du candidat est conservé dans `tests/evidence/release-1.2.0.json` ; les preuves 1.1.0 et 1.1.1 restent historiques et ne qualifient pas cette intégration. Le test `test_barriere_de_release_comportementale` reste volontairement en échec tant que `release_ready` est faux ; les autres tests doivent réussir.
+La distribution open source 1.2.0 exige des traces comportementales en
+conversations fraîches, le seuil de mesure DCP et un smoke installé réussi.
+Le statut courant est conservé dans `tests/evidence/release-1.2.0.json` :
+`distribution.ready` concerne cette distribution ; `deployment.ready` et
+le champ historique `release_ready` restent faux sans qualification métier.
+La relecture praticien devient une condition du déploiement opérationnel
+dans une collectivité ou une structure tierce, selon l'[ADR 0007](docs/adr/0007-distribution-open-source-et-deploiement.md).
+Les preuves historiques et avis humains non réalisés restent inchangés.
 
 Le lanceur `scripts/run_plugin_campaign.py` exécute les neuf scénarios dans
 des sessions non persistées, impose les activations qualifiées attendues,
 désactive les connecteurs juridiques globaux et ne conserve qu'une trace JSONL
-assainie dans `tests/evidence/.work/`. Cette sortie reste soumise à une revue
-humaine des invariants métier avant d'être promue en preuve de release.
+assainie dans `tests/evidence/.work/`. La revue humaine des invariants métier
+reste distincte et requise avant le déploiement opérationnel chez un tiers.
 
-Les cinq scénarios DCP sont un contrat de campagne encore non exécuté :
-ils ne remplacent pas la suite métier amont à construire. L'accès MCP et les
-options réelles de la CLI restent à qualifier avant lancement. Le profil
-MCP du plugin diffère de celui du lanceur autonome DCP actuellement sans MCP ;
-leurs résultats ne doivent pas être présentés comme comparables par défaut.
+À la demande de l'auteur, la campagne actuelle utilise Codex et
+`scripts/run_codex_campaign.py` : copies natives en workspace frais,
+lectures ordonnées par segments vérifiés, MCP juridique propre au processus
+dans les sept cas nominaux, MCP absent dans les deux cas dégradés. La connexion
+Codex existante suffit ; aucune connexion Claude n'est requise pour ce profil.
+La campagne native ne teste pas le déclenchement implicite ou l'activation
+Skill de Claude. Un smoke distinct installe le candidat exact depuis Git,
+vérifie les six skills dans le contexte modèle et leurs octets, puis mesure
+des réponses et appels MCP depuis ce cache, sans copie native en workspace.
+Une demande sans nom de skill déclenche des lectures DCP/juridique et un STOP ;
+la mémoire et les instructions utilisateur restent présentes, sans attribution
+causale exclusive. La mesure autonome DCP avec web/MCP garde son profil distinct.
+
+Les avertissements antérieurs à la mesure dans les entrées et manifestes sont
+conservés pour préserver les octets du candidat testé. Le présent statut et
+le rapport de qualification donnent les résultats actuels ; aucune relecture
+humaine ni validation juridique n'est déclarée acquise.
 
 ## Architecture et décisions
 

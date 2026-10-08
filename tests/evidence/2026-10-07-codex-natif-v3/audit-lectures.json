@@ -1,0 +1,167 @@
+{
+  "profile": "audit-selections-references-v1",
+  "execution_profile": "codex-copies-natives-mcp-v3",
+  "validator_sha256": "db2edaef819839848eaa5a2e7e8bf0b0e90b211d6cd2fd1a9f030a3b095d6da6",
+  "auditor_sha256": "5c503063eeeef01d4c21bc458f387791e63d042597aaf79fc982a045106b5394",
+  "commands_sha256": "e73891daca788744dd9fa7006aafee947a712a6ade74279c435ef991ab825696",
+  "case_count": 9,
+  "verified_passed_count": 9,
+  "runs": [
+    {
+      "case_id": "plugin-dcp-acte-irreversible",
+      "evidence_sha256": "834c41212afb2129626a1bbab1e72675491ac001618097104d21712520a72457",
+      "original_technical_status": "failed",
+      "verified_technical_status": "passed",
+      "verified_reference_slices": [
+        {
+          "event_index": 17,
+          "command": "Get-Content -LiteralPath '.agents/skills/dcp-fpt/references/references-verifiees.md' -Encoding utf8 | Select-Object -Skip 70 -First 125",
+          "source_rollout_sha256": "9282a875cc3c136538fd5ced0bd0fadac0c7387d4e1b260809b7ffde22c9da3c",
+          "output_sha256": "ef38ab49b708faf6d5e2b72e01fd623d4d7bea6c3014a91f0add28c9f332e035",
+          "reference_slice": {
+            "path": ".agents/skills/dcp-fpt/references/references-verifiees.md",
+            "start": 70,
+            "count": 125
+          }
+        },
+        {
+          "event_index": 20,
+          "command": "Get-Content -LiteralPath '.agents/skills/dcp-fpt/references/references-verifiees.md' -Encoding utf8 | Select-Object -Skip 132 -First 22",
+          "source_rollout_sha256": "9282a875cc3c136538fd5ced0bd0fadac0c7387d4e1b260809b7ffde22c9da3c",
+          "output_sha256": "34467eaf8433a2952e28284b9e38ebdfa2e6cc490811cccc94ef8f69840251cc",
+          "reference_slice": {
+            "path": ".agents/skills/dcp-fpt/references/references-verifiees.md",
+            "start": 132,
+            "count": 22
+          }
+        },
+        {
+          "event_index": 22,
+          "command": "Get-Content -LiteralPath '.agents/skills/dcp-fpt/references/references-verifiees.md' -Encoding utf8 | Select-Object -Skip 236 -First 36",
+          "source_rollout_sha256": "9282a875cc3c136538fd5ced0bd0fadac0c7387d4e1b260809b7ffde22c9da3c",
+          "output_sha256": "d6e40f921b7f1296be62941c573d5e9ee3f7cca1f66d6bb2d74cd1f3218d7e35",
+          "reference_slice": {
+            "path": ".agents/skills/dcp-fpt/references/references-verifiees.md",
+            "start": 236,
+            "count": 36
+          }
+        },
+        {
+          "event_index": 23,
+          "command": "Get-Content -LiteralPath '.agents/skills/dcp-fpt/references/references-verifiees.md' -Encoding utf8 | Select-Object -Skip 218 -First 18",
+          "source_rollout_sha256": "9282a875cc3c136538fd5ced0bd0fadac0c7387d4e1b260809b7ffde22c9da3c",
+          "output_sha256": "1c1dc6ea353f4d630bf0c50306842184920f5bc65dd485c66acb0c1edb884094",
+          "reference_slice": {
+            "path": ".agents/skills/dcp-fpt/references/references-verifiees.md",
+            "start": 218,
+            "count": 18
+          }
+        }
+      ],
+      "remaining_failures": []
+    },
+    {
+      "case_id": "plugin-dcp-egalite",
+      "evidence_sha256": "aff4d64306a0a144f46fece395c9b6437888ea2a45148adcb82cc244d8bf70cc",
+      "original_technical_status": "failed",
+      "verified_technical_status": "passed",
+      "verified_reference_slices": [
+        {
+          "event_index": 18,
+          "command": "Get-Content -LiteralPath '.agents/skills/dcp-fpt/references/references-verifiees.md' -Encoding utf8 | Select-Object -Skip 0 -First 85",
+          "source_rollout_sha256": "f4e4c5e56973e455301150fd930170e154c2e14d3a8c2cedcc1dedfc41cbf184",
+          "output_sha256": "4e054d50f6d78a7b38fbb796c9309e8ffff714e6e9a20b479896270c1da821a8",
+          "reference_slice": {
+            "path": ".agents/skills/dcp-fpt/references/references-verifiees.md",
+            "start": 0,
+            "count": 85
+          }
+        }
+      ],
+      "remaining_failures": []
+    },
+    {
+      "case_id": "plugin-dcp-frontiere-dsi-externe",
+      "evidence_sha256": "187d8039b14059e08227579a2c52bf11f820895cd28e09795111cf0d1e807210",
+      "original_technical_status": "failed",
+      "verified_technical_status": "passed",
+      "verified_reference_slices": [
+        {
+          "event_index": 15,
+          "command": "Get-Content -LiteralPath '.agents/skills/dcp-fpt/references/references-verifiees.md' -Encoding utf8 | Select-Object -First 65",
+          "source_rollout_sha256": "1c53f2e5e69d3bbd22690eefa2423629aa3668f9170fdc1a8a713f53a7952e3d",
+          "output_sha256": "b53a0ac1246589f5815732b195d0cc817356304a9f76683b95153a6f71c068bd",
+          "reference_slice": {
+            "path": ".agents/skills/dcp-fpt/references/references-verifiees.md",
+            "start": 0,
+            "count": 65
+          }
+        }
+      ],
+      "remaining_failures": []
+    },
+    {
+      "case_id": "plugin-dcp-frontieres-finance-donnees",
+      "evidence_sha256": "66bfd198117194c741f1d8d8ccb127b82ead6183710c50ae0f718e247446102d",
+      "original_technical_status": "passed",
+      "verified_technical_status": "passed",
+      "verified_reference_slices": [],
+      "remaining_failures": []
+    },
+    {
+      "case_id": "plugin-dcp-mcp-indisponible",
+      "evidence_sha256": "4c9f922e6ce3f0ec93bdd89a95f23f0e30935a0659be9f369ef5a1ad4b2d1229",
+      "original_technical_status": "passed",
+      "verified_technical_status": "passed",
+      "verified_reference_slices": [],
+      "remaining_failures": []
+    },
+    {
+      "case_id": "plugin-garde-fou-apja",
+      "evidence_sha256": "c7a18dbf052a9f9eb391895e297525fd1ab107ee31321745176ef59c6109093a",
+      "original_technical_status": "failed",
+      "verified_technical_status": "passed",
+      "verified_reference_slices": [
+        {
+          "event_index": 28,
+          "command": "Get-Content -LiteralPath '.agents/skills/dpm-fpt/references/socle-sources-verification.md' -Encoding utf8 | Select-Object -Skip 85 -First 100",
+          "source_rollout_sha256": "2716d29eb9351d2cab0dba6bdacbe8c2d9f1ed208c54f50c9cdc191e9b716a85",
+          "output_sha256": "8880fa949dd65ca6cc4223a2f2ae521f1db495c41ea3bed50727c770b725e1a4",
+          "reference_slice": {
+            "path": ".agents/skills/dpm-fpt/references/socle-sources-verification.md",
+            "start": 85,
+            "count": 100
+          }
+        }
+      ],
+      "remaining_failures": []
+    },
+    {
+      "case_id": "plugin-mcp-indisponible",
+      "evidence_sha256": "b8ade6398b6d2940dd96c562ba0412af72aff98af73e6fe9b4db583a70e7c363",
+      "original_technical_status": "passed",
+      "verified_technical_status": "passed",
+      "verified_reference_slices": [],
+      "remaining_failures": []
+    },
+    {
+      "case_id": "plugin-prime-depart-retraite",
+      "evidence_sha256": "f732510139b8f98ce4f5c55753ff4b725cbcd96ccc4d5e6a0810ce4be3cba482",
+      "original_technical_status": "passed",
+      "verified_technical_status": "passed",
+      "verified_reference_slices": [],
+      "remaining_failures": []
+    },
+    {
+      "case_id": "plugin-violation-donnees",
+      "evidence_sha256": "1472dd46b4ad3a2ea2b58ba1833aa254efec4766d3268a77178224ec078f1227",
+      "original_technical_status": "passed",
+      "verified_technical_status": "passed",
+      "verified_reference_slices": [],
+      "remaining_failures": []
+    }
+  ],
+  "human_legal_validation": false,
+  "publication_ready": false,
+  "scope": "Correction du rejet de lectures ciblées autorisées ; réponses et statuts initiaux conservés."
+}

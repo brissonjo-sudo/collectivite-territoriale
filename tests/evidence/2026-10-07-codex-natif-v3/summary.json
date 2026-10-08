@@ -1,0 +1,173 @@
+{
+  "profile": "codex-copies-natives-mcp-v3",
+  "plugin_commit": "4dfec61aa81b54b21b347b2ebe077bdc54fc8940",
+  "case_count": 9,
+  "technical_passed_count": 9,
+  "runner_sha256": "40be30627c3b949f41839a5161e2d9f28049100b74561eb6a8f16b1876321869",
+  "runs": [
+    {
+      "case_id": "plugin-prime-depart-retraite",
+      "technical_status": "passed",
+      "original_technical_status": "passed",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v3/plugin-prime-depart-retraite.json",
+      "evidence_sha256": "f732510139b8f98ce4f5c55753ff4b725cbcd96ccc4d5e6a0810ce4be3cba482",
+      "mcp_mode": "required",
+      "human_invariants_reviewed": false
+    },
+    {
+      "case_id": "plugin-garde-fou-apja",
+      "technical_status": "passed",
+      "original_technical_status": "failed",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v3/plugin-garde-fou-apja.json",
+      "evidence_sha256": "c7a18dbf052a9f9eb391895e297525fd1ab107ee31321745176ef59c6109093a",
+      "mcp_mode": "required",
+      "human_invariants_reviewed": false
+    },
+    {
+      "case_id": "plugin-violation-donnees",
+      "technical_status": "passed",
+      "original_technical_status": "passed",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v3/plugin-violation-donnees.json",
+      "evidence_sha256": "1472dd46b4ad3a2ea2b58ba1833aa254efec4766d3268a77178224ec078f1227",
+      "mcp_mode": "required",
+      "human_invariants_reviewed": false
+    },
+    {
+      "case_id": "plugin-mcp-indisponible",
+      "technical_status": "passed",
+      "original_technical_status": "passed",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v3/plugin-mcp-indisponible.json",
+      "evidence_sha256": "b8ade6398b6d2940dd96c562ba0412af72aff98af73e6fe9b4db583a70e7c363",
+      "mcp_mode": "disabled",
+      "human_invariants_reviewed": false
+    },
+    {
+      "case_id": "plugin-dcp-egalite",
+      "technical_status": "passed",
+      "original_technical_status": "failed",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v3/plugin-dcp-egalite.json",
+      "evidence_sha256": "aff4d64306a0a144f46fece395c9b6437888ea2a45148adcb82cc244d8bf70cc",
+      "mcp_mode": "required",
+      "human_invariants_reviewed": false
+    },
+    {
+      "case_id": "plugin-dcp-acte-irreversible",
+      "technical_status": "passed",
+      "original_technical_status": "failed",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v3/plugin-dcp-acte-irreversible.json",
+      "evidence_sha256": "834c41212afb2129626a1bbab1e72675491ac001618097104d21712520a72457",
+      "mcp_mode": "required",
+      "human_invariants_reviewed": false
+    },
+    {
+      "case_id": "plugin-dcp-frontieres-finance-donnees",
+      "technical_status": "passed",
+      "original_technical_status": "passed",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v3/plugin-dcp-frontieres-finance-donnees.json",
+      "evidence_sha256": "66bfd198117194c741f1d8d8ccb127b82ead6183710c50ae0f718e247446102d",
+      "mcp_mode": "required",
+      "human_invariants_reviewed": false
+    },
+    {
+      "case_id": "plugin-dcp-frontiere-dsi-externe",
+      "technical_status": "passed",
+      "original_technical_status": "failed",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v3/plugin-dcp-frontiere-dsi-externe.json",
+      "evidence_sha256": "187d8039b14059e08227579a2c52bf11f820895cd28e09795111cf0d1e807210",
+      "mcp_mode": "required",
+      "human_invariants_reviewed": false
+    },
+    {
+      "case_id": "plugin-dcp-mcp-indisponible",
+      "technical_status": "passed",
+      "original_technical_status": "passed",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v3/plugin-dcp-mcp-indisponible.json",
+      "evidence_sha256": "4c9f922e6ce3f0ec93bdd89a95f23f0e30935a0659be9f369ef5a1ad4b2d1229",
+      "mcp_mode": "disabled",
+      "human_invariants_reviewed": false
+    }
+  ],
+  "verification_commit": "bf2e695fa752edf3ffd3c2f0d4d8c74d4a282698",
+  "validator_sha256": "db2edaef819839848eaa5a2e7e8bf0b0e90b211d6cd2fd1a9f030a3b095d6da6",
+  "audit_evidence_path": "tests/evidence/2026-10-07-codex-natif-v3/audit-lectures.json",
+  "audit_evidence_sha256": "2d3be6097a35a33661691790ab0660f33e7ccffed3740092240584e08e941cb7",
+  "initial_technical_passed_count": 5,
+  "attempts": [
+    {
+      "case_id": "plugin-prime-depart-retraite",
+      "attempt": 1,
+      "technical_status": "passed",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v3/plugin-prime-depart-retraite.json",
+      "evidence_sha256": "f732510139b8f98ce4f5c55753ff4b725cbcd96ccc4d5e6a0810ce4be3cba482"
+    },
+    {
+      "case_id": "plugin-garde-fou-apja",
+      "attempt": 1,
+      "technical_status": "failed",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v3/plugin-garde-fou-apja.json",
+      "evidence_sha256": "c7a18dbf052a9f9eb391895e297525fd1ab107ee31321745176ef59c6109093a"
+    },
+    {
+      "case_id": "plugin-garde-fou-apja",
+      "attempt": 2,
+      "technical_status": "passed",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v3-reprise/plugin-garde-fou-apja.json",
+      "evidence_sha256": "cd4025c7a7c0d79ee904d058b8157d0c6d106b2e68b65bc1daa47f511466995e"
+    },
+    {
+      "case_id": "plugin-violation-donnees",
+      "attempt": 1,
+      "technical_status": "passed",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v3/plugin-violation-donnees.json",
+      "evidence_sha256": "1472dd46b4ad3a2ea2b58ba1833aa254efec4766d3268a77178224ec078f1227"
+    },
+    {
+      "case_id": "plugin-mcp-indisponible",
+      "attempt": 1,
+      "technical_status": "passed",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v3/plugin-mcp-indisponible.json",
+      "evidence_sha256": "b8ade6398b6d2940dd96c562ba0412af72aff98af73e6fe9b4db583a70e7c363"
+    },
+    {
+      "case_id": "plugin-dcp-egalite",
+      "attempt": 1,
+      "technical_status": "failed",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v3/plugin-dcp-egalite.json",
+      "evidence_sha256": "aff4d64306a0a144f46fece395c9b6437888ea2a45148adcb82cc244d8bf70cc"
+    },
+    {
+      "case_id": "plugin-dcp-acte-irreversible",
+      "attempt": 1,
+      "technical_status": "failed",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v3/plugin-dcp-acte-irreversible.json",
+      "evidence_sha256": "834c41212afb2129626a1bbab1e72675491ac001618097104d21712520a72457"
+    },
+    {
+      "case_id": "plugin-dcp-frontieres-finance-donnees",
+      "attempt": 1,
+      "technical_status": "passed",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v3/plugin-dcp-frontieres-finance-donnees.json",
+      "evidence_sha256": "66bfd198117194c741f1d8d8ccb127b82ead6183710c50ae0f718e247446102d"
+    },
+    {
+      "case_id": "plugin-dcp-frontiere-dsi-externe",
+      "attempt": 1,
+      "technical_status": "failed",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v3/plugin-dcp-frontiere-dsi-externe.json",
+      "evidence_sha256": "187d8039b14059e08227579a2c52bf11f820895cd28e09795111cf0d1e807210"
+    },
+    {
+      "case_id": "plugin-dcp-mcp-indisponible",
+      "attempt": 1,
+      "technical_status": "passed",
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v3/plugin-dcp-mcp-indisponible.json",
+      "evidence_sha256": "4c9f922e6ce3f0ec93bdd89a95f23f0e30935a0659be9f369ef5a1ad4b2d1229"
+    }
+  ],
+  "retry_policy": "Reprise APJA supplémentaire avant diagnostic ; aucune réponse initiale remplacée.",
+  "technical_status_note": "Statuts vérifiés après correction de sept faux positifs de lecture ; statuts initiaux inchangés dans chaque preuve.",
+  "human_legal_validation": false,
+  "publication_ready": false,
+  "marketplace_installation_tested": false,
+  "automatic_activation_tested": false
+}

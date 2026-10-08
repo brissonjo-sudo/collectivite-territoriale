@@ -1,0 +1,85 @@
+{
+  "profile": "codex-copies-natives-mcp-v4",
+  "plugin_commit": "e26e84bdfbfae697d657b95217e1865df4d84cc2",
+  "case_count": 9,
+  "technical_passed_count": 9,
+  "runner_sha256": "57862ff250f304ae337234e9d5eae0cd371c5d3fba893bb3fb7364c343ecafed",
+  "runs": [
+    {
+      "case_id": "plugin-prime-depart-retraite",
+      "technical_status": "passed",
+      "failures": [],
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v5/plugin-prime-depart-retraite.json",
+      "evidence_sha256": "d49acc21a11e0a3488ca4fb8f97e2647c22db4772517355fceb421b739cb3614",
+      "human_invariants_reviewed": false
+    },
+    {
+      "case_id": "plugin-garde-fou-apja",
+      "technical_status": "passed",
+      "failures": [],
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v5/plugin-garde-fou-apja.json",
+      "evidence_sha256": "517d7eb80336463ad47e9d83bb6b2e32a6190297e03771cc079cec2619b030de",
+      "human_invariants_reviewed": false
+    },
+    {
+      "case_id": "plugin-violation-donnees",
+      "technical_status": "passed",
+      "failures": [],
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v5/plugin-violation-donnees.json",
+      "evidence_sha256": "2c3f441e5cd9f60cdc6d35db112599e4a2ebf15780787b5ab734a6f43192187f",
+      "human_invariants_reviewed": false
+    },
+    {
+      "case_id": "plugin-mcp-indisponible",
+      "technical_status": "passed",
+      "failures": [],
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v5/plugin-mcp-indisponible.json",
+      "evidence_sha256": "abe35b8a866c274c073be2366a421378d23c47e9d1f7112e1fe798c2087147bf",
+      "human_invariants_reviewed": false
+    },
+    {
+      "case_id": "plugin-dcp-egalite",
+      "technical_status": "passed",
+      "failures": [],
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v5/plugin-dcp-egalite.json",
+      "evidence_sha256": "7396cd64894ac593ca38f0a0d9a678dd0c55e3cfc3baeaa627a916caebfd5059",
+      "human_invariants_reviewed": false
+    },
+    {
+      "case_id": "plugin-dcp-acte-irreversible",
+      "technical_status": "passed",
+      "failures": [],
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v5/plugin-dcp-acte-irreversible.json",
+      "evidence_sha256": "81e84325b6790947c60cf2a3d5fea114b02d7d876d206e40021d8855ed5d6d32",
+      "human_invariants_reviewed": false
+    },
+    {
+      "case_id": "plugin-dcp-frontieres-finance-donnees",
+      "technical_status": "passed",
+      "failures": [],
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v5/plugin-dcp-frontieres-finance-donnees.json",
+      "evidence_sha256": "261b2cc1f6a82a72673dd617960a684eb70b4dee103d7de2d97e31bd3ed9616c",
+      "human_invariants_reviewed": false
+    },
+    {
+      "case_id": "plugin-dcp-frontiere-dsi-externe",
+      "technical_status": "passed",
+      "failures": [],
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v5/plugin-dcp-frontiere-dsi-externe.json",
+      "evidence_sha256": "6660ef21ff29c6688e19be6f311740d131092c22f72549ae25e5ba340300d57c",
+      "human_invariants_reviewed": false
+    },
+    {
+      "case_id": "plugin-dcp-mcp-indisponible",
+      "technical_status": "passed",
+      "failures": [],
+      "evidence_path": "tests/evidence/2026-10-07-codex-natif-v5/plugin-dcp-mcp-indisponible.json",
+      "evidence_sha256": "cbdeb9e88fa51f16fc69122b5d2cbd81803d1a2aed3ddda37b20b23879f929b5",
+      "human_invariants_reviewed": false
+    }
+  ],
+  "human_legal_validation": false,
+  "publication_ready": false,
+  "first_responses_preserved": true,
+  "scope": "Intégralité des points d’entrée restituée par segments ; références complémentaires non couvertes intégralement."
+}

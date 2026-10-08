@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-07",
+  "plugin_version": "1.2.0",
+  "plugin_commit": "4dfec61aa81b54b21b347b2ebe077bdc54fc8940",
+  "release_ready": false,
+  "upstream_commits": {
+    "dpm-fpt": "1668c89798f1f50a829c0b94d3cf6bf33a3640fb",
+    "drh-fpt": "f81c9b955f7ebb47df7e93bdc41ac743d85a2973",
+    "dpo-ct": "f3406f412368199a33f47e7861eb450eab2b2cdb",
+    "dirfi-fpt": "d970fe530d3f50f6b4c330e3cfb85db35b7126ab",
+    "recherche-juridique": "e437d10a2d4bbf66ba7a9c1e9fb49e773166054e",
+    "dcp-fpt": "caef7fd9e680dc28056998532d24befa0e8680ec"
+  },
+  "release_blockers": [
+    "Coactivation Codex v3 : 9/9 contrôles vérifiés après audit des lectures ; cinq rapports initiaux réussis et quatre faux positifs conservés. Relecture humaine des invariants non réalisée.",
+    "DCP 0.1.1 : seuil automatique True ; 20 citations dans 8 cas sans URL d’ouverture explicite correspondante, sources et portée à relire.",
+    "Relecture par un praticien non réalisée, y compris les invariants RH ; qualification de fond ouverte.",
+    "Installation locale et découverte vérifiées sans compte ; réponse modèle et appel MCP depuis le plugin installé non testés.",
+    "Déclenchement implicite et installation depuis le catalogue Git distribué non testés.",
+    "Réserve DPO : revue humaine avant chaque notification externe non explicitement demandée ; cas DCP-24 demi-réussi et sources à relire."
+  ],
+  "historical_evidence": "tests/evidence/2026-09-20-validation-locale.json",
+  "runs": [],
+  "skill_measurements": {
+    "dcp-fpt": {
+      "status": "completed_pending_review",
+      "upstream_commit": "caef7fd9e680dc28056998532d24befa0e8680ec",
+      "evidence_path": "tests/evidence/2026-10-07-correctif/dcp-autonome.json"
+    }
+  },
+  "review": {
+    "human_legal_validation": false
+  },
+  "codex_smoke": {
+    "status": "partial",
+    "plugin_commit": "4dfec61aa81b54b21b347b2ebe077bdc54fc8940",
+    "evidence_path": "tests/evidence/2026-10-07-correctif/installation-codex.json",
+    "scope": "Installation locale et découverte réelles sans compte ; neuf réponses en copies natives mesurées séparément. Le modèle et le MCP du plugin installé restent à qualifier."
+  },
+  "native_campaign": {
+    "profile": "codex-copies-natives-mcp-v3",
+    "status": "completed_pending_review",
+    "evidence_path": "tests/evidence/2026-10-07-codex-natif-v3/summary.json",
+    "technical_passed_count": 9,
+    "initial_technical_passed_count": 5,
+    "verification_commit": "bf2e695fa752edf3ffd3c2f0d4d8c74d4a282698",
+    "case_count": 9,
+    "plugin_commit": "4dfec61aa81b54b21b347b2ebe077bdc54fc8940"
+  },
+  "historical_qualification": "tests/evidence/2026-10-07-candidat/release-initial-0.1.0.json"
+}

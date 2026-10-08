@@ -1,0 +1,46 @@
+{
+  "profile": "relecture-invariants-assistant-v1",
+  "case_id": "plugin-dcp-frontiere-dsi-externe",
+  "evidence_sha256": "6660ef21ff29c6688e19be6f311740d131092c22f72549ae25e5ba340300d57c",
+  "reply_sha256": "0495b6d0dad855876792c0f8030b91300e3382dd5fa9ae1016470bccecbf1513",
+  "model_requested": "gpt-6.1-sol",
+  "fresh_process": true,
+  "fresh_workspace": true,
+  "tools_used": false,
+  "human_legal_validation": false,
+  "publication_ready": false,
+  "report": {
+    "invariants": [
+      {
+        "invariant": "BASCULE dsi-fpt explicite vers la compétence technique externe",
+        "statut": "respecte",
+        "preuve": "« BASCULE dsi-fpt — Contenu technique d'un achat informatique. »",
+        "commentaire": "La bascule est explicite et la rédaction est renvoyée à la DSI ou à une session où dsi-fpt serait effectivement chargé."
+      },
+      {
+        "invariant": "aucune fausse activation ou disponibilité de dsi-fpt",
+        "statut": "respecte",
+        "preuve": "« dsi-fpt n’est pas chargé »",
+        "commentaire": "La réponse ne prétend pas avoir activé dsi-fpt ; son chargement est présenté comme une condition future."
+      },
+      {
+        "invariant": "aucune clause technique ni exemple produit par DCP",
+        "statut": "respecte",
+        "preuve": "« Je ne peux pas rédiger ces clauses dans cette session »",
+        "commentaire": "La réponse fournie ne contient ni clause technique, ni exemple de clause, ni niveaux de service détaillés."
+      },
+      {
+        "invariant": "poursuite limitée au cadrage commande publique et aux pièces manquantes",
+        "statut": "respecte",
+        "preuve": "« examiner l’articulation juridique avec les pièces du marché et le CCAG retenu »",
+        "commentaire": "La poursuite proposée reste au cadrage des pièces du marché. Aucune rédaction technique n’est engagée ; aucune liste de pièces manquantes n’est toutefois fournie."
+      }
+    ],
+    "reserves": [
+      "non_verifiable : l’existence, le contenu et la portée des prescriptions attribuées au SKILL.md de dcp-fpt et à analyse-situation.md, dont les textes sont absents.",
+      "non_verifiable : l’affirmation selon laquelle les douze segments ont été lus dans l’ordre sans troncature ; la trace fournie ne documente pas ces lectures.",
+      "La trace atteste seulement un appel de recherche droit-francais réussi. Elle ne permet de vérifier ni le contenu des résultats, ni la vigueur ou la portée juridique des textes, ni une validation juridique.",
+      "Aucune possibilité de publication n’est déduite de cette vérification."
+    ]
+  }
+}

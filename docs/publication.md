@@ -24,10 +24,18 @@ ne qualifie pas le contenu distribué.
 ## Publier une nouvelle version
 
 1. **Qualifier le candidat sur `main`** : `tests/evidence/release-<version>.json`
-   avec `release_ready: true` (campagne, relecture juridique, smoke Codex),
-   et CI entièrement verte, barrière de publication comprise.
-2. **Créer l'étiquette annotée** `v<version>` sur le commit qualifié, celui qui
-   figure dans `plugin_commit` de la preuve. Depuis GitHub : *Releases → Draft
+   avec `distribution.scope: open_source` et `distribution.ready: true`,
+   et CI entièrement verte, barrière technique de distribution comprise.
+   Depuis le 2026-10-08, la relecture praticien est différée jusqu'au déploiement
+   opérationnel dans une structure tierce : [ADR 0007](adr/0007-distribution-open-source-et-deploiement.md).
+   `deployment.ready` et le champ historique `release_ready` restent faux
+   tant que cette qualification métier n'est pas réalisée.
+2. **Après accord de l'auteur, créer l'étiquette annotée** `v<version>` sur le
+   commit qualifié présent dans `main`. `plugin_commit` désigne la baseline
+   mesurée : le commit publié peut ajouter les preuves et la documentation,
+   à condition que les fichiers de skills et la configuration installée aient
+   les mêmes empreintes. Le commit publié est consigné dans le registre et
+   `source.sha`. Depuis GitHub : *Releases → Draft
    a new release → Choose a tag → v<version> → Target : le commit qualifié*.
    En ligne de commande :
 
@@ -38,12 +46,22 @@ ne qualifie pas le contenu distribué.
 
 3. **Ouvrir une PR de distribution** qui modifie uniquement :
    - `.claude-plugin/marketplace.json` : `version`, `source.ref`
-     (`v<version>`) et `source.sha` (commit complet) ;
+     (`v<version>`), `source.sha` (commit complet) et description du contenu ;
    - `.agents/plugins/marketplace.json` : `source.ref` (`v<version>`) ;
    - ce registre (nouvelle ligne).
 4. **Fusionner** une fois la CI verte : l'étape « Vérifier l'étiquette
    distribuée » échoue tant que l'étiquette n'existe pas ou ne désigne pas
    le commit épinglé.
+
+Le statut du registre distingue « distribution open source qualifiée
+techniquement » et « déploiement tiers non qualifié ». Le contrôle
+`python scripts/qualify_distribution.py` vérifie les empreintes des preuves,
+la couverture des scénarios, le runtime et la configuration installée.
+Une revue différée ne permet pas d'ignorer un échec technique ou un runtime
+modifié. Les preuves historiques gardent leurs statuts d'origine.
+
+La [note praticien conservée](deploiement-collectivite.md) doit être reprise
+avant le déploiement dans une collectivité ou une structure tierce.
 
 ## Effet pour les utilisateurs
 

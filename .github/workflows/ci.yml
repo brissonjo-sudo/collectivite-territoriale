@@ -34,14 +34,14 @@ jobs:
           fi
 
   release:
-    name: Qualification de publication
+    name: Qualification de distribution open source
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Contrôler la barrière de publication
+      - name: Contrôler la distribution open source et conserver les réserves métier
         env:
           CT_SAUTER_BARRIERE: "0"
         run: python -m unittest discover -s tests -k ReleaseGateTests
