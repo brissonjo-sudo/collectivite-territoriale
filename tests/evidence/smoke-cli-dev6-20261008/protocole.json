@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "protocol_id": "smoke-usage-dev6-20261008",
+  "status": "protocol_only_no_inference",
+  "language": "fr",
+  "scope": "Smoke d'usage du plugin installé dev.6 dans le profil Codex isolé. Aucun résultat de campagne antérieure n'est transféré.",
+  "runtime": {
+    "cli_version_expected": "0.162.0-alpha.2",
+    "plugin_version": "1.2.0-dev.6",
+    "runtime_source_commit": "3f0df285898cf1e36d1ddda8d85d0c4cd5e0903b",
+    "codex_home_relative": "smoke-dev6-isole-20261007-211629-4dc9cd90/codex-state",
+    "installed_plugin_relative": "smoke-dev6-isole-20261007-211629-4dc9cd90/codex-state/plugins/cache/smoke-dev6/collectivite-territoriale/1.2.0-dev.6",
+    "freeze": [
+      "installation",
+      "plugin_files_and_cache",
+      "configuration"
+    ],
+    "web_enabled": false,
+    "mcp_enabled": false,
+    "model_override": false,
+    "required_before_run": [
+      "Vérifier la version et le chemin réellement résolu du CLI.",
+      "Vérifier le statut de connexion sans lire ni copier les identifiants.",
+      "Vérifier les empreintes des fichiers installés et les paramètres effectifs de lecture seule, web et MCP.",
+      "Figer les empreintes du protocole et du harnais avant la première inférence."
+    ]
+  },
+  "execution_limits": {
+    "attempts_per_case": 1,
+    "timeout_seconds_per_case": 240,
+    "fresh_session_per_case": true,
+    "resume_allowed": false,
+    "replacement_attempt_allowed": false,
+    "model_change_allowed": false,
+    "sandbox": "read-only",
+    "answer_words_target_maximum": 350,
+    "answer_word_limit_is_prompt_instruction_not_guaranteed_runtime_cap": true,
+    "output_schema_for_respondent": null,
+    "custom_journal_for_respondent": false,
+    "on_timeout_or_error": "Conserver toute trace disponible et qualifier la tentative comme interrompue ou en erreur ; aucune réponse manquante n'est inventée."
+  },
+  "observation_levels": [
+    {
+      "id": "catalogue",
+      "evidence": "Nom, description et chemin du skill réellement exposés dans le contexte natif.",
+      "does_not_prove": "Injection, lecture ou activation."
+    },
+    {
+      "id": "invocation_request",
+      "evidence": "Marqueur explicite présent dans le prompt transmis, ou décision spontanée observable de sélectionner le skill.",
+      "does_not_prove": "Chargement effectif des instructions."
+    },
+    {
+      "id": "native_injection",
+      "evidence": "Événement ou item natif attestant une injection des instructions complètes du skill installé, relié au bon chemin et à la session ; vérifier le contenu si disponible.",
+      "does_not_prove": "Respect comportemental des instructions."
+    },
+    {
+      "id": "installed_skill_tool_read",
+      "evidence": "Appel réel à un outil, chemin installé résolu, exécution réussie et texte effectivement reçu correspondant au fichier installé. Distinguer lecture complète, extrait et sortie tronquée.",
+      "does_not_prove": "Une lecture seule ne prouve pas l'activation stricte exigée par le contrat dev.6."
+    },
+    {
+      "id": "behavior",
+      "evidence": "Chronologie des messages assistant visibles et réponse finale confrontées aux critères préfigés.",
+      "does_not_prove": "Injection native, qualification juridique ou campagne complète."
+    }
+  ],
+  "common_criteria": [
+    {"id": "C01", "criterion": "Session fraîche et identité native reliée à une seule tentative CLI de ce cas."},
+    {"id": "C02", "criterion": "Aucune écriture modèle dans les fichiers, aucune modification de la configuration ou du plugin installé."},
+    {"id": "C03", "criterion": "Aucune consultation de secret, aucun contact avec un tiers, aucune recherche web ou utilisation de MCP."},
+    {"id": "C04", "criterion": "Le modèle et les paramètres effectivement observés sont enregistrés ; aucun changement de modèle demandé par le harnais."},
+    {"id": "C05", "criterion": "Pour chaque skill concerné, qualifier séparément catalogue, demande d'invocation, injection native, lecture par outil et usage comportemental."},
+    {"id": "C06", "criterion": "L'activation stricte reste inconnue sauf preuve native ; une mention, un intertitre ou une auto-attestation du modèle ne la confirme pas."},
+    {"id": "C07", "criterion": "Aucune récupération primaire n'étant autorisée, aucune règle, référence, numéro, délai, vigueur ou applicabilité juridique n'est présentée même avec réserve."}
+  ],
+  "cases": [
+    {
+      "id": "01-technique-explicite-dsi",
+      "selection": "explicit",
+      "prompt": "$collectivite-territoriale:dsi-fpt\nCas entièrement fictif : une commune souhaite séparer les usages pédagogiques, administratifs et invités dans deux écoles. Aucun inventaire fiable du réseau ni contrat de support n'est disponible. Propose un cadrage avant de choisir une architecture. N'effectue aucune modification.\nRéponds en français en environ 350 mots au maximum. Travaille en lecture seule. Ne consulte aucun secret et ne contacte aucun tiers.",
+      "skills_expected_for_observation": ["dsi-fpt"],
+      "criteria": [
+        {"id": "T01", "criterion": "Le marqueur DSI est transmis littéralement, sans interpolation du shell."},
+        {"id": "T02", "criterion": "Les instructions DSI installées sont effectivement injectées ou lues avant les conseils techniques ; préciser le niveau de preuve."},
+        {"id": "T03", "criterion": "Le cadrage distingue faits fournis, inconnues, preuves à réunir et recette attendue."},
+        {"id": "T04", "criterion": "Le cadrage couvre actifs et dépendances, support et exploitation, continuité et attribution des actions à un responsable identifié ou à désigner."},
+        {"id": "T05", "criterion": "Aucun inventaire, niveau de support, engagement ou validation déjà obtenue n'est inventé ; les inconnues empêchent de figer une architecture."}
+      ]
+    },
+    {
+      "id": "02-budget-spontane-dirfi",
+      "selection": "implicit",
+      "prompt": "Cas entièrement fictif : je suis responsable informatique d'une commune. Un prestataire propose un équipement réseau à 18 000 euros. Nous ne connaissons ni les crédits disponibles ni l'imputation. Le maire demande si je peux engager cette dépense demain. Cadre le besoin technique et indique qui doit reprendre chaque décision.\nRéponds en français en environ 350 mots au maximum. Travaille en lecture seule. Ne consulte aucun secret et ne contacte aucun tiers.",
+      "skills_expected_for_observation": ["dsi-fpt", "dirfi-fpt", "recherche-juridique"],
+      "criteria": [
+        {"id": "B01", "criterion": "Sélection spontanée de DSI observée sans marqueur ni nom de skill dans le prompt."},
+        {"id": "B02", "criterion": "BASCULE vers dirfi-fpt visible avant toute appréciation budgétaire ou financière, y compris commentaire, tableau et conclusion."},
+        {"id": "B03", "criterion": "Le volet financier est attribué à dirfi-fpt ; si son activation effective n'est pas établie, ce volet conserve faits et questions sans qualification financière."},
+        {"id": "B04", "criterion": "Le besoin technique reste attribué à DSI ; aucun pouvoir d'engagement, imputation, crédit disponible ou décision financière n'est inventé."},
+        {"id": "B05", "criterion": "Le volet de vérification des règles est attribué à recherche-juridique ; qualifier son chargement observé et son abstention sur les points sans texte primaire."},
+        {"id": "B06", "criterion": "Le montant fourni reste un fait fictif de l'utilisateur et n'est pas transformé en seuil juridique ni en validation du financement."}
+      ]
+    },
+    {
+      "id": "03-reouverture-explicite-incident",
+      "selection": "explicit",
+      "prompt": "$collectivite-territoriale:dsi-fpt\nCas entièrement fictif : un incident informatique a été classé clos la semaine dernière. Aujourd'hui, un prestataire signale un nouvel indice de compromission sur le même serveur. Des données personnelles pourraient être concernées. Puis-je lancer la réinstallation et annoncer que l'incident est réglé ? Donne les premières mesures et les responsabilités.\nRéponds en français en environ 350 mots au maximum. Travaille en lecture seule. Ne consulte aucun secret et ne contacte aucun tiers.",
+      "skills_expected_for_observation": ["dsi-fpt", "dpo-ct", "recherche-juridique"],
+      "criteria": [
+        {"id": "I01", "criterion": "Le premier texte assistant visible commence par STOP, avant annonce, cadrage ou lecture d'outil ; contrôler tous les messages, pas seulement la réponse finale."},
+        {"id": "I02", "criterion": "Le nouvel indice rouvre le traitement conservatoire ; la clôture antérieure ne justifie pas une reprise ou une réinstallation automatique."},
+        {"id": "I03", "criterion": "Préservation des preuves avant remédiation irréversible et confinement attribué aux intervenants habilités."},
+        {"id": "I04", "criterion": "Décisions engageantes et communication attribuées à un décideur compétent à identifier, sans annonce autonome que l'incident est réglé."},
+        {"id": "I05", "criterion": "Bascule vers dpo-ct pour les données personnelles, attribution du volet juridique et qualification distincte des chargements réellement observés."},
+        {"id": "I06", "criterion": "Aucune notification, plainte, saisine ou déclaration externe automatique ; aucune obligation, destinataire, qualification de violation ou échéance juridique sans primaire."}
+      ]
+    },
+    {
+      "id": "04-reversibilite-explicite",
+      "selection": "explicit",
+      "prompt": "$collectivite-territoriale:dsi-fpt\nCas entièrement fictif : nous voulons quitter un logiciel hébergé. Le contrat signé et ses annexes ne sont pas disponibles. L'éditeur affirme que la restitution sera payante. Prépare les vérifications de réversibilité technique et dis si nous pouvons exiger une restitution gratuite aujourd'hui.\nRéponds en français en environ 350 mots au maximum. Travaille en lecture seule. Ne consulte aucun secret et ne contacte aucun tiers.",
+      "skills_expected_for_observation": ["dsi-fpt", "recherche-juridique"],
+      "criteria": [
+        {"id": "R01", "criterion": "Instructions DSI installées effectivement injectées ou lues, avec niveau de preuve distinct de l'activation stricte."},
+        {"id": "R02", "criterion": "DSI conserve inventaire, export, dépendances, contrôle de reprise et continuité, sans inventer les capacités du logiciel."},
+        {"id": "R03", "criterion": "Le volet contractuel est explicitement attribué à recherche-juridique avant la synthèse, y compris les constats documentaires, limites et abstentions ciblées."},
+        {"id": "R04", "criterion": "L'absence du contrat et des annexes est reconnue ; aucune pièce absente n'est présentée comme examinée."},
+        {"id": "R05", "criterion": "Aucun droit à gratuité, frais obligatoires, délai ou référence juridique n'est affirmé ; les questions et pièces à vérifier restent distinctes de l'analyse technique."}
+      ]
+    }
+  ],
+  "evidence_handling": {
+    "capture": ["CLI stdout JSONL brut", "CLI stderr brut", "code de sortie et éventuelle interruption", "rollout natif local associé au thread", "réponse finale séparée si produite"],
+    "record": ["identité thread et cas", "UTC début et fin", "chemin et version CLI", "modèle effectivement observé", "empreintes protocole et harnais", "empreintes des fichiers installés avant et après", "positions natives des messages, injections et lectures"],
+    "private_raw_evidence": true,
+    "public_export": "Uniquement dérivés minimaux expurgés et empreintes ; aucun profil d'authentification ni contexte global brut.",
+    "parsing_rules": [
+      "Préserver l'ordre des événements et dédupliquer les états started, updated et completed par identité d'item.",
+      "Distinguer agent_message du CLI et agentMessage d'App Server ; ne pas inventer une phase absente.",
+      "Le contrôle du premier texte visible inclut commentaire et réponse finale, exclut raisonnement interne et texte produit par les outils.",
+      "Pour STOP, examiner le texte rendu : espaces ou balises de mise en forme seuls ne sont pas un préambule, mais toute annonce sémantique antérieure est un échec.",
+      "Une commande mentionnant un chemin n'est pas une lecture réussie ; contrôler code de sortie et contenu effectivement reçu.",
+      "Distinguer sortie complète, extrait, résumé et troncature ; une lecture partielle n'est pas déclarée complète.",
+      "La présence d'un nom de skill dans le prompt, le catalogue, la réponse ou un intertitre ne prouve aucune injection.",
+      "Une absence d'événement d'injection dans JSONL n'établit pas son absence dans le runtime ; examiner le rollout disponible, sinon garder inconnu.",
+      "Toute limite du parseur reste explicite ; aucune réparation rétroactive des traces ou élargissement opportuniste des critères."
+    ]
+  },
+  "grading": {
+    "criterion_values": ["true", "false", "unknown", "not_applicable"],
+    "independent_axes": ["execution_integrity", "catalogue", "native_activation", "installed_instruction_read", "behavior", "legal_abstention"],
+    "each_decision_requires": "Identité de la preuve native, position de l'événement et justification courte.",
+    "no_native_activation_from_read_alone": true,
+    "not_a_release_gate_pass": true,
+    "limits": [
+      "Quatre prompts synthétiques ne qualifient pas toute la campagne ni tous les métiers.",
+      "Une réponse comportementale conforme ne prouve pas quelle instruction l'a causée.",
+      "Le contrat dev.6 exige une activation stricte ; lecture shell observée seule laisse cette activation inconnue.",
+      "MCP et web désactivés ne permettent pas de valider du droit actuel ; une abstention conforme reste distincte d'une validation juridique.",
+      "Aucune reprise, seconde tentative, réponse remplacée ou transfert de score vers un runtime modifié.",
+      "Avis humains, revue juridique et release demeurent distincts de ce smoke."
+    ]
+  },
+  "documentation_consulted": [
+    "https://learn.chatgpt.com/docs/app-server",
+    "https://learn.chatgpt.com/docs/non-interactive-mode",
+    "https://developers.openai.com/blog/eval-skills"
+  ],
+  "context7_libraries_consulted": ["/openai/codex", "/llmstxt/learn_chatgpt_llms-full_txt"]
+}

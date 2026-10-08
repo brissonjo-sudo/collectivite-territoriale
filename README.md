@@ -4,7 +4,7 @@
 
 Plugin Claude Code et Codex destiné aux collectivités territoriales françaises. Une seule installation réunit cinq expertises métier, une méthode de recherche juridique sourcée et un accès optionnel à Légifrance/Judilibre.
 
-> **Statut :** candidat `1.2.0-dev.6`, pilote natif **PARTIEL** : cinq cas jugés, un rejet hors score et dix cas non exécutés. Installation isolée et découverte des six descriptions établies ; activation et smoke d'usage non établis. Avis humains ouverts ; `release_ready=false`. Aucun score dev.5 transféré. Voir [qualification](docs/qualification/README.md).
+> **Statut :** candidat `1.2.0-dev.7` non mesuré, correction STOP à qualifier. Le smoke natif CLI dev.6 vérifie l'usage DSI explicite, avec coactivation encore bloquée. Avis humains ouverts ; `release_ready=false`. Aucun score antérieur transféré. Voir [qualification](docs/qualification/README.md).
 
 Ce plugin aide à qualifier une situation, identifier les expertises à mobiliser et produire une réponse traçable. Il ne remplace ni la validation d'un juriste, ni le contrôle de l'autorité compétente, ni la vérification des textes officiels en vigueur.
 

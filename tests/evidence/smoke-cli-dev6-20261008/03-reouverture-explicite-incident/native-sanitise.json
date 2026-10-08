@@ -1,0 +1,277 @@
+{
+  "case_id": "03-reouverture-explicite-incident",
+  "thread_id": "01a11b0e-1897-7070-be1f-3c9bbf2ed1f9",
+  "model_observed": "gpt-6.1-sol",
+  "native_session_basename": "rollout-2026-10-08T12-27-51-01a11b0e-1897-7070-be1f-3c9bbf2ed1f9.jsonl",
+  "native_session_sha256": "b39f9be9fec69d1a5d69b02e67a42d47b6b53be111cc45019a19500f4c00b1f7",
+  "native_line_count": 32,
+  "events": [
+    {
+      "native_line": 1,
+      "native_line_sha256": "6505db5556f9b5289985cb12e2dfcfa08c25f4c74983d82a6ae42eb7e4ec67f2",
+      "timestamp": "2026-10-08T10:27:51.283Z",
+      "type": "session_meta",
+      "id": "01a11b0e-1897-7070-be1f-3c9bbf2ed1f9",
+      "cli_version": "0.162.0-alpha.2",
+      "source": "exec"
+    },
+    {
+      "native_line": 8,
+      "native_line_sha256": "45c6f2b8d53a587d6e762e05cf00ed2ee4bece153b64ad557264607e45cef666",
+      "timestamp": "2026-10-08T10:27:52.270Z",
+      "type": "turn_context",
+      "model": "gpt-6.1-sol",
+      "approval_policy": "never",
+      "sandbox_policy": {
+        "type": "read-only"
+      }
+    },
+    {
+      "native_line": 9,
+      "native_line_sha256": "207351b3e7410e9257c41e03e7ba4a72dc5c39f8507258e9a963cbaae741ab77",
+      "timestamp": "2026-10-08T10:27:52.278Z",
+      "type": "submitted_prompt",
+      "sha256": "5f36be5ffbdef796331ceeb2d3988dbce6940e577ebf7ee44d56f7ba81924270"
+    },
+    {
+      "native_line": 11,
+      "native_line_sha256": "5a17827fb68af98652faf6909e8bf28236a81bda389878096f79c91cd5057c7e",
+      "timestamp": "2026-10-08T10:27:52.292Z",
+      "type": "native_skill_injection",
+      "name": "collectivite-territoriale:dsi-fpt",
+      "path_relative_to_installed_plugin": "skills/dsi-fpt/SKILL.md",
+      "installed_file_sha256": "072147c7cf481c50ba009b20324a7efaeafa5f6090d40325a7ad24697fb435de",
+      "full_installed_text_present": true,
+      "native_input_text_sha256": "e71318dab22883a27557f92e9ede85018262f6fb05f2791b13599a615f1847f8",
+      "native_input_text_chars": 35315,
+      "source_body_omitted_from_public_extract": true
+    },
+    {
+      "native_line": 13,
+      "native_line_sha256": "1a0d4f3023d76e99ed99081a889ac2ee41f52c6ffad624a3ca6c0b280aed8d4a",
+      "timestamp": "2026-10-08T10:27:58.470Z",
+      "type": "assistant_message",
+      "phase": "commentary",
+      "channel": null,
+      "text": "STOP — Incident de sécurité suspecté ou rouvert.\n1. Préserver les preuves avant toute réinstallation, suppression ou restauration ; organiser le confinement avec les intervenants habilités.\n2. Alerter les responsables opérationnels désignés et documenter les faits.\n3. Faire identifier le décideur pour la reprise, l’arrêt de service et la communication publique.\n4. Aucune contre-mesure offensive ni aucun accès à un système tiers.\n5. Données personnelles possiblement touchées → BASCULE dpo-ct.\n\nJ’applique les skills dsi-fpt, dpo-ct et recherche-juridique, en lecture seule, sans consulter de secrets ni contacter de tiers."
+    },
+    {
+      "native_line": 14,
+      "native_line_sha256": "b76c822e11e77e11713e6d96917167bc258dd94b906a41e3fd1ff0a8402cafdd",
+      "timestamp": "2026-10-08T10:28:04.142Z",
+      "type": "tool_call",
+      "tool": "exec",
+      "call_id": "call_de1b1578b8e047058eebf72399a14d53",
+      "input": "const base=\"C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/smoke-dev6-isole-20261007-211629-4dc9cd90/codex-state/plugins/cache/smoke-dev6/collectivite-territoriale/1.2.0-dev.6/skills\";\ntext(await tools.exec_command({cmd:`$paths = @('${base}/dsi-fpt/SKILL.md','${base}/dpo-ct/SKILL.md','${base}/recherche-juridique/SKILL.md','${base}/dsi-fpt/references/analyse-situation.md','${base}/dsi-fpt/references/crise-cyber-continuite.md','${base}/dsi-fpt/references/securite-si.md','${base}/dsi-fpt/objets/incident-securite.md'); foreach ($p in $paths) { Write-Output \"SOURCE: $p\"; Get-Content -LiteralPath $p -Raw }`,max_output_tokens:23000}));\ntext(ALL_TOOLS.filter(x=>/search|fetch|browse|skill/i.test(x.name+\" \"+x.description)).map(x=>({name:x.name,description:x.description.slice(0,100)})));\n"
+    },
+    {
+      "native_line": 16,
+      "native_line_sha256": "847dae01de6ca7e1a66be83e7215c72d632a1c72338fe5a12e9e49d059bd1696",
+      "timestamp": "2026-10-08T10:28:04.252Z",
+      "type": "tool_result",
+      "call_id": "call_de1b1578b8e047058eebf72399a14d53",
+      "blocked_by_policy": true,
+      "tool_inventory_result_omitted": true,
+      "raw_output_omitted": true,
+      "raw_output_sha256": "f8db7e40aee624bf21d1067b35f3715594aa6da377c5ae6ed6f84f682de103f7",
+      "tool_read_succeeded": false
+    },
+    {
+      "native_line": 18,
+      "native_line_sha256": "9c195c9a8fcba451714e67d39f2ec44596f76657e465e8ad0529f834f4f2e669",
+      "timestamp": "2026-10-08T10:28:07.998Z",
+      "type": "tool_call",
+      "tool": "exec",
+      "call_id": "call_a3b8dcf20bf04e52ac31001fe7d0500f",
+      "input": "text(ALL_TOOLS.filter(x=>/read|search|fetch|skill/i.test(x.name+\" \"+x.description)).map(x=>({name:x.name,description:x.description.slice(0,180)})));\n"
+    },
+    {
+      "native_line": 20,
+      "native_line_sha256": "3a8d19f4aa5eb706fba36f27cc854e845d9b14586d37355df118ae7988f6beee",
+      "timestamp": "2026-10-08T10:28:08.084Z",
+      "type": "tool_result",
+      "call_id": "call_a3b8dcf20bf04e52ac31001fe7d0500f",
+      "blocked_by_policy": false,
+      "tool_inventory_result_omitted": true,
+      "raw_output_omitted": true,
+      "raw_output_sha256": "83edf22c18367509c791b7c857b93b15cdeddeda3078fde263b5a2881449fba2",
+      "tool_read_succeeded": null
+    },
+    {
+      "native_line": 24,
+      "native_line_sha256": "ada00656fd5c3444543dc54adc9e03e13a51ad2e4fb1d2e6a7774f70c3ad76c7",
+      "timestamp": "2026-10-08T10:28:12.693Z",
+      "type": "tool_call",
+      "tool": "exec",
+      "call_id": "call_d1f8a8b635ab45409b41d1f031f07d8f",
+      "input": "text(await tools.exec_command({cmd:\"Get-Content -LiteralPath 'C:\\\\Users\\\\Krn\\\\Documents\\\\Codex\\\\2026-10-06\\\\reprends-le-travail-de-cette-session\\\\smoke-dev6-isole-20261007-211629-4dc9cd90\\\\codex-state\\\\plugins\\\\cache\\\\smoke-dev6\\\\collectivite-territoriale\\\\1.2.0-dev.6\\\\skills\\\\dpo-ct\\\\SKILL.md' -Raw\",max_output_tokens:10000}));\n"
+    },
+    {
+      "native_line": 26,
+      "native_line_sha256": "60d9a332ee22e2d8d0f0e3ac60d4273a9782769cc59ac907797ced5fdc1795a6",
+      "timestamp": "2026-10-08T10:28:12.782Z",
+      "type": "tool_result",
+      "call_id": "call_d1f8a8b635ab45409b41d1f031f07d8f",
+      "blocked_by_policy": true,
+      "tool_inventory_result_omitted": false,
+      "raw_output_omitted": true,
+      "raw_output_sha256": "5817b8819dd269c8ebb0c9631d3b2daab6221098a45d6a03fdaab21c31123488",
+      "tool_read_succeeded": false
+    },
+    {
+      "native_line": 29,
+      "native_line_sha256": "39dbaa20c0d16f0e001394b84c23130720965ecd6f5a9d7db71cd6a63e8fda81",
+      "timestamp": "2026-10-08T10:28:30.479Z",
+      "type": "assistant_message",
+      "phase": "final_answer",
+      "channel": null,
+      "text": "STOP — Incident de sécurité suspecté ou rouvert. **Ne lancez pas la réinstallation et n’annoncez pas que l’incident est réglé.** Le nouvel indice remet en cause la clôture précédente ; une réinstallation pourrait détruire des preuves sans expliquer la compromission.\n\nSur le seul fondement du skill dsi-fpt fourni, les premières mesures conservatoires sont :\n\n- **Préserver et documenter** : conserver le signalement existant du prestataire, sa date, les faits rapportés et la chronologie de l’incident précédent. Faire organiser la préservation des preuves par des intervenants habilités, avant effacement, restauration ou réinstallation.\n- **Organiser le confinement** : faire examiner par la DSI/RSSI les mesures limitant la propagation, avec leurs conséquences sur les services. Aucun accès offensif ni intervention sur un système tiers.\n- **Cadrer le périmètre** : identifier les actifs et dépendances concernés, les services essentiels, les sauvegardes disponibles, la supervision et le responsable d’exploitation. Le périmètre réel, la persistance éventuelle de l’attaque et l’atteinte aux données restent inconnus.\n- **Préparer une reprise contrôlée** : conditionner la reconstruction à la préservation des preuves et à un diagnostic suffisant ; prévoir des contrôles de sécurité, une recette métier et une surveillance après reprise.\n\nRépartition opérationnelle **à confirmer dans l’organisation locale** : DSI/RSSI pour coordonner diagnostic et mesures techniques ; exploitant ou prestataire pour exécuter les actions autorisées et en rendre compte ; responsables métiers pour valider la continuité et la recette ; décideur désigné pour arbitrer les interruptions, la reprise et la communication. Une remise en service ne suffit pas à démontrer la résolution.\n\n**BASCULE dpo-ct —** La qualification d’une éventuelle violation, les notifications et l’information des personnes relèvent du volet données personnelles. Je ne les tranche pas ici.\n\nLe contrôle demandé à **recherche-juridique** reste indisponible : compétences juridiques, démarches externes et délais ne sont pas confirmés.\n\nLa politique d’exécution a bloqué les lectures locales : dpo-ct, recherche-juridique et les branches complémentaires n’ont pas pu être chargés. Aucun texte primaire n’a été récupéré ; aucune obligation juridique n’est donc affirmée. Aucun fichier modifié, secret consulté ou tiers contacté."
+    }
+  ],
+  "excluded_records": [
+    {
+      "native_line": 2,
+      "native_line_sha256": "c05e8f7b84baf552bf202caea50890d119d4b880d7e91ec76d31e1d5460df275",
+      "timestamp": "2026-10-08T10:27:51.283Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 3,
+      "native_line_sha256": "703fd99493d648fccbbc3703d72cd1d4d7c8b5a35b589393564d81e18c7dc654",
+      "timestamp": "2026-10-08T10:27:52.255Z",
+      "reason": "system_or_developer_context_omitted"
+    },
+    {
+      "native_line": 4,
+      "native_line_sha256": "0c203010f99f6001591367eb760b8c79f23f2ad129ce2d9d66f0e8676ef2268d",
+      "timestamp": "2026-10-08T10:27:52.255Z",
+      "reason": "system_or_developer_context_omitted"
+    },
+    {
+      "native_line": 5,
+      "native_line_sha256": "1899b70e8dd871fc5ee8643fd4583425bc955f965f2d5c7bd799ccd95f7b8631",
+      "timestamp": "2026-10-08T10:27:52.255Z",
+      "reason": "system_or_developer_context_omitted"
+    },
+    {
+      "native_line": 6,
+      "native_line_sha256": "ce69ef5682937d4497af0472bd347f5d7e84cc2780d1bf97356707006d906103",
+      "timestamp": "2026-10-08T10:27:52.255Z",
+      "reason": "environment_or_other_user_context_omitted"
+    },
+    {
+      "native_line": 7,
+      "native_line_sha256": "058a7d416ab25742551bf523bf95c6ee9acc711851a1b2474afa7376de861c5b",
+      "timestamp": "2026-10-08T10:27:52.263Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 10,
+      "native_line_sha256": "f390b18f8242e9e7594fd01a0d90fadc142e7de5e44992992e36c96afee8bde2",
+      "timestamp": "2026-10-08T10:27:52.285Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 12,
+      "native_line_sha256": "765d276df7614f7437cafeb53af60fc2bb8f11dc14cd17be4355faac3228e9d8",
+      "timestamp": "2026-10-08T10:27:58.461Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 15,
+      "native_line_sha256": "6f6e8d8d5bfbc73e0e583f65bc1d392603b45276f8dad6abef36f5fdc1276cc7",
+      "timestamp": "2026-10-08T10:28:04.181Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 17,
+      "native_line_sha256": "76477a3cc597ae0b58d16a68903223a15ccfff964d60f6c21873ec29a99c0e80",
+      "timestamp": "2026-10-08T10:28:04.288Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 19,
+      "native_line_sha256": "6a2fd6b1c7a2697cb954ceeb4626cab9adc7319a980a2fa9bbc0bcd59ed8741a",
+      "timestamp": "2026-10-08T10:28:08.045Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 21,
+      "native_line_sha256": "2a34519bf33e843004e4b8fee1fe138a78f558f17037518606efcafbb8fdcb3d",
+      "timestamp": "2026-10-08T10:28:08.092Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 22,
+      "native_line_sha256": "965d83c43323290448b98ba730d4664a6f75b3b0c17a02f933d59e4220e2b8fa",
+      "timestamp": "2026-10-08T10:28:10.224Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 23,
+      "native_line_sha256": "0a16c679085004c58cfc36ffd895bb22a60c39ee2934e6fe7f10483007860f6e",
+      "timestamp": "2026-10-08T10:28:10.231Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 25,
+      "native_line_sha256": "f33b8c73fc021e44014c8764262990c00e260f9a8234a16476c73b1dd243469b",
+      "timestamp": "2026-10-08T10:28:12.737Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 27,
+      "native_line_sha256": "f594af2f8c75f790543a81c1c08baceefb68de92940e8e2f30ec56ea2013d242",
+      "timestamp": "2026-10-08T10:28:12.830Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 28,
+      "native_line_sha256": "a42345d04765c49fd7cd90a8cd71a0425b3befb5362ebdda63b2e46279730665",
+      "timestamp": "2026-10-08T10:28:30.473Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 30,
+      "native_line_sha256": "16fd00155dcbdac525f0ff46945d381989e1c16fc009700d695fc72e761ba460",
+      "timestamp": "2026-10-08T10:28:30.511Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 31,
+      "native_line_sha256": "264bcd297bcd6e9ba49f1b813006f874b7fc837880ed2c3a28e516f9fa2976af",
+      "timestamp": "2026-10-08T10:28:30.517Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 32,
+      "native_line_sha256": "4a01cba12bb590465cd548df721a6f81699497abb974b338aee73d9f3ab6b728",
+      "timestamp": "2026-10-08T10:28:30.525Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    }
+  ],
+  "actual_native_injections": [
+    {
+      "native_line": 11,
+      "native_line_sha256": "5a17827fb68af98652faf6909e8bf28236a81bda389878096f79c91cd5057c7e",
+      "timestamp": "2026-10-08T10:27:52.292Z",
+      "type": "native_skill_injection",
+      "name": "collectivite-territoriale:dsi-fpt",
+      "path_relative_to_installed_plugin": "skills/dsi-fpt/SKILL.md",
+      "installed_file_sha256": "072147c7cf481c50ba009b20324a7efaeafa5f6090d40325a7ad24697fb435de",
+      "full_installed_text_present": true,
+      "native_input_text_sha256": "e71318dab22883a27557f92e9ede85018262f6fb05f2791b13599a615f1847f8",
+      "native_input_text_chars": 35315,
+      "source_body_omitted_from_public_extract": true
+    }
+  ],
+  "first_visible_assistant_text": "STOP — Incident de sécurité suspecté ou rouvert.\n1. Préserver les preuves avant toute réinstallation, suppression ou restauration ; organiser le confinement avec les intervenants habilités.\n2. Alerter les responsables opérationnels désignés et documenter les faits.\n3. Faire identifier le décideur pour la reprise, l’arrêt de service et la communication publique.\n4. Aucune contre-mesure offensive ni aucun accès à un système tiers.\n5. Données personnelles possiblement touchées → BASCULE dpo-ct.\n\nJ’applique les skills dsi-fpt, dpo-ct et recherche-juridique, en lecture seule, sans consulter de secrets ni contacter de tiers.",
+  "first_visible_assistant_starts_STOP": true,
+  "tool_call_count": 3,
+  "policy_rejection_count": 2,
+  "final_response_sha256": "13b3c5a8d87d6e65cee074d469ea7f3e33e32506a3c05699e74ff6c3d6233a8b",
+  "historical_scores_reused": false,
+  "source_provenance_limit": "Raw rollout, developer context, installed skill bodies and tool inventories remain local; line hashes and injection attestations retained.",
+  "effective_mcp_exposure_verified": false,
+  "release_ready": false
+}

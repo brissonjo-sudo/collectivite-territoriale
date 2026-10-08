@@ -1,0 +1,24 @@
+{
+  "started_at": "2026-10-08T10:29:42.601888+00:00",
+  "argv": [
+    "C:\\Users\\Krn\\AppData\\Local\\OpenAI\\Codex\\bin\\9691020b546a15b2\\codex.exe",
+    "--no-daemon",
+    "--cd",
+    "C:\\Users\\Krn\\Documents\\Codex\\2026-10-06\\reprends-le-travail-de-cette-session\\qualification-smoke-dev6-cli-20261008-r1\\workspace",
+    "--sandbox",
+    "read-only",
+    "--ask-for-approval",
+    "never",
+    "exec",
+    "--skip-git-repo-check",
+    "--json",
+    "--color",
+    "never",
+    "--output-last-message",
+    "C:\\Users\\Krn\\Documents\\Codex\\2026-10-06\\reprends-le-travail-de-cette-session\\qualification-smoke-dev6-cli-20261008-r1\\04-reversibilite-explicite\\response.md",
+    "-"
+  ],
+  "prompt_sha256": "5cc95774fa8008342bef24ee8a6af35858e2e6cdb27f6add5689f4187a1e4741",
+  "manifest_sha256": "db96243a720e8eefe38ceeb949df307a6f99cf36e4bdc16db04f995e1e700e2d",
+  "attempt": 1
+}

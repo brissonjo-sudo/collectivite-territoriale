@@ -1,0 +1,244 @@
+{
+  "case_id": "04-reversibilite-explicite",
+  "thread_id": "01a11b0f-cc75-7ca1-96d0-6917bfc8c3a5",
+  "model_observed": "gpt-6.1-sol",
+  "native_session_basename": "rollout-2026-10-08T12-29-42-01a11b0f-cc75-7ca1-96d0-6917bfc8c3a5.jsonl",
+  "native_session_sha256": "ed559b9173dff2b7193e1841823d9b25a77aca5cfb96e78428e4d644adb05f07",
+  "native_line_count": 28,
+  "events": [
+    {
+      "native_line": 1,
+      "native_line_sha256": "1d7103b497445de9cff784066c42ec2aab30bc6ceaaf6272b6102cf75887847d",
+      "timestamp": "2026-10-08T10:29:42.859Z",
+      "type": "session_meta",
+      "id": "01a11b0f-cc75-7ca1-96d0-6917bfc8c3a5",
+      "cli_version": "0.162.0-alpha.2",
+      "source": "exec"
+    },
+    {
+      "native_line": 8,
+      "native_line_sha256": "b89df85235595ef2749ddb1dfe76d22a2683ca1fbd2cdcff39d3f325123ebabc",
+      "timestamp": "2026-10-08T10:29:43.877Z",
+      "type": "turn_context",
+      "model": "gpt-6.1-sol",
+      "approval_policy": "never",
+      "sandbox_policy": {
+        "type": "read-only"
+      }
+    },
+    {
+      "native_line": 9,
+      "native_line_sha256": "1e1db3401d394be29073cb772433914c0fd81bd8882e1a276394c87993aadfd8",
+      "timestamp": "2026-10-08T10:29:43.885Z",
+      "type": "submitted_prompt",
+      "sha256": "5cc95774fa8008342bef24ee8a6af35858e2e6cdb27f6add5689f4187a1e4741"
+    },
+    {
+      "native_line": 11,
+      "native_line_sha256": "57eee7f073ee5a42c1c2292b55ba8d8f90134ec8bd6e886c0ab019cd8e50a5ad",
+      "timestamp": "2026-10-08T10:29:43.899Z",
+      "type": "native_skill_injection",
+      "name": "collectivite-territoriale:dsi-fpt",
+      "path_relative_to_installed_plugin": "skills/dsi-fpt/SKILL.md",
+      "installed_file_sha256": "072147c7cf481c50ba009b20324a7efaeafa5f6090d40325a7ad24697fb435de",
+      "full_installed_text_present": true,
+      "native_input_text_sha256": "e71318dab22883a27557f92e9ede85018262f6fb05f2791b13599a615f1847f8",
+      "native_input_text_chars": 35315,
+      "source_body_omitted_from_public_extract": true
+    },
+    {
+      "native_line": 13,
+      "native_line_sha256": "b0ca0d67a7c8c5bfd6da299380978d45ea21cf04d7ac469dc6c4e679f781fc03",
+      "timestamp": "2026-10-08T10:29:48.633Z",
+      "type": "assistant_message",
+      "phase": "commentary",
+      "channel": null,
+      "text": "J’utilise le skill `dsi-fpt` pour préparer les contrôles techniques et `recherche-juridique` pour examiner la question de la gratuité. Je reste en lecture seule, sans consulter de secrets ni contacter de tiers.\n"
+    },
+    {
+      "native_line": 14,
+      "native_line_sha256": "7895c60442fd4bb504fe10765da8d4760c62ca3cd7485ce922dc10f62f9b5a8f",
+      "timestamp": "2026-10-08T10:29:53.184Z",
+      "type": "tool_call",
+      "tool": "exec",
+      "call_id": "call_74da17647c8b4b81898056259018c3bb",
+      "input": "const base=\"C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/smoke-dev6-isole-20261007-211629-4dc9cd90/codex-state/plugins/cache/smoke-dev6/collectivite-territoriale/1.2.0-dev.6/skills\";\ntext(await tools.exec_command({cmd:`Get-Content -LiteralPath '${base}/dsi-fpt/SKILL.md','${base}/recherche-juridique/SKILL.md','${base}/dsi-fpt/references/analyse-situation.md','${base}/dsi-fpt/references/contrats-prestataires.md','${base}/dsi-fpt/references/cloud-hebergement.md'`,max_output_tokens:19000}));\ntext(ALL_TOOLS.filter(x=>/search|fetch|browse|skill/i.test(x.name+\" \"+x.description)).map(x=>({name:x.name,description:x.description.slice(0,120)})));\n"
+    },
+    {
+      "native_line": 16,
+      "native_line_sha256": "d73089f7cb0601c932702f6c68e72e34b050d61850064a6b86666e3406f90a0d",
+      "timestamp": "2026-10-08T10:29:53.310Z",
+      "type": "tool_result",
+      "call_id": "call_74da17647c8b4b81898056259018c3bb",
+      "blocked_by_policy": true,
+      "tool_inventory_result_omitted": true,
+      "raw_output_omitted": true,
+      "raw_output_sha256": "46b7f405c4b137b723c1766ba5e7d2aaf710741ef9bccface7c2ba51b106979a",
+      "tool_read_succeeded": false
+    },
+    {
+      "native_line": 18,
+      "native_line_sha256": "708bd7b6819c47c703513e0f940c800279325ba6299b4ba645577f553d59b84f",
+      "timestamp": "2026-10-08T10:29:56.723Z",
+      "type": "tool_call",
+      "tool": "exec",
+      "call_id": "call_13c66317f9a84cb2b957123571975bdf",
+      "input": "text(ALL_TOOLS.filter(x=>/read|search|fetch|skill/i.test(x.name+\" \"+x.description)).map(x=>({name:x.name,description:x.description.slice(0,180)})));\n"
+    },
+    {
+      "native_line": 20,
+      "native_line_sha256": "506640ff6a47c010f369a27a688dfc14eb2f77c3c580a28557be768fad968451",
+      "timestamp": "2026-10-08T10:29:56.808Z",
+      "type": "tool_result",
+      "call_id": "call_13c66317f9a84cb2b957123571975bdf",
+      "blocked_by_policy": false,
+      "tool_inventory_result_omitted": true,
+      "raw_output_omitted": true,
+      "raw_output_sha256": "83edf22c18367509c791b7c857b93b15cdeddeda3078fde263b5a2881449fba2",
+      "tool_read_succeeded": null
+    },
+    {
+      "native_line": 25,
+      "native_line_sha256": "51e433a8598136dd6a1787bd284d7766f41b20bc6b109be67a2b3d4757af9591",
+      "timestamp": "2026-10-08T10:30:19.010Z",
+      "type": "assistant_message",
+      "phase": "final_answer",
+      "channel": null,
+      "text": "**La gratuité ne peut pas être confirmée aujourd’hui avec les éléments disponibles.** Le contrat et ses annexes sont absents ; l’affirmation de l’éditeur ne suffit pas non plus à établir que les frais sont dus.\n\nLe skill `dsi-fpt` fourni cadre les vérifications ci-dessous. La lecture de ses fichiers complémentaires et du skill `recherche-juridique` a été bloquée par la politique d’exécution. Leur chargement effectif n’est donc pas réalisé ; aucun texte primaire n’a été récupéré. Je m’abstiens de conclure sur un droit à restitution gratuite ou sur la validité des frais.\n\n**Vérifications techniques à préparer — DSI**\n\nFaits connus : logiciel hébergé, départ envisagé, restitution annoncée payante. Avant de choisir une solution, préciser : qui exploite le SI — service interne, mutualisé ou prestataire —, quel logiciel remplacera l’actuel, quels volumes et quelle interruption sont acceptables ?\n\nPour chaque contrôle, désigner un responsable technique et un valideur métier :\n\n- **Périmètre et dépendances** : inventorier données, pièces jointes, historiques fonctionnels, configurations, référentiels et interfaces. Preuves attendues : inventaire et documentation disponibles, sans secrets. Recette : chaque élément nécessaire est identifié et repris.\n- **Exports et reprise** : vérifier formats, encodage, schéma, identifiants, relations et mécanisme de récupération des dernières modifications. Prévoir ultérieurement une reprise en environnement d’essai. Recette : rapprochement des volumes, intégrité des fichiers et validation de dossiers représentatifs par le métier.\n- **Exploitation, support et supervision** : identifier documentation, assistance à la migration, dépendances de licence et contrôles de bon fonctionnement. Recette : l’équipe désignée sait exploiter la cible et détecter les anomalies.\n- **Continuité** : préparer séquencement, sauvegarde, contrôle final et retour arrière. Proposer de conserver l’accès à l’ancien service jusqu’à validation de la reprise.\n\n**Volet contractuel à attribuer à `recherche-juridique`**\n\nRéunir en interne : contrat signé, annexes, avenants, clauses de réversibilité, tarifs et justificatif écrit des frais. Distinguer restitution, conversion, assistance et transfert.\n\nLe point non confirmé reste précis : **quel fondement permettrait d’exiger gratuitement quelles prestations, aujourd’hui ?** Une revue humaine des pièces et des sources pertinentes reste nécessaire.\n\nAucune modification, consultation de secret ou prise de contact n’a été effectuée."
+    }
+  ],
+  "excluded_records": [
+    {
+      "native_line": 2,
+      "native_line_sha256": "31eba33aed7d07f77371374043369f8040c1ed5b87e3665a4177514fe99600ac",
+      "timestamp": "2026-10-08T10:29:42.859Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 3,
+      "native_line_sha256": "6cf75b9b4516d394e3034c7628a6c4d6760c453a76218f29a8e0346176137a1d",
+      "timestamp": "2026-10-08T10:29:43.862Z",
+      "reason": "system_or_developer_context_omitted"
+    },
+    {
+      "native_line": 4,
+      "native_line_sha256": "5e5cfedefeb922ae18d62efc4c500f7ee79b9fefe86e844289a260402a0b41f2",
+      "timestamp": "2026-10-08T10:29:43.862Z",
+      "reason": "system_or_developer_context_omitted"
+    },
+    {
+      "native_line": 5,
+      "native_line_sha256": "1be716d6a4107ab91b53071baabae63c474e2368b362a77ebc9133b6e55c2ef5",
+      "timestamp": "2026-10-08T10:29:43.862Z",
+      "reason": "system_or_developer_context_omitted"
+    },
+    {
+      "native_line": 6,
+      "native_line_sha256": "6ec8dcaa74e1dd523459901665c77584cd436db1ed8d3cf4ceb6b1dcb9e3043f",
+      "timestamp": "2026-10-08T10:29:43.863Z",
+      "reason": "environment_or_other_user_context_omitted"
+    },
+    {
+      "native_line": 7,
+      "native_line_sha256": "3447062247dae0627510a47a9b9dac62ba848c069a3681c8d4d635f9a254d41c",
+      "timestamp": "2026-10-08T10:29:43.870Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 10,
+      "native_line_sha256": "6c2e85bd82d9bb88cab1d494c162b1745d3f3d455fe826cfb3ca0397756f23a4",
+      "timestamp": "2026-10-08T10:29:43.892Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 12,
+      "native_line_sha256": "144cbf8c4395a53de3f449868f9baaf55aef5143d87f447eed821ad2e87e6d2a",
+      "timestamp": "2026-10-08T10:29:48.626Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 15,
+      "native_line_sha256": "96f47a852f46467effd4d9c12b55e42326fb4f2a13a50a59280381799d45fe20",
+      "timestamp": "2026-10-08T10:29:53.237Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 17,
+      "native_line_sha256": "5ece89757bec4b40c6136ea3ebd2f2e6b67c7a2904a291c685b65df7f97fed8a",
+      "timestamp": "2026-10-08T10:29:53.354Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 19,
+      "native_line_sha256": "153ea066e54c64df9d76f431afa6b0a832a90c4fa31a6a1be66d397901466898",
+      "timestamp": "2026-10-08T10:29:56.767Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 21,
+      "native_line_sha256": "a62cfe8fcd0c6207f18ca526df5d6142c8c10b91c498fefa5c32e8aeee615e87",
+      "timestamp": "2026-10-08T10:29:56.815Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 22,
+      "native_line_sha256": "5d8a149b5242308158cd48dbc7b6f878249eed8e76b2c5875ed7c46d47229893",
+      "timestamp": "2026-10-08T10:30:00.736Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 23,
+      "native_line_sha256": "79a772a403e34f6c09702e83234336844ebb9b729efdac0f07c814c755d3e3ba",
+      "timestamp": "2026-10-08T10:30:00.744Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 24,
+      "native_line_sha256": "c93463cb4560191c15c3a457d467383a46b5c4d3e96faa107a920ec61393075e",
+      "timestamp": "2026-10-08T10:30:19.002Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 26,
+      "native_line_sha256": "18f559eda6e115f76edf022339f3a97cffe1f7a3f5f31442a31d851fa751354e",
+      "timestamp": "2026-10-08T10:30:19.055Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 27,
+      "native_line_sha256": "c7c8459ab1e4a56699f8fe0db20df1162ca433b2bb53b159a1ffd4743dc91283",
+      "timestamp": "2026-10-08T10:30:19.061Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 28,
+      "native_line_sha256": "66b1e27f9bcae4bcb0f9dd3b97264d3d1340730be940ec397e6b954101a06c0e",
+      "timestamp": "2026-10-08T10:30:19.070Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    }
+  ],
+  "actual_native_injections": [
+    {
+      "native_line": 11,
+      "native_line_sha256": "57eee7f073ee5a42c1c2292b55ba8d8f90134ec8bd6e886c0ab019cd8e50a5ad",
+      "timestamp": "2026-10-08T10:29:43.899Z",
+      "type": "native_skill_injection",
+      "name": "collectivite-territoriale:dsi-fpt",
+      "path_relative_to_installed_plugin": "skills/dsi-fpt/SKILL.md",
+      "installed_file_sha256": "072147c7cf481c50ba009b20324a7efaeafa5f6090d40325a7ad24697fb435de",
+      "full_installed_text_present": true,
+      "native_input_text_sha256": "e71318dab22883a27557f92e9ede85018262f6fb05f2791b13599a615f1847f8",
+      "native_input_text_chars": 35315,
+      "source_body_omitted_from_public_extract": true
+    }
+  ],
+  "first_visible_assistant_text": "J’utilise le skill `dsi-fpt` pour préparer les contrôles techniques et `recherche-juridique` pour examiner la question de la gratuité. Je reste en lecture seule, sans consulter de secrets ni contacter de tiers.\n",
+  "first_visible_assistant_starts_STOP": false,
+  "tool_call_count": 2,
+  "policy_rejection_count": 1,
+  "final_response_sha256": "45eb482f1150df0f3fc006268ce7b352372004e271121c86c9cf8872ae421d79",
+  "historical_scores_reused": false,
+  "source_provenance_limit": "Raw rollout, developer context, installed skill bodies and tool inventories remain local; line hashes and injection attestations retained.",
+  "effective_mcp_exposure_verified": false,
+  "release_ready": false
+}

@@ -1,7 +1,7 @@
 {
   "plugin_version": "1.2.0-dev.7",
-  "plugin_commit": null,
-  "candidate_commit_status": "uncommitted_not_measured",
+  "plugin_commit": "fb186b4951b95adabf05904f8a34995720588be3",
+  "candidate_commit_status": "committed_not_measured",
   "release_ready": false,
   "available_skills": [
     "dpm-fpt",
@@ -36,7 +36,7 @@
     "Activation réelle et smoke d’usage dev.7 non établis",
     "Avis DSI/RSSI et juridique humains non recueillis"
   ],
-  "frozen_inventory_path": null,
+  "frozen_inventory_path": "docs/qualification/gel-dev7-non-mesure.json",
   "correction_status": "hypothesis_pending_new_measurement",
   "preceding_measurement": {
     "summary_path": "tests/evidence/coactivation-codex-dev6-PARTIEL/synthese-PARTIELLE.json",

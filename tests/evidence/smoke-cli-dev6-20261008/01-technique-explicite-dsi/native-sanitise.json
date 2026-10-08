@@ -1,0 +1,256 @@
+{
+  "case_id": "01-technique-explicite-dsi",
+  "thread_id": "01a11b0c-131d-7ef2-91fe-b665c236a81e",
+  "model_observed": "gpt-6.1-sol",
+  "native_session_basename": "rollout-2026-10-08T12-25-39-01a11b0c-131d-7ef2-91fe-b665c236a81e.jsonl",
+  "native_session_sha256": "b20fe7d8549bd19e6e049ef99cfcbab8811ec661e37a9fee43ee97453ac3c87d",
+  "native_line_count": 30,
+  "events": [
+    {
+      "native_line": 1,
+      "native_line_sha256": "09c9a6ad68a1000036ab341d5c06496eac6f995bd8b2239b8a329d76d65fe762",
+      "timestamp": "2026-10-08T10:25:39.783Z",
+      "type": "session_meta",
+      "id": "01a11b0c-131d-7ef2-91fe-b665c236a81e",
+      "cli_version": "0.162.0-alpha.2",
+      "source": "exec"
+    },
+    {
+      "native_line": 8,
+      "native_line_sha256": "64c2c3e813fd24c027de8eaa1e86457fe70d47687b837ebc6398c25e2db214ff",
+      "timestamp": "2026-10-08T10:25:40.678Z",
+      "type": "turn_context",
+      "model": "gpt-6.1-sol",
+      "approval_policy": "never",
+      "sandbox_policy": {
+        "type": "read-only"
+      }
+    },
+    {
+      "native_line": 9,
+      "native_line_sha256": "eb7d2a7d9f068cff080ca902e953ea846b4b0d7708873d91efa7943f3b443605",
+      "timestamp": "2026-10-08T10:25:40.686Z",
+      "type": "submitted_prompt",
+      "sha256": "2e2eb678dfb76eb29aa10975f239fb6ce95df9d9b4475e3384361644a3388a5d"
+    },
+    {
+      "native_line": 11,
+      "native_line_sha256": "57909a797f765df69bbae89031153a7d82f38c71edcbfa07e771481272a2a640",
+      "timestamp": "2026-10-08T10:25:40.700Z",
+      "type": "native_skill_injection",
+      "name": "collectivite-territoriale:dsi-fpt",
+      "path_relative_to_installed_plugin": "skills/dsi-fpt/SKILL.md",
+      "installed_file_sha256": "072147c7cf481c50ba009b20324a7efaeafa5f6090d40325a7ad24697fb435de",
+      "full_installed_text_present": true,
+      "native_input_text_sha256": "e71318dab22883a27557f92e9ede85018262f6fb05f2791b13599a615f1847f8",
+      "native_input_text_chars": 35315,
+      "source_body_omitted_from_public_extract": true
+    },
+    {
+      "native_line": 13,
+      "native_line_sha256": "8127401baf460ec193e4efec60f9d54f6b1726ef487a1145da746b2311e594f1",
+      "timestamp": "2026-10-08T10:25:44.479Z",
+      "type": "assistant_message",
+      "phase": "commentary",
+      "channel": null,
+      "text": "J’utilise le skill `collectivite-territoriale:dsi-fpt` pour cadrer les besoins et l’exploitation avant tout choix d’architecture. Je lirai uniquement ses documents de méthode, sans consulter de secret ni contacter de tiers.\n"
+    },
+    {
+      "native_line": 14,
+      "native_line_sha256": "778ef5b5693b0d8f710433c88b6977c404c3482d1eebd4938bc6080e15cbcb72",
+      "timestamp": "2026-10-08T10:25:48.140Z",
+      "type": "tool_call",
+      "tool": "exec",
+      "call_id": "call_e8c928bca07c492786b3883695ac9cfa",
+      "input": "const base=\"C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/smoke-dev6-isole-20261007-211629-4dc9cd90/codex-state/plugins/cache/smoke-dev6/collectivite-territoriale/1.2.0-dev.6/skills/dsi-fpt\";\ntext(await tools.exec_command({cmd:`Get-Content -LiteralPath '${base}/SKILL.md'`,max_output_tokens:14000}));\ntext(await tools.exec_command({cmd:`Get-Content -LiteralPath '${base}/references/analyse-situation.md','${base}/references/infrastructures-reseaux.md','${base}/objets/site-reseau.md'`,max_output_tokens:14000}));\n"
+    },
+    {
+      "native_line": 16,
+      "native_line_sha256": "2ee4ee5a9e55029b6d8279a642d9dda774d2ffa1ec3b7f2859432ce72fb86ce8",
+      "timestamp": "2026-10-08T10:25:48.250Z",
+      "type": "tool_result",
+      "call_id": "call_e8c928bca07c492786b3883695ac9cfa",
+      "blocked_by_policy": true,
+      "tool_inventory_result_omitted": false,
+      "raw_output_omitted": true,
+      "raw_output_sha256": "e46c3c35030b6b8eb2ac4f3723fe20760775a575797282260acb2e233b9e72e1",
+      "tool_read_succeeded": false
+    },
+    {
+      "native_line": 20,
+      "native_line_sha256": "c5ac9419328d36af5d2ecc65340540af2b342750b8ec6df7ae5aa68a629f88b9",
+      "timestamp": "2026-10-08T10:25:53.083Z",
+      "type": "tool_call",
+      "tool": "exec",
+      "call_id": "call_0c6dae58b86042b2a7f99fe88434ef49",
+      "input": "text(ALL_TOOLS.filter(x=>/read.*file|list.*directory/i.test(x.description+\" \"+x.name)));\n"
+    },
+    {
+      "native_line": 22,
+      "native_line_sha256": "09ffb9f28958c946d3374a726f5670669031e479db1daa382c4c2436d95e73b4",
+      "timestamp": "2026-10-08T10:25:53.148Z",
+      "type": "tool_result",
+      "call_id": "call_0c6dae58b86042b2a7f99fe88434ef49",
+      "blocked_by_policy": false,
+      "tool_inventory_result_omitted": true,
+      "raw_output_omitted": true,
+      "raw_output_sha256": "4ddc614c5083e7f18254b8b8f60990033be89acc30858445bd55fa9c09126606",
+      "tool_read_succeeded": null
+    },
+    {
+      "native_line": 27,
+      "native_line_sha256": "5ece7a8d345f251469a0da6a1a99047d806153f0f5d6efdf711584a9fe3e40b7",
+      "timestamp": "2026-10-08T10:26:16.184Z",
+      "type": "assistant_message",
+      "phase": "final_answer",
+      "channel": null,
+      "text": "Je propose un **cadrage préalable**, sans retenir d’architecture. Le skill fourni impose de distinguer faits, inconnues, preuves et recette pour chaque volet.\n\n**Faits connus :** deux écoles, trois usages à séparer ; inventaire non fiable ; aucun contrat de support disponible. Cela ne prouve ni l’absence de support ni la capacité des équipements à assurer cette séparation.\n\nQuestions à résoudre avant de figer une option : qui exploite le réseau — commune, service mutualisé ou prestataire ? Quels services chaque usage doit-il atteindre ? Quelles communications entre usages sont nécessaires ? Quelles interruptions sont acceptables ?\n\n| Volet | Inconnues et preuves à réunir | Responsable proposé et recette attendue |\n|---|---|---|\n| Périmètre et dépendances | Équipements, câblage, accès Internet, Wi-Fi, applications, impressions et éventuelles liaisons entre écoles. Réunir plans et fiches techniques sans secrets. | Référent SI à désigner ; inventaire et schéma fonctionnel confrontés aux besoins de chaque école. |\n| Usages et séparation | Terminaux partagés, mobilité, volumes simultanés, destinations nécessaires. Construire une matrice des communications souhaitées et interdites. | Référents pédagogiques et administratifs ; validation des parcours et des exceptions. |\n| Support et exploitation | Intervenants, couverture réelle, maintenance, accès d’administration et capacités de suivi de disponibilité des équipements. Réunir les documents disponibles, sans présumer leur contenu. | Responsable d’exploitation à désigner ; scénario de panne avec interlocuteur, diagnostic et escalade identifiés. |\n| Continuité | Services prioritaires, dépendances communes, possibilités de restauration et fonctionnement dégradé. | Référent SI et responsables des écoles ; critères de reprise et procédure de retour arrière documentés. |\n\nLe livrable serait un **dossier de décision** : inventaire qualifié, matrice des communications, responsabilités, besoins de continuité et plan de recette. Ensuite seulement, comparer plusieurs architectures selon leur compatibilité matérielle, leur simplicité d’exploitation et leur capacité à isoler effectivement les usages. Trois noms de réseaux Wi-Fi ne démontrent pas cette isolation.\n\nAucune modification, consultation de secret ou prise de contact n’a été effectuée. La lecture locale du skill a été bloquée par la politique d’exécution ; ce cadrage s’appuie sur son contenu fourni dans votre message, sans prétendre avoir lu ses fichiers complémentaires."
+    }
+  ],
+  "excluded_records": [
+    {
+      "native_line": 2,
+      "native_line_sha256": "80a52a9996d6cfd7973009586895f0ed2cd4ea74fcad3f0f7ac9778135e4c872",
+      "timestamp": "2026-10-08T10:25:39.783Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 3,
+      "native_line_sha256": "39bd36a0830f2cdddce00678f6ed3171d59701db954ced3898ece4381046a084",
+      "timestamp": "2026-10-08T10:25:40.662Z",
+      "reason": "system_or_developer_context_omitted"
+    },
+    {
+      "native_line": 4,
+      "native_line_sha256": "a3ae41830099984a58d32bdd3d01e4a1b99d5d09d286ed684ba7cee1440c0c71",
+      "timestamp": "2026-10-08T10:25:40.662Z",
+      "reason": "system_or_developer_context_omitted"
+    },
+    {
+      "native_line": 5,
+      "native_line_sha256": "e6599888ade32968d01c466055fad72186b24e70c89a0bbb99cc99706d710ec2",
+      "timestamp": "2026-10-08T10:25:40.662Z",
+      "reason": "system_or_developer_context_omitted"
+    },
+    {
+      "native_line": 6,
+      "native_line_sha256": "bc644c9d7898dc5cef5c7b42dd0ca784185b8cb4e2fb024b646b6d7cc0019360",
+      "timestamp": "2026-10-08T10:25:40.662Z",
+      "reason": "environment_or_other_user_context_omitted"
+    },
+    {
+      "native_line": 7,
+      "native_line_sha256": "797bc4881379c976023945ef6dd14fc44aee994210b6fff72555a5b3badf8c81",
+      "timestamp": "2026-10-08T10:25:40.671Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 10,
+      "native_line_sha256": "21a570cc50456d540964a774a21170e0dbf3e10ee3f55f27bcba0fcaab8038bf",
+      "timestamp": "2026-10-08T10:25:40.692Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 12,
+      "native_line_sha256": "51d553e4d15248de996d7a15aefd16edc5038891b70f0e156214cd1a9f236e00",
+      "timestamp": "2026-10-08T10:25:44.472Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 15,
+      "native_line_sha256": "d458b6f664005dc397bbf19a92c75b97ae9cdcebc814e1fe7443744537fab03f",
+      "timestamp": "2026-10-08T10:25:48.179Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 17,
+      "native_line_sha256": "5957e759e38783f1d31b1f8a83fe70fbc4c0c4e3143ad897a76fdb42b091aa99",
+      "timestamp": "2026-10-08T10:25:48.286Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 18,
+      "native_line_sha256": "07722d6f435737e9da735835d658db5759dd4301a8e135f1efbc138b0c328e25",
+      "timestamp": "2026-10-08T10:25:52.060Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 19,
+      "native_line_sha256": "b7a663ea4cac3b48699abe8359486ac184d3f88130ca2ed1525895e15e8b2a98",
+      "timestamp": "2026-10-08T10:25:52.096Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 21,
+      "native_line_sha256": "3bd04b06d89b11ee3f118c710d9be9822456d82c5b24cd3db9f2bf8949609421",
+      "timestamp": "2026-10-08T10:25:53.121Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 23,
+      "native_line_sha256": "5946831ae3e8564563619e902e6a92ce5e0c84f2a6a558d9104782985d0a3a7e",
+      "timestamp": "2026-10-08T10:25:53.156Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 24,
+      "native_line_sha256": "250090408211d6055f52fd8b04be35d2e0957e2564b353bbd70466436af6c5db",
+      "timestamp": "2026-10-08T10:25:58.166Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 25,
+      "native_line_sha256": "1d89dc29decd4e74e19462b2e0bc1495ddabdd283ea73ca0dbd496d7296d93a4",
+      "timestamp": "2026-10-08T10:25:58.175Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 26,
+      "native_line_sha256": "3948c78bd3455228c2019b168c9305b85c976640af2754634c170a51ac7c89f9",
+      "timestamp": "2026-10-08T10:26:16.175Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 28,
+      "native_line_sha256": "3ea22c3e4a87313adfd507329369dda1515c4da031c6edaac85e84760fcef370",
+      "timestamp": "2026-10-08T10:26:16.219Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 29,
+      "native_line_sha256": "baa350063b9b6ca8124ca870672e7305a6445e42c45ca50938a5e9d6d22d0c05",
+      "timestamp": "2026-10-08T10:26:16.225Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 30,
+      "native_line_sha256": "152da61dfdd28e9a6fb540affb80d4ad91639c611a6fe88ff9699523a724346d",
+      "timestamp": "2026-10-08T10:26:16.235Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    }
+  ],
+  "actual_native_injections": [
+    {
+      "native_line": 11,
+      "native_line_sha256": "57909a797f765df69bbae89031153a7d82f38c71edcbfa07e771481272a2a640",
+      "timestamp": "2026-10-08T10:25:40.700Z",
+      "type": "native_skill_injection",
+      "name": "collectivite-territoriale:dsi-fpt",
+      "path_relative_to_installed_plugin": "skills/dsi-fpt/SKILL.md",
+      "installed_file_sha256": "072147c7cf481c50ba009b20324a7efaeafa5f6090d40325a7ad24697fb435de",
+      "full_installed_text_present": true,
+      "native_input_text_sha256": "e71318dab22883a27557f92e9ede85018262f6fb05f2791b13599a615f1847f8",
+      "native_input_text_chars": 35315,
+      "source_body_omitted_from_public_extract": true
+    }
+  ],
+  "first_visible_assistant_text": "J’utilise le skill `collectivite-territoriale:dsi-fpt` pour cadrer les besoins et l’exploitation avant tout choix d’architecture. Je lirai uniquement ses documents de méthode, sans consulter de secret ni contacter de tiers.\n",
+  "first_visible_assistant_starts_STOP": false,
+  "tool_call_count": 2,
+  "policy_rejection_count": 1,
+  "final_response_sha256": "7551410ff0479ded80d954339743eec754453e962e7534a6c2cd17af5859d72e",
+  "historical_scores_reused": false,
+  "source_provenance_limit": "Raw rollout, developer context, installed skill bodies and tool inventories remain local; line hashes and injection attestations retained.",
+  "effective_mcp_exposure_verified": false,
+  "release_ready": false
+}

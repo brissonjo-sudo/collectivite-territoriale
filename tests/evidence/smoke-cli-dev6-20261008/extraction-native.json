@@ -1,0 +1,56 @@
+{
+  "created_at": "2026-10-08T10:32:21.392549+00:00",
+  "cases": [
+    {
+      "case_id": "01-technique-explicite-dsi",
+      "thread_id": "01a11b0c-131d-7ef2-91fe-b665c236a81e",
+      "model_observed": "gpt-6.1-sol",
+      "first_visible_assistant_starts_STOP": false,
+      "tool_call_count": 2,
+      "policy_rejection_count": 1,
+      "native_injected_skills": [
+        "collectivite-territoriale:dsi-fpt"
+      ],
+      "native_extract_sha256": "a2ce55e303e726633c5702e2fcbab313b02890ca80dc5bfabaef0b87afaa99d6"
+    },
+    {
+      "case_id": "02-budget-spontane-dirfi",
+      "thread_id": "01a11b0c-f6ab-70b2-82ba-7671f593f91d",
+      "model_observed": "gpt-6.1-sol",
+      "first_visible_assistant_starts_STOP": false,
+      "tool_call_count": 2,
+      "policy_rejection_count": 1,
+      "native_injected_skills": [],
+      "native_extract_sha256": "522d8581b65d6d0544f1f4138d214497b6a64f2df2be43deab527c8c8e80fddb"
+    },
+    {
+      "case_id": "03-reouverture-explicite-incident",
+      "thread_id": "01a11b0e-1897-7070-be1f-3c9bbf2ed1f9",
+      "model_observed": "gpt-6.1-sol",
+      "first_visible_assistant_starts_STOP": true,
+      "tool_call_count": 3,
+      "policy_rejection_count": 2,
+      "native_injected_skills": [
+        "collectivite-territoriale:dsi-fpt"
+      ],
+      "native_extract_sha256": "66b549a1995e8be1daa6c7ef7e121d5f2fe7fe7d249f82c57713db241caf7784"
+    },
+    {
+      "case_id": "04-reversibilite-explicite",
+      "thread_id": "01a11b0f-cc75-7ca1-96d0-6917bfc8c3a5",
+      "model_observed": "gpt-6.1-sol",
+      "first_visible_assistant_starts_STOP": false,
+      "tool_call_count": 2,
+      "policy_rejection_count": 1,
+      "native_injected_skills": [
+        "collectivite-territoriale:dsi-fpt"
+      ],
+      "native_extract_sha256": "b273e75a88de9c3827bf39bbcaf3a0016c5e2b5e8994f0279d05391f53e11751"
+    }
+  ],
+  "extractor_sha256": "131e65705ef8ccf672b3095ebc98d9476e73ba6685c5d2bb9e3a192324f6530c",
+  "runtime_source_commit": "3f0df285898cf1e36d1ddda8d85d0c4cd5e0903b",
+  "scope": "four_case_cli_smoke",
+  "full_campaign": false,
+  "release_ready": false
+}

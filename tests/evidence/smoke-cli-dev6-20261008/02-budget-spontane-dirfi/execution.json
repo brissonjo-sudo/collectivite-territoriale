@@ -1,0 +1,17 @@
+{
+  "completed_at": "2026-10-08T10:26:58.839039+00:00",
+  "exit_code": 0,
+  "timed_out": false,
+  "elapsed_seconds": 22.047,
+  "attempt": 1,
+  "event_count": 5,
+  "invalid_jsonl_lines": 0,
+  "thread_id": "01a11b0c-f6ab-70b2-82ba-7671f593f91d",
+  "candidate_cache_config_unchanged": true,
+  "stdout_sha256": "3b0036e6c5213c38b25617b3b6cc235c93bde130d0ec1269c35e576ee211ea8c",
+  "stderr_sha256": "e619f21952cce2d06dc60bddf76b389ce9ab40053c069eed7c432a0376fc878c",
+  "response_sha256": "800145f032cdc44ec4f35c97c368a375c71eed1089adcd0bc8103926cab862c9",
+  "upstream_authentication_verified": true,
+  "strict_activation_verified": null,
+  "release_ready": false
+}

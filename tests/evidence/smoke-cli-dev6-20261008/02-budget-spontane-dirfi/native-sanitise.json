@@ -1,0 +1,217 @@
+{
+  "case_id": "02-budget-spontane-dirfi",
+  "thread_id": "01a11b0c-f6ab-70b2-82ba-7671f593f91d",
+  "model_observed": "gpt-6.1-sol",
+  "native_session_basename": "rollout-2026-10-08T12-26-36-01a11b0c-f6ab-70b2-82ba-7671f593f91d.jsonl",
+  "native_session_sha256": "74010bf31cdccf575e96182428313486e3c75a51f6dc4664d5131a82c31f7989",
+  "native_line_count": 27,
+  "events": [
+    {
+      "native_line": 1,
+      "native_line_sha256": "4b72db116e8e4cdcbf5e56b3352135f85f87881ed5a6b80b2fe31fe0c271529f",
+      "timestamp": "2026-10-08T10:26:37.051Z",
+      "type": "session_meta",
+      "id": "01a11b0c-f6ab-70b2-82ba-7671f593f91d",
+      "cli_version": "0.162.0-alpha.2",
+      "source": "exec"
+    },
+    {
+      "native_line": 8,
+      "native_line_sha256": "e528a240fd98b659008ac55b45a450ae27f00bb22b3527d6cd321c9a532dfa27",
+      "timestamp": "2026-10-08T10:26:37.975Z",
+      "type": "turn_context",
+      "model": "gpt-6.1-sol",
+      "approval_policy": "never",
+      "sandbox_policy": {
+        "type": "read-only"
+      }
+    },
+    {
+      "native_line": 9,
+      "native_line_sha256": "9034ab88d3c14291057143257c3cb95c6f52d6d557cb425d613bf318912c994a",
+      "timestamp": "2026-10-08T10:26:37.983Z",
+      "type": "submitted_prompt",
+      "sha256": "d02833a1cbc44f20ba94e00972c032982f4616fa5a5bedb7d0d68cc5a469ca26"
+    },
+    {
+      "native_line": 12,
+      "native_line_sha256": "f2b6f4f889df0fa08026af57504985af94a9c8ede923d5fdbda33864367aebd2",
+      "timestamp": "2026-10-08T10:26:41.354Z",
+      "type": "assistant_message",
+      "phase": "commentary",
+      "channel": null,
+      "text": "Je vais appliquer les compétences DSI et finances territoriales pour cadrer le besoin et répartir les décisions, en lecture seule, sans consulter de secrets ni contacter de tiers.\n"
+    },
+    {
+      "native_line": 13,
+      "native_line_sha256": "eff2cac9209fb0ba934ad8121c6366442b07e9c8d9f7950b7a4cb8d68c34a718",
+      "timestamp": "2026-10-08T10:26:44.440Z",
+      "type": "tool_call",
+      "tool": "exec",
+      "call_id": "call_4dab36a2e96641b5b2addcfdf4a1357a",
+      "input": "const base=\"C:/Users/Krn/Documents/Codex/2026-10-06/reprends-le-travail-de-cette-session/smoke-dev6-isole-20261007-211629-4dc9cd90/codex-state/plugins/cache/smoke-dev6/collectivite-territoriale/1.2.0-dev.6/skills\";\nconst r=await Promise.allSettled([\"dsi-fpt\",\"dirfi-fpt\"].map(n=>tools.exec_command({cmd:`Get-Content -LiteralPath '${base}/${n}/SKILL.md'`,max_output_tokens:6500}))); r.forEach(text);\nstore(\"skillbase\",base);\n"
+    },
+    {
+      "native_line": 15,
+      "native_line_sha256": "39de8aac6ced2e48acd368ca420c174be5e9c56a7a4631188f7b71c6986e4f3f",
+      "timestamp": "2026-10-08T10:26:44.546Z",
+      "type": "tool_result",
+      "call_id": "call_4dab36a2e96641b5b2addcfdf4a1357a",
+      "blocked_by_policy": true,
+      "tool_inventory_result_omitted": false,
+      "raw_output_omitted": true,
+      "raw_output_sha256": "72bbf4c9c9351fb4f3bdf6ee4a4e03915329d53a4dcfed3de14d4926943c75f7",
+      "tool_read_succeeded": false
+    },
+    {
+      "native_line": 17,
+      "native_line_sha256": "8bd07c60b6c734fbfa95cce8795e2c348d96ecbea9a03f9caa718fcecadccb05",
+      "timestamp": "2026-10-08T10:26:47.865Z",
+      "type": "tool_call",
+      "tool": "exec",
+      "call_id": "call_7bc415f8db9e49b98a78ad4dc6ff270c",
+      "input": "text(ALL_TOOLS.filter(x=>/read|search|skill/i.test(x.name+\" \"+x.description)));\n"
+    },
+    {
+      "native_line": 19,
+      "native_line_sha256": "e08f87b7912237c43b7cde612dd616faaae497f31fbb28cc924c75a4fe2438fa",
+      "timestamp": "2026-10-08T10:26:47.982Z",
+      "type": "tool_result",
+      "call_id": "call_7bc415f8db9e49b98a78ad4dc6ff270c",
+      "blocked_by_policy": false,
+      "tool_inventory_result_omitted": true,
+      "raw_output_omitted": true,
+      "raw_output_sha256": "44d1ee1a3358adcc4b428ae3194efc442327c754d462a6c8e097ea5176859734",
+      "tool_read_succeeded": null
+    },
+    {
+      "native_line": 24,
+      "native_line_sha256": "3115f451a5de789d02937c71b0d6cf5a9d200a8bfd36b6d8571eb88c3df47a84",
+      "timestamp": "2026-10-08T10:26:58.274Z",
+      "type": "assistant_message",
+      "phase": "final_answer",
+      "channel": null,
+      "text": "Je ne peux pas fournir le cadrage demandé dans cette session : la lecture des fichiers des compétences **dsi-fpt** et **dirfi-fpt**, nécessaires pour traiter ce cas, a été bloquée. Leur description ne remplace pas leur chargement réel ; je ne peux donc pas donner le conseil territorial demandé à partir de ma seule mémoire.\n\nLe cas reste à traiter après rétablissement de l’accès en lecture à ces fichiers. Aucun fichier n’a été modifié, aucun secret consulté et aucun tiers contacté.\n\nLe contrôle automatique a rejeté les deux commandes de lecture de `SKILL.md` avec le motif « blocked by policy ». Aucune demande d’autorisation ni tentative de contournement n’a été effectuée."
+    }
+  ],
+  "excluded_records": [
+    {
+      "native_line": 2,
+      "native_line_sha256": "99472ba3bf1841cff2bcf67c5164e74c7c3f4ff52dc2617b67cd1c5b88a55e70",
+      "timestamp": "2026-10-08T10:26:37.051Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 3,
+      "native_line_sha256": "a53c462f2709192a23fd3242f903d7147e55d6b62b1751dd4bc1d394cd9de855",
+      "timestamp": "2026-10-08T10:26:37.961Z",
+      "reason": "system_or_developer_context_omitted"
+    },
+    {
+      "native_line": 4,
+      "native_line_sha256": "3587820ad455c75ba1c130cd7e898b817479cb4799f4ef4021476587bed50722",
+      "timestamp": "2026-10-08T10:26:37.961Z",
+      "reason": "system_or_developer_context_omitted"
+    },
+    {
+      "native_line": 5,
+      "native_line_sha256": "5e004f1ef068f905059ff65e847c7d091b02e2f9772a90a4ff1f69a9acb2b3bb",
+      "timestamp": "2026-10-08T10:26:37.961Z",
+      "reason": "system_or_developer_context_omitted"
+    },
+    {
+      "native_line": 6,
+      "native_line_sha256": "e4b64e39b461a47ac9fcf887fda12ecb291a25fe901bc0a10d768cf18856c0f5",
+      "timestamp": "2026-10-08T10:26:37.961Z",
+      "reason": "environment_or_other_user_context_omitted"
+    },
+    {
+      "native_line": 7,
+      "native_line_sha256": "3e27d6a979dda99dec0ca6309986bd8369208223cb38bf7eb9ac9e11d84e4095",
+      "timestamp": "2026-10-08T10:26:37.969Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 10,
+      "native_line_sha256": "7b852f251bdffc6aa86c5362a556c43b038b0de251f83d31ba69bbd6fd3d66e2",
+      "timestamp": "2026-10-08T10:26:37.990Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 11,
+      "native_line_sha256": "80d43aba09399251e3347c0cdc2081d5b302e085ba3f29f035895f41a12657a0",
+      "timestamp": "2026-10-08T10:26:41.346Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 14,
+      "native_line_sha256": "9da5e788b2d8dc8d77a8cdc31da654bfeee8555ac56a5951ddf1de1e697a4ead",
+      "timestamp": "2026-10-08T10:26:44.472Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 16,
+      "native_line_sha256": "0d53b26d5c705fd766ff67ef26de76fd38b6c5cf9b21ad7985ab884f921fbcf3",
+      "timestamp": "2026-10-08T10:26:44.597Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 18,
+      "native_line_sha256": "4c65c5ef3953f8b66525543e114f05ba1ee847f19578bfda5dc5a327480d75d2",
+      "timestamp": "2026-10-08T10:26:47.923Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 20,
+      "native_line_sha256": "4f80e69735a8bd59116bba89f6a6971040e2f23637f36414ecd5a6faa2b6ee77",
+      "timestamp": "2026-10-08T10:26:47.990Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 21,
+      "native_line_sha256": "e54a0d1df905b6692486c0ce2ac26972f7caa8e516f74a47f1cf53546d6df329",
+      "timestamp": "2026-10-08T10:26:52.741Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 22,
+      "native_line_sha256": "5196f00ddbb36d8a46245314739a3a3063ab2117a7d38e7e1a03fb4afde9ad4e",
+      "timestamp": "2026-10-08T10:26:52.748Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 23,
+      "native_line_sha256": "b5dd4402e1084dbae9d161074aba46c9d9f4798de071d49f6fa9675147eb4326",
+      "timestamp": "2026-10-08T10:26:58.266Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 25,
+      "native_line_sha256": "c941d8dfa9fe3d4bba401ce3f7d4a5e7efdeb220f08fe42a6472118d2283529a",
+      "timestamp": "2026-10-08T10:26:58.306Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 26,
+      "native_line_sha256": "064a886f456eac9e02885b5de606d98e8a2e22768d87c6838484ef8fa62d8b6a",
+      "timestamp": "2026-10-08T10:26:58.311Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    },
+    {
+      "native_line": 27,
+      "native_line_sha256": "20053ce3eb22f1593be8d0f2bc2d8eae7208f2039690804f0cf234382c8bbac3",
+      "timestamp": "2026-10-08T10:26:58.320Z",
+      "reason": "duplicate_status_internal_or_other_record_omitted"
+    }
+  ],
+  "actual_native_injections": [],
+  "first_visible_assistant_text": "Je vais appliquer les compétences DSI et finances territoriales pour cadrer le besoin et répartir les décisions, en lecture seule, sans consulter de secrets ni contacter de tiers.\n",
+  "first_visible_assistant_starts_STOP": false,
+  "tool_call_count": 2,
+  "policy_rejection_count": 1,
+  "final_response_sha256": "800145f032cdc44ec4f35c97c368a375c71eed1089adcd0bc8103926cab862c9",
+  "historical_scores_reused": false,
+  "source_provenance_limit": "Raw rollout, developer context, installed skill bodies and tool inventories remain local; line hashes and injection attestations retained.",
+  "effective_mcp_exposure_verified": false,
+  "release_ready": false
+}
