@@ -1,0 +1,82 @@
+{
+  "observed_at": "2026-10-09T09:38:01.959947+00:00",
+  "candidate_commit": "fb186b4951b95adabf05904f8a34995720588be3",
+  "authentication": {
+    "started_at": "2026-10-09T09:25:05.590939+00:00",
+    "completed": true,
+    "model_inference": false,
+    "auth_secrets_read": false,
+    "automatic_retry": false,
+    "oauth_login_attempted": true,
+    "browser_opened": true,
+    "release_ready": false,
+    "success": true,
+    "error": null,
+    "completed_at": "2026-10-09T09:25:09.939285+00:00",
+    "configuration_file_unchanged": true,
+    "candidate_cache_unchanged": true
+  },
+  "discovery": {
+    "started_at": "2026-10-09T09:25:50.385677+00:00",
+    "completed_at": "2026-10-09T09:25:53.195141+00:00",
+    "server": {
+      "name": "droit-francais",
+      "pluginId": "collectivite-territoriale@campagne-dev7-20261008-r3",
+      "authStatus": "oAuth",
+      "runtimeStatus": null,
+      "tool_count": 8,
+      "tool_names": [
+        "fetch",
+        "get_article",
+        "get_decision",
+        "get_section",
+        "get_text",
+        "search",
+        "search_articles",
+        "search_case_law"
+      ],
+      "tools_error": null
+    },
+    "model_inference": false
+  },
+  "source_read": {
+    "text_chars": 773,
+    "text_sha256_utf8": "5121be91cf9ac86f5b31f12257cd6ef916d81f4c2950fcc9b5b6fcd849ee930c",
+    "metadata_source": "Légifrance API",
+    "metadata_verified": true,
+    "metadata_as_of_date": "2026-10-09",
+    "metadata_legal_status": "ABROGE_DIFF",
+    "metadata_applicable_at_as_of_date": true,
+    "legal_currentness_independently_reviewed": false,
+    "text_or_legal_rule_exported": false,
+    "full_source_coverage_verified": false,
+    "identifier_observed_in_search": true,
+    "native_method": "mcpServer/tool/call",
+    "turn_started": false,
+    "model_inference": false,
+    "source_id_sha256_utf8": "26e0630dd973b0c6c88c15a6d26a4555339bc996396e87780dcbec6f477ea1d8",
+    "source_url_sha256_utf8": "baa77b9a8d103279eb22ec7054350be7fd5f66a6de0963a66ef02e2e01be2cfd"
+  },
+  "windows_precheck": {
+    "status": "blocked",
+    "reason": "Runtime CUA Node encore actif ; aucune terminaison automatique",
+    "checked_at": "2026-10-09T09:38:01.959947+00:00",
+    "processes_terminated": false,
+    "sandbox_read_verified": false
+  },
+  "new_respondents": 0,
+  "full_campaign_prepared": false,
+  "new_judges": 0,
+  "configuration_file_unchanged": true,
+  "candidate_cache_unchanged": true,
+  "historical_proofs_rewritten": false,
+  "release_ready": false,
+  "source_file_sha256": {
+    "connexion-juridique-dev7-20261009-092505-47cfc799/resultat-assaini.json": "70fde8dbf467e7ace712837f2f6a947ef82036ca6655ac40181098331be0382c",
+    "precontrole-mcp-dev7-20261009-apres-connexion-r1/precontrole-mcp-assaini.json": "5c1e3700961ae50107d13fde15e7907c7504a973973eb33de83940e872b8c843",
+    "lecture-mcp-dev7-20261009-093209-ec837b48/search.private.json": "7b8d547ffac5cd14e4e7f74c26f9c9e61aa55e5c250e0fb3ee45e876cdc8f942",
+    "texte-mcp-dev7-20261009-093309-6412aff5/fetch.private.json": "38b5ffc690b5981e8befb191e279690c5ff832adcde41315b61de135dfd7dda2"
+  },
+  "original_local_constat_sha256": "fae8a90a86039a313bd32691081aa6c5e5092b0150bba3d9741c97cd319615c6",
+  "public_source_identity_omitted": true
+}

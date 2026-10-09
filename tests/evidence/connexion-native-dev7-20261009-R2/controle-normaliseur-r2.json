@@ -1,0 +1,60 @@
+{
+  "schema_version": "dev7-normalization-r2-audit-v1",
+  "completed_at": "2026-10-09T09:38:58.248990+00:00",
+  "status": "tooling_verified_not_executed",
+  "new_tools_sha256": {
+    "campagne_native_complete_dev7_20261009_r2.py": "e547cd723232fa1a01068df701cc17647308a1b0327f212b01910bb80416042a",
+    "normaliseur_native_complete_dev7_20261009_r2.py": "fbbbdb01f117dda7e333f84018e988811dc3937b2ecd7607e4d60b379b98bf59",
+    "tests_native_complete_dev7_20261009_r2.py": "04be72136ff001fdc4eabba3ff05795950168b5ece40158e37a9392a68f9d11b",
+    "lancer-campagne-native-dev7-complet-20261009-r2.ps1": "e8a7eb326177902dc17489e3e73ea7e8f1b0e19fd03227f67e7ad63bd2a7b213",
+    "protocole-native-dev7-complet-20261009-r2.json": "7f75ba939972baabcef3c4c411d628578d029ba6a34917e4139c796dc4476432"
+  },
+  "v1_tools_sha256": {
+    "campagne_native_complete_dev7_20261009.py": "376a4243480146ef64118bac4528c579e862cbf2e15c20bb30ed6311c8b9cdd6",
+    "normaliseur_native_complete_dev7_20261009.py": "f07de2215b3dd6891dd9067918843b01e3b62f7c91f9c22a196b9b7bdb2671cd",
+    "tests_native_complete_dev7_20261009.py": "f96edb6c324b46c236acb4e8ea467e7efe18b36e4117948abffc4e909dceaea2",
+    "lancer-campagne-native-dev7-complet-20261009.ps1": "6f89307e755a8370690ef2d60c06512793eaddcb6bb3bfbba5a68caee860407b",
+    "protocole-native-dev7-complet-20261009.json": "46b4e6f7f6ae59decf0257adbab575c61be220e5f8610889e87094dbb44c6947"
+  },
+  "v1_unchanged": true,
+  "static_inputs_verified": true,
+  "tests": {
+    "v1": 24,
+    "r2": 29,
+    "total": 53,
+    "passed": 53,
+    "command": "python -B -m unittest tests_native_complete_dev7_20261009 tests_native_complete_dev7_20261009_r2"
+  },
+  "ruff_passed": true,
+  "powershell_parse_passed": true,
+  "actual_source_format_check": {
+    "input_path": "texte-mcp-dev7-20261009-093309-6412aff5/fetch.private.json",
+    "input_sha256": "38b5ffc690b5981e8befb191e279690c5ff832adcde41315b61de135dfd7dda2",
+    "decode_reason": null,
+    "primary_format_supported": true,
+    "legal_currentness_verified": null,
+    "content_exported": false,
+    "native_call_identity_implemented_by_this_fixture": false
+  },
+  "changes": [
+    "Une source déclarée verified=false ne devient pas un primaire utilisable.",
+    "content_complete=false bloque un primaire, au niveau document ou métadonnées.",
+    "get_text/get_section et fetch hiérarchique sont des preuves non vérifiables en l’absence de contrat réel observé.",
+    "Ces limites de source ne déclenchent pas un arrêt technique global de la campagne.",
+    "Questions, oracles, atomes, modes de source, modules v1 et candidat préservés."
+  ],
+  "remaining_limits": [
+    "Contrats hiérarchiques get_text/get_section non observés sur une lecture réelle.",
+    "Pertinence et applicabilité soumises au jugement et à la revue juridique.",
+    "Lecture native à froid encore non vérifiée.",
+    "Les sources demeurent des données non fiables, jamais des instructions."
+  ],
+  "target_run": "qualification-coactivation-dev7-complet-20261009-r2",
+  "campaign_prepared": false,
+  "campaign_executed": false,
+  "model_inference": false,
+  "new_judges_created": false,
+  "historical_scores_reused": false,
+  "release_ready": false,
+  "original_local_control_sha256": "212b3004b987da21473a62f1ffb406beb56cee252a9b4cac1646ba12c9cf6917"
+}
