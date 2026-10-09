@@ -1,0 +1,41 @@
+{
+  "started_at": "2026-10-09T10:13:11.594262+00:00",
+  "model_inference": false,
+  "campaign_prepared": false,
+  "new_respondents": 0,
+  "automatic_retry": false,
+  "outputBytesCap_sent": false,
+  "timeoutMs_sent": 20000,
+  "release_ready": false,
+  "effective_configuration": {
+    "windows_backend": "elevated",
+    "sandbox": "read-only",
+    "approval_policy": "never",
+    "web_search": "disabled",
+    "disabled_features": [
+      "apps",
+      "computer_use",
+      "browser_use",
+      "browser_use_external",
+      "browser_use_full_cdp_access",
+      "in_app_browser",
+      "code_mode_host"
+    ],
+    "candidate_plugin_id": "collectivite-territoriale@campagne-dev7-20261008-r3",
+    "legal_mcp_enabled": true,
+    "effective_config_private_sha256": "d76c75259d9f1af512fc876953b53c3a1629f23b7f580f549c2097a2b2c8b4a1"
+  },
+  "command_response_received": false,
+  "error_type": "GateError",
+  "rpc_error": {
+    "code": -32603,
+    "message_sha256": "8b31ee2c83a6a773ba5681296acbc0e2f70567ed2569e00ae5068a0009e96a45",
+    "markers": [
+      "setup refresh had errors"
+    ],
+    "raw_message_exported": false
+  },
+  "completed_at": "2026-10-09T10:13:11.807582+00:00",
+  "configuration_unchanged": true,
+  "cache_unchanged": true
+}

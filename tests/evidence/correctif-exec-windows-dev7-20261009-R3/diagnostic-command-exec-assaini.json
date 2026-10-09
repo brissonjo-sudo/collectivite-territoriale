@@ -1,0 +1,20 @@
+{
+  "observed_started_at": "2026-10-09T10:09:13.676709+00:00",
+  "observed_completed_at": "2026-10-09T10:09:16.047146+00:00",
+  "status": "blocked",
+  "step": "sandbox_read",
+  "native_process_gate_passed": true,
+  "legal_auth_status": "oAuth",
+  "legal_schema_count": 8,
+  "rpc_error_code": -32600,
+  "rpc_error_message": "custom outputBytesCap is not supported with windows sandbox",
+  "command_outputBytesCap_sent": 4096,
+  "configuration_unchanged": true,
+  "candidate_cache_unchanged": true,
+  "sandbox_read_succeeded": false,
+  "model_inference": false,
+  "campaign_prepared": false,
+  "release_ready": false,
+  "raw_rpc_exported": false,
+  "original_private_rpc_file_sha256": "f66b59a93f55ed608813f2cf735c32a0d91cd8c35a01b99a9be865818e372803"
+}
