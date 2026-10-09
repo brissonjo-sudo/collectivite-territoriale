@@ -1,0 +1,109 @@
+{
+  "completed_at": "2026-10-09T10:33:10.590672+00:00",
+  "configurations_checked": 3,
+  "results": [
+    {
+      "case_id": "plugin-prime-depart-retraite",
+      "configuration_id": "7293ead90b1a528b5b69872d6655dfd14a3152bf1ce232e82ad09b425944bf04",
+      "started_at": "2026-10-09T10:33:06.784503+00:00",
+      "model_inference": false,
+      "sandbox_read_performed": false,
+      "status": "passed",
+      "configuration": {
+        "windows_backend": "elevated",
+        "sandbox": "read-only",
+        "approval_policy": "never",
+        "web_search": "disabled",
+        "disabled_features": [
+          "apps",
+          "computer_use",
+          "browser_use",
+          "browser_use_external",
+          "browser_use_full_cdp_access",
+          "in_app_browser",
+          "code_mode_host"
+        ],
+        "candidate_plugin_id": "collectivite-territoriale@campagne-dev7-20261008-r3",
+        "legal_mcp_enabled": true,
+        "effective_config_private_sha256": "d76c75259d9f1af512fc876953b53c3a1629f23b7f580f549c2097a2b2c8b4a1"
+      },
+      "catalogue_detail": "full",
+      "mcp_mode": "required",
+      "exposed_tools": 8,
+      "inactive_catalogue_present": false,
+      "catalogue_sha256": "2809ded7113691307c5b1450fe0d40c55574dfb3d8a8dd7aa41a0395c8b6200e",
+      "completed_at": "2026-10-09T10:33:08.721519+00:00"
+    },
+    {
+      "case_id": "plugin-violation-donnees",
+      "configuration_id": "122e0cb2e766dc102dfced1cf732a18f0dd4a4ac53c7cd9909e888c9317b0c5f",
+      "started_at": "2026-10-09T10:33:08.722521+00:00",
+      "model_inference": false,
+      "sandbox_read_performed": false,
+      "status": "passed",
+      "configuration": {
+        "windows_backend": "elevated",
+        "sandbox": "read-only",
+        "approval_policy": "never",
+        "web_search": "live",
+        "disabled_features": [
+          "apps",
+          "computer_use",
+          "browser_use",
+          "browser_use_external",
+          "browser_use_full_cdp_access",
+          "in_app_browser",
+          "code_mode_host"
+        ],
+        "candidate_plugin_id": "collectivite-territoriale@campagne-dev7-20261008-r3",
+        "legal_mcp_enabled": true,
+        "effective_config_private_sha256": "739eeced31716ee5fffb7f4cbe58246d29960d658781551d474f5d897660b20a"
+      },
+      "catalogue_detail": "full",
+      "mcp_mode": "required",
+      "exposed_tools": 8,
+      "inactive_catalogue_present": false,
+      "catalogue_sha256": "2809ded7113691307c5b1450fe0d40c55574dfb3d8a8dd7aa41a0395c8b6200e",
+      "completed_at": "2026-10-09T10:33:10.493598+00:00"
+    },
+    {
+      "case_id": "plugin-mcp-indisponible",
+      "configuration_id": "9d0893c6239487d6e8c446023766e58b4e930197e8f99f4c2fb3eb27fa4a7215",
+      "started_at": "2026-10-09T10:33:10.494597+00:00",
+      "model_inference": false,
+      "sandbox_read_performed": false,
+      "status": "passed",
+      "configuration": {
+        "windows_backend": "elevated",
+        "sandbox": "read-only",
+        "approval_policy": "never",
+        "web_search": "disabled",
+        "disabled_features": [
+          "apps",
+          "computer_use",
+          "browser_use",
+          "browser_use_external",
+          "browser_use_full_cdp_access",
+          "in_app_browser",
+          "code_mode_host"
+        ],
+        "candidate_plugin_id": "collectivite-territoriale@campagne-dev7-20261008-r3",
+        "legal_mcp_enabled": false,
+        "effective_config_private_sha256": "6b85795317ebe7e493317cd657f8f27d779c2d29e34cf4f14c2380460b8d4967"
+      },
+      "catalogue_detail": "full",
+      "mcp_mode": "disabled",
+      "exposed_tools": 0,
+      "inactive_catalogue_present": true,
+      "catalogue_sha256": "a9cd0d7ddca5db4ba7a13a9c928f9ceb5f5926123dab85ed8432cfa5d64e8592",
+      "completed_at": "2026-10-09T10:33:10.589670+00:00"
+    }
+  ],
+  "all_catalogues_passed": true,
+  "model_inference": false,
+  "campaign_prepared": false,
+  "new_respondents": 0,
+  "configuration_unchanged": true,
+  "cache_unchanged": true,
+  "release_ready": false
+}

@@ -1,0 +1,73 @@
+{
+  "verified_at": "2026-10-09T10:41:28.271529+00:00",
+  "tools_sha256": {
+    "campagne_native_complete_dev7_20261009_r4.py": "5fc8c833c37bf2496f6401e02ada39a1f9eff7402b04ed0813f29adf6f30c7a6",
+    "tests_native_complete_dev7_20261009_r4.py": "152ecd85cd8b6d36fc96d14bceb498376d16fc992328ac4417504c480563b7ff",
+    "lancer-campagne-native-dev7-complet-20261009-r4.ps1": "a8714d8105c24cd5543bbcaa44fee9257f8d1849afc77fbfe21b67a63ab5174d",
+    "normaliseur_native_complete_dev7_20261009_r2.py": "fbbbdb01f117dda7e333f84018e988811dc3937b2ecd7607e4d60b379b98bf59",
+    "protocole-native-dev7-complet-20261009-r4.json": "e4d1537b591844ed1d2a2da3ca081a31906e7eea7b66b891fd5abed131e70482",
+    "reprise_autonome_dev7_20261009.py": "48a945411a3564ea35bd6f24446e633e49ad095b142b85e092c662a0dbd75e2a",
+    "tests_reprise_autonome_dev7_20261009.py": "90ba1ffa79866a465e98599cc5da7dbc1ef56785fbfbfebb0f8a8263866cd10b"
+  },
+  "tests": {
+    "harness_passed": 35,
+    "worker_passed": 23,
+    "total_passed": 58
+  },
+  "ruff_passed": true,
+  "powershell_parser_passed": true,
+  "native_catalogue_configurations_passed": 3,
+  "catalogue_detail": "full",
+  "catalogue_receipt_sha256": "4fb4465caff262d396fcf32539be4964e7f4e0d22ed920238e66a3027faa3cfb",
+  "source_profiles": 6,
+  "case_count": 16,
+  "atomic_count": 124,
+  "cold_reads_r3": [
+    {
+      "case_id": "plugin-prime-depart-retraite",
+      "started_at": "2026-10-09T10:23:21.681390+00:00",
+      "completed_at": "2026-10-09T10:23:46.975434+00:00",
+      "sandbox_read_succeeded": true,
+      "model_inference": false,
+      "candidate_cache_unchanged": true,
+      "persistent_config_unchanged": true,
+      "source_file_sha256": "6b178ee17f07063e0604587e97d5d36288ba27669a1f289227c4c0174de33282",
+      "tooling_version": "r3"
+    },
+    {
+      "case_id": "plugin-garde-fou-apja",
+      "started_at": "2026-10-09T10:23:47.006438+00:00",
+      "completed_at": "2026-10-09T10:23:49.721926+00:00",
+      "sandbox_read_succeeded": true,
+      "model_inference": false,
+      "candidate_cache_unchanged": true,
+      "persistent_config_unchanged": true,
+      "source_file_sha256": "2a2d2b358aed47aa9175c087549c3f114486eaa1e01443af9ca239c5ea79edc0",
+      "tooling_version": "r3"
+    },
+    {
+      "case_id": "plugin-violation-donnees",
+      "started_at": "2026-10-09T10:23:49.751930+00:00",
+      "completed_at": "2026-10-09T10:23:52.429714+00:00",
+      "sandbox_read_succeeded": true,
+      "model_inference": false,
+      "candidate_cache_unchanged": true,
+      "persistent_config_unchanged": true,
+      "source_file_sha256": "f735a1d7f594c0b74c751f1d5278bc5b4d95dcfb8ca2bdc527a00c9f0cfadb86",
+      "tooling_version": "r3"
+    }
+  ],
+  "cold_sandbox_read_r4_verified": false,
+  "campaign_prepared": false,
+  "new_respondents": 0,
+  "model_inference": false,
+  "source_policies_unchanged": true,
+  "historical_proofs_unchanged": true,
+  "normalizer_r2_reused_unchanged": true,
+  "automatic_retry": false,
+  "preexisting_process_termination": false,
+  "max_wait_seconds": 900,
+  "max_campaign_seconds": 5700,
+  "judges_created": false,
+  "release_ready": false
+}
