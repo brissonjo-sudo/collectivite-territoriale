@@ -1,0 +1,12 @@
+{
+  "format_version": 1,
+  "repository": "https://github.com/DietrichGebert/ponytail",
+  "version": "5.1.0",
+  "release_tag": "v5.1.0",
+  "commit": "9cc65d03aa2da1db7121b912d03596409ee340b8",
+  "source_path": "skills/ponytail/SKILL.md",
+  "files_sha256": {
+    "rules.md": "ba68ff26239c3c3b05b2a9a47ee0d9a6b93a69639a2555ec87a5d44bffaf2f0c",
+    "LICENSE": "fb1bc6909ac3ef82d5c22106e32ef682b0cff66788fa915fb9b53b15c9d2f3ab"
+  }
+}

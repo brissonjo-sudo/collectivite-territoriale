@@ -100,6 +100,26 @@ Cette marketplace Git sert au développement, aux tests et à la distribution di
 
 ## Sources et reproductibilité
 
+### Outil de développement local
+
+[Ponytail](https://github.com/DietrichGebert/ponytail) 5.1.0 est installé dans
+`.agents/skills/ponytail/` pour développer ce dépôt uniquement. Il n'est pas
+un septième skill du plugin. Son point d'entrée vérifie la dernière release
+stable publiée, le commit de son étiquette et les empreintes locales avant
+chaque utilisation, puis affiche les règles seulement en cas de succès :
+
+```text
+python .agents/skills/ponytail/scripts/check_version.py
+```
+
+Version dépassée, fichiers modifiés ou contrôle réseau/API impossible :
+**ne pas utiliser Ponytail**. Aucun cache de succès ni mise à jour automatique.
+Les consignes de [AGENTS.md](AGENTS.md) imposent aussi le recontrôle à chaque
+tour où il serait appliqué. Les règles de développement restent soumises aux
+instructions utilisateur et à la sécurité du projet. [Décision](docs/adr/0008-ponytail-developpement-verifie.md).
+
+### Runtimes métier du plugin
+
 Chaque dossier `skills/<nom>/` provient des fichiers d'exécution d'un commit amont figé. `upstream.json` fixe le dépôt, le commit, la version de base et les chemins inclus. `dirfi-fpt`, `drh-fpt` et `dcp-fpt` restent des copies exactes. `dpm-fpt`, `dpo-ct` et `recherche-juridique` sont des **variantes locales du plugin**, avec les corrections de méthode conservées dans `overlays/` et déclarées dans `instruction_overlays`.
 
 Chaque surcharge est liée à l'empreinte SHA-256 exacte de son fichier amont et de son texte local ; elle est insérée une seule fois à une ancre unique. Tout changement de base, de correction ou d'ancre bloque la synchronisation tant qu'il n'a pas été revu. Les versions internes identifient la base amont, pas une nouvelle release de ces dépôts. Le commit du plugin identifie la variante complète. Aucun dépôt amont n'est modifié par ces surcharges.
@@ -203,6 +223,10 @@ humaine ni validation juridique n'est déclarée acquise.
 Le format de compatibilité actuel reste volontairement utilisé pour le candidat 1.2.0. La migration vers le manifeste portable Agent Plugins fera l'objet d'un chantier séparé. Le plan de construction et les décisions d'architecture sont conservés dans `docs/`, dont l'[ADR DCP](docs/adr/0003-integration-candidate-dcp.md) et le [relevé d'intégration](docs/integration-dcp-2026-10-06.md).
 
 ## Licences
+
+L'outil de développement Ponytail conserve sa licence MIT propre dans
+`.agents/skills/ponytail/LICENSE` ; il ne fait pas partie des six contenus
+métier/juridiques embarqués ci-dessous.
 
 Le plugin et ses six contenus embarqués sont distribués sous licence [CC-BY-SA-4.0](LICENSE), avec attribution à `brissonjo-sudo`. Cette licence globale couvre notamment `dpm-fpt` et `dpo-ct`, qui ne disposaient pas auparavant d'une licence explicite dans leur dépôt amont. La licence DCP accompagne également sa copie.
 
