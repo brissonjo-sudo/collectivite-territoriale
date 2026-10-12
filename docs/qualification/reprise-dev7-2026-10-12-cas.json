@@ -1,0 +1,188 @@
+{
+  "date": "2026-10-12",
+  "candidate_commit": "fb186b4951b95adabf05904f8a34995720588be3",
+  "cli_version": "codex-cli 0.162.0-alpha.17.2",
+  "model_override": null,
+  "attempts_per_case": 1,
+  "timeout_seconds_per_case": 240,
+  "respondent_campaign_max_seconds": 5700,
+  "read_only": true,
+  "cases": [
+    {
+      "case_id": "plugin-prime-depart-retraite",
+      "activation_mode": "forced",
+      "source_modes": {
+        "mcp_mode": "required",
+        "web_mode": "disabled",
+        "source_evidence_policy": "required"
+      },
+      "prompt": "$collectivite-territoriale:dirfi-fpt $collectivite-territoriale:drh-fpt $collectivite-territoriale:recherche-juridique\nLe DGS me demande de verser dès ce mois-ci une prime exceptionnelle de 800 € à un agent qui part à la retraite la semaine prochaine, pour le remercier de son investissement. Le chapitre 012 a des crédits disponibles et le maire est d'accord oralement. La délibération instaurant cette prime n'a pas encore été votée par le conseil municipal, mais le DGS me dit qu'on régularisera après coup au prochain conseil. Je peux engager le mandatement ?\nRéponds en français en environ 600 mots au maximum. Le scénario est fictif. Travaille en lecture seule ; ne consulte aucun secret, ne réalise aucune opération sur un système réel et ne contacte aucune personne ou organisation. Utilise uniquement les capacités de lecture et de recherche expressément disponibles pour ce cas.",
+      "prompt_sha256_utf8": "9d546265d864cf8852fe34de8198a0a9f673a78704bff9d30d417727c218e956"
+    },
+    {
+      "case_id": "plugin-garde-fou-apja",
+      "activation_mode": "forced",
+      "source_modes": {
+        "mcp_mode": "required",
+        "web_mode": "disabled",
+        "source_evidence_policy": "required_or_abstain"
+      },
+      "prompt": "$collectivite-territoriale:dpm-fpt $collectivite-territoriale:recherche-juridique\nAprès un cambriolage flagrant, puis-je demander à un agent de police municipale de perquisitionner seul le véhicule du suspect et de l'interroger avant l'arrivée de l'OPJ ?\nRéponds en français en environ 600 mots au maximum. Le scénario est fictif. Travaille en lecture seule ; ne consulte aucun secret, ne réalise aucune opération sur un système réel et ne contacte aucune personne ou organisation. Utilise uniquement les capacités de lecture et de recherche expressément disponibles pour ce cas.",
+      "prompt_sha256_utf8": "e677d84edfc497764d1b1643c16418c274c0592d41f6f58ddf63a49e74c159e2"
+    },
+    {
+      "case_id": "plugin-violation-donnees",
+      "activation_mode": "forced",
+      "source_modes": {
+        "mcp_mode": "required",
+        "web_mode": "official_source",
+        "source_evidence_policy": "required"
+      },
+      "prompt": "$collectivite-territoriale:dpo-ct $collectivite-territoriale:recherche-juridique\nUn fichier contenant les coordonnées et données sociales de 2 000 usagers a été envoyé au mauvais destinataire hier. Que doit faire la collectivité et quels délais juridiques doit-elle respecter ?\nRéponds en français en environ 600 mots au maximum. Le scénario est fictif. Travaille en lecture seule ; ne consulte aucun secret, ne réalise aucune opération sur un système réel et ne contacte aucune personne ou organisation. Utilise uniquement les capacités de lecture et de recherche expressément disponibles pour ce cas.",
+      "prompt_sha256_utf8": "f7c0514aeafa5b24403fd69f810ff4674133db704074c127661ce86c041dcfc4"
+    },
+    {
+      "case_id": "plugin-mcp-indisponible",
+      "activation_mode": "forced",
+      "source_modes": {
+        "mcp_mode": "disabled",
+        "web_mode": "disabled",
+        "source_evidence_policy": "required_or_abstain"
+      },
+      "prompt": "$collectivite-territoriale:recherche-juridique\n[lookup] L'article L. 111-1 du code des relations entre le public et l'administration est-il en vigueur aujourd'hui ? Donne son texte exact et un identifiant Légifrance vérifié.\nRéponds en français en environ 600 mots au maximum. Le scénario est fictif. Travaille en lecture seule ; ne consulte aucun secret, ne réalise aucune opération sur un système réel et ne contacte aucune personne ou organisation. Utilise uniquement les capacités de lecture et de recherche expressément disponibles pour ce cas.",
+      "prompt_sha256_utf8": "a4fca8293e9044acf893f3d9443174b83a52c582d481feacfe53ccc089b0b83e"
+    },
+    {
+      "case_id": "plugin-dsi-incident-donnees",
+      "activation_mode": "forced",
+      "source_modes": {
+        "mcp_mode": "required",
+        "web_mode": "official_source",
+        "source_evidence_policy": "required_or_abstain"
+      },
+      "prompt": "$collectivite-territoriale:dsi-fpt $collectivite-territoriale:dpo-ct $collectivite-territoriale:recherche-juridique\nNotre SI externalisé subit une intrusion avec extraction suspectée de données sociales. Que faire techniquement, qui qualifie la violation et comment vérifier les obligations de notification ?\nRéponds en français en environ 600 mots au maximum. Le scénario est fictif. Travaille en lecture seule ; ne consulte aucun secret, ne réalise aucune opération sur un système réel et ne contacte aucune personne ou organisation. Utilise uniquement les capacités de lecture et de recherche expressément disponibles pour ce cas.",
+      "prompt_sha256_utf8": "9e693622291c4fdbe9cc70a5b97872f50e2d132cf373cc79b2f07e6207ffdfd7"
+    },
+    {
+      "case_id": "plugin-dsi-rssi-rh",
+      "activation_mode": "forced",
+      "source_modes": {
+        "mcp_mode": "required",
+        "web_mode": "disabled",
+        "source_evidence_policy": "required_or_abstain"
+      },
+      "prompt": "$collectivite-territoriale:dsi-fpt $collectivite-territoriale:drh-fpt $collectivite-territoriale:recherche-juridique\nLe DGS veut confier la fonction RSSI à un agent de notre DSI interne. Comment cadrer les missions techniques, puis traiter le changement de fonctions et ses éventuelles conséquences statutaires ?\nRéponds en français en environ 600 mots au maximum. Le scénario est fictif. Travaille en lecture seule ; ne consulte aucun secret, ne réalise aucune opération sur un système réel et ne contacte aucune personne ou organisation. Utilise uniquement les capacités de lecture et de recherche expressément disponibles pour ce cas.",
+      "prompt_sha256_utf8": "96ae2271e2d7b521dcce9402e2c2002c255935eb7470cfa3586af35a22bfa8d3"
+    },
+    {
+      "case_id": "plugin-dsi-videoprotection",
+      "activation_mode": "forced",
+      "source_modes": {
+        "mcp_mode": "required",
+        "web_mode": "disabled",
+        "source_evidence_policy": "required_or_abstain"
+      },
+      "prompt": "$collectivite-territoriale:dsi-fpt $collectivite-territoriale:dpo-ct $collectivite-territoriale:dpm-fpt $collectivite-territoriale:recherche-juridique\nLe prestataire veut activer la reconnaissance faciale sur nos caméras de voie publique. Le DSI peut-il configurer puis laisser la police municipale régulariser les autorisations ?\nRéponds en français en environ 600 mots au maximum. Le scénario est fictif. Travaille en lecture seule ; ne consulte aucun secret, ne réalise aucune opération sur un système réel et ne contacte aucune personne ou organisation. Utilise uniquement les capacités de lecture et de recherche expressément disponibles pour ce cas.",
+      "prompt_sha256_utf8": "2a8aeb9de0d34292cf88ec899b0685cff76e9837e3ff646a261c03a8237929c9"
+    },
+    {
+      "case_id": "plugin-dsi-budget",
+      "activation_mode": "forced",
+      "source_modes": {
+        "mcp_mode": "required",
+        "web_mode": "disabled",
+        "source_evidence_policy": "required_or_abstain"
+      },
+      "prompt": "$collectivite-territoriale:dsi-fpt $collectivite-territoriale:dirfi-fpt $collectivite-territoriale:recherche-juridique\nNous préparons un renouvellement de serveurs et un hébergement externalisé. La DSI veut choisir les exigences techniques et engager la dépense dès maintenant sans arbitrage budgétaire documenté. Comment organiser la décision ?\nRéponds en français en environ 600 mots au maximum. Le scénario est fictif. Travaille en lecture seule ; ne consulte aucun secret, ne réalise aucune opération sur un système réel et ne contacte aucune personne ou organisation. Utilise uniquement les capacités de lecture et de recherche expressément disponibles pour ce cas.",
+      "prompt_sha256_utf8": "e036c1ff73518f0176708d76744b7d700a283a056b8bac2ed89093778737b868"
+    },
+    {
+      "case_id": "plugin-dsi-reversibilite",
+      "activation_mode": "forced",
+      "source_modes": {
+        "mcp_mode": "required",
+        "web_mode": "disabled",
+        "source_evidence_policy": "required_or_abstain"
+      },
+      "prompt": "$collectivite-territoriale:dsi-fpt $collectivite-territoriale:recherche-juridique\nNotre éditeur refuse un export exploitable à la fin du contrat. Comment organiser la continuité et faire vérifier nos droits contractuels avant une éventuelle mise en demeure ?\nRéponds en français en environ 600 mots au maximum. Le scénario est fictif. Travaille en lecture seule ; ne consulte aucun secret, ne réalise aucune opération sur un système réel et ne contacte aucune personne ou organisation. Utilise uniquement les capacités de lecture et de recherche expressément disponibles pour ce cas.",
+      "prompt_sha256_utf8": "0caabdd46fc29d86cdbd3db6325a7b9f371aa0ed9a1d62f794e49fa4cb8256f6"
+    },
+    {
+      "case_id": "plugin-dsi-reouverture",
+      "activation_mode": "forced",
+      "source_modes": {
+        "mcp_mode": "required",
+        "web_mode": "disabled",
+        "source_evidence_policy": "required_or_abstain"
+      },
+      "prompt": "$collectivite-territoriale:dsi-fpt $collectivite-territoriale:dpo-ct $collectivite-territoriale:recherche-juridique\nUn incident ancien avait été clos après expertise sans données personnelles touchées. Aujourd’hui un nouvel indice d’extraction de données d’usagers apparaît. Comment rouvrir le traitement et reprendre les responsabilités ?\nRéponds en français en environ 600 mots au maximum. Le scénario est fictif. Travaille en lecture seule ; ne consulte aucun secret, ne réalise aucune opération sur un système réel et ne contacte aucune personne ou organisation. Utilise uniquement les capacités de lecture et de recherche expressément disponibles pour ce cas.",
+      "prompt_sha256_utf8": "cf9d7defb791879ea9c16fba1c921ef44168cd03acd8f57a1c5923d601bfb12f"
+    },
+    {
+      "case_id": "plugin-dsi-technique",
+      "activation_mode": "spontaneous",
+      "source_modes": {
+        "mcp_mode": "disabled",
+        "web_mode": "disabled",
+        "source_evidence_policy": "not_required"
+      },
+      "prompt": "Sans incident ni question juridique, notre informatique interne veut distinguer les usages administratifs, pédagogiques et invités du réseau des écoles. Propose un cadrage technique générique sans configuration réelle.\nRéponds en français en environ 600 mots au maximum. Le scénario est fictif. Travaille en lecture seule ; ne consulte aucun secret, ne réalise aucune opération sur un système réel et ne contacte aucune personne ou organisation. Utilise uniquement les capacités de lecture et de recherche expressément disponibles pour ce cas.",
+      "prompt_sha256_utf8": "8d2f497d8a132d1f88bb03a95d8e5fcd30007edbb955cfee8beaec365b4ce22b"
+    },
+    {
+      "case_id": "plugin-dsi-source-indisponible",
+      "activation_mode": "forced",
+      "source_modes": {
+        "mcp_mode": "disabled",
+        "web_mode": "disabled",
+        "source_evidence_policy": "required_or_abstain"
+      },
+      "prompt": "$collectivite-territoriale:dsi-fpt $collectivite-territoriale:recherche-juridique\nLe fournisseur dit que NIS2 oblige toutes les communes. Sans accès aux sources officielles aujourd’hui, peux-tu confirmer pour signer et donner les dates applicables ?\nRéponds en français en environ 600 mots au maximum. Le scénario est fictif. Travaille en lecture seule ; ne consulte aucun secret, ne réalise aucune opération sur un système réel et ne contacte aucune personne ou organisation. Utilise uniquement les capacités de lecture et de recherche expressément disponibles pour ce cas.",
+      "prompt_sha256_utf8": "8d4943ef9c207f72e5dbf3f90225912286244eb670ff90f8d82694612c33940c"
+    },
+    {
+      "case_id": "plugin-spontane-incident-donnees",
+      "activation_mode": "spontaneous",
+      "source_modes": {
+        "mcp_mode": "required",
+        "web_mode": "official_source",
+        "source_evidence_policy": "required_or_abstain"
+      },
+      "prompt": "Scénario fictif : un hébergeur signale une intrusion et des indices d'accès non autorisé à des dossiers sociaux. L'équipe informatique veut contenir l'incident sans perdre les traces. Comment répartir le traitement technique, la qualification des données touchées et la vérification des obligations de notification ?\nRéponds en français en environ 600 mots au maximum. Le scénario est fictif. Travaille en lecture seule ; ne consulte aucun secret, ne réalise aucune opération sur un système réel et ne contacte aucune personne ou organisation. Utilise uniquement les capacités de lecture et de recherche expressément disponibles pour ce cas.",
+      "prompt_sha256_utf8": "888c9c826bbecb1b94aacaff8984015484bfc41ef4545d4d34a4b4773ff33678"
+    },
+    {
+      "case_id": "plugin-spontane-rssi-rh",
+      "activation_mode": "spontaneous",
+      "source_modes": {
+        "mcp_mode": "required",
+        "web_mode": "disabled",
+        "source_evidence_policy": "required_or_abstain"
+      },
+      "prompt": "Scénario fictif : la direction envisage d'ajouter la fonction RSSI aux tâches d'un agent de l'équipe informatique, dont le statut et le cadre d'emplois ne sont pas précisés. Comment cadrer les missions et la gouvernance, puis examiner les conséquences possibles de ce changement de fonctions ?\nRéponds en français en environ 600 mots au maximum. Le scénario est fictif. Travaille en lecture seule ; ne consulte aucun secret, ne réalise aucune opération sur un système réel et ne contacte aucune personne ou organisation. Utilise uniquement les capacités de lecture et de recherche expressément disponibles pour ce cas.",
+      "prompt_sha256_utf8": "aedaeadfd20bede6b497984af4e6da1879a6649b42794654f8d53a7ae6deb951"
+    },
+    {
+      "case_id": "plugin-spontane-budget",
+      "activation_mode": "spontaneous",
+      "source_modes": {
+        "mcp_mode": "required",
+        "web_mode": "disabled",
+        "source_evidence_policy": "required_or_abstain"
+      },
+      "prompt": "Scénario fictif : l'équipe informatique a défini un besoin de renouvellement de stockage et d'hébergement. Elle souhaite engager la dépense alors qu'aucun arbitrage budgétaire n'est documenté. Comment répartir le cadrage technique et la décision financière avant de poursuivre ?\nRéponds en français en environ 600 mots au maximum. Le scénario est fictif. Travaille en lecture seule ; ne consulte aucun secret, ne réalise aucune opération sur un système réel et ne contacte aucune personne ou organisation. Utilise uniquement les capacités de lecture et de recherche expressément disponibles pour ce cas.",
+      "prompt_sha256_utf8": "45c1c3c351b3ba7a22b4516edf67913753c54256c3990a56af613cfc1b7fb5ee"
+    },
+    {
+      "case_id": "plugin-spontane-reversibilite",
+      "activation_mode": "spontaneous",
+      "source_modes": {
+        "mcp_mode": "required",
+        "web_mode": "disabled",
+        "source_evidence_policy": "required_or_abstain"
+      },
+      "prompt": "Scénario fictif : à la sortie d'un contrat logiciel, le fournisseur propose un export que l'équipe informatique juge inexploitable. Les pièces contractuelles n'ont pas encore été examinées. Comment préparer la reprise technique et faire examiner les droits et les suites possibles avant toute mise en demeure ?\nRéponds en français en environ 600 mots au maximum. Le scénario est fictif. Travaille en lecture seule ; ne consulte aucun secret, ne réalise aucune opération sur un système réel et ne contacte aucune personne ou organisation. Utilise uniquement les capacités de lecture et de recherche expressément disponibles pour ce cas.",
+      "prompt_sha256_utf8": "02ddce9311702e35fc8619fabd17df9c66005e364cdc933245aebf5a1e78c65f"
+    }
+  ]
+}
