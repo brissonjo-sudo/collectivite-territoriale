@@ -152,10 +152,18 @@ def distribution_errors(root: Path, evidence: dict) -> list[str]:
     return errors
 
 
+def current_distribution_errors(root: Path) -> list[str]:
+    """Refuse explicitement l'absence de mesure ; jamais de fallback de version."""
+    version = load(root, ".codex-plugin/plugin.json")["version"]
+    relative = f"tests/evidence/release-{version}.json"
+    if not (root / relative).is_file():
+        return [f"Preuve courante absente : release-{version}.json"]
+    return distribution_errors(root, load(root, relative))
+
+
 def main() -> int:
     """Contrôle le candidat courant sans appel réseau ni publication."""
-    version = load(ROOT, ".codex-plugin/plugin.json")["version"]
-    errors = distribution_errors(ROOT, load(ROOT, f"tests/evidence/release-{version}.json"))
+    errors = current_distribution_errors(ROOT)
     for error in errors:
         print(f"[ERREUR] {error}")
     if not errors:

@@ -49,6 +49,22 @@ diff de test pour arbitrage ; aucune option ne sera appliquée dans ce lot.
 Jusqu’à cet arbitrage, un échec de `validate` limité à ce test est accepté et
 signalé. Il n’est ni masqué ni contourné.
 
+### Décision D3 — 2026-10-17, application en L7
+
+Claude retient la combinaison B de L6 : R1-B + R2-B + R3-B + R4-B,
+exactement telle que testée dans `COMBINAISON-B.patch`. Validate contrôle
+explicitement l'état « non mesuré, non qualifié » lorsque la preuve courante
+est absente ; les assertions historiques restent applicables si elle existe.
+Release refuse toujours toute absence de mesure et tout runtime différent.
+
+Aucune preuve n'est fabriquée ; aucun seuil, saut ou filtre n'est ajouté.
+L'assertion historique « DSI absent » est remplacée par la vérification de la
+frontière sur la distribution publiée et de l'activation dans le cas local.
+Les fixtures historiques qualifiées restent distinctes du candidat 1.3.0.
+L'ADR 0007 et la séparation validate/release sont conservées. Cette décision
+autorise l'application et la recette logicielle locale, sans campagne, mesure,
+avis humain acquis, qualification ni action externe.
+
 ### D4 — Reprise R5
 
 L5 est autorisé à réintégrer `tests/test_reprise_dev7.py` et à rendre
