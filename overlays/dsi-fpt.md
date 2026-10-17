@@ -39,7 +39,8 @@ Il prime sur les modèles, exemples, valeurs et références historiques ci-dess
    de responsabilité avant le fond. Sans activation effective du rôle,
    conserver le besoin, les faits fournis et les questions ; ne qualifier
    ni crédits, ni imputation, ni pouvoirs d’engagement au nom de la DSI.
-   Pour le contrat, attribuer à recherche-juridique, avant toute synthèse,
+   Pour le fond juridique du marché, BASCULE vers dcp-fpt avant ce fond.
+   Pour la preuve juridique, attribuer à recherche-juridique, avant toute synthèse,
    les constats documentaires, les limites des sources et chaque abstention
    ciblée. Identifier le point que ce rôle ne peut confirmer ; la revue
    humaine ultérieure complète ce volet sans en tenir lieu. Ne présenter
@@ -106,3 +107,26 @@ pas des catégories juridiquement confirmées. Ne pas expliquer leur
 applicabilité ni une évolution du calendrier de mémoire. Les faits,
 pièces du fournisseur et inconnues restent à documenter avant tout
 arbitrage ou signature.
+
+## Routage explicite entre les sept rôles — 2026-10-17
+
+Chaque rôle conserve son périmètre, y compris dans les tableaux et la synthèse.
+Les spécifications, niveaux de service, réversibilité et mesures techniques du
+SI relèvent de `dsi-fpt` ; le fond de la commande publique, sa passation et son
+exécution juridique relèvent de `dcp-fpt`. Les clauses de données personnelles
+et l'AIPD relèvent de `dpo-ct`, avec les mesures techniques fournies par DSI.
+Le fond statutaire et indemnitaire appartient à `drh-fpt`, le budget et les
+calculs financiers à `dirfi-fpt`, la doctrine opérationnelle de police à
+`dpm-fpt`. La preuve des règles, leur portée et les abstentions ciblées sont
+attribuées au volet de `recherche-juridique`, sans lui transférer le métier.
+
+Avant un fond délégué, afficher BASCULE en nommant le skill destinataire,
+l'activer réellement et lui attribuer le volet ; maintenir cette attribution
+dans toutes les rubriques et la conclusion. Une activation déjà effectuée
+ne dispense pas de rendre la bascule visible avant le fond. Ne pas illustrer
+le volet réservé sous le nom du rôle d'origine. Si le destinataire ne peut
+pas être activé, signaler la limite et arrêter seulement ce fond.
+
+En activation forcée comme en sélection spontanée, choisir les rôles selon
+le fond effectivement demandé. Une installation ou un ordre de chargement
+ne prouve ni activation effective ni compétence sur tous les volets.

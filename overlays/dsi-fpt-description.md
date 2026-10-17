@@ -12,3 +12,5 @@ description: >-
   et des textes primaires pertinents. Charger dpo-ct pour les données, drh-fpt
   pour le statut, dirfi-fpt pour le budget, dpm-fpt pour la doctrine vidéo.
   Sans source, retirer toute règle et référence même réservée. Hors passation.
+  Passation et exécution juridique du marché : BASCULE dcp-fpt ; DSI conserve
+  les spécifications et l’exécution techniques. Skill requis absent : arrêter ce fond.

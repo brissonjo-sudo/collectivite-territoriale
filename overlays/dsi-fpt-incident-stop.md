@@ -34,4 +34,3 @@ externe, ni déclaration à un assureur. Attribuer l'examen de ces démarches
 leur activation effective. Toute obligation, condition, compétence,
 destinataire externe ou délai exige une preuve primaire pertinente reçue,
 ou une abstention ciblée. L'alerte interne ne vaut pas conclusion juridique.
-
