@@ -77,3 +77,15 @@ La séparation validate/release et les quatre échecs L4 restent inchangés pour
 L6. Aucune campagne, inférence, préparation native, installation, publication
 ou poussée n'est autorisée ou exécutée par ce lot. Les preuves R4/R5 restent
 des archives historiques, sans lien d'exécution avec le nouveau candidat.
+
+## Décision de l'orchestrateur — 2026-10-17
+
+Claude borne R5 à la **récupération des modules publics et aux contrôles
+logiciels sans inférence**. Cette décision répond à la question ci-dessus ;
+elle conserve son constat et les validateurs historiques inchangés.
+
+Le portage du bridge natif vers un contrat 1.3.0 relève d'un chantier distinct,
+à ouvrir seulement si Jo autorise une campagne. Il n'est pas requis pour la
+recette logicielle du successeur. Aucune préparation native, campagne, copie
+d'état privé, réutilisation de gel ou transfert de résultat n'est autorisé
+par cette décision. Les modes natifs restent explicitement refusés.
