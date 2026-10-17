@@ -1,5 +1,21 @@
 # Historique des versions
 
+## 1.3.0 — Candidat d'intégration DSI — non mesuré, non qualifié
+
+Préparation locale du 2026-10-17, selon l'ADR 0010.
+
+- Union de sept skills : DSI 0.2.1 au pin `704e5dd6a3d15994ed431b23585aabd72086ca75`
+  (30 fichiers) ; DPO 0.2.2 au pin `58ea45c4d12812da10ace5f1486deea96b8534fa`.
+- DCP 0.1.3 conservé sans modification ; routage juridique des marchés vers DCP,
+  technique vers DSI, protection des données vers DPO et preuve vers recherche-juridique.
+- Surcharges ordonnées et vérifiées : priorité STOP, activation réelle forcée ou
+  spontanée, abstention sans source primaire et transferts persistants.
+- Neuf cas historiques conservés ; huit cas DSI ajoutés pour des contrôles
+  locaux de structure uniquement, sans jugement ni campagne.
+- Manifestes locaux en 1.3.0 ; catalogues inchangés, toujours épinglés `v1.2.0`.
+- Aucun ancien gel ou score transféré. Preuves et tests historiques inchangés ;
+  absence de mesure 1.3.0 et hypothèse ancienne « DSI externe » à traiter en L6.
+
 ## Préparation de distribution open source — 2026-10-08
 
 - DCP 0.1.3 et les six skills restent identiques au runtime mesuré.

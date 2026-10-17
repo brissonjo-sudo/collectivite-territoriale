@@ -1,7 +1,7 @@
 {
   "name": "collectivite-territoriale",
-  "version": "1.2.0",
-  "description": "Cinq expertises métier et une méthode juridique transverse pour les collectivités territoriales françaises, avec accès à Légifrance/Judilibre. Commande publique intégrée en version candidate, non mesurée et non relue par un praticien.",
+  "version": "1.3.0",
+  "description": "Sept skills pour les collectivités territoriales françaises : police municipale, RH, données, finances, commande publique, systèmes d’information et recherche juridique avec accès Légifrance/Judilibre. Candidat d’intégration DSI, non mesuré, non qualifié.",
   "author": {
     "name": "brissonjo-sudo",
     "url": "https://github.com/brissonjo-sudo"
@@ -23,8 +23,8 @@
   "mcpServers": "./.mcp.json",
   "interface": {
     "displayName": "Collectivité territoriale",
-    "shortDescription": "Cinq métiers et une méthode juridique",
-    "longDescription": "Police municipale, ressources humaines territoriales, protection des données, finances locales et commande publique, complétées par une méthode de recherche juridique et un accès Légifrance/Judilibre. La commande publique reste non mesurée et non relue par un praticien.",
+    "shortDescription": "Six métiers et une méthode juridique",
+    "longDescription": "Sept skills pour les collectivités territoriales françaises : police municipale, RH, données, finances, commande publique, systèmes d’information et recherche juridique avec accès Légifrance/Judilibre. Candidat d’intégration DSI, non mesuré, non qualifié.",
     "developerName": "brissonjo-sudo",
     "category": "Productivity",
     "capabilities": [
@@ -40,7 +40,8 @@
       "Analyse cette situation RH dans la fonction publique territoriale.",
       "Vérifie ce point de finances locales avec ses sources.",
       "Analyse cette situation de marché public et les vérifications nécessaires.",
-      "Recherche et vérifie cette règle de droit français."
+      "Recherche et vérifie cette règle de droit français.",
+      "Cadre ce projet informatique et les expertises à activer."
     ]
   }
 }

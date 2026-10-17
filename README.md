@@ -3,27 +3,34 @@
 [![Validation du plugin](https://github.com/brissonjo-sudo/collectivite-territoriale/actions/workflows/ci.yml/badge.svg)](https://github.com/brissonjo-sudo/collectivite-territoriale/actions/workflows/ci.yml)
 
 Plugin Claude Code et Codex destiné aux collectivités territoriales françaises.
-La distribution open source 1.2.0 expose cinq expertises métier, une méthode
-de recherche juridique sourcée et un accès optionnel à Légifrance/Judilibre.
+Le candidat local **1.3.0 — Candidat d'intégration DSI — non mesuré, non qualifié**
+réunit six expertises métier et une méthode de recherche juridique sourcée,
+avec un accès optionnel à Légifrance/Judilibre.
 
-> **Statut :** intégration DCP 0.1.3 techniquement qualifiée pour la distribution open source : 27 réussites, une demi-réussite, zéro échec et huit critiques réussis ; neuf cas plugin techniques et smoke Git avec modèle/MCP réussis. La relecture praticien est conservée pour un futur déploiement en collectivité ou chez un tiers. Les catalogues distribuent `v1.2.0`, avec DCP. [Qualification actuelle](docs/qualification-013-2026-10-08.md), [publication](docs/publication.md) et [note praticien différée](docs/deploiement-collectivite.md).
+> **Statut du candidat :** aucune mesure ni qualification de ce runtime à sept skills.
+> Aucun ancien gel, score ou avis n'est transférable. Les deux catalogues restent
+> épinglés sur `v1.2.0` et distribuent les six skills historiques, sans DSI.
+> Les preuves de cette distribution sont historiques et ne qualifient pas 1.3.0.
+> Voir le [contrat du candidat](docs/adr/0010-contrat-candidat-1-3-0.md),
+> la [publication](docs/publication.md) et la [note praticien](docs/deploiement-collectivite.md).
 
 Ce plugin aide à qualifier une situation, identifier les expertises à mobiliser et produire une réponse traçable. Il ne remplace ni la validation d'un juriste, ni le contrôle de l'autorité compétente, ni la vérification des textes officiels en vigueur.
 
-## Contenu de la distribution 1.2.0
+## Contenu du candidat 1.3.0
 
 | Skill | Domaine | Version embarquée |
 |---|---|---:|
 | `collectivite-territoriale:dpm-fpt` | Police municipale et limites APJA | 1.0.5 |
 | `collectivite-territoriale:drh-fpt` | Ressources humaines territoriales | 0.6.0 |
-| `collectivite-territoriale:dpo-ct` | Protection des données | 0.2.1 |
+| `collectivite-territoriale:dpo-ct` | Protection des données | 0.2.2 |
 | `collectivite-territoriale:dirfi-fpt` | Finances locales | 1.0.4 |
-| `collectivite-territoriale:dcp-fpt` | Commande publique, mesuré autonomement, à relire | 0.1.3 |
+| `collectivite-territoriale:dcp-fpt` | Commande publique | 0.1.3 |
+| `collectivite-territoriale:dsi-fpt` | Systèmes d’information et sécurité technique | 0.2.1 |
 | `collectivite-territoriale:recherche-juridique` | Recherche et vérification du droit français | 3.5.0 |
 
 L'étiquette distribuée `v1.2.0` contient les six skills, dont DCP 0.1.3.
 Les deux marketplaces récupèrent le même commit figé. Une mise à jour
-de la marketplace permet d'installer cette version.
+de la marketplace permet d'installer cette version historique, pas le candidat local 1.3.0.
 
 Le serveur MCP `droit-francais`, déclaré une seule fois dans `.mcp.json`, fournit l'accès aux sources Légifrance/Judilibre. Le skill `recherche-juridique` apporte la méthode de vérification de vigueur, de provenance et de citation. Le serveur et la méthode sont complémentaires.
 
@@ -46,16 +53,20 @@ L'activation simultanée de plusieurs skills dépend de la question posée. Une 
   fixe ; aucun secret OAuth ou PISTE n'est distribué dans ce dépôt.
 - En cas d'indisponibilité du MCP, le plugin doit signaler la voie dégradée et ne pas inventer de référence.
 
-`dsi-fpt` reste externe au plugin : la frontière DCP sur les spécifications,
-niveaux de service, réversibilité et exécution technique d'un achat informatique
-est un renvoi vers cette compétence. Sa disponibilité et son activation ne
-doivent pas être présumées. En son absence, DCP signale la frontière et arrête
-ce volet. Aucune copie de DSI ni modification des autres skills n'accompagne
-cette intégration candidate.
+`dsi-fpt` est embarqué dans le candidat 1.3.0. DCP conserve la passation et
+l'exécution juridique du marché ; DSI prend les spécifications, niveaux de
+service, réversibilité et exécution technique. Le chargement effectif d'un rôle
+reste nécessaire avant son fond : sa présence installée ne vaut pas activation.
+Si le rôle requis est indisponible, ce volet s'arrête explicitement. La frontière
+DSI externe des anciens cas reste un scénario où ce rôle n'est pas chargé dans
+la session ; elle ne décrit plus l'inventaire du candidat.
 
 Le plugin traite le droit français et l'aide à la décision dans le contexte des collectivités territoriales. Toute conclusion sensible doit être confrontée à la source officielle et aux circonstances du dossier.
 
 La collecte et la transmission éventuelles de données sont décrites dans la [politique de confidentialité](PRIVACY.md). Le serveur MCP peut être désactivé lorsque la transmission d'une requête juridique au service distant n'est pas souhaitée.
+
+Les commandes de marketplace ci-dessous installent la distribution `v1.2.0` ;
+le candidat 1.3.0 reste local et non publié.
 
 ## Installation dans Claude Code
 
@@ -96,7 +107,7 @@ Le plugin peut aussi être installé depuis le répertoire des plugins de l'appl
 
 Cette marketplace Git sert au développement, aux tests et à la distribution directe. Elle ne publie pas automatiquement le plugin dans l'annuaire public universel. Dans un espace de travail ChatGPT, l'import et les autorisations restent administrés par l'organisation.
 
-> **Compte de l'auteur :** ne pas installer ce plugin en parallèle de ses six skills individuels. Les deux jeux coexistent sous des noms distincts et peuvent doubler le contexte chargé.
+> **Compte de l'auteur :** ne pas installer ce plugin en parallèle de ses sept skills individuels. Les deux jeux coexistent sous des noms distincts et peuvent doubler le contexte chargé.
 
 ## Sources et reproductibilité
 
@@ -104,7 +115,7 @@ Cette marketplace Git sert au développement, aux tests et à la distribution di
 
 [Ponytail](https://github.com/DietrichGebert/ponytail) 5.1.0 est installé dans
 `.agents/skills/ponytail/` pour développer ce dépôt uniquement. Il n'est pas
-un septième skill du plugin. Son point d'entrée vérifie la dernière release
+un skill distribué du plugin. Son point d'entrée vérifie la dernière release
 stable publiée, le commit de son étiquette et les empreintes locales avant
 chaque utilisation, puis affiche les règles seulement en cas de succès :
 
@@ -120,9 +131,25 @@ instructions utilisateur et à la sécurité du projet. [Décision](docs/adr/000
 
 ### Runtimes métier du plugin
 
-Chaque dossier `skills/<nom>/` provient des fichiers d'exécution d'un commit amont figé. `upstream.json` fixe le dépôt, le commit, la version de base et les chemins inclus. `dirfi-fpt`, `drh-fpt` et `dcp-fpt` restent des copies exactes. `dpm-fpt`, `dpo-ct` et `recherche-juridique` sont des **variantes locales du plugin**, avec les corrections de méthode conservées dans `overlays/` et déclarées dans `instruction_overlays`.
+Chaque dossier `skills/<nom>/` provient des fichiers d'exécution d'un commit
+amont figé. `upstream.json` fixe dépôt, commit, version et chemins inclus.
+`dcp-fpt` reste une copie exacte, sans surcharge. Les six autres skills sont
+des variantes locales du plugin, avec leurs surcharges dans `overlays/` et
+leur chaîne ordonnée déclarée dans `instruction_overlays`.
 
-Chaque surcharge est liée à l'empreinte SHA-256 exacte de son fichier amont et de son texte local ; elle est insérée une seule fois à une ancre unique. Tout changement de base, de correction ou d'ancre bloque la synchronisation tant qu'il n'a pas été revu. Les versions internes identifient la base amont, pas une nouvelle release de ces dépôts. Le commit du plugin identifie la variante complète. Aucun dépôt amont n'est modifié par ces surcharges.
+Chaque étape vérifie l'empreinte SHA-256 exacte de son entrée et de sa surcharge.
+Les insertions gardent leur ancre unique ; les remplacements sont bornés au
+champ folded complet de description ou à la section `###` complète de même
+titre, hors frontmatter. Toute dérive de base, d'ordre, de texte ou d'ancre
+bloque la synchronisation. Les versions internes identifient les bases amont,
+pas de nouvelles releases de ces dépôts. Le commit du plugin identifie la
+variante complète. Aucun dépôt amont n'est modifié.
+
+DSI 0.2.1 est figé à `704e5dd6a3d15994ed431b23585aabd72086ca75` :
+30 fichiers runtime, sélection de #11, sans cache de valeurs. DPO 0.2.2 reste
+figé à `58ea45c4d12812da10ace5f1486deea96b8534fa` (18 fichiers).
+Les renvois DCP, les STOP et l'abstention sans source primaire sont conservés ;
+les transferts imposent l'activation effective et une attribution persistante.
 
 Pour `recherche-juridique`, la racine canonique `skill/` est aplatie dans `skills/recherche-juridique/`. Sa licence est copiée avec le runtime ; aucun manifeste, serveur MCP, fichier `.env` ou autre fichier de dépôt amont n'est dupliqué. Le fichier `references/cache-taux-seuils.md` de `dirfi-fpt`, exclu de son propre paquet de distribution, n'est pas embarqué.
 
@@ -178,9 +205,9 @@ Le manifeste Codex est également contrôlé avec le validateur du skill systèm
 - les deux STOP DCP, les frontières financières et données, la dépendance DSI
   externe et le comportement DCP sans accès aux sources officielles.
 
-La distribution open source 1.2.0 exige des traces comportementales en
+Les preuves historiques de la distribution open source 1.2.0 exigent des traces comportementales en
 conversations fraîches, le seuil de mesure DCP et un smoke installé réussi.
-Le statut courant est conservé dans `tests/evidence/release-1.2.0.json` :
+Le statut de cette distribution historique est conservé dans `tests/evidence/release-1.2.0.json` :
 `distribution.ready` concerne cette distribution ; `deployment.ready` et
 le champ historique `release_ready` restent faux sans qualification métier.
 La relecture praticien devient une condition du déploiement opérationnel
@@ -193,7 +220,7 @@ désactive les connecteurs juridiques globaux et ne conserve qu'une trace JSONL
 assainie dans `tests/evidence/.work/`. La revue humaine des invariants métier
 reste distincte et requise avant le déploiement opérationnel chez un tiers.
 
-À la demande de l'auteur, la campagne actuelle utilise Codex et
+Pour la distribution historique 1.2.0, la campagne utilise Codex et
 `scripts/run_codex_campaign.py` : copies natives en workspace frais,
 lectures ordonnées par segments vérifiés, MCP juridique propre au processus
 dans les sept cas nominaux, MCP absent dans les deux cas dégradés. La connexion
@@ -206,10 +233,19 @@ Une demande sans nom de skill déclenche des lectures DCP/juridique et un STOP ;
 la mémoire et les instructions utilisateur restent présentes, sans attribution
 causale exclusive. La mesure autonome DCP avec web/MCP garde son profil distinct.
 
-Les avertissements antérieurs à la mesure dans les entrées et manifestes sont
-conservés pour préserver les octets du candidat testé. Le présent statut et
-le rapport de qualification donnent les résultats actuels ; aucune relecture
-humaine ni validation juridique n'est déclarée acquise.
+Ces résultats et avertissements historiques ne s'appliquent pas au candidat
+1.3.0. Aucune preuve `release-1.3.0.json` n'est fabriquée. Les tests de preuve
+restent inchangés et signalent cette absence ainsi que la divergence du runtime.
+Un ancien test exige encore l'absence de DSI : il reste inchangé, en attente
+de l'arbitrage L6. ADR 0007, séparation validate/release et seuils sont conservés.
+
+`tests/cas-plugin.json` conserve ses neuf cas historiques, dont les cinq DCP.
+`tests/cas-coactivation-dsi.json` ajoute huit cas locaux de structure (six
+activations forcées, deux spontanées), sans jugement ni mesure. Les quatre tests
+de structure associés ne prouvent aucun comportement du modèle. Ce fichier
+n'est pas raccordé aux lanceurs historiques : leur activation forcée systématique
+ne permet pas d'évaluer les nouveaux cas spontanés en l'état. Aucune campagne,
+installation, qualification ou requête modèle n'accompagne cette intégration.
 
 ## Architecture et décisions
 
@@ -217,17 +253,17 @@ humaine ni validation juridique n'est déclarée acquise.
 - `.claude-plugin/plugin.json` : manifeste Claude Code.
 - `.agents/plugins/marketplace.json` et `.claude-plugin/marketplace.json` : catalogues de distribution.
 - `.mcp.json` : unique déclaration du serveur `droit-francais`.
-- `skills/` : six runtimes figés et synchronisés.
+- `skills/` : sept runtimes figés et synchronisés.
 - `upstream.json` et `scripts/` : provenance et contrôle de dérive.
 
-Le format de compatibilité actuel reste volontairement utilisé pour le candidat 1.2.0. La migration vers le manifeste portable Agent Plugins fera l'objet d'un chantier séparé. Le plan de construction et les décisions d'architecture sont conservés dans `docs/`, dont l'[ADR DCP](docs/adr/0003-integration-candidate-dcp.md) et le [relevé d'intégration](docs/integration-dcp-2026-10-06.md).
+Le format de compatibilité actuel reste volontairement utilisé pour le candidat 1.3.0. La migration vers le manifeste portable Agent Plugins fera l'objet d'un chantier séparé. Le plan de construction et les décisions d'architecture sont conservés dans `docs/`, dont l'[ADR DCP](docs/adr/0003-integration-candidate-dcp.md) et le [relevé d'intégration](docs/integration-dcp-2026-10-06.md).
 
 ## Licences
 
 L'outil de développement Ponytail conserve sa licence MIT propre dans
-`.agents/skills/ponytail/LICENSE` ; il ne fait pas partie des six contenus
+`.agents/skills/ponytail/LICENSE` ; il ne fait pas partie des sept contenus
 métier/juridiques embarqués ci-dessous.
 
-Le plugin et ses six contenus embarqués sont distribués sous licence [CC-BY-SA-4.0](LICENSE), avec attribution à `brissonjo-sudo`. Cette licence globale couvre notamment `dpm-fpt` et `dpo-ct`, qui ne disposaient pas auparavant d'une licence explicite dans leur dépôt amont. La licence DCP accompagne également sa copie.
+Le plugin et ses sept contenus embarqués sont distribués sous licence [CC-BY-SA-4.0](LICENSE), avec attribution à `brissonjo-sudo`. Cette licence globale couvre notamment `dpm-fpt` et `dpo-ct`, qui ne disposaient pas auparavant d'une licence explicite dans leur dépôt amont. La licence DCP accompagne également sa copie.
 
 Les textes, décisions et métadonnées récupérés depuis Légifrance ou Judilibre restent soumis aux droits, licences et conditions de réutilisation de leurs producteurs. Le texte CC-BY-SA-4.0 accompagne également la copie du runtime `recherche-juridique` dans `skills/recherche-juridique/LICENSE`.
