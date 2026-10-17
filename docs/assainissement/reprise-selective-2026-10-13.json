@@ -71,5 +71,32 @@
     "adapter manifestes,cases,gels et barriere distincte nouveau candidat",
     "rendre dependancesR5 recuperables hors chemin prive sans copier secrets",
     "relecture humaine puis autorisations de campagne et de PR distinctes"
+  ],
+  "decisions_orchestrateur": [
+    {
+      "date": "2026-10-17",
+      "lot": "T43-L1",
+      "reference": "../adr/0010-contrat-candidat-1-3-0.md",
+      "decision": "Le contrat du candidat 1.3.0 et les décisions D1-D5 sont fixés par l’ADR 0010.",
+      "pins": {
+        "dsi-fpt": {
+          "version": "0.2.1",
+          "commit": "704e5dd6a3d15994ed431b23585aabd72086ca75"
+        },
+        "dpo-ct": {
+          "version": "0.2.2",
+          "commit": "58ea45c4d12812da10ace5f1486deea96b8534fa"
+        },
+        "dcp-fpt": {
+          "version": "0.1.3",
+          "commit": "129f374e6ab8ea3b47bcfd9de9ddd52a2d3d9498"
+        }
+      },
+      "status": "non_mesure_non_qualifie",
+      "catalogues": "v1.2.0 inchangés",
+      "ci": "échec du seul test de preuve courante accepté en attendant arbitrage L6; aucun seuil, saut ou filtre ajouté",
+      "r5": "test et dépendances publiques autorisés pour L5; aucun profil, OAuth, gel, état privé ni lancement init/preflight/prepare/run-all",
+      "hors_perimetre": "patchs DPM eval_suite.py et package_skill.py"
+    }
   ]
 }
