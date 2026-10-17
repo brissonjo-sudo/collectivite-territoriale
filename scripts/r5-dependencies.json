@@ -1,0 +1,158 @@
+{
+  "schema_version": 1,
+  "repository": "https://github.com/brissonjo-sudo/collectivite-territoriale.git",
+  "source_commit": "b02dd247e328b4401cd82826a276d8fa1b31f1bb",
+  "entrypoints": [
+    "campagne_native_complete_dev7_20261009_r4",
+    "socle_campagne_native_dev7_20261008"
+  ],
+  "scope": "Fermeture des imports publics et cinq modules déclarés par socle.MODULES. Sources publiques uniquement ; aucun protocole, gel, reçu, profil, cache, état ou authentification. Les modules historiques sont récupérables mais ne sont pas un runtime natif portable qualifié.",
+  "modules": [
+    {
+      "module": "campagne_native_complete_dev7_20261009_r4",
+      "path": "tests/evidence/reprise-efficace-dev7-20261009-R4/outillage/campagne_native_complete_dev7_20261009_r4.py",
+      "commit": "b02dd247e328b4401cd82826a276d8fa1b31f1bb",
+      "sha256": "5fc8c833c37bf2496f6401e02ada39a1f9eff7402b04ed0813f29adf6f30c7a6",
+      "bytes": 48867,
+      "imports_publics": [
+        "normaliseur_native_complete_dev7_20261009_r2",
+        "socle_campagne_native_dev7_20261008"
+      ],
+      "imports_stdlib": [
+        "__future__",
+        "argparse",
+        "contextlib",
+        "copy",
+        "datetime",
+        "hashlib",
+        "json",
+        "msvcrt",
+        "os",
+        "pathlib",
+        "queue",
+        "re",
+        "subprocess",
+        "threading",
+        "time",
+        "typing",
+        "uuid"
+      ]
+    },
+    {
+      "module": "socle_campagne_native_dev7_20261008",
+      "path": "docs/qualification/preparation-campagne-dev7-hors-application-20261008/outillage/socle_campagne_native_dev7_20261008.py",
+      "commit": "b02dd247e328b4401cd82826a276d8fa1b31f1bb",
+      "sha256": "b2c3c4a2b943997b79960d512628a8d3da5daccf18038eceeeda7b8ce4bc555f",
+      "bytes": 10576,
+      "imports_publics": [],
+      "imports_stdlib": [
+        "__future__",
+        "datetime",
+        "hashlib",
+        "json",
+        "os",
+        "pathlib",
+        "re",
+        "subprocess",
+        "tomllib",
+        "typing"
+      ]
+    },
+    {
+      "module": "campagne_native_dev7_20261008",
+      "path": "docs/qualification/preparation-campagne-dev7-hors-application-20261008/outillage/campagne_native_dev7_20261008.py",
+      "commit": "b02dd247e328b4401cd82826a276d8fa1b31f1bb",
+      "sha256": "4581e12a083d3ec59b38af699f55a905a5be40b638ef27176f80db9023f8ea36",
+      "bytes": 19420,
+      "imports_publics": [
+        "socle_campagne_native_dev7_20261008"
+      ],
+      "imports_stdlib": [
+        "__future__",
+        "argparse",
+        "contextlib",
+        "json",
+        "msvcrt",
+        "pathlib",
+        "re",
+        "subprocess",
+        "time",
+        "typing"
+      ]
+    },
+    {
+      "module": "tests_campagne_native_dev7_20261008",
+      "path": "docs/qualification/preparation-campagne-dev7-hors-application-20261008/outillage/tests_campagne_native_dev7_20261008.py",
+      "commit": "b02dd247e328b4401cd82826a276d8fa1b31f1bb",
+      "sha256": "8ab2a69fa6b76c384df619f609b6180bad3a61d4078c63ac0533bb597aca672c",
+      "bytes": 11858,
+      "imports_publics": [
+        "campagne_native_dev7_20261008",
+        "socle_campagne_native_dev7_20261008"
+      ],
+      "imports_stdlib": [
+        "__future__",
+        "copy",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ]
+    },
+    {
+      "module": "extraire_campagne_native_dev7_20261008",
+      "path": "docs/qualification/preparation-campagne-dev7-hors-application-20261008/outillage/extraire_campagne_native_dev7_20261008.py",
+      "commit": "b02dd247e328b4401cd82826a276d8fa1b31f1bb",
+      "sha256": "fa47656e8edb2f4cf76f7bf64b019ea941f2853146e44570ca5d769402fb7f05",
+      "bytes": 24471,
+      "imports_publics": [],
+      "imports_stdlib": [
+        "__future__",
+        "argparse",
+        "datetime",
+        "hashlib",
+        "json",
+        "pathlib",
+        "re",
+        "typing"
+      ]
+    },
+    {
+      "module": "tests_extraire_campagne_native_dev7_20261008",
+      "path": "docs/qualification/preparation-campagne-dev7-hors-application-20261008/outillage/tests_extraire_campagne_native_dev7_20261008.py",
+      "commit": "b02dd247e328b4401cd82826a276d8fa1b31f1bb",
+      "sha256": "de958af6e0e084623a2d927d1a75d95567f533968f0f948e3fd1132d2d579b10",
+      "bytes": 9557,
+      "imports_publics": [
+        "extraire_campagne_native_dev7_20261008"
+      ],
+      "imports_stdlib": [
+        "__future__",
+        "importlib",
+        "json",
+        "pathlib",
+        "tempfile",
+        "unittest"
+      ]
+    },
+    {
+      "module": "normaliseur_native_complete_dev7_20261009_r2",
+      "path": "tests/evidence/reprise-efficace-dev7-20261009-R4/outillage/normaliseur_native_complete_dev7_20261009_r2.py",
+      "commit": "b02dd247e328b4401cd82826a276d8fa1b31f1bb",
+      "sha256": "fbbbdb01f117dda7e333f84018e988811dc3937b2ecd7607e4d60b379b98bf59",
+      "bytes": 54204,
+      "imports_publics": [],
+      "imports_stdlib": [
+        "__future__",
+        "copy",
+        "datetime",
+        "hashlib",
+        "json",
+        "pathlib",
+        "re",
+        "typing",
+        "urllib"
+      ]
+    }
+  ]
+}

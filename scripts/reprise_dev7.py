@@ -1,14 +1,13 @@
-"""Reprise explicite de dev.7 avec un CLI choisi et figé, sans modifier R4.
+"""Outillage R5 portable : récupération publique et contrôle sans inférence.
 
-Les dépendances historiques sont copiées après contrôle de leurs empreintes.
-Aucun secret n'est copié. Le profil déjà installé est utilisé et vérifié.
-Les commandes init/check/preflight/prepare ne lancent aucun répondant.
+Les commandes natives historiques ne sont pas transposées implicitement : leurs
+validateurs restent récupérables sans changement, liés au runtime R4 archivé.
+Aucun protocole, gel, cache, profil ou état historique n'est une entrée portable.
 """
 from __future__ import annotations
 
 import argparse
 import hashlib
-import importlib
 import json
 from pathlib import Path
 import queue
@@ -16,6 +15,9 @@ import subprocess
 import sys
 import time
 from typing import Any
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import r5_portable
 
 
 def sha(raw: bytes) -> str:
@@ -37,115 +39,11 @@ def write_new(path: Path, value: Any) -> None:
         stream.write("\n")
 
 
-def initialiser(legacy: Path, destination: Path, cli: Path) -> dict[str, Any]:
-    """Crée un successeur R5 après vérification des sources et du CLI explicite."""
-    legacy, destination, cli = legacy.resolve(), destination.resolve(), cli.resolve()
-    require(not destination.exists(), "Destination existante ; aucun remplacement")
-    require(not destination.is_relative_to(legacy), "Les preuves historiques restent hors destination")
-    original = legacy / "protocole-native-dev7-complet-20261009-r4.json"
-    protocol = read(original)
-    control = read(legacy / "controle-reprise-efficace-dev7-20261009.json")
-    require(protocol["schema_version"] == "dev7-native-complete-protocol-v4", "Protocole R4 requis")
-    required = {**protocol["immutable_tools_sha256"], **protocol["predecessor_tools_sha256"],
-                **control["tools_sha256"]}
-    # Les recouvrements doivent désigner exactement les mêmes octets.
-    for mapping in (protocol["immutable_tools_sha256"], protocol["predecessor_tools_sha256"], control["tools_sha256"]):
-        require(all(required[name] == digest for name, digest in mapping.items()), "Gels contradictoires")
-    for name, digest in required.items():
-        require(Path(name).name == name and sha((legacy / name).read_bytes()) == digest,
-                "Outillage historique divergent : " + name)
-    extras = {protocol["proposal_path"]: protocol["proposal_sha256"],
-              protocol["r3_manifest_path"]: protocol["r3_manifest_sha256"]}
-    for name, digest in extras.items():
-        target = (legacy / name).resolve()
-        require(target.is_relative_to(legacy) and sha(target.read_bytes()) == digest, "Preuve historique divergente")
-    require(cli.is_file(), "CLI explicite absent")
-    cli_digest = sha(cli.read_bytes())
-    version = subprocess.run([str(cli), "--version"], capture_output=True, timeout=20, check=True)
-    require(sha(cli.read_bytes()) == cli_digest, "CLI modifié pendant sa détection")
-    cli_version = version.stdout.decode("utf-8").strip()
-    require(cli_version.startswith("codex-cli "), "Identité CLI inconnue")
-    destination.mkdir(parents=True)
-    for name in (*required, *extras):
-        target = destination / name
-        target.parent.mkdir(parents=True, exist_ok=True)
-        target.write_bytes((legacy / name).read_bytes())
-    # Le successeur garde les cas, oracles, sources, permissions et limites R4.
-    protocol.update(schema_version="dev7-native-complete-protocol-v5",
-                    protocol_id="dev7-native-complete-20261012-r5",
-                    status="successor_not_measured", cli=str(cli), cli_version=cli_version,
-                    cli_sha256=cli_digest)
-    own_name = Path(__file__).name
-    (destination / own_name).write_bytes(Path(__file__).read_bytes())
-    protocol["new_tools"] = list(dict.fromkeys([*protocol["new_tools"], own_name]))
-    write_new(destination / "protocole-native-dev7-complet-20261012-r5.json", protocol)
-    identity = {"legacy_root": str(legacy), "legacy_protocol_sha256": sha(original.read_bytes()),
-                "legacy_control_sha256": sha((legacy / "controle-reprise-efficace-dev7-20261009.json").read_bytes()),
-                "source_git_root": str(Path(read(legacy / protocol["proposal_path"])["candidate_gel_path"]).parent.parent.parent),
-                "state_root": str(Path(protocol["installed_path"]).parents[4]),
-                "previous_cli": read(original)["cli"], "previous_cli_version": read(original)["cli_version"],
-                "cli": str(cli), "cli_version": cli_version, "cli_sha256": cli_digest,
-                "candidate_commit": protocol["candidate_commit"], "model_override": None,
-                "runtime_changed": False, "historical_scores_reused": False,
-                "model_inference": False, "release_ready": False}
-    write_new(destination / "reprise-identite.json", identity)
-    frozen = {p.relative_to(destination).as_posix(): sha(p.read_bytes())
-              for p in destination.rglob("*") if p.is_file()}
-    write_new(destination / "gel-reprise.json", frozen)
-    return identity
-
-
-def charger(folder: Path) -> Any:
-    """Valide le gel R5 et charge les modules R4 sans les modifier sur disque."""
-    folder = folder.resolve()
-    for name, expected in read(folder / "gel-reprise.json").items():
-        target = (folder / name).resolve()
-        require(target.is_relative_to(folder) and sha(target.read_bytes()) == expected, "Gel R5 divergent : " + name)
-    require(sha(Path(__file__).read_bytes()) == sha((folder / Path(__file__).name).read_bytes()),
-            "Le lanceur exécuté diffère du lanceur figé")
-    identity = read(folder / "reprise-identite.json")
-    legacy = Path(identity["legacy_root"])
-    require(sha((legacy / "protocole-native-dev7-complet-20261009-r4.json").read_bytes())
-            == identity["legacy_protocol_sha256"], "Protocole historique modifié")
-    original = read(legacy / "protocole-native-dev7-complet-20261009-r4.json")
-    successor = read(folder / "protocole-native-dev7-complet-20261012-r5.json")
-    allowed = {"schema_version", "protocol_id", "status", "cli", "cli_version", "cli_sha256", "new_tools"}
-    require({k: v for k, v in successor.items() if k not in allowed}
-            == {k: v for k, v in original.items() if k not in allowed}, "Contrat de campagne modifié")
-    require(all(successor[key] == identity[key] for key in ("cli", "cli_version", "cli_sha256")),
-            "Identité CLI différente de la reprise")
-    sys.path.insert(0, str(folder))
-    harness = importlib.import_module("campagne_native_complete_dev7_20261009_r4")
-    historical = importlib.import_module("socle_campagne_native_dev7_20261008")
-    historical.SOURCE = Path(identity["source_git_root"])
-    harness.ROOT = folder
-    harness.STATE = Path(identity["state_root"])
-    harness.PROTOCOL = folder / "protocole-native-dev7-complet-20261012-r5.json"
-    harness.DEFAULT_RUN = folder / "campagne"
-    original_preflight = harness.preflight
-    original_execute = harness.execute_case
-
-    class ClientCompatible(harness.Client):
-        """Même RPC et sandbox ; calcul SHA-256 sans autoload de module PowerShell."""
-        def request(self, method: str, params: dict[str, Any], timeout: float = 30) -> dict[str, Any]:
-            deadline = getattr(harness, "campaign_deadline", None)
-            if deadline is not None:
-                remaining = deadline - time.monotonic() - 20
-                require(remaining > 0, "Budget global atteint avant RPC")
-                timeout = min(timeout, remaining)
-            if method == "command/exec":
-                params = commande_hash_compatible(params, Path(successor["installed_path"]) / "skills/dsi-fpt/SKILL.md")
-            return super().request(method, params, timeout)
-
-    def preflight(*args: Any, **kwargs: Any) -> dict[str, Any]:
-        return original_preflight(*args, **kwargs, client_factory=ClientCompatible)
-
-    def execute_case(run: Path, identifier: str) -> dict[str, Any]:
-        return original_execute(run, identifier, gate=preflight)
-
-    harness.preflight = preflight
-    harness.execute_case = execute_case
-    return harness
+def charger(folder: Path, *, manifest_path: Path, contract_path: Path,
+            contract_sha256: str, **settings: Any) -> dict[str, Any]:
+    """Vérifie l'outillage sans importer le harnais historique à état privé."""
+    return r5_portable.check(folder, manifest_path, contract_path, contract_sha256,
+                             Path(__file__), **settings)
 
 
 def commande_hash_compatible(params: dict[str, Any], skill: Path) -> dict[str, Any]:
@@ -217,36 +115,36 @@ def executer(harness: Any) -> dict[str, Any]:
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("action", choices=("init", "check", "preflight", "prepare", "run-all", "export"))
+    parser.add_argument("action", choices=("recover", "check", "init", "preflight", "prepare", "run-all", "export"))
     parser.add_argument("--folder", type=Path, required=True)
-    parser.add_argument("--legacy", type=Path)
+    parser.add_argument("--manifest", type=Path, default=Path(__file__).with_name("r5-dependencies.json"))
+    parser.add_argument("--repository", type=Path)
+    parser.add_argument("--bundle", type=Path)
+    parser.add_argument("--bundle-sha256")
+    parser.add_argument("--contract", type=Path)
+    parser.add_argument("--contract-sha256")
+    parser.add_argument("--source-root", type=Path)
+    parser.add_argument("--candidate-commit")
+    parser.add_argument("--state-root", type=Path)
+    parser.add_argument("--installed-path", type=Path)
     parser.add_argument("--cli", type=Path)
-    parser.add_argument("--case")
+    parser.add_argument("--cli-sha256")
+    parser.add_argument("--cli-version")
     args = parser.parse_args()
-    if args.action == "init":
-        require(args.legacy is not None and args.cli is not None, "Racine historique et CLI explicites requis")
-        result = initialiser(args.legacy, args.folder, args.cli)
+    if args.action == "recover":
+        result = r5_portable.recover(args.manifest, args.folder, repository=args.repository,
+                                     bundle=args.bundle, bundle_sha256=args.bundle_sha256)
     else:
-        harness = charger(args.folder)
-        protocol, installed = harness.inputs()
-        if args.action == "check":
-            result = {"inputs_verified": True, "candidate_commit": protocol["candidate_commit"],
-                      "case_count": len(protocol["cases"]), "installed_files": len(installed["installed_files"]),
-                      "cli_version": protocol["cli_version"], "model_inference": False, "release_ready": False}
-        elif args.action == "preflight":
-            receipts = harness.preparation_preflights(protocol, installed, harness.preflight)
-            result = {"profiles_passed": len(harness.profile_groups(protocol)), "cases_covered": len(receipts),
-                      "model_inference": False, "release_ready": False}
-        elif args.action == "prepare":
-            result = harness.prepare(harness.DEFAULT_RUN, gate=harness.preflight)
-        elif args.action == "export":
-            require(args.case is not None, "Cas requis")
-            result = harness.export_case(harness.DEFAULT_RUN, args.case)
-        else:
-            result = executer(harness)
+        require(args.action == "check",
+                "Action native historique non portable : protocole et bridge du nouveau runtime à arbitrer ; aucun lancement")
+        require(args.contract is not None and args.contract_sha256 is not None,
+                "Contrat portable et empreinte explicites requis")
+        result = charger(args.folder, manifest_path=args.manifest, contract_path=args.contract,
+                         contract_sha256=args.contract_sha256,
+                         source_root=args.source_root, candidate_commit=args.candidate_commit,
+                         state_root=args.state_root, installed_path=args.installed_path,
+                         cli=args.cli, cli_sha256=args.cli_sha256, cli_version=args.cli_version)
     print(json.dumps(result, ensure_ascii=False))
-    if result.get("stopped_on_technical_failure"):
-        raise SystemExit(2)
 
 
 if __name__ == "__main__":
