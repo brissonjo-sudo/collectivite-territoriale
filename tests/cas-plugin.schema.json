@@ -1,0 +1,29 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Contrat des cas plugin, historique et DSI",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "required": ["id", "skills", "activation_sequence", "mcp", "mcp_mode", "web_mode", "prompt", "invariants"],
+    "properties": {
+      "id": {"type": "string", "minLength": 1},
+      "schema_version": {"enum": [1, 2]},
+      "skills": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string"}},
+      "activation_sequence": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+      "mcp_mode": {"enum": ["required", "disabled"]},
+      "mcp": {"enum": ["droit-francais", null]},
+      "web_mode": {"enum": ["official_source", "disabled"]},
+      "prompt": {"type": "string", "minLength": 1},
+      "invariants": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"type": "string", "minLength": 1}},
+      "max_budget_usd": {"type": "number", "exclusiveMinimum": 0},
+      "activation_mode": {"enum": ["forced", "spontaneous"]},
+      "stop_first": {"type": "boolean"},
+      "expected_skills": {"type": "array", "minItems": 1, "uniqueItems": true},
+      "invariants_observables": {"type": "array", "minItems": 1, "uniqueItems": true}
+    },
+    "allOf": [
+      {"if": {"properties": {"schema_version": {"const": 2}}, "required": ["schema_version"]},
+       "then": {"required": ["activation_mode", "stop_first", "expected_skills", "invariants_observables"]}}
+    ]
+  }
+}

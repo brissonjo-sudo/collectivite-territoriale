@@ -12,7 +12,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import run_codex_campaign as campaign
 import audit_native_reads as read_audit
-from support_preuves_historiques import runtime_at, files_at
+from support_preuves_historiques import cases_at, runtime_at, files_at
 
 
 def load(name):
@@ -22,7 +22,7 @@ def load(name):
 class PreuvesCorrectifTests(unittest.TestCase):
     def test_neuf_cas_et_tous_les_essais_lies_au_protocole_fige(self):
         summary = load("tests/evidence/2026-10-07-codex-natif-v3/summary.json")
-        cases = {c["id"]:c for c in campaign.load_cases()}
+        cases = {c["id"]:c for c in cases_at(ROOT, summary["plugin_commit"])}
         self.assertEqual(summary["case_count"], len(cases))
         self.assertEqual({r["case_id"] for r in summary["runs"]}, set(cases))
         self.assertEqual(len(summary["runs"]), len(cases))

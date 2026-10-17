@@ -166,7 +166,7 @@ class CodexPluginTests(unittest.TestCase):
 
     def test_cas_plugin_couvrent_les_coactivations_juridiques(self) -> None:
         cases = load_json("tests/cas-plugin.json")
-        self.assertEqual(len(cases), 9)
+        self.assertEqual(len(cases), 18)
         by_id = {case["id"]: case for case in cases}
         self.assertEqual(
             by_id["plugin-prime-depart-retraite"]["skills"],
