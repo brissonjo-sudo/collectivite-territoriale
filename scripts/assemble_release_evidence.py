@@ -16,6 +16,7 @@ from codex_event_contract import activated_skills, stop_errors
 from measurement_common import (CONFIGURATION, binding, bound, candidate, canonical, checked,
                                 digest, fingerprint, output_outside, seal, write_new)
 from qualify_distribution import distribution_errors
+from dcp_reference import reference, copy_reference
 from review_codex_campaign import validate_report
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -60,38 +61,9 @@ def campaign_inputs(root: Path, commit: str, directory: Path, baseline: dict) ->
     return summary, loaded
 
 
-def dcp_input(path: Path | None, commit: str, baseline: dict, pin: str) -> dict:
-    """Exige la nouvelle mesure et ses 56 exécutions, pas une ancienne synthèse."""
-    if path is None or not path.is_file():
-        raise ValueError("Mesure DCP absente")
-    proof = checked(path, commit, {"real_dcp"})
-    protocol = json.loads(Path(__file__).with_name("dcp-protocol.json").read_bytes())
-    if protocol["mixed_engine_supported"] is not True or protocol["effort_parameter_supported"] is not True:
-        raise ValueError("Protocole DCP bloqué : couple Codex / Claude high non porté ; arbitrage requis")
-    expected = {n.removeprefix("skills/dcp-fpt/"): h for n, h in baseline["runtime_sha256"].items()
-                if n.startswith("skills/dcp-fpt/") and n != "skills/dcp-fpt/LICENSE"}
-    summary = proof["summary"]
-    if (proof["upstream_runtime_commit"] != pin or summary["runtime_sha256"] != expected
-            or summary["case_count"] != 28 or summary["threshold_passed"] is not True
-            or summary["critical_failures"]):
-        raise ValueError("DCP d'un autre runtime ou seuil non atteint")
-    execution = proof.get("executions", [])
-    wanted = {(f"cas-{i:02d}", role) for i in range(1, 29) for role in ("respondant", "juge")}
-    if len(execution) != 56 or {(e.get("case_id"), e.get("role")) for e in execution} != wanted:
-        raise ValueError("Mesure DCP incomplète : cinquante-six rôles attendus")
-    for item in execution:
-        artifact = checked(bound(path.parent, item["proof"]), commit, {"real_dcp_role"})
-        if artifact.get("upstream_runtime_commit") != pin or not artifact.get("fresh_process") or not artifact.get("fresh_workspace"):
-            raise ValueError("Rôle DCP non rattaché au runtime ou contexte réutilisé")
-        if artifact.get("case_id") != item["case_id"] or artifact.get("role") != item["role"]:
-            raise ValueError("Rôle DCP divergent")
-        expected_engine, expected_model = (("codex", "gpt-6.1-sol") if item["role"] == "respondant" else ("claude", "claude-opus-5-5"))
-        if artifact.get("engine") != expected_engine or artifact.get("model_requested") != expected_model:
-            raise ValueError("Famille ou modèle DCP non conforme à la décision")
-        if item["role"] == "juge" and artifact.get("effort") != "high":
-            raise ValueError("Effort high du juge DCP non attesté")
-        bound(path.parent, artifact["output"])
-    return proof
+def dcp_input(root: Path, path: Path | None) -> dict:
+    """DCP-0 : mesure du skill autonome, jamais du runtime plugin."""
+    return reference(root, path)
 
 
 def assemble(root: Path, commit: str, campaign_dir: Path, smoke_path: Path,
@@ -103,7 +75,7 @@ def assemble(root: Path, commit: str, campaign_dir: Path, smoke_path: Path,
     campaign_data, runs = campaign_inputs(root, commit, campaign_dir, baseline)
     cases = {c["id"]: c for c in json.loads((root / "tests/cas-plugin.json").read_bytes())}
     upstream = json.loads((root / "upstream.json").read_bytes())["skills"]
-    dcp = dcp_input(dcp_path, commit, baseline, upstream["dcp-fpt"]["commit"])
+    dcp = dcp_input(root, dcp_path)
     smoke = checked(smoke_path, commit, {"real_smoke"})
     if any(smoke.get(k) != v for k, v in baseline.items()) or smoke.get("credentials_copied") is not False or smoke.get("user_config_unchanged") is not True:
         raise ValueError("Smoke d'un autre runtime ou configuration utilisateur affectée")
@@ -165,10 +137,12 @@ def assemble(root: Path, commit: str, campaign_dir: Path, smoke_path: Path,
     # Copies exactes des pièces secondaires, jamais des répertoires de profils.
     for category, document, original in (("smoke", smoke, smoke_path), ("dcp", dcp, dcp_path)):
         directory = pieces / category; directory.mkdir()
-        shutil.copyfile(original, directory / original.name)
-        links = [r["proof"] for r in document["runs" if category == "smoke" else "executions"]]
         if category == "dcp":
-            links += [json.loads(bound(original.parent, link).read_bytes())["output"] for link in links[:]]
+            if copy_reference(root, original, directory / original.name) != dcp:
+                raise ValueError("Référence DCP divergente avant assemblage")
+            continue
+        shutil.copyfile(original, directory / original.name)
+        links = [r["proof"] for r in document["runs"]]
         for link in links:
             source = bound(original.parent, link)
             destination = directory / link["evidence_path"]

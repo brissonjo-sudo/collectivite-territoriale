@@ -1,4 +1,4 @@
-# Mesure du candidat 1.3.0 — outillage L9, non exécuté
+# Mesure du candidat 1.3.0 — outillage L10, non exécuté
 
 Les dix-huit cas comprennent les neuf scénarios historiques inchangés et les
 neuf propositions DSI acceptées par Claude les 17–18 octobre 2026. Aucun budget
@@ -36,7 +36,7 @@ python -B scripts/run_codex_campaign.py --plugin-commit <sha40> --codex <cli-epi
 python -B scripts/review_codex_campaign.py --plugin-commit <sha40> --campaign-dir <campagne> --codex <cli-epingle> --model gpt-6.1-sol --output-dir <relecture-neuve> --authorize-model-calls
 python -B scripts/run_codex_smoke.py --plugin-commit <sha40> --codex <cli-epingle> --phase install --output-dir <installation-neuve> --authorize-install
 python -B scripts/run_codex_smoke.py --plugin-commit <sha40> --codex <cli-epingle> --phase run --prepared-env <installation> --output-dir <smoke-neuf> --authorize-model-calls
-python -B scripts/assemble_release_evidence.py --plugin-commit <sha40> --campaign-dir <campagne> --review-dir <relecture> --smoke <smoke/installation-codex.json> --dcp <mesure-dcp.json> --output-dir <distribution-neuve>
+python -B scripts/assemble_release_evidence.py --plugin-commit <sha40> --campaign-dir <campagne> --review-dir <relecture> --smoke <smoke/installation-codex.json> --dcp tests/evidence/2026-10-08-candidat-013/dcp-autonome.json --output-dir <distribution-neuve>
 ```
 
 Le runner campagne accepte également `--dry-run`, le reviewer et les deux phases
@@ -78,28 +78,28 @@ comparées avant/après. Une erreur produit un refus, jamais une synthèse posit
 Les homes temporaires éventuellement authentifiés ne sont pas des pièces à
 archiver : l'assembleur ne copie que ses liens publics explicites.
 
-## Blocage DCP exact et options
+## DCP-0 — décision du 18 octobre 2026
 
-Au pin `129f374e6ab8ea3b47bcfd9de9ddd52a2d3d9498`, `mesure_locale.py`
-utilise le même `settings.engine` pour répondant et juge. Il n'a ni moteur par
-rôle ni paramètre d'effort. `--mcp` exige en outre le moteur Codex. Passer
-`claude-opus-5-5` comme modèle au moteur Codex ne satisfait pas la décision.
+L'ADR 0012 consigne le choix de l'orchestrateur : référencer la mesure autonome
+DCP existante au pin inchangé, sans nouvelle campagne DCP ni juge Claude.
+Les options DCP-A / DCP-B de L9 sont remplacées par cette décision. Les limites
+du protocole amont restent constatées dans `scripts/dcp-protocol.json`, sans
+aucune modification de son moteur, de son barème ou de ses seuils.
 
-Le couple demandé est Codex `gpt-6.1-sol` / Claude `claude-opus-5-5`, effort high.
-Il n'est pas exécuté et aucun moteur de remplacement n'est choisi. Le manifeste
-`scripts/dcp-protocol.json` constate l'incompatibilité : l'assemblage reste fermé.
-Les futurs rôles DCP devront tous porter le bon commit plugin, le pin amont,
-leurs modèles/moteurs, high pour le juge, les contextes neufs et leurs sorties
-empreintées. Les seuils existants ne changent pas.
+`python -B scripts/check_dcp_protocol.py` vérifie sans modèle le pin, les 30
+empreintes runtime contre les fichiers embarqués, la provenance publique,
+`source_summary_sha256` et l'empreinte du fichier entier de la pièce autorisée.
+Seul `LICENSE`, embarqué pour la distribution mais absent de la mesure autonome,
+est exclu ; tout autre écart est refusé. L'assembleur refait ces contrôles et
+copie la preuve à l'identique, réserves et `scope` d'origine compris, sans y
+ajouter de commit plugin. La copie est elle aussi contrôlée.
 
-Options à Claude, aucune appliquée :
-
-1. **Recommandée :** lot d'adaptateur à moteurs par rôle, source/barème/seuils
-   du pin préservés ; tests d'isolement, effort, modèles et provenance avant appel.
-2. Nouveau pin public DCP supportant ce contrat, puis arbitrage du pin et
-   recontrôle des octets/scripts ; aucun repointage implicite.
-3. Réviser explicitement la décision du juge vers un moteur unique ; cela perd
-   la famille distincte demandée et n'est pas recommandé ni appliqué.
+Ce contrôle ne mesure pas le plugin : les 18 cas, leurs 18 relectures séparées
+et les deux sessions de smoke restent liés au commit exact du candidat. Le
+lanceur préparé hors dépôt `l10-preuves/run-mesure.ps1` prévoit **38 sessions
+Codex gpt-6.1-sol et zéro session Claude**, hors reprises et requêtes d'outils.
+Coût, quota disponible et durée future : inconnus ; budget Jo à fixer avant appel.
+Il n'est pas exécuté. Les preuves historiques plugin/R4/R5 ne sont pas transférées.
 
 ## Assemblage et limites de preuve
 
@@ -112,8 +112,9 @@ La sortie est une distribution indépendante avec `release-<version>.json`,
 jamais une écriture dans `tests/evidence` du candidat. La qualification existante
 est recalculée dans cette copie avant écriture du manifeste final. Le
 qualificateur et la CI ne sont pas modifiés. Une intégration ultérieure de vraies
-pièces reste un lot autorisé et revu. Le blocage DCP empêche actuellement cette
-finalisation ; les essais sur fixtures ne produisent aucune preuve courante.
+pièces reste un lot autorisé et revu. DCP-0 permet de référencer la mesure
+autonome ; l'absence des nouvelles campagnes plugin et du smoke empêche toujours
+la finalisation. Les essais sur fixtures ne produisent aucune preuve courante.
 
 `review.human_legal_validation` vaut toujours false à l'assemblage ; seul Jo
 peut décider de la passer à true hors script, après avis réel. Les invariants

@@ -189,21 +189,23 @@ class MeasurementToolsTests(unittest.TestCase):
             assembly.assemble(ROOT, COMMIT, self.directory, self.directory / "smoke.json", None, self.directory, destination)
         self.assertFalse(destination.exists())
 
-    def test_pin_DCP_ne_permet_pas_de_declarer_un_juge_Claude_high(self) -> None:
+    def test_DCP_declare_reel_sans_reference_autorisee_refuse(self) -> None:
         path = self.write("dcp.json", {"plugin_commit": COMMIT,
             "origin": {"kind": "real_dcp", "synthetic": False, "dry_run": False}})
-        with self.assertRaisesRegex(ValueError, "Protocole DCP bloqué"):
-            assembly.dcp_input(path, COMMIT, {}, "129f374e6ab8ea3b47bcfd9de9ddd52a2d3d9498")
+        with self.assertRaisesRegex(ValueError, "Pin DCP différent"):
+            assembly.dcp_input(ROOT, path)
 
     def test_diagnostic_DCP_sans_modele_et_sans_substitution(self) -> None:
         stream = io.StringIO()
         with contextlib.redirect_stdout(stream), patch.object(common.subprocess, "run") as call:
-            self.assertEqual(check_dcp_protocol.main(), 2)
+            self.assertEqual(check_dcp_protocol.main(), 0)
         call.assert_not_called()
         result = json.loads(stream.getvalue())
-        self.assertFalse(result["compatible"])
+        self.assertTrue(result["compatible"])
         self.assertFalse(result["model_called"])
-        self.assertEqual(result["requested_judge"], {"engine": "claude", "model": "claude-opus-5-5", "effort": "high"})
+        self.assertEqual(result["decision"], "DCP-0")
+        self.assertFalse(result["new_dcp_campaign_required"])
+        self.assertNotIn("requested_judge", result)
 
     def test_qualificateur_inchange_refuse_fixture_sans_preuve_assemblee(self) -> None:
         root = self.directory / "fixture-distribution"; (root / ".codex-plugin").mkdir(parents=True)
