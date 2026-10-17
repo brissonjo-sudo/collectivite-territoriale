@@ -39,6 +39,8 @@ def timeline(events: list[dict[str, Any]]) -> list[dict[str, Any]]:
             if kind == "item.started":
                 started.add(identity)
             if kind == "item.completed":
+                if identity not in started:
+                    result.append({"type": "trace_error", "position": position})
                 completed.add(identity)
     if started - completed:
         result.append({"type": "trace_error", "position": len(events)})

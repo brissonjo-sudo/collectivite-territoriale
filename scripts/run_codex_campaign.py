@@ -119,7 +119,7 @@ def read_command_paths(command_text: str) -> list[str]:
 
 def command(case: dict[str, Any], cli: str, model: str) -> list[str]:
     """Isole la configuration d'outils sans changer les identifiants OAuth."""
-    args = [cli, "exec", "--json", "--skip-git-repo-check", "--ignore-user-config",
+    args = [cli, "exec", "--json", "--ephemeral", "--skip-git-repo-check", "--ignore-user-config",
             "--sandbox", "read-only", "-m", model, "-c",
             'web_search="live"' if case["web_mode"] == "official_source" else 'web_search="disabled"']
     if sys.platform == "win32":
@@ -341,6 +341,7 @@ def main() -> int:
     parser.add_argument("--stop-on-failure", action="store_true")
     parser.add_argument("--plugin-commit", required=True)
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--authorize-model-calls", action="store_true")
     args = parser.parse_args()
     if args.timeout <= 0:
         parser.error("--timeout doit être positif")
@@ -353,6 +354,8 @@ def main() -> int:
                           "case_ids": [c["id"] for c in selected], "model": args.model,
                           "sessions": len(selected), "execution": "aucun processus modèle"}, ensure_ascii=True))
         return 0
+    if not args.authorize_model_calls:
+        raise ValueError("Autorisation Jo d'appel modèle absente")
     baseline = candidate(ROOT, args.plugin_commit)
     resolved_cli = shutil.which(args.codex)
     if not resolved_cli:

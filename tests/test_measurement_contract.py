@@ -26,6 +26,7 @@ def synthetic_trace(case: dict, order: list[str] | None = None) -> list[dict]:
             events.append({"type": "item.completed", "item": {"id": identity, "type": "command_execution",
                 "command": command, "aggregated_output": chunk["content"], "status": "completed", "exit_code": 0}})
     if case["mcp_mode"] == "required":
+        events.append({"type": "item.started", "item": {"id": "mcp", "type": "mcp_tool_call"}})
         events.append({"type": "item.completed", "item": {"id": "mcp", "type": "mcp_tool_call",
             "server": "droit-francais", "tool": "get_article", "status": "completed",
             "result": {"content": [{"type": "text", "text": "fixture_sans_droit"}]}}})
@@ -59,6 +60,12 @@ class MeasurementContractTests(unittest.TestCase):
             with self.subTest(field=field), self.assertRaises(ValueError):
                 validate_cases([case], set(self.case["skills"]))
 
+    def test_identifiant_non_slug_et_budget_non_fini_refuses(self) -> None:
+        for field, value in (("id", "../sortie"), ("skills", [["dsi-fpt"]]), ("max_budget_usd", float("nan"))):
+            case = copy.deepcopy(self.case); case[field] = value
+            with self.subTest(field=field), self.assertRaises(ValueError):
+                validate_cases([case], set(self.case["skills"]))
+
     def test_conforme_STOP_et_activations_completees(self) -> None:
         events = synthetic_trace(self.case)
         self.assertEqual(self.errors(events), [])
@@ -81,6 +88,11 @@ class MeasurementContractTests(unittest.TestCase):
         events = synthetic_trace(self.case)
         events.insert(0, {"type": "item.completed", "item": {"id": "intro", "type": "agent_message", "text": "Je vais vérifier."}})
         self.assertIn("stop_first_absent", self.errors(events))
+
+    def test_debut_outil_manquant_ne_permet_pas_de_prouver_STOP_avant_outil(self) -> None:
+        events = synthetic_trace(self.case)
+        del events[1]
+        self.assertIn("trace_error", self.errors(events))
 
     def test_activation_manquante_ne_vaut_pas_mention(self) -> None:
         events = synthetic_trace(self.case, self.case["skills"][1:])

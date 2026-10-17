@@ -367,6 +367,8 @@ def main() -> int:
     ]
     if args.case_ids and len(selected) != len(set(args.case_ids)):
         parser.error("Un identifiant de cas est inconnu ou dupliqué")
+    if any(case.get("schema_version", 1) != 1 for case in selected):
+        parser.error("Cas v2 réservés au protocole Codex ; aucun cas Claude exécuté")
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
     exit_code = 0

@@ -6,11 +6,15 @@ import json
 import re
 import subprocess
 import time
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 from typing import Any
 import uuid
 
 CONFIGURATION = (".codex-plugin/plugin.json", ".claude-plugin/plugin.json", ".mcp.json", "assets/icon.png")
+
+
+def _redirect(path: Path) -> bool:
+    return path.is_symlink() or getattr(path, "is_junction", lambda: False)()
 
 
 def digest(data: bytes) -> str:
@@ -28,11 +32,19 @@ def fingerprint(path: Path) -> str:
     return digest(path.read_bytes())
 
 
+def verify_codex_cli(path: Path) -> dict[str, str]:
+    """Refuse un simulateur ou une autre CLI avant toute exécution réelle."""
+    expected = json.loads(Path(__file__).with_name("measurement-cli.json").read_bytes())["codex"]
+    if fingerprint(path) != expected["sha256"]:
+        raise ValueError("CLI différente du binaire de mesure épinglé")
+    return expected
+
+
 def snapshot(root: Path) -> dict[str, Any]:
     """Inventorie octets distribués, contrat et outillage courant."""
     runtime = {}
     for path in sorted((root / "skills").rglob("*")):
-        if path.is_symlink():
+        if _redirect(path):
             raise ValueError("Lien symbolique dans le runtime")
         if path.is_file():
             runtime[path.relative_to(root).as_posix()] = fingerprint(path)
@@ -41,7 +53,7 @@ def snapshot(root: Path) -> dict[str, Any]:
             "case_file_sha256": fingerprint(root / "tests/cas-plugin.json"),
             "upstream_sha256": fingerprint(root / "upstream.json"),
             "toolchain_sha256": {p.relative_to(root).as_posix(): fingerprint(p)
-                                   for p in sorted((root / "scripts").glob("*.py"))}}
+                                   for p in sorted((root / "scripts").iterdir()) if p.suffix in {".py", ".json"}}}
 
 
 def candidate(root: Path, commit: str) -> dict[str, Any]:
@@ -60,7 +72,7 @@ def candidate(root: Path, commit: str) -> dict[str, Any]:
 def output_outside(root: Path, destination: Path) -> Path:
     """Refuse liens, sorties dans le candidat et écrasements."""
     for ancestor in (destination, *destination.parents):
-        if ancestor.exists() and ancestor.is_symlink():
+        if ancestor.exists() and _redirect(ancestor):
             raise ValueError("Sortie redirigée")
     destination = destination.resolve()
     if destination.is_relative_to(root.resolve()):
@@ -90,35 +102,55 @@ def checked(path: Path, commit: str, kinds: set[str]) -> dict[str, Any]:
     Les empreintes établissent l'intégrité, pas une attestation indépendante
     contre un opérateur qui fabriquerait toute la chaîne et ses reçus.
     """
-    if path.is_symlink():
+    if _redirect(path):
         raise ValueError("Lien de preuve refusé")
-    value = json.loads(path.read_bytes())
+    raw = path.read_bytes()
+    value = json.loads(raw)
+    if raw != (json.dumps(value, ensure_ascii=False, indent=2) + "\n").encode():
+        raise ValueError("Octets de pièce altérés : " + path.name)
     body = {k: v for k, v in value.items() if k != "payload_sha256"}
     if value.get("payload_sha256") != digest(canonical(body)):
         raise ValueError("Empreinte de pièce divergente : " + path.name)
     if value.get("plugin_commit") != commit:
         raise ValueError("Commit de pièce divergent : " + path.name)
     origin = value.get("origin") or {}
-    if origin.get("kind") not in kinds or origin.get("synthetic") is not False or origin.get("dry_run") is not False:
+    if (origin.get("kind") not in kinds or origin.get("synthetic") is not False or origin.get("dry_run") is not False
+            or value.get("synthetic") is True or value.get("fixture") is True or value.get("dry_run") is True):
         raise ValueError("Pièce synthétique, dry-run ou provenance absente : " + path.name)
+    if origin["kind"] == "real_cli":
+        try:
+            thread = uuid.UUID(origin["thread_id"])
+            hashes = ("cli_sha256", "argv_sha256", "prompt_sha256", "stdout_sha256", "stderr_sha256")
+            complete = (thread.int != 0 and origin["process_exit"] == 0 and value.get("model_requested")
+                        and all(re.fullmatch(r"[0-9a-f]{64}", origin.get(k, "")) for k in hashes)
+                        and origin.get("cli_sha256") == json.loads(Path(__file__).with_name("measurement-cli.json").read_bytes())["codex"]["sha256"])
+        except (ValueError, KeyError, TypeError, AttributeError):
+            complete = False
+        if not complete:
+            raise ValueError("Reçu CLI réel incomplet : " + path.name)
     return value
 
 
 def binding(path: Path, root: Path) -> dict[str, str]:
     """Lien relatif et empreinte d'une pièce sous un dossier contrôlé."""
     resolved = path.resolve()
-    if path.is_symlink() or not resolved.is_relative_to(root.resolve()):
+    if _redirect(path) or not resolved.is_relative_to(root.resolve()):
         raise ValueError("Pièce hors du dossier de mesure")
     return {"evidence_path": resolved.relative_to(root.resolve()).as_posix(), "sha256": fingerprint(resolved)}
 
 
 def bound(root: Path, link: dict[str, str]) -> Path:
     """Relit un lien sans traversée ni changement d'empreinte."""
-    path = root / link["evidence_path"]
+    relative = link["evidence_path"]
+    pure = PurePosixPath(relative)
+    if (pure.is_absolute() or ".." in pure.parts or str(pure) != relative
+            or "\\" in relative or ":" in relative or not relative):
+        raise ValueError("Chemin de preuve non relatif ou non canonique")
+    path = root / relative
     for ancestor in (path, *path.parents):
         if ancestor == root.parent:
             break
-        if ancestor.is_symlink():
+        if _redirect(ancestor):
             raise ValueError("Lien symbolique de preuve")
     if not path.resolve().is_relative_to(root.resolve()) or fingerprint(path) != link["sha256"]:
         raise ValueError("Preuve liée altérée ou hors dossier")
@@ -143,6 +175,7 @@ def run_cli(argv: list[str], prompt: str, cwd: Path, timeout: int,
     if timeout <= 0:
         raise ValueError("Timeout positif requis")
     executable = Path(argv[0]).resolve(strict=True)
+    identity = verify_codex_cli(executable)
     started = time.monotonic()
     try:
         result = subprocess.run(argv, input=prompt, cwd=cwd, env=environment, capture_output=True,
@@ -160,6 +193,7 @@ def run_cli(argv: list[str], prompt: str, cwd: Path, timeout: int,
     except (ValueError, TypeError, AttributeError):
         real = False
     receipt = {"kind": "real_cli" if real else "incomplete_cli", "synthetic": False, "dry_run": False,
+               "cli_version": identity["version"],
                "thread_id": thread, "cli_sha256": fingerprint(executable), "argv_sha256": digest(canonical(argv)),
                "prompt_sha256": digest(prompt.encode()), "stdout_sha256": digest(raw.encode()),
                "stderr_sha256": digest(stderr.encode()), "process_exit": code,

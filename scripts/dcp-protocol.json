@@ -1,0 +1,15 @@
+{
+  "upstream_commit": "129f374e6ab8ea3b47bcfd9de9ddd52a2d3d9498",
+  "mixed_engine_supported": false,
+  "effort_parameter_supported": false,
+  "requested_responder": {"engine": "codex", "model": "gpt-6.1-sol"},
+  "requested_judge": {"engine": "claude", "model": "claude-opus-5-5", "effort": "high"},
+  "status": "blocked_pending_orchestrator_protocol_decision",
+  "sources_sha256": {
+    "scripts/eval_suite.py": "b337be25862471cae04b66f6731afda4f0d5d4c641da9839e0d69353ac36385f",
+    "scripts/mesure_locale.py": "0c34510305e2e642ea8b25129b3d22a6c0996212578d58d7e750dc8a452e79ea",
+    "tests/cas-de-test.json": "ed0734bae30e2e3053ba096016b08d30bd0b5117a74ae760f294daf6237a06fa",
+    "tests/bareme-cas-de-test.md": "58d79ce8b06fd9bc7d2e47fe4aa0ce629399408eeaf7034d02729474b867cf43"
+  },
+  "reason": "Le lanceur public utilise settings.engine pour les deux rôles et ne porte pas effort high. Aucun adaptateur ou moteur de remplacement appliqué en L9."
+}

@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 from typing import Any
+import math
+import re
 
 
 def validate_cases(cases: list[dict[str, Any]], skills: set[str]) -> None:
@@ -9,11 +11,12 @@ def validate_cases(cases: list[dict[str, Any]], skills: set[str]) -> None:
     seen: set[str] = set()
     for case in cases:
         name = case.get("id")
-        if not isinstance(name, str) or not name or name in seen:
+        if not isinstance(name, str) or not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", name) or name in seen:
             raise ValueError("Identifiant de cas absent ou dupliqué")
         seen.add(name)
         selected = case.get("skills")
-        if (not isinstance(selected, list) or not selected or len(set(selected)) != len(selected)
+        if (not isinstance(selected, list) or not selected or any(not isinstance(s, str) for s in selected)
+                or len(set(selected)) != len(selected)
                 or not set(selected).issubset(skills)):
             raise ValueError("Skills de cas invalides : " + name)
         if case.get("mcp_mode") not in {"required", "disabled"}:
@@ -32,7 +35,7 @@ def validate_cases(cases: list[dict[str, Any]], skills: set[str]) -> None:
                 or len(set(invariants)) != len(invariants)):
             raise ValueError("Invariants absents ou dupliqués : " + name)
         if "max_budget_usd" in case and (type(case["max_budget_usd"]) not in {int, float}
-                                         or case["max_budget_usd"] <= 0):
+                                         or not math.isfinite(case["max_budget_usd"]) or case["max_budget_usd"] <= 0):
             raise ValueError("Budget invalide : " + name)
         version = case.get("schema_version", 1)
         if version not in {1, 2}:
@@ -50,4 +53,3 @@ def validate_cases(cases: list[dict[str, Any]], skills: set[str]) -> None:
         expected = selected if case["activation_mode"] == "forced" else []
         if case.get("activation_sequence") != expected:
             raise ValueError("Séquence incompatible avec le mode : " + name)
-
