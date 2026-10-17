@@ -10,8 +10,9 @@ clauses RGPD dans la commande publique.
 
 **Exclut** : la sécurité de fond (mesures, habilitations, traçabilité) →
 `securite-traitements.md` ; la violation chez un sous-traitant →
-`violations.md` ; le fond du droit de la commande publique → hors skill,
-signaler la limite ; vigueur des textes et jurisprudence CJUE de fond →
+`violations.md` ; le fond du droit de la commande publique (passation,
+exécution, modification du marché) → skill `dcp-fpt`, ou signaler la limite
+s'il n'est pas installé ; vigueur des textes et jurisprudence CJUE de fond →
 `recherche-juridique`.
 
 ## 2. Questions couvertes

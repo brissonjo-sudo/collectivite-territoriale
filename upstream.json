@@ -32,8 +32,8 @@
     },
     "dpo-ct": {
       "repository": "https://github.com/brissonjo-sudo/DPO-CT.git",
-      "commit": "f3406f412368199a33f47e7861eb450eab2b2cdb",
-      "version": "0.2.1",
+      "commit": "58ea45c4d12812da10ace5f1486deea96b8534fa",
+      "version": "0.2.2",
       "paths": [
         "SKILL.md",
         "references/",
@@ -43,9 +43,17 @@
         {
           "target": "SKILL.md",
           "source": "overlays/dpo-ct.md",
-          "base_sha256": "41e4f3b262f8bbd3e7ca568613c57ad053399311a946a4aec3bb0fa1adc602b7",
-          "source_sha256": "a611c4057cd988f7fdb49b9a98853dc8194e522fe5d3b528d6dc49605262b532",
+          "base_sha256": "82288b47c2d5e67acc4eb9ee24636eefe8b29c3a31b137e8e48e69460ed06fa5",
+          "source_sha256": "b641d2a63b893def0ffc240cb79815cee8557a564bd14478801e4c473af23f45",
           "anchor": "## 1. Déclenchement"
+        },
+        {
+          "target": "SKILL.md",
+          "source": "overlays/dpo-ct-description.md",
+          "operation": "replace-description",
+          "base_sha256": "29d39897c50952dbc469cf9b20e2ca5ee63c8135ab3b6919e1f6f1baf193aaff",
+          "source_sha256": "10cebe49f7d923007320cbc88f3b8ee4e824278e5e3df9f73012e9f734fafc2a",
+          "anchor": "description: >-\n  Système expert d'aide à la décision pour un Délégué à la Protection des\n  Données (DPO) en collectivité territoriale française. Activer pour toute\n  question de protection des données personnelles : avis RGPD sur un projet ou\n  un traitement, AIPD (méthode CNIL), registre des traitements (art. 30),\n  violation de données et notification CNIL (72 h), droits des personnes\n  (accès, effacement, opposition...), sous-traitance (art. 28) et transferts\n  hors UE, sécurité (art. 32), doctrine CNIL et CEPD, traitements communaux\n  (état civil, élections, scolaire, action sociale, vidéoprotection,\n  téléservices, open data). Activer aussi dès qu'un projet implique des\n  données personnelles, même sans mention du RGPD. Toute règle reposant sur un\n  texte est vérifiée à la source officielle avant conclusion. Ne pas activer\n  pour le volet opérationnel de la police municipale (dpm-fpt), le RH\n  statutaire (drh-fpt), la mise en œuvre technique de la sécurité (dsi-fpt),\n  la passation des marchés (dcp-fpt), ni le droit hors UE.\n"
         }
       ]
     },
