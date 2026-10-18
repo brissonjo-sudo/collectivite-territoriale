@@ -137,7 +137,7 @@ def main_config_hash() -> str | None:
 def install(root: Path, commit: str, cli: str, output: Path) -> None:
     """Installe la source publique exacte dans son seul home temporaire neuf."""
     baseline = candidate(root, commit)
-    verify_codex_cli(Path(cli))
+    identity = verify_codex_cli(Path(cli), 'smoke_cli')
     output = output_outside(root, output); output.mkdir(parents=True)
     environment_root = Path(tempfile.mkdtemp(prefix="smoke-env-", dir=output)).resolve()
     assert environment_root.is_relative_to(output)
@@ -168,9 +168,11 @@ def install(root: Path, commit: str, cli: str, output: Path) -> None:
     actual = installed_snapshot(installed)
     if any(actual[k] != baseline[k] for k in actual) or main_config_hash() != before or candidate(root, commit) != baseline:
         raise ValueError("Octets installés, candidat ou configuration principale divergents")
+    if verify_codex_cli(Path(cli), 'smoke_cli') != identity:
+        raise ValueError('Package CLI modifié pendant installation')
     write_new(output / "prepared.json", seal({**baseline, "origin": {"kind": "real_smoke_install", "synthetic": False, "dry_run": False},
         "environment_path": environment_root.relative_to(output).as_posix(), "installed_path": installed.relative_to(output).as_posix(),
-        "cli_sha256": fingerprint(Path(cli)), "main_config_sha256": before,
+        "cli_sha256": fingerprint(Path(cli)), "smoke_cli": identity, "main_config_sha256": before,
         "credentials_copied": False, "human_legal_validation": False, "model_called": False}))
 
 
@@ -228,8 +230,8 @@ def smoke_prompt(root: Path, case_id: str) -> str:
 def run(root: Path, commit: str, cli: str, output: Path, prepared_root: Path, model: str, timeout: int) -> None:
     """Deux sessions sur le plugin installé, jamais sur copies natives ajoutées."""
     baseline = candidate(root, commit)
-    verify_codex_cli(Path(cli))
-    prepared = checked(prepared_root / "prepared.json", commit, {"real_smoke_install"})
+    identity = verify_codex_cli(Path(cli), 'smoke_cli')
+    prepared = checked(prepared_root / "prepared.json", commit, {"real_smoke_install"}, 'smoke_cli')
     if any(prepared[k] != v for k, v in baseline.items()) or prepared["cli_sha256"] != fingerprint(Path(cli)):
         raise ValueError("Installation d'un autre candidat ou CLI")
     environment_root = (prepared_root / prepared["environment_path"]).resolve()
@@ -263,7 +265,7 @@ def run(root: Path, commit: str, cli: str, output: Path, prepared_root: Path, mo
                 "-m", model, "-c", 'web_search="disabled"']
         if os.name == "nt":
             argv += ["-c", 'windows.sandbox="elevated"']
-        events, code, receipt = run_cli(argv + ["-"], text, workspace, timeout, environment)
+        events, code, receipt = run_cli(argv + ["-"], text, workspace, timeout, environment, cli_phase='smoke_cli')
         reads = read_events(events, installed)
         # Les commandes installées sont contrôlées ci-dessus, pas comme copies .agents.
         useful = sanitize([e for e in events if (e.get("item") or {}).get("type") != "command_execution"])
@@ -290,7 +292,10 @@ def run(root: Path, commit: str, cli: str, output: Path, prepared_root: Path, mo
             raise ValueError("Smoke en échec ; conserver ses traces, aucune synthèse positive")
     if candidate(root, commit) != baseline or main_config_hash() != before or any(installed_snapshot(installed)[k] != baseline[k] for k in actual):
         raise ValueError("Candidat, cache installé ou configuration principale changé")
+    if verify_codex_cli(Path(cli), 'smoke_cli') != identity:
+        raise ValueError('Package CLI modifié pendant smoke')
     write_new(output / "installation-codex.json", seal({**baseline, **actual,
+        "smoke_cli": identity,
         "origin": {"kind": "real_smoke", "synthetic": False, "dry_run": False},
         "visible_skills": visible, "credentials_copied": False, "user_config_unchanged": True,
         "native_workspace_skills": False, "runs": runs, "human_legal_validation": False}))

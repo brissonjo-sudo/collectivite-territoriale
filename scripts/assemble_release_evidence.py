@@ -20,6 +20,7 @@ from qualify_distribution import distribution_errors
 from dcp_reference import reference, copy_reference
 from review_codex_campaign import validate_report
 from human_resolution import load_bundle
+from cli_toolchains import prove_toolchains, toolchains
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -106,14 +107,16 @@ def assemble(root: Path, commit: str, campaign_dir: Path, smoke_path: Path,
     cases = {c["id"]: c for c in json.loads((root / "tests/cas-plugin.json").read_bytes())}
     upstream = json.loads((root / "upstream.json").read_bytes())["skills"]
     dcp = dcp_input(root, dcp_path)
-    smoke = checked(smoke_path, commit, {"real_smoke"})
+    smoke = checked(smoke_path, commit, {"real_smoke"}, 'smoke_cli')
     if any(smoke.get(k) != v for k, v in baseline.items()) or smoke.get("credentials_copied") is not False or smoke.get("user_config_unchanged") is not True:
         raise ValueError("Smoke d'un autre runtime ou configuration utilisateur affectée")
     smoke_runs = smoke.get("runs", [])
     if len(smoke_runs) != 2 or {r["case_id"] for r in smoke_runs} != {"activation-implicite", "mcp-installe"}:
         raise ValueError("Smoke incomplet")
+    smoke_receipts = []
     for item in smoke_runs:
-        proof = checked(bound(smoke_path.parent, item["proof"]), commit, {"real_cli"})
+        proof = checked(bound(smoke_path.parent, item["proof"]), commit, {"real_cli"}, 'smoke_cli')
+        smoke_receipts.append(proof['origin'])
         if (proof["process_exit"] != 0 or proof["candidate_entry_read"] is not True
                 or proof["installed_mcp_success"] is not True or proof["technical_status"] != "passed"):
             raise ValueError("Smoke en échec")
@@ -137,12 +140,16 @@ def assemble(root: Path, commit: str, campaign_dir: Path, smoke_path: Path,
         if proof["evidence_sha256"] != fingerprint(runs[item["case_id"]][0]) or any(i["statut"] == "violation" for i in proof["report"]["invariants"]):
             raise ValueError("Relecture non liée à la réponse ou violation identifiée")
         reviews[item["case_id"]] = (path, proof)
+    cli_identities = prove_toolchains([p['origin'] for _, p in runs.values()],
+        [p['origin'] for _, p in reviews.values()], smoke_receipts,
+        {**toolchains(), 'smoke_cli': smoke['smoke_cli']})
     output = output_outside(root, output)
     # Toutes les entrées sont refusées avant toute écriture si synthétiques ou incomplètes.
     output.mkdir(parents=True)
     wanted = [*CONFIGURATION, "upstream.json", "tests/cas-plugin.json", "scripts/run_codex_campaign.py",
               "docs/adr/0007-distribution-open-source-et-deploiement.md", "docs/deploiement-collectivite.md"]
     wanted += list(baseline["runtime_sha256"])
+    wanted += ['scripts/measurement-cli.json', 'scripts/smoke-cli.json', 'scripts/toolchain-transition-0013.json']
     for name in wanted:
         target = output / name; target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(root / name, target)
@@ -225,6 +232,7 @@ def assemble(root: Path, commit: str, campaign_dir: Path, smoke_path: Path,
         extra[name] = binding(destination, output)
     version = json.loads((root / ".codex-plugin/plugin.json").read_bytes())["version"]
     evidence = {"plugin_version": version, "plugin_commit": commit,
+        **cli_identities,
         "upstream_commits": {n: s["commit"] for n, s in upstream.items()}, "runs": recorded,
         "review": linked['human'] if linked else {"human_legal_validation": False}, "release_ready": bool(linked),
         "distribution": {"scope": "open_source", "ready": True, "blockers": [],

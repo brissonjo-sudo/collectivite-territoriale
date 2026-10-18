@@ -13,6 +13,7 @@ from typing import Any
 import run_codex_campaign as campaign
 from measurement_common import bound, canonical, checked, digest, fingerprint
 from review_codex_campaign import validate_report
+from cli_toolchains import compatibility_files
 
 
 def dated(value: str) -> datetime:
@@ -75,6 +76,7 @@ def compatible(root: Path, measured: dict, target: dict) -> None:
         if measured.get(key) != target.get(key):
             raise ValueError('Runtime, configuration ou cas différents de la mesure : ' + key)
     permitted = {'scripts/assemble_release_evidence.py', 'scripts/human_resolution.py'}
+    permitted |= compatibility_files(root, measured, target)
     old, current = measured['toolchain_sha256'], target['toolchain_sha256']
     if any(old.get(n) != current.get(n) for n in set(old) | set(current) if n not in permitted):
         raise ValueError('Protocole ou outillage mesuré différent')

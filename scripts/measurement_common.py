@@ -10,6 +10,8 @@ from pathlib import Path, PurePosixPath
 from typing import Any
 import uuid
 
+from cli_toolchains import phase_pin, receipt_matches, verify_package
+
 CONFIGURATION = (".codex-plugin/plugin.json", ".claude-plugin/plugin.json", ".mcp.json", "assets/icon.png")
 
 
@@ -32,12 +34,9 @@ def fingerprint(path: Path) -> str:
     return digest(path.read_bytes())
 
 
-def verify_codex_cli(path: Path) -> dict[str, str]:
+def verify_codex_cli(path: Path, cli_phase: str = 'campaign_cli') -> dict[str, Any]:
     """Refuse un simulateur ou une autre CLI avant toute exécution réelle."""
-    expected = json.loads(Path(__file__).with_name("measurement-cli.json").read_bytes())["codex"]
-    if fingerprint(path) != expected["sha256"]:
-        raise ValueError("CLI différente du binaire de mesure épinglé")
-    return expected
+    return verify_package(path, cli_phase)
 
 
 def snapshot(root: Path) -> dict[str, Any]:
@@ -96,7 +95,7 @@ def seal(value: dict[str, Any]) -> dict[str, Any]:
     return {**value, "payload_sha256": digest(canonical(value))}
 
 
-def checked(path: Path, commit: str, kinds: set[str]) -> dict[str, Any]:
+def checked(path: Path, commit: str, kinds: set[str], cli_phase: str = 'campaign_cli') -> dict[str, Any]:
     """Refuse pièce synthétique déclarée, provenance absente ou octets altérés.
 
     Les empreintes établissent l'intégrité, pas une attestation indépendante
@@ -118,16 +117,20 @@ def checked(path: Path, commit: str, kinds: set[str]) -> dict[str, Any]:
             or value.get("synthetic") is True or value.get("fixture") is True or value.get("dry_run") is True):
         raise ValueError("Pièce synthétique, dry-run ou provenance absente : " + path.name)
     if origin["kind"] == "real_cli":
+        expected = phase_pin(cli_phase)
         try:
             thread = uuid.UUID(origin["thread_id"])
             hashes = ("cli_sha256", "argv_sha256", "prompt_sha256", "stdout_sha256", "stderr_sha256")
             complete = (thread.int != 0 and origin["process_exit"] == 0 and value.get("model_requested")
                         and all(re.fullmatch(r"[0-9a-f]{64}", origin.get(k, "")) for k in hashes)
-                        and origin.get("cli_sha256") == json.loads(Path(__file__).with_name("measurement-cli.json").read_bytes())["codex"]["sha256"])
+                        and receipt_matches(origin, cli_phase, expected))
         except (ValueError, KeyError, TypeError, AttributeError):
             complete = False
         if not complete:
             raise ValueError("Reçu CLI réel incomplet : " + path.name)
+    if origin['kind'] in {'real_smoke', 'real_smoke_install'}:
+        if cli_phase != 'smoke_cli' or value.get('smoke_cli') != phase_pin('smoke_cli'):
+            raise ValueError('Smoke sans CLI épinglée ou de phase différente')
     return value
 
 
@@ -170,12 +173,13 @@ def parse_jsonl(raw: str) -> list[dict[str, Any]]:
 
 
 def run_cli(argv: list[str], prompt: str, cwd: Path, timeout: int,
-            environment: dict[str, str] | None = None) -> tuple[list[dict], int, dict]:
+            environment: dict[str, str] | None = None,
+            cli_phase: str = 'campaign_cli') -> tuple[list[dict], int, dict]:
     """Seul point d'appel réel ; flux bruts et stderr restent en mémoire."""
     if timeout <= 0:
         raise ValueError("Timeout positif requis")
     executable = Path(argv[0]).resolve(strict=True)
-    identity = verify_codex_cli(executable)
+    identity = verify_codex_cli(executable, cli_phase)
     started = time.monotonic()
     try:
         result = subprocess.run(argv, input=prompt, cwd=cwd, env=environment, capture_output=True,
@@ -193,6 +197,7 @@ def run_cli(argv: list[str], prompt: str, cwd: Path, timeout: int,
     except (ValueError, TypeError, AttributeError):
         real = False
     receipt = {"kind": "real_cli" if real else "incomplete_cli", "synthetic": False, "dry_run": False,
+               "cli_phase": cli_phase, "cli_toolchain": identity,
                "cli_version": identity["version"],
                "thread_id": thread, "cli_sha256": fingerprint(executable), "argv_sha256": digest(canonical(argv)),
                "prompt_sha256": digest(prompt.encode()), "stdout_sha256": digest(raw.encode()),
