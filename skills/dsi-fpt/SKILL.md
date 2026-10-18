@@ -140,6 +140,10 @@ calculs financiers à `dirfi-fpt`, la doctrine opérationnelle de police à
 `dpm-fpt`. La preuve des règles, leur portée et les abstentions ciblées sont
 attribuées au volet de `recherche-juridique`, sans lui transférer le métier.
 
+Chaque BASCULE est émise au moment où le volet est confié, avant toute phrase
+qui attribue ou traite ce volet ; une BASCULE regroupée en fin de réponse
+ne compte pas.
+
 Avant un fond délégué, afficher BASCULE en nommant le skill destinataire,
 l'activer réellement et lui attribuer le volet ; maintenir cette attribution
 dans toutes les rubriques et la conclusion. Une activation déjà effectuée

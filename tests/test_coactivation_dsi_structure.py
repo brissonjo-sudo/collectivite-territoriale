@@ -70,6 +70,16 @@ class CoactivationDsiStructureTests(unittest.TestCase):
         self.assertEqual(mixed["routes"]["fond_juridique_du_marche"], "dcp-fpt")
         self.assertEqual(mixed["routes"]["specifications_et_reversibilite"], "dsi-fpt")
 
+    def test_bascule_dsi_installee_avant_attribution_pas_regroupee_en_fin(self) -> None:
+        rule = ("Chaque BASCULE est émise au moment où le volet est confié, avant toute phrase "
+                "qui attribue ou traite ce volet ; une BASCULE regroupée en fin de réponse "
+                "ne compte pas.")
+        for relative in ("overlays/dsi-fpt.md", "skills/dsi-fpt/SKILL.md"):
+            with self.subTest(fichier=relative):
+                text = " ".join((ROOT / relative).read_text(encoding="utf-8").split())
+                self.assertEqual(text.count(rule), 1)
+                self.assertIn("Avant un fond délégué, afficher BASCULE en nommant le skill destinataire", text)
+
 
 if __name__ == "__main__":
     unittest.main()
