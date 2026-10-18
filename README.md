@@ -15,8 +15,8 @@ Ce plugin aide à qualifier une situation, identifier les expertises à mobilise
 | Skill | Domaine | Version embarquée |
 |---|---|---:|
 | `collectivite-territoriale:dpm-fpt` | Police municipale et limites APJA | 1.0.5 |
-| `collectivite-territoriale:drh-fpt` | Ressources humaines territoriales | 0.6.0 |
-| `collectivite-territoriale:dpo-ct` | Protection des données | 0.2.1 |
+| `collectivite-territoriale:drh-fpt` | Ressources humaines territoriales | 0.7.0 |
+| `collectivite-territoriale:dpo-ct` | Protection des données | 0.2.2 |
 | `collectivite-territoriale:dirfi-fpt` | Finances locales | 1.0.4 |
 | `collectivite-territoriale:dcp-fpt` | Commande publique, mesuré autonomement, à relire | 0.1.3 |
 | `collectivite-territoriale:recherche-juridique` | Recherche et vérification du droit français | 3.5.0 |

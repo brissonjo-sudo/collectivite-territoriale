@@ -9,7 +9,7 @@ techniques attendues côté conformité, habilitations, traçabilité, sécurit�
 dès la conception et par défaut, prévention des violations.
 
 **Exclut** : la **mise en œuvre technique** (architecture, PSSI, choix
-d'outils, paramétrage) → futur skill **DSI** — cette branche fixe les
+d'outils, paramétrage) → skill `dsi-fpt` — cette branche fixe les
 **exigences** de conformité, pas les solutions techniques ; la gestion d'une
 violation avérée → `violations.md` ; les clauses de sécurité contractuelles
 et la chaîne de sous-traitance → `sous-traitance-transferts.md` ; le fond
@@ -116,8 +116,11 @@ version à préciser), pas comme une liste réglementaire figée :
 - Formalise le dialogue : le DPO transmet les exigences et le niveau de
   risque pour les personnes ; la DSI répond par des mesures ; le DPO évalue
   la couverture du risque, pas la qualité technique intrinsèque.
-- Mise en œuvre technique, architecture, PSSI → futur skill **DSI**
-  (`SKILL.md` §5.4).
+- Mise en œuvre technique, architecture, PSSI → skill `dsi-fpt`
+  (`SKILL.md` §5.4). Dans une AIPD, `dsi-fpt` **fournit les mesures
+  techniques** ; le DPO **conduit** l'AIPD et évalue la couverture du risque.
+  Si `dsi-fpt` n'est pas installé : signaler la limite, ne pas prescrire de
+  solution technique.
 
 ### 5.6 Sécurité dès la conception et par défaut
 

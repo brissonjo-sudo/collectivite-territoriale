@@ -9,13 +9,14 @@ description: >-
   (accès, effacement, opposition...), sous-traitance (art. 28) et transferts
   hors UE, sécurité (art. 32), doctrine CNIL et CEPD, traitements communaux
   (état civil, élections, scolaire, action sociale, vidéoprotection,
-  téléservices, open data). Activer aussi dès qu'un projet de la collectivité
-  implique des données personnelles, même sans mention du RGPD ou du DPO.
-  Toute règle reposant sur un texte est vérifiée à la source officielle avant
-  conclusion. Ne pas activer pour le volet opérationnel de la police
-  municipale (dpm-fpt), le RH statutaire (drh-fpt), ni le droit hors UE.
+  téléservices, open data). Activer aussi dès qu'un projet implique des
+  données personnelles, même sans mention du RGPD. Toute règle reposant sur un
+  texte est vérifiée à la source officielle avant conclusion. Ne pas activer
+  pour le volet opérationnel de la police municipale (dpm-fpt), le RH
+  statutaire (drh-fpt), la mise en œuvre technique de la sécurité (dsi-fpt),
+  la passation des marchés (dcp-fpt), ni le droit hors UE.
 metadata:
-  version: 0.2.1
+  version: 0.2.2
   statut: éprouvé sur batterie de 10 cas complexes (59/60, 0 hallucination) — conformité politique d'usage et navigation des fichiers longs renforcées
   date_derniere_revue_methodologique: 2026-07-22
   date_derniere_verification_sources: 2026-07-22
@@ -24,13 +25,16 @@ metadata:
     - recherche-juridique (recommandé — validateur de vigueur et de citation)
     - dpm-fpt (frontière vidéoprotection et traitements police municipale)
     - drh-fpt (frontière traitements RH)
+    - dsi-fpt (frontière mise en œuvre technique de la sécurité)
+    - dirfi-fpt (frontière données et fond financier)
+    - dcp-fpt (frontière commande publique, clauses RGPD comprises)
   compatibilite:
     - Claude Opus
     - Claude Sonnet
   langue: français
 ---
 
-# Skill : dpo-ct (v0.2.1)
+# Skill : dpo-ct (v0.2.2)
 
 > **Objet** : expertise d'un **Délégué à la Protection des Données** de
 > collectivité territoriale, à la fois **opérationnelle** (orientée avis,
@@ -299,19 +303,23 @@ Détail des sources et règles de conflit →
 | **Vidéoprotection** | AIPD, durées de conservation, droits des personnes filmées, information du public, registre | `dpm-fpt` : autorisation préfectorale (CSI), doctrine d'emploi, déport aux forces de l'État |
 | **Traitements police municipale** (main courante, vidéoverbalisation, rapports) | Qualification du régime (Police-Justice), conformité, registre | `dpm-fpt` : contenu opérationnel des écrits, pouvoirs APJA |
 | **Traitements RH** (dossier agent, SIRH, badgeage, cybersurveillance) | Conformité RGPD, AIPD, information des agents, durées | `drh-fpt` : règles statutaires, gestion RH de fond |
-| **Sécurité SI** | Exigences de conformité (art. 32), évaluation du risque pour les personnes | futur skill **DSI** : mise en œuvre technique, architecture, PSSI |
-| **Données financières** (facturation, régies, fiscalité locale) | Conformité des traitements | futur skill **finances** : fond budgétaire et comptable |
+| **Sécurité SI** | Exigences de conformité (art. 32), évaluation du risque pour les personnes | `dsi-fpt` : mise en œuvre technique, architecture, PSSI |
+| **Données financières** (facturation, régies, fiscalité locale) | Conformité des traitements | `dirfi-fpt` : fond budgétaire et comptable |
+| **Commande publique** (marchés, clauses de sous-traitance de données) | Contenu RGPD des clauses (art. 28), qualification des acteurs | `dcp-fpt` : passation, exécution juridique, modification et résiliation du marché |
 | **Vigueur d'un texte, citation, jurisprudence** | Analyse métier | `recherche-juridique` : validation de fond et de forme |
 
 **Règle de bascule** : ce skill traite le traitement de données **en tant que
 traitement** (licéité, loyauté, minimisation, sécurité, droits). Dès que la
 question porte sur le **fond métier** du domaine (opérationnel PM, statut RH,
-technique SI, comptabilité), passer la main et le signaler.
+technique SI, comptabilité, commande publique), passer la main et le signaler.
+Si le skill nommé n'est pas installé, **signaler la limite et s'arrêter** sur
+ce fond : ne pas le traiter à sa place.
 
 ### 5.5 Hiérarchie de co-activation
 
 1. **`dpo-ct`** — chef d'orchestre sur toute question données personnelles.
-2. **`dpm-fpt`** / **`drh-fpt`** — activés sur leur fond métier (§5.4).
+2. **`dpm-fpt`** / **`drh-fpt`** / **`dsi-fpt`** / **`dirfi-fpt`** /
+   **`dcp-fpt`** — activés sur leur fond métier (§5.4).
 3. **`recherche-juridique`** — validateur de fond (vigueur, format de
    citation, triangulation des sources).
 
@@ -369,7 +377,7 @@ appartient au responsable de traitement (garde-fou §5.2.a).
 9. **Personnes vulnérables** (mineurs, bénéficiaires action sociale) ou
    **données sensibles** → niveau de risque relevé en conséquence ?
 10. **Frontières (§5.4)** respectées : le fond métier PM / RH / DSI /
-    finances a-t-il été renvoyé au bon skill ?
+    finances / commande publique a-t-il été renvoyé au bon skill ?
 11. **Livrable** demandé effectivement produit (ou brouillon `[INCOMPLET]`) ?
 12. Pas de **donnée personnelle réelle** (agent ou administré) reproduite
     inutilement dans la sortie — l'exemplarité vaut aussi pour le DPO.

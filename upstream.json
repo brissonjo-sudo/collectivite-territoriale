@@ -3,7 +3,7 @@
   "skills": {
     "dpm-fpt": {
       "repository": "https://github.com/brissonjo-sudo/Dpm-fpt.git",
-      "commit": "1668c89798f1f50a829c0b94d3cf6bf33a3640fb",
+      "commit": "2376270f6afe7b28f7b21320a38866d2b3765e3e",
       "version": "1.0.5",
       "paths": [
         "SKILL.md",
@@ -22,8 +22,8 @@
     },
     "drh-fpt": {
       "repository": "https://github.com/brissonjo-sudo/Drh-fpt.git",
-      "commit": "f81c9b955f7ebb47df7e93bdc41ac743d85a2973",
-      "version": "0.6.0",
+      "commit": "36a23a763afe33160ed11e8cc1be5281a13ee5f5",
+      "version": "0.7.0",
       "paths": [
         "SKILL.md",
         "references/",
@@ -32,8 +32,8 @@
     },
     "dpo-ct": {
       "repository": "https://github.com/brissonjo-sudo/DPO-CT.git",
-      "commit": "f3406f412368199a33f47e7861eb450eab2b2cdb",
-      "version": "0.2.1",
+      "commit": "58ea45c4d12812da10ace5f1486deea96b8534fa",
+      "version": "0.2.2",
       "paths": [
         "SKILL.md",
         "references/",
@@ -43,7 +43,7 @@
         {
           "target": "SKILL.md",
           "source": "overlays/dpo-ct.md",
-          "base_sha256": "41e4f3b262f8bbd3e7ca568613c57ad053399311a946a4aec3bb0fa1adc602b7",
+          "base_sha256": "82288b47c2d5e67acc4eb9ee24636eefe8b29c3a31b137e8e48e69460ed06fa5",
           "source_sha256": "a611c4057cd988f7fdb49b9a98853dc8194e522fe5d3b528d6dc49605262b532",
           "anchor": "## 1. Déclenchement"
         }
@@ -51,7 +51,7 @@
     },
     "dirfi-fpt": {
       "repository": "https://github.com/brissonjo-sudo/DirFi-fpt.git",
-      "commit": "d970fe530d3f50f6b4c330e3cfb85db35b7126ab",
+      "commit": "a9af51b38e726ae775412209bb468e6bcc3ed35d",
       "version": "1.0.4",
       "paths": [
         "SKILL.md",
@@ -64,7 +64,7 @@
     },
     "recherche-juridique": {
       "repository": "https://github.com/brissonjo-sudo/droit-francais-skill.git",
-      "commit": "e437d10a2d4bbf66ba7a9c1e9fb49e773166054e",
+      "commit": "798b7c37dc8d6306fc7e7b22584c8a45297a41d2",
       "version": "3.5.0",
       "source_root": "skill/",
       "local_directory": "droit-francais-skill",
@@ -93,7 +93,7 @@
     },
     "dcp-fpt": {
       "repository": "https://github.com/brissonjo-sudo/DCP-fpt.git",
-      "commit": "129f374e6ab8ea3b47bcfd9de9ddd52a2d3d9498",
+      "commit": "ff35b7af38f2e03bf39a1244ebdae292b53daccd",
       "version": "0.1.3",
       "paths": [
         "SKILL.md",
