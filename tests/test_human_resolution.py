@@ -1,6 +1,7 @@
 """Résolution humaine liée, sur fixtures explicites et pièces réelles inchangées ; aucun modèle."""
 from pathlib import Path
 import copy
+import gzip
 import hashlib
 import json
 import shutil
@@ -122,7 +123,7 @@ class HumanBundleTests(unittest.TestCase):
         self.assertEqual(set(n for n, r in value['resolutions'].items() if r['resolutions']),
             {'plugin-violation-donnees', 'plugin-dcp-frontiere-dsi-externe', 'l8-dsi-donnees-sans-source'})
         self.assertEqual(set(value['human']['reservations']), {'plugin-prime-depart-retraite'})
-        opinion = json.loads((BUNDLE / 'avis-humain-jo-20261018-quinze.json').read_bytes())
+        opinion = self.original(BUNDLE, 'avis-humain-jo-20261018-quinze.json')
         self.assertEqual(value['human']['reservations'], opinion['reserves'])
         self.assertTrue(value['human']['human_legal_validation'])
         self.assertFalse((ROOT / 'tests/evidence/release-1.3.0.json').exists())
@@ -134,7 +135,8 @@ class HumanBundleTests(unittest.TestCase):
 
     def test_avis_ou_trace_alteres_refuses(self) -> None:
         bundle = self.copied()
-        (bundle / 'avis-humain-jo-20261018.json').write_bytes((bundle / 'avis-humain-jo-20261018.json').read_bytes() + b'\n')
+        path = bundle / 'avis-humain-jo-20261018.json.gz'
+        path.write_bytes(path.read_bytes() + b'\n')
         with self.assertRaisesRegex(ValueError, 'Preuve liée altérée'):
             human.load_bundle(ROOT, bundle, self.baseline)
 
@@ -162,26 +164,38 @@ class HumanBundleTests(unittest.TestCase):
 
     def test_fiche_humaine_ou_lien_run_absents_refuses(self) -> None:
         bundle = self.copied()
-        (bundle / 'FICHE-RELECTURE-17.md').unlink()
+        (bundle / 'FICHE-RELECTURE-17.md.gz').unlink()
         with self.assertRaises((OSError, ValueError)):
             human.load_bundle(ROOT, bundle, self.baseline)
 
+    def original(self, bundle: Path, relative: str) -> dict:
+        index = json.loads((bundle / 'liaisons-humaines.json').read_bytes())
+        stored = relative if relative in index['files'] else relative + '.gz'
+        return json.loads(human.original_bytes(bundle, {'evidence_path': stored, **index['files'][stored]}))
+
     def replace_piece(self, bundle: Path, relative: str, value: dict) -> None:
-        path = bundle / relative
-        path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')
         index_path = bundle / 'liaisons-humaines.json'
         index = json.loads(index_path.read_bytes())
-        index['files'][relative] = {'sha256': common.fingerprint(path), 'octets': path.stat().st_size}
+        raw = (json.dumps(value, ensure_ascii=False, indent=2) + '\n').encode('utf-8')
+        stored = relative if relative in index['files'] else relative + '.gz'
+        path = bundle / stored
+        info = {}
+        if stored.endswith('.gz'):
+            info.update(compression='gzip', original_sha256=common.digest(raw), original_octets=len(raw))
+            raw = gzip.compress(raw, mtime=0)
+        path.write_bytes(raw)
+        info.update(sha256=common.fingerprint(path), octets=path.stat().st_size)
+        index['files'][stored] = info
         for binding in index['cases'].values():
             for item in binding.values():
-                if isinstance(item, dict) and item.get('evidence_path') == relative:
-                    item['sha256'] = common.fingerprint(path)
+                if isinstance(item, dict) and item.get('evidence_path') == stored:
+                    item.update(info)
         index_path.write_text(json.dumps(index, ensure_ascii=False, indent=2) + '\n', encoding='utf-8', newline='\n')
 
     def test_session_synthetique_refusee_meme_avec_avis_et_index_relies(self) -> None:
         bundle = self.copied()
         relative = 'campagne/plugin-prime-depart-retraite/reponse/session.json'
-        value = json.loads((bundle / relative).read_bytes())
+        value = self.original(bundle, relative)
         value.pop('payload_sha256')
         value['origin']['synthetic'] = True
         self.replace_piece(bundle, relative, common.seal(value))
@@ -191,7 +205,7 @@ class HumanBundleTests(unittest.TestCase):
     def test_decideur_substitue_refuse_meme_apres_recalcul_index(self) -> None:
         bundle = self.copied()
         relative = 'avis-humain-jo-20261018.json'
-        value = json.loads((bundle / relative).read_bytes())
+        value = self.original(bundle, relative)
         value['decideur'] = 'autre'
         self.replace_piece(bundle, relative, value)
         with self.assertRaisesRegex(ValueError, 'Décideur humain différent'):
@@ -200,11 +214,25 @@ class HumanBundleTests(unittest.TestCase):
     def test_validation_globale_ne_peut_pas_etre_inventee(self) -> None:
         bundle = self.copied()
         relative = 'avis-humain-jo-20261018-quinze.json'
-        value = json.loads((bundle / relative).read_bytes())
+        value = self.original(bundle, relative)
         value['human_legal_validation_globale'] = False
         self.replace_piece(bundle, relative, value)
         with self.assertRaisesRegex(ValueError, 'Décision humaine globale absente'):
             human.load_bundle(ROOT, bundle, self.baseline)
+
+    def test_original_decompresse_empreinte_divergente_refusee(self) -> None:
+        index = json.loads((BUNDLE / 'liaisons-humaines.json').read_bytes())
+        stored = 'avis-humain-jo-20261018.json.gz'
+        binding = {'evidence_path': stored, **index['files'][stored], 'original_sha256': '0' * 64}
+        with self.assertRaisesRegex(ValueError, 'décompressée altérée'):
+            human.original_bytes(BUNDLE, binding)
+
+    def test_decompression_bornee_taille_divergente_refusee(self) -> None:
+        index = json.loads((BUNDLE / 'liaisons-humaines.json').read_bytes())
+        stored = 'FICHE-RELECTURE-17.md.gz'
+        binding = {'evidence_path': stored, **index['files'][stored], 'original_octets': 1}
+        with self.assertRaisesRegex(ValueError, 'décompressée altérée'):
+            human.original_bytes(BUNDLE, binding)
 
 
 if __name__ == '__main__':

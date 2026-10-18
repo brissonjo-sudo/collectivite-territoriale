@@ -41,6 +41,13 @@ plan, autorisation et avis sont copiés octet pour octet ; aucun commit mesuré
 n'est remplacé dans une pièce originale. Le lot ne change aucun octet des
 skills, de la configuration distribuée, des cas ou du protocole de campagne.
 
+Les cinq pièces originales en CRLF (deux fiches, deux avis et autorisation)
+sont conservées en gzip sans perte : l'index contient l'empreinte et la taille
+du fichier compressé et de l'original décompressé. Le lecteur exige les deux
+empreintes, avec taille décompressée bornée. Cela préserve les espaces finaux
+et fins de ligne approuvés, sans normalisation Git ni exception au contrôle
+`git diff --check`. Les autres pièces restent des copies directes.
+
 La qualification d'une tête descendante de packaging distingue explicitement
 `measurement_commit` et commit cible. L'assembleur exige identité intégrale
 du runtime, de la configuration, des cas, d'upstream et de tout l'outillage

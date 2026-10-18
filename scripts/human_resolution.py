@@ -2,6 +2,8 @@
 from __future__ import annotations
 
 from datetime import datetime
+import gzip
+import io
 import json
 from pathlib import Path
 import re
@@ -9,7 +11,7 @@ import subprocess
 from typing import Any
 
 import run_codex_campaign as campaign
-from measurement_common import bound, canonical, checked, digest, fingerprint, snapshot
+from measurement_common import bound, canonical, checked, digest, fingerprint
 from review_codex_campaign import validate_report
 
 
@@ -100,6 +102,22 @@ def events(directory: Path, session: dict) -> tuple[list[dict], list[dict]]:
     return rows, [event for row in rows for event in row.get('events', [])]
 
 
+def original_bytes(directory: Path, binding: dict) -> bytes:
+    """Pièce originale, éventuellement gzip sans perte ; double empreinte, taille bornée."""
+    raw = bound(directory, binding).read_bytes()
+    if 'compression' not in binding:
+        return raw
+    limit = binding.get('original_octets')
+    if (binding['compression'] != 'gzip' or not isinstance(limit, int)
+            or not 0 <= limit <= 1_000_000):
+        raise ValueError('Conservation sans perte non prise en charge')
+    with gzip.GzipFile(fileobj=io.BytesIO(raw)) as stream:
+        decoded = stream.read(limit + 1)
+    if len(decoded) != limit or digest(decoded) != binding.get('original_sha256'):
+        raise ValueError('Pièce originale décompressée altérée')
+    return decoded
+
+
 def load_bundle(root: Path, directory: Path, target: dict) -> dict[str, Any]:
     """Contrôle les 18 cas L14 et leurs avis ; ne crée aucune preuve de release."""
     index = json.loads((directory / 'liaisons-humaines.json').read_bytes())
@@ -109,6 +127,7 @@ def load_bundle(root: Path, directory: Path, target: dict) -> dict[str, Any]:
         path = bound(directory, {'evidence_path': name, 'sha256': info['sha256']})
         if path.stat().st_size != info['octets']:
             raise ValueError('Taille de pièce divergente')
+        original_bytes(directory, {'evidence_path': name, **info})
     summary_path = bound(directory, index['summary'])
     summary = json.loads(summary_path.read_bytes())
     attempt, commit = index['campaign_attempt_id'], index['measurement_commit']
@@ -180,12 +199,11 @@ def load_bundle(root: Path, directory: Path, target: dict) -> dict[str, Any]:
                 or {i['invariant']: i['statut_relecteur'] for i in item['invariants']}
                     != {i['invariant']: i['statut'] for i in report['invariants']}):
             raise ValueError('Résumé différent des sessions et rapports')
-        opinion_path = bound(directory, link['human_opinion'])
-        opinion = json.loads(opinion_path.read_bytes())
-        sheet_path = bound(directory, link['review_sheet'])
-        if fingerprint(sheet_path) != opinion['fiche_relecture_sha256']:
+        opinion = json.loads(original_bytes(directory, link['human_opinion']))
+        sheet_bytes = original_bytes(directory, link['review_sheet'])
+        if digest(sheet_bytes) != opinion['fiche_relecture_sha256']:
             raise ValueError('Fiche relue différente')
-        text = sheet_path.read_text(encoding='utf-8')
+        text = sheet_bytes.decode('utf-8').replace('\r\n', '\n')
         sections = list(re.finditer(r'(?m)^## \d+\. `([^`]+)`', text))
         section = next((text[m.end():sections[i + 1].start() if i + 1 < len(sections) else len(text)]
                         for i, m in enumerate(sections) if m[1] == name), None)
