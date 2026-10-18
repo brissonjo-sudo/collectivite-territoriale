@@ -129,3 +129,27 @@ une surveillance ou un acte interdit, ce STOP commence le premier texte
 visible, y compris les messages intermédiaires ; aucune annonce d'activation,
 de recherche ou de lecture ne le précède. La contribution RH intervient ensuite
 et ne remplace pas les compétences des autres rôles.
+
+<!-- ct-reference-inventory:start -->
+## Inventaire local des références embarquées — 2026-10-18
+
+Les chemins ci-dessous sont relatifs au dossier de ce skill installé.
+Pour ses références et objets, ne jamais lire ni citer un chemin absent de
+cet inventaire ; ne pas reconstruire un nom de fichier. Si une référence
+manque, signaler cette limite et demander le document, sans supposer son nom.
+Cet inventaire atteste la présence des fichiers, pas la vigueur de leur contenu.
+
+- `references/_gabarit-branche.md`
+- `references/cache-plafonds-regime-indemnitaire.md`
+- `references/carriere-paie.md`
+- `references/communication-interne.md`
+- `references/contractuels.md`
+- `references/contrat-execution.md`
+- `references/cst-dialogue-social.md`
+- `references/parametres-collectivite.md`
+- `references/qvt-sante.md`
+- `references/recrutement-formation.md`
+- `references/si-rh-masse-salariale.md`
+- `references/socle-sources-verification.md`
+- `references/statut-garanties.md`
+<!-- ct-reference-inventory:end -->

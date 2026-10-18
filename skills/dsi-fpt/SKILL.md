@@ -155,6 +155,45 @@ En activation forcée comme en sélection spontanée, choisir les rôles selon
 le fond effectivement demandé. Une installation ou un ordre de chargement
 ne prouve ni activation effective ni compétence sur tous les volets.
 
+<!-- ct-reference-inventory:start -->
+## Inventaire local des références embarquées — 2026-10-18
+
+Les chemins ci-dessous sont relatifs au dossier de ce skill installé.
+Pour ses références et objets, ne jamais lire ni citer un chemin absent de
+cet inventaire ; ne pas reconstruire un nom de fichier. Si une référence
+manque, signaler cette limite et demander le document, sans supposer son nom.
+Cet inventaire atteste la présence des fichiers, pas la vigueur de leur contenu.
+
+- `objets/_gabarit-objet.md`
+- `objets/compte-poste-agent.md`
+- `objets/incident-securite.md`
+- `objets/projet-si.md`
+- `objets/site-reseau.md`
+- `objets/solution-saas.md`
+- `objets/teleservice.md`
+- `references/_gabarit-branche.md`
+- `references/accessibilite-numerique.md`
+- `references/analyse-situation.md`
+- `references/applications-interoperabilite.md`
+- `references/cloud-hebergement.md`
+- `references/contrats-prestataires.md`
+- `references/crise-cyber-continuite.md`
+- `references/dematerialisation-teleservices.md`
+- `references/ecrits-numerique.md`
+- `references/gouvernance-strategie.md`
+- `references/ia-donnees.md`
+- `references/infrastructures-reseaux.md`
+- `references/references-verifiees.md`
+- `references/retex.md`
+- `references/securite-si.md`
+- `references/socle-sources-verification.md`
+- `references/templates/cahier-des-charges-technique.md`
+- `references/templates/charte-usage-si.md`
+- `references/templates/fiche-projet-si.md`
+- `references/templates/note-homologation.md`
+- `references/templates/rapport-incident.md`
+<!-- ct-reference-inventory:end -->
+
 # Skill : dsi-fpt (v0.2.1)
 
 > **Métadonnées** — version : **0.2.1** · statut : **candidat corrigé à mesurer** ;

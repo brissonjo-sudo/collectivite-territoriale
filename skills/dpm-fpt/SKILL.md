@@ -208,6 +208,50 @@ une réserve ou dans un tableau. Ne pas conclure globalement que tous les articl
 aujourd'hui après n'en avoir contrôlé qu'une partie. En doute persistant sur
 une contrainte, ne pas la recommander ; maintenir le STOP et le compte rendu.
 
+<!-- ct-reference-inventory:start -->
+## Inventaire local des références embarquées — 2026-10-18
+
+Les chemins ci-dessous sont relatifs au dossier de ce skill installé.
+Pour ses références et objets, ne jamais lire ni citer un chemin absent de
+cet inventaire ; ne pas reconstruire un nom de fichier. Si une référence
+manque, signaler cette limite et demander le document, sans supposer son nom.
+Cet inventaire atteste la présence des fichiers, pas la vigueur de leur contenu.
+
+- `objets/_gabarit-objet.md`
+- `objets/accident.md`
+- `objets/agent.md`
+- `objets/commerce.md`
+- `objets/fourriere.md`
+- `objets/manifestation.md`
+- `objets/occupation-domaine-public.md`
+- `objets/police-chiens.md`
+- `objets/videoprotection.md`
+- `references/_gabarit-branche.md`
+- `references/analyse-situation.md`
+- `references/armement-equipements.md`
+- `references/conformite-deontologie-donnees.md`
+- `references/contentieux.md`
+- `references/continuum-partenariats.md`
+- `references/controle-legalite.md`
+- `references/doctrine-operationnelle.md`
+- `references/ecrits-professionnels.md`
+- `references/liste-RSD.md`
+- `references/penal-procedure.md`
+- `references/pilotage-budget.md`
+- `references/pouvoirs-police.md`
+- `references/references-verifiees.md`
+- `references/reglementation-appliquee.md`
+- `references/retex.md`
+- `references/rh-specificites-pm.md`
+- `references/socle-sources-verification.md`
+- `references/templates/arrete-modele.md`
+- `references/templates/note-maire-modele.md`
+- `references/templates/pv-contravention.md`
+- `references/templates/rapport-information.md`
+- `references/templates/rapport-mise-a-disposition.md`
+- `references/videoprotection.md`
+<!-- ct-reference-inventory:end -->
+
 ## 1. Déclenchement
 
 Activer ce skill dès qu'une question relève du **métier de police municipale** :

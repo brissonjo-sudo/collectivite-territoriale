@@ -90,3 +90,47 @@ pas être activé, signaler la limite et arrêter seulement ce fond.
 En activation forcée comme en sélection spontanée, choisir les rôles selon
 le fond effectivement demandé. Une installation ou un ordre de chargement
 ne prouve ni activation effective ni compétence sur tous les volets.
+
+<!-- ct-reference-inventory:start -->
+## Inventaire local des références embarquées — 2026-10-18
+
+Les chemins ci-dessous sont relatifs au dossier de ce skill installé.
+Pour ses références et objets, ne jamais lire ni citer un chemin absent de
+cet inventaire ; ne pas reconstruire un nom de fichier. Si une référence
+manque, signaler cette limite et demander le document, sans supposer son nom.
+Cet inventaire atteste la présence des fichiers, pas la vigueur de leur contenu.
+
+- `objets/_gabarit-objet.md`
+- `objets/cloture-exercice.md`
+- `objets/emprunt.md`
+- `objets/immobilisation.md`
+- `objets/marche-public.md`
+- `objets/operation-investissement.md`
+- `objets/regie.md`
+- `objets/satellites.md`
+- `objets/subvention-association.md`
+- `references/_gabarit-branche.md`
+- `references/analyse-situation.md`
+- `references/budget-cycle.md`
+- `references/commande-publique-financiere.md`
+- `references/contentieux-financier.md`
+- `references/controle-budgetaire.md`
+- `references/controle-interne-financier.md`
+- `references/dette-tresorerie.md`
+- `references/dotations-perequation.md`
+- `references/ecrits-financiers.md`
+- `references/execution-depense.md`
+- `references/execution-recette.md`
+- `references/fiscalite-locale.md`
+- `references/nomenclature-m57.md`
+- `references/prospective-analyse.md`
+- `references/references-verifiees.md`
+- `references/retex.md`
+- `references/socle-sources-verification.md`
+- `references/subventions.md`
+- `references/templates/convention-subvention.md`
+- `references/templates/deliberation-budgetaire.md`
+- `references/templates/fiche-procedure-financiere.md`
+- `references/templates/note-impact-financier.md`
+- `references/templates/rapport-orientation-budgetaire.md`
+<!-- ct-reference-inventory:end -->

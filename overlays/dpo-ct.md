@@ -89,3 +89,25 @@ avant sortie externe, et la décision reste au responsable de traitement.
 L'assistant ne valide ni ne déclenche ces envois. Ce contrôle ne justifie pas
 de différer les mesures immédiates ni de dépasser le délai applicable vérifié
 à la source.
+
+<!-- ct-reference-inventory:start -->
+## Inventaire local des références embarquées — 2026-10-18
+
+Les chemins ci-dessous sont relatifs au dossier de ce skill installé.
+Pour ses références et objets, ne jamais lire ni citer un chemin absent de
+cet inventaire ; ne pas reconstruire un nom de fichier. Si une référence
+manque, signaler cette limite et demander le document, sans supposer son nom.
+Cet inventaire atteste la présence des fichiers, pas la vigueur de leur contenu.
+
+- `references/_gabarit-branche.md`
+- `references/aipd.md`
+- `references/analyse-situation.md`
+- `references/droits-personnes.md`
+- `references/gouvernance-registre.md`
+- `references/relations-cnil.md`
+- `references/secteur-collectivites.md`
+- `references/securite-traitements.md`
+- `references/socle-sources-verification.md`
+- `references/sous-traitance-transferts.md`
+- `references/violations.md`
+<!-- ct-reference-inventory:end -->

@@ -163,6 +163,37 @@ sans modifier les étapes ni autoriser d'autres outils.
 - **Citation** : des guillemets exigent le libellé réellement récupéré.
   Sinon paraphraser en indiquant la source et les limites, sans faux extrait.
 
+## Lecture des références dans l'environnement PowerShell — 2026-10-18
+
+Les références et objets d'un skill se lisent avec `Get-Content -LiteralPath
+'chemin exact' -Encoding utf8`, soit en entier, soit par tranche bornée :
+`| Select-Object -First N`, éventuellement précédé de `-Skip M` dans la même
+commande (`| Select-Object -Skip M -First N`). N est un entier strictement
+positif ; M est un entier positif ou nul. Lire les tranches nécessaires pour
+couvrir le passage utile et signaler toute restitution tronquée ou incomplète.
+Ne lire ces fichiers jamais par `-Skip` seul, jamais par une autre commande
+ou un autre pipeline ; ne pas supposer le contenu des lignes non reçues.
+
+<!-- ct-reference-inventory:start -->
+## Inventaire local des références embarquées — 2026-10-18
+
+Les chemins ci-dessous sont relatifs au dossier de ce skill installé.
+Pour ses références et objets, ne jamais lire ni citer un chemin absent de
+cet inventaire ; ne pas reconstruire un nom de fichier. Si une référence
+manque, signaler cette limite et demander le document, sans supposer son nom.
+Cet inventaire atteste la présence des fichiers, pas la vigueur de leur contenu.
+
+- `references/audit-documentaire.md`
+- `references/checklist-vigueur.md`
+- `references/format-citation.md`
+- `references/gabarits-requetes.md`
+- `references/gabarits-sortie.md`
+- `references/maintenance.md`
+- `references/modes-erreur.md`
+- `references/modules.md`
+- `references/sources-autorisees.md`
+<!-- ct-reference-inventory:end -->
+
 ## Déclenchement
 
 Activer ce skill dès que l'utilisateur :
