@@ -1,4 +1,4 @@
-"""Assemble exclusivement des pièces réelles liées ; jamais d'avis humain.
+"""Assemble exclusivement des pièces réelles liées ; ne fabrique aucun avis humain.
 
 La sortie est un dossier de distribution indépendant du checkout candidat.
 L'intégration de ses pièces dans le dépôt reste une décision séparée.
@@ -6,6 +6,7 @@ L'intégration de ses pièces dans le dépôt reste une décision séparée.
 from __future__ import annotations
 
 import argparse
+import copy
 import json
 from pathlib import Path
 import shutil
@@ -18,8 +19,32 @@ from measurement_common import (CONFIGURATION, binding, bound, candidate, canoni
 from qualify_distribution import distribution_errors
 from dcp_reference import reference, copy_reference
 from review_codex_campaign import validate_report
+from human_resolution import load_bundle
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def qualified_run(case: dict, proof: dict, commit: str, relative: str,
+                  resolution: dict | None, measurement_commit: str) -> dict:
+    """Projection de sortie ; conserve verdict/réserve humains et statut automatique source."""
+    activated = activated_skills(proof['events'], campaign.entry_chunks)[0] if case.get('schema_version') == 2 else case['activation_sequence']
+    tools = ['mcp__droit-francais__' + e['tool'] for e in proof['events'] if e['type'] == 'mcp_call' and e['succeeded']]
+    return {'case_id': case['id'], 'plugin_commit': commit, 'evidence_path': relative,
+        'technical_status': 'passed', 'status': 'passed' if resolution else 'blocked', 'activated_skills': activated,
+        'invariants': resolution['invariants'] if resolution else {i: False for i in case['invariants']},
+        'human_invariants_reviewed': bool(resolution),
+        'human_verdict': resolution['human_verdict'] if resolution else None,
+        'human_reservation': resolution['reservation'] if resolution else None,
+        'human_resolutions': resolution['resolutions'] if resolution else [],
+        'measurement_commit': measurement_commit, 'mcp_tools': tools,
+        'mcp_status': 'disabled' if case['mcp_mode'] == 'disabled' else 'passed'}
+
+
+def human_review_fields(linked: dict, source_index: dict) -> dict:
+    """Lit la décision globale existante sans supprimer ses réserves ni muter l'avis source."""
+    value = copy.deepcopy(linked['human'])
+    value['linked_sources'] = source_index
+    return value
 
 
 def campaign_inputs(root: Path, commit: str, directory: Path, baseline: dict) -> tuple[dict, dict[str, tuple[Path, dict]]]:
@@ -67,12 +92,17 @@ def dcp_input(root: Path, path: Path | None) -> dict:
 
 
 def assemble(root: Path, commit: str, campaign_dir: Path, smoke_path: Path,
-             dcp_path: Path | None, review_dir: Path, output: Path) -> Path:
+             dcp_path: Path | None, review_dir: Path, output: Path,
+             human_bundle: Path | None = None) -> Path:
     """N'écrit la preuve release qu'après validation et qualification en staging."""
     if dcp_path is None or not dcp_path.is_file():
         raise ValueError("Mesure DCP absente")
     baseline = candidate(root, commit)
-    campaign_data, runs = campaign_inputs(root, commit, campaign_dir, baseline)
+    linked = load_bundle(root, human_bundle, baseline) if human_bundle is not None else None
+    if linked:
+        campaign_data, runs = linked['campaign'], linked['runs']
+    else:
+        campaign_data, runs = campaign_inputs(root, commit, campaign_dir, baseline)
     cases = {c["id"]: c for c in json.loads((root / "tests/cas-plugin.json").read_bytes())}
     upstream = json.loads((root / "upstream.json").read_bytes())["skills"]
     dcp = dcp_input(root, dcp_path)
@@ -89,13 +119,15 @@ def assemble(root: Path, commit: str, campaign_dir: Path, smoke_path: Path,
             raise ValueError("Smoke en échec")
         if item["case_id"] == "activation-implicite" and (proof["stop_first"] is not True or stop_errors(proof["chronology"])):
             raise ValueError("STOP du smoke non prouvé")
-    review = checked(review_dir / "summary.json", commit, {"real_review"})
+    if linked:
+        review, reviews = linked['review'], linked['reviews']
+    else:
+        review, reviews = checked(review_dir / "summary.json", commit, {"real_review"}), {}
     if any(review.get(k) != v for k, v in baseline.items()):
         raise ValueError("Baseline de relecture divergente")
-    if len(review["runs"]) != len(cases) or {r["case_id"] for r in review["runs"]} != set(cases):
+    if not linked and (len(review["runs"]) != len(cases) or {r["case_id"] for r in review["runs"]} != set(cases)):
         raise ValueError("Relecture incomplète")
-    reviews = {}
-    for item in review["runs"]:
+    for item in ([] if linked else review["runs"]):
         path = bound(review_dir, {"evidence_path": item["evidence_path"], "sha256": item["evidence_sha256"]})
         proof = checked(path, commit, {"real_cli"})
         validate_report(proof["report"], cases[item["case_id"]]["invariants"])
@@ -115,21 +147,46 @@ def assemble(root: Path, commit: str, campaign_dir: Path, smoke_path: Path,
         target = output / name; target.parent.mkdir(parents=True, exist_ok=True)
         shutil.copyfile(root / name, target)
     pieces = output / "tests/evidence/mesure-courante"; pieces.mkdir(parents=True)
+    source_root = None
+    if linked:
+        # Copie fermée des originaux ; aucune réécriture de commit, statut ou avis.
+        source_root = pieces / 'source-l14'
+        index = json.loads((human_bundle / 'liaisons-humaines.json').read_bytes())
+        for relative in ['liaisons-humaines.json', *index['files']]:
+            source = human_bundle / relative
+            destination = source_root / relative
+            destination.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copyfile(source, destination)
+        load_bundle(root, source_root, baseline)
     native_runs, recorded, review_runs = [], [], []
     for case_id, (path, proof) in runs.items():
-        destination = pieces / (case_id + ".json"); shutil.copyfile(path, destination)
+        destination = pieces / (case_id + ".json")
+        if linked:
+            original = source_root / f'campagne/{case_id}/reponse/session.json'
+            proof = {**proof, 'original_session': binding(original, pieces),
+                     'trace': binding(original.with_name('trace.jsonl'), pieces),
+                     'source_bundle_root': source_root.relative_to(output).as_posix()}
+            write_new(destination, seal(proof))
+        else:
+            shutil.copyfile(path, destination)
         relative = destination.relative_to(output).as_posix()
         native_runs.append({"case_id": case_id, "evidence_path": relative,
                             "evidence_sha256": fingerprint(destination), "technical_status": "passed", "failures": []})
         case = cases[case_id]
-        activated = activated_skills(proof["events"], campaign.entry_chunks)[0] if case.get("schema_version") == 2 else case["activation_sequence"]
-        tools = ["mcp__droit-francais__" + e["tool"] for e in proof["events"] if e["type"] == "mcp_call" and e["succeeded"]]
-        recorded.append({"case_id": case_id, "plugin_commit": commit, "evidence_path": relative,
-            "technical_status": "passed", "status": "blocked", "activated_skills": activated,
-            "invariants": {i: False for i in case["invariants"]}, "human_invariants_reviewed": False,
-            "mcp_tools": tools, "mcp_status": "disabled" if case["mcp_mode"] == "disabled" else "passed"})
+        resolution = linked['resolutions'][case_id] if linked else None
+        recorded.append(qualified_run(case, proof, commit, relative, resolution,
+                                      linked['source_commit'] if linked else commit))
         review_path, review_proof = reviews[case_id]
-        destination = pieces / (case_id + "-review.json"); shutil.copyfile(review_path, destination)
+        destination = pieces / (case_id + "-review.json")
+        if linked:
+            original = source_root / f'campagne/{case_id}/relecture/session.json'
+            review_proof = {**review_proof, 'evidence_sha256': fingerprint(pieces / (case_id + '.json')),
+                            'original_session': binding(original, pieces),
+                            'trace': binding(original.with_name('trace.jsonl'), pieces),
+                            'source_bundle_root': source_root.relative_to(output).as_posix()}
+            write_new(destination, seal(review_proof))
+        else:
+            shutil.copyfile(review_path, destination)
         review_runs.append({"case_id": case_id, "evidence_path": destination.relative_to(output).as_posix(),
                             "evidence_sha256": fingerprint(destination), "violations_textuelles": 0})
     native = {**campaign_data, "runs": native_runs}
@@ -152,7 +209,8 @@ def assemble(root: Path, commit: str, campaign_dir: Path, smoke_path: Path,
             if not destination.exists():
                 shutil.copyfile(source, destination)
     # Les synthèses de campagne/relecture sont dérivées ; leurs originales restent liées.
-    for category, source in (("native-original", campaign_dir / "summary.json"), ("review-original", review_dir / "summary.json")):
+    originals = [] if linked else [("native-original", campaign_dir / "summary.json"), ("review-original", review_dir / "summary.json")]
+    for category, source in originals:
         shutil.copyfile(source, pieces / (category + ".json"))
     extra = {}
     for name, document in (("native_campaign", native), ("codex_smoke", smoke), ("dcp_measurement", dcp), ("assistant_review", assistant)):
@@ -168,14 +226,18 @@ def assemble(root: Path, commit: str, campaign_dir: Path, smoke_path: Path,
     version = json.loads((root / ".codex-plugin/plugin.json").read_bytes())["version"]
     evidence = {"plugin_version": version, "plugin_commit": commit,
         "upstream_commits": {n: s["commit"] for n, s in upstream.items()}, "runs": recorded,
-        "review": {"human_legal_validation": False}, "release_ready": False,
+        "review": linked['human'] if linked else {"human_legal_validation": False}, "release_ready": bool(linked),
         "distribution": {"scope": "open_source", "ready": True, "blockers": [],
             "decision_path": "docs/adr/0007-distribution-open-source-et-deploiement.md", "proofs": extra},
-        "deployment": {"ready": False, "blockers": ["Avis praticien non délivré"], "note_path": "docs/deploiement-collectivite.md"},
+        "deployment": {"ready": bool(linked), "blockers": [] if linked else ["Avis praticien non délivré"],
+            "reservations": linked['human']['reservations'] if linked else {}, "note_path": "docs/deploiement-collectivite.md"},
         "native_campaign": {"status": "passed", "plugin_commit": commit, "evidence_path": extra["native_campaign"]["evidence_path"]},
         "codex_smoke": {"status": "passed", "plugin_commit": commit, "evidence_path": extra["codex_smoke"]["evidence_path"]},
         "skill_measurements": {"dcp-fpt": {"status": "passed", "upstream_commit": upstream["dcp-fpt"]["commit"],
             "evidence_path": extra["dcp_measurement"]["evidence_path"]}}}
+    if linked:
+        evidence['review'] = human_review_fields(linked, binding(source_root / 'liaisons-humaines.json', output))
+        evidence['measurement_commit'] = linked['source_commit']
     if candidate(root, commit) != baseline:
         raise ValueError("Candidat divergent avant finalisation")
     errors = distribution_errors(output, evidence)
@@ -187,7 +249,7 @@ def assemble(root: Path, commit: str, campaign_dir: Path, smoke_path: Path,
 
 
 def main() -> int:
-    """Aucune option pour accepter fixtures, absence de DCP ou avis humain."""
+    """Les avis Jo sont lus depuis leurs pièces liées ; fixtures et smoke absent refusés."""
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--plugin-commit", required=True)
     parser.add_argument("--campaign-dir", type=Path, required=True)
@@ -195,11 +257,14 @@ def main() -> int:
     parser.add_argument("--dcp", type=Path, required=True)
     parser.add_argument("--review-dir", type=Path, required=True)
     parser.add_argument("--output-dir", type=Path, required=True)
+    parser.add_argument("--human-bundle", type=Path)
     args = parser.parse_args()
     try:
         result = assemble(ROOT, args.plugin_commit, args.campaign_dir.resolve(), args.smoke.resolve(),
-                          args.dcp.resolve(), args.review_dir.resolve(), args.output_dir)
-        print(json.dumps({"path": str(result), "human_legal_validation": False})); return 0
+                          args.dcp.resolve(), args.review_dir.resolve(), args.output_dir,
+                          args.human_bundle.resolve() if args.human_bundle else None)
+        value = json.loads(result.read_bytes())
+        print(json.dumps({"path": str(result), "human_legal_validation": value['review']['human_legal_validation']})); return 0
     except (OSError, ValueError, KeyError, TypeError) as exc:
         print(json.dumps({"status": "blocked", "reason_type": type(exc).__name__,
                           "reason_sha256": digest(str(exc).encode()), "human_legal_validation": False})); return 2
