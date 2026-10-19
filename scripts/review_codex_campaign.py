@@ -11,6 +11,7 @@ from typing import Any
 from measurement_common import (binding, bound, candidate, canonical, checked, digest,
                                 fingerprint, output_outside, run_cli, seal, write_new)
 from codex_event_contract import timeline
+from campaign_contract import load_cycle_cases
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -29,7 +30,7 @@ def review(root: Path, commit: str, campaign_dir: Path, cli: str, model: str, ou
     """Contexte neuf par cas, sans skill fourni et sans outil autorisé à réussir."""
     baseline = candidate(root, commit)
     summary = checked(campaign_dir / "summary.json", commit, {"real_campaign"})
-    cases = {c["id"]: c for c in json.loads((root / "tests/cas-plugin.json").read_bytes())}
+    cases = {c["id"]: c for c in load_cycle_cases(root)}
     if set(cases) != {r["case_id"] for r in summary["runs"]} or len(summary["runs"]) != len(cases):
         raise ValueError("Campagne incomplète : relecture refusée")
     output = output_outside(root, output); output.mkdir(parents=True)
@@ -92,7 +93,7 @@ def main() -> int:
     args = parser.parse_args()
     if args.dry_run:
         print(json.dumps({"dry_run": True, "synthetic": True, "human_legal_validation": False,
-                          "execution": "aucun modèle", "sessions": len(json.loads((ROOT / "tests/cas-plugin.json").read_bytes()))})); return 0
+                          "execution": "aucun modèle", "sessions": len(load_cycle_cases(ROOT))})); return 0
     if not args.authorize_model_calls:
         raise ValueError("Autorisation Jo d'appel modèle absente")
     cli = shutil.which(args.codex)

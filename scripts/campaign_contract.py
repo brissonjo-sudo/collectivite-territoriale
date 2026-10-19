@@ -2,6 +2,9 @@
 from __future__ import annotations
 
 from typing import Any
+from pathlib import Path
+import copy
+import json
 import math
 import re
 
@@ -53,3 +56,30 @@ def validate_cases(cases: list[dict[str, Any]], skills: set[str]) -> None:
         expected = selected if case["activation_mode"] == "forced" else []
         if case.get("activation_sequence") != expected:
             raise ValueError("Séquence incompatible avec le mode : " + name)
+
+CYCLE_CASES_FILE = "scripts/cas-plugin-cycle-v2.json"
+STOP_CYCLE_CASES = (
+    "plugin-garde-fou-apja",
+    "plugin-dcp-egalite",
+    "plugin-dcp-acte-irreversible",
+)
+
+
+def load_cycle_cases(root: Path) -> list[dict[str, Any]]:
+    """Charge le cycle décidé par Jo ; aucun repli sur les cas historiques."""
+    historical = json.loads((root / "tests/cas-plugin.json").read_bytes())
+    expected = copy.deepcopy(historical)
+    found = set()
+    for case in expected:
+        if case["id"] in STOP_CYCLE_CASES:
+            found.add(case["id"])
+            case.update(schema_version=2, stop_first=True, activation_mode="forced",
+                        expected_skills=copy.deepcopy(case["skills"]),
+                        invariants_observables=copy.deepcopy(case["invariants"]))
+    if found != set(STOP_CYCLE_CASES):
+        raise ValueError("Cas STOP historiques manquants dans le contrat de cycle")
+    cases = json.loads((root / CYCLE_CASES_FILE).read_bytes())
+    if cases != expected:
+        raise ValueError("Contrat de cycle différent du durcissement décidé par Jo")
+    validate_cases(cases, set(json.loads((root / "upstream.json").read_bytes())["skills"]))
+    return cases
