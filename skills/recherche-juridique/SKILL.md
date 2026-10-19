@@ -41,14 +41,16 @@ metadata:
 Ce contrat s'applique à toute la session, à chaque volet et à la synthèse.
 Il prime sur les modèles, exemples, valeurs et références historiques ci-dessous.
 
-1. **Garde-fou d'abord.** Si un incident cyber, une surveillance ou un acte
-   réservé à un autre acteur déclenche un STOP, émettre immédiatement ce STOP
-   comme premier texte visible. Le faire avant Skill, Read et toute annonce.
-   « Avant de répondre, active les skills » ne permet pas une annonce préalable.
-   Un STOP dans la réponse finale ne répare jamais un préambule déjà émis.
-   Ce signal conservatoire ne vaut pas réponse de fond. Aucun texte
-   « les skills sont chargés », « je consulte » ou « j’ai les éléments »
-   ne le précède ; le contrôle des sources intervient ensuite.
+1. **Garde-fou et lecture d'entrée.** Si un STOP métier s'applique, notamment égalité de traitement ou acte
+irréversible, émettre son bloc conservatoire comme tout premier texte visible,
+avant toute annonce d'activation, lecture d'entrée ou autre outil. Reporter
+l'annonce des skills après ce bloc. Ne pas attendre la réponse finale pour STOP.
+Pour chaque entrée SKILL.md sélectionnée, choisir une seule lecture intégrale
+ou une seule série de segments contigus couvrant le fichier du début à la fin.
+Ne jamais mélanger ces deux modes ni relire un segment ou une entrée déjà
+couverte ; conserver la couverture acquise. Si la sortie est tronquée ou
+échouée, signaler la limite et arrêter cette tentative sans présenter
+l'activation comme acquise. Les références utiles restent distinctes des entrées.
 2. **Coactivation réelle.** Une branche métier qui examine une obligation,
    un délai, une règle statutaire, financière ou contractuelle charge aussi
    `recherche-juridique` via Skill dans cette session. Lire un fichier,
