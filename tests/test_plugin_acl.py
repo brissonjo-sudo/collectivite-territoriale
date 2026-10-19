@@ -32,6 +32,8 @@ class PluginAclTests(unittest.TestCase):
         temp = tempfile.TemporaryDirectory(prefix="t43-L18-acl-synthetic-")
         self.addCleanup(temp.cleanup)
         self.directory = Path(temp.name)
+        environment = patch.dict(smoke.os.environ, {"SystemRoot": str(self.directory / "synthetic-windows")})
+        environment.start(); self.addCleanup(environment.stop)
         self.home = self.directory / "codex-home"
         self.plugin = self.home / "plugins/cache/qualification-l9/collectivite-territoriale/1.3.0"
         self.plugin.mkdir(parents=True)
@@ -75,8 +77,8 @@ class PluginAclTests(unittest.TestCase):
                 process.assert_not_called()
 
     def test_redirection_refusee_avant_processus(self) -> None:
-        original = Path.is_junction
-        with patch.object(Path, "is_junction", lambda p: p == self.plugin.parent or original(p)), \
+        original = getattr(Path, "is_junction", lambda p: False)
+        with patch.object(Path, "is_junction", lambda p: p == self.plugin.parent or original(p), create=True), \
                 patch.object(smoke.subprocess, "run") as process:
             with self.assertRaisesRegex(ValueError, "redirigée"):
                 smoke.grant_plugin_read(self.plugin, self.home)
