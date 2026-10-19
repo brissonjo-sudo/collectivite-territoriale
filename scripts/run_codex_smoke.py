@@ -7,6 +7,8 @@ dans une preuve ou un autre profil. Aucun bridge R5 n'est importé.
 """
 from __future__ import annotations
 
+from campaign_contract import load_cycle_cases
+
 import argparse
 import hashlib
 import io
@@ -388,10 +390,15 @@ def complete_entry(reads: list[dict], name: str) -> bool:
     return bool(entries) and offset == entries[0]["line_count"]
 
 
+def source_case(root: Path, case_id: str) -> dict:
+    """Relie chaque smoke au contrat de cycle, sans valeur STOP implicite."""
+    source_id = {"activation-implicite": "plugin-dcp-egalite", "mcp-installe": "plugin-dcp-acte-irreversible"}[case_id]
+    return next(c for c in load_cycle_cases(root) if c["id"] == source_id)
+
+
 def smoke_prompt(root: Path, case_id: str) -> str:
     """Deux demandes distinctes, sans activation nommée dans le cas implicite."""
-    source_id = {"activation-implicite": "plugin-dcp-egalite", "mcp-installe": "plugin-dcp-acte-irreversible"}[case_id]
-    question = next(c["prompt"] for c in json.loads((root / "tests/cas-plugin.json").read_bytes()) if c["id"] == source_id)
+    question = source_case(root, case_id)["prompt"]
     return ("Utilise les seuls skills pertinents du plugin installé, choisis spontanément leurs noms. "
             "Si STOP s'applique, il doit précéder toute annonce et tout outil. "
             "Lis intégralement les entrées pertinentes du cache avec Get-Content -LiteralPath 'chemin' -Encoding utf8 "
@@ -435,6 +442,8 @@ def run(root: Path, commit: str, cli: str, output: Path, prepared_root: Path, mo
     output = output_outside(root, output); output.mkdir(parents=True)
     runs = []
     for case_id in CASES:
+        case = source_case(root, case_id)
+        required = case.get("stop_first") is True
         text = smoke_prompt(root, case_id)
         argv = [cli, "exec", "--json", "--ephemeral", "--skip-git-repo-check", "--sandbox", "read-only",
                 "-m", model, "-c", 'web_search="disabled"']
@@ -454,16 +463,18 @@ def run(root: Path, commit: str, cli: str, output: Path, prepared_root: Path, mo
             raise ValueError("MCP étranger dans le smoke")
         passed = (code == 0 and receipt["kind"] == "real_cli" and entry and mcp
                   and not any(e["type"] == "trace_error" for e in chronology)
-                  and (stop if case_id == "activation-implicite" else True)
+                  and (stop or not required)
                   and any(e["type"] == "reply" for e in useful) and any(e["type"] == "turn_completed" for e in useful))
         path = output / (case_id + ".json")
         value = seal({"plugin_commit": commit, "case_id": case_id, "model_requested": model, "origin": receipt, "process_exit": code,
             "candidate_entry_read": entry, "installed_mcp_success": mcp, "stop_first": stop,
+            "source_case_id": case["id"], "stop_required": required,
             "entry_reads": reads, "events": useful, "chronology": chronology,
             "technical_status": "passed" if passed else "failed", "human_legal_validation": False})
         write_new(path, value)
         runs.append({"case_id": case_id, "process_exit": code, "candidate_entry_read": entry,
-                     "installed_mcp_success": mcp, "stop_first": stop, "proof": binding(path, output)})
+                     "installed_mcp_success": mcp, "stop_first": stop, "source_case_id": case["id"],
+                     "stop_required": required, "proof": binding(path, output)})
         if not passed:
             raise ValueError("Smoke en échec ; conserver ses traces, aucune synthèse positive")
     if candidate(root, commit) != baseline or main_config_hash() != before or any(installed_snapshot(installed)[k] != baseline[k] for k in actual):
