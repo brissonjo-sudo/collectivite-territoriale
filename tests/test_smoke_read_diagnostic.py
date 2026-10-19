@@ -117,7 +117,10 @@ class SmokeReadDiagnosticTests(unittest.TestCase):
     def test_run_ecrit_dans_mesure_et_arrete_avant_le_second_cas(self) -> None:
         candidate = self.root / "candidate"
         candidate.mkdir()
-        (candidate / "upstream.json").write_text('{"skills": {}}', encoding="utf-8")
+        for name in ("upstream.json", "tests/cas-plugin.json", "scripts/cas-plugin-cycle-v2.json"):
+            target = candidate / name
+            target.parent.mkdir(parents=True, exist_ok=True)
+            target.write_bytes((ROOT / name).read_bytes())
         (candidate / ".mcp.json").write_text('{"mcpServers":{"droit-francais":{"url":"https://fixture.invalid"}}}', encoding="utf-8")
         prepared = self.root / "prepared"
         prepared.mkdir()

@@ -2,6 +2,9 @@
 from __future__ import annotations
 
 import json
+import contextlib
+import io
+import subprocess
 from pathlib import Path
 import shutil
 import sys
@@ -13,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 import dcp_reference as dcp
 import assemble_release_evidence as assembly
+import check_dcp_protocol
 
 PROOF = ROOT / "tests/evidence/2026-10-08-candidat-013/dcp-autonome.json"
 
@@ -24,7 +28,12 @@ class DcpReferenceTests(unittest.TestCase):
         self.directory = Path(temporary.name)
         self.root = self.directory / "candidat"
         shutil.copytree(ROOT / "skills/dcp-fpt", self.root / "skills/dcp-fpt")
-        shutil.copyfile(ROOT / "upstream.json", self.root / "upstream.json")
+        # Les mutations de DCP-0 partent de son runtime historique exact :
+        # le candidat courant surchargé doit, lui, être refusé séparément.
+        for name in ("skills/dcp-fpt/SKILL.md", "upstream.json"):
+            raw = subprocess.check_output(["git", "show",
+                "87afc049f70b7900bc670b5f683a033724cae136:" + name], cwd=ROOT)
+            (self.root / name).write_bytes(raw)
         self.path = self.directory / "dcp-autonome.json"
         shutil.copyfile(PROOF, self.path)
 
@@ -33,14 +42,37 @@ class DcpReferenceTests(unittest.TestCase):
         action(value)
         self.path.write_text(json.dumps(value, ensure_ascii=False, indent=2)+"\n", encoding="utf-8", newline="\n")
 
-    def test_accepte_etat_reel_du_candidat_sans_commit_plugin_transfere(self) -> None:
-        proof = assembly.dcp_input(ROOT, PROOF)
+    def test_accepte_reference_historique_sans_commit_plugin_transfere(self) -> None:
+        proof = assembly.dcp_input(self.root, PROOF)
         self.assertEqual(proof, json.loads(PROOF.read_bytes()))
         self.assertEqual(len(proof["summary"]["runtime_sha256"]), 30)
         self.assertNotIn("plugin_commit", proof)
-        self.assertEqual(set(p.relative_to(ROOT / "skills/dcp-fpt").as_posix()
-            for p in (ROOT / "skills/dcp-fpt").rglob("*") if p.is_file())
+        self.assertEqual(set(p.relative_to(self.root / "skills/dcp-fpt").as_posix()
+            for p in (self.root / "skills/dcp-fpt").rglob("*") if p.is_file())
             - set(proof["summary"]["runtime_sha256"]), {"LICENSE"})
+
+    def test_candidat_surcharge_refuse_ancienne_reference(self) -> None:
+        with self.assertRaisesRegex(ValueError, "Octets DCP mesurés divergents : SKILL.md"):
+            assembly.dcp_input(ROOT, PROOF)
+
+    def test_copie_reference_sur_candidat_surcharge_refusee_avant_ecriture(self) -> None:
+        destination = self.directory / "jamais-copiee.json"
+        with self.assertRaisesRegex(ValueError, "Octets DCP mesurés divergents : SKILL.md"):
+            dcp.copy_reference(ROOT, PROOF, destination)
+        self.assertFalse(destination.exists())
+
+    def test_diagnostic_historique_reste_compatible_sans_modele(self) -> None:
+        historical_proof = self.root / dcp.contract()["reference"]["evidence_path"]
+        historical_proof.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copyfile(PROOF, historical_proof)
+        stream = io.StringIO()
+        with patch.object(check_dcp_protocol, "ROOT", self.root), contextlib.redirect_stdout(stream):
+            self.assertEqual(check_dcp_protocol.main(), 0)
+        result = json.loads(stream.getvalue())
+        self.assertTrue(result["compatible"])
+        self.assertFalse(result["model_called"])
+        self.assertFalse(result["new_dcp_campaign_required"])
+        self.assertEqual(result["decision"], "DCP-0")
 
     def test_pin_upstream_different_refuse(self) -> None:
         path = self.root / "upstream.json"

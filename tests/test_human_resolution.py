@@ -16,6 +16,7 @@ import assemble_release_evidence as assembly
 import human_resolution as human
 import measurement_common as common
 import qualify_distribution as qualifier
+from support_preuves_historiques import checkout_at
 
 BUNDLE = ROOT / 'tests/evidence/2026-10-18-candidat-1-3-0'
 SOURCE = '08f92936dd0ae09775a2d2293bae315cdf20847d'
@@ -109,15 +110,22 @@ class HumanRuleTests(unittest.TestCase):
 class HumanBundleTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
-        cls.baseline = {'plugin_commit': SOURCE, **common.snapshot(ROOT)}
+        cls.historical_directory = tempfile.TemporaryDirectory(prefix="L22-source-L14-historique-")
+        cls.addClassCleanup(cls.historical_directory.cleanup)
+        cls.historical_root = Path(cls.historical_directory.name) / "source"
+        checkout_at(ROOT, SOURCE, cls.historical_root)
+        cls.baseline = {'plugin_commit': SOURCE, **common.snapshot(cls.historical_root)}
 
     def setUp(self) -> None:
         temporary = tempfile.TemporaryDirectory(prefix='L15-humain-fixtures-')
         self.addCleanup(temporary.cleanup)
         self.root = Path(temporary.name)
+        historical_chunks = patch.object(human.campaign, "ROOT", self.historical_root)
+        historical_chunks.start()
+        self.addCleanup(historical_chunks.stop)
 
     def test_bundle_reel_quatre_resolutions_et_reserve_sans_release(self) -> None:
-        value = human.load_bundle(ROOT, BUNDLE, self.baseline)
+        value = human.load_bundle(self.historical_root, BUNDLE, self.baseline)
         self.assertEqual(len(value['runs']), 18)
         self.assertEqual(sum(len(r['resolutions']) for r in value['resolutions'].values()), 4)
         self.assertEqual(set(n for n, r in value['resolutions'].items() if r['resolutions']),
@@ -133,30 +141,35 @@ class HumanBundleTests(unittest.TestCase):
         shutil.copytree(BUNDLE, destination)
         return destination
 
+    def test_avis_L14_non_transferable_au_candidat_surcharge(self) -> None:
+        target = {'plugin_commit': SOURCE, **common.snapshot(ROOT)}
+        with self.assertRaisesRegex(ValueError, 'Runtime, configuration ou cas'):
+            human.load_bundle(ROOT, BUNDLE, target)
+
     def test_avis_ou_trace_alteres_refuses(self) -> None:
         bundle = self.copied()
         path = bundle / 'avis-humain-jo-20261018.json.gz'
         path.write_bytes(path.read_bytes() + b'\n')
         with self.assertRaisesRegex(ValueError, 'Preuve liée altérée'):
-            human.load_bundle(ROOT, bundle, self.baseline)
+            human.load_bundle(self.historical_root, bundle, self.baseline)
 
     def test_runtime_cible_different_refuse(self) -> None:
         target = copy.deepcopy(self.baseline)
         target['runtime_sha256']['skills/dsi-fpt/SKILL.md'] = '0' * 64
         with self.assertRaisesRegex(ValueError, 'Runtime, configuration ou cas'):
-            human.load_bundle(ROOT, BUNDLE, target)
+            human.load_bundle(self.historical_root, BUNDLE, target)
 
     def test_protocole_cible_different_refuse(self) -> None:
         target = copy.deepcopy(self.baseline)
         target['toolchain_sha256']['scripts/run_codex_campaign.py'] = '0' * 64
         with self.assertRaisesRegex(ValueError, 'Protocole ou outillage'):
-            human.load_bundle(ROOT, BUNDLE, target)
+            human.load_bundle(self.historical_root, BUNDLE, target)
 
     def test_aucune_ecriture_d_assemblage_sans_smoke(self) -> None:
         output = self.root / 'aucune-preuve'
         with patch.object(assembly, 'candidate', return_value=self.baseline):
             with self.assertRaises(FileNotFoundError):
-                assembly.assemble(ROOT, SOURCE, BUNDLE / 'campagne', self.root / 'smoke-absent.json',
+                assembly.assemble(self.historical_root, SOURCE, BUNDLE / 'campagne', self.root / 'smoke-absent.json',
                     ROOT / 'tests/evidence/2026-10-08-candidat-013/dcp-autonome.json',
                     BUNDLE / 'campagne', output, BUNDLE)
         self.assertFalse(output.exists())
@@ -166,7 +179,7 @@ class HumanBundleTests(unittest.TestCase):
         bundle = self.copied()
         (bundle / 'FICHE-RELECTURE-17.md.gz').unlink()
         with self.assertRaises((OSError, ValueError)):
-            human.load_bundle(ROOT, bundle, self.baseline)
+            human.load_bundle(self.historical_root, bundle, self.baseline)
 
     def original(self, bundle: Path, relative: str) -> dict:
         index = json.loads((bundle / 'liaisons-humaines.json').read_bytes())
@@ -200,7 +213,7 @@ class HumanBundleTests(unittest.TestCase):
         value['origin']['synthetic'] = True
         self.replace_piece(bundle, relative, common.seal(value))
         with self.assertRaisesRegex(ValueError, 'Pièce synthétique'):
-            human.load_bundle(ROOT, bundle, self.baseline)
+            human.load_bundle(self.historical_root, bundle, self.baseline)
 
     def test_decideur_substitue_refuse_meme_apres_recalcul_index(self) -> None:
         bundle = self.copied()
@@ -209,7 +222,7 @@ class HumanBundleTests(unittest.TestCase):
         value['decideur'] = 'autre'
         self.replace_piece(bundle, relative, value)
         with self.assertRaisesRegex(ValueError, 'Décideur humain différent'):
-            human.load_bundle(ROOT, bundle, self.baseline)
+            human.load_bundle(self.historical_root, bundle, self.baseline)
 
     def test_validation_globale_ne_peut_pas_etre_inventee(self) -> None:
         bundle = self.copied()
@@ -218,7 +231,7 @@ class HumanBundleTests(unittest.TestCase):
         value['human_legal_validation_globale'] = False
         self.replace_piece(bundle, relative, value)
         with self.assertRaisesRegex(ValueError, 'Décision humaine globale absente'):
-            human.load_bundle(ROOT, bundle, self.baseline)
+            human.load_bundle(self.historical_root, bundle, self.baseline)
 
     def test_original_decompresse_empreinte_divergente_refusee(self) -> None:
         index = json.loads((BUNDLE / 'liaisons-humaines.json').read_bytes())

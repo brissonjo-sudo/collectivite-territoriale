@@ -156,7 +156,7 @@ class CliToolchainsTests(unittest.TestCase):
 
     def test_transition_naccepte_pas_derive_du_lecteur(self) -> None:
         measured = json.loads(SOURCE.read_bytes())
-        target = {'plugin_commit': COMMIT, **common.snapshot(ROOT)}
+        target = copy.deepcopy(measured)  # Mutation du protocole à runtime historique identique.
         target['toolchain_sha256']['scripts/measurement_common.py'] = '0' * 64
         with self.assertRaisesRegex(ValueError, 'Protocole ou outillage'):
             human.compatible(ROOT, measured, target)
