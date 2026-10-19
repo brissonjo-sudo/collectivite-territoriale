@@ -1,6 +1,10 @@
 ---
 name: dcp-fpt
 description: >-
+  Si un STOP métier s'applique, il est le tout premier texte visible, avant
+  annonce d'activation, lecture ou outil ; annoncer les skills ensuite.
+  Lire chaque entrée une seule fois : en entier ou par segments contigus,
+  sans doublon ni mélange des deux modes. En cas de troncature, signaler et arrêter.
   Aide à la décision pour la fonction commande publique d'une collectivité
   territoriale française : besoin, passation, attribution, exécution juridique,
   modifications, résiliation, contentieux et écrits des marchés publics.
@@ -9,6 +13,19 @@ description: >-
   déontologie et la sanction des agents (drh-fpt), le besoin opérationnel de
   police municipale (dpm-fpt), les concessions et délégations de service public.
 ---
+
+## Priorité STOP et entrée unique — proposition L20
+
+Si un STOP métier s'applique, notamment égalité de traitement ou acte
+irréversible, émettre son bloc conservatoire comme tout premier texte visible,
+avant toute annonce d'activation, lecture d'entrée ou autre outil. Reporter
+l'annonce des skills après ce bloc. Ne pas attendre la réponse finale pour STOP.
+Pour chaque entrée SKILL.md sélectionnée, choisir une seule lecture intégrale
+ou une seule série de segments contigus couvrant le fichier du début à la fin.
+Ne jamais mélanger ces deux modes ni relire un segment ou une entrée déjà
+couverte ; conserver la couverture acquise. Si la sortie est tronquée ou
+échouée, signaler la limite et arrêter cette tentative sans présenter
+l'activation comme acquise. Les références utiles restent distinctes des entrées.
 
 # Skill : dcp-fpt (v0.1.3)
 
