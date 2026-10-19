@@ -8,6 +8,7 @@ dans une preuve ou un autre profil. Aucun bridge R5 n'est importé.
 from __future__ import annotations
 
 import argparse
+import hashlib
 import io
 import json
 import os
@@ -20,7 +21,7 @@ import tarfile
 import tempfile
 import threading
 import time
-from typing import Any
+from typing import Any, NoReturn
 
 from measurement_common import (CONFIGURATION, binding, bound, candidate, checked, digest,
                                 fingerprint, output_outside, run_cli, seal, snapshot, write_new)
@@ -295,8 +296,62 @@ def install(root: Path, commit: str, cli: str, output: Path) -> None:
         "credentials_copied": False, "human_legal_validation": False, "model_called": False, "plugin_acl": acl}))
 
 
-def read_events(raw: list[dict], installed: Path) -> list[dict]:
+MAX_COMMAND_CHARS = 2000
+MARK = "[MASQUE]"
+VALUE = r'''(?:"[^"\r\n]*"|'[^'\r\n]*'|[^\s;|,}]+)'''
+KEYS = r"(?:[A-Z0-9_]*(?:API[_-]?KEY|ACCESS[_-]?TOKEN|REFRESH[_-]?TOKEN|CLIENT[_-]?SECRET|PASSWORD|TOKEN|SECRET|KEY)|AUTHORIZATION)"
+CREDENTIAL = r"(?:auth\.json|credentials(?:\.json)?|[\w.-]*oauth[\w.-]*\.json|tokens?\.json|\.env(?:\.[\w-]+)?|id_rsa|id_ed25519)"
+
+
+def public_command(command: str | None) -> dict:
+    """Motifs documentés : clés/jetons usuels, affectations, Bearer et chemins credentials."""
+    if not isinstance(command, str):
+        return {"command_available": False, "command_text": None, "command_truncated": False}
+    text = command
+    redactions = []
+    patterns = [
+        ("credential_path", r'''(?i)(?:"[^"\r\n]*'''+CREDENTIAL+r'''[^"\r\n]*"|'[^'\r\n]*'''+CREDENTIAL+r'''[^'\r\n]*')'''),
+        ("credential_path", r"(?i)(?:[\w.~$%:\-]+[\\/])*"+CREDENTIAL+r"\b"),
+        ("named_secret", r"(?i)(?:\$env:)?[\"']?\b"+KEYS+r"\b[\"']?\s*[:=]\s*"+VALUE),
+        ("secret_option", r"(?i)--(?:api[-_]key|access[-_]token|refresh[-_]token|client[-_]secret|password|token|secret|key)\s+"+VALUE),
+        ("url_credentials", r'''(?i)\b(?:https?|ssh)://[^/\s'"@]+:[^@\s'"]+@'''),
+        ("bearer", r"(?i)\bBearer\s+[^\s'\";,)}]+"),
+        ("provider_token", r"\b(?:sk-(?:proj-|svcacct-)?[A-Za-z0-9_-]{16,}|gh[pousr]_[A-Za-z0-9_]{16,}|github_pat_[A-Za-z0-9_]{16,})"),
+        ("jwt", r"\beyJ[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]+\b"),
+        ("private_key", r"(?s)-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----.*?(?:-----END (?:RSA |EC |OPENSSH )?PRIVATE KEY-----|$)"),
+    ]
+    for label, pattern in patterns:
+        text, count = re.subn(pattern, MARK, text)
+        if count:redactions.append(label)
+    included = text[:MAX_COMMAND_CHARS]
+    return {"command_available": True, "command_text": included, "command_limit_chars": MAX_COMMAND_CHARS,
+            "command_truncated": len(text) > MAX_COMMAND_CHARS, "command_redactions": list(dict.fromkeys(redactions)),
+            "masked_command_sha256": hashlib.sha256(text.encode("utf-8")).hexdigest()}
+
+
+def read_events(raw: list[dict], installed: Path, *, diagnostic_path: Path | None = None,
+                case_id: str | None = None, plugin_commit: str | None = None) -> list[dict]:
     """Vérifie les lectures dans le cache installé sans archiver leurs contenus."""
+    def refuse(item: dict, reason: str) -> NoReturn:
+        if diagnostic_path is not None:
+            output = item.get("aggregated_output")
+            status = item.get("status")
+            code = item.get("exit_code")
+            value = {"kind": "installed_read_refusal", "diagnostic_only": True,
+                "case_id": case_id, "plugin_commit": plugin_commit, "refusal": reason,
+                **public_command(item.get("command")),
+                "exit_code": code if type(code) is int else None,
+                "status": status if status in ("completed", "failed", "in_progress", "declined") else "unrecognized",
+                "output_chars": len(output) if isinstance(output, str) else None,
+                "output_bytes_utf8": len(output.encode("utf-8")) if isinstance(output, str) else None,
+                "output_content_archived": False, "human_legal_validation": False}
+            try:
+                write_new(diagnostic_path, value)
+            except OSError as exc:
+                # Un incident d'archivage ne change ni le refus ni une ancienne piece.
+                raise ValueError(reason) from exc
+        raise ValueError(reason)
+
     result = []
     for event in raw:
         item = event.get("item") or {}
@@ -305,17 +360,17 @@ def read_events(raw: list[dict], installed: Path) -> list[dict]:
         body = read_body(item.get("command", ""))
         match = re.fullmatch(r"Get-Content -LiteralPath '([^']+)' -Encoding (?:utf8|utf-8)(?: \| Select-Object -Skip (\d+) -First (\d+))?", body, re.I)
         if not match:
-            raise ValueError("Commande hors contrat de lecture installé")
+            refuse(item, "Commande hors contrat de lecture installé")
         path = Path(match[1]).resolve()
         if path.is_symlink() or not path.is_relative_to((installed / "skills").resolve()):
-            raise ValueError("Lecture hors skill installé")
+            refuse(item, "Lecture hors skill installé")
         lines = path.read_text(encoding="utf-8").splitlines(keepends=True)
         start, count = int(match[2] or 0), int(match[3] or len(lines))
         expected = "".join(lines[start:start+count]).strip()
         valid = (bool(expected) and expected in item.get("aggregated_output", "").replace("\r\n", "\n")
                  and item.get("exit_code") == 0 and item.get("status") == "completed")
         if not valid:
-            raise ValueError("Lecture installée tronquée ou échouée")
+            refuse(item, "Lecture installée tronquée ou échouée")
         result.append({"path": path.relative_to(installed).as_posix(), "start": start,
                        "count": min(count, len(lines)-start), "line_count": len(lines),
                        "source_sha256": fingerprint(path), "content_verified": True})
@@ -386,7 +441,8 @@ def run(root: Path, commit: str, cli: str, output: Path, prepared_root: Path, mo
         if os.name == "nt":
             argv += ["-c", 'windows.sandbox="elevated"']
         events, code, receipt = run_cli(argv + ["-"], text, workspace, timeout, environment, cli_phase='smoke_cli')
-        reads = read_events(events, installed)
+        reads = read_events(events, installed, diagnostic_path=output / (case_id + ".read-refusal.json"),
+                            case_id=case_id, plugin_commit=commit)
         # Les commandes installées sont contrôlées ci-dessus, pas comme copies .agents.
         useful = sanitize([e for e in events if (e.get("item") or {}).get("type") != "command_execution"])
         chronology = timeline(events)
