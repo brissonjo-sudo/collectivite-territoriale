@@ -134,6 +134,124 @@ def main_config_hash() -> str | None:
     return fingerprint(path) if path.is_file() else None
 
 
+WINDOWS = os.name == "nt"
+SANDBOX_GROUP = "CodexSandboxUsers"
+
+
+def plugin_acl_target(installed: Path, home: Path) -> tuple[Path, Path]:
+    """Refuse toute cible autre que le plugin du marketplace isolé, liens inclus."""
+    for leaf in (installed, home):
+        for path in (leaf, *leaf.parents):
+            if path.is_symlink() or getattr(path, "is_junction", lambda: False)():
+                raise ValueError("Cible ACL redirigée")
+    installed, home = installed.resolve(), home.resolve()
+    if not installed.is_relative_to(home):
+        raise ValueError("Cible ACL hors plugin installé")
+    parts = installed.relative_to(home).parts
+    if (home.name != "codex-home" or len(parts) != 5
+            or parts[:4] != ("plugins", "cache", "qualification-l9", "collectivite-territoriale")
+            or not installed.is_dir() or not home.is_dir()):
+        raise ValueError("Cible ACL hors plugin installé")
+    return installed, home
+
+
+def windows_acl_state(installed: Path, home: Path) -> dict:
+    """Lecture structurée par SID du seul groupe local nommé ; aucun profil lu."""
+    powershell = Path(os.environ["SystemRoot"]) / "System32/WindowsPowerShell/v1.0/powershell.exe"
+    def literal(path: Path) -> str:
+        return "'" + str(path).replace("'", "''") + "'"
+    script = (
+        "$ErrorActionPreference='Stop'; [Console]::OutputEncoding=[Text.UTF8Encoding]::new($false); "
+        "$group=Get-LocalGroup -Name 'CodexSandboxUsers' -ErrorAction Stop; $sid=$group.SID.Value; "
+        "function Rules($acl) { @($acl.GetAccessRules($true,$true,[Security.Principal.SecurityIdentifier]) "
+        "| Where-Object { $_.IdentityReference.Value -eq $sid } | ForEach-Object { "
+        "[ordered]@{rights=[int]$_.FileSystemRights; inheritance=[int]$_.InheritanceFlags; "
+        "propagation=[int]$_.PropagationFlags; type=$_.AccessControlType.ToString(); inherited=$_.IsInherited} }) }; "
+        "$plugin=Get-Acl -LiteralPath " + literal(installed) + "; "
+        "$homeAcl=Get-Acl -LiteralPath " + literal(home) + "; "
+        "[ordered]@{group_sid=$sid; plugin_rules=@(Rules $plugin); home_rules=@(Rules $homeAcl); "
+        "home_dacl=$homeAcl.GetSecurityDescriptorSddlForm([Security.AccessControl.AccessControlSections]::Access)} "
+        "| ConvertTo-Json -Depth 5 -Compress"
+    )
+    # Le PSModulePath de PowerShell 7 ne doit pas masquer les modules système 5.1.
+    environment = {k: v for k, v in os.environ.items() if k.upper() != "PSMODULEPATH"}
+    result = subprocess.run([str(powershell), "-NoProfile", "-NonInteractive", "-Command", script],
+        env=environment, capture_output=True, text=True, encoding="utf-8", timeout=30, check=False)
+    if result.returncode:
+        raise ValueError("Groupe local CodexSandboxUsers absent ou lecture ACL impossible")
+    value = json.loads(result.stdout)
+    if (not isinstance(value, dict) or re.fullmatch(r"S-1-5-21-(?:\d+-){3}\d+", str(value.get("group_sid"))) is None
+            or not isinstance(value.get("plugin_rules"), list) or not isinstance(value.get("home_rules"), list)
+            or not isinstance(value.get("home_dacl"), str) or not value["home_dacl"]):
+        raise ValueError("Lecture ACL non attestée")
+    return value
+
+
+def verify_acl_state(state: dict, require_plugin: bool) -> None:
+    """Aucun octroi au home ; seul RX explicite et héritable est recevable au plugin."""
+    if any(rule.get("type") == "Allow" for rule in state["home_rules"]):
+        raise ValueError("Octroi CodexSandboxUsers interdit sur codex-home")
+    if require_plugin:
+        rules = state["plugin_rules"]
+        # Windows ajoute normalement Synchronize à ReadAndExecute (131241).
+        if (len(rules) != 1 or rules[0].get("type") != "Allow"
+                or rules[0].get("rights") not in {131241, 1179817}
+                or rules[0].get("inheritance") != 3 or rules[0].get("propagation") != 0
+                or rules[0].get("inherited") is not False):
+            raise ValueError("Octroi plugin (OI)(CI)RX non attesté")
+
+
+def plugin_acl_command(installed: Path, sid: str) -> list[str]:
+    """Une seule mutation ACL, sans récursion, remplacement ni changement de propriétaire."""
+    icacls = Path(os.environ["SystemRoot"]) / "System32/icacls.exe"
+    return [str(icacls), str(installed), "/grant", "*" + sid + ":(OI)(CI)RX"]
+
+
+def grant_plugin_read(installed: Path, home: Path) -> dict:
+    """Accorde RX au seul plugin sous Windows, après vérification des octets par install."""
+    if not WINDOWS:
+        return {"platform": "non_windows", "status": "not_applicable", "grant_executed": False}
+    installed, home = plugin_acl_target(installed, home)
+    before = windows_acl_state(installed, home)
+    verify_acl_state(before, False)
+    argv = plugin_acl_command(installed, before["group_sid"])
+    result = subprocess.run(argv, capture_output=True, timeout=30, check=False)
+    if result.returncode:
+        raise ValueError("Échec de l'octroi ACL ciblé au plugin")
+    after = windows_acl_state(installed, home)
+    verify_acl_state(after, True)
+    if before["group_sid"] != after["group_sid"] or before["home_dacl"] != after["home_dacl"]:
+        raise ValueError("Groupe ou ACL codex-home modifié pendant l'octroi")
+    return {"platform": "windows", "status": "verified", "grant_executed": True,
+        "group": SANDBOX_GROUP, "group_sid": after["group_sid"],
+        "target": str(installed), "home": str(home), "command": argv, "process_exit": result.returncode,
+        "plugin_grant": "(OI)(CI)RX", "plugin_acl_verified": True, "home_grant_present": False,
+        "home_dacl_sha256": digest(after["home_dacl"].encode("utf-8"))}
+
+
+def verify_plugin_read(prepared: dict, installed: Path, home: Path) -> None:
+    """Refuse avant authentification/modèle un reçu absent, étranger ou une ACL dérivée."""
+    receipt = prepared.get("plugin_acl")
+    if not WINDOWS:
+        if receipt != {"platform": "non_windows", "status": "not_applicable", "grant_executed": False}:
+            raise ValueError("Statut ACL non Windows absent ou divergent")
+        return
+    installed, home = plugin_acl_target(installed, home)
+    if (not isinstance(receipt, dict) or receipt.get("platform") != "windows"
+            or receipt.get("status") != "verified" or receipt.get("grant_executed") is not True
+            or receipt.get("group") != SANDBOX_GROUP or receipt.get("target") != str(installed)
+            or receipt.get("home") != str(home) or receipt.get("process_exit") != 0
+            or receipt.get("plugin_grant") != "(OI)(CI)RX" or receipt.get("plugin_acl_verified") is not True
+            or receipt.get("home_grant_present") is not False):
+        raise ValueError("Octroi plugin non attesté dans le statut d'installation")
+    state = windows_acl_state(installed, home)
+    verify_acl_state(state, True)
+    if (receipt.get("group_sid") != state["group_sid"]
+            or receipt.get("command") != plugin_acl_command(installed, state["group_sid"])
+            or receipt.get("home_dacl_sha256") != digest(state["home_dacl"].encode("utf-8"))):
+        raise ValueError("Attestation ACL étrangère ou ACL modifiée depuis installation")
+
+
 def install(root: Path, commit: str, cli: str, output: Path) -> None:
     """Installe la source publique exacte dans son seul home temporaire neuf."""
     baseline = candidate(root, commit)
@@ -168,12 +286,13 @@ def install(root: Path, commit: str, cli: str, output: Path) -> None:
     actual = installed_snapshot(installed)
     if any(actual[k] != baseline[k] for k in actual) or main_config_hash() != before or candidate(root, commit) != baseline:
         raise ValueError("Octets installés, candidat ou configuration principale divergents")
+    acl = grant_plugin_read(installed, home)
     if verify_codex_cli(Path(cli), 'smoke_cli') != identity:
         raise ValueError('Package CLI modifié pendant installation')
     write_new(output / "prepared.json", seal({**baseline, "origin": {"kind": "real_smoke_install", "synthetic": False, "dry_run": False},
         "environment_path": environment_root.relative_to(output).as_posix(), "installed_path": installed.relative_to(output).as_posix(),
         "cli_sha256": fingerprint(Path(cli)), "smoke_cli": identity, "main_config_sha256": before,
-        "credentials_copied": False, "human_legal_validation": False, "model_called": False}))
+        "credentials_copied": False, "human_legal_validation": False, "model_called": False, "plugin_acl": acl}))
 
 
 def read_events(raw: list[dict], installed: Path) -> list[dict]:
@@ -238,6 +357,7 @@ def run(root: Path, commit: str, cli: str, output: Path, prepared_root: Path, mo
     installed = (prepared_root / prepared["installed_path"]).resolve()
     if not environment_root.is_relative_to(prepared_root.resolve()) or not installed.is_relative_to(environment_root):
         raise ValueError("Home préparé hors tentative")
+    verify_plugin_read(prepared, installed, environment_root / "codex-home")
     environment = {**os.environ, "CODEX_HOME": str(environment_root / "codex-home")}
     workspace = environment_root / "workspace"
     if (workspace / ".agents/skills").exists():
