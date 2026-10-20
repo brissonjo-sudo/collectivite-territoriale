@@ -1,0 +1,527 @@
+{
+  "plugin_commit": "aa811706eb395cbfea1f6f58db520176e2e480f0",
+  "case_id": "mcp-installe",
+  "model_requested": "gpt-6.1-sol",
+  "origin": {
+    "kind": "real_cli",
+    "synthetic": false,
+    "dry_run": false,
+    "cli_phase": "smoke_cli",
+    "cli_toolchain": {
+      "version": "codex-cli 0.163.0-alpha.10.2",
+      "sha256": "f6dbf48cb70f62649c645f26c87dc9bf84cc36986202dfad8e12fb5b8ca70312",
+      "companions_sha256": {
+        "codex-code-mode-host.exe": "3b6a9179a4da17fa5fc6948219cd61486dc3b534c683838076d8c61bd311c68e",
+        "codex-command-runner.exe": "ce80b56a2f37f808815fde33cceb97ac858ceecde296425ad3860f0f37fb4877",
+        "codex-windows-sandbox-setup.exe": "c4da812016cbfb92d9a62791f78460c59e9662faadb0a2720d3aa5d0535b80bd"
+      }
+    },
+    "cli_version": "codex-cli 0.163.0-alpha.10.2",
+    "thread_id": "ef75e1dab78170edaf7586899be3ac77dcdf68f462d0270efc5ac92cec2a6ad9",
+    "cli_sha256": "f6dbf48cb70f62649c645f26c87dc9bf84cc36986202dfad8e12fb5b8ca70312",
+    "argv_sha256": "211e9873cdb3609aef610c8254b3e8ae0a84787e8c0be24f46845097e0659721",
+    "prompt_sha256": "9aa86947471e1169a9ba3186bf5c92221e1519e14a7454c5e42337461bf2c896",
+    "stdout_sha256": "e23e1c7c670a13c9eca5a55a972aa8bb512e80b3376f95281162588734359454",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "process_exit": 0,
+    "elapsed_seconds": 131.680951,
+    "startup_failure": {
+      "before_model_attested": false,
+      "model_session_opened": true,
+      "zero_input_tokens_attested": false,
+      "input_tokens_before_model": null,
+      "reason": "startup_not_attested",
+      "diagnostic": {
+        "command_available": true,
+        "command_text": "",
+        "command_limit_chars": 2000,
+        "command_truncated": false,
+        "command_redactions": [],
+        "masked_command_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "basis": "unknown_or_session_opened"
+    }
+  },
+  "process_exit": 0,
+  "candidate_entry_read": true,
+  "installed_mcp_success": true,
+  "stop_first": true,
+  "source_case_id": "plugin-dcp-acte-irreversible",
+  "stop_required": true,
+  "entry_reads": [
+    {
+      "path": "skills/dcp-fpt/SKILL.md",
+      "start": 0,
+      "count": 85,
+      "line_count": 319,
+      "source_sha256": "49e04e18203cc6472c35ab595d8f0a9a30671a51bd946d8a03f6b936041ff3b3",
+      "content_verified": true
+    },
+    {
+      "path": "skills/dcp-fpt/SKILL.md",
+      "start": 85,
+      "count": 85,
+      "line_count": 319,
+      "source_sha256": "49e04e18203cc6472c35ab595d8f0a9a30671a51bd946d8a03f6b936041ff3b3",
+      "content_verified": true
+    },
+    {
+      "path": "skills/recherche-juridique/SKILL.md",
+      "start": 0,
+      "count": 85,
+      "line_count": 1162,
+      "source_sha256": "45ecfad61022be17315da425f27bd16e57a5f17be7ef6263f1cbd1db88c58a51",
+      "content_verified": true
+    },
+    {
+      "path": "skills/dcp-fpt/SKILL.md",
+      "start": 170,
+      "count": 85,
+      "line_count": 319,
+      "source_sha256": "49e04e18203cc6472c35ab595d8f0a9a30671a51bd946d8a03f6b936041ff3b3",
+      "content_verified": true
+    },
+    {
+      "path": "skills/recherche-juridique/SKILL.md",
+      "start": 85,
+      "count": 85,
+      "line_count": 1162,
+      "source_sha256": "45ecfad61022be17315da425f27bd16e57a5f17be7ef6263f1cbd1db88c58a51",
+      "content_verified": true
+    },
+    {
+      "path": "skills/dcp-fpt/SKILL.md",
+      "start": 255,
+      "count": 64,
+      "line_count": 319,
+      "source_sha256": "49e04e18203cc6472c35ab595d8f0a9a30671a51bd946d8a03f6b936041ff3b3",
+      "content_verified": true
+    },
+    {
+      "path": "skills/recherche-juridique/SKILL.md",
+      "start": 170,
+      "count": 85,
+      "line_count": 1162,
+      "source_sha256": "45ecfad61022be17315da425f27bd16e57a5f17be7ef6263f1cbd1db88c58a51",
+      "content_verified": true
+    },
+    {
+      "path": "skills/dcp-fpt/references/analyse-situation.md",
+      "start": 0,
+      "count": 79,
+      "line_count": 79,
+      "source_sha256": "5ff8cf6921bcd31a7de4503a0cc617124aaab099e57ab7e938e0f1c0f375f206",
+      "content_verified": true
+    },
+    {
+      "path": "skills/dcp-fpt/references/contentieux.md",
+      "start": 0,
+      "count": 85,
+      "line_count": 115,
+      "source_sha256": "dc8e88af165873e78d7495f22b41c2c572b4f0431cbda481367504994fe0ef8f",
+      "content_verified": true
+    },
+    {
+      "path": "skills/dcp-fpt/references/attribution-signature.md",
+      "start": 0,
+      "count": 85,
+      "line_count": 112,
+      "source_sha256": "6b03b803e85665a8603df96dea425761667e6b4cff1b307d5355f8fcaf840904",
+      "content_verified": true
+    },
+    {
+      "path": "skills/recherche-juridique/SKILL.md",
+      "start": 255,
+      "count": 85,
+      "line_count": 1162,
+      "source_sha256": "45ecfad61022be17315da425f27bd16e57a5f17be7ef6263f1cbd1db88c58a51",
+      "content_verified": true
+    },
+    {
+      "path": "skills/dcp-fpt/references/socle-sources-verification.md",
+      "start": 0,
+      "count": 85,
+      "line_count": 121,
+      "source_sha256": "12b45dea2e0431a055f42417745a02f71e4b98126df2610f72f87cafaf1173cd",
+      "content_verified": true
+    },
+    {
+      "path": "skills/dcp-fpt/references/references-verifiees.md",
+      "start": 0,
+      "count": 85,
+      "line_count": 306,
+      "source_sha256": "58737d8b1f77f4f1e543e09f9d7b9ae7d27652ab1baf187f9e083ceee2527250",
+      "content_verified": true
+    },
+    {
+      "path": "skills/recherche-juridique/SKILL.md",
+      "start": 340,
+      "count": 85,
+      "line_count": 1162,
+      "source_sha256": "45ecfad61022be17315da425f27bd16e57a5f17be7ef6263f1cbd1db88c58a51",
+      "content_verified": true
+    },
+    {
+      "path": "skills/recherche-juridique/SKILL.md",
+      "start": 425,
+      "count": 85,
+      "line_count": 1162,
+      "source_sha256": "45ecfad61022be17315da425f27bd16e57a5f17be7ef6263f1cbd1db88c58a51",
+      "content_verified": true
+    },
+    {
+      "path": "skills/recherche-juridique/SKILL.md",
+      "start": 510,
+      "count": 85,
+      "line_count": 1162,
+      "source_sha256": "45ecfad61022be17315da425f27bd16e57a5f17be7ef6263f1cbd1db88c58a51",
+      "content_verified": true
+    },
+    {
+      "path": "skills/recherche-juridique/SKILL.md",
+      "start": 595,
+      "count": 85,
+      "line_count": 1162,
+      "source_sha256": "45ecfad61022be17315da425f27bd16e57a5f17be7ef6263f1cbd1db88c58a51",
+      "content_verified": true
+    },
+    {
+      "path": "skills/recherche-juridique/SKILL.md",
+      "start": 680,
+      "count": 85,
+      "line_count": 1162,
+      "source_sha256": "45ecfad61022be17315da425f27bd16e57a5f17be7ef6263f1cbd1db88c58a51",
+      "content_verified": true
+    },
+    {
+      "path": "skills/recherche-juridique/SKILL.md",
+      "start": 765,
+      "count": 85,
+      "line_count": 1162,
+      "source_sha256": "45ecfad61022be17315da425f27bd16e57a5f17be7ef6263f1cbd1db88c58a51",
+      "content_verified": true
+    },
+    {
+      "path": "skills/recherche-juridique/SKILL.md",
+      "start": 850,
+      "count": 85,
+      "line_count": 1162,
+      "source_sha256": "45ecfad61022be17315da425f27bd16e57a5f17be7ef6263f1cbd1db88c58a51",
+      "content_verified": true
+    },
+    {
+      "path": "skills/recherche-juridique/SKILL.md",
+      "start": 935,
+      "count": 85,
+      "line_count": 1162,
+      "source_sha256": "45ecfad61022be17315da425f27bd16e57a5f17be7ef6263f1cbd1db88c58a51",
+      "content_verified": true
+    },
+    {
+      "path": "skills/recherche-juridique/SKILL.md",
+      "start": 1020,
+      "count": 85,
+      "line_count": 1162,
+      "source_sha256": "45ecfad61022be17315da425f27bd16e57a5f17be7ef6263f1cbd1db88c58a51",
+      "content_verified": true
+    },
+    {
+      "path": "skills/recherche-juridique/SKILL.md",
+      "start": 1105,
+      "count": 57,
+      "line_count": 1162,
+      "source_sha256": "45ecfad61022be17315da425f27bd16e57a5f17be7ef6263f1cbd1db88c58a51",
+      "content_verified": true
+    },
+    {
+      "path": "skills/recherche-juridique/references/modules.md",
+      "start": 0,
+      "count": 85,
+      "line_count": 104,
+      "source_sha256": "4dfaccd0fb0d1e2da83bf1ea753ef0adaceb61f5eacfffaf765ebd67dbb6e71a",
+      "content_verified": true
+    },
+    {
+      "path": "skills/recherche-juridique/references/gabarits-sortie.md",
+      "start": 0,
+      "count": 85,
+      "line_count": 213,
+      "source_sha256": "c4d83e364f45631810d9b361b013d542436986197a3d43f4970eea3e3033b88f",
+      "content_verified": true
+    },
+    {
+      "path": "skills/recherche-juridique/references/modules.md",
+      "start": 85,
+      "count": 19,
+      "line_count": 104,
+      "source_sha256": "4dfaccd0fb0d1e2da83bf1ea753ef0adaceb61f5eacfffaf765ebd67dbb6e71a",
+      "content_verified": true
+    }
+  ],
+  "eof_probes": [],
+  "events": [
+    {
+      "type": "reply",
+      "text": "STOP — acte irréversible\n\nJe vais appliquer les skills « dcp-fpt » et « recherche-juridique » pour établir le calendrier de signature et de démarrage à proposer.\n"
+    },
+    {
+      "type": "reply",
+      "text": "Ne pas signer, ne pas notifier et ne pas faire commencer la prestation à ce stade. Il faut vérifier la suspension liée au recours et l’habilitation du signataire. Le service achat prépare le dossier ; l’autorité compétente décide, avec une délégation vérifiée si elle est utilisée. La commission d’appel d’offres, lorsqu’elle est requise, intervient pour l’attribution.\n\nLa vérification des règles et de leur vigueur relève de « recherche-juridique ».\n"
+    },
+    {
+      "type": "mcp_call",
+      "server": "droit-francais",
+      "tool": "search_articles",
+      "status": "completed",
+      "succeeded": true,
+      "arguments_publics": {
+        "code": "Code de justice administrative",
+        "number": "L551-4"
+      },
+      "identifiants_dans_resultat": [
+        "LEGIARTI000020602109"
+      ],
+      "result_sha256": "faa10e3cd1252692de86c738988c3b3da0808ab26174bb4c3759f2c58225bf48"
+    },
+    {
+      "type": "mcp_call",
+      "server": "droit-francais",
+      "tool": "get_article",
+      "status": "completed",
+      "succeeded": true,
+      "arguments_publics": {
+        "id": "LEGIARTI000020602109"
+      },
+      "identifiants_dans_resultat": [
+        "LEGIARTI000020602109"
+      ],
+      "result_sha256": "0504369a6304d0625e939ce141bd9a29dcf721826dd7ec7d957e5c4a4765ab56"
+    },
+    {
+      "type": "mcp_call",
+      "server": "droit-francais",
+      "tool": "search_articles",
+      "status": "completed",
+      "succeeded": true,
+      "arguments_publics": {
+        "code": "Code de la commande publique",
+        "number": "R2182-4"
+      },
+      "identifiants_dans_resultat": [
+        "LEGIARTI000037729981"
+      ],
+      "result_sha256": "f3d1af9496bc4993ffba43b93ab4b79763c05fb8f83cd450c9e2f262f36c85c9"
+    },
+    {
+      "type": "mcp_call",
+      "server": "droit-francais",
+      "tool": "get_article",
+      "status": "completed",
+      "succeeded": true,
+      "arguments_publics": {
+        "id": "LEGIARTI000037729981"
+      },
+      "identifiants_dans_resultat": [
+        "LEGIARTI000037729981"
+      ],
+      "result_sha256": "f599d00115c49e4098c852684199832096139fa45b679beb4ad47279a5a6dbe7"
+    },
+    {
+      "type": "reply",
+      "text": "La source officielle récupérée confirme que, pour un pouvoir adjudicateur, la signature est interdite depuis la saisine du tribunal jusqu’à la notification de la décision juridictionnelle. Le calendrier doit donc être fixé par étapes et conditions, sans promettre aujourd’hui une date de démarrage.\n"
+    },
+    {
+      "type": "reply",
+      "text": "STOP — acte irréversible\n\n**Ne pas signer, ne pas notifier et ne pas faire commencer la prestation maintenant.** La suspension liée au recours et l’habilitation du signataire doivent être contrôlées séparément. La délégation indisponible ne peut être tenue pour vérifiée.\n\nJe proposerais au service prescripteur **un calendrier conditionnel, sans date ferme de démarrage** :\n\n| Étape | Action et condition de passage |\n|---|---|\n| **Immédiatement** | Le service achat bloque la signature et le démarrage, rassemble le recours, la preuve de saisine, les pièces de procédure et les actes d’habilitation ; il associe le conseil juridique et l’autorité compétente. |\n| **Pendant le référé** | Préparer la défense et le dossier contractuel. Pour un pouvoir adjudicateur, la signature est interdite depuis la saisine du tribunal administratif **jusqu’à la notification à celui-ci de la décision juridictionnelle** : l’audience seule ne constitue pas cette échéance. |\n| **Après notification de la décision** | Faire examiner son dispositif par le conseil : quelles suites permet-elle ou impose-t-elle ? Vérifier également les autres conditions de signature applicables à la procédure. **Aucune signature automatique à réception de la décision.** |\n| **Avant toute signature** | Identifier l’autorité habilitée et obtenir la preuve de sa compétence. Si une délégation est invoquée, récupérer et contrôler l’acte. Distinguer préparation par le service achat, attribution par l’organe compétent et signature. |\n| **Après signature régulière** | Organiser la notification au titulaire et conserver sa preuve de réception. Le marché prend effet à cette réception. |\n| **Démarrage** | Fixer ensuite la date conformément aux pièces contractuelles et, s’il est prévu, à l’ordre de service, après contrôle des formalités applicables à la collectivité. |\n\nLes deux règles citées ont été **effectivement récupérées par le MCP juridique, sans web**, et leur applicabilité au **20 octobre 2026** a été confirmée :\n\n- [CJA, article L. 551-4](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000020602109), version depuis le 9 mai 2009 : interdiction de signature pendant le référé.\n- [CCP, article R. 2182-4](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037729981), version depuis le 1er avril 2019 : notification et prise d’effet.\n\n**Message à transmettre :** « Nous préparons le dossier dès maintenant. La signature puis le démarrage seront programmés après examen de la décision notifiée, vérification des conditions de procédure et preuve de l’habilitation du signataire. »\n\nSkills mobilisés : **dcp-fpt** et **recherche-juridique**, entrées lues jusqu’à leur fin. Branches utilisées : `dcp-fpt/references/contentieux.md` et `dcp-fpt/references/attribution-signature.md`. La catégorie d’acheteur, la procédure, la décision future et les pièces d’habilitation restent à documenter ; aucun délai chiffré ni feu vert de signature n’est donné."
+    },
+    {
+      "type": "turn_completed",
+      "usage": {
+        "input_tokens": 868426,
+        "cached_input_tokens": 807296,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 3801,
+        "reasoning_output_tokens": 97
+      }
+    }
+  ],
+  "chronology": [
+    {
+      "type": "visible_text",
+      "position": 2,
+      "item_id": "item_0",
+      "text": "STOP — acte irréversible\n\nJe vais appliquer les skills « dcp-fpt » et « recherche-juridique » pour établir le calendrier de signature et de démarrage à proposer.\n"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 3,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 5,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 7,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 9,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 11,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "visible_text",
+      "position": 13,
+      "item_id": "item_6",
+      "text": "Ne pas signer, ne pas notifier et ne pas faire commencer la prestation à ce stade. Il faut vérifier la suspension liée au recours et l’habilitation du signataire. Le service achat prépare le dossier ; l’autorité compétente décide, avec une délégation vérifiée si elle est utilisée. La commission d’appel d’offres, lorsqu’elle est requise, intervient pour l’attribution.\n\nLa vérification des règles et de leur vigueur relève de « recherche-juridique ».\n"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 14,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 16,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 18,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 20,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 22,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 24,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 26,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 28,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 30,
+      "item_type": "mcp_tool_call"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 32,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 34,
+      "item_type": "mcp_tool_call"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 36,
+      "item_type": "mcp_tool_call"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 38,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 40,
+      "item_type": "mcp_tool_call"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 42,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 44,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 46,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "visible_text",
+      "position": 48,
+      "item_id": "item_24",
+      "text": "La source officielle récupérée confirme que, pour un pouvoir adjudicateur, la signature est interdite depuis la saisine du tribunal jusqu’à la notification de la décision juridictionnelle. Le calendrier doit donc être fixé par étapes et conditions, sans promettre aujourd’hui une date de démarrage.\n"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 49,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 51,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 53,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 55,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 57,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 59,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 61,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 63,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "visible_text",
+      "position": 65,
+      "item_id": "item_33",
+      "text": "STOP — acte irréversible\n\n**Ne pas signer, ne pas notifier et ne pas faire commencer la prestation maintenant.** La suspension liée au recours et l’habilitation du signataire doivent être contrôlées séparément. La délégation indisponible ne peut être tenue pour vérifiée.\n\nJe proposerais au service prescripteur **un calendrier conditionnel, sans date ferme de démarrage** :\n\n| Étape | Action et condition de passage |\n|---|---|\n| **Immédiatement** | Le service achat bloque la signature et le démarrage, rassemble le recours, la preuve de saisine, les pièces de procédure et les actes d’habilitation ; il associe le conseil juridique et l’autorité compétente. |\n| **Pendant le référé** | Préparer la défense et le dossier contractuel. Pour un pouvoir adjudicateur, la signature est interdite depuis la saisine du tribunal administratif **jusqu’à la notification à celui-ci de la décision juridictionnelle** : l’audience seule ne constitue pas cette échéance. |\n| **Après notification de la décision** | Faire examiner son dispositif par le conseil : quelles suites permet-elle ou impose-t-elle ? Vérifier également les autres conditions de signature applicables à la procédure. **Aucune signature automatique à réception de la décision.** |\n| **Avant toute signature** | Identifier l’autorité habilitée et obtenir la preuve de sa compétence. Si une délégation est invoquée, récupérer et contrôler l’acte. Distinguer préparation par le service achat, attribution par l’organe compétent et signature. |\n| **Après signature régulière** | Organiser la notification au titulaire et conserver sa preuve de réception. Le marché prend effet à cette réception. |\n| **Démarrage** | Fixer ensuite la date conformément aux pièces contractuelles et, s’il est prévu, à l’ordre de service, après contrôle des formalités applicables à la collectivité. |\n\nLes deux règles citées ont été **effectivement récupérées par le MCP juridique, sans web**, et leur applicabilité au **20 octobre 2026** a été confirmée :\n\n- [CJA, article L. 551-4](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000020602109), version depuis le 9 mai 2009 : interdiction de signature pendant le référé.\n- [CCP, article R. 2182-4](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037729981), version depuis le 1er avril 2019 : notification et prise d’effet.\n\n**Message à transmettre :** « Nous préparons le dossier dès maintenant. La signature puis le démarrage seront programmés après examen de la décision notifiée, vérification des conditions de procédure et preuve de l’habilitation du signataire. »\n\nSkills mobilisés : **dcp-fpt** et **recherche-juridique**, entrées lues jusqu’à leur fin. Branches utilisées : `dcp-fpt/references/contentieux.md` et `dcp-fpt/references/attribution-signature.md`. La catégorie d’acheteur, la procédure, la décision future et les pièces d’habilitation restent à documenter ; aucun délai chiffré ni feu vert de signature n’est donné."
+    }
+  ],
+  "technical_status": "passed",
+  "human_legal_validation": false,
+  "payload_sha256": "841aae9d41fde166575db08e0bcd58ef99ad2591e728b1480db647288cf9b800"
+}

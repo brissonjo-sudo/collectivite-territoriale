@@ -1,0 +1,819 @@
+{
+  "schema": "ct-human-linked-v1",
+  "measurement_commit": "13b4e1e537e5a8097a004ee913abcc9d079114a7",
+  "campaign_attempt_id": "campagne-l24-20261020-d",
+  "summary": {
+    "evidence_path": "campagne/resume-campagne.json",
+    "sha256": "1d000ebaefb77c6e782370d5d9439e819c53a9e11a9a05eea69cdd57ce9a63c9"
+  },
+  "files": {
+    "campagne/l8-dcp-vers-dsi-disponible/relecture/session.json": {
+      "sha256": "4abc2f7cbff91588435f9fd316df088c0531a697c9b664a1d4090e676c241ab7",
+      "octets": 35550
+    },
+    "campagne/l8-dcp-vers-dsi-disponible/relecture/trace.jsonl": {
+      "sha256": "39f0fee31548deefb0574b443ab08bb5998edfa4f07482ac4350390ca67e4d0f",
+      "octets": 7132
+    },
+    "campagne/l8-dcp-vers-dsi-disponible/reponse/session.json": {
+      "sha256": "569119bfa36b5d524babed2a5816638d21dd3cc9032b1a6243a85cf136724874",
+      "octets": 33554
+    },
+    "campagne/l8-dcp-vers-dsi-disponible/reponse/trace.jsonl": {
+      "sha256": "3784968d8985d19816d4070aecd510487e7148bac187b90d47706c140caf487f",
+      "octets": 36664
+    },
+    "campagne/l8-dpm-video-technique-donnees/relecture/session.json": {
+      "sha256": "c35d6b724b9b1e61176e7ebd17115f6ef54646d09290d3ea8db4a33c0041fa92",
+      "octets": 34789
+    },
+    "campagne/l8-dpm-video-technique-donnees/relecture/trace.jsonl": {
+      "sha256": "1caa91adee28c19dcf16a065cbf77f256ff54b31ed925f601c8a7095102a4906",
+      "octets": 5978
+    },
+    "campagne/l8-dpm-video-technique-donnees/reponse/session.json": {
+      "sha256": "46c7e3454892db602098a94ade1b5c08bc4e95cfa3091e604fe70c0c54355d76",
+      "octets": 33562
+    },
+    "campagne/l8-dpm-video-technique-donnees/reponse/trace.jsonl": {
+      "sha256": "ae5a3e7dda15ac540ef97244be0428603c060e8edfc2187d76307f1d3d6427c6",
+      "octets": 39198
+    },
+    "campagne/l8-dsi-achat-contrat-mixte/relecture/session.json": {
+      "sha256": "57b95a8bd759b66d35085a5deb6e5319f99ae6fe6dd8f5c511231d32e8cae638",
+      "octets": 35016
+    },
+    "campagne/l8-dsi-achat-contrat-mixte/relecture/trace.jsonl": {
+      "sha256": "ab8816a6e12b3ebb62049283b996bc73375967bc5585b55fed24ef53b428bb44",
+      "octets": 6360
+    },
+    "campagne/l8-dsi-achat-contrat-mixte/reponse/session.json": {
+      "sha256": "dba342863ae303ee67da24316fdd893ad1792a596c9ef68aea78f5534e9ce571",
+      "octets": 33553
+    },
+    "campagne/l8-dsi-achat-contrat-mixte/reponse/trace.jsonl": {
+      "sha256": "a97cfb5755bfb81c49c2b591316aed450dbc6258124e16724a3ff7b1957e7e08",
+      "octets": 53788
+    },
+    "campagne/l8-dsi-donnees-sans-source/relecture/session.json": {
+      "sha256": "68d941a6c1eae997d91de70bb377f50e98bb7b9e1a24aa67cab555a770a1e86c",
+      "octets": 35190
+    },
+    "campagne/l8-dsi-donnees-sans-source/relecture/trace.jsonl": {
+      "sha256": "42b783b692962ef307504f948287e20c113d34dba4bd2ee9987105b4fa22d159",
+      "octets": 6598
+    },
+    "campagne/l8-dsi-donnees-sans-source/reponse/session.json": {
+      "sha256": "1229a8ceb976b9cac1a7acef2f04ae36078b6ee71b2bb2d47b3adc6c0df5429d",
+      "octets": 33554
+    },
+    "campagne/l8-dsi-donnees-sans-source/reponse/trace.jsonl": {
+      "sha256": "b5fa4501642fe50ceff14efacf48ef7a1e6adc206627716172e54499228e0145",
+      "octets": 27234
+    },
+    "campagne/l8-dsi-incident-ancien-spontane/relecture/session.json": {
+      "sha256": "6380c104694b6a3fe5cbb71d603fa74f65f6387ce978ddbb1976d4f9d6bfe5b6",
+      "octets": 35079
+    },
+    "campagne/l8-dsi-incident-ancien-spontane/relecture/trace.jsonl": {
+      "sha256": "9ce67f3714f3659ed50a2bc4e36a8fd9e2310ba1f9e579cca4aa10fbde7401f9",
+      "octets": 6415
+    },
+    "campagne/l8-dsi-incident-ancien-spontane/reponse/session.json": {
+      "sha256": "b40fdd15b4e2c40aa486f4a589e0d38886c1061f023e6bbd90c1a5ca7e562d35",
+      "octets": 33564
+    },
+    "campagne/l8-dsi-incident-ancien-spontane/reponse/trace.jsonl": {
+      "sha256": "ea5f59978a5271f4571624275e0c7c21d9624fc45c2bd74f53de7df384615e1b",
+      "octets": 31908
+    },
+    "campagne/l8-dsi-incident-donnees/relecture/session.json": {
+      "sha256": "9641ad0fcec3b066b3207b3ae1f42bf935cf573cf5baac403fad364b4e5e0a70",
+      "octets": 35492
+    },
+    "campagne/l8-dsi-incident-donnees/relecture/trace.jsonl": {
+      "sha256": "ab8db6fcbbadbdda28480fbbd578d6b98846ccee05b17e02890574bd8a62f00a",
+      "octets": 7085
+    },
+    "campagne/l8-dsi-incident-donnees/reponse/session.json": {
+      "sha256": "9c5c9f835a395399d472b379fec31ed6a9e99ef421dec01888fc63e8d7fd6539",
+      "octets": 33548
+    },
+    "campagne/l8-dsi-incident-donnees/reponse/trace.jsonl": {
+      "sha256": "857c13b4d6f1294a4836954c52c04cffb50591185f17fae0ee5d06a4b48d4adc",
+      "octets": 39791
+    },
+    "campagne/l8-dsi-rssi-indemnitaire/relecture/session.json": {
+      "sha256": "ee9aa7faa831b20df134aa485b8a8f1cdf9431e8bad40b0cbe0279d137c11b7f",
+      "octets": 34939
+    },
+    "campagne/l8-dsi-rssi-indemnitaire/relecture/trace.jsonl": {
+      "sha256": "25bc6e3af96213e787f547c6719c164cbf819cd3f70c1d20ebb7864bc59612a9",
+      "octets": 6141
+    },
+    "campagne/l8-dsi-rssi-indemnitaire/reponse/session.json": {
+      "sha256": "1c56a526f07a1b4e6f2be7d307e4259fc24287d3ca3f142304a8d20981290cf3",
+      "octets": 33550
+    },
+    "campagne/l8-dsi-rssi-indemnitaire/reponse/trace.jsonl": {
+      "sha256": "893c2ee1af57afdfdfc98554573a8790ca7291ea7bea8e1e57a45555d161de2f",
+      "octets": 44616
+    },
+    "campagne/l8-dsi-surveillance-rh/relecture/session.json": {
+      "sha256": "ca260ced1f1a8f2711a2cac13b079fdf4601e6616c4a57afa2d61ecef3b0e3a6",
+      "octets": 35025
+    },
+    "campagne/l8-dsi-surveillance-rh/relecture/trace.jsonl": {
+      "sha256": "eebcfa542c07c28890e94b2be809523b1222d3199c8371ee4f963d9e068d462f",
+      "octets": 6315
+    },
+    "campagne/l8-dsi-surveillance-rh/reponse/session.json": {
+      "sha256": "0a9b7f96f74d45be56583dcfafdedd5ef7d2c8460b26252c024f0ba482f4fbf0",
+      "octets": 33546
+    },
+    "campagne/l8-dsi-surveillance-rh/reponse/trace.jsonl": {
+      "sha256": "756b5da1743f8d3e91610543ef36dd73270854902f196c02445fcd4f5fd4486b",
+      "octets": 53278
+    },
+    "campagne/l8-dsi-technique-spontanee/relecture/session.json": {
+      "sha256": "c874ea443cf0743b66b6b76d009fea79c8e6ae80582be0285acff52ca4268bd8",
+      "octets": 34645
+    },
+    "campagne/l8-dsi-technique-spontanee/relecture/trace.jsonl": {
+      "sha256": "a7b9a798225a41778a99ca7327f5698cac5f54c6e7d888d3bfe98b2f95deeb17",
+      "octets": 5781
+    },
+    "campagne/l8-dsi-technique-spontanee/reponse/session.json": {
+      "sha256": "5d55ec41d2ec1a7b90a9b64dce581ca64d285e8f870c59681fd7fe88944d0c23",
+      "octets": 33553
+    },
+    "campagne/l8-dsi-technique-spontanee/reponse/trace.jsonl": {
+      "sha256": "68ffbb8dba625323ed0d7cf5e558e4f57e72c994ba0d52b496dd05d9a2b9f6cb",
+      "octets": 17266
+    },
+    "campagne/plugin-dcp-acte-irreversible/relecture/session.json": {
+      "sha256": "ece9b7d279741072f6f98b203b90a144c143a533f72eb4232fa34656b5c4ecba",
+      "octets": 35385
+    },
+    "campagne/plugin-dcp-acte-irreversible/relecture/trace.jsonl": {
+      "sha256": "5850a9d7d37a9ce713f88a7633c703d5180bdde7b11c634097fd454521b0f89d",
+      "octets": 6910
+    },
+    "campagne/plugin-dcp-acte-irreversible/reponse/session.json": {
+      "sha256": "33e98f2b0c015214f49d31809e838cdce0f4c3b05605f562eb456bcda1bffecb",
+      "octets": 33558
+    },
+    "campagne/plugin-dcp-acte-irreversible/reponse/trace.jsonl": {
+      "sha256": "721257f1bf2054f8427e59ab14758d7fe5e2783b8026fc26fbb1c3df38544648",
+      "octets": 52436
+    },
+    "campagne/plugin-dcp-egalite/relecture/session.json": {
+      "sha256": "b9d050c3313cbfd1621c208c86205a151fef7d9f0c2e6ae583c7bb047747b7a0",
+      "octets": 35442
+    },
+    "campagne/plugin-dcp-egalite/relecture/trace.jsonl": {
+      "sha256": "e32955d576f20a6e06a9bf19fbfe28cab57626902027c8c045d0274cf804f8c6",
+      "octets": 7012
+    },
+    "campagne/plugin-dcp-egalite/reponse/session.json": {
+      "sha256": "5da3d8a587db8358d999460990a4b6e71846332146b75e233e18bd4100ff3dc9",
+      "octets": 33538
+    },
+    "campagne/plugin-dcp-egalite/reponse/trace.jsonl": {
+      "sha256": "83ab7c7d547e54ade62f7bbb982faf242b39994377a99f700f9f6b52e0a8a874",
+      "octets": 40552
+    },
+    "campagne/plugin-dcp-frontiere-dsi-externe/relecture/session.json": {
+      "sha256": "f76b897a8b0afb5b1914ce9e5fd379fe0f7d37678204b77fbd9a7059949d8abe",
+      "octets": 35059
+    },
+    "campagne/plugin-dcp-frontiere-dsi-externe/relecture/trace.jsonl": {
+      "sha256": "f66ff50688c93a81a257178f2645feae5883e76e117ec82f1e2f30df79921e2b",
+      "octets": 6397
+    },
+    "campagne/plugin-dcp-frontiere-dsi-externe/reponse/session.json": {
+      "sha256": "66d569b787acfc90a655fae6b6359800ed792a0eca91b1231cef2ae07bcc0938",
+      "octets": 33566
+    },
+    "campagne/plugin-dcp-frontiere-dsi-externe/reponse/trace.jsonl": {
+      "sha256": "77f499b3138dcb883e2a580b69d55adaa5634a61d2df0620b058d2d8fe13addf",
+      "octets": 23317
+    },
+    "campagne/plugin-dcp-frontieres-finance-donnees/relecture/session.json": {
+      "sha256": "4d933878b2708c462b0946a1098068fea21cf81bba0b1aefad05e55f956bf541",
+      "octets": 35668
+    },
+    "campagne/plugin-dcp-frontieres-finance-donnees/relecture/trace.jsonl": {
+      "sha256": "18dc83e1e725274903dbbc176abc12345e6faf9fca177068b9191a36b0db37ee",
+      "octets": 8077
+    },
+    "campagne/plugin-dcp-frontieres-finance-donnees/reponse/session.json": {
+      "sha256": "dd7673586e19de800c3212c6d1c6c87c8046cb151504decebb72dd800610605e",
+      "octets": 33576
+    },
+    "campagne/plugin-dcp-frontieres-finance-donnees/reponse/trace.jsonl": {
+      "sha256": "a628da3fe74246594dd16b06b3e6b80b599f7f6f9330b04dc07e0f34dce117cc",
+      "octets": 39077
+    },
+    "campagne/plugin-dcp-mcp-indisponible/relecture/session.json": {
+      "sha256": "7dad95cb45933c809089b3cd2fd4677327c276083d5ad71cced5c4cd4e5872eb",
+      "octets": 34946
+    },
+    "campagne/plugin-dcp-mcp-indisponible/relecture/trace.jsonl": {
+      "sha256": "3e023ca72e08b3fe670046930c0a7c3dda98f820bffa50d8a8a73c15b7a30d41",
+      "octets": 6285
+    },
+    "campagne/plugin-dcp-mcp-indisponible/reponse/session.json": {
+      "sha256": "d242b3a85ec69e1d381c9ff80bc6e9db8a81d3e2940d97aab04a5717d2886635",
+      "octets": 33556
+    },
+    "campagne/plugin-dcp-mcp-indisponible/reponse/trace.jsonl": {
+      "sha256": "39ed529b5fc2ebff72543cbbd7390d9c63929a3dcdada04873eecb7f590db8ff",
+      "octets": 20367
+    },
+    "campagne/plugin-garde-fou-apja/relecture/session.json": {
+      "sha256": "d7548118fce691b4fb5ffe7a2752a65ed5ef646ee43bdd337b6e3c521a28e79e",
+      "octets": 35123
+    },
+    "campagne/plugin-garde-fou-apja/relecture/trace.jsonl": {
+      "sha256": "0e6f7929b32b1527bf3c7f4e570b2d0856c6004fb93dd1608f36b94f203863bb",
+      "octets": 6448
+    },
+    "campagne/plugin-garde-fou-apja/reponse/session.json": {
+      "sha256": "5f821820a58ebdea481439ee0543b48bdbe00bf4a76e332212532ae2f039257d",
+      "octets": 33544
+    },
+    "campagne/plugin-garde-fou-apja/reponse/trace.jsonl": {
+      "sha256": "1367b386c10b07d6920e3c68cb4637ce8b688cb64ca28b88ff8ebc70f89a9e94",
+      "octets": 76546
+    },
+    "campagne/plugin-mcp-indisponible/relecture/session.json": {
+      "sha256": "ec1268574a15303234e56a5b49a7d2c27f2ee7461d43ddce020fc8dd0ecba07f",
+      "octets": 35049
+    },
+    "campagne/plugin-mcp-indisponible/relecture/trace.jsonl": {
+      "sha256": "35a5afb1f10624a42bb139a83dac575d9731ce72384cae2b1de732cb128ed848",
+      "octets": 6230
+    },
+    "campagne/plugin-mcp-indisponible/reponse/session.json": {
+      "sha256": "d4757d4048723b33a49ffa71e4a96ef30d4a0a84bbf9f2ed9a2385ca3e7e020d",
+      "octets": 33547
+    },
+    "campagne/plugin-mcp-indisponible/reponse/trace.jsonl": {
+      "sha256": "5ed691181022e55410c19ea558860efcc6cff45c594b1f955c927e573f57383f",
+      "octets": 12683
+    },
+    "campagne/plugin-prime-depart-retraite/relecture/session.json": {
+      "sha256": "db4be9d8c90bfaa1264da022797db9ecda8797f65e3b400c74732261ae5887f2",
+      "octets": 36308
+    },
+    "campagne/plugin-prime-depart-retraite/relecture/trace.jsonl": {
+      "sha256": "6ec58355e78f3b2479c844216da1bc30e895c1bbfe3921aa81355065ec781d11",
+      "octets": 8318
+    },
+    "campagne/plugin-prime-depart-retraite/reponse/session.json": {
+      "sha256": "f3fce1d12a597a94b52d300193dc2b3d4d239b0cedabb9814ef9c2b6cb3fdda8",
+      "octets": 33558
+    },
+    "campagne/plugin-prime-depart-retraite/reponse/trace.jsonl": {
+      "sha256": "d8b784f9775921bb444c328da71dfcdf0aef4b029861c04f69c9f2ff740ee22d",
+      "octets": 53421
+    },
+    "campagne/plugin-violation-donnees/relecture/session.json": {
+      "sha256": "f882baae24ed2012e48d4fb33a641b1efa95fc37b5fcf35243ceb0c418011018",
+      "octets": 35072
+    },
+    "campagne/plugin-violation-donnees/relecture/trace.jsonl": {
+      "sha256": "b6bcd6aad8f20c223793205950714c68d60eb5bb52971b347c1005c9e6915b11",
+      "octets": 6430
+    },
+    "campagne/plugin-violation-donnees/reponse/session.json": {
+      "sha256": "8425c3a5ff27f223f0586dbf268e7ef8487556eb17b83bc3962f9b17e86bd33a",
+      "octets": 33550
+    },
+    "campagne/plugin-violation-donnees/reponse/trace.jsonl": {
+      "sha256": "1f281d5cdf75be75b02c39d51c6017b0f38db46421bda6aea4ec717214c8f6bd",
+      "octets": 32101
+    },
+    "campagne/resume-campagne.json": {
+      "sha256": "1d000ebaefb77c6e782370d5d9439e819c53a9e11a9a05eea69cdd57ce9a63c9",
+      "octets": 183653
+    },
+    "avis-humain-jo-20261020.json": {
+      "sha256": "4b40590c91afe9073a130806671d9c13983c96e387a94288a28da04fec466082",
+      "octets": 3279
+    },
+    "FICHE-RELECTURE-17-D.md": {
+      "sha256": "132ced25541f8458d68e92249100ef92c73d7fc6df717d3289eb7a8811ed5d8e",
+      "octets": 127209
+    },
+    "cas-plugin-cycle-v2.json": {
+      "sha256": "65593a1c46bd31b403c5b83344f14951cbc3455f456eefcde2c6853fa68a9478",
+      "octets": 23996
+    },
+    "campagne/plan-suite.json": {
+      "sha256": "3db23a4d48e8087c6b975ed006da74119ffceaccce389d14d83290cc4679915a",
+      "octets": 12386
+    },
+    "PLAN-CAMPAGNE.md": {
+      "sha256": "319b6b59193608d1a646d6ed656260755641c5676cb00d79c066000235f2bab5",
+      "octets": 4159
+    },
+    "autorisation-jo.json": {
+      "sha256": "3fd67559e56f245f1f972e4a80143601ae81fb8889e3caa2148e670abca04a89",
+      "octets": 1004
+    }
+  },
+  "cases": {
+    "plugin-violation-donnees": {
+      "summary_sha256": "1d000ebaefb77c6e782370d5d9439e819c53a9e11a9a05eea69cdd57ce9a63c9",
+      "human_opinion": {
+        "evidence_path": "avis-humain-jo-20261020.json",
+        "sha256": "4b40590c91afe9073a130806671d9c13983c96e387a94288a28da04fec466082"
+      },
+      "review_sheet": {
+        "evidence_path": "FICHE-RELECTURE-17-D.md",
+        "sha256": "132ced25541f8458d68e92249100ef92c73d7fc6df717d3289eb7a8811ed5d8e"
+      },
+      "response_session": {
+        "evidence_path": "campagne/plugin-violation-donnees/reponse/session.json",
+        "sha256": "8425c3a5ff27f223f0586dbf268e7ef8487556eb17b83bc3962f9b17e86bd33a"
+      },
+      "response_trace": {
+        "evidence_path": "campagne/plugin-violation-donnees/reponse/trace.jsonl",
+        "sha256": "1f281d5cdf75be75b02c39d51c6017b0f38db46421bda6aea4ec717214c8f6bd"
+      },
+      "review_session": {
+        "evidence_path": "campagne/plugin-violation-donnees/relecture/session.json",
+        "sha256": "f882baae24ed2012e48d4fb33a641b1efa95fc37b5fcf35243ceb0c418011018"
+      },
+      "review_trace": {
+        "evidence_path": "campagne/plugin-violation-donnees/relecture/trace.jsonl",
+        "sha256": "b6bcd6aad8f20c223793205950714c68d60eb5bb52971b347c1005c9e6915b11"
+      }
+    },
+    "plugin-prime-depart-retraite": {
+      "summary_sha256": "1d000ebaefb77c6e782370d5d9439e819c53a9e11a9a05eea69cdd57ce9a63c9",
+      "human_opinion": {
+        "evidence_path": "avis-humain-jo-20261020.json",
+        "sha256": "4b40590c91afe9073a130806671d9c13983c96e387a94288a28da04fec466082"
+      },
+      "review_sheet": {
+        "evidence_path": "FICHE-RELECTURE-17-D.md",
+        "sha256": "132ced25541f8458d68e92249100ef92c73d7fc6df717d3289eb7a8811ed5d8e"
+      },
+      "response_session": {
+        "evidence_path": "campagne/plugin-prime-depart-retraite/reponse/session.json",
+        "sha256": "f3fce1d12a597a94b52d300193dc2b3d4d239b0cedabb9814ef9c2b6cb3fdda8"
+      },
+      "response_trace": {
+        "evidence_path": "campagne/plugin-prime-depart-retraite/reponse/trace.jsonl",
+        "sha256": "d8b784f9775921bb444c328da71dfcdf0aef4b029861c04f69c9f2ff740ee22d"
+      },
+      "review_session": {
+        "evidence_path": "campagne/plugin-prime-depart-retraite/relecture/session.json",
+        "sha256": "db4be9d8c90bfaa1264da022797db9ecda8797f65e3b400c74732261ae5887f2"
+      },
+      "review_trace": {
+        "evidence_path": "campagne/plugin-prime-depart-retraite/relecture/trace.jsonl",
+        "sha256": "6ec58355e78f3b2479c844216da1bc30e895c1bbfe3921aa81355065ec781d11"
+      }
+    },
+    "plugin-garde-fou-apja": {
+      "summary_sha256": "1d000ebaefb77c6e782370d5d9439e819c53a9e11a9a05eea69cdd57ce9a63c9",
+      "human_opinion": {
+        "evidence_path": "avis-humain-jo-20261020.json",
+        "sha256": "4b40590c91afe9073a130806671d9c13983c96e387a94288a28da04fec466082"
+      },
+      "review_sheet": {
+        "evidence_path": "FICHE-RELECTURE-17-D.md",
+        "sha256": "132ced25541f8458d68e92249100ef92c73d7fc6df717d3289eb7a8811ed5d8e"
+      },
+      "response_session": {
+        "evidence_path": "campagne/plugin-garde-fou-apja/reponse/session.json",
+        "sha256": "5f821820a58ebdea481439ee0543b48bdbe00bf4a76e332212532ae2f039257d"
+      },
+      "response_trace": {
+        "evidence_path": "campagne/plugin-garde-fou-apja/reponse/trace.jsonl",
+        "sha256": "1367b386c10b07d6920e3c68cb4637ce8b688cb64ca28b88ff8ebc70f89a9e94"
+      },
+      "review_session": {
+        "evidence_path": "campagne/plugin-garde-fou-apja/relecture/session.json",
+        "sha256": "d7548118fce691b4fb5ffe7a2752a65ed5ef646ee43bdd337b6e3c521a28e79e"
+      },
+      "review_trace": {
+        "evidence_path": "campagne/plugin-garde-fou-apja/relecture/trace.jsonl",
+        "sha256": "0e6f7929b32b1527bf3c7f4e570b2d0856c6004fb93dd1608f36b94f203863bb"
+      }
+    },
+    "plugin-mcp-indisponible": {
+      "summary_sha256": "1d000ebaefb77c6e782370d5d9439e819c53a9e11a9a05eea69cdd57ce9a63c9",
+      "human_opinion": {
+        "evidence_path": "avis-humain-jo-20261020.json",
+        "sha256": "4b40590c91afe9073a130806671d9c13983c96e387a94288a28da04fec466082"
+      },
+      "review_sheet": {
+        "evidence_path": "FICHE-RELECTURE-17-D.md",
+        "sha256": "132ced25541f8458d68e92249100ef92c73d7fc6df717d3289eb7a8811ed5d8e"
+      },
+      "response_session": {
+        "evidence_path": "campagne/plugin-mcp-indisponible/reponse/session.json",
+        "sha256": "d4757d4048723b33a49ffa71e4a96ef30d4a0a84bbf9f2ed9a2385ca3e7e020d"
+      },
+      "response_trace": {
+        "evidence_path": "campagne/plugin-mcp-indisponible/reponse/trace.jsonl",
+        "sha256": "5ed691181022e55410c19ea558860efcc6cff45c594b1f955c927e573f57383f"
+      },
+      "review_session": {
+        "evidence_path": "campagne/plugin-mcp-indisponible/relecture/session.json",
+        "sha256": "ec1268574a15303234e56a5b49a7d2c27f2ee7461d43ddce020fc8dd0ecba07f"
+      },
+      "review_trace": {
+        "evidence_path": "campagne/plugin-mcp-indisponible/relecture/trace.jsonl",
+        "sha256": "35a5afb1f10624a42bb139a83dac575d9731ce72384cae2b1de732cb128ed848"
+      }
+    },
+    "plugin-dcp-egalite": {
+      "summary_sha256": "1d000ebaefb77c6e782370d5d9439e819c53a9e11a9a05eea69cdd57ce9a63c9",
+      "human_opinion": {
+        "evidence_path": "avis-humain-jo-20261020.json",
+        "sha256": "4b40590c91afe9073a130806671d9c13983c96e387a94288a28da04fec466082"
+      },
+      "review_sheet": {
+        "evidence_path": "FICHE-RELECTURE-17-D.md",
+        "sha256": "132ced25541f8458d68e92249100ef92c73d7fc6df717d3289eb7a8811ed5d8e"
+      },
+      "response_session": {
+        "evidence_path": "campagne/plugin-dcp-egalite/reponse/session.json",
+        "sha256": "5da3d8a587db8358d999460990a4b6e71846332146b75e233e18bd4100ff3dc9"
+      },
+      "response_trace": {
+        "evidence_path": "campagne/plugin-dcp-egalite/reponse/trace.jsonl",
+        "sha256": "83ab7c7d547e54ade62f7bbb982faf242b39994377a99f700f9f6b52e0a8a874"
+      },
+      "review_session": {
+        "evidence_path": "campagne/plugin-dcp-egalite/relecture/session.json",
+        "sha256": "b9d050c3313cbfd1621c208c86205a151fef7d9f0c2e6ae583c7bb047747b7a0"
+      },
+      "review_trace": {
+        "evidence_path": "campagne/plugin-dcp-egalite/relecture/trace.jsonl",
+        "sha256": "e32955d576f20a6e06a9bf19fbfe28cab57626902027c8c045d0274cf804f8c6"
+      }
+    },
+    "plugin-dcp-acte-irreversible": {
+      "summary_sha256": "1d000ebaefb77c6e782370d5d9439e819c53a9e11a9a05eea69cdd57ce9a63c9",
+      "human_opinion": {
+        "evidence_path": "avis-humain-jo-20261020.json",
+        "sha256": "4b40590c91afe9073a130806671d9c13983c96e387a94288a28da04fec466082"
+      },
+      "review_sheet": {
+        "evidence_path": "FICHE-RELECTURE-17-D.md",
+        "sha256": "132ced25541f8458d68e92249100ef92c73d7fc6df717d3289eb7a8811ed5d8e"
+      },
+      "response_session": {
+        "evidence_path": "campagne/plugin-dcp-acte-irreversible/reponse/session.json",
+        "sha256": "33e98f2b0c015214f49d31809e838cdce0f4c3b05605f562eb456bcda1bffecb"
+      },
+      "response_trace": {
+        "evidence_path": "campagne/plugin-dcp-acte-irreversible/reponse/trace.jsonl",
+        "sha256": "721257f1bf2054f8427e59ab14758d7fe5e2783b8026fc26fbb1c3df38544648"
+      },
+      "review_session": {
+        "evidence_path": "campagne/plugin-dcp-acte-irreversible/relecture/session.json",
+        "sha256": "ece9b7d279741072f6f98b203b90a144c143a533f72eb4232fa34656b5c4ecba"
+      },
+      "review_trace": {
+        "evidence_path": "campagne/plugin-dcp-acte-irreversible/relecture/trace.jsonl",
+        "sha256": "5850a9d7d37a9ce713f88a7633c703d5180bdde7b11c634097fd454521b0f89d"
+      }
+    },
+    "plugin-dcp-frontieres-finance-donnees": {
+      "summary_sha256": "1d000ebaefb77c6e782370d5d9439e819c53a9e11a9a05eea69cdd57ce9a63c9",
+      "human_opinion": {
+        "evidence_path": "avis-humain-jo-20261020.json",
+        "sha256": "4b40590c91afe9073a130806671d9c13983c96e387a94288a28da04fec466082"
+      },
+      "review_sheet": {
+        "evidence_path": "FICHE-RELECTURE-17-D.md",
+        "sha256": "132ced25541f8458d68e92249100ef92c73d7fc6df717d3289eb7a8811ed5d8e"
+      },
+      "response_session": {
+        "evidence_path": "campagne/plugin-dcp-frontieres-finance-donnees/reponse/session.json",
+        "sha256": "dd7673586e19de800c3212c6d1c6c87c8046cb151504decebb72dd800610605e"
+      },
+      "response_trace": {
+        "evidence_path": "campagne/plugin-dcp-frontieres-finance-donnees/reponse/trace.jsonl",
+        "sha256": "a628da3fe74246594dd16b06b3e6b80b599f7f6f9330b04dc07e0f34dce117cc"
+      },
+      "review_session": {
+        "evidence_path": "campagne/plugin-dcp-frontieres-finance-donnees/relecture/session.json",
+        "sha256": "4d933878b2708c462b0946a1098068fea21cf81bba0b1aefad05e55f956bf541"
+      },
+      "review_trace": {
+        "evidence_path": "campagne/plugin-dcp-frontieres-finance-donnees/relecture/trace.jsonl",
+        "sha256": "18dc83e1e725274903dbbc176abc12345e6faf9fca177068b9191a36b0db37ee"
+      }
+    },
+    "plugin-dcp-frontiere-dsi-externe": {
+      "summary_sha256": "1d000ebaefb77c6e782370d5d9439e819c53a9e11a9a05eea69cdd57ce9a63c9",
+      "human_opinion": {
+        "evidence_path": "avis-humain-jo-20261020.json",
+        "sha256": "4b40590c91afe9073a130806671d9c13983c96e387a94288a28da04fec466082"
+      },
+      "review_sheet": {
+        "evidence_path": "FICHE-RELECTURE-17-D.md",
+        "sha256": "132ced25541f8458d68e92249100ef92c73d7fc6df717d3289eb7a8811ed5d8e"
+      },
+      "response_session": {
+        "evidence_path": "campagne/plugin-dcp-frontiere-dsi-externe/reponse/session.json",
+        "sha256": "66d569b787acfc90a655fae6b6359800ed792a0eca91b1231cef2ae07bcc0938"
+      },
+      "response_trace": {
+        "evidence_path": "campagne/plugin-dcp-frontiere-dsi-externe/reponse/trace.jsonl",
+        "sha256": "77f499b3138dcb883e2a580b69d55adaa5634a61d2df0620b058d2d8fe13addf"
+      },
+      "review_session": {
+        "evidence_path": "campagne/plugin-dcp-frontiere-dsi-externe/relecture/session.json",
+        "sha256": "f76b897a8b0afb5b1914ce9e5fd379fe0f7d37678204b77fbd9a7059949d8abe"
+      },
+      "review_trace": {
+        "evidence_path": "campagne/plugin-dcp-frontiere-dsi-externe/relecture/trace.jsonl",
+        "sha256": "f66ff50688c93a81a257178f2645feae5883e76e117ec82f1e2f30df79921e2b"
+      }
+    },
+    "plugin-dcp-mcp-indisponible": {
+      "summary_sha256": "1d000ebaefb77c6e782370d5d9439e819c53a9e11a9a05eea69cdd57ce9a63c9",
+      "human_opinion": {
+        "evidence_path": "avis-humain-jo-20261020.json",
+        "sha256": "4b40590c91afe9073a130806671d9c13983c96e387a94288a28da04fec466082"
+      },
+      "review_sheet": {
+        "evidence_path": "FICHE-RELECTURE-17-D.md",
+        "sha256": "132ced25541f8458d68e92249100ef92c73d7fc6df717d3289eb7a8811ed5d8e"
+      },
+      "response_session": {
+        "evidence_path": "campagne/plugin-dcp-mcp-indisponible/reponse/session.json",
+        "sha256": "d242b3a85ec69e1d381c9ff80bc6e9db8a81d3e2940d97aab04a5717d2886635"
+      },
+      "response_trace": {
+        "evidence_path": "campagne/plugin-dcp-mcp-indisponible/reponse/trace.jsonl",
+        "sha256": "39ed529b5fc2ebff72543cbbd7390d9c63929a3dcdada04873eecb7f590db8ff"
+      },
+      "review_session": {
+        "evidence_path": "campagne/plugin-dcp-mcp-indisponible/relecture/session.json",
+        "sha256": "7dad95cb45933c809089b3cd2fd4677327c276083d5ad71cced5c4cd4e5872eb"
+      },
+      "review_trace": {
+        "evidence_path": "campagne/plugin-dcp-mcp-indisponible/relecture/trace.jsonl",
+        "sha256": "3e023ca72e08b3fe670046930c0a7c3dda98f820bffa50d8a8a73c15b7a30d41"
+      }
+    },
+    "l8-dsi-technique-spontanee": {
+      "summary_sha256": "1d000ebaefb77c6e782370d5d9439e819c53a9e11a9a05eea69cdd57ce9a63c9",
+      "human_opinion": {
+        "evidence_path": "avis-humain-jo-20261020.json",
+        "sha256": "4b40590c91afe9073a130806671d9c13983c96e387a94288a28da04fec466082"
+      },
+      "review_sheet": {
+        "evidence_path": "FICHE-RELECTURE-17-D.md",
+        "sha256": "132ced25541f8458d68e92249100ef92c73d7fc6df717d3289eb7a8811ed5d8e"
+      },
+      "response_session": {
+        "evidence_path": "campagne/l8-dsi-technique-spontanee/reponse/session.json",
+        "sha256": "5d55ec41d2ec1a7b90a9b64dce581ca64d285e8f870c59681fd7fe88944d0c23"
+      },
+      "response_trace": {
+        "evidence_path": "campagne/l8-dsi-technique-spontanee/reponse/trace.jsonl",
+        "sha256": "68ffbb8dba625323ed0d7cf5e558e4f57e72c994ba0d52b496dd05d9a2b9f6cb"
+      },
+      "review_session": {
+        "evidence_path": "campagne/l8-dsi-technique-spontanee/relecture/session.json",
+        "sha256": "c874ea443cf0743b66b6b76d009fea79c8e6ae80582be0285acff52ca4268bd8"
+      },
+      "review_trace": {
+        "evidence_path": "campagne/l8-dsi-technique-spontanee/relecture/trace.jsonl",
+        "sha256": "a7b9a798225a41778a99ca7327f5698cac5f54c6e7d888d3bfe98b2f95deeb17"
+      }
+    },
+    "l8-dsi-incident-donnees": {
+      "summary_sha256": "1d000ebaefb77c6e782370d5d9439e819c53a9e11a9a05eea69cdd57ce9a63c9",
+      "human_opinion": {
+        "evidence_path": "avis-humain-jo-20261020.json",
+        "sha256": "4b40590c91afe9073a130806671d9c13983c96e387a94288a28da04fec466082"
+      },
+      "review_sheet": {
+        "evidence_path": "FICHE-RELECTURE-17-D.md",
+        "sha256": "132ced25541f8458d68e92249100ef92c73d7fc6df717d3289eb7a8811ed5d8e"
+      },
+      "response_session": {
+        "evidence_path": "campagne/l8-dsi-incident-donnees/reponse/session.json",
+        "sha256": "9c5c9f835a395399d472b379fec31ed6a9e99ef421dec01888fc63e8d7fd6539"
+      },
+      "response_trace": {
+        "evidence_path": "campagne/l8-dsi-incident-donnees/reponse/trace.jsonl",
+        "sha256": "857c13b4d6f1294a4836954c52c04cffb50591185f17fae0ee5d06a4b48d4adc"
+      },
+      "review_session": {
+        "evidence_path": "campagne/l8-dsi-incident-donnees/relecture/session.json",
+        "sha256": "9641ad0fcec3b066b3207b3ae1f42bf935cf573cf5baac403fad364b4e5e0a70"
+      },
+      "review_trace": {
+        "evidence_path": "campagne/l8-dsi-incident-donnees/relecture/trace.jsonl",
+        "sha256": "ab8db6fcbbadbdda28480fbbd578d6b98846ccee05b17e02890574bd8a62f00a"
+      }
+    },
+    "l8-dsi-surveillance-rh": {
+      "summary_sha256": "1d000ebaefb77c6e782370d5d9439e819c53a9e11a9a05eea69cdd57ce9a63c9",
+      "human_opinion": {
+        "evidence_path": "avis-humain-jo-20261020.json",
+        "sha256": "4b40590c91afe9073a130806671d9c13983c96e387a94288a28da04fec466082"
+      },
+      "review_sheet": {
+        "evidence_path": "FICHE-RELECTURE-17-D.md",
+        "sha256": "132ced25541f8458d68e92249100ef92c73d7fc6df717d3289eb7a8811ed5d8e"
+      },
+      "response_session": {
+        "evidence_path": "campagne/l8-dsi-surveillance-rh/reponse/session.json",
+        "sha256": "0a9b7f96f74d45be56583dcfafdedd5ef7d2c8460b26252c024f0ba482f4fbf0"
+      },
+      "response_trace": {
+        "evidence_path": "campagne/l8-dsi-surveillance-rh/reponse/trace.jsonl",
+        "sha256": "756b5da1743f8d3e91610543ef36dd73270854902f196c02445fcd4f5fd4486b"
+      },
+      "review_session": {
+        "evidence_path": "campagne/l8-dsi-surveillance-rh/relecture/session.json",
+        "sha256": "ca260ced1f1a8f2711a2cac13b079fdf4601e6616c4a57afa2d61ecef3b0e3a6"
+      },
+      "review_trace": {
+        "evidence_path": "campagne/l8-dsi-surveillance-rh/relecture/trace.jsonl",
+        "sha256": "eebcfa542c07c28890e94b2be809523b1222d3199c8371ee4f963d9e068d462f"
+      }
+    },
+    "l8-dsi-incident-ancien-spontane": {
+      "summary_sha256": "1d000ebaefb77c6e782370d5d9439e819c53a9e11a9a05eea69cdd57ce9a63c9",
+      "human_opinion": {
+        "evidence_path": "avis-humain-jo-20261020.json",
+        "sha256": "4b40590c91afe9073a130806671d9c13983c96e387a94288a28da04fec466082"
+      },
+      "review_sheet": {
+        "evidence_path": "FICHE-RELECTURE-17-D.md",
+        "sha256": "132ced25541f8458d68e92249100ef92c73d7fc6df717d3289eb7a8811ed5d8e"
+      },
+      "response_session": {
+        "evidence_path": "campagne/l8-dsi-incident-ancien-spontane/reponse/session.json",
+        "sha256": "b40fdd15b4e2c40aa486f4a589e0d38886c1061f023e6bbd90c1a5ca7e562d35"
+      },
+      "response_trace": {
+        "evidence_path": "campagne/l8-dsi-incident-ancien-spontane/reponse/trace.jsonl",
+        "sha256": "ea5f59978a5271f4571624275e0c7c21d9624fc45c2bd74f53de7df384615e1b"
+      },
+      "review_session": {
+        "evidence_path": "campagne/l8-dsi-incident-ancien-spontane/relecture/session.json",
+        "sha256": "6380c104694b6a3fe5cbb71d603fa74f65f6387ce978ddbb1976d4f9d6bfe5b6"
+      },
+      "review_trace": {
+        "evidence_path": "campagne/l8-dsi-incident-ancien-spontane/relecture/trace.jsonl",
+        "sha256": "9ce67f3714f3659ed50a2bc4e36a8fd9e2310ba1f9e579cca4aa10fbde7401f9"
+      }
+    },
+    "l8-dsi-donnees-sans-source": {
+      "summary_sha256": "1d000ebaefb77c6e782370d5d9439e819c53a9e11a9a05eea69cdd57ce9a63c9",
+      "human_opinion": {
+        "evidence_path": "avis-humain-jo-20261020.json",
+        "sha256": "4b40590c91afe9073a130806671d9c13983c96e387a94288a28da04fec466082"
+      },
+      "review_sheet": {
+        "evidence_path": "FICHE-RELECTURE-17-D.md",
+        "sha256": "132ced25541f8458d68e92249100ef92c73d7fc6df717d3289eb7a8811ed5d8e"
+      },
+      "response_session": {
+        "evidence_path": "campagne/l8-dsi-donnees-sans-source/reponse/session.json",
+        "sha256": "1229a8ceb976b9cac1a7acef2f04ae36078b6ee71b2bb2d47b3adc6c0df5429d"
+      },
+      "response_trace": {
+        "evidence_path": "campagne/l8-dsi-donnees-sans-source/reponse/trace.jsonl",
+        "sha256": "b5fa4501642fe50ceff14efacf48ef7a1e6adc206627716172e54499228e0145"
+      },
+      "review_session": {
+        "evidence_path": "campagne/l8-dsi-donnees-sans-source/relecture/session.json",
+        "sha256": "68d941a6c1eae997d91de70bb377f50e98bb7b9e1a24aa67cab555a770a1e86c"
+      },
+      "review_trace": {
+        "evidence_path": "campagne/l8-dsi-donnees-sans-source/relecture/trace.jsonl",
+        "sha256": "42b783b692962ef307504f948287e20c113d34dba4bd2ee9987105b4fa22d159"
+      }
+    },
+    "l8-dsi-achat-contrat-mixte": {
+      "summary_sha256": "1d000ebaefb77c6e782370d5d9439e819c53a9e11a9a05eea69cdd57ce9a63c9",
+      "human_opinion": {
+        "evidence_path": "avis-humain-jo-20261020.json",
+        "sha256": "4b40590c91afe9073a130806671d9c13983c96e387a94288a28da04fec466082"
+      },
+      "review_sheet": {
+        "evidence_path": "FICHE-RELECTURE-17-D.md",
+        "sha256": "132ced25541f8458d68e92249100ef92c73d7fc6df717d3289eb7a8811ed5d8e"
+      },
+      "response_session": {
+        "evidence_path": "campagne/l8-dsi-achat-contrat-mixte/reponse/session.json",
+        "sha256": "dba342863ae303ee67da24316fdd893ad1792a596c9ef68aea78f5534e9ce571"
+      },
+      "response_trace": {
+        "evidence_path": "campagne/l8-dsi-achat-contrat-mixte/reponse/trace.jsonl",
+        "sha256": "a97cfb5755bfb81c49c2b591316aed450dbc6258124e16724a3ff7b1957e7e08"
+      },
+      "review_session": {
+        "evidence_path": "campagne/l8-dsi-achat-contrat-mixte/relecture/session.json",
+        "sha256": "57b95a8bd759b66d35085a5deb6e5319f99ae6fe6dd8f5c511231d32e8cae638"
+      },
+      "review_trace": {
+        "evidence_path": "campagne/l8-dsi-achat-contrat-mixte/relecture/trace.jsonl",
+        "sha256": "ab8816a6e12b3ebb62049283b996bc73375967bc5585b55fed24ef53b428bb44"
+      }
+    },
+    "l8-dsi-rssi-indemnitaire": {
+      "summary_sha256": "1d000ebaefb77c6e782370d5d9439e819c53a9e11a9a05eea69cdd57ce9a63c9",
+      "human_opinion": {
+        "evidence_path": "avis-humain-jo-20261020.json",
+        "sha256": "4b40590c91afe9073a130806671d9c13983c96e387a94288a28da04fec466082"
+      },
+      "review_sheet": {
+        "evidence_path": "FICHE-RELECTURE-17-D.md",
+        "sha256": "132ced25541f8458d68e92249100ef92c73d7fc6df717d3289eb7a8811ed5d8e"
+      },
+      "response_session": {
+        "evidence_path": "campagne/l8-dsi-rssi-indemnitaire/reponse/session.json",
+        "sha256": "1c56a526f07a1b4e6f2be7d307e4259fc24287d3ca3f142304a8d20981290cf3"
+      },
+      "response_trace": {
+        "evidence_path": "campagne/l8-dsi-rssi-indemnitaire/reponse/trace.jsonl",
+        "sha256": "893c2ee1af57afdfdfc98554573a8790ca7291ea7bea8e1e57a45555d161de2f"
+      },
+      "review_session": {
+        "evidence_path": "campagne/l8-dsi-rssi-indemnitaire/relecture/session.json",
+        "sha256": "ee9aa7faa831b20df134aa485b8a8f1cdf9431e8bad40b0cbe0279d137c11b7f"
+      },
+      "review_trace": {
+        "evidence_path": "campagne/l8-dsi-rssi-indemnitaire/relecture/trace.jsonl",
+        "sha256": "25bc6e3af96213e787f547c6719c164cbf819cd3f70c1d20ebb7864bc59612a9"
+      }
+    },
+    "l8-dpm-video-technique-donnees": {
+      "summary_sha256": "1d000ebaefb77c6e782370d5d9439e819c53a9e11a9a05eea69cdd57ce9a63c9",
+      "human_opinion": {
+        "evidence_path": "avis-humain-jo-20261020.json",
+        "sha256": "4b40590c91afe9073a130806671d9c13983c96e387a94288a28da04fec466082"
+      },
+      "review_sheet": {
+        "evidence_path": "FICHE-RELECTURE-17-D.md",
+        "sha256": "132ced25541f8458d68e92249100ef92c73d7fc6df717d3289eb7a8811ed5d8e"
+      },
+      "response_session": {
+        "evidence_path": "campagne/l8-dpm-video-technique-donnees/reponse/session.json",
+        "sha256": "46c7e3454892db602098a94ade1b5c08bc4e95cfa3091e604fe70c0c54355d76"
+      },
+      "response_trace": {
+        "evidence_path": "campagne/l8-dpm-video-technique-donnees/reponse/trace.jsonl",
+        "sha256": "ae5a3e7dda15ac540ef97244be0428603c060e8edfc2187d76307f1d3d6427c6"
+      },
+      "review_session": {
+        "evidence_path": "campagne/l8-dpm-video-technique-donnees/relecture/session.json",
+        "sha256": "c35d6b724b9b1e61176e7ebd17115f6ef54646d09290d3ea8db4a33c0041fa92"
+      },
+      "review_trace": {
+        "evidence_path": "campagne/l8-dpm-video-technique-donnees/relecture/trace.jsonl",
+        "sha256": "1caa91adee28c19dcf16a065cbf77f256ff54b31ed925f601c8a7095102a4906"
+      }
+    },
+    "l8-dcp-vers-dsi-disponible": {
+      "summary_sha256": "1d000ebaefb77c6e782370d5d9439e819c53a9e11a9a05eea69cdd57ce9a63c9",
+      "human_opinion": {
+        "evidence_path": "avis-humain-jo-20261020.json",
+        "sha256": "4b40590c91afe9073a130806671d9c13983c96e387a94288a28da04fec466082"
+      },
+      "review_sheet": {
+        "evidence_path": "FICHE-RELECTURE-17-D.md",
+        "sha256": "132ced25541f8458d68e92249100ef92c73d7fc6df717d3289eb7a8811ed5d8e"
+      },
+      "response_session": {
+        "evidence_path": "campagne/l8-dcp-vers-dsi-disponible/reponse/session.json",
+        "sha256": "569119bfa36b5d524babed2a5816638d21dd3cc9032b1a6243a85cf136724874"
+      },
+      "response_trace": {
+        "evidence_path": "campagne/l8-dcp-vers-dsi-disponible/reponse/trace.jsonl",
+        "sha256": "3784968d8985d19816d4070aecd510487e7148bac187b90d47706c140caf487f"
+      },
+      "review_session": {
+        "evidence_path": "campagne/l8-dcp-vers-dsi-disponible/relecture/session.json",
+        "sha256": "4abc2f7cbff91588435f9fd316df088c0531a697c9b664a1d4090e676c241ab7"
+      },
+      "review_trace": {
+        "evidence_path": "campagne/l8-dcp-vers-dsi-disponible/relecture/trace.jsonl",
+        "sha256": "39f0fee31548deefb0574b443ab08bb5998edfa4f07482ac4350390ca67e4d0f"
+      }
+    }
+  },
+  "case_contract": {
+    "evidence_path": "cas-plugin-cycle-v2.json",
+    "sha256": "65593a1c46bd31b403c5b83344f14951cbc3455f456eefcde2c6853fa68a9478"
+  }
+}
