@@ -436,6 +436,9 @@ def smoke_prompt(root: Path, case_id: str) -> str:
             "ne lis jamais au-delà ; sinon, lis seulement le segment suivant. "
             "Ne fais aucune lecture intégrale et ne relis jamais une ligne, même si la restitution est signalée tronquée. "
             "Si une restitution reste incomplète, signale la limite et n'affirme rien des lignes non reçues, sans arrêter la réponse. "
+            "Chaque entrée SKILL.md sélectionnée doit être lue jusqu'à sa fin, marquée par le premier segment de moins de 85 lignes. "
+            "Une restitution perçue comme tronquée ne permet ni de relire ni d'interrompre la série : "
+            "poursuis avec le segment suivant (M + 85), puis signale la limite dans la réponse. "
             "Aucune autre commande ni accès aux profils. Utilise le MCP juridique installé, sans web. "
             + ("Récupère effectivement une source officielle avec le MCP installé, sans inventer d'identifiant. "
                if case_id == "mcp-installe" else "") + question)

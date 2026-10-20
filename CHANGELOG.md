@@ -4,6 +4,15 @@
 
 Préparation locale du 2026-10-17, selon l'ADR 0010.
 
+Actualisation locale du 2026-10-20 (T43-L40, ADR 0023, décision de Jo
+« Consigne + smoke ce soir ») : ajout au seul prompt de l'obligation de lire
+chaque entrée SKILL.md sélectionnée jusqu'au premier segment court. Une
+restitution perçue comme tronquée impose de poursuivre au segment M + 85,
+sans relire ni interrompre la série ; la limite est ensuite signalée dans
+la réponse. Toutes les règles précédentes, les validateurs, N, la sonde EOF,
+STOP, MCP sans web, les seuils et les sept skills sont inchangés. Pré-vol et
+nouveau smoke préparés ; aucun modèle, Docker ou push exécuté dans ce lot.
+
 Actualisation locale du 2026-10-20 (T43-L39, ADR 0022, décision de Jo
 « Préciser le validateur ») : au plus une sonde EOF vide et réussie par fichier,
 après couverture complète contiguë dans la même session. Les sondes sont tracées
