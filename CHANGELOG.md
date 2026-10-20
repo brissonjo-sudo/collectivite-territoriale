@@ -4,6 +4,14 @@
 
 Préparation locale du 2026-10-17, selon l'ADR 0010.
 
+Actualisation locale du 2026-10-20 (T43-L30, ADR 0019) : toute entrée ou
+référence du cache est lue uniquement par segments contigus de 85 lignes.
+Un segment court termine le fichier, sans lecture au-delà ni relecture.
+Les 183 Markdown sont non vides et non multiples de 85 ; test régressif
+obligatoire pour tous les fichiers futurs. Validateurs et runtime inchangés,
+transition fermée réépinglée ; smoke c préparé seulement, a et b consommées
+et conservées séparément. Aucun modèle, installation, push ni release.
+
 Actualisation locale du 2026-10-20 (T43-L29, ADR 0018) : seule la consigne de
 lecture du prompt smoke change : lecture unique jusqu'à 319 lignes, sinon
 segments contigus d'au plus 90 lignes dès le départ, aucune relecture.
