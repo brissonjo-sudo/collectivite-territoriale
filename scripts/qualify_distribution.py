@@ -6,6 +6,9 @@ import hashlib
 import json
 from pathlib import Path
 
+from cli_toolchains import measurement_contract
+from measurement_common import bound
+
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -20,6 +23,23 @@ def load(root: Path, relative: str) -> dict:
     if not path.is_relative_to(root.resolve()):
         raise ValueError("Pièce hors dépôt")
     return json.loads(path.read_text(encoding="utf-8"))
+
+
+def qualification_cases(root: Path, evidence: dict) -> dict[str, dict]:
+    """Choisit v2 par l'index source lié et le pin du commit mesuré, jamais par la preuve."""
+    link = evidence.get("review", {}).get("linked_sources")
+    if link is not None:
+        index_path = bound(root, link)
+        index = json.loads(index_path.read_bytes())
+        contract = measurement_contract(root, index.get("measurement_commit"))
+        if contract is not None:
+            case_link = index.get("case_contract") or {}
+            if (index.get("schema") != "ct-human-linked-v1"
+                    or case_link.get("sha256") != contract["case_contract_sha256"]):
+                raise ValueError("Contrat de cycle v2 absent ou divergent")
+            path = bound(index_path.parent, case_link)
+            return {c["id"]: c for c in json.loads(path.read_bytes())}
+    return {c["id"]: c for c in load(root, "tests/cas-plugin.json")}
 
 
 def distribution_errors(root: Path, evidence: dict) -> list[str]:
@@ -91,7 +111,7 @@ def distribution_errors(root: Path, evidence: dict) -> list[str]:
         runner = fingerprint(root / "scripts/run_codex_campaign.py")
         require(native["runner_sha256"] == runner, "Protocole de campagne modifié")
 
-        cases = {c["id"]: c for c in load(root, "tests/cas-plugin.json")}
+        cases = qualification_cases(root, evidence)
         runs = {r["case_id"]: r for r in native["runs"]}
         recorded = {r["case_id"]: r for r in evidence["runs"]}
         require(len(runs) == len(native["runs"]) == len(cases)

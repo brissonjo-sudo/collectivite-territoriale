@@ -4,6 +4,12 @@
 
 Préparation locale du 2026-10-17, selon l'ADR 0010.
 
+Actualisation locale du 2026-10-20 (T43-L33, ADR 0020) : le qualificateur
+sélectionne le contrat v2 exact de d depuis le commit de l'index humain lié,
+avec empreinte épinglée. Sans ce lien, le contrôle historique v1 demeure.
+Transition fermée étendue au seul qualificateur ; aucun autre contrôle changé.
+Qualification et assemblage restent à vérifier ; aucune action externe.
+
 Actualisation locale du 2026-10-20 (T43-L30, ADR 0019) : toute entrée ou
 référence du cache est lue uniquement par segments contigus de 85 lignes.
 Un segment court termine le fichier, sans lecture au-delà ni relecture.
