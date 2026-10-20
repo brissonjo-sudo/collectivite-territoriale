@@ -332,8 +332,9 @@ def public_command(command: str | None) -> dict:
 
 
 def read_events(raw: list[dict], installed: Path, *, diagnostic_path: Path | None = None,
-                case_id: str | None = None, plugin_commit: str | None = None) -> list[dict]:
-    """Vérifie les lectures dans le cache installé sans archiver leurs contenus."""
+                case_id: str | None = None, plugin_commit: str | None = None,
+                eof_probes: list[dict] | None = None) -> list[dict]:
+    """Vérifie le contenu ; isole au plus une sonde EOF après couverture complète."""
     def refuse(item: dict, reason: str) -> NoReturn:
         if diagnostic_path is not None:
             output = item.get("aggregated_output")
@@ -355,6 +356,8 @@ def read_events(raw: list[dict], installed: Path, *, diagnostic_path: Path | Non
         raise ValueError(reason)
 
     result = []
+    coverage: dict[Path, list[dict]] = {}
+    probed: set[Path] = set()
     for event in raw:
         item = event.get("item") or {}
         if event.get("type") != "item.completed" or item.get("type") != "command_execution":
@@ -368,19 +371,45 @@ def read_events(raw: list[dict], installed: Path, *, diagnostic_path: Path | Non
             refuse(item, "Lecture hors skill installé")
         lines = path.read_text(encoding="utf-8").splitlines(keepends=True)
         start, count = int(match[2] or 0), int(match[3] or len(lines))
+        previous = coverage.get(path, [])
+        output = item.get("aggregated_output")
+        normalized = output.replace("\r\n", "\n").strip() if isinstance(output, str) else None
+        if start >= len(lines):
+            offset = 0
+            contiguous = bool(previous)
+            for read in previous:
+                if read["start"] != offset:
+                    contiguous = False
+                offset += read["count"]
+            if (normalized != "" or item.get("exit_code") != 0 or item.get("status") != "completed"
+                    or not contiguous or offset != len(lines)):
+                refuse(item, "Lecture installée tronquée ou échouée")
+            if path in probed:
+                refuse(item, "Sonde de fin de fichier répétée")
+            probed.add(path)
+            if eof_probes is not None:
+                eof_probes.append({"path": path.relative_to(installed).as_posix(), "start": start,
+                    "requested_count": count, "line_count": len(lines), "source_sha256": fingerprint(path),
+                    "exit_code": 0, "status": "completed", "coverage_verified": True,
+                    "counts_as_content": False})
+            continue
         expected = "".join(lines[start:start+count]).strip()
         valid = (bool(expected) and expected in item.get("aggregated_output", "").replace("\r\n", "\n")
                  and item.get("exit_code") == 0 and item.get("status") == "completed")
         if not valid:
             refuse(item, "Lecture installée tronquée ou échouée")
+        end = start + min(count, len(lines)-start)
+        if any(start < read["start"] + read["count"] and read["start"] < end for read in previous):
+            refuse(item, "Lecture installée dupliquée")
         result.append({"path": path.relative_to(installed).as_posix(), "start": start,
                        "count": min(count, len(lines)-start), "line_count": len(lines),
                        "source_sha256": fingerprint(path), "content_verified": True})
+        coverage.setdefault(path, []).append(result[-1])
     return result
 
 
 def complete_entry(reads: list[dict], name: str) -> bool:
-    """Exige une couverture contiguë intégrale, sans trou ou doublon."""
+    """Exige le contenu contigu intégral ; read_events sépare déjà les sondes EOF."""
     entries = [r for r in reads if r["path"] == f"skills/{name}/SKILL.md"]
     offset = 0
     for item in entries:
@@ -454,8 +483,9 @@ def run(root: Path, commit: str, cli: str, output: Path, prepared_root: Path, mo
         if os.name == "nt":
             argv += ["-c", 'windows.sandbox="elevated"']
         events, code, receipt = run_cli(argv + ["-"], text, workspace, timeout, environment, cli_phase='smoke_cli')
+        eof_probes: list[dict] = []
         reads = read_events(events, installed, diagnostic_path=output / (case_id + ".read-refusal.json"),
-                            case_id=case_id, plugin_commit=commit)
+                            case_id=case_id, plugin_commit=commit, eof_probes=eof_probes)
         # Les commandes installées sont contrôlées ci-dessus, pas comme copies .agents.
         useful = sanitize([e for e in events if (e.get("item") or {}).get("type") != "command_execution"])
         chronology = timeline(events)
@@ -473,7 +503,7 @@ def run(root: Path, commit: str, cli: str, output: Path, prepared_root: Path, mo
         value = seal({"plugin_commit": commit, "case_id": case_id, "model_requested": model, "origin": receipt, "process_exit": code,
             "candidate_entry_read": entry, "installed_mcp_success": mcp, "stop_first": stop,
             "source_case_id": case["id"], "stop_required": required,
-            "entry_reads": reads, "events": useful, "chronology": chronology,
+            "entry_reads": reads, "eof_probes": eof_probes, "events": useful, "chronology": chronology,
             "technical_status": "passed" if passed else "failed", "human_legal_validation": False})
         write_new(path, value)
         runs.append({"case_id": case_id, "process_exit": code, "candidate_entry_read": entry,

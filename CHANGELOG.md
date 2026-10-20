@@ -4,6 +4,14 @@
 
 Préparation locale du 2026-10-17, selon l'ADR 0010.
 
+Actualisation locale du 2026-10-20 (T43-L39, ADR 0022, décision de Jo
+« Préciser le validateur ») : au plus une sonde EOF vide et réussie par fichier,
+après couverture complète contiguë dans la même session. Les sondes sont tracées
+dans `eof_probes`, séparées du contenu et de sa couverture. Lectures vides ailleurs,
+troncatures, doublons, secondes sondes et commandes hors contrat restent refusés.
+Prompt, STOP, seuils, campagne d et sept skills inchangés. Replays diagnostiques
+L29-b/L38-d et pré-vol locaux ; aucun nouveau smoke réel, Docker ou push exécuté.
+
 Actualisation locale du 2026-10-20 (T43-L37, décision de Jo « Oui aux deux ») :
 les deux tests qui lisent le binaire smoke Windows local épinglé sont sautés
 uniquement hors Windows, avec motif explicite. Sous Windows ils demeurent

@@ -56,7 +56,7 @@ class SmokeEofTests(unittest.TestCase):
                         self.assertTrue(smoke.complete_entry(reads,path.parent.name))
                         self.assertFalse(smoke.complete_entry(reads+[reads[-1]],path.parent.name))
 
-    def test_lecture_vide_apres_fin_et_sortie_tronquee_toujours_refusees(self):
+    def test_sonde_sans_couverture_complete_et_sortie_tronquee_refusees(self):
         with tempfile.TemporaryDirectory(prefix='L30-REFUS-DIAGNOSTIQUE-') as tmp:
             installed=Path(tmp)/'fixture-diagnostic-jamais-preuve'
             path=installed/'skills/dcp-fpt/SKILL.md';path.parent.mkdir(parents=True)
@@ -69,7 +69,7 @@ class SmokeEofTests(unittest.TestCase):
                 'aggregated_output':''}}
             diagnostic=installed.parent/'refus-diagnostic.json'
             with self.assertRaisesRegex(ValueError,'^Lecture installée tronquée ou échouée$'):
-                smoke.read_events(events+[beyond],installed,diagnostic_path=diagnostic)
+                smoke.read_events(events[:-1]+[beyond],installed,diagnostic_path=diagnostic)
             value=json.loads(diagnostic.read_bytes())
             self.assertTrue(value['diagnostic_only'])
             self.assertEqual(value['output_chars'],0)
