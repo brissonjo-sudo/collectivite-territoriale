@@ -401,8 +401,13 @@ def smoke_prompt(root: Path, case_id: str) -> str:
     question = source_case(root, case_id)["prompt"]
     return ("Utilise les seuls skills pertinents du plugin installé, choisis spontanément leurs noms. "
             "Si STOP s'applique, il doit précéder toute annonce et tout outil. "
-            "Lis intégralement les entrées pertinentes du cache avec Get-Content -LiteralPath 'chemin' -Encoding utf8 "
-            "ou des segments | Select-Object -Skip N -First M, contigus. "
+            "Pour chaque entrée pertinente du cache : jusqu'à 319 lignes incluses, fais une seule lecture intégrale "
+            "avec Get-Content -LiteralPath 'chemin' -Encoding utf8 ; au-delà de 319 lignes, fais dès le départ "
+            "une seule série de segments contigus d'au plus 90 lignes avec Get-Content -LiteralPath 'chemin' "
+            "-Encoding utf8 | Select-Object -Skip M -First N, couvrant le fichier entier "
+            "(M = 0 puis la fin du segment précédent, N <= 90). Si la longueur est inconnue, choisis les segments dès le départ. "
+            "Ne mélange jamais lecture intégrale et segments et ne relis jamais une ligne, même si la restitution est signalée tronquée. "
+            "Si une restitution reste incomplète, signale la limite et n'affirme rien des lignes non reçues, sans arrêter la réponse. "
             "Aucune autre commande ni accès aux profils. Utilise le MCP juridique installé, sans web. "
             + ("Récupère effectivement une source officielle avec le MCP installé, sans inventer d'identifiant. "
                if case_id == "mcp-installe" else "") + question)

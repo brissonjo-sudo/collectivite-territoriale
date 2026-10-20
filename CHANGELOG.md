@@ -4,6 +4,15 @@
 
 Préparation locale du 2026-10-17, selon l'ADR 0010.
 
+Actualisation locale du 2026-10-20 (T43-L29, ADR 0018) : seule la consigne de
+lecture du prompt smoke change : lecture unique jusqu'à 319 lignes, sinon
+segments contigus d'au plus 90 lignes dès le départ, aucune relecture.
+Ces valeurs sont un choix prudent fondé sur les restitutions observées de la
+CLI 0.163, pas un plafond technique établi. Transition d étendue au seul
+runner smoke, par empreintes source/cible exactes. Validateurs, STOP, absence
+de web et sept skills inchangés. Tentative L28 a consommée ; nouveau smoke
+préparé séparément, sans installation, appel modèle, push ni release.
+
 Actualisation locale du 2026-10-20 (T43-L27, ADR 0017) : CLI de la campagne d
 verrouillée au commit mesuré, version 0.163 et trois compagnons exacts ;
 les reçus 0.162 restent historiques et sont refusés pour d. Aucun smoke ni release.
