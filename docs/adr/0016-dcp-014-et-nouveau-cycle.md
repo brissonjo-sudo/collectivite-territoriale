@@ -36,6 +36,10 @@ Elle contient la synthèse autonome exacte (28 réussites sur 28), et distingue
 la relecture de Jo, non praticien, de la validation juridique et du plugin.
 La synthèse, l'avis humain, la provenance et le statut hors runtime sont copiés
 depuis les blobs Git publics, avec leurs empreintes dans la pièce.
+L'avis public en CRLF est conservé en gzip sans perte, avec empreintes du
+compressé et de l'original, et taille originale ; sa lecture de contrôle est
+bornée. Les autres originaux sont directement copiés. Cela préserve les octets
+publics sans exception au contrôle des espaces ni normalisation de l'avis.
 
 Le commit effectivement mesuré est
 `071737280debb275549647ffc8c1340cab544a18`. Pour chacun des 30 fichiers,

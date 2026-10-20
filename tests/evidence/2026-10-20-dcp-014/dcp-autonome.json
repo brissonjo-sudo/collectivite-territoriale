@@ -68,5 +68,14 @@
   "human_review_note": "Relecture humaine du fond des 28 réponses de la mesure autonome DCP 0.1.4. Ne vaut pas relecture praticien ni validation du plugin.",
   "human_legal_validation": false,
   "publication_ready": false,
-  "scope": "Seuil automatique de mesure ; relecture juridique et provenance distinctes."
+  "scope": "Seuil automatique de mesure ; relecture juridique et provenance distinctes.",
+  "source_files_storage": {
+    "tests/runs/codex-web-v0.1.4-dcp-stop-20261020-a/avis-humain-jo-20261020.json": {
+      "path": "avis-humain-jo-20261020.json.gz",
+      "encoding": "gzip",
+      "sha256": "8720b11bc0fb708be4e50c2ba32c858b1bc388c85c116a8f04093a71c5d6a644",
+      "original_sha256": "29c3934f821e1bce52d9fa4d684363cc0d8ddf74a40767577619c812b266b213",
+      "original_size": 1426
+    }
+  }
 }

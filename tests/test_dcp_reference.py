@@ -183,7 +183,20 @@ class Dcp014ReferenceTests(DcpReferenceTests):
         proof = json.loads(self.PROOF.read_bytes())
         for name, digest in proof["source_files_sha256"].items():
             import hashlib
-            self.assertEqual(hashlib.sha256((self.PROOF.parent / Path(name).name).read_bytes()).hexdigest(), digest)
+            storage = proof.get("source_files_storage", {}).get(name)
+            if storage:
+                import gzip
+                compressed = (self.PROOF.parent / storage["path"]).read_bytes()
+                self.assertEqual(hashlib.sha256(compressed).hexdigest(), storage["sha256"])
+                self.assertEqual(storage["encoding"], "gzip")
+                with gzip.GzipFile(fileobj=io.BytesIO(compressed)) as stream:
+                    raw = stream.read(1024 * 1024)
+                    self.assertEqual(stream.read(1), b"")
+                self.assertEqual(len(raw), storage["original_size"])
+                self.assertEqual(hashlib.sha256(raw).hexdigest(), storage["original_sha256"])
+            else:
+                raw = (self.PROOF.parent / Path(name).name).read_bytes()
+            self.assertEqual(hashlib.sha256(raw).hexdigest(), digest)
 
     def test_surcharge_locale_meme_au_pin_exact_refusee(self) -> None:
         path = self.root / "skills/dcp-fpt/SKILL.md"
