@@ -4,6 +4,13 @@
 
 Préparation locale du 2026-10-17, selon l'ADR 0010.
 
+Actualisation locale du 2026-10-20 (T43-L35, ADR 0021) : les contrôles
+d'absence de release utilisent leurs fixtures isolées, sans retrait d'assertion.
+L'assembleur conserve les originaux hors dépôt et produit une projection
+publique déterministe, sa table d'empreintes et une re-dérivation locale liée.
+La CI contrôle le graphe des projections et refuse homes, identifiants de
+session non hachés et secrets. Aucun nouvel appel modèle ni push dans ce lot.
+
 Actualisation locale du 2026-10-20 (T43-L33, ADR 0020) : le qualificateur
 sélectionne le contrat v2 exact de d depuis le commit de l'index humain lié,
 avec empreinte épinglée. Sans ce lien, le contrôle historique v1 demeure.

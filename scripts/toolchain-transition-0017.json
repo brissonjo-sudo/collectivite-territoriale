@@ -10,16 +10,18 @@
     "scripts/measurement-cli.json": "14f3782c2c8cac996fd55e1a50adeecf0861699dc44d691c7fdbea2d0d849159",
     "scripts/measurement_common.py": "d182f563ec827efeac5a75068d43c18cbba58a36f3f67faff0351a1c4046a4dd",
     "scripts/run_codex_smoke.py": "778f44060971effbfac1a47444e81ec05aa3977b8d183c3aa07b4a79db31dd0d",
-    "scripts/qualify_distribution.py": "12993daa0711b752f6389e907e7bd827d943b82d6017f87b1c9236b10f6372f1"
+    "scripts/qualify_distribution.py": "12993daa0711b752f6389e907e7bd827d943b82d6017f87b1c9236b10f6372f1",
+    "scripts/public_projection.py": null
   },
   "target_files_sha256": {
-    "CHANGELOG.md": "519213a11970703eda40ad9834a8c46413e1b3736d51fe5f878e8426c2f9c517",
-    "scripts/assemble_release_evidence.py": "5a29b0cde8f132eb70d9a60bb77cfd44334294b55006c21a0c73d60537968d3a",
-    "scripts/cli_toolchains.py": "e39544023503294370f2ddb84361c8ffa3464b08e3a4c4fd3ca468735731779d",
+    "CHANGELOG.md": "942ea9bf53681ced99c81efae4d30b6dad5001cb142475e5228627c985f288dc",
+    "scripts/assemble_release_evidence.py": "776b435f03228e341bff91292a845ca535b019905f4002a5ae0ade40ef351320",
+    "scripts/cli_toolchains.py": "42228fb17ddae096c141c0f6cfa0c7fab1191798380187763bc44b9d0a88749e",
     "scripts/human_resolution.py": "794acdfd1dfb5fc901cac52e44f10493edead97872949f2dcff208d06f231a0f",
     "scripts/measurement-cli.json": "1987fc911f925b59148e94aab14511178dbd3fe6c0f647e4ef2841f2038f050f",
     "scripts/measurement_common.py": "c0c774cd986e49f39820d1fe9cac3bd3b88d7ebc0ef6dbf1a127bbc6d961ecfb",
     "scripts/run_codex_smoke.py": "357a250afb704829b1349375d26b3f14b0b98797e49cbdc95ae9fb09babeddcb",
-    "scripts/qualify_distribution.py": "a521d1790b7f881144694b4024b6820ea7f662c2fab0a3a9e25b4caf7ad496f2"
+    "scripts/qualify_distribution.py": "e7fb32e7faa6dd0e93e3d1109046801f7687f990b0cea76a056c31fe253a38eb",
+    "scripts/public_projection.py": "ffce5880ee592441306d2c79ab79760a5aa8223bbc3d16286070fee781503027"
   }
 }

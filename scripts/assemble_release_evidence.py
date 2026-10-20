@@ -16,7 +16,8 @@ import run_codex_campaign as campaign
 from codex_event_contract import activated_skills, stop_errors
 from measurement_common import (CONFIGURATION, binding, bound, candidate, canonical, checked,
                                 digest, fingerprint, output_outside, seal, write_new)
-from qualify_distribution import distribution_errors
+from qualify_distribution import distribution_errors, _distribution_errors
+from public_projection import publish
 from dcp_reference import reference, copy_reference
 from review_codex_campaign import validate_report
 from human_resolution import load_bundle
@@ -145,7 +146,8 @@ def assemble(root: Path, commit: str, campaign_dir: Path, smoke_path: Path,
         [p['origin'] for _, p in reviews.values()], smoke_receipts,
         {**toolchains(measurement_commit=measurement_commit), 'smoke_cli': smoke['smoke_cli']},
         measurement_commit=measurement_commit)
-    output = output_outside(root, output)
+    public_output = output_outside(root, output)
+    output = output_outside(root, public_output.with_name(public_output.name + '-originaux'))
     # Toutes les entrées sont refusées avant toute écriture si synthétiques ou incomplètes.
     output.mkdir(parents=True)
     wanted = [*CONFIGURATION, "upstream.json", "tests/cas-plugin.json", "scripts/run_codex_campaign.py",
@@ -250,12 +252,17 @@ def assemble(root: Path, commit: str, campaign_dir: Path, smoke_path: Path,
         evidence['measurement_commit'] = linked['source_commit']
     if candidate(root, commit) != baseline:
         raise ValueError("Candidat divergent avant finalisation")
-    errors = distribution_errors(output, evidence)
+    # Cette sortie privée conserve les originaux ; elle n'est jamais à commiter.
+    errors = _distribution_errors(output, evidence)
     if errors:
         raise ValueError("Qualificateur inchangé en refus : " + "; ".join(errors))
     destination = output / "tests/evidence" / ("release-" + version + ".json")
     write_new(destination, evidence)
-    return destination
+    result = publish(output, public_output, destination.relative_to(output).as_posix())
+    errors = distribution_errors(public_output, json.loads(result.read_bytes()))
+    if errors:
+        raise ValueError('Projection publique en refus : ' + '; '.join(errors))
+    return result
 
 
 def main() -> int:

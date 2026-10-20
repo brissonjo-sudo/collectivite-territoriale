@@ -18,7 +18,7 @@ TRANSITION_D = 'scripts/toolchain-transition-0017.json'
 MIGRATION_D = {'scripts/measurement-cli.json', 'scripts/cli_toolchains.py',
     'scripts/measurement_common.py', 'scripts/human_resolution.py',
     'scripts/assemble_release_evidence.py', 'scripts/run_codex_smoke.py',
-    'scripts/qualify_distribution.py', TRANSITION_D, 'CHANGELOG.md'}
+    'scripts/qualify_distribution.py', 'scripts/public_projection.py', TRANSITION_D, 'CHANGELOG.md'}
 
 
 def sha(path: Path) -> str:
