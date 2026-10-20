@@ -397,19 +397,14 @@ class CodexPluginTests(unittest.TestCase):
                 and evidence["codex_smoke"]["plugin_commit"] == evidence["plugin_commit"],
             )
 
-    def assert_dcp_overlays_l22(self, spec: dict) -> None:
-        """Exige les deux seules surcharges DCP décidées par Jo, avec leurs empreintes."""
-        overlays = spec["instruction_overlays"]
-        self.assertEqual([(o["target"], o["source"], o.get("operation", "insert-before")) for o in overlays],
-            [("SKILL.md", "overlays/dcp-fpt.md", "insert-before"),
-             ("SKILL.md", "overlays/dcp-fpt-description.md", "replace-description")])
-        self.assertEqual([o["source_sha256"] for o in overlays],
-            ["ec4862bb4715d1b5da931f967c48f1bd1f2297eaf4288a4ab2f9bcd3d0b6244f",
-             "70b39ef01131e95214e4d679c1a57e59d496a1bbb36d60241206c6f12fbd07d9"])
-        self.assertEqual(overlays[0]["base_sha256"], "32f0366db9fdd451bcd3eaf70860b4b24ecd6bbf303b0e01bbd3d39e2b3f3379")
-        self.assertEqual(overlays[1]["base_sha256"], "d488e8d5ccbe0592fdf9c6c0b3f5d77d3349136dd32f0362a7ed796a803960ac")
-        for overlay in overlays:
-            self.assertEqual(overlay["source_sha256"], hashlib.sha256((ROOT / overlay["source"]).read_bytes()).hexdigest())
+    def assert_dcp_source_l24(self, spec: dict) -> None:
+        """DCP est une copie source 0.1.4 sans surcharge locale, liée à la mesure."""
+        self.assertNotIn("instruction_overlays", spec)
+        self.assertEqual(spec["version"], "0.1.4")
+        self.assertEqual(spec["commit"], "414cd4ecf41ba8b296908b738224355069b1890f")
+        self.assertEqual(list((ROOT / "overlays").glob("dcp-fpt*.md")), [])
+        self.assertEqual(hashlib.sha256((ROOT / "skills/dcp-fpt/SKILL.md").read_bytes()).hexdigest(),
+                         "49e04e18203cc6472c35ab595d8f0a9a30671a51bd946d8a03f6b936041ff3b3")
 
     def test_dcp_distribution_sans_cache_ni_conception(self) -> None:
         spec = load_json("upstream.json")["skills"]["dcp-fpt"]
@@ -432,7 +427,7 @@ class CodexPluginTests(unittest.TestCase):
         if version.startswith("0."):
             # Tant que le skill n'a pas passé le seuil de mesure, l'avertissement reste obligatoire.
             self.assertIn("non mesuré, non relu par un praticien", entrypoint)
-        self.assert_dcp_overlays_l22(spec)
+        self.assert_dcp_source_l24(spec)
 
     def test_cas_dcp_orchestration_et_outils(self) -> None:
         cases = load_json("tests/cas-plugin.json")
@@ -463,8 +458,8 @@ class CodexPluginTests(unittest.TestCase):
         self.assertIn("dcp-fpt", pinned)
         self.assertIn("dsi-fpt", pinned)
         self.assertEqual(pinned["dsi-fpt"]["commit"], "704e5dd6a3d15994ed431b23585aabd72086ca75")
-        self.assertEqual(pinned["dcp-fpt"]["commit"], "129f374e6ab8ea3b47bcfd9de9ddd52a2d3d9498")
-        self.assert_dcp_overlays_l22(pinned["dcp-fpt"])
+        self.assertEqual(pinned["dcp-fpt"]["commit"], "414cd4ecf41ba8b296908b738224355069b1890f")
+        self.assert_dcp_source_l24(pinned["dcp-fpt"])
         dcp = (ROOT / "skills/dcp-fpt/SKILL.md").read_text(encoding="utf-8")
         self.assertIn("BASCULE dsi-fpt", dcp)
         self.assertIn("spécifications, niveaux de service, réversibilité et exécution technique", dcp)

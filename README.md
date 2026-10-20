@@ -24,7 +24,7 @@ Ce plugin aide à qualifier une situation, identifier les expertises à mobilise
 | `collectivite-territoriale:drh-fpt` | Ressources humaines territoriales | 0.6.0 |
 | `collectivite-territoriale:dpo-ct` | Protection des données | 0.2.2 |
 | `collectivite-territoriale:dirfi-fpt` | Finances locales | 1.0.4 |
-| `collectivite-territoriale:dcp-fpt` | Commande publique | 0.1.3 |
+| `collectivite-territoriale:dcp-fpt` | Commande publique | 0.1.4 |
 | `collectivite-territoriale:dsi-fpt` | Systèmes d’information et sécurité technique | 0.2.1 |
 | `collectivite-territoriale:recherche-juridique` | Recherche et vérification du droit français | 3.5.0 |
 
@@ -153,12 +153,14 @@ les transferts imposent l'activation effective et une attribution persistante.
 
 Pour `recherche-juridique`, la racine canonique `skill/` est aplatie dans `skills/recherche-juridique/`. Sa licence est copiée avec le runtime ; aucun manifeste, serveur MCP, fichier `.env` ou autre fichier de dépôt amont n'est dupliqué. Le fichier `references/cache-taux-seuils.md` de `dirfi-fpt`, exclu de son propre paquet de distribution, n'est pas embarqué.
 
-Pour DCP 0.1.3, le commit correctif est figé :
-`129f374e6ab8ea3b47bcfd9de9ddd52a2d3d9498`. Les 30 fichiers de son paquet
+Pour DCP 0.1.4, le commit correctif est figé :
+`414cd4ecf41ba8b296908b738224355069b1890f`. Les 30 fichiers de son paquet
 runtime et sa licence sont copiés ; le cache `references/cache-valeurs.md`,
 la conception, les scripts d'évaluation et les preuves amont sont exclus.
 Le registre daté reste une piste de recherche, jamais une preuve de lecture
 officielle dans la session. Aucun correctif local du contenu DCP n'est appliqué.
+Le statut de mesure autonome et la relecture de Jo sont documentés hors runtime
+dans l'amont ; l'avertissement historique de l'entrée reste copié à l'identique.
 
 Pour reproduire les copies depuis des dépôts locaux placés côte à côte :
 
