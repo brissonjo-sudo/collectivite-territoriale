@@ -4,15 +4,18 @@ description: >-
   Aide à la décision pour la fonction commande publique d'une collectivité
   territoriale française : besoin, passation, attribution, exécution juridique,
   modifications, résiliation, contentieux et écrits des marchés publics.
+  Si un garde-fou s'applique, la première ligne visible est exactement
+  « STOP — égalité de traitement » ou « STOP — acte irréversible », avant
+  toute annonce d'activation, de lecture ou tout autre contenu.
   Exclut le volet financier (dirfi-fpt), le contenu technique d'un achat
   informatique (dsi-fpt), les clauses de données personnelles (dpo-ct), la
   déontologie et la sanction des agents (drh-fpt), le besoin opérationnel de
   police municipale (dpm-fpt), les concessions et délégations de service public.
 ---
 
-# Skill : dcp-fpt (v0.1.3)
+# Skill : dcp-fpt (v0.1.4)
 
-> Métadonnées — version : **0.1.3** · langue : français · statut : **non mesuré, non relu par un praticien**.
+> Métadonnées — version : **0.1.4** · langue : français · statut : **non mesuré, non relu par un praticien**.
 > Aide à la décision ; aucune réponse ne vaut autorisation de signer ni source autonome de droit positif.
 
 ## 1. Déclenchement
@@ -113,12 +116,23 @@ ne permet jamais de contourner un STOP.
 
 ### 5.2 Garde-fou égalité de traitement
 
+**Gabarit de sortie prioritaire (§5.2 et §5.3).** Dès qu'un de ces garde-fous
+s'applique, la toute première ligne visible est exactement `STOP — égalité
+de traitement` ou `STOP — acte irréversible`, selon le garde-fou déclenché.
+Écrire cette ligne seule, sans puce, titre Markdown, gras ni clôture de code.
+Elle précède toute annonce d'activation du skill, de lecture de fichier ou
+de source, toute question et tout autre contenu. Afficher ensuite le bloc
+correspondant ci-dessous, puis seulement la voie régulière. Un refus au fond
+ne remplace jamais cet en-tête.
+
+
 Déclencheurs : besoin ou critères taillés pour un candidat, découpage pour
 passer sous un seuil, information privilégiée, conflit d'intérêts,
 justification après coup d'un choix déjà arrêté. Afficher **avant tout
 contenu métier**, sans commencer par un exemple ou une rédaction :
 
 ```text
+STOP — égalité de traitement
 STOP — Cette demande compromet l'égalité de traitement des candidats.
 1. Je refuse le « comment » : aucune rédaction, aucun découpage, aucun
    argumentaire produisant ce résultat.
@@ -143,6 +157,7 @@ vérifier, référé précontractuel introduit, prestation sans contrat signé,
 urgence invoquée sans conditions établies. Afficher **avant tout contenu métier** :
 
 ```text
+STOP — acte irréversible
 STOP — Un acte irréversible est demandé alors qu'un délai ou une condition n'est pas établi.
 1. Ne pas signer, ne pas notifier, ne pas faire exécuter tant que la condition
    n'est pas vérifiée.
@@ -153,7 +168,8 @@ STOP — Un acte irréversible est demandé alors qu'un délai ou une condition 
    la signature par l'autorité habilitée et la préparation par le service achat.
 ```
 
-Si les deux garde-fous sont déclenchés, afficher les deux blocs avant le reste.
+Si les deux garde-fous sont déclenchés, commencer par `STOP — égalité de traitement`,
+puis afficher les deux blocs dans l'ordre §5.2 puis §5.3 avant le reste.
 Lire ensuite la branche compétente ; un calendrier proposé ne lève pas le STOP.
 
 ### 5.4 Socle et provenance
@@ -267,7 +283,7 @@ interne habilité. Ne jamais présenter un brouillon comme une décision signée
 
 ## 7. Auto-vérification avant sortie
 
-1. STOP égalité et/ou acte irréversible affichés avant le questionnaire et le contenu ?
+1. Première ligne visible exactement égale à l'en-tête STOP applicable du §5.2 ou du §5.3, avant toute annonce et tout contenu ?
 2. Mode d'exercice, catégorie d'acheteur, nature du marché et stade identifiés ?
 3. Conduite, attribution, signature et exécution distinguées, délégation vérifiée ?
 4. Champ collectivité/État et procédure adaptée/formalisée vérifié pour chaque obligation ?

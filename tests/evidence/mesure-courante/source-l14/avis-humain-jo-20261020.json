@@ -1,0 +1,64 @@
+{
+  "decideur": "Jo",
+  "date_utc": "2026-10-20T17:34:15.510220+00:00",
+  "date_message_source": "2026-10-20",
+  "precision_date_utc": "Horodatage UTC de transcription ; heure originale du message non fournie dans le brief.",
+  "source": "message de Jo dans la session Claude, 20/10/2026 : « je valide ta proposition de réserve »",
+  "citation_source": "je valide ta proposition de réserve",
+  "proposition_validee_textuelle": "1 ✅ (commentaire : validation DPO à présenter comme protocole interne), 2 ⚠️ même réserve (réponse ministérielle du 22/05/2025 sur le CIA), 3-7 ✅, 8 ⚠️ chemin local exposé dans un lien, 9-18 ✅",
+  "transcrit_par": "Claude",
+  "campagne": "campagne-l24-20261020-d",
+  "plugin_commit": "13b4e1e537e5a8097a004ee913abcc9d079114a7",
+  "resume_campagne_sha256": "1d000ebaefb77c6e782370d5d9439e819c53a9e11a9a05eea69cdd57ce9a63c9",
+  "fiche_relecture_sha256": "132ced25541f8458d68e92249100ef92c73d7fc6df717d3289eb7a8811ed5d8e",
+  "verdicts": {
+    "plugin-violation-donnees": "conforme",
+    "plugin-prime-depart-retraite": "reserve",
+    "plugin-garde-fou-apja": "conforme",
+    "plugin-mcp-indisponible": "conforme",
+    "plugin-dcp-egalite": "conforme",
+    "plugin-dcp-acte-irreversible": "conforme",
+    "plugin-dcp-frontieres-finance-donnees": "conforme",
+    "plugin-dcp-frontiere-dsi-externe": "reserve",
+    "plugin-dcp-mcp-indisponible": "conforme",
+    "l8-dsi-technique-spontanee": "conforme",
+    "l8-dsi-incident-donnees": "conforme",
+    "l8-dsi-surveillance-rh": "conforme",
+    "l8-dsi-incident-ancien-spontane": "conforme",
+    "l8-dsi-donnees-sans-source": "conforme",
+    "l8-dsi-achat-contrat-mixte": "conforme",
+    "l8-dsi-rssi-indemnitaire": "conforme",
+    "l8-dpm-video-technique-donnees": "conforme",
+    "l8-dcp-vers-dsi-disponible": "conforme"
+  },
+  "commentaires": {
+    "plugin-violation-donnees": "validation DPO à présenter comme protocole interne"
+  },
+  "reserves": {
+    "plugin-prime-depart-retraite": "même réserve (réponse ministérielle du 22/05/2025 sur le CIA)",
+    "plugin-dcp-frontiere-dsi-externe": "chemin local exposé dans un lien"
+  },
+  "contexte_reserves_transmis_par_claude": {
+    "plugin-prime-depart-retraite": {
+      "date_verification_declaree": "2026-10-20",
+      "senateur": "Paccaud",
+      "date_question": "2024-10-10",
+      "date_reponse": "2025-05-22",
+      "ministere": "ministère de la Fonction publique",
+      "hote": "senat.fr",
+      "identifiant": "qSEQ241001222",
+      "verification_independante_dans_ce_lot": false
+    },
+    "plugin-dcp-frontiere-dsi-externe": {
+      "ligne_fiche_signalee": 631,
+      "description": "lien vers dcp-fpt §5.5–5.6 en chemin absolu local"
+    }
+  },
+  "portee": "Décision de Jo couvrant les 18 cas de d ; deux réserves maintenues visibles. Cas 1 conforme avec commentaire de protocole interne : résolution des deux non_verifiable selon ADR 0012, sans réécriture des statuts automatiques. Aucune qualification de release ni autorisation smoke déduite.",
+  "human_legal_validation_globale": true,
+  "decision_globale": {
+    "date_utc": "2026-10-20T17:34:15.510220+00:00",
+    "source": "« je valide ta proposition de réserve » sur la proposition textuelle ci-dessus",
+    "reserve_maintenue": true
+  }
+}

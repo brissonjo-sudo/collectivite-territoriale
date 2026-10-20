@@ -1,0 +1,102 @@
+{
+  "date": "2026-10-13",
+  "status": "preparation_locale; aucune fusion/publication/campagne",
+  "base_main": "051e13c6f178b8a82fbb23793a51355d3335a190",
+  "parents_historiques": {
+    "11": "a9ea26f10a175d4102bca3404a5d48ea504bfe6b",
+    "16": "b02dd247e328b4401cd82826a276d8fa1b31f1bb"
+  },
+  "decision_16": {
+    "choix": "reprendre contenu R5 comme base outillage; ne pas abandonner",
+    "files": [
+      {
+        "path": "docs/qualification/reprise-dev7-2026-10-12-cas.json",
+        "source_commit": "b02dd247e328b4401cd82826a276d8fa1b31f1bb",
+        "sha256": "5fcfdf5b9c6b5f989543f6163b0fe9727195032b67ab3b90925d38e98635c88c",
+        "bytes": 16457
+      },
+      {
+        "path": "docs/qualification/reprise-dev7-2026-10-12.md",
+        "source_commit": "b02dd247e328b4401cd82826a276d8fa1b31f1bb",
+        "sha256": "d9629187607dbd1e37c81ffa547dba64ef419e9864fe731c435a65ffedb3ac27",
+        "bytes": 6587
+      },
+      {
+        "path": "scripts/reprise_dev7.py",
+        "source_commit": "b02dd247e328b4401cd82826a276d8fa1b31f1bb",
+        "sha256": "73aa5a07954552690794be7b0f61ad8d6424955b2a1a035ec65c02afec2ef4ff",
+        "bytes": 14136
+      },
+      {
+        "path": "tests/test_reprise_dev7.py",
+        "source_commit": "b02dd247e328b4401cd82826a276d8fa1b31f1bb",
+        "sha256": "079ce0e126a797b58ed916d443423b77b18096791d3e09ea30c45eca2a5d72c7",
+        "bytes": 10145
+      }
+    ],
+    "test_source": "archive privee et historique Git; aucun nouveau test ajoute ni execute",
+    "execution": "interdite sans autorisation campagne; nouveau gel/cas/pins et preflight a preparer; ancien R5 ne qualifie pas successeur"
+  },
+  "skills_decisions": {
+    "dpo-ct": {
+      "before": "0.2.1",
+      "selected": "0.2.2",
+      "commit": "58ea45c4d12812da10ace5f1486deea96b8534fa",
+      "decision": "mise a jour retenue pour integration dans runtime suivant; recalculer empreinte base overlay, conserver validation humaine, revoir frontiere DCP/DSI",
+      "implemented_runtime_update": false
+    },
+    "dcp-fpt": {
+      "before": "0.1.3",
+      "selected": "0.1.3",
+      "commit": "129f374e6ab8ea3b47bcfd9de9ddd52a2d3d9498",
+      "decision": "conserver source distribuee; main amont actuellement0.1.0 non substituable; prochain candidat dePR6 apres revues/validation",
+      "pr6_head": "b60c2b4ccb2e11f88d6375bb98dedfe61e8f039f",
+      "pr6_draft": true,
+      "implemented_runtime_update": false
+    },
+    "dsi-fpt": {
+      "selected": "0.2.1",
+      "historical_source": "704e5dd6a3d15994ed431b23585aabd72086ca75",
+      "decision": "integration selective future avec garde-fous; jamais transfert de score autonome/plugin; nouveaux pin et overlays a revalider",
+      "implemented_runtime_update": false
+    }
+  },
+  "runtime_current": "six skills inchanges main; ce commit est un successeur preparatoire, pas une integration DSI qualifiee",
+  "closure_11_16": "validation separee apres successeur fonctionnel tracable et liens de remplacement; aucune fermeture maintenant",
+  "T44": "reportee apres T43 et revalidation base",
+  "historical_evidence": "2498fichiers preuves restent dans bundles/historique, aucun abandon",
+  "remaining": [
+    "integrer DPO0.2.2 et surcharges verifiees",
+    "integrer DSI avec frontieres actuelles DCP/DPO",
+    "adapter manifestes,cases,gels et barriere distincte nouveau candidat",
+    "rendre dependancesR5 recuperables hors chemin prive sans copier secrets",
+    "relecture humaine puis autorisations de campagne et de PR distinctes"
+  ],
+  "decisions_orchestrateur": [
+    {
+      "date": "2026-10-17",
+      "lot": "T43-L1",
+      "reference": "../adr/0010-contrat-candidat-1-3-0.md",
+      "decision": "Le contrat du candidat 1.3.0 et les décisions D1-D5 sont fixés par l’ADR 0010.",
+      "pins": {
+        "dsi-fpt": {
+          "version": "0.2.1",
+          "commit": "704e5dd6a3d15994ed431b23585aabd72086ca75"
+        },
+        "dpo-ct": {
+          "version": "0.2.2",
+          "commit": "58ea45c4d12812da10ace5f1486deea96b8534fa"
+        },
+        "dcp-fpt": {
+          "version": "0.1.3",
+          "commit": "129f374e6ab8ea3b47bcfd9de9ddd52a2d3d9498"
+        }
+      },
+      "status": "non_mesure_non_qualifie",
+      "catalogues": "v1.2.0 inchangés",
+      "ci": "échec du seul test de preuve courante accepté en attendant arbitrage L6; aucun seuil, saut ou filtre ajouté",
+      "r5": "test et dépendances publiques autorisés pour L5; aucun profil, OAuth, gel, état privé ni lancement init/preflight/prepare/run-all",
+      "hors_perimetre": "patchs DPM eval_suite.py et package_skill.py"
+    }
+  ]
+}

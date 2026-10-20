@@ -3,6 +3,9 @@
 from __future__ import annotations
 
 import copy
+import io
+import subprocess
+import tarfile
 import json
 import shutil
 import sys
@@ -12,26 +15,42 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
-from qualify_distribution import distribution_errors, fingerprint, load
+from qualify_distribution import distribution_errors, fingerprint, load, current_distribution_errors
 
 
 class DistributionQualificationTests(unittest.TestCase):
     def setUp(self) -> None:
         self.workspace = tempfile.TemporaryDirectory()
         self.addCleanup(self.workspace.cleanup)
-        self.root = Path(self.workspace.name)
-        for relative in ("skills", "tests/evidence/2026-10-07-codex-natif-v5",
-                         "tests/evidence/2026-10-08-candidat-013"):
-            shutil.copytree(ROOT / relative, self.root / relative)
-        for relative in (".codex-plugin/plugin.json", ".claude-plugin/plugin.json",
-                         ".mcp.json", "assets/icon.png", "upstream.json",
-                         "tests/cas-plugin.json", "scripts/run_codex_campaign.py",
-                         "docs/adr/0007-distribution-open-source-et-deploiement.md",
-                         "docs/deploiement-collectivite.md"):
-            target = self.root / relative
-            target.parent.mkdir(parents=True, exist_ok=True)
-            shutil.copyfile(ROOT / relative, target)
+        self.root = self.historical_distribution_fixture()
         self.evidence = copy.deepcopy(load(ROOT, "tests/evidence/release-1.2.0.json"))
+
+    def historical_distribution_fixture(self) -> Path:
+        """Restaure les seuls blobs publics épinglés ; aucune preuve réécrite."""
+        entry = load(ROOT, ".claude-plugin/marketplace.json")["plugins"][0]
+        commit = entry["source"]["sha"]
+        self.assertRegex(commit, r"^[0-9a-f]{40}$")
+        target = Path(self.workspace.name) / "distribution-historique-exacte"
+        target.mkdir()
+        wanted = ["skills", "tests/evidence/2026-10-07-codex-natif-v5",
+                  "tests/evidence/2026-10-08-candidat-013", ".codex-plugin/plugin.json",
+                  ".claude-plugin/plugin.json", ".mcp.json", "assets/icon.png", "upstream.json",
+                  "tests/cas-plugin.json", "scripts/run_codex_campaign.py",
+                  "docs/adr/0007-distribution-open-source-et-deploiement.md",
+                  "docs/deploiement-collectivite.md"]
+        raw = subprocess.check_output(["git", "archive", "--format=tar", commit, "--", *wanted], cwd=ROOT)
+        with tarfile.open(fileobj=io.BytesIO(raw), mode="r:") as archive:
+            for member in archive.getmembers():
+                path = (target / member.name).resolve()
+                self.assertTrue(path.is_relative_to(target.resolve()))
+                self.assertTrue(member.isfile() or member.isdir())
+                if member.isdir():
+                    path.mkdir(parents=True, exist_ok=True)
+                else:
+                    path.parent.mkdir(parents=True, exist_ok=True)
+                    with archive.extractfile(member) as stream:
+                        path.write_bytes(stream.read())
+        return target
 
     def write_proof(self, name: str, proof: dict) -> None:
         binding = self.evidence["distribution"]["proofs"][name]
@@ -45,6 +64,13 @@ class DistributionQualificationTests(unittest.TestCase):
         self.assertFalse(self.evidence["deployment"]["ready"])
         self.assertFalse(self.evidence["release_ready"])
         self.assertTrue(all(not r["human_invariants_reviewed"] for r in self.evidence["runs"]))
+
+    def test_preuve_historique_refusee_sur_candidat_courant(self) -> None:
+        self.assertEqual(distribution_errors(self.root, self.evidence), [])
+        errors = distribution_errors(ROOT, self.evidence)
+        self.assertIn("Version non mesurée", errors)
+        self.assertIn("Commits amont divergents", errors)
+        self.assertIn("Runtime différent du plugin installé", errors)
 
     def test_deploiement_sans_avis_reste_refuse(self) -> None:
         self.evidence["deployment"]["ready"] = self.evidence["release_ready"] = True
@@ -108,3 +134,15 @@ class DistributionQualificationTests(unittest.TestCase):
         (self.root / self.evidence["deployment"]["note_path"]).unlink()
         self.assertIn("Note praticien différée absente",
                       distribution_errors(self.root, self.evidence))
+
+
+class MissingCurrentProofTests(unittest.TestCase):
+    def test_absence_de_mesure_reste_un_refus(self) -> None:
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            (root / ".codex-plugin").mkdir()
+            shutil.copyfile(ROOT / ".codex-plugin/plugin.json", root / ".codex-plugin/plugin.json")
+            version = load(root, ".codex-plugin/plugin.json")["version"]
+            self.assertEqual(current_distribution_errors(root),
+                             [f"Preuve courante absente : release-{version}.json"])
+            self.assertFalse((root / "tests/evidence").exists())

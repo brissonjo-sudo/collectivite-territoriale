@@ -1,0 +1,26 @@
+{
+  "upstream_commit": "414cd4ecf41ba8b296908b738224355069b1890f",
+  "mixed_engine_supported": false,
+  "effort_parameter_supported": false,
+  "status": "standalone_reference_only",
+  "sources_sha256": {
+    "scripts/eval_suite.py": "33bd6af81f76e427ff9fdbf36d04134414beb034b13b67d09fa1aa813373c99d",
+    "scripts/mesure_locale.py": "21767869463afd3eb5f111a9c5c2eabe1359c5747d90fedd187343347a8ac707",
+    "tests/cas-de-test.json": "ed0734bae30e2e3053ba096016b08d30bd0b5117a74ae760f294daf6237a06fa",
+    "tests/bareme-cas-de-test.md": "58d79ce8b06fd9bc7d2e47fe4aa0ce629399408eeaf7034d02729474b867cf43"
+  },
+  "reason": "Décision Jo T43-L24 : référence autonome DCP 0.1.4 au pin exact et aux octets mesurés ; aucune mesure plugin transférée.",
+  "decision": "DCP-014",
+  "decision_date": "2026-10-20",
+  "reference": {
+    "evidence_path": "tests/evidence/2026-10-20-dcp-014/dcp-autonome.json",
+    "sha256": "f87d4b0f6d46000309eeddf5eac68eb64d8c4eafec589ff83c7ba88d0a79d7a8",
+    "source_repository": "https://github.com/brissonjo-sudo/DCP-fpt",
+    "source_proof_commit": "414cd4ecf41ba8b296908b738224355069b1890f",
+    "source_summary_sha256": "94268ed71b80df7f8e419384b951a953646dba2646de771a7bef6ecb15919a5c",
+    "selection_excluded": [
+      "LICENSE"
+    ],
+    "selection_reason": "LICENSE est embarqué pour la distribution ; ce fichier de licence ne figure pas dans les 30 fichiers du runtime de la mesure autonome. Aucune autre exclusion permise."
+  }
+}

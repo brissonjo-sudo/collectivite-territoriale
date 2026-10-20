@@ -17,6 +17,8 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urlparse
 
+from campaign_contract import validate_cases
+
 
 ROOT = Path(__file__).resolve().parents[1]
 PLUGIN_NAME = "collectivite-territoriale"
@@ -35,9 +37,11 @@ MCP_TOOLS = (
 def load_cases() -> list[dict[str, Any]]:
     """Charge le contrat des scénarios comportementaux."""
 
-    return json.loads(
+    cases = json.loads(
         (ROOT / "tests/cas-plugin.json").read_text(encoding="utf-8")
     )
+    validate_cases(cases, set(json.loads((ROOT / "upstream.json").read_bytes())["skills"]))
+    return cases
 
 
 def qualified_skill(name: str) -> str:
@@ -99,6 +103,8 @@ def builtin_tools(case: dict[str, Any]) -> str:
 def build_command(case: dict[str, Any], claude: str) -> list[str]:
     """Construit la commande Claude Code sans interprétation par un shell."""
 
+    if case.get("schema_version", 1) != 1:
+        raise ValueError("Cas v2 : utiliser le protocole Codex avec chronologie visible")
     mcp_config = (
         str(ROOT / ".mcp.json")
         if case["mcp_mode"] == "required"
@@ -361,6 +367,8 @@ def main() -> int:
     ]
     if args.case_ids and len(selected) != len(set(args.case_ids)):
         parser.error("Un identifiant de cas est inconnu ou dupliqué")
+    if any(case.get("schema_version", 1) != 1 for case in selected):
+        parser.error("Cas v2 réservés au protocole Codex ; aucun cas Claude exécuté")
 
     args.output_dir.mkdir(parents=True, exist_ok=True)
     exit_code = 0

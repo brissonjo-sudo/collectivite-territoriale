@@ -1,0 +1,4 @@
+interface:
+  display_name: "DSI — collectivités territoriales"
+  short_description: "Décisions SI, sécurité et services numériques territoriaux"
+  default_prompt: "Utilise $dsi-fpt pour cadrer cette situation SI, vérifier l’applicabilité des textes et proposer un livrable."

@@ -3,3 +3,5 @@
 *.bat text eol=crlf
 skills/** -text
 overlays/** text eol=lf
+# Octets approuves par empreinte ; toute normalisation briserait les liens.
+tests/evidence/mesure-courante/source-l14/FICHE-RELECTURE-17-D.md -whitespace

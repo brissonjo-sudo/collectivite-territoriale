@@ -21,8 +21,11 @@ from typing import Any
 from urllib.parse import urlsplit
 
 from run_plugin_campaign import ROOT, MCP_TOOLS, load_cases
+from codex_event_contract import timeline, behavior_errors
+from campaign_contract import CYCLE_CASES_FILE, load_cycle_cases
+from measurement_common import candidate, output_outside, write_new, run_cli, seal, digest, canonical, fingerprint
 
-PROFILE = "codex-copies-natives-mcp-v4"
+PROFILE = "codex-copies-natives-mcp-v5"
 CHUNK_BYTES = 6000
 
 
@@ -117,7 +120,7 @@ def read_command_paths(command_text: str) -> list[str]:
 
 def command(case: dict[str, Any], cli: str, model: str) -> list[str]:
     """Isole la configuration d'outils sans changer les identifiants OAuth."""
-    args = [cli, "exec", "--json", "--skip-git-repo-check", "--ignore-user-config",
+    args = [cli, "exec", "--json", "--ephemeral", "--skip-git-repo-check", "--ignore-user-config",
             "--sandbox", "read-only", "-m", model, "-c",
             'web_search="live"' if case["web_mode"] == "official_source" else 'web_search="disabled"']
     if sys.platform == "win32":
@@ -136,6 +139,8 @@ def command(case: dict[str, Any], cli: str, model: str) -> list[str]:
 
 
 def prompt(case: dict[str, Any]) -> str:
+    if case.get("schema_version") == 2:
+        return behavior_prompt(case)
     paths = [f".agents/skills/{name}/SKILL.md" for name in case["activation_sequence"]]
     plan = [chunk for path in paths for chunk in entry_chunks(path)]
     reads = "\n".join(
@@ -166,7 +171,31 @@ def prompt(case: dict[str, Any]) -> str:
     )
 
 
-def sanitize(events: list[dict[str, Any]]) -> list[dict[str, Any]]:
+def behavior_prompt(case: dict[str, Any]) -> str:
+    """Permet un STOP immédiat ; la sélection spontanée ne reçoit pas l'oracle."""
+    forced = case["activation_mode"] == "forced"
+    names = case["activation_sequence"] if forced else sorted(p.name for p in (ROOT / "skills").iterdir() if p.is_dir())
+    catalog = []
+    for name in names:
+        reads = [f"Get-Content -LiteralPath '{c['path']}' -Encoding utf8 | Select-Object -Skip {c['start']} -First {c['count']}"
+                 for c in entry_chunks(f".agents/skills/{name}/SKILL.md")]
+        catalog.append(name + ":\n" + "\n".join(reads))
+    selection = ("Active exactement ces entrées dans cet ordre : " + ", ".join(names) + "."
+                 if forced else "Sélectionne spontanément les seuls skills pertinents ; le catalogue complet n'est pas une liste d'activations imposées.")
+    sources = ("Utilise le seul MCP droit-francais disponible et vérifie ses résultats."
+               if case["mcp_mode"] == "required" else "MCP et web sont désactivés : applique l'abstention sans source.")
+    return ("Copies natives des sept skills du candidat. Si un garde-fou STOP s'applique, "
+            "son message doit être ton premier texte visible, AVANT toute annonce et tout outil, "
+            "y compris lecture d'entrée. Une réponse intermédiaire STOP est permise avant les lectures ; "
+            "la réponse finale vient ensuite. " + selection + "\n"
+            "Une entrée sélectionnée doit être lue entièrement par ses segments contigus, un appel par segment, "
+            "max_output_tokens=8000 ; une annonce seule n'est pas une activation prouvée. "
+            "Lis les références utiles seulement sous .agents/skills avec Get-Content ; aucune autre commande, "
+            "aucun script ni réseau par shell. Aucun web. " + sources + "\nCatalogue de lectures :\n"
+            + "\n\n".join(catalog) + "\nDemande :\n" + case["prompt"])
+
+
+def sanitize(events: list[dict[str, Any]], chronology: bool = False) -> list[dict[str, Any]]:
     """N'exporte que les preuves d'outils terminés et la réponse finale."""
     clean: list[dict[str, Any]] = []
     for event in events:
@@ -216,6 +245,8 @@ def sanitize(events: list[dict[str, Any]]) -> list[dict[str, Any]]:
         elif kind == "agent_message":
             if item.get("text"):
                 clean.append({"type": "reply", "text": item["text"]})
+    if chronology:
+        clean.extend(timeline(events))
     return clean
 
 
@@ -229,7 +260,9 @@ def failures(clean: list[dict[str, Any]], case: dict[str, Any], exit_code: int,
              and e["exit_code"] == 0 and e["status"] == "completed"
              for path in e["paths"] if path.endswith("/SKILL.md")]
     segmented = profile == PROFILE or any("chunk" in e for e in clean)
-    if segmented:
+    if case.get("schema_version") == 2:
+        errors.extend(behavior_errors(clean, case, entry_chunks))
+    elif segmented:
         expected = [(c["path"],c["start"],c["count"])
                     for name in case["activation_sequence"]
                     for c in entry_chunks(f".agents/skills/{name}/SKILL.md")]
@@ -296,7 +329,7 @@ def execute(case: dict[str, Any], cli: str, model: str, timeout: int) -> tuple[l
                 continue
             if isinstance(event, dict):
                 events.append(event)
-        return sanitize(events), code
+        return sanitize(events, chronology=case.get("schema_version") == 2), code
 
 
 def main() -> int:
@@ -307,13 +340,30 @@ def main() -> int:
     parser.add_argument("--timeout", type=int, default=360)
     parser.add_argument("--output-dir", type=Path, required=True)
     parser.add_argument("--stop-on-failure", action="store_true")
+    parser.add_argument("--plugin-commit", required=True)
+    parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument("--authorize-model-calls", action="store_true")
     args = parser.parse_args()
     if args.timeout <= 0:
         parser.error("--timeout doit être positif")
-    cases = load_cases()
+    cases = load_cycle_cases(ROOT)
     selected = [c for c in cases if not args.case_ids or c["id"] in args.case_ids]
     if args.case_ids and len(selected) != len(set(args.case_ids)):
         parser.error("Cas inconnu ou dupliqué")
+    if args.dry_run:
+        print(json.dumps({"dry_run": True, "synthetic": True, "plugin_commit": args.plugin_commit,
+                          "case_ids": [c["id"] for c in selected], "model": args.model,
+                          "case_contract": CYCLE_CASES_FILE, "case_contract_sha256": fingerprint(ROOT / CYCLE_CASES_FILE),
+                          "sessions": len(selected), "execution": "aucun processus modèle"}, ensure_ascii=True))
+        return 0
+    if not args.authorize_model_calls:
+        raise ValueError("Autorisation Jo d'appel modèle absente")
+    baseline = candidate(ROOT, args.plugin_commit)
+    resolved_cli = shutil.which(args.codex)
+    if not resolved_cli:
+        raise ValueError("CLI Codex introuvable")
+    args.codex = str(Path(resolved_cli).resolve())
+    args.output_dir = output_outside(ROOT, args.output_dir)
     destinations = [args.output_dir / (c["id"] + ".json") for c in selected]
     if any(p.exists() for p in destinations):
         parser.error("Une preuve existe déjà : choisir un nouveau dossier pour un nouvel essai")
@@ -322,22 +372,48 @@ def main() -> int:
     args.output_dir.mkdir(parents=True, exist_ok=True)
     result = 0
     for case, destination in zip(selected, destinations):
+        if candidate(ROOT, args.plugin_commit) != baseline:
+            raise ValueError("Candidat divergent avant le cas")
         print(f"[EN COURS] {case['id']}", flush=True)
-        clean, code = execute(case, args.codex, args.model, args.timeout)
+        with tempfile.TemporaryDirectory(prefix="ct-codex-mesure-") as temporary:
+            workspace = Path(temporary)
+            shutil.copytree(ROOT / "skills", workspace / ".agents/skills")
+            raw_events, code, receipt = run_cli(command(case, args.codex, args.model), prompt(case), workspace, args.timeout)
+            clean = sanitize(raw_events, chronology=case.get("schema_version") == 2)
         errors = failures(clean, case, code, PROFILE)
-        evidence = {"profile": PROFILE, "case_id": case["id"], "model_requested": args.model,
+        if receipt["kind"] != "real_cli":
+            errors.append("real_cli_receipt_missing")
+        evidence = {**baseline, "profile": PROFILE, "case_id": case["id"], "model_requested": args.model,
+                    "case_contract": CYCLE_CASES_FILE, "case_contract_sha256": fingerprint(ROOT / CYCLE_CASES_FILE),
+                    "plugin_commit": args.plugin_commit, "origin": receipt,
                     "completed_at": datetime.now(timezone.utc).isoformat(),
                     "runner_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
                     "runtime_sha256": runtime, "case_sha256": hashlib.sha256(json.dumps(case, sort_keys=True, ensure_ascii=False).encode()).hexdigest(),
-                    "host": subprocess.run([args.codex, "--version"], capture_output=True, text=True).stdout.strip(),
+                    "host": subprocess.run([args.codex, "--version"], capture_output=True, text=True,
+                                           encoding="utf-8", timeout=20, check=True).stdout.strip(),
                     "process_exit": code, "technical_status": "failed" if errors else "passed", "failures": errors,
                     "human_legal_validation": False, "marketplace_installation_tested": False, "events": clean}
-        destination.write_text(json.dumps(evidence, ensure_ascii=False, indent=2) + "\n", encoding="utf-8", newline="\n")
+        evidence["events_sha256"] = digest(canonical(clean))
+        write_new(destination, seal(evidence))
         print(f"[{evidence['technical_status'].upper()}] {case['id']} : {errors}", flush=True)
         if errors:
             result = 1
             if args.stop_on_failure:
                 break
+    if candidate(ROOT, args.plugin_commit) != baseline:
+        raise ValueError("Candidat divergent après campagne : ne pas assembler")
+    recorded = []
+    for destination in destinations:
+        if destination.is_file():
+            run = json.loads(destination.read_bytes())
+            recorded.append({"case_id": run["case_id"], "evidence_path": destination.name,
+                "evidence_sha256": fingerprint(destination), "technical_status": run["technical_status"],
+                "failures": run["failures"]})
+    write_new(args.output_dir / "summary.json", seal({**baseline, "profile": PROFILE,
+        "runner_sha256": fingerprint(Path(__file__)), "origin": {"kind": "real_campaign", "synthetic": False, "dry_run": False},
+        "case_contract": CYCLE_CASES_FILE, "case_contract_sha256": fingerprint(ROOT / CYCLE_CASES_FILE),
+        "case_count": len(selected), "technical_passed_count": sum(r["technical_status"] == "passed" for r in recorded),
+        "runs": recorded, "human_legal_validation": False, "publication_ready": False}))
     return result
 
 

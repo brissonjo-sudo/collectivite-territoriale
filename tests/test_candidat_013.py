@@ -3,7 +3,7 @@ import hashlib,json,subprocess,sys,unittest
 import tempfile
 from unittest.mock import patch
 from pathlib import Path
-from support_preuves_historiques import runtime_at, files_at
+from support_preuves_historiques import cases_at, runtime_at, files_at
 
 ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
@@ -15,7 +15,7 @@ def sha(data):return hashlib.sha256(data).hexdigest()
 class Candidat013Tests(unittest.TestCase):
     def test_mesure_dcp_correspond_aux_trente_fichiers_embarques(self):
         proof=load('tests/evidence/2026-10-08-candidat-013/dcp-autonome.json')
-        source=load('upstream.json')['skills']['dcp-fpt']['commit']
+        source=json.loads(files_at(ROOT,'e26e84bdfbfae697d657b95217e1865df4d84cc2',('upstream.json',))['upstream.json'])['skills']['dcp-fpt']['commit']
         self.assertEqual(proof['upstream_runtime_commit'],source)
         runtime={name.removeprefix('skills/dcp-fpt/'):digest
             for name,digest in runtime_at(ROOT,'e26e84bdfbfae697d657b95217e1865df4d84cc2').items()
@@ -30,7 +30,7 @@ class Candidat013Tests(unittest.TestCase):
 
     def test_neuf_premieres_reponses_liees_au_runtime_et_au_lanceur(self):
         summary=load('tests/evidence/2026-10-07-codex-natif-v5/summary.json')
-        cases={c['id']:c for c in campaign.load_cases()}
+        cases={c['id']:c for c in cases_at(ROOT, summary["plugin_commit"])}
         self.assertEqual({r['case_id'] for r in summary['runs']},set(cases))
         self.assertEqual(len(summary['runs']),9)
         self.assertFalse(summary['human_legal_validation'])
@@ -54,7 +54,7 @@ class Candidat013Tests(unittest.TestCase):
 
     def test_relectures_separees_ne_valent_pas_avis_humain(self):
         summary=load('tests/evidence/2026-10-08-candidat-013/relecture-assistant.json')
-        cases={c['id']:c for c in campaign.load_cases()}
+        cases={c['id']:c for c in cases_at(ROOT, summary["plugin_commit"])}
         self.assertEqual({r['case_id'] for r in summary['runs']},set(cases))
         self.assertFalse(summary['human_legal_validation'])
         self.assertFalse(summary['publication_ready'])

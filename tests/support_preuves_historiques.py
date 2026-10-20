@@ -1,12 +1,13 @@
 """Lit les octets Git d'un runtime historique sans conversion des lignes."""
 import hashlib
+import json
 import subprocess
 from pathlib import Path
 
 
-def files_at(root: Path, commit: str) -> dict[str, bytes]:
+def files_at(root: Path, commit: str, paths: tuple[str, ...] = ("skills",)) -> dict[str, bytes]:
     """Récupère les blobs historiques sans conversion des lignes."""
-    listing = subprocess.run(["git", "ls-tree", "-r", "-z", commit, "--", "skills"],
+    listing = subprocess.run(["git", "ls-tree", "-r", "-z", commit, "--", *paths],
                              cwd=root, check=True, capture_output=True).stdout
     entries = []
     for record in listing.split(b"\0"):
@@ -37,3 +38,22 @@ def files_at(root: Path, commit: str) -> dict[str, bytes]:
 def runtime_at(root: Path, commit: str) -> dict[str, str]:
     """Compare les preuves historiques à leur commit, jamais au candidat courant."""
     return {name: hashlib.sha256(data).hexdigest() for name, data in files_at(root, commit).items()}
+
+
+def cases_at(root: Path, commit: str) -> list[dict]:
+    """Lit le contrat de cas au commit réellement mesuré, sans filtre de cas."""
+    raw = subprocess.run(["git", "show", commit + ":tests/cas-plugin.json"],
+                         cwd=root, check=True, capture_output=True).stdout
+    return json.loads(raw)
+
+
+def checkout_at(root: Path, commit: str, destination: Path) -> None:
+    """Matérialise le contexte public historique des tests, sans .git ni profil."""
+    paths = ("skills", "scripts", "upstream.json", "tests/cas-plugin.json",
+             ".codex-plugin/plugin.json", ".claude-plugin/plugin.json", ".mcp.json", "assets/icon.png")
+    if destination.exists():
+        raise ValueError("Fixture historique déjà présente")
+    for name, data in files_at(root, commit, paths).items():
+        target = destination / name
+        target.parent.mkdir(parents=True, exist_ok=True)
+        target.write_bytes(data)

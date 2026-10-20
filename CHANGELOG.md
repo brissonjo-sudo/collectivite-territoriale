@@ -1,5 +1,89 @@
 # Historique des versions
 
+## 1.3.0 — Candidat d'intégration DSI — non mesuré, non qualifié
+
+Préparation locale du 2026-10-17, selon l'ADR 0010.
+
+Actualisation locale du 2026-10-20 (T43-L40, ADR 0023, décision de Jo
+« Consigne + smoke ce soir ») : ajout au seul prompt de l'obligation de lire
+chaque entrée SKILL.md sélectionnée jusqu'au premier segment court. Une
+restitution perçue comme tronquée impose de poursuivre au segment M + 85,
+sans relire ni interrompre la série ; la limite est ensuite signalée dans
+la réponse. Toutes les règles précédentes, les validateurs, N, la sonde EOF,
+STOP, MCP sans web, les seuils et les sept skills sont inchangés. Pré-vol et
+nouveau smoke préparés ; aucun modèle, Docker ou push exécuté dans ce lot.
+
+Actualisation locale du 2026-10-20 (T43-L39, ADR 0022, décision de Jo
+« Préciser le validateur ») : au plus une sonde EOF vide et réussie par fichier,
+après couverture complète contiguë dans la même session. Les sondes sont tracées
+dans `eof_probes`, séparées du contenu et de sa couverture. Lectures vides ailleurs,
+troncatures, doublons, secondes sondes et commandes hors contrat restent refusés.
+Prompt, STOP, seuils, campagne d et sept skills inchangés. Replays diagnostiques
+L29-b/L38-d et pré-vol locaux ; aucun nouveau smoke réel, Docker ou push exécuté.
+
+Actualisation locale du 2026-10-20 (T43-L37, décision de Jo « Oui aux deux ») :
+les deux tests qui lisent le binaire smoke Windows local épinglé sont sautés
+uniquement hors Windows, avec motif explicite. Sous Windows ils demeurent
+obligatoires, y compris si le binaire manque. Leurs assertions et les tests
+portables sur fixtures sont inchangés. Pré-vol Linux/Python 3.11 préparé pour
+Claude ; aucune validation Linux, session modèle ou poussée acquise dans ce lot.
+
+Actualisation locale du 2026-10-20 (T43-L35, ADR 0021) : les contrôles
+d'absence de release utilisent leurs fixtures isolées, sans retrait d'assertion.
+L'assembleur conserve les originaux hors dépôt et produit une projection
+publique déterministe, sa table d'empreintes et une re-dérivation locale liée.
+La CI contrôle le graphe des projections et refuse homes, identifiants de
+session non hachés et secrets. Aucun nouvel appel modèle ni push dans ce lot.
+
+Actualisation locale du 2026-10-20 (T43-L33, ADR 0020) : le qualificateur
+sélectionne le contrat v2 exact de d depuis le commit de l'index humain lié,
+avec empreinte épinglée. Sans ce lien, le contrôle historique v1 demeure.
+Transition fermée étendue au seul qualificateur ; aucun autre contrôle changé.
+Qualification et assemblage restent à vérifier ; aucune action externe.
+
+Actualisation locale du 2026-10-20 (T43-L30, ADR 0019) : toute entrée ou
+référence du cache est lue uniquement par segments contigus de 85 lignes.
+Un segment court termine le fichier, sans lecture au-delà ni relecture.
+Les 183 Markdown sont non vides et non multiples de 85 ; test régressif
+obligatoire pour tous les fichiers futurs. Validateurs et runtime inchangés,
+transition fermée réépinglée ; smoke c préparé seulement, a et b consommées
+et conservées séparément. Aucun modèle, installation, push ni release.
+
+Actualisation locale du 2026-10-20 (T43-L29, ADR 0018) : seule la consigne de
+lecture du prompt smoke change : lecture unique jusqu'à 319 lignes, sinon
+segments contigus d'au plus 90 lignes dès le départ, aucune relecture.
+Ces valeurs sont un choix prudent fondé sur les restitutions observées de la
+CLI 0.163, pas un plafond technique établi. Transition d étendue au seul
+runner smoke, par empreintes source/cible exactes. Validateurs, STOP, absence
+de web et sept skills inchangés. Tentative L28 a consommée ; nouveau smoke
+préparé séparément, sans installation, appel modèle, push ni release.
+
+Actualisation locale du 2026-10-20 (T43-L27, ADR 0017) : CLI de la campagne d
+verrouillée au commit mesuré, version 0.163 et trois compagnons exacts ;
+les reçus 0.162 restent historiques et sont refusés pour d. Aucun smoke ni release.
+Le lecteur humain et l'assembleur relisent le contrat de cycle v2 exact de d ;
+les empreintes v1 des trois cas STOP ne sont pas équivalentes. Réserves au format
+L14, réponses exactes dans la fiche et décision globale restent exigées.
+
+Actualisation locale du 2026-10-20 (T43-L24, ADR 0016) : DCP 0.1.4 au pin
+`414cd4ecf41ba8b296908b738224355069b1890f`, sans surcharge DCP. Référence
+autonome 28/28 et relecture Jo liées aux octets ; aucune mesure plugin transférée.
+RJ prévoit les segments bornés dès le départ pour une entrée longue, sans
+interrompre toute la réponse si une restitution reste incomplète. Nouveau cycle
+plugin préparé seulement ; contrat v2, smoke durci et barrière release conservés.
+
+- Union de sept skills : DSI 0.2.1 au pin `704e5dd6a3d15994ed431b23585aabd72086ca75`
+  (30 fichiers) ; DPO 0.2.2 au pin `58ea45c4d12812da10ace5f1486deea96b8534fa`.
+- DCP 0.1.3 conservé sans modification ; routage juridique des marchés vers DCP,
+  technique vers DSI, protection des données vers DPO et preuve vers recherche-juridique.
+- Surcharges ordonnées et vérifiées : priorité STOP, activation réelle forcée ou
+  spontanée, abstention sans source primaire et transferts persistants.
+- Neuf cas historiques conservés ; huit cas DSI ajoutés pour des contrôles
+  locaux de structure uniquement, sans jugement ni campagne.
+- Manifestes locaux en 1.3.0 ; catalogues inchangés, toujours épinglés `v1.2.0`.
+- Aucun ancien gel ou score transféré. Preuves et tests historiques inchangés ;
+  absence de mesure 1.3.0 et hypothèse ancienne « DSI externe » à traiter en L6.
+
 ## Préparation de distribution open source — 2026-10-08
 
 - DCP 0.1.3 et les six skills restent identiques au runtime mesuré.

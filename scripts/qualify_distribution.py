@@ -6,6 +6,10 @@ import hashlib
 import json
 from pathlib import Path
 
+from cli_toolchains import measurement_contract
+from measurement_common import bound
+from public_projection import ProjectionView, verify_ci
+
 ROOT = Path(__file__).resolve().parents[1]
 
 
@@ -22,9 +26,39 @@ def load(root: Path, relative: str) -> dict:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def qualification_cases(root: Path, evidence: dict, view: ProjectionView | None = None) -> dict[str, dict]:
+    """Choisit v2 par l'index source lié et le pin du commit mesuré, jamais par la preuve."""
+    link = evidence.get("review", {}).get("linked_sources")
+    if link is not None:
+        index_path = view.bound(root, link) if view else bound(root, link)
+        index = json.loads(index_path.read_bytes())
+        contract = measurement_contract(root, index.get("measurement_commit"))
+        if contract is not None:
+            case_link = index.get("case_contract") or {}
+            if (index.get("schema") != "ct-human-linked-v1"
+                    or case_link.get("sha256") != contract["case_contract_sha256"]):
+                raise ValueError("Contrat de cycle v2 absent ou divergent")
+            path = view.bound(index_path.parent, case_link) if view else bound(index_path.parent, case_link)
+            return {c["id"]: c for c in json.loads(path.read_bytes())}
+    return {c["id"]: c for c in load(root, "tests/cas-plugin.json")}
+
+
 def distribution_errors(root: Path, evidence: dict) -> list[str]:
+    """Ajoute la barrière publique ; les contrôles techniques restent tous exécutés."""
+    try:
+        view = verify_ci(root, evidence) if 'public_projection' in evidence else None
+        if (view is None and evidence.get('plugin_version') == '1.3.0'
+                and evidence.get('review', {}).get('linked_sources')):
+            raise ValueError('Projection publique absente')
+    except (KeyError, TypeError, ValueError, OSError) as exc:
+        return ['Projection publique refusée : ' + str(exc)]
+    return _distribution_errors(root, evidence, view)
+
+
+def _distribution_errors(root: Path, evidence: dict, view: ProjectionView | None = None) -> list[str]:
     """Recalcule les conditions techniques ; aucun avis humain n'est inventé."""
     errors: list[str] = []
+    fingerprint = view.fingerprint if view else globals()['fingerprint']
 
     def require(condition: bool, message: str) -> None:
         if not condition:
@@ -91,7 +125,7 @@ def distribution_errors(root: Path, evidence: dict) -> list[str]:
         runner = fingerprint(root / "scripts/run_codex_campaign.py")
         require(native["runner_sha256"] == runner, "Protocole de campagne modifié")
 
-        cases = {c["id"]: c for c in load(root, "tests/cas-plugin.json")}
+        cases = qualification_cases(root, evidence, view)
         runs = {r["case_id"]: r for r in native["runs"]}
         recorded = {r["case_id"]: r for r in evidence["runs"]}
         require(len(runs) == len(native["runs"]) == len(cases)
@@ -152,10 +186,18 @@ def distribution_errors(root: Path, evidence: dict) -> list[str]:
     return errors
 
 
+def current_distribution_errors(root: Path) -> list[str]:
+    """Refuse explicitement l'absence de mesure ; jamais de fallback de version."""
+    version = load(root, ".codex-plugin/plugin.json")["version"]
+    relative = f"tests/evidence/release-{version}.json"
+    if not (root / relative).is_file():
+        return [f"Preuve courante absente : release-{version}.json"]
+    return distribution_errors(root, load(root, relative))
+
+
 def main() -> int:
     """Contrôle le candidat courant sans appel réseau ni publication."""
-    version = load(ROOT, ".codex-plugin/plugin.json")["version"]
-    errors = distribution_errors(ROOT, load(ROOT, f"tests/evidence/release-{version}.json"))
+    errors = current_distribution_errors(ROOT)
     for error in errors:
         print(f"[ERREUR] {error}")
     if not errors:

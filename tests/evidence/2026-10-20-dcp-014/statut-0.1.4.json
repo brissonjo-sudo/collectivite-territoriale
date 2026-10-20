@@ -1,0 +1,27 @@
+{
+  "version": "0.1.4",
+  "date": "2026-10-20",
+  "statut": "mesuré (28/28, protocole autonome Codex), relu par Jo (non praticien)",
+  "source_runtime_commit": "071737280debb275549647ffc8c1340cab544a18",
+  "run": "tests/runs/codex-web-v0.1.4-dcp-stop-20261020-a",
+  "totals": {
+    "RÉUSSITE": 28,
+    "DEMI-RÉUSSITE": 0,
+    "ÉCHEC": 0
+  },
+  "sessions": 56,
+  "input_tokens": 5829642,
+  "stop_checks_passed": 6,
+  "human_review": {
+    "reviewer": "Jo",
+    "practitioner": false,
+    "case_count": 28,
+    "conformes": 28,
+    "reserves": {}
+  },
+  "practitioner_reviewed": false,
+  "plugin_qualified": false,
+  "publication_ready": false,
+  "runtime_bytes_preserved": true,
+  "status_location": "hors runtime selon convention ff35b7a"
+}

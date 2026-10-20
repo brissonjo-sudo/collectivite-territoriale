@@ -1,0 +1,22 @@
+{
+  "codex": {
+    "version": "codex-cli 0.162.0-alpha.17.2",
+    "sha256": "e98c516f1c8935789aabe9122ee7e05ec4c3efd1ba6acf179242e031c495b99e",
+    "platform": "windows",
+    "source": "Binaire local contrôlé en L8 ; aucun programme de simulation admis comme CLI de mesure."
+  },
+  "campaign_measurements": {
+    "13b4e1e537e5a8097a004ee913abcc9d079114a7": {
+      "campaign_cli": {
+        "version": "codex-cli 0.163.0-alpha.10.2",
+        "sha256": "f6dbf48cb70f62649c645f26c87dc9bf84cc36986202dfad8e12fb5b8ca70312",
+        "companions_sha256": {
+          "codex-code-mode-host.exe": "3b6a9179a4da17fa5fc6948219cd61486dc3b534c683838076d8c61bd311c68e",
+          "codex-command-runner.exe": "ce80b56a2f37f808815fde33cceb97ac858ceecde296425ad3860f0f37fb4877",
+          "codex-windows-sandbox-setup.exe": "c4da812016cbfb92d9a62791f78460c59e9662faadb0a2720d3aa5d0535b80bd"
+        }
+      },
+      "case_contract_sha256": "65593a1c46bd31b403c5b83344f14951cbc3455f456eefcde2c6853fa68a9478"
+    }
+  }
+}
