@@ -135,7 +135,7 @@ class HumanBundleTests(unittest.TestCase):
         opinion = self.original(BUNDLE, 'avis-humain-jo-20261018-quinze.json')
         self.assertEqual(value['human']['reservations'], opinion['reserves'])
         self.assertTrue(value['human']['human_legal_validation'])
-        self.assertFalse((ROOT / 'tests/evidence/release-1.3.0.json').exists())
+        self.assertFalse((self.root / 'tests/evidence/release-1.3.0.json').exists())
 
     def copied(self) -> Path:
         destination = self.root / 'bundle-public-fixture'
@@ -176,7 +176,7 @@ class HumanBundleTests(unittest.TestCase):
                     ROOT / 'tests/evidence/2026-10-08-candidat-013/dcp-autonome.json',
                     BUNDLE / 'campagne', output, BUNDLE)
         self.assertFalse(output.exists())
-        self.assertEqual(qualifier.current_distribution_errors(ROOT), ['Preuve courante absente : release-1.3.0.json'])
+        self.assertEqual(qualifier.current_distribution_errors(self.historical_root), ['Preuve courante absente : release-1.3.0.json'])
 
     def test_fiche_humaine_ou_lien_run_absents_refuses(self) -> None:
         bundle = self.copied()

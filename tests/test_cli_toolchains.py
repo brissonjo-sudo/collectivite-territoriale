@@ -50,7 +50,7 @@ class CliToolchainsTests(unittest.TestCase):
         self.assertEqual(result, self.pins)
         self.assertEqual(result['campaign_cli']['version'], 'codex-cli 0.162.0-alpha.17.2')
         self.assertEqual(result['smoke_cli']['version'], 'codex-cli 0.163.0-alpha.10.2')
-        self.assertFalse((ROOT / 'tests/evidence/release-1.3.0.json').exists())
+        self.assertFalse((self.root / 'tests/evidence/release-1.3.0.json').exists())
         self.assertTrue(qualifier.distribution_errors(ROOT, {'fixture': True, **result}))
 
     def test_smoke_sans_CLI_epinglee_refuse(self) -> None:
