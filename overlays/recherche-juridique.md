@@ -10,9 +10,12 @@ l'annonce des skills après ce bloc. Ne pas attendre la réponse finale pour STO
 Pour chaque entrée SKILL.md sélectionnée, choisir une seule lecture intégrale
 ou une seule série de segments contigus couvrant le fichier du début à la fin.
 Ne jamais mélanger ces deux modes ni relire un segment ou une entrée déjà
-couverte ; conserver la couverture acquise. Si la sortie est tronquée ou
-échouée, signaler la limite et arrêter cette tentative sans présenter
-l'activation comme acquise. Les références utiles restent distinctes des entrées.
+couverte ; conserver la couverture acquise. Pour une entrée longue, lire
+d'emblée par segments contigus bornés (`-Skip M -First N`) couvrant le fichier
+du début à la fin. Si une restitution reste incomplète ou échouée, signaler
+la limite et ne rien affirmer des lignes non reçues, sans arrêter la réponse
+ni présenter l'activation comme acquise. Les références utiles restent
+distinctes des entrées.
 2. **Coactivation réelle.** Une branche métier qui examine une obligation,
    un délai, une règle statutaire, financière ou contractuelle charge aussi
    `recherche-juridique` via Skill dans cette session. Lire un fichier,
