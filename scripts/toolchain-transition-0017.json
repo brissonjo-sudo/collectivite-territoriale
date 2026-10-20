@@ -1,0 +1,21 @@
+{
+  "adr": "docs/adr/0017-assemblage-campagne-d.md",
+  "measurement_commit": "13b4e1e537e5a8097a004ee913abcc9d079114a7",
+  "case_contract_sha256": "65593a1c46bd31b403c5b83344f14951cbc3455f456eefcde2c6853fa68a9478",
+  "source_files_sha256": {
+    "CHANGELOG.md": "a3de7e69268f2860a2d5d66f31b28abaf2ad5dce02421382c44f9ad14451b0ed",
+    "scripts/assemble_release_evidence.py": "8fa07fa86aeff040626c2f7384374e28dc75b490df041118df552a55d409172e",
+    "scripts/cli_toolchains.py": "efb2ee0ef1977980d65be18afc5ca76cc4137c6eb10bb2c7ac184dc5f0bb157a",
+    "scripts/human_resolution.py": "d23fc81f15333593c7d1039334555d96430869231bab155d18292e7071debed0",
+    "scripts/measurement-cli.json": "14f3782c2c8cac996fd55e1a50adeecf0861699dc44d691c7fdbea2d0d849159",
+    "scripts/measurement_common.py": "d182f563ec827efeac5a75068d43c18cbba58a36f3f67faff0351a1c4046a4dd"
+  },
+  "target_files_sha256": {
+    "CHANGELOG.md": "6e1043103bce5c54342f5466f59e4059925a0393150fc92c33870d17f976cafd",
+    "scripts/assemble_release_evidence.py": "8fa07fa86aeff040626c2f7384374e28dc75b490df041118df552a55d409172e",
+    "scripts/cli_toolchains.py": "3700efbd52c0035bfa324ba9aa3b0d217e88966eaba935b5762bffb881985e5f",
+    "scripts/human_resolution.py": "d23fc81f15333593c7d1039334555d96430869231bab155d18292e7071debed0",
+    "scripts/measurement-cli.json": "1987fc911f925b59148e94aab14511178dbd3fe6c0f647e4ef2841f2038f050f",
+    "scripts/measurement_common.py": "c0c774cd986e49f39820d1fe9cac3bd3b88d7ebc0ef6dbf1a127bbc6d961ecfb"
+  }
+}

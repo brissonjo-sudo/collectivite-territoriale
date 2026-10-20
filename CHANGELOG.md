@@ -4,6 +4,10 @@
 
 Préparation locale du 2026-10-17, selon l'ADR 0010.
 
+Actualisation locale du 2026-10-20 (T43-L27, ADR 0017) : CLI de la campagne d
+verrouillée au commit mesuré, version 0.163 et trois compagnons exacts ;
+les reçus 0.162 restent historiques et sont refusés pour d. Aucun smoke ni release.
+
 Actualisation locale du 2026-10-20 (T43-L24, ADR 0016) : DCP 0.1.4 au pin
 `414cd4ecf41ba8b296908b738224355069b1890f`, sans surcharge DCP. Référence
 autonome 28/28 et relecture Jo liées aux octets ; aucune mesure plugin transférée.

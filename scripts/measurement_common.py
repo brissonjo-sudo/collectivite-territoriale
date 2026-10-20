@@ -117,7 +117,7 @@ def checked(path: Path, commit: str, kinds: set[str], cli_phase: str = 'campaign
             or value.get("synthetic") is True or value.get("fixture") is True or value.get("dry_run") is True):
         raise ValueError("Pièce synthétique, dry-run ou provenance absente : " + path.name)
     if origin["kind"] == "real_cli":
-        expected = phase_pin(cli_phase)
+        expected = phase_pin(cli_phase, measurement_commit=commit)
         try:
             thread = uuid.UUID(origin["thread_id"])
             hashes = ("cli_sha256", "argv_sha256", "prompt_sha256", "stdout_sha256", "stderr_sha256")
