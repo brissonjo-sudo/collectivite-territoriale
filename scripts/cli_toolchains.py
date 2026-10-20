@@ -18,7 +18,8 @@ TRANSITION_D = 'scripts/toolchain-transition-0017.json'
 MIGRATION_D = {'scripts/measurement-cli.json', 'scripts/cli_toolchains.py',
     'scripts/measurement_common.py', 'scripts/human_resolution.py',
     'scripts/assemble_release_evidence.py', 'scripts/run_codex_smoke.py',
-    'scripts/qualify_distribution.py', 'scripts/public_projection.py', TRANSITION_D, 'CHANGELOG.md'}
+    'scripts/qualify_distribution.py', 'scripts/public_projection.py', TRANSITION_D, 'CHANGELOG.md',
+    '.gitattributes'}
 
 
 def sha(path: Path) -> str:
@@ -114,7 +115,7 @@ def prove_toolchains(campaign: list[dict], reviews: list[dict], smoke: list[dict
 def compatibility_files(root: Path, measured: dict, target: dict) -> set[str]:
     """Transition L14 -> ADR 0013 : liste fermée et hashes exacts, pas d'exemption générale."""
     old, current = measured['toolchain_sha256'], target['toolchain_sha256']
-    if measured.get('plugin_commit') == MEASUREMENT_D and any(old.get(n) != current.get(n) for n in MIGRATION_D - {'CHANGELOG.md'}):
+    if measured.get('plugin_commit') == MEASUREMENT_D and any(old.get(n) != current.get(n) for n in MIGRATION_D - {'CHANGELOG.md', '.gitattributes'}):
         try:
             transition = json.loads((root / TRANSITION_D).read_bytes())
             names = MIGRATION_D - {TRANSITION_D}
@@ -125,7 +126,7 @@ def compatibility_files(root: Path, measured: dict, target: dict) -> set[str]:
                     or current.get(TRANSITION_D) != sha(root / TRANSITION_D)):
                 raise ValueError('Transition d non autorisée')
             for name in names:
-                if name == 'CHANGELOG.md':
+                if name in {'CHANGELOG.md', '.gitattributes'}:
                     raw = subprocess.check_output(['git', '-c', 'safe.directory=' + str(root),
                         'show', MEASUREMENT_D + ':' + name], cwd=root)
                     source_hash = hashlib.sha256(raw).hexdigest()

@@ -54,3 +54,26 @@ les liaisons du smoke ancien sont simulées ; aucun résultat n'est transféré 
 nouveau candidat. La préparation d'une nouvelle tentative dépend de ce résultat.
 Aucune installation, connexion, session modèle, poussée ou autorisation de Jo
 n'est acquise par cette ADR.
+
+## Addendum du 20 octobre 2026 — T43-L36
+
+Arbitrage transmis par Claude : « pas de gzip », et mécanisme Git standard
+`-whitespace` limité aux pièces approuvées par empreinte. La fiche projetée
+`tests/evidence/mesure-courante/source-l14/FICHE-RELECTURE-17-D.md` conserve
+ses octets, y compris les espaces de la fiche humaine originale. Aucune
+normalisation ni compression supplémentaire n'est appliquée. Son seul chemin
+exact reçoit cet attribut ; `git diff --check` continue à contrôler tous les
+autres chemins, notamment le code et la documentation.
+
+La transition fermée ADR 0017 ajoute `.gitattributes`, avec empreinte source
+issue de l'objet Git du commit mesuré et empreinte cible exacte du fichier.
+Comme pour le CHANGELOG, cette vérification explicite couvre un fichier hors
+inventaire Python/JSON d'outillage. La cible de `cli_toolchains.py` est renouvelée
+uniquement pour cette extension. Toute autre modification du fichier, de sa
+portée ou de la transition demeure refusée.
+
+L'intégration jetable vérifie l'identité des octets de travail et d'index ainsi
+que le maintien du refus d'espaces finaux dans le code et la documentation.
+Le diagnostic complet reste non probant ; seul le rattachement du smoke L30c
+à la nouvelle tête y est simulé. La préparation finale de L35d ne vaut toujours
+pas autorisation de Jo pour Install ou Run ; Claude doit la demander.
