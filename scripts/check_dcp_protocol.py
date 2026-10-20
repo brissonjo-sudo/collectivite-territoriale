@@ -1,4 +1,4 @@
-"""Contrôle logiciel DCP-0 ; aucun répondant ou juge lancé."""
+"""Contrôle logiciel DCP-014 ; aucun répondant ou juge lancé."""
 from __future__ import annotations
 
 import json
@@ -15,7 +15,7 @@ def main() -> int:
         protocol = contract()
         proof = reference(ROOT, ROOT / protocol["reference"]["evidence_path"])
         print(json.dumps({"status": "verified_standalone_reference", "compatible": True,
-            "decision": "DCP-0", "upstream_commit": proof["upstream_runtime_commit"],
+            "decision": protocol["decision"], "upstream_commit": proof["upstream_runtime_commit"],
             "proof_sha256": protocol["reference"]["sha256"], "runtime_files_verified": len(proof["summary"]["runtime_sha256"]),
             "selection_excluded": protocol["reference"]["selection_excluded"],
             "scope": proof["scope"], "human_legal_validation": proof["human_legal_validation"],
@@ -24,7 +24,7 @@ def main() -> int:
             "model_called": False}, ensure_ascii=True))
         return 0
     except (OSError, ValueError, KeyError, TypeError):
-        print(json.dumps({"status": "blocked", "compatible": False, "decision": "DCP-0", "model_called": False}))
+        print(json.dumps({"status": "blocked", "compatible": False, "decision": "DCP-014", "model_called": False}))
         return 2
 
 

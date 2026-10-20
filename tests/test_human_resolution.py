@@ -16,6 +16,7 @@ import assemble_release_evidence as assembly
 import human_resolution as human
 import measurement_common as common
 import qualify_distribution as qualifier
+import dcp_reference
 from support_preuves_historiques import checkout_at
 
 BUNDLE = ROOT / 'tests/evidence/2026-10-18-candidat-1-3-0'
@@ -167,7 +168,9 @@ class HumanBundleTests(unittest.TestCase):
 
     def test_aucune_ecriture_d_assemblage_sans_smoke(self) -> None:
         output = self.root / 'aucune-preuve'
-        with patch.object(assembly, 'candidate', return_value=self.baseline):
+        historical_dcp = json.loads((self.historical_root / 'scripts/dcp-protocol.json').read_bytes())
+        with patch.object(assembly, 'candidate', return_value=self.baseline), \
+                patch.object(dcp_reference, 'contract', return_value=historical_dcp):
             with self.assertRaises(FileNotFoundError):
                 assembly.assemble(self.historical_root, SOURCE, BUNDLE / 'campagne', self.root / 'smoke-absent.json',
                     ROOT / 'tests/evidence/2026-10-08-candidat-013/dcp-autonome.json',

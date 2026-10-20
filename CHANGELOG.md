@@ -4,6 +4,13 @@
 
 Préparation locale du 2026-10-17, selon l'ADR 0010.
 
+Actualisation locale du 2026-10-20 (T43-L24, ADR 0016) : DCP 0.1.4 au pin
+`414cd4ecf41ba8b296908b738224355069b1890f`, sans surcharge DCP. Référence
+autonome 28/28 et relecture Jo liées aux octets ; aucune mesure plugin transférée.
+RJ prévoit les segments bornés dès le départ pour une entrée longue, sans
+interrompre toute la réponse si une restitution reste incomplète. Nouveau cycle
+plugin préparé seulement ; contrat v2, smoke durci et barrière release conservés.
+
 - Union de sept skills : DSI 0.2.1 au pin `704e5dd6a3d15994ed431b23585aabd72086ca75`
   (30 fichiers) ; DPO 0.2.2 au pin `58ea45c4d12812da10ace5f1486deea96b8534fa`.
 - DCP 0.1.3 conservé sans modification ; routage juridique des marchés vers DCP,

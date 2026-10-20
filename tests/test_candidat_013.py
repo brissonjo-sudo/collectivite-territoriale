@@ -15,7 +15,7 @@ def sha(data):return hashlib.sha256(data).hexdigest()
 class Candidat013Tests(unittest.TestCase):
     def test_mesure_dcp_correspond_aux_trente_fichiers_embarques(self):
         proof=load('tests/evidence/2026-10-08-candidat-013/dcp-autonome.json')
-        source=load('upstream.json')['skills']['dcp-fpt']['commit']
+        source=json.loads(files_at(ROOT,'e26e84bdfbfae697d657b95217e1865df4d84cc2',('upstream.json',))['upstream.json'])['skills']['dcp-fpt']['commit']
         self.assertEqual(proof['upstream_runtime_commit'],source)
         runtime={name.removeprefix('skills/dcp-fpt/'):digest
             for name,digest in runtime_at(ROOT,'e26e84bdfbfae697d657b95217e1865df4d84cc2').items()

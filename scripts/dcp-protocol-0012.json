@@ -1,0 +1,26 @@
+{
+  "upstream_commit": "129f374e6ab8ea3b47bcfd9de9ddd52a2d3d9498",
+  "mixed_engine_supported": false,
+  "effort_parameter_supported": false,
+  "status": "standalone_reference_only",
+  "sources_sha256": {
+    "scripts/eval_suite.py": "b337be25862471cae04b66f6731afda4f0d5d4c641da9839e0d69353ac36385f",
+    "scripts/mesure_locale.py": "0c34510305e2e642ea8b25129b3d22a6c0996212578d58d7e750dc8a452e79ea",
+    "tests/cas-de-test.json": "ed0734bae30e2e3053ba096016b08d30bd0b5117a74ae760f294daf6237a06fa",
+    "tests/bareme-cas-de-test.md": "58d79ce8b06fd9bc7d2e47fe4aa0ce629399408eeaf7034d02729474b867cf43"
+  },
+  "reason": "Décision DCP-0 : référence autonome au pin inchangé ; aucune nouvelle campagne DCP, aucun juge requis. Les limitations du protocole amont restent constatées, sans modification.",
+  "decision": "DCP-0",
+  "decision_date": "2026-10-18",
+  "reference": {
+    "evidence_path": "tests/evidence/2026-10-08-candidat-013/dcp-autonome.json",
+    "sha256": "9b23cd811ee4aef6cebfae129e6baa006f7269b76d623f7e7fc6a994dff61375",
+    "source_repository": "https://github.com/brissonjo-sudo/DCP-fpt",
+    "source_proof_commit": "ff35b7af38f2e03bf39a1244ebdae292b53daccd",
+    "source_summary_sha256": "37c9f6ca8f66eb60c9840ec03f62b618840067d7287404ae633787cc2388d4a6",
+    "selection_excluded": [
+      "LICENSE"
+    ],
+    "selection_reason": "LICENSE est embarqué pour la distribution ; ce fichier de licence ne figure pas dans les 30 fichiers du runtime de la mesure autonome. Aucune autre exclusion permise."
+  }
+}

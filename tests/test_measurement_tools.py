@@ -197,14 +197,15 @@ class MeasurementToolsTests(unittest.TestCase):
 
     def test_diagnostic_DCP_sans_modele_et_sans_substitution(self) -> None:
         stream = io.StringIO()
-        with contextlib.redirect_stdout(stream), patch.object(common.subprocess, "run") as call:
+        with contextlib.redirect_stdout(stream), patch.object(common.subprocess, "run") as call, \
+                patch.object(check_dcp_protocol, "ROOT", self.directory):
             self.assertEqual(check_dcp_protocol.main(), 2)
         call.assert_not_called()
         result = json.loads(stream.getvalue())
         self.assertFalse(result["compatible"])
         self.assertEqual(result["status"], "blocked")
         self.assertFalse(result["model_called"])
-        self.assertEqual(result["decision"], "DCP-0")
+        self.assertEqual(result["decision"], "DCP-014")
         self.assertNotIn("new_dcp_campaign_required", result)
         self.assertNotIn("requested_judge", result)
 

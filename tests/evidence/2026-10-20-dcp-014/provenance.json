@@ -1,0 +1,30 @@
+{
+  "policy": "mesure-controlee-publique-v1",
+  "source_runtime_commit": "071737280debb275549647ffc8c1340cab544a18",
+  "private_sources_sha256": {
+    "resume-final.json": "0758f6d586e2433d8773e75c55fd3bf5ae4db726867ed246d353ac3c3a3effd0",
+    "PLAN-D1.json": "91d0fdd35ca26d86b71778d7ecc4ab143c05dbae3c846e7bb78e8d35357c8448",
+    "autorisation-jo.json": "a082679a174d210a50ba56643acf1b4bcf1396fcff7bfe383ccf395e0c216455",
+    "avis-humain-jo-20261020.json": "29c3934f821e1bce52d9fa4d684363cc0d8ddf74a40767577619c812b266b213",
+    "fiche-relecture.md": "7b654887a27826e493b29ecd203fd52a0c487c5fe356179976b0de2db795561b",
+    "manifest.json": "90afabe5272064d37035b0957c7f4628962dba118b395613aed55c663b8931f3"
+  },
+  "source_launcher_manifest_sha256": "9dc70cc7a33d31da86474525c316636fa71872ff205b60c8d16a05c6acdc712f",
+  "excluded": [
+    "homes",
+    "credentials",
+    "flux bruts",
+    "pensées",
+    "signatures",
+    "identifiants de thread",
+    "chemins personnels"
+  ],
+  "human_review": {
+    "reviewer": "Jo",
+    "practitioner": false,
+    "case_count": 28,
+    "reserves": {}
+  },
+  "publication_ready": false,
+  "plugin_qualified": false
+}
