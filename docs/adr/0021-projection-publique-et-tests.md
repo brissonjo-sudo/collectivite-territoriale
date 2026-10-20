@@ -77,3 +77,26 @@ que le maintien du refus d'espaces finaux dans le code et la documentation.
 Le diagnostic complet reste non probant ; seul le rattachement du smoke L30c
 à la nouvelle tête y est simulé. La préparation finale de L35d ne vaut toujours
 pas autorisation de Jo pour Install ou Run ; Claude doit la demander.
+
+## Addendum du 20 octobre 2026 — T43-L37
+
+Décision de Jo : « Oui aux deux », pré-vol CI avant le smoke final. Les deux
+tests de `tests/test_cli_toolchains.py` qui lisent réellement le binaire local
+épinglé et ses compagnons reçoivent `skipIf(sys.platform != 'win32', motif)`.
+Sous Windows, aucun saut lié à l'existence du binaire n'est permis : son absence
+reste un échec. Aucun corps de test ni aucune assertion n'est modifié ; les
+tests portables sur fixtures, y compris ceux des ACL Windows simulées, restent
+exécutés sur toutes les plateformes.
+
+Ce fichier de tests est hors inventaire d'outillage et déjà couvert par le
+périmètre documentaire/tests de la transition. Seule l'empreinte cible du
+CHANGELOG est renouvelée dans la transition fermée ADR 0017 ; aucun nouveau
+chemin ni contrôle d'exécution n'est exempté.
+
+Le pré-vol prépare une copie Git avec commit de release simulé, uniquement
+composé des projections publiques, et consigne son caractère non probant hors
+de la copie (`release_evidence:false`). Claude exécutera dans Python 3.11/Linux
+les commandes des deux jobs du workflow, puis le job d'intégration sur la tête
+sans release. Docker n'est pas lancé ici. Le rattachement du smoke L30c reste
+le seul écart diagnostique ; il ne constitue ni un nouveau smoke ni une preuve
+de release. Toute préparation smoke liée à la tête précédente reste historique.

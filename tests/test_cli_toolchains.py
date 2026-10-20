@@ -139,11 +139,13 @@ class CliToolchainsTests(unittest.TestCase):
         with patch.object(cli, 'phase_pin', return_value=expected), self.assertRaisesRegex(ValueError, 'Compagnon smoke'):
             common.verify_codex_cli(package, 'smoke_cli')
 
+    @unittest.skipIf(sys.platform != 'win32', 'Binaire Windows local epingle et compagnons requis ; obligatoire sous Windows')
     def test_package_reel_smoke_verifie_sans_le_lancer(self) -> None:
         with patch.object(common.subprocess, 'run') as process:
             self.assertEqual(common.verify_codex_cli(ACTUAL_CLI, 'smoke_cli'), self.pins['smoke_cli'])
         process.assert_not_called()
 
+    @unittest.skipIf(sys.platform != 'win32', 'Binaire Windows local epingle et compagnons requis ; obligatoire sous Windows')
     def test_recu_emis_lie_la_phase_et_les_compagnons_sans_modele(self) -> None:
         synthetic = subprocess.CompletedProcess([], 0,
             '{"type":"thread.started","thread_id":"00000000-0000-0000-0000-000000000123"}\n{"type":"turn.completed"}\n', '')

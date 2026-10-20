@@ -4,6 +4,13 @@
 
 Préparation locale du 2026-10-17, selon l'ADR 0010.
 
+Actualisation locale du 2026-10-20 (T43-L37, décision de Jo « Oui aux deux ») :
+les deux tests qui lisent le binaire smoke Windows local épinglé sont sautés
+uniquement hors Windows, avec motif explicite. Sous Windows ils demeurent
+obligatoires, y compris si le binaire manque. Leurs assertions et les tests
+portables sur fixtures sont inchangés. Pré-vol Linux/Python 3.11 préparé pour
+Claude ; aucune validation Linux, session modèle ou poussée acquise dans ce lot.
+
 Actualisation locale du 2026-10-20 (T43-L35, ADR 0021) : les contrôles
 d'absence de release utilisent leurs fixtures isolées, sans retrait d'assertion.
 L'assembleur conserve les originaux hors dépôt et produit une projection
