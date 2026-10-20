@@ -11,10 +11,10 @@
     "scripts/measurement_common.py": "d182f563ec827efeac5a75068d43c18cbba58a36f3f67faff0351a1c4046a4dd"
   },
   "target_files_sha256": {
-    "CHANGELOG.md": "6e1043103bce5c54342f5466f59e4059925a0393150fc92c33870d17f976cafd",
-    "scripts/assemble_release_evidence.py": "8fa07fa86aeff040626c2f7384374e28dc75b490df041118df552a55d409172e",
+    "CHANGELOG.md": "c2b5c2b5ab070da52da933a13a4b4aa9993df45ca0399be19bbb7c83b97e4c80",
+    "scripts/assemble_release_evidence.py": "5a29b0cde8f132eb70d9a60bb77cfd44334294b55006c21a0c73d60537968d3a",
     "scripts/cli_toolchains.py": "3700efbd52c0035bfa324ba9aa3b0d217e88966eaba935b5762bffb881985e5f",
-    "scripts/human_resolution.py": "d23fc81f15333593c7d1039334555d96430869231bab155d18292e7071debed0",
+    "scripts/human_resolution.py": "794acdfd1dfb5fc901cac52e44f10493edead97872949f2dcff208d06f231a0f",
     "scripts/measurement-cli.json": "1987fc911f925b59148e94aab14511178dbd3fe6c0f647e4ef2841f2038f050f",
     "scripts/measurement_common.py": "c0c774cd986e49f39820d1fe9cac3bd3b88d7ebc0ef6dbf1a127bbc6d961ecfb"
   }

@@ -104,7 +104,7 @@ def assemble(root: Path, commit: str, campaign_dir: Path, smoke_path: Path,
         campaign_data, runs = linked['campaign'], linked['runs']
     else:
         campaign_data, runs = campaign_inputs(root, commit, campaign_dir, baseline)
-    cases = {c["id"]: c for c in json.loads((root / "tests/cas-plugin.json").read_bytes())}
+    cases = linked['cases'] if linked else {c["id"]: c for c in json.loads((root / "tests/cas-plugin.json").read_bytes())}
     upstream = json.loads((root / "upstream.json").read_bytes())["skills"]
     dcp = dcp_input(root, dcp_path)
     smoke = checked(smoke_path, commit, {"real_smoke"}, 'smoke_cli')
@@ -140,9 +140,11 @@ def assemble(root: Path, commit: str, campaign_dir: Path, smoke_path: Path,
         if proof["evidence_sha256"] != fingerprint(runs[item["case_id"]][0]) or any(i["statut"] == "violation" for i in proof["report"]["invariants"]):
             raise ValueError("Relecture non liée à la réponse ou violation identifiée")
         reviews[item["case_id"]] = (path, proof)
+    measurement_commit = linked['source_commit'] if linked else None
     cli_identities = prove_toolchains([p['origin'] for _, p in runs.values()],
         [p['origin'] for _, p in reviews.values()], smoke_receipts,
-        {**toolchains(), 'smoke_cli': smoke['smoke_cli']})
+        {**toolchains(measurement_commit=measurement_commit), 'smoke_cli': smoke['smoke_cli']},
+        measurement_commit=measurement_commit)
     output = output_outside(root, output)
     # Toutes les entrées sont refusées avant toute écriture si synthétiques ou incomplètes.
     output.mkdir(parents=True)

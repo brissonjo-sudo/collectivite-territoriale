@@ -13,7 +13,7 @@ from typing import Any
 import run_codex_campaign as campaign
 from measurement_common import bound, canonical, checked, digest, fingerprint
 from review_codex_campaign import validate_report
-from cli_toolchains import compatibility_files
+from cli_toolchains import compatibility_files, measurement_contract
 
 
 def dated(value: str) -> datetime:
@@ -120,6 +120,27 @@ def original_bytes(directory: Path, binding: dict) -> bytes:
     return decoded
 
 
+def bundle_cases(root: Path, directory: Path, index: dict) -> dict[str, dict]:
+    """Le commit lié de d exige son contrat v2 exact ; aucun repli sur v1."""
+    contract = measurement_contract(root, index['measurement_commit'])
+    if contract is None:
+        cases = json.loads((root / 'tests/cas-plugin.json').read_bytes())
+    else:
+        binding = index.get('case_contract') or {}
+        if (binding.get('sha256') != contract['case_contract_sha256']
+                or fingerprint(root / campaign.CYCLE_CASES_FILE) != contract['case_contract_sha256']):
+            raise ValueError('Contrat de cycle v2 absent ou divergent')
+        bound(directory, binding)
+        cases = campaign.load_cycle_cases(root)
+    return {case['id']: case for case in cases}
+
+
+def verify_case_hash(source: dict, case: dict) -> None:
+    """Empreinte du cas complet, sans équivalence entre contrats v1 et v2."""
+    if source['case_sha256'] != digest(canonical(case)):
+        raise ValueError('Scénario mesuré différent')
+
+
 def load_bundle(root: Path, directory: Path, target: dict) -> dict[str, Any]:
     """Contrôle les 18 cas L14 et leurs avis ; ne crée aucune preuve de release."""
     index = json.loads((directory / 'liaisons-humaines.json').read_bytes())
@@ -137,7 +158,7 @@ def load_bundle(root: Path, directory: Path, target: dict) -> dict[str, Any]:
             or summary.get('synthetic_inputs_allowed') is not False
             or summary.get('technical_failed_case_ids')):
         raise ValueError('Campagne différente, composite ou en échec')
-    cases = {c['id']: c for c in json.loads((root / 'tests/cas-plugin.json').read_bytes())}
+    cases = bundle_cases(root, directory, index)
     recorded = {c['case_id']: c for c in summary['cas']}
     if set(index['cases']) != set(cases) or set(recorded) != set(cases) or len(summary['cas']) != len(cases):
         raise ValueError('Campagne ou couverture humaine incomplète')
@@ -161,8 +182,7 @@ def load_bundle(root: Path, directory: Path, target: dict) -> dict[str, Any]:
             if identity in threads:
                 raise ValueError('Conversation réutilisée')
             threads.add(identity)
-        if source['case_sha256'] != digest(canonical(case)):
-            raise ValueError('Scénario mesuré différent')
+        verify_case_hash(source, case)
         response_rows, clean = events(response_path.parent, source)
         review_rows, review_events = events(review_path.parent, review)
         if (bound(directory, link['response_trace']) != bound(response_path.parent, source['trace'])
@@ -251,7 +271,7 @@ def load_bundle(root: Path, directory: Path, target: dict) -> dict[str, Any]:
         raise ValueError('Réserve humaine perdue dans la décision globale')
     common = {**target, 'measurement_commit': commit, 'source_campaign': index['summary'],
               'origin': {'kind': 'derived_qualification_projection', 'synthetic': False, 'dry_run': False}}
-    return {'runs': runs, 'reviews': reviews, 'resolutions': resolved,
+    return {'runs': runs, 'reviews': reviews, 'resolutions': resolved, 'cases': cases,
         'campaign': {**common, 'runner_sha256': fingerprint(root / 'scripts/run_codex_campaign.py'),
                      'case_count': len(cases), 'technical_passed_count': len(cases)},
         'review': dict(common), 'source_bundle': directory, 'source_commit': commit,

@@ -10,6 +10,8 @@ ROOT=Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/'scripts'))
 import cli_toolchains as cli
 import measurement_common as common
+import human_resolution as human
+from campaign_contract import load_cycle_cases, STOP_CYCLE_CASES
 
 class CampaignDTests(unittest.TestCase):
     def test_pin_d_exact_et_trois_compagnons(self):
@@ -44,5 +46,19 @@ class CampaignDTests(unittest.TestCase):
             self.assertFalse(cli.receipt_matches(bad,'campaign_cli',pin))
         bad=copy.deepcopy(origin);bad['cli_toolchain']['companions_sha256'].pop('codex-command-runner.exe')
         self.assertFalse(cli.receipt_matches(bad,'campaign_cli',pin))
+
+    def test_empreintes_v1_refusees_pour_les_trois_cas_v2(self):
+        historical={c['id']:c for c in json.loads((ROOT/'tests/cas-plugin.json').read_bytes())}
+        current={c['id']:c for c in load_cycle_cases(ROOT)}
+        for name in STOP_CYCLE_CASES:
+            with self.subTest(case=name):
+                self.assertTrue(current[name]['stop_first'])
+                with self.assertRaisesRegex(ValueError,'Scénario mesuré différent'):
+                    human.verify_case_hash({'case_sha256':common.digest(common.canonical(historical[name]))},current[name])
+                human.verify_case_hash({'case_sha256':common.digest(common.canonical(current[name]))},current[name])
+
+    def test_contrat_v2_absent_refuse_sans_repli(self):
+        with self.assertRaisesRegex(ValueError,'Contrat de cycle v2'):
+            human.bundle_cases(ROOT,ROOT,{'measurement_commit':cli.MEASUREMENT_D})
 
 if __name__=='__main__':unittest.main()

@@ -236,6 +236,20 @@ class HumanBundleTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Décision humaine globale absente'):
             human.load_bundle(self.historical_root, bundle, self.baseline)
 
+    def test_reserve_exige_decision_globale_et_maintien_explicite(self) -> None:
+        bundle = self.copied()
+        relative = 'avis-humain-jo-20261018-quinze.json'
+        value = self.original(bundle, relative)
+        self.assertEqual(value['verdicts']['plugin-prime-depart-retraite'], 'reserve')
+        value['decision_globale']['reserve_maintenue'] = False
+        self.replace_piece(bundle, relative, value)
+        with self.assertRaisesRegex(ValueError, 'Réserve humaine perdue'):
+            human.load_bundle(self.historical_root, bundle, self.baseline)
+        value.pop('decision_globale')
+        self.replace_piece(bundle, relative, value)
+        with self.assertRaises(KeyError):
+            human.load_bundle(self.historical_root, bundle, self.baseline)
+
     def test_original_decompresse_empreinte_divergente_refusee(self) -> None:
         index = json.loads((BUNDLE / 'liaisons-humaines.json').read_bytes())
         stored = 'avis-humain-jo-20261018.json.gz'
