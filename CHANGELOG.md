@@ -1,5 +1,22 @@
 # Historique des versions
 
+## 1.4.0 — Non publiée
+
+Lot B1 du 2026-10-21 (ADR 0024) : le qualificateur recalcule les empreintes
+du fichier de cas, d'`upstream.json` et de l'inventaire d'outillage du smoke.
+Seules les exceptions d'assemblage et les transitions fermées existantes de
+`human_resolution.compatible()` sont conservées. Les deux verrous CLI et les
+reçus de campagne, de relecture et de smoke sont revérifiés, y compris dans la
+vue de projection CI. Le staging de l'assembleur copie l'outillage inventorié.
+
+Les fixtures temporaires des tests sont explicitement synthétiques ; les
+preuves sources, assertions, seuils, verrous et manifestes de transition ne
+sont pas modifiés. La preuve `release-1.3.0.json` est conservée : elle est
+refusée par la nouvelle règle sur cette branche, à cause de l'outillage modifié.
+La barrière de release restera rouge jusqu'à l'assemblage 1.4.0. `main` ne
+recevra la règle qu'avec la release 1.4.0. Aucune campagne, aucun smoke réel,
+appel modèle, push ou publication ne fait partie de B1.
+
 ## 1.3.0 — Candidat d'intégration DSI — non mesuré, non qualifié
 
 Préparation locale du 2026-10-17, selon l'ADR 0010.

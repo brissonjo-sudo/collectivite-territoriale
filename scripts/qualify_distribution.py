@@ -6,8 +6,8 @@ import hashlib
 import json
 from pathlib import Path
 
-from cli_toolchains import measurement_contract
-from measurement_common import bound
+from cli_toolchains import compatibility_files, measurement_contract, prove_toolchains, toolchains
+from measurement_common import bound, snapshot
 from public_projection import ProjectionView, verify_ci
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -53,6 +53,46 @@ def distribution_errors(root: Path, evidence: dict) -> list[str]:
     except (KeyError, TypeError, ValueError, OSError) as exc:
         return ['Projection publique refusée : ' + str(exc)]
     return _distribution_errors(root, evidence, view)
+
+
+def smoke_contract_errors(root: Path, evidence: dict, native: dict, reviews: dict,
+                          smoke: dict, view: ProjectionView | None = None) -> list[str]:
+    """Rejoue les liaisons du smoke et les deux verrous, y compris en projection CI."""
+    errors: list[str] = []
+    current = snapshot(root)
+    for key in ('case_file_sha256', 'upstream_sha256'):
+        if smoke.get(key) != current[key]:
+            errors.append('Empreinte différente du smoke : ' + key)
+    try:
+        # Même périmètre que human_resolution.compatible ; aucune transition ajoutée.
+        permitted = {'scripts/assemble_release_evidence.py', 'scripts/human_resolution.py'}
+        permitted |= compatibility_files(root, smoke, current)
+        old, target = smoke['toolchain_sha256'], current['toolchain_sha256']
+        if any(old.get(name) != target.get(name) for name in set(old) | set(target)
+               if name not in permitted):
+            errors.append('Protocole ou outillage du smoke différent')
+    except (KeyError, TypeError, ValueError, OSError) as exc:
+        errors.append('Transition du smoke refusée : ' + str(exc))
+    try:
+        resolve = view.bound if view else bound
+        measurement_commit = None
+        link = evidence.get('review', {}).get('linked_sources')
+        if link is not None:
+            index = json.loads(resolve(root, link).read_bytes())
+            measurement_commit = index.get('measurement_commit')
+        declared = {phase: evidence[phase] for phase in ('campaign_cli', 'smoke_cli')}
+        if declared != toolchains(root, measurement_commit) or smoke['smoke_cli'] != declared['smoke_cli']:
+            raise ValueError('Verrous CLI différents de la distribution ou du smoke')
+        campaign_receipts = [load(root, run['evidence_path'])['origin'] for run in native['runs']]
+        review_receipts = [load(root, run['evidence_path'])['origin'] for run in reviews['runs']]
+        directory = (root / evidence['distribution']['proofs']['codex_smoke']['evidence_path']).parent
+        smoke_receipts = [json.loads(resolve(directory, run['proof']).read_bytes())['origin']
+                          for run in smoke['runs']]
+        prove_toolchains(campaign_receipts, review_receipts, smoke_receipts, declared,
+                         measurement_commit=measurement_commit)
+    except (KeyError, TypeError, ValueError, OSError) as exc:
+        errors.append('Toolchains de distribution refusées : ' + str(exc))
+    return errors
 
 
 def _distribution_errors(root: Path, evidence: dict, view: ProjectionView | None = None) -> list[str]:
@@ -124,6 +164,7 @@ def _distribution_errors(root: Path, evidence: dict, view: ProjectionView | None
                     f"Configuration différente du smoke : {name}")
         runner = fingerprint(root / "scripts/run_codex_campaign.py")
         require(native["runner_sha256"] == runner, "Protocole de campagne modifié")
+        errors.extend(smoke_contract_errors(root, evidence, native, reviews, smoke, view))
 
         cases = qualification_cases(root, evidence, view)
         runs = {r["case_id"]: r for r in native["runs"]}

@@ -13,6 +13,7 @@ import cli_toolchains as cli
 import measurement_common as common
 import qualify_distribution as qualifier
 import test_distribution_qualification as historical
+from support_distribution_contract import closed_transition_root, complete_synthetic_contract
 
 
 class QualificationCycleTests(unittest.TestCase):
@@ -72,6 +73,8 @@ class QualificationCycleTests(unittest.TestCase):
         native['case_count'] = native['technical_passed_count'] = len(cases)
         self.fixture.write_proof('native_campaign', native)
         self.fixture.write_proof('assistant_review', reviews)
+        commit = self.index.get('measurement_commit') if 'linked_sources' in self.evidence['review'] else None
+        complete_synthetic_contract(self.fixture, ROOT, commit)
 
     def test_projection_d_liee_au_contrat_v2_exact_passe(self) -> None:
         self.assertEqual(qualifier.distribution_errors(self.root, self.evidence), [])
@@ -80,6 +83,8 @@ class QualificationCycleTests(unittest.TestCase):
         del self.evidence['review']['linked_sources']
         # Un champ déclaré par la preuve ne remplace jamais le lien vers le commit.
         self.evidence['measurement_commit'] = cli.MEASUREMENT_D
+        # Isole le choix des cas : reçus CLI factices conformes au contexte sans lien.
+        complete_synthetic_contract(self.fixture, ROOT)
         errors = qualifier.distribution_errors(self.root, self.evidence)
         self.assertEqual(set(errors), {'Scénario modifié : ' + name for name in (
             'plugin-garde-fou-apja', 'plugin-dcp-egalite', 'plugin-dcp-acte-irreversible')})
@@ -122,14 +127,17 @@ class QualificationCycleTests(unittest.TestCase):
 
 class QualificationTransitionTests(unittest.TestCase):
     def test_transition_qualificateur_exacte_et_derive_refusee(self) -> None:
-        transition = json.loads((ROOT / cli.TRANSITION_D).read_bytes())
+        # La transition est fermée sur la tête 1.3.0 mesurée, jamais sur le code B1.
+        root = closed_transition_root(self, ROOT)
+        transition = json.loads((root / cli.TRANSITION_D).read_bytes())
         old = {'plugin_commit': cli.MEASUREMENT_D,
                'toolchain_sha256': dict(transition['source_files_sha256'])}
-        current = {'toolchain_sha256': common.snapshot(ROOT)['toolchain_sha256']}
-        self.assertIn('scripts/qualify_distribution.py', cli.compatibility_files(ROOT, old, current))
+        current = {'toolchain_sha256': {p.relative_to(root).as_posix(): common.fingerprint(p)
+                                      for p in (root / 'scripts').iterdir() if p.suffix in {'.py', '.json'}}}
+        self.assertIn('scripts/qualify_distribution.py', cli.compatibility_files(root, old, current))
         current['toolchain_sha256']['scripts/qualify_distribution.py'] = '0' * 64
         with self.assertRaisesRegex(ValueError, 'transition d refusée'):
-            cli.compatibility_files(ROOT, old, current)
+            cli.compatibility_files(root, old, current)
 
 
 if __name__ == '__main__':

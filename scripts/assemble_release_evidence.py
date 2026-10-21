@@ -153,6 +153,7 @@ def assemble(root: Path, commit: str, campaign_dir: Path, smoke_path: Path,
     wanted = [*CONFIGURATION, "upstream.json", "tests/cas-plugin.json", "scripts/run_codex_campaign.py",
               "docs/adr/0007-distribution-open-source-et-deploiement.md", "docs/deploiement-collectivite.md"]
     wanted += list(baseline["runtime_sha256"])
+    wanted += list(baseline["toolchain_sha256"])
     wanted += ['scripts/measurement-cli.json', 'scripts/smoke-cli.json', 'scripts/toolchain-transition-0013.json']
     for name in wanted:
         target = output / name; target.parent.mkdir(parents=True, exist_ok=True)
