@@ -13,6 +13,8 @@
 
 | `v1.2.0` | `640a86911195747dfbb0bdff75b0acae44810a29` | 2026-10-08 | **distribution open source qualifiée techniquement**, déploiement tiers non qualifié | DCP 0.1.3 et six skills ; avis praticien différé selon ADR 0007 |
 
+| `v1.3.0` | `f899fad183702109af590fc58d9eb7c5dd9d7163` | 2026-10-21 | **distribution open source qualifiée techniquement** ; avis métier enregistré avec deux réserves (`release-1.3.0.json`) | Intégration DSI, sept skills ; mesure sur `aa81170`, commit publié limité aux preuves et à la documentation |
+
 Ajouter une ligne par étiquette distribuée ; ne jamais réécrire une ligne.
 Le test `test_distribution_epinglee_sur_etiquette` exige que l'étiquette et
 le commit épinglés figurent dans ce tableau.

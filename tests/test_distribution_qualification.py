@@ -18,6 +18,11 @@ sys.path.insert(0, str(ROOT / "scripts"))
 from qualify_distribution import distribution_errors, fingerprint, load, current_distribution_errors
 
 
+#: Distribution historique v1.2.0 (registre de docs/publication.md), socle
+#: positif de ces contre-épreuves ; elle ne suit pas la marketplace courante.
+HISTORICAL_DISTRIBUTION = "640a86911195747dfbb0bdff75b0acae44810a29"
+
+
 class DistributionQualificationTests(unittest.TestCase):
     def setUp(self) -> None:
         self.workspace = tempfile.TemporaryDirectory()
@@ -26,9 +31,8 @@ class DistributionQualificationTests(unittest.TestCase):
         self.evidence = copy.deepcopy(load(ROOT, "tests/evidence/release-1.2.0.json"))
 
     def historical_distribution_fixture(self) -> Path:
-        """Restaure les seuls blobs publics épinglés ; aucune preuve réécrite."""
-        entry = load(ROOT, ".claude-plugin/marketplace.json")["plugins"][0]
-        commit = entry["source"]["sha"]
+        """Restaure les seuls blobs publics de la v1.2.0 ; aucune preuve réécrite."""
+        commit = HISTORICAL_DISTRIBUTION
         self.assertRegex(commit, r"^[0-9a-f]{40}$")
         target = Path(self.workspace.name) / "distribution-historique-exacte"
         target.mkdir()

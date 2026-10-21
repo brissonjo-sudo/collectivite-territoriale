@@ -469,11 +469,11 @@ class CodexPluginTests(unittest.TestCase):
         self.assertIn("aucune fausse activation ou disponibilité de dsi-fpt", case["invariants"])
         self.assertIn("aucune clause technique ni exemple produit par DCP", case["invariants"])
         self.assertIn("`dsi-fpt` est embarqué", (ROOT / "README.md").read_text(encoding="utf-8"))
-        # La distribution épinglée conserve sa frontière externe historique.
+        # Depuis la v1.3.0, la distribution épinglée embarque dsi-fpt.
         entry = load_json(".claude-plugin/marketplace.json")["plugins"][0]
         published = json.loads(subprocess.check_output(
             ["git", "cat-file", "blob", entry["source"]["sha"] + ":upstream.json"], cwd=ROOT))
-        self.assertNotIn("dsi-fpt", published["skills"])
+        self.assertIn("dsi-fpt", published["skills"])
         self.assertIn("dcp-fpt", published["skills"])
         self.assertEqual(entry["source"]["ref"], "v" + entry["version"])
         self.assertEqual(set(pinned), {p.name for p in (ROOT / "skills").iterdir() if p.is_dir()})

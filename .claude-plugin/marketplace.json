@@ -11,12 +11,12 @@
       "source": {
         "source": "github",
         "repo": "brissonjo-sudo/collectivite-territoriale",
-        "ref": "v1.2.0",
-        "sha": "640a86911195747dfbb0bdff75b0acae44810a29"
+        "ref": "v1.3.0",
+        "sha": "f899fad183702109af590fc58d9eb7c5dd9d7163"
       },
       "displayName": "Collectivité territoriale",
-      "description": "Police municipale, RH, DPO, finances locales, commande publique et recherche juridique avec accès Légifrance/Judilibre.",
-      "version": "1.2.0",
+      "description": "Police municipale, RH, DPO, finances locales, commande publique, systèmes d'information et recherche juridique avec accès Légifrance/Judilibre.",
+      "version": "1.3.0",
       "repository": "https://github.com/brissonjo-sudo/collectivite-territoriale"
     }
   ]
