@@ -38,6 +38,7 @@ assertions ne changent pas avec le réépinglage.
 | B1 | Qualificateur renforcé localement ; ADR 0024. |
 | B2/B2b/B2c | Réépinglage, surcharges et candidat 1.4.0 préparés localement. |
 | B3 | Contrat v3 préparé, un invariant ajouté au seul cas prime-départ ; v2 intact. Liaison au commit mesuré fermée en attente du gel B4 (ADR 0025). |
+| B5 (transition) | Branche fermée 1.4.0 préparée avant gel, décision Jo du 21/10 ; manifeste non fermé jusqu'à H2 et procédure exacte dans l'ADR 0026. Pré-vol non probant rejoué. |
 | B4 | Pré-vol complet, notamment Docker, à exécuter avant gel. |
 | B5 | Campagne, avis humain, smoke réel, assemblage et publication non exécutés. |
 

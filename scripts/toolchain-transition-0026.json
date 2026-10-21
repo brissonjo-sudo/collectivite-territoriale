@@ -1,0 +1,22 @@
+{
+  "adr": "docs/adr/0026-transition-fermee-1-4-0.md",
+  "measurement_commit": null,
+  "case_contract_sha256": "deb0d39efc93a24b16444922dbafddbb6570801a67e21ca23d612343ba471e89",
+  "campaign_cli": {
+    "version": "codex-cli 0.163.0-alpha.10.2",
+    "sha256": "f6dbf48cb70f62649c645f26c87dc9bf84cc36986202dfad8e12fb5b8ca70312",
+    "companions_sha256": {
+      "codex-code-mode-host.exe": "3b6a9179a4da17fa5fc6948219cd61486dc3b534c683838076d8c61bd311c68e",
+      "codex-command-runner.exe": "ce80b56a2f37f808815fde33cceb97ac858ceecde296425ad3860f0f37fb4877",
+      "codex-windows-sandbox-setup.exe": "c4da812016cbfb92d9a62791f78460c59e9662faadb0a2720d3aa5d0535b80bd"
+    }
+  },
+  "source_files_sha256": {
+    "scripts/cli_toolchains.py": null,
+    "scripts/measurement-cli.json": null
+  },
+  "target_files_sha256": {
+    "scripts/cli_toolchains.py": null,
+    "scripts/measurement-cli.json": null
+  }
+}

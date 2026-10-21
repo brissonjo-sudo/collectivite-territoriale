@@ -2,6 +2,14 @@
 
 ## 1.4.0 — Non publiée — non mesuré, non qualifié
 
+Lot B5 du 2026-10-21, décision de Jo (ADR 0026) : branche de transition 1.4.0
+fermée sur le seul H1 explicitement lié, v3, la CLI 0.163 et ses compagnons.
+Seuls le lecteur, le verrou de mesure et le manifeste peuvent changer en H2.
+Les empreintes source/cible sont vérifiées, les sources relues dans les objets
+Git H1 et le contenu limité aux seules données de liaison. Le manifeste reste
+non fermé avant la campagne ; aucune transition historique n'est modifiée.
+Le pré-vol est rejoué dans une copie non probante, sans modèle ni Docker.
+
 Lot B3 du 2026-10-21 (ADR 0025) : contrat de cycle v3, avec un seul invariant
 ajouté au cas `plugin-prime-depart-retraite` sur l'absence d'indemnité de départ,
 la consultation de la réponse ministérielle du 22/05/2025 (question n° 01222,
