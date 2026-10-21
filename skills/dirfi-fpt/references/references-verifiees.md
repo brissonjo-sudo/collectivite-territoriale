@@ -1,4 +1,4 @@
-# Références vérifiées sur Légifrance
+# Références vérifiées — Légifrance et doctrine officielle
 
 > **Ce fichier est le seul du dépôt autorisé à contenir des identifiants
 > Légifrance en dur** (`LEGIARTI`, `JORFTEXT`, `NOR`, numéro de décision) — parce
@@ -180,6 +180,19 @@ l'état de ce registre, être **réservée** :
 > une décision juridictionnelle se cite **comme un article** — juridiction,
 > formation, date, numéro de requête ou de décision, identifiant, et date de
 > vérification — jamais par son seul nom d'usage.
+
+---
+
+## 8. Doctrine administrative consultée hors Légifrance
+
+Cette section consigne une consultation de doctrine officielle, distincte des
+vérifications d'identifiants Légifrance des sections précédentes. Une réponse
+ministérielle ne prime jamais sur la loi ou le décret ; son utilisation pour
+un agent relève de `drh-fpt` (renvoi de `SKILL.md` §5.5).
+
+| Objet | Référence | Identifiant | Date de vérification | Statut |
+|---|---|---|---|---|
+| Absence d'indemnité de départ à la retraite instituée ; repère CIA strictement conditionnel et renvoi vers drh-fpt | Réponse du ministère de l'action publique, de la fonction publique et de la simplification du 22/05/2025 à la question écrite n° 01222 — [Sénat](https://www.senat.fr/questions/base/2024/qSEQ241001222.html) | sans identifiant Légifrance, senat.fr | 2026-10-21 | consultée — doctrine administrative ; vérifications d'applicabilité à reprendre côté drh-fpt |
 
 ---
 

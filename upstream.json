@@ -30,8 +30,8 @@
     },
     "drh-fpt": {
       "repository": "https://github.com/brissonjo-sudo/Drh-fpt.git",
-      "commit": "f81c9b955f7ebb47df7e93bdc41ac743d85a2973",
-      "version": "0.6.0",
+      "commit": "002f74b07b5b31557a75ecfeda838d4126a1b1fd",
+      "version": "0.7.0",
       "paths": [
         "SKILL.md",
         "references/",
@@ -41,8 +41,8 @@
         {
           "target": "SKILL.md",
           "source": "overlays/drh-fpt.md",
-          "anchor": "# Skill : drh-fpt (v0.6.0)",
-          "base_sha256": "b1e5ba27f8d4fb73ee78ddfc575d87c435132f98d755e808fc5794d6c30b44aa",
+          "anchor": "# Skill : drh-fpt (v0.7.0)",
+          "base_sha256": "a13b4c3fce2cca6b2631149a5569077f28839c9d21a95374224ea163e7924c31",
           "source_sha256": "2711487346ebb6ccfe0adec41683ce13c7103e02211a86697a4640bafa86f0b0"
         },
         {
@@ -50,7 +50,7 @@
           "source": "overlays/drh-fpt-description.md",
           "operation": "replace-description",
           "anchor": "description: >-\n  Expertise opérationnelle et juridiquement vérifiée en ressources humaines de\n  la fonction publique territoriale, pour les collectivités de plus de 350\n  agents. Active ce skill pour toute question RH territoriale : carrière et\n  paie, régime indemnitaire, santé et QVT, recrutement et formation, instances\n  et dialogue social, masse salariale et SI RH, communication interne, agents\n  contractuels, protection fonctionnelle, déontologie, cumul d'activités,\n  signalements ; pour qualifier une situation statutaire, sécuriser un acte\n  (avancement, sanction, refus, délibération) ou produire un livrable RH\n  (note, délibération, fiche de procédure, courrier d'agent). Pour toute règle\n  reposant sur un texte, une procédure, un calcul, un délai, une condition\n  d'accès, une compétence d'instance ou une jurisprudence, le skill vérifie la\n  source officielle avant de conclure. Ne pas activer pour le droit privé hors\n  FPT, les fonctions publiques d'État ou hospitalière, ni pour les\n  collectivités de moins de 350 agents.\n",
-          "base_sha256": "f5423bcdfd0b4f0f6a0406e7d04441208acfd7378e98f2d88bab2d8687105b1b",
+          "base_sha256": "bd2d50efaf2d7e7f7a7a6084e49a57c2851238544c6d8dfc8501430b4513d2c4",
           "source_sha256": "13e1a73d89289a59044a954194679cd7072d3391287a03bc98fcc5c17a3ca4de"
         }
       ]
@@ -84,8 +84,8 @@
     },
     "dirfi-fpt": {
       "repository": "https://github.com/brissonjo-sudo/DirFi-fpt.git",
-      "commit": "d970fe530d3f50f6b4c330e3cfb85db35b7126ab",
-      "version": "1.0.4",
+      "commit": "9c81531592cc83e6b41156f21494f3bc2d64a9db",
+      "version": "1.0.5",
       "paths": [
         "SKILL.md",
         "references/",
@@ -98,8 +98,8 @@
         {
           "target": "SKILL.md",
           "source": "overlays/dirfi-fpt.md",
-          "anchor": "# Skill : dirfi-fpt (v1.0.4)",
-          "base_sha256": "b9ea140e83a02f8fb7bcfae9b3ad038b5576256977c51b749f63265dfdc1c59b",
+          "anchor": "# Skill : dirfi-fpt (v1.0.5)",
+          "base_sha256": "363ebeef09ff4731d356f99ce9835e0942ca58502bcd00e576d31f569f085b4d",
           "source_sha256": "d9ea26ea1b2528265412b000e6594d5e4a37941c76b5d43541de9d7af04f565f"
         },
         {
@@ -107,15 +107,15 @@
           "source": "overlays/dirfi-fpt-description.md",
           "operation": "replace-description",
           "anchor": "description: >-\n  Système expert d'aide à la décision pour un Directeur des Finances (DirFi) en\n  collectivité territoriale française. Activer pour toute question de finances\n  publiques locales : cycle budgétaire et vote du budget, nomenclature M57,\n  exécution de la dépense et de la recette, régies, fiscalité locale, dotations\n  et péréquation, dette et trésorerie, prospective et analyse financière,\n  subventions, volet financier de la commande publique, contrôle interne\n  financier et écrits budgétaires. Activer aussi lorsqu'un montage fait manier\n  des deniers publics hors du circuit du comptable public, afin d'opposer le\n  garde-fou gestion de fait, ou lorsqu'un acte budgétaire paraît irrégulier,\n  afin d'opposer le garde-fou budgétaire avant toute recommandation\n  d'exécution. Vérifier toute règle de droit et toute valeur chiffrée sur une\n  source officielle avant conclusion. Ne pas activer pour le RH statutaire des\n  agents (carrière, paie, régime indemnitaire : drh-fpt), pour la passation des\n  marchés publics, ni pour le droit étranger.\n",
-          "base_sha256": "34040fa2967ccf3453c3cbfa3cc13a37e6c339ef18e16d8c72f99d2552250a0b",
+          "base_sha256": "f3eff53a075eca322e21025bbf59a90c488f42abfc7b2ef81fc6820c99d0769e",
           "source_sha256": "8afaae8a5019403ba25dfd62085643b254d36b6c62f144a7dda40bd65963691c"
         }
       ]
     },
     "recherche-juridique": {
       "repository": "https://github.com/brissonjo-sudo/droit-francais-skill.git",
-      "commit": "e437d10a2d4bbf66ba7a9c1e9fb49e773166054e",
-      "version": "3.5.0",
+      "commit": "f3ddffb520cb7a9ffe70860d0dd119d2bbca272d",
+      "version": "3.6.0",
       "source_root": "skill/",
       "local_directory": "droit-francais-skill",
       "paths": [
@@ -135,7 +135,7 @@
         {
           "target": "SKILL.md",
           "source": "overlays/recherche-juridique.md",
-          "base_sha256": "33a48ee9e830dcde148a80ecb4fa74c795ec11eca3fad7c9b5370d7162662857",
+          "base_sha256": "9ea3a8a169bacb373fa969a012184c073e64824c0031f5b913aa5ad76fd26920",
           "source_sha256": "3f7ad4f4977940f4281a9ca15eecb1feeb731aac54fb3debf7b852525fdcce64",
           "anchor": "## Déclenchement"
         }

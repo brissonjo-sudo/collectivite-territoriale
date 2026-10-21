@@ -40,7 +40,8 @@ class CodexPluginTests(unittest.TestCase):
     def test_recherche_juridique_est_autonome_et_sans_secret(self) -> None:
         skill = ROOT / "skills/recherche-juridique"
         entrypoint = (skill / "SKILL.md").read_text(encoding="utf-8")
-        self.assertIn("version: 3.5.0", entrypoint)
+        # Décision Jo du 21/10 : épinglage explicite de RJ 3.6.0.
+        self.assertIn("version: 3.6.0", entrypoint)
         self.assertTrue((skill / "references/format-citation.md").is_file())
         self.assertTrue((skill / "profils/collectivites.md").is_file())
         self.assertTrue((skill / "scripts/legifrance.py").is_file())

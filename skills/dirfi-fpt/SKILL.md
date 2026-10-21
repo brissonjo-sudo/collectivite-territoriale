@@ -163,16 +163,16 @@ Cet inventaire atteste la présence des fichiers, pas la vigueur de leur contenu
 - `references/templates/rapport-orientation-budgetaire.md`
 <!-- ct-reference-inventory:end -->
 
-# Skill : dirfi-fpt (v1.0.4)
+# Skill : dirfi-fpt (v1.0.5)
 
-> **Métadonnées** — version : **1.0.4** · statut : correctif de co-activation
+> **Métadonnées** — version : **1.0.5** · statut : correctif de co-activation
 > DirFi / DRH, **postérieur à la mesure**. Dernier score de suite : campagne
 > complète `claude-v1.0.3-r3` achevée le 2026-09-16, qui mesure la **v1.0.3**
 > (28 cas, skill lu depuis le dépôt) — **27 réussites, 1 demi-réussite,
-> 0 échec**. La v1.0.4 ajoute un contrat explicite pour les agrégateurs de
-> skills et un cas de non-régression issu d'un test réel du plugin ; elle n'est
+> 0 échec**. La v1.0.5 permet un repère CIA strictement conditionnel après
+> bascule explicite vers `drh-fpt` pour une prime de départ ; elle n'est
 > pas encore couverte par une campagne · dernière revue méthodologique :
-> 2026-09-19 · périmètre : direction des finances,
+> 2026-10-21 · périmètre : direction des finances,
 > collectivités territoriales (France) · dépendances recommandées :
 > `recherche-juridique` (validateur de fond et de vigueur), `drh-fpt` (volet RH
 > statutaire), `dpm-fpt` (volet métier police municipale) · compatibilité :
@@ -582,9 +582,25 @@ vérifier côté `drh-fpt` : le statut et le cadre d'emplois de l'agent, l'exist
 d'un fondement indemnitaire autorisé, le respect du principe de parité, les
 critères généraux de la délibération et la décision individuelle. Une
 délibération ne permet pas, à elle seule, de créer une gratification libre ou
-ad personam. Ne jamais nommer le RIFSEEP, le CIA, l'ISFE ou un autre régime
-spécial avant d'avoir confirmé qu'il s'applique à l'agent et que la délibération
-locale permet réellement l'attribution envisagée.
+ad personam. Ne jamais **présumer** le régime de l'agent : présenter le RIFSEEP,
+le CIA, l'ISFE ou un autre régime spécial comme applicable exige d'avoir
+confirmé le statut, le cadre d'emplois et la portée de la délibération locale.
+
+**Prime de départ à la retraite — repère conditionnel après `BASCULE drh-fpt`.**
+La réponse peut signaler qu'aucune indemnité de départ n'est instituée selon la
+[réponse ministérielle du 22/05/2025](https://www.senat.fr/questions/base/2024/qSEQ241001222.html)
+(consultée le **21/10/2026**, provenance dans `references/references-verifiees.md`
+§8). **Si l'agent relève du RIFSEEP — à vérifier —**, le CIA peut être évoqué
+au regard de la délibération instituant le régime et de la valeur
+professionnelle, sans prime ad personam ni régularisation après coup d'un
+versement dépourvu de base. Ce repère ne vaut ni qualification du régime ni
+autorisation de payer : **renvoyer à `drh-fpt`, module rémunération et paie,
+§5.7 « Départ à la retraite »**, pour l'analyse et les vérifications. Sa
+poursuite dans la même réponse reste soumise à l'activation effective décrite
+ci-dessus. La réponse ministérielle relève de la doctrine administrative et ne
+prime jamais sur la loi ou le décret (`references/socle-sources-verification.md`
+§7).
+
 **Ce qui reste interdit à `dirfi-fpt`** : montants de régime indemnitaire, plafonds
 réglementaires par groupe de fonctions, conditions individuelles
 d'attribution, délais et instances de procédure — même sourcés, même sous
