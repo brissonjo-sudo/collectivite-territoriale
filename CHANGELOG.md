@@ -1,6 +1,28 @@
 # Historique des versions
 
-## 1.4.0 — Non publiée
+## 1.4.0 — Non publiée — non mesuré, non qualifié
+
+Lot B2c du 2026-10-21 : réépinglage de DRH 0.7.0 (`002f74b`), DirFi 1.0.5
+(`9c81531`) et recherche-juridique 3.6.0 (`f3ddffb`). Les autres pins sont
+inchangés. Les copies sont régénérées depuis les blobs Git et les surcharges
+déclarées ; aucune édition manuelle des fichiers embarqués.
+
+Arbitrages B2b/B2c : réancrage sur les nouveaux titres, ajout des seuls sept
+chemins constatés aux inventaires DRH/RJ, rappel CIA strictement conditionnel
+après bascule et activation DRH dans les cinq contrats concernés, et règle de
+citation des ressources de skill par nom et section dans le contrat commun RJ.
+Une seule ligne blanche supplémentaire, autorisée en B2c, porte l'entrée RJ
+embarquée à 511 lignes et 31 230 caractères LF ; N = 85 reste inchangé.
+Le seul attendu de version du test d'autonomie RJ passe de 3.5.0 à 3.6.0,
+conformément au pin explicitement décidé par Jo le 21/10 ; aucun seuil changé.
+Deux fixtures de version sont isolées ou alignées sur le candidat ; leurs
+assertions et les contrôles d'installation restent inchangés.
+
+Les manifestes portent le candidat 1.4.0 non mesuré, non qualifié. Les deux
+catalogues continuent à distribuer l'étiquette publiée 1.3.0 : ni étiquette
+1.4.0 ni preuve de release ne sont inventées. Le contrat de cycle v3, le
+pré-vol complet et les exécutions réelles restent les lots suivants.
+Voir l'[état d'avancement](docs/preparation-1-4-0.md).
 
 Lot B1 du 2026-10-21 (ADR 0024) : le qualificateur recalcule les empreintes
 du fichier de cas, d'`upstream.json` et de l'inventaire d'outillage du smoke.

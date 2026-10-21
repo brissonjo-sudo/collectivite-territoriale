@@ -211,7 +211,10 @@ class MeasurementToolsTests(unittest.TestCase):
 
     def test_qualificateur_inchange_refuse_fixture_sans_preuve_assemblee(self) -> None:
         root = self.directory / "fixture-distribution"; (root / ".codex-plugin").mkdir(parents=True)
-        (root / ".codex-plugin/plugin.json").write_bytes((ROOT / ".codex-plugin/plugin.json").read_bytes())
+        # Fixture historique 1.3.0 autonome, distincte de la version candidate.
+        manifest = json.loads((ROOT / ".codex-plugin/plugin.json").read_bytes())
+        manifest.update(version="1.3.0", test_only_synthetic_fixture=True)
+        (root / ".codex-plugin/plugin.json").write_text(json.dumps(manifest), encoding="utf-8")
         self.assertEqual(current_distribution_errors(root), ["Preuve courante absente : release-1.3.0.json"])
         fake_assembly = {"review": {"human_legal_validation": False}, "release_ready": False,
                          "distribution": {"scope": "open_source", "ready": False, "blockers": ["fixtures sans mesure réelle"]}}
