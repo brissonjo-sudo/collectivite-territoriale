@@ -189,7 +189,9 @@ def behavior_prompt(case: dict[str, Any]) -> str:
             "y compris lecture d'entrée. Une réponse intermédiaire STOP est permise avant les lectures ; "
             "la réponse finale vient ensuite. " + selection + "\n"
             "Une entrée sélectionnée doit être lue entièrement par ses segments contigus, un appel par segment, "
-            "max_output_tokens=8000 ; une annonce seule n'est pas une activation prouvée. "
+            "max_output_tokens=8000 ; "
+            "Lis une seule entrée à la fois : termine tous ses segments avant d'ouvrir une autre entrée, sans lectures en parallèle. "
+            "une annonce seule n'est pas une activation prouvée. "
             "Lis les références utiles seulement sous .agents/skills avec Get-Content ; aucune autre commande, "
             "aucun script ni réseau par shell. Aucun web. " + sources + "\nCatalogue de lectures :\n"
             + "\n\n".join(catalog) + "\nDemande :\n" + case["prompt"])

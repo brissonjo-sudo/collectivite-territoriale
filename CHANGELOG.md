@@ -2,6 +2,12 @@
 
 ## 1.4.0 — Non publiée — non mesuré, non qualifié
 
+Lot B8 du 2026-10-21, décision de Jo (ADR 0027) : consigne explicite de lecture
+d’une seule entrée à la fois, sans segments parallèles, dans behavior_prompt
+uniquement. Validateur, smoke, cas et seuils inchangés. Tentative a consommée
+archivée sur place ; nouvelle tentative complète b sur H1b, sans résultat repris.
+Aucun modèle ni poussée dans ce lot ; preuve 1.3.0 conservée dans son contexte.
+
 Lot B5 du 2026-10-21, décision de Jo (ADR 0026) : branche de transition 1.4.0
 fermée sur le seul H1 explicitement lié, v3, la CLI 0.163 et ses compagnons.
 Seuls le lecteur, le verrou de mesure et le manifeste peuvent changer en H2.
