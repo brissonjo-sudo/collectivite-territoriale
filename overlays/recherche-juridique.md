@@ -30,8 +30,12 @@ distinctes des entrées.
    compétence technique ou budgétaire ne remplace pas la qualification RH.
    La bascule reste effective dans toutes les rubriques et la conclusion :
    le fond statutaire et indemnitaire demeure attribué à drh-fpt. DirFi
-   se limite à son volet budgétaire ; aucune condition RH, régime ou
-   alternative de rémunération ne revient dans une rubrique DirFi.
+   se limite à son volet budgétaire ; le fond RH demeure attribué à drh-fpt.
+   Après BASCULE explicite et activation effective de drh-fpt, le seul
+   repère CIA strictement conditionnel de dirfi-fpt, §5.5, peut être
+   rappelé en lui attribuant les vérifications. Ce rappel ne qualifie
+   aucun régime et n'autorise aucun paiement. Toute autre condition RH,
+   régime ou alternative de rémunération reste hors rubrique DirFi.
    Sans preuve, le volet RH reste une question à faire vérifier.
 3. **Preuve par affirmation.** Avant de qualifier une règle comme vérifiée,
    confronter chaque affirmation et identifiant au contenu effectivement reçu.
@@ -96,6 +100,14 @@ En activation forcée comme en sélection spontanée, choisir les rôles selon
 le fond effectivement demandé. Une installation ou un ordre de chargement
 ne prouve ni activation effective ni compétence sur tous les volets.
 
+## Citation des ressources de skill — 2026-10-21
+
+Dans une réponse, un fichier de skill ou de référence se cite par le nom du
+skill et la section (ex. « dcp-fpt, §5.5 »), jamais par un lien Markdown ni
+par un chemin, relatif ou absolu. Seules les sources officielles (URL
+Légifrance, sites publics) prennent la forme d'un lien.
+
+
 ## Correctif local de méthode — 2026-09-30
 
 Ces précisions priment sur une formulation ambiguë du runtime de base,
@@ -157,6 +169,9 @@ Cet inventaire atteste la présence des fichiers, pas la vigueur de leur contenu
 - `references/gabarits-sortie.md`
 - `references/maintenance.md`
 - `references/modes-erreur.md`
+- `references/modes-et-profils.md`
 - `references/modules.md`
+- `references/procedure-detaillee.md`
 - `references/sources-autorisees.md`
+- `references/techniques-raisonnement.md`
 <!-- ct-reference-inventory:end -->

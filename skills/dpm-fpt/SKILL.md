@@ -100,8 +100,12 @@ Il prime sur les modèles, exemples, valeurs et références historiques ci-dess
    compétence technique ou budgétaire ne remplace pas la qualification RH.
    La bascule reste effective dans toutes les rubriques et la conclusion :
    le fond statutaire et indemnitaire demeure attribué à drh-fpt. DirFi
-   se limite à son volet budgétaire ; aucune condition RH, régime ou
-   alternative de rémunération ne revient dans une rubrique DirFi.
+   se limite à son volet budgétaire ; le fond RH demeure attribué à drh-fpt.
+   Après BASCULE explicite et activation effective de drh-fpt, le seul
+   repère CIA strictement conditionnel de dirfi-fpt, §5.5, peut être
+   rappelé en lui attribuant les vérifications. Ce rappel ne qualifie
+   aucun régime et n'autorise aucun paiement. Toute autre condition RH,
+   régime ou alternative de rémunération reste hors rubrique DirFi.
    Sans preuve, le volet RH reste une question à faire vérifier.
 3. **Preuve par affirmation.** Avant de qualifier une règle comme vérifiée,
    confronter chaque affirmation et identifiant au contenu effectivement reçu.
