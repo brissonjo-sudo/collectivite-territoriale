@@ -13,6 +13,7 @@ from unittest.mock import patch
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 from campaign_contract import CYCLE_CASES_FILE, STOP_CYCLE_CASES, load_cycle_cases
+from cli_toolchains import MEASUREMENT_D
 import run_codex_campaign as campaign
 import measurement_common as common
 from test_measurement_contract import synthetic_trace
@@ -83,7 +84,8 @@ class CycleStopTests(unittest.TestCase):
 
     def test_entree_campagne_utilise_cycle_en_dry_run_sans_processus(self) -> None:
         stream = io.StringIO()
-        argv = ["campagne", "--plugin-commit", "0" * 40, "--output-dir", "jamais-cree-L22", "--dry-run"]
+        # La campagne historique 1.3.0 reste liée à d et à v2 (décision B3).
+        argv = ["campagne", "--plugin-commit", MEASUREMENT_D, "--output-dir", "jamais-cree-L22", "--dry-run"]
         with patch.object(sys, "argv", argv), patch.object(campaign, "run_cli") as model, \
                 patch.object(campaign.subprocess, "run") as process, contextlib.redirect_stdout(stream):
             self.assertEqual(campaign.main(), 0)

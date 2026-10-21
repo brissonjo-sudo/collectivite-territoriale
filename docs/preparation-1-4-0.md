@@ -37,9 +37,15 @@ assertions ne changent pas avec le réépinglage.
 |---|---|
 | B1 | Qualificateur renforcé localement ; ADR 0024. |
 | B2/B2b/B2c | Réépinglage, surcharges et candidat 1.4.0 préparés localement. |
-| B3 | Contrat de cycle v3 à préparer ; aucun invariant ajouté dans B2c. |
+| B3 | Contrat v3 préparé, un invariant ajouté au seul cas prime-départ ; v2 intact. Liaison au commit mesuré fermée en attente du gel B4 (ADR 0025). |
 | B4 | Pré-vol complet, notamment Docker, à exécuter avant gel. |
 | B5 | Campagne, avis humain, smoke réel, assemblage et publication non exécutés. |
+
+Le lanceur vérifie v3 à blanc pour préparer 1.4.0. Aucune exécution réelle ni
+qualification 1.4.0 n'est autorisée tant que le commit mesuré exact n'est pas
+lié au verrou v3 au gel. L'ADR 0025 décrit cette étape, notamment l'impossibilité
+pour un commit de contenir son propre SHA. Aucun commit provisoire ni choix de
+contrat par un champ de preuve ne remplace cette liaison.
 
 L'entrée RJ embarquée passe de 1 162 lignes / 57 588 caractères LF à
 511 lignes / 31 230 caractères LF. Les 190 Markdown installables sont non

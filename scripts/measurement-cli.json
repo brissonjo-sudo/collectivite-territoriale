@@ -18,5 +18,12 @@
       },
       "case_contract_sha256": "65593a1c46bd31b403c5b83344f14951cbc3455f456eefcde2c6853fa68a9478"
     }
+  },
+  "prepared_cycles": {
+    "1.4.0": {
+      "case_contract_file": "scripts/cas-plugin-cycle-v3.json",
+      "case_contract_sha256": "deb0d39efc93a24b16444922dbafddbb6570801a67e21ca23d612343ba471e89",
+      "measurement_commit": null
+    }
   }
 }

@@ -2,6 +2,16 @@
 
 ## 1.4.0 — Non publiée — non mesuré, non qualifié
 
+Lot B3 du 2026-10-21 (ADR 0025) : contrat de cycle v3, avec un seul invariant
+ajouté au cas `plugin-prime-depart-retraite` sur l'absence d'indemnité de départ,
+la consultation de la réponse ministérielle du 22/05/2025 (question n° 01222,
+senat.fr) et le CIA strictement conditionnel. V2 et la preuve 1.3.0 restent
+intacts ; aucun autre cas, attendu STOP ou seuil ne change. L'empreinte v3 est
+fermée. Sa liaison au commit mesuré reste à réaliser au gel B4 ; toute mesure
+1.4.0 non liée est refusée. Le lanceur charge v3 en préparation à blanc,
+sans appel modèle. Les contre-épreuves passent par l'API publique, y compris
+la projection CI, et ne constituent aucune mesure réelle.
+
 Lot B2c du 2026-10-21 : réépinglage de DRH 0.7.0 (`002f74b`), DirFi 1.0.5
 (`9c81531`) et recherche-juridique 3.6.0 (`f3ddffb`). Les autres pins sont
 inchangés. Les copies sont régénérées depuis les blobs Git et les surcharges
@@ -20,8 +30,8 @@ assertions et les contrôles d'installation restent inchangés.
 
 Les manifestes portent le candidat 1.4.0 non mesuré, non qualifié. Les deux
 catalogues continuent à distribuer l'étiquette publiée 1.3.0 : ni étiquette
-1.4.0 ni preuve de release ne sont inventées. Le contrat de cycle v3, le
-pré-vol complet et les exécutions réelles restent les lots suivants.
+1.4.0 ni preuve de release ne sont inventées. La liaison du contrat v3 au gel,
+le pré-vol complet et les exécutions réelles restent les lots suivants.
 Voir l'[état d'avancement](docs/preparation-1-4-0.md).
 
 Lot B1 du 2026-10-21 (ADR 0024) : le qualificateur recalcule les empreintes

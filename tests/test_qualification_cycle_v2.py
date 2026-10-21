@@ -12,6 +12,7 @@ sys.path.insert(0, str(ROOT / 'scripts'))
 import cli_toolchains as cli
 import measurement_common as common
 import qualify_distribution as qualifier
+import public_projection as public
 import test_distribution_qualification as historical
 from support_distribution_contract import closed_transition_root, complete_synthetic_contract
 
@@ -24,6 +25,11 @@ class QualificationCycleTests(unittest.TestCase):
         self.fixture.setUp()
         self.root, self.evidence = self.fixture.root, self.fixture.evidence
         self.evidence['fixture'] = True
+        # B3 réserve v2 à 1.3.0 ; la fixture conserve l'API publique complète.
+        self.evidence['plugin_version'] = '1.3.0'
+        manifest = qualifier.load(self.root, '.codex-plugin/plugin.json')
+        manifest['version'] = '1.3.0'
+        (self.root / '.codex-plugin/plugin.json').write_text(json.dumps(manifest), encoding='utf-8')
         self.cases = json.loads((ROOT / 'tests/cas-plugin.json').read_bytes())
         self.cycle = json.loads((ROOT / 'scripts/cas-plugin-cycle-v2.json').read_bytes())
         (self.root / 'tests/cas-plugin.json').write_bytes((ROOT / 'tests/cas-plugin.json').read_bytes())
@@ -38,6 +44,19 @@ class QualificationCycleTests(unittest.TestCase):
                       'case_contract': common.binding(self.contract_path, directory)}
         self.link_index()
         self.project(self.cycle)
+        # Projection locale réelle d'une pièce synthétique, sans accès externe.
+        pieces = self.root / public.PIECES
+        pieces.mkdir(parents=True)
+        (pieces / 'cycle-fixture.json').write_bytes(self.contract_path.read_bytes())
+        relative = 'tests/evidence/release-fixture.json'
+        public.write_json(self.root / relative, self.evidence)
+        destination = self.root.parent / 'projection-synthetique-l33'
+        release = public.publish(self.root, destination, relative)
+        index_relative = self.index_path.relative_to(self.root)
+        self.root = self.fixture.root = destination
+        self.evidence = self.fixture.evidence = json.loads(release.read_bytes())
+        self.index_path = destination / index_relative
+        self.contract_path = self.index_path.parent / 'cycle.json'
 
     def link_index(self) -> None:
         self.index_path.write_text(json.dumps(self.index), encoding='utf-8')
@@ -75,6 +94,10 @@ class QualificationCycleTests(unittest.TestCase):
         self.fixture.write_proof('assistant_review', reviews)
         commit = self.index.get('measurement_commit') if 'linked_sources' in self.evidence['review'] else None
         complete_synthetic_contract(self.fixture, ROOT, commit)
+        # Le manifeste synthétique 1.3.0 est bien celui installé dans le smoke.
+        smoke = qualifier.load(self.root, self.evidence['codex_smoke']['evidence_path'])
+        smoke['plugin_configuration_sha256'] = common.snapshot(self.root)['plugin_configuration_sha256']
+        self.fixture.write_proof('codex_smoke', smoke)
 
     def test_projection_d_liee_au_contrat_v2_exact_passe(self) -> None:
         self.assertEqual(qualifier.distribution_errors(self.root, self.evidence), [])

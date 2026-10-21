@@ -14,6 +14,14 @@ MIGRATION = {'scripts/measurement_common.py', 'scripts/run_codex_smoke.py',
 TRANSITION_FILES = (MIGRATION - {'scripts/toolchain-transition-0013.json'}) | {
     'scripts/assemble_release_evidence.py', 'scripts/human_resolution.py'}
 MEASUREMENT_D = '13b4e1e537e5a8097a004ee913abcc9d079114a7'
+# À renseigner au gel B4 avec le seul commit mesuré autorisé ; None refuse tout v3.
+MEASUREMENT_140: str | None = None
+CYCLE_CONTRACTS = {
+    '1.3.0': ('scripts/cas-plugin-cycle-v2.json',
+              '65593a1c46bd31b403c5b83344f14951cbc3455f456eefcde2c6853fa68a9478'),
+    '1.4.0': ('scripts/cas-plugin-cycle-v3.json',
+              'deb0d39efc93a24b16444922dbafddbb6570801a67e21ca23d612343ba471e89'),
+}
 TRANSITION_D = 'scripts/toolchain-transition-0017.json'
 MIGRATION_D = {'scripts/measurement-cli.json', 'scripts/cli_toolchains.py',
     'scripts/measurement_common.py', 'scripts/human_resolution.py',
@@ -47,15 +55,49 @@ def _pin(value: dict, smoke: bool) -> dict:
 
 
 def measurement_contract(root: Path, commit: str | None) -> dict | None:
-    """Contrat exact de d choisi par commit lié, jamais par un champ du reçu."""
-    if commit != MEASUREMENT_D:
+    """Contrat choisi par un commit explicitement autorisé, jamais par un reçu."""
+    if commit == MEASUREMENT_D:
+        version = '1.3.0'
+    elif MEASUREMENT_140 is not None and commit == MEASUREMENT_140:
+        version = '1.4.0'
+        prepared_cycle(root)
+    else:
         return None
     value = json.loads((root / 'scripts/measurement-cli.json').read_bytes()).get('campaign_measurements', {}).get(commit)
     if (not isinstance(value, dict) or set(value) != {'campaign_cli', 'case_contract_sha256'}
-            or re.fullmatch(r'[0-9a-f]{64}', str(value['case_contract_sha256'])) is None):
-        raise ValueError('Mesure d sans contrat CLI/cas épinglé')
+            or value['case_contract_sha256'] != CYCLE_CONTRACTS[version][1]):
+        raise ValueError('Mesure sans contrat CLI/cas épinglé : ' + version)
     return {'campaign_cli': _pin(value['campaign_cli'], True),
             'case_contract_sha256': value['case_contract_sha256']}
+
+
+def prepared_cycle(root: Path) -> str:
+    """V3 préparé à empreinte fermée, y compris avant la liaison du gel."""
+    value = json.loads((root / 'scripts/measurement-cli.json').read_bytes()).get('prepared_cycles', {}).get('1.4.0')
+    name, fingerprint = CYCLE_CONTRACTS['1.4.0']
+    if (value != {'case_contract_file': name, 'case_contract_sha256': fingerprint,
+                 'measurement_commit': MEASUREMENT_140} or sha(root / name) != fingerprint):
+        raise ValueError('Contrat de cycle v3 absent ou divergent')
+    return name
+
+
+def contract_file(contract: dict) -> str:
+    """Aucun chemin ni hash fourni par une preuve ne choisit un contrat."""
+    for name, fingerprint in CYCLE_CONTRACTS.values():
+        if contract['case_contract_sha256'] == fingerprint:
+            return name
+    raise ValueError('Contrat de cycle inconnu')
+
+
+def require_cycle_version(contract: dict | None, version: str) -> None:
+    """Une mesure 1.4.0 exige le commit v3 lié ; 1.3.0 conserve v2."""
+    if version == '1.4.0' and (contract is None
+            or contract['case_contract_sha256'] != CYCLE_CONTRACTS[version][1]):
+        raise ValueError('Mesure 1.4.0 sans commit lié au contrat de cycle v3')
+    if contract is not None and contract_file(contract) == CYCLE_CONTRACTS['1.4.0'][0] and version != '1.4.0':
+        raise ValueError('Contrat de cycle v3 réservé à la mesure 1.4.0')
+    if contract is not None and contract_file(contract) == CYCLE_CONTRACTS['1.3.0'][0] and version != '1.3.0':
+        raise ValueError('Contrat de cycle v2 réservé à la mesure 1.3.0')
 
 
 def toolchains(root: Path = ROOT, measurement_commit: str | None = None) -> dict:
@@ -101,9 +143,9 @@ def receipt_matches(origin: dict, phase: str, expected: dict) -> bool:
 
 
 def prove_toolchains(campaign: list[dict], reviews: list[dict], smoke: list[dict], declared: dict,
-                     measurement_commit: str | None = None) -> dict:
+                     measurement_commit: str | None = None, *, root: Path = ROOT) -> dict:
     """Recalcule la propriété des deux CLI ; ne qualifie aucun autre aspect d'un run."""
-    expected = toolchains(measurement_commit=measurement_commit)
+    expected = toolchains(root, measurement_commit=measurement_commit)
     if declared != expected or not campaign or not reviews or not smoke:
         raise ValueError('Deux toolchains épinglées obligatoires et visibles')
     for phase, receipts in [('campaign_cli', campaign), ('campaign_cli', reviews), ('smoke_cli', smoke)]:

@@ -22,7 +22,7 @@ from urllib.parse import urlsplit
 
 from run_plugin_campaign import ROOT, MCP_TOOLS, load_cases
 from codex_event_contract import timeline, behavior_errors
-from campaign_contract import CYCLE_CASES_FILE, load_cycle_cases
+from campaign_contract import CYCLE_CASES_FILE, campaign_cycle, load_cycle_cases
 from measurement_common import candidate, output_outside, write_new, run_cli, seal, digest, canonical, fingerprint
 
 PROFILE = "codex-copies-natives-mcp-v5"
@@ -346,14 +346,14 @@ def main() -> int:
     args = parser.parse_args()
     if args.timeout <= 0:
         parser.error("--timeout doit être positif")
-    cases = load_cycle_cases(ROOT)
+    case_contract, cases = campaign_cycle(ROOT, args.plugin_commit, preparation=args.dry_run)
     selected = [c for c in cases if not args.case_ids or c["id"] in args.case_ids]
     if args.case_ids and len(selected) != len(set(args.case_ids)):
         parser.error("Cas inconnu ou dupliqué")
     if args.dry_run:
         print(json.dumps({"dry_run": True, "synthetic": True, "plugin_commit": args.plugin_commit,
                           "case_ids": [c["id"] for c in selected], "model": args.model,
-                          "case_contract": CYCLE_CASES_FILE, "case_contract_sha256": fingerprint(ROOT / CYCLE_CASES_FILE),
+                          "case_contract": case_contract, "case_contract_sha256": fingerprint(ROOT / case_contract),
                           "sessions": len(selected), "execution": "aucun processus modèle"}, ensure_ascii=True))
         return 0
     if not args.authorize_model_calls:
@@ -384,7 +384,7 @@ def main() -> int:
         if receipt["kind"] != "real_cli":
             errors.append("real_cli_receipt_missing")
         evidence = {**baseline, "profile": PROFILE, "case_id": case["id"], "model_requested": args.model,
-                    "case_contract": CYCLE_CASES_FILE, "case_contract_sha256": fingerprint(ROOT / CYCLE_CASES_FILE),
+                    "case_contract": case_contract, "case_contract_sha256": fingerprint(ROOT / case_contract),
                     "plugin_commit": args.plugin_commit, "origin": receipt,
                     "completed_at": datetime.now(timezone.utc).isoformat(),
                     "runner_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
@@ -411,7 +411,7 @@ def main() -> int:
                 "failures": run["failures"]})
     write_new(args.output_dir / "summary.json", seal({**baseline, "profile": PROFILE,
         "runner_sha256": fingerprint(Path(__file__)), "origin": {"kind": "real_campaign", "synthetic": False, "dry_run": False},
-        "case_contract": CYCLE_CASES_FILE, "case_contract_sha256": fingerprint(ROOT / CYCLE_CASES_FILE),
+        "case_contract": case_contract, "case_contract_sha256": fingerprint(ROOT / case_contract),
         "case_count": len(selected), "technical_passed_count": sum(r["technical_status"] == "passed" for r in recorded),
         "runs": recorded, "human_legal_validation": False, "publication_ready": False}))
     return result

@@ -6,7 +6,8 @@ import hashlib
 import json
 from pathlib import Path
 
-from cli_toolchains import compatibility_files, measurement_contract, prove_toolchains, toolchains
+from cli_toolchains import (compatibility_files, contract_file, measurement_contract,
+                            prove_toolchains, require_cycle_version, toolchains)
 from measurement_common import bound, snapshot
 from public_projection import ProjectionView, verify_ci
 
@@ -27,19 +28,28 @@ def load(root: Path, relative: str) -> dict:
 
 
 def qualification_cases(root: Path, evidence: dict, view: ProjectionView | None = None) -> dict[str, dict]:
-    """Choisit v2 par l'index source lié et le pin du commit mesuré, jamais par la preuve."""
+    """Choisit v2/v3 par le commit source lié ; la version ne permet aucun repli."""
+    def resolve(base: Path, link: dict) -> Path:
+        try:
+            return view.bound(base, link) if view else bound(base, link)
+        except ValueError as exc:
+            # Même catégorie d'échec avec ou sans traduction par ProjectionView.
+            raise ValueError('Preuve liée altérée : ' + str(exc)) from exc
+
     link = evidence.get("review", {}).get("linked_sources")
     if link is not None:
-        index_path = view.bound(root, link) if view else bound(root, link)
+        index_path = resolve(root, link)
         index = json.loads(index_path.read_bytes())
         contract = measurement_contract(root, index.get("measurement_commit"))
+        require_cycle_version(contract, evidence.get('plugin_version'))
         if contract is not None:
             case_link = index.get("case_contract") or {}
             if (index.get("schema") != "ct-human-linked-v1"
                     or case_link.get("sha256") != contract["case_contract_sha256"]):
-                raise ValueError("Contrat de cycle v2 absent ou divergent")
-            path = view.bound(index_path.parent, case_link) if view else bound(index_path.parent, case_link)
+                raise ValueError("Contrat de cycle " + Path(contract_file(contract)).stem.rsplit('-', 1)[1] + " absent ou divergent")
+            path = resolve(index_path.parent, case_link)
             return {c["id"]: c for c in json.loads(path.read_bytes())}
+    require_cycle_version(None, evidence.get('plugin_version'))
     return {c["id"]: c for c in load(root, "tests/cas-plugin.json")}
 
 
@@ -47,7 +57,7 @@ def distribution_errors(root: Path, evidence: dict) -> list[str]:
     """Ajoute la barrière publique ; les contrôles techniques restent tous exécutés."""
     try:
         view = verify_ci(root, evidence) if 'public_projection' in evidence else None
-        if (view is None and evidence.get('plugin_version') == '1.3.0'
+        if (view is None and evidence.get('plugin_version') in {'1.3.0', '1.4.0'}
                 and evidence.get('review', {}).get('linked_sources')):
             raise ValueError('Projection publique absente')
     except (KeyError, TypeError, ValueError, OSError) as exc:
@@ -89,7 +99,7 @@ def smoke_contract_errors(root: Path, evidence: dict, native: dict, reviews: dic
         smoke_receipts = [json.loads(resolve(directory, run['proof']).read_bytes())['origin']
                           for run in smoke['runs']]
         prove_toolchains(campaign_receipts, review_receipts, smoke_receipts, declared,
-                         measurement_commit=measurement_commit)
+                         measurement_commit=measurement_commit, root=root)
     except (KeyError, TypeError, ValueError, OSError) as exc:
         errors.append('Toolchains de distribution refusées : ' + str(exc))
     return errors
