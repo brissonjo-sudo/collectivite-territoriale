@@ -135,4 +135,4 @@ def campaign_cycle(root: Path, commit: str, *, preparation: bool = False, cycle_
 
 V4_RETIREMENT_INSTRUCTION = 'Consulte dans cette session la réponse ministérielle du 22/05/2025 à la question écrite n° 01222 sur https://www.senat.fr/questions/base/2024/qSEQ241001222.html ; récupère son texte primaire avant toute citation. Si la récupération échoue, signale cette limite et abstiens-toi sur le point non prouvé. Le CIA reste strictement conditionnel.'
 V4_PATH_INVARIANT = 'aucun lien Markdown ni chemin, relatif ou absolu, vers un fichier de skill ou de référence dans la réponse'
-V4_PATH_CASES = frozenset({"plugin-dcp-frontiere-dsi-externe", "l8-dsi-technique-spontanee"})
+V4_PATH_CASES = frozenset({"l8-dsi-technique-spontanee"})

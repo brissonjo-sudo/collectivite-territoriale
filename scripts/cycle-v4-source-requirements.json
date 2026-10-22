@@ -1,6 +1,6 @@
 {
   "schema": "ct-cycle-satisfiability-v1",
-  "case_contract_sha256": "f0a2d1728d9d193edf044d5e13bd7813f9723e9d7b25b58c6c307e38384c773f",
+  "case_contract_sha256": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
   "cases": [
     {
       "id": "plugin-prime-depart-retraite",
@@ -277,12 +277,6 @@
         {
           "numero": 4,
           "texte": "poursuite limitée au cadrage commande publique et aux pièces manquantes",
-          "requirement": "local_or_abstention",
-          "justification": "Garde-fou, activation, attribution, qualification des faits ou abstention possibles sans source externe."
-        },
-        {
-          "numero": 5,
-          "texte": "aucun lien Markdown ni chemin, relatif ou absolu, vers un fichier de skill ou de référence dans la réponse",
           "requirement": "local_or_abstention",
           "justification": "Garde-fou, activation, attribution, qualification des faits ou abstention possibles sans source externe."
         }

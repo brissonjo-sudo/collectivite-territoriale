@@ -115,7 +115,7 @@ conditionnelle, sans présumer le régime de l'agent ni autoriser le paiement.
 Dans les réponses, un fichier de skill ou de référence se cite par le nom
 du skill et la section, jamais par lien Markdown ni chemin, relatif ou
 absolu. Cette règle prioritaire prime sur toute traçabilité locale par
-chemin, y compris dans DCP. Les chemins de lecture internes restent permis.
+chemin. Les chemins de lecture internes restent permis.
 Les liens vers les sources officielles restent utilisables.
 
 ## Routage explicite entre les sept rôles — 2026-10-17

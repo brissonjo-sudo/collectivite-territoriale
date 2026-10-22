@@ -2,6 +2,12 @@
 
 ## 1.4.0 — Non publiée — non mesuré, non qualifié
 
+Lot B12c du 2026-10-22 (ADR 0029), décision Jo « Retirer la surcharge DCP » :
+retour aux octets DCP-014, retrait du seul invariant de chemin du cas DCP
+externe ; invariant DSI et F2 conservés. Lien local du cas 9 maintenu en réserve,
+correction à la source dans DCP-fpt 0.1.5 avec la relecture praticien.
+Aucun test historique ni mécanisme de validation modifié.
+
 Lot B12b du 2026-10-22 (ADR 0028) : contrat v4 à empreinte fermée, web Sénat
 limité au cas retraite, citation par nom et section pour les sept rôles et
 surcharge DCP autorisée à pin constant. Contrats et transitions v2/v3 conservés.
