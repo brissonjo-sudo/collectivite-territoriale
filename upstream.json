@@ -159,16 +159,6 @@
           "source": "LICENSE",
           "target": "LICENSE"
         }
-      ],
-      "instruction_overlays": [
-        {
-          "operation": "insert-before",
-          "target": "SKILL.md",
-          "source": "overlays/dcp-fpt.md",
-          "anchor": "## 1. Déclenchement",
-          "base_sha256": "49e04e18203cc6472c35ab595d8f0a9a30671a51bd946d8a03f6b936041ff3b3",
-          "source_sha256": "12ff1b31207df6ede735d044a8771e09a6ce90c8cda7520b78da39137c76247d"
-        }
       ]
     },
     "dsi-fpt": {
