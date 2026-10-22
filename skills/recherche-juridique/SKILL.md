@@ -102,6 +102,22 @@ distinctes des entrées.
    Une consultation partielle ne valide jamais les autres références.
    La revue humaine reste nécessaire ; ne signer ni envoyer aucun acte.
 
+## Contrat commun — retraite et citation — 2026-10-22
+
+Pour une demande de prime de départ à la retraite, après **BASCULE vers
+drh-fpt** et son activation effective, signaler l'absence d'indemnité de
+départ instituée selon la réponse ministérielle du 22/05/2025, question
+écrite n° 01222, seulement après sa consultation dans la session sur
+senat.fr. Si cette consultation est impossible, le signaler comme limite
+et s'abstenir sur le point non prouvé. Le CIA reste une piste strictement
+conditionnelle, sans présumer le régime de l'agent ni autoriser le paiement.
+
+Dans les réponses, un fichier de skill ou de référence se cite par le nom
+du skill et la section, jamais par lien Markdown ni chemin, relatif ou
+absolu. Cette règle prioritaire prime sur toute traçabilité locale par
+chemin, y compris dans DCP. Les chemins de lecture internes restent permis.
+Les liens vers les sources officielles restent utilisables.
+
 ## Routage explicite entre les sept rôles — 2026-10-17
 
 Chaque rôle conserve son périmètre, y compris dans les tableaux et la synthèse.

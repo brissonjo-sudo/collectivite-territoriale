@@ -15,7 +15,7 @@
           "target": "SKILL.md",
           "source": "overlays/dpm-fpt.md",
           "base_sha256": "f6820c1f51013029268cd68b8db564c1b88965ff77fa678c6b7aeb5a37c3ca96",
-          "source_sha256": "57a4849e54fb9f49f2253c0e176c5f500351afbd7be5893d8e2baadbf74841c5",
+          "source_sha256": "21e9c6aeab82dda69aa38574581e91ebef79d5c016edca3f7c69d44a1ba2097a",
           "anchor": "## 1. Déclenchement"
         },
         {
@@ -23,7 +23,7 @@
           "source": "overlays/dpm-fpt-description.md",
           "operation": "replace-description",
           "anchor": "description: >-\n  Système expert d'aide à la décision pour un Directeur de Police Municipale\n  (DPM) en collectivité territoriale française. Activer pour toute question du\n  métier de police municipale : pouvoirs de police du maire, limites APJA,\n  procédure pénale applicable à la PM, réglementation de terrain (fourrière,\n  débits de boissons, domaine public, chiens dangereux), doctrine\n  opérationnelle, continuum de sécurité, agrément et assermentation des\n  agents, armement, vidéoprotection et caméras-piétons, déontologie, données,\n  pilotage, budget et écrits professionnels. Activer aussi lorsqu'une demande\n  faite à une PM approche ou dépasse les pouvoirs APJA, afin d'opposer le\n  garde-fou et d'orienter vers l'OPJ sans formaliser l'acte réservé. Vérifier\n  toute règle de droit sur une source officielle avant conclusion. Ne pas\n  activer pour le RH statutaire des agents (carrière, paie, procédure\n  disciplinaire : drh-fpt), pour le RGPD général de la collectivité\n  (registre, AIPD : dpo-ct), ni pour le droit étranger.\n",
-          "base_sha256": "d8b38ffad9f8fc529824cf044f6d99a00b637d67c109483876bd9455feff73d4",
+          "base_sha256": "d13baac833dc7e8fb58cd3141e124377dc01d0e4c274134ba036d72deb249ede",
           "source_sha256": "3c5821e50dc87f9ab0c02110087872125a4d69f3c45cf8ee2d67684cb022b065"
         }
       ]
@@ -43,14 +43,14 @@
           "source": "overlays/drh-fpt.md",
           "anchor": "# Skill : drh-fpt (v0.7.0)",
           "base_sha256": "a13b4c3fce2cca6b2631149a5569077f28839c9d21a95374224ea163e7924c31",
-          "source_sha256": "b0d2f23c97bd03060e1c5620fe57d122f841f66dd4c3394c1f0b5467cfded9d2"
+          "source_sha256": "e3470970911e46db4eef3b3bae5ba063170be113c60ce7f6d2239ff0d9107777"
         },
         {
           "target": "SKILL.md",
           "source": "overlays/drh-fpt-description.md",
           "operation": "replace-description",
           "anchor": "description: >-\n  Expertise opérationnelle et juridiquement vérifiée en ressources humaines de\n  la fonction publique territoriale, pour les collectivités de plus de 350\n  agents. Active ce skill pour toute question RH territoriale : carrière et\n  paie, régime indemnitaire, santé et QVT, recrutement et formation, instances\n  et dialogue social, masse salariale et SI RH, communication interne, agents\n  contractuels, protection fonctionnelle, déontologie, cumul d'activités,\n  signalements ; pour qualifier une situation statutaire, sécuriser un acte\n  (avancement, sanction, refus, délibération) ou produire un livrable RH\n  (note, délibération, fiche de procédure, courrier d'agent). Pour toute règle\n  reposant sur un texte, une procédure, un calcul, un délai, une condition\n  d'accès, une compétence d'instance ou une jurisprudence, le skill vérifie la\n  source officielle avant de conclure. Ne pas activer pour le droit privé hors\n  FPT, les fonctions publiques d'État ou hospitalière, ni pour les\n  collectivités de moins de 350 agents.\n",
-          "base_sha256": "70d163c8e99ea0e8cce70802f7ef22da605cacfba189823317075d0121fc4d72",
+          "base_sha256": "b8b66a6576a8d614997c04c073fbe1ca3188d3af2f5f0f92cee17a1dd393aa79",
           "source_sha256": "13e1a73d89289a59044a954194679cd7072d3391287a03bc98fcc5c17a3ca4de"
         }
       ]
@@ -69,14 +69,14 @@
           "target": "SKILL.md",
           "source": "overlays/dpo-ct.md",
           "base_sha256": "82288b47c2d5e67acc4eb9ee24636eefe8b29c3a31b137e8e48e69460ed06fa5",
-          "source_sha256": "ab577c1ecbc902f87fd8446c519eb30d3afcbf1f825344bfb89ea4d81ba7aeb2",
+          "source_sha256": "e8bc021c5753609cbee76a6a7eaaeddfade0198720f0cdf7ce61db207df5c255",
           "anchor": "## 1. Déclenchement"
         },
         {
           "target": "SKILL.md",
           "source": "overlays/dpo-ct-description.md",
           "operation": "replace-description",
-          "base_sha256": "4457eaba5e411851b28f52b5a2c1371c306cfd542d70cf9ccfd5acd2d99fe902",
+          "base_sha256": "8e1b93a66bf54260e9572f061a80bc09f2b1ff4f4f7ad2c96964734d19e783e3",
           "source_sha256": "10cebe49f7d923007320cbc88f3b8ee4e824278e5e3df9f73012e9f734fafc2a",
           "anchor": "description: >-\n  Système expert d'aide à la décision pour un Délégué à la Protection des\n  Données (DPO) en collectivité territoriale française. Activer pour toute\n  question de protection des données personnelles : avis RGPD sur un projet ou\n  un traitement, AIPD (méthode CNIL), registre des traitements (art. 30),\n  violation de données et notification CNIL (72 h), droits des personnes\n  (accès, effacement, opposition...), sous-traitance (art. 28) et transferts\n  hors UE, sécurité (art. 32), doctrine CNIL et CEPD, traitements communaux\n  (état civil, élections, scolaire, action sociale, vidéoprotection,\n  téléservices, open data). Activer aussi dès qu'un projet implique des\n  données personnelles, même sans mention du RGPD. Toute règle reposant sur un\n  texte est vérifiée à la source officielle avant conclusion. Ne pas activer\n  pour le volet opérationnel de la police municipale (dpm-fpt), le RH\n  statutaire (drh-fpt), la mise en œuvre technique de la sécurité (dsi-fpt),\n  la passation des marchés (dcp-fpt), ni le droit hors UE.\n"
         }
@@ -100,14 +100,14 @@
           "source": "overlays/dirfi-fpt.md",
           "anchor": "# Skill : dirfi-fpt (v1.0.5)",
           "base_sha256": "363ebeef09ff4731d356f99ce9835e0942ca58502bcd00e576d31f569f085b4d",
-          "source_sha256": "a92450af3891a895aa4902cd8212f4965562a6412ce265ee37524a1e627fb6ea"
+          "source_sha256": "fba4f8135c0269b11f980b2826d7a8120bfa6e8d223d668310eaf6c60d7f01b8"
         },
         {
           "target": "SKILL.md",
           "source": "overlays/dirfi-fpt-description.md",
           "operation": "replace-description",
           "anchor": "description: >-\n  Système expert d'aide à la décision pour un Directeur des Finances (DirFi) en\n  collectivité territoriale française. Activer pour toute question de finances\n  publiques locales : cycle budgétaire et vote du budget, nomenclature M57,\n  exécution de la dépense et de la recette, régies, fiscalité locale, dotations\n  et péréquation, dette et trésorerie, prospective et analyse financière,\n  subventions, volet financier de la commande publique, contrôle interne\n  financier et écrits budgétaires. Activer aussi lorsqu'un montage fait manier\n  des deniers publics hors du circuit du comptable public, afin d'opposer le\n  garde-fou gestion de fait, ou lorsqu'un acte budgétaire paraît irrégulier,\n  afin d'opposer le garde-fou budgétaire avant toute recommandation\n  d'exécution. Vérifier toute règle de droit et toute valeur chiffrée sur une\n  source officielle avant conclusion. Ne pas activer pour le RH statutaire des\n  agents (carrière, paie, régime indemnitaire : drh-fpt), pour la passation des\n  marchés publics, ni pour le droit étranger.\n",
-          "base_sha256": "53259a3cdf9ae9d8cdf07e3129089defa9fc94b042995a7f9ae5325ac24b8c44",
+          "base_sha256": "f254d3f45bbde289c6e9ea2c13647da39f8eaaee20d81085b093fb965adeece4",
           "source_sha256": "8afaae8a5019403ba25dfd62085643b254d36b6c62f144a7dda40bd65963691c"
         }
       ]
@@ -136,7 +136,7 @@
           "target": "SKILL.md",
           "source": "overlays/recherche-juridique.md",
           "base_sha256": "9ea3a8a169bacb373fa969a012184c073e64824c0031f5b913aa5ad76fd26920",
-          "source_sha256": "560f45e4d82c4bde56d820c27651c109c6a0f763fec1e5671f31d3f645b93ea3",
+          "source_sha256": "f447de024e6fd0e5115e53279de06fdf93e208dcd2a0c018b1bb723f5ee7a4a9",
           "anchor": "## Déclenchement"
         }
       ]
@@ -159,6 +159,16 @@
           "source": "LICENSE",
           "target": "LICENSE"
         }
+      ],
+      "instruction_overlays": [
+        {
+          "operation": "insert-before",
+          "target": "SKILL.md",
+          "source": "overlays/dcp-fpt.md",
+          "anchor": "## 1. Déclenchement",
+          "base_sha256": "49e04e18203cc6472c35ab595d8f0a9a30671a51bd946d8a03f6b936041ff3b3",
+          "source_sha256": "43e9e8b77e0b6d18667e546218cf690b7f9ccb650ea4539ad55c98bdf33ec241"
+        }
       ]
     },
     "dsi-fpt": {
@@ -179,14 +189,14 @@
           "target": "SKILL.md",
           "source": "overlays/dsi-fpt.md",
           "base_sha256": "4522f18710d8e3d9ecc8183a86ed2f8a2b96b4212fabbc3ab1ad4619fb51be76",
-          "source_sha256": "6c88d56ec5736ba930a45a46a249b15c61a9b0fc2254201cd4614a1cc0834585",
+          "source_sha256": "c16e9094863de4bdd994e226fee430e05ad007f606796f9838f1567ebd767315",
           "anchor": "# Skill : dsi-fpt (v0.2.1)"
         },
         {
           "target": "SKILL.md",
           "source": "overlays/dsi-fpt-description.md",
           "operation": "replace-description",
-          "base_sha256": "a62c9cdfb6b23b9a96b518f417861154156a260f3464dc19cdc335812392ac34",
+          "base_sha256": "a2737f9ea3444ec0de04d1519b8cd2660b64686bab065e2972c0f4df3c182162",
           "source_sha256": "20c3d28265b576d4c03ac552417aacc395a5ad3b02c78d71fda6b224a4af18cc",
           "anchor": "description: >-\n  Incident cyber ou surveillance : le premier texte visible commence par STOP,\n  avant toute annonce d'activation. Aide à la décision DSI/RSSI en collectivité française.\n  Activer pour les questions de gouvernance du SI, sécurité et\n  homologation, crise cyber et continuité, réseaux et infrastructures, cloud et\n  hébergement, applications métiers et interopérabilité, dématérialisation et\n  téléservices, accessibilité numérique, intelligence artificielle et\n  algorithmes publics, contrats informatiques. Toute question de droit exige\n  l'activation réelle de recherche-juridique et un texte primaire récupéré,\n  sinon abstention sur le fond. Ne pas activer pour la conformité\n  RGPD, l'AIPD ou la notification de violation (dpo-ct), le RH statutaire\n  (drh-fpt), la doctrine de vidéoprotection (dpm-fpt), le budget (dirfi-fpt),\n  ni la passation des marchés.\n"
         },
@@ -194,7 +204,7 @@
           "target": "SKILL.md",
           "source": "overlays/dsi-fpt-incident-stop.md",
           "operation": "replace-block",
-          "base_sha256": "6c179cead1d036977e08baa5d4a6ba34f5127556efcfdbdbe0d36daed3fce66c",
+          "base_sha256": "f7ba78a43510f9d77b77d98a9efb0fe6e6859417eb48661382ed07920a167027",
           "source_sha256": "f600b65785c2440c42523628f67c18f8f50050145b7894af8cf83df8d9e1abe9",
           "anchor": "### 5.2 Garde-fou « incident cyber » — règle d'or\n\n**Déclencheurs (liste ouverte)** : rançongiciel, chiffrement de fichiers,\ncompromission de compte, fuite ou exfiltration de données, indisponibilité\nsuspecte, intrusion constatée, demande de rançon, alerte d'un tiers sur une\nattaque.\n\nDès qu'un déclencheur apparaît, le **premier livrable, avant tout autre\ncontenu**, est :\n\n```\nSTOP — Incident de sécurité en cours ou récent.\n1. Ne rien faire d'irréversible avant de préserver les preuves : ne pas\n   réinstaller, effacer, restaurer ni rallumer ce qui a été touché ; isoler.\n2. Ne rien taire : signaler l'incident dans les circuits prévus (autorité\n   territoriale, assureur, plainte, autorités compétentes) ; les délais se\n   vérifient à la source.\n3. Ne pas décider seul de ce qui revient à l'exécutif : paiement d'une rançon,\n   communication publique, arrêt d'un service public.\n4. Aucune contre-mesure offensive, aucun accès à un système tiers.\n5. Données personnelles possiblement touchées → BASCULE dpo-ct.\n```\n\nEnsuite seulement, orienter vers `references/crise-cyber-continuite.md` et\n`objets/incident-securite.md`. Le skill aide à **organiser, documenter et\nreprendre** ; il ne remplace ni l'appui d'un CSIRT territorial ou d'un\nprestataire de réponse à incident, ni les autorités compétentes.\n\n**Les références de ce garde-fou ne sont pas dispensées de provenance** : une\nobligation de plainte, de signalement ou de notification se cite avec sa\nsource et sa date, ou ne se cite pas.\n\n"
         }
