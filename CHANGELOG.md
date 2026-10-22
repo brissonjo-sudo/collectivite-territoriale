@@ -2,6 +2,12 @@
 
 ## 1.4.0 — Non publiée — non mesuré, non qualifié
 
+Lot B12b du 2026-10-22 (ADR 0028) : contrat v4 à empreinte fermée, web Sénat
+limité au cas retraite, citation par nom et section pour les sept rôles et
+surcharge DCP autorisée à pin constant. Contrats et transitions v2/v3 conservés.
+Contrôle de chemins additif et matrice de satisfiabilité ; préparation de d
+sans modèle, publication ou modification des archives.
+
 Lot B8 du 2026-10-21, décision de Jo (ADR 0027) : consigne explicite de lecture
 d’une seule entrée à la fois, sans segments parallèles, dans behavior_prompt
 uniquement. Validateur, smoke, cas et seuils inchangés. Tentative a consommée

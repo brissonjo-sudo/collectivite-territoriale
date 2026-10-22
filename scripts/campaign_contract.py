@@ -79,12 +79,25 @@ def load_cycle_cases(root: Path, relative: str = CYCLE_CASES_FILE) -> list[dict[
                         invariants_observables=copy.deepcopy(case["invariants"]))
     if found != set(STOP_CYCLE_CASES):
         raise ValueError("Cas STOP historiques manquants dans le contrat de cycle")
-    if relative == "scripts/cas-plugin-cycle-v3.json":
+    if relative in {"scripts/cas-plugin-cycle-v3.json", "scripts/cas-plugin-cycle-v4.json"}:
         from cli_toolchains import prepared_cycle
-        prepared_cycle(root)
+        if relative.endswith('-v4.json'):
+            from cli_toolchains import prepared_cycle_v4
+            prepared_cycle_v4(root)
+        else:
+            prepared_cycle(root)
         next(c for c in expected if c['id'] == 'plugin-prime-depart-retraite')['invariants'].append(CYCLE_V3_INVARIANT)
     elif relative != CYCLE_CASES_FILE:
         raise ValueError("Contrat de cycle inconnu")
+    if relative == "scripts/cas-plugin-cycle-v4.json":
+        prime = next(c for c in expected if c['id'] == 'plugin-prime-depart-retraite')
+        prime.update(web_mode='official_source', official_source_hosts=['www.senat.fr'],
+                     official_source_instruction=V4_RETIREMENT_INSTRUCTION)
+        for case in expected:
+            if case['id'] in V4_PATH_CASES:
+                case['invariants'].append(V4_PATH_INVARIANT)
+                if case.get('schema_version') == 2:
+                    case['invariants_observables'].append(V4_PATH_INVARIANT)
     cases = json.loads((root / relative).read_bytes())
     if cases != expected:
         raise ValueError("Contrat de cycle différent du durcissement décidé par Jo")
@@ -92,12 +105,22 @@ def load_cycle_cases(root: Path, relative: str = CYCLE_CASES_FILE) -> list[dict[
     return cases
 
 
-def campaign_cycle(root: Path, commit: str, *, preparation: bool = False) -> tuple[str, list[dict[str, Any]]]:
+def campaign_cycle(root: Path, commit: str, *, preparation: bool = False, cycle_v4: bool = False) -> tuple[str, list[dict[str, Any]]]:
     """Le lanceur choisit par commit ; préparation v3 possible avant le gel B4."""
     from cli_toolchains import (contract_file, measurement_contract, prepared_cycle,
                                 require_cycle_version)
     contract = measurement_contract(root, commit)
     version = json.loads((root / '.codex-plugin/plugin.json').read_bytes())['version']
+    if cycle_v4:
+        from cli_toolchains import CYCLE_V4, prepared_cycle_v4
+        if preparation:
+            relative = prepared_cycle_v4(root)
+        else:
+            require_cycle_version(contract, version)
+            if contract is None or contract['case_contract_sha256'] != CYCLE_V4[1]:
+                raise ValueError('Mesure sans commit lié au contrat de cycle v4')
+            relative = contract_file(contract)
+        return relative, load_cycle_cases(root, relative)
     if not preparation:
         require_cycle_version(contract, version)
     if contract is not None:
@@ -109,3 +132,7 @@ def campaign_cycle(root: Path, commit: str, *, preparation: bool = False) -> tup
             require_cycle_version(contract, version)
             relative = CYCLE_CASES_FILE
     return relative, load_cycle_cases(root, relative)
+
+V4_RETIREMENT_INSTRUCTION = 'Consulte dans cette session la réponse ministérielle du 22/05/2025 à la question écrite n° 01222 sur https://www.senat.fr/questions/base/2024/qSEQ241001222.html ; récupère son texte primaire avant toute citation. Si la récupération échoue, signale cette limite et abstiens-toi sur le point non prouvé. Le CIA reste strictement conditionnel.'
+V4_PATH_INVARIANT = 'aucun lien Markdown ni chemin, relatif ou absolu, vers un fichier de skill ou de référence dans la réponse'
+V4_PATH_CASES = frozenset({"plugin-dcp-frontiere-dsi-externe", "l8-dsi-technique-spontanee"})

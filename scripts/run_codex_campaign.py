@@ -152,6 +152,8 @@ def prompt(case: dict[str, Any]) -> str:
         "MCP volontairement absent : applique la voie dégradée, aucune source officielle accessible."
     )
     web_rule = (
+        case["official_source_instruction"] + " Seul www.senat.fr est autorisé pour le web."
+        if case.get("official_source_hosts") == ["www.senat.fr"] and case["id"] == "plugin-prime-depart-retraite" else
         "Vérifie les articles 33 et 34 du RGPD en ouvrant EUR-Lex ou la CNIL ; ne présume aucun délai si la récupération échoue. Seuls eur-lex.europa.eu et www.cnil.fr sont autorisés pour le web."
         if case["web_mode"] == "official_source" else "N'utilise aucun web."
     )
@@ -306,6 +308,11 @@ def failures(clean: list[dict[str, Any]], case: dict[str, Any], exit_code: int,
             errors.append("non_official_web_source")
     if not any(e["type"] == "reply" for e in clean) or not any(e["type"] == "turn_completed" for e in clean):
         errors.append("result_error_or_absent")
+    from campaign_contract import V4_PATH_INVARIANT
+    if V4_PATH_INVARIANT in case['invariants']:
+        from skill_citation import forbidden_skill_path
+        if any(forbidden_skill_path(e.get('text', '')) for e in clean if e['type'] == 'reply'):
+            errors.append('skill_path_in_response')
     return errors
 
 
@@ -337,6 +344,7 @@ def execute(case: dict[str, Any], cli: str, model: str, timeout: int) -> tuple[l
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--case", action="append", dest="case_ids")
+    parser.add_argument("--cycle-v4", action="store_true", help="Contrat v4 explicite, sans équivalence v2/v3")
     parser.add_argument("--codex", default="codex")
     parser.add_argument("--model", default="gpt-6.1-sol")
     parser.add_argument("--timeout", type=int, default=360)
@@ -348,7 +356,7 @@ def main() -> int:
     args = parser.parse_args()
     if args.timeout <= 0:
         parser.error("--timeout doit être positif")
-    case_contract, cases = campaign_cycle(ROOT, args.plugin_commit, preparation=args.dry_run)
+    case_contract, cases = campaign_cycle(ROOT, args.plugin_commit, preparation=args.dry_run, cycle_v4=args.cycle_v4)
     selected = [c for c in cases if not args.case_ids or c["id"] in args.case_ids]
     if args.case_ids and len(selected) != len(set(args.case_ids)):
         parser.error("Cas inconnu ou dupliqué")
