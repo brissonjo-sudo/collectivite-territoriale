@@ -17,7 +17,7 @@ TRANSITION_FILES = (MIGRATION - {'scripts/toolchain-transition-0013.json'}) | {
 MEASUREMENT_D = '13b4e1e537e5a8097a004ee913abcc9d079114a7'
 # À renseigner en H2 avec le seul commit H1 effectivement mesuré ; None refuse v3.
 MEASUREMENT_140: str | None = None
-MEASUREMENT_140_V4: str | None = None
+MEASUREMENT_140_V4: str | None = 'acfa12e8f23373712984e6c3588116fbbb2b815d'
 CYCLE_V4 = ('scripts/cas-plugin-cycle-v4.json', 'be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24')
 TRANSITION_140_V4 = 'scripts/toolchain-transition-0028.json'
 MIGRATION_140_V4 = {'scripts/cli_toolchains.py', 'scripts/measurement-cli.json', TRANSITION_140_V4}
