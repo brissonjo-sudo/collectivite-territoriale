@@ -110,4 +110,3 @@ du skill et la section, jamais par lien Markdown ni chemin, relatif ou
 absolu. Cette règle prioritaire prime sur toute traçabilité locale par
 chemin, y compris dans DCP. Les chemins de lecture internes restent permis.
 Les liens vers les sources officielles restent utilisables.
-
