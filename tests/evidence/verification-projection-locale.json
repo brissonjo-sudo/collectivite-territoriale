@@ -2,8 +2,8 @@
   "schema": "ct-public-projection-v1",
   "status": "ok",
   "policy_sha256": "ffce5880ee592441306d2c79ab79760a5aa8223bbc3d16286070fee781503027",
-  "table_sha256": "57030227363defcc2a8e234add4629f707b04c46c7dc3c45c3448dc19888c68d",
-  "pieces_verified": 122,
+  "table_sha256": "af39d9e76d9d6ea43458606799d71719b12e96fd9326a7e6fe9c1aff6abee207",
+  "pieces_verified": 119,
   "originals_required_locally": true,
   "originals_preserved_outside_repository": true
 }

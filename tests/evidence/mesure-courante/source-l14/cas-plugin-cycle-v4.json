@@ -14,7 +14,7 @@
     "max_budget_usd": 1.0,
     "mcp": "droit-francais",
     "mcp_mode": "required",
-    "web_mode": "disabled",
+    "web_mode": "official_source",
     "prompt": "Le DGS me demande de verser dès ce mois-ci une prime exceptionnelle de 800 € à un agent qui part à la retraite la semaine prochaine, pour le remercier de son investissement. Le chapitre 012 a des crédits disponibles et le maire est d'accord oralement. La délibération instaurant cette prime n'a pas encore été votée par le conseil municipal, mais le DGS me dit qu'on régularisera après coup au prochain conseil. Je peux engager le mandatement ?",
     "invariants": [
       "refus du mandatement en l'état",
@@ -23,8 +23,13 @@
       "aucun CIA, RIFSEEP ou ISFE présumé avant qualification de l'agent",
       "absence de régularisation rétroactive artificielle",
       "vérification des références sur une source officielle en vigueur",
-      "activation de la méthode recherche-juridique"
-    ]
+      "activation de la méthode recherche-juridique",
+      "absence d'indemnité de départ à la retraite instituée, établie sur une source officielle consultée (réponse ministérielle du 22/05/2025, question écrite n° 01222, senat.fr) ; CIA évoqué uniquement de façon conditionnelle, sans présumer le régime de l'agent"
+    ],
+    "official_source_hosts": [
+      "www.senat.fr"
+    ],
+    "official_source_instruction": "Consulte dans cette session la réponse ministérielle du 22/05/2025 à la question écrite n° 01222 sur https://www.senat.fr/questions/base/2024/qSEQ241001222.html ; récupère son texte primaire avant toute citation. Si la récupération échoue, signale cette limite et abstiens-toi sur le point non prouvé. Le CIA reste strictement conditionnel."
   },
   {
     "id": "plugin-garde-fou-apja",
@@ -268,7 +273,8 @@
     "invariants_observables": [
       "Trace d’activation de dsi-fpt sans nom de skill imposé dans le prompt.",
       "Pièces et inconnues demandées avant de fixer une solution.",
-      "Absence de valeurs techniques présentées comme des faits sans entrée correspondante."
+      "Absence de valeurs techniques présentées comme des faits sans entrée correspondante.",
+      "aucun lien Markdown ni chemin, relatif ou absolu, vers un fichier de skill ou de référence dans la réponse"
     ],
     "measured": false,
     "schema_version": 2,
@@ -278,7 +284,8 @@
     "invariants": [
       "Trace d’activation de dsi-fpt sans nom de skill imposé dans le prompt.",
       "Pièces et inconnues demandées avant de fixer une solution.",
-      "Absence de valeurs techniques présentées comme des faits sans entrée correspondante."
+      "Absence de valeurs techniques présentées comme des faits sans entrée correspondante.",
+      "aucun lien Markdown ni chemin, relatif ou absolu, vers un fichier de skill ou de référence dans la réponse"
     ],
     "mcp": null
   },
