@@ -1,3 +1,42 @@
+# Collectivité 1.4.0 — qualifiée, non publiée
+
+État au **23 octobre 2026**. La qualification 1.4.0 repose sur le cycle propre
+à cette version ; la publication et les deux catalogues restent sur **1.3.0**
+jusqu’à la [procédure prévue](publication.md).
+
+## Qualification constatée
+
+- Campagne `campagne-l140-d` : **18/18 cas**.
+- Avis humain de Jo du **22 octobre 2026** : réserve maintenue au cas
+  `plugin-dcp-frontiere-dsi-externe`.
+- Smoke réel `smoke-l140-a` : **2/2 cas**.
+- Preuve : [tests/evidence/release-1.4.0.json](../tests/evidence/release-1.4.0.json),
+  assemblée sur H2 puis commise en H3 `f2382f3a0be40bd7337240adaf2ffeac264717b7`.
+- Copies figées, qualificateur, barrière de release et 414 tests réussis en
+  cp1252 puis UTF-8, sans saut, sur H3. Les résultats ne constituent pas un déploiement.
+
+La réserve DCP porte sur le lien local absolu vers le skill DCP. Elle reste
+maintenue selon l’[ADR 0029](adr/0029-retrait-surcharge-dcp-et-reserve-0-1-5.md) ;
+la correction est prévue dans **DCP-fpt 0.1.5**. Elle n’est pas présentée comme levée.
+
+## Entrée recherche-juridique installée
+
+L’entrée `skills/recherche-juridique/SKILL.md`, **surcharges comprises**, compte
+**527 lignes / 32 129 caractères LF**. Recompte du 23 octobre : décodage UTF-8 et
+normalisation LF, caractère LF final inclus ; les octets de l’installation du
+smoke sont identiques à ceux de l’entrée du candidat. Cette mesure de taille
+est distincte des preuves comportementales ci-dessus.
+
+## Conservation de l’état préparatoire
+
+L’état du 21 octobre ci-dessous est conservé comme historique : ses statuts
+« non mesuré, non qualifié », ses décisions et ses tailles décrivent cette étape,
+pas la qualification constatée le 23 octobre. Les transitions v3/v4 et leurs
+décisions restent dans leurs ADR ; aucune décision passée n’est réécrite.
+
+<details>
+<summary>État préparatoire historique du 21 octobre 2026</summary>
+
 # Candidat 1.4.0 — non mesuré, non qualifié
 
 État local au 2026-10-21. La distribution reste épinglée sur la release 1.3.0.
@@ -66,3 +105,5 @@ La preuve `release-1.4.0.json` est absente. La barrière reste donc rouge jusqu'
 l'assemblage autorisé d'une nouvelle preuve ; celle de 1.3.0 n'est ni modifiée
 ni transférée. Les vérifications locales sont archivées hors dépôt ; aucune
 poussée ni exécution d'évaluation modèle n'accompagne cette préparation.
+
+</details>

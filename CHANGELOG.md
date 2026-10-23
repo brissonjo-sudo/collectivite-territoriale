@@ -1,6 +1,15 @@
 # Historique des versions
 
-## 1.4.0 — Non publiée — non mesuré, non qualifié
+## 1.4.0 — Qualifiée — non publiée
+
+Actualisation du 2026-10-23 : campagne `campagne-l140-d` 18/18, avis de Jo du
+22/10 avec réserve DCP au cas `plugin-dcp-frontiere-dsi-externe`, smoke réel
+`smoke-l140-a` 2/2 et preuve `tests/evidence/release-1.4.0.json` assemblée en H3.
+La publication et les deux catalogues restent sur 1.3.0 jusqu’à la procédure
+prévue. Réserve DCP maintenue (ADR 0029), correction prévue dans DCP-fpt 0.1.5.
+L’entrée RJ installée, surcharges comprises, compte 527 lignes / 32 129 caractères LF.
+Les entrées datées ci-dessous restent l’historique de leur étape préparatoire ;
+leurs décisions, tailles et résultats ne sont pas réécrits.
 
 Lot B12c du 2026-10-22 (ADR 0029), décision Jo « Retirer la surcharge DCP » :
 retour aux octets DCP-014, retrait du seul invariant de chemin du cas DCP

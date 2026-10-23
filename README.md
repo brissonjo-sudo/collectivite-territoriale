@@ -3,14 +3,19 @@
 [![Validation du plugin](https://github.com/brissonjo-sudo/collectivite-territoriale/actions/workflows/ci.yml/badge.svg)](https://github.com/brissonjo-sudo/collectivite-territoriale/actions/workflows/ci.yml)
 
 Plugin Claude Code et Codex destiné aux collectivités territoriales françaises.
-Le candidat local **1.4.0 — Candidat de réépinglage DRH/DirFi/RJ — non mesuré, non qualifié**
-réunit six expertises métier et une méthode de recherche juridique sourcée,
-avec un accès optionnel à Légifrance/Judilibre.
+La version **1.4.0 — qualifiée, non publiée** réunit six expertises métier et
+une méthode de recherche juridique sourcée, avec un accès optionnel à Légifrance/Judilibre.
 
-> **Statut du candidat :** aucune mesure ni qualification de ce runtime à sept skills.
-> Aucun ancien gel, score ou avis n'est transférable. Les deux catalogues restent
-> épinglés sur `v1.3.0` et distribuent les sept skills de la release précédente.
-> Les preuves de cette distribution sont historiques et ne qualifient pas 1.4.0.
+> **Statut au 23 octobre 2026 :** 1.4.0 est qualifiée sur ses propres preuves :
+> campagne `campagne-l140-d` **18/18**, avis de Jo du 22 octobre avec réserve DCP
+> au cas `plugin-dcp-frontiere-dsi-externe`, puis smoke réel `smoke-l140-a` **2/2**.
+> La preuve est [release-1.4.0.json](tests/evidence/release-1.4.0.json).
+> La réserve DCP reste maintenue selon l’[ADR 0029](docs/adr/0029-retrait-surcharge-dcp-et-reserve-0-1-5.md) ;
+> la correction est prévue dans DCP-fpt 0.1.5.
+> La publication et les deux catalogues restent sur **1.3.0** jusqu’à la
+> [procédure de publication](docs/publication.md). Aucune publication 1.4.0 n’est annoncée ici.
+> Les décisions et preuves historiques de 1.3.0 gardent leur contexte ;
+> elles ne remplacent pas la qualification propre à 1.4.0.
 > Voir l’[état du candidat](docs/preparation-1-4-0.md),
 > la [publication](docs/publication.md) et la [note praticien](docs/deploiement-collectivite.md).
 
@@ -30,7 +35,7 @@ Ce plugin aide à qualifier une situation, identifier les expertises à mobilise
 
 L'étiquette distribuée `v1.3.0` contient les sept skills, dont DCP 0.1.4.
 Les deux marketplaces récupèrent le même commit figé. Une mise à jour
-de la marketplace permet d'installer cette version historique, pas le candidat local 1.4.0.
+de la marketplace permet d'installer cette version historique, pas la version 1.4.0 qualifiée et non publiée.
 
 Le serveur MCP `droit-francais`, déclaré une seule fois dans `.mcp.json`, fournit l'accès aux sources Légifrance/Judilibre. Le skill `recherche-juridique` apporte la méthode de vérification de vigueur, de provenance et de citation. Le serveur et la méthode sont complémentaires.
 
@@ -66,7 +71,7 @@ Le plugin traite le droit français et l'aide à la décision dans le contexte d
 La collecte et la transmission éventuelles de données sont décrites dans la [politique de confidentialité](PRIVACY.md). Le serveur MCP peut être désactivé lorsque la transmission d'une requête juridique au service distant n'est pas souhaitée.
 
 Les commandes de marketplace ci-dessous installent la distribution `v1.3.0` ;
-le candidat 1.4.0 reste local et non publié.
+la version 1.4.0 qualifiée reste non publiée.
 
 ## Installation dans Claude Code
 
