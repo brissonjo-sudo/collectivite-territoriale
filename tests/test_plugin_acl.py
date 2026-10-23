@@ -169,6 +169,7 @@ class PluginAclTests(unittest.TestCase):
 
     def test_install_consigne_attestation_apres_octets(self) -> None:
         output = self.directory / "installation"
+        candidate_version = json.loads((ROOT / ".codex-plugin/plugin.json").read_bytes())["version"]
         baseline = {"plugin_commit": COMMIT, "runtime_sha256": {}, "plugin_configuration_sha256": {}}
         actual = {k: baseline[k] for k in ("runtime_sha256", "plugin_configuration_sha256")}
         raw = io.BytesIO()
@@ -177,10 +178,10 @@ class PluginAclTests(unittest.TestCase):
         order = []
         def metadata(argv, environment, workspace):
             if argv[1:3] == ["plugin", "add"]:
-                installed = Path(environment["CODEX_HOME"]) / "plugins/cache/qualification-l9/collectivite-territoriale/1.3.0"
+                installed = Path(environment["CODEX_HOME"]) / f"plugins/cache/qualification-l9/collectivite-territoriale/{candidate_version}"
                 installed.mkdir(parents=True)
                 self.plugin = installed; self.home = Path(environment["CODEX_HOME"])
-                return {"installedPath": str(installed), "version": "1.3.0"}
+                return {"installedPath": str(installed), "version": candidate_version}
             return {}
         def snapshot(installed):
             order.append("bytes_verified"); return actual

@@ -1,5 +1,89 @@
 # Historique des versions
 
+## 1.4.0 — Qualifiée — non publiée
+
+Actualisation du 2026-10-23 : campagne `campagne-l140-d` 18/18, avis de Jo du
+22/10 avec réserve DCP au cas `plugin-dcp-frontiere-dsi-externe`, smoke réel
+`smoke-l140-a` 2/2 et preuve `tests/evidence/release-1.4.0.json` assemblée en H3.
+La publication et les deux catalogues restent sur 1.3.0 jusqu’à la procédure
+prévue. Réserve DCP maintenue (ADR 0029), correction prévue dans DCP-fpt 0.1.5.
+L’entrée RJ installée, surcharges comprises, compte 527 lignes / 32 129 caractères LF.
+Les entrées datées ci-dessous restent l’historique de leur étape préparatoire ;
+leurs décisions, tailles et résultats ne sont pas réécrits.
+
+Lot B12c du 2026-10-22 (ADR 0029), décision Jo « Retirer la surcharge DCP » :
+retour aux octets DCP-014, retrait du seul invariant de chemin du cas DCP
+externe ; invariant DSI et F2 conservés. Lien local du cas 9 maintenu en réserve,
+correction à la source dans DCP-fpt 0.1.5 avec la relecture praticien.
+Aucun test historique ni mécanisme de validation modifié.
+
+Lot B12b du 2026-10-22 (ADR 0028) : contrat v4 à empreinte fermée, web Sénat
+limité au cas retraite, citation par nom et section pour les sept rôles et
+surcharge DCP autorisée à pin constant. Contrats et transitions v2/v3 conservés.
+Contrôle de chemins additif et matrice de satisfiabilité ; préparation de d
+sans modèle, publication ou modification des archives.
+
+Lot B8 du 2026-10-21, décision de Jo (ADR 0027) : consigne explicite de lecture
+d’une seule entrée à la fois, sans segments parallèles, dans behavior_prompt
+uniquement. Validateur, smoke, cas et seuils inchangés. Tentative a consommée
+archivée sur place ; nouvelle tentative complète b sur H1b, sans résultat repris.
+Aucun modèle ni poussée dans ce lot ; preuve 1.3.0 conservée dans son contexte.
+
+Lot B5 du 2026-10-21, décision de Jo (ADR 0026) : branche de transition 1.4.0
+fermée sur le seul H1 explicitement lié, v3, la CLI 0.163 et ses compagnons.
+Seuls le lecteur, le verrou de mesure et le manifeste peuvent changer en H2.
+Les empreintes source/cible sont vérifiées, les sources relues dans les objets
+Git H1 et le contenu limité aux seules données de liaison. Le manifeste reste
+non fermé avant la campagne ; aucune transition historique n'est modifiée.
+Le pré-vol est rejoué dans une copie non probante, sans modèle ni Docker.
+
+Lot B3 du 2026-10-21 (ADR 0025) : contrat de cycle v3, avec un seul invariant
+ajouté au cas `plugin-prime-depart-retraite` sur l'absence d'indemnité de départ,
+la consultation de la réponse ministérielle du 22/05/2025 (question n° 01222,
+senat.fr) et le CIA strictement conditionnel. V2 et la preuve 1.3.0 restent
+intacts ; aucun autre cas, attendu STOP ou seuil ne change. L'empreinte v3 est
+fermée. Sa liaison au commit mesuré reste à réaliser au gel B4 ; toute mesure
+1.4.0 non liée est refusée. Le lanceur charge v3 en préparation à blanc,
+sans appel modèle. Les contre-épreuves passent par l'API publique, y compris
+la projection CI, et ne constituent aucune mesure réelle.
+
+Lot B2c du 2026-10-21 : réépinglage de DRH 0.7.0 (`002f74b`), DirFi 1.0.5
+(`9c81531`) et recherche-juridique 3.6.0 (`f3ddffb`). Les autres pins sont
+inchangés. Les copies sont régénérées depuis les blobs Git et les surcharges
+déclarées ; aucune édition manuelle des fichiers embarqués.
+
+Arbitrages B2b/B2c : réancrage sur les nouveaux titres, ajout des seuls sept
+chemins constatés aux inventaires DRH/RJ, rappel CIA strictement conditionnel
+après bascule et activation DRH dans les cinq contrats concernés, et règle de
+citation des ressources de skill par nom et section dans le contrat commun RJ.
+Une seule ligne blanche supplémentaire, autorisée en B2c, porte l'entrée RJ
+embarquée à 511 lignes et 31 230 caractères LF ; N = 85 reste inchangé.
+Le seul attendu de version du test d'autonomie RJ passe de 3.5.0 à 3.6.0,
+conformément au pin explicitement décidé par Jo le 21/10 ; aucun seuil changé.
+Deux fixtures de version sont isolées ou alignées sur le candidat ; leurs
+assertions et les contrôles d'installation restent inchangés.
+
+Les manifestes portent le candidat 1.4.0 non mesuré, non qualifié. Les deux
+catalogues continuent à distribuer l'étiquette publiée 1.3.0 : ni étiquette
+1.4.0 ni preuve de release ne sont inventées. La liaison du contrat v3 au gel,
+le pré-vol complet et les exécutions réelles restent les lots suivants.
+Voir l'[état d'avancement](docs/preparation-1-4-0.md).
+
+Lot B1 du 2026-10-21 (ADR 0024) : le qualificateur recalcule les empreintes
+du fichier de cas, d'`upstream.json` et de l'inventaire d'outillage du smoke.
+Seules les exceptions d'assemblage et les transitions fermées existantes de
+`human_resolution.compatible()` sont conservées. Les deux verrous CLI et les
+reçus de campagne, de relecture et de smoke sont revérifiés, y compris dans la
+vue de projection CI. Le staging de l'assembleur copie l'outillage inventorié.
+
+Les fixtures temporaires des tests sont explicitement synthétiques ; les
+preuves sources, assertions, seuils, verrous et manifestes de transition ne
+sont pas modifiés. La preuve `release-1.3.0.json` est conservée : elle est
+refusée par la nouvelle règle sur cette branche, à cause de l'outillage modifié.
+La barrière de release restera rouge jusqu'à l'assemblage 1.4.0. `main` ne
+recevra la règle qu'avec la release 1.4.0. Aucune campagne, aucun smoke réel,
+appel modèle, push ou publication ne fait partie de B1.
+
 ## 1.3.0 — Candidat d'intégration DSI — non mesuré, non qualifié
 
 Préparation locale du 2026-10-17, selon l'ADR 0010.

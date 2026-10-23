@@ -25,8 +25,12 @@ Il prime sur les modèles, exemples, valeurs et références historiques ci-dess
    compétence technique ou budgétaire ne remplace pas la qualification RH.
    La bascule reste effective dans toutes les rubriques et la conclusion :
    le fond statutaire et indemnitaire demeure attribué à drh-fpt. DirFi
-   se limite à son volet budgétaire ; aucune condition RH, régime ou
-   alternative de rémunération ne revient dans une rubrique DirFi.
+   se limite à son volet budgétaire ; le fond RH demeure attribué à drh-fpt.
+   Après BASCULE explicite et activation effective de drh-fpt, le seul
+   repère CIA strictement conditionnel de dirfi-fpt, §5.5, peut être
+   rappelé en lui attribuant les vérifications. Ce rappel ne qualifie
+   aucun régime et n'autorise aucun paiement. Toute autre condition RH,
+   régime ou alternative de rémunération reste hors rubrique DirFi.
    Sans preuve, le volet RH reste une question à faire vérifier.
 3. **Preuve par affirmation.** Avant de qualifier une règle comme vérifiée,
    confronter chaque affirmation et identifiant au contenu effectivement reçu.
@@ -67,6 +71,22 @@ Il prime sur les modèles, exemples, valeurs et références historiques ci-dess
    preuve primaire pertinente reçue et attribution explicite, ou retrait.
    Une consultation partielle ne valide jamais les autres références.
    La revue humaine reste nécessaire ; ne signer ni envoyer aucun acte.
+
+## Contrat commun — retraite et citation — 2026-10-22
+
+Pour une demande de prime de départ à la retraite, après **BASCULE vers
+drh-fpt** et son activation effective, signaler l'absence d'indemnité de
+départ instituée selon la réponse ministérielle du 22/05/2025, question
+écrite n° 01222, seulement après sa consultation dans la session sur
+senat.fr. Si cette consultation est impossible, le signaler comme limite
+et s'abstenir sur le point non prouvé. Le CIA reste une piste strictement
+conditionnelle, sans présumer le régime de l'agent ni autoriser le paiement.
+
+Dans les réponses, un fichier de skill ou de référence se cite par le nom
+du skill et la section, jamais par lien Markdown ni chemin, relatif ou
+absolu. Cette règle prioritaire prime sur toute traçabilité locale par
+chemin. Les chemins de lecture internes restent permis.
+Les liens vers les sources officielles restent utilisables.
 
 ## Routage explicite entre les sept rôles — 2026-10-17
 
@@ -142,6 +162,9 @@ Cet inventaire atteste la présence des fichiers, pas la vigueur de leur contenu
 - `references/_gabarit-branche.md`
 - `references/cache-plafonds-regime-indemnitaire.md`
 - `references/carriere-paie.md`
+- `references/carriere-paie/remuneration-paie.md`
+- `references/carriere-paie/statut-discipline.md`
+- `references/carriere-paie/temps-fin-fonctions.md`
 - `references/communication-interne.md`
 - `references/contractuels.md`
 - `references/contrat-execution.md`
@@ -149,6 +172,7 @@ Cet inventaire atteste la présence des fichiers, pas la vigueur de leur contenu
 - `references/parametres-collectivite.md`
 - `references/qvt-sante.md`
 - `references/recrutement-formation.md`
+- `references/restitution-proportionnee.md`
 - `references/si-rh-masse-salariale.md`
 - `references/socle-sources-verification.md`
 - `references/statut-garanties.md`

@@ -16,6 +16,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 from qualify_distribution import distribution_errors, fingerprint, load, current_distribution_errors
+from support_distribution_contract import complete_synthetic_contract
 
 
 #: Distribution historique v1.2.0 (registre de docs/publication.md), socle
@@ -29,6 +30,7 @@ class DistributionQualificationTests(unittest.TestCase):
         self.addCleanup(self.workspace.cleanup)
         self.root = self.historical_distribution_fixture()
         self.evidence = copy.deepcopy(load(ROOT, "tests/evidence/release-1.2.0.json"))
+        complete_synthetic_contract(self, ROOT)
 
     def historical_distribution_fixture(self) -> Path:
         """Restaure les seuls blobs publics de la v1.2.0 ; aucune preuve réécrite."""

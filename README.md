@@ -3,34 +3,39 @@
 [![Validation du plugin](https://github.com/brissonjo-sudo/collectivite-territoriale/actions/workflows/ci.yml/badge.svg)](https://github.com/brissonjo-sudo/collectivite-territoriale/actions/workflows/ci.yml)
 
 Plugin Claude Code et Codex destiné aux collectivités territoriales françaises.
-Le candidat local **1.3.0 — Candidat d'intégration DSI — non mesuré, non qualifié**
-réunit six expertises métier et une méthode de recherche juridique sourcée,
-avec un accès optionnel à Légifrance/Judilibre.
+La version **1.4.0 — qualifiée, non publiée** réunit six expertises métier et
+une méthode de recherche juridique sourcée, avec un accès optionnel à Légifrance/Judilibre.
 
-> **Statut du candidat :** aucune mesure ni qualification de ce runtime à sept skills.
-> Aucun ancien gel, score ou avis n'est transférable. Les deux catalogues restent
-> épinglés sur `v1.2.0` et distribuent les six skills historiques, sans DSI.
-> Les preuves de cette distribution sont historiques et ne qualifient pas 1.3.0.
-> Voir le [contrat du candidat](docs/adr/0010-contrat-candidat-1-3-0.md),
+> **Statut au 23 octobre 2026 :** 1.4.0 est qualifiée sur ses propres preuves :
+> campagne `campagne-l140-d` **18/18**, avis de Jo du 22 octobre avec réserve DCP
+> au cas `plugin-dcp-frontiere-dsi-externe`, puis smoke réel `smoke-l140-a` **2/2**.
+> La preuve est [release-1.4.0.json](tests/evidence/release-1.4.0.json).
+> La réserve DCP reste maintenue selon l’[ADR 0029](docs/adr/0029-retrait-surcharge-dcp-et-reserve-0-1-5.md) ;
+> la correction est prévue dans DCP-fpt 0.1.5.
+> La publication et les deux catalogues restent sur **1.3.0** jusqu’à la
+> [procédure de publication](docs/publication.md). Aucune publication 1.4.0 n’est annoncée ici.
+> Les décisions et preuves historiques de 1.3.0 gardent leur contexte ;
+> elles ne remplacent pas la qualification propre à 1.4.0.
+> Voir l’[état du candidat](docs/preparation-1-4-0.md),
 > la [publication](docs/publication.md) et la [note praticien](docs/deploiement-collectivite.md).
 
 Ce plugin aide à qualifier une situation, identifier les expertises à mobiliser et produire une réponse traçable. Il ne remplace ni la validation d'un juriste, ni le contrôle de l'autorité compétente, ni la vérification des textes officiels en vigueur.
 
-## Contenu du candidat 1.3.0
+## Contenu du candidat 1.4.0
 
 | Skill | Domaine | Version embarquée |
 |---|---|---:|
 | `collectivite-territoriale:dpm-fpt` | Police municipale et limites APJA | 1.0.5 |
-| `collectivite-territoriale:drh-fpt` | Ressources humaines territoriales | 0.6.0 |
+| `collectivite-territoriale:drh-fpt` | Ressources humaines territoriales | 0.7.0 |
 | `collectivite-territoriale:dpo-ct` | Protection des données | 0.2.2 |
-| `collectivite-territoriale:dirfi-fpt` | Finances locales | 1.0.4 |
+| `collectivite-territoriale:dirfi-fpt` | Finances locales | 1.0.5 |
 | `collectivite-territoriale:dcp-fpt` | Commande publique | 0.1.4 |
 | `collectivite-territoriale:dsi-fpt` | Systèmes d’information et sécurité technique | 0.2.1 |
-| `collectivite-territoriale:recherche-juridique` | Recherche et vérification du droit français | 3.5.0 |
+| `collectivite-territoriale:recherche-juridique` | Recherche et vérification du droit français | 3.6.0 |
 
-L'étiquette distribuée `v1.2.0` contient les six skills, dont DCP 0.1.3.
+L'étiquette distribuée `v1.3.0` contient les sept skills, dont DCP 0.1.4.
 Les deux marketplaces récupèrent le même commit figé. Une mise à jour
-de la marketplace permet d'installer cette version historique, pas le candidat local 1.3.0.
+de la marketplace permet d'installer cette version historique, pas la version 1.4.0 qualifiée et non publiée.
 
 Le serveur MCP `droit-francais`, déclaré une seule fois dans `.mcp.json`, fournit l'accès aux sources Légifrance/Judilibre. Le skill `recherche-juridique` apporte la méthode de vérification de vigueur, de provenance et de citation. Le serveur et la méthode sont complémentaires.
 
@@ -53,7 +58,7 @@ L'activation simultanée de plusieurs skills dépend de la question posée. Une 
   fixe ; aucun secret OAuth ou PISTE n'est distribué dans ce dépôt.
 - En cas d'indisponibilité du MCP, le plugin doit signaler la voie dégradée et ne pas inventer de référence.
 
-`dsi-fpt` est embarqué dans le candidat 1.3.0. DCP conserve la passation et
+`dsi-fpt` est embarqué dans le candidat 1.4.0. DCP conserve la passation et
 l'exécution juridique du marché ; DSI prend les spécifications, niveaux de
 service, réversibilité et exécution technique. Le chargement effectif d'un rôle
 reste nécessaire avant son fond : sa présence installée ne vaut pas activation.
@@ -65,8 +70,8 @@ Le plugin traite le droit français et l'aide à la décision dans le contexte d
 
 La collecte et la transmission éventuelles de données sont décrites dans la [politique de confidentialité](PRIVACY.md). Le serveur MCP peut être désactivé lorsque la transmission d'une requête juridique au service distant n'est pas souhaitée.
 
-Les commandes de marketplace ci-dessous installent la distribution `v1.2.0` ;
-le candidat 1.3.0 reste local et non publié.
+Les commandes de marketplace ci-dessous installent la distribution `v1.3.0` ;
+la version 1.4.0 qualifiée reste non publiée.
 
 ## Installation dans Claude Code
 
@@ -258,7 +263,7 @@ installation, qualification ou requête modèle n'accompagne cette intégration.
 - `skills/` : sept runtimes figés et synchronisés.
 - `upstream.json` et `scripts/` : provenance et contrôle de dérive.
 
-Le format de compatibilité actuel reste volontairement utilisé pour le candidat 1.3.0. La migration vers le manifeste portable Agent Plugins fera l'objet d'un chantier séparé. Le plan de construction et les décisions d'architecture sont conservés dans `docs/`, dont l'[ADR DCP](docs/adr/0003-integration-candidate-dcp.md) et le [relevé d'intégration](docs/integration-dcp-2026-10-06.md).
+Le format de compatibilité actuel reste volontairement utilisé pour le candidat 1.4.0. La migration vers le manifeste portable Agent Plugins fera l'objet d'un chantier séparé. Le plan de construction et les décisions d'architecture sont conservés dans `docs/`, dont l'[ADR DCP](docs/adr/0003-integration-candidate-dcp.md) et le [relevé d'intégration](docs/integration-dcp-2026-10-06.md).
 
 ## Licences
 

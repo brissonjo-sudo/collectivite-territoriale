@@ -6,8 +6,9 @@ import hashlib
 import json
 from pathlib import Path
 
-from cli_toolchains import measurement_contract
-from measurement_common import bound
+from cli_toolchains import (compatibility_files, contract_file, measurement_contract,
+                            prove_toolchains, require_cycle_version, toolchains)
+from measurement_common import bound, snapshot
 from public_projection import ProjectionView, verify_ci
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -27,19 +28,28 @@ def load(root: Path, relative: str) -> dict:
 
 
 def qualification_cases(root: Path, evidence: dict, view: ProjectionView | None = None) -> dict[str, dict]:
-    """Choisit v2 par l'index source lié et le pin du commit mesuré, jamais par la preuve."""
+    """Choisit v2/v3 par le commit source lié ; la version ne permet aucun repli."""
+    def resolve(base: Path, link: dict) -> Path:
+        try:
+            return view.bound(base, link) if view else bound(base, link)
+        except ValueError as exc:
+            # Même catégorie d'échec avec ou sans traduction par ProjectionView.
+            raise ValueError('Preuve liée altérée : ' + str(exc)) from exc
+
     link = evidence.get("review", {}).get("linked_sources")
     if link is not None:
-        index_path = view.bound(root, link) if view else bound(root, link)
+        index_path = resolve(root, link)
         index = json.loads(index_path.read_bytes())
         contract = measurement_contract(root, index.get("measurement_commit"))
+        require_cycle_version(contract, evidence.get('plugin_version'))
         if contract is not None:
             case_link = index.get("case_contract") or {}
             if (index.get("schema") != "ct-human-linked-v1"
                     or case_link.get("sha256") != contract["case_contract_sha256"]):
-                raise ValueError("Contrat de cycle v2 absent ou divergent")
-            path = view.bound(index_path.parent, case_link) if view else bound(index_path.parent, case_link)
+                raise ValueError("Contrat de cycle " + Path(contract_file(contract)).stem.rsplit('-', 1)[1] + " absent ou divergent")
+            path = resolve(index_path.parent, case_link)
             return {c["id"]: c for c in json.loads(path.read_bytes())}
+    require_cycle_version(None, evidence.get('plugin_version'))
     return {c["id"]: c for c in load(root, "tests/cas-plugin.json")}
 
 
@@ -47,12 +57,52 @@ def distribution_errors(root: Path, evidence: dict) -> list[str]:
     """Ajoute la barrière publique ; les contrôles techniques restent tous exécutés."""
     try:
         view = verify_ci(root, evidence) if 'public_projection' in evidence else None
-        if (view is None and evidence.get('plugin_version') == '1.3.0'
+        if (view is None and evidence.get('plugin_version') in {'1.3.0', '1.4.0'}
                 and evidence.get('review', {}).get('linked_sources')):
             raise ValueError('Projection publique absente')
     except (KeyError, TypeError, ValueError, OSError) as exc:
         return ['Projection publique refusée : ' + str(exc)]
     return _distribution_errors(root, evidence, view)
+
+
+def smoke_contract_errors(root: Path, evidence: dict, native: dict, reviews: dict,
+                          smoke: dict, view: ProjectionView | None = None) -> list[str]:
+    """Rejoue les liaisons du smoke et les deux verrous, y compris en projection CI."""
+    errors: list[str] = []
+    current = snapshot(root)
+    for key in ('case_file_sha256', 'upstream_sha256'):
+        if smoke.get(key) != current[key]:
+            errors.append('Empreinte différente du smoke : ' + key)
+    try:
+        # Même périmètre que human_resolution.compatible ; aucune transition ajoutée.
+        permitted = {'scripts/assemble_release_evidence.py', 'scripts/human_resolution.py'}
+        permitted |= compatibility_files(root, smoke, current)
+        old, target = smoke['toolchain_sha256'], current['toolchain_sha256']
+        if any(old.get(name) != target.get(name) for name in set(old) | set(target)
+               if name not in permitted):
+            errors.append('Protocole ou outillage du smoke différent')
+    except (KeyError, TypeError, ValueError, OSError) as exc:
+        errors.append('Transition du smoke refusée : ' + str(exc))
+    try:
+        resolve = view.bound if view else bound
+        measurement_commit = None
+        link = evidence.get('review', {}).get('linked_sources')
+        if link is not None:
+            index = json.loads(resolve(root, link).read_bytes())
+            measurement_commit = index.get('measurement_commit')
+        declared = {phase: evidence[phase] for phase in ('campaign_cli', 'smoke_cli')}
+        if declared != toolchains(root, measurement_commit) or smoke['smoke_cli'] != declared['smoke_cli']:
+            raise ValueError('Verrous CLI différents de la distribution ou du smoke')
+        campaign_receipts = [load(root, run['evidence_path'])['origin'] for run in native['runs']]
+        review_receipts = [load(root, run['evidence_path'])['origin'] for run in reviews['runs']]
+        directory = (root / evidence['distribution']['proofs']['codex_smoke']['evidence_path']).parent
+        smoke_receipts = [json.loads(resolve(directory, run['proof']).read_bytes())['origin']
+                          for run in smoke['runs']]
+        prove_toolchains(campaign_receipts, review_receipts, smoke_receipts, declared,
+                         measurement_commit=measurement_commit, root=root)
+    except (KeyError, TypeError, ValueError, OSError) as exc:
+        errors.append('Toolchains de distribution refusées : ' + str(exc))
+    return errors
 
 
 def _distribution_errors(root: Path, evidence: dict, view: ProjectionView | None = None) -> list[str]:
@@ -124,6 +174,7 @@ def _distribution_errors(root: Path, evidence: dict, view: ProjectionView | None
                     f"Configuration différente du smoke : {name}")
         runner = fingerprint(root / "scripts/run_codex_campaign.py")
         require(native["runner_sha256"] == runner, "Protocole de campagne modifié")
+        errors.extend(smoke_contract_errors(root, evidence, native, reviews, smoke, view))
 
         cases = qualification_cases(root, evidence, view)
         runs = {r["case_id"]: r for r in native["runs"]}

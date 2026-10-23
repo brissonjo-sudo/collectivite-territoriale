@@ -1,5 +1,5 @@
 {
-  "plugin_commit": "13b4e1e537e5a8097a004ee913abcc9d079114a7",
+  "plugin_commit": "acfa12e8f23373712984e6c3588116fbbb2b815d",
   "runtime_sha256": {
     "skills/dcp-fpt/agents/openai.yaml": "b37aec5086edadd2d0012545ab4c3b1a6493db31f7b6f26673674f5f514aeb40",
     "skills/dcp-fpt/LICENSE": "ad5259ac9d63c064078a6490ddc5df3999d97fb0c33ae3bfad0ba3752ccf17e4",
@@ -42,7 +42,7 @@
     "skills/dirfi-fpt/objets/satellites.md": "32a2eb86179c483f2fb6ebdc8a8db4e7244ba8e2ee9b1de480fc51de9a86b2a7",
     "skills/dirfi-fpt/objets/subvention-association.md": "16a5871b04750783f5d757ab82e3c49ebf915aed54f9fd7900deb60c7a29c21c",
     "skills/dirfi-fpt/references/_gabarit-branche.md": "a9e644060c7796d2f92f334ee4da6cb8fb421e6174a5720073a22ad9723f2d9c",
-    "skills/dirfi-fpt/references/analyse-situation.md": "558618b77323ff06eaedaa8eb281f1c5b4857f8e871efde9a78dc5782cce5358",
+    "skills/dirfi-fpt/references/analyse-situation.md": "a5b57b612ce443513421e1558222841bb6828fe7fd8bddc1398f126892fc3467",
     "skills/dirfi-fpt/references/budget-cycle.md": "9d4e0d7b8ec1e7257c8830984da8b21dc236c39d29d2d02202e1bbe80676da4d",
     "skills/dirfi-fpt/references/commande-publique-financiere.md": "d0cf7b152effbfea8544dc9a8359f79d86a2c8b50d766ccbdce355fe78e9d68a",
     "skills/dirfi-fpt/references/contentieux-financier.md": "435cdaf11a0083bc6444708b5626674c036a99ce7edd6f63f7c819231510e752",
@@ -56,7 +56,7 @@
     "skills/dirfi-fpt/references/fiscalite-locale.md": "b7e1ffccec6245e95fdedfed6bf8289197b5559a695c0aa6a72eeb2ae831998e",
     "skills/dirfi-fpt/references/nomenclature-m57.md": "e7d40fe8d89a641d1afd9e9d44c4768868a578ae13e925366749936d89019e36",
     "skills/dirfi-fpt/references/prospective-analyse.md": "1c6b0a3754cbe458dfbc72f9cfff8d97514cefb55d83bbfcac1c14a7652b76c4",
-    "skills/dirfi-fpt/references/references-verifiees.md": "362909cd758581119341b333fc5da46616b2ad45d60fd0f237d7f4c909fc79a6",
+    "skills/dirfi-fpt/references/references-verifiees.md": "050005737e99d3e43492bc4db4abfd404d08cd3b3c1dbeb19e58d609cbf71fe1",
     "skills/dirfi-fpt/references/retex.md": "4d6e6ee3e842b5e25810083956d0600fb0f5292259545911651c967cda926212",
     "skills/dirfi-fpt/references/socle-sources-verification.md": "fdc543f05c5a02befb1c090975ebaf988fd08f7f473bc9fc0bb86f6b73e48c68",
     "skills/dirfi-fpt/references/subventions.md": "242c3a03c7da541572d58a9c3547164b3b236300ffcde4ac37c1582308b1b558",
@@ -65,7 +65,7 @@
     "skills/dirfi-fpt/references/templates/fiche-procedure-financiere.md": "5b50650f166deb2ef213892fcbc8b93a2b129395226e977026fd3c9d43f0851b",
     "skills/dirfi-fpt/references/templates/note-impact-financier.md": "ade65528e66a950f57f1e6c7af6eee38004aa9bdee09662f42e7b0a98dad713a",
     "skills/dirfi-fpt/references/templates/rapport-orientation-budgetaire.md": "b7d9989724040ac3411aadb1006fcd4e288849a5e5fdc762cc8c87144dd6fbdc",
-    "skills/dirfi-fpt/SKILL.md": "57321f1467773f7ccddd8291ee555043a2153781a9a746da88d7da08b8595e27",
+    "skills/dirfi-fpt/SKILL.md": "e1dbc060d1d6d39315ad370388ec4d9e958cf87afc52fcd49efdaff74dca2460",
     "skills/dpm-fpt/objets/_gabarit-objet.md": "0c1800b87497e4ded6e78d8f669fd4994a34c8e2ad60d2c4629874827c066185",
     "skills/dpm-fpt/objets/accident.md": "f7a80126fbb8030060e5d7bb4a9fead060c50c217ab31b9a78b8cf5bb4f998fe",
     "skills/dpm-fpt/objets/agent.md": "f2e1cdfa9257c3b71ea43eedc59c26c56e6affe07e5ab9fdef98ca655fdba314",
@@ -99,7 +99,7 @@
     "skills/dpm-fpt/references/templates/rapport-information.md": "c5516d3159c263ca0a2caca3cd61685fe56658fdf384506e3263667232425042",
     "skills/dpm-fpt/references/templates/rapport-mise-a-disposition.md": "575f5768e3f3bbbeaf8d9f6a2817fcc508ab2e0f3791179ea7e58f26c56db76b",
     "skills/dpm-fpt/references/videoprotection.md": "ec44f6900a3ca8827339e0863a32b10bff791f372eaba264e11ad93b018d95d2",
-    "skills/dpm-fpt/SKILL.md": "e634992493497a128420677174fa80c7d3bcd9c3c904d5d730eb62bed297a9c1",
+    "skills/dpm-fpt/SKILL.md": "5222d6ba00405fcbf2ea15f356ccbbced7ef13d02f7cc4999ac930aeb920442b",
     "skills/dpo-ct/assets/aipd-modele.md": "6a8aa2b71b2c2f5f5b3daa7ab3ca1b90d0cbad8a0b0b34a5bcad4cbca0bb2f76",
     "skills/dpo-ct/assets/avis-dpo-modele.md": "ad0f9b6fad04cf61d5b4b3debf056f738c0993734a022874434c908690ed7789",
     "skills/dpo-ct/assets/fiche-registre-modele.md": "ecb38a779f443679a10ab9568992a6dada246b849beeb3bcb3947dd43631a0e0",
@@ -117,7 +117,7 @@
     "skills/dpo-ct/references/socle-sources-verification.md": "2f52edf8026d922c197d24a5c84bd17ae5f875e7a061f478e3361e79bc8d482d",
     "skills/dpo-ct/references/sous-traitance-transferts.md": "313a650ed852387d6e6816b2d6b9e996cd979341a3e34a137e5d0314ce709e3a",
     "skills/dpo-ct/references/violations.md": "dbd0779833f1deef052d343e978d14987309dc4cd0917e045fa9fb5337a75c6c",
-    "skills/dpo-ct/SKILL.md": "1657c1ffbc570e5007048321e19ba6e8dd29ead1443ac408109f0f6ba7c49b63",
+    "skills/dpo-ct/SKILL.md": "e6476b8701e7ef4f77bf7362e6cb478607fc05864fbd98248f058cd1c92dbced",
     "skills/drh-fpt/assets/courrier-modele.md": "3ae21c22d857460147fdddf5c46c9c38d5019cbfe5b2495e4b21030119f63b87",
     "skills/drh-fpt/assets/decision-modele.md": "8b90ed411dd7cc30e595c6085de62cf156af6238863b525cd4d803caff9d854b",
     "skills/drh-fpt/assets/deliberation-modele.md": "85d21ed882159176761271227eed9262d81deb87360c4edaf1f1903d002eb42b",
@@ -125,20 +125,24 @@
     "skills/drh-fpt/assets/note-modele.md": "a5437f2e0b587dd19a215ce591b9071bd4c9e0e33889adf2da8268c972142df2",
     "skills/drh-fpt/assets/procedure-modele.md": "e43053064c410c2b819d4c2c8ed3087e96b3f9a11cefd9599dc03d43878dcbbc",
     "skills/drh-fpt/assets/README.md": "8dc8f83cf3d78d7072931aeadc575c6222a7773db3024096fc161ea188c428e3",
-    "skills/drh-fpt/references/_gabarit-branche.md": "99c4aab5fe2618804158e7b282c8e57ac0d00957707968d917fac96a50aa78b8",
-    "skills/drh-fpt/references/cache-plafonds-regime-indemnitaire.md": "480b8e51e03fffea723169014db606076bea1558a2a8eb6c35154afc0c1c32e7",
-    "skills/drh-fpt/references/carriere-paie.md": "e0890737636e140db6429cd2142e159c755a6836a539923db7378c64e752767c",
-    "skills/drh-fpt/references/communication-interne.md": "6e752e567fc04a68d56e353f05865716a8b8bc552db34e5a72280130af937764",
-    "skills/drh-fpt/references/contractuels.md": "2778879942eac95c42add104df5c548d1716e29d7a330cd223a58a9b2a9cac26",
-    "skills/drh-fpt/references/contrat-execution.md": "c647da45d6156f2b82d33ce69ffe9387e509dcb0affe246debec339b8d1962a4",
-    "skills/drh-fpt/references/cst-dialogue-social.md": "1fb1139d09f208379fe81d7780588593e447a235688570345b8649bf5aa659fd",
+    "skills/drh-fpt/references/_gabarit-branche.md": "c35f4f37603ea52929192e00ce433555884dda1c6c8c25a2daa2b464aaead056",
+    "skills/drh-fpt/references/cache-plafonds-regime-indemnitaire.md": "0de0208dd0fc85bf2c70b165be78edce506c12723390b695518692c05c999faa",
+    "skills/drh-fpt/references/carriere-paie/remuneration-paie.md": "f6d1a949611a681a216299086cb091268f9aea6914c1dfdca9ce36e7a98e6289",
+    "skills/drh-fpt/references/carriere-paie/statut-discipline.md": "89020504a714590427864b4d4f18f8e9583fc5bbccb658a836e457f0566329aa",
+    "skills/drh-fpt/references/carriere-paie/temps-fin-fonctions.md": "edd55f4e23e8b9e73a8913ec10777faee602332983b8232f05461e144beed665",
+    "skills/drh-fpt/references/carriere-paie.md": "acd33d8a2c437e448301e786d7531f855d0b0b2c95fddf40c7180855df068921",
+    "skills/drh-fpt/references/communication-interne.md": "f0dbacd48b370b7377b8aa915b21426f13a8ead3e18b5c79e4eb8764fce49240",
+    "skills/drh-fpt/references/contractuels.md": "cebcefcf0303eed7ed81dbdc4532fba3593a3a7bf406cc725b88725d729a63bb",
+    "skills/drh-fpt/references/contrat-execution.md": "48aad37e28217d65c144a7515ed239bd8f3dee2dcc74f187eae9cd05535b0e9a",
+    "skills/drh-fpt/references/cst-dialogue-social.md": "4f64be6c08dced35b53082825c813b690beacc9bd32796e43df40a84bfbca91b",
     "skills/drh-fpt/references/parametres-collectivite.md": "6a6ddfacf8c7cba8c3bf082d6137c3bdbe08c67372f46c0098103d047d2c1cd2",
-    "skills/drh-fpt/references/qvt-sante.md": "3f36f2abfe0446e1ac59e4354d2fbe1e0e143f0a0dfbb6984cd634fa502c48f8",
-    "skills/drh-fpt/references/recrutement-formation.md": "511c78f3b1e3edf7a06ea858d4e5df1a5dcdc536c522887b214f900b5e4e4f65",
-    "skills/drh-fpt/references/si-rh-masse-salariale.md": "06e8f36523dab602c6257a559d71ed7b67202507fd0f7c67891c1a4439b60322",
-    "skills/drh-fpt/references/socle-sources-verification.md": "fe7887aa6d83ff4d3f382c7e6adc10f32828a23eef1a73138217d943d535681e",
-    "skills/drh-fpt/references/statut-garanties.md": "5ef4c2344730d46b1840908c9ada4d964438ddbbb7a0ca68e10172134edcb073",
-    "skills/drh-fpt/SKILL.md": "497a7aa43399de1c4ab10d76fd94bb6a4ee0134ac904ece37e1c268654fa89a8",
+    "skills/drh-fpt/references/qvt-sante.md": "f1bd608f2bca06205aa5d6bd9052c1e813b67b2e0dac6728459625dc48e0f008",
+    "skills/drh-fpt/references/recrutement-formation.md": "62305e93c5d9dfe458172108b3019471ee1126a49e620f5acc5109ac929291ea",
+    "skills/drh-fpt/references/restitution-proportionnee.md": "6191767164e93ed75700cc8ee0b1dd944da35b0af489bb8d5a89c72734b01873",
+    "skills/drh-fpt/references/si-rh-masse-salariale.md": "2b933437d8347819c2a11c3e9ae3fbf44956fce6c8c4584382a1ae72c8251d57",
+    "skills/drh-fpt/references/socle-sources-verification.md": "31b9d75cf7f88ed107ae5488726522a2387de29cfb8f06d6c1b83ac066ac4d2d",
+    "skills/drh-fpt/references/statut-garanties.md": "8a999452da50d5636c6bfbcf1cd79a78e19a5a5517625c8cb97cbcee1c17f250",
+    "skills/drh-fpt/SKILL.md": "7da009a9fdca48d0730f4a6aa3e4365aabbcca5872b6e9042e1ca0a260735974",
     "skills/dsi-fpt/agents/openai.yaml": "220be54430bf5cfeebd913346b3212c613b8369328288f175a6ba0f5b77d79a9",
     "skills/dsi-fpt/objets/_gabarit-objet.md": "9aa2ac160ac6c0bbc4c3cae99a4b08cc0d241517b0127869d90ab806f604360a",
     "skills/dsi-fpt/objets/compte-poste-agent.md": "bac469edfc0cf5bbc8a085396c3b99fae2faefba69c0f5793e06d14968dffe1e",
@@ -168,8 +172,8 @@
     "skills/dsi-fpt/references/templates/fiche-projet-si.md": "ccef6531aa172ed7ef9c80557670cfae3a34f2e98f17363e23a40eb8f3b7543d",
     "skills/dsi-fpt/references/templates/note-homologation.md": "10f39621125c69aaa63b2ed293c7e8f786ffd70fbc2cdc13bee8f5103696ae19",
     "skills/dsi-fpt/references/templates/rapport-incident.md": "866218a1a4982b61bc00f2c27474dc3c725a9d99bcb99feb84ca47687aea7806",
-    "skills/dsi-fpt/SKILL.md": "8d27f25eceef9c3caa1e02c3609c97acfddbd2058337a8ee70fca01629a22775",
-    "skills/recherche-juridique/CHANGELOG.md": "41d686ae885c2aba343d0321f3ffbaae2aef30fd4d34136336909f0cdaf2b53e",
+    "skills/dsi-fpt/SKILL.md": "5c92e1c356e7ce8a12d90beec0a1c18ce0ddeba42115331017247b01594b8ba8",
+    "skills/recherche-juridique/CHANGELOG.md": "4b66fb61794edf997f7fa93bbf6e41154d007e449bf61552ee7ae9b65621aba1",
     "skills/recherche-juridique/LICENSE": "ad5259ac9d63c064078a6490ddc5df3999d97fb0c33ae3bfad0ba3752ccf17e4",
     "skills/recherche-juridique/profils/_modele.md": "2ebc6568ea90eade980129a5320535918f2a794cdec789449f85c8dfc53f5524",
     "skills/recherche-juridique/profils/avocat.md": "2ba16f6efcf217551d0f7e72d85590f9081bd2a90ab1b5f50ced5c3c5288d371",
@@ -177,66 +181,83 @@
     "skills/recherche-juridique/profils/etudiant-concours.md": "8ff54e86502b7a64f6a6587189ddac859718d300159b537ead0a121a57134f52",
     "skills/recherche-juridique/profils/juriste-entreprise.md": "0bfbee7d7f2fde519a126039c9d2f31b2a11ee440cf60fb95642af78512b7881",
     "skills/recherche-juridique/profils/police-gendarmerie.md": "1a01f47bdc28ca3fa7085c2aa4679429586e9252d2506f376a106b77e0e7d3ff",
-    "skills/recherche-juridique/references/audit-documentaire.md": "4a2e7e325e4fb256c2d9db96a9c3ae46e5c04ea8a73cfae5e39a6b956c5891f8",
-    "skills/recherche-juridique/references/checklist-vigueur.md": "dc8112f669145c1ebb61455dff785848f8547024e3ab945889a2cc3f3aaf4669",
-    "skills/recherche-juridique/references/format-citation.md": "5b3d640b278828ea88b0d77e7668b18007426009bb211970210d0b6e79207225",
-    "skills/recherche-juridique/references/gabarits-requetes.md": "0eec509123af574faa01161bec8e0c6a8f50d90e2f9dcb26329c992c0bc9efe8",
-    "skills/recherche-juridique/references/gabarits-sortie.md": "c4d83e364f45631810d9b361b013d542436986197a3d43f4970eea3e3033b88f",
-    "skills/recherche-juridique/references/maintenance.md": "32fe716276fdd0b38b5b494fd7d298a00735a522eb9e975aeba056d60070e195",
-    "skills/recherche-juridique/references/modes-erreur.md": "b1611915389db644b6192b78b5b18d963d4a22223e8db23fdeb79887e863c996",
-    "skills/recherche-juridique/references/modules.md": "4dfaccd0fb0d1e2da83bf1ea753ef0adaceb61f5eacfffaf765ebd67dbb6e71a",
-    "skills/recherche-juridique/references/sources-autorisees.md": "9ebd961a8078307d4f45b1c8bf59072d2dd79794f87dc85ec7d0f87628b4df47",
+    "skills/recherche-juridique/references/audit-documentaire.md": "da41e27baedeacaba05fb0efacd0464df2b6ed486996353302cbf6621a6e5635",
+    "skills/recherche-juridique/references/checklist-vigueur.md": "dd8385c6a95da2e858c5ff4eb60348073792ff168fb6bffe6ad358e6cbf2b152",
+    "skills/recherche-juridique/references/format-citation.md": "d3365f033da06ecd9dfa975e77bf8663b49a7b578101cb432383c04de220c682",
+    "skills/recherche-juridique/references/gabarits-requetes.md": "2631c84a19057acf161146c141f4ce8159a3025c2a43c0e83d52355afb3b3791",
+    "skills/recherche-juridique/references/gabarits-sortie.md": "80c172bb1bd62696f1b9d33a7f0c5b908a83da178f5e32bfe0458f1784180d72",
+    "skills/recherche-juridique/references/maintenance.md": "0789ada63ce4d602b72787cb5121cf8916fba1d17ecd2226e6701fa2f80dd220",
+    "skills/recherche-juridique/references/modes-erreur.md": "4d9e67b967c6ebf60c366c4577114f2aec003ebc621209ffa3fc7ad0c62bd29a",
+    "skills/recherche-juridique/references/modes-et-profils.md": "109dca83d8de81852cc84a7bee437a166cc061acc71823a11c34dcf7143b1f57",
+    "skills/recherche-juridique/references/modules.md": "8d44799a8681970b6f060a6fe8bfae86011113be220e001f467bfe1b931049d7",
+    "skills/recherche-juridique/references/procedure-detaillee.md": "30562b81a1a1c265794e5244a364fd25842650c9e2b187312788c21a545b77ef",
+    "skills/recherche-juridique/references/sources-autorisees.md": "cf9f7a08495e70233184716b295094dba36f915b7c134363358f353f7216af0b",
+    "skills/recherche-juridique/references/techniques-raisonnement.md": "c2186858fd7bad90b1421f8258c12f09004fcc86772745ede41c6863b77ebd38",
     "skills/recherche-juridique/scripts/.env.example": "e2eff87c4e15168d97e034bf36aafdc3a43dfb4cd5f60f415e1305019ca16ea0",
     "skills/recherche-juridique/scripts/droit_francais/__init__.py": "3421a7775cd9a2a8b9bf64e3980531b33e66ecda5c8814d8cf0da4a54ef32720",
+    "skills/recherche-juridique/scripts/droit_francais/article_versions.py": "9a21df7978c2686804c6a539705d068e64bd6469b6c91333b6d060b0da6c13cc",
     "skills/recherche-juridique/scripts/droit_francais/config.py": "71bc65d83b742b76e36337d25a03df19514b803febdbe7612ab34a851bb98e98",
     "skills/recherche-juridique/scripts/droit_francais/errors.py": "fa186ef69d7bc1fab66f003ade8677fc4e53689bd500d28a527cf93f021d8435",
     "skills/recherche-juridique/scripts/droit_francais/judilibre.py": "5aba0c795fb88315ce8b7b3bffac6ea4dcc7e7ed7106efac26407e8544bf13fc",
     "skills/recherche-juridique/scripts/droit_francais/legifrance.py": "baea37a064031a11cd60359cf98061c4483507ab4c10651f29d5c27aab293f83",
-    "skills/recherche-juridique/scripts/droit_francais/tools.py": "7f5dd7d2b4405ac7dc686e5492c230cb979866419b0b25721cfbb1493c6a69fb",
+    "skills/recherche-juridique/scripts/droit_francais/section_diagnostics.py": "46b44c689d97e88ffbb01796727e1271324ea9150c32b723fb901ab6dabd06fb",
+    "skills/recherche-juridique/scripts/droit_francais/sections.py": "cbadc60b87082f4b9841bd12888680f1180250da0f29cbac593a5e7766f32c5e",
+    "skills/recherche-juridique/scripts/droit_francais/text_diagnostics.py": "c934b6b94dcc620c6a3b9c8821597831dae6fd6990fd3ae4e2793188ac43af5f",
+    "skills/recherche-juridique/scripts/droit_francais/texts.py": "3dffadc93f0372909578de3c3947447fd5fea4dce9ce53e365740cb158354020",
+    "skills/recherche-juridique/scripts/droit_francais/tools.py": "b6440bde5b578ae2b1d3b91302a505c6882a60e1a0403796dd77fe84987d8f84",
     "skills/recherche-juridique/scripts/droit_francais/transport.py": "3c0a4514e302494be9cc78bc2efd3d5084e42a0d438f48e87f375958a57c7003",
     "skills/recherche-juridique/scripts/legifrance.py": "b3e40305a5ca9407d39ea3142c888f879d4926956328d3d586752427190a1bba",
     "skills/recherche-juridique/scripts/README.md": "a73f2f8377b33079fefaffa8afbb656626cba75fb76f7350a3747caed6255e0d",
     "skills/recherche-juridique/scripts/update_skill.py": "9768a5eda24759ecb5574d1706a5e64449b62a92d781e1406f5e5979f8525e01",
-    "skills/recherche-juridique/SKILL.md": "45ecfad61022be17315da425f27bd16e57a5f17be7ef6263f1cbd1db88c58a51"
+    "skills/recherche-juridique/SKILL.md": "0099bfe0912e826f2de28e98b65962350f7c5d78aeaf842acfb8eb3fbfb164f3"
   },
   "plugin_configuration_sha256": {
-    ".codex-plugin/plugin.json": "a129a9ba9c8096e3a145840182d2d1f6b3cf98a59055e66e5008a6bd35c77b39",
-    ".claude-plugin/plugin.json": "004cfdb12868537d9b1cf1796c4cd2c70f02edceda95c4e6f28711f734b75cf4",
+    ".codex-plugin/plugin.json": "707912d1b1163d0a3092141a08ba84753423abe8ee41fa102a27056fff335798",
+    ".claude-plugin/plugin.json": "a94be3aef8c9fb3294848ec823cf92b470f554a739f5ed42807667c9cf8ad2d8",
     ".mcp.json": "c1988401a93d468e87557dc1ebf47989323203b9c5ef7607641529615aefbcac",
     "assets/icon.png": "10aca45cb876735f06e10b352b9a2ba004b5deae462e08d8dfba092044aaee1f"
   },
   "case_file_sha256": "0747b6268cccab1bb46c820217d2a4ba1c69e5c2ad6fe61126e3a5bd9242f5ea",
-  "upstream_sha256": "c4ce9308e441b6b51d465c31bee112bc1b799354eecb9dfa0cebc9cef4de1135",
+  "upstream_sha256": "cabe20f1feadfd195e54f8fbc4a5e850a9c8b7e44bc49b10d859291b9245ab1b",
   "toolchain_sha256": {
-    "scripts/assemble_release_evidence.py": "8fa07fa86aeff040626c2f7384374e28dc75b490df041118df552a55d409172e",
+    "scripts/assemble_release_evidence.py": "a87b26268040f4353a43470e84e83fc8f9f0bce3c42f774f8432b656ee45fc01",
     "scripts/audit_native_reads.py": "5c503063eeeef01d4c21bc458f387791e63d042597aaf79fc982a045106b5394",
-    "scripts/campaign_contract.py": "695421cf14950138546da22c0b9f052fb7e55a3bf7394b2d3b563449ba23770f",
+    "scripts/campaign_contract.py": "9383f57154bff8da7d71d13dd7449ff152111692a9aa882205b3d5ade26eeee3",
     "scripts/cas-plugin-cycle-v2.json": "65593a1c46bd31b403c5b83344f14951cbc3455f456eefcde2c6853fa68a9478",
+    "scripts/cas-plugin-cycle-v3.json": "deb0d39efc93a24b16444922dbafddbb6570801a67e21ca23d612343ba471e89",
+    "scripts/cas-plugin-cycle-v4.json": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
     "scripts/check_dcp_protocol.py": "01db515a86fe66355cf73e42617b5d3d520fad803dd04afa5a4dfc80818a4917",
     "scripts/check_sync.py": "69f080fbe4ded47ab1c5980a662e4219e15e111a67de8a6cbf166aac831e008e",
-    "scripts/cli_toolchains.py": "efb2ee0ef1977980d65be18afc5ca76cc4137c6eb10bb2c7ac184dc5f0bb157a",
+    "scripts/cli_toolchains.py": "4da64e0c0e4f1f095b6f2d1c1a6da19dc3e1256ba356a3e1db8b8cec420483a3",
     "scripts/codex_event_contract.py": "f4e848f3c34504b4df6b5f444337b4064829828d8c492ecd3023cbae471d42d7",
+    "scripts/cycle-v4-source-requirements.json": "54bed7aaf6afc439a6d24e1f95204d4b3e7d9327024ce5435bd9cc0988a8a333",
+    "scripts/cycle_satisfiability.py": "5a8625a8f8169393a6b3bcf35ab696830707cc142366c9d179c192fa128bb6ea",
     "scripts/dcp-protocol-0012.json": "808e8def87583bc830dc0a5172772741fa5c829e420bde263599c2034020326c",
     "scripts/dcp-protocol.json": "c348cd68e64aaddcfd675831cf97878dd0fd00f5dcb30b3bcf448184304f4b60",
     "scripts/dcp_reference.py": "563632abb7244eeac585c34d2b9211083e9b67766ae0e8685db883c3d74f010a",
     "scripts/extract_native_read_commands.py": "d1292a0e6f798fcab1bd55fdce76b0e804526208b97e9e82172702057f1ef6c4",
-    "scripts/human_resolution.py": "d23fc81f15333593c7d1039334555d96430869231bab155d18292e7071debed0",
+    "scripts/human_resolution.py": "9829a925bc0bffa7f650bdd03cb12905e7ca9590f3854c35f0342fec97eb7935",
     "scripts/instruction_overlays.py": "aa9dd39d3ba92ba2fed15b8eacc70a3b7dcc1f5287a7aa9c9cd1f4c6109374f9",
-    "scripts/measurement-cli.json": "14f3782c2c8cac996fd55e1a50adeecf0861699dc44d691c7fdbea2d0d849159",
-    "scripts/measurement_common.py": "d182f563ec827efeac5a75068d43c18cbba58a36f3f67faff0351a1c4046a4dd",
-    "scripts/qualify_distribution.py": "12993daa0711b752f6389e907e7bd827d943b82d6017f87b1c9236b10f6372f1",
+    "scripts/measurement-cli.json": "ded31e16710c9bb2acfc1519da16620c49866d384b02a60f5e7ccb7ec68e1653",
+    "scripts/measurement_common.py": "c0c774cd986e49f39820d1fe9cac3bd3b88d7ebc0ef6dbf1a127bbc6d961ecfb",
+    "scripts/public_projection.py": "ffce5880ee592441306d2c79ab79760a5aa8223bbc3d16286070fee781503027",
+    "scripts/qualify_distribution.py": "cf056b4309ccc71a771bcb603642f9f627e8d778a5dc64fa554bec2ec843d62f",
     "scripts/r5-dependencies.json": "06c032bcb323606b0c4eb8652d59c6ba35f3d83d423cb2327a5f57b26910654e",
     "scripts/r5_portable.py": "bcb3af53fe4a92925f8706b0c5b41730ffcb14791caacd3525b1b6d97fc6169d",
     "scripts/redact_native_evidence.py": "d841424552afa9c9936f897233dfb0060930c395da91749e773fb01accf546a9",
     "scripts/reference_inventory.py": "d1229a630fdbab87eb0bf8db5c133e780b5ef82afaf2bb8c6058d4da73b0b2f6",
     "scripts/reprise_dev7.py": "b044d698f49b0ee3a919c393b1d429ca9f86d35d3527be66666881c148551957",
     "scripts/review_codex_campaign.py": "f498fff9ade79e5e669793a6be2ce4b86ac60e8dce2e47b51c7281da6ddfe968",
-    "scripts/run_codex_campaign.py": "2e919320d544cae3a03c304e3dc67301f2ea682f88b53a69d882769646408e96",
-    "scripts/run_codex_smoke.py": "778f44060971effbfac1a47444e81ec05aa3977b8d183c3aa07b4a79db31dd0d",
+    "scripts/run_codex_campaign.py": "89fd874415c5830dc67be3e2fa76a77eb9bafdd1f7434ecad696d35db1ef1602",
+    "scripts/run_codex_smoke.py": "dd8d53dedfaa4f1fdc7cfec0ce633fda4fd7638fdb3ad755ae39729b1254df89",
     "scripts/run_plugin_campaign.py": "d371345ac99536edfcd3167c44bb376a91ea063029537ad17a78b9f69f969590",
+    "scripts/skill_citation.py": "d01f1a451b5492bc3000aef60aca6a3149135d455e38dd36c6dd6f79423af430",
     "scripts/smoke-cli.json": "ccb7f9450ae34365f00da87e05ade23a8016b424f12bf7cacf29c21cd90e16a6",
     "scripts/sync_skills.py": "9f934bf9b38e3854b19468e812e50eb6b4af400adc6564b6ad50bbacde5cba15",
-    "scripts/toolchain-transition-0013.json": "60c317fb9a825f0d37831f76787e7ba09490a2ccfb57e2b0b0286fd037dcabab"
+    "scripts/toolchain-transition-0013.json": "60c317fb9a825f0d37831f76787e7ba09490a2ccfb57e2b0b0286fd037dcabab",
+    "scripts/toolchain-transition-0017.json": "a4f69a61c6e0ea4a020bd5d98a11a6fc08be6646a4db96957bf48446290685c1",
+    "scripts/toolchain-transition-0026.json": "a29c8e146052d33b489d84b10900a733f7c647bc4a36bdfc006fdb248212810c",
+    "scripts/toolchain-transition-0028.json": "487a8b6d6cec2250088bfb0bc237cfb6c4d01d975415c98228b5be37026a1d53"
   },
   "case_id": "l8-dcp-vers-dsi-disponible",
   "role": "reponse",
@@ -257,14 +278,14 @@
       }
     },
     "cli_version": "codex-cli 0.163.0-alpha.10.2",
-    "thread_id": "f08632df08e0fbab588e76d45d38e5b51413152476052b0a340d2807905184b9",
+    "thread_id": "708f9ec6e5aacd787a6213b66240a5b0932d2b39b33ec8de3311d690b37568ea",
     "cli_sha256": "f6dbf48cb70f62649c645f26c87dc9bf84cc36986202dfad8e12fb5b8ca70312",
     "argv_sha256": "b931575c5e5c37e752d9e088335f4718be39e848e44d9da1869154d06852996a",
-    "prompt_sha256": "d9a73536d7f60b6681b365b8eadd027081b560e085eda2e4dfc6d2059ffa6c39",
-    "stdout_sha256": "9e6f6f3ae324f77cfdef6262666f93c51726a97e3771ee0725ba3fd2f3f6baf8",
+    "prompt_sha256": "6c86ba2474b3e3b6161123c24dafe750519d7ae72d81092ec8d509c116ae089c",
+    "stdout_sha256": "dee8ceee44b928dc23f9bddd38f0552b24cd9d2397a91cf80fc28b230092516a",
     "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "process_exit": 0,
-    "elapsed_seconds": 168.204383,
+    "elapsed_seconds": 165.735782,
     "startup_failure": {
       "before_model_attested": false,
       "model_session_opened": true,
@@ -287,7 +308,7 @@
     "kind": "native_seven_skills_precheck",
     "diagnostic_only": true,
     "model_calls": 0,
-    "runtime": "<HOME>\\Documents\\Codex\\repo-recovery\\2026-10-12\\instantane-r1\\t43-successeur\\l24d-preparation\\campagne-l24-20261020-d\\l8-dcp-vers-dsi-disponible-reponse-hp55p403\\.agents\\skills",
+    "runtime": "<HOME>\\Documents\\Codex\\repo-recovery\\2026-10-12\\instantane-r1\\suivis\\l140-preparation\\campagne-l140-d\\l8-dcp-vers-dsi-disponible-reponse-9b9x79ys\\.agents\\skills",
     "probes": [
       {
         "status": "ok",
@@ -295,11 +316,11 @@
         "timeout": false,
         "timeout_seconds": 180,
         "model_calls": 0,
-        "stdout_sha256": "7ffefde067f96c3476f6caca5c3e7cdc5e871bfbc641ed65402c852c8b27fb78",
+        "stdout_sha256": "bf5e7a2f5c0bf04341cf21eb70b0d7e37bf086a308baf98f3ad3d1dacde7f619",
         "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "stdout_octets": 692,
         "stderr_octets": 0,
-        "argv_sha256": "abb5ab04628d5edd497f9adbf884ac537aceae64a38e0a82973b53d3b8422464",
+        "argv_sha256": "c2b16b7e94025ea8a6b142ac2da4692b4ce08971ec42fa4e494b0286390056db",
         "runtime_entries_verified": 7,
         "raw_output_archived": false
       }
@@ -320,7 +341,7 @@
   },
   "campaign_harness": {
     "lot": "T43-L24e",
-    "manifest_sha256": "0d6c90c4bab272cf83095034fba35fb928d5bd353c7e753a431016d5cfdbdbc3",
+    "manifest_sha256": "95d5aad231a1b12a35072e59af7df349a8dffaa59d584cc40bac3ca425636092",
     "campaign_cli": {
       "version": "codex-cli 0.163.0-alpha.10.2",
       "sha256": "f6dbf48cb70f62649c645f26c87dc9bf84cc36986202dfad8e12fb5b8ca70312",
@@ -332,13 +353,13 @@
     },
     "candidate_toolchain_modified": false
   },
-  "case_contract": "scripts/cas-plugin-cycle-v2.json",
-  "case_contract_sha256": "65593a1c46bd31b403c5b83344f14951cbc3455f456eefcde2c6853fa68a9478",
-  "campaign_attempt_id": "campagne-l24-20261020-d",
-  "completed_at": "2026-10-20T17:07:40.919805+00:00",
+  "case_contract": "scripts/cas-plugin-cycle-v4.json",
+  "case_contract_sha256": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
+  "campaign_attempt_id": "campagne-l140-d",
+  "completed_at": "2026-10-22T21:00:55.347471+00:00",
   "trace": {
     "evidence_path": "source-l14/campagne/l8-dcp-vers-dsi-disponible/reponse/trace.jsonl",
-    "sha256": "3784968d8985d19816d4070aecd510487e7148bac187b90d47706c140caf487f"
+    "sha256": "03beed577aea30067efc0aceb188b6ff452b8dd412abc2d35a407ede6a12a91e"
   },
   "process_exit": 0,
   "execution_errors": [],
@@ -347,28 +368,38 @@
   "case_status": "passed",
   "response_technical_failures": [],
   "invariant_violations": [],
-  "optional_reads_absent": [],
+  "optional_reads_absent": [
+    {
+      "paths": [
+        ".agents/skills/recherche-juridique/profil.md"
+      ],
+      "trace_line": 58,
+      "exit_code": 1,
+      "status": "failed",
+      "runtime_absence_verified": true
+    }
+  ],
   "case_sha256": "f6f7f307f72a1c49264e4fb9fb3a45327c0fd1ada71d6fe63a17962cf8746153",
   "report": null,
   "human_legal_validation": false,
   "publication_ready": false,
   "campaign_adapter_sha256": "e6de101f2124077fd68bcffd96c63ac6bcd7af43309593b061ce3abdd64360d0",
-  "campaign_support_sha256": "90af11092a9b2246dd555c737b81bb68c8f7fd41183fa624b03f9712cb4fe4ec",
+  "campaign_support_sha256": "df862b18e3039c33b26c5dd6c7495c4d289d834d99c92d969312f27bc8f7d231",
   "mcp_review_sha256": "bde75706abf0feccf719734ad36044809a64e186aeaa2dc294dbd3ae974989aa",
   "mcp_text_limit_bytes": 12000,
   "case_outcome_sha256": "a7b318c11a53bb07ee6abca1e6de65a47362796949b3d9a31451e0b6c7798d79",
   "command_trace_sha256": "bc8528482e46ddd7cd49506ca7de9671fa5ba93fb09366c157b5426ec482877f",
-  "web_review_sha256": "b03b7d888b47ac8bb52aebff2a0bf5c4fad86fc073d14edc68cb5c0d11b1c003",
+  "web_review_sha256": "e8fe654802a9528de5e9edde9016cb4d48829234b36c2d90169cc642dd7583ce",
   "events": [
     {
       "type": "reply",
-      "text": "J’active les entrées dans l’ordre demandé : dcp-fpt, dsi-fpt, puis recherche-juridique. Je répartirai ensuite le cadrage du marché et les volets techniques, en précisant les pièces nécessaires.\n\n"
+      "text": "J’active les trois entrées dans l’ordre demandé : dcp-fpt, dsi-fpt, puis recherche-juridique. Je vérifierai le périmètre de chacune avant de répartir les volets et de relever les pièces manquantes.\n"
     },
     {
       "type": "visible_text",
       "position": 2,
       "item_id": "item_0",
-      "text": "J’active les entrées dans l’ordre demandé : dcp-fpt, dsi-fpt, puis recherche-juridique. Je répartirai ensuite le cadrage du marché et les volets techniques, en précisant les pièces nécessaires.\n\n"
+      "text": "J’active les trois entrées dans l’ordre demandé : dcp-fpt, dsi-fpt, puis recherche-juridique. Je vérifierai le périmètre de chacune avant de répartir les volets et de relever les pièces manquantes.\n"
     },
     {
       "type": "tool_boundary",
@@ -473,7 +504,7 @@
         ".agents/skills/dsi-fpt/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "fdd6c2303f82454eac6b3c789227aeb6bc0f06484a92977f5e88d3aed8962217",
+      "output_sha256": "b32d67a2c98a28e9a9a1f77973147f929bbdff214334125d81e22e62afd32783",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
@@ -481,8 +512,8 @@
         "start": 0,
         "count": 84,
         "content_verified": true,
-        "expected_content_sha256": "fdd6c2303f82454eac6b3c789227aeb6bc0f06484a92977f5e88d3aed8962217",
-        "source_bytes": 5967
+        "expected_content_sha256": "b32d67a2c98a28e9a9a1f77973147f929bbdff214334125d81e22e62afd32783",
+        "source_bytes": 5946
       }
     },
     {
@@ -496,16 +527,16 @@
         ".agents/skills/dsi-fpt/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "877c8729664fe9aeb4a9c4e28f1e3719e6ad4662d9a415eb0f2a5949f7ec42f6",
+      "output_sha256": "446602c0a2ed0d0a14534bb10fbb385e26d1c106297249cce8b748fa1c3b3a8f",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
         "path": ".agents/skills/dsi-fpt/SKILL.md",
         "start": 84,
-        "count": 107,
+        "count": 96,
         "content_verified": true,
-        "expected_content_sha256": "877c8729664fe9aeb4a9c4e28f1e3719e6ad4662d9a415eb0f2a5949f7ec42f6",
-        "source_bytes": 5999
+        "expected_content_sha256": "446602c0a2ed0d0a14534bb10fbb385e26d1c106297249cce8b748fa1c3b3a8f",
+        "source_bytes": 5949
       }
     },
     {
@@ -519,16 +550,16 @@
         ".agents/skills/dsi-fpt/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "2308e7c470973b6c894efc0e2f31e662a549efbae66346206ef8ffdd47154867",
+      "output_sha256": "22a243ae88cddeb7c6f61a145438f877cbd88faa77d507653e7a5a560a4c5d62",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
         "path": ".agents/skills/dsi-fpt/SKILL.md",
-        "start": 191,
-        "count": 107,
+        "start": 180,
+        "count": 112,
         "content_verified": true,
-        "expected_content_sha256": "2308e7c470973b6c894efc0e2f31e662a549efbae66346206ef8ffdd47154867",
-        "source_bytes": 5928
+        "expected_content_sha256": "22a243ae88cddeb7c6f61a145438f877cbd88faa77d507653e7a5a560a4c5d62",
+        "source_bytes": 5951
       }
     },
     {
@@ -542,16 +573,16 @@
         ".agents/skills/dsi-fpt/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "79a0014adc502abfa1207f24b42b3e6a31978c6c4908289314d1b34abcd7454f",
+      "output_sha256": "c375ac6d5e1e94d5380a188541a4309f2e7e44f17f8ad81a3993c7a7975836cd",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
         "path": ".agents/skills/dsi-fpt/SKILL.md",
-        "start": 298,
-        "count": 115,
+        "start": 292,
+        "count": 120,
         "content_verified": true,
-        "expected_content_sha256": "79a0014adc502abfa1207f24b42b3e6a31978c6c4908289314d1b34abcd7454f",
-        "source_bytes": 5948
+        "expected_content_sha256": "c375ac6d5e1e94d5380a188541a4309f2e7e44f17f8ad81a3993c7a7975836cd",
+        "source_bytes": 6000
       }
     },
     {
@@ -565,21 +596,31 @@
         ".agents/skills/dsi-fpt/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "6014521f61117d386dc33ab030433e49929e8a796082b700521dfc3d5f85d4e1",
+      "output_sha256": "b9a19d75af67993eb62f416fcebe16346178b7b96e541bb23355c165b0dbea97",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
         "path": ".agents/skills/dsi-fpt/SKILL.md",
-        "start": 413,
-        "count": 99,
+        "start": 412,
+        "count": 102,
         "content_verified": true,
-        "expected_content_sha256": "6014521f61117d386dc33ab030433e49929e8a796082b700521dfc3d5f85d4e1",
-        "source_bytes": 5936
+        "expected_content_sha256": "b9a19d75af67993eb62f416fcebe16346178b7b96e541bb23355c165b0dbea97",
+        "source_bytes": 5955
       }
     },
     {
-      "type": "tool_boundary",
+      "type": "reply",
+      "text": "La lecture de DCP est terminée. Elle attribue à DSI les spécifications, les niveaux de service et la réversibilité ; DCP conserve le cadrage de l’achat. Je poursuis la lecture de DSI : sans inventaire ni cahier technique, les paramètres restent à définir.\n"
+    },
+    {
+      "type": "visible_text",
       "position": 21,
+      "item_id": "item_10",
+      "text": "La lecture de DCP est terminée. Elle attribue à DSI les spécifications, les niveaux de service et la réversibilité ; DCP conserve le cadrage de l’achat. Je poursuis la lecture de DSI : sans inventaire ni cahier technique, les paramètres restent à définir.\n"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 22,
       "item_type": "command_execution"
     },
     {
@@ -588,21 +629,21 @@
         ".agents/skills/dsi-fpt/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "3d72189bbc8c869f4ae3f5684f9adef51a218937d8cd45db3c55e20521502fe7",
+      "output_sha256": "9db5ca6845a803fa9f6d01a89418651374650ecc9e322448c0d98b558735beaf",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
         "path": ".agents/skills/dsi-fpt/SKILL.md",
-        "start": 512,
-        "count": 100,
+        "start": 514,
+        "count": 94,
         "content_verified": true,
-        "expected_content_sha256": "3d72189bbc8c869f4ae3f5684f9adef51a218937d8cd45db3c55e20521502fe7",
-        "source_bytes": 5969
+        "expected_content_sha256": "9db5ca6845a803fa9f6d01a89418651374650ecc9e322448c0d98b558735beaf",
+        "source_bytes": 5926
       }
     },
     {
       "type": "tool_boundary",
-      "position": 23,
+      "position": 24,
       "item_type": "command_execution"
     },
     {
@@ -611,21 +652,21 @@
         ".agents/skills/dsi-fpt/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "6439c92de0cc550c65b3554176cd00a2015cab35c55e8201e9c2fec92f75a4d8",
+      "output_sha256": "832c3eea4bb36fdc69d9e6dd8656a6998498f22f500a0539a540f6423d6ffeb4",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
         "path": ".agents/skills/dsi-fpt/SKILL.md",
-        "start": 612,
-        "count": 80,
+        "start": 608,
+        "count": 104,
         "content_verified": true,
-        "expected_content_sha256": "6439c92de0cc550c65b3554176cd00a2015cab35c55e8201e9c2fec92f75a4d8",
-        "source_bytes": 4452
+        "expected_content_sha256": "832c3eea4bb36fdc69d9e6dd8656a6998498f22f500a0539a540f6423d6ffeb4",
+        "source_bytes": 5695
       }
     },
     {
       "type": "tool_boundary",
-      "position": 25,
+      "position": 26,
       "item_type": "command_execution"
     },
     {
@@ -634,21 +675,21 @@
         ".agents/skills/recherche-juridique/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "58320fa531ab60c85d9de6366294e921a7b6781bf1fb12c19d79bc7153e8edf9",
+      "output_sha256": "3f2ceb356b8bbf01abd96e8edcd658baccc7509aaef8dd8590d31dd92a7882d4",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
         "path": ".agents/skills/recherche-juridique/SKILL.md",
         "start": 0,
-        "count": 92,
+        "count": 88,
         "content_verified": true,
-        "expected_content_sha256": "58320fa531ab60c85d9de6366294e921a7b6781bf1fb12c19d79bc7153e8edf9",
-        "source_bytes": 5996
+        "expected_content_sha256": "3f2ceb356b8bbf01abd96e8edcd658baccc7509aaef8dd8590d31dd92a7882d4",
+        "source_bytes": 5925
       }
     },
     {
       "type": "tool_boundary",
-      "position": 27,
+      "position": 28,
       "item_type": "command_execution"
     },
     {
@@ -657,21 +698,21 @@
         ".agents/skills/recherche-juridique/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "18858aa560104736b771e824ad41e35244af30f21f8a166d67e437462ca866f8",
+      "output_sha256": "31b7ab8e904d5717f2eb9fe4e7dfe87ff98d6d4ebeab4ad39757c9e34045e4ef",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
         "path": ".agents/skills/recherche-juridique/SKILL.md",
-        "start": 92,
-        "count": 90,
+        "start": 88,
+        "count": 94,
         "content_verified": true,
-        "expected_content_sha256": "18858aa560104736b771e824ad41e35244af30f21f8a166d67e437462ca866f8",
-        "source_bytes": 5995
+        "expected_content_sha256": "31b7ab8e904d5717f2eb9fe4e7dfe87ff98d6d4ebeab4ad39757c9e34045e4ef",
+        "source_bytes": 5965
       }
     },
     {
       "type": "tool_boundary",
-      "position": 29,
+      "position": 30,
       "item_type": "command_execution"
     },
     {
@@ -680,21 +721,21 @@
         ".agents/skills/recherche-juridique/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "4bb3152b863af10c01f33e1a9addd6320879afea4bdf77cd57e89ac9536e5a26",
+      "output_sha256": "013f87b2284fbef1d48a1304782808a9f506a5115dd60bb63767d4cd2d446c57",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
         "path": ".agents/skills/recherche-juridique/SKILL.md",
         "start": 182,
-        "count": 127,
+        "count": 104,
         "content_verified": true,
-        "expected_content_sha256": "4bb3152b863af10c01f33e1a9addd6320879afea4bdf77cd57e89ac9536e5a26",
-        "source_bytes": 5967
+        "expected_content_sha256": "013f87b2284fbef1d48a1304782808a9f506a5115dd60bb63767d4cd2d446c57",
+        "source_bytes": 5966
       }
     },
     {
       "type": "tool_boundary",
-      "position": 31,
+      "position": 32,
       "item_type": "command_execution"
     },
     {
@@ -703,27 +744,17 @@
         ".agents/skills/recherche-juridique/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "8a6c501c5e6b7e68332f5f6a8f9360c5e524c46211be4d7a426b88983d20e4ce",
+      "output_sha256": "92cef1121ddb97bc6c5a7cab762f0f60784c20c81164ac200e73d28b1b3f3fe6",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
         "path": ".agents/skills/recherche-juridique/SKILL.md",
-        "start": 309,
-        "count": 107,
+        "start": 286,
+        "count": 91,
         "content_verified": true,
-        "expected_content_sha256": "8a6c501c5e6b7e68332f5f6a8f9360c5e524c46211be4d7a426b88983d20e4ce",
-        "source_bytes": 5930
+        "expected_content_sha256": "92cef1121ddb97bc6c5a7cab762f0f60784c20c81164ac200e73d28b1b3f3fe6",
+        "source_bytes": 5976
       }
-    },
-    {
-      "type": "reply",
-      "text": "La séparation est confirmée : DCP conduit le cadrage de l’achat ; DSI peut poursuivre les spécifications et la réversibilité après une bascule explicite. Sans inventaire ni cahier technique, le livrable sera un cadrage à compléter, sans niveaux de service inventés.\n\n"
-    },
-    {
-      "type": "visible_text",
-      "position": 33,
-      "item_id": "item_16",
-      "text": "La séparation est confirmée : DCP conduit le cadrage de l’achat ; DSI peut poursuivre les spécifications et la réversibilité après une bascule explicite. Sans inventaire ni cahier technique, le livrable sera un cadrage à compléter, sans niveaux de service inventés.\n\n"
     },
     {
       "type": "tool_boundary",
@@ -736,16 +767,16 @@
         ".agents/skills/recherche-juridique/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "642dd4fcef4a2e02d9da4001b5b14a8d195ed8f0cfc04824255065cbbd514a5d",
+      "output_sha256": "1b7ef958894a9d763cda95bbc8f114f68d363926e6577d1d6a16d884b29d467e",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
         "path": ".agents/skills/recherche-juridique/SKILL.md",
-        "start": 416,
-        "count": 141,
+        "start": 377,
+        "count": 89,
         "content_verified": true,
-        "expected_content_sha256": "642dd4fcef4a2e02d9da4001b5b14a8d195ed8f0cfc04824255065cbbd514a5d",
-        "source_bytes": 5982
+        "expected_content_sha256": "1b7ef958894a9d763cda95bbc8f114f68d363926e6577d1d6a16d884b29d467e",
+        "source_bytes": 5931
       }
     },
     {
@@ -759,113 +790,21 @@
         ".agents/skills/recherche-juridique/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "bd9023413f3d5a0b35fd108884027537e344d30f29b1fd7d77aa43878b5e21a2",
+      "output_sha256": "bc81e5f1c01149f10ee7fbb205fb4fcfcdfe7c3ac8fa71976df66b97955998e8",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
         "path": ".agents/skills/recherche-juridique/SKILL.md",
-        "start": 557,
-        "count": 120,
+        "start": 466,
+        "count": 61,
         "content_verified": true,
-        "expected_content_sha256": "bd9023413f3d5a0b35fd108884027537e344d30f29b1fd7d77aa43878b5e21a2",
-        "source_bytes": 5957
+        "expected_content_sha256": "bc81e5f1c01149f10ee7fbb205fb4fcfcdfe7c3ac8fa71976df66b97955998e8",
+        "source_bytes": 3419
       }
     },
     {
       "type": "tool_boundary",
       "position": 38,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/recherche-juridique/SKILL.md"
-      ],
-      "complete_content_verified": [],
-      "output_sha256": "939b38ca289f3208f39543c2aaf4932a016c70ab3dddb299c8ba8853b5c89538",
-      "exit_code": 0,
-      "status": "completed",
-      "chunk": {
-        "path": ".agents/skills/recherche-juridique/SKILL.md",
-        "start": 677,
-        "count": 112,
-        "content_verified": true,
-        "expected_content_sha256": "939b38ca289f3208f39543c2aaf4932a016c70ab3dddb299c8ba8853b5c89538",
-        "source_bytes": 5973
-      }
-    },
-    {
-      "type": "tool_boundary",
-      "position": 40,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/recherche-juridique/SKILL.md"
-      ],
-      "complete_content_verified": [],
-      "output_sha256": "30c42379ecae36854effb3f4eb5d9e624a1d753e944428bb29808bb0a1b9606b",
-      "exit_code": 0,
-      "status": "completed",
-      "chunk": {
-        "path": ".agents/skills/recherche-juridique/SKILL.md",
-        "start": 789,
-        "count": 118,
-        "content_verified": true,
-        "expected_content_sha256": "30c42379ecae36854effb3f4eb5d9e624a1d753e944428bb29808bb0a1b9606b",
-        "source_bytes": 5993
-      }
-    },
-    {
-      "type": "tool_boundary",
-      "position": 42,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/recherche-juridique/SKILL.md"
-      ],
-      "complete_content_verified": [],
-      "output_sha256": "a7a3c37962134721e1f7325dc6a6595f0166fea9795fc742dc53a487875c1aca",
-      "exit_code": 0,
-      "status": "completed",
-      "chunk": {
-        "path": ".agents/skills/recherche-juridique/SKILL.md",
-        "start": 907,
-        "count": 118,
-        "content_verified": true,
-        "expected_content_sha256": "a7a3c37962134721e1f7325dc6a6595f0166fea9795fc742dc53a487875c1aca",
-        "source_bytes": 5999
-      }
-    },
-    {
-      "type": "tool_boundary",
-      "position": 44,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/recherche-juridique/SKILL.md"
-      ],
-      "complete_content_verified": [],
-      "output_sha256": "f0150afc11b8c173d48e5e60039fbde52e5777bc057069ad646017c878c5d171",
-      "exit_code": 0,
-      "status": "completed",
-      "chunk": {
-        "path": ".agents/skills/recherche-juridique/SKILL.md",
-        "start": 1025,
-        "count": 137,
-        "content_verified": true,
-        "expected_content_sha256": "f0150afc11b8c173d48e5e60039fbde52e5777bc057069ad646017c878c5d171",
-        "source_bytes": 5867
-      }
-    },
-    {
-      "type": "tool_boundary",
-      "position": 46,
       "item_type": "command_execution"
     },
     {
@@ -882,7 +821,56 @@
     },
     {
       "type": "tool_boundary",
-      "position": 48,
+      "position": 40,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dcp-fpt/references/besoin-strategie-achat.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/dcp-fpt/references/besoin-strategie-achat.md"
+      ],
+      "output_sha256": "78537d272033bfb10e5a31d86604edac452f27a950639c6133d0e6f2ee1f08b4",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 42,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dcp-fpt/references/socle-sources-verification.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/dcp-fpt/references/socle-sources-verification.md"
+      ],
+      "output_sha256": "12b45dea2e0431a055f42417745a02f71e4b98126df2610f72f87cafaf1173cd",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 44,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dcp-fpt/references/references-verifiees.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "4e054d50f6d78a7b38fbb796c9309e8ffff714e6e9a20b479896270c1da821a8",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 46,
       "item_type": "command_execution"
     },
     {
@@ -899,30 +887,8 @@
     },
     {
       "type": "tool_boundary",
-      "position": 50,
+      "position": 48,
       "item_type": "command_execution"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 51,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 52,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/dcp-fpt/references/references-verifiees.md"
-      ],
-      "complete_content_verified": [
-        ".agents/skills/dcp-fpt/references/references-verifiees.md"
-      ],
-      "output_sha256": "58737d8b1f77f4f1e543e09f9d7b9ae7d27652ab1baf187f9e083ceee2527250",
-      "exit_code": 0,
-      "status": "completed"
     },
     {
       "type": "native_read",
@@ -938,54 +904,8 @@
     },
     {
       "type": "tool_boundary",
-      "position": 55,
+      "position": 50,
       "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/dsi-fpt/objets/solution-saas.md"
-      ],
-      "complete_content_verified": [
-        ".agents/skills/dsi-fpt/objets/solution-saas.md"
-      ],
-      "output_sha256": "6b63bd56dfae05b13fc082ca660d6c3e117bdb63eac937ae11e67a5fd08eeac2",
-      "exit_code": 0,
-      "status": "completed"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 57,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 58,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/dcp-fpt/references/besoin-strategie-achat.md"
-      ],
-      "complete_content_verified": [
-        ".agents/skills/dcp-fpt/references/besoin-strategie-achat.md"
-      ],
-      "output_sha256": "78537d272033bfb10e5a31d86604edac452f27a950639c6133d0e6f2ee1f08b4",
-      "exit_code": 0,
-      "status": "completed"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/dcp-fpt/references/socle-sources-verification.md"
-      ],
-      "complete_content_verified": [
-        ".agents/skills/dcp-fpt/references/socle-sources-verification.md"
-      ],
-      "output_sha256": "12b45dea2e0431a055f42417745a02f71e4b98126df2610f72f87cafaf1173cd",
-      "exit_code": 0,
-      "status": "completed"
     },
     {
       "type": "native_read",
@@ -1001,8 +921,94 @@
     },
     {
       "type": "tool_boundary",
-      "position": 62,
+      "position": 52,
       "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dsi-fpt/objets/solution-saas.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/dsi-fpt/objets/solution-saas.md"
+      ],
+      "output_sha256": "6b63bd56dfae05b13fc082ca660d6c3e117bdb63eac937ae11e67a5fd08eeac2",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "reply",
+      "text": "Les trois entrées ont été lues intégralement, dans l’ordre demandé. Aucun fait du cas ne déclenche de STOP. Je prépare la répartition DCP/DSI et la liste des pièces à réunir, puis je contrôlerai les seuls points de droit retenus avec le MCP droit-francais.\n"
+    },
+    {
+      "type": "visible_text",
+      "position": 54,
+      "item_id": "item_27",
+      "text": "Les trois entrées ont été lues intégralement, dans l’ordre demandé. Aucun fait du cas ne déclenche de STOP. Je prépare la répartition DCP/DSI et la liste des pièces à réunir, puis je contrôlerai les seuls points de droit retenus avec le MCP droit-francais.\n"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 55,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/profil.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "4abf5968e9d011be4eed3fb935deee8b0b2a485870ad298a0b967002998e49ec",
+      "exit_code": 1,
+      "status": "failed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 57,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/references/procedure-detaillee.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/recherche-juridique/references/procedure-detaillee.md"
+      ],
+      "output_sha256": "30562b81a1a1c265794e5244a364fd25842650c9e2b187312788c21a545b77ef",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 59,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/references/sources-autorisees.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "a40d222cb7d411c98b7f5b03b4a17c2e35d9003c4c5fff0b93bb6b9693bbd125",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 61,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/references/checklist-vigueur.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/recherche-juridique/references/checklist-vigueur.md"
+      ],
+      "output_sha256": "dd8385c6a95da2e858c5ff4eb60348073792ff168fb6bffe6ad358e6cbf2b152",
+      "exit_code": 0,
+      "status": "completed"
     },
     {
       "type": "tool_boundary",
@@ -1010,43 +1016,30 @@
       "item_type": "command_execution"
     },
     {
-      "type": "tool_boundary",
-      "position": 64,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/dcp-fpt/references/references-verifiees.md"
-      ],
-      "complete_content_verified": [],
-      "output_sha256": "268d40f2804b67d48d52b14764152d6a751a7e82c31c9a4f7eb3b08486b32c2f",
-      "exit_code": 0,
-      "status": "completed"
-    },
-    {
       "type": "native_read",
       "paths": [
         ".agents/skills/recherche-juridique/references/gabarits-sortie.md"
       ],
-      "complete_content_verified": [],
-      "output_sha256": "78584c7b533ff12ec0f348b2abdac71323f6724c8e63fab51a82d277c3a7b643",
+      "complete_content_verified": [
+        ".agents/skills/recherche-juridique/references/gabarits-sortie.md"
+      ],
+      "output_sha256": "80c172bb1bd62696f1b9d33a7f0c5b908a83da178f5e32bfe0458f1784180d72",
       "exit_code": 0,
       "status": "completed"
     },
     {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/dsi-fpt/references/cloud-hebergement.md"
-      ],
-      "complete_content_verified": [],
-      "output_sha256": "c3ebc4031b5cb7de1bf4b4aa6c765691afb41b1e92884c67ef372d85ecec8b02",
-      "exit_code": 0,
-      "status": "completed"
+      "type": "reply",
+      "text": "BASCULE recherche-juridique — Je lui attribue la vérification du cadrage du besoin et de la méthode d’estimation. L’acheteur exact, le mode d’exercice, la date de lancement, la durée et la valeur estimée manquent : le choix de procédure reste donc ouvert.\n"
+    },
+    {
+      "type": "visible_text",
+      "position": 65,
+      "item_id": "item_33",
+      "text": "BASCULE recherche-juridique — Je lui attribue la vérification du cadrage du besoin et de la méthode d’estimation. L’acheteur exact, le mode d’exercice, la date de lancement, la durée et la valeur estimée manquent : le choix de procédure reste donc ouvert.\n"
     },
     {
       "type": "tool_boundary",
-      "position": 68,
+      "position": 66,
       "item_type": "mcp_tool_call"
     },
     {
@@ -1057,12 +1050,13 @@
       "succeeded": true,
       "arguments_publics": {
         "code": "Code de la commande publique",
-        "number": "L2111-1"
+        "number": "L. 2111-1",
+        "limit": 3
       },
       "identifiants_dans_resultat": [
         "LEGIARTI000052393960"
       ],
-      "result_sha256": "328956eae63aa2b879895b6fe6991fff9242d42507e7e1332406461ed94466c6",
+      "result_sha256": "8cbc8e65d0864cf9ba417c4b1a57c6e02551fdad735d949cdc5a01931c11638b",
       "review_material": {
         "schema": "mcp-text-v1",
         "untrusted_data": true,
@@ -1070,17 +1064,58 @@
         "arguments_present": true,
         "arguments": {
           "code": "Code de la commande publique",
-          "number": "L2111-1"
+          "number": "L. 2111-1",
+          "limit": 3
         },
-        "arguments_sha256": "c213aa1a399d6f810529f04dffb11014f331bca7c76ee07e7538f8796b468d93",
-        "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000052393960\",\n      \"title\": \"Article L2111-1 — Code de la commande publique\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000052393960\",\n      \"number\": \"L2111-1\",\n      \"code\": \"Code de la commande publique\",\n      \"section\": \"Chapitre Ier : Définition du besoin\",\n      \"legal_status\": \"VIGUEUR\",\n      \"start_date\": \"2025-10-16T00:00:00.000+0000\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"L2111-1\",\n    \"code\": \"Code de la commande publique\",\n    \"date\": \"2026-10-20\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-10-20\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
+        "arguments_sha256": "62df3b5d6a414136894a5f2b293555af82d6ba4d2e78d3999ba82050d2af9a54",
+        "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000052393960\",\n      \"title\": \"Article L2111-1 — Code de la commande publique\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000052393960\",\n      \"number\": \"L2111-1\",\n      \"code\": \"Code de la commande publique\",\n      \"section\": \"Chapitre Ier : Définition du besoin\",\n      \"legal_status\": \"VIGUEUR\",\n      \"start_date\": \"2025-10-16T00:00:00.000+0000\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"L. 2111-1\",\n    \"code\": \"Code de la commande publique\",\n    \"date\": \"2026-10-22\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-10-22\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
         "text_available": true,
         "text_block_count": 1,
         "text_limit_bytes": 12000,
-        "included_text_bytes": 794,
-        "included_text_sha256": "947f7fd6978c3f238e74102ad691fa7bd8ca73cbb3c60f05fbfade5417d06b21",
-        "full_text_bytes": 794,
-        "full_text_sha256": "947f7fd6978c3f238e74102ad691fa7bd8ca73cbb3c60f05fbfade5417d06b21",
+        "included_text_bytes": 796,
+        "included_text_sha256": "392f3d17b71b064addceae4757ff014ff70953b4407d03011b27a9297180f32c",
+        "full_text_bytes": 796,
+        "full_text_sha256": "392f3d17b71b064addceae4757ff014ff70953b4407d03011b27a9297180f32c",
+        "truncated": false,
+        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
+        "upstream_truncation": "not_attested"
+      }
+    },
+    {
+      "type": "tool_boundary",
+      "position": 68,
+      "item_type": "mcp_tool_call"
+    },
+    {
+      "type": "mcp_call",
+      "server": "droit-francais",
+      "tool": "get_article",
+      "status": "completed",
+      "succeeded": true,
+      "arguments_publics": {
+        "id": "LEGIARTI000052393960"
+      },
+      "identifiants_dans_resultat": [
+        "LEGIARTI000052393960"
+      ],
+      "result_sha256": "a5310a61fdfdc67db39edc4b5015417ac4f07b74fc850bbe399c81cb0a4dabe3",
+      "review_material": {
+        "schema": "mcp-text-v1",
+        "untrusted_data": true,
+        "tool": "get_article",
+        "arguments_present": true,
+        "arguments": {
+          "id": "LEGIARTI000052393960"
+        },
+        "arguments_sha256": "a876cd7ad8b7c620c6d14a97748e6a226da0cac6a4e73750c1f48d1b56be1c9a",
+        "text": "{\n  \"id\": \"LEGIARTI000052393960\",\n  \"title\": \"Article L2111-1\",\n  \"text\": \"La nature et l'étendue des besoins à satisfaire sont déterminées avec précision avant le lancement de la consultation en prenant en compte des objectifs de développement durable dans leurs dimensions économique, sociale et environnementale. A ce titre, pour leurs marchés répondant à un besoin dont la valeur estimée hors taxe est égale ou supérieure aux seuils européens figurant dans un avis annexé au présent code, les acheteurs prennent en compte l'efficacité et la sobriété énergétiques.\",\n  \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000052393960\",\n  \"metadata\": {\n    \"number\": \"L2111-1\",\n    \"legal_status\": \"VIGUEUR\",\n    \"start_date\": 1760572800000,\n    \"end_date\": 32472144000000,\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\",\n    \"as_of_date\": \"2026-10-22\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null,\n    \"version_start_date\": \"2025-10-16\",\n    \"version_end_date\": \"2999-01-01\",\n    \"applicable_at_as_of_date\": true\n  }\n}",
+        "text_available": true,
+        "text_block_count": 1,
+        "text_limit_bytes": 12000,
+        "included_text_bytes": 1135,
+        "included_text_sha256": "5771b02415b90656b47c3952b10bcd0594e66e32ad293d734f0fc3300936cbac",
+        "full_text_bytes": 1135,
+        "full_text_sha256": "5771b02415b90656b47c3952b10bcd0594e66e32ad293d734f0fc3300936cbac",
         "truncated": false,
         "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
         "upstream_truncation": "not_attested"
@@ -1089,39 +1124,91 @@
     {
       "type": "tool_boundary",
       "position": 70,
-      "item_type": "command_execution"
+      "item_type": "mcp_tool_call"
     },
     {
-      "type": "tool_boundary",
-      "position": 71,
-      "item_type": "command_execution"
+      "type": "mcp_call",
+      "server": "droit-francais",
+      "tool": "search_articles",
+      "status": "completed",
+      "succeeded": true,
+      "arguments_publics": {
+        "code": "Code de la commande publique",
+        "number": "R. 2121-1",
+        "limit": 3
+      },
+      "identifiants_dans_resultat": [
+        "LEGIARTI000037730909"
+      ],
+      "result_sha256": "cf7a0eba72dffb43399eb3989697f262ef467f4a0cfc9c977860da0223856950",
+      "review_material": {
+        "schema": "mcp-text-v1",
+        "untrusted_data": true,
+        "tool": "search_articles",
+        "arguments_present": true,
+        "arguments": {
+          "code": "Code de la commande publique",
+          "number": "R. 2121-1",
+          "limit": 3
+        },
+        "arguments_sha256": "fa2532d4f12599b7f21ea9f05288beff9da95f0d047dc984bcb5eb0517a74b64",
+        "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000037730909\",\n      \"title\": \"Article R2121-1 — Code de la commande publique\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037730909\",\n      \"number\": \"R2121-1\",\n      \"code\": \"Code de la commande publique\",\n      \"section\": \"Section 1 : Dispositions générales\",\n      \"legal_status\": \"VIGUEUR\",\n      \"start_date\": \"2019-04-01T00:00:00.000+0000\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"R. 2121-1\",\n    \"code\": \"Code de la commande publique\",\n    \"date\": \"2026-10-22\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-10-22\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
+        "text_available": true,
+        "text_block_count": 1,
+        "text_limit_bytes": 12000,
+        "included_text_bytes": 796,
+        "included_text_sha256": "622a44d98c6b7f990a96b94f4e02b4b6674cbe6403c96e00d24ee463aad8f868",
+        "full_text_bytes": 796,
+        "full_text_sha256": "622a44d98c6b7f990a96b94f4e02b4b6674cbe6403c96e00d24ee463aad8f868",
+        "truncated": false,
+        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
+        "upstream_truncation": "not_attested"
+      }
     },
     {
       "type": "tool_boundary",
       "position": 72,
+      "item_type": "mcp_tool_call"
+    },
+    {
+      "type": "mcp_call",
+      "server": "droit-francais",
+      "tool": "get_article",
+      "status": "completed",
+      "succeeded": true,
+      "arguments_publics": {
+        "id": "LEGIARTI000037730909"
+      },
+      "identifiants_dans_resultat": [
+        "LEGIARTI000037730909"
+      ],
+      "result_sha256": "2e78af421ba49e7d877e7e3cf4dc40a19063ede150c49b8442a51ca695e3f300",
+      "review_material": {
+        "schema": "mcp-text-v1",
+        "untrusted_data": true,
+        "tool": "get_article",
+        "arguments_present": true,
+        "arguments": {
+          "id": "LEGIARTI000037730909"
+        },
+        "arguments_sha256": "4d9923c597309a7904dbbd6315d230283d0c69f81752dcea90267f3e6b534636",
+        "text": "{\n  \"id\": \"LEGIARTI000037730909\",\n  \"title\": \"Article R2121-1\",\n  \"text\": \"L'acheteur procède au calcul de la valeur estimée du besoin sur la base du montant total hors taxes du ou des marchés envisagés. Il tient compte des options, des reconductions ainsi que de l'ensemble des lots et, le cas échéant, des primes prévues au profit des candidats ou soumissionnaires.\",\n  \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037730909\",\n  \"metadata\": {\n    \"number\": \"R2121-1\",\n    \"legal_status\": \"VIGUEUR\",\n    \"start_date\": 1554076800000,\n    \"end_date\": 32472144000000,\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\",\n    \"as_of_date\": \"2026-10-22\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null,\n    \"version_start_date\": \"2019-04-01\",\n    \"version_end_date\": \"2999-01-01\",\n    \"applicable_at_as_of_date\": true\n  }\n}",
+        "text_available": true,
+        "text_block_count": 1,
+        "text_limit_bytes": 12000,
+        "included_text_bytes": 921,
+        "included_text_sha256": "3ef1dd129acc24b69c0b9496203a1d66eeefecd81b32d34757e56e527fe8748e",
+        "full_text_bytes": 921,
+        "full_text_sha256": "3ef1dd129acc24b69c0b9496203a1d66eeefecd81b32d34757e56e527fe8748e",
+        "truncated": false,
+        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
+        "upstream_truncation": "not_attested"
+      }
+    },
+    {
+      "type": "tool_boundary",
+      "position": 74,
       "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/dsi-fpt/references/cloud-hebergement.md"
-      ],
-      "complete_content_verified": [],
-      "output_sha256": "1df3618d1d5b2125a51ea5a733c0db664cbe7fc0bdd228a442d2860daeb5e179",
-      "exit_code": 0,
-      "status": "completed"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/dsi-fpt/references/templates/cahier-des-charges-technique.md"
-      ],
-      "complete_content_verified": [
-        ".agents/skills/dsi-fpt/references/templates/cahier-des-charges-technique.md"
-      ],
-      "output_sha256": "078bf9bc8551dd1a056678c820ec43807b2417f1ca64611095ddb7feedf24286",
-      "exit_code": 0,
-      "status": "completed"
     },
     {
       "type": "native_read",
@@ -1138,42 +1225,19 @@
     {
       "type": "tool_boundary",
       "position": 76,
-      "item_type": "mcp_tool_call"
+      "item_type": "command_execution"
     },
     {
-      "type": "mcp_call",
-      "server": "droit-francais",
-      "tool": "get_article",
-      "status": "completed",
-      "succeeded": true,
-      "arguments_publics": {
-        "id": "LEGIARTI000052393960"
-      },
-      "identifiants_dans_resultat": [
-        "LEGIARTI000052393960"
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dsi-fpt/references/templates/cahier-des-charges-technique.md"
       ],
-      "result_sha256": "61724313a69f0cd1deffc5d4db3e72e823ee259e479265366dcf390750aa2154",
-      "review_material": {
-        "schema": "mcp-text-v1",
-        "untrusted_data": true,
-        "tool": "get_article",
-        "arguments_present": true,
-        "arguments": {
-          "id": "LEGIARTI000052393960"
-        },
-        "arguments_sha256": "a876cd7ad8b7c620c6d14a97748e6a226da0cac6a4e73750c1f48d1b56be1c9a",
-        "text": "{\n  \"id\": \"LEGIARTI000052393960\",\n  \"title\": \"Article L2111-1\",\n  \"text\": \"La nature et l'étendue des besoins à satisfaire sont déterminées avec précision avant le lancement de la consultation en prenant en compte des objectifs de développement durable dans leurs dimensions économique, sociale et environnementale. A ce titre, pour leurs marchés répondant à un besoin dont la valeur estimée hors taxe est égale ou supérieure aux seuils européens figurant dans un avis annexé au présent code, les acheteurs prennent en compte l'efficacité et la sobriété énergétiques.\",\n  \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000052393960\",\n  \"metadata\": {\n    \"number\": \"L2111-1\",\n    \"legal_status\": \"VIGUEUR\",\n    \"start_date\": 1760572800000,\n    \"end_date\": 32472144000000,\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\",\n    \"as_of_date\": \"2026-10-20\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null,\n    \"version_start_date\": \"2025-10-16\",\n    \"version_end_date\": \"2999-01-01\",\n    \"applicable_at_as_of_date\": true\n  }\n}",
-        "text_available": true,
-        "text_block_count": 1,
-        "text_limit_bytes": 12000,
-        "included_text_bytes": 1135,
-        "included_text_sha256": "d8047362bd9ea3bbaeee1a9e9d5a4007246aaa25cf0d46ca2b6ce1c8a815fdf3",
-        "full_text_bytes": 1135,
-        "full_text_sha256": "d8047362bd9ea3bbaeee1a9e9d5a4007246aaa25cf0d46ca2b6ce1c8a815fdf3",
-        "truncated": false,
-        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
-        "upstream_truncation": "not_attested"
-      }
+      "complete_content_verified": [
+        ".agents/skills/dsi-fpt/references/templates/cahier-des-charges-technique.md"
+      ],
+      "output_sha256": "078bf9bc8551dd1a056678c820ec43807b2417f1ca64611095ddb7feedf24286",
+      "exit_code": 0,
+      "status": "completed"
     },
     {
       "type": "tool_boundary",
@@ -1183,56 +1247,54 @@
     {
       "type": "native_read",
       "paths": [
-        ".agents/skills/dsi-fpt/references/socle-sources-verification.md"
+        ".agents/skills/recherche-juridique/references/format-citation.md"
       ],
-      "complete_content_verified": [
-        ".agents/skills/dsi-fpt/references/socle-sources-verification.md"
-      ],
-      "output_sha256": "59efe3fca96f06a90c53e2df6e5f2907ac1cbd690e37a4b6322814d62f18bef0",
+      "complete_content_verified": [],
+      "output_sha256": "f3a11e11a374c3f6f6dce09a6baa672b0916f0dad178a5726ea8a94a85e4e09c",
       "exit_code": 0,
       "status": "completed"
     },
     {
       "type": "reply",
-      "text": "**[INCOMPLET] — DCP conduit le cadrage de l’achat ; DSI prend les spécifications et la réversibilité technique.** Les trois entrées ont été intégralement lues dans l’ordre demandé. Aucun fait décrit ne déclenche de STOP.\n\nBASCULE recherche-juridique — Vérification des règles, des sources et des points non confirmés.\n\n**Analyse recherche-juridique — 20/10/2026**\n\nLe texte primaire reçu confirme la détermination précise du besoin avant consultation et la prise en compte des objectifs de développement durable : [article L. 2111-1 du Code de la commande publique](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000052393960), version depuis le 16/10/2025, identifiant LEGIARTI000052393960, consulté via le MCP ce jour. Le numéro, le contenu et l’applicabilité au 20/10/2026 concordent entre recherche et récupération.\n\nLa procédure à retenir et les droits contractuels de sortie restent non conclus : périmètre, estimation, date de lancement et pièces contractuelles manquent.\n\nBASCULE dcp-fpt — Cadrage, passation et exécution juridique du marché.\n\n**Analyse dcp-fpt**\n\nSelon `dcp-fpt/references/besoin-strategie-achat.md`, le service achat prépare :\n\n- la fiche de besoin avec le métier : objectifs, bénéficiaires, prestations attendues et exclusions ;\n- le périmètre d’achat, la qualification des prestations, la méthode d’estimation et l’examen de l’allotissement ;\n- le montage, le calendrier et les pièces de consultation après instruction des éléments manquants ;\n- l’articulation juridique des engagements techniques proposés par DSI.\n\n**Pièces manquantes :** identité et catégorie de l’acheteur, mode d’exercice de l’achat, conventions et délégations utiles, expression du besoin métier, durée envisagée, options et reconductions, éléments d’estimation, date de lancement, contrats existants éventuels. Distinguer préparation par l’achat, attribution, signature et suivi ; les habilitations restent à vérifier.\n\nBASCULE dsi-fpt — Contenu technique d’un achat informatique.  \nÀ reprendre : spécifications, niveaux de service, réversibilité et exécution technique.\n\n**Analyse dsi-fpt**\n\nDSI peut poursuivre dans cette réponse, son entrée et ses références utiles ayant été lues. Voici la trame technique à compléter, fondée sur `dsi-fpt/references/cloud-hebergement.md`, `references/contrats-prestataires.md` et `objets/solution-saas.md` :\n\n| Volet | Pièces manquantes | Résultat et preuve à préparer |\n|---|---|---|\n| Périmètre | Inventaire des usages, actifs, applications, volumes, interfaces et dépendances | Exigences fonctionnelles et techniques reliées à des scénarios de recette métier |\n| Hébergement | Description de l’offre, localisations, exploitation, administration et responsabilités | Dossier technique documenté et contrôles associés |\n| Support et exploitation | Organisation, plages nécessaires, criticité, supervision et interlocuteurs | Niveaux de service mesurables ; valeurs à définir |\n| Continuité | Interruptions et pertes acceptables, sauvegardes, reprise et fonctionnement dégradé | Scénarios de restauration et de reprise testables |\n| Réversibilité | Inventaire des données, pièces jointes, métadonnées, configurations, formats, documentation et dépendances de licence | Export puis reprise exploitable sur jeu synthétique ; contrôle de complétude, intégrité et fonctionnement métier |\n\nPour chaque ligne, désigner le responsable d’exploitation, le producteur de la preuve et le validateur métier. Préparer aussi l’assistance à la transition, le retour arrière et les preuves de clôture des accès. Aucun engagement chiffré n’est présumé acquis.\n\nLe cahier technique restera **[INCOMPLET]**, selon `dsi-fpt/references/templates/cahier-des-charges-technique.md`, jusqu’à réception de ces éléments.\n\nBASCULE dirfi-fpt — Volet financier du marché.  \nChiffrage, crédits et validation financière restent hors du traitement présent ; cette entrée n’est pas activée.\n\nBASCULE dpo-ct — Clauses relatives aux données personnelles, si leur présence est confirmée par l’inventaire.  \nCe volet reste réservé ; cette entrée n’est pas activée."
+      "text": "**DCP pilote le cadrage du marché ; DSI prend en charge les spécifications, les niveaux de service et la réversibilité technique.** Les trois entrées ont été lues intégralement dans l’ordre demandé. Aucun déclencheur de STOP n’apparaît dans ce cas fictif.\n\nLe dossier reste **[INCOMPLET]** : aucun cahier technique ni inventaire n’a été fourni.\n\nBASCULE dcp-fpt — Cadrage et traitement juridique du marché.\n\n**Analyse dcp-fpt**\n\nLe service achat prépare le périmètre des prestations, la qualification du marché, la méthode d’estimation, l’examen de l’allotissement et le dossier de consultation. Le choix de procédure reste ouvert.\n\nPièces et informations manquantes :\n\n- identité et catégorie de l’acheteur, bénéficiaires du logiciel ;\n- mode d’exercice : achat intégré, mutualisé, groupement, centrale ou assistance ; convention correspondante ;\n- expression du besoin métier, périmètre des prestations, durée envisagée, options et reconductions ;\n- estimation documentée et date prévisionnelle de lancement ;\n- délégations permettant d’identifier séparément les responsables de la conduite, de l’attribution et de la signature ;\n- contrat existant et projets de pièces contractuelles, s’ils existent.\n\nCette répartition suit **dcp-fpt, §5.5–5.6**, et sa branche « Besoin et stratégie d’achat ».\n\nBASCULE dsi-fpt — Contenu technique d’un achat informatique.  \nÀ reprendre : spécifications, niveaux de service, réversibilité et exécution technique.\n\n**Analyse dsi-fpt — trame technique [INCOMPLET]**\n\nLes éléments suivants constituent un programme de préparation, sans architecture ni niveau de service présumé.\n\n| Volet confié à DSI | Pièces à réunir | Preuve de recette à définir |\n|---|---|---|\n| Périmètre et usages | Expression fonctionnelle, utilisateurs, volumes, contraintes métier | Scénarios métier et validation du service utilisateur |\n| Actifs et dépendances | Inventaire applicatif, interfaces, données, formats et composants tiers | Tests d’échanges et rapprochement des résultats |\n| Hébergement et sécurité | Description de l’hébergement, répartition des responsabilités, exigences de sécurité instruites | Contrôles documentés correspondant aux exigences retenues |\n| Exploitation et support | Responsable d’exploitation à désigner, plages de service, maintenance, supervision, escalade | Mesures et comptes rendus permettant de constater le service |\n| Continuité | Criticité, interruptions acceptables, sauvegardes, modalités de reprise | Essai de restauration et validation métier |\n| Réversibilité | Inventaire des éléments à restituer, formats, documentation, destination de reprise et assistance attendue | Export puis réimport d’un jeu synthétique ; contrôle de complétude, cohérence et fonctionnement dans la cible |\n\nChaque exigence devra identifier son origine, son responsable et son validateur. Les valeurs restent **à définir avec le métier et l’exploitant**.\n\nLa réversibilité technique doit démontrer une reprise utilisable, au-delà du téléchargement d’un export. Les droits, obligations, frais et effets contractuels restent à instruire séparément. Références internes mobilisées : **dsi-fpt, cadrage obligatoire du volet technique ; branches « Cloud et hébergement », « Contrats et prestataires » ; gabarit « Cahier des charges technique »**.\n\nBASCULE dirfi-fpt — Volet financier du marché.\n\nLe chiffrage financier, les crédits et la validation de l’engagement restent réservés : cette entrée n’est pas activée.\n\nBASCULE dpo-ct — Clauses relatives aux données personnelles.\n\nSi le logiciel traite des données personnelles, ce volet devra être instruit par cette entrée, non activée ici. Aucune clause correspondante n’est rédigée.\n\nBASCULE recherche-juridique — Vérification des règles et limites documentaires.\n\n**Analyse recherche-juridique**\n\nLe MCP droit-francais a fourni les textes et métadonnées suivants, contrôlés après recherche puis lecture :\n\n- **Définition du besoin** : précision de sa nature et de son étendue avant consultation — [art. L. 2111-1 du Code de la commande publique](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000052393960), version depuis le 16/10/2025.\n- **Estimation** : montant total hors taxes des marchés envisagés, avec options, reconductions, lots et primes éventuelles — [art. R. 2121-1 du même code](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037730909), version depuis le 01/04/2019.\n\nConsultation le **22/10/2026** ; les deux versions sont indiquées applicables à cette date. Confiance élevée sur ces seuls constats textuels. La procédure, les pouvoirs de signature et les engagements contractuels de réversibilité ne sont pas confirmés faute des éléments nécessaires."
     },
     {
       "type": "visible_text",
       "position": 80,
-      "item_id": "item_40",
-      "text": "**[INCOMPLET] — DCP conduit le cadrage de l’achat ; DSI prend les spécifications et la réversibilité technique.** Les trois entrées ont été intégralement lues dans l’ordre demandé. Aucun fait décrit ne déclenche de STOP.\n\nBASCULE recherche-juridique — Vérification des règles, des sources et des points non confirmés.\n\n**Analyse recherche-juridique — 20/10/2026**\n\nLe texte primaire reçu confirme la détermination précise du besoin avant consultation et la prise en compte des objectifs de développement durable : [article L. 2111-1 du Code de la commande publique](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000052393960), version depuis le 16/10/2025, identifiant LEGIARTI000052393960, consulté via le MCP ce jour. Le numéro, le contenu et l’applicabilité au 20/10/2026 concordent entre recherche et récupération.\n\nLa procédure à retenir et les droits contractuels de sortie restent non conclus : périmètre, estimation, date de lancement et pièces contractuelles manquent.\n\nBASCULE dcp-fpt — Cadrage, passation et exécution juridique du marché.\n\n**Analyse dcp-fpt**\n\nSelon `dcp-fpt/references/besoin-strategie-achat.md`, le service achat prépare :\n\n- la fiche de besoin avec le métier : objectifs, bénéficiaires, prestations attendues et exclusions ;\n- le périmètre d’achat, la qualification des prestations, la méthode d’estimation et l’examen de l’allotissement ;\n- le montage, le calendrier et les pièces de consultation après instruction des éléments manquants ;\n- l’articulation juridique des engagements techniques proposés par DSI.\n\n**Pièces manquantes :** identité et catégorie de l’acheteur, mode d’exercice de l’achat, conventions et délégations utiles, expression du besoin métier, durée envisagée, options et reconductions, éléments d’estimation, date de lancement, contrats existants éventuels. Distinguer préparation par l’achat, attribution, signature et suivi ; les habilitations restent à vérifier.\n\nBASCULE dsi-fpt — Contenu technique d’un achat informatique.  \nÀ reprendre : spécifications, niveaux de service, réversibilité et exécution technique.\n\n**Analyse dsi-fpt**\n\nDSI peut poursuivre dans cette réponse, son entrée et ses références utiles ayant été lues. Voici la trame technique à compléter, fondée sur `dsi-fpt/references/cloud-hebergement.md`, `references/contrats-prestataires.md` et `objets/solution-saas.md` :\n\n| Volet | Pièces manquantes | Résultat et preuve à préparer |\n|---|---|---|\n| Périmètre | Inventaire des usages, actifs, applications, volumes, interfaces et dépendances | Exigences fonctionnelles et techniques reliées à des scénarios de recette métier |\n| Hébergement | Description de l’offre, localisations, exploitation, administration et responsabilités | Dossier technique documenté et contrôles associés |\n| Support et exploitation | Organisation, plages nécessaires, criticité, supervision et interlocuteurs | Niveaux de service mesurables ; valeurs à définir |\n| Continuité | Interruptions et pertes acceptables, sauvegardes, reprise et fonctionnement dégradé | Scénarios de restauration et de reprise testables |\n| Réversibilité | Inventaire des données, pièces jointes, métadonnées, configurations, formats, documentation et dépendances de licence | Export puis reprise exploitable sur jeu synthétique ; contrôle de complétude, intégrité et fonctionnement métier |\n\nPour chaque ligne, désigner le responsable d’exploitation, le producteur de la preuve et le validateur métier. Préparer aussi l’assistance à la transition, le retour arrière et les preuves de clôture des accès. Aucun engagement chiffré n’est présumé acquis.\n\nLe cahier technique restera **[INCOMPLET]**, selon `dsi-fpt/references/templates/cahier-des-charges-technique.md`, jusqu’à réception de ces éléments.\n\nBASCULE dirfi-fpt — Volet financier du marché.  \nChiffrage, crédits et validation financière restent hors du traitement présent ; cette entrée n’est pas activée.\n\nBASCULE dpo-ct — Clauses relatives aux données personnelles, si leur présence est confirmée par l’inventaire.  \nCe volet reste réservé ; cette entrée n’est pas activée."
+      "item_id": "item_41",
+      "text": "**DCP pilote le cadrage du marché ; DSI prend en charge les spécifications, les niveaux de service et la réversibilité technique.** Les trois entrées ont été lues intégralement dans l’ordre demandé. Aucun déclencheur de STOP n’apparaît dans ce cas fictif.\n\nLe dossier reste **[INCOMPLET]** : aucun cahier technique ni inventaire n’a été fourni.\n\nBASCULE dcp-fpt — Cadrage et traitement juridique du marché.\n\n**Analyse dcp-fpt**\n\nLe service achat prépare le périmètre des prestations, la qualification du marché, la méthode d’estimation, l’examen de l’allotissement et le dossier de consultation. Le choix de procédure reste ouvert.\n\nPièces et informations manquantes :\n\n- identité et catégorie de l’acheteur, bénéficiaires du logiciel ;\n- mode d’exercice : achat intégré, mutualisé, groupement, centrale ou assistance ; convention correspondante ;\n- expression du besoin métier, périmètre des prestations, durée envisagée, options et reconductions ;\n- estimation documentée et date prévisionnelle de lancement ;\n- délégations permettant d’identifier séparément les responsables de la conduite, de l’attribution et de la signature ;\n- contrat existant et projets de pièces contractuelles, s’ils existent.\n\nCette répartition suit **dcp-fpt, §5.5–5.6**, et sa branche « Besoin et stratégie d’achat ».\n\nBASCULE dsi-fpt — Contenu technique d’un achat informatique.  \nÀ reprendre : spécifications, niveaux de service, réversibilité et exécution technique.\n\n**Analyse dsi-fpt — trame technique [INCOMPLET]**\n\nLes éléments suivants constituent un programme de préparation, sans architecture ni niveau de service présumé.\n\n| Volet confié à DSI | Pièces à réunir | Preuve de recette à définir |\n|---|---|---|\n| Périmètre et usages | Expression fonctionnelle, utilisateurs, volumes, contraintes métier | Scénarios métier et validation du service utilisateur |\n| Actifs et dépendances | Inventaire applicatif, interfaces, données, formats et composants tiers | Tests d’échanges et rapprochement des résultats |\n| Hébergement et sécurité | Description de l’hébergement, répartition des responsabilités, exigences de sécurité instruites | Contrôles documentés correspondant aux exigences retenues |\n| Exploitation et support | Responsable d’exploitation à désigner, plages de service, maintenance, supervision, escalade | Mesures et comptes rendus permettant de constater le service |\n| Continuité | Criticité, interruptions acceptables, sauvegardes, modalités de reprise | Essai de restauration et validation métier |\n| Réversibilité | Inventaire des éléments à restituer, formats, documentation, destination de reprise et assistance attendue | Export puis réimport d’un jeu synthétique ; contrôle de complétude, cohérence et fonctionnement dans la cible |\n\nChaque exigence devra identifier son origine, son responsable et son validateur. Les valeurs restent **à définir avec le métier et l’exploitant**.\n\nLa réversibilité technique doit démontrer une reprise utilisable, au-delà du téléchargement d’un export. Les droits, obligations, frais et effets contractuels restent à instruire séparément. Références internes mobilisées : **dsi-fpt, cadrage obligatoire du volet technique ; branches « Cloud et hébergement », « Contrats et prestataires » ; gabarit « Cahier des charges technique »**.\n\nBASCULE dirfi-fpt — Volet financier du marché.\n\nLe chiffrage financier, les crédits et la validation de l’engagement restent réservés : cette entrée n’est pas activée.\n\nBASCULE dpo-ct — Clauses relatives aux données personnelles.\n\nSi le logiciel traite des données personnelles, ce volet devra être instruit par cette entrée, non activée ici. Aucune clause correspondante n’est rédigée.\n\nBASCULE recherche-juridique — Vérification des règles et limites documentaires.\n\n**Analyse recherche-juridique**\n\nLe MCP droit-francais a fourni les textes et métadonnées suivants, contrôlés après recherche puis lecture :\n\n- **Définition du besoin** : précision de sa nature et de son étendue avant consultation — [art. L. 2111-1 du Code de la commande publique](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000052393960), version depuis le 16/10/2025.\n- **Estimation** : montant total hors taxes des marchés envisagés, avec options, reconductions, lots et primes éventuelles — [art. R. 2121-1 du même code](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037730909), version depuis le 01/04/2019.\n\nConsultation le **22/10/2026** ; les deux versions sont indiquées applicables à cette date. Confiance élevée sur ces seuls constats textuels. La procédure, les pouvoirs de signature et les engagements contractuels de réversibilité ne sont pas confirmés faute des éléments nécessaires."
     },
     {
       "type": "turn_completed",
       "usage": {
-        "input_tokens": 1273323,
-        "cached_input_tokens": 1188480,
+        "input_tokens": 2212646,
+        "cached_input_tokens": 2123776,
         "cache_write_input_tokens": 0,
-        "output_tokens": 3892,
-        "reasoning_output_tokens": 757
+        "output_tokens": 4016,
+        "reasoning_output_tokens": 511
       }
     }
   ],
-  "events_sha256": "2ef3f722873862489597ad52040ffb749c9d2bbaa3b7292142db6f32398f21e6",
-  "runner_sha256": "2e919320d544cae3a03c304e3dc67301f2ea682f88b53a69d882769646408e96",
+  "events_sha256": "a27a52ca585167dc071d5e2ed25f72552e4492a9ae4e6fae69b59811c163fc56",
+  "runner_sha256": "89fd874415c5830dc67be3e2fa76a77eb9bafdd1f7434ecad696d35db1ef1602",
   "profile": "codex-copies-natives-mcp-v5",
-  "measurement_commit": "13b4e1e537e5a8097a004ee913abcc9d079114a7",
-  "qualification_target_commit": "aa811706eb395cbfea1f6f58db520176e2e480f0",
+  "measurement_commit": "acfa12e8f23373712984e6c3588116fbbb2b815d",
+  "qualification_target_commit": "4b8e44087ad5f14ea48957e560a4ad901d2892d4",
   "derivation": {
     "kind": "projection_of_original_session",
     "original": {
       "evidence_path": "campagne/l8-dcp-vers-dsi-disponible/reponse/session.json",
-      "sha256": "569119bfa36b5d524babed2a5816638d21dd3cc9032b1a6243a85cf136724874"
+      "sha256": "83deac3e9f6e641fa3ae7e9aa4bf857596266f09c1fd270ef59345e7090722d5"
     },
     "summary": {
       "evidence_path": "campagne/resume-campagne.json",
-      "sha256": "1d000ebaefb77c6e782370d5d9439e819c53a9e11a9a05eea69cdd57ce9a63c9"
+      "sha256": "b289933dcefc412ee24603522f43cc02ec2b095138d3f0a2b131470e11144d48"
     }
   },
   "original_session": {
     "evidence_path": "source-l14/campagne/l8-dcp-vers-dsi-disponible/reponse/session.json",
-    "sha256": "569119bfa36b5d524babed2a5816638d21dd3cc9032b1a6243a85cf136724874"
+    "sha256": "83deac3e9f6e641fa3ae7e9aa4bf857596266f09c1fd270ef59345e7090722d5"
   },
   "source_bundle_root": "tests/evidence/mesure-courante/source-l14",
-  "payload_sha256": "dd3199509c0964bd6f8f03e9d5cf62d37934ad3dbb7bf4fcc661d164e5630e6d"
+  "payload_sha256": "70088e5e306e0e3562479345e76b188bdf753207fb8d90df36260caf2358cf76"
 }

@@ -112,6 +112,16 @@ crédits et au calendrier ; toute qualification du régime indemnitaire appartie
 créable par la seule volonté locale : faire contrôler son fondement, la parité,
 les critères généraux et l'absence de traitement ad personam.
 
+Pour une prime de départ à la retraite, appliquer le repère conditionnel de
+`SKILL.md` §5.5 **après `BASCULE drh-fpt`** : absence d'indemnité de départ
+instituée selon la réponse ministérielle du 22/05/2025, puis possibilité
+d'évoquer le CIA **si l'agent relève du RIFSEEP — à vérifier —**. Le lien avec
+la délibération et la valeur professionnelle, sans prime ad personam ni
+régularisation après coup d'un versement dépourvu de base, reste à traiter
+côté **`drh-fpt`, module rémunération et paie, §5.7**. Ne jamais présumer le
+régime de l'agent. Source et consultation du 21/10/2026 :
+`references/references-verifiees.md` §8 ; ne pas dupliquer l'analyse DRH ici.
+
 ---
 
 ## 4. Orienter vers la branche (couche 2)

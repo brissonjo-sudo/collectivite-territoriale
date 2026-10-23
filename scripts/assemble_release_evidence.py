@@ -21,9 +21,20 @@ from public_projection import publish
 from dcp_reference import reference, copy_reference
 from review_codex_campaign import validate_report
 from human_resolution import load_bundle
-from cli_toolchains import prove_toolchains, toolchains
+from cli_toolchains import (contract_file, measurement_contract, prove_toolchains,
+                            require_cycle_version, toolchains)
 
 ROOT = Path(__file__).resolve().parents[1]
+
+
+def measurement_cases(root: Path, commit: str) -> dict[str, dict]:
+    """Sélection fermée pour les entrées directes de l'assembleur, sans champ de preuve."""
+    contract = measurement_contract(root, commit)
+    version = json.loads((root / '.codex-plugin/plugin.json').read_bytes())['version']
+    require_cycle_version(contract, version)
+    cases = (campaign.load_cycle_cases(root, contract_file(contract)) if contract is not None
+             else json.loads((root / 'tests/cas-plugin.json').read_bytes()))
+    return {c['id']: c for c in cases}
 
 
 def qualified_run(case: dict, proof: dict, commit: str, relative: str,
@@ -53,11 +64,14 @@ def campaign_inputs(root: Path, commit: str, directory: Path, baseline: dict) ->
     """Recalcule les contrôles des dix-huit cas, pas seulement leurs statuts."""
     summary_path = directory / "summary.json"
     untrusted = json.loads(summary_path.read_bytes())
-    cases = {c["id"]: c for c in json.loads((root / "tests/cas-plugin.json").read_bytes())}
+    # V2 et v3 conservent exactement les dix-huit identifiants historiques.
+    # Couverture et origine réelle restent contrôlées avant le choix du contrat.
+    expected_ids = {c['id'] for c in json.loads((root / 'tests/cas-plugin.json').read_bytes())}
     runs = untrusted.get("runs", [])
-    if len(runs) != len(cases) or {r.get("case_id") for r in runs} != set(cases):
+    if len(runs) != len(expected_ids) or {r.get("case_id") for r in runs} != expected_ids:
         raise ValueError("Un run manque, est ajouté ou dupliqué")
     summary = checked(summary_path, commit, {"real_campaign"})
+    cases = measurement_cases(root, commit)
     if any(summary.get(k) != v for k, v in baseline.items()):
         raise ValueError("Baseline de campagne divergente")
     loaded = {}
@@ -105,7 +119,7 @@ def assemble(root: Path, commit: str, campaign_dir: Path, smoke_path: Path,
         campaign_data, runs = linked['campaign'], linked['runs']
     else:
         campaign_data, runs = campaign_inputs(root, commit, campaign_dir, baseline)
-    cases = linked['cases'] if linked else {c["id"]: c for c in json.loads((root / "tests/cas-plugin.json").read_bytes())}
+    cases = linked['cases'] if linked else measurement_cases(root, commit)
     upstream = json.loads((root / "upstream.json").read_bytes())["skills"]
     dcp = dcp_input(root, dcp_path)
     smoke = checked(smoke_path, commit, {"real_smoke"}, 'smoke_cli')
@@ -141,11 +155,11 @@ def assemble(root: Path, commit: str, campaign_dir: Path, smoke_path: Path,
         if proof["evidence_sha256"] != fingerprint(runs[item["case_id"]][0]) or any(i["statut"] == "violation" for i in proof["report"]["invariants"]):
             raise ValueError("Relecture non liée à la réponse ou violation identifiée")
         reviews[item["case_id"]] = (path, proof)
-    measurement_commit = linked['source_commit'] if linked else None
+    measurement_commit = linked['source_commit'] if linked else commit
     cli_identities = prove_toolchains([p['origin'] for _, p in runs.values()],
         [p['origin'] for _, p in reviews.values()], smoke_receipts,
-        {**toolchains(measurement_commit=measurement_commit), 'smoke_cli': smoke['smoke_cli']},
-        measurement_commit=measurement_commit)
+        {**toolchains(root, measurement_commit=measurement_commit), 'smoke_cli': smoke['smoke_cli']},
+        measurement_commit=measurement_commit, root=root)
     public_output = output_outside(root, output)
     output = output_outside(root, public_output.with_name(public_output.name + '-originaux'))
     # Toutes les entrées sont refusées avant toute écriture si synthétiques ou incomplètes.
@@ -153,6 +167,7 @@ def assemble(root: Path, commit: str, campaign_dir: Path, smoke_path: Path,
     wanted = [*CONFIGURATION, "upstream.json", "tests/cas-plugin.json", "scripts/run_codex_campaign.py",
               "docs/adr/0007-distribution-open-source-et-deploiement.md", "docs/deploiement-collectivite.md"]
     wanted += list(baseline["runtime_sha256"])
+    wanted += list(baseline["toolchain_sha256"])
     wanted += ['scripts/measurement-cli.json', 'scripts/smoke-cli.json', 'scripts/toolchain-transition-0013.json']
     for name in wanted:
         target = output / name; target.parent.mkdir(parents=True, exist_ok=True)

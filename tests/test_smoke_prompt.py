@@ -10,6 +10,7 @@ ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / 'scripts'))
 import run_codex_smoke as smoke
 import cli_toolchains as cli
+from support_distribution_contract import closed_transition_root
 
 PREFIX = (
     "Utilise les seuls skills pertinents du plugin installé, choisis spontanément leurs noms. "
@@ -51,19 +52,20 @@ class SmokePromptTests(unittest.TestCase):
         self.assertFalse(smoke.complete_entry(incomplete, 'recherche-juridique'))
 
     def transition(self):
-        manifest = json.loads((ROOT / cli.TRANSITION_D).read_bytes())
+        self.transition_root = closed_transition_root(self, ROOT)
+        manifest = json.loads((self.transition_root / cli.TRANSITION_D).read_bytes())
         measured = {'plugin_commit': cli.MEASUREMENT_D, 'toolchain_sha256': manifest['source_files_sha256']}
-        target = {'toolchain_sha256': {name: cli.sha(ROOT / name) for name in cli.MIGRATION_D}}
+        target = {'toolchain_sha256': {name: cli.sha(self.transition_root / name) for name in cli.MIGRATION_D}}
         return manifest, measured, target
 
     def test_transition_d_accepte_uniquement_le_runner_exact_epingle(self):
         _, measured, target = self.transition()
-        self.assertEqual(cli.compatibility_files(ROOT, measured, target), cli.MIGRATION_D)
+        self.assertEqual(cli.compatibility_files(self.transition_root, measured, target), cli.MIGRATION_D)
         for field in ('source', 'target'):
             old, new = copy.deepcopy(measured), copy.deepcopy(target)
             (old if field == 'source' else new)['toolchain_sha256']['scripts/run_codex_smoke.py'] = '0'*64
             with self.subTest(field=field), self.assertRaisesRegex(ValueError, 'transition d refusée'):
-                cli.compatibility_files(ROOT, old, new)
+                cli.compatibility_files(self.transition_root, old, new)
 
     def test_transition_d_refuse_un_chemin_supplementaire(self):
         manifest, measured, target = self.transition()
@@ -71,9 +73,9 @@ class SmokePromptTests(unittest.TestCase):
         manifest['target_files_sha256']['scripts/qualify_distribution.py'] = '0'*64
         raw = json.dumps(manifest).encode()
         original = Path.read_bytes
-        with patch.object(Path, 'read_bytes', lambda p: raw if p == ROOT / cli.TRANSITION_D else original(p)):
+        with patch.object(Path, 'read_bytes', lambda p: raw if p == self.transition_root / cli.TRANSITION_D else original(p)):
             with self.assertRaisesRegex(ValueError, 'transition d refusée'):
-                cli.compatibility_files(ROOT, measured, target)
+                cli.compatibility_files(self.transition_root, measured, target)
 
 
 if __name__ == '__main__':

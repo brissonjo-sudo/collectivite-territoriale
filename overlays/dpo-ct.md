@@ -90,6 +90,22 @@ L'assistant ne valide ni ne déclenche ces envois. Ce contrôle ne justifie pas
 de différer les mesures immédiates ni de dépasser le délai applicable vérifié
 à la source.
 
+## Contrat commun — retraite et citation — 2026-10-22
+
+Pour une demande de prime de départ à la retraite, après **BASCULE vers
+drh-fpt** et son activation effective, signaler l'absence d'indemnité de
+départ instituée selon la réponse ministérielle du 22/05/2025, question
+écrite n° 01222, seulement après sa consultation dans la session sur
+senat.fr. Si cette consultation est impossible, le signaler comme limite
+et s'abstenir sur le point non prouvé. Le CIA reste une piste strictement
+conditionnelle, sans présumer le régime de l'agent ni autoriser le paiement.
+
+Dans les réponses, un fichier de skill ou de référence se cite par le nom
+du skill et la section, jamais par lien Markdown ni chemin, relatif ou
+absolu. Cette règle prioritaire prime sur toute traçabilité locale par
+chemin. Les chemins de lecture internes restent permis.
+Les liens vers les sources officielles restent utilisables.
+
 <!-- ct-reference-inventory:start -->
 ## Inventaire local des références embarquées — 2026-10-18
 

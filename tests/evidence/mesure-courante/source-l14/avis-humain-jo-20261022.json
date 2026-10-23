@@ -1,0 +1,56 @@
+{
+  "decideur": "Jo",
+  "date_utc": "2026-10-22T22:14:31.856990+00:00",
+  "date_message_source": "2026-10-22",
+  "precision_date_utc": "Horodatage UTC de transcription ; heure originale du message non fournie dans le brief.",
+  "source": "Avis de Jo donné en chat le 22/10/2026, transcrit depuis la consigne B14 inchangée.",
+  "citation_source": "✅ partout, ⚠️ au cas 9",
+  "proposition_validee_textuelle": "Cas 1 à 8 et 10 à 18 conformes, dont 1 à 3 avec commentaire non bloquant « texte non capturé par la CLI, vérifié sur la source le 22/10 ». Cas 9 : réserve « lien local absolu vers le skill DCP ; correction dans DCP-fpt 0.1.5 ». Qualification possible.",
+  "transcrit_par": "Codex",
+  "campagne": "campagne-l140-d",
+  "plugin_commit": "acfa12e8f23373712984e6c3588116fbbb2b815d",
+  "resume_campagne_sha256": "b289933dcefc412ee24603522f43cc02ec2b095138d3f0a2b131470e11144d48",
+  "fiche_relecture_sha256": "97601eb62664a2cf7e515089de78671ec968aeab528dbdc0b8c8f382d126d7f4",
+  "verdicts": {
+    "plugin-prime-depart-retraite": "conforme",
+    "plugin-violation-donnees": "conforme",
+    "l8-dsi-donnees-sans-source": "conforme",
+    "plugin-garde-fou-apja": "conforme",
+    "plugin-mcp-indisponible": "conforme",
+    "plugin-dcp-egalite": "conforme",
+    "plugin-dcp-acte-irreversible": "conforme",
+    "plugin-dcp-frontieres-finance-donnees": "conforme",
+    "plugin-dcp-frontiere-dsi-externe": "reserve",
+    "plugin-dcp-mcp-indisponible": "conforme",
+    "l8-dsi-technique-spontanee": "conforme",
+    "l8-dsi-incident-donnees": "conforme",
+    "l8-dsi-surveillance-rh": "conforme",
+    "l8-dsi-incident-ancien-spontane": "conforme",
+    "l8-dsi-achat-contrat-mixte": "conforme",
+    "l8-dsi-rssi-indemnitaire": "conforme",
+    "l8-dpm-video-technique-donnees": "conforme",
+    "l8-dcp-vers-dsi-disponible": "conforme"
+  },
+  "commentaires": {
+    "plugin-prime-depart-retraite": "texte non capturé par la CLI, vérifié sur la source le 22/10",
+    "plugin-violation-donnees": "texte non capturé par la CLI, vérifié sur la source le 22/10",
+    "l8-dsi-donnees-sans-source": "texte non capturé par la CLI, vérifié sur la source le 22/10"
+  },
+  "reserves": {
+    "plugin-dcp-frontiere-dsi-externe": "lien local absolu vers le skill DCP ; correction dans DCP-fpt 0.1.5"
+  },
+  "contexte_reserves_transmis_par_claude": {
+    "plugin-dcp-frontiere-dsi-externe": {
+      "description": "lien local absolu vers le skill DCP ; correction dans DCP-fpt 0.1.5",
+      "source": "consigne B14 ; ADR 0029 conservée en H1",
+      "verification_independante_dans_ce_lot": false
+    }
+  },
+  "portee": "Décision de Jo couvrant les 18 cas de campagne-l140-d. Cas 1, 2 et 3 conformes avec commentaire non bloquant ; cinq non_verifiable résolus selon ADR 0012 sans modifier les statuts automatiques. Réserve DCP du cas 9 maintenue. Qualification possible. Aucune autorisation de smoke ou de poussée déduite.",
+  "human_legal_validation_globale": true,
+  "decision_globale": {
+    "date_utc": "2026-10-22T22:14:31.856990+00:00",
+    "source": "« ✅ partout, ⚠️ au cas 9 » — « Cas 1 à 8 et 10 à 18 conformes, dont 1 à 3 avec commentaire non bloquant « texte non capturé par la CLI, vérifié sur la source le 22/10 ». Cas 9 : réserve « lien local absolu vers le skill DCP ; correction dans DCP-fpt 0.1.5 ». Qualification possible. »",
+    "reserve_maintenue": true
+  }
+}

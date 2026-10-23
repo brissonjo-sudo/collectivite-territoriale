@@ -13,7 +13,7 @@ from typing import Any
 import run_codex_campaign as campaign
 from measurement_common import bound, canonical, checked, digest, fingerprint
 from review_codex_campaign import validate_report
-from cli_toolchains import compatibility_files, measurement_contract
+from cli_toolchains import compatibility_files, contract_file, measurement_contract, require_cycle_version
 
 
 def dated(value: str) -> datetime:
@@ -121,17 +121,20 @@ def original_bytes(directory: Path, binding: dict) -> bytes:
 
 
 def bundle_cases(root: Path, directory: Path, index: dict) -> dict[str, dict]:
-    """Le commit lié de d exige son contrat v2 exact ; aucun repli sur v1."""
+    """Le commit lié exige son contrat v2/v3 exact ; aucun repli pour 1.4.0."""
     contract = measurement_contract(root, index['measurement_commit'])
+    # Le lecteur historique de d reste utilisable depuis le candidat 1.4.0.
+    # load_bundle contrôle la version cible avant tout assemblage.
     if contract is None:
         cases = json.loads((root / 'tests/cas-plugin.json').read_bytes())
     else:
+        relative = contract_file(contract)
         binding = index.get('case_contract') or {}
         if (binding.get('sha256') != contract['case_contract_sha256']
-                or fingerprint(root / campaign.CYCLE_CASES_FILE) != contract['case_contract_sha256']):
-            raise ValueError('Contrat de cycle v2 absent ou divergent')
+                or fingerprint(root / relative) != contract['case_contract_sha256']):
+            raise ValueError('Contrat de cycle ' + Path(relative).stem.rsplit('-', 1)[1] + ' absent ou divergent')
         bound(directory, binding)
-        cases = campaign.load_cycle_cases(root)
+        cases = campaign.load_cycle_cases(root, relative)
     return {case['id']: case for case in cases}
 
 
@@ -146,6 +149,7 @@ def load_bundle(root: Path, directory: Path, target: dict) -> dict[str, Any]:
     index = json.loads((directory / 'liaisons-humaines.json').read_bytes())
     if index.get('schema') != 'ct-human-linked-v1':
         raise ValueError('Index humain non pris en charge')
+    version = json.loads((root / '.codex-plugin/plugin.json').read_bytes())['version']
     for name, info in index['files'].items():
         path = bound(directory, {'evidence_path': name, 'sha256': info['sha256']})
         if path.stat().st_size != info['octets']:
@@ -178,6 +182,7 @@ def load_bundle(root: Path, directory: Path, target: dict) -> dict[str, Any]:
                     or value.get('technical_status') != 'passed' or value.get('response_technical_failures')):
                 raise ValueError('Échec technique ou session étrangère non résoluble')
             compatible(root, value, target)
+            require_cycle_version(measurement_contract(root, commit), version)
             identity = value['origin']['thread_id']
             if identity in threads:
                 raise ValueError('Conversation réutilisée')

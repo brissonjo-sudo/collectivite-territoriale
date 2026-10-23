@@ -22,7 +22,7 @@ from urllib.parse import urlsplit
 
 from run_plugin_campaign import ROOT, MCP_TOOLS, load_cases
 from codex_event_contract import timeline, behavior_errors
-from campaign_contract import CYCLE_CASES_FILE, load_cycle_cases
+from campaign_contract import CYCLE_CASES_FILE, campaign_cycle, load_cycle_cases
 from measurement_common import candidate, output_outside, write_new, run_cli, seal, digest, canonical, fingerprint
 
 PROFILE = "codex-copies-natives-mcp-v5"
@@ -152,6 +152,8 @@ def prompt(case: dict[str, Any]) -> str:
         "MCP volontairement absent : applique la voie dégradée, aucune source officielle accessible."
     )
     web_rule = (
+        case["official_source_instruction"] + " Seul www.senat.fr est autorisé pour le web."
+        if case.get("official_source_hosts") == ["www.senat.fr"] and case["id"] == "plugin-prime-depart-retraite" else
         "Vérifie les articles 33 et 34 du RGPD en ouvrant EUR-Lex ou la CNIL ; ne présume aucun délai si la récupération échoue. Seuls eur-lex.europa.eu et www.cnil.fr sont autorisés pour le web."
         if case["web_mode"] == "official_source" else "N'utilise aucun web."
     )
@@ -189,7 +191,9 @@ def behavior_prompt(case: dict[str, Any]) -> str:
             "y compris lecture d'entrée. Une réponse intermédiaire STOP est permise avant les lectures ; "
             "la réponse finale vient ensuite. " + selection + "\n"
             "Une entrée sélectionnée doit être lue entièrement par ses segments contigus, un appel par segment, "
-            "max_output_tokens=8000 ; une annonce seule n'est pas une activation prouvée. "
+            "max_output_tokens=8000 ; "
+            "Lis une seule entrée à la fois : termine tous ses segments avant d'ouvrir une autre entrée, sans lectures en parallèle. "
+            "une annonce seule n'est pas une activation prouvée. "
             "Lis les références utiles seulement sous .agents/skills avec Get-Content ; aucune autre commande, "
             "aucun script ni réseau par shell. Aucun web. " + sources + "\nCatalogue de lectures :\n"
             + "\n\n".join(catalog) + "\nDemande :\n" + case["prompt"])
@@ -304,6 +308,11 @@ def failures(clean: list[dict[str, Any]], case: dict[str, Any], exit_code: int,
             errors.append("non_official_web_source")
     if not any(e["type"] == "reply" for e in clean) or not any(e["type"] == "turn_completed" for e in clean):
         errors.append("result_error_or_absent")
+    from campaign_contract import V4_PATH_INVARIANT
+    if V4_PATH_INVARIANT in case['invariants']:
+        from skill_citation import forbidden_skill_path
+        if any(forbidden_skill_path(e.get('text', '')) for e in clean if e['type'] == 'reply'):
+            errors.append('skill_path_in_response')
     return errors
 
 
@@ -335,6 +344,7 @@ def execute(case: dict[str, Any], cli: str, model: str, timeout: int) -> tuple[l
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--case", action="append", dest="case_ids")
+    parser.add_argument("--cycle-v4", action="store_true", help="Contrat v4 explicite, sans équivalence v2/v3")
     parser.add_argument("--codex", default="codex")
     parser.add_argument("--model", default="gpt-6.1-sol")
     parser.add_argument("--timeout", type=int, default=360)
@@ -346,14 +356,14 @@ def main() -> int:
     args = parser.parse_args()
     if args.timeout <= 0:
         parser.error("--timeout doit être positif")
-    cases = load_cycle_cases(ROOT)
+    case_contract, cases = campaign_cycle(ROOT, args.plugin_commit, preparation=args.dry_run, cycle_v4=args.cycle_v4)
     selected = [c for c in cases if not args.case_ids or c["id"] in args.case_ids]
     if args.case_ids and len(selected) != len(set(args.case_ids)):
         parser.error("Cas inconnu ou dupliqué")
     if args.dry_run:
         print(json.dumps({"dry_run": True, "synthetic": True, "plugin_commit": args.plugin_commit,
                           "case_ids": [c["id"] for c in selected], "model": args.model,
-                          "case_contract": CYCLE_CASES_FILE, "case_contract_sha256": fingerprint(ROOT / CYCLE_CASES_FILE),
+                          "case_contract": case_contract, "case_contract_sha256": fingerprint(ROOT / case_contract),
                           "sessions": len(selected), "execution": "aucun processus modèle"}, ensure_ascii=True))
         return 0
     if not args.authorize_model_calls:
@@ -384,7 +394,7 @@ def main() -> int:
         if receipt["kind"] != "real_cli":
             errors.append("real_cli_receipt_missing")
         evidence = {**baseline, "profile": PROFILE, "case_id": case["id"], "model_requested": args.model,
-                    "case_contract": CYCLE_CASES_FILE, "case_contract_sha256": fingerprint(ROOT / CYCLE_CASES_FILE),
+                    "case_contract": case_contract, "case_contract_sha256": fingerprint(ROOT / case_contract),
                     "plugin_commit": args.plugin_commit, "origin": receipt,
                     "completed_at": datetime.now(timezone.utc).isoformat(),
                     "runner_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
@@ -411,7 +421,7 @@ def main() -> int:
                 "failures": run["failures"]})
     write_new(args.output_dir / "summary.json", seal({**baseline, "profile": PROFILE,
         "runner_sha256": fingerprint(Path(__file__)), "origin": {"kind": "real_campaign", "synthetic": False, "dry_run": False},
-        "case_contract": CYCLE_CASES_FILE, "case_contract_sha256": fingerprint(ROOT / CYCLE_CASES_FILE),
+        "case_contract": case_contract, "case_contract_sha256": fingerprint(ROOT / case_contract),
         "case_count": len(selected), "technical_passed_count": sum(r["technical_status"] == "passed" for r in recorded),
         "runs": recorded, "human_legal_validation": False, "publication_ready": False}))
     return result
