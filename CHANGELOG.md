@@ -1,5 +1,13 @@
 # Historique des versions
 
+## Non publiée
+
+- Correctif #21 : le contrôle des citations refuse les URL visant `SKILL.md`,
+  `references/`, `objets/` ou `.agents/skills/`, quel que soit l'hôte, y compris
+  les chemins encodés. Les liens vers les sources officielles restent permis.
+  Ce changement d'outillage exige une nouvelle release mesurée ; les preuves
+  et les réserves de la 1.4.0 restent inchangées.
+
 ## 1.4.0 — Qualifiée — non publiée
 
 Actualisation du 2026-10-23 : campagne `campagne-l140-d` 18/18, avis de Jo du
