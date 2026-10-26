@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 270" width="800" height="270" role="img" aria-labelledby="t d">
   <title id="t">Collectivité territoriale</title>
-  <desc id="d">Dessin au trait : à gauche, le texte « Six métiers, un seul réflexe : la source. » suivi d'un drapeau français ; au centre, six agents de la collectivité posent ensemble : un policier municipal qui salue, une responsable des ressources humaines avec un dossier, un directeur financier avec un graphique en euros, une déléguée à la protection des données avec un bouclier et un cadenas, une acheteuse publique qui tamponne un contrat et un informaticien avec un ordinateur portable ; au-dessus d'eux vole une luciole qui porte un Code rouge ; à droite, une mairie pavoisée dont l'horloge tourne.</desc>
+  <desc id="d">Dessin au trait : à gauche, le texte « Toute la mairie autour de votre question. » ; au centre, six agents de la collectivité posent ensemble : un policier municipal qui salue, une responsable des ressources humaines avec un dossier, un directeur financier avec un graphique en euros, une déléguée à la protection des données avec un bouclier et un cadenas, une acheteuse publique qui tamponne un contrat et un informaticien avec un ordinateur portable ; au-dessus d'eux vole une luciole qui porte un Code rouge ; à droite, une mairie pavoisée dont l'horloge tourne.</desc>
   <defs>
     <clipPath id="card"><rect width="800" height="270" rx="18"/></clipPath>
 
@@ -59,15 +59,10 @@
 
     <!-- ===== à gauche : la chute, au lettrage manuscrit ===== -->
     <g filter="url(#ink)" fill="#111" font-family="'Segoe Print', 'Chalkboard SE', 'Comic Sans MS', 'Comic Neue', cursive">
-      <text x="32" y="112" font-size="24">Six métiers,</text>
-      <text x="32" y="144" font-size="24">un seul réflexe :</text>
-      <text x="32" y="186" font-size="32" font-weight="700" textLength="150" lengthAdjust="spacingAndGlyphs">la source.</text>
-      <path d="M34 198 Q108 205 182 194" fill="none" stroke="#d6322b" stroke-width="3.5" stroke-linecap="round"/>
-    </g>
-    <g filter="url(#ink)">
-      <line x1="196" y1="154" x2="196" y2="198" stroke="#111" stroke-width="2.4" stroke-linecap="round"/>
-      <circle cx="196" cy="153" r="2.6" fill="#111"/>
-      <use href="#flag" transform="translate(197 156)"/>
+      <text x="32" y="112" font-size="24">Toute la mairie</text>
+      <text x="32" y="144" font-size="24">autour de</text>
+      <text x="32" y="186" font-size="30" font-weight="700" textLength="212" lengthAdjust="spacingAndGlyphs">votre question.</text>
+      <path d="M34 198 Q140 205 244 194" fill="none" stroke="#d6322b" stroke-width="3.5" stroke-linecap="round"/>
     </g>
 
     <!-- ===== à droite : la mairie, son horloge et son drapeau ===== -->

@@ -1,4 +1,4 @@
-<p align="center"><img src="assets/banner.svg" width="800" alt="Dessin au trait : six agents de la collectivité posent devant une mairie pavoisée (un policier municipal qui salue, une responsable RH, un directeur financier, une déléguée à la protection des données, une acheteuse publique qui tamponne un contrat et un informaticien), avec au-dessus d'eux une luciole qui porte un Code rouge. Six métiers, un seul réflexe : la source."></p>
+<p align="center"><img src="assets/banner.svg" width="800" alt="Dessin au trait : six agents de la collectivité posent devant une mairie pavoisée (un policier municipal qui salue, une responsable RH, un directeur financier, une déléguée à la protection des données, une acheteuse publique qui tamponne un contrat et un informaticien), avec au-dessus d'eux une luciole qui porte un Code rouge. Toute la mairie autour de votre question."></p>
 
 # Collectivité territoriale : six métiers, un droit vérifié
 
