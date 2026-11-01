@@ -8,7 +8,7 @@ utilisateurs du plugin.
 
 ### Outil de développement local
 
-[Ponytail](https://github.com/DietrichGebert/ponytail) 5.1.0 est installé dans
+[Ponytail](https://github.com/DietrichGebert/ponytail) 5.3.3 est installé dans
 `.agents/skills/ponytail/` pour développer ce dépôt uniquement. Il n'est pas
 un skill distribué du plugin. Son point d'entrée vérifie la dernière release
 stable publiée, le commit de son étiquette et les empreintes locales avant
