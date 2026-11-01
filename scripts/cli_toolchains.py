@@ -22,6 +22,15 @@ CYCLE_V4 = ('scripts/cas-plugin-cycle-v4.json', 'be70f64b4650a72c15a33e477c81f84
 TRANSITION_140_V4 = 'scripts/toolchain-transition-0028.json'
 MIGRATION_140_V4 = {'scripts/cli_toolchains.py', 'scripts/measurement-cli.json', TRANSITION_140_V4}
 ADR_140_V4 = 'docs/adr/0028-contrat-v4-et-tentative-d.md'
+# ADR 0031 : H2 remplace seulement cette affectation par le SHA complet du H1 mesuré.
+MEASUREMENT_150_V4: str | None = None
+TRANSITION_150_V4 = 'scripts/toolchain-transition-0031.json'
+MIGRATION_150_V4 = {'scripts/cli_toolchains.py', 'scripts/measurement-cli.json', TRANSITION_150_V4}
+ADR_150_V4 = 'docs/adr/0031-mesure-1-5-0-contrat-v4.md'
+# Anciennes mesures sans contrat lié : lecture v1 conservée (ADR 0025). Liste fermée.
+UNBOUND_HISTORICAL_VERSIONS = frozenset({'1.1.0', '1.1.1', '1.2.0', '1.3.0'})
+# Versions dont le smoke est épinglé sur la CLI de la mesure ; 1.4.0 garde scripts/smoke-cli.json.
+SMOKE_FOLLOWS_MEASUREMENT = frozenset({'1.5.0'})
 CYCLE_CONTRACTS = {
     '1.3.0': ('scripts/cas-plugin-cycle-v2.json',
               '65593a1c46bd31b403c5b83344f14951cbc3455f456eefcde2c6853fa68a9478'),
@@ -46,6 +55,31 @@ CAMPAIGN_140_CLI = {
         'codex-windows-sandbox-setup.exe': 'c4da812016cbfb92d9a62791f78460c59e9662faadb0a2720d3aa5d0535b80bd',
     },
 }
+# ADR 0031 : pin de campagne et de smoke de la mesure 1.5.0 (copie figée du harnais).
+CAMPAIGN_150_CLI = {
+    'version': 'codex-cli 0.164.0-alpha.11.1',
+    'sha256': '1103e9e09c71fa2cd0afd6d8f3b9a2d63174fe8efd7cb5bd09f1cb14ef58a098',
+    'companions_sha256': {
+        'codex-code-mode-host.exe': '2727abaa2b30eb4afbe64b1da51a26cb594dd18dda82c6292b5373b15a758257',
+        'codex-command-runner.exe': '598fbfbad52ccd717b60aa94185541ccecf27e849349026f93884e9519f7ac61',
+        'codex-windows-sandbox-setup.exe': '5765c3951b2c247611dec18176660bd3d2e81f20baba61096b454888ee821b2c',
+    },
+}
+
+
+def v4_measurements() -> dict:
+    """Mesures v4 liées, lues à l'appel : (commit, transition, ADR, migration, CLI) par version."""
+    return {'1.4.0': (MEASUREMENT_140_V4, TRANSITION_140_V4, ADR_140_V4, MIGRATION_140_V4, CAMPAIGN_140_CLI),
+            '1.5.0': (MEASUREMENT_150_V4, TRANSITION_150_V4, ADR_150_V4, MIGRATION_150_V4, CAMPAIGN_150_CLI)}
+
+
+def v4_version(commit: str | None) -> str | None:
+    """Version dont le commit v4 lié égale `commit` ; deux versions sur un même commit sont refusées."""
+    found = [version for version, entry in v4_measurements().items()
+             if entry[0] is not None and commit == entry[0]]
+    if len(found) > 1:
+        raise ValueError('Commit v4 lié à deux versions')
+    return found[0] if found else None
 
 
 def sha(path: Path) -> str:
@@ -74,10 +108,11 @@ def _pin(value: dict, smoke: bool) -> dict:
 
 def measurement_contract(root: Path, commit: str | None) -> dict | None:
     """Contrat choisi par un commit explicitement autorisé, jamais par un reçu."""
-    if MEASUREMENT_140_V4 is not None and commit == MEASUREMENT_140_V4:
-        prepared_cycle_v4(root)
+    bound_version = v4_version(commit)
+    if bound_version is not None:
+        prepared_cycle_v4(root, bound_version)
         value = json.loads((root / 'scripts/measurement-cli.json').read_bytes()).get('campaign_measurements', {}).get(commit)
-        if value != {'campaign_cli': CAMPAIGN_140_CLI, 'case_contract_sha256': CYCLE_V4[1]}:
+        if value != {'campaign_cli': v4_measurements()[bound_version][4], 'case_contract_sha256': CYCLE_V4[1]}:
             raise ValueError('Mesure v4 sans contrat CLI/cas épinglé')
         return {'campaign_cli': _pin(value['campaign_cli'], True), 'case_contract_sha256': CYCLE_V4[1]}
     if commit == MEASUREMENT_D:
@@ -115,11 +150,12 @@ def contract_file(contract: dict) -> str:
     raise ValueError('Contrat de cycle inconnu')
 
 
-def require_cycle_version(contract: dict | None, version: str) -> None:
-    """Une mesure 1.4.0 exige le commit v3 lié ; 1.3.0 conserve v2."""
+def require_cycle_version(contract: dict | None, version: str, commit: str | None = None) -> None:
+    """Une mesure 1.4.0 exige le commit v3 lié ; v4 est lié par version et commit ; 1.3.0 conserve v2."""
     if contract is not None and contract.get('case_contract_sha256') == CYCLE_V4[1]:
-        if version != '1.4.0':
-            raise ValueError('Contrat de cycle v4 réservé à la mesure 1.4.0')
+        entry = v4_measurements().get(version)
+        if entry is None or entry[0] is None or commit != entry[0]:
+            raise ValueError('Contrat de cycle v4 réservé aux mesures liées 1.4.0 et 1.5.0')
         return
     if version == '1.4.0' and (contract is None
             or contract['case_contract_sha256'] != CYCLE_CONTRACTS[version][1]):
@@ -128,6 +164,8 @@ def require_cycle_version(contract: dict | None, version: str) -> None:
         raise ValueError('Contrat de cycle v3 réservé à la mesure 1.4.0')
     if contract is not None and contract_file(contract) == CYCLE_CONTRACTS['1.3.0'][0] and version != '1.3.0':
         raise ValueError('Contrat de cycle v2 réservé à la mesure 1.3.0')
+    if contract is None and version not in UNBOUND_HISTORICAL_VERSIONS:
+        raise ValueError('Mesure ' + str(version) + ' sans commit lié à un contrat de cycle')
 
 
 def toolchains(root: Path = ROOT, measurement_commit: str | None = None) -> dict:
@@ -136,6 +174,8 @@ def toolchains(root: Path = ROOT, measurement_commit: str | None = None) -> dict
         campaign = json.loads((root / 'scripts/measurement-cli.json').read_bytes())['codex']
         smoke = json.loads((root / 'scripts/smoke-cli.json').read_bytes())['smoke_cli']
         contract = measurement_contract(root, measurement_commit)
+        if v4_version(measurement_commit) in SMOKE_FOLLOWS_MEASUREMENT:
+            smoke = contract['campaign_cli']
         return {'campaign_cli': contract['campaign_cli'] if contract else _pin(campaign, False),
                 'smoke_cli': _pin(smoke, True)}
     except (OSError, KeyError, TypeError) as exc:
@@ -273,8 +313,9 @@ def transition_140_files(root: Path, measured: dict, target: dict) -> set[str]:
 
 def compatibility_files(root: Path, measured: dict, target: dict) -> set[str]:
     """Transition L14 -> ADR 0013 : liste fermée et hashes exacts, pas d'exemption générale."""
-    if MEASUREMENT_140_V4 is not None and measured.get('plugin_commit') == MEASUREMENT_140_V4:
-        return transition_140_v4_files(root, measured, target)
+    transition_version = v4_version(measured.get('plugin_commit'))
+    if transition_version is not None:
+        return transition_v4_files(root, measured, target, transition_version)
     old, current = measured['toolchain_sha256'], target['toolchain_sha256']
     if MEASUREMENT_140 is not None and measured.get('plugin_commit') == MEASUREMENT_140:
         return transition_140_files(root, measured, target)
@@ -336,34 +377,43 @@ def compatibility_files(root: Path, measured: dict, target: dict) -> set[str]:
     return set(MIGRATION)
 
 
-def prepared_cycle_v4(root: Path) -> str:
+def prepared_cycle_v4(root: Path, version: str = '1.4.0') -> str:
     """V4 explicite à empreinte fermée ; aucune équivalence avec v2/v3."""
-    value = json.loads((root / 'scripts/measurement-cli.json').read_bytes()).get('prepared_cycles', {}).get('1.4.0-v4')
+    entry = v4_measurements().get(version)
+    value = json.loads((root / 'scripts/measurement-cli.json').read_bytes()).get('prepared_cycles', {}).get(version + '-v4')
     name, fingerprint = CYCLE_V4
-    if (value != {'case_contract_file': name, 'case_contract_sha256': fingerprint,
-                 'measurement_commit': MEASUREMENT_140_V4} or sha(root / name) != fingerprint):
+    if (entry is None or value != {'case_contract_file': name, 'case_contract_sha256': fingerprint,
+                                   'measurement_commit': entry[0]} or sha(root / name) != fingerprint):
         raise ValueError('Contrat de cycle v4 absent ou divergent')
     return name
 
 
 def transition_140_v4_files(root: Path, measured: dict, target: dict) -> set[str]:
+    """Enveloppe historique de la transition 1.4.0 sous contrat v4."""
+    return transition_v4_files(root, measured, target, '1.4.0')
+
+
+def transition_v4_files(root: Path, measured: dict, target: dict, version: str) -> set[str]:
     """H1→H2 fermé sur trois chemins et les seules données de liaison décidées."""
     try:
-        commit = MEASUREMENT_140_V4
+        commit, transition_path, adr, migration, campaign_cli = v4_measurements()[version]
+        # Aucun commit déjà lié à une autre mesure ne peut servir de H1.
+        refused = {MEASUREMENT_D, MEASUREMENT_140,
+                   *(entry[0] for other, entry in v4_measurements().items() if other != version)}
         if (not isinstance(commit, str) or re.fullmatch(r'[0-9a-f]{40}', commit) is None
-                or commit == MEASUREMENT_D or measured.get('plugin_commit') != commit):
+                or commit in refused or measured.get('plugin_commit') != commit):
             raise ValueError('SHA H1 non autorisé')
         old, current = measured['toolchain_sha256'], target['toolchain_sha256']
         if not isinstance(old, dict) or not isinstance(current, dict):
-            raise ValueError('Inventaire de transition 1.4.0 invalide')
-        transition = json.loads((root / TRANSITION_140_V4).read_bytes())
-        names = MIGRATION_140_V4 - {TRANSITION_140_V4}
+            raise ValueError('Inventaire de transition ' + version + ' invalide')
+        transition = json.loads((root / transition_path).read_bytes())
+        names = migration - {transition_path}
         if (not isinstance(transition, dict)
                 or set(transition) != {'adr', 'measurement_commit', 'case_contract_sha256', 'campaign_cli',
                                 'source_files_sha256', 'target_files_sha256'}
-                or transition['adr'] != ADR_140_V4 or transition['measurement_commit'] != commit
+                or transition['adr'] != adr or transition['measurement_commit'] != commit
                 or transition['case_contract_sha256'] != CYCLE_V4[1]
-                or transition['campaign_cli'] != CAMPAIGN_140_CLI
+                or transition['campaign_cli'] != campaign_cli
                 or not isinstance(transition['source_files_sha256'], dict)
                 or not isinstance(transition['target_files_sha256'], dict)
                 or set(transition['source_files_sha256']) != names
@@ -371,11 +421,11 @@ def transition_140_v4_files(root: Path, measured: dict, target: dict) -> set[str
                 or any(re.fullmatch(r'[0-9a-f]{64}', str(value)) is None
                        for key in ('source_files_sha256', 'target_files_sha256')
                        for value in transition[key].values())
-                or current.get(TRANSITION_140_V4) != sha(root / TRANSITION_140_V4)):
-            raise ValueError('Manifeste 1.4.0 non fermé ou divergent')
+                or current.get(transition_path) != sha(root / transition_path)):
+            raise ValueError('Manifeste ' + version + ' non fermé ou divergent')
         if any(old.get(name) != current.get(name) for name in set(old) | set(current)
-               if name not in MIGRATION_140_V4):
-            raise ValueError('Fichier supplémentaire dans la transition 1.4.0')
+               if name not in migration):
+            raise ValueError('Fichier supplémentaire dans la transition ' + version)
 
         def source(name: str) -> bytes:
             return subprocess.check_output(['git', '-c', 'safe.directory=' + str(root),
@@ -387,12 +437,12 @@ def transition_140_v4_files(root: Path, measured: dict, target: dict) -> set[str
             if (old.get(name) != source_hash or source_hash != transition['source_files_sha256'][name]
                     or current.get(name) != transition['target_files_sha256'][name]
                     or sha(root / name) != transition['target_files_sha256'][name]):
-                raise ValueError('Empreinte source ou cible 1.4.0 divergente')
-        raw_manifest = source(TRANSITION_140_V4)
+                raise ValueError('Empreinte source ou cible ' + version + ' divergente')
+        raw_manifest = source(transition_path)
         expected_open = {**transition, 'measurement_commit': None,
                          'source_files_sha256': {name: None for name in names},
                          'target_files_sha256': {name: None for name in names}}
-        if (old.get(TRANSITION_140_V4) != hashlib.sha256(raw_manifest).hexdigest()
+        if (old.get(transition_path) != hashlib.sha256(raw_manifest).hexdigest()
                 or json.loads(raw_manifest) != expected_open):
             raise ValueError('Manifeste H1 différent de la préparation non fermée')
         if target.get('plugin_commit') is not None:
@@ -401,33 +451,34 @@ def transition_140_v4_files(root: Path, measured: dict, target: dict) -> set[str
                 raise ValueError('SHA cible absent ou invalide')
             changed = subprocess.check_output(['git', '-c', 'safe.directory=' + str(root),
                 'diff', '--name-only', commit, destination], cwd=root, stderr=subprocess.PIPE).decode().splitlines()
-            if any(name not in MIGRATION_140_V4 for name in changed):
-                raise ValueError('Fichier Git supplémentaire dans la transition 1.4.0')
+            if any(name not in migration for name in changed):
+                raise ValueError('Fichier Git supplémentaire dans la transition ' + version)
         for name, fingerprint in (*CYCLE_CONTRACTS.values(), CYCLE_V4):
             if (old.get(name) != fingerprint or current.get(name) != fingerprint
                     or sha(root / name) != fingerprint
                     or hashlib.sha256(source(name)).hexdigest() != fingerprint):
                 raise ValueError('Contrat v2, v3 ou v4 altéré')
-        assignment = b'MEASUREMENT_140_V4: str | None = None\n'
+        prefix = 'MEASUREMENT_' + version.replace('.', '') + '_V4: str | None = '
+        assignment = (prefix + 'None\n').encode()
         raw_cli = source_bytes['scripts/cli_toolchains.py']
-        expected_cli = raw_cli.replace(assignment, ("MEASUREMENT_140_V4: str | None = '" + commit + "'\n").encode(), 1)
+        expected_cli = raw_cli.replace(assignment, (prefix + "'" + commit + "'\n").encode(), 1)
         if raw_cli.count(assignment) != 1 or (root / 'scripts/cli_toolchains.py').read_bytes() != expected_cli:
             raise ValueError('Modification du lecteur autre que la liaison H1')
         config = json.loads(source_bytes['scripts/measurement-cli.json'])
         name, fingerprint = CYCLE_V4
-        if (config['prepared_cycles']['1.4.0-v4'] != {'case_contract_file': name,
+        if (config['prepared_cycles'][version + '-v4'] != {'case_contract_file': name,
                 'case_contract_sha256': fingerprint, 'measurement_commit': None}
                 or commit in config['campaign_measurements']):
             raise ValueError('Verrou H1 déjà lié ou différent de la préparation')
         expected_config = copy.deepcopy(config)
-        expected_config['prepared_cycles']['1.4.0-v4']['measurement_commit'] = commit
+        expected_config['prepared_cycles'][version + '-v4']['measurement_commit'] = commit
         expected_config['campaign_measurements'][commit] = {
-            'case_contract_sha256': fingerprint, 'campaign_cli': CAMPAIGN_140_CLI}
+            'case_contract_sha256': fingerprint, 'campaign_cli': campaign_cli}
         if json.loads((root / 'scripts/measurement-cli.json').read_bytes()) != expected_config:
             raise ValueError('Modification du verrou autre que la liaison H1')
         contract = measurement_contract(root, commit)
-        if contract != {'case_contract_sha256': fingerprint, 'campaign_cli': CAMPAIGN_140_CLI}:
-            raise ValueError('Contrat de mesure 1.4.0 divergent')
+        if contract != {'case_contract_sha256': fingerprint, 'campaign_cli': campaign_cli}:
+            raise ValueError('Contrat de mesure ' + version + ' divergent')
     except (OSError, KeyError, TypeError, ValueError, subprocess.SubprocessError) as exc:
-        raise ValueError('Protocole ou outillage mesuré différent : transition 1.4.0 refusée') from exc
-    return set(MIGRATION_140_V4)
+        raise ValueError('Protocole ou outillage mesuré différent : transition ' + version + ' refusée') from exc
+    return set(migration)
