@@ -2,3 +2,6 @@ __pycache__/
 *.pyc
 .claude/settings.local.json
 tests/evidence/.work/
+
+# Graphe graphify local, régénérable
+graphify-out/

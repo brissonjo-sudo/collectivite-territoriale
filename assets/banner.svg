@@ -1,0 +1,329 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 270" width="800" height="270" role="img" aria-labelledby="t d">
+  <title id="t">Collectivité territoriale</title>
+  <desc id="d">Dessin au trait : à gauche, le texte « Toute la mairie autour de votre question. » ; au centre, six agents de la collectivité posent ensemble : un policier municipal qui salue, une responsable des ressources humaines avec un dossier, un directeur financier avec un graphique en euros, une déléguée à la protection des données avec un bouclier et un cadenas, une acheteuse publique qui tamponne un contrat et un informaticien avec un ordinateur portable ; au-dessus d'eux vole une luciole qui porte un Code rouge ; à droite, une mairie pavoisée dont l'horloge tourne.</desc>
+  <defs>
+    <clipPath id="card"><rect width="800" height="270" rx="18"/></clipPath>
+
+    <!-- trait d'encre tremblé, redessiné en continu -->
+    <filter id="ink" x="-10%" y="-10%" width="120%" height="120%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="1" result="n">
+        <animate attributeName="seed" values="1;4;7" dur="0.36s" calcMode="discrete" repeatCount="indefinite"/>
+      </feTurbulence>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="2.6" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+
+    <radialGradient id="glowCode"><stop offset="0" stop-color="#F5C542" stop-opacity="0.7"/><stop offset="1" stop-color="#F5C542" stop-opacity="0"/></radialGradient>
+
+    <!-- drapeau français qui flotte ; pivot sur la hampe en (0,0) -->
+    <g id="flag">
+      <g stroke="#111" stroke-width="1.2">
+        <rect x="0" y="0" width="10" height="20" fill="#0055A4"/>
+        <rect x="10" y="0" width="10" height="20" fill="#ffffff"/>
+        <rect x="20" y="0" width="10" height="20" fill="#EF4135"/>
+        <animateTransform attributeName="transform" type="skewY" values="0;-7;0;6;0" dur="1.6s" repeatCount="indefinite"/>
+      </g>
+    </g>
+
+    <!-- la luciole de la recherche juridique : un Code rouge -->
+    <g id="ff-code">
+      <circle r="16" fill="url(#glowCode)"><animate attributeName="r" values="13;19;13" dur="1.4s" repeatCount="indefinite"/></circle>
+      <g stroke="#111" stroke-width="1.2">
+        <ellipse cx="-5" cy="-11" rx="3.2" ry="5" fill="#ffffff" fill-opacity="0.85">
+          <animate attributeName="ry" values="5;1.6;5" dur="0.12s" repeatCount="indefinite"/>
+        </ellipse>
+        <ellipse cx="5" cy="-11" rx="3.2" ry="5" fill="#ffffff" fill-opacity="0.85">
+          <animate attributeName="ry" values="5;1.6;5" dur="0.12s" repeatCount="indefinite"/>
+        </ellipse>
+        <circle cx="0" cy="-9" r="2.6" fill="#111"/>
+        <path d="M-1 -11 l-3 -5 M1 -11 l3 -5" fill="none"/>
+      </g>
+      <circle r="8.5" fill="#ffffff" stroke="#111" stroke-width="1.2"/>
+      <rect x="-4.5" y="-5.5" width="9" height="11" rx="1" fill="#d6322b" stroke="#111" stroke-width="0.9"/>
+      <line x1="-3" y1="-2.5" x2="3" y2="-2.5" stroke="#f5c542" stroke-width="1.2"/>
+    </g>
+  </defs>
+
+  <g clip-path="url(#card)">
+    <rect width="800" height="270" fill="#ffffff"/>
+
+    <!-- sol -->
+    <g filter="url(#ink)" stroke="#111" stroke-linecap="round" fill="none">
+      <path d="M24 240 C220 237 520 243 776 239" stroke-width="2.2"/>
+      <path d="M60 250h10M150 256h6M240 250h10M352 258h6M452 252h10M600 258h6M700 250h10" stroke-width="2"/>
+    </g>
+    <g fill="#ececec">
+      <ellipse cx="285" cy="241" rx="27" ry="3.5"/>
+      <ellipse cx="395" cy="241" rx="27" ry="3.5"/>
+      <ellipse cx="500" cy="241" rx="27" ry="3.5"/>
+    </g>
+
+    <!-- ===== à gauche : la chute, au lettrage manuscrit ===== -->
+    <g filter="url(#ink)" fill="#111" font-family="'Segoe Print', 'Chalkboard SE', 'Comic Sans MS', 'Comic Neue', cursive">
+      <text x="32" y="112" font-size="24">Toute la mairie</text>
+      <text x="32" y="144" font-size="24">autour de</text>
+      <text x="32" y="186" font-size="30" font-weight="700" textLength="212" lengthAdjust="spacingAndGlyphs">votre question.</text>
+      <path d="M34 198 Q140 205 244 194" fill="none" stroke="#d6322b" stroke-width="3.5" stroke-linecap="round"/>
+    </g>
+
+    <!-- ===== à droite : la mairie, son horloge et son drapeau ===== -->
+    <g filter="url(#ink)" stroke="#111" stroke-linejoin="round" stroke-linecap="round">
+      <line x1="690" y1="104" x2="690" y2="62" stroke-width="2.4"/>
+      <circle cx="690" cy="61" r="2.6" fill="#111"/>
+      <use href="#flag" transform="translate(691 64)"/>
+      <polygon points="602,138 690,104 778,138" fill="#f4f4f4" stroke-width="2.5"/>
+      <circle cx="690" cy="125" r="8.5" fill="#ffffff" stroke-width="2"/>
+      <line x1="690" y1="125" x2="690" y2="119" stroke-width="1.6">
+        <animateTransform attributeName="transform" type="rotate" values="0 690 125;360 690 125" dur="6s" repeatCount="indefinite"/>
+      </line>
+      <line x1="690" y1="125" x2="694" y2="125" stroke-width="1.8">
+        <animateTransform attributeName="transform" type="rotate" values="0 690 125;360 690 125" dur="72s" repeatCount="indefinite"/>
+      </line>
+      <rect x="608" y="138" width="164" height="16" fill="#f4f4f4" stroke-width="2.5"/>
+      <text x="690" y="150" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="11" font-weight="700" letter-spacing="3" fill="#111" stroke="none">MAIRIE</text>
+      <g fill="#ffffff" stroke-width="2.2">
+        <rect x="618" y="154" width="14" height="62"/>
+        <rect x="648" y="154" width="14" height="62"/>
+        <rect x="718" y="154" width="14" height="62"/>
+        <rect x="748" y="154" width="14" height="62"/>
+      </g>
+      <path d="M676 216 V182 Q690 168 704 182 V216" fill="#2b2b2b" stroke-width="2.2"/>
+      <rect x="610" y="216" width="160" height="10" fill="#f4f4f4" stroke-width="2.2"/>
+      <rect x="598" y="226" width="184" height="12" fill="#f4f4f4" stroke-width="2.2"/>
+    </g>
+
+    <!-- ===== rang du fond : RH, finances, informatique ===== -->
+
+    <!-- la responsable RH et son dossier -->
+    <g transform="translate(345 226) scale(0.92) translate(-300 -240)">
+      <g filter="url(#ink)" stroke="#111" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="292" y1="204" x2="292" y2="233" stroke-width="3"/>
+        <line x1="308" y1="204" x2="308" y2="233" stroke-width="3"/>
+        <ellipse cx="289" cy="236" rx="8" ry="3.5" fill="#111"/>
+        <ellipse cx="311" cy="236" rx="8" ry="3.5" fill="#111"/>
+        <path d="M283 186 L317 186 L322 208 L278 208 Z" fill="#2f3b52" stroke-width="2"/>
+        <path d="M280 140 Q300 134 320 140 L318 190 L282 190 Z" fill="#2f7f7a" stroke-width="2.5"/>
+        <path d="M294 139 L300 149 L306 139" fill="#ffffff" stroke-width="1.5"/>
+        <path d="M293 141 L300 157 L307 141" fill="none" stroke="#d6322b" stroke-width="1.4"/>
+        <rect x="295" y="156" width="10" height="7" rx="1" fill="#ffffff" stroke-width="1.1"/>
+        <rect x="296.5" y="157.5" width="3" height="4" fill="#3f6fd8" stroke="none"/>
+        <path d="M288 168 v-3 h9 l2 3" fill="#e9b65c" stroke-width="1.6"/>
+        <rect x="286" y="168" width="28" height="23" rx="1.5" fill="#e9b65c" stroke-width="2"/>
+        <text x="300" y="184" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="700" fill="#5b3a29" stroke="none">RH</text>
+        <path d="M281 146 Q266 170 288 182" fill="none" stroke="#2f7f7a" stroke-width="9"/>
+        <path d="M319 146 Q334 170 312 182" fill="none" stroke="#2f7f7a" stroke-width="9"/>
+        <circle cx="288" cy="182" r="4.5" fill="#f1cfb2" stroke-width="2"/>
+        <circle cx="312" cy="182" r="4.5" fill="#f1cfb2" stroke-width="2"/>
+        <path d="M280 116 Q278 96 300 96 Q322 96 320 116 L322 140 Q314 137 312 128 L288 128 Q286 137 278 140 Z" fill="#7a4a2a" stroke-width="2"/>
+        <circle cx="300" cy="118" r="19" fill="#fbe3cf" stroke-width="2.5"/>
+        <path d="M282 113 Q283 99 300 99 Q317 99 318 113 Q309 104 300 106 Q291 104 282 113 Z" fill="#7a4a2a" stroke-width="1.8"/>
+        <ellipse cx="293" cy="117" rx="2" ry="2.5" fill="#111" stroke="none">
+          <animate attributeName="ry" values="2.5;2.5;0.4;2.5" keyTimes="0;0.9;0.95;1" dur="3.9s" repeatCount="indefinite"/>
+        </ellipse>
+        <ellipse cx="307" cy="117" rx="2" ry="2.5" fill="#111" stroke="none">
+          <animate attributeName="ry" values="2.5;2.5;0.4;2.5" keyTimes="0;0.9;0.95;1" dur="3.9s" repeatCount="indefinite"/>
+        </ellipse>
+        <path d="M300 116 Q305 124 299 126" fill="none" stroke-width="2"/>
+        <circle cx="289" cy="125" r="3.3" fill="#f6a5a5" stroke="none" opacity="0.6"/>
+        <circle cx="311" cy="125" r="3.3" fill="#f6a5a5" stroke="none" opacity="0.6"/>
+        <path d="M293 130 Q300 136 307 130" fill="none" stroke-width="2.2"/>
+      </g>
+    </g>
+
+    <!-- le directeur financier et son graphique en euros -->
+    <g transform="translate(450 226) scale(0.92) translate(-300 -240)">
+      <g filter="url(#ink)" stroke="#111" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="288" y="196" width="10" height="32" fill="#3a3f4b" stroke-width="2"/>
+        <rect x="302" y="196" width="10" height="32" fill="#3a3f4b" stroke-width="2"/>
+        <ellipse cx="292" cy="233" rx="8" ry="3.5" fill="#111"/>
+        <ellipse cx="308" cy="233" rx="8" ry="3.5" fill="#111"/>
+        <path d="M280 140 Q300 134 320 140 L318 198 L282 198 Z" fill="#34405a" stroke-width="2.5"/>
+        <path d="M293 139 L300 156 L307 139 Z" fill="#ffffff" stroke-width="1.4"/>
+        <path d="M298.5 142 h3 l1.5 11 l-3 4 l-3 -4 Z" fill="#d6322b" stroke-width="1"/>
+        <rect x="285" y="162" width="30" height="26" rx="1" fill="#ffffff" stroke-width="1.8"/>
+        <rect x="289" y="178" width="4" height="7" fill="#2c5aa0" stroke-width="1"/>
+        <rect x="295" y="174" width="4" height="11" fill="#2c5aa0" stroke-width="1"/>
+        <rect x="301" y="170" width="4" height="15" fill="#d6322b" stroke-width="1"/>
+        <text x="311" y="173" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="8" font-weight="700" fill="#111" stroke="none">€</text>
+        <path d="M281 146 Q266 170 287 180" fill="none" stroke="#34405a" stroke-width="9"/>
+        <path d="M319 146 Q334 170 313 180" fill="none" stroke="#34405a" stroke-width="9"/>
+        <circle cx="287" cy="180" r="4.5" fill="#f1cfb2" stroke-width="2"/>
+        <circle cx="313" cy="180" r="4.5" fill="#f1cfb2" stroke-width="2"/>
+        <circle cx="300" cy="118" r="19" fill="#f1cfb2" stroke-width="2.5"/>
+        <path d="M281.5 114 Q280 98 300 98 Q320 98 318.5 114 Q314 104 300 104 Q286 104 281.5 114 Z" fill="#8a8580" stroke-width="2"/>
+        <circle cx="293" cy="118" r="5" fill="#ffffff" fill-opacity="0.35" stroke-width="1.8"/>
+        <circle cx="307" cy="118" r="5" fill="#ffffff" fill-opacity="0.35" stroke-width="1.8"/>
+        <path d="M298 118 L302 118" stroke-width="1.6"/>
+        <ellipse cx="293" cy="119" rx="1.6" ry="2" fill="#111" stroke="none">
+          <animate attributeName="ry" values="2;2;0.4;2" keyTimes="0;0.9;0.95;1" dur="4.6s" repeatCount="indefinite"/>
+        </ellipse>
+        <ellipse cx="307" cy="119" rx="1.6" ry="2" fill="#111" stroke="none">
+          <animate attributeName="ry" values="2;2;0.4;2" keyTimes="0;0.9;0.95;1" dur="4.6s" repeatCount="indefinite"/>
+        </ellipse>
+        <path d="M300 120 Q304 126 299 128" fill="none" stroke-width="1.8"/>
+        <path d="M293 132 Q300 137 307 132" fill="none" stroke-width="2"/>
+      </g>
+    </g>
+
+    <!-- l'informaticien et son ordinateur portable -->
+    <g transform="translate(552 226) scale(0.92) translate(-300 -240)">
+      <g filter="url(#ink)" stroke="#111" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="288" y="196" width="10" height="32" fill="#3b5b8c" stroke-width="2"/>
+        <rect x="302" y="196" width="10" height="32" fill="#3b5b8c" stroke-width="2"/>
+        <path d="M284 228 h14 v6 q0 2 -2 2 h-12 q-2 0 -2 -2 Z" fill="#ffffff" stroke-width="1.6"/>
+        <path d="M316 228 h-14 v6 q0 2 2 2 h12 q2 0 2 -2 Z" fill="#ffffff" stroke-width="1.6"/>
+        <path d="M280 140 Q300 134 320 140 L318 198 L282 198 Z" fill="#4a5568" stroke-width="2.5"/>
+        <path d="M284 141 Q300 152 316 141" fill="none" stroke-width="2"/>
+        <path d="M296 145 V156 M304 145 V156" stroke="#d9dde3" stroke-width="1.3"/>
+        <rect x="284" y="160" width="32" height="26" rx="2" fill="#1f2937" stroke-width="2"/>
+        <text x="289" y="177" font-family="Consolas, 'Courier New', monospace" font-size="10" font-weight="700" fill="#22c55e" stroke="none">&gt;</text>
+        <rect x="297" y="174" width="6" height="2" fill="#22c55e" stroke="none">
+          <animate attributeName="opacity" values="1;0;1" dur="1s" calcMode="discrete" repeatCount="indefinite"/>
+        </rect>
+        <path d="M309 165 l4 1.5 v3 q0 3 -4 5 q-4 -2 -4 -5 v-3 Z" fill="none" stroke="#22c55e" stroke-width="1.1"/>
+        <path d="M280 186 L320 186 L324 192 L276 192 Z" fill="#c9ced6" stroke-width="1.8"/>
+        <path d="M281 146 Q268 168 281 187" fill="none" stroke="#4a5568" stroke-width="9"/>
+        <path d="M319 146 Q332 168 319 187" fill="none" stroke="#4a5568" stroke-width="9"/>
+        <circle cx="281" cy="188" r="4.5" fill="#e8b98f" stroke-width="2"/>
+        <circle cx="319" cy="188" r="4.5" fill="#e8b98f" stroke-width="2"/>
+        <circle cx="300" cy="118" r="19" fill="#e8b98f" stroke-width="2.5"/>
+        <path d="M281.5 114 Q279 97 300 97 Q321 97 318.5 114 Q316 102 306 103 Q300 99 294 103 Q284 102 281.5 114 Z" fill="#3b2a20" stroke-width="2"/>
+        <path d="M282 122 Q284 138 300 139 Q316 138 318 122 Q313 131 300 131 Q287 131 282 122 Z" fill="#3b2a20" stroke-width="1.6"/>
+        <ellipse cx="293" cy="116" rx="2" ry="2.5" fill="#111" stroke="none">
+          <animate attributeName="ry" values="2.5;2.5;0.4;2.5" keyTimes="0;0.9;0.95;1" dur="5.1s" repeatCount="indefinite"/>
+        </ellipse>
+        <ellipse cx="307" cy="116" rx="2" ry="2.5" fill="#111" stroke="none">
+          <animate attributeName="ry" values="2.5;2.5;0.4;2.5" keyTimes="0;0.9;0.95;1" dur="5.1s" repeatCount="indefinite"/>
+        </ellipse>
+        <path d="M300 115 Q305 122 299 124" fill="none" stroke-width="2"/>
+        <path d="M294 127 Q300 130 306 127" fill="none" stroke="#f1cfb2" stroke-width="2"/>
+      </g>
+    </g>
+
+    <!-- ===== premier rang : police municipale, données, commande publique ===== -->
+
+    <!-- le policier municipal, de face, qui salue -->
+    <g transform="translate(-15 0)">
+      <g filter="url(#ink)" stroke="#111" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="288" y="196" width="10" height="32" fill="#26357a" stroke-width="2"/>
+        <rect x="302" y="196" width="10" height="32" fill="#26357a" stroke-width="2"/>
+        <rect x="289.5" y="208" width="6" height="8" rx="1" fill="none" stroke="#111" stroke-width="1.1"/>
+        <rect x="304.5" y="208" width="6" height="8" rx="1" fill="none" stroke="#111" stroke-width="1.1"/>
+        <path d="M285 225 h14 v9 q0 2 -2 2 h-13 q-2 0 -2 -2 v-3 Z" fill="#111" stroke-width="1.6"/>
+        <path d="M315 225 h-14 v9 q0 2 2 2 h13 q2 0 2 -2 v-3 Z" fill="#111" stroke-width="1.6"/>
+        <path d="M282 146 Q273 170 277 190" fill="none" stroke="#2b3a86" stroke-width="9"/>
+        <circle cx="277" cy="192" r="4.5" fill="#f1cfb2" stroke-width="2"/>
+        <path d="M276 149 h7 v6 q-3.5 3.5 -7 0 Z" fill="#ffffff" stroke-width="1.1"/>
+        <path d="M277.5 151 h4 v3 q-2 2 -4 0 Z" fill="#3f6fd8" stroke="none"/>
+        <path d="M280 140 Q300 134 320 140 L318 198 L282 198 Z" fill="#2b3a86" stroke-width="2.5"/>
+        <path d="M283 142 L292 139 L294 147 L306 147 L308 139 L317 142 L318 189 L282 189 Z" fill="#1b1b1b" stroke-width="2"/>
+        <rect x="284" y="153" width="16" height="7" rx="1" fill="#111" stroke="#666" stroke-width="0.8"/>
+        <text x="292" y="158.6" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="4.8" font-weight="700" fill="#ffffff" stroke="none">POLICE</text>
+        <rect x="303" y="153" width="12" height="7" rx="1" fill="#3f6fd8" stroke="#666" stroke-width="0.8"/>
+        <path d="M305 156.5 h8" stroke="#ffffff" stroke-width="1"/>
+        <path d="M285 167 h30 M285 172 h30" stroke="#4a4a4a" stroke-width="1.1"/>
+        <rect x="285" y="175" width="9" height="12" rx="1.5" fill="#262626" stroke-width="1.3"/>
+        <rect x="306" y="175" width="9" height="12" rx="1.5" fill="#262626" stroke-width="1.3"/>
+        <rect x="296" y="176" width="8" height="10" rx="1.5" fill="#262626" stroke-width="1.3"/>
+        <rect x="281" y="189" width="38" height="7" fill="#111" stroke-width="1"/>
+        <rect x="297" y="190" width="6" height="5" fill="#c9ced6" stroke-width="1"/>
+        <g>
+          <path d="M318 146 Q332 134 333 114" fill="none" stroke="#2b3a86" stroke-width="9"/>
+          <circle cx="333" cy="111" r="4.8" fill="#f1cfb2" stroke-width="2"/>
+          <animateTransform attributeName="transform" type="rotate" values="-8 318 146;10 318 146;-8 318 146" dur="1.1s" repeatCount="indefinite"/>
+        </g>
+        <circle cx="300" cy="118" r="19" fill="#f1cfb2" stroke-width="2.5"/>
+        <path d="M281.5 114 Q280 98 300 98 Q320 98 318.5 114 Q314 104 300 104 Q286 104 281.5 114 Z" fill="#2a2522" stroke-width="2"/>
+        <ellipse cx="293" cy="117" rx="2" ry="2.5" fill="#111" stroke="none">
+          <animate attributeName="ry" values="2.5;2.5;0.4;2.5" keyTimes="0;0.9;0.95;1" dur="4.2s" repeatCount="indefinite"/>
+        </ellipse>
+        <ellipse cx="307" cy="117" rx="2" ry="2.5" fill="#111" stroke="none">
+          <animate attributeName="ry" values="2.5;2.5;0.4;2.5" keyTimes="0;0.9;0.95;1" dur="4.2s" repeatCount="indefinite"/>
+        </ellipse>
+        <path d="M300 116 Q305 124 299 126" fill="none" stroke-width="2"/>
+        <path d="M291 129 Q300 125 309 129" fill="none" stroke="#5b3a29" stroke-width="3"/>
+        <path d="M294 133 Q300 137 306 133" fill="none" stroke-width="2"/>
+        <path d="M290 110 Q294 107.5 297 110 M303 110 Q306 107.5 310 110" fill="none" stroke-width="1.8"/>
+      </g>
+    </g>
+
+    <!-- la déléguée à la protection des données, bouclier et cadenas -->
+    <g transform="translate(95 0)">
+      <g filter="url(#ink)" stroke="#111" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="292" y1="196" x2="292" y2="233" stroke-width="3"/>
+        <line x1="308" y1="196" x2="308" y2="233" stroke-width="3"/>
+        <ellipse cx="289" cy="236" rx="8" ry="3.5" fill="#111"/>
+        <ellipse cx="311" cy="236" rx="8" ry="3.5" fill="#111"/>
+        <path d="M280 140 Q300 134 320 140 L319 200 L281 200 Z" fill="#6b4c9a" stroke-width="2.5"/>
+        <path d="M293 139 L300 152 L307 139 Z" fill="#ffffff" stroke-width="1.4"/>
+        <path d="M300 160 L316 165 Q316 186 300 196 Q284 186 284 165 Z" fill="#2c5aa0" stroke-width="2"/>
+        <path d="M296.5 175 v-3 a3.5 3.5 0 0 1 7 0 v3" fill="none" stroke="#ffffff" stroke-width="1.6"/>
+        <rect x="294" y="175" width="12" height="10" rx="1.5" fill="#f5c542" stroke-width="1.4"/>
+        <circle cx="300" cy="179.5" r="1.4" fill="#111" stroke="none"/>
+        <path d="M281 146 Q266 170 285 178" fill="none" stroke="#6b4c9a" stroke-width="9"/>
+        <path d="M319 146 Q334 170 315 178" fill="none" stroke="#6b4c9a" stroke-width="9"/>
+        <circle cx="285" cy="178" r="4.5" fill="#c68e64" stroke-width="2"/>
+        <circle cx="315" cy="178" r="4.5" fill="#c68e64" stroke-width="2"/>
+        <path d="M279 120 Q277 96 300 96 Q323 96 321 120 L321 134 Q313 135 311 128 L289 128 Q287 135 279 134 Z" fill="#1f1a17" stroke-width="2"/>
+        <circle cx="300" cy="118" r="19" fill="#c68e64" stroke-width="2.5"/>
+        <path d="M281.5 112 Q283 99 300 99 Q317 99 318.5 112 Z" fill="#1f1a17" stroke-width="1.8"/>
+        <circle cx="281.5" cy="125" r="1.8" fill="#f5c542" stroke-width="1"/>
+        <circle cx="318.5" cy="125" r="1.8" fill="#f5c542" stroke-width="1"/>
+        <ellipse cx="293" cy="117" rx="2" ry="2.6" fill="#111" stroke="none">
+          <animate attributeName="ry" values="2.6;2.6;0.4;2.6" keyTimes="0;0.9;0.95;1" dur="3.3s" repeatCount="indefinite"/>
+        </ellipse>
+        <ellipse cx="307" cy="117" rx="2" ry="2.6" fill="#111" stroke="none">
+          <animate attributeName="ry" values="2.6;2.6;0.4;2.6" keyTimes="0;0.9;0.95;1" dur="3.3s" repeatCount="indefinite"/>
+        </ellipse>
+        <path d="M300 116 Q305 124 299 126" fill="none" stroke-width="2"/>
+        <path d="M292 130 Q300 137 308 130" fill="none" stroke-width="2.3"/>
+      </g>
+    </g>
+
+    <!-- l'acheteuse publique qui tamponne le contrat -->
+    <g transform="translate(200 0)">
+      <g filter="url(#ink)" stroke="#111" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="288" y="196" width="10" height="32" fill="#4a3b30" stroke-width="2"/>
+        <rect x="302" y="196" width="10" height="32" fill="#4a3b30" stroke-width="2"/>
+        <ellipse cx="292" cy="233" rx="8" ry="3.5" fill="#111"/>
+        <ellipse cx="308" cy="233" rx="8" ry="3.5" fill="#111"/>
+        <path d="M280 140 Q300 134 320 140 L318 198 L282 198 Z" fill="#a0612f" stroke-width="2.5"/>
+        <path d="M293 139 L300 151 L307 139 Z" fill="#ffffff" stroke-width="1.4"/>
+        <rect x="282" y="160" width="26" height="32" rx="1" fill="#ffffff" stroke-width="1.8"/>
+        <path d="M286 167 h18 M286 172 h18 M286 177 h12" fill="none" stroke="#9a9a9a" stroke-width="1.1"/>
+        <path d="M286 187 q3 -4 6 0 t6 0" fill="none" stroke="#2c5aa0" stroke-width="1.2"/>
+        <circle cx="301" cy="180" r="4.6" fill="none" stroke="#d6322b" stroke-width="1.6" opacity="0">
+          <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.69;0.7;0.95;1" dur="2.4s" repeatCount="indefinite"/>
+        </circle>
+        <path d="M281 146 Q266 172 284 186" fill="none" stroke="#a0612f" stroke-width="9"/>
+        <circle cx="284" cy="186" r="4.5" fill="#f1cfb2" stroke-width="2"/>
+        <g>
+          <path d="M319 146 Q334 160 306 166" fill="none" stroke="#a0612f" stroke-width="9"/>
+          <rect x="296" y="174" width="10" height="4" fill="#d6322b" stroke-width="1.2"/>
+          <rect x="299" y="166" width="4" height="8" fill="#8a5a3b" stroke-width="1.2"/>
+          <circle cx="303" cy="166" r="4.5" fill="#f1cfb2" stroke-width="2"/>
+          <animateTransform attributeName="transform" type="rotate" values="20 319 146;20 319 146;0 319 146;20 319 146" keyTimes="0;0.6;0.7;1" dur="2.4s" repeatCount="indefinite"/>
+        </g>
+        <circle cx="300" cy="92" r="7.5" fill="#c49a5a" stroke-width="2.2"/>
+        <circle cx="300" cy="118" r="19" fill="#f1cfb2" stroke-width="2.5"/>
+        <path d="M281 115 Q279 97 300 99 Q321 97 319 115 Q312 104 300 104 Q288 104 281 115 Z" fill="#c49a5a" stroke-width="2"/>
+        <ellipse cx="293" cy="117" rx="2" ry="2.5" fill="#111" stroke="none">
+          <animate attributeName="ry" values="2.5;2.5;0.4;2.5" keyTimes="0;0.9;0.95;1" dur="3.6s" repeatCount="indefinite"/>
+        </ellipse>
+        <ellipse cx="307" cy="117" rx="2" ry="2.5" fill="#111" stroke="none">
+          <animate attributeName="ry" values="2.5;2.5;0.4;2.5" keyTimes="0;0.9;0.95;1" dur="3.6s" repeatCount="indefinite"/>
+        </ellipse>
+        <path d="M290 110 Q294 107.5 297 110 M303 110 Q306 107.5 310 110" fill="none" stroke-width="1.6"/>
+        <path d="M300 116 Q305 124 299 126" fill="none" stroke-width="2"/>
+        <circle cx="289" cy="124" r="3.3" fill="#f6a5a5" stroke="none" opacity="0.6"/>
+        <circle cx="311" cy="124" r="3.3" fill="#f6a5a5" stroke="none" opacity="0.6"/>
+        <path d="M293 130 Q300 136 307 130" fill="none" stroke-width="2.2"/>
+      </g>
+    </g>
+
+    <!-- ===== la luciole de la recherche juridique, qui passe d'une tête à l'autre ===== -->
+    <g>
+      <g><use href="#ff-code" transform="scale(1.45)"/><animateTransform attributeName="transform" type="translate" values="0 0;0 -2.5;0 0" dur="1.1s" repeatCount="indefinite"/></g>
+      <animateMotion dur="12s" repeatCount="indefinite" calcMode="linear" keyPoints="0;1;0" keyTimes="0;0.5;1" path="M244 76 C280 46 322 46 346 72 S 420 96 452 70 S 530 44 584 76"/>
+    </g>
+  </g>
+</svg>

@@ -105,12 +105,17 @@ def load_cycle_cases(root: Path, relative: str = CYCLE_CASES_FILE) -> list[dict[
     return cases
 
 
+def manifest_version(root: Path) -> str:
+    """Version déclarée par le manifeste Codex du candidat."""
+    return json.loads((root / '.codex-plugin/plugin.json').read_bytes())['version']
+
+
 def campaign_cycle(root: Path, commit: str, *, preparation: bool = False, cycle_v4: bool = False) -> tuple[str, list[dict[str, Any]]]:
     """Le lanceur choisit par commit ; préparation v3 possible avant le gel B4."""
     from cli_toolchains import (contract_file, measurement_contract, prepared_cycle,
                                 require_cycle_version)
     contract = measurement_contract(root, commit)
-    version = json.loads((root / '.codex-plugin/plugin.json').read_bytes())['version']
+    version = manifest_version(root)
     if cycle_v4:
         from cli_toolchains import CYCLE_V4, prepared_cycle_v4
         if preparation:

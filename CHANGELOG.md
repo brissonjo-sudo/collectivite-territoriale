@@ -1,12 +1,35 @@
 # Historique des versions
 
-## Non publiée
+## 1.5.0 : candidat non mesuré, non qualifié
 
+Passage à la licence EUPL 1.2 (ADR 0030, 2026-11-01), sans changement de
+comportement des skills, et correctif #21 de l'outillage de mesure.
+
+- Code, skills, scripts, tests et manifestes : EUPL-1.2 ; `docs/` reste en
+  CC-BY-SA-4.0 ; Ponytail garde sa licence MIT. Versions 1.4.0 et antérieures
+  inchangées.
+- Textes officiels de la Commission européenne : `LICENSE`, `LICENCE.fr.txt`,
+  `LICENSES/`, `skills/*/LICENSE` et `skills/*/LICENCE.fr.txt` ; `REUSE.toml`.
+- Sept épingles amont avancées sur des commits qui n'ajoutent que les textes de
+  licence ; recherche-juridique 3.6.0 et dcp-fpt 0.1.4 sur des branches
+  dédiées. Aucun fichier de comportement synchronisé ne change.
+- Référence DCP-014 : pin distribué 7874c62 admis à côté du pin mesuré
+  414cd4e ; `LICENCE.fr.txt` hors mesure avec `LICENSE`.
 - Correctif #21 : le contrôle des citations refuse les URL visant `SKILL.md`,
   `references/`, `objets/` ou `.agents/skills/`, quel que soit l'hôte, y compris
   les chemins encodés. Les liens vers les sources officielles restent permis.
-  Ce changement d'outillage exige une nouvelle release mesurée ; les preuves
-  et les réserves de la 1.4.0 restent inchangées.
+  Ce changement d'outillage (`scripts/skill_citation.py`) est couvert par la
+  mesure de la 1.5.0 ; les preuves et les réserves de la 1.4.0 restent inchangées.
+- Catalogues inchangés (1.4.0) jusqu'à la mesure et la publication.
+- Ponytail (outil de développement local, hors distribution) mis à jour de
+  5.1.0 à 5.3.3 (commit 7801d06, 2026-11-01) selon la procédure de l'ADR 0008 :
+  seule l'indication d'argument des règles change (ajout de `off`), licence MIT
+  identique.
+
+Correction datée du 2026-11-01 : la 1.4.0 ci-dessous a été publiée (étiquette
+`v1.4.0`, registre `docs/publication.md`, catalogues sur 1.4.0). Les mentions
+« non publiée » et « catalogues sur 1.3.0 » de l'entrée 1.4.0 datent de sa
+qualification et ne sont pas réécrites.
 
 ## 1.4.0 — Qualifiée — non publiée
 

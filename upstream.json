@@ -3,12 +3,22 @@
   "skills": {
     "dpm-fpt": {
       "repository": "https://github.com/brissonjo-sudo/Dpm-fpt.git",
-      "commit": "1668c89798f1f50a829c0b94d3cf6bf33a3640fb",
+      "commit": "30b1e203293ecc87088181b5dca5b9a9ad06561e",
       "version": "1.0.5",
       "paths": [
         "SKILL.md",
         "references/",
         "objets/"
+      ],
+      "additional_files": [
+        {
+          "source": "LICENSE",
+          "target": "LICENSE"
+        },
+        {
+          "source": "LICENCE.fr.txt",
+          "target": "LICENCE.fr.txt"
+        }
       ],
       "instruction_overlays": [
         {
@@ -30,12 +40,22 @@
     },
     "drh-fpt": {
       "repository": "https://github.com/brissonjo-sudo/Drh-fpt.git",
-      "commit": "002f74b07b5b31557a75ecfeda838d4126a1b1fd",
+      "commit": "0fe666324a3451ee824e1cdd81dcc3ae279abdbd",
       "version": "0.7.0",
       "paths": [
         "SKILL.md",
         "references/",
         "assets/"
+      ],
+      "additional_files": [
+        {
+          "source": "LICENSE",
+          "target": "LICENSE"
+        },
+        {
+          "source": "LICENCE.fr.txt",
+          "target": "LICENCE.fr.txt"
+        }
       ],
       "instruction_overlays": [
         {
@@ -57,12 +77,22 @@
     },
     "dpo-ct": {
       "repository": "https://github.com/brissonjo-sudo/DPO-CT.git",
-      "commit": "58ea45c4d12812da10ace5f1486deea96b8534fa",
+      "commit": "9f91d726cd7693873bcfaa057a22638679b4c0d2",
       "version": "0.2.2",
       "paths": [
         "SKILL.md",
         "references/",
         "assets/"
+      ],
+      "additional_files": [
+        {
+          "source": "LICENSE",
+          "target": "LICENSE"
+        },
+        {
+          "source": "LICENCE.fr.txt",
+          "target": "LICENCE.fr.txt"
+        }
       ],
       "instruction_overlays": [
         {
@@ -84,7 +114,7 @@
     },
     "dirfi-fpt": {
       "repository": "https://github.com/brissonjo-sudo/DirFi-fpt.git",
-      "commit": "9c81531592cc83e6b41156f21494f3bc2d64a9db",
+      "commit": "075535ffb1c695845d723f50e3d781c5b5106d3e",
       "version": "1.0.5",
       "paths": [
         "SKILL.md",
@@ -93,6 +123,16 @@
       ],
       "exclude": [
         "references/cache-taux-seuils.md"
+      ],
+      "additional_files": [
+        {
+          "source": "LICENSE",
+          "target": "LICENSE"
+        },
+        {
+          "source": "LICENCE.fr.txt",
+          "target": "LICENCE.fr.txt"
+        }
       ],
       "instruction_overlays": [
         {
@@ -114,7 +154,7 @@
     },
     "recherche-juridique": {
       "repository": "https://github.com/brissonjo-sudo/droit-francais-skill.git",
-      "commit": "f3ddffb520cb7a9ffe70860d0dd119d2bbca272d",
+      "commit": "30c9c90b67bae9658395b24bb44ea35506594fb4",
       "version": "3.6.0",
       "source_root": "skill/",
       "local_directory": "droit-francais-skill",
@@ -129,6 +169,10 @@
         {
           "source": "LICENSE",
           "target": "LICENSE"
+        },
+        {
+          "source": "LICENCE.fr.txt",
+          "target": "LICENCE.fr.txt"
         }
       ],
       "instruction_overlays": [
@@ -143,7 +187,7 @@
     },
     "dcp-fpt": {
       "repository": "https://github.com/brissonjo-sudo/DCP-fpt.git",
-      "commit": "414cd4ecf41ba8b296908b738224355069b1890f",
+      "commit": "7874c62999ac9b4cf48152d525974f3f5accbc50",
       "version": "0.1.4",
       "paths": [
         "SKILL.md",
@@ -158,12 +202,16 @@
         {
           "source": "LICENSE",
           "target": "LICENSE"
+        },
+        {
+          "source": "LICENCE.fr.txt",
+          "target": "LICENCE.fr.txt"
         }
       ]
     },
     "dsi-fpt": {
       "repository": "https://github.com/brissonjo-sudo/DSI-fpt.git",
-      "commit": "704e5dd6a3d15994ed431b23585aabd72086ca75",
+      "commit": "5fa1f8a49d971d53852eca0c4f15c4b750509d3f",
       "version": "0.2.1",
       "paths": [
         "SKILL.md",
@@ -173,6 +221,16 @@
       ],
       "exclude": [
         "references/cache-valeurs.md"
+      ],
+      "additional_files": [
+        {
+          "source": "LICENSE",
+          "target": "LICENSE"
+        },
+        {
+          "source": "LICENCE.fr.txt",
+          "target": "LICENCE.fr.txt"
+        }
       ],
       "instruction_overlays": [
         {

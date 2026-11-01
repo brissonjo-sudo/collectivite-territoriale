@@ -5,3 +5,6 @@ skills/** -text
 overlays/** text eol=lf
 # Octets approuves par empreinte ; toute normalisation briserait les liens.
 tests/evidence/mesure-courante/source-l14/FICHE-RELECTURE-17-D.md -whitespace
+# Textes officiels de l'EUPL (Commission europeenne) : conserves octet pour octet (ADR 0030).
+LICENCE.fr.txt -text -whitespace
+skills/**/LICENCE.fr.txt -whitespace
