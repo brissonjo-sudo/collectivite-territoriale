@@ -16,6 +16,10 @@ comportement.
 - Référence DCP-014 : pin distribué 7874c62 admis à côté du pin mesuré
   414cd4e ; `LICENCE.fr.txt` hors mesure avec `LICENSE`.
 - Catalogues inchangés (1.4.0) jusqu'à la mesure et la publication.
+- Ponytail (outil de développement local, hors distribution) mis à jour de
+  5.1.0 à 5.3.3 (commit 7801d06, 2026-11-01) selon la procédure de l'ADR 0008 :
+  seule l'indication d'argument des règles change (ajout de `off`), licence MIT
+  identique.
 
 Correction datée du 2026-11-01 : la 1.4.0 ci-dessous a été publiée (étiquette
 `v1.4.0`, registre `docs/publication.md`, catalogues sur 1.4.0). Les mentions
