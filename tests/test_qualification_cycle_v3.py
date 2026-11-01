@@ -153,7 +153,9 @@ class CycleV3Tests(unittest.TestCase):
     def test_lanceur_140_charge_v3_a_blanc_sans_processus(self):
         stream = io.StringIO()
         argv = ['campagne', '--plugin-commit', '0' * 40, '--output-dir', 'jamais-cree-B3', '--dry-run']
+        # Le lanceur 1.4.0 reste prouvé même quand le manifeste porte un candidat ultérieur.
         with patch.object(sys, 'argv', argv), patch.object(runner, 'run_cli') as model, \
+                patch.object(cases, 'manifest_version', return_value='1.4.0'), \
                 patch.object(runner.subprocess, 'run') as process, contextlib.redirect_stdout(stream):
             self.assertEqual(runner.main(), 0)
         model.assert_not_called()
@@ -164,7 +166,8 @@ class CycleV3Tests(unittest.TestCase):
         self.assertEqual(output['sessions'], 18)
 
     def test_lanceur_reel_refuse_avant_gel_sans_appel_modele(self):
-        with patch.object(runner, 'run_cli') as model, patch.object(runner.subprocess, 'run') as process:
+        with patch.object(runner, 'run_cli') as model, patch.object(runner.subprocess, 'run') as process, \
+                patch.object(cases, 'manifest_version', return_value='1.4.0'):
             with self.assertRaisesRegex(ValueError, '1.4.0 sans commit lié'):
                 cases.campaign_cycle(ROOT, '0' * 40)
         model.assert_not_called()

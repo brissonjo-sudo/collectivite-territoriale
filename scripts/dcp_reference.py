@@ -15,7 +15,8 @@ def redirected(path: Path) -> bool:
 def contract() -> dict:
     """Contrat versionné ; aucun hash ou fichier exclu fourni par la CLI."""
     value = json.loads(Path(__file__).with_name("dcp-protocol.json").read_bytes())
-    if value.get("decision") != "DCP-014" or value["reference"]["selection_excluded"] != ["LICENSE"]:
+    if (value.get("decision") != "DCP-014"
+            or value["reference"]["selection_excluded"] != ["LICENCE.fr.txt", "LICENSE"]):
         raise ValueError("Contrat DCP-014 absent ou sélection non autorisée")
     return value
 
@@ -29,7 +30,9 @@ def reference(root: Path, path: Path | None) -> dict:
     pin = json.loads((root / "upstream.json").read_bytes())["skills"]["dcp-fpt"]["commit"]
     proof_bytes = path.read_bytes()
     proof = json.loads(proof_bytes)
-    if proof.get("upstream_runtime_commit") != pin or pin != protocol["upstream_commit"]:
+    # ADR 0030 : le pin distribué ne diffère du pin mesuré que par les textes de licence.
+    distributed = protocol.get("distributed_upstream_commit", protocol["upstream_commit"])
+    if proof.get("upstream_runtime_commit") != protocol["upstream_commit"] or pin != distributed:
         raise ValueError("Pin DCP différent de la référence autonome")
     summary = proof["summary"]
     serialized = (json.dumps(summary, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
@@ -57,7 +60,7 @@ def reference(root: Path, path: Path | None) -> dict:
                 or "\\" in name or ":" in name or installed.get(name) != digest):
             raise ValueError("Octets DCP mesurés divergents : " + name)
     if set(installed) - set(measured) != set(expected["selection_excluded"]):
-        raise ValueError("Sélection DCP différente : seul LICENSE est hors mesure")
+        raise ValueError("Sélection DCP différente : seuls LICENSE et LICENCE.fr.txt sont hors mesure")
     if (summary["case_count"] != 28 or summary["threshold_passed"] is not True
             or summary["critical_failures"]):
         raise ValueError("Mesure autonome DCP incomplète ou seuil non atteint")

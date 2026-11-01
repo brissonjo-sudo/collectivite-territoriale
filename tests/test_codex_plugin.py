@@ -79,13 +79,10 @@ class CodexPluginTests(unittest.TestCase):
         self.assertEqual(codex["version"], claude["version"])
         self.assertEqual(codex["repository"], claude["repository"])
         self.assertEqual(codex["homepage"], claude["homepage"])
-        self.assertEqual(codex["license"], "CC-BY-SA-4.0")
-        self.assertEqual(claude["license"], "CC-BY-SA-4.0")
+        self.assertEqual(codex["license"], "EUPL-1.2")
+        self.assertEqual(claude["license"], "EUPL-1.2")
         license_text = (ROOT / "LICENSE").read_text(encoding="utf-8")
-        self.assertIn(
-            "Creative Commons Attribution-ShareAlike 4.0 International",
-            license_text,
-        )
+        self.assertIn("EUROPEAN UNION PUBLIC LICENCE v. 1.2", license_text)
 
     def test_distribution_epinglee_sur_etiquette(self) -> None:
         """La marketplace distribue une étiquette publiée, pas l'état de main."""
@@ -402,7 +399,8 @@ class CodexPluginTests(unittest.TestCase):
         """DCP est une copie source 0.1.4 sans surcharge locale, liée à la mesure."""
         self.assertNotIn("instruction_overlays", spec)
         self.assertEqual(spec["version"], "0.1.4")
-        self.assertEqual(spec["commit"], "414cd4ecf41ba8b296908b738224355069b1890f")
+        # ADR 0030 : 414cd4e plus les seuls textes EUPL 1.2.
+        self.assertEqual(spec["commit"], "7874c62999ac9b4cf48152d525974f3f5accbc50")
         self.assertEqual(list((ROOT / "overlays").glob("dcp-fpt*.md")), [])
         self.assertEqual(hashlib.sha256((ROOT / "skills/dcp-fpt/SKILL.md").read_bytes()).hexdigest(),
                          "49e04e18203cc6472c35ab595d8f0a9a30671a51bd946d8a03f6b936041ff3b3")
@@ -458,8 +456,9 @@ class CodexPluginTests(unittest.TestCase):
         pinned = load_json("upstream.json")["skills"]
         self.assertIn("dcp-fpt", pinned)
         self.assertIn("dsi-fpt", pinned)
-        self.assertEqual(pinned["dsi-fpt"]["commit"], "704e5dd6a3d15994ed431b23585aabd72086ca75")
-        self.assertEqual(pinned["dcp-fpt"]["commit"], "414cd4ecf41ba8b296908b738224355069b1890f")
+        # ADR 0030 : 704e5dd et 414cd4e plus les seuls textes EUPL 1.2.
+        self.assertEqual(pinned["dsi-fpt"]["commit"], "5fa1f8a49d971d53852eca0c4f15c4b750509d3f")
+        self.assertEqual(pinned["dcp-fpt"]["commit"], "7874c62999ac9b4cf48152d525974f3f5accbc50")
         self.assert_dcp_source_l24(pinned["dcp-fpt"])
         dcp = (ROOT / "skills/dcp-fpt/SKILL.md").read_text(encoding="utf-8")
         self.assertIn("BASCULE dsi-fpt", dcp)

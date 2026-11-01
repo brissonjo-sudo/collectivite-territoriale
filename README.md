@@ -160,10 +160,17 @@ décrite dans la [publication](docs/publication.md).
 
 ## Licence et contribution
 
-Le plugin et ses sept skills sont distribués sous licence
-[CC BY-SA 4.0](LICENSE), avec attribution à `brissonjo-sudo`. Les textes,
-décisions et métadonnées récupérés depuis Légifrance ou Judilibre restent
-soumis aux conditions de réutilisation de leurs producteurs.
+À compter de la version 1.5.0, le plugin et ses sept skills sont distribués
+sous licence publique de l'Union européenne [EUPL 1.2](LICENSE) (texte
+français : [LICENCE.fr.txt](LICENCE.fr.txt) ; toutes les
+versions linguistiques ont la même valeur). La documentation de `docs/` reste
+sous [CC BY-SA 4.0](LICENSES/CC-BY-SA-4.0.txt) et l'outil Ponytail garde sa
+licence MIT. Les versions 1.4.0 et antérieures restent sous CC BY-SA 4.0.
+Répartition détaillée : [REUSE.toml](REUSE.toml) et
+[ADR 0030](docs/adr/0030-adoption-eupl-1-2.md).
+
+Les textes, décisions et métadonnées récupérés depuis Légifrance ou Judilibre
+restent soumis aux conditions de réutilisation de leurs producteurs.
 
 Questions, erreurs, propositions : ouvrir une
 [issue](https://github.com/brissonjo-sudo/collectivite-territoriale/issues).

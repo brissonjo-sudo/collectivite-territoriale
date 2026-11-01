@@ -1,5 +1,7 @@
 {
   "upstream_commit": "414cd4ecf41ba8b296908b738224355069b1890f",
+  "distributed_upstream_commit": "7874c62999ac9b4cf48152d525974f3f5accbc50",
+  "distributed_reason": "ADR 0030 : 414cd4e plus les seuls textes EUPL 1.2 (LICENSE, LICENCE.fr.txt, .gitattributes) ; runtime mesuré identique octet pour octet.",
   "mixed_engine_supported": false,
   "effort_parameter_supported": false,
   "status": "standalone_reference_only",
@@ -19,8 +21,9 @@
     "source_proof_commit": "414cd4ecf41ba8b296908b738224355069b1890f",
     "source_summary_sha256": "94268ed71b80df7f8e419384b951a953646dba2646de771a7bef6ecb15919a5c",
     "selection_excluded": [
+      "LICENCE.fr.txt",
       "LICENSE"
     ],
-    "selection_reason": "LICENSE est embarqué pour la distribution ; ce fichier de licence ne figure pas dans les 30 fichiers du runtime de la mesure autonome. Aucune autre exclusion permise."
+    "selection_reason": "LICENSE et LICENCE.fr.txt (textes EUPL 1.2, ADR 0030) sont embarqués pour la distribution ; ces fichiers de licence ne figurent pas dans les 30 fichiers du runtime de la mesure autonome. Aucune autre exclusion permise."
   }
 }
