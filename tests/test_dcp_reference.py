@@ -27,7 +27,7 @@ class DcpReferenceTests(unittest.TestCase):
     FROZEN = "87afc049f70b7900bc670b5f683a033724cae136"
 
     def setUp(self) -> None:
-        protocol = json.loads(self.CONTRACT.read_bytes())
+        protocol = self.protocol = json.loads(self.CONTRACT.read_bytes())
         if self.FROZEN:
             for module in (dcp, check_dcp_protocol):
                 contract_patch = patch.object(module, "contract", return_value=protocol)
@@ -44,6 +44,9 @@ class DcpReferenceTests(unittest.TestCase):
             raw = subprocess.check_output(["git", "show",
                 self.FROZEN + ":" + name], cwd=ROOT)
             (self.root / name).write_bytes(raw)
+        if self.FROZEN:
+            # Le runtime historique ne contenait pas le texte français de l'EUPL (ADR 0030).
+            (self.root / "skills/dcp-fpt/LICENCE.fr.txt").unlink(missing_ok=True)
         if not self.FROZEN:
             shutil.copyfile(ROOT / "upstream.json", self.root / "upstream.json")
         self.path = self.directory / "dcp-autonome.json"
@@ -61,7 +64,8 @@ class DcpReferenceTests(unittest.TestCase):
         self.assertNotIn("plugin_commit", proof)
         self.assertEqual(set(p.relative_to(self.root / "skills/dcp-fpt").as_posix()
             for p in (self.root / "skills/dcp-fpt").rglob("*") if p.is_file())
-            - set(proof["summary"]["runtime_sha256"]), {"LICENSE"})
+            - set(proof["summary"]["runtime_sha256"]),
+            set(self.protocol["reference"]["selection_excluded"]))
 
     def test_candidat_surcharge_refuse_ancienne_reference(self) -> None:
         with self.assertRaisesRegex(ValueError, "Pin DCP différent"):

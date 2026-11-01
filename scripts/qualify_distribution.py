@@ -224,13 +224,19 @@ def _distribution_errors(root: Path, evidence: dict, view: ProjectionView | None
             require(run["process_exit"] == 0 and run["candidate_entry_read"] is True
                     and run["installed_mcp_success"] is True, "Smoke installé en échec")
         require(smoke_runs["activation-implicite"]["stop_first"] is True, "STOP absent du smoke")
-        require(dcp["upstream_runtime_commit"] == upstream["dcp-fpt"]["commit"],
+        # ADR 0030 : seule exception, le pin distribué = pin mesuré + textes de licence.
+        protocol = json.loads(Path(__file__).with_name("dcp-protocol.json").read_bytes())
+        licence_only = (dcp["upstream_runtime_commit"] == protocol["upstream_commit"]
+                        and upstream["dcp-fpt"]["commit"]
+                        == protocol.get("distributed_upstream_commit"))
+        require(dcp["upstream_runtime_commit"] == upstream["dcp-fpt"]["commit"] or licence_only,
                 "Mesure DCP d'un autre candidat")
         require(dcp["summary"]["threshold_passed"] is True
                 and dcp["summary"]["case_count"] == 28
                 and not dcp["summary"]["critical_failures"], "Seuil DCP non atteint")
+        licences = {"skills/dcp-fpt/LICENSE", "skills/dcp-fpt/LICENCE.fr.txt"}
         expected_dcp = {n.removeprefix("skills/dcp-fpt/"): h for n, h in runtime.items()
-                        if n.startswith("skills/dcp-fpt/") and n != "skills/dcp-fpt/LICENSE"}
+                        if n.startswith("skills/dcp-fpt/") and n not in licences}
         require(dcp["summary"]["runtime_sha256"] == expected_dcp, "Octets DCP non mesurés")
     except (KeyError, TypeError, ValueError, OSError) as exc:
         errors.append(f"Qualification incomplète ou illisible : {exc}")
