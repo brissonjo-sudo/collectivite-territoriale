@@ -122,8 +122,9 @@ et ses pièces.
 Le lanceur du dépôt (`run_codex_campaign.py --cycle-v4 --dry-run`) ne sert qu'au
 pré-vol à blanc : il n'écrit rien et ne lance aucun processus. La mesure réelle
 est faite par un harnais externe, comme pour la 1.4.0, avec la CLI figée
-`harnais-mesure-150\cli\codex-cli-0.164.0-alpha.11.1\`. Le lanceur
-`run_codex_smoke.py` et `measurement_common.py` ne sont pas modifiés.
+`harnais-mesure-150\cli\codex-cli-0.164.0-alpha.11.1\`. Le smoke réel passe par
+`run_codex_smoke.py` sur H2 (voir « Pin du smoke sans commit de mesure »). Les
+lanceurs et `measurement_common.py` ne sont pas modifiés.
 
 ## Ce qui ne change pas
 
@@ -156,10 +157,17 @@ affirmer que `MEASUREMENT_150_V4` vaut `None`.
 - **H3 écrase `mesure-courante`** : la projection de la 1.5.0 remplace le
   dossier `tests/evidence/mesure-courante`. La preuve 1.4.0 reste vérifiable au
   commit `f2382f3` (et non plus sur la tête, dont l'outillage a changé).
-- **Pin de smoke hors contexte de mesure** : `verify_package` (donc
-  `run_codex_smoke.py`) et la branche smoke de `measurement_common.checked`
-  résolvent encore le pin de smoke sans commit de mesure, donc sur
-  `scripts/smoke-cli.json` (0.163). Le smoke réel de la 1.5.0 passe par le
-  harnais externe ; l'assemblage de ses pièces en H3 demandera une décision
-  distincte (changement minimal de `measurement_common.py` ou du lanceur). Le
-  refus actuel est le comportement strict, jamais un assouplissement.
+
+## Pin du smoke sans commit de mesure
+
+`verify_package` (donc `run_codex_smoke.py`) et la branche smoke de
+`measurement_common.checked` demandent le pin de smoke sans commit de mesure.
+`phase_pin` le résout ainsi : pour une version de `SMOKE_FOLLOWS_MEASUREMENT`
+(1.5.0) dont la mesure est liée (H2), la CLI de cette mesure (`CAMPAIGN_150_CLI`) ;
+sinon `scripts/smoke-cli.json` (0.163), comme avant. Le smoke réel se fait sur
+H2 : il exige donc la CLI figée 0.164. Avant H2, un smoke 0.163 resterait refusé
+à l'assemblage et par le qualificateur, qui exigent la CLI de la mesure liée.
+Deux tests qui comparaient au pin de smoke courant visent désormais
+explicitement la mesure 1.4.0 (`MEASUREMENT_140_V4`), avec la même force :
+`tests/test_campaign_d_cli.py` et `tests/test_qualification_cycle_v4_150.py`.
+Le pré-vol rejoue la suite complète sur une copie jetable liée en H2 simulé.

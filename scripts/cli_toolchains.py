@@ -186,6 +186,12 @@ def phase_pin(phase: str, measurement_commit: str | None = None) -> dict:
     """Phase explicitement nommée, jamais déduite du SHA du reçu."""
     if phase not in {'campaign_cli', 'smoke_cli'}:
         raise ValueError('Phase CLI inconnue')
+    if phase == 'smoke_cli' and measurement_commit is None:
+        # ADR 0031 : après la liaison H2, le smoke 1.5.0 suit la CLI de sa mesure.
+        # Avant, il garde scripts/smoke-cli.json ; l'assemblage exige de toute façon la CLI liée.
+        version = json.loads((ROOT / '.codex-plugin/plugin.json').read_bytes())['version']
+        if version in SMOKE_FOLLOWS_MEASUREMENT:
+            measurement_commit = v4_measurements()[version][0]
     return toolchains(measurement_commit=measurement_commit)[phase]
 
 

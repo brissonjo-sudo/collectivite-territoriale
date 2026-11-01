@@ -101,10 +101,10 @@ class CycleV4Version150Tests(unittest.TestCase):
         pins = cli.toolchains(self.root, SYNTHETIC_COMMIT)
         self.assertEqual(pins['campaign_cli'], cli._pin(cli.CAMPAIGN_150_CLI, True))
         self.assertEqual(pins['smoke_cli'], cli._pin(cli.CAMPAIGN_150_CLI, True))
-        # Sans commit lié ou pour la 1.4.0, le smoke garde scripts/smoke-cli.json (0.163).
-        historical = cli.phase_pin('smoke_cli')
+        # Pour la 1.4.0, le smoke garde scripts/smoke-cli.json (0.163), en H1 comme en H2.
+        historical = cli.phase_pin('smoke_cli', cli.MEASUREMENT_140_V4)
         self.assertEqual(historical['version'], cli.CAMPAIGN_140_CLI['version'])
-        self.assertEqual(cli.phase_pin('smoke_cli', cli.MEASUREMENT_140_V4), historical)
+        self.assertEqual(historical['sha256'], cli.CAMPAIGN_140_CLI['sha256'])
         self.assertEqual(cli.phase_pin('campaign_cli', cli.MEASUREMENT_140_V4), cli._pin(cli.CAMPAIGN_140_CLI, True))
 
     def test_150_avec_le_commit_lie_de_la_140_refusee(self):
