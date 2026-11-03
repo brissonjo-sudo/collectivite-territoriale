@@ -82,8 +82,9 @@ def load_cycle_cases(root: Path, relative: str = CYCLE_CASES_FILE) -> list[dict[
     if relative in {"scripts/cas-plugin-cycle-v3.json", "scripts/cas-plugin-cycle-v4.json"}:
         from cli_toolchains import prepared_cycle
         if relative.endswith('-v4.json'):
-            from cli_toolchains import prepared_cycle_v4
-            prepared_cycle_v4(root)
+            from cli_toolchains import prepared_cycle_v4, v4_measurements
+            for bound_version in v4_measurements():
+                prepared_cycle_v4(root, bound_version)
         else:
             prepared_cycle(root)
         next(c for c in expected if c['id'] == 'plugin-prime-depart-retraite')['invariants'].append(CYCLE_V3_INVARIANT)
@@ -119,22 +120,22 @@ def campaign_cycle(root: Path, commit: str, *, preparation: bool = False, cycle_
     if cycle_v4:
         from cli_toolchains import CYCLE_V4, prepared_cycle_v4
         if preparation:
-            relative = prepared_cycle_v4(root)
+            relative = prepared_cycle_v4(root, version)
         else:
-            require_cycle_version(contract, version)
+            require_cycle_version(contract, version, commit)
             if contract is None or contract['case_contract_sha256'] != CYCLE_V4[1]:
                 raise ValueError('Mesure sans commit lié au contrat de cycle v4')
             relative = contract_file(contract)
         return relative, load_cycle_cases(root, relative)
     if not preparation:
-        require_cycle_version(contract, version)
+        require_cycle_version(contract, version, commit)
     if contract is not None:
         relative = contract_file(contract)
     else:
         if preparation and version == '1.4.0':
             relative = prepared_cycle(root)
         else:
-            require_cycle_version(contract, version)
+            require_cycle_version(contract, version, commit)
             relative = CYCLE_CASES_FILE
     return relative, load_cycle_cases(root, relative)
 

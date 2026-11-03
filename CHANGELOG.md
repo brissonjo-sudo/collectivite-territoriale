@@ -25,6 +25,13 @@ comportement des skills, et correctif #21 de l'outillage de mesure.
   5.1.0 à 5.3.3 (commit 7801d06, 2026-11-01) selon la procédure de l'ADR 0008 :
   seule l'indication d'argument des règles change (ajout de `off`), licence MIT
   identique.
+- Mesure 1.5.0 sous le contrat de cycle v4 à l'identique (ADR 0031, 2026-11-01) :
+  nouveau pin de CLI `codex-cli 0.164.0-alpha.11.1` pour la campagne et le smoke
+  (le binaire 0.163 de la 1.4.0 a disparu), liaison version, commit et mesure v4
+  par version, repli v2 fermé (une version non historique sans commit lié à un
+  contrat est refusée), projection publique exigée pour toute version récente.
+  Préparation H1 : aucune mesure liée, aucun comportement des skills modifié ;
+  les preuves et les contrôles de la 1.3.0 et de la 1.4.0 sont inchangés.
 
 Correction datée du 2026-11-01 : la 1.4.0 ci-dessous a été publiée (étiquette
 `v1.4.0`, registre `docs/publication.md`, catalogues sur 1.4.0). Les mentions

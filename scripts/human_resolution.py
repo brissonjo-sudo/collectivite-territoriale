@@ -182,7 +182,7 @@ def load_bundle(root: Path, directory: Path, target: dict) -> dict[str, Any]:
                     or value.get('technical_status') != 'passed' or value.get('response_technical_failures')):
                 raise ValueError('Échec technique ou session étrangère non résoluble')
             compatible(root, value, target)
-            require_cycle_version(measurement_contract(root, commit), version)
+            require_cycle_version(measurement_contract(root, commit), version, commit)
             identity = value['origin']['thread_id']
             if identity in threads:
                 raise ValueError('Conversation réutilisée')

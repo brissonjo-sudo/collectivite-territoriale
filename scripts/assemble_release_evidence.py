@@ -31,7 +31,7 @@ def measurement_cases(root: Path, commit: str) -> dict[str, dict]:
     """Sélection fermée pour les entrées directes de l'assembleur, sans champ de preuve."""
     contract = measurement_contract(root, commit)
     version = json.loads((root / '.codex-plugin/plugin.json').read_bytes())['version']
-    require_cycle_version(contract, version)
+    require_cycle_version(contract, version, commit)
     cases = (campaign.load_cycle_cases(root, contract_file(contract)) if contract is not None
              else json.loads((root / 'tests/cas-plugin.json').read_bytes()))
     return {c['id']: c for c in cases}
