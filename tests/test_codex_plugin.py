@@ -456,8 +456,8 @@ class CodexPluginTests(unittest.TestCase):
         pinned = load_json("upstream.json")["skills"]
         self.assertIn("dcp-fpt", pinned)
         self.assertIn("dsi-fpt", pinned)
-        # ADR 0030 : 704e5dd et 414cd4e plus les seuls textes EUPL 1.2.
-        self.assertEqual(pinned["dsi-fpt"]["commit"], "5fa1f8a49d971d53852eca0c4f15c4b750509d3f")
+        # ADR 0030 : 414cd4e plus les seuls textes EUPL 1.2 ; DSI 0.2.2 (veille 2026-11-03).
+        self.assertEqual(pinned["dsi-fpt"]["commit"], "252fd0d7abd8bb064ff31133003f92a1bd5b3813")
         self.assertEqual(pinned["dcp-fpt"]["commit"], "7874c62999ac9b4cf48152d525974f3f5accbc50")
         self.assert_dcp_source_l24(pinned["dcp-fpt"])
         dcp = (ROOT / "skills/dcp-fpt/SKILL.md").read_text(encoding="utf-8")

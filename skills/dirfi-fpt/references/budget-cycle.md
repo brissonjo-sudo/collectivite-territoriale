@@ -175,7 +175,9 @@ réel et la compétence de l'autorité qui signerait l'acte.
 - Le **chapitre des dépenses imprévues**, lorsqu'il est ouvert, obéit à un
   régime propre : il ne peut financer que des dépenses imprévisibles au moment
   du vote, dans une limite fixée par le CGCT — limite à vérifier, jamais
-  reconstituée de mémoire.
+  reconstituée de mémoire. Les anciens articles communaux sur ce chapitre
+  sont abrogés à compter de l'exercice 2026 (registre
+  `references-verifiees.md` §2) : fondement actuel **à vérifier**.
 - Ne jamais présenter un virement comme un moyen de contourner l'absence de
   crédit pour une dépense obligatoire (→ garde-fou budgétaire, `SKILL.md`
   §5.3).
@@ -185,11 +187,16 @@ réel et la compétence de l'autorité qui signerait l'acte.
 - Le **compte administratif** est établi par l'**ordonnateur** : il retrace
   l'exécution du budget de l'exercice clos (recettes et dépenses réellement
   constatées et mandatées).
-- Le **compte financier unique (CFU)**, propre au référentiel M57, se
-  substitue au compte administratif et au compte de gestion du comptable dans
-  un document **unique**, établi **conjointement** par l'ordonnateur et le
-  comptable — l'articulation avec le régime transitoire dépend de la date
-  d'entrée effective de la collectivité dans ce dispositif : **à vérifier**.
+- Le **compte financier unique (CFU)** se substitue au compte administratif
+  et au compte de gestion du comptable dans un document **unique**, établi
+  **conjointement** par l'ordonnateur et le comptable.
+- **Depuis la réforme applicable à compter de l'exercice 2026**
+  (ordonnance n° 2025-526, registre `references-verifiees.md` §2),
+  l'**approbation des comptes** est constituée par le vote de l'assemblée sur
+  le **CFU** (CGCT L. 1612-12) : c'est elle qui déclenche, en cas de déficit,
+  la saisine de la CRC (`controle-budgetaire.md` §5.3). Le compte
+  administratif ne subsiste que pour des comptes d'exercices antérieurs ; le
+  texte applicable à ceux-ci est **à vérifier**.
 - Vote soumis à une **règle de retrait** : l'exécutif ne prend pas part au
   vote qui arrête son propre compte (ou la part CA du CFU) ; modalité exacte
   de présidence de séance à vérifier.

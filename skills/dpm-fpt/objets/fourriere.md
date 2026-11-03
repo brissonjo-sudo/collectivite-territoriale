@@ -101,10 +101,14 @@ contentieux.
 
 **Réserve systématique** : durée minimale de garde en fourrière avant
 restitution de droit, délai maximal de garde avant saisie du véhicule, délai
-de notification au propriétaire, tarif de frais, procédure de réclamation :
-aucun de ces éléments ne se cite de mémoire. Tous sont marqués « à confirmer en
-version consolidée » ou vérifiés auprès du gestionnaire de fourrière et de la
-préfecture avant communication au public.
+de notification au propriétaire, procédure de réclamation : aucun de ces
+éléments ne se cite de mémoire. Tous sont marqués « à confirmer en version
+consolidée » ou vérifiés auprès du gestionnaire de fourrière et de la
+préfecture avant communication au public. **Frais** : les **tarifs maxima**
+en vigueur depuis le 01/10/2026 (arrêté du 13/09/2026,
+`JORFTEXT000054877184`) figurent, sourcés et datés, dans
+`../references/reglementation-appliquee.md` §5.1 ; ce sont des plafonds, le
+montant appliqué se vérifie auprès du gestionnaire de fourrière.
 
 ---
 
@@ -213,7 +217,8 @@ préfecture avant communication au public.
    - Vérification de l'identité et du droit de restitution (propriétaire ou
      titulaire du droit).
    - **Paiement des frais** : somme due pour garde + enlèvement (frais du
-     prestataire). Montants à confirmer auprès de la fourrière.
+     prestataire). Plafonds : `../references/reglementation-appliquee.md`
+     §5.1 ; montant exact auprès du gestionnaire de fourrière.
    - Restitution du véhicule sur présentation d'une pièce d'identité et justif.
      de propriété.
 2. **Restitution d'office** : le véhicule est restitué gratuitement si

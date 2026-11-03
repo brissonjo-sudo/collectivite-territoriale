@@ -110,6 +110,21 @@ juridique externe, signaler la limite ; vigueur des textes de procédure →
   pour certains cas — existence et champ à vérifier) : phase contradictoire,
   rapport, observations, séance. À ce stade, recommande l'appui d'un conseil
   juridique externe ; le DPO ne plaide pas seul.
+- **Droit de se taire** : la décision du Conseil constitutionnel
+  n° 2025-1154 QPC du 8 août 2025 a déclaré contraires à la Constitution les
+  mots de l'art. 22 de la loi 78-17 relatifs au dépôt d'observations et à
+  l'audition devant la formation restreinte, faute d'information de la
+  personne mise en cause (ou du représentant légal de la personne morale)
+  sur son droit de se taire ; abrogation reportée au **1er octobre 2026**,
+  réserve transitoire jusqu'à cette date ou jusqu'à une nouvelle loi. La
+  version de l'art. 22 en vigueur depuis le 01/10/2026 ne mentionne plus ces
+  facultés et se lit mal (lue le 03/11/2026 ; aucune loi nouvelle à cette
+  date) : **vérifier en session** l'état de l'art. 22 et la procédure
+  suivie avant toute réponse à la formation restreinte, et préparer le
+  représentant de la collectivité à l'exercice de ce droit. CE, 16/10/2026,
+  n° 499597 (inédit au recueil Lebon) : les mesures prises avant la
+  publication de la décision QPC ne peuvent être contestées sur le fondement
+  de cette inconstitutionnalité.
 - **Pouvoirs de la CNIL vis-à-vis des collectivités** : rappel à l'ordre,
   mise en demeure, injonction sous astreinte, amende administrative — un
   **plafond spécifique au secteur public existe en droit français : le
@@ -147,7 +162,9 @@ procédures de la CNIL (contrôle, mise en demeure, formation restreinte,
 procédure simplifiée) ; **plafond d'amende applicable au secteur public** ;
 sanction de l'entrave ou de l'obstruction ; publicité des mesures ; art. 36
 (consultation préalable) ; toute décision de la formation restreinte citée ;
-toute évolution récente de la loi 78-17 sur la procédure répressive.
+toute évolution récente de la loi 78-17 sur la procédure répressive
+(art. 22 modifié au 01/10/2026 par l'effet de la décision n° 2025-1154 QPC ;
+réécriture législative à surveiller).
 
 ## 8. Pièges & confusions fréquentes
 

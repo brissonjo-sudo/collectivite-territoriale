@@ -166,10 +166,14 @@ skill **drh-fpt** ; la qualification du régime → `analyse-situation.md`.
 - **Renvoi principal** : autorisation préfectorale (CSI), doctrine d'emploi,
   déport aux forces de l'État → skill **dpm-fpt**. Ne pas dérouler ici.
 - Volet données traité ici : **registre** (→ `gouvernance-registre.md`) ;
-  **information du public** (panneaux + mention complète — doctrine CNIL, à
+  **information du public** (CSI, art. R. 253-6 I : affiches ou panonceaux
+  avec pictogramme de caméra, mentionnant au moins le responsable, les
+  finalités et les droits, le reste par tout autre moyen ; doctrine CNIL à
   dater) ; **durées** (fixées par l'autorisation et les textes — aucune
-  valeur de mémoire) ; **droits des personnes filmées**
-  (→ `droits-personnes.md`) ; **AIPD** (surveillance systématique d'un lieu
+  valeur de mémoire) ; **droits des personnes filmées** (CSI, art.
+  R. 253-6 : exercice direct auprès du responsable selon le titre de la loi
+  78-17, droit de visionnage, pas d'opposition → `droits-personnes.md`
+  §5.10) ; **AIPD** (surveillance systématique d'un lieu
   public = risque élevé, listes CNIL à vérifier → `aipd.md`).
 - **Caméras-piétons et vidéoverbalisation** : régime **Police-Justice**
   probable → `analyse-situation.md` §2 ; opérationnel → **dpm-fpt**. Un

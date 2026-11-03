@@ -58,8 +58,10 @@ demandes d'exercice de droits reçues par la collectivité.
 - **Droit(s) invoqué(s)** — la personne ne cite pas toujours le bon :
   requalifier d'après ce qu'elle veut obtenir.
 - **Régime** : RGPD ou Police-Justice (fichier PM, vidéoverbalisation) ?
-  L'exercice des droits peut y être **indirect** (via la CNIL) — à vérifier
-  au titre III de la loi 78-17, jamais de mémoire (STOP RÉGIME).
+  Sous le titre III de la loi 78-17, l'accès s'exerce **directement** auprès
+  du responsable ; la voie **indirecte** (via la CNIL) n'est ouverte qu'en
+  cas de restriction (§5.9). Vidéoprotection : §5.10. Vérifier en session,
+  jamais de mémoire (STOP RÉGIME).
 - **Responsable de traitement** : commune, CCAS, EPCI, État (état civil,
   élections) ? La réponse en dépend.
 - **Date de réception** par la collectivité (tout canal, tout service).
@@ -84,6 +86,10 @@ consolidée. Générateur → `assets/mention-information-modele.md`.
 ### 5.2 Chaque droit avec ses limites en contexte public
 - **Accès** : confirmation du traitement + copie des données + informations
   associées. Ne pas confondre avec la communication de documents (§5.8).
+  L'art. 15 n'implique ni l'accès à des données inexistantes ou non
+  conservées, ni leur reconstitution (CE, 20/10/2026, n° 511156, inédit au
+  recueil Lebon — décision d'espèce ; elle ne traite pas d'une destruction
+  postérieure à la demande).
 - **Rectification** : données inexactes ou incomplètes. Attention aux actes
   authentiques (état civil) : procédures sectorielles propres — vérifier.
 - **Effacement** : cède devant l'**obligation légale** et l'**archivage
@@ -150,9 +156,45 @@ CRPA, saisir le circuit PRADA/CADA de la collectivité. Dans tous les cas,
 
 ### 5.9 Droits en régime Police-Justice
 Pour les traitements relevant du titre III de la loi 78-17 (fichiers à
-finalité pénale), les droits peuvent s'exercer de façon **indirecte** (via
-la CNIL) et connaître des restrictions propres — **à vérifier en session**,
-jamais de mémoire. Afficher le STOP RÉGIME dès qu'un fichier PM est visé.
+finalité pénale), la personne exerce ses droits **directement** auprès du
+responsable de traitement : accès (art. 105), rectification, effacement,
+limitation (art. 106). Ces droits peuvent être **restreints** si l'acte
+instaurant le traitement le prévoit, par mesure nécessaire et
+proportionnée (art. 107 : enquêtes et procédures, prévention et détection
+des infractions, sécurité publique, sécurité nationale, droits d'autrui).
+Le refus ou la limitation d'accès est notifié et motivé, sauf si cette
+information compromet ces objectifs ; les motifs sont consignés et tenus à
+la disposition de la CNIL. La personne est alors informée qu'elle peut
+exercer ses droits **par l'intermédiaire de la CNIL** (art. 108) et, hors
+la seule restriction de l'information de l'art. 104, former un recours
+juridictionnel.
+Art. 105, 107 et 108 lus le 03/11/2026 : **revérifier en session** avant
+citation. Afficher le STOP RÉGIME dès qu'un fichier PM est visé.
+
+### 5.10 Personnes filmées par un système de vidéoprotection
+Texte propre : CSI, art. **R. 253-6** (en vigueur depuis le 30/11/2023, lu
+le 03/11/2026 — revérifier avant citation). Qualifier d'abord le régime
+**finalité par finalité** (`analyse-situation.md` §2), puis :
+- **titre II** (RGPD) : accès, rectification, limitation exercés
+  **directement** auprès du responsable du système (art. 15, 16, 18 RGPD) ;
+  effacement le cas échéant (art. 17). Si l'accès est restreint (art. 23
+  RGPD : sécurité nationale, menaces pour la sécurité publique), la personne
+  l'exerce auprès de la CNIL (art. 52 loi 78-17) ;
+- **titre III** (Police-Justice) : accès, rectification, effacement,
+  limitation exercés **directement** auprès du responsable (art. 105 et
+  106) ; en cas de restriction (art. 107), exercice via la CNIL (art. 108) ;
+- **titre IV** : droits exercés auprès de la CNIL (art. 118) ;
+- **visionnage** : toute personne concernée peut demander au responsable à
+  visionner les enregistrements, sans préjudice de la copie (art. 15 RGPD)
+  ni de la communication (art. 105). Refus possible pour un motif tenant à
+  la sûreté de l'État, à la défense, à la sécurité publique, à des
+  procédures juridictionnelles engagées ou à leurs opérations
+  préliminaires, ou au droit des tiers ;
+- **opposition** : exclue pour ces traitements (art. 21 RGPD, art. 110 et
+  117 loi 78-17) ;
+- **images déjà détruites** au terme de la durée de conservation : voir
+  l'accès au §5.2 (pas de reconstitution).
+Autorisation et doctrine d'emploi du système → skill **dpm-fpt**.
 
 ---
 
@@ -177,6 +219,7 @@ Vérifier la source officielle avant de conclure sur :
 - les directives post-mortem et droits des héritiers (loi 78-17 — jamais
   de mémoire) ;
 - l'exercice des droits en régime Police-Justice (titre III) ;
+- les droits des personnes filmées (CSI, art. R. 253-6) ;
 - la procédure d'élimination d'archives publiques (code du patrimoine) ;
 - la doctrine CNIL sur la vérification d'identité (version datée) ;
 - la frontière CADA/CRPA au cas d'espèce.

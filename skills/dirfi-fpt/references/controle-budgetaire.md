@@ -15,7 +15,7 @@
 - **Périmètre** : la procédure de **contrôle budgétaire**, exercée par le
   représentant de l'État avec le concours de la **chambre régionale des
   comptes (CRC)**, dans les quatre cas de saisine limitativement prévus —
-  budget non voté, budget en déséquilibre réel, compte administratif en
+  budget non voté, budget en déséquilibre réel, comptes approuvés en
   déficit excessif, dépense obligatoire non ou insuffisamment inscrite — ainsi
   que son articulation avec le contrôle de légalité de droit commun appliqué
   aux actes budgétaires.
@@ -37,7 +37,7 @@
 - « Le budget n'a pas été voté à la date limite : que se passe-t-il ? »
 - « Notre budget est-il en déséquilibre réel ? Qui le constate, et avec
   quelles conséquences ? »
-- « Le compte administratif ressort en déficit : sommes-nous au-dessus du
+- « Nos comptes approuvés ressortent en déficit : sommes-nous au-dessus du
   seuil qui déclenche la procédure ? »
 - « Une dépense obligatoire n'a pas été inscrite (ou pas assez) : quelle est
   la procédure, et jusqu'où va-t-elle ? »
@@ -102,8 +102,8 @@ finances.
 |---|---|---|---|---|
 | **Budget non voté** dans les délais | Carence de l'assemblée délibérante à adopter le budget primitif avant la date limite | Représentant de l'État saisit la CRC | Exécution provisoire limitée dans l'attente (mécanisme de continuité, à vérifier dans `budget-cycle.md`) ; **l'assemblée est dessaisie dès la saisine** et jusqu'au règlement préfectoral (L. 1612-2 al. 2) | Vote du budget par l'assemblée **avant la saisine** uniquement ; après la saisine, la régularisation passe par le règlement préfectoral, sur la base des propositions de la CRC |
 | Budget voté **en déséquilibre réel** | Non-respect de l'équilibre réel au sens de la notion définie en §5.2 | Représentant de l'État saisit la CRC dans un délai suivant la transmission du budget | Le budget reste en principe applicable jusqu'au règlement, sous réserve des effets propres à chaque étape (à vérifier) | Nouvelle délibération de l'assemblée reprenant les mesures de redressement proposées par la CRC, dans le délai imparti |
-| **Compte administratif** en déficit au-delà du seuil légal | Le déficit constaté au compte administratif dépasse un seuil, exprimé en proportion des recettes de fonctionnement et variable selon la strate | Représentant de l'État saisit la CRC | Le budget primitif suivant doit intégrer les mesures de redressement ; jusque-là le déficit reste supporté par le budget en cours | Mesures de redressement inscrites au budget primitif de l'exercice suivant, sur proposition de la CRC |
-| **Dépense obligatoire** non ou insuffisamment inscrite | Une dépense répondant à la notion de dépense obligatoire (§5.4) est absente du budget ou sous-dotée | Saisine ouverte à un cercle de personnes intéressées (créancier, préfet, comptable public, autres — à vérifier), qui saisissent la CRC | La dépense reste due indépendamment de son inscription ; le créancier n'est pas privé de sa créance | Mise en demeure d'inscrire les crédits ; à défaut, inscription d'office par le préfet ; à défaut d'exécution, mandatement d'office |
+| **Comptes approuvés** (compte financier unique) en déficit au-delà du seuil légal | Le déficit qui ressort de l'**approbation des comptes** dépasse un seuil, exprimé en proportion des recettes de fonctionnement et variable selon la strate (CGCT L. 1612-14, version au 01/01/2026, registre §2) | Représentant de l'État saisit la CRC | Le budget primitif suivant doit intégrer les mesures de redressement ; jusque-là le déficit reste supporté par le budget en cours | Mesures de redressement inscrites au budget primitif de l'exercice suivant, sur proposition de la CRC |
+| **Dépense obligatoire** non ou insuffisamment inscrite | Une dépense répondant à la notion de dépense obligatoire (§5.4) est absente du budget ou sous-dotée | Le représentant de l'État, le comptable public concerné ou **toute personne y ayant intérêt** (dont le créancier) saisit la CRC (CGCT L. 1612-15, registre §2) | La dépense reste due indépendamment de son inscription ; le créancier n'est pas privé de sa créance | Mise en demeure par la CRC ; à défaut, inscription d'office par le préfet ; à défaut de mandatement après mise en demeure du préfet, mandatement d'office (CGCT L. 1612-16) |
 
 **Lecture transversale** : dans les trois premiers cas, la CRC **formule des
 propositions ou un avis** que l'assemblée est invitée à suivre avant toute
@@ -142,14 +142,19 @@ comptable. Une maquette budgétaire qui « boucle » à zéro sur le total gén�
 peut néanmoins être en déséquilibre réel si l'une de ces trois conditions
 n'est pas remplie.
 
-### 5.3 Le compte administratif en déficit
+### 5.3 Les comptes approuvés en déficit
 
-Le seuil au-delà duquel un déficit du compte administratif déclenche la
-procédure est **variable selon la strate et la catégorie de la collectivité**
-et s'exprime en proportion des recettes de fonctionnement. Ce taux ne se cite
-**jamais** de mémoire (§9). Le déficit s'apprécie sur le compte administratif
-(ou le compte financier unique selon le régime applicable), pas sur une
-simple prévision d'exécution en cours d'exercice.
+Le seuil au-delà duquel un déficit déclenche la procédure est **variable
+selon la strate et la catégorie de la collectivité** et s'exprime en
+proportion des recettes de fonctionnement. Ce taux ne se cite **jamais** de
+mémoire (§9). Depuis le 1er janvier 2026, la procédure est déclenchée par
+l'**approbation des comptes** (CGCT L. 1612-14), c'est-à-dire le vote de
+l'assemblée sur le **compte financier unique** (CGCT L. 1612-12), réforme
+applicable à compter de l'exercice 2026 (ordonnance n° 2025-526, registre
+§2). Pour des comptes d'exercices antérieurs encore votés sur compte
+administratif, le texte applicable est **à vérifier**. Le déficit s'apprécie
+sur les comptes votés, pas sur une simple prévision d'exécution en cours
+d'exercice.
 
 ### 5.4 La notion de dépense obligatoire
 
@@ -284,7 +289,7 @@ Appliquer systématiquement le socle-sources (`SKILL.md` §5.4,
 - le **délai** de saisine de la CRC par le préfet, quel que soit le cas ;
 - le **délai d'instruction** de la CRC et le **délai de réponse** laissé à
   l'assemblée ;
-- le **seuil** de déficit du compte administratif déclenchant la procédure,
+- le **seuil** de déficit des comptes approuvés déclenchant la procédure,
   et sa variation selon la strate ;
 - la **liste exacte** des dépenses obligatoires et la qualification d'une
   dépense précise comme telle ;
@@ -313,7 +318,7 @@ Appliquer systématiquement le socle-sources (`SKILL.md` §5.4,
    équilibre réel — faux si l'une des trois conditions cumulatives de §5.2
    n'est pas remplie (sincérité, équilibre par section, couverture du capital
    de la dette).
-4. Confondre le **déficit du compte administratif** (constaté a posteriori
+4. Confondre le **déficit des comptes approuvés** (constaté a posteriori
    sur l'exécution) et le **déséquilibre du budget primitif** (constaté a
    priori sur la prévision) — deux cas distincts, deux temporalités
    distinctes, deux seuils/critères distincts.
@@ -345,7 +350,7 @@ référence :
   des quatre cas.
 - **Délai d'instruction** de la CRC et **délai de réponse** laissé à
   l'assemblée délibérante après transmission des propositions ou de l'avis.
-- **Seuil de déficit** du compte administratif déclenchant la procédure,
+- **Seuil de déficit** des comptes approuvés déclenchant la procédure,
   exprimé en proportion des recettes de fonctionnement, et sa **variation
   selon la strate** de collectivité.
 - **Liste exacte des dépenses obligatoires** et ses évolutions.
@@ -356,8 +361,9 @@ référence :
   territoriales (CGCT)**, dont les dispositions relatives au contrôle
   budgétaire ; le **code des juridictions financières (CJF)**, pour
   l'organisation de la CRC ; le **décret relatif à la gestion budgétaire et
-  comptable publique (GBCP)** — aucun de ces textes n'est cité ici avec un
-  numéro d'article précis, faute de vérification dans la présente session.
+  comptable publique (GBCP)**. Seuls les articles du CGCT consignés au
+  registre (`references-verifiees.md` §1 et §2) sont cités ici par leur
+  numéro.
 
 ---
 
@@ -390,7 +396,7 @@ référence :
 |---|---|---|
 | Budget non voté à la date limite | Élevé | Stable sur le principe, à vérifier sur les dates |
 | Déséquilibre réel (constat) | Élevé | Stable sur la notion (§5.2), à vérifier sur les délais |
-| Déficit du compte administratif | Élevé à critique selon l'ampleur | Stable sur le principe, à vérifier sur le seuil exact |
+| Déficit des comptes approuvés (CFU) | Élevé à critique selon l'ampleur | Stable sur le principe, à vérifier sur le seuil exact |
 | Dépense obligatoire non inscrite | Élevé à critique (le créancier reste titulaire de sa créance) | À vérifier sur la qualification et sur les délais de chaque étape |
 | Articulation contrôle budgétaire / contrôle de légalité | Moyen | Stable sur la distinction de principe (§6.4) |
 | Détection interne avant saisine, régularisation volontaire engagée | Moyen (décroît si la régularisation est rapide) | Stable sur la méthode, à vérifier sur les délais restants |

@@ -219,6 +219,13 @@ inverse expose à un rejet du comptable évitable.
   d'inscription d'office par le représentant de l'État, sur saisine de la
   chambre régionale des comptes — détail et déclenchement → renvoyer à
   `controle-budgetaire.md`, ne pas le traiter ici.
+- **Condamnations prononcées contre la collectivité** : leur mandatement
+  tardif, ou une exécution tardive qui entraîne une astreinte, engage la
+  responsabilité financière personnelle du maire **et** des agents qui ont
+  pris part au retard (Cour des comptes, arrêt du 22 octobre 2026, registre
+  `references-verifiees.md` §7 ; CJF L. 131-14, registre §5). Réflexe :
+  suivre chaque décision de justice jusqu'au mandatement ; délais légaux
+  **à vérifier** ; détail du régime → `contentieux-financier.md` §5.2.
 
 ### 5.8 Avances et acomptes
 
@@ -253,7 +260,9 @@ inverse expose à un rejet du comptable évitable.
   permet de financer des dépenses **imprévisibles au moment du vote**, dans
   une limite fixée par le CGCT — limite et conditions de virement vers un
   chapitre ordinaire à vérifier, jamais chiffrées de mémoire (→
-  `budget-cycle.md` §5.5).
+  `budget-cycle.md` §5.5). Les anciens articles communaux sur ce chapitre
+  sont abrogés par la réforme applicable à compter de l'exercice 2026
+  (registre `references-verifiees.md` §2) : fondement actuel **à vérifier**.
 - Le virement d'un crédit de ce chapitre vers un chapitre de dépense
   effective doit être **documenté et notifié** dans les conditions fixées par
   le texte applicable — ne jamais l'utiliser pour couvrir une dépense

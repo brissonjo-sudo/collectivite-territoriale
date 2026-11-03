@@ -117,6 +117,17 @@ tarif et aucun montant** ne s'en déduisent sans vérification (§9).
 - **Tarifs propres** (TEOM, taxe de séjour, TLPE) : compétence de la même
   assemblée, mais texte de référence et calendrier propres à chacun ; ne pas
   présumer un calendrier unique pour toutes les impositions.
+- **TEOM — proportionnalité du taux** (CE, 23 octobre 2026, registre
+  `references-verifiees.md` §7) : le produit attendu ne doit pas être
+  **manifestement disproportionné** par rapport aux dépenses du service de
+  collecte et de traitement estimées **à la date du vote du taux**, nettes des
+  recettes non fiscales affectées. Ces dépenses comprennent le fonctionnement
+  réel et, pour chaque immobilisation, **soit** les dotations aux
+  amortissements, **soit** l'investissement réel, selon l'**option retenue
+  par la collectivité au moment du vote**. Réflexe : documenter cette option
+  dans les documents budgétaires du vote ; une option invoquée seulement
+  devant le juge est inopérante. Seuil de disproportion : appréciation du
+  juge, jamais chiffrée ici.
 
 ### 5.3 Règles de lien entre les taux
 
