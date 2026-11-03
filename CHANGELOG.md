@@ -1,5 +1,23 @@
 # Historique des versions
 
+## 1.5.1 : candidat non mesuré, non qualifié
+
+Ré-épinglage du 2026-11-03 sur la maintenance de veille juridique fusionnée
+dans le `main` de quatre dépôts amont. Patch, comme la 1.1.1 : mise à jour du
+contenu de skills, sans fonctionnalité du plugin.
+
+- dpm-fpt 1.0.5 → 1.0.6 (`af221e9`), dirfi-fpt 1.0.5 → 1.0.6 (`f29926a`),
+  dpo-ct 0.2.2 → 0.2.3 (`5b33862`), dsi-fpt 0.2.1 → 0.2.2 (`252fd0d`).
+- Surcharges inchangées ; seules leurs empreintes d'entrée (`base_sha256`) et
+  les ancres de titre DirFi et DSI suivent les nouvelles bases. Copies
+  régénérées par `scripts/sync_skills.py`.
+- dcp-fpt reste à 0.1.4 (`7874c62`) : la 0.1.6 amont change des fichiers
+  mesurés par la preuve DCP-014 (ADR 0029). recherche-juridique reste à 3.6.0
+  (`30c9c90`, ADR 0030) : la maintenance amont du jour ne touche pas `skill/`.
+  drh-fpt est inchangé.
+- Aucune campagne, aucun smoke ni aucune preuve ; la mesure préparée pour la
+  1.5.0 ne couvre pas ce runtime. Catalogues inchangés (1.4.0).
+
 ## 1.5.0 : candidat non mesuré, non qualifié
 
 Passage à la licence EUPL 1.2 (ADR 0030, 2026-11-01), sans changement de
