@@ -6,8 +6,10 @@ Ré-épinglage du 2026-11-03 sur la maintenance de veille juridique fusionnée
 dans le `main` de quatre dépôts amont. Patch, comme la 1.1.1 : mise à jour du
 contenu de skills, sans fonctionnalité du plugin.
 
-- dpm-fpt 1.0.5 → 1.0.6 (`af221e9`), dirfi-fpt 1.0.5 → 1.0.6 (`f29926a`),
-  dpo-ct 0.2.2 → 0.2.3 (`5b33862`), dsi-fpt 0.2.1 → 0.2.2 (`252fd0d`).
+- dpm-fpt 1.0.5 → 1.0.6 (`af221e9`), dirfi-fpt 1.0.5 → 1.0.7 (`0675107` :
+  veille du 2026-11-03 puis garde-fou §5.3 déclenché par les comptes
+  approuvés en déficit), dpo-ct 0.2.2 → 0.2.3 (`5b33862`), dsi-fpt
+  0.2.1 → 0.2.2 (`252fd0d`).
 - Surcharges inchangées ; seules leurs empreintes d'entrée (`base_sha256`) et
   les ancres de titre DirFi et DSI suivent les nouvelles bases. Copies
   régénérées par `scripts/sync_skills.py`.

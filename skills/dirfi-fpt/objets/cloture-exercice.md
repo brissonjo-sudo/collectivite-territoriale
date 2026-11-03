@@ -146,8 +146,9 @@ de mémoire.
 
 ### 3.10 Détection d'un risque de déficit
 
-1. Si le compte administratif fait apparaître un **déficit au-delà du seuil
-   légal** (seuil à vérifier, non chiffré de mémoire), ne pas poursuivre
+1. Si les comptes approuvés (compte financier unique, ou compte administratif
+   selon le régime applicable à l'exercice) font apparaître un **déficit
+   au-delà du seuil légal** (seuil à vérifier, non chiffré de mémoire), ne pas poursuivre
    l'exécution en l'état.
 2. Afficher l'**ALERTE BUDGÉTAIRE** (`SKILL.md` §5.3) avant tout contenu
    métier complémentaire, et orienter vers
@@ -193,9 +194,10 @@ Thèmes appelant une recherche avant conclusion :
 
 ### Garde-fou budgétaire (`SKILL.md` §5.3) — à vérifier en priorité
 
-- [ ] Le compte administratif fait-il apparaître un **déficit au-delà du
-      seuil légal** ? Si oui → **ALERTE BUDGÉTAIRE** affichée avant tout
-      contenu, orientation vers `controle-budgetaire.md` §4.3.
+- [ ] Les comptes approuvés (CFU, ou compte administratif selon le régime
+      applicable) font-ils apparaître un **déficit au-delà du seuil légal** ?
+      Si oui → **ALERTE BUDGÉTAIRE** affichée avant tout contenu, orientation
+      vers `controle-budgetaire.md` §5.3.
 - [ ] Une **provision obligatoire** a-t-elle été omise ? Si oui → même
       traitement.
 

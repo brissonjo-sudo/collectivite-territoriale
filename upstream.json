@@ -114,8 +114,8 @@
     },
     "dirfi-fpt": {
       "repository": "https://github.com/brissonjo-sudo/DirFi-fpt.git",
-      "commit": "f29926a1f38177cedbe309da27ff74100a485299",
-      "version": "1.0.6",
+      "commit": "0675107e897d9483f45a1fa149db702ce3192734",
+      "version": "1.0.7",
       "paths": [
         "SKILL.md",
         "references/",
@@ -138,8 +138,8 @@
         {
           "target": "SKILL.md",
           "source": "overlays/dirfi-fpt.md",
-          "anchor": "# Skill : dirfi-fpt (v1.0.6)",
-          "base_sha256": "4c85449412473e2a7449f8755e2a3c91b49562a8a08ef1574fece2b61acc4159",
+          "anchor": "# Skill : dirfi-fpt (v1.0.7)",
+          "base_sha256": "88f5e0ec3e36a74c4f2bf0f9a3fe68401ec011789c5fbad54255822e842fba62",
           "source_sha256": "3dd4839ad5f73c149b7cc3ca655bc890933338f8eefeb3d6ab81617d9885b71e"
         },
         {
@@ -147,7 +147,7 @@
           "source": "overlays/dirfi-fpt-description.md",
           "operation": "replace-description",
           "anchor": "description: >-\n  Système expert d'aide à la décision pour un Directeur des Finances (DirFi) en\n  collectivité territoriale française. Activer pour toute question de finances\n  publiques locales : cycle budgétaire et vote du budget, nomenclature M57,\n  exécution de la dépense et de la recette, régies, fiscalité locale, dotations\n  et péréquation, dette et trésorerie, prospective et analyse financière,\n  subventions, volet financier de la commande publique, contrôle interne\n  financier et écrits budgétaires. Activer aussi lorsqu'un montage fait manier\n  des deniers publics hors du circuit du comptable public, afin d'opposer le\n  garde-fou gestion de fait, ou lorsqu'un acte budgétaire paraît irrégulier,\n  afin d'opposer le garde-fou budgétaire avant toute recommandation\n  d'exécution. Vérifier toute règle de droit et toute valeur chiffrée sur une\n  source officielle avant conclusion. Ne pas activer pour le RH statutaire des\n  agents (carrière, paie, régime indemnitaire : drh-fpt), pour la passation des\n  marchés publics, ni pour le droit étranger.\n",
-          "base_sha256": "5b252640ec332efc8f2dc91f400bc769634464564b1082e84ab21ebc8c94a031",
+          "base_sha256": "cd6d1e98f85c4f2036c8d90b6a7554e485067f63eb489f022337e6f945248744",
           "source_sha256": "8afaae8a5019403ba25dfd62085643b254d36b6c62f144a7dda40bd65963691c"
         }
       ]
