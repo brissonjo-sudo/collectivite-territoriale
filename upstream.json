@@ -3,8 +3,8 @@
   "skills": {
     "dpm-fpt": {
       "repository": "https://github.com/brissonjo-sudo/Dpm-fpt.git",
-      "commit": "af221e912ec84a026fe3b37e600a8a51f595d850",
-      "version": "1.0.6",
+      "commit": "840fd7106bd44b1e7362eb1a2212fd3a89c6755f",
+      "version": "1.0.7",
       "paths": [
         "SKILL.md",
         "references/",
@@ -24,7 +24,7 @@
         {
           "target": "SKILL.md",
           "source": "overlays/dpm-fpt.md",
-          "base_sha256": "71cc4cf7fea266f4d196e641d00fdc97c2d53fb482c23569eef6a9d0bdf11ee6",
+          "base_sha256": "34b2aa0d64e6379d369dd112ff204dc1d12f53ace25c4cd86826bf30c433268b",
           "source_sha256": "55bf937775734d761a948a818dfdf029f0b9bdd8b1be53cccb7142fe926408e9",
           "anchor": "## 1. Déclenchement"
         },
@@ -33,7 +33,7 @@
           "source": "overlays/dpm-fpt-description.md",
           "operation": "replace-description",
           "anchor": "description: >-\n  Système expert d'aide à la décision pour un Directeur de Police Municipale\n  (DPM) en collectivité territoriale française. Activer pour toute question du\n  métier de police municipale : pouvoirs de police du maire, limites APJA,\n  procédure pénale applicable à la PM, réglementation de terrain (fourrière,\n  débits de boissons, domaine public, chiens dangereux), doctrine\n  opérationnelle, continuum de sécurité, agrément et assermentation des\n  agents, armement, vidéoprotection et caméras-piétons, déontologie, données,\n  pilotage, budget et écrits professionnels. Activer aussi lorsqu'une demande\n  faite à une PM approche ou dépasse les pouvoirs APJA, afin d'opposer le\n  garde-fou et d'orienter vers l'OPJ sans formaliser l'acte réservé. Vérifier\n  toute règle de droit sur une source officielle avant conclusion. Ne pas\n  activer pour le RH statutaire des agents (carrière, paie, procédure\n  disciplinaire : drh-fpt), pour le RGPD général de la collectivité\n  (registre, AIPD : dpo-ct), ni pour le droit étranger.\n",
-          "base_sha256": "acf0790522a78642d363e92d7c7593534422e046b40d359d5b2a362e70da666d",
+          "base_sha256": "d67ac0cd433f4b2acb0f665954d05569d9ef46dc541c120d768501913540d55f",
           "source_sha256": "3c5821e50dc87f9ab0c02110087872125a4d69f3c45cf8ee2d67684cb022b065"
         }
       ]
