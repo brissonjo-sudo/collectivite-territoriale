@@ -16,7 +16,7 @@ description: >-
   s'arrêter sur son fond. Document externe : brouillon soumis à validation humaine
   avant tout envoi. Ne pas activer pour le droit hors UE.
 metadata:
-  version: 0.2.2
+  version: 0.2.3
   statut: éprouvé sur batterie de 10 cas complexes (59/60, 0 hallucination) — conformité politique d'usage et navigation des fichiers longs renforcées
   date_derniere_revue_methodologique: 2026-07-22
   date_derniere_verification_sources: 2026-07-22
@@ -34,7 +34,7 @@ metadata:
   langue: français
 ---
 
-# Skill : dpo-ct (v0.2.2)
+# Skill : dpo-ct (v0.2.3)
 
 > **Objet** : expertise d'un **Délégué à la Protection des Données** de
 > collectivité territoriale, à la fois **opérationnelle** (orientée avis,

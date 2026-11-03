@@ -183,16 +183,17 @@ Cet inventaire atteste la présence des fichiers, pas la vigueur de leur contenu
 - `references/templates/rapport-orientation-budgetaire.md`
 <!-- ct-reference-inventory:end -->
 
-# Skill : dirfi-fpt (v1.0.5)
+# Skill : dirfi-fpt (v1.0.6)
 
-> **Métadonnées** — version : **1.0.5** · statut : correctif de co-activation
-> DirFi / DRH, **postérieur à la mesure**. Dernier score de suite : campagne
+> **Métadonnées** — version : **1.0.6** · statut : veille juridique
+> du 2026-11-03, **postérieure à la mesure**. Dernier score de suite : campagne
 > complète `claude-v1.0.3-r3` achevée le 2026-09-16, qui mesure la **v1.0.3**
 > (28 cas, skill lu depuis le dépôt) — **27 réussites, 1 demi-réussite,
-> 0 échec**. La v1.0.5 permet un repère CIA strictement conditionnel après
-> bascule explicite vers `drh-fpt` pour une prime de départ ; elle n'est
-> pas encore couverte par une campagne · dernière revue méthodologique :
-> 2026-10-21 · périmètre : direction des finances,
+> 0 échec**. La v1.0.6 intègre la réforme budgétaire applicable à compter de
+> l'exercice 2026 (approbation des comptes sur compte financier unique) et
+> trois décisions vérifiées ; elle n'est pas encore couverte par une
+> campagne · dernière revue méthodologique :
+> 2026-11-03 · périmètre : direction des finances,
 > collectivités territoriales (France) · dépendances recommandées :
 > `recherche-juridique` (validateur de fond et de vigueur), `drh-fpt` (volet RH
 > statutaire), `dpm-fpt` (volet métier police municipale) · compatibilité :

@@ -39,7 +39,8 @@ La situation décrit-elle l'un de ces cas ?
 
 - budget **non voté** à la date limite ;
 - budget voté **en déséquilibre réel** ;
-- **compte administratif en déficit** au-delà du seuil légal ;
+- **comptes approuvés en déficit** (compte financier unique ; compte
+  administratif pour un exercice antérieur à 2026) au-delà du seuil légal ;
 - **dépense obligatoire** non inscrite ou sous-inscrite ;
 - **exécution sans crédit ouvert** ;
 - **provision obligatoire** absente ;

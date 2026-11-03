@@ -214,12 +214,12 @@ Cet inventaire atteste la présence des fichiers, pas la vigueur de leur contenu
 - `references/templates/rapport-incident.md`
 <!-- ct-reference-inventory:end -->
 
-# Skill : dsi-fpt (v0.2.1)
+# Skill : dsi-fpt (v0.2.2)
 
-> **Métadonnées** — version : **0.2.1** · statut : **candidat corrigé à mesurer** ;
+> **Métadonnées** — version : **0.2.2** · statut : **candidat corrigé à mesurer** ;
 > les résultats des candidats précédents ne qualifient pas cette version ;
 > relecture par un praticien DSI/RSSI de collectivité requise avant publication · dernière revue du
-> socle : 2026-10-05 · périmètre : fonction systèmes d'information des
+> socle : 2026-11-03 · périmètre : fonction systèmes d'information des
 > collectivités territoriales et de leurs groupements (France) · dépendances
 > recommandées : `recherche-juridique` (validateur de fond et de vigueur),
 > `dpo-ct` (protection des données), `drh-fpt` (RH statutaire), `dpm-fpt`
