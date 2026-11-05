@@ -142,7 +142,9 @@ attribuées au volet de `recherche-juridique`, sans lui transférer le métier.
 
 Chaque BASCULE est émise au moment où le volet est confié, avant toute phrase
 qui attribue ou traite ce volet ; une BASCULE regroupée en fin de réponse
-ne compte pas.
+ne compte pas. Cette règle vaut aussi pour les commentaires de progression
+visibles avant ou entre les outils : y nommer seulement les rôles chargés,
+sans leur répartir de volet, ou y émettre déjà la BASCULE.
 
 Avant un fond délégué, afficher BASCULE en nommant le skill destinataire,
 l'activer réellement et lui attribuer le volet ; maintenir cette attribution

@@ -79,6 +79,11 @@ class CoactivationDsiStructureTests(unittest.TestCase):
                 text = " ".join((ROOT / relative).read_text(encoding="utf-8").split())
                 self.assertEqual(text.count(rule), 1)
                 self.assertIn("Avant un fond délégué, afficher BASCULE en nommant le skill destinataire", text)
+                # Campagne e (05/11/2026) : volet attribué dans un commentaire de progression avant la BASCULE.
+                self.assertEqual(text.count(
+                    "Cette règle vaut aussi pour les commentaires de progression visibles avant ou entre "
+                    "les outils : y nommer seulement les rôles chargés, sans leur répartir de volet, "
+                    "ou y émettre déjà la BASCULE."), 1)
 
 
 if __name__ == "__main__":

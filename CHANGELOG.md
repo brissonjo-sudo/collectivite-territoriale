@@ -2,8 +2,8 @@
 
 ## 1.5.0 : candidat non mesuré, non qualifié
 
-Passage à la licence EUPL 1.2 (ADR 0030, 2026-11-01), sans changement de
-comportement des skills, et correctif #21 de l'outillage de mesure.
+Passage à la licence EUPL 1.2 (ADR 0030, 2026-11-01), correctif #21 de
+l'outillage de mesure et une correction de comportement de dsi-fpt (2026-11-05).
 
 - Code, skills, scripts, tests et manifestes : EUPL-1.2 ; `docs/` reste en
   CC-BY-SA-4.0 ; Ponytail garde sa licence MIT. Versions 1.4.0 et antérieures
@@ -32,6 +32,12 @@ comportement des skills, et correctif #21 de l'outillage de mesure.
   contrat est refusée), projection publique exigée pour toute version récente.
   Préparation H1 : aucune mesure liée, aucun comportement des skills modifié ;
   les preuves et les contrôles de la 1.3.0 et de la 1.4.0 sont inchangés.
+- Correction de comportement de dsi-fpt (2026-11-05), après l'arrêt de la
+  tentative e de la mesure sur H1 (cas `l8-dsi-achat-contrat-mixte`, volet
+  confié à dcp-fpt dans un commentaire de progression avant la BASCULE) : la
+  règle « BASCULE avant toute phrase qui attribue le volet » vaut aussi pour
+  les commentaires de progression (`overlays/dsi-fpt.md`). Nouveau candidat à
+  mesurer ; aucun résultat des tentatives a à e n'est repris.
 
 Correction datée du 2026-11-01 : la 1.4.0 ci-dessous a été publiée (étiquette
 `v1.4.0`, registre `docs/publication.md`, catalogues sur 1.4.0). Les mentions
