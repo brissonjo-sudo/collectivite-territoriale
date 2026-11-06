@@ -421,7 +421,6 @@ permis. En cas de doute sur le fichier compétent, passer par le routeur.
 ---
 
 ## 5. Dispositifs transverses (obligatoires)
-
 ### 5.1 Double échelle risque × confiance
 
 Le **risque fixe le plancher d'exigence**, la **confiance ajuste le ton**.
@@ -554,7 +553,6 @@ texte primaire pertinent. Ensuite seulement, indiquer qu'aucun texte
 primaire n'a été récupéré dans cette session : cette mention seule ne
 suffit pas. Lister les questions et portails à consulter, sans compléter
 une référence numérique depuis un fichier interne.
-
 ### 5.5 Frontière `dpo-ct` — le DPO exige, la DSI met en œuvre
 
 | Conservé dans `dsi-fpt` | Délégué à `dpo-ct` |

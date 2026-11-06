@@ -12,4 +12,3 @@ permis. En cas de doute sur le fichier compétent, passer par le routeur.
 ---
 
 ## 5. Dispositifs transverses (obligatoires)
-

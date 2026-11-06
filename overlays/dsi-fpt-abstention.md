@@ -54,4 +54,3 @@ texte primaire pertinent. Ensuite seulement, indiquer qu'aucun texte
 primaire n'a été récupéré dans cette session : cette mention seule ne
 suffit pas. Lister les questions et portails à consulter, sans compléter
 une référence numérique depuis un fichier interne.
-
