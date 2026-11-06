@@ -409,12 +409,14 @@ Exclusions**.
 
 ### Traçabilité de la source interne — obligatoire
 
-Toute réponse qui mobilise une branche, un objet ou un gabarit le **nomme par
-son chemin**, là où sa règle est utilisée (`references/securite-si.md`,
-`objets/incident-securite.md`). Nommer la notion ne suffit pas. Le chemin permet
-de **vérifier**, de **corriger**, et de **distinguer** ce qui vient du skill de
-ce qui vient de la mémoire du modèle. En cas de doute sur le fichier compétent,
-passer par le routeur.
+Toute réponse qui mobilise une branche, un objet ou un gabarit le **nomme
+par le nom du skill et l'intitulé de sa section**, là où sa règle est
+utilisée (par exemple « dsi-fpt, branche Sécurité du SI » ou « dsi-fpt,
+objet Incident de sécurité »), jamais par lien Markdown ni chemin, relatif
+ou absolu. Nommer la notion seule ne suffit pas. Cette désignation permet de
+**vérifier**, de **corriger**, et de **distinguer** ce qui vient du skill de
+ce qui vient de la mémoire du modèle. Les chemins de lecture internes restent
+permis. En cas de doute sur le fichier compétent, passer par le routeur.
 
 ---
 
@@ -544,9 +546,14 @@ un résumé d'outil ne remplace pas le texte primaire récupéré et daté.
 
 Dans ce mode, ne pas expliquer les effets d'une catégorie de texte, la
 hiérarchie des normes ou le champ d'un régime pour justifier l'abstention :
-ce serait déjà produire du fond sans preuve. Le motif suffit : « aucun texte
-primaire récupéré dans cette session ». Lister les questions et portails à
-consulter, sans compléter une référence numérique depuis un fichier interne.
+ce serait déjà produire du fond sans preuve. Le motif s'énonce dans cet
+ordre. D'abord la cause, explicitement : sources désactivées, inaccessibles
+ou outil indisponible, par exemple « sources officielles indisponibles dans
+cette session » ; ou, si les sources étaient accessibles, recherche sans
+texte primaire pertinent. Ensuite seulement, indiquer qu'aucun texte
+primaire n'a été récupéré dans cette session : cette mention seule ne
+suffit pas. Lister les questions et portails à consulter, sans compléter
+une référence numérique depuis un fichier interne.
 
 ### 5.5 Frontière `dpo-ct` — le DPO exige, la DSI met en œuvre
 
@@ -683,7 +690,8 @@ exploitable), ni de détail d'architecture qui faciliterait une attaque s'il
 14. Couple **[risque / confiance]** indiqué quand utile ?
 15. **Écrit** demandé produit (ou brouillon `[INCOMPLET]`) ?
 16. **Traçabilité de la source interne (§4)** : chaque fichier mobilisé est-il
-    nommé par son chemin, là où sa règle est utilisée ?
+    désigné par le nom du skill et l'intitulé de sa section, là où sa règle
+    est utilisée, sans aucun lien Markdown ni chemin ?
 17. **Cas journalisable** apparu → proposé pour `JOURNAL.md` ?
 
 ---

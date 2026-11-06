@@ -95,6 +95,25 @@ class CoactivationDsiStructureTests(unittest.TestCase):
                     "explicitement avant l’abstention, par exemple « sources officielles "
                     "indisponibles dans cette session » ; « aucun texte récupéré » ne suffit pas."), 1)
 
+    def test_formules_amont_contradictoires_neutralisees(self) -> None:
+        # Audit du 07/11/2026 : l'amont contredisait la surcouche (motif d'abstention, chemins).
+        text = " ".join((ROOT / "skills/dsi-fpt/SKILL.md").read_text(encoding="utf-8").split())
+        for old in ("Le motif suffit", "« aucun texte primaire récupéré dans cette session »",
+                    "nomme par son chemin", "Le chemin permet de",
+                    "(`references/securite-si.md`, `objets/incident-securite.md`)",
+                    "nommé par son chemin, là où sa règle est utilisée"):
+            with self.subTest(formule=old):
+                self.assertNotIn(old, text)
+        for new in ("D'abord la cause, explicitement : sources désactivées, inaccessibles "
+                    "ou outil indisponible",
+                    "Ensuite seulement, indiquer qu'aucun texte primaire n'a été récupéré "
+                    "dans cette session : cette mention seule ne suffit pas.",
+                    "objet Incident de sécurité »), jamais par lien Markdown ni chemin, relatif ou absolu",
+                    "désigné par le nom du skill et l'intitulé de sa section, là où sa règle "
+                    "est utilisée, sans aucun lien Markdown ni chemin ?"):
+            with self.subTest(formule=new):
+                self.assertEqual(text.count(new), 1)
+
 
 if __name__ == "__main__":
     unittest.main()
