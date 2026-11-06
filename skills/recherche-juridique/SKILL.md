@@ -32,6 +32,8 @@ Il prime sur les modèles, exemples, valeurs et références historiques ci-dess
 irréversible, émettre son bloc conservatoire comme tout premier texte visible,
 avant toute annonce d'activation, lecture d'entrée ou autre outil. Reporter
 l'annonce des skills après ce bloc. Ne pas attendre la réponse finale pour STOP.
+Le STOP se limite à l’alerte et aux mesures conservatoires : il ne traite
+aucun volet confié à un autre rôle ; ce volet n’apparaît qu’après sa BASCULE.
 Pour chaque entrée SKILL.md sélectionnée, choisir une seule lecture intégrale
 ou une seule série de segments contigus couvrant le fichier du début à la fin.
 Ne jamais mélanger ces deux modes ni relire un segment ou une entrée déjà
@@ -97,6 +99,9 @@ distinctes des entrées.
    pas une troisième voie entre preuve et abstention. Les mentions locales
    « vérifié sur Légifrance » restent des traces historiques ; elles ne
    dispensent jamais d’une récupération primaire dans cette session.
+   Sources désactivées, inaccessibles ou outil indisponible : l’annoncer
+   explicitement avant l’abstention, par exemple « sources officielles
+   indisponibles dans cette session » ; « aucun texte récupéré » ne suffit pas.
 6. **Contrôle avant toute rédaction finale.** Pour chaque phrase de droit :
    preuve primaire pertinente reçue et attribution explicite, ou retrait.
    Une consultation partielle ne valide jamais les autres références.
@@ -129,6 +134,12 @@ Le fond statutaire et indemnitaire appartient à `drh-fpt`, le budget et les
 calculs financiers à `dirfi-fpt`, la doctrine opérationnelle de police à
 `dpm-fpt`. La preuve des règles, leur portée et les abstentions ciblées sont
 attribuées au volet de `recherche-juridique`, sans lui transférer le métier.
+
+Chaque BASCULE est émise au moment où le volet est confié, avant toute phrase
+qui attribue ou traite ce volet ; une BASCULE regroupée en fin de réponse
+ne compte pas. Cette règle vaut aussi pour les commentaires de progression
+visibles avant ou entre les outils : y nommer seulement les rôles chargés,
+sans leur répartir de volet, ou y émettre déjà la BASCULE.
 
 Avant un fond délégué, afficher BASCULE en nommant le skill destinataire,
 l'activer réellement et lui attribuer le volet ; maintenir cette attribution

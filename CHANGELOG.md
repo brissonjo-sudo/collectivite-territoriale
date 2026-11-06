@@ -3,8 +3,9 @@
 ## 1.5.0 : candidat non mesuré, non qualifié
 
 Passage à la licence EUPL 1.2 (ADR 0030, 2026-11-01), correctif #21 de
-l'outillage de mesure et trois corrections de comportement de dsi-fpt
-(2026-11-05 et deux le 2026-11-06).
+l'outillage de mesure et quatre corrections de comportement : trois de
+dsi-fpt (2026-11-05 et deux le 2026-11-06), puis une quatrième (2026-11-07)
+sur dsi-fpt et les cinq autres surcouches.
 
 - Code, skills, scripts, tests et manifestes : EUPL-1.2 ; `docs/` reste en
   CC-BY-SA-4.0 ; Ponytail garde sa licence MIT. Versions 1.4.0 et antérieures
@@ -51,6 +52,22 @@ l'outillage de mesure et trois corrections de comportement de dsi-fpt
   l'indisponibilité des sources s'annonce explicitement avant l'abstention
   (`overlays/dsi-fpt.md`). Nouveau candidat à mesurer ; aucun résultat des
   tentatives a à h n'est repris.
+- Quatrième correction de comportement (2026-11-07), après l'audit du
+  candidat 87b6dac, avant toute mesure réussie sur lui : (1) dsi-fpt, trois
+  surcouches `replace-block` neutralisent les formules amont contraires à la
+  surcouche (le motif d'abstention annonce d'abord la cause, sources
+  désactivées, inaccessibles ou outil indisponible, puis seulement l'absence de
+  texte récupéré ; une source interne se cite par nom de skill et intitulé de
+  section, jamais par chemin, y compris dans l'auto-vérification) ; (2) les
+  trois règles nées des tentatives e, g et h (BASCULE avant tout volet, y
+  compris dans les commentaires de progression ; STOP limité à l'alerte et aux
+  mesures conservatoires ; indisponibilité des sources annoncée avant
+  l'abstention) sont portées dans dpm-fpt, drh-fpt, dirfi-fpt, dpo-ct et
+  recherche-juridique. dcp-fpt reste sans surcouche (référence DCP-014, ADR
+  0029). Outil `scripts/rehash_overlays.py` pour rechaîner les empreintes ;
+  plusieurs sections distinctes peuvent être remplacées, une seule fois
+  chacune. Nouveau candidat à mesurer ; aucun résultat des tentatives a à i
+  n'est repris.
 
 Correction datée du 2026-11-01 : la 1.4.0 ci-dessous a été publiée (étiquette
 `v1.4.0`, registre `docs/publication.md`, catalogues sur 1.4.0). Les mentions

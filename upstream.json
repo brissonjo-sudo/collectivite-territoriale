@@ -25,7 +25,7 @@
           "target": "SKILL.md",
           "source": "overlays/dpm-fpt.md",
           "base_sha256": "f6820c1f51013029268cd68b8db564c1b88965ff77fa678c6b7aeb5a37c3ca96",
-          "source_sha256": "55bf937775734d761a948a818dfdf029f0b9bdd8b1be53cccb7142fe926408e9",
+          "source_sha256": "92eb7452667523d601c555f483147d83a984f3061ecfbf1f760807e1ef3755cf",
           "anchor": "## 1. Déclenchement"
         },
         {
@@ -33,7 +33,7 @@
           "source": "overlays/dpm-fpt-description.md",
           "operation": "replace-description",
           "anchor": "description: >-\n  Système expert d'aide à la décision pour un Directeur de Police Municipale\n  (DPM) en collectivité territoriale française. Activer pour toute question du\n  métier de police municipale : pouvoirs de police du maire, limites APJA,\n  procédure pénale applicable à la PM, réglementation de terrain (fourrière,\n  débits de boissons, domaine public, chiens dangereux), doctrine\n  opérationnelle, continuum de sécurité, agrément et assermentation des\n  agents, armement, vidéoprotection et caméras-piétons, déontologie, données,\n  pilotage, budget et écrits professionnels. Activer aussi lorsqu'une demande\n  faite à une PM approche ou dépasse les pouvoirs APJA, afin d'opposer le\n  garde-fou et d'orienter vers l'OPJ sans formaliser l'acte réservé. Vérifier\n  toute règle de droit sur une source officielle avant conclusion. Ne pas\n  activer pour le RH statutaire des agents (carrière, paie, procédure\n  disciplinaire : drh-fpt), pour le RGPD général de la collectivité\n  (registre, AIPD : dpo-ct), ni pour le droit étranger.\n",
-          "base_sha256": "3c9e0e7f11cc59c30adec8862df274b628260520abdfbe1a297e63a87c6735ef",
+          "base_sha256": "d890f46ad318a1104a6805b4d38f480547132ebded5282719088ab00cce99818",
           "source_sha256": "3c5821e50dc87f9ab0c02110087872125a4d69f3c45cf8ee2d67684cb022b065"
         }
       ]
@@ -63,14 +63,14 @@
           "source": "overlays/drh-fpt.md",
           "anchor": "# Skill : drh-fpt (v0.7.0)",
           "base_sha256": "a13b4c3fce2cca6b2631149a5569077f28839c9d21a95374224ea163e7924c31",
-          "source_sha256": "f0ec74c138d3a5c88d3e97b9523c0e8f355c1b65683ee8005343df027be9cc38"
+          "source_sha256": "71f8135dde92cede493a00a6fe633a7852d296a8a725c9fe43dd4c86cfad06bc"
         },
         {
           "target": "SKILL.md",
           "source": "overlays/drh-fpt-description.md",
           "operation": "replace-description",
           "anchor": "description: >-\n  Expertise opérationnelle et juridiquement vérifiée en ressources humaines de\n  la fonction publique territoriale, pour les collectivités de plus de 350\n  agents. Active ce skill pour toute question RH territoriale : carrière et\n  paie, régime indemnitaire, santé et QVT, recrutement et formation, instances\n  et dialogue social, masse salariale et SI RH, communication interne, agents\n  contractuels, protection fonctionnelle, déontologie, cumul d'activités,\n  signalements ; pour qualifier une situation statutaire, sécuriser un acte\n  (avancement, sanction, refus, délibération) ou produire un livrable RH\n  (note, délibération, fiche de procédure, courrier d'agent). Pour toute règle\n  reposant sur un texte, une procédure, un calcul, un délai, une condition\n  d'accès, une compétence d'instance ou une jurisprudence, le skill vérifie la\n  source officielle avant de conclure. Ne pas activer pour le droit privé hors\n  FPT, les fonctions publiques d'État ou hospitalière, ni pour les\n  collectivités de moins de 350 agents.\n",
-          "base_sha256": "c7ab189c1567372b1860da45eb1bee4872da1bbf27a74c04462509f0bdffd7ec",
+          "base_sha256": "38f31b50d82d424c76c2a19894b58a86a12ed3dd721737bdc8723b9239d3c653",
           "source_sha256": "13e1a73d89289a59044a954194679cd7072d3391287a03bc98fcc5c17a3ca4de"
         }
       ]
@@ -99,14 +99,14 @@
           "target": "SKILL.md",
           "source": "overlays/dpo-ct.md",
           "base_sha256": "82288b47c2d5e67acc4eb9ee24636eefe8b29c3a31b137e8e48e69460ed06fa5",
-          "source_sha256": "f1c0f9aaaa4f31fcbbf4c7875b7f1ba6d0b1cc5f11aa2d3c954db0e032efa434",
+          "source_sha256": "7b6cec5a61225a1678f027757e918aaf4995964f3a88b380b3475c9fa2829b24",
           "anchor": "## 1. Déclenchement"
         },
         {
           "target": "SKILL.md",
           "source": "overlays/dpo-ct-description.md",
           "operation": "replace-description",
-          "base_sha256": "014963875a4a06610abc07e49acf200b0ef0eab928ae885e6d67533cf80a7828",
+          "base_sha256": "1d230f4d0456cd882cab454ea2bca3b68e68072f8aa905dafb9728bb0501da84",
           "source_sha256": "10cebe49f7d923007320cbc88f3b8ee4e824278e5e3df9f73012e9f734fafc2a",
           "anchor": "description: >-\n  Système expert d'aide à la décision pour un Délégué à la Protection des\n  Données (DPO) en collectivité territoriale française. Activer pour toute\n  question de protection des données personnelles : avis RGPD sur un projet ou\n  un traitement, AIPD (méthode CNIL), registre des traitements (art. 30),\n  violation de données et notification CNIL (72 h), droits des personnes\n  (accès, effacement, opposition...), sous-traitance (art. 28) et transferts\n  hors UE, sécurité (art. 32), doctrine CNIL et CEPD, traitements communaux\n  (état civil, élections, scolaire, action sociale, vidéoprotection,\n  téléservices, open data). Activer aussi dès qu'un projet implique des\n  données personnelles, même sans mention du RGPD. Toute règle reposant sur un\n  texte est vérifiée à la source officielle avant conclusion. Ne pas activer\n  pour le volet opérationnel de la police municipale (dpm-fpt), le RH\n  statutaire (drh-fpt), la mise en œuvre technique de la sécurité (dsi-fpt),\n  la passation des marchés (dcp-fpt), ni le droit hors UE.\n"
         }
@@ -140,14 +140,14 @@
           "source": "overlays/dirfi-fpt.md",
           "anchor": "# Skill : dirfi-fpt (v1.0.5)",
           "base_sha256": "363ebeef09ff4731d356f99ce9835e0942ca58502bcd00e576d31f569f085b4d",
-          "source_sha256": "3dd4839ad5f73c149b7cc3ca655bc890933338f8eefeb3d6ab81617d9885b71e"
+          "source_sha256": "1c8d9b204dccd0725783f29c8d019ca30e1a77c025d581291229e6c4da7946c3"
         },
         {
           "target": "SKILL.md",
           "source": "overlays/dirfi-fpt-description.md",
           "operation": "replace-description",
           "anchor": "description: >-\n  Système expert d'aide à la décision pour un Directeur des Finances (DirFi) en\n  collectivité territoriale française. Activer pour toute question de finances\n  publiques locales : cycle budgétaire et vote du budget, nomenclature M57,\n  exécution de la dépense et de la recette, régies, fiscalité locale, dotations\n  et péréquation, dette et trésorerie, prospective et analyse financière,\n  subventions, volet financier de la commande publique, contrôle interne\n  financier et écrits budgétaires. Activer aussi lorsqu'un montage fait manier\n  des deniers publics hors du circuit du comptable public, afin d'opposer le\n  garde-fou gestion de fait, ou lorsqu'un acte budgétaire paraît irrégulier,\n  afin d'opposer le garde-fou budgétaire avant toute recommandation\n  d'exécution. Vérifier toute règle de droit et toute valeur chiffrée sur une\n  source officielle avant conclusion. Ne pas activer pour le RH statutaire des\n  agents (carrière, paie, régime indemnitaire : drh-fpt), pour la passation des\n  marchés publics, ni pour le droit étranger.\n",
-          "base_sha256": "60b909d7ab4b2b40d7dde86eaf79df4c5abc2e6ce0df5493c0acfa778a229f59",
+          "base_sha256": "f7c8196cd195f09496c4aae0720cf046614773975758581f94777a53da84361c",
           "source_sha256": "8afaae8a5019403ba25dfd62085643b254d36b6c62f144a7dda40bd65963691c"
         }
       ]
@@ -180,7 +180,7 @@
           "target": "SKILL.md",
           "source": "overlays/recherche-juridique.md",
           "base_sha256": "9ea3a8a169bacb373fa969a012184c073e64824c0031f5b913aa5ad76fd26920",
-          "source_sha256": "d76358b724c9fb16a23616a87d60697a649d6fd9722a7bcf53e437be4b299020",
+          "source_sha256": "1d465e32945e5d9e4ca1a3d96504e387fdd95c3c3520c6ba24fdbb697eea612d",
           "anchor": "## Déclenchement"
         }
       ]
