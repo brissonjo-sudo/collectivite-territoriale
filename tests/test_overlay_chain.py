@@ -92,6 +92,17 @@ class OverlayChainTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "^Surcharge : cible dupliquée$"):
             apply_overlays(self.root, {"SKILL.md": self.base}, [first, second])
 
+    def test_deux_sections_distinctes_remplacees_dans_l_ordre(self) -> None:
+        first = self.spec("first", "replace-block", self.block, self.new_block, self.base)
+        intermediate = self.base.replace(self.block, self.new_block, 1)
+        second = self.spec("second", "replace-block", b"### Next\nuntouched\n",
+                           b"### Next\nreplaced\n", intermediate)
+        result = apply_overlays(self.root, {"SKILL.md": self.base}, [first, second])
+        self.assertEqual(result["SKILL.md"],
+                         intermediate.replace(b"### Next\nuntouched\n", b"### Next\nreplaced\n"))
+        with self.assertRaisesRegex(ValueError, "^Surcharge : cible dupliquée$"):
+            apply_overlays(self.root, {"SKILL.md": self.base}, [first, second, first])
+
     def test_description_ancre_absente_refusee_sans_masquage_par_empreinte(self) -> None:
         replacement = {**self.replacement, "base_sha256": self.sha(self.base),
                        "anchor": "description: >-\n  Absent description.\n"}

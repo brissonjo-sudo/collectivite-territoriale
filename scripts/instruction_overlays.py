@@ -87,6 +87,9 @@ def validate_overlays(overlays: list[dict]) -> None:
         if not overlay["source"].startswith("overlays/"):
             raise ValueError("Surcharge : source hors overlays")
         identity = (overlay["target"], operation)
+        if operation == "replace-block" and isinstance(overlay["anchor"], str):
+            # Une seule correction par section : le titre ### identifie la section.
+            identity += (overlay["anchor"].split("\n", 1)[0],)
         if identity in targets:
             raise ValueError("Surcharge : cible dupliquée")
         targets.add(identity)
