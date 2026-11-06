@@ -1,11 +1,29 @@
 # Collectivité 1.5.0 : candidat non mesuré, non qualifié
 
-État au **1er novembre 2026**. La 1.5.0 porte le passage à la licence
+État au **7 novembre 2026**. La 1.5.0 porte le passage à la licence
 EUPL 1.2 ([ADR 0030](adr/0030-adoption-eupl-1-2.md)). La version publiée et
 les deux catalogues restent sur **1.4.0** jusqu'à la
 [procédure prévue](publication.md).
 
-## Aucun comportement modifié
+## Nouveau candidat du 7 novembre 2026
+
+Après l'audit du candidat 87b6dac, sur lequel aucune campagne n'a réussi, le
+candidat change ([ADR 0032](adr/0032-relecture-attestee-et-statuts-definis.md)) :
+
+- quatrième correction de comportement : dsi-fpt sans contradiction amont
+  (motif d'abstention, citation sans chemin) ; trois règles des tentatives e,
+  g et h portées dans dpm-fpt, drh-fpt, dirfi-fpt, dpo-ct et
+  recherche-juridique ; dcp-fpt inchangé (référence DCP-014) ;
+- relecture du harnais à statuts définis et invariants mécaniques non
+  abaissables (`mechanical_attestations`), harnais versionné ; le contrat de
+  cycle v4 et ses 18 cas ne changent pas ;
+- outillage : rechaînage des surcouches, projection publique étendue, timeout
+  tolérant une dernière ligne coupée.
+
+Nouvelle série de tentatives sur ce candidat ; la comparaison avec les
+tentatives a à i est perdue.
+
+## Épingles et licence (ADR 0030)
 
 - Les sept épingles de `upstream.json` n'ajoutent que les textes de licence ;
   `python scripts/check_sync.py` le contrôle fichier par fichier.
