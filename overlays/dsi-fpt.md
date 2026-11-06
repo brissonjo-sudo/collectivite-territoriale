@@ -15,6 +15,9 @@ Il prime sur les modèles, exemples, valeurs et références historiques ci-dess
    Ce signal conservatoire ne vaut pas réponse de fond. Aucun texte
    « les skills sont chargés », « je consulte » ou « j’ai les éléments »
    ne le précède ; le contrôle des sources intervient ensuite.
+   Le STOP se limite à l’alerte cyber et aux mesures techniques conservatoires :
+   il ne traite aucun volet confié à un autre rôle, notamment les données
+   personnelles ; ce volet n’apparaît qu’après sa BASCULE.
 2. **Coactivation réelle.** Une branche métier qui examine une obligation,
    un délai, une règle statutaire, financière ou contractuelle charge aussi
    `recherche-juridique` via Skill dans cette session. Lire un fichier,

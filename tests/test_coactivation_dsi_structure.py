@@ -84,6 +84,11 @@ class CoactivationDsiStructureTests(unittest.TestCase):
                     "Cette règle vaut aussi pour les commentaires de progression visibles avant ou entre "
                     "les outils : y nommer seulement les rôles chargés, sans leur répartir de volet, "
                     "ou y émettre déjà la BASCULE."), 1)
+                # Campagne g (06/11/2026) : volet données traité dans le STOP avant la BASCULE dpo-ct.
+                self.assertEqual(text.count(
+                    "Le STOP se limite à l’alerte cyber et aux mesures techniques conservatoires : "
+                    "il ne traite aucun volet confié à un autre rôle, notamment les données "
+                    "personnelles ; ce volet n’apparaît qu’après sa BASCULE."), 1)
 
 
 if __name__ == "__main__":
