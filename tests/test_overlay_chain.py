@@ -10,6 +10,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 from instruction_overlays import apply_overlays
+from rehash_overlays import rehash
 
 
 class OverlayChainTests(unittest.TestCase):
@@ -58,8 +59,30 @@ class OverlayChainTests(unittest.TestCase):
             if list(permutation) == self.chain:
                 continue
             with self.subTest(order=[spec["operation"] for spec in permutation]):
-                with self.assertRaisesRegex(ValueError, "^Surcharge : empreinte amont divergente$"):
-                    apply_overlays(self.root, {"SKILL.md": self.base}, list(permutation))
+                with self.assertRaisesRegex(
+                        ValueError, r"^Surcharge : empreinte amont divergente \(skill test, "
+                        r"surcouche overlays/\w+\.md, attendue [0-9a-f]{64}, obtenue [0-9a-f]{64}\)$"):
+                    apply_overlays(self.root, {"SKILL.md": self.base}, list(permutation), "test")
+
+    def test_rechainage_reconstruit_les_empreintes_et_le_meme_resultat(self) -> None:
+        broken = [{**spec, "base_sha256": "0" * 64, "source_sha256": "1" * 64} for spec in self.chain]
+        chained = rehash(self.root, {"SKILL.md": self.base}, broken)
+        self.assertEqual(chained, self.chain)
+        self.assertEqual(apply_overlays(self.root, {"SKILL.md": self.base}, chained)["SKILL.md"],
+                         self.expected)
+
+    def test_rechainage_garde_les_controles_d_ancre(self) -> None:
+        broken = [{**self.section, "anchor": "### Absent\nnone\n\n"}]
+        with self.assertRaisesRegex(ValueError, "ancre absente"):
+            rehash(self.root, {"SKILL.md": self.base}, broken)
+
+    def test_divergence_locale_nomme_skill_surcouche_et_empreintes(self) -> None:
+        (self.root / "overlays/priority.md").write_bytes(b"changed")
+        with self.assertRaisesRegex(
+                ValueError, r"^Surcharge : empreinte locale divergente \(skill dsi-fpt, "
+                r"surcouche overlays/priority\.md, attendue " + self.insertion["source_sha256"]
+                + r", obtenue " + self.sha(b"changed") + r"\)$"):
+            apply_overlays(self.root, {"SKILL.md": self.base}, self.chain, "dsi-fpt")
 
     def test_deux_remplacements_meme_section_refuses_meme_avec_hashes_valides(self) -> None:
         first = self.spec("first", "replace-block", self.block, self.new_block, self.base)
