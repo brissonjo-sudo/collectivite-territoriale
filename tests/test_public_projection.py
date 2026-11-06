@@ -158,6 +158,69 @@ class PublicProjectionTests(unittest.TestCase):
         raw = b'{"fixture":true,"path":"C:/\\u0055sers/fixture/f.txt"}'
         self.assertTrue(any('home résiduel' in error for error in public.privacy_errors('fixture.json', raw)))
 
+    # Audit du 07/11/2026 : chemins hors C:/Users, espaces, e-mail et IPv4.
+    PERSONAL = {
+        'E:\\Claude code\\Projects\\harnais-mesure-150\\suivis\\t.jsonl': b'<CHEMIN>',
+        'D:/Data/Jean Dupont/x': b'<CHEMIN>',
+        'C:\\Users\\Jean Dupont\\x': b'<HOME>\\x',
+        '/tmp/campagne/trace.jsonl': b'<CHEMIN>',
+        '/var/lib/ct/x.json': b'<CHEMIN>',
+        '/opt/codex/bin/codex': b'<CHEMIN>',
+        'jean.dupont@mairie.example.fr': b'<EMAIL>',
+        '192.168.10.24': b'<IPV4>',
+    }
+
+    def test_chemins_absolus_email_et_ipv4_substitues_en_texte_et_json(self) -> None:
+        for value, expected in self.PERSONAL.items():
+            text = ('Pièce ' + value + ' ; fin.').encode()
+            in_json = json.dumps({'fixture': True, 'path': value}, ensure_ascii=False).encode()
+            for name, raw in (('fiche.md', text), ('session.json', in_json)):
+                with self.subTest(valeur=value, piece=name):
+                    projected = public.project_bytes(name, raw, {})
+                    self.assertEqual(public.privacy_errors(name, projected), [])
+                    for fragment in ('Claude code', 'Jean', 'Dupont', 'harnais', 'Data', 'mairie',
+                                     '192.168', 'campagne', 'codex/bin', 'lib/ct'):
+                        self.assertNotIn(fragment.encode(), projected)
+                    if name == 'fiche.md':
+                        self.assertEqual(projected, b'Pi\xc3\xa8ce ' + expected + b' ; fin.')
+                    else:
+                        self.assertEqual(json.loads(projected)['path'], expected.decode())
+
+    def test_chemin_absolu_email_ipv4_residuels_refuses(self) -> None:
+        labels = {'<CHEMIN>': 'chemin absolu résiduel', '<HOME>\\x': 'home résiduel',
+                  '<EMAIL>': 'e-mail résiduel', '<IPV4>': 'IPv4 résiduel'}
+        for value, expected in self.PERSONAL.items():
+            for name, raw in (('fiche.md', value.encode()),
+                              ('session.json', json.dumps({'fixture': True, 'path': value}).encode())):
+                with self.subTest(valeur=value, piece=name):
+                    errors = public.privacy_errors(name, raw)
+                    self.assertTrue(any(labels[expected.decode()] in error for error in errors), errors)
+
+    def test_chemin_absolu_residuel_refuse_en_ci_meme_liens_recalcules(self) -> None:
+        evidence = self.publish()
+        path = self.output / public.PIECES / 'fiche.md'
+        path.write_bytes(path.read_bytes() + b'E:/Claude code/Projects/x.md')
+        with self.assertRaisesRegex(ValueError, 'chemin absolu résiduel'):
+            public.verify_ci(self.output, self.rebound(evidence))
+
+    def test_politique_historique_reservee_a_sa_version(self) -> None:
+        evidence = self.publish()
+        table_path = self.output / public.TABLE
+        table = json.loads(table_path.read_bytes())
+        table['policy_sha256'] = public.HISTORICAL_POLICIES['1.4.0']
+        table_path.write_text(json.dumps(table), encoding='utf-8')
+        report_path = self.output / public.REPORT
+        report = json.loads(report_path.read_bytes())
+        report.update(policy_sha256=table['policy_sha256'], table_sha256=public.digest(table_path.read_bytes()))
+        report_path.write_text(json.dumps(report), encoding='utf-8')
+        evidence['public_projection']['table']['sha256'] = public.digest(table_path.read_bytes())
+        evidence['public_projection']['local_verification']['sha256'] = public.digest(report_path.read_bytes())
+        for version in ('1.5.0', None):
+            with self.subTest(version=version):
+                with self.assertRaisesRegex(ValueError, 'Politique de projection différente'):
+                    public.verify_ci(self.output, {**evidence, 'plugin_version': version})
+        public.verify_ci(self.output, {**evidence, 'plugin_version': '1.4.0'})
+
 
 if __name__ == '__main__':
     unittest.main()
