@@ -111,6 +111,20 @@ class CliToolchainsTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Reçu CLI réel incomplet'):
             self.memory_checked(body)
 
+    def test_checked_smoke_suit_le_pin_smoke_courant_en_H1_et_H2(self) -> None:
+        # Pré-vol du 07/11/2026 : un reçu smoke H2 (commit non lié) était comparé au pin 0.163.
+        for state, context in self.binding_states():
+            with self.subTest(etat=state), context:
+                pin = cli.phase_pin('smoke_cli')
+                receipt = {**copy.deepcopy(self.campaign), 'cli_version': pin['version'], 'cli_sha256': pin['sha256'],
+                           'cli_phase': 'smoke_cli', 'cli_toolchain': pin}
+                body = {'plugin_commit': COMMIT, 'model_requested': 'fixture-non-mesuree', 'origin': receipt}
+                self.assertEqual(self.memory_checked(body)['origin'], receipt)
+                other = cli._pin(cli.CAMPAIGN_140_CLI if state == 'H2' else cli.CAMPAIGN_150_CLI, True)
+                bad = {**receipt, 'cli_version': other['version'], 'cli_sha256': other['sha256'], 'cli_toolchain': other}
+                with self.assertRaisesRegex(ValueError, 'Reçu CLI réel incomplet'):
+                    self.memory_checked({**body, 'origin': bad})
+
     def test_checked_campagne_refuse_recu_smoke(self) -> None:
         body = {'plugin_commit': COMMIT, 'model_requested': 'fixture-non-mesuree', 'origin': self.smoke}
         with self.assertRaisesRegex(ValueError, 'Reçu CLI réel incomplet'):

@@ -117,7 +117,9 @@ def checked(path: Path, commit: str, kinds: set[str], cli_phase: str = 'campaign
             or value.get("synthetic") is True or value.get("fixture") is True or value.get("dry_run") is True):
         raise ValueError("Pièce synthétique, dry-run ou provenance absente : " + path.name)
     if origin["kind"] == "real_cli":
-        expected = phase_pin(cli_phase, measurement_commit=commit)
+        # ADR 0032 : un reçu smoke porte le commit H2, jamais lié ; son pin est celui de la phase
+        # smoke courante, comme pour le résumé real_smoke ci-dessous (ADR 0031 : 0.164 après H2).
+        expected = phase_pin(cli_phase) if cli_phase == 'smoke_cli' else phase_pin(cli_phase, measurement_commit=commit)
         try:
             thread = uuid.UUID(origin["thread_id"])
             hashes = ("cli_sha256", "argv_sha256", "prompt_sha256", "stdout_sha256", "stderr_sha256")
