@@ -68,6 +68,12 @@ sur dsi-fpt et les cinq autres surcouches.
   plusieurs sections distinctes peuvent être remplacées, une seule fois
   chacune. Nouveau candidat à mesurer ; aucun résultat des tentatives a à i
   n'est repris.
+- Outillage du même candidat (2026-11-07, ADR 0032) : relectures à
+  `mechanical_attestations` acceptées et conservées par `human_resolution.py`
+  après vérification ; reçus smoke contrôlés contre le pin smoke courant (le
+  smoke 0.164 de H2 était refusé à l'assemblage) ; projection publique
+  étendue aux chemins absolus quelconques, e-mails et IPv4 ; timeout tolérant
+  une dernière ligne coupée ; CLI des tests résolue par `CT_CODEX_CLI`.
 
 Correction datée du 2026-11-01 : la 1.4.0 ci-dessous a été publiée (étiquette
 `v1.4.0`, registre `docs/publication.md`, catalogues sur 1.4.0). Les mentions
