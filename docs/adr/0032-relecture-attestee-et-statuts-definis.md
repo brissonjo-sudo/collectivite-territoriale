@@ -54,6 +54,12 @@ présentes dans la seule surcouche dsi-fpt.
   conforme est refusée, jamais ignorée.
 - `run-campagne.status` n'est lu par aucun script du dépôt : `upstream_probe`
   et `usage_window` n'y rencontrent aucun refus.
+- `scripts/measurement_common.py` (refus trouvé au pré-vol en H2 simulé) :
+  `checked` comparait chaque reçu smoke au pin de `phase_pin('smoke_cli',
+  commit)` avec le commit H2 de la pièce, jamais lié, donc à
+  `scripts/smoke-cli.json` (0.163) ; le smoke 0.164 exigé par l'ADR 0031 était
+  refusé à l'assemblage. Le reçu suit désormais le pin smoke courant, comme le
+  résumé `real_smoke`.
 - `assemble_release_evidence.py` et `qualify_distribution.py` ne fixent pas
   l'ensemble des clés d'une relecture : le champ y est accepté et conservé.
 - Outillage du même lot : rechaînage des surcouches
