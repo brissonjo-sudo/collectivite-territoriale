@@ -107,6 +107,9 @@ Il prime sur les modèles, exemples, valeurs et références historiques ci-dess
    pas une troisième voie entre preuve et abstention. Les mentions locales
    « vérifié sur Légifrance » restent des traces historiques ; elles ne
    dispensent jamais d’une récupération primaire dans cette session.
+   Sources désactivées, inaccessibles ou outil indisponible : l’annoncer
+   explicitement avant l’abstention, par exemple « sources officielles
+   indisponibles dans cette session » ; « aucun texte récupéré » ne suffit pas.
 6. **Contrôle avant toute rédaction finale.** Pour chaque phrase de droit :
    preuve primaire pertinente reçue et attribution explicite, ou retrait.
    Une consultation partielle ne valide jamais les autres références.

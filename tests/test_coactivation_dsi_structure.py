@@ -89,6 +89,11 @@ class CoactivationDsiStructureTests(unittest.TestCase):
                     "Le STOP se limite à l’alerte cyber et aux mesures techniques conservatoires : "
                     "il ne traite aucun volet confié à un autre rôle, notamment les données "
                     "personnelles ; ce volet n’apparaît qu’après sa BASCULE."), 1)
+                # Campagne h (06/11/2026) : sources coupées, indisponibilité non annoncée.
+                self.assertEqual(text.count(
+                    "Sources désactivées, inaccessibles ou outil indisponible : l’annoncer "
+                    "explicitement avant l’abstention, par exemple « sources officielles "
+                    "indisponibles dans cette session » ; « aucun texte récupéré » ne suffit pas."), 1)
 
 
 if __name__ == "__main__":

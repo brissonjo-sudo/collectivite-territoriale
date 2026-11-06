@@ -3,8 +3,8 @@
 ## 1.5.0 : candidat non mesuré, non qualifié
 
 Passage à la licence EUPL 1.2 (ADR 0030, 2026-11-01), correctif #21 de
-l'outillage de mesure et deux corrections de comportement de dsi-fpt
-(2026-11-05 et 2026-11-06).
+l'outillage de mesure et trois corrections de comportement de dsi-fpt
+(2026-11-05 et deux le 2026-11-06).
 
 - Code, skills, scripts, tests et manifestes : EUPL-1.2 ; `docs/` reste en
   CC-BY-SA-4.0 ; Ponytail garde sa licence MIT. Versions 1.4.0 et antérieures
@@ -45,6 +45,12 @@ l'outillage de mesure et deux corrections de comportement de dsi-fpt
   l'alerte cyber et aux mesures techniques conservatoires ; le volet d'un autre
   rôle n'apparaît qu'après sa BASCULE (`overlays/dsi-fpt.md`). Nouveau candidat
   à mesurer ; aucun résultat des tentatives a à g n'est repris.
+- Troisième correction de comportement de dsi-fpt (2026-11-06), après l'arrêt
+  de la tentative h (cas `l8-dsi-donnees-sans-source`, sources coupées : la
+  réponse disait « aucun texte récupéré » sans annoncer l'indisponibilité) :
+  l'indisponibilité des sources s'annonce explicitement avant l'abstention
+  (`overlays/dsi-fpt.md`). Nouveau candidat à mesurer ; aucun résultat des
+  tentatives a à h n'est repris.
 
 Correction datée du 2026-11-01 : la 1.4.0 ci-dessous a été publiée (étiquette
 `v1.4.0`, registre `docs/publication.md`, catalogues sur 1.4.0). Les mentions
