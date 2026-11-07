@@ -14,6 +14,41 @@ import run_codex_campaign as campaign
 from measurement_common import bound, canonical, checked, digest, fingerprint
 from review_codex_campaign import validate_report
 from cli_toolchains import compatibility_files, contract_file, measurement_contract, require_cycle_version
+import campaign_contract
+
+# ADR 0032 : familles d'invariants déjà vérifiées par le code du harnais (c1c3315), non abaissables.
+MECHANICAL_STOP = re.compile(r'^STOP est le premier texte visible')
+MECHANICAL_ACTIVATION = re.compile(r'^(?:[Aa]ctivation de |Trace d.activation de )')
+MECHANICAL_MOTIF = 'Attesté par le code du harnais ; avis du modèle non retenu : '
+
+
+def traced_report(report: dict, attestations: object, case: dict) -> dict:
+    """Rapport du modèle tel que tracé : chaque attestation mécanique est vérifiée puis annulée."""
+    if not isinstance(attestations, list):
+        raise ValueError('Attestations mécaniques invalides')
+    model = json.loads(json.dumps(report))
+    items = {item.get('invariant'): item for item in model.get('invariants', [])}
+    seen = set()
+    for attestation in attestations:
+        name = attestation.get('invariant') if isinstance(attestation, dict) else None
+        family = isinstance(name, str) and bool(
+            (case.get('stop_first') is True and MECHANICAL_STOP.match(name))
+            or (case.get('activation_sequence') and MECHANICAL_ACTIVATION.match(name))
+            or name == campaign_contract.V4_PATH_INVARIANT)
+        item = items.get(name)
+        if (not isinstance(attestation, dict) or set(attestation) != {'invariant', 'model_statut', 'model_motif'}
+                or not family or name in seen or item is None
+                or attestation['model_statut'] not in {'violation', 'non_verifiable'}
+                or item.get('statut') != 'respecte'
+                or item.get('motif') != MECHANICAL_MOTIF + str(attestation['model_motif'])):
+            raise ValueError('Attestation mécanique non conforme : ' + str(name))
+        seen.add(name)
+        item['statut'] = attestation['model_statut']
+        if attestation['model_motif'] is None:
+            item.pop('motif', None)
+        else:
+            item['motif'] = attestation['model_motif']
+    return model
 
 
 def dated(value: str) -> datetime:
@@ -182,7 +217,7 @@ def load_bundle(root: Path, directory: Path, target: dict) -> dict[str, Any]:
                     or value.get('technical_status') != 'passed' or value.get('response_technical_failures')):
                 raise ValueError('Échec technique ou session étrangère non résoluble')
             compatible(root, value, target)
-            require_cycle_version(measurement_contract(root, commit), version)
+            require_cycle_version(measurement_contract(root, commit), version, commit)
             identity = value['origin']['thread_id']
             if identity in threads:
                 raise ValueError('Conversation réutilisée')
@@ -213,7 +248,9 @@ def load_bundle(root: Path, directory: Path, target: dict) -> dict[str, Any]:
         review_texts = [e['text'] for e in review_events if e['type'] == 'reply']
         report = review['report']
         validate_report(report, case['invariants'])
-        if not replies or not review_texts or json.loads(review_texts[-1]) != report:
+        # ADR 0032 : le rapport retenu ne diffère du rapport tracé que par les attestations vérifiées.
+        if (not replies or not review_texts or json.loads(review_texts[-1])
+                != traced_report(report, review.get('mechanical_attestations', []), case)):
             raise ValueError('Rapport ou réponse absents de la trace')
         if (not any(e['type'] == 'turn_completed' for e in clean)
                 or not any(e['type'] == 'turn_completed' for e in review_events)

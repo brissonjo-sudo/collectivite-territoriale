@@ -23,8 +23,10 @@ contenu de skills, sans fonctionnalité du plugin.
 
 ## 1.5.0 : candidat non mesuré, non qualifié
 
-Passage à la licence EUPL 1.2 (ADR 0030, 2026-11-01), sans changement de
-comportement des skills, et correctif #21 de l'outillage de mesure.
+Passage à la licence EUPL 1.2 (ADR 0030, 2026-11-01), correctif #21 de
+l'outillage de mesure et quatre corrections de comportement : trois de
+dsi-fpt (2026-11-05 et deux le 2026-11-06), puis une quatrième (2026-11-07)
+sur dsi-fpt et les cinq autres surcouches.
 
 - Code, skills, scripts, tests et manifestes : EUPL-1.2 ; `docs/` reste en
   CC-BY-SA-4.0 ; Ponytail garde sa licence MIT. Versions 1.4.0 et antérieures
@@ -46,6 +48,53 @@ comportement des skills, et correctif #21 de l'outillage de mesure.
   5.1.0 à 5.3.3 (commit 7801d06, 2026-11-01) selon la procédure de l'ADR 0008 :
   seule l'indication d'argument des règles change (ajout de `off`), licence MIT
   identique.
+- Mesure 1.5.0 sous le contrat de cycle v4 à l'identique (ADR 0031, 2026-11-01) :
+  nouveau pin de CLI `codex-cli 0.164.0-alpha.11.1` pour la campagne et le smoke
+  (le binaire 0.163 de la 1.4.0 a disparu), liaison version, commit et mesure v4
+  par version, repli v2 fermé (une version non historique sans commit lié à un
+  contrat est refusée), projection publique exigée pour toute version récente.
+  Préparation H1 : aucune mesure liée, aucun comportement des skills modifié ;
+  les preuves et les contrôles de la 1.3.0 et de la 1.4.0 sont inchangés.
+- Correction de comportement de dsi-fpt (2026-11-05), après l'arrêt de la
+  tentative e de la mesure sur H1 (cas `l8-dsi-achat-contrat-mixte`, volet
+  confié à dcp-fpt dans un commentaire de progression avant la BASCULE) : la
+  règle « BASCULE avant toute phrase qui attribue le volet » vaut aussi pour
+  les commentaires de progression (`overlays/dsi-fpt.md`). Nouveau candidat à
+  mesurer ; aucun résultat des tentatives a à e n'est repris.
+- Seconde correction de comportement de dsi-fpt (2026-11-06), après l'arrêt de
+  la tentative g (cas `l8-dsi-incident-donnees`, volet données personnelles
+  traité dans le STOP avant la BASCULE vers dpo-ct) : le STOP se limite à
+  l'alerte cyber et aux mesures techniques conservatoires ; le volet d'un autre
+  rôle n'apparaît qu'après sa BASCULE (`overlays/dsi-fpt.md`). Nouveau candidat
+  à mesurer ; aucun résultat des tentatives a à g n'est repris.
+- Troisième correction de comportement de dsi-fpt (2026-11-06), après l'arrêt
+  de la tentative h (cas `l8-dsi-donnees-sans-source`, sources coupées : la
+  réponse disait « aucun texte récupéré » sans annoncer l'indisponibilité) :
+  l'indisponibilité des sources s'annonce explicitement avant l'abstention
+  (`overlays/dsi-fpt.md`). Nouveau candidat à mesurer ; aucun résultat des
+  tentatives a à h n'est repris.
+- Quatrième correction de comportement (2026-11-07), après l'audit du
+  candidat 87b6dac, avant toute mesure réussie sur lui : (1) dsi-fpt, trois
+  surcouches `replace-block` neutralisent les formules amont contraires à la
+  surcouche (le motif d'abstention annonce d'abord la cause, sources
+  désactivées, inaccessibles ou outil indisponible, puis seulement l'absence de
+  texte récupéré ; une source interne se cite par nom de skill et intitulé de
+  section, jamais par chemin, y compris dans l'auto-vérification) ; (2) les
+  trois règles nées des tentatives e, g et h (BASCULE avant tout volet, y
+  compris dans les commentaires de progression ; STOP limité à l'alerte et aux
+  mesures conservatoires ; indisponibilité des sources annoncée avant
+  l'abstention) sont portées dans dpm-fpt, drh-fpt, dirfi-fpt, dpo-ct et
+  recherche-juridique. dcp-fpt reste sans surcouche (référence DCP-014, ADR
+  0029). Outil `scripts/rehash_overlays.py` pour rechaîner les empreintes ;
+  plusieurs sections distinctes peuvent être remplacées, une seule fois
+  chacune. Nouveau candidat à mesurer ; aucun résultat des tentatives a à i
+  n'est repris.
+- Outillage du même candidat (2026-11-07, ADR 0032) : relectures à
+  `mechanical_attestations` acceptées et conservées par `human_resolution.py`
+  après vérification ; reçus smoke contrôlés contre le pin smoke courant (le
+  smoke 0.164 de H2 était refusé à l'assemblage) ; projection publique
+  étendue aux chemins absolus quelconques, e-mails et IPv4 ; timeout tolérant
+  une dernière ligne coupée ; CLI des tests résolue par `CT_CODEX_CLI`.
 
 Correction datée du 2026-11-01 : la 1.4.0 ci-dessous a été publiée (étiquette
 `v1.4.0`, registre `docs/publication.md`, catalogues sur 1.4.0). Les mentions

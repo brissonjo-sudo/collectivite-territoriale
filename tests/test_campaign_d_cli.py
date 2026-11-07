@@ -16,7 +16,8 @@ from campaign_contract import load_cycle_cases, STOP_CYCLE_CASES
 class CampaignDTests(unittest.TestCase):
     def test_pin_d_exact_et_trois_compagnons(self):
         pin=cli.phase_pin('campaign_cli',cli.MEASUREMENT_D)
-        self.assertEqual(pin,cli.phase_pin('smoke_cli'))
+        # ADR 0031 : le smoke courant suit la mesure 1.5.0 après H2 ; D reste lié au smoke 1.4.0.
+        self.assertEqual(pin,cli.phase_pin('smoke_cli',cli.MEASUREMENT_140_V4))
         self.assertEqual(pin['version'],'codex-cli 0.163.0-alpha.10.2')
         self.assertEqual(pin['sha256'],'f6dbf48cb70f62649c645f26c87dc9bf84cc36986202dfad8e12fb5b8ca70312')
         self.assertEqual(set(pin['companions_sha256']),cli.COMPANIONS)

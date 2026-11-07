@@ -41,7 +41,7 @@ def qualification_cases(root: Path, evidence: dict, view: ProjectionView | None 
         index_path = resolve(root, link)
         index = json.loads(index_path.read_bytes())
         contract = measurement_contract(root, index.get("measurement_commit"))
-        require_cycle_version(contract, evidence.get('plugin_version'))
+        require_cycle_version(contract, evidence.get('plugin_version'), index.get("measurement_commit"))
         if contract is not None:
             case_link = index.get("case_contract") or {}
             if (index.get("schema") != "ct-human-linked-v1"
@@ -57,8 +57,12 @@ def distribution_errors(root: Path, evidence: dict) -> list[str]:
     """Ajoute la barrière publique ; les contrôles techniques restent tous exécutés."""
     try:
         view = verify_ci(root, evidence) if 'public_projection' in evidence else None
-        if (view is None and evidence.get('plugin_version') in {'1.3.0', '1.4.0'}
-                and evidence.get('review', {}).get('linked_sources')):
+        version = evidence.get('plugin_version')
+        # Hors des trois versions historiques sans projection, elle est toujours exigée (ADR 0031).
+        # 1.3.0 et 1.4.0 gardent la condition historique ; toute autre version déclarée l'exige sans
+        # condition. Une preuve sans version échoue plus loin sur plugin_version.
+        if (view is None and version is not None and version not in {'1.1.0', '1.1.1', '1.2.0'}
+                and (version not in {'1.3.0', '1.4.0'} or evidence.get('review', {}).get('linked_sources'))):
             raise ValueError('Projection publique absente')
     except (KeyError, TypeError, ValueError, OSError) as exc:
         return ['Projection publique refusée : ' + str(exc)]

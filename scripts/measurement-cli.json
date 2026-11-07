@@ -29,6 +29,18 @@
         }
       },
       "case_contract_sha256": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24"
+    },
+    "0127c7b30fe4d2146760db97412d7edbe8e16f6e": {
+      "campaign_cli": {
+        "version": "codex-cli 0.164.0-alpha.11.1",
+        "sha256": "1103e9e09c71fa2cd0afd6d8f3b9a2d63174fe8efd7cb5bd09f1cb14ef58a098",
+        "companions_sha256": {
+          "codex-code-mode-host.exe": "2727abaa2b30eb4afbe64b1da51a26cb594dd18dda82c6292b5373b15a758257",
+          "codex-command-runner.exe": "598fbfbad52ccd717b60aa94185541ccecf27e849349026f93884e9519f7ac61",
+          "codex-windows-sandbox-setup.exe": "5765c3951b2c247611dec18176660bd3d2e81f20baba61096b454888ee821b2c"
+        }
+      },
+      "case_contract_sha256": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24"
     }
   },
   "prepared_cycles": {
@@ -41,6 +53,11 @@
       "case_contract_file": "scripts/cas-plugin-cycle-v4.json",
       "case_contract_sha256": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
       "measurement_commit": "acfa12e8f23373712984e6c3588116fbbb2b815d"
+    },
+    "1.5.0-v4": {
+      "case_contract_file": "scripts/cas-plugin-cycle-v4.json",
+      "case_contract_sha256": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
+      "measurement_commit": "0127c7b30fe4d2146760db97412d7edbe8e16f6e"
     }
   }
 }

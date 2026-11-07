@@ -1,16 +1,28 @@
 {
-  "plugin_commit": "4b8e44087ad5f14ea48957e560a4ad901d2892d4",
+  "plugin_commit": "5547ef8a3f146f763d214e87f6044f99b345512a",
   "runtime_sha256": {
-    "skills/dcp-fpt/LICENSE": "ad5259ac9d63c064078a6490ddc5df3999d97fb0c33ae3bfad0ba3752ccf17e4",
+    "skills/dcp-fpt/LICENCE.fr.txt": "14e59bc002e1339e5554451aedad7c2b113dc7ef942e96b410b5517099ad6d91",
+    "skills/dcp-fpt/LICENSE": "bf4eddf38a235988ae9214aa49ab57717a77caad3d9a4c5bdbe2a33c952dc218",
     "skills/dcp-fpt/SKILL.md": "49e04e18203cc6472c35ab595d8f0a9a30671a51bd946d8a03f6b936041ff3b3",
-    "skills/dirfi-fpt/SKILL.md": "e1dbc060d1d6d39315ad370388ec4d9e958cf87afc52fcd49efdaff74dca2460",
-    "skills/dpm-fpt/SKILL.md": "5222d6ba00405fcbf2ea15f356ccbbced7ef13d02f7cc4999ac930aeb920442b",
-    "skills/dpo-ct/SKILL.md": "e6476b8701e7ef4f77bf7362e6cb478607fc05864fbd98248f058cd1c92dbced",
-    "skills/drh-fpt/SKILL.md": "7da009a9fdca48d0730f4a6aa3e4365aabbcca5872b6e9042e1ca0a260735974",
-    "skills/dsi-fpt/SKILL.md": "5c92e1c356e7ce8a12d90beec0a1c18ce0ddeba42115331017247b01594b8ba8",
+    "skills/dirfi-fpt/LICENCE.fr.txt": "14e59bc002e1339e5554451aedad7c2b113dc7ef942e96b410b5517099ad6d91",
+    "skills/dirfi-fpt/LICENSE": "bf4eddf38a235988ae9214aa49ab57717a77caad3d9a4c5bdbe2a33c952dc218",
+    "skills/dirfi-fpt/SKILL.md": "4db330d6de0108e336f4a05bb004e3f628496561e0357cd0ff678211610f9306",
+    "skills/dpm-fpt/LICENCE.fr.txt": "14e59bc002e1339e5554451aedad7c2b113dc7ef942e96b410b5517099ad6d91",
+    "skills/dpm-fpt/LICENSE": "bf4eddf38a235988ae9214aa49ab57717a77caad3d9a4c5bdbe2a33c952dc218",
+    "skills/dpm-fpt/SKILL.md": "a63a2c54383b58c8f1e9ad118cc0118fc8d7d9c3102d039a3aaf41aa63e55f35",
+    "skills/dpo-ct/LICENCE.fr.txt": "14e59bc002e1339e5554451aedad7c2b113dc7ef942e96b410b5517099ad6d91",
+    "skills/dpo-ct/LICENSE": "bf4eddf38a235988ae9214aa49ab57717a77caad3d9a4c5bdbe2a33c952dc218",
+    "skills/dpo-ct/SKILL.md": "39cff5d80da2d08287817bb2bfe8c79699b5dfad371ce9061de37d70aaaa414a",
+    "skills/drh-fpt/LICENCE.fr.txt": "14e59bc002e1339e5554451aedad7c2b113dc7ef942e96b410b5517099ad6d91",
+    "skills/drh-fpt/LICENSE": "bf4eddf38a235988ae9214aa49ab57717a77caad3d9a4c5bdbe2a33c952dc218",
+    "skills/drh-fpt/SKILL.md": "a5c8f04c8175eabdb109ccc6530d9f8d2a39f3f553883cfd15b2652c36cd8b15",
+    "skills/dsi-fpt/LICENCE.fr.txt": "14e59bc002e1339e5554451aedad7c2b113dc7ef942e96b410b5517099ad6d91",
+    "skills/dsi-fpt/LICENSE": "bf4eddf38a235988ae9214aa49ab57717a77caad3d9a4c5bdbe2a33c952dc218",
+    "skills/dsi-fpt/SKILL.md": "88f287b187d5cab8b97f6e0e32ac41a023ed32290924f46383e00bbff90186df",
     "skills/recherche-juridique/CHANGELOG.md": "4b66fb61794edf997f7fa93bbf6e41154d007e449bf61552ee7ae9b65621aba1",
-    "skills/recherche-juridique/LICENSE": "ad5259ac9d63c064078a6490ddc5df3999d97fb0c33ae3bfad0ba3752ccf17e4",
-    "skills/recherche-juridique/SKILL.md": "0099bfe0912e826f2de28e98b65962350f7c5d78aeaf842acfb8eb3fbfb164f3",
+    "skills/recherche-juridique/LICENCE.fr.txt": "14e59bc002e1339e5554451aedad7c2b113dc7ef942e96b410b5517099ad6d91",
+    "skills/recherche-juridique/LICENSE": "bf4eddf38a235988ae9214aa49ab57717a77caad3d9a4c5bdbe2a33c952dc218",
+    "skills/recherche-juridique/SKILL.md": "99d8a336d02528e59b4326e0c28fb4da0f655e1fc354a89428725764b7b170b2",
     "skills/recherche-juridique/profils/avocat.md": "2ba16f6efcf217551d0f7e72d85590f9081bd2a90ab1b5f50ced5c3c5288d371",
     "skills/recherche-juridique/profils/collectivites.md": "091c102af3b89a478e51cf2f14c7c012e86dbcda1a07fddaa41cf1e1d3939f61",
     "skills/recherche-juridique/profils/etudiant-concours.md": "8ff54e86502b7a64f6a6587189ddac859718d300159b537ead0a121a57134f52",
@@ -212,60 +224,62 @@
     "skills/dcp-fpt/references/templates/rapport-analyse-offres.md": "220abb58f5a2181077a93912c89535a823ca0181fb35f02463bfb768dfa1ae75"
   },
   "plugin_configuration_sha256": {
-    ".codex-plugin/plugin.json": "707912d1b1163d0a3092141a08ba84753423abe8ee41fa102a27056fff335798",
-    ".claude-plugin/plugin.json": "a94be3aef8c9fb3294848ec823cf92b470f554a739f5ed42807667c9cf8ad2d8",
+    ".codex-plugin/plugin.json": "c562aaf070598e6e97e8da06d8c89d06032f98f5d7e8b032542e10e4d5fd040f",
+    ".claude-plugin/plugin.json": "920546198c2286d2665e336ef28a2f612e6f0e12ca465a8eb9a32dee384cda21",
     ".mcp.json": "c1988401a93d468e87557dc1ebf47989323203b9c5ef7607641529615aefbcac",
     "assets/icon.png": "10aca45cb876735f06e10b352b9a2ba004b5deae462e08d8dfba092044aaee1f"
   },
   "case_file_sha256": "0747b6268cccab1bb46c820217d2a4ba1c69e5c2ad6fe61126e3a5bd9242f5ea",
-  "upstream_sha256": "cabe20f1feadfd195e54f8fbc4a5e850a9c8b7e44bc49b10d859291b9245ab1b",
+  "upstream_sha256": "6f1f3b6a38264a6efa53e6c6195c5e1baeebdc1636cb38fd75662d002dc08dc9",
   "toolchain_sha256": {
-    "scripts/assemble_release_evidence.py": "a87b26268040f4353a43470e84e83fc8f9f0bce3c42f774f8432b656ee45fc01",
+    "scripts/assemble_release_evidence.py": "40a872f6c718883386ea45dae3bd51b545589be41f094660cdb773ef4727ec86",
     "scripts/audit_native_reads.py": "5c503063eeeef01d4c21bc458f387791e63d042597aaf79fc982a045106b5394",
-    "scripts/campaign_contract.py": "9383f57154bff8da7d71d13dd7449ff152111692a9aa882205b3d5ade26eeee3",
+    "scripts/campaign_contract.py": "cc47f276fe251c22e62d70c7aeaaf8a7cd738dbd01891eadbabbf45939c869b9",
     "scripts/cas-plugin-cycle-v2.json": "65593a1c46bd31b403c5b83344f14951cbc3455f456eefcde2c6853fa68a9478",
     "scripts/cas-plugin-cycle-v3.json": "deb0d39efc93a24b16444922dbafddbb6570801a67e21ca23d612343ba471e89",
     "scripts/cas-plugin-cycle-v4.json": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
     "scripts/check_dcp_protocol.py": "01db515a86fe66355cf73e42617b5d3d520fad803dd04afa5a4dfc80818a4917",
     "scripts/check_sync.py": "69f080fbe4ded47ab1c5980a662e4219e15e111a67de8a6cbf166aac831e008e",
-    "scripts/cli_toolchains.py": "09f7bf21983c473a4700ceabe3c6ba3d27d36b978e39955571f025ea239390d2",
+    "scripts/cli_toolchains.py": "3e8410eced95615c3a3dcd16dadef70e1a81a34e814ef6f4e52c3fd4171cf31b",
     "scripts/codex_event_contract.py": "f4e848f3c34504b4df6b5f444337b4064829828d8c492ecd3023cbae471d42d7",
     "scripts/cycle-v4-source-requirements.json": "54bed7aaf6afc439a6d24e1f95204d4b3e7d9327024ce5435bd9cc0988a8a333",
     "scripts/cycle_satisfiability.py": "5a8625a8f8169393a6b3bcf35ab696830707cc142366c9d179c192fa128bb6ea",
     "scripts/dcp-protocol-0012.json": "808e8def87583bc830dc0a5172772741fa5c829e420bde263599c2034020326c",
-    "scripts/dcp-protocol.json": "c348cd68e64aaddcfd675831cf97878dd0fd00f5dcb30b3bcf448184304f4b60",
-    "scripts/dcp_reference.py": "563632abb7244eeac585c34d2b9211083e9b67766ae0e8685db883c3d74f010a",
+    "scripts/dcp-protocol.json": "e76d7dd75c2f0f49689e453eec5b67fb9363ffcd52817afd96cbeb9b8c9f94e5",
+    "scripts/dcp_reference.py": "0e4fac49acf9083063cc010b1b8e33f2a35793d09534469e8fcdd685154592c8",
     "scripts/extract_native_read_commands.py": "d1292a0e6f798fcab1bd55fdce76b0e804526208b97e9e82172702057f1ef6c4",
-    "scripts/human_resolution.py": "9829a925bc0bffa7f650bdd03cb12905e7ca9590f3854c35f0342fec97eb7935",
-    "scripts/instruction_overlays.py": "aa9dd39d3ba92ba2fed15b8eacc70a3b7dcc1f5287a7aa9c9cd1f4c6109374f9",
-    "scripts/measurement-cli.json": "f9e0d19ec47df7293f7e13f5b15623d1f851fdcfc9d478f6777af4dcc79277bb",
-    "scripts/measurement_common.py": "c0c774cd986e49f39820d1fe9cac3bd3b88d7ebc0ef6dbf1a127bbc6d961ecfb",
-    "scripts/public_projection.py": "ffce5880ee592441306d2c79ab79760a5aa8223bbc3d16286070fee781503027",
-    "scripts/qualify_distribution.py": "cf056b4309ccc71a771bcb603642f9f627e8d778a5dc64fa554bec2ec843d62f",
+    "scripts/human_resolution.py": "444d01b13428773c33a9100310ebb5815c32067b4f838f8f6afd9b4d9a284e32",
+    "scripts/instruction_overlays.py": "e40decc70e39416d33b484b9d9620e2e6db64a0b6d1826c88b9899e0fbe57e99",
+    "scripts/measurement-cli.json": "aa271237685162bfecbe9cb8b8d847108c16000376bc3c2c264b1dbc173e7069",
+    "scripts/measurement_common.py": "1a703163152afa70d669e276f7be8f62f86a7989819daff8676d6fd8afddb7a4",
+    "scripts/public_projection.py": "7521e1835e16dd841966f30237370f225e29014f418a5557e6c01953d0f4c102",
+    "scripts/qualify_distribution.py": "f05040ca0e3921aa2407c3be56c0bb0402809588edb8785983d8d9977bc03d20",
     "scripts/r5-dependencies.json": "06c032bcb323606b0c4eb8652d59c6ba35f3d83d423cb2327a5f57b26910654e",
     "scripts/r5_portable.py": "bcb3af53fe4a92925f8706b0c5b41730ffcb14791caacd3525b1b6d97fc6169d",
     "scripts/redact_native_evidence.py": "d841424552afa9c9936f897233dfb0060930c395da91749e773fb01accf546a9",
     "scripts/reference_inventory.py": "d1229a630fdbab87eb0bf8db5c133e780b5ef82afaf2bb8c6058d4da73b0b2f6",
+    "scripts/rehash_overlays.py": "52b1a7ceddc5339e3daa00f8d3625b1273bbd0a54ae2b9e52b6a515944595658",
     "scripts/reprise_dev7.py": "b044d698f49b0ee3a919c393b1d429ca9f86d35d3527be66666881c148551957",
     "scripts/review_codex_campaign.py": "f498fff9ade79e5e669793a6be2ce4b86ac60e8dce2e47b51c7281da6ddfe968",
     "scripts/run_codex_campaign.py": "89fd874415c5830dc67be3e2fa76a77eb9bafdd1f7434ecad696d35db1ef1602",
     "scripts/run_codex_smoke.py": "dd8d53dedfaa4f1fdc7cfec0ce633fda4fd7638fdb3ad755ae39729b1254df89",
     "scripts/run_plugin_campaign.py": "d371345ac99536edfcd3167c44bb376a91ea063029537ad17a78b9f69f969590",
-    "scripts/skill_citation.py": "d01f1a451b5492bc3000aef60aca6a3149135d455e38dd36c6dd6f79423af430",
+    "scripts/skill_citation.py": "f363ecec8556ec9602e3067d44c3172834cdca660f8d58f67b64c1d439d0d9d9",
     "scripts/smoke-cli.json": "ccb7f9450ae34365f00da87e05ade23a8016b424f12bf7cacf29c21cd90e16a6",
-    "scripts/sync_skills.py": "9f934bf9b38e3854b19468e812e50eb6b4af400adc6564b6ad50bbacde5cba15",
+    "scripts/sync_skills.py": "fb34aaa936671ac5c1f28882c9c28c964e268ead22b2a1fbc5163d45c3a6004c",
     "scripts/toolchain-transition-0013.json": "60c317fb9a825f0d37831f76787e7ba09490a2ccfb57e2b0b0286fd037dcabab",
     "scripts/toolchain-transition-0017.json": "a4f69a61c6e0ea4a020bd5d98a11a6fc08be6646a4db96957bf48446290685c1",
     "scripts/toolchain-transition-0026.json": "a29c8e146052d33b489d84b10900a733f7c647bc4a36bdfc006fdb248212810c",
-    "scripts/toolchain-transition-0028.json": "f586ea9b42b203275835c9d71bbc758c6094d390edae76906a2bde874171aecb"
+    "scripts/toolchain-transition-0028.json": "f586ea9b42b203275835c9d71bbc758c6094d390edae76906a2bde874171aecb",
+    "scripts/toolchain-transition-0031.json": "05ba38e8b694a7ec0d5b0ec1ec098f627c9d392ab06b4cea65d9b9d3d3f19b61"
   },
   "smoke_cli": {
-    "version": "codex-cli 0.163.0-alpha.10.2",
-    "sha256": "f6dbf48cb70f62649c645f26c87dc9bf84cc36986202dfad8e12fb5b8ca70312",
+    "version": "codex-cli 0.164.0-alpha.11.1",
+    "sha256": "1103e9e09c71fa2cd0afd6d8f3b9a2d63174fe8efd7cb5bd09f1cb14ef58a098",
     "companions_sha256": {
-      "codex-code-mode-host.exe": "3b6a9179a4da17fa5fc6948219cd61486dc3b534c683838076d8c61bd311c68e",
-      "codex-command-runner.exe": "ce80b56a2f37f808815fde33cceb97ac858ceecde296425ad3860f0f37fb4877",
-      "codex-windows-sandbox-setup.exe": "c4da812016cbfb92d9a62791f78460c59e9662faadb0a2720d3aa5d0535b80bd"
+      "codex-code-mode-host.exe": "2727abaa2b30eb4afbe64b1da51a26cb594dd18dda82c6292b5373b15a758257",
+      "codex-command-runner.exe": "598fbfbad52ccd717b60aa94185541ccecf27e849349026f93884e9519f7ac61",
+      "codex-windows-sandbox-setup.exe": "5765c3951b2c247611dec18176660bd3d2e81f20baba61096b454888ee821b2c"
     }
   },
   "origin": {
@@ -296,7 +310,7 @@
       "stop_required": true,
       "proof": {
         "evidence_path": "activation-implicite.json",
-        "sha256": "4acea6a057654df1db8941dde7a6d930ab7310b4a2b756c92a051703808244e7"
+        "sha256": "360dac70a91b76cc9cd50a77eaa33cffddaae085df5db8e331f804715e8fd432"
       }
     },
     {
@@ -309,10 +323,10 @@
       "stop_required": true,
       "proof": {
         "evidence_path": "mcp-installe.json",
-        "sha256": "8e7d74357aa1f460c66b217d48a87ead4d6f5ec415208db48aab8a6af9fa8e0a"
+        "sha256": "497fe0c91a4e0f9cabb739d52ddf678b42c4e1ca6bb4c88e644b769126abb372"
       }
     }
   ],
   "human_legal_validation": false,
-  "payload_sha256": "e80672643ed189d45e8888c3fa5ce340cf5c6e77450e8525bf25126dd78d7569"
+  "payload_sha256": "873c601e0caffce3bf214871ebfebb46422b0a5d562c1de10fdbc53488fc80ab"
 }

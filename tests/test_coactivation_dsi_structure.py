@@ -79,6 +79,40 @@ class CoactivationDsiStructureTests(unittest.TestCase):
                 text = " ".join((ROOT / relative).read_text(encoding="utf-8").split())
                 self.assertEqual(text.count(rule), 1)
                 self.assertIn("Avant un fond délégué, afficher BASCULE en nommant le skill destinataire", text)
+                # Campagne e (05/11/2026) : volet attribué dans un commentaire de progression avant la BASCULE.
+                self.assertEqual(text.count(
+                    "Cette règle vaut aussi pour les commentaires de progression visibles avant ou entre "
+                    "les outils : y nommer seulement les rôles chargés, sans leur répartir de volet, "
+                    "ou y émettre déjà la BASCULE."), 1)
+                # Campagne g (06/11/2026) : volet données traité dans le STOP avant la BASCULE dpo-ct.
+                self.assertEqual(text.count(
+                    "Le STOP se limite à l’alerte cyber et aux mesures techniques conservatoires : "
+                    "il ne traite aucun volet confié à un autre rôle, notamment les données "
+                    "personnelles ; ce volet n’apparaît qu’après sa BASCULE."), 1)
+                # Campagne h (06/11/2026) : sources coupées, indisponibilité non annoncée.
+                self.assertEqual(text.count(
+                    "Sources désactivées, inaccessibles ou outil indisponible : l’annoncer "
+                    "explicitement avant l’abstention, par exemple « sources officielles "
+                    "indisponibles dans cette session » ; « aucun texte récupéré » ne suffit pas."), 1)
+
+    def test_formules_amont_contradictoires_neutralisees(self) -> None:
+        # Audit du 07/11/2026 : l'amont contredisait la surcouche (motif d'abstention, chemins).
+        text = " ".join((ROOT / "skills/dsi-fpt/SKILL.md").read_text(encoding="utf-8").split())
+        for old in ("Le motif suffit", "« aucun texte primaire récupéré dans cette session »",
+                    "nomme par son chemin", "Le chemin permet de",
+                    "(`references/securite-si.md`, `objets/incident-securite.md`)",
+                    "nommé par son chemin, là où sa règle est utilisée"):
+            with self.subTest(formule=old):
+                self.assertNotIn(old, text)
+        for new in ("D'abord la cause, explicitement : sources désactivées, inaccessibles "
+                    "ou outil indisponible",
+                    "Ensuite seulement, indiquer qu'aucun texte primaire n'a été récupéré "
+                    "dans cette session : cette mention seule ne suffit pas.",
+                    "objet Incident de sécurité »), jamais par lien Markdown ni chemin, relatif ou absolu",
+                    "désigné par le nom du skill et l'intitulé de sa section, là où sa règle "
+                    "est utilisée, sans aucun lien Markdown ni chemin ?"):
+            with self.subTest(formule=new):
+                self.assertEqual(text.count(new), 1)
 
 
 if __name__ == "__main__":
