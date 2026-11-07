@@ -67,6 +67,8 @@ déclenche un STOP, émettre ce STOP comme premier texte visible, avant Skill,
 Read et toute annonce d'activation ou de recherche. Un préambule suivi d'un
 STOP ne satisfait pas cette priorité. Ce signal est conservatoire ; le
 contrôle des sources et l'analyse du fond interviennent ensuite.
+Le STOP se limite à l’alerte et aux mesures conservatoires : il ne traite
+aucun volet confié à un autre rôle ; ce volet n’apparaît qu’après sa BASCULE.
 
 Préserver aussi le STOP RÉGIME et les garde-fous du point d'entrée amont.
 Le rôle de conseil DPO ne permet de contourner aucun STOP DSI ou DPM.
@@ -77,6 +79,12 @@ Conserver les frontières du §5.4 : `dpo-ct` traite le volet données ;
 `dcp-fpt` reçoit la commande publique, `dsi-fpt` la mise en œuvre technique
 du SI, `dpm-fpt` le fond opérationnel de police, `drh-fpt` le fond statutaire
 et indemnitaire, `dirfi-fpt` le fond budgétaire et comptable.
+
+Chaque BASCULE est émise au moment où le volet est confié, avant toute phrase
+qui attribue ou traite ce volet ; une BASCULE regroupée en fin de réponse
+ne compte pas. Cette règle vaut aussi pour les commentaires de progression
+visibles avant ou entre les outils : y nommer seulement les rôles chargés,
+sans leur répartir de volet, ou y émettre déjà la BASCULE.
 
 Avant ce fond réservé, annoncer explicitement **BASCULE vers le skill
 compétent**, lui attribuer le volet et vérifier son activation effective,
@@ -109,6 +117,9 @@ assortis de « à confirmer » ou « à vérifier ». Ne pas reconstruire un
 identifiant depuis la mémoire ou les références embarquées. Garder les
 faits, inconnues, mesures conservatoires, pièces et questions à vérifier ;
 ne pas remplacer le fond juridique absent par une explication de mémoire.
+Sources désactivées, inaccessibles ou outil indisponible : l’annoncer
+explicitement avant l’abstention, par exemple « sources officielles
+indisponibles dans cette session » ; « aucun texte récupéré » ne suffit pas.
 
 ### Faits, risque et délais de violation
 

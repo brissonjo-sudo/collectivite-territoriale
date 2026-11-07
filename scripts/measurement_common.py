@@ -117,7 +117,9 @@ def checked(path: Path, commit: str, kinds: set[str], cli_phase: str = 'campaign
             or value.get("synthetic") is True or value.get("fixture") is True or value.get("dry_run") is True):
         raise ValueError("Pièce synthétique, dry-run ou provenance absente : " + path.name)
     if origin["kind"] == "real_cli":
-        expected = phase_pin(cli_phase, measurement_commit=commit)
+        # ADR 0032 : un reçu smoke porte le commit H2, jamais lié ; son pin est celui de la phase
+        # smoke courante, comme pour le résumé real_smoke ci-dessous (ADR 0031 : 0.164 après H2).
+        expected = phase_pin(cli_phase) if cli_phase == 'smoke_cli' else phase_pin(cli_phase, measurement_commit=commit)
         try:
             thread = uuid.UUID(origin["thread_id"])
             hashes = ("cli_sha256", "argv_sha256", "prompt_sha256", "stdout_sha256", "stderr_sha256")
@@ -187,9 +189,18 @@ def run_cli(argv: list[str], prompt: str, cwd: Path, timeout: int,
         raw, stderr, code = result.stdout, result.stderr, result.returncode
     except subprocess.TimeoutExpired as exc:
         raw = exc.stdout or ""; stderr = exc.stderr or ""; code = 124
-        raw = raw.decode("utf-8", "strict") if isinstance(raw, bytes) else raw
-        stderr = stderr.decode("utf-8", "strict") if isinstance(stderr, bytes) else stderr
-    events = parse_jsonl(raw)
+        raw = _decode_cut(raw) if isinstance(raw, bytes) else raw
+        stderr = _decode_cut(stderr) if isinstance(stderr, bytes) else stderr
+    # Au timeout seulement, la dernière ligne coupée par l'arrêt est écartée et signalée ;
+    # le cas reste en échec (process_exit 124) et sa pièce d'échec peut être écrite.
+    complete, truncated = raw, False
+    if code == 124 and raw and not raw.endswith("\n"):
+        head, _, tail = raw.rpartition("\n")
+        try:
+            json.loads(tail)
+        except json.JSONDecodeError:
+            complete, truncated = head, True
+    events = parse_jsonl(complete)
     thread = next((e.get("thread_id") for e in events if e.get("type") == "thread.started"), None)
     try:
         uuid.UUID(thread)
@@ -203,4 +214,16 @@ def run_cli(argv: list[str], prompt: str, cwd: Path, timeout: int,
                "prompt_sha256": digest(prompt.encode()), "stdout_sha256": digest(raw.encode()),
                "stderr_sha256": digest(stderr.encode()), "process_exit": code,
                "elapsed_seconds": round(time.monotonic() - started, 6)}
+    if truncated:
+        receipt["truncated_tail"] = True
     return events, code, receipt
+
+
+def _decode_cut(data: bytes) -> str:
+    """UTF-8 strict ; seul un caractère coupé en toute fin (arrêt au timeout) est écarté."""
+    try:
+        return data.decode("utf-8", "strict")
+    except UnicodeDecodeError as exc:
+        if exc.end == len(data) and exc.reason == "unexpected end of data":
+            return data[:exc.start].decode("utf-8", "strict")
+        raise

@@ -265,5 +265,57 @@ class HumanBundleTests(unittest.TestCase):
             human.original_bytes(BUNDLE, binding)
 
 
+class MechanicalAttestationTests(unittest.TestCase):
+    """ADR 0032 : attestation mécanique acceptée et conservée seulement si elle s'explique exactement."""
+    def setUp(self) -> None:
+        cases = json.loads((ROOT / 'scripts/cas-plugin-cycle-v4.json').read_bytes())
+        self.case = next(c for c in cases if c['id'] == 'l8-dsi-incident-donnees')
+        self.stop = next(i for i in self.case['invariants'] if human.MECHANICAL_STOP.match(i))
+        self.other = next(i for i in self.case['invariants'] if not human.MECHANICAL_STOP.match(i)
+                          and not human.MECHANICAL_ACTIVATION.match(i))
+        # Rapport tracé du modèle : STOP jugé non vérifiable, puis relevé par le harnais.
+        self.traced = {'invariants': [{'invariant': i, 'statut': 'respecte', 'motif': 'fixture'}
+                                      for i in self.case['invariants']]}
+        self.attest(self.traced, self.stop, 'non_verifiable')
+        self.retained, self.attestations = self.harness(self.stop)
+
+    @staticmethod
+    def attest(report: dict, invariant: str, statut: str) -> None:
+        next(i for i in report['invariants'] if i['invariant'] == invariant).update(statut=statut, motif='avis modèle')
+
+    def harness(self, invariant: str) -> tuple[dict, list]:
+        """Réplique de apply_mechanical (harnais c1c3315) sur une copie."""
+        report = copy.deepcopy(self.traced)
+        item = next(i for i in report['invariants'] if i['invariant'] == invariant)
+        attestation = {'invariant': invariant, 'model_statut': item['statut'], 'model_motif': item['motif']}
+        item.update(statut='respecte', motif=human.MECHANICAL_MOTIF + str(item['motif']))
+        return report, [attestation]
+
+    def test_sans_attestation_rapport_inchange(self) -> None:
+        self.assertEqual(human.traced_report(self.traced, [], self.case), self.traced)
+
+    def test_attestation_stop_annulee_vers_le_rapport_trace(self) -> None:
+        retained = copy.deepcopy(self.retained)
+        self.assertEqual(human.traced_report(retained, self.attestations, self.case), self.traced)
+        self.assertEqual(retained, self.retained)  # Le rapport retenu reste intact.
+
+    def test_attestation_hors_famille_ou_cas_sans_stop_refusee(self) -> None:
+        self.attest(self.traced, self.other, 'violation')
+        retained, attestations = self.harness(self.other)
+        with self.assertRaisesRegex(ValueError, 'Attestation mécanique non conforme'):
+            human.traced_report(retained, attestations, self.case)
+        with self.assertRaisesRegex(ValueError, 'Attestation mécanique non conforme'):
+            human.traced_report(self.retained, self.attestations, {**self.case, 'stop_first': False})
+
+    def test_attestation_alteree_dupliquee_ou_non_liste_refusee(self) -> None:
+        attestation = self.attestations[0]
+        for mutated in ([{**attestation, 'model_motif': 'autre'}], [{**attestation, 'model_statut': 'respecte'}],
+                        [{**attestation, 'extra': True}], [attestation, attestation], ['STOP']):
+            with self.subTest(attestations=mutated), self.assertRaisesRegex(ValueError, 'Attestation mécanique'):
+                human.traced_report(self.retained, mutated, self.case)
+        with self.assertRaisesRegex(ValueError, 'Attestations mécaniques invalides'):
+            human.traced_report(self.retained, None, self.case)
+
+
 if __name__ == '__main__':
     unittest.main()

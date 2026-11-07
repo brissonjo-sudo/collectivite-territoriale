@@ -157,24 +157,27 @@ def archive_files(repository: Path, spec: dict) -> dict[str, bytes]:
     return files
 
 
+def upstream_repository(name: str, spec: dict, local_repos: Path | None, temp: Path) -> Path:
+    """Désigne le dépôt amont local déclaré, ou le clone dans temp."""
+    if local_repos is not None:
+        source = local_repos / spec.get("local_directory", name)
+        if not (source / ".git").exists():
+            raise ValueError(f"Dépôt local introuvable : {source}")
+        return source
+    source = temp / name
+    run_git("clone", "--quiet", "--no-checkout", spec["repository"], str(source))
+    return source
+
+
 def snapshots(root: Path, local_repos: Path | None = None) -> dict[str, dict[str, bytes]]:
     upstreams = load_upstreams(root)
     result: dict[str, dict[str, bytes]] = {}
-    if local_repos is not None:
-        for name, spec in upstreams.items():
-            source = local_repos / spec.get("local_directory", name)
-            if not (source / ".git").exists():
-                raise ValueError(f"Dépôt local introuvable : {source}")
-            result[name] = apply_overlays(root, archive_files(source, spec), spec.get("instruction_overlays", []))
-        return result
     with tempfile.TemporaryDirectory(prefix="collectivite-sync-") as temp:
         for name, spec in upstreams.items():
-            source = Path(temp) / name
-            run_git(
-                "clone", "--quiet", "--no-checkout",
-                spec["repository"], str(source),
+            source = upstream_repository(name, spec, local_repos, Path(temp))
+            result[name] = apply_overlays(
+                root, archive_files(source, spec), spec.get("instruction_overlays", []), name
             )
-            result[name] = apply_overlays(root, archive_files(source, spec), spec.get("instruction_overlays", []))
     return result
 
 

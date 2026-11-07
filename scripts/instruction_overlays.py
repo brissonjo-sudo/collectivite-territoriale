@@ -87,6 +87,9 @@ def validate_overlays(overlays: list[dict]) -> None:
         if not overlay["source"].startswith("overlays/"):
             raise ValueError("Surcharge : source hors overlays")
         identity = (overlay["target"], operation)
+        if operation == "replace-block" and isinstance(overlay["anchor"], str):
+            # Une seule correction par section : le titre ### identifie la section.
+            identity += (overlay["anchor"].split("\n", 1)[0],)
         if identity in targets:
             raise ValueError("Surcharge : cible dupliquée")
         targets.add(identity)
@@ -105,7 +108,8 @@ def validate_overlays(overlays: list[dict]) -> None:
             description_field(overlay["anchor"].encode("utf-8"))
 
 
-def apply_overlays(root: Path, files: dict[str, bytes], overlays: list[dict]) -> dict[str, bytes]:
+def apply_overlays(root: Path, files: dict[str, bytes], overlays: list[dict],
+                   skill: str = "non précisé") -> dict[str, bytes]:
     """Applique les opérations dans l'ordre, avec empreinte d'entrée à chaque étape."""
     validate_overlays(overlays)
     result = dict(files)
@@ -114,16 +118,24 @@ def apply_overlays(root: Path, files: dict[str, bytes], overlays: list[dict]) ->
         if target not in result:
             raise ValueError("Surcharge : cible absente du runtime")
         base = result[target]
-        if hashlib.sha256(base).hexdigest() != overlay["base_sha256"]:
-            raise ValueError("Surcharge : empreinte amont divergente")
+        actual = hashlib.sha256(base).hexdigest()
+        if actual != overlay["base_sha256"]:
+            raise ValueError(
+                f"Surcharge : empreinte amont divergente (skill {skill}, surcouche "
+                f"{overlay['source']}, attendue {overlay['base_sha256']}, obtenue {actual})"
+            )
         source = root.joinpath(*PurePosixPath(overlay["source"]).parts)
         if source.is_symlink() or any(parent.is_symlink() for parent in source.parents if parent != root.parent):
             raise ValueError("Surcharge : lien symbolique interdit")
         if not source.resolve().is_relative_to((root / "overlays").resolve()):
             raise ValueError("Surcharge : source hors overlays")
         content = source.read_bytes()
-        if hashlib.sha256(content).hexdigest() != overlay["source_sha256"]:
-            raise ValueError("Surcharge : empreinte locale divergente")
+        actual = hashlib.sha256(content).hexdigest()
+        if actual != overlay["source_sha256"]:
+            raise ValueError(
+                f"Surcharge : empreinte locale divergente (skill {skill}, surcouche "
+                f"{overlay['source']}, attendue {overlay['source_sha256']}, obtenue {actual})"
+            )
         anchor = overlay["anchor"].encode("utf-8")
         if base.count(anchor) != 1:
             raise ValueError("Surcharge : ancre absente ou ambiguë")
