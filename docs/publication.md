@@ -17,6 +17,8 @@
 
 | `v1.4.0` | `df4a3ccb578bea4dda4ef94b1c067843b50202f2` | 2026-10-23 | **distribution open source qualifiée techniquement** ; avis métier enregistré avec une réserve (`release-1.4.0.json`) | Réépinglage DRH 0.7, DirFi 1.0.5, RJ 3.6.0, contrat de cycle v4 ; mesure sur `4b8e440`, commit publié limité aux preuves et à la documentation |
 
+| `v1.5.0` | `4b38328e957707cac67197b5b518f8bc45efb494` | 2026-11-07 | **distribution open source qualifiée techniquement** ; avis métier enregistré avec deux réserves (`release-1.5.0.json`) | Licence EUPL 1.2, quatre corrections de comportement (dsi-fpt et surcouches), CLI 0.164, contrat de cycle v4 ; mesure sur `5547ef8`, commit publié limité aux preuves et à la documentation |
+
 Ajouter une ligne par étiquette distribuée ; ne jamais réécrire une ligne.
 Le test `test_distribution_epinglee_sur_etiquette` exige que l'étiquette et
 le commit épinglés figurent dans ce tableau.
