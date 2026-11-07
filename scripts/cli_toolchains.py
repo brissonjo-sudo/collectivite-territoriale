@@ -23,7 +23,7 @@ TRANSITION_140_V4 = 'scripts/toolchain-transition-0028.json'
 MIGRATION_140_V4 = {'scripts/cli_toolchains.py', 'scripts/measurement-cli.json', TRANSITION_140_V4}
 ADR_140_V4 = 'docs/adr/0028-contrat-v4-et-tentative-d.md'
 # ADR 0031 : H2 remplace seulement cette affectation par le SHA complet du H1 mesuré.
-MEASUREMENT_150_V4: str | None = None
+MEASUREMENT_150_V4: str | None = '0127c7b30fe4d2146760db97412d7edbe8e16f6e'
 TRANSITION_150_V4 = 'scripts/toolchain-transition-0031.json'
 MIGRATION_150_V4 = {'scripts/cli_toolchains.py', 'scripts/measurement-cli.json', TRANSITION_150_V4}
 ADR_150_V4 = 'docs/adr/0031-mesure-1-5-0-contrat-v4.md'
