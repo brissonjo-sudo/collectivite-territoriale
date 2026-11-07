@@ -4,19 +4,19 @@
     "name": "brissonjo-sudo",
     "url": "https://github.com/brissonjo-sudo"
   },
-  "description": "Six métiers et une méthode juridique pour les collectivités territoriales françaises. Distribution épinglée 1.4.0, qualifiée techniquement.",
+  "description": "Six métiers et une méthode juridique pour les collectivités territoriales françaises. Distribution épinglée 1.5.0, qualifiée techniquement.",
   "plugins": [
     {
       "name": "collectivite-territoriale",
       "source": {
         "source": "github",
         "repo": "brissonjo-sudo/collectivite-territoriale",
-        "ref": "v1.4.0",
-        "sha": "df4a3ccb578bea4dda4ef94b1c067843b50202f2"
+        "ref": "v1.5.0",
+        "sha": "4b38328e957707cac67197b5b518f8bc45efb494"
       },
       "displayName": "Collectivité territoriale",
       "description": "Police municipale, RH, DPO, finances locales, commande publique, systèmes d'information et recherche juridique avec accès Légifrance/Judilibre.",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "repository": "https://github.com/brissonjo-sudo/collectivite-territoriale"
     }
   ]
