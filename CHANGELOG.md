@@ -19,9 +19,22 @@ contenu de skills, sans fonctionnalité du plugin.
   (`30c9c90`, ADR 0030) : la maintenance amont du jour ne touche pas `skill/`.
   drh-fpt est inchangé.
 - Aucune campagne, aucun smoke ni aucune preuve ; la mesure préparée pour la
-  1.5.0 ne couvre pas ce runtime. Catalogues inchangés (1.4.0).
+  1.5.0 ne couvre pas ce runtime. Catalogues inchangés (1.5.0).
 
-## 1.5.0 : candidat non mesuré, non qualifié
+## 1.5.0 — Qualifiée et publiée le 2026-11-07
+
+Actualisation du 2026-11-07 : campagne `campagne-l150-j` 18/18 sur `0127c7b`,
+avis de Jo du 07/11 avec deux réserves maintenues, au cas
+`plugin-dcp-acte-irreversible` (contrôle de légalité placé après la
+notification) et au cas `plugin-dcp-frontiere-dsi-externe` (lien local vers le
+`SKILL.md` DCP, réserve déjà portée en 1.4.0). Smoke réel `smoke-l150-a` 2/2 sur
+`5547ef8` (H2), preuve `tests/evidence/release-1.5.0.json` assemblée en H3
+(`ebfca14`). La PR 30 ayant été fusionnée en squash, la PR 31 a rattaché H1, H2
+et H3 à l'historique de `main` sans changer de fichier. Publiée sous l'étiquette
+`v1.5.0` (`4b38328`), catalogues sur 1.5.0 (PR 32, registre
+`docs/publication.md`). Les entrées ci-dessous restent l'historique de leur
+étape préparatoire, y compris la mention « catalogues inchangés (1.4.0) » ;
+elles ne sont pas réécrites.
 
 Passage à la licence EUPL 1.2 (ADR 0030, 2026-11-01), correctif #21 de
 l'outillage de mesure et quatre corrections de comportement : trois de
