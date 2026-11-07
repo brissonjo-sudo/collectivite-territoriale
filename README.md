@@ -6,7 +6,7 @@
 
 [![Validation du plugin](https://github.com/brissonjo-sudo/collectivite-territoriale/actions/workflows/ci.yml/badge.svg)](https://github.com/brissonjo-sudo/collectivite-territoriale/actions/workflows/ci.yml)
 [![Version](https://img.shields.io/github/v/tag/brissonjo-sudo/collectivite-territoriale?filter=v*&label=version)](docs/publication.md)
-[![License: CC BY-SA 4.0](https://img.shields.io/badge/license-CC%20BY--SA%204.0-blue)](LICENSE)
+[![Licence : EUPL 1.2](https://img.shields.io/badge/licence-EUPL%201.2-blue)](LICENSE)
 
 En mairie, une question touche souvent plusieurs services. Une prime engage
 les RH et le budget ; une caméra engage la police municipale, la protection
@@ -136,19 +136,19 @@ reste recommandée : voir la [note praticien](docs/deploiement-collectivite.md).
 
 ## État du projet
 
-| Composant | État au 26 octobre 2026 | Détail |
+| Composant | État au 8 novembre 2026 | Détail |
 |---|---|---|
-| Plugin | 1.4.0, publiée le 23/10/2026 (étiquette `v1.4.0`) | Distribuée par les marketplaces Claude Code et Codex |
-| Qualification | Campagne 18/18, smoke d'installation 2/2 | Relecture humaine avec une réserve : un lien local dans un cas DCP, correction prévue dans DCP-fpt 0.1.5 ([ADR 0029](docs/adr/0029-retrait-surcharge-dcp-et-reserve-0-1-5.md)) |
+| Plugin | 1.5.0, publiée le 07/11/2026 (étiquette `v1.5.0`) | Distribuée par les marketplaces Claude Code et Codex |
+| Qualification | Campagne 18/18, smoke d'installation 2/2 | Relecture humaine avec deux réserves sur des cas DCP : contrôle de légalité placé après la notification ; lien local vers le skill DCP, réserve déjà portée en 1.4.0 ([ADR 0029](docs/adr/0029-retrait-surcharge-dcp-et-reserve-0-1-5.md)) |
 
 ## Mesure de la qualité
 
-Avant sa publication, la 1.4.0 a passé une campagne de dix-huit cas métier.
+Avant sa publication, la 1.5.0 a passé une campagne de dix-huit cas métier.
 Pour chaque cas, des critères sont fixés à l'avance ; un modèle répond, un
 autre relit, puis l'auteur relit chaque réponse. Un smoke installe ensuite
 le plugin depuis Git et vérifie l'activation et les appels au serveur
 juridique. Les résultats et leurs empreintes sont dans
-[`release-1.4.0.json`](tests/evidence/release-1.4.0.json) ; la procédure est
+[`release-1.5.0.json`](tests/evidence/release-1.5.0.json) ; la procédure est
 décrite dans la [publication](docs/publication.md).
 
 ## Pour aller plus loin
@@ -174,3 +174,5 @@ restent soumis aux conditions de réutilisation de leurs producteurs.
 
 Questions, erreurs, propositions : ouvrir une
 [issue](https://github.com/brissonjo-sudo/collectivite-territoriale/issues).
+Faille de sécurité : suivre la [politique de sécurité](SECURITY.md), sans
+publier de détail dans une issue.
