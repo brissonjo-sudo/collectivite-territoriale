@@ -161,7 +161,8 @@ class CliToolchainsTests(unittest.TestCase):
 
     def binding_states(self):
         """H1 réel, puis H2 simulé : smoke 1.5.0 lié à la CLI de sa mesure (ADR 0031)."""
-        yield 'H1', contextlib.nullcontext()
+        # H1 explicite : le test reste valable une fois le dépôt réel lié en H2.
+        yield 'H1', patch.object(cli, 'MEASUREMENT_150_V4', None)
         bound = {'campaign_cli': cli._pin(cli.CAMPAIGN_150_CLI, True), 'case_contract_sha256': cli.CYCLE_V4[1]}
         h2 = contextlib.ExitStack()
         h2.enter_context(patch.object(cli, 'MEASUREMENT_150_V4', 'f' * 40))
