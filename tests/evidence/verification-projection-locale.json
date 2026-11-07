@@ -1,8 +1,8 @@
 {
   "schema": "ct-public-projection-v1",
   "status": "ok",
-  "policy_sha256": "ffce5880ee592441306d2c79ab79760a5aa8223bbc3d16286070fee781503027",
-  "table_sha256": "af39d9e76d9d6ea43458606799d71719b12e96fd9326a7e6fe9c1aff6abee207",
+  "policy_sha256": "7521e1835e16dd841966f30237370f225e29014f418a5557e6c01953d0f4c102",
+  "table_sha256": "b9e548949b3ff6a3a0dc13a6378a41b894014872ae3a3d0fbaa26410e7d600f1",
   "pieces_verified": 119,
   "originals_required_locally": true,
   "originals_preserved_outside_repository": true
