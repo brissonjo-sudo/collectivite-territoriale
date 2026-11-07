@@ -1,7 +1,9 @@
 """ADR 0013 : propriétés CLI sur fixtures en mémoire ; aucune mesure ni preuve de release."""
 from pathlib import Path
+import contextlib
 import copy
 import json
+import os
 import subprocess
 import sys
 import tempfile
@@ -18,7 +20,11 @@ import qualify_distribution as qualifier
 
 SOURCE = ROOT / 'tests/evidence/2026-10-18-candidat-1-3-0/campagne/plugin-mcp-indisponible/reponse/session.json'
 COMMIT = '08f92936dd0ae09775a2d2293bae315cdf20847d'
-ACTUAL_CLI = Path('C:/Users/Krn/AppData/Local/OpenAI/Codex/bin/896a0166b774037a/codex.exe')
+# CLI réelle : CT_CODEX_CLI d'abord, puis la copie figée du harnais de mesure 1.5.0
+# (seul chemin personnel admis dans le dépôt, repli explicite décidé le 07/11/2026).
+HARNESS_CLI = Path('E:/Claude code/Projects/harnais-mesure-150/cli/codex-cli-0.164.0-alpha.11.1/codex.exe')
+ACTUAL_CLI = next((Path(candidate) for candidate in (os.environ.get('CT_CODEX_CLI'), HARNESS_CLI)
+                   if candidate and Path(candidate).is_file()), None)
 
 
 class CliToolchainsTests(unittest.TestCase):
@@ -105,6 +111,20 @@ class CliToolchainsTests(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, 'Reçu CLI réel incomplet'):
             self.memory_checked(body)
 
+    def test_checked_smoke_suit_le_pin_smoke_courant_en_H1_et_H2(self) -> None:
+        # Pré-vol du 07/11/2026 : un reçu smoke H2 (commit non lié) était comparé au pin 0.163.
+        for state, context in self.binding_states():
+            with self.subTest(etat=state), context:
+                pin = cli.phase_pin('smoke_cli')
+                receipt = {**copy.deepcopy(self.campaign), 'cli_version': pin['version'], 'cli_sha256': pin['sha256'],
+                           'cli_phase': 'smoke_cli', 'cli_toolchain': pin}
+                body = {'plugin_commit': COMMIT, 'model_requested': 'fixture-non-mesuree', 'origin': receipt}
+                self.assertEqual(self.memory_checked(body)['origin'], receipt)
+                other = cli._pin(cli.CAMPAIGN_140_CLI if state == 'H2' else cli.CAMPAIGN_150_CLI, True)
+                bad = {**receipt, 'cli_version': other['version'], 'cli_sha256': other['sha256'], 'cli_toolchain': other}
+                with self.assertRaisesRegex(ValueError, 'Reçu CLI réel incomplet'):
+                    self.memory_checked({**body, 'origin': bad})
+
     def test_checked_campagne_refuse_recu_smoke(self) -> None:
         body = {'plugin_commit': COMMIT, 'model_requested': 'fixture-non-mesuree', 'origin': self.smoke}
         with self.assertRaisesRegex(ValueError, 'Reçu CLI réel incomplet'):
@@ -139,22 +159,57 @@ class CliToolchainsTests(unittest.TestCase):
         with patch.object(cli, 'phase_pin', return_value=expected), self.assertRaisesRegex(ValueError, 'Compagnon smoke'):
             common.verify_codex_cli(package, 'smoke_cli')
 
-    @unittest.skipIf(sys.platform != 'win32', 'Binaire Windows local epingle et compagnons requis ; obligatoire sous Windows')
-    def test_package_reel_smoke_verifie_sans_le_lancer(self) -> None:
-        with patch.object(common.subprocess, 'run') as process:
-            self.assertEqual(common.verify_codex_cli(ACTUAL_CLI, 'smoke_cli'), self.pins['smoke_cli'])
-        process.assert_not_called()
+    def binding_states(self):
+        """H1 réel, puis H2 simulé : smoke 1.5.0 lié à la CLI de sa mesure (ADR 0031)."""
+        # H1 explicite : le test reste valable une fois le dépôt réel lié en H2.
+        yield 'H1', patch.object(cli, 'MEASUREMENT_150_V4', None)
+        bound = {'campaign_cli': cli._pin(cli.CAMPAIGN_150_CLI, True), 'case_contract_sha256': cli.CYCLE_V4[1]}
+        h2 = contextlib.ExitStack()
+        h2.enter_context(patch.object(cli, 'MEASUREMENT_150_V4', 'f' * 40))
+        h2.enter_context(patch.object(cli, 'measurement_contract',
+                                      lambda root, commit: bound if commit == 'f' * 40 else None))
+        yield 'H2', h2
 
-    @unittest.skipIf(sys.platform != 'win32', 'Binaire Windows local epingle et compagnons requis ; obligatoire sous Windows')
+    @unittest.skipIf(sys.platform != 'win32', 'Binaire Windows local epingle et compagnons requis')
+    @unittest.skipUnless(ACTUAL_CLI, 'Aucune CLI Codex locale : definir CT_CODEX_CLI ou installer la copie figee du harnais')
+    def test_package_reel_smoke_verifie_sans_le_lancer(self) -> None:
+        verified = []
+        for state, context in self.binding_states():
+            with self.subTest(etat=state), context, patch.object(common.subprocess, 'run') as process:
+                expected = cli.phase_pin('smoke_cli')
+                if state == 'H1':
+                    self.assertEqual(expected, self.pins['smoke_cli'])
+                else:
+                    self.assertEqual(expected, cli._pin(cli.CAMPAIGN_150_CLI, True))
+                if cli.sha(ACTUAL_CLI) == expected['sha256']:
+                    self.assertEqual(common.verify_codex_cli(ACTUAL_CLI, 'smoke_cli'), expected)
+                    verified.append(state)
+                else:
+                    with self.assertRaisesRegex(ValueError, 'CLI différente du binaire de mesure épinglé'):
+                        common.verify_codex_cli(ACTUAL_CLI, 'smoke_cli')
+                process.assert_not_called()
+        self.assertTrue(verified, 'La CLI locale ne correspond au pin smoke ni en H1 ni en H2')
+
+    @unittest.skipIf(sys.platform != 'win32', 'Binaire Windows local epingle et compagnons requis')
+    @unittest.skipUnless(ACTUAL_CLI, 'Aucune CLI Codex locale : definir CT_CODEX_CLI ou installer la copie figee du harnais')
     def test_recu_emis_lie_la_phase_et_les_compagnons_sans_modele(self) -> None:
         synthetic = subprocess.CompletedProcess([], 0,
             '{"type":"thread.started","thread_id":"00000000-0000-0000-0000-000000000123"}\n{"type":"turn.completed"}\n', '')
-        with patch.object(common.subprocess, 'run', return_value=synthetic) as process:
-            _, code, receipt = common.run_cli([str(ACTUAL_CLI), 'exec'], 'FIXTURE SANS MODELE', self.root, 1, cli_phase='smoke_cli')
-        self.assertEqual(code, 0)
-        self.assertEqual(process.call_count, 1)  # Appel simulé, aucun processus réel.
-        self.assertEqual(receipt['cli_phase'], 'smoke_cli')
-        self.assertEqual(receipt['cli_toolchain'], self.pins['smoke_cli'])
+        emitted = []
+        for state, context in self.binding_states():
+            with context:
+                expected = cli.phase_pin('smoke_cli')
+                if cli.sha(ACTUAL_CLI) != expected['sha256']:
+                    continue
+                with self.subTest(etat=state), patch.object(common.subprocess, 'run', return_value=synthetic) as process:
+                    _, code, receipt = common.run_cli([str(ACTUAL_CLI), 'exec'], 'FIXTURE SANS MODELE', self.root, 1,
+                                                      cli_phase='smoke_cli')
+                    self.assertEqual(code, 0)
+                    self.assertEqual(process.call_count, 1)  # Appel simulé, aucun processus réel.
+                    self.assertEqual(receipt['cli_phase'], 'smoke_cli')
+                    self.assertEqual(receipt['cli_toolchain'], expected)
+                    emitted.append(state)
+        self.assertTrue(emitted, 'La CLI locale ne correspond au pin smoke ni en H1 ni en H2')
 
     def test_transition_naccepte_pas_derive_du_lecteur(self) -> None:
         measured = json.loads(SOURCE.read_bytes())

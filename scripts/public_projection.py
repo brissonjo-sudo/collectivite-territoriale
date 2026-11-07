@@ -13,7 +13,20 @@ SCHEMA = 'ct-public-projection-v1'
 PIECES = 'tests/evidence/mesure-courante'
 TABLE = 'tests/evidence/projection-publique.json'
 REPORT = 'tests/evidence/verification-projection-locale.json'
-HOME = re.compile(rb'(?i)(?:[A-Z]:[\\/]+Users[\\/]+[^\\/\s"\x27<>]+|/(?:home|Users)/[^/\s"\x27<>]+)')
+# Le nom de compte peut contenir des espaces s'il est suivi d'un séparateur (C:\Users\Jean Dupont\x).
+HOME = re.compile(rb'(?i)(?:[A-Z]:[\\/]+Users[\\/]+(?:[^\\/\s"\x27<>]+(?: [^\\/\s"\x27<>]+)*?(?=[\\/])|[^\\/\s"\x27<>]+)'
+                  rb'|/(?:home|Users)/(?:[^/\s"\x27<>]+(?: [^/\s"\x27<>]+)*?(?=/)|[^/\s"\x27<>]+))')
+# Tout autre chemin absolu Windows (X:\ ou X:/) ou POSIX courant ; un segment avec espaces doit
+# être suivi d'un séparateur. shortcut: un dernier segment avec espaces garde sa fin, à étendre si besoin.
+ABSOLUTE = re.compile(rb'(?i)(?<![A-Z0-9_])(?:[A-Z]:[\\/]+|/(?:tmp|var|opt|home|Users|root|mnt|srv|private)/)'
+                      rb'(?:[^\\/\s"\x27<>|:*?()\[\]]+(?: [^\\/\s"\x27<>|:*?()\[\]]+)*[\\/]+)*'
+                      rb'[^\\/\s"\x27<>|:*?()\[\]]*')
+EMAIL = re.compile(rb'(?i)\b[A-Z0-9._%+-]+@[A-Z0-9-]+(?:\.[A-Z0-9-]+)*\.[A-Z]{2,}\b')
+IPV4 = re.compile(rb'(?<![\d.])(?:(?:25[0-5]|2[0-4]\d|1?\d?\d)\.){3}(?:25[0-5]|2[0-4]\d|1?\d?\d)(?![\d.])')
+# ADR 0032 : politique des projections publiées avant l'extension des chemins absolus. Une preuve
+# de ces versions garde sa politique ; les contrôles de résidus actuels s'y appliquent quand même.
+HISTORICAL_POLICIES = {'1.3.0': 'ffce5880ee592441306d2c79ab79760a5aa8223bbc3d16286070fee781503027',
+                       '1.4.0': 'ffce5880ee592441306d2c79ab79760a5aa8223bbc3d16286070fee781503027'}
 INSTALL = re.compile(rb'(?i)(?:[A-Z]:[\\/]+|/(?:home|Users)/)[^\s"\x27<>()\[\]]*?(?=[\\/]+(?:\.agents[\\/]+)?skills[\\/]+)')
 IDENTIFIER_KEY = re.compile(r'(?i)(?:thread|session|conversation)(?:[_-]?(?:id|uuid))$')
 HASH = re.compile(r'^[0-9a-f]{64}$')
@@ -30,6 +43,12 @@ def digest(raw: bytes) -> str:
 def policy_hash() -> str:
     """La règle est le module versionné, sans configuration appelante."""
     return digest(Path(__file__).read_bytes())
+
+
+def accepted_policies(version: object) -> set[str]:
+    """Politique courante, plus la politique historique de la seule version publiée sous elle."""
+    historical = HISTORICAL_POLICIES.get(version) if isinstance(version, str) else None
+    return {policy_hash()} | ({historical} if historical else set())
 
 
 def safe(root: Path, relative: str) -> Path:
@@ -112,21 +131,28 @@ def project_bytes(name: str, raw: bytes, ids: dict[bytes, bytes]) -> bytes:
         projected = projected.replace(original, ids[original])
     projected = INSTALL.sub(b'<INSTALL>', projected)
     projected = HOME.sub(b'<HOME>', projected)
+    projected = ABSOLUTE.sub(b'<CHEMIN>', projected)
+    projected = EMAIL.sub(b'<EMAIL>', projected)
+    projected = IPV4.sub(b'<IPV4>', projected)
     if name.endswith('.gz'):
         return raw if projected == content else gzip.compress(projected, mtime=0)
     return projected
+
+
+RESIDUALS = (('home', HOME), ('installation', INSTALL), ('chemin absolu', ABSOLUTE),
+             ('e-mail', EMAIL), ('IPv4', IPV4), ('identifiant UUID', UUID), ('secret', SECRET))
 
 
 def privacy_errors(name: str, raw: bytes) -> list[str]:
     """Refuse les résidus ; ne masque jamais un secret pour le faire passer."""
     content = decoded(name, raw)
     errors = []
-    for label, pattern in (('home', HOME), ('installation', INSTALL), ('identifiant UUID', UUID), ('secret', SECRET)):
+    for label, pattern in RESIDUALS:
         if pattern.search(content):
             errors.append(label + ' résiduel : ' + name)
     for document in documents(name, raw):
         for key, value, parent in strings(document):
-            for label, pattern in (('home', HOME), ('installation', INSTALL), ('identifiant UUID', UUID), ('secret', SECRET)):
+            for label, pattern in RESIDUALS:
                 if pattern.search(value.encode()):
                     errors.append(label + ' résiduel : ' + name)
             if identifier_field(key, parent) and not HASH.fullmatch(value):
@@ -288,7 +314,8 @@ def verify_ci(root: Path, evidence: dict) -> ProjectionView:
         documents_bound.append(json.loads(raw))
     table, report = documents_bound
     if (set(table) != {'schema', 'policy_sha256', 'pieces', 'links'}
-            or table['schema'] != SCHEMA or table['policy_sha256'] != policy_hash()):
+            or table['schema'] != SCHEMA
+            or table['policy_sha256'] not in accepted_policies(evidence.get('plugin_version'))):
         raise ValueError('Politique de projection différente')
     files = read_pieces(root)
     if set(files) != set(table['pieces']):
@@ -305,7 +332,7 @@ def verify_ci(root: Path, evidence: dict) -> ProjectionView:
             raise ValueError('; '.join(errors))
     if table['links'] != graph(files, table['pieces']):
         raise ValueError('Liens de projection divergents')
-    expected_report = {'schema': SCHEMA, 'status': 'ok', 'policy_sha256': policy_hash(),
+    expected_report = {'schema': SCHEMA, 'status': 'ok', 'policy_sha256': table['policy_sha256'],
         'table_sha256': descriptor['table']['sha256'], 'pieces_verified': len(files),
         'originals_required_locally': True, 'originals_preserved_outside_repository': True}
     if report != expected_report:
