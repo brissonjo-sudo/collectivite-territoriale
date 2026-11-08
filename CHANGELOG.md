@@ -14,10 +14,13 @@ contenu de skills, sans fonctionnalité du plugin.
 - Surcharges inchangées ; seules leurs empreintes d'entrée (`base_sha256`) et
   les ancres de titre DirFi et DSI suivent les nouvelles bases. Copies
   régénérées par `scripts/sync_skills.py`.
-- dcp-fpt reste à 0.1.4 (`7874c62`) : la 0.1.6 amont change des fichiers
-  mesurés par la preuve DCP-014 (ADR 0029). recherche-juridique reste à 3.6.0
-  (`30c9c90`, ADR 0030) : la maintenance amont du jour ne touche pas `skill/`.
-  drh-fpt est inchangé.
+- dcp-fpt 0.1.4 → 0.1.7 (`f3be71f`, ADR 0033) : veille 0.1.6 et correction
+  de la réserve R6 de la 1.5.0 (transmission au contrôle de légalité avant la
+  notification). Nouvelle référence autonome DCP-017 : mesure 25/28 à `5debffd`,
+  huit critiques réussis, relue par Jo avec trois réserves sur la frontière
+  dirfi-fpt. DCP-014 conservée comme historique.
+- recherche-juridique reste à 3.6.0 (`30c9c90`, ADR 0030) : la maintenance amont
+  du jour ne touche pas `skill/`. drh-fpt est inchangé.
 - Aucune campagne, aucun smoke ni aucune preuve ; la mesure préparée pour la
   1.5.0 ne couvre pas ce runtime. Catalogues inchangés (1.5.0).
 
