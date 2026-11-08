@@ -160,12 +160,15 @@ class CliToolchainsTests(unittest.TestCase):
             common.verify_codex_cli(package, 'smoke_cli')
 
     def binding_states(self):
-        """H1 réel, puis H2 simulé : smoke 1.5.0 lié à la CLI de sa mesure (ADR 0031)."""
+        """H1 réel, puis H2 simulé : smoke lié à la CLI de la mesure de la version courante (ADR 0031, 0034)."""
+        # La liaison simulée est celle de la version du plugin, que phase_pin lit dans le manifeste.
+        version = json.loads((ROOT / '.codex-plugin/plugin.json').read_bytes())['version']
+        binding = {'1.5.0': 'MEASUREMENT_150_V4', '1.5.1': 'MEASUREMENT_151_V4'}[version]
         # H1 explicite : le test reste valable une fois le dépôt réel lié en H2.
-        yield 'H1', patch.object(cli, 'MEASUREMENT_150_V4', None)
+        yield 'H1', patch.object(cli, binding, None)
         bound = {'campaign_cli': cli._pin(cli.CAMPAIGN_150_CLI, True), 'case_contract_sha256': cli.CYCLE_V4[1]}
         h2 = contextlib.ExitStack()
-        h2.enter_context(patch.object(cli, 'MEASUREMENT_150_V4', 'f' * 40))
+        h2.enter_context(patch.object(cli, binding, 'f' * 40))
         h2.enter_context(patch.object(cli, 'measurement_contract',
                                       lambda root, commit: bound if commit == 'f' * 40 else None))
         yield 'H2', h2

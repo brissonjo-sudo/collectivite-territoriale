@@ -27,10 +27,15 @@ MEASUREMENT_150_V4: str | None = '0127c7b30fe4d2146760db97412d7edbe8e16f6e'
 TRANSITION_150_V4 = 'scripts/toolchain-transition-0031.json'
 MIGRATION_150_V4 = {'scripts/cli_toolchains.py', 'scripts/measurement-cli.json', TRANSITION_150_V4}
 ADR_150_V4 = 'docs/adr/0031-mesure-1-5-0-contrat-v4.md'
+# ADR 0034 : H2 remplace seulement cette affectation par le SHA complet du H1 mesuré.
+MEASUREMENT_151_V4: str | None = None
+TRANSITION_151_V4 = 'scripts/toolchain-transition-0034.json'
+MIGRATION_151_V4 = {'scripts/cli_toolchains.py', 'scripts/measurement-cli.json', TRANSITION_151_V4}
+ADR_151_V4 = 'docs/adr/0034-mesure-1-5-1-contrat-v4.md'
 # Anciennes mesures sans contrat lié : lecture v1 conservée (ADR 0025). Liste fermée.
 UNBOUND_HISTORICAL_VERSIONS = frozenset({'1.1.0', '1.1.1', '1.2.0', '1.3.0'})
 # Versions dont le smoke est épinglé sur la CLI de la mesure ; 1.4.0 garde scripts/smoke-cli.json.
-SMOKE_FOLLOWS_MEASUREMENT = frozenset({'1.5.0'})
+SMOKE_FOLLOWS_MEASUREMENT = frozenset({'1.5.0', '1.5.1'})
 CYCLE_CONTRACTS = {
     '1.3.0': ('scripts/cas-plugin-cycle-v2.json',
               '65593a1c46bd31b403c5b83344f14951cbc3455f456eefcde2c6853fa68a9478'),
@@ -70,7 +75,9 @@ CAMPAIGN_150_CLI = {
 def v4_measurements() -> dict:
     """Mesures v4 liées, lues à l'appel : (commit, transition, ADR, migration, CLI) par version."""
     return {'1.4.0': (MEASUREMENT_140_V4, TRANSITION_140_V4, ADR_140_V4, MIGRATION_140_V4, CAMPAIGN_140_CLI),
-            '1.5.0': (MEASUREMENT_150_V4, TRANSITION_150_V4, ADR_150_V4, MIGRATION_150_V4, CAMPAIGN_150_CLI)}
+            '1.5.0': (MEASUREMENT_150_V4, TRANSITION_150_V4, ADR_150_V4, MIGRATION_150_V4, CAMPAIGN_150_CLI),
+            # ADR 0034 : la 1.5.1 garde la CLI figée de la 1.5.0 (même moteur).
+            '1.5.1': (MEASUREMENT_151_V4, TRANSITION_151_V4, ADR_151_V4, MIGRATION_151_V4, CAMPAIGN_150_CLI)}
 
 
 def v4_version(commit: str | None) -> str | None:
@@ -155,7 +162,7 @@ def require_cycle_version(contract: dict | None, version: str, commit: str | Non
     if contract is not None and contract.get('case_contract_sha256') == CYCLE_V4[1]:
         entry = v4_measurements().get(version)
         if entry is None or entry[0] is None or commit != entry[0]:
-            raise ValueError('Contrat de cycle v4 réservé aux mesures liées 1.4.0 et 1.5.0')
+            raise ValueError('Contrat de cycle v4 réservé aux mesures liées 1.4.0, 1.5.0 et 1.5.1')
         return
     if version == '1.4.0' and (contract is None
             or contract['case_contract_sha256'] != CYCLE_CONTRACTS[version][1]):

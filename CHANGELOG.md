@@ -21,6 +21,8 @@ contenu de skills, sans fonctionnalité du plugin.
   dirfi-fpt. DCP-014 conservée comme historique.
 - recherche-juridique reste à 3.6.0 (`30c9c90`, ADR 0030) : la maintenance amont
   du jour ne touche pas `skill/`. drh-fpt est inchangé.
+- Cycle 1.5.1 préparé en H1 (ADR 0034) : contrat v4 inchangé, même CLI figée
+  que la 1.5.0, transition 0034 non fermée.
 - Aucune campagne, aucun smoke ni aucune preuve ; la mesure préparée pour la
   1.5.0 ne couvre pas ce runtime. Catalogues inchangés (1.5.0).
 
