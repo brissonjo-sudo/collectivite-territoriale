@@ -4,6 +4,10 @@ on:
   push:
   pull_request:
 
+# Jeton en lecture seule : aucune étape ne pousse, ne commente ni ne publie.
+permissions:
+  contents: read
+
 jobs:
   validate:
     name: Intégration candidate
