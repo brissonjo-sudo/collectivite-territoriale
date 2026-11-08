@@ -54,6 +54,12 @@ L'agrément juridique des conditions de paiement reste dans cette branche ;
 `dirfi-fpt`. Le socle signale une lacune sur le paiement direct : ne pas la
 combler par une formule standard.
 
+Intérêts moratoires : repère de jurisprudence seulement, calcul chiffré →
+BASCULE `dirfi-fpt`. CE, 19/10/2026, n° 508690 (Tables ; lu le 2026-11-03,
+registre §14) : les sommes versées en paiement partiel s'imputent d'abord sur
+le principal dû, non sur les intérêts déjà courus. Taux et point de départ :
+lire le texte en session (registre §8), aucun taux de mémoire.
+
 Cession ou changement de titulaire : ne pas délivrer une autorisation à
 partir d'une lettre du titulaire. Lire `references/modifications.md` ;
 le régime réglementaire détaillé du remplacement reste à vérifier.

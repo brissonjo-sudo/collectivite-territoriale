@@ -1,0 +1,71 @@
+{
+  "policy": "mesure-controlee-publique-v1",
+  "source_runtime_commit": "5debffd54a6d76e86c79ab261446f9123e564494",
+  "private_sources_sha256": {
+    "resume-final.json": "020e286b023a1d1f765f061f4eac1b03eafc7319992c832694ffdc4b5e282128",
+    "PLAN-D1.json": "78b82d52f8f73440987f4a99c7c9cbd654123e4c9dc9d2ba99f8603a12464a50",
+    "autorisation-jo.json": "fb0ad26507fb949f920bf20d30dd9539e5eb12fcc25464acaefd47d20e49888a",
+    "avis-humain-jo-20261108.json": "2507a1f444fa0a73b54f249609187e06d3479cd5f7fee5ee29f5e327da94f1f8",
+    "fiche-relecture.md": "150a4adbe77f4e31b87d2616e5a2ad57bd0031cf30fae5acb8eed1e20e665dab",
+    "manifest.json": "9f61be39d2c76dfb38627ce0c7906e45dff22ed49e17a910abb60d5ec0064358"
+  },
+  "source_launcher_manifest_sha256": "ecd5b6d26024f9238be8ab7fb009887452eb545197ed960fb0fc44ae4af68d40",
+  "excluded": [
+    "homes",
+    "credentials",
+    "flux bruts",
+    "pensées",
+    "signatures",
+    "identifiants de thread",
+    "chemins personnels"
+  ],
+  "human_review": {
+    "reviewer": "Jo",
+    "practitioner": false,
+    "case_count": 28,
+    "reserves": {
+      "cas-06": "rôle exact de la centrale non qualifié ; renvoi du volet budgétaire à dirfi-fpt absent",
+      "cas-08": "fondements possibles de la modification non examinés ; chiffrage non renvoyé à dirfi-fpt",
+      "cas-18": "après BASCULE dirfi-fpt, imputation financière encore traitée (« excédents de dépenses » / « toutes les dépenses ») : frontière déléguée franchie ; droit énoncé non contesté"
+    },
+    "review_file": "avis-humain-jo-20261108.json",
+    "review_date": "2026-11-08",
+    "verdicts": {
+      "cas-01": "conforme",
+      "cas-02": "conforme",
+      "cas-03": "conforme",
+      "cas-04": "conforme",
+      "cas-05": "conforme",
+      "cas-06": "en réserve",
+      "cas-07": "conforme",
+      "cas-08": "en réserve",
+      "cas-09": "conforme",
+      "cas-10": "conforme",
+      "cas-11": "conforme",
+      "cas-12": "conforme",
+      "cas-13": "conforme",
+      "cas-14": "conforme",
+      "cas-15": "conforme",
+      "cas-16": "conforme",
+      "cas-17": "conforme",
+      "cas-18": "en réserve",
+      "cas-19": "conforme",
+      "cas-20": "conforme",
+      "cas-21": "conforme",
+      "cas-22": "conforme",
+      "cas-23": "conforme",
+      "cas-24": "conforme",
+      "cas-25": "conforme",
+      "cas-26": "conforme",
+      "cas-27": "conforme",
+      "cas-28": "conforme"
+    },
+    "demi_reussites": [
+      "cas-06",
+      "cas-08"
+    ],
+    "reserve_report": "relecture-reserves.md"
+  },
+  "publication_ready": false,
+  "plugin_qualified": false
+}

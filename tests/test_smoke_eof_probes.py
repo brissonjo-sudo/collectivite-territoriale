@@ -49,16 +49,16 @@ class SmokeEofProbeTests(unittest.TestCase):
         self.assertEqual(probes[0]['source_sha256'], reads[0]['source_sha256'])
         self.assertFalse(smoke.complete_entry(reads, 'dcp-fpt'))
 
-    def test_replay_L29b_entree_319_lignes_segments_90_puis_sonde_360(self):
+    def test_replay_L29b_entree_dcp_segments_90_puis_sonde_360(self):
         path = self.source('skills/dcp-fpt/SKILL.md')
-        self.assertEqual(len(path.read_text(encoding='utf-8').splitlines()), 319)
+        self.assertEqual(len(path.read_text(encoding='utf-8').splitlines()), 322)  # DCP 0.1.7 (ADR 0033)
         probes = []
         events = self.segments(path, 90) + [self.event(path, 360, 90)]
         reads = smoke.read_events(events, self.installed, eof_probes=probes)
-        self.assertEqual([r['count'] for r in reads], [90, 90, 90, 49])
+        self.assertEqual([r['count'] for r in reads], [90, 90, 90, 52])
         self.assertTrue(smoke.complete_entry(reads, 'dcp-fpt'))
         self.assertEqual(len(probes), 1)
-        self.assertEqual(sum(r['count'] for r in reads), 319)
+        self.assertEqual(sum(r['count'] for r in reads), 322)
 
     def test_sonde_a_la_borne_exacte_et_sortie_blanche_normalisee(self):
         path = self.source('skills/dcp-fpt/references/analyse-situation.md')

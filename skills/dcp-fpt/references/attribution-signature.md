@@ -17,7 +17,9 @@ restent à accomplir ?
 
 Intention de signer → garde-fou §5.3 → procédure, stade et catégorie →
 compétence et délégation → information et preuve d'envoi → suspension et
-recours vérifiés → signature habilitée → notification → publications/transmission.
+recours vérifiés → signature habilitée → transmission au contrôle de légalité
+si le marché y est soumis, avec preuve de réception → notification →
+information du représentant de l'État et publications.
 Chaque feu vert doit avoir une preuve ; une case inconnue maintient l'arrêt.
 
 ## 4. Variables à lever
@@ -56,9 +58,15 @@ réception dans le régime vérifié, distinctes de la signature.
 
 CCP R. 2183-1 et R. 2196-1 : avis d'attribution et données essentielles,
 selon champ, valeur et événements. CGCT L. 2131-2, D. 2131-5-1 et équivalents
-départemental/régional du registre : transmission. Vérifier caractère
-exécutoire et ordre des opérations requis pour la collectivité ; ne pas
-déduire ce régime de la seule notification.
+départemental/régional du registre : marchés soumis à transmission.
+Commune et établissement public communal : CGCT L. 2131-13 rend L. 1411-9
+applicable à leurs marchés. Transmission avec les pièces requises dans le délai
+du registre à compter de la signature, mention de la transmission et de sa
+date sur le contrat notifié, puis information du représentant de l'État de la
+date de notification. La transmission précède donc la notification. CCP
+R. 2182-5 : prise d'effet à réception de la notification, sous réserve du
+contrôle de légalité. Département, région, EPCI : disposition équivalente à
+vérifier, sans transposer le régime communal.
 
 **Bonne pratique** : fiche de contrôle séparant chaque acte, preuve, autorité
 et condition ; modèle anonymisé, aucune lettre effectivement adressée ici.
@@ -68,8 +76,12 @@ et condition ; modèle anonymisé, aucune lettre effectivement adressée ici.
 1. Figer analyse et proposition, contrôler organe et habilitation.
 2. Produire l'information correspondant au régime et conserver les envois.
 3. Vérifier suspension, recours et caractère exécutoire ; STOP tant qu'inconnus.
-4. L'autorité habilitée signe ; le service conduit la notification autorisée.
-5. Vérifier réception, publications, données essentielles et transmission.
+4. L'autorité habilitée signe.
+5. Marché soumis à transmission : transmettre avec les pièces, conserver la
+   preuve de réception et porter la mention de transmission ; puis seulement
+   notifier.
+6. Vérifier réception, information de la date de notification, publications
+   et données essentielles.
 
 ## 7. Déclencheurs de vérification
 
@@ -82,7 +94,8 @@ versions applicables ; toute lacune demeure à vérifier.
 
 Commission qui signerait le marché ; service mutualisé supposé compétent
 sans convention ; notification assimilée à signature ; suspension comptée
-sans preuve d'envoi ; délai de paiement confondu avec mise en vigueur ; lettre
+sans preuve d'envoi ; notification avant transmission d'un marché soumis au
+contrôle de légalité ; délai de paiement confondu avec mise en vigueur ; lettre
 générique qui révèle une offre ou invente les motifs.
 
 ## 9. Données et valeurs à vérifier
@@ -109,4 +122,6 @@ ou prise d'effet incertaine : critique/abstention sur l'acte, STOP.
 - [ ] Contenu du rejet adapté au régime, sans transposition automatique.
 - [ ] Suspension, saisine et décision juridictionnelle vérifiées.
 - [ ] Signature, notification, réception et caractère exécutoire distincts.
-- [ ] Publications/transmission prévues, aucun délai inventé.
+- [ ] Transmission prouvée avant notification si le marché y est soumis.
+- [ ] Publications et information du représentant de l'État prévues, aucun
+      délai inventé.
