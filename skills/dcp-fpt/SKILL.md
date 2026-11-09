@@ -13,9 +13,9 @@ description: >-
   police municipale (dpm-fpt), les concessions et délégations de service public.
 ---
 
-# Skill : dcp-fpt (v0.1.4)
+# Skill : dcp-fpt (v0.1.7)
 
-> Métadonnées — version : **0.1.4** · langue : français · statut : **non mesuré, non relu par un praticien**.
+> Métadonnées — version : **0.1.7** · langue : français · statut : **non mesuré, non relu par un praticien**.
 > Aide à la décision ; aucune réponse ne vaut autorisation de signer ni source autonome de droit positif.
 
 ## 1. Déclenchement
@@ -94,8 +94,11 @@ Objets transverses : [objets/marche-travaux.md](objets/marche-travaux.md),
 [objets/titulaire-defaillant.md](objets/titulaire-defaillant.md).
 
 **Traçabilité interne obligatoire** : nommer chaque branche, objet ou gabarit
-mobilisé par son chemin, là où sa règle est utilisée. Un chemin interne ne
-remplace pas la provenance officielle d'une règle de droit.
+mobilisé par le nom du skill et sa section (par exemple « dcp-fpt, objet
+accord-cadre, §3 »), là où sa règle est utilisée ; jamais par un lien Markdown
+ni un chemin, relatif ou absolu. Les chemins servent uniquement à la lecture
+interne. Un renvoi interne ne remplace pas la provenance officielle d'une
+règle de droit ; les liens vers les sources officielles restent permis.
 
 ## 5. Dispositifs transverses
 

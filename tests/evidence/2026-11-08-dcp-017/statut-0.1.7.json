@@ -1,0 +1,38 @@
+{
+  "version": "0.1.7",
+  "date": "2026-11-08",
+  "statut": "mesuré 25/28, relu par Jo (non praticien) avec réserves ; relecture praticien en attente",
+  "run": "tests/runs/codex-web-v0.1.7-dcp-017-20261108-b",
+  "totals": {
+    "DEMI-RÉUSSITE": 2,
+    "RÉUSSITE": 25,
+    "ÉCHEC": 1
+  },
+  "sessions": 56,
+  "input_tokens": 6115143,
+  "human_review_done": true,
+  "practitioner_reviewed": false,
+  "plugin_qualified": false,
+  "publication_ready": false,
+  "historical_score_transferred": false,
+  "date_mesure": "2026-11-08",
+  "source_runtime_commit": "5debffd54a6d76e86c79ab261446f9123e564494",
+  "attempt": "dcp-017-20261108-b",
+  "previous_attempt_stopped": "dcp-017-20261108-a : arrêt au précontrôle natif du cas 02 (incident de sandbox), sans score retenu",
+  "threshold_passed": true,
+  "critical_failures": [],
+  "stop_checks_passed": 6,
+  "skill_citation_occurrences": 0,
+  "human_review": {
+    "reviewer": "Jo",
+    "date": "2026-11-08",
+    "conformes": 25,
+    "reserves": {
+      "cas-06": "rôle exact de la centrale non qualifié ; renvoi du volet budgétaire à dirfi-fpt absent",
+      "cas-08": "fondements possibles de la modification non examinés ; chiffrage non renvoyé à dirfi-fpt",
+      "cas-18": "après BASCULE dirfi-fpt, imputation financière encore traitée (« excédents de dépenses » / « toutes les dépenses ») : frontière déléguée franchie ; droit énoncé non contesté"
+    },
+    "avis_sha256": "2507a1f444fa0a73b54f249609187e06d3479cd5f7fee5ee29f5e327da94f1f8"
+  },
+  "suivi": "Frontière dirfi-fpt : renvoi budgétaire absent (cas-06, cas-08, déjà en réserve en 0.1.5) et volet financier traité après BASCULE (cas-18). Voir qualification-0.1.7-2026-11-08.md ; runtime mesuré inchangé."
+}

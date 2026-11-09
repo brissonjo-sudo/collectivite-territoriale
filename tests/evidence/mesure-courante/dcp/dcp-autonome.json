@@ -1,26 +1,26 @@
 {
   "profile": "codex-web-autonome-v1",
   "source_repository": "https://github.com/brissonjo-sudo/DCP-fpt",
-  "source_proof_commit": "414cd4ecf41ba8b296908b738224355069b1890f",
-  "upstream_runtime_commit": "414cd4ecf41ba8b296908b738224355069b1890f",
-  "source_measured_commit": "071737280debb275549647ffc8c1340cab544a18",
-  "source_run": "tests/runs/codex-web-v0.1.4-dcp-stop-20261020-a",
-  "source_summary_sha256": "94268ed71b80df7f8e419384b951a953646dba2646de771a7bef6ecb15919a5c",
+  "source_proof_commit": "f3be71f4d8feb7e00faabb69786d3b14c7280908",
+  "upstream_runtime_commit": "f3be71f4d8feb7e00faabb69786d3b14c7280908",
+  "source_measured_commit": "5debffd54a6d76e86c79ab261446f9123e564494",
+  "source_run": "tests/runs/codex-web-v0.1.7-dcp-017-20261108-b",
+  "source_summary_sha256": "289bad001c752bc0a2eeb151486e8be143568b6d273d8ab580b02d9787525476",
   "source_files_sha256": {
-    "tests/runs/codex-web-v0.1.4-dcp-stop-20261020-a/summary.json": "94268ed71b80df7f8e419384b951a953646dba2646de771a7bef6ecb15919a5c",
-    "tests/runs/codex-web-v0.1.4-dcp-stop-20261020-a/avis-humain-jo-20261020.json": "29c3934f821e1bce52d9fa4d684363cc0d8ddf74a40767577619c812b266b213",
-    "tests/runs/codex-web-v0.1.4-dcp-stop-20261020-a/provenance.json": "e7dbeacba0fee4ffeeab64928af84b73ddb47d14be87ec5569da37baa85100db",
-    "docs/statut-0.1.4.json": "271cfe0e6cb05c6a3def577718420af21e01fc757c4bdc3294e444dea895de02"
+    "tests/runs/codex-web-v0.1.7-dcp-017-20261108-b/summary.json": "289bad001c752bc0a2eeb151486e8be143568b6d273d8ab580b02d9787525476",
+    "tests/runs/codex-web-v0.1.7-dcp-017-20261108-b/avis-humain-jo-20261108.json": "2507a1f444fa0a73b54f249609187e06d3479cd5f7fee5ee29f5e327da94f1f8",
+    "tests/runs/codex-web-v0.1.7-dcp-017-20261108-b/provenance.json": "37681d5e300c310bf4c553ed268cbd1a0d63b57311b3c66d439e05582b554e2c",
+    "docs/statut-0.1.7.json": "0b75b9e755bdb4efcd3d898b4a202091b5ab033edc7f8a9e3a0d18d81d4e751c"
   },
   "summary": {
     "suite_sha256": "ed0734bae30e2e3053ba096016b08d30bd0b5117a74ae760f294daf6237a06fa",
     "case_count": 28,
     "totals": {
-      "DEMI-RÉUSSITE": 0,
-      "RÉUSSITE": 28,
-      "ÉCHEC": 0
+      "DEMI-RÉUSSITE": 2,
+      "RÉUSSITE": 25,
+      "ÉCHEC": 1
     },
-    "completed_at": "2026-10-20T07:08:39.124776+00:00",
+    "completed_at": "2026-11-08T18:41:16.116960+00:00",
     "runtime_sha256": {
       "agents/openai.yaml": "b37aec5086edadd2d0012545ab4c3b1a6493db31f7b6f26673674f5f514aeb40",
       "objets/_gabarit-objet.md": "c9c58839c41874c9d9b02f297e7fd821c649482f73a17c62cf146113566af164",
@@ -32,16 +32,16 @@
       "objets/titulaire-defaillant.md": "61a126356496e9feacedfe6ea462f64d1eda3c4800d30eabc483cbd5abc5b4be",
       "references/_gabarit-branche.md": "5f4b10bc0942ba2936ff3d1a5479e5d903e873eee27614227c00c1938beeb524",
       "references/analyse-situation.md": "5ff8cf6921bcd31a7de4503a0cc617124aaab099e57ab7e938e0f1c0f375f206",
-      "references/attribution-signature.md": "6b03b803e85665a8603df96dea425761667e6b4cff1b307d5355f8fcaf840904",
+      "references/attribution-signature.md": "abad36903033196bd3569de31e9e621385845993e1e521363176de171958b754",
       "references/besoin-strategie-achat.md": "78537d272033bfb10e5a31d86604edac452f27a950639c6133d0e6f2ee1f08b4",
       "references/candidatures-offres.md": "b0742b8e098c8d4c509a4766aa711a5d7a7ae0b487fcc88a2d7f151b1a90cf9c",
       "references/contentieux.md": "dc8e88af165873e78d7495f22b41c2c572b4f0431cbda481367504994fe0ef8f",
       "references/ecrits-commande-publique.md": "cb137e33a796823de2797a505a842cc5b34c61f7ca4010de47797eeb697a7d0d",
-      "references/execution-juridique.md": "8c33645351117c6a0da13d87ddf53949d3181f3b909039a186b2c89ba5673f0a",
+      "references/execution-juridique.md": "bba77fe982da7ad31e1dc112a64f7d9fbdc0a63565ef501f420c7a8c1d4626cf",
       "references/modifications.md": "77fde478ea875069eb1752e14c9d510025838746b78ef973bdd09ee439bdf333",
-      "references/procedures.md": "89ce9b50d3c718070294e22e64565a6d077d55534ee9e36a28f148e6599d58a4",
+      "references/procedures.md": "ed575cb495edabfa9fb3b3064726dfdd12bb560087dd10d31f45caa338e05451",
       "references/publicite-consultation.md": "7ed81cf30315bc37142865aed2858045ee0815ecbb24bc6a847ab79458c6a8bf",
-      "references/references-verifiees.md": "58737d8b1f77f4f1e543e09f9d7b9ae7d27652ab1baf187f9e083ceee2527250",
+      "references/references-verifiees.md": "5ed7eb19dc2121d12daeb6ca4de93bae5e04a4e4e0a4ef699ae41d608bb34651",
       "references/resiliation-difficultes.md": "01515aa5d5bad782099cc7ba824f70e519be7b18b79c306ba67e3a7ef3f724df",
       "references/retex.md": "36dc627b2caf794b53af9b159dababf78464364f22c7ea6c9708e912427c8f09",
       "references/socle-sources-verification.md": "12b45dea2e0431a055f42417745a02f71e4b98126df2610f72f87cafaf1173cd",
@@ -51,7 +51,7 @@
       "references/templates/note-choix-procedure.md": "a7f0857c7c6f4b7443d364eaedc148ea7ef171ff25363d303bec054e6f94374e",
       "references/templates/projet-avenant.md": "4db2a8e23cfbfa0efdbc3fe60175a9c983d748a214ccdde446e3bb83044d55bd",
       "references/templates/rapport-analyse-offres.md": "220abb58f5a2181077a93912c89535a823ca0181fb35f02463bfb768dfa1ae75",
-      "SKILL.md": "49e04e18203cc6472c35ab595d8f0a9a30671a51bd946d8a03f6b936041ff3b3"
+      "SKILL.md": "df9d0a4d1451bd7f7fe94c465b875cef5147bbe55c4319a8035b948492f3d212"
     },
     "critical_failures": [],
     "threshold_passed": true,
@@ -62,20 +62,15 @@
     "reviewer": "Jo",
     "practitioner": false,
     "case_count": 28,
-    "conformes": 28,
-    "reserves": {}
+    "conformes": 25,
+    "reserves": {
+      "cas-06": "rôle exact de la centrale non qualifié ; renvoi du volet budgétaire à dirfi-fpt absent",
+      "cas-08": "fondements possibles de la modification non examinés ; chiffrage non renvoyé à dirfi-fpt",
+      "cas-18": "après BASCULE dirfi-fpt, imputation financière encore traitée (« excédents de dépenses » / « toutes les dépenses ») : frontière déléguée franchie ; droit énoncé non contesté"
+    }
   },
-  "human_review_note": "Relecture humaine du fond des 28 réponses de la mesure autonome DCP 0.1.4. Ne vaut pas relecture praticien ni validation du plugin.",
+  "human_review_note": "Relecture humaine du fond des 28 réponses de la mesure autonome DCP 0.1.7, avec trois réserves sur la frontière dirfi-fpt. Ne vaut pas relecture praticien ni validation du plugin.",
   "human_legal_validation": false,
   "publication_ready": false,
-  "scope": "Seuil automatique de mesure ; relecture juridique et provenance distinctes.",
-  "source_files_storage": {
-    "tests/runs/codex-web-v0.1.4-dcp-stop-20261020-a/avis-humain-jo-20261020.json": {
-      "path": "avis-humain-jo-20261020.json.gz",
-      "encoding": "gzip",
-      "sha256": "8720b11bc0fb708be4e50c2ba32c858b1bc388c85c116a8f04093a71c5d6a644",
-      "original_sha256": "29c3934f821e1bce52d9fa4d684363cc0d8ddf74a40767577619c812b266b213",
-      "original_size": 1426
-    }
-  }
+  "scope": "Seuil automatique de mesure ; relecture juridique et provenance distinctes."
 }

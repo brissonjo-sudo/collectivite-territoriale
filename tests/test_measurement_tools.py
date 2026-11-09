@@ -205,7 +205,7 @@ class MeasurementToolsTests(unittest.TestCase):
         self.assertFalse(result["compatible"])
         self.assertEqual(result["status"], "blocked")
         self.assertFalse(result["model_called"])
-        self.assertEqual(result["decision"], "DCP-014")
+        self.assertEqual(result["decision"], "DCP-017")
         self.assertNotIn("new_dcp_campaign_required", result)
         self.assertNotIn("requested_judge", result)
 

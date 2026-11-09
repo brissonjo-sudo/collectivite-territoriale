@@ -2,10 +2,12 @@
 
 > Brique transverse, pas une branche métier. Structure adaptée du gabarit
 > `_gabarit-branche.md` : les 12 sections sont conservées, dans l'ordre.
-> **Aucune décision de justice n'est citée ici par son nom d'usage, son
-> millésime ou son numéro** : toute recherche de jurisprudence financière
-> relève de `recherche-juridique`. **Aucun montant de sanction ni délai de
-> prescription n'est chiffré** : chacun est nommé, marqué « à vérifier ».
+> **Aucune décision de justice n'est citée de mémoire** : seules les décisions
+> consignées et datées au registre (`references-verifiees.md` §7) sont
+> évoquées ici, par juridiction et date, le numéro restant au registre ; toute
+> autre recherche de jurisprudence financière relève de `recherche-juridique`.
+> **Aucun montant de sanction ni délai de prescription n'est chiffré** :
+> chacun est nommé, marqué « à vérifier ».
 
 ## 1. Périmètre / Exclusions
 
@@ -89,26 +91,30 @@ financière compétente.
 
 ### 5.1 Organisation des juridictions financières
 
-- **Chambres régionales des comptes (CRC)** : juridictions financières de
-  premier ressort, territorialement compétentes ; elles jugent les comptes
-  des comptables publics de leur ressort, exercent le contrôle budgétaire
-  (`controle-budgetaire.md`) et l'examen de la gestion, et jugent les
-  affaires relevant du régime de responsabilité financière pour les
-  collectivités et organismes de leur ressort.
-- **Cour des comptes** : juridiction financière nationale ; elle juge
-  notamment les comptables et gestionnaires de l'État et des organismes
-  nationaux, et exerce des missions de contrôle et de certification propres.
+- **Chambres régionales des comptes (CRC)** : juridictions financières
+  territorialement compétentes ; elles exercent le contrôle budgétaire
+  (`controle-budgetaire.md`) et l'examen de la gestion. Lorsqu'elles relèvent
+  des faits susceptibles de constituer une infraction du régime de
+  responsabilité financière, y compris une gestion de fait, elles les
+  **défèrent au ministère public près la Cour des comptes** (constat des deux
+  arrêts d'octobre 2026, registre §7).
+- **Cour des comptes** : juridiction financière nationale ; sa **chambre du
+  contentieux** juge les gestionnaires publics, y compris ceux des
+  collectivités, au titre du régime de responsabilité financière et de la
+  gestion de fait (même source). Elle exerce aussi des missions de contrôle et
+  de certification propres.
 - **Juridiction d'appel unifiée** : depuis la réforme entrée en vigueur en
   2023 (ordonnance de réforme du régime de responsabilité financière des
   gestionnaires publics — **vérifiée dans `references/references-verifiees.md`
   §5**, à relire avant toute citation dans un acte), les décisions relatives à
   la responsabilité financière relèvent d'une **voie d'appel unifiée** devant
-  une chambre spécialisée de la Cour des comptes, avec pourvoi en cassation
-  devant le **Conseil d'État** — fin de la coexistence antérieure de
-  juridictions distinctes pour les comptables et pour les autres
-  gestionnaires. La **codification précise** des infractions, sanctions et de
-  la gestion de fait au CJF n'est, elle, **pas stabilisée** dans ce même
-  registre : jamais d'article précis sans revérification immédiate.
+  la **Cour d'appel financière** (voie mentionnée dans les arrêts du registre
+  §7), avec pourvoi en cassation devant le **Conseil d'État** — fin de la
+  coexistence antérieure de juridictions distinctes pour les comptables et
+  pour les autres gestionnaires. Au CJF, seuls les articles lus au registre §5
+  (justiciables, astreinte et exécution des décisions de justice, gestion de
+  fait) sont citables ; les autres infractions et les sanctions restent à
+  revérifier avant toute citation.
 - **Ministère public** près les juridictions financières : engage les
   poursuites (réquisitoire) et représente l'intérêt de la loi à l'audience,
   distinct de la formation de jugement.
@@ -125,10 +131,21 @@ financière compétente.
   sanctions. Portée exacte (cas résiduels, entrée en vigueur par type
   d'organisme) **à vérifier** avant affirmation catégorique.
 - **Qui est justiciable** : tout **gestionnaire public** au sens large —
-  ordonnateur, élu local dans ses fonctions d'ordonnateur ou de gestionnaire,
-  agent public, comptable public — dès lors qu'il a personnellement pris part
-  aux faits reprochés. Exceptions et régimes particuliers à vérifier au cas
-  par cas.
+  agent public (y compris un directeur général des services), comptable
+  public, ordonnateur — dès lors qu'il a personnellement pris part aux faits
+  reprochés. **Exception pour les élus exécutifs** (CJF, registre §5) : le
+  maire et, dans les cas visés, ses adjoints et conseillers ne sont **pas**
+  justiciables des infractions de droit commun du régime, **sauf** pour
+  l'inexécution des décisions de justice ayant entraîné une astreinte ou le
+  manquement aux règles de mandatement des condamnations, et pour la
+  **gestion de fait**. Autres régimes particuliers à vérifier au cas par cas.
+- **Exécution des décisions de justice** : le **mandatement tardif** des
+  sommes dues par la collectivité en exécution d'une condamnation, ou une
+  exécution tardive qui lui vaut une **astreinte**, est une infraction propre
+  dont le maire et le directeur général des services ont tous deux répondu
+  (Cour des comptes, arrêt du 22 octobre 2026, registre §7). Délais légaux de
+  mandatement : **à vérifier** ; volet exécution → `execution-depense.md`
+  §5.7.
 - **Infractions réprimées** (catégories, sans préjuger de la qualification
   exacte dans un cas donné) : **infraction aux règles d'exécution des
   recettes et des dépenses**, ou plus largement aux règles de gestion des
@@ -150,17 +167,34 @@ financière compétente.
 
 ### 5.3 La gestion de fait
 
-- **Définition** : le maniement de deniers publics, en recettes ou en
-  dépenses, par une personne **n'ayant pas la qualité de comptable public**
-  et **sans titre légal** l'y habilitant — en dehors, donc, du circuit
-  régulier (comptable public assignataire ou régisseur régulièrement
-  institué).
+- **Définition** (CJF L. 131-15, registre §5) : l'ingérence, sans qualité de
+  comptable public ni action sous son contrôle et pour son compte, dans le
+  recouvrement de recettes publiques ; la réception ou le maniement de fonds
+  **extraits irrégulièrement** de la caisse d'un organisme public ; les
+  opérations sur fonds que seuls les comptables publics peuvent exécuter —
+  en dehors, donc, du circuit régulier (comptable public assignataire ou
+  régisseur régulièrement institué).
+- **Mandat fictif** (Cour des comptes, chambre du contentieux, arrêt du
+  16 octobre 2026, registre §7, susceptible d'appel) : un mandat appuyé sur
+  une **fausse facture**, sans service fait, émis pour conserver une
+  subvention, extrait irrégulièrement des fonds de la caisse du comptable et
+  constitue une gestion de fait. Le maire qui l'a signé en connaissance de
+  cause et le prestataire qui a émis la facture sont déclarés comptables de
+  fait. Sont **sans effet** sur la qualification : l'intérêt communal de
+  l'opération, l'absence d'enrichissement personnel, la réalisation
+  ultérieure d'autres travaux, le remboursement de la subvention.
 - **Éléments constitutifs** : une **immixtion** dans les fonctions réservées
   au comptable public (encaissement, décaissement, détention ou maniement de
   fonds publics) et l'**absence de titre régulier** justifiant cette
   opération. L'intention de nuire n'est pas un élément constitutif : la
   gestion de fait peut être caractérisée même sans malversation, par le seul
   fait objectif du maniement irrégulier.
+- **Régime depuis le 1er janvier 2023** : la gestion de fait est une
+  infraction passible des sanctions du régime de responsabilité financière ;
+  le comptable de fait est en outre comptable de l'emploi des fonds maniés
+  (CJF L. 131-15). La procédure de déclaration et de ligne de compte décrite
+  ci-dessous est celle du **régime antérieur** ; son maintien est **à
+  vérifier** avant toute affirmation.
 - **Procédure de déclaration et ligne de compte** : la juridiction financière
   compétente se saisit ou est saisie ; elle statue par un jugement qui
   **déclare** la gestion de fait, après procédure contradictoire. Ce jugement
@@ -234,7 +268,7 @@ financière compétente.
 | 5. Décision | Jugement motivé, qualifiant ou non les faits, prononçant le cas échéant une sanction |
 | 6. Voies de recours | Appel devant la juridiction d'appel unifiée (§5.1), puis pourvoi en cassation devant le Conseil d'État |
 
-### 6.2 Déroulé type d'une procédure de gestion de fait
+### 6.2 Déroulé type d'une procédure de gestion de fait (régime antérieur au 1er janvier 2023 — maintien à vérifier, §5.3)
 
 | Étape | Contenu |
 |---|---|
@@ -264,8 +298,9 @@ Appliquer systématiquement le socle-sources (`SKILL.md` §5.4,
 - les **conséquences statutaires ou électorales** d'une gestion de fait
   déclarée (notamment inéligibilité) ;
 - toute **référence jurisprudentielle** (CRC, Cour des comptes, Conseil
-  d'État) → `recherche-juridique` systématiquement, jamais de nom d'usage,
-  millésime ou numéro cité de mémoire ;
+  d'État) non consignée au registre (`references-verifiees.md` §7) →
+  `recherche-juridique` systématiquement, jamais de nom d'usage, millésime
+  ou numéro cité de mémoire ;
 - les **délais et conditions** d'un recours administratif (REP, référé)
   contre un acte budgétaire ou fiscal.
 
@@ -287,8 +322,8 @@ Appliquer systématiquement le socle-sources (`SKILL.md` §5.4,
    financière objective, pouvant coexister avec des faits pénalement
    qualifiables poursuivis par une voie distincte.
 5. Citer une décision de justice financière par son **nom d'usage**, son
-   **millésime** ou son **numéro** — interdit ici ; `recherche-juridique`
-   systématiquement.
+   **millésime** ou son **numéro** sans qu'elle figure au registre (§7) —
+   interdit ; `recherche-juridique` systématiquement.
 6. Inventer ou approximer un **montant de sanction** ou un **délai de
    prescription** « à titre indicatif » — nommer la règle, marquer « à
    vérifier ».
@@ -297,6 +332,9 @@ Appliquer systématiquement le socle-sources (`SKILL.md` §5.4,
    seule procédure — objets et issues distincts.
 8. Oublier la **communication obligatoire à l'assemblée délibérante** des
    observations définitives d'un examen de la gestion.
+9. Croire qu'une gestion de fait suppose un enrichissement ou un circuit
+   occulte : un **mandat fictif** au profit de l'intérêt communal suffit
+   (§5.3).
 
 ---
 
@@ -313,17 +351,16 @@ référence :
 - **Portée exacte des causes d'exonération** et leurs limites.
 - **Conséquences statutaires ou électorales précises** d'une déclaration
   définitive de gestion de fait (notamment inéligibilité).
-- **Numérotation exacte**, au CJF, des articles définissant infractions,
-  sanctions et gestion de fait : non stabilisée dans
-  `references/references-verifiees.md` §5 (articles concurrents repérés,
-  aucun retenu avec certitude) — jamais de numéro précis sans revérification.
+- **Numérotation exacte**, au CJF, des articles d'infractions et de
+  sanctions **non lus** au registre (`references/references-verifiees.md`
+  §5) — jamais de numéro précis sans revérification.
 - **Délais de recours** (droit commun, déféré préfectoral, référés).
 - **Référence structurelle stable**, citable avec la réserve « à confirmer en
   version consolidée » : le **CJF**, dans son architecture générale.
   L'**ordonnance de réforme (2023)** est, elle, **déjà vérifiée** — voir
   `references/references-verifiees.md` §5 pour son numéro et sa date, à
   relire avant citation dans un acte.
-- Toute **référence jurisprudentielle** : aucune vérifiée à ce jour
+- Toute **référence jurisprudentielle** hors des décisions consignées
   (`references/references-verifiees.md` §7) → `recherche-juridique`
   systématiquement, jamais de nom d'usage, millésime ou numéro cité seul.
 
@@ -374,9 +411,9 @@ référence :
 4. Une éventuelle **cause d'exonération** (ordre écrit, circonstances) a-t-elle
    été traitée comme une appréciation casuistique, pas comme un mécanisme
    automatique ?
-5. Aucune **décision de justice** n'a-t-elle été citée par son nom d'usage,
-   son millésime ou son numéro ? Le renvoi à `recherche-juridique` a-t-il été
-   fait systématiquement pour toute jurisprudence ?
+5. Aucune **décision de justice** absente du registre (§7) n'a-t-elle été
+   citée par son nom d'usage, son millésime ou son numéro ? Le renvoi à
+   `recherche-juridique` a-t-il été fait pour toute autre jurisprudence ?
 6. Aucun **montant de sanction** ni **délai de prescription** n'a-t-il été
    chiffré sans la mention « à vérifier » ?
 7. La distinction entre **examen de la gestion** (contrôle non

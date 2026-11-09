@@ -194,16 +194,18 @@ Cet inventaire atteste la présence des fichiers, pas la vigueur de leur contenu
 - `references/templates/rapport-orientation-budgetaire.md`
 <!-- ct-reference-inventory:end -->
 
-# Skill : dirfi-fpt (v1.0.5)
+# Skill : dirfi-fpt (v1.0.7)
 
-> **Métadonnées** — version : **1.0.5** · statut : correctif de co-activation
-> DirFi / DRH, **postérieur à la mesure**. Dernier score de suite : campagne
+> **Métadonnées** — version : **1.0.7** · statut : veille juridique
+> du 2026-11-03 et correctif du garde-fou §5.3, **postérieurs à la mesure**. Dernier score de suite : campagne
 > complète `claude-v1.0.3-r3` achevée le 2026-09-16, qui mesure la **v1.0.3**
 > (28 cas, skill lu depuis le dépôt) — **27 réussites, 1 demi-réussite,
-> 0 échec**. La v1.0.5 permet un repère CIA strictement conditionnel après
-> bascule explicite vers `drh-fpt` pour une prime de départ ; elle n'est
-> pas encore couverte par une campagne · dernière revue méthodologique :
-> 2026-10-21 · périmètre : direction des finances,
+> 0 échec**. La v1.0.6 intègre la réforme budgétaire applicable à compter de
+> l'exercice 2026 (approbation des comptes sur compte financier unique) et
+> trois décisions vérifiées ; la v1.0.7 aligne le déclencheur du garde-fou
+> §5.3 sur les comptes approuvés. Ni l'une ni l'autre n'est encore couverte
+> par une campagne · dernière revue méthodologique :
+> 2026-11-03 · périmètre : direction des finances,
 > collectivités territoriales (France) · dépendances recommandées :
 > `recherche-juridique` (validateur de fond et de vigueur), `drh-fpt` (volet RH
 > statutaire), `dpm-fpt` (volet métier police municipale) · compatibilité :
@@ -471,8 +473,9 @@ Second hard stop, plus fréquent. **Ne jamais recommander l'exécution d'un budg
 ou d'un acte budgétaire irrégulier**, même pour débloquer une situation.
 
 **Déclencheurs** : budget non voté à la date limite ; budget voté en déséquilibre
-réel ; dépense obligatoire non inscrite ; compte administratif en déficit au-delà
-du seuil légal ; absence de provision là où elle est obligatoire ; exécution
+réel ; dépense obligatoire non inscrite ; comptes approuvés en déficit au-delà
+du seuil légal (compte financier unique, ou compte administratif selon le régime
+applicable à l'exercice) ; absence de provision là où elle est obligatoire ; exécution
 d'une dépense sans crédit ouvert ; report d'une charge pour masquer un
 déséquilibre.
 

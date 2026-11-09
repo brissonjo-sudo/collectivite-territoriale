@@ -93,7 +93,7 @@ Ces textes forment le socle de référence du métier. Ils ne dispensent
 | **Loi 78-17** | Marges nationales (mineurs, données sensibles, NIR), titre III Police-Justice | Numérotation remaniée en 2018-2019 : **ne jamais citer un article de mémoire** |
 | **Décret 2019-536** | Modalités procédurales | À confirmer à chaque usage |
 | **Code du patrimoine** | Archives publiques : le sort final des documents des collectivités relève du régime des archives | Croiser toute question de durée / effacement |
-| **CSI** | Vidéoprotection (voie publique) | Volet autorisation → `dpm-fpt` ; volet données ici |
+| **CSI** | Vidéoprotection (voie publique) ; information et droits des personnes filmées (art. R. 253-6) | Volet autorisation → `dpm-fpt` ; volet données ici |
 | **Référentiels et listes CNIL** | Durées sectorielles, AIPD obligatoire/dispensée | Vérifier la version en ligne, dater la citation |
 
 ---
@@ -200,3 +200,13 @@ règle.
 
 L'abstention est **ciblée** : elle porte sur le point incertain et n'empêche
 pas de livrer le reste de l'analyse.
+
+---
+
+## 8. Revues datées
+
+- **Veille du 2026-11-03** (delta depuis le 2026-09-17) : références
+  nationales rattachées et historisées sur Légifrance ; 1 modification —
+  loi 78-17, art. 22 (version du 01/10/2026, effet de la décision
+  n° 2025-1154 QPC) → `relations-cnil.md` §5.4 ; CSI, art. R. 253-6 intégré
+  (droits des personnes filmées) → `droits-personnes.md` §5.10.

@@ -1,5 +1,31 @@
 # Historique des versions
 
+## 1.5.1 : candidat non mesuré, non qualifié
+
+Ré-épinglage du 2026-11-03 sur la maintenance de veille juridique fusionnée
+dans le `main` de quatre dépôts amont. Patch, comme la 1.1.1 : mise à jour du
+contenu de skills, sans fonctionnalité du plugin.
+
+- dpm-fpt 1.0.5 → 1.0.7 (`840fd71` : veille du 2026-11-03 puis tarifs
+  maxima des frais de fourrière au 01/10/2026), dirfi-fpt 1.0.5 → 1.0.7 (`0675107` :
+  veille du 2026-11-03 puis garde-fou §5.3 déclenché par les comptes
+  approuvés en déficit), dpo-ct 0.2.2 → 0.2.3 (`5b33862`), dsi-fpt
+  0.2.1 → 0.2.2 (`252fd0d`).
+- Surcharges inchangées ; seules leurs empreintes d'entrée (`base_sha256`) et
+  les ancres de titre DirFi et DSI suivent les nouvelles bases. Copies
+  régénérées par `scripts/sync_skills.py`.
+- dcp-fpt 0.1.4 → 0.1.7 (`f3be71f`, ADR 0033) : veille 0.1.6 et correction
+  de la réserve R6 de la 1.5.0 (transmission au contrôle de légalité avant la
+  notification). Nouvelle référence autonome DCP-017 : mesure 25/28 à `5debffd`,
+  huit critiques réussis, relue par Jo avec trois réserves sur la frontière
+  dirfi-fpt. DCP-014 conservée comme historique.
+- recherche-juridique reste à 3.6.0 (`30c9c90`, ADR 0030) : la maintenance amont
+  du jour ne touche pas `skill/`. drh-fpt est inchangé.
+- Cycle 1.5.1 préparé en H1 (ADR 0034) : contrat v4 inchangé, même CLI figée
+  que la 1.5.0, transition 0034 non fermée.
+- Aucune campagne, aucun smoke ni aucune preuve ; la mesure préparée pour la
+  1.5.0 ne couvre pas ce runtime. Catalogues inchangés (1.5.0).
+
 ## 1.5.0 — Qualifiée et publiée le 2026-11-07
 
 Actualisation du 2026-11-07 : campagne `campagne-l150-j` 18/18 sur `0127c7b`,

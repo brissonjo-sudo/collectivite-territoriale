@@ -37,17 +37,17 @@ class DcpReferenceTests(unittest.TestCase):
         self.addCleanup(temporary.cleanup)
         self.directory = Path(temporary.name)
         self.root = self.directory / "candidat"
-        shutil.copytree(ROOT / "skills/dcp-fpt", self.root / "skills/dcp-fpt")
-        # Les mutations de DCP-0 partent de son runtime historique exact :
-        # le candidat courant surchargé doit, lui, être refusé séparément.
-        for name in ("skills/dcp-fpt/SKILL.md", "upstream.json") if self.FROZEN else ():
-            raw = subprocess.check_output(["git", "show",
-                self.FROZEN + ":" + name], cwd=ROOT)
-            (self.root / name).write_bytes(raw)
         if self.FROZEN:
-            # Le runtime historique ne contenait pas le texte français de l'EUPL (ADR 0030).
-            (self.root / "skills/dcp-fpt/LICENCE.fr.txt").unlink(missing_ok=True)
-        if not self.FROZEN:
+            # Une référence historique part de son runtime exact au commit figé (blobs bruts,
+            # sans conversion) ; le candidat courant doit, lui, la refuser séparément.
+            names = subprocess.check_output(["git", "ls-tree", "-r", "--name-only", self.FROZEN,
+                "skills/dcp-fpt"], cwd=ROOT).decode("utf-8").splitlines()
+            for name in names + ["upstream.json"]:
+                target = self.root / name
+                target.parent.mkdir(parents=True, exist_ok=True)
+                target.write_bytes(subprocess.check_output(["git", "show", self.FROZEN + ":" + name], cwd=ROOT))
+        else:
+            shutil.copytree(ROOT / "skills/dcp-fpt", self.root / "skills/dcp-fpt")
             shutil.copyfile(ROOT / "upstream.json", self.root / "upstream.json")
         self.path = self.directory / "dcp-autonome.json"
         shutil.copyfile(self.PROOF, self.path)
@@ -168,20 +168,19 @@ class DcpReferenceTests(unittest.TestCase):
 
 
 
+DCP014_PROOF = ROOT / "tests/evidence/2026-10-20-dcp-014/dcp-autonome.json"
+
+
 class Dcp014ReferenceTests(DcpReferenceTests):
-    """La même batterie de mutations s'applique à la nouvelle référence exacte."""
-    PROOF = ROOT / "tests/evidence/2026-10-20-dcp-014/dcp-autonome.json"
-    CONTRACT = ROOT / "scripts/dcp-protocol.json"
-    FROZEN = None
+    """DCP-014 historique (ADR 0016) : même batterie, runtime 0.1.4 restauré au dernier commit actif."""
+    PROOF = DCP014_PROOF
+    CONTRACT = ROOT / "scripts/dcp-protocol-0014.json"
+    FROZEN = "601157da9d9d86d7be1647584c955a3a4984ede3"
 
     def test_candidat_surcharge_refuse_ancienne_reference(self) -> None:
-        with self.assertRaisesRegex(ValueError, "Pin DCP différent"):
-            assembly.dcp_input(ROOT, PROOF)
-        proof = assembly.dcp_input(ROOT, self.PROOF)
-        self.assertEqual(proof["upstream_runtime_commit"], "414cd4ecf41ba8b296908b738224355069b1890f")
-        self.assertEqual(proof["summary"]["totals"]["RÉUSSITE"], 28)
-        self.assertEqual(proof["human_review"]["conformes"], 28)
-        self.assertFalse(proof["human_review"]["practitioner"])
+        for proof in (PROOF, self.PROOF):
+            with self.subTest(proof=proof.parent.name), self.assertRaisesRegex(ValueError, "Pin DCP différent"):
+                assembly.dcp_input(ROOT, proof)
 
     def test_sources_publiques_embarquees_identiques_aux_empreintes(self) -> None:
         proof = json.loads(self.PROOF.read_bytes())
@@ -207,6 +206,25 @@ class Dcp014ReferenceTests(DcpReferenceTests):
         path.write_bytes(path.read_bytes() + b"\nlocal overlay\n")
         with self.assertRaisesRegex(ValueError, "Octets DCP mesurés divergents : SKILL.md"):
             dcp.reference(self.root, self.path)
+
+
+class Dcp017ReferenceTests(Dcp014ReferenceTests):
+    """DCP-017 (ADR 0033) : la même batterie de mutations s'applique à la référence courante exacte."""
+    PROOF = ROOT / "tests/evidence/2026-11-08-dcp-017/dcp-autonome.json"
+    CONTRACT = ROOT / "scripts/dcp-protocol.json"
+    FROZEN = None
+
+    def test_candidat_surcharge_refuse_ancienne_reference(self) -> None:
+        for proof in (PROOF, DCP014_PROOF):
+            with self.subTest(proof=proof.parent.name), self.assertRaisesRegex(ValueError, "Pin DCP différent"):
+                assembly.dcp_input(ROOT, proof)
+        proof = assembly.dcp_input(ROOT, self.PROOF)
+        self.assertEqual(proof["upstream_runtime_commit"], "f3be71f4d8feb7e00faabb69786d3b14c7280908")
+        self.assertEqual(proof["source_measured_commit"], "5debffd54a6d76e86c79ab261446f9123e564494")
+        self.assertEqual(proof["summary"]["totals"], {"DEMI-RÉUSSITE": 2, "RÉUSSITE": 25, "ÉCHEC": 1})
+        self.assertEqual(proof["human_review"]["conformes"], 25)
+        self.assertEqual(set(proof["human_review"]["reserves"]), {"cas-06", "cas-08", "cas-18"})
+        self.assertFalse(proof["human_review"]["practitioner"])
 
 
 if __name__ == "__main__":

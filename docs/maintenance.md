@@ -40,16 +40,20 @@ bloque la synchronisation. Les versions internes identifient les bases amont,
 pas de nouvelles releases de ces dépôts. Le commit du plugin identifie la
 variante complète. Aucun dépôt amont n'est modifié.
 
-DSI 0.2.1 est figé à `704e5dd6a3d15994ed431b23585aabd72086ca75` :
-30 fichiers runtime, sélection de #11, sans cache de valeurs. DPO 0.2.2 reste
-figé à `58ea45c4d12812da10ace5f1486deea96b8534fa` (18 fichiers).
+DSI 0.2.2 est figé à `252fd0d7abd8bb064ff31133003f92a1bd5b3813` :
+sélection runtime de #11, sans cache de valeurs. DPO 0.2.3 est figé à
+`5b338627cd2b503bec919e20f2b23424875d494c`. Les épingles courantes font foi
+dans `upstream.json`.
 Les renvois DCP, les STOP et l'abstention sans source primaire sont conservés ;
 les transferts imposent l'activation effective et une attribution persistante.
 
 Pour `recherche-juridique`, la racine canonique `skill/` est aplatie dans `skills/recherche-juridique/`. Sa licence est copiée avec le runtime ; aucun manifeste, serveur MCP, fichier `.env` ou autre fichier de dépôt amont n'est dupliqué. Le fichier `references/cache-taux-seuils.md` de `dirfi-fpt`, exclu de son propre paquet de distribution, n'est pas embarqué.
 
-Pour DCP 0.1.4, le commit correctif est figé :
-`414cd4ecf41ba8b296908b738224355069b1890f`. Les 30 fichiers de son paquet
+Pour DCP 0.1.7, le commit figé est
+`f3be71f4d8feb7e00faabb69786d3b14c7280908` : commit de preuve dont le runtime
+est identique au commit mesuré `5debffd54a6d76e86c79ab261446f9123e564494`, textes
+EUPL 1.2 déjà inclus ([ADR 0033](adr/0033-dcp-017-reference-autonome.md)).
+La référence DCP-014 (0.1.4, `7874c62`) reste historique. Les 30 fichiers de son paquet
 runtime et sa licence sont copiés ; le cache `references/cache-valeurs.md`,
 la conception, les scripts d'évaluation et les preuves amont sont exclus.
 Le registre daté reste une piste de recherche, jamais une preuve de lecture

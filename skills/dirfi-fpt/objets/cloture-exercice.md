@@ -18,7 +18,13 @@
 | **Exécutif (ordonnateur)** | Arrête les comptes | Prépare et arrête le compte administratif ; organise le rattachement des charges et produits et la constatation des restes à réaliser |
 | **Comptable public assignataire** | Produit le compte de gestion / CFU | Établit le compte de gestion (ou compte financier unique selon le calendrier de généralisation) ; sa concordance avec le compte administratif est une condition de validité |
 | **Assemblée délibérante** | Vote | Arrête le compte administratif (ou le CFU selon le régime applicable), délibère sur l'affectation du résultat |
-| **Représentant de l'État** | Contrôle | Saisit la chambre régionale des comptes en cas de compte administratif en déficit au-delà du seuil légal |
+| **Représentant de l'État** | Contrôle | Saisit la chambre régionale des comptes lorsque les comptes approuvés font apparaître un déficit au-delà du seuil légal |
+
+**Réforme à compter de l'exercice 2026** : l'approbation des comptes est le
+vote de l'assemblée sur le **compte financier unique** (CGCT L. 1612-12,
+registre `../references/references-verifiees.md` §2). Les mentions du
+compte administratif et du compte de gestion ci-dessous ne valent que pour
+des comptes d'exercices antérieurs (régime **à vérifier**).
 
 **Point de vigilance sur le vote** : l'exécutif ne prend pas part au vote du
 compte administratif le concernant — vérifier les règles de quorum et de
@@ -37,8 +43,8 @@ présidence de séance applicables (`budget-cycle.md` §5.6).
   produits à l'exercice), §5.8 (restes à réaliser), §5.6 (provisions et
   dépréciations), §5.9 (opérations d'ordre), §5.10 (état de l'actif et
   compte financier unique).
-- **`../references/controle-budgetaire.md`** §4.1 (les quatre cas de
-  saisine), §4.3 (le compte administratif en déficit) — dès qu'un risque de
+- **`../references/controle-budgetaire.md`** §5.1 (les quatre cas de
+  saisine), §5.3 (les comptes approuvés en déficit) — dès qu'un risque de
   déficit apparaît.
 - **`../references/execution-depense.md`** et **`../references/execution-recette.md`** — mandatements et titres de fin d'exercice, rattachements individuels.
 
@@ -140,12 +146,13 @@ de mémoire.
 
 ### 3.10 Détection d'un risque de déficit
 
-1. Si le compte administratif fait apparaître un **déficit au-delà du seuil
-   légal** (seuil à vérifier, non chiffré de mémoire), ne pas poursuivre
+1. Si les comptes approuvés (compte financier unique, ou compte administratif
+   selon le régime applicable à l'exercice) font apparaître un **déficit
+   au-delà du seuil légal** (seuil à vérifier, non chiffré de mémoire), ne pas poursuivre
    l'exécution en l'état.
 2. Afficher l'**ALERTE BUDGÉTAIRE** (`SKILL.md` §5.3) avant tout contenu
    métier complémentaire, et orienter vers
-   `../references/controle-budgetaire.md` §4.3 (le compte administratif en
+   `../references/controle-budgetaire.md` §5.3 (les comptes approuvés en
    déficit) pour la qualification précise du cas et la procédure de
    saisine.
 
@@ -187,9 +194,10 @@ Thèmes appelant une recherche avant conclusion :
 
 ### Garde-fou budgétaire (`SKILL.md` §5.3) — à vérifier en priorité
 
-- [ ] Le compte administratif fait-il apparaître un **déficit au-delà du
-      seuil légal** ? Si oui → **ALERTE BUDGÉTAIRE** affichée avant tout
-      contenu, orientation vers `controle-budgetaire.md` §4.3.
+- [ ] Les comptes approuvés (CFU, ou compte administratif selon le régime
+      applicable) font-ils apparaître un **déficit au-delà du seuil légal** ?
+      Si oui → **ALERTE BUDGÉTAIRE** affichée avant tout contenu, orientation
+      vers `controle-budgetaire.md` §5.3.
 - [ ] Une **provision obligatoire** a-t-elle été omise ? Si oui → même
       traitement.
 

@@ -55,7 +55,11 @@ R. 2122-2 exige de qualifier les résultats antérieurs : toute infructuosité
 n'est pas ce cas. R. 2122-3 impose de vérifier l'exclusivité, les alternatives
 et l'absence de restriction artificielle. R. 2122-8 : conditions de faible
 montant, version et règles de choix à vérifier, aucune préférence habituelle
-automatique. Les autres cas du registre restent conditionnels à leurs faits.
+automatique. CE, 19/10/2026, n° 513188 (Tables ; lu le 2026-11-03, registre
+§14) : rejet du recours contre les décrets fixant ces seuils, dispense
+confirmée, mais L. 3 reste à respecter selon la nature et le montant du
+marché ; la valeur se relit à la source en session. Les autres cas du
+registre restent conditionnels à leurs faits.
 
 **Bonne pratique** : consigner voie envisagée, voie écartée, faits, preuve et
 autorité. Une justification rédigée après un choix orienté relève du STOP.

@@ -10,6 +10,8 @@
 > le cache daté est conservé dans le seul dépôt source, hors paquet runtime.
 > Ne pas tenter de le charger ; revenir à la source primaire pour toute valeur.
 >
+> **Veille du 2026-11-03.** 63 identifiants recontrôlés par l'API Légifrance : 0 changement de fond ; 2 présentations datées (CCP, art. L. 2192-5, deux versions).
+>
 > **Vérification du 2026-10-05.** Droit français : API Légifrance (outils
 > `Droit_Francais`, `search_articles` et `get_article`), texte de chaque article
 > lu. Textes entiers non codifiés (`JORFTEXT`) : page Légifrance lue par
@@ -185,8 +187,8 @@
 | Factures électroniques transmises par les titulaires de marchés | CCP, art. L. 2192-1 | LEGIARTI000046195587 | 2024-07-01 | vérifié | Oui (inférence) : obligation **des fournisseurs** |
 | Acceptation des factures électroniques par les personnes publiques | CCP, art. L. 2192-2 | LEGIARTI000046195584 | 2024-07-01 | vérifié | Oui (inférence) : obligation **de la collectivité** |
 | Acceptation des factures conformes à la norme | CCP, art. L. 2192-3 | LEGIARTI000038541739 | 2019-07-22 | vérifié | Oui (inférence) |
-| Portail public de facturation (version en vigueur jusqu'au changement de version) | CCP, art. L. 2192-5 | LEGIARTI000053546705 | 2026-02-21 | vérifié | **Oui, expressément** : « les collectivités territoriales » |
-| Portail public de facturation (version future) | CCP, art. L. 2192-5 | LEGIARTI000054567709 | version future (date dans le cache) | vérifié | Oui, expressément |
+| Portail public de facturation (version applicable jusqu'au 2027-01-01 : abrogation différée ; consultée le 2026-11-03) | CCP, art. L. 2192-5 | LEGIARTI000053546705 | 2026-02-21 | vérifié | **Oui, expressément** : « les collectivités territoriales » |
+| Portail public de facturation (version future ; consultée le 2026-11-03) | CCP, art. L. 2192-5 | LEGIARTI000054567709 | 2027-01-01 (entrée en vigueur différée ; non applicable au 2026-11-03) | vérifié | Oui, expressément |
 | Exclusions du dispositif | CCP, art. L. 2192-6 | LEGIARTI000038960975 | 2020-01-01 | vérifié | Aucune exclusion ne vise une collectivité |
 
 > **Frontière.** Ces références servent l'**exécution** des contrats. La

@@ -3,8 +3,8 @@
   "skills": {
     "dpm-fpt": {
       "repository": "https://github.com/brissonjo-sudo/Dpm-fpt.git",
-      "commit": "30b1e203293ecc87088181b5dca5b9a9ad06561e",
-      "version": "1.0.5",
+      "commit": "840fd7106bd44b1e7362eb1a2212fd3a89c6755f",
+      "version": "1.0.7",
       "paths": [
         "SKILL.md",
         "references/",
@@ -24,7 +24,7 @@
         {
           "target": "SKILL.md",
           "source": "overlays/dpm-fpt.md",
-          "base_sha256": "f6820c1f51013029268cd68b8db564c1b88965ff77fa678c6b7aeb5a37c3ca96",
+          "base_sha256": "34b2aa0d64e6379d369dd112ff204dc1d12f53ace25c4cd86826bf30c433268b",
           "source_sha256": "92eb7452667523d601c555f483147d83a984f3061ecfbf1f760807e1ef3755cf",
           "anchor": "## 1. Déclenchement"
         },
@@ -33,7 +33,7 @@
           "source": "overlays/dpm-fpt-description.md",
           "operation": "replace-description",
           "anchor": "description: >-\n  Système expert d'aide à la décision pour un Directeur de Police Municipale\n  (DPM) en collectivité territoriale française. Activer pour toute question du\n  métier de police municipale : pouvoirs de police du maire, limites APJA,\n  procédure pénale applicable à la PM, réglementation de terrain (fourrière,\n  débits de boissons, domaine public, chiens dangereux), doctrine\n  opérationnelle, continuum de sécurité, agrément et assermentation des\n  agents, armement, vidéoprotection et caméras-piétons, déontologie, données,\n  pilotage, budget et écrits professionnels. Activer aussi lorsqu'une demande\n  faite à une PM approche ou dépasse les pouvoirs APJA, afin d'opposer le\n  garde-fou et d'orienter vers l'OPJ sans formaliser l'acte réservé. Vérifier\n  toute règle de droit sur une source officielle avant conclusion. Ne pas\n  activer pour le RH statutaire des agents (carrière, paie, procédure\n  disciplinaire : drh-fpt), pour le RGPD général de la collectivité\n  (registre, AIPD : dpo-ct), ni pour le droit étranger.\n",
-          "base_sha256": "d890f46ad318a1104a6805b4d38f480547132ebded5282719088ab00cce99818",
+          "base_sha256": "71eb0044a14fff45bfd7368641108ead3b66451290613123c68edef6eb86aea9",
           "source_sha256": "3c5821e50dc87f9ab0c02110087872125a4d69f3c45cf8ee2d67684cb022b065"
         }
       ]
@@ -77,8 +77,8 @@
     },
     "dpo-ct": {
       "repository": "https://github.com/brissonjo-sudo/DPO-CT.git",
-      "commit": "9f91d726cd7693873bcfaa057a22638679b4c0d2",
-      "version": "0.2.2",
+      "commit": "5b338627cd2b503bec919e20f2b23424875d494c",
+      "version": "0.2.3",
       "paths": [
         "SKILL.md",
         "references/",
@@ -98,7 +98,7 @@
         {
           "target": "SKILL.md",
           "source": "overlays/dpo-ct.md",
-          "base_sha256": "82288b47c2d5e67acc4eb9ee24636eefe8b29c3a31b137e8e48e69460ed06fa5",
+          "base_sha256": "24b3994020379511c12a8fdcafba4a34d1072ed4632679baea17415362fd8448",
           "source_sha256": "7b6cec5a61225a1678f027757e918aaf4995964f3a88b380b3475c9fa2829b24",
           "anchor": "## 1. Déclenchement"
         },
@@ -106,7 +106,7 @@
           "target": "SKILL.md",
           "source": "overlays/dpo-ct-description.md",
           "operation": "replace-description",
-          "base_sha256": "1d230f4d0456cd882cab454ea2bca3b68e68072f8aa905dafb9728bb0501da84",
+          "base_sha256": "bc14919646f9b457b296d33cf64edbd1f43401e7b5f878c3deac125aeb726d48",
           "source_sha256": "10cebe49f7d923007320cbc88f3b8ee4e824278e5e3df9f73012e9f734fafc2a",
           "anchor": "description: >-\n  Système expert d'aide à la décision pour un Délégué à la Protection des\n  Données (DPO) en collectivité territoriale française. Activer pour toute\n  question de protection des données personnelles : avis RGPD sur un projet ou\n  un traitement, AIPD (méthode CNIL), registre des traitements (art. 30),\n  violation de données et notification CNIL (72 h), droits des personnes\n  (accès, effacement, opposition...), sous-traitance (art. 28) et transferts\n  hors UE, sécurité (art. 32), doctrine CNIL et CEPD, traitements communaux\n  (état civil, élections, scolaire, action sociale, vidéoprotection,\n  téléservices, open data). Activer aussi dès qu'un projet implique des\n  données personnelles, même sans mention du RGPD. Toute règle reposant sur un\n  texte est vérifiée à la source officielle avant conclusion. Ne pas activer\n  pour le volet opérationnel de la police municipale (dpm-fpt), le RH\n  statutaire (drh-fpt), la mise en œuvre technique de la sécurité (dsi-fpt),\n  la passation des marchés (dcp-fpt), ni le droit hors UE.\n"
         }
@@ -114,8 +114,8 @@
     },
     "dirfi-fpt": {
       "repository": "https://github.com/brissonjo-sudo/DirFi-fpt.git",
-      "commit": "075535ffb1c695845d723f50e3d781c5b5106d3e",
-      "version": "1.0.5",
+      "commit": "0675107e897d9483f45a1fa149db702ce3192734",
+      "version": "1.0.7",
       "paths": [
         "SKILL.md",
         "references/",
@@ -138,8 +138,8 @@
         {
           "target": "SKILL.md",
           "source": "overlays/dirfi-fpt.md",
-          "anchor": "# Skill : dirfi-fpt (v1.0.5)",
-          "base_sha256": "363ebeef09ff4731d356f99ce9835e0942ca58502bcd00e576d31f569f085b4d",
+          "anchor": "# Skill : dirfi-fpt (v1.0.7)",
+          "base_sha256": "88f5e0ec3e36a74c4f2bf0f9a3fe68401ec011789c5fbad54255822e842fba62",
           "source_sha256": "1c8d9b204dccd0725783f29c8d019ca30e1a77c025d581291229e6c4da7946c3"
         },
         {
@@ -147,7 +147,7 @@
           "source": "overlays/dirfi-fpt-description.md",
           "operation": "replace-description",
           "anchor": "description: >-\n  Système expert d'aide à la décision pour un Directeur des Finances (DirFi) en\n  collectivité territoriale française. Activer pour toute question de finances\n  publiques locales : cycle budgétaire et vote du budget, nomenclature M57,\n  exécution de la dépense et de la recette, régies, fiscalité locale, dotations\n  et péréquation, dette et trésorerie, prospective et analyse financière,\n  subventions, volet financier de la commande publique, contrôle interne\n  financier et écrits budgétaires. Activer aussi lorsqu'un montage fait manier\n  des deniers publics hors du circuit du comptable public, afin d'opposer le\n  garde-fou gestion de fait, ou lorsqu'un acte budgétaire paraît irrégulier,\n  afin d'opposer le garde-fou budgétaire avant toute recommandation\n  d'exécution. Vérifier toute règle de droit et toute valeur chiffrée sur une\n  source officielle avant conclusion. Ne pas activer pour le RH statutaire des\n  agents (carrière, paie, régime indemnitaire : drh-fpt), pour la passation des\n  marchés publics, ni pour le droit étranger.\n",
-          "base_sha256": "f7c8196cd195f09496c4aae0720cf046614773975758581f94777a53da84361c",
+          "base_sha256": "9a6098d5d3726265563ae30fa8dd1ffd5fde1f38adc7c0a986c276d44334e430",
           "source_sha256": "8afaae8a5019403ba25dfd62085643b254d36b6c62f144a7dda40bd65963691c"
         }
       ]
@@ -187,8 +187,8 @@
     },
     "dcp-fpt": {
       "repository": "https://github.com/brissonjo-sudo/DCP-fpt.git",
-      "commit": "7874c62999ac9b4cf48152d525974f3f5accbc50",
-      "version": "0.1.4",
+      "commit": "f3be71f4d8feb7e00faabb69786d3b14c7280908",
+      "version": "0.1.7",
       "paths": [
         "SKILL.md",
         "agents/openai.yaml",
@@ -211,8 +211,8 @@
     },
     "dsi-fpt": {
       "repository": "https://github.com/brissonjo-sudo/DSI-fpt.git",
-      "commit": "5fa1f8a49d971d53852eca0c4f15c4b750509d3f",
-      "version": "0.2.1",
+      "commit": "252fd0d7abd8bb064ff31133003f92a1bd5b3813",
+      "version": "0.2.2",
       "paths": [
         "SKILL.md",
         "agents/",
@@ -236,15 +236,15 @@
         {
           "target": "SKILL.md",
           "source": "overlays/dsi-fpt.md",
-          "base_sha256": "4522f18710d8e3d9ecc8183a86ed2f8a2b96b4212fabbc3ab1ad4619fb51be76",
+          "base_sha256": "4d1cd1ab13cf7fd5f09573c20f56796058742be85fbd1ce5dbf2567d479b28b1",
           "source_sha256": "4ff98752dd2817aed15dc9d74b0803d030fd8e2b1a500e0a31ce66c7c86a84a4",
-          "anchor": "# Skill : dsi-fpt (v0.2.1)"
+          "anchor": "# Skill : dsi-fpt (v0.2.2)"
         },
         {
           "target": "SKILL.md",
           "source": "overlays/dsi-fpt-description.md",
           "operation": "replace-description",
-          "base_sha256": "2ee7e13625f3655e8965d00f938f7f104a7b228428c5dfee1452cb331819fc1c",
+          "base_sha256": "dc2700e3a09b8f02603bcca58200f0e1a60d6a3d137e625d10d895bf725054f7",
           "source_sha256": "20c3d28265b576d4c03ac552417aacc395a5ad3b02c78d71fda6b224a4af18cc",
           "anchor": "description: >-\n  Incident cyber ou surveillance : le premier texte visible commence par STOP,\n  avant toute annonce d'activation. Aide à la décision DSI/RSSI en collectivité française.\n  Activer pour les questions de gouvernance du SI, sécurité et\n  homologation, crise cyber et continuité, réseaux et infrastructures, cloud et\n  hébergement, applications métiers et interopérabilité, dématérialisation et\n  téléservices, accessibilité numérique, intelligence artificielle et\n  algorithmes publics, contrats informatiques. Toute question de droit exige\n  l'activation réelle de recherche-juridique et un texte primaire récupéré,\n  sinon abstention sur le fond. Ne pas activer pour la conformité\n  RGPD, l'AIPD ou la notification de violation (dpo-ct), le RH statutaire\n  (drh-fpt), la doctrine de vidéoprotection (dpm-fpt), le budget (dirfi-fpt),\n  ni la passation des marchés.\n"
         },
@@ -252,7 +252,7 @@
           "target": "SKILL.md",
           "source": "overlays/dsi-fpt-incident-stop.md",
           "operation": "replace-block",
-          "base_sha256": "0e3827d041e5d9252aaba24b91c1a55e79bdc6c0c8b4d95f076185384a93f05e",
+          "base_sha256": "34d2df28afd8239fe6f7cb2ef89f85a258d6c3d890ded1df66555e7114b0d4c6",
           "source_sha256": "f600b65785c2440c42523628f67c18f8f50050145b7894af8cf83df8d9e1abe9",
           "anchor": "### 5.2 Garde-fou « incident cyber » — règle d'or\n\n**Déclencheurs (liste ouverte)** : rançongiciel, chiffrement de fichiers,\ncompromission de compte, fuite ou exfiltration de données, indisponibilité\nsuspecte, intrusion constatée, demande de rançon, alerte d'un tiers sur une\nattaque.\n\nDès qu'un déclencheur apparaît, le **premier livrable, avant tout autre\ncontenu**, est :\n\n```\nSTOP — Incident de sécurité en cours ou récent.\n1. Ne rien faire d'irréversible avant de préserver les preuves : ne pas\n   réinstaller, effacer, restaurer ni rallumer ce qui a été touché ; isoler.\n2. Ne rien taire : signaler l'incident dans les circuits prévus (autorité\n   territoriale, assureur, plainte, autorités compétentes) ; les délais se\n   vérifient à la source.\n3. Ne pas décider seul de ce qui revient à l'exécutif : paiement d'une rançon,\n   communication publique, arrêt d'un service public.\n4. Aucune contre-mesure offensive, aucun accès à un système tiers.\n5. Données personnelles possiblement touchées → BASCULE dpo-ct.\n```\n\nEnsuite seulement, orienter vers `references/crise-cyber-continuite.md` et\n`objets/incident-securite.md`. Le skill aide à **organiser, documenter et\nreprendre** ; il ne remplace ni l'appui d'un CSIRT territorial ou d'un\nprestataire de réponse à incident, ni les autorités compétentes.\n\n**Les références de ce garde-fou ne sont pas dispensées de provenance** : une\nobligation de plainte, de signalement ou de notification se cite avec sa\nsource et sa date, ou ne se cite pas.\n\n"
         },
@@ -260,7 +260,7 @@
           "target": "SKILL.md",
           "source": "overlays/dsi-fpt-abstention.md",
           "operation": "replace-block",
-          "base_sha256": "c86b3188421db0ab3121273c80b376ce4a3e970838fbf0f22dc65378f3b17661",
+          "base_sha256": "762da1c45242843f1beb04ee3f38e0f1b2ab4ec7cd8cc4466fd9472f68529152",
           "source_sha256": "d010c9f15468374027e6ebaba030e8ca536d9af4de51d9ce9116b30b0c9c59a7",
           "anchor": "### 5.4 Socle-sources autonome\n\nNoyau embarqué pour orienter la vérification. Dès qu'une ligne « Oui » de\nla matrice §2.2 est concernée, **activer réellement `recherche-juridique`**\net lire son point d'entrée avant toute conclusion juridique, y compris si\nle fond est délégué à un autre skill. Une question purement technique ne\ndéclenche pas cette activation. Nommer un skill ou annoncer une future\nrevue juridique ne constitue pas une activation. Carte des sources,\nhiérarchie et réflexes : **`references/socle-sources-verification.md`** ;\nidentifiants vérifiés et datés : **`references/references-verifiees.md`**.\n\n1. **Primarité et provenance.** Aucune affirmation juridique ni aucune valeur\n   de mémoire. Un identifiant officiel (Légifrance, CELEX) ne se reconstitue\n   jamais : il vient d'une source primaire effectivement récupérée dans la\n   session. Le registre local fournit des pistes, jamais la preuve de vigueur.\n   Sans récupération, retirer l'identifiant et toute conclusion de droit. **Aucune exception de notoriété** : un article\n   cité en incise, entre parenthèses ou pour être écarté porte sa provenance.\n   **Interdiction de l'auto-attestation** : « vérifié ce jour » n'est pas une\n   provenance. Une provenance opposable porte **trois éléments** — la source\n   nommée, le point d'entrée obtenu (identifiant ou URL), la date de\n   consultation — ou elle n'existe pas.\n2. **Applicabilité d'abord.** Avant « la collectivité doit », vérifier que le\n   texte la vise : mention expresse, catégorie qui l'inclut, seuil, option\n   laissée aux États membres, transposition publiée. Un projet de loi n'oblige\n   personne. Une doctrine n'est pas du droit positif.\n3. **Régime des valeurs, à deux vitesses.** Valeurs volatiles (montants,\n   seuils, délais, dates d'application, versions de référentiels) : jamais de\n   mémoire, jamais sans date. Les références structurelles exigent aussi une\n   source primaire récupérée avant tout usage comme fondement. Une réserve\n   générique ne permet aucune assertion non vérifiée, même en incise, pour\n   écarter un article ou annoncer l'état d'une transposition.\n4. **Date de référence.** Le droit du numérique s'applique par étapes et ses\n   calendriers sont parfois repoussés par un texte modificatif : raisonner sur\n   la version applicable à la date de la question.\n5. **Abstention motivée.** Source inaccessible, valeur non confirmée,\n   contradiction : ne pas trancher ; livrer une esquisse bornée et le point\n   exact à vérifier.\n\n**Source primaire absente, inaccessible ou outil indisponible** : aucune\nvaleur, aucun numéro d'article ou identifiant, aucune assertion de vigueur,\nd'applicabilité ou de contenu juridique n'est produit. Cela vaut aussi pour\nles passages des références internes : ils orientent la recherche, sans\nconstituer une preuve actuelle. Livrer les faits techniques, les pièces\nmanquantes et les questions à vérifier. Un résultat de recherche, un lien ou\nun résumé d'outil ne remplace pas le texte primaire récupéré et daté.\n\nDans ce mode, ne pas expliquer les effets d'une catégorie de texte, la\nhiérarchie des normes ou le champ d'un régime pour justifier l'abstention :\nce serait déjà produire du fond sans preuve. Le motif suffit : « aucun texte\nprimaire récupéré dans cette session ». Lister les questions et portails à\nconsulter, sans compléter une référence numérique depuis un fichier interne.\n\n"
         },
@@ -268,7 +268,7 @@
           "target": "SKILL.md",
           "source": "overlays/dsi-fpt-tracabilite.md",
           "operation": "replace-block",
-          "base_sha256": "c23a77aeaf67e0502e8520cf8a633b59613b347cada8fbf46f71933542f9537e",
+          "base_sha256": "3f2e44aec1f02b16730fa10cf4a83d6d3152305d5007aab7b5e7a9fcbb8907dc",
           "source_sha256": "06c4adac8ac81e0ff226d6c1efa421002a4b7c7d64e108f02daf04e3648f29aa",
           "anchor": "### Traçabilité de la source interne — obligatoire\n\nToute réponse qui mobilise une branche, un objet ou un gabarit le **nomme par\nson chemin**, là où sa règle est utilisée (`references/securite-si.md`,\n`objets/incident-securite.md`). Nommer la notion ne suffit pas. Le chemin permet\nde **vérifier**, de **corriger**, et de **distinguer** ce qui vient du skill de\nce qui vient de la mémoire du modèle. En cas de doute sur le fichier compétent,\npasser par le routeur.\n\n---\n\n## 5. Dispositifs transverses (obligatoires)\n\n"
         },
@@ -276,7 +276,7 @@
           "target": "SKILL.md",
           "source": "overlays/dsi-fpt-autocontrole.md",
           "operation": "replace-block",
-          "base_sha256": "7c137dc2b806beb48988740b2a994a0b76cb6407908a4d781028d561d31fdd15",
+          "base_sha256": "56af4581f10b9d2646284b522b830837f6dafce967d48ccd746370467c4f996b",
           "source_sha256": "65eb0062a49137f3b324af240eb084082b6831d40a51a169fd99ceacddb809ff",
           "anchor": "### 5.7 Hiérarchie de co-activation\n\n1. **`dsi-fpt`** — chef d'orchestre sur le SI : cadre le besoin technique et\n   pose les garde-fous.\n2. **`dpo-ct`** / **`drh-fpt`** / **`dpm-fpt`** / **`dirfi-fpt`** — activés\n   sur leur périmètre propre (§5.5, §5.6).\n3. **`recherche-juridique`** — activé pour vérifier le fond, les sources et\n   leur applicabilité avant toute assertion juridique. Les conclusions sur\n   l'exécution, la restitution, les frais ou les droits contractuels sont\n   attribuées à son volet explicite ; `dsi-fpt` conserve l'inventaire, les\n   contrôles de reprise et la continuité. Même en cas d'abstention, identifier\n   ce rôle et le point qu'il ne peut confirmer.\n\n**Co-activation dans un plugin agrégateur** — le bloc `BASCULE` reste\nobligatoire même lorsque le skill délégataire est réellement chargé. Il\nmatérialise le changement de responsable ; il n'interdit pas au délégataire de\npoursuivre la même réponse. Dans ce cas seulement, `dsi-fpt` s'arrête après son\nvolet et la suite commence sous un intertitre explicite (`Analyse dpo-ct`,\n`Analyse drh-fpt`…). La simple disponibilité du délégataire ne suffit pas :\nson point d'entrée doit avoir été effectivement activé et ses références\npertinentes lues.\n\nSi seul `dsi-fpt` est chargé ou que le délégataire ne peut pas être activé,\nle bloc BASCULE arrête le fond concerné. Ne pas poursuivre par des articles,\nclauses juridiques ou un intertitre simulant le délégataire. Les sources\nconsultées par la DSI ne lui transfèrent pas cette compétence.\n\nLes skills d'accessibilité (TDAH, DYS, etc.) régissent la **forme** uniquement.\n\n---\n\n## 6. Écrits et livrables\n\nProduits à la demande via les gabarits de `references/templates/`, pilotés\npar `references/ecrits-numerique.md` :\n\n- **Fiche projet SI** — `references/templates/fiche-projet-si.md`\n- **Rapport d'incident** — `references/templates/rapport-incident.md`\n- **Cahier des charges technique** — `references/templates/cahier-des-charges-technique.md`\n- **Charte d'usage du SI** (contenu technique) — `references/templates/charte-usage-si.md`\n- **Note d'homologation de sécurité** — `references/templates/note-homologation.md`\n\n**Logique interactive** : détecter le type d'écrit → poser les questions une à\nune → assembler. **Cas incomplets** : ne jamais inventer une donnée (date,\narchitecture, prestataire, niveau de service) ; produire un brouillon marqué\n`[INCOMPLET]` listant les champs manquants.\n\n**Vocabulaire exact** : le décret relatif au RGS parle d'**attestation\nformelle** par l'autorité administrative ; le référentiel RGS décrit la\ndémarche d'**homologation de sécurité**. C'est la collectivité qui homologue\net atteste pour ses systèmes ; l'ANSSI qualifie des produits, elle n'homologue\npas les systèmes d'une collectivité.\n\n**Aucun écrit ne contient** de secret (mot de passe, clé, adresse interne\nexploitable), ni de détail d'architecture qui faciliterait une attaque s'il\nétait diffusé.\n\n---\n\n## 7. Auto-vérification avant sortie\n\n1. **Garde-fou incident (§5.2)** : incident en cours ou récent ? Si oui, le\n   **STOP** est-il **en premier** ?\n2. **Garde-fou surveillance (§5.3)** : accès aux contenus ou aux traces d'une\n   personne, ou dispositif de surveillance ? Si oui, le **STOP** et la\n   **BASCULE** précèdent-ils tout contenu technique, sans mode opératoire ?\n3. **Mode d'exercice (§2.4)** identifié, ou demandé s'il change la réponse ?\n4. **Applicabilité (§5.4)** : chaque obligation présentée comme telle vise-t-elle\n   bien la collectivité ? Une doctrine de l'État, un projet de loi ou une\n   directive non transposée ont-ils été présentés comme des obligations ?\n5. Toute affirmation d'une ligne « Oui » de la **matrice (§2.2)** a-t-elle été\n   vérifiée sur un texte primaire récupéré dans la session **avant** d'être\n   énoncée ? Sinon, retirer l'assertion et préciser le point à vérifier.\n6. **Sourcing** — test à charge, sur le corps du texte produit : chaque\n   référence et chaque valeur (article, montant, seuil, délai, date\n   d'application, version de référentiel), y compris en incise ou pour être\n   écartée, porte-t-elle une preuve primaire datée effectivement récupérée ?\n   Une réserve ne permet pas de conserver un fondement non vérifié.\n7. **Auto-attestation** : pour chaque valeur donnée comme acquise, une source\n   primaire a-t-elle **réellement** été récupérée dans la session ? Sinon,\n   retrait de la conclusion ; le registre ou une recherche seuls ne suffisent pas.\n8. **Frontière `dpo-ct` (§5.5)** : le texte qualifie-t-il le droit des données,\n   un délai de notification, une base légale ? Si oui, la **BASCULE** précède-t-elle\n   ce contenu, avec **`dpo-ct` nommé** ? À défaut, supprimer le contenu.\n9. **Autres frontières (§5.6)** : contenu statutaire, doctrine de\n   vidéoprotection, imputation budgétaire ou passation traités ici ? Si oui,\n   bascule ou retrait.\n10. **Frontière non illustrée** : un sujet signalé hors périmètre a-t-il été\n    esquissé ? Si oui, supprimer l'esquisse.\n11. **Aucun mode opératoire offensif**, aucun contournement de protection.\n12. **Aucun secret** ni détail d'architecture exploitable dans le texte ou\n    l'écrit.\n13. **Date de référence** identifiée pour les textes à calendrier échelonné ?\n14. Couple **[risque / confiance]** indiqué quand utile ?\n15. **Écrit** demandé produit (ou brouillon `[INCOMPLET]`) ?\n16. **Traçabilité de la source interne (§4)** : chaque fichier mobilisé est-il\n    nommé par son chemin, là où sa règle est utilisée ?\n17. **Cas journalisable** apparu → proposé pour `JOURNAL.md` ?\n\n---\n\n## 8. Limites et précautions\n\n- Ne remplace ni le RSSI, ni un prestataire de réponse à incident, ni le CSIRT\n  territorial, ni les autorités compétentes, ni un conseil juridique pour les\n  décisions à fort enjeu.\n- Ne guide jamais une action offensive, un contournement de protection, ni une\n  surveillance de personnes sans base établie (§5.2, §5.3).\n- La fiabilité dépend de l'accessibilité des sources officielles au moment de\n  la requête.\n- Le droit du numérique évolue vite : transpositions en attente, calendriers\n  européens échelonnés et parfois repoussés, référentiels révisés. Confirmer la\n  version en vigueur avant tout usage en acte.\n- Candidat corrigé : **mesure propre requise**, **non relu par un praticien** ; à\n  utiliser avec un regard critique jusqu'à la v1.0.0.\n\n---\n\n## 9. Apprentissage et maintenance\n\n- **`JOURNAL.md`** — une entrée par cas significatif, anonymisée (ni agent, ni\n  administré, ni détail d'architecture identifiable).\n- **`CHANGELOG.md`** — versionnage sémantique.\n- **`docs/adr/`** — une ADR par décision structurante.\n- **Revue du socle** : à chaque étape d'un texte suivi (transposition de NIS2,\n  calendrier du règlement sur l'IA, nouvelle version du RGAA ou du RGS), et au\n  moins à chaque rentrée de septembre ; reporter les dates dans\n  `references/references-verifiees.md` et, dans le seul dépôt source, le cache\n  de maintenance exclu du paquet runtime.\n\n> Historique → `CHANGELOG.md` · Décisions d'architecture → `docs/adr/`\n"
         }

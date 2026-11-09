@@ -1,7 +1,7 @@
 {
   "name": "collectivite-territoriale",
-  "version": "1.5.0",
-  "description": "Sept skills pour les collectivités territoriales françaises : police municipale, RH, données, finances, commande publique, systèmes d’information et recherche juridique avec accès Légifrance/Judilibre. Candidat 1.5.0 : passage à la licence EUPL 1.2, sans changement de comportement, non mesuré, non qualifié.",
+  "version": "1.5.1",
+  "description": "Sept skills pour les collectivités territoriales françaises : police municipale, RH, données, finances, commande publique, systèmes d’information et recherche juridique avec accès Légifrance/Judilibre. Candidat 1.5.1 : licence EUPL 1.2 et veille juridique du 2026-11-03 (DPM, DirFi, DPO, DSI), non mesuré, non qualifié.",
   "author": {
     "name": "brissonjo-sudo",
     "url": "https://github.com/brissonjo-sudo"
@@ -24,7 +24,7 @@
   "interface": {
     "displayName": "Collectivité territoriale",
     "shortDescription": "Six métiers et une méthode juridique",
-    "longDescription": "Sept skills pour les collectivités territoriales françaises : police municipale, RH, données, finances, commande publique, systèmes d’information et recherche juridique avec accès Légifrance/Judilibre. Candidat 1.5.0 : passage à la licence EUPL 1.2, sans changement de comportement, non mesuré, non qualifié.",
+    "longDescription": "Sept skills pour les collectivités territoriales françaises : police municipale, RH, données, finances, commande publique, systèmes d’information et recherche juridique avec accès Légifrance/Judilibre. Candidat 1.5.1 : licence EUPL 1.2 et veille juridique du 2026-11-03 (DPM, DirFi, DPO, DSI), non mesuré, non qualifié.",
     "developerName": "brissonjo-sudo",
     "category": "Productivity",
     "capabilities": [

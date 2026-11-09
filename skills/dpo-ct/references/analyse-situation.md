@@ -27,7 +27,9 @@ Dérouler dans cet ordre, sans sauter d'étape :
    - toute autre finalité → **RGPD** (+ titre II loi 78-17) ;
    - dispositif mixte (ex. vidéoprotection tranquillité publique +
      vidéoverbalisation) → **découper par finalité** et traiter chaque volet
-     sous son régime.
+     sous son régime. Vidéoprotection : le régime retenu commande aussi
+     l'exercice des droits (CSI, art. R. 253-6 → `droits-personnes.md`
+     §5.10).
    Afficher le régime retenu en tête d'analyse dès que la frontière est
    proche. En cas de doute : matrice §2.2 → vérification.
 4. **Qui est responsable de traitement ?** Commune, EPCI, CCAS (personne
@@ -63,7 +65,7 @@ Dérouler dans cet ordre, sans sauter d'étape :
 
 | Dispositif | Régime probable | Vigilance |
 |---|---|---|
-| Vidéoprotection voie publique (tranquillité) | RGPD + CSI | Autorisation préfectorale → `dpm-fpt` |
+| Vidéoprotection voie publique (tranquillité) | RGPD + CSI | Autorisation préfectorale → `dpm-fpt` ; droits : CSI R. 253-6 |
 | Vidéoverbalisation | Police-Justice | Découpage par finalité si dispositif mixte |
 | Main courante / rapports PM | Police-Justice | Contenu opérationnel → `dpm-fpt` |
 | Caméras-piétons PM | Police-Justice (texte propre CSI — à vérifier) | Croiser `dpm-fpt` |
