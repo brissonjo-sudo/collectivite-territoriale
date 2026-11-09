@@ -1,6 +1,19 @@
 # Historique des versions
 
-## 1.5.1 : candidat non mesuré, non qualifié
+## 1.5.1 — Qualifiée et publiée le 2026-11-09
+
+Actualisation du 2026-11-09 : campagne `campagne-l151-a` 18/18 sur `223d2b4`,
+avis de Jo du 09/11 avec une seule réserve maintenue, au cas
+`plugin-dcp-frontiere-dsi-externe` (lien local vers le `SKILL.md` DCP, réserve
+déjà portée en 1.4.0 et 1.5.0). La réserve 1.5.0 du cas
+`plugin-dcp-acte-irreversible` n'est pas reconduite. Smoke réel `smoke-l151-a`
+2/2 sur `765854a` (H2), preuve `tests/evidence/release-1.5.1.json` assemblée en
+H3 (`af8a654`). PR 29 fusionnée par merge commit (`793bd79`), qui garde H1, H2
+et H3 dans l'historique de `main`. Publiée sous l'étiquette `v1.5.1`
+(`793bd79`), étiquette légère créée par la release GitHub, écart consigné au
+registre `docs/publication.md` ; catalogues sur 1.5.1 (PR 38). Les entrées
+ci-dessous restent l'historique de leur étape préparatoire, y compris la
+mention « Catalogues inchangés (1.5.0) » ; elles ne sont pas réécrites.
 
 Ré-épinglage du 2026-11-03 sur la maintenance de veille juridique fusionnée
 dans le `main` de quatre dépôts amont. Patch, comme la 1.1.1 : mise à jour du
