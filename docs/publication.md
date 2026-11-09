@@ -19,6 +19,8 @@
 
 | `v1.5.0` | `4b38328e957707cac67197b5b518f8bc45efb494` | 2026-11-07 | **distribution open source qualifiée techniquement** ; avis métier enregistré avec deux réserves (`release-1.5.0.json`) | Licence EUPL 1.2, quatre corrections de comportement (dsi-fpt et surcouches), CLI 0.164, contrat de cycle v4 ; mesure sur `5547ef8`, commit publié limité aux preuves et à la documentation |
 
+| `v1.5.1` | `793bd79e6bc06963145dbb61d445d686be821341` | 2026-11-09 | **distribution open source qualifiée techniquement** ; avis métier enregistré avec une réserve (`release-1.5.1.json`) | Veille du 2026-11-03 (DPM 1.0.7, DirFi 1.0.7, DPO 0.2.3, DSI 0.2.2), DCP 0.1.7 (contrôle de légalité avant notification) ; mesure sur `223d2b4`, commit publié limité aux preuves et à la liaison de mesure (ADR 0034) ; étiquette légère créée par la release GitHub, écart à l'étape 2 |
+
 Ajouter une ligne par étiquette distribuée ; ne jamais réécrire une ligne.
 Le test `test_distribution_epinglee_sur_etiquette` exige que l'étiquette et
 le commit épinglés figurent dans ce tableau.
