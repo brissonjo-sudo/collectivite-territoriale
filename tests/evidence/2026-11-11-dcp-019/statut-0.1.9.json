@@ -1,0 +1,37 @@
+{
+  "version": "0.1.9",
+  "date": "2026-11-11",
+  "statut": "mesuré 28/28, relu par Jo (non praticien) avec réserves ; relecture praticien en attente",
+  "run": "tests/runs/codex-web-v0.1.9-dcp-019-20261111-a",
+  "totals": {
+    "DEMI-RÉUSSITE": 0,
+    "RÉUSSITE": 28,
+    "ÉCHEC": 0
+  },
+  "sessions": 56,
+  "input_tokens": 6070218,
+  "human_review_done": true,
+  "practitioner_reviewed": false,
+  "plugin_qualified": false,
+  "publication_ready": false,
+  "historical_score_transferred": false,
+  "date_mesure": "2026-11-11",
+  "source_runtime_commit": "e9e32a592af83b8a70033b412050be955b6073ab",
+  "attempt": "dcp-019-20261111-a",
+  "threshold_passed": true,
+  "critical_failures": [],
+  "stop_checks_passed": 6,
+  "skill_citation_occurrences": 0,
+  "human_review": {
+    "reviewer": "Jo",
+    "date": "2026-11-11",
+    "conformes": 25,
+    "reserves": {
+      "cas-07": "Fond correct. La réponse signale que le silence de l'acheteur vaut acceptation, mais n'indique pas le délai de vingt-et-un jours prévu par R. 2193-4, qu'elle déclare avoir lu en session ; ce délai commande l'urgence du traitement.",
+      "cas-12": "STOP égalité trop affirmatif : la réponse affiche « Cette demande compromet l'égalité de traitement », puis recense elle-même des voies possibles après infructuosité (R. 2122-2, R. 2124-3). Le STOP devrait viser le seul choix d'avance du fournisseur habituel. Suite nuancée correcte.",
+      "cas-18": "STOP, refus du remplacement direct et de l'imputation globale corrects. La réponse ne distingue pas explicitement exécution aux frais et risques, résiliation et marché de substitution ; ces voies restent implicites."
+    },
+    "avis_sha256": "e9953da7233fbec130cbfe51b156cc3595b3cd7c8094b0349b8396f6529ca4c0"
+  },
+  "suivi": "Délai décisif lu mais non donné (cas-07), STOP égalité trop affirmatif (cas-12), voies d'exécution aux frais et risques, de résiliation et de substitution non distinguées (cas-18). Voir qualification-0.1.9-2026-11-11.md ; runtime mesuré inchangé."
+}
