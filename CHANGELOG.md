@@ -1,8 +1,10 @@
 # Historique des versions
 
-## Non publié : ré-épinglages de dcp-fpt 0.1.9 (ADR 0035), drh-fpt et recherche-juridique
+## 1.5.2 : candidat non mesuré, non qualifié
 
-Ré-épinglage du 2026-11-11, hors cycle de version : aucun manifeste ni catalogue ne change.
+Ré-épinglage du 2026-11-11 : dcp-fpt 0.1.9 (ADR 0035), drh-fpt et recherche-juridique.
+Patch, comme la 1.5.1 : mise à jour du contenu de skills, sans fonctionnalité du plugin.
+Les deux manifestes passent en 1.5.2 ; les catalogues restent sur 1.5.1.
 
 - dcp-fpt 0.1.7 → 0.1.9 (`8b10549`, ADR 0035) : réserves de Jo sur DCP-018 corrigées
   en amont (STOP égalité adapté aux faits, bloc BASCULE dirfi-fpt recopié, échec de
@@ -16,6 +18,8 @@ Ré-épinglage du 2026-11-11, hors cycle de version : aucun manifeste ni catalog
   L'entrée amont de recherche-juridique est « Non publié » : la version reste 3.6.0.
   Surcouches inchangées ; seules leurs empreintes d'entrée (`base_sha256`) suivent les
   nouvelles bases (`scripts/rehash_overlays.py`). Copies régénérées par `scripts/sync_skills.py`.
+- Cycle 1.5.2 préparé en H1 (ADR 0036) : contrat v4 inchangé, même CLI figée que la 1.5.0,
+  transition 0036 non fermée.
 - Les pièces de la 1.5.1 restent liées à DCP 0.1.7 : la barrière de release échoue
   jusqu'au prochain cycle. Aucune campagne, aucun smoke ni aucune preuve du plugin ;
   la mesure 1.5.1 ne couvre pas ce runtime.
