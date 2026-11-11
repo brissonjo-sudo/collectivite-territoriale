@@ -1,6 +1,6 @@
 # Historique des versions
 
-## Non publié : ré-épinglage de dcp-fpt 0.1.9 (ADR 0035)
+## Non publié : ré-épinglages de dcp-fpt 0.1.9 (ADR 0035), drh-fpt et recherche-juridique
 
 Ré-épinglage du 2026-11-11, hors cycle de version : aucun manifeste ni catalogue ne change.
 
@@ -10,6 +10,12 @@ Ré-épinglage du 2026-11-11, hors cycle de version : aucun manifeste ni catalog
   Nouvelle référence autonome DCP-019 : mesure 28/28 à `e9e32a5`, huit critiques
   réussis, relue par Jo avec trois réserves de formulation (cas-07, cas-12, cas-18).
   DCP-014 et DCP-017 conservées comme historiques.
+- drh-fpt 0.7.0 (`0fe6663` → `6f5e906`) : décret n° 2026-705 (congés pour raison de santé)
+  et veille ciblée du 2026-11-03 ; recherche-juridique 3.6.0 (`30c9c90` → `d8d49bd`) :
+  pourvois joints visibles, déclencheur d'abstention 3 précisé, diagnostic des 429 PISTE.
+  L'entrée amont de recherche-juridique est « Non publié » : la version reste 3.6.0.
+  Surcouches inchangées ; seules leurs empreintes d'entrée (`base_sha256`) suivent les
+  nouvelles bases (`scripts/rehash_overlays.py`). Copies régénérées par `scripts/sync_skills.py`.
 - Les pièces de la 1.5.1 restent liées à DCP 0.1.7 : la barrière de release échoue
   jusqu'au prochain cycle. Aucune campagne, aucun smoke ni aucune preuve du plugin ;
   la mesure 1.5.1 ne couvre pas ce runtime.

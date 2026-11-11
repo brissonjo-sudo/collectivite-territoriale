@@ -29,6 +29,15 @@ collective.
   200 agents** (acquise ici).
 - **Objet de la consultation** : détermine quelle instance saisir et si l'avis
   est préalable obligatoire.
+- **Séance, avis et réexamen** : reprendre les faits déjà fournis, notamment
+  un vote unanime défavorable des représentants du personnel et le besoin
+  d'une délibération pour mettre en œuvre la question. Réunir le
+  procès-verbal, la composition et le quorum de la première séance, ainsi
+  que la délibération locale prévoyant éventuellement le recueil de l'avis
+  des représentants de la collectivité (collège employeur). Distinguer ces
+  contrôles de ceux d'un réexamen : objet, convocation, calendrier,
+  composition et suites du nouvel avis. En dégradé, proposer seulement un
+  plan conditionnel avec ces points à vérifier.
 
 ## 5. Règles métier
 
@@ -48,15 +57,42 @@ collective.
   discipline (voir branche carrière-paie).
 - **CCP** (commission consultative paritaire) : équivalent pour les
   **contractuels**.
+- **Avis du CST et réexamen** : l'avis est émis à la majorité des
+  représentants du personnel ayant voix délibérative présents (partage égal :
+  avis réputé donné). Les représentants de la collectivité ne votent que si
+  une délibération a prévu le recueil de leur avis sur le point concerné
+  (R252-37) ; chaque collège émet alors son avis à la majorité de ses membres
+  présents (R254-65, R254-66). Lorsqu'une question soumise au titre de
+  R253-7, dont la mise en œuvre nécessite une délibération, recueille un
+  **vote unanime défavorable** des représentants du personnel, elle est
+  réexaminée : nouvelle délibération dans un délai de **8 à 30 jours**,
+  nouvelle convocation adressée dans le délai de huit jours au moins à
+  compter de la première séance ; le comité siège alors valablement quel
+  que soit le nombre de représentants du personnel présents, et cette
+  procédure ne peut être répétée (R254-68). Sources : CGFP R252-37
+  (LEGIARTI000050549571), R254-65 (LEGIARTI000050550145), R254-66
+  (LEGIARTI000050550147) et R254-68 (LEGIARTI000050550151), en vigueur depuis
+  le 01/02/2025, consultés sur Légifrance le 03/11/2026. Les anciens articles
+  du titre IV du décret n° 2021-571 sont signalés abrogés sur Légifrance :
+  ne plus les viser.
 
 ### 5.2 Élections et représentativité
 - **Élections professionnelles** : tous les **4 ans**. Dernier renouvellement
   **décembre 2022** ; prochain scrutin fixé au **10 décembre 2026** (arrêté
   ministériel du 2 juillet 2025), calendrier opérationnel et règles
   procédurales harmonisées précisés par le décret n° 2025-1430 du
-  30 décembre 2025 (délais de procédure portés de 3-5 à 8 jours notamment —
-  détail à confirmer en version consolidée). Déterminent la composition des
-  instances et la représentativité syndicale.
+  30 décembre 2025. Points vérifiés en version consolidée (CGFP, versions
+  du 01/01/2026, consultées sur Légifrance le 03/11/2026) : inéligibilité
+  d'un candidat constatée dans les **8 jours francs** suivant la date limite
+  de dépôt des listes, puis rectification par le délégué de liste sous
+  **3 jours francs** (R211-62 ; R211-64 pour le point de départ en cas de
+  contestation et le remplacement d'un candidat devenu inéligible) ;
+  inéligibilité au CST des titulaires d'un emploi fonctionnel de direction
+  dans leur collectivité (R211-40, 4°). Autres modifications du décret : à
+  relire avant usage. Le vote électronique peut s'appuyer sur l'ENSAP
+  (décret n° 2026-1000 du 26/10/2026, connu par résumé seulement : à
+  confirmer). Déterminent la composition des instances et la
+  représentativité syndicale. Après le scrutin, mettre à jour cette section.
 
 ### 5.3 Droit syndical
 - **ASA** (autorisations spéciales d'absence), **décharges d'activité de

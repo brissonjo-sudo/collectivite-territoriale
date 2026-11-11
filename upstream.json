@@ -40,7 +40,7 @@
     },
     "drh-fpt": {
       "repository": "https://github.com/brissonjo-sudo/Drh-fpt.git",
-      "commit": "0fe666324a3451ee824e1cdd81dcc3ae279abdbd",
+      "commit": "6f5e9068e0095e127a1fde3ceec4ba9110fee696",
       "version": "0.7.0",
       "paths": [
         "SKILL.md",
@@ -62,7 +62,7 @@
           "target": "SKILL.md",
           "source": "overlays/drh-fpt.md",
           "anchor": "# Skill : drh-fpt (v0.7.0)",
-          "base_sha256": "a13b4c3fce2cca6b2631149a5569077f28839c9d21a95374224ea163e7924c31",
+          "base_sha256": "fda150f71785a7ca350aed08993dc770f8eba50b9d4ad5fc7ec6041bf6850b45",
           "source_sha256": "71f8135dde92cede493a00a6fe633a7852d296a8a725c9fe43dd4c86cfad06bc"
         },
         {
@@ -70,7 +70,7 @@
           "source": "overlays/drh-fpt-description.md",
           "operation": "replace-description",
           "anchor": "description: >-\n  Expertise opérationnelle et juridiquement vérifiée en ressources humaines de\n  la fonction publique territoriale, pour les collectivités de plus de 350\n  agents. Active ce skill pour toute question RH territoriale : carrière et\n  paie, régime indemnitaire, santé et QVT, recrutement et formation, instances\n  et dialogue social, masse salariale et SI RH, communication interne, agents\n  contractuels, protection fonctionnelle, déontologie, cumul d'activités,\n  signalements ; pour qualifier une situation statutaire, sécuriser un acte\n  (avancement, sanction, refus, délibération) ou produire un livrable RH\n  (note, délibération, fiche de procédure, courrier d'agent). Pour toute règle\n  reposant sur un texte, une procédure, un calcul, un délai, une condition\n  d'accès, une compétence d'instance ou une jurisprudence, le skill vérifie la\n  source officielle avant de conclure. Ne pas activer pour le droit privé hors\n  FPT, les fonctions publiques d'État ou hospitalière, ni pour les\n  collectivités de moins de 350 agents.\n",
-          "base_sha256": "38f31b50d82d424c76c2a19894b58a86a12ed3dd721737bdc8723b9239d3c653",
+          "base_sha256": "a24534e18a262a7f6f0e2e3c6e8c94892820803dadde43a98e19d9ce1c43ed1a",
           "source_sha256": "13e1a73d89289a59044a954194679cd7072d3391287a03bc98fcc5c17a3ca4de"
         }
       ]
@@ -154,7 +154,7 @@
     },
     "recherche-juridique": {
       "repository": "https://github.com/brissonjo-sudo/droit-francais-skill.git",
-      "commit": "30c9c90b67bae9658395b24bb44ea35506594fb4",
+      "commit": "d8d49bd6647b15b5fe95527d3cc1e306edb4ee9d",
       "version": "3.6.0",
       "source_root": "skill/",
       "local_directory": "droit-francais-skill",
@@ -179,7 +179,7 @@
         {
           "target": "SKILL.md",
           "source": "overlays/recherche-juridique.md",
-          "base_sha256": "9ea3a8a169bacb373fa969a012184c073e64824c0031f5b913aa5ad76fd26920",
+          "base_sha256": "a2a81f74a68c1e9d544a6ea50ea4386e1e2ef792579a9ea6d95b8e44b2e6abca",
           "source_sha256": "1d465e32945e5d9e4ca1a3d96504e387fdd95c3c3520c6ba24fdbb697eea612d",
           "anchor": "## Déclenchement"
         }
