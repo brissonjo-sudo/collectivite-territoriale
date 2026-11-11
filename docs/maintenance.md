@@ -49,11 +49,11 @@ les transferts imposent l'activation effective et une attribution persistante.
 
 Pour `recherche-juridique`, la racine canonique `skill/` est aplatie dans `skills/recherche-juridique/`. Sa licence est copiée avec le runtime ; aucun manifeste, serveur MCP, fichier `.env` ou autre fichier de dépôt amont n'est dupliqué. Le fichier `references/cache-taux-seuils.md` de `dirfi-fpt`, exclu de son propre paquet de distribution, n'est pas embarqué.
 
-Pour DCP 0.1.7, le commit figé est
-`f3be71f4d8feb7e00faabb69786d3b14c7280908` : commit de preuve dont le runtime
-est identique au commit mesuré `5debffd54a6d76e86c79ab261446f9123e564494`, textes
-EUPL 1.2 déjà inclus ([ADR 0033](adr/0033-dcp-017-reference-autonome.md)).
-La référence DCP-014 (0.1.4, `7874c62`) reste historique. Les 30 fichiers de son paquet
+Pour DCP 0.1.9, le commit figé est
+`8b105490592185fc3b96373ba277da8b0f323c67` : commit de preuve dont le runtime
+est identique au commit mesuré `e9e32a592af83b8a70033b412050be955b6073ab`, textes
+EUPL 1.2 déjà inclus ([ADR 0035](adr/0035-dcp-019-reference-autonome.md)).
+Les références DCP-014 (0.1.4, `7874c62`) et DCP-017 (0.1.7, `f3be71f`) restent historiques. Les 30 fichiers de son paquet
 runtime et sa licence sont copiés ; le cache `references/cache-valeurs.md`,
 la conception, les scripts d'évaluation et les preuves amont sont exclus.
 Le registre daté reste une piste de recherche, jamais une preuve de lecture

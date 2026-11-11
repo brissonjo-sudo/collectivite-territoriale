@@ -1,5 +1,19 @@
 # Historique des versions
 
+## Non publié : ré-épinglage de dcp-fpt 0.1.9 (ADR 0035)
+
+Ré-épinglage du 2026-11-11, hors cycle de version : aucun manifeste ni catalogue ne change.
+
+- dcp-fpt 0.1.7 → 0.1.9 (`8b10549`, ADR 0035) : réserves de Jo sur DCP-018 corrigées
+  en amont (STOP égalité adapté aux faits, bloc BASCULE dirfi-fpt recopié, échec de
+  lecture décrit tel que la trace le montre). Seul `SKILL.md` change (343 lignes).
+  Nouvelle référence autonome DCP-019 : mesure 28/28 à `e9e32a5`, huit critiques
+  réussis, relue par Jo avec trois réserves de formulation (cas-07, cas-12, cas-18).
+  DCP-014 et DCP-017 conservées comme historiques.
+- Les pièces de la 1.5.1 restent liées à DCP 0.1.7 : la barrière de release échoue
+  jusqu'au prochain cycle. Aucune campagne, aucun smoke ni aucune preuve du plugin ;
+  la mesure 1.5.1 ne couvre pas ce runtime.
+
 ## 1.5.1 — Qualifiée et publiée le 2026-11-09
 
 Actualisation du 2026-11-09 : campagne `campagne-l151-a` 18/18 sur `223d2b4`,
