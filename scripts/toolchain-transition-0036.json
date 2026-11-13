@@ -1,6 +1,6 @@
 {
   "adr": "docs/adr/0036-mesure-1-5-2-contrat-v4.md",
-  "measurement_commit": null,
+  "measurement_commit": "889582bb1ed6a076fa3116a28e33a9101bcad2e1",
   "case_contract_sha256": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
   "campaign_cli": {
     "version": "codex-cli 0.164.0-alpha.11.1",
@@ -12,11 +12,11 @@
     }
   },
   "source_files_sha256": {
-    "scripts/cli_toolchains.py": null,
-    "scripts/measurement-cli.json": null
+    "scripts/cli_toolchains.py": "348ce91fff7f224f92c42dedcb771de47d7bf2c88a6fe03d79203e4fe3b1eb40",
+    "scripts/measurement-cli.json": "fb31ac1ec4b1e0a1f6ac2710f6b395aa025ed58f427e2d18f2b1b4e5b232766e"
   },
   "target_files_sha256": {
-    "scripts/cli_toolchains.py": null,
-    "scripts/measurement-cli.json": null
+    "scripts/cli_toolchains.py": "949e56750ffd2c95347427f2413ab294712eff4903a699aa11da5890f510c0c4",
+    "scripts/measurement-cli.json": "dda01f0207752bfc33a78eee5a96f0584a546752088d2423e9d596d4ebfe018a"
   }
 }
