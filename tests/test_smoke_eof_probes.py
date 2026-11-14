@@ -51,14 +51,14 @@ class SmokeEofProbeTests(unittest.TestCase):
 
     def test_replay_L29b_entree_dcp_segments_90_puis_sonde_360(self):
         path = self.source('skills/dcp-fpt/SKILL.md')
-        self.assertEqual(len(path.read_text(encoding='utf-8').splitlines()), 322)  # DCP 0.1.7 (ADR 0033)
+        self.assertEqual(len(path.read_text(encoding='utf-8').splitlines()), 343)  # DCP 0.1.9 (ADR 0035)
         probes = []
         events = self.segments(path, 90) + [self.event(path, 360, 90)]
         reads = smoke.read_events(events, self.installed, eof_probes=probes)
-        self.assertEqual([r['count'] for r in reads], [90, 90, 90, 52])
+        self.assertEqual([r['count'] for r in reads], [90, 90, 90, 73])
         self.assertTrue(smoke.complete_entry(reads, 'dcp-fpt'))
         self.assertEqual(len(probes), 1)
-        self.assertEqual(sum(r['count'] for r in reads), 322)
+        self.assertEqual(sum(r['count'] for r in reads), 343)
 
     def test_sonde_a_la_borne_exacte_et_sortie_blanche_normalisee(self):
         path = self.source('skills/dcp-fpt/references/analyse-situation.md')
@@ -73,7 +73,7 @@ class SmokeEofProbeTests(unittest.TestCase):
         events = self.segments(path)
         for previous in ([], events[:-1], events[1:], [events[1], events[0], *events[2:]]):
             with self.subTest(previous=len(previous)), self.assertRaises(ValueError):
-                smoke.read_events(previous + [self.event(path, 340)], self.installed)
+                smoke.read_events(previous + [self.event(path, 425)], self.installed)
 
     def test_lecture_vide_au_milieu_et_sortie_tronquee_refusees(self):
         path = self.source('skills/dcp-fpt/SKILL.md')
@@ -98,7 +98,7 @@ class SmokeEofProbeTests(unittest.TestCase):
         first = self.source('skills/dcp-fpt/references/analyse-situation.md')
         second = self.source('skills/dcp-fpt/SKILL.md')
         with self.assertRaises(ValueError):
-            smoke.read_events([self.event(first, 0), self.event(second, 340)], self.installed)
+            smoke.read_events([self.event(first, 0), self.event(second, 425)], self.installed)
         smoke.read_events([self.event(first, 0)], self.installed)
         with self.assertRaises(ValueError):
             smoke.read_events([self.event(first, 85)], self.installed)
@@ -108,7 +108,7 @@ class SmokeEofProbeTests(unittest.TestCase):
         second = self.source('skills/dcp-fpt/SKILL.md')
         probes = []
         reads = smoke.read_events([self.event(first, 0), *self.segments(second),
-            self.event(first, 85), self.event(second, 340)], self.installed, eof_probes=probes)
+            self.event(first, 85), self.event(second, 425)], self.installed, eof_probes=probes)
         self.assertEqual(len(probes), 2)
         self.assertEqual(len({p['path'] for p in probes}), 2)
         self.assertTrue(smoke.complete_entry(reads, 'dcp-fpt'))
@@ -117,7 +117,7 @@ class SmokeEofProbeTests(unittest.TestCase):
         path = self.source('skills/dcp-fpt/SKILL.md')
         segments = self.segments(path)
         variants = [[segments[0], copy.deepcopy(segments[0])],
-            [segments[0], self.event(path, 84)], segments + [self.event(path, 340), segments[0]]]
+            [segments[0], self.event(path, 84)], segments + [self.event(path, 425), segments[0]]]
         for events in variants:
             with self.subTest(events=len(events)), self.assertRaisesRegex(ValueError, 'Lecture installée dupliquée'):
                 smoke.read_events(events, self.installed)

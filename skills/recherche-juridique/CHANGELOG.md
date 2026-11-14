@@ -11,6 +11,115 @@ conservés tels quels pour ne pas casser les liens publiés.
 
 ---
 
+### [Non publié : décision écartée sur la date] - 2026-11-11
+
+- Déclencheur d'abstention 3 (§7) : avant de déclarer une décision
+  introuvable, ouvrir tout résultat d'une recherche sur le numéro exact, même
+  si le numéro affiché, la date ou la formation diffère. Une jonction ou une
+  date erronée ne se voit que dans la décision.
+- `search_case_law` et `get_decision` transmettent `numbers`, la liste des
+  pourvois joints fournie par Judilibre. Jusqu'ici seul `number` (le premier
+  pourvoi) était rendu : le numéro cherché pouvait n'apparaître nulle part.
+- Script `legifrance.py` (noyau, Grok, Vibe) : `juri` et `decision` affichent
+  une ligne « Pourvois joints » quand la décision en joint plusieurs.
+- Origine : sonde F1-b du banc (11/11/2026, bras C, Sonnet, 4 passes sur 4 en
+  échec, dont 2 avec une première version de la règle). La recherche renvoyait
+  Soc. 13 juillet 2010, affiché « n° 09-42.839 », qui joint 43 pourvois dont
+  le n° 09-42.873. L'assistant l'a écarté sans l'ouvrir, puis s'est abstenu.
+- Déclinaisons Grok et Vibe : même règle portée à part, le même jour.
+
+### [Non publié : diagnostic des 429 amont] - 2026-11-07
+
+- Transport : `LegifranceError.upstream` conserve statut, hôte, chemin sans
+  requête, `Retry-After` brut et en secondes, en-têtes de limitation,
+  tentatives, attente cumulée et extrait de corps (200 caractères).
+- `Retry-After` au format date HTTP désormais pris en compte.
+- Message public du `429` : « réessayer dans N s » quand le délai est connu.
+- Échéance mémorisée par (hôte, chemin) quand `Retry-After` dépasse le budget
+  de 8 s : les appels suivants échouent localement, sans toucher PISTE, jusqu'à
+  l'échéance (64 entrées au plus, une heure au plus). Budgets de reprise inchangés.
+- Serveur MCP : le logger `droit_francais.transport` reste à `INFO` en
+  production ; la ligne `upstream_error` porte `retry_after_s`, `attempts`,
+  `waited_s`, `local_backoff` et `rate_limit` ; la ligne `throttled` porte
+  `principal` et `limiter`. La requête n'est jamais journalisée.
+- Journal conforme à la politique de confidentialité (audit S2-02) : le champ
+  `detail` d'une erreur amont ne garde que l'opération de transport, l'hôte et
+  le chemin. Paramètres d'URL, corps amont et diagnostics portant des
+  arguments ne sont plus journalisés (`detail=omis`).
+
+### [Non publié : licence EUPL 1.2] - 2026-11-01
+
+- Passage du dépôt à la licence publique de l'Union européenne (EUPL) 1.2 :
+  textes officiels de la Commission européenne, anglais dans `LICENSE` et
+  français dans `LICENCE.fr.txt`.
+- Champ `license` des manifestes (`.claude-plugin`, `.codex-plugin`) et de
+  `vibe_skill/SKILL.md` : `EUPL-1.2`. README, mentions de licence des
+  déclinaisons Grok et Vibe et conditions d'utilisation alignés.
+- Versions antérieures inchangées : elles restent sous CC-BY-SA-4.0.
+- Aucun changement de comportement.
+
+### [Non publié — pont MCP, ADR 0001] — 2026-11-01
+
+- Mode pont opt-in (`MCP_PISTE_CREDENTIALS=caller`) : chaque appelant fournit
+  ses identifiants PISTE par les en-têtes `X-Piste-Client-Id` et
+  `X-Piste-Client-Secret`. Cache de jetons par appelant, borné à 256 entrées.
+- Budget séparé `MCP_NEW_CALLERS_PER_MINUTE` pour les paires que PISTE n'a pas
+  encore validées. Masquage du secret sous ses formes encodées ; détail amont
+  non journalisé en pont.
+- Changement visible en mode `server` : une erreur inattendue d'un outil rend
+  un message neutre avec référence ; le journal n'en garde que le type.
+- ADR 0001 adoptée le 01/11/2026 sous condition d'une réponse écrite du support
+  PISTE. Mode désactivé par défaut, non déployé.
+- Tests : `tests/test_pont_identifiants.py`.
+
+### [3.6.0-manus] — 2026-10-25
+
+Alignement de la déclinaison Manus sur le noyau 3.6.0, sans recette réelle.
+
+- Étape 0 bis ajoutée : procédure en 9 étapes (0, 0 bis, 1 à 7).
+- Marqueur de provenance du noyau (`⚠️ non vérifié — identifiant non récupéré`)
+  à la place de l'ancienne réserve, balises `[syllogisme]` et `[opérationnel]`.
+- Profils métier copiés à l'identique ; références condensées inchangées.
+
+### [3.6.0-gemini] — 2026-10-25
+
+Alignement de la déclinaison Gemini sur le noyau 3.6.0, sans recette réelle.
+
+- Étape 0 bis ajoutée : procédure en 9 étapes (0, 0 bis, 1 à 7).
+- Ordre des voies aligné sur l'étape 2 du noyau : MCP, puis script, puis
+  recherche officielle, enfin abstention.
+- Marqueur de provenance du noyau (`⚠️ non vérifié — identifiant non récupéré`),
+  balise `[opérationnel]` et profils métier copiés à l'identique.
+- Sources : Tribunal des conflits et juridictions financières ajoutés.
+
+### [3.6.0-vibe] — 2026-10-24
+
+Préparation locale de la déclinaison Vibe, sans publication ni recette réelle.
+
+- Noyau court aligné sur la 3.6.0 : neuf étapes, DOC-AUDIT 3.5.0,
+  fraîcheur 3.5.1 et citations internes par nom et section.
+- Onze références et profils du noyau repris mot pour mot, seuls renvois
+  d'en-tête DOC-AUDIT et modules adaptés ; script conservé comme source
+  documentaire pour les liens, sans intégration native supposée.
+- Outils natifs conservés ; maintenance du CLI skills sans objet sur cette
+  plateforme, aucun updater annoncé. Dates de vérification du noyau conservées.
+- Tests de parité, provenance, routage et limites de plateforme ajoutés.
+- Retiré (2026-10-25) : wrapper `tools/legifrance_vibe.py`, jamais branché, qui
+  fabriquait un identifiant de forme LEGIARTI et présumait la vigueur d'un article.
+
+### [3.6.0-grok] — 2026-10-24
+
+Préparation locale de la déclinaison Grok, sans publication ni recette réelle.
+
+- Noyau court aligné sur la 3.6.0 : neuf étapes, DOC-AUDIT 3.5.0,
+  fraîcheur 3.5.1 et citations internes par nom et section.
+- Onze références et profils du noyau repris mot pour mot, seuls renvois
+  d'en-tête DOC-AUDIT et modules adaptés ; script conservé comme source
+  documentaire pour les liens, sans intégration native supposée.
+- Outils natifs conservés ; maintenance du CLI skills sans objet sur cette
+  plateforme, aucun updater annoncé. Dates de vérification du noyau conservées.
+- Tests de parité, provenance, routage et limites de plateforme ajoutés.
+
 ### [Non publié — Gemini : portage 3.3.0 → 3.5.1] — 2026-10-21
 
 - `gemini_skill/SKILL.md` réécrit sur la base 3.5.1 (structure de la
@@ -91,7 +200,7 @@ Ce numéro local ne vaut ni tag Git, ni publication, ni service distant mis à j
 
 ### [3.6.0] — 2026-10-21
 
-Préparation locale de la méthodologie ; aucune publication ni mesure modèle.
+Publiée le 2026-10-25 (étiquette `skill-v3.6.0`) ; aucune mesure modèle.
 Les dates de vérification juridique embarquées ne sont pas actualisées par cette refonte.
 
 #### Modifié

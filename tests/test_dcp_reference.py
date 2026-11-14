@@ -208,22 +208,44 @@ class Dcp014ReferenceTests(DcpReferenceTests):
             dcp.reference(self.root, self.path)
 
 
+DCP017_PROOF = ROOT / "tests/evidence/2026-11-08-dcp-017/dcp-autonome.json"
+
+
 class Dcp017ReferenceTests(Dcp014ReferenceTests):
-    """DCP-017 (ADR 0033) : la même batterie de mutations s'applique à la référence courante exacte."""
-    PROOF = ROOT / "tests/evidence/2026-11-08-dcp-017/dcp-autonome.json"
-    CONTRACT = ROOT / "scripts/dcp-protocol.json"
-    FROZEN = None
+    """DCP-017 historique (ADR 0033) : même batterie, runtime 0.1.7 restauré au dernier commit actif."""
+    PROOF = DCP017_PROOF
+    CONTRACT = ROOT / "scripts/dcp-protocol-0017.json"
+    FROZEN = "b2d6f6887871e66798ca6dae29c58dec19f1cb89"
 
     def test_candidat_surcharge_refuse_ancienne_reference(self) -> None:
-        for proof in (PROOF, DCP014_PROOF):
+        for proof in (PROOF, DCP014_PROOF, self.PROOF):
             with self.subTest(proof=proof.parent.name), self.assertRaisesRegex(ValueError, "Pin DCP différent"):
                 assembly.dcp_input(ROOT, proof)
-        proof = assembly.dcp_input(ROOT, self.PROOF)
+        proof = assembly.dcp_input(self.root, self.PROOF)
         self.assertEqual(proof["upstream_runtime_commit"], "f3be71f4d8feb7e00faabb69786d3b14c7280908")
         self.assertEqual(proof["source_measured_commit"], "5debffd54a6d76e86c79ab261446f9123e564494")
         self.assertEqual(proof["summary"]["totals"], {"DEMI-RÉUSSITE": 2, "RÉUSSITE": 25, "ÉCHEC": 1})
         self.assertEqual(proof["human_review"]["conformes"], 25)
         self.assertEqual(set(proof["human_review"]["reserves"]), {"cas-06", "cas-08", "cas-18"})
+        self.assertFalse(proof["human_review"]["practitioner"])
+
+
+class Dcp019ReferenceTests(Dcp014ReferenceTests):
+    """DCP-019 (ADR 0035) : la même batterie de mutations s'applique à la référence courante exacte."""
+    PROOF = ROOT / "tests/evidence/2026-11-11-dcp-019/dcp-autonome.json"
+    CONTRACT = ROOT / "scripts/dcp-protocol.json"
+    FROZEN = None
+
+    def test_candidat_surcharge_refuse_ancienne_reference(self) -> None:
+        for proof in (PROOF, DCP014_PROOF, DCP017_PROOF):
+            with self.subTest(proof=proof.parent.name), self.assertRaisesRegex(ValueError, "Pin DCP différent"):
+                assembly.dcp_input(ROOT, proof)
+        proof = assembly.dcp_input(ROOT, self.PROOF)
+        self.assertEqual(proof["upstream_runtime_commit"], "8b105490592185fc3b96373ba277da8b0f323c67")
+        self.assertEqual(proof["source_measured_commit"], "e9e32a592af83b8a70033b412050be955b6073ab")
+        self.assertEqual(proof["summary"]["totals"], {"DEMI-RÉUSSITE": 0, "RÉUSSITE": 28, "ÉCHEC": 0})
+        self.assertEqual(proof["human_review"]["conformes"], 25)
+        self.assertEqual(set(proof["human_review"]["reserves"]), {"cas-07", "cas-12", "cas-18"})
         self.assertFalse(proof["human_review"]["practitioner"])
 
 

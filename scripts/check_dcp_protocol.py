@@ -1,4 +1,4 @@
-"""Contrôle logiciel DCP-017 ; aucun répondant ou juge lancé."""
+"""Contrôle logiciel DCP-019 ; aucun répondant ou juge lancé."""
 from __future__ import annotations
 
 import json
@@ -24,7 +24,7 @@ def main() -> int:
             "model_called": False}, ensure_ascii=True))
         return 0
     except (OSError, ValueError, KeyError, TypeError):
-        print(json.dumps({"status": "blocked", "compatible": False, "decision": "DCP-017", "model_called": False}))
+        print(json.dumps({"status": "blocked", "compatible": False, "decision": "DCP-019", "model_called": False}))
         return 2
 
 

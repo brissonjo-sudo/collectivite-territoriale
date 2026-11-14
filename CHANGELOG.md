@@ -1,5 +1,29 @@
 # Historique des versions
 
+## 1.5.2 : candidat non mesuré, non qualifié
+
+Ré-épinglage du 2026-11-11 : dcp-fpt 0.1.9 (ADR 0035), drh-fpt et recherche-juridique.
+Patch, comme la 1.5.1 : mise à jour du contenu de skills, sans fonctionnalité du plugin.
+Les deux manifestes passent en 1.5.2 ; les catalogues restent sur 1.5.1.
+
+- dcp-fpt 0.1.7 → 0.1.9 (`8b10549`, ADR 0035) : réserves de Jo sur DCP-018 corrigées
+  en amont (STOP égalité adapté aux faits, bloc BASCULE dirfi-fpt recopié, échec de
+  lecture décrit tel que la trace le montre). Seul `SKILL.md` change (343 lignes).
+  Nouvelle référence autonome DCP-019 : mesure 28/28 à `e9e32a5`, huit critiques
+  réussis, relue par Jo avec trois réserves de formulation (cas-07, cas-12, cas-18).
+  DCP-014 et DCP-017 conservées comme historiques.
+- drh-fpt 0.7.0 (`0fe6663` → `6f5e906`) : décret n° 2026-705 (congés pour raison de santé)
+  et veille ciblée du 2026-11-03 ; recherche-juridique 3.6.0 (`30c9c90` → `d8d49bd`) :
+  pourvois joints visibles, déclencheur d'abstention 3 précisé, diagnostic des 429 PISTE.
+  L'entrée amont de recherche-juridique est « Non publié » : la version reste 3.6.0.
+  Surcouches inchangées ; seules leurs empreintes d'entrée (`base_sha256`) suivent les
+  nouvelles bases (`scripts/rehash_overlays.py`). Copies régénérées par `scripts/sync_skills.py`.
+- Cycle 1.5.2 préparé en H1 (ADR 0036) : contrat v4 inchangé, même CLI figée que la 1.5.0,
+  transition 0036 non fermée.
+- Les pièces de la 1.5.1 restent liées à DCP 0.1.7 : la barrière de release échoue
+  jusqu'au prochain cycle. Aucune campagne, aucun smoke ni aucune preuve du plugin ;
+  la mesure 1.5.1 ne couvre pas ce runtime.
+
 ## 1.5.1 — Qualifiée et publiée le 2026-11-09
 
 Actualisation du 2026-11-09 : campagne `campagne-l151-a` 18/18 sur `223d2b4`,

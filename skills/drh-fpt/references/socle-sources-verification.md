@@ -22,7 +22,9 @@
    réglementaire du CGFP absorbe progressivement ces décrets par vagues
    (Livres I-II en vigueur depuis le 1er février 2025, Livre III —
    recrutement — depuis le 1er octobre 2025, Livre IV — formation,
-   télétravail, réorganisation — depuis le 1er août 2026 ; Livre V annoncé).
+   télétravail, réorganisation — depuis le 1er août 2026, décret n° 2026-366
+   du 7 mai 2026 ; au 03/11/2026, aucune partie réglementaire au-delà du
+   Livre IV n'est publiée : aucun article R./D. 5xx sur Légifrance).
    Un décret cité comme « transversal » peut donc avoir été abrogé et
    recodifié en articles R./D. du CGFP : vérifier avant de citer un numéro
    de décret isolé.
@@ -97,18 +99,29 @@ Domaines à forte évolution récente, à confirmer systématiquement avant
 usage en acte :
 
 - **Protection sociale complémentaire (PSC)** — participation employeur
-  prévoyance puis santé, calendrier progressif.
+  prévoyance puis santé, calendrier progressif. Prévoyance : adhésion
+  obligatoire aux garanties minimales du contrat collectif (loi
+  n° 2025-1251 du 22 décembre 2025, CGFP L827-6 et L827-11, en vigueur
+  depuis le 24/12/2025) ; décrets d'application n° 2026-986 et 2026-987 du
+  23 octobre 2026 (JO du 24/10/2026), applicables au 1er janvier 2029 ou
+  au terme de la convention de participation en cours. Jusque-là, le
+  chapitre Ier du décret n° 2022-581 reste applicable. Décrets lus en
+  partie seulement : relire le JORF avant toute citation.
 - **RIFSEEP** — montants, groupes de fonctions, cadres d'emplois éligibles.
 - **Contractuels** — cas de recours élargis depuis la loi de
   transformation de la fonction publique (2019).
 - **Instances médicales** — conseil médical (fusion comité médical /
-  commission de réforme, décret n° 2022-350). Un décret n° 2026-705 du
-  29 juillet 2026 (transposition au secteur public des règles d'arrêt de
-  travail du privé) modifie, depuis le 1er septembre 2026, les modalités
-  de saisine du conseil médical en formation restreinte pour le
-  renouvellement des congés de maladie après épuisement des droits à
-  rémunération : à intégrer dans la branche QVT/santé avant toute réponse
-  sur ce point.
+  commission de réforme, décret n° 2022-350). Le décret n° 2026-705 du
+  29 juillet 2026 (JORFTEXT000054570030) supprime, à compter du
+  1er septembre 2026, l'avis de la formation restreinte sur le
+  renouvellement d'un CLM ou d'un CLD après épuisement du plein traitement
+  (décret 87-602, art. 5, I, 2°), sans toucher à l'avis requis pour
+  l'ultime période de congé rétribuée (art. 32), et modifie les congés pour raison de santé
+  (avis d'arrêt, contrôle, formation, examen à distance), avec des dates
+  d'application échelonnées (1er août 2026, 1er septembre 2026,
+  1er janvier 2028) : intégré le 03/11/2026 dans la branche QVT/santé
+  (§5.2, §5.3, §5.8). Revérifier la version applicable à la date de début
+  ou de prolongation du congé.
 - **CAP / LDG** — compétences des CAP recentrées, montée des lignes
   directrices de gestion.
 - **Rupture conventionnelle** — pour les fonctionnaires, l'expérimentation
@@ -116,8 +129,26 @@ usage en acte :
   loi n° 2026-103 du 19 février 2026 (loi de finances pour 2026), codifiée
   au CGFP **art. L.552-1 à L.552-5** (L.552-5 pour les agents contractuels
   en CDI), en vigueur depuis le 21 février 2026. Décrets d'application du
-  6 août 2026 (n° 2026-745, procédure ; n° 2026-746, indemnité spécifique)
-  à confirmer en version consolidée avant tout acte.
+  6 août 2026 (n° 2026-745, procédure ; n° 2026-746, indemnité spécifique),
+  en vigueur le 8 août 2026 : ils modifient les décrets n° 2019-1593 et
+  n° 2019-1596 et les art. 49 bis à 49 decies du décret n° 88-145. Plancher
+  **et plafond** de l'indemnité abaissés (plafond porté de 1/12 à 1/24 de
+  la rémunération brute annuelle par année d'ancienneté) : voir
+  carrière-paie, temps et fin de fonctions §5.9.
+- **Projets de lois financières 2027** (état relevé au 03/11/2026 sur les
+  dossiers législatifs de l'Assemblée nationale et du Sénat, à revérifier ;
+  rien à appliquer avant publication) :
+  - PLFSS 2027 (AN n° 3211) : rejeté en première lecture à l'Assemblée
+    le 23/10/2026, transmis au Sénat le 02/11/2026. Articles à suivre :
+    majorations pour enfants servies par la CNRACL, revalorisation 2027
+    des pensions.
+  - PLF 2027 (AN n° 3210), en première lecture : le texte déposé ne
+    contient aucun article sur le jour de carence, l'indemnisation du CMO
+    ou la GIPA (surveiller les amendements) ; un article créerait une
+    protection fonctionnelle des agents poursuivis devant le juge
+    financier (futur CGFP L134-4-1).
+  - Taux de cotisation employeur CNRACL : relire le décret en vigueur
+    avant tout chiffrage, jamais de valeur de mémoire.
 
 ---
 

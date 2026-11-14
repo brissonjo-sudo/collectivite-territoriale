@@ -13,9 +13,9 @@ description: >-
   police municipale (dpm-fpt), les concessions et délégations de service public.
 ---
 
-# Skill : dcp-fpt (v0.1.7)
+# Skill : dcp-fpt (v0.1.9)
 
-> Métadonnées — version : **0.1.7** · langue : français · statut : **non mesuré, non relu par un praticien**.
+> Métadonnées — version : **0.1.9** · langue : français · statut : **non mesuré, non relu par un praticien**.
 > Aide à la décision ; aucune réponse ne vaut autorisation de signer ni source autonome de droit positif.
 
 ## 1. Déclenchement
@@ -58,7 +58,9 @@ d'effectif.
 
 Dire : faits établis et manquants → branche compétente → condition à vérifier
 → option régulière → responsable de la décision → écrit et contrôle suivant.
-Séparer règle sourcée, inférence, recommandation et point réservé. Une urgence
+Séparer règle sourcée, inférence, recommandation et point réservé. La
+première phrase annonce la conclusion réelle : si l'acte demandé n'est pas
+possible en l'état, ne pas l'ouvrir par « oui ». Une urgence
 ne démontre pas ses propres conditions. Ne jamais inventer les données d'une
 consultation ni reproduire des données nominatives ou des offres identifiables.
 
@@ -93,11 +95,12 @@ Objets transverses : [objets/marche-travaux.md](objets/marche-travaux.md),
 [objets/candidat-evince.md](objets/candidat-evince.md),
 [objets/titulaire-defaillant.md](objets/titulaire-defaillant.md).
 
-**Traçabilité interne obligatoire** : nommer chaque branche, objet ou gabarit
-mobilisé par le nom du skill et sa section (par exemple « dcp-fpt, objet
-accord-cadre, §3 »), là où sa règle est utilisée ; jamais par un lien Markdown
-ni un chemin, relatif ou absolu. Les chemins servent uniquement à la lecture
-interne. Un renvoi interne ne remplace pas la provenance officielle d'une
+**Traçabilité interne obligatoire** : nommer chaque branche, objet, gabarit
+ou section de ce fichier mobilisé par le nom du skill et sa section (par
+exemple « dcp-fpt, objet accord-cadre, §3 » ou « dcp-fpt, §5.5 »), là où sa
+règle est utilisée ; jamais par un lien Markdown ni un chemin, relatif ou
+absolu, y compris vers ce `SKILL.md`. Les chemins servent uniquement à la
+lecture interne. Un renvoi interne ne remplace pas la provenance officielle d'une
 règle de droit ; les liens vers les sources officielles restent permis.
 
 ## 5. Dispositifs transverses
@@ -137,8 +140,8 @@ contenu métier**, sans commencer par un exemple ou une rédaction :
 ```text
 STOP — égalité de traitement
 STOP — Cette demande compromet l'égalité de traitement des candidats.
-1. Je refuse le « comment » : aucune rédaction, aucun découpage, aucun
-   argumentaire produisant ce résultat.
+1. Je refuse le « comment » : aucune rédaction, aucun découpage, aucune
+   information réservée, aucun argumentaire produisant ce résultat.
 2. Risques : nullité du contrat, contentieux des candidats évincés et risque
    pénal pour les agents et les élus ; qualification à vérifier à la source,
    sans chiffre ni automaticité de sanction.
@@ -149,6 +152,11 @@ STOP — Cette demande compromet l'égalité de traitement des candidats.
 5. Fait déjà commis : aucune aide à le dissimuler. Saisir le conseil juridique
    de la collectivité ; recherche-juridique pour les obligations de signalement.
 ```
+
+Les points 1 et 2 s'affichent toujours. Les points 3, 4 et 5 ne s'affichent
+que si les faits les concernent : 3 pour un besoin, un critère ou un seuil ;
+4 pour un conflit d'intérêts ; 5 pour un fait déjà commis. Renuméroter sans
+changer leur texte.
 
 Après ce bloc, seule une méthode régulière est possible ; aucune proposition
 ne doit produire indirectement le résultat refusé.
@@ -184,6 +192,10 @@ Le registre est daté et ne prouve pas une lecture en session. Pour chaque
 référence utilisée : source officielle, identifiant ou URL obtenu de la source,
 date de lecture et statut. « Vérifié ce jour » sans preuve n'est pas une provenance.
 
+Un échec de lecture se décrit tel que la trace le montre (page inaccessible,
+erreur sans détail) : ne jamais ajouter un code, une cause ou un contenu absent
+du retour obtenu.
+
 Une réserve finale ne permet pas d'affirmer une règle dont la lecture
 officielle a échoué. Sur ce point, présenter la règle comme une question à
 vérifier, sans conclure sur son contenu ni l'utiliser comme prémisse acquise.
@@ -210,14 +222,18 @@ Afficher le bloc correspondant puis arrêter ce volet :
 
 La méthode juridique d'estimation du besoin et le choix de procédure restent
 dans DCP. Le chiffrage, les crédits et la validation de l'engagement relèvent
-de `dirfi-fpt`. Dans une note d'estimation ou de montage, nommer cette
-séparation et afficher la BASCULE financière avant ce volet, même si les
-données manquent et qu'aucun calcul ne peut encore être produit.
+de `dirfi-fpt`. Dès que la décision d'achat a une incidence financière
+(estimation ou montage, adhésion ou recours à une centrale d'achat,
+modification ou avenant, exécution par un tiers aux frais et risques du
+titulaire), nommer cette séparation et afficher la BASCULE financière avant ce
+volet, même si les données manquent et qu'aucun calcul ne peut encore être
+produit.
 
 ```text
 BASCULE dirfi-fpt — Volet financier du marché.
 À reprendre : avances, acomptes, révision et actualisation, calcul et imputation
 des pénalités, garantie, décompte, paiement direct, délais de paiement ou crédits.
+Ces points sont renvoyés à dirfi-fpt ; aucun n'est traité ici.
 ```
 
 ```text
@@ -246,7 +262,12 @@ BASCULE recherche-juridique — Validité, vigueur ou portée d'une référence.
 ```
 
 **Une frontière ne s'illustre pas.** Aucun aperçu, clause exemple ou calcul
-sur le volet délégué, même si le skill est disponible. Concessions,
+sur le volet délégué, même si le skill est disponible. Le bloc se recopie
+tel quel : ne pas développer, compléter ni appliquer au cas sa liste
+« À reprendre ». Après la BASCULE
+dirfi-fpt, DCP ne dit plus quelles sommes sont imputables, récupérables ou
+dues, ni sur quelle assiette : il nomme seulement le mécanisme contractuel à
+vérifier (clause, mise en demeure, décision) et laisse le reste au renvoi. Concessions,
 délégations de service public, contrats de l'État et droit étranger : signaler
 le hors périmètre et nommer le conseil compétent, puis s'arrêter. Pour un
 indice de pratique anticoncurrentielle entre entreprises, signaler sans
@@ -286,20 +307,20 @@ interne habilité. Ne jamais présenter un brouillon comme une décision signée
 
 ## 7. Auto-vérification avant sortie
 
-1. Première ligne visible exactement égale à l'en-tête STOP applicable du §5.2 ou du §5.3, avant toute annonce et tout contenu ?
+1. Première ligne visible exactement égale à l'en-tête STOP applicable du §5.2 ou du §5.3, avant toute annonce et tout contenu ; points 3 à 5 du §5.2 seulement si les faits les déclenchent ?
 2. Mode d'exercice, catégorie d'acheteur, nature du marché et stade identifiés ?
 3. Conduite, attribution, signature et exécution distinguées, délégation vérifiée ?
 4. Champ collectivité/État et procédure adaptée/formalisée vérifié pour chaque obligation ?
 5. Inférence, doctrine, bonne pratique et règle de droit distinguées ?
-6. Chaque référence a-t-elle sa provenance datée et son statut, sans auto-attestation ?
+6. Chaque référence a-t-elle sa provenance datée et son statut, sans auto-attestation ; échec de lecture décrit sans code ni cause absents de la trace ?
 7. Version applicable au lancement et dispositions transitoires confirmées ou réservées ?
 8. Aucune valeur de mémoire, aucun nouvel identifiant reconstitué ?
 9. Jurisprudence avec juridiction, date et numéro ; réserves et absence de citation respectées ?
-10. BASCULE explicite avant tout volet délégué, sans illustration ?
+10. BASCULE explicite avant tout volet délégué, bloc recopié sans développement, sans illustration ni sommes imputables après elle ?
 11. Aucune aide à orienter la concurrence, justifier après coup ou dissimuler ?
-12. Chemins internes nommés, écrit demandé produit ou marqué [INCOMPLET] ?
+12. Sources internes nommées sans lien ni chemin, écrit demandé produit ou marqué [INCOMPLET] ?
 13. Aucune donnée nominative, entreprise candidate ou consultation identifiable ?
-14. Risque/confiance, point non conclu, autorité et contrôle suivant explicites ?
+14. Risque/confiance, point non conclu, autorité et contrôle suivant explicites ; première phrase cohérente avec la recommandation ?
 
 ## 8. Limites et précautions
 

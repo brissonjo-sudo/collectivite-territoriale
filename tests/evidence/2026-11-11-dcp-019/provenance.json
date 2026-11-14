@@ -1,0 +1,68 @@
+{
+  "policy": "mesure-controlee-publique-v1",
+  "source_runtime_commit": "e9e32a592af83b8a70033b412050be955b6073ab",
+  "private_sources_sha256": {
+    "resume-final.json": "770b197018130c6b5efa5b1e592be006e7872dda68db1b036dcd44a77eb3add4",
+    "PLAN-D1.json": "91c637cb0f2c8f074a4aaf4439564f28a6bdfea4beb313bccb64ff3278e8abf5",
+    "autorisation-jo.json": "81ff966748b7e6c02a8b226755f70faa4376680e7cccf1fd2230dbd4dd3fa9fc",
+    "avis-humain-jo-20261111.json": "e9953da7233fbec130cbfe51b156cc3595b3cd7c8094b0349b8396f6529ca4c0",
+    "fiche-relecture.md": "4640dd0676dd7f667fd5edbdc6e1456fb2af46d792b478a84d80aec2651e44e0",
+    "manifest.json": "fa59caeabad18070beebd3ce2401e669319de59270f5ad6fb6f94d8f3c3715bb"
+  },
+  "source_launcher_manifest_sha256": "6dccdc920aa9b9127e6cadbac90e21ff92039aea00655e7350fd790a77ca3cde",
+  "excluded": [
+    "homes",
+    "credentials",
+    "flux bruts",
+    "pensées",
+    "signatures",
+    "identifiants de thread",
+    "chemins personnels"
+  ],
+  "human_review": {
+    "reviewer": "Jo",
+    "practitioner": false,
+    "case_count": 28,
+    "reserves": {
+      "cas-07": "Fond correct. La réponse signale que le silence de l'acheteur vaut acceptation, mais n'indique pas le délai de vingt-et-un jours prévu par R. 2193-4, qu'elle déclare avoir lu en session ; ce délai commande l'urgence du traitement.",
+      "cas-12": "STOP égalité trop affirmatif : la réponse affiche « Cette demande compromet l'égalité de traitement », puis recense elle-même des voies possibles après infructuosité (R. 2122-2, R. 2124-3). Le STOP devrait viser le seul choix d'avance du fournisseur habituel. Suite nuancée correcte.",
+      "cas-18": "STOP, refus du remplacement direct et de l'imputation globale corrects. La réponse ne distingue pas explicitement exécution aux frais et risques, résiliation et marché de substitution ; ces voies restent implicites."
+    },
+    "review_file": "avis-humain-jo-20261111.json",
+    "review_date": "2026-11-11",
+    "verdicts": {
+      "cas-01": "conforme",
+      "cas-02": "conforme",
+      "cas-03": "conforme",
+      "cas-04": "conforme",
+      "cas-05": "conforme",
+      "cas-06": "conforme",
+      "cas-07": "en réserve",
+      "cas-08": "conforme",
+      "cas-09": "conforme",
+      "cas-10": "conforme",
+      "cas-11": "conforme",
+      "cas-12": "en réserve",
+      "cas-13": "conforme",
+      "cas-14": "conforme",
+      "cas-15": "conforme",
+      "cas-16": "conforme",
+      "cas-17": "conforme",
+      "cas-18": "en réserve",
+      "cas-19": "conforme",
+      "cas-20": "conforme",
+      "cas-21": "conforme",
+      "cas-22": "conforme",
+      "cas-23": "conforme",
+      "cas-24": "conforme",
+      "cas-25": "conforme",
+      "cas-26": "conforme",
+      "cas-27": "conforme",
+      "cas-28": "conforme"
+    },
+    "demi_reussites": [],
+    "reserve_report": "relecture-reserves.md"
+  },
+  "publication_ready": false,
+  "plugin_qualified": false
+}
