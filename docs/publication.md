@@ -21,6 +21,8 @@
 
 | `v1.5.1` | `793bd79e6bc06963145dbb61d445d686be821341` | 2026-11-09 | **distribution open source qualifiée techniquement** ; avis métier enregistré avec une réserve (`release-1.5.1.json`) | Veille du 2026-11-03 (DPM 1.0.7, DirFi 1.0.7, DPO 0.2.3, DSI 0.2.2), DCP 0.1.7 (contrôle de légalité avant notification) ; mesure sur `223d2b4`, commit publié limité aux preuves et à la liaison de mesure (ADR 0034) ; étiquette légère créée par la release GitHub, écart à l'étape 2 |
 
+| `v1.5.2` | `c5b35b0979ae903cab463a283c0994949f193f26` | 2026-11-14 | **distribution open source qualifiée techniquement** ; avis métier enregistré sans réserve (`release-1.5.2.json`) | DCP 0.1.9 (référence autonome DCP-019, ADR 0035), DRH 0.7.0, recherche-juridique 3.6.0 ; mesure sur `889582b`, commit publié limité aux preuves et à la liaison de mesure (ADR 0036) ; étiquette légère créée par la release GitHub, écart à l'étape 2 |
+
 Ajouter une ligne par étiquette distribuée ; ne jamais réécrire une ligne.
 Le test `test_distribution_epinglee_sur_etiquette` exige que l'étiquette et
 le commit épinglés figurent dans ce tableau.
