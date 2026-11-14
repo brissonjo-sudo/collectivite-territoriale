@@ -1,6 +1,19 @@
 # Historique des versions
 
-## 1.5.2 : candidat non mesuré, non qualifié
+## 1.5.2 — Qualifiée et publiée le 2026-11-14
+
+Actualisation du 2026-11-14 : campagne `campagne-l152-a` 18/18 sur `889582b`,
+avis de Jo du 13/11 sans réserve maintenue (six `non_verifiable` résolus).
+La réserve 1.5.1 du cas `plugin-dcp-frontiere-dsi-externe` n'est pas
+reconduite. Smoke réel `smoke-l152-a` 2/2 sur `89501cf` (H2), preuve
+`tests/evidence/release-1.5.2.json` assemblée en H3 (`7b0a7de`). PR 40
+fusionnée par merge commit (`c5b35b0`), qui garde H1, H2 et H3 dans
+l'historique de `main`. Publiée sous l'étiquette `v1.5.2` (`c5b35b0`),
+étiquette légère créée par la release GitHub, écart consigné au registre
+`docs/publication.md` ; catalogues sur 1.5.2 (PR 41). Les entrées ci-dessous
+restent l'historique de leur étape préparatoire, y compris les mentions
+« les catalogues restent sur 1.5.1 » et « la barrière de release échoue » ;
+elles ne sont pas réécrites.
 
 Ré-épinglage du 2026-11-11 : dcp-fpt 0.1.9 (ADR 0035), drh-fpt et recherche-juridique.
 Patch, comme la 1.5.1 : mise à jour du contenu de skills, sans fonctionnalité du plugin.
