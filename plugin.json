@@ -1,0 +1,18 @@
+{
+  "name": "collectivite-territoriale",
+  "displayName": "Collectivité territoriale",
+  "version": "1.5.2",
+  "description": "Police municipale, RH, DPO, finances locales, commande publique, systèmes d'information et recherche juridique avec accès Légifrance/Judilibre.",
+  "logo": "assets/icon.png",
+  "suggestedPrompts": [
+    "Aide-moi à traiter une question de police municipale.",
+    "Analyse cette situation RH dans la fonction publique territoriale.",
+    "Recherche et vérifie cette règle de droit français."
+  ],
+  "author": {
+    "name": "brissonjo-sudo",
+    "url": "https://github.com/brissonjo-sudo"
+  },
+  "homepage": "https://github.com/brissonjo-sudo/collectivite-territoriale",
+  "repository": "https://github.com/brissonjo-sudo/collectivite-territoriale"
+}

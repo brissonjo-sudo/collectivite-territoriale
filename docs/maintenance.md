@@ -152,6 +152,7 @@ installation, qualification ou requête modèle n'accompagne cette intégration.
 
 - `.codex-plugin/plugin.json` : manifeste de compatibilité Codex.
 - `.claude-plugin/plugin.json` : manifeste Claude Code.
+- `plugin.json` et `mcp_config.json` : manifeste et serveur `droit-francais` pour Antigravity ([ADR 0037](adr/0037-distribution-antigravity.md)) ; hors configuration mesurée par le smoke.
 - `.agents/plugins/marketplace.json` et `.claude-plugin/marketplace.json` : catalogues de distribution.
 - `.mcp.json` : unique déclaration du serveur `droit-francais`.
 - `skills/` : sept runtimes figés et synchronisés.

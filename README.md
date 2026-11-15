@@ -2,7 +2,7 @@
 
 # Collectivité territoriale : six métiers, un droit vérifié
 
-**Un plugin Claude Code et Codex pour les agents des collectivités : police municipale, ressources humaines, finances, données personnelles, commande publique et informatique, avec le droit vérifié sur les sources officielles.**
+**Un plugin Claude Code, Codex et Antigravity pour les agents des collectivités : police municipale, ressources humaines, finances, données personnelles, commande publique et informatique, avec le droit vérifié sur les sources officielles.**
 
 [![Validation du plugin](https://github.com/brissonjo-sudo/collectivite-territoriale/actions/workflows/ci.yml/badge.svg)](https://github.com/brissonjo-sudo/collectivite-territoriale/actions/workflows/ci.yml)
 [![Version](https://img.shields.io/github/v/tag/brissonjo-sudo/collectivite-territoriale?filter=v*&label=version)](docs/publication.md)
@@ -99,6 +99,31 @@ publiée qu'il désigne. Mise à jour : `codex plugin marketplace upgrade collec
 Le plugin s'installe aussi depuis le répertoire des plugins de l'application
 de bureau, une fois la marketplace ajoutée. Dans un espace de travail ChatGPT,
 l'import et les autorisations relèvent de l'organisation.
+
+### Dans Antigravity
+
+> **À partir de la 1.5.3 (à venir).** Le manifeste Antigravity est sur `main`
+> mais n'est encore dans aucune étiquette publiée. La connexion au serveur
+> juridique a été vérifiée de bout en bout le 15/11/2026 : authentification,
+> puis appels `search` et `fetch` ([ADR 0037](docs/adr/0037-distribution-antigravity.md)).
+
+Cloner l'étiquette publiée dans le dossier des plugins d'Antigravity :
+
+```powershell
+git clone --branch v1.5.3 https://github.com/brissonjo-sudo/collectivite-territoriale.git "$env:USERPROFILE\.gemini\config\plugins\collectivite-territoriale"
+```
+
+Le plugin se charge seul ; ses sept skills sont disponibles au tour suivant.
+Pour le serveur juridique : **Settings → Customizations → Installed MCP
+Servers → Refresh**, puis **Authenticate** sur `droit-francais`. Le client
+OAuth est public : aucun secret n'est à saisir.
+
+Si le skill autonome `recherche-juridique` est déjà installé dans
+`~/.gemini/antigravity/skills` ou `~/.gemini/skills`, retirez-le : il ferait
+doublon avec celui du plugin.
+
+Mise à jour : `git fetch --tags`, puis `git checkout` de la nouvelle étiquette
+dans ce dossier.
 
 ## Ce que vous obtenez
 
