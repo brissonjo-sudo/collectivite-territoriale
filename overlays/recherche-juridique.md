@@ -150,6 +150,10 @@ sans modifier les étapes ni autoriser d'autres outils.
   officielle d'un identifiant ni la vigueur actuelle du texte.
   Sans récupération suffisante, signaler le point comme non vérifié et ne
   pas conclure sur son applicabilité actuelle.
+- **Formulation de la provenance** : écrire « texte récupéré » ou « lu dans
+  cette session » seulement si le libellé a été reçu dans une sortie d'outil
+  de la session. Une page officielle ouverte sans texte reçu se dit « page
+  officielle consultée », sans affirmer en avoir lu le contenu.
 - **Identifiants** : la règle de provenance vaut aussi pour les identifiants
   de codes, sections, textes européens et décisions, pas seulement ceux
   d'articles. Ne restituer aucun identifiant non récupéré dans la session,
