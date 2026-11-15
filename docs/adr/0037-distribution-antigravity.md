@@ -52,15 +52,28 @@ la doc intégrée locale n'en parle pas.
    `~/.gemini/config/plugins/collectivite-territoriale`. La notice vise la
    prochaine étiquette, v1.5.3, et la marque « à venir » jusque-là.
 
+## Recette du 2026-11-15
+
+Recette faite sur le clone local de Jo, avec les deux fichiers de cette
+branche.
+
+1. Le premier essai a échoué en « Callback URL mismatch », d'après le journal
+   Auth0. Antigravity envoyait bien `redirect_uri` =
+   `https://antigravity.google/oauth-callback`, avec le client
+   `tpc_gCoyj4…`, PKCE S256 et `resource` égal à l'URL du serveur MCP. Cette
+   adresse manquait seulement à la liste du client.
+2. Jo a ajouté cette adresse aux *Allowed Callback URLs* du client.
+   L'authentification a ensuite **réussi**, selon le constat de Jo.
+
+Ce qui reste à faire ou à surveiller :
+
+- **Non vérifié** : un appel d'outil réel, `search` puis `fetch`, à consigner
+  ici une fois fait.
+- **À surveiller** : la requête d'autorisation part avec un `scope` vide, sans
+  `offline_access`. Une reconnexion pourrait donc être demandée à
+  l'expiration du jeton.
+
 ## Conséquences
-
-- **Non vérifié** : la connexion OAuth sous Antigravity. Pour la vérifier :
-  1. ajouter l'adresse de retour dans Auth0 ;
-  2. authentifier depuis Customizations ;
-  3. réussir un appel réel, `search` puis `fetch`.
-
-  Si `clientId` seul échoue, retenter avec un client Auth0 dédié. Aucun
-  retour à `mcp-remote` sans nouvelle décision.
 - Un même client sert trois hôtes. Révoquer ce client coupe Claude Code, Codex
   et Antigravity en même temps.
 - Le format est natif : aucune étape de conversion depuis le format Claude

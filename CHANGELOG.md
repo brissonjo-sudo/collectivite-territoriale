@@ -7,8 +7,10 @@
   `serverUrl` et le client OAuth public déjà utilisé par Claude Code et Codex,
   sans pont `mcp-remote`. `tests/test_antigravity_plugin.py` aligne identité et
   version sur les deux autres manifestes. Version inchangée (1.5.2), skills
-  intacts ; installation documentée pour la prochaine étiquette. Connexion
-  OAuth sous Antigravity non vérifiée.
+  intacts ; installation documentée pour la prochaine étiquette. Recette du
+  2026-11-15 : authentification OAuth réussie après ajout de
+  `https://antigravity.google/oauth-callback` au client Auth0 ; premier appel
+  d'outil non encore confirmé.
 
 ## 1.5.2 — Qualifiée et publiée le 2026-11-14
 
