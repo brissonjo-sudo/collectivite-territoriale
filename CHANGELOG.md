@@ -1,5 +1,15 @@
 # Historique des versions
 
+## Non publié
+
+- Distribution Antigravity (ADR 0037) : manifeste natif `plugin.json` et
+  `mcp_config.json` à la racine, serveur `droit-francais` déclaré par
+  `serverUrl` et le client OAuth public déjà utilisé par Claude Code et Codex,
+  sans pont `mcp-remote`. `tests/test_antigravity_plugin.py` aligne identité et
+  version sur les deux autres manifestes. Version inchangée (1.5.2), skills
+  intacts ; installation documentée pour la prochaine étiquette. Connexion
+  OAuth sous Antigravity non vérifiée.
+
 ## 1.5.2 — Qualifiée et publiée le 2026-11-14
 
 Actualisation du 2026-11-14 : campagne `campagne-l152-a` 18/18 sur `889582b`,
