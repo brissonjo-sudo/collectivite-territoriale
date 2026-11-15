@@ -65,10 +65,13 @@ branche.
 2. Jo a ajouté cette adresse aux *Allowed Callback URLs* du client.
    L'authentification a ensuite **réussi**, selon le constat de Jo.
 
-Ce qui reste à faire ou à surveiller :
+3. Un appel d'outil de bout en bout a ensuite **réussi**, d'après la réponse
+   d'Antigravity relevée par Jo : `search`, puis `fetch` sur
+   `LEGIARTI000029946370` (article L2212-2 du CGCT), version du 2014-12-22,
+   `applicable_at_as_of_date` à `true`, texte récupéré.
 
-- **Non vérifié** : un appel d'outil réel, `search` puis `fetch`, à consigner
-  ici une fois fait.
+Ce qui reste à surveiller :
+
 - **À surveiller** : la requête d'autorisation part avec un `scope` vide, sans
   `offline_access`. Une reconnexion pourrait donc être demandée à
   l'expiration du jeton.

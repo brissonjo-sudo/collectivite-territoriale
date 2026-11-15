@@ -9,8 +9,8 @@
   version sur les deux autres manifestes. Version inchangée (1.5.2), skills
   intacts ; installation documentée pour la prochaine étiquette. Recette du
   2026-11-15 : authentification OAuth réussie après ajout de
-  `https://antigravity.google/oauth-callback` au client Auth0 ; premier appel
-  d'outil non encore confirmé.
+  `https://antigravity.google/oauth-callback` au client Auth0, puis appels
+  `search` et `fetch` réussis de bout en bout.
 
 ## 1.5.2 — Qualifiée et publiée le 2026-11-14
 

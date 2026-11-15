@@ -103,9 +103,9 @@ l'import et les autorisations relèvent de l'organisation.
 ### Dans Antigravity
 
 > **À partir de la 1.5.3 (à venir).** Le manifeste Antigravity est sur `main`
-> mais n'est encore dans aucune étiquette publiée. L'authentification au
-> serveur juridique a été vérifiée le 15/11/2026, mais aucun appel d'outil
-> n'a encore été confirmé ([ADR 0037](docs/adr/0037-distribution-antigravity.md)).
+> mais n'est encore dans aucune étiquette publiée. La connexion au serveur
+> juridique a été vérifiée de bout en bout le 15/11/2026 : authentification,
+> puis appels `search` et `fetch` ([ADR 0037](docs/adr/0037-distribution-antigravity.md)).
 
 Cloner l'étiquette publiée dans le dossier des plugins d'Antigravity :
 
