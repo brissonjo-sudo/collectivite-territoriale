@@ -11,6 +11,15 @@
   2026-11-15 : authentification OAuth réussie après ajout de
   `https://antigravity.google/oauth-callback` au client Auth0, puis appels
   `search` et `fetch` réussis de bout en bout.
+- Ré-épinglage du 2026-11-16 : dcp-fpt 0.1.9 → 0.2.0 (`cad0259`, ADR 0038).
+  Cinq réserves corrigées en amont (acte refusé nommé après le STOP égalité,
+  référence ou « non vérifié » après chaque bloc STOP, délai décisif indiqué,
+  trois voies face à la défaillance). `SKILL.md` (353 lignes) et
+  `references/resiliation-difficultes.md` changent. Nouvelle référence
+  autonome DCP-020 : mesure 27/28 à `c810d10`, un ÉCHEC non critique (cas-06),
+  huit critiques réussis, relue par Jo avec sept réserves. DCP-014, DCP-017 et
+  DCP-019 conservées comme historiques. Les pièces de la 1.5.2 restent liées à
+  DCP 0.1.9 : la barrière de release échoue jusqu'à H3.
 
 ## 1.5.2 — Qualifiée et publiée le 2026-11-14
 

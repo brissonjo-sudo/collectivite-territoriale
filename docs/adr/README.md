@@ -58,3 +58,4 @@ Le prochain ADR prend le numéro qui suit le plus grand de la liste.
 | 0035 | [`0035-dcp-019-reference-autonome.md`](0035-dcp-019-reference-autonome.md) | Référence autonome DCP 0.1.9 (DCP-019) |
 | 0036 | [`0036-mesure-1-5-2-contrat-v4.md`](0036-mesure-1-5-2-contrat-v4.md) | Mesure 1.5.2 sous contrat v4, même CLI que la 1.5.0 |
 | 0037 | [`0037-distribution-antigravity.md`](0037-distribution-antigravity.md) | Distribution Antigravity par manifeste natif à la racine |
+| 0038 | [`0038-dcp-020-reference-autonome.md`](0038-dcp-020-reference-autonome.md) | Référence autonome DCP 0.2.0 (DCP-020) |
