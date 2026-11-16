@@ -1,7 +1,17 @@
 # Historique des versions
 
-## Non publié
+## 1.5.3 : candidat non mesuré, non qualifié
 
+Patch, comme la 1.5.2 : distribution Antigravity et contenu de skills, sans autre
+fonctionnalité du plugin. Les trois manifestes passent en 1.5.3 ; les catalogues
+restent sur 1.5.2.
+
+- Cycle 1.5.3 préparé en H1 (ADR 0039) : contrat v4 inchangé, même CLI figée que la
+  1.5.0, transition 0039 non fermée.
+- Surcharge locale `recherche-juridique` (réserve de la campagne 1.5.2,
+  `plugin-prime-depart-retraite`) : « texte récupéré » ou « lu dans cette session »
+  seulement si le libellé a été reçu dans une sortie d'outil ; sinon « page officielle
+  consultée ». Empreintes rechaînées dans `upstream.json`, copie resynchronisée.
 - Distribution Antigravity (ADR 0037) : manifeste natif `plugin.json` et
   `mcp_config.json` à la racine, serveur `droit-francais` déclaré par
   `serverUrl` et le client OAuth public déjà utilisé par Claude Code et Codex,

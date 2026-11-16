@@ -1,6 +1,6 @@
-# Collectivité 1.5.3 : candidat en préparation, non mesuré, non qualifié
+# Collectivité 1.5.3 : candidat préparé en H1, non mesuré, non qualifié
 
-État au **16 novembre 2026**. Décision de Jo du 2026-11-15 : la 1.5.3 forme
+État au **16 novembre 2026**, H1 préparé localement. Décision de Jo du 2026-11-15 : la 1.5.3 forme
 un **lot unique**. Elle porte la distribution Antigravity
 ([ADR 0037](adr/0037-distribution-antigravity.md)) et les six réserves non
 bloquantes relevées après DCP-019 et la campagne 1.5.2. La version publiée et
@@ -26,16 +26,18 @@ référence DCP-020 (choix de Jo du 2026-11-15).
 
 ## État des corrections
 
-- **dcp-fpt 0.2.0** : commit local `a78c3d1` sur la branche
-  `fix/reserves-0-2-0` du dépôt amont, depuis `8b10549`. Paquet
-  `5baff7a6b9cff6bb3f476443cee4cface80e5367034dbd144b04a70f4e431cff`
-  (octets LF, construction reproduite deux fois). 81 tests et
-  2 905 contrôles statiques OK. **Non poussé.**
+- **dcp-fpt 0.2.0** : fusionné en amont (PR 22, `c810d10`), mesuré
+  DCP-020 (27/28, un ÉCHEC non critique au cas-06), relu par Jo avec sept
+  réserves ; preuves fusionnées (PR 23, `cad0259`). Paquet
+  `5baff7a6b9cff6bb3f476443cee4cface80e5367034dbd144b04a70f4e431cff`.
+  Plugin ré-épinglé sur `cad0259` ([ADR 0038](adr/0038-dcp-020-reference-autonome.md)).
 - **Surcharge `recherche-juridique`** : sur cette branche ; empreintes
   rechaînées dans `upstream.json` et copie resynchronisée, `check_sync` OK.
 - **Antigravity** : déjà sur `main` (PR 44). `plugin.json` et
   `mcp_config.json` restent hors des jeux de configuration comparés au
-  smoke.
+  smoke ; `plugin.json` passe en 1.5.3 avec les deux autres manifestes.
+- **H1** : cycle 1.5.3 préparé ([ADR 0039](adr/0039-mesure-1-5-3-contrat-v4.md)),
+  contrat v4 et CLI de la 1.5.0 inchangés, transition 0039 non fermée.
 
 ## Phases et verrous
 
