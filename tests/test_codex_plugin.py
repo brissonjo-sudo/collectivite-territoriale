@@ -396,14 +396,14 @@ class CodexPluginTests(unittest.TestCase):
             )
 
     def assert_dcp_source_l24(self, spec: dict) -> None:
-        """DCP est une copie source 0.1.9 sans surcharge locale, liée à la mesure (ADR 0035)."""
+        """DCP est une copie source 0.2.0 sans surcharge locale, liée à la mesure (ADR 0038)."""
         self.assertNotIn("instruction_overlays", spec)
-        self.assertEqual(spec["version"], "0.1.9")
-        # ADR 0035 : commit de preuve 8b10549, runtime identique au commit mesuré e9e32a5.
-        self.assertEqual(spec["commit"], "8b105490592185fc3b96373ba277da8b0f323c67")
+        self.assertEqual(spec["version"], "0.2.0")
+        # ADR 0038 : commit de preuve cad0259, runtime identique au commit mesuré c810d10.
+        self.assertEqual(spec["commit"], "cad02591e844d0f995b975b1dfc3e9fdc66f8cfa")
         self.assertEqual(list((ROOT / "overlays").glob("dcp-fpt*.md")), [])
         self.assertEqual(hashlib.sha256((ROOT / "skills/dcp-fpt/SKILL.md").read_bytes()).hexdigest(),
-                         "91719ec15abd6a01d789050a2826e0d1489c2300ec579ad7be23267693109948")
+                         "4345b2535d9c45c7c7f8e6918ff1b3c064a3b22a524c5b99212dc2330a207cfa")
 
     def test_dcp_distribution_sans_cache_ni_conception(self) -> None:
         spec = load_json("upstream.json")["skills"]["dcp-fpt"]
@@ -456,9 +456,9 @@ class CodexPluginTests(unittest.TestCase):
         pinned = load_json("upstream.json")["skills"]
         self.assertIn("dcp-fpt", pinned)
         self.assertIn("dsi-fpt", pinned)
-        # ADR 0035 : DCP 0.1.9 au commit de preuve 8b10549 ; DSI 0.2.2 (veille 2026-11-03).
+        # ADR 0038 : DCP 0.2.0 au commit de preuve cad0259 ; DSI 0.2.2 (veille 2026-11-03).
         self.assertEqual(pinned["dsi-fpt"]["commit"], "252fd0d7abd8bb064ff31133003f92a1bd5b3813")
-        self.assertEqual(pinned["dcp-fpt"]["commit"], "8b105490592185fc3b96373ba277da8b0f323c67")
+        self.assertEqual(pinned["dcp-fpt"]["commit"], "cad02591e844d0f995b975b1dfc3e9fdc66f8cfa")
         self.assert_dcp_source_l24(pinned["dcp-fpt"])
         dcp = (ROOT / "skills/dcp-fpt/SKILL.md").read_text(encoding="utf-8")
         self.assertIn("BASCULE dsi-fpt", dcp)
