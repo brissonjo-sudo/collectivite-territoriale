@@ -13,9 +13,9 @@ description: >-
   police municipale (dpm-fpt), les concessions et délégations de service public.
 ---
 
-# Skill : dcp-fpt (v0.1.9)
+# Skill : dcp-fpt (v0.2.0)
 
-> Métadonnées — version : **0.1.9** · langue : français · statut : **non mesuré, non relu par un praticien**.
+> Métadonnées — version : **0.2.0** · langue : français · statut : **non mesuré, non relu par un praticien**.
 > Aide à la décision ; aucune réponse ne vaut autorisation de signer ni source autonome de droit positif.
 
 ## 1. Déclenchement
@@ -158,8 +158,11 @@ que si les faits les concernent : 3 pour un besoin, un critère ou un seuil ;
 4 pour un conflit d'intérêts ; 5 pour un fait déjà commis. Renuméroter sans
 changer leur texte.
 
-Après ce bloc, seule une méthode régulière est possible ; aucune proposition
-ne doit produire indirectement le résultat refusé.
+Après ce bloc, nommer en une phrase l'acte précis qui rompt l'égalité (par
+exemple le choix arrêté d'avance d'un titulaire) : le refus vise cet acte, pas
+les voies régulières que la réponse recense ensuite. Seule une méthode
+régulière est alors possible ; aucune proposition ne doit produire
+indirectement le résultat refusé.
 
 ### 5.3 Garde-fou acte irréversible sous délai
 
@@ -178,6 +181,11 @@ STOP — Un acte irréversible est demandé alors qu'un délai ou une condition 
    l'attribution par la commission d'appel d'offres lorsqu'elle est requise,
    la signature par l'autorité habilitée et la préparation par le service achat.
 ```
+
+Les blocs précèdent toute lecture : le risque pénal et la compétence de la
+commission d'appel d'offres y sont nommés sans référence. Dans la suite,
+chaque risque ou compétence ainsi nommé porte sa référence lue en session,
+ou la mention « non vérifié » si la lecture n'a pas eu lieu.
 
 Si les deux garde-fous sont déclenchés, commencer par `STOP — égalité de traitement`,
 puis afficher les deux blocs dans l'ordre §5.2 puis §5.3 avant le reste.
@@ -208,6 +216,8 @@ objets ou écrits. Le cache est un artefact de maintenance **exclu du paquet** :
 il n'est pas disponible dans le runtime. Pour une réponse chiffrée, consulter
 la source officielle en session et dater la lecture ; sans outil, ne produire
 ni valeur ni nouvel identifiant, donner seulement le point à vérifier.
+Un délai lu en session qui commande l'urgence (silence valant acceptation,
+suspension, recours) s'indique avec sa valeur, sa source et la date de lecture.
 
 Vérifier particulièrement : seuil de l'État ou des autres pouvoirs
 adjudicateurs ; procédure adaptée ou formalisée ; version au lancement ;
@@ -307,14 +317,14 @@ interne habilité. Ne jamais présenter un brouillon comme une décision signée
 
 ## 7. Auto-vérification avant sortie
 
-1. Première ligne visible exactement égale à l'en-tête STOP applicable du §5.2 ou du §5.3, avant toute annonce et tout contenu ; points 3 à 5 du §5.2 seulement si les faits les déclenchent ?
+1. Première ligne visible exactement égale à l'en-tête STOP applicable du §5.2 ou du §5.3, avant toute annonce et tout contenu ; points 3 à 5 du §5.2 seulement si les faits les déclenchent ; acte précis refusé nommé ; risque ou compétence nommé par un bloc référencé après lecture ou marqué « non vérifié » ?
 2. Mode d'exercice, catégorie d'acheteur, nature du marché et stade identifiés ?
 3. Conduite, attribution, signature et exécution distinguées, délégation vérifiée ?
 4. Champ collectivité/État et procédure adaptée/formalisée vérifié pour chaque obligation ?
 5. Inférence, doctrine, bonne pratique et règle de droit distinguées ?
 6. Chaque référence a-t-elle sa provenance datée et son statut, sans auto-attestation ; échec de lecture décrit sans code ni cause absents de la trace ?
 7. Version applicable au lancement et dispositions transitoires confirmées ou réservées ?
-8. Aucune valeur de mémoire, aucun nouvel identifiant reconstitué ?
+8. Aucune valeur de mémoire, aucun nouvel identifiant reconstitué ; délai décisif lu en session indiqué avec sa source et sa date ?
 9. Jurisprudence avec juridiction, date et numéro ; réserves et absence de citation respectées ?
 10. BASCULE explicite avant tout volet délégué, bloc recopié sans développement, sans illustration ni sommes imputables après elle ?
 11. Aucune aide à orienter la concurrence, justifier après coup ou dissimuler ?

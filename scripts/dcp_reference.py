@@ -1,4 +1,4 @@
-"""DCP-019 : référence autonome fermée, distincte de toute mesure du plugin."""
+"""DCP-020 : référence autonome fermée, distincte de toute mesure du plugin."""
 from __future__ import annotations
 
 import hashlib
@@ -15,9 +15,9 @@ def redirected(path: Path) -> bool:
 def contract() -> dict:
     """Contrat versionné ; aucun hash ou fichier exclu fourni par la CLI."""
     value = json.loads(Path(__file__).with_name("dcp-protocol.json").read_bytes())
-    if (value.get("decision") != "DCP-019"
+    if (value.get("decision") != "DCP-020"
             or value["reference"]["selection_excluded"] != ["LICENCE.fr.txt", "LICENSE"]):
-        raise ValueError("Contrat DCP-019 absent ou sélection non autorisée")
+        raise ValueError("Contrat DCP-020 absent ou sélection non autorisée")
     return value
 
 

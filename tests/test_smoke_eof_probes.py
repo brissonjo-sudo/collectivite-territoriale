@@ -51,14 +51,14 @@ class SmokeEofProbeTests(unittest.TestCase):
 
     def test_replay_L29b_entree_dcp_segments_90_puis_sonde_360(self):
         path = self.source('skills/dcp-fpt/SKILL.md')
-        self.assertEqual(len(path.read_text(encoding='utf-8').splitlines()), 343)  # DCP 0.1.9 (ADR 0035)
+        self.assertEqual(len(path.read_text(encoding='utf-8').splitlines()), 353)  # DCP 0.2.0 (ADR 0038)
         probes = []
         events = self.segments(path, 90) + [self.event(path, 360, 90)]
         reads = smoke.read_events(events, self.installed, eof_probes=probes)
-        self.assertEqual([r['count'] for r in reads], [90, 90, 90, 73])
+        self.assertEqual([r['count'] for r in reads], [90, 90, 90, 83])
         self.assertTrue(smoke.complete_entry(reads, 'dcp-fpt'))
         self.assertEqual(len(probes), 1)
-        self.assertEqual(sum(r['count'] for r in reads), 343)
+        self.assertEqual(sum(r['count'] for r in reads), 353)
 
     def test_sonde_a_la_borne_exacte_et_sortie_blanche_normalisee(self):
         path = self.source('skills/dcp-fpt/references/analyse-situation.md')
