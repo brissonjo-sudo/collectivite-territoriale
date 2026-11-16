@@ -59,7 +59,7 @@ d'après les instructions de son employeur, applicable aussi aux agents des
 collectivités publiques) ne sont donc pas réunies.
 
 L'historique Git (annexe) montre plusieurs noms d'auteur. Jo a confirmé le
-2026-11-01 que « Murukan » (même adresse brisson.jo@gmail.com) est l'une de ses
+2026-11-01 que « Murukan » (même adresse, retirée de ce document) est l'une de ses
 identités Git, et que Claude, Codex, Vibe Nuage Agent, github-actions et
 dependabot sont des outils qu'il opère, sans droits de tiers.
 
@@ -104,29 +104,29 @@ ce repli, antérieur au présent ADR, ne doit pas servir de mesure 1.5.0.
 ### collectivite-territoriale (relevé du 2026-11-01)
 
 ```text
-   124	Jo <brisson.jo@gmail.com>
-    24	Murukan <brisson.jo@gmail.com>
+   124	Jo <adresse retirée>
+    24	Murukan <adresse retirée>
      5	Claude <noreply@anthropic.com>
      3	Codex <codex@local.invalid>
-     3	Jonathan Brisson <brisson.jo@gmail.com>
+     3	Jonathan Brisson <adresse retirée>
 ```
 
 ### Dpm-fpt (relevé du 2026-11-01)
 
 ```text
     82	Claude <noreply@anthropic.com>
-    14	Murukan <brisson.jo@gmail.com>
-    11	Jo <brisson.jo@gmail.com>
+    14	Murukan <adresse retirée>
+    11	Jo <adresse retirée>
      1	Codex <codex@local.invalid>
 ```
 
 ### Drh-fpt (relevé du 2026-11-01)
 
 ```text
-    29	Jonathan Brisson <brisson.jo@gmail.com>
-    28	Jo <brisson.jo@gmail.com>
-    25	Murukan <brisson.jo@gmail.com>
-    16	brissonjo-sudo <brisson.jo@gmail.com>
+    29	Jonathan Brisson <adresse retirée>
+    28	Jo <adresse retirée>
+    25	Murukan <adresse retirée>
+    16	brissonjo-sudo <adresse retirée>
      4	Claude <noreply@anthropic.com>
 ```
 
@@ -134,33 +134,33 @@ ce repli, antérieur au présent ADR, ne doit pas servir de mesure 1.5.0.
 
 ```text
      5	Claude <noreply@anthropic.com>
-     4	Murukan <brisson.jo@gmail.com>
-     2	Jo <brisson.jo@gmail.com>
+     4	Murukan <adresse retirée>
+     2	Jo <adresse retirée>
 ```
 
 ### DirFi-fpt (relevé du 2026-11-01)
 
 ```text
     25	Claude <noreply@anthropic.com>
-     9	Murukan <brisson.jo@gmail.com>
-     3	Jo <brisson.jo@gmail.com>
-     2	Jonathan Brisson <brisson.jo@gmail.com>
+     9	Murukan <adresse retirée>
+     3	Jo <adresse retirée>
+     2	Jonathan Brisson <adresse retirée>
 ```
 
 ### DCP-fpt (relevé du 2026-11-01)
 
 ```text
-    26	Jo <brisson.jo@gmail.com>
+    26	Jo <adresse retirée>
     13	Claude <noreply@anthropic.com>
-    12	Murukan <brisson.jo@gmail.com>
+    12	Murukan <adresse retirée>
 ```
 
 ### DSI-fpt (relevé du 2026-11-01)
 
 ```text
-    24	Jo <brisson.jo@gmail.com>
+    24	Jo <adresse retirée>
     13	Claude <noreply@anthropic.com>
-    10	Murukan <brisson.jo@gmail.com>
+    10	Murukan <adresse retirée>
      1	Codex <codex@local.invalid>
 ```
 
@@ -168,14 +168,14 @@ ce repli, antérieur au présent ADR, ne doit pas servir de mesure 1.5.0.
 
 ```text
    306	github-actions[bot] <41898282+github-actions[bot]@users.noreply.github.com>
-   135	Murukan <brisson.jo@gmail.com>
-   134	Jo <brisson.jo@gmail.com>
-    18	Jonathan Brisson <brisson.jo@gmail.com>
+   135	Murukan <adresse retirée>
+   134	Jo <adresse retirée>
+    18	Jonathan Brisson <adresse retirée>
     12	dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
      8	Claude <noreply@anthropic.com>
      3	brissonjo-sudo <2.81237092e+08+brissonjo-sudo@users.noreply.github.com>
      2	Murukan <Murukan@users.noreply.github.com>
      1	Vibe Nuage Agent <vibe@mistral.ai>
-     1	brissonjo-sudo <brisson.jo@users.noreply.github.com>
+     1	brissonjo-sudo <adresse retirée>
      1	brissonjo-sudo <brissonjo-sudo@users.noreply.github.com>
 ```
