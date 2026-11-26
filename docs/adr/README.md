@@ -60,3 +60,5 @@ Le prochain ADR prend le numéro qui suit le plus grand de la liste.
 | 0037 | [`0037-distribution-antigravity.md`](0037-distribution-antigravity.md) | Distribution Antigravity par manifeste natif à la racine |
 | 0038 | [`0038-dcp-020-reference-autonome.md`](0038-dcp-020-reference-autonome.md) | Référence autonome DCP 0.2.0 (DCP-020) |
 | 0039 | [`0039-mesure-1-5-3-contrat-v4.md`](0039-mesure-1-5-3-contrat-v4.md) | Mesure 1.5.3 sous contrat v4, même CLI que la 1.5.0 |
+| 0040 | [`0040-dcp-025-reference-autonome.md`](0040-dcp-025-reference-autonome.md) | Référence autonome DCP 0.2.2 (DCP-025) |
+| 0041 | [`0041-mesure-1-5-3-h1-groupe.md`](0041-mesure-1-5-3-h1-groupe.md) | Nouveau H1 de la 1.5.3 : cycle groupé, même contrat v4 |

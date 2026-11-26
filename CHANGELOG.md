@@ -30,6 +30,18 @@ restent sur 1.5.2.
   huit critiques réussis, relue par Jo avec sept réserves. DCP-014, DCP-017 et
   DCP-019 conservées comme historiques. Les pièces de la 1.5.2 restent liées à
   DCP 0.1.9 : la barrière de release échoue jusqu'à H3.
+- Cycle groupé du 2026-11-26, nouveau H1 de la 1.5.3 (ADR 0041) : trois tentatives
+  consommées sans mesure liée sur `c1659bf`, abandonné. Contrat v4 et CLI inchangés ;
+  19e cas `drh-detachement-pm-equivalence` reporté à un prochain contrat de cycle.
+  - dcp-fpt 0.2.0 → 0.2.2 (`86d9896`, ADR 0040) : en-têtes STOP exacts associés à
+    leur déclencheur dans la description, abstention après échec de lecture, bloc
+    BASCULE dirfi-fpt sans liste. `SKILL.md` seul change (355 lignes). Référence
+    autonome DCP-025 : 27/28 à `d9da5db`, une DEMI-RÉUSSITE non critique (cas-15),
+    aucun ÉCHEC, relue par Jo avec trois réserves. DCP-020 conservée comme historique.
+  - drh-fpt 0.7.0 → 0.8.0 (`1880d02`) : module mobilité et registre d'identifiants ;
+    deux références ajoutées à l'inventaire fermé de la surcharge, ancre v0.8.0.
+  - recherche-juridique 3.6.0 → 3.7.0 (`ce675c6`) : outil `search_texts` et ligne
+    §4 bis de `gabarits-requetes.md`. Surcharge locale inchangée.
 
 ## 1.5.2 — Qualifiée et publiée le 2026-11-14
 

@@ -49,11 +49,11 @@ les transferts imposent l'activation effective et une attribution persistante.
 
 Pour `recherche-juridique`, la racine canonique `skill/` est aplatie dans `skills/recherche-juridique/`. Sa licence est copiée avec le runtime ; aucun manifeste, serveur MCP, fichier `.env` ou autre fichier de dépôt amont n'est dupliqué. Le fichier `references/cache-taux-seuils.md` de `dirfi-fpt`, exclu de son propre paquet de distribution, n'est pas embarqué.
 
-Pour DCP 0.2.0, le commit figé est
-`cad02591e844d0f995b975b1dfc3e9fdc66f8cfa` : commit de preuve dont le runtime
-est identique au commit mesuré `c810d109e043065282c3549bad5192205a8f41eb`, textes
-EUPL 1.2 déjà inclus ([ADR 0038](adr/0038-dcp-020-reference-autonome.md)).
-Les références DCP-014 (0.1.4, `7874c62`), DCP-017 (0.1.7, `f3be71f`) et DCP-019 (0.1.9, `8b10549`) restent historiques. Les 30 fichiers de son paquet
+Pour DCP 0.2.2, le commit figé est
+`86d9896a9e72f0e5e9a5700e813ea60034f2191f` : commit de preuve dont le runtime
+est identique au commit mesuré `d9da5db8165ee858b57c10f543a504861926011e`, textes
+EUPL 1.2 déjà inclus ([ADR 0040](adr/0040-dcp-025-reference-autonome.md)).
+Les références DCP-014 (0.1.4, `7874c62`), DCP-017 (0.1.7, `f3be71f`), DCP-019 (0.1.9, `8b10549`) et DCP-020 (0.2.0, `cad0259`) restent historiques. Les 30 fichiers de son paquet
 runtime et sa licence sont copiés ; le cache `references/cache-valeurs.md`,
 la conception, les scripts d'évaluation et les preuves amont sont exclus.
 Le registre daté reste une piste de recherche, jamais une preuve de lecture
