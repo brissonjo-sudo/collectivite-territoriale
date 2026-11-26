@@ -173,6 +173,7 @@ Cet inventaire atteste la présence des fichiers, pas la vigueur de leur contenu
 - `references/_gabarit-branche.md`
 - `references/cache-plafonds-regime-indemnitaire.md`
 - `references/carriere-paie.md`
+- `references/carriere-paie/mobilite.md`
 - `references/carriere-paie/remuneration-paie.md`
 - `references/carriere-paie/statut-discipline.md`
 - `references/carriere-paie/temps-fin-fonctions.md`
@@ -183,6 +184,7 @@ Cet inventaire atteste la présence des fichiers, pas la vigueur de leur contenu
 - `references/parametres-collectivite.md`
 - `references/qvt-sante.md`
 - `references/recrutement-formation.md`
+- `references/references-verifiees.md`
 - `references/restitution-proportionnee.md`
 - `references/si-rh-masse-salariale.md`
 - `references/socle-sources-verification.md`
