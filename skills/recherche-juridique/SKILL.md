@@ -11,13 +11,13 @@ description: Méthodologie rigoureuse de recherche en droit français (sources
   un écrit ou oral de concours avec références juridiques. Ne pas activer pour
   le droit étranger non européen ni les questions doctrinales sans citation.
 metadata:
-  version: 3.6.0
+  version: 3.7.0
   date_derniere_revue_methodologique: 2026-10-21
   date_derniere_verification_sources: 2026-10-21
   langue: français
 ---
 
-# Skill : recherche-juridique (v3.6.0)
+# Skill : recherche-juridique (v3.7.0)
 
 Rigueur et abstention informée avant spéculation ; profil métier sans certitude.
 Résoudre les ressources depuis la racine `skill/`. Référence requise illisible :
@@ -313,10 +313,11 @@ Pour diagnostiquer un échec ou consulter les exemples des modes 1 à 18, lire [
 Aucune affirmation juridique sur la seule mémoire. Lire le texte officiel,
 ou l'extrait officiel couvrant tout le passage cité, et vérifier sa version
 applicable. Un résultat de recherche seul ne suffit pas. Tout identifiant
-officiel restitué doit être récupéré par outil **dans la session courante**,
+officiel restitué (n° de loi, d'ordonnance et de décret compris) doit être récupéré par outil **dans la session courante**,
 selon l'ordre normé de l'étape 2. Sinon : omettre ou marquer
 `⚠️ non vérifié — identifiant non récupéré` ; aucun gabarit C.
 Procédure affichée sans récupération : défaut bloquant, pas preuve.
+Document fourni (capture, PDF, extrait) : piste ou fait déclaré, jamais preuve de lecture ; voir [Sources autorisées](references/sources-autorisees.md#document-fourni-par-lutilisateur).
 Absence de PISTE ou repli web : même niveau de preuve exigé.
 
 ### P2 — Date de référence

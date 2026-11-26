@@ -154,8 +154,8 @@
     },
     "recherche-juridique": {
       "repository": "https://github.com/brissonjo-sudo/droit-francais-skill.git",
-      "commit": "d8d49bd6647b15b5fe95527d3cc1e306edb4ee9d",
-      "version": "3.6.0",
+      "commit": "ce675c6d45e7d29dfa77b41e08fc7d13d1ce3206",
+      "version": "3.7.0",
       "source_root": "skill/",
       "local_directory": "droit-francais-skill",
       "paths": [
@@ -179,7 +179,7 @@
         {
           "target": "SKILL.md",
           "source": "overlays/recherche-juridique.md",
-          "base_sha256": "a2a81f74a68c1e9d544a6ea50ea4386e1e2ef792579a9ea6d95b8e44b2e6abca",
+          "base_sha256": "d7eedf26ec62e4d832e1ba522b325a212db0ccd84ad3d4c54d34475999b0f8c8",
           "source_sha256": "732876b9a9fe48797be4de523f1c8f188492a4986305269ed1be25face7bb89e",
           "anchor": "## Déclenchement"
         }
