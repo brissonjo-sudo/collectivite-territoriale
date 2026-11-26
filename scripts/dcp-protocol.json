@@ -1,5 +1,5 @@
 {
-  "upstream_commit": "cad02591e844d0f995b975b1dfc3e9fdc66f8cfa",
+  "upstream_commit": "86d9896a9e72f0e5e9a5700e813ea60034f2191f",
   "mixed_engine_supported": false,
   "effort_parameter_supported": false,
   "status": "standalone_reference_only",
@@ -9,15 +9,15 @@
     "tests/cas-de-test.json": "ed0734bae30e2e3053ba096016b08d30bd0b5117a74ae760f294daf6237a06fa",
     "tests/bareme-cas-de-test.md": "9aa3d9aabdce879c680ef6c022ca289831cdf603365a79079393c503cf886be6"
   },
-  "reason": "Décision Jo du 2026-11-15 (lot unique 1.5.3, phase 3) : référence autonome DCP 0.2.0 au pin de preuve cad0259 et aux octets mesurés à c810d10 ; aucune mesure plugin transférée.",
-  "decision": "DCP-020",
-  "decision_date": "2026-11-16",
+  "reason": "Décision Jo du 2026-11-26 (cycle groupé 1.5.3, nouveau H1) : référence autonome DCP 0.2.2 au pin de preuve 86d9896 et aux octets mesurés à d9da5db ; aucune mesure plugin transférée.",
+  "decision": "DCP-025",
+  "decision_date": "2026-11-26",
   "reference": {
-    "evidence_path": "tests/evidence/2026-11-16-dcp-020/dcp-autonome.json",
-    "sha256": "d1e624323792314dd12a5f96227a65af89e7ea8c24ae52fd519d98400597d494",
+    "evidence_path": "tests/evidence/2026-11-26-dcp-025/dcp-autonome.json",
+    "sha256": "9d4cb3b5bba7a48cec9d7646a4638c8d8d860bc90e72cac840c0239bec88e434",
     "source_repository": "https://github.com/brissonjo-sudo/DCP-fpt",
-    "source_proof_commit": "cad02591e844d0f995b975b1dfc3e9fdc66f8cfa",
-    "source_summary_sha256": "31f04f3f50acf64a7c10749d2cfa03debe379c6a2d2b89ef3e63a93cd96581a2",
+    "source_proof_commit": "86d9896a9e72f0e5e9a5700e813ea60034f2191f",
+    "source_summary_sha256": "f247e2f0502b775bd5838d7843c952802b5526632d5a8d00804000bdd00e7e14",
     "selection_excluded": [
       "LICENCE.fr.txt",
       "LICENSE"

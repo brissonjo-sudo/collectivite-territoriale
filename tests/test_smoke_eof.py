@@ -62,8 +62,8 @@ class SmokeEofTests(unittest.TestCase):
             path=installed/'skills/dcp-fpt/SKILL.md';path.parent.mkdir(parents=True)
             path.write_bytes((ROOT/'skills/dcp-fpt/SKILL.md').read_bytes())
             lines,events=self.events(path)
-            self.assertEqual(len(lines),353)  # entrée DCP 0.2.0 (ADR 0038)
-            self.assertEqual([r['count'] for r in smoke.read_events(events,installed)],[85,85,85,85,13])
+            self.assertEqual(len(lines),355)  # entrée DCP 0.2.2 (ADR 0040)
+            self.assertEqual([r['count'] for r in smoke.read_events(events,installed)],[85,85,85,85,15])
             beyond={'type':'item.completed','item':{'type':'command_execution','status':'completed','exit_code':0,
                 'command':f"Get-Content -LiteralPath '{path}' -Encoding utf8 | Select-Object -Skip {len(events)*N} -First {N}",
                 'aggregated_output':''}}

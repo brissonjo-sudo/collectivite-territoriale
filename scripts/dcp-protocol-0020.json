@@ -1,0 +1,27 @@
+{
+  "upstream_commit": "cad02591e844d0f995b975b1dfc3e9fdc66f8cfa",
+  "mixed_engine_supported": false,
+  "effort_parameter_supported": false,
+  "status": "standalone_reference_only",
+  "sources_sha256": {
+    "scripts/eval_suite.py": "33bd6af81f76e427ff9fdbf36d04134414beb034b13b67d09fa1aa813373c99d",
+    "scripts/mesure_locale.py": "2d3f6026a122c029b296a3011665f02da96f144bd39553841d16ee2b404753e5",
+    "tests/cas-de-test.json": "ed0734bae30e2e3053ba096016b08d30bd0b5117a74ae760f294daf6237a06fa",
+    "tests/bareme-cas-de-test.md": "9aa3d9aabdce879c680ef6c022ca289831cdf603365a79079393c503cf886be6"
+  },
+  "reason": "Décision Jo du 2026-11-15 (lot unique 1.5.3, phase 3) : référence autonome DCP 0.2.0 au pin de preuve cad0259 et aux octets mesurés à c810d10 ; aucune mesure plugin transférée.",
+  "decision": "DCP-020",
+  "decision_date": "2026-11-16",
+  "reference": {
+    "evidence_path": "tests/evidence/2026-11-16-dcp-020/dcp-autonome.json",
+    "sha256": "d1e624323792314dd12a5f96227a65af89e7ea8c24ae52fd519d98400597d494",
+    "source_repository": "https://github.com/brissonjo-sudo/DCP-fpt",
+    "source_proof_commit": "cad02591e844d0f995b975b1dfc3e9fdc66f8cfa",
+    "source_summary_sha256": "31f04f3f50acf64a7c10749d2cfa03debe379c6a2d2b89ef3e63a93cd96581a2",
+    "selection_excluded": [
+      "LICENCE.fr.txt",
+      "LICENSE"
+    ],
+    "selection_reason": "LICENSE et LICENCE.fr.txt (textes EUPL 1.2, ADR 0030) sont embarqués pour la distribution ; ces fichiers de licence ne figurent pas dans les 30 fichiers du runtime de la mesure autonome. Aucune autre exclusion permise."
+  }
+}
