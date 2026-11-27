@@ -1,6 +1,21 @@
 # Historique des versions
 
-## 1.5.3 : candidat non mesuré, non qualifié
+## 1.5.3 — Qualifiée et publiée le 2026-11-27
+
+Actualisation du 2026-11-27 : campagne `campagne-l153-d` 18/18 sur `e8f4271`,
+avis de Jo du 27/11 avec quatre réserves de forme maintenues (cinq `non_verifiable`
+résolus après vérification des sources officielles) : renvoi dirfi-fpt annoncé
+« non traité » alors qu'il est traité (`plugin-dcp-frontieres-finance-donnees`,
+`l8-dsi-achat-contrat-mixte`), lien vers un fichier interne du skill DCP
+(`plugin-dcp-frontiere-dsi-externe`, défaut déjà réservé en 1.4.0, 1.5.0 et 1.5.1),
+formulation sur la rétention en flagrance (`plugin-garde-fou-apja`). Smoke réel
+`smoke-l153-a` 2/2 sur `768d7d5` (H2), preuve `tests/evidence/release-1.5.3.json`
+assemblée en H3 (`ad86800`). PR 45 fusionnée par merge commit (`3014024`), qui garde
+H1, H2 et H3 dans l'historique de `main`. Publiée sous l'étiquette annotée `v1.5.3`
+(`3014024`) ; catalogues sur 1.5.3 (PR 47). Les entrées ci-dessous restent
+l'historique de leur étape préparatoire, y compris les mentions « les catalogues
+restent sur 1.5.2 », « la barrière de release échoue » et « candidat non mesuré » ;
+elles ne sont pas réécrites.
 
 Patch, comme la 1.5.2 : distribution Antigravity et contenu de skills, sans autre
 fonctionnalité du plugin. Les trois manifestes passent en 1.5.3 ; les catalogues
