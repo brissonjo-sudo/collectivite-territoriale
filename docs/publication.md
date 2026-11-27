@@ -23,6 +23,8 @@
 
 | `v1.5.2` | `c5b35b0979ae903cab463a283c0994949f193f26` | 2026-11-14 | **distribution open source qualifiée techniquement** ; avis métier enregistré sans réserve (`release-1.5.2.json`) | DCP 0.1.9 (référence autonome DCP-019, ADR 0035), DRH 0.7.0, recherche-juridique 3.6.0 ; mesure sur `889582b`, commit publié limité aux preuves et à la liaison de mesure (ADR 0036) ; étiquette légère créée par la release GitHub, écart à l'étape 2 |
 
+| `v1.5.3` | `30140245dbada1ddae201782c6a2ebac0390b818` | 2026-11-27 | **distribution open source qualifiée techniquement** ; avis métier enregistré avec quatre réserves (`release-1.5.3.json`) | Distribution Antigravity (ADR 0037), DCP 0.2.2 (référence autonome DCP-025, ADR 0040), DRH 0.8.0, recherche-juridique 3.7.0, H1 groupé (ADR 0041) ; mesure sur `e8f4271`, commit publié limité aux preuves et à la liaison de mesure (ADR 0039) ; étiquette annotée |
+
 Ajouter une ligne par étiquette distribuée ; ne jamais réécrire une ligne.
 Le test `test_distribution_epinglee_sur_etiquette` exige que l'étiquette et
 le commit épinglés figurent dans ce tableau.
