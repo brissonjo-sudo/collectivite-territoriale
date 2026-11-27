@@ -125,6 +125,20 @@ doublon avec celui du plugin.
 Mise à jour : `git fetch --tags`, puis `git checkout` de la nouvelle étiquette
 dans ce dossier.
 
+### Connexion au serveur juridique
+
+Le serveur `droit-francais` est le service pont : chaque utilisateur se connecte avec un
+compte à e-mail vérifié (OAuth) et utilise **ses propres clés PISTE**.
+
+1. Lancez la connexion OAuth quand le client la demande.
+2. Demandez l'outil `configurer_cles_piste` : il renvoie un lien signé, à usage unique,
+   valable 10 minutes, pour enregistrer vos clés. Le secret ne passe pas par la
+   conversation.
+3. `oublier_cles_piste` supprime vos clés enregistrées.
+
+**Réserve ouverte** : la question des conditions générales de PISTE (§ 3.1.2, partage
+des clés) n'est pas tranchée.
+
 ## Ce que vous obtenez
 
 - Face à un acte réservé à un officier de police judiciaire, un incident cyber

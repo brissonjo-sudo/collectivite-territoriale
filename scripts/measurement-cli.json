@@ -109,6 +109,11 @@
       "case_contract_file": "scripts/cas-plugin-cycle-v4.json",
       "case_contract_sha256": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
       "measurement_commit": "e8f42719e90e5fdf69458cf9960bf04ee6560f84"
+    },
+    "1.5.4-v4": {
+      "case_contract_file": "scripts/cas-plugin-cycle-v4.json",
+      "case_contract_sha256": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
+      "measurement_commit": null
     }
   }
 }
