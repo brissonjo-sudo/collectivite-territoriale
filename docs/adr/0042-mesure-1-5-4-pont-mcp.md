@@ -97,12 +97,25 @@ configuration installée. Décision de Jo du 2026-11-27, « Accepter la correcti
 **ou** une configuration différents de la preuve publiée ; la comparaison des commits
 amont est retirée.
 
+## Hébergement du pont (complément du 2026-11-27)
+
+Une migration du pont vers un autre hébergeur et un domaine propre avait été proposée
+le 2026-11-26 en amont (ADR 0003, non adoptée), avec « pas d'ouverture sur Render » en
+attendant. Décision de Jo du 2026-11-27, « Ouvrir Render maintenant » : la 1.5.4 garde
+l'URL `droit-francais-pont.onrender.com` et l'Action Auth0 est ouverte sur le tenant
+actuel ; cette migration est reportée. Si elle a lieu, l'URL du plugin changera et un
+nouveau cycle de mesure sera nécessaire.
+
 ## Points ouverts pour Jo
 
-- **Action Auth0 du pont** : l'ouvrir à tout compte à e-mail vérifié (hors de ce dépôt).
-- **Clés PISTE** : enregistrer les siennes dans son compte du pont avant la campagne.
-- **Client Auth0** : vérifier que le client prédéfini (`tpc_gCoyj4qPSuyrg1ZZWDyp4D`) est
-  autorisé sur l'API du pont, et que l'URI de rappel Antigravity est toujours admise.
+- **Action Auth0 du pont** : l'ouvrir à tout compte à e-mail vérifié (hors de ce dépôt) ;
+  l'API historique reste réservée au mainteneur.
+- **Clés PISTE** : déjà enregistrées dans le compte du mainteneur sur le pont (parcours
+  validé le 2026-11-26, web et mobile, selon le journal amont).
+- **Client Auth0 du plugin** : `tpc_gCoyj4qPSuyrg1ZZWDyp4D` n'est pas le client du
+  connecteur claude.ai. Il doit être admis sur l'API du pont (accès délégué par
+  l'utilisateur pour les applications tierces), et l'URI de rappel Antigravity doit
+  rester admise.
 - **Budget** : campagne 18 cas (36 sessions) et smoke (2 sessions), à autoriser après
   pré-vol.
 - **Gel du serveur** : le commit déployé du pont doit figurer dans la provenance de la
