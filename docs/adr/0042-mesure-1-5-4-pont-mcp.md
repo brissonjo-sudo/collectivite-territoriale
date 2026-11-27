@@ -89,6 +89,14 @@ commit mesuré de la 1.5.3 comme H1. `tests/test_cli_toolchains.py` simule la li
 la version courante du plugin. Les tests de manifestes ne figeaient pas l'ancienne URL
 (`https://` seulement, `mcp_config.json` aligné sur `.mcp.json`) : aucun n'a changé.
 
+`tests/test_codex_plugin.py`, `test_preuve_courante_correspond_au_runtime` (branche
+« non mesuré ») supposait qu'un candidat change toujours les skills (« Runtime différent
+du plugin installé » et commits amont différents). La 1.5.4 ne change que la
+configuration installée. Décision de Jo du 2026-11-27, « Accepter la correction
+(Recommandé) » : le test exige toujours « Version non mesurée », et accepte un runtime
+**ou** une configuration différents de la preuve publiée ; la comparaison des commits
+amont est retirée.
+
 ## Points ouverts pour Jo
 
 - **Action Auth0 du pont** : l'ouvrir à tout compte à e-mail vérifié (hors de ce dépôt).

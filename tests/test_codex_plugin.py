@@ -345,9 +345,9 @@ class CodexPluginTests(unittest.TestCase):
             old = load_json(f"tests/evidence/release-{published}.json")
             errors = distribution_errors(ROOT, old)
             self.assertIn("Version non mesurée", errors)
-            self.assertIn("Runtime différent du plugin installé", errors)
-            self.assertNotEqual(old["upstream_commits"],
-                                {n: s["commit"] for n, s in load_json("upstream.json")["skills"].items()})
+            # ADR 0042 : un candidat peut ne changer que la configuration installée (bascule MCP).
+            self.assertTrue("Runtime différent du plugin installé" in errors
+                            or any(e.startswith("Configuration différente du smoke : ") for e in errors), errors)
         else:
             evidence = load_json(f"tests/evidence/release-{manifest['version']}.json")
             self.assertEqual(evidence["plugin_version"], manifest["version"])
