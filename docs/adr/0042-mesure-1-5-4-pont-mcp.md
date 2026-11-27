@@ -108,8 +108,10 @@ nouveau cycle de mesure sera nécessaire.
 
 ## Points ouverts pour Jo
 
-- **Action Auth0 du pont** : l'ouvrir à tout compte à e-mail vérifié (hors de ce dépôt) ;
-  l'API historique reste réservée au mainteneur.
+- **Action Auth0 du pont** : code relevé par Jo le 2026-11-27 (hors de ce dépôt) :
+  e-mail vérifié exigé partout ; API du pont ouverte à tout compte vérifié, sauf liste
+  de blocage (secret d'Action `BLOQUES_PONT`) ; toute autre API réservée au mainteneur.
+  Reste à confirmer : version déployée et liée au déclencheur post-login.
 - **Clés PISTE** : déjà enregistrées dans le compte du mainteneur sur le pont (parcours
   validé le 2026-11-26, web et mobile, selon le journal amont).
 - **Client Auth0 du plugin** : `tpc_gCoyj4qPSuyrg1ZZWDyp4D` n'est pas le client du
