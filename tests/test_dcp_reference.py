@@ -230,22 +230,67 @@ class Dcp017ReferenceTests(Dcp014ReferenceTests):
         self.assertFalse(proof["human_review"]["practitioner"])
 
 
+DCP019_PROOF = ROOT / "tests/evidence/2026-11-11-dcp-019/dcp-autonome.json"
+
+
 class Dcp019ReferenceTests(Dcp014ReferenceTests):
-    """DCP-019 (ADR 0035) : la même batterie de mutations s'applique à la référence courante exacte."""
-    PROOF = ROOT / "tests/evidence/2026-11-11-dcp-019/dcp-autonome.json"
-    CONTRACT = ROOT / "scripts/dcp-protocol.json"
-    FROZEN = None
+    """DCP-019 historique (ADR 0035) : même batterie, runtime 0.1.9 restauré au dernier commit actif."""
+    PROOF = DCP019_PROOF
+    CONTRACT = ROOT / "scripts/dcp-protocol-0019.json"
+    FROZEN = "155704f5054e7a6f40db3e4e517f86160222459f"
 
     def test_candidat_surcharge_refuse_ancienne_reference(self) -> None:
-        for proof in (PROOF, DCP014_PROOF, DCP017_PROOF):
+        for proof in (PROOF, DCP014_PROOF, DCP017_PROOF, self.PROOF):
             with self.subTest(proof=proof.parent.name), self.assertRaisesRegex(ValueError, "Pin DCP différent"):
                 assembly.dcp_input(ROOT, proof)
-        proof = assembly.dcp_input(ROOT, self.PROOF)
+        proof = assembly.dcp_input(self.root, self.PROOF)
         self.assertEqual(proof["upstream_runtime_commit"], "8b105490592185fc3b96373ba277da8b0f323c67")
         self.assertEqual(proof["source_measured_commit"], "e9e32a592af83b8a70033b412050be955b6073ab")
         self.assertEqual(proof["summary"]["totals"], {"DEMI-RÉUSSITE": 0, "RÉUSSITE": 28, "ÉCHEC": 0})
         self.assertEqual(proof["human_review"]["conformes"], 25)
         self.assertEqual(set(proof["human_review"]["reserves"]), {"cas-07", "cas-12", "cas-18"})
+        self.assertFalse(proof["human_review"]["practitioner"])
+
+
+DCP020_PROOF = ROOT / "tests/evidence/2026-11-16-dcp-020/dcp-autonome.json"
+
+
+class Dcp020ReferenceTests(Dcp014ReferenceTests):
+    """DCP-020 historique (ADR 0038) : même batterie, runtime 0.2.0 restauré au dernier commit actif."""
+    PROOF = DCP020_PROOF
+    CONTRACT = ROOT / "scripts/dcp-protocol-0020.json"
+    FROZEN = "c1659bf780f90cc5cb21bc450f049fd5fd88a553"
+
+    def test_candidat_surcharge_refuse_ancienne_reference(self) -> None:
+        for proof in (PROOF, DCP014_PROOF, DCP017_PROOF, DCP019_PROOF, self.PROOF):
+            with self.subTest(proof=proof.parent.name), self.assertRaisesRegex(ValueError, "Pin DCP différent"):
+                assembly.dcp_input(ROOT, proof)
+        proof = assembly.dcp_input(self.root, self.PROOF)
+        self.assertEqual(proof["upstream_runtime_commit"], "cad02591e844d0f995b975b1dfc3e9fdc66f8cfa")
+        self.assertEqual(proof["source_measured_commit"], "c810d109e043065282c3549bad5192205a8f41eb")
+        self.assertEqual(proof["summary"]["totals"], {"DEMI-RÉUSSITE": 0, "RÉUSSITE": 27, "ÉCHEC": 1})
+        self.assertEqual(proof["human_review"]["conformes"], 21)
+        self.assertEqual(set(proof["human_review"]["reserves"]),
+                         {"cas-05", "cas-06", "cas-07", "cas-12", "cas-17", "cas-18", "cas-21"})
+        self.assertFalse(proof["human_review"]["practitioner"])
+
+
+class Dcp025ReferenceTests(Dcp014ReferenceTests):
+    """DCP-025 (ADR 0040) : la même batterie de mutations s'applique à la référence courante exacte."""
+    PROOF = ROOT / "tests/evidence/2026-11-26-dcp-025/dcp-autonome.json"
+    CONTRACT = ROOT / "scripts/dcp-protocol.json"
+    FROZEN = None
+
+    def test_candidat_surcharge_refuse_ancienne_reference(self) -> None:
+        for proof in (PROOF, DCP014_PROOF, DCP017_PROOF, DCP019_PROOF, DCP020_PROOF):
+            with self.subTest(proof=proof.parent.name), self.assertRaisesRegex(ValueError, "Pin DCP différent"):
+                assembly.dcp_input(ROOT, proof)
+        proof = assembly.dcp_input(ROOT, self.PROOF)
+        self.assertEqual(proof["upstream_runtime_commit"], "86d9896a9e72f0e5e9a5700e813ea60034f2191f")
+        self.assertEqual(proof["source_measured_commit"], "d9da5db8165ee858b57c10f543a504861926011e")
+        self.assertEqual(proof["summary"]["totals"], {"DEMI-RÉUSSITE": 1, "RÉUSSITE": 27, "ÉCHEC": 0})
+        self.assertEqual(proof["human_review"]["conformes"], 25)
+        self.assertEqual(set(proof["human_review"]["reserves"]), {"cas-07", "cas-12", "cas-15"})
         self.assertFalse(proof["human_review"]["practitioner"])
 
 

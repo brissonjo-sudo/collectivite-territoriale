@@ -11,6 +11,92 @@ conservés tels quels pour ne pas casser les liens publiés.
 
 ---
 
+### [3.7.0] — 2026-11-24
+
+Publiée le 2026-11-26 (étiquette `skill-v3.7.0`) ; aucune mesure modèle.
+Regroupe pour le skill les entrées « Non publié » du 2026-11-11 (numéros de
+texte dans P1) et du 2026-11-24 ci-dessous. Le noyau et les quatre
+déclinaisons (Gemini, Grok, Manus, Vibe) passent en 3.7.0.
+
+#### Ajouté
+- `references/sources-autorisees.md` : rubrique « Document fourni par
+  l'utilisateur ». Capture ou PDF d'un site officiel : piste de localisation,
+  la preuve reste l'extrait récupéré par outil. Extrait d'un site privé : fait
+  déclaré, hypothèse signalée, jamais fondement ; demander l'URL officielle.
+  Pièce du dossier : fait de l'espèce. Un identifiant lu sur un document
+  fourni relève de P1.
+- Noyau P1 : une ligne de renvoi vers cette rubrique (noyau et Grok). Le noyau
+  Vibe, à 6 caractères de son plafond de 21 000, ne la porte pas ; sa
+  référence est identique.
+- Outils `search_texts` et `parent_text` de `get_article` (voir les deux
+  entrées suivantes), et parade « texte non codifié » de `modes-erreur.md`.
+- `references/gabarits-requetes.md` §4 bis (noyau, Grok, Vibe) : en tête de la
+  démarche, tenter d'abord `search_texts(number=…)` ou `search_texts(nor=…)`,
+  puis `get_text` ou `get_article`, avant le contournement manuel par la page
+  LODA.
+
+Origine : cas fictif d'un agent de maîtrise détaché en police municipale
+(co-activation drh-fpt). Le décret d'échelonnement n'avait pu être retrouvé
+par outil, et aucune règle ne fixait la valeur d'une capture fournie.
+
+### [Non publié : search_texts, texte non codifié par numéro ou NOR] - 2026-11-24
+
+- Nouvel outil MCP `search_texts(number, nor, date, limit)`, en lecture seule :
+  retrouve un décret, une loi, une ordonnance ou un arrêté non codifié dans le
+  fonds `LODA_DATE`, une ligne par LEGITEXT (LEGITEXT, JORFTEXT, nature,
+  numéro, NOR, titre, état, date de publication, lien Légifrance). Jusqu'ici
+  `search_articles` ne couvrait que les codes et `search` partait vers
+  Judilibre : un décret non codifié restait introuvable par outil.
+- Garde-fous : les résultats sont filtrés exactement côté serveur (un champ
+  ignoré en silence renvoie tout le fonds) ; les versions datées sont
+  dédoublonnées et le suffixe de date retiré ; `date` s'appuie sur le filtre
+  `DATE_VERSION`, vérifié sur ce fonds. Pas de recherche par titre : `TITLE`
+  répond mais mêle les textes modificateurs, sans ordre fiable.
+- `references/modes-erreur.md` (noyau, Grok, Vibe) : limite de la voie outillée
+  pour un texte non codifié et parade (`search_texts`, sinon URL Légifrance
+  demandée à l'utilisateur puis confirmée par `fetch`).
+- Catalogue, soumission ChatGPT, sonde live, CI et listes d'outils des
+  déclinaisons Gemini et Manus (une ligne d'outil chacune) mis à jour.
+
+### [Non publié : texte parent dans get_article] - 2026-11-24
+
+- `get_article` (et `fetch` sur un `LEGIARTI`) ajoute `parent_text` : identifiant
+  LEGITEXT, identifiant JORFTEXT, nature, numéro, NOR, titre complet, état et
+  date de publication du texte qui porte l'article ; et `section` (identifiant
+  et titre de la section parente) quand la réponse en fournit une. Champs lus
+  dans `textTitles` et `sectionParentId`/`sectionParentTitre` de
+  `/consult/getArticle` (décret 88-547 et arrêté du 14 novembre 2001) ;
+  la date sentinelle 2999 des codes est écartée. Clés existantes inchangées ;
+  sans `textTitles`, les deux blocs sont simplement absents.
+
+### [Non publié : article d'un décret non codifié] - 2026-11-18
+
+- `gabarits-requetes.md`, nouvelle section 4 bis : `search_articles` ne
+  retrouve pas l'article d'un décret non codifié. Démarche qui a abouti :
+  relever le `LEGIARTI` sur la page LODA du texte, récupérer l'article par
+  `fetch` ou `get_article`, puis contrôler `applicable_at_as_of_date` (un
+  identifiant relevé sur la page peut désigner une version abrogée). Une
+  erreur PISTE HTTP 400 ponctuelle a disparu à la relance du même appel.
+- Origine : cas réel du 17/11/2026 (décret n° 87-602, art. 33, 34 et 41),
+  en co-activation avec drh-fpt.
+- Copies `grok_skill/` et `vibe_skill/` alignées à l'identique.
+
+### [Non publié : numéros de texte dans P1] - 2026-11-11
+
+- P1 (règle de provenance) : les n° de loi, d'ordonnance et de décret entrent
+  dans la liste des identifiants officiels. Non récupérés par outil, ils sont
+  omis ou marqués `⚠️ non vérifié — identifiant non récupéré`, comme un
+  `LEGIARTI` ou un n° de pourvoi. Ajouté au noyau (`SKILL.md`, seul texte lu
+  sans outil) et aux trois références qui portent la liste.
+- Origine : sondes F2-a et F2-b du banc, bras B (11/11/2026, Sonnet). Sans
+  outil, l'assistant citait de mémoire « décret n° 2019-140 » ou
+  « ordonnance n° 2012-351 » sous une réserve générale : la liste de P1 ne
+  couvrait pas ces numéros.
+- Correspondance A4 : arbitrage A4f déclaré dans `check_skill_structure.py`
+  pour les unités RJ-L0244 et RJ-L0741 ; textes source inchangés.
+- Déclinaisons Grok et Vibe alignées. Gemini, Manus et l'agent Gemini ont
+  leurs propres listes : non modifiés.
+
 ### [Non publié : décision écartée sur la date] - 2026-11-11
 
 - Déclencheur d'abstention 3 (§7) : avant de déclarer une décision

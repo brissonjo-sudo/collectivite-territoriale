@@ -44,6 +44,11 @@ et la réception des actes dépendent des pièces incorporées : vérifier la cl
 et sa vigueur avant de proposer un acte. Le CCAG n'est ni automatique ni
 consolidé au registre ; sa réserve reste opposable.
 
+Face à une défaillance, nommer séparément, sans les confondre, l'exécution aux
+frais et risques du titulaire, la résiliation et la passation d'un marché de
+substitution. Pour chacune, indiquer la clause ou la source qui la fonderait et
+la condition à vérifier ; ne pas en décrire le régime sans lecture.
+
 Intérêt général : distinguer motif réel et faute, compétence et suites.
 La décision très récente du registre §14 sur cette matière concerne une
 délégation de service public : **portée à confirmer, aucun usage autonome ni

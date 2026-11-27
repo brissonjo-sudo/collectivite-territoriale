@@ -40,8 +40,8 @@ class CodexPluginTests(unittest.TestCase):
     def test_recherche_juridique_est_autonome_et_sans_secret(self) -> None:
         skill = ROOT / "skills/recherche-juridique"
         entrypoint = (skill / "SKILL.md").read_text(encoding="utf-8")
-        # Décision Jo du 21/10 : épinglage explicite de RJ 3.6.0.
-        self.assertIn("version: 3.6.0", entrypoint)
+        # Décision Jo du 26/11 (cycle groupé 1.5.3) : épinglage explicite de RJ 3.7.0.
+        self.assertIn("version: 3.7.0", entrypoint)
         self.assertTrue((skill / "references/format-citation.md").is_file())
         self.assertTrue((skill / "profils/collectivites.md").is_file())
         self.assertTrue((skill / "scripts/legifrance.py").is_file())
@@ -396,14 +396,14 @@ class CodexPluginTests(unittest.TestCase):
             )
 
     def assert_dcp_source_l24(self, spec: dict) -> None:
-        """DCP est une copie source 0.1.9 sans surcharge locale, liée à la mesure (ADR 0035)."""
+        """DCP est une copie source 0.2.2 sans surcharge locale, liée à la mesure (ADR 0040)."""
         self.assertNotIn("instruction_overlays", spec)
-        self.assertEqual(spec["version"], "0.1.9")
-        # ADR 0035 : commit de preuve 8b10549, runtime identique au commit mesuré e9e32a5.
-        self.assertEqual(spec["commit"], "8b105490592185fc3b96373ba277da8b0f323c67")
+        self.assertEqual(spec["version"], "0.2.2")
+        # ADR 0040 : commit de preuve 86d9896, runtime identique au commit mesuré d9da5db.
+        self.assertEqual(spec["commit"], "86d9896a9e72f0e5e9a5700e813ea60034f2191f")
         self.assertEqual(list((ROOT / "overlays").glob("dcp-fpt*.md")), [])
         self.assertEqual(hashlib.sha256((ROOT / "skills/dcp-fpt/SKILL.md").read_bytes()).hexdigest(),
-                         "91719ec15abd6a01d789050a2826e0d1489c2300ec579ad7be23267693109948")
+                         "11b7ffe4b74a986cdaba1fa6aaf9588eefdb50c018da10e79043b1e3d67d2e5c")
 
     def test_dcp_distribution_sans_cache_ni_conception(self) -> None:
         spec = load_json("upstream.json")["skills"]["dcp-fpt"]
@@ -456,9 +456,9 @@ class CodexPluginTests(unittest.TestCase):
         pinned = load_json("upstream.json")["skills"]
         self.assertIn("dcp-fpt", pinned)
         self.assertIn("dsi-fpt", pinned)
-        # ADR 0035 : DCP 0.1.9 au commit de preuve 8b10549 ; DSI 0.2.2 (veille 2026-11-03).
+        # ADR 0040 : DCP 0.2.2 au commit de preuve 86d9896 ; DSI 0.2.2 (veille 2026-11-03).
         self.assertEqual(pinned["dsi-fpt"]["commit"], "252fd0d7abd8bb064ff31133003f92a1bd5b3813")
-        self.assertEqual(pinned["dcp-fpt"]["commit"], "8b105490592185fc3b96373ba277da8b0f323c67")
+        self.assertEqual(pinned["dcp-fpt"]["commit"], "86d9896a9e72f0e5e9a5700e813ea60034f2191f")
         self.assert_dcp_source_l24(pinned["dcp-fpt"])
         dcp = (ROOT / "skills/dcp-fpt/SKILL.md").read_text(encoding="utf-8")
         self.assertIn("BASCULE dsi-fpt", dcp)

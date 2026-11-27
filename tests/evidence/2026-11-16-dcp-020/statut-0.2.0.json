@@ -1,0 +1,41 @@
+{
+  "version": "0.2.0",
+  "date": "2026-11-16",
+  "statut": "mesuré 27/28, relu par Jo (non praticien) avec réserves ; relecture praticien en attente",
+  "run": "tests/runs/codex-web-v0.2.0-dcp-020-20261116-a",
+  "totals": {
+    "DEMI-RÉUSSITE": 0,
+    "RÉUSSITE": 27,
+    "ÉCHEC": 1
+  },
+  "sessions": 56,
+  "input_tokens": 7453854,
+  "human_review_done": true,
+  "practitioner_reviewed": false,
+  "plugin_qualified": false,
+  "publication_ready": false,
+  "historical_score_transferred": false,
+  "date_mesure": "2026-11-16",
+  "source_runtime_commit": "c810d109e043065282c3549bad5192205a8f41eb",
+  "attempt": "dcp-020-20261116-a",
+  "threshold_passed": true,
+  "critical_failures": [],
+  "stop_checks_passed": 6,
+  "skill_citation_occurrences": 0,
+  "human_review": {
+    "reviewer": "Jo",
+    "date": "2026-11-16",
+    "conformes": 21,
+    "reserves": {
+      "cas-05": "Abstention correcte. La réponse attribue l'échec de lecture de R. 2182-1 à un retour « 403 Forbidden » que les traces structurées ne contiennent pas (seulement « Internal Error ») : détail de provenance inventé.",
+      "cas-06": "Réponse conforme : elle reprend mot pour mot le bloc BASCULE dirfi-fpt prescrit par le §5.5 et le fond sur la centrale d'achat est correct. L'ÉCHEC automatique sanctionne la liste « À reprendre » de ce bloc ; la réserve vise le texte du skill (§5.5), à raccourcir dans une version ultérieure.",
+      "cas-07": "Circuit d'acceptation correct. Le régime juridique du paiement direct, qui relève de DCP, n'est pas traité ni signalé comme lacune : L. 2193-11 (sous-traitant direct accepté, conditions de paiement agréées), R. 2193-10 (seuil) et R. 2193-3 (aucune cession ni aucun nantissement faisant obstacle), lus sur Légifrance le 2026-11-16.",
+      "cas-12": "STOP égalité excessif : aucun attendu ne le prévoit et R. 2122-2 (lu le 2026-11-16) peut permettre une négociation sans publicité ni mise en concurrence après infructuosité. La phrase ajoutée en 0.2.0 et la citation de R. 2122-2 sont présentes ; la réserve DCP-019 n'est que partiellement levée.",
+      "cas-17": "La réponse omet que le délai de trente-et-un jours ne court que si la notification mentionne le nom du titulaire et les motifs du choix (R. 551-7 CJA, lu le 2026-11-16). Elle attribue aussi l'échec de lecture de L. 551-1 à un « 403 Forbidden » absent des traces.",
+      "cas-18": "Voies d'exécution correctement distinguées. Le droit du titulaire défaillant de suivre l'exécution à ses frais et risques (CCAG-Travaux, article 52.5) n'est pas mentionné ; numérotation non vérifiée, le CCAG n'étant pas couvert par l'outil de lecture.",
+      "cas-21": "Refus pertinent. La réponse cite L. 2152-7 dans sa version du 22 août 2026 sans indiquer qu'au moins un critère prend en compte les caractéristiques environnementales de l'offre (texte lu le 2026-11-16)."
+    },
+    "avis_sha256": "a1a8709107c2b5ee1efa6d0e07b7bda04f11968386fbe1d43107d686f63c35b3"
+  },
+  "suivi": "Liste « À reprendre » du §5.5 (cas-06, ÉCHEC du juge) ; STOP égalité déclenché à tort (cas-12) et point 2 annonçant des risques non vérifiés (cas 03, 21, 22) ; BASCULE dirfi-fpt trop large (cas 22, 26) ; codes d'erreur absents de la trace (cas 05, 17) ; compléments de fond (cas 07, 17, 18, 21). Voir qualification-0.2.0-2026-11-16.md ; runtime mesuré inchangé."
+}

@@ -1,5 +1,5 @@
 {
-  "plugin_commit": "889582bb1ed6a076fa3116a28e33a9101bcad2e1",
+  "plugin_commit": "e8f42719e90e5fdf69458cf9960bf04ee6560f84",
   "runtime_sha256": {
     "skills/dcp-fpt/agents/openai.yaml": "b37aec5086edadd2d0012545ab4c3b1a6493db31f7b6f26673674f5f514aeb40",
     "skills/dcp-fpt/LICENCE.fr.txt": "14e59bc002e1339e5554451aedad7c2b113dc7ef942e96b410b5517099ad6d91",
@@ -23,7 +23,7 @@
     "skills/dcp-fpt/references/procedures.md": "ed575cb495edabfa9fb3b3064726dfdd12bb560087dd10d31f45caa338e05451",
     "skills/dcp-fpt/references/publicite-consultation.md": "7ed81cf30315bc37142865aed2858045ee0815ecbb24bc6a847ab79458c6a8bf",
     "skills/dcp-fpt/references/references-verifiees.md": "5ed7eb19dc2121d12daeb6ca4de93bae5e04a4e4e0a4ef699ae41d608bb34651",
-    "skills/dcp-fpt/references/resiliation-difficultes.md": "01515aa5d5bad782099cc7ba824f70e519be7b18b79c306ba67e3a7ef3f724df",
+    "skills/dcp-fpt/references/resiliation-difficultes.md": "86f99eedfee53569b76906a41bcff1fe7a3365cb78c5a7c18d43865161c6cdc7",
     "skills/dcp-fpt/references/retex.md": "36dc627b2caf794b53af9b159dababf78464364f22c7ea6c9708e912427c8f09",
     "skills/dcp-fpt/references/socle-sources-verification.md": "12b45dea2e0431a055f42417745a02f71e4b98126df2610f72f87cafaf1173cd",
     "skills/dcp-fpt/references/techniques-achat.md": "452030a6e1ecbfcf76a213917fa6f2949e90916f49142b8eca7ecb00364b57e6",
@@ -32,7 +32,7 @@
     "skills/dcp-fpt/references/templates/note-choix-procedure.md": "a7f0857c7c6f4b7443d364eaedc148ea7ef171ff25363d303bec054e6f94374e",
     "skills/dcp-fpt/references/templates/projet-avenant.md": "4db2a8e23cfbfa0efdbc3fe60175a9c983d748a214ccdde446e3bb83044d55bd",
     "skills/dcp-fpt/references/templates/rapport-analyse-offres.md": "220abb58f5a2181077a93912c89535a823ca0181fb35f02463bfb768dfa1ae75",
-    "skills/dcp-fpt/SKILL.md": "91719ec15abd6a01d789050a2826e0d1489c2300ec579ad7be23267693109948",
+    "skills/dcp-fpt/SKILL.md": "11b7ffe4b74a986cdaba1fa6aaf9588eefdb50c018da10e79043b1e3d67d2e5c",
     "skills/dirfi-fpt/LICENCE.fr.txt": "14e59bc002e1339e5554451aedad7c2b113dc7ef942e96b410b5517099ad6d91",
     "skills/dirfi-fpt/LICENSE": "bf4eddf38a235988ae9214aa49ab57717a77caad3d9a4c5bdbe2a33c952dc218",
     "skills/dirfi-fpt/objets/_gabarit-objet.md": "4f0f3f3ab6818e7697942c59e4753e89f7808a2046063860cdbbe60a01edc86d",
@@ -136,22 +136,24 @@
     "skills/drh-fpt/LICENSE": "bf4eddf38a235988ae9214aa49ab57717a77caad3d9a4c5bdbe2a33c952dc218",
     "skills/drh-fpt/references/_gabarit-branche.md": "c35f4f37603ea52929192e00ce433555884dda1c6c8c25a2daa2b464aaead056",
     "skills/drh-fpt/references/cache-plafonds-regime-indemnitaire.md": "a2749c2c84bf7944b0d31edd57a163756809b8f59191975b0721c3c48ec2fdb1",
+    "skills/drh-fpt/references/carriere-paie/mobilite.md": "f5a0dcd1040d2ff0b414bb25c80a6aa919b03c587df2d45c1776c97ae2114585",
     "skills/drh-fpt/references/carriere-paie/remuneration-paie.md": "dac3f134867590c32a7afed969c22223122b639415f24ebdc27dfc3269f183d6",
     "skills/drh-fpt/references/carriere-paie/statut-discipline.md": "89020504a714590427864b4d4f18f8e9583fc5bbccb658a836e457f0566329aa",
     "skills/drh-fpt/references/carriere-paie/temps-fin-fonctions.md": "349d64a8ac24a59fdd46de7e1ccb08b8b2d2094b92804e54fe2c57d342020d02",
-    "skills/drh-fpt/references/carriere-paie.md": "afcd6df91fff7fb71490bddf59f192499584423579b518456084333fe16460fd",
+    "skills/drh-fpt/references/carriere-paie.md": "d59f122b61e2b146d938246c0f90ef777cfea5b2440380ca69b752538143707f",
     "skills/drh-fpt/references/communication-interne.md": "f0dbacd48b370b7377b8aa915b21426f13a8ead3e18b5c79e4eb8764fce49240",
     "skills/drh-fpt/references/contractuels.md": "194f2bcc3c779757f07f67a18a246b2a55d7c1fd964c7289b4ab7a05cffcb57b",
-    "skills/drh-fpt/references/contrat-execution.md": "48aad37e28217d65c144a7515ed239bd8f3dee2dcc74f187eae9cd05535b0e9a",
+    "skills/drh-fpt/references/contrat-execution.md": "fd2702e29e847653aa950a1e0879f74fcd37b6adbfe24c15e3586a08dd26741a",
     "skills/drh-fpt/references/cst-dialogue-social.md": "49869bdb90bf5804ad5832118806434e6a2ca7bb9b96382c14047a8d7f38e68f",
     "skills/drh-fpt/references/parametres-collectivite.md": "6a6ddfacf8c7cba8c3bf082d6137c3bdbe08c67372f46c0098103d047d2c1cd2",
-    "skills/drh-fpt/references/qvt-sante.md": "9dc1588b4236c0372d1d5d9dd238b6630d6eb8df96da60007bd6367719d7be63",
+    "skills/drh-fpt/references/qvt-sante.md": "99193d8de88599160aa6b37e03baf864af1730d01c062d1051ce502a8d539fd2",
     "skills/drh-fpt/references/recrutement-formation.md": "0f79a9b2aa2b58463b342e708992347065acc7d2d33a3bb88ef53fa8475427ed",
+    "skills/drh-fpt/references/references-verifiees.md": "92965ae28b428e9e591c68467436fc78c48ec28dad8057c05a4dacf93756b31b",
     "skills/drh-fpt/references/restitution-proportionnee.md": "942cc036d45715584dca522fa9569b2c04f8298677c6f9dac399f7bfb7db44a9",
     "skills/drh-fpt/references/si-rh-masse-salariale.md": "2b933437d8347819c2a11c3e9ae3fbf44956fce6c8c4584382a1ae72c8251d57",
-    "skills/drh-fpt/references/socle-sources-verification.md": "4e11cb6cced775eb27265d25ec44915beed2d33580302143eb2886f90cc5715d",
+    "skills/drh-fpt/references/socle-sources-verification.md": "886d2516a68a700618d670eab8e6d56fb5989d88b76142b3b7aa73f0f906f27a",
     "skills/drh-fpt/references/statut-garanties.md": "834fb0c471d478df4e639d8e5b2ea4896f574c2d4f0d3cb8c8585dd362ca8e49",
-    "skills/drh-fpt/SKILL.md": "ba3df80fbebeed84666b4f3d431e6a863134e445da4bb733f2d5418485d7d32e",
+    "skills/drh-fpt/SKILL.md": "6213eade32d3182e6484bd66d2eadd51c44d9991451de6cd7263b94737574d2b",
     "skills/dsi-fpt/agents/openai.yaml": "220be54430bf5cfeebd913346b3212c613b8369328288f175a6ba0f5b77d79a9",
     "skills/dsi-fpt/LICENCE.fr.txt": "14e59bc002e1339e5554451aedad7c2b113dc7ef942e96b410b5517099ad6d91",
     "skills/dsi-fpt/LICENSE": "bf4eddf38a235988ae9214aa49ab57717a77caad3d9a4c5bdbe2a33c952dc218",
@@ -184,7 +186,7 @@
     "skills/dsi-fpt/references/templates/note-homologation.md": "10f39621125c69aaa63b2ed293c7e8f786ffd70fbc2cdc13bee8f5103696ae19",
     "skills/dsi-fpt/references/templates/rapport-incident.md": "866218a1a4982b61bc00f2c27474dc3c725a9d99bcb99feb84ca47687aea7806",
     "skills/dsi-fpt/SKILL.md": "e51e0cb0cfac5d5654c020e92e3e989c63526d5fd245ac5800aa73d69717ff46",
-    "skills/recherche-juridique/CHANGELOG.md": "62b05877a7630f35a574b0e3ae1dad6e6bdfc37892ff560f7b5330f446a072d5",
+    "skills/recherche-juridique/CHANGELOG.md": "de79786b8ce26da1fa214f3a9fa52a86cfbbfa1bd9b420cc7626be7cb5d36c67",
     "skills/recherche-juridique/LICENCE.fr.txt": "14e59bc002e1339e5554451aedad7c2b113dc7ef942e96b410b5517099ad6d91",
     "skills/recherche-juridique/LICENSE": "bf4eddf38a235988ae9214aa49ab57717a77caad3d9a4c5bdbe2a33c952dc218",
     "skills/recherche-juridique/profils/_modele.md": "2ebc6568ea90eade980129a5320535918f2a794cdec789449f85c8dfc53f5524",
@@ -195,15 +197,15 @@
     "skills/recherche-juridique/profils/police-gendarmerie.md": "1a01f47bdc28ca3fa7085c2aa4679429586e9252d2506f376a106b77e0e7d3ff",
     "skills/recherche-juridique/references/audit-documentaire.md": "da41e27baedeacaba05fb0efacd0464df2b6ed486996353302cbf6621a6e5635",
     "skills/recherche-juridique/references/checklist-vigueur.md": "dd8385c6a95da2e858c5ff4eb60348073792ff168fb6bffe6ad358e6cbf2b152",
-    "skills/recherche-juridique/references/format-citation.md": "d3365f033da06ecd9dfa975e77bf8663b49a7b578101cb432383c04de220c682",
-    "skills/recherche-juridique/references/gabarits-requetes.md": "2631c84a19057acf161146c141f4ce8159a3025c2a43c0e83d52355afb3b3791",
+    "skills/recherche-juridique/references/format-citation.md": "d3375671e65b7579b73f94ce8f8f28f8c3b6a0101532273933eb2bf0b48019db",
+    "skills/recherche-juridique/references/gabarits-requetes.md": "0440f3f0496af65c6d387770047327130741652425ba26ef5067f817dcc51fa0",
     "skills/recherche-juridique/references/gabarits-sortie.md": "80c172bb1bd62696f1b9d33a7f0c5b908a83da178f5e32bfe0458f1784180d72",
     "skills/recherche-juridique/references/maintenance.md": "0789ada63ce4d602b72787cb5121cf8916fba1d17ecd2226e6701fa2f80dd220",
-    "skills/recherche-juridique/references/modes-erreur.md": "4d9e67b967c6ebf60c366c4577114f2aec003ebc621209ffa3fc7ad0c62bd29a",
+    "skills/recherche-juridique/references/modes-erreur.md": "ad45f8a50bc0b28885cefe79f32581eea8c798308c4fd56c82733331a7cc716e",
     "skills/recherche-juridique/references/modes-et-profils.md": "109dca83d8de81852cc84a7bee437a166cc061acc71823a11c34dcf7143b1f57",
     "skills/recherche-juridique/references/modules.md": "8d44799a8681970b6f060a6fe8bfae86011113be220e001f467bfe1b931049d7",
-    "skills/recherche-juridique/references/procedure-detaillee.md": "30562b81a1a1c265794e5244a364fd25842650c9e2b187312788c21a545b77ef",
-    "skills/recherche-juridique/references/sources-autorisees.md": "cf9f7a08495e70233184716b295094dba36f915b7c134363358f353f7216af0b",
+    "skills/recherche-juridique/references/procedure-detaillee.md": "0dc962e5c13d21f080712540e66b527d324539d0b293c103d03da7878f5bd7eb",
+    "skills/recherche-juridique/references/sources-autorisees.md": "43c3f925d30934cdba3dbd646b24c3d9897a9ff9e5075e8ce393e3b416f96401",
     "skills/recherche-juridique/references/techniques-raisonnement.md": "c2186858fd7bad90b1421f8258c12f09004fcc86772745ede41c6863b77ebd38",
     "skills/recherche-juridique/scripts/.env.example": "e2eff87c4e15168d97e034bf36aafdc3a43dfb4cd5f60f415e1305019ca16ea0",
     "skills/recherche-juridique/scripts/droit_francais/__init__.py": "3421a7775cd9a2a8b9bf64e3980531b33e66ecda5c8814d8cf0da4a54ef32720",
@@ -215,22 +217,23 @@
     "skills/recherche-juridique/scripts/droit_francais/section_diagnostics.py": "46b44c689d97e88ffbb01796727e1271324ea9150c32b723fb901ab6dabd06fb",
     "skills/recherche-juridique/scripts/droit_francais/sections.py": "cbadc60b87082f4b9841bd12888680f1180250da0f29cbac593a5e7766f32c5e",
     "skills/recherche-juridique/scripts/droit_francais/text_diagnostics.py": "c934b6b94dcc620c6a3b9c8821597831dae6fd6990fd3ae4e2793188ac43af5f",
+    "skills/recherche-juridique/scripts/droit_francais/text_search.py": "3310833cf075c73060e76ee97aebb43afe80ad5159529026da4dbaaf2c4795e5",
     "skills/recherche-juridique/scripts/droit_francais/texts.py": "3dffadc93f0372909578de3c3947447fd5fea4dce9ce53e365740cb158354020",
-    "skills/recherche-juridique/scripts/droit_francais/tools.py": "493680f7ad9905018ddd6a09a6a624ea12f6c70e07691258a2e57fcb5b0557b9",
+    "skills/recherche-juridique/scripts/droit_francais/tools.py": "1fd154040161847b3d888ca55929136997eb46a730b5fcb16da6b811f4b2b823",
     "skills/recherche-juridique/scripts/droit_francais/transport.py": "d709eaed8e8cccd5afa4edb1f06c7bb8bec356e7f6bf2ae05ff29cb6e86d19b8",
     "skills/recherche-juridique/scripts/legifrance.py": "02a349f77c574d5eaf6135dc4ee9e1526f130c2b92a0d81b1a7b75cf935235f5",
     "skills/recherche-juridique/scripts/README.md": "a73f2f8377b33079fefaffa8afbb656626cba75fb76f7350a3747caed6255e0d",
     "skills/recherche-juridique/scripts/update_skill.py": "9768a5eda24759ecb5574d1706a5e64449b62a92d781e1406f5e5979f8525e01",
-    "skills/recherche-juridique/SKILL.md": "875c65813a005cb24a875417f17c2b564f49e7d36b23869ef4ae3db2a3ca105a"
+    "skills/recherche-juridique/SKILL.md": "13bb816e3b168daed181813411be87d1cf58ea65b15212b4207f68f201b5e7cd"
   },
   "plugin_configuration_sha256": {
-    ".codex-plugin/plugin.json": "4d38757bbe4442706998ea9ce16f93e85ea63daa5844be6ca1eb7fc782288b3f",
-    ".claude-plugin/plugin.json": "9a508a43d61010a6973f178a53e31a6cdb77a081eaf8aaf4522e902f1e2b33d0",
+    ".codex-plugin/plugin.json": "4294642b42d209a3bc3184945f249559c2f748b56f3e7a1a62bb3e9e9a0bf22d",
+    ".claude-plugin/plugin.json": "8671012148c78ec01f217103b96a87fda761271e236a01d9428186a6407a038e",
     ".mcp.json": "c1988401a93d468e87557dc1ebf47989323203b9c5ef7607641529615aefbcac",
     "assets/icon.png": "10aca45cb876735f06e10b352b9a2ba004b5deae462e08d8dfba092044aaee1f"
   },
   "case_file_sha256": "0747b6268cccab1bb46c820217d2a4ba1c69e5c2ad6fe61126e3a5bd9242f5ea",
-  "upstream_sha256": "b413eb8c6e762e263e1c541a8873346cf9bb98e5a4e28b9bba4881879f9a263c",
+  "upstream_sha256": "c5075d139623d672590eea54783fbbf880cc4aa132f48e06b274a23ab996a149",
   "toolchain_sha256": {
     "scripts/assemble_release_evidence.py": "40a872f6c718883386ea45dae3bd51b545589be41f094660cdb773ef4727ec86",
     "scripts/audit_native_reads.py": "5c503063eeeef01d4c21bc458f387791e63d042597aaf79fc982a045106b5394",
@@ -238,21 +241,23 @@
     "scripts/cas-plugin-cycle-v2.json": "65593a1c46bd31b403c5b83344f14951cbc3455f456eefcde2c6853fa68a9478",
     "scripts/cas-plugin-cycle-v3.json": "deb0d39efc93a24b16444922dbafddbb6570801a67e21ca23d612343ba471e89",
     "scripts/cas-plugin-cycle-v4.json": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
-    "scripts/check_dcp_protocol.py": "dc8843f321619325816568fda72c144b9f9c2707ed9e33fd87418dafaf3d20f2",
+    "scripts/check_dcp_protocol.py": "6faeea694546084ceae2b64d8c87603f4c04fb521efdb5baa3b743958fad5f06",
     "scripts/check_sync.py": "69f080fbe4ded47ab1c5980a662e4219e15e111a67de8a6cbf166aac831e008e",
-    "scripts/cli_toolchains.py": "348ce91fff7f224f92c42dedcb771de47d7bf2c88a6fe03d79203e4fe3b1eb40",
+    "scripts/cli_toolchains.py": "e1c73adbd0a52d01214853ca32a316343445c4d6cfd8d4d054118ff17ed32d67",
     "scripts/codex_event_contract.py": "f4e848f3c34504b4df6b5f444337b4064829828d8c492ecd3023cbae471d42d7",
     "scripts/cycle-v4-source-requirements.json": "54bed7aaf6afc439a6d24e1f95204d4b3e7d9327024ce5435bd9cc0988a8a333",
     "scripts/cycle_satisfiability.py": "5a8625a8f8169393a6b3bcf35ab696830707cc142366c9d179c192fa128bb6ea",
     "scripts/dcp-protocol-0012.json": "808e8def87583bc830dc0a5172772741fa5c829e420bde263599c2034020326c",
     "scripts/dcp-protocol-0014.json": "e76d7dd75c2f0f49689e453eec5b67fb9363ffcd52817afd96cbeb9b8c9f94e5",
     "scripts/dcp-protocol-0017.json": "260de6d5ac8e4275e2f96f308de73525fdea4cae5bebc36a9e7f78e7a74a033c",
-    "scripts/dcp-protocol.json": "89e326992f02ad47ee7e111a9d55ca9f8e5df09cf85701795d50efa688d319af",
-    "scripts/dcp_reference.py": "01d31e5ef9d600c27b005e154b77a6f7033a0f0def92d0b8670e52959559e2e2",
+    "scripts/dcp-protocol-0019.json": "89e326992f02ad47ee7e111a9d55ca9f8e5df09cf85701795d50efa688d319af",
+    "scripts/dcp-protocol-0020.json": "abbfdac91c9ed439e4388ae883ca078c8608a26a09c700c90e25e7bf0a569f3f",
+    "scripts/dcp-protocol.json": "46363200fa10baa0ef67387a0ef63ea52de13104016677a6220cfe4191495e1b",
+    "scripts/dcp_reference.py": "99faaecb8592ad70d59a63afa05e9ec8d17053d6ad5f0a17b0a422d5719be6d4",
     "scripts/extract_native_read_commands.py": "d1292a0e6f798fcab1bd55fdce76b0e804526208b97e9e82172702057f1ef6c4",
     "scripts/human_resolution.py": "444d01b13428773c33a9100310ebb5815c32067b4f838f8f6afd9b4d9a284e32",
     "scripts/instruction_overlays.py": "e40decc70e39416d33b484b9d9620e2e6db64a0b6d1826c88b9899e0fbe57e99",
-    "scripts/measurement-cli.json": "fb31ac1ec4b1e0a1f6ac2710f6b395aa025ed58f427e2d18f2b1b4e5b232766e",
+    "scripts/measurement-cli.json": "96f0c453455891fe6367a957ac2a674b7d17ab16ad03229b2bc1dd3c42a1ac99",
     "scripts/measurement_common.py": "1a703163152afa70d669e276f7be8f62f86a7989819daff8676d6fd8afddb7a4",
     "scripts/public_projection.py": "7521e1835e16dd841966f30237370f225e29014f418a5557e6c01953d0f4c102",
     "scripts/qualify_distribution.py": "f05040ca0e3921aa2407c3be56c0bb0402809588edb8785983d8d9977bc03d20",
@@ -275,7 +280,8 @@
     "scripts/toolchain-transition-0028.json": "f586ea9b42b203275835c9d71bbc758c6094d390edae76906a2bde874171aecb",
     "scripts/toolchain-transition-0031.json": "05ba38e8b694a7ec0d5b0ec1ec098f627c9d392ab06b4cea65d9b9d3d3f19b61",
     "scripts/toolchain-transition-0034.json": "73bdaa3c74e30b70a337ee9865c78c158086f59919f9cc743ff9e1960db11e44",
-    "scripts/toolchain-transition-0036.json": "825ab5ea2e9e6027bb2f93ce01043f2035b633d96b556300a038a9996720ebdd"
+    "scripts/toolchain-transition-0036.json": "df2c1bcb356e67bded5efe82c7257acbd05375fb2e30618f290225daabcbd11c",
+    "scripts/toolchain-transition-0039.json": "77b565d483928a203c2b436c66bfc537f60f49c542082690e57d8a081eefb729"
   },
   "case_id": "plugin-prime-depart-retraite",
   "role": "reponse",
@@ -296,14 +302,14 @@
       }
     },
     "cli_version": "codex-cli 0.164.0-alpha.11.1",
-    "thread_id": "728bc611f4c5ed0ee2f33786ca4f7537d873c0dff5ce1226b23e0c71036c5ece",
+    "thread_id": "3cab5d85167fa060594901e7bea55ec65b1846e16c60614ae29b87b65ac1a958",
     "cli_sha256": "1103e9e09c71fa2cd0afd6d8f3b9a2d63174fe8efd7cb5bd09f1cb14ef58a098",
     "argv_sha256": "9a2381bf5b135259a209f2df11425efcc5963e454409cc076bd5646d93867d83",
-    "prompt_sha256": "14b2e932e8c847fbc87e413b762e738c6db80e60ec9a5b8bdb207f7229df407a",
-    "stdout_sha256": "4523c11b958545d7f611f4cbd026b2c764960c72ed54191ab430cf482df833e1",
+    "prompt_sha256": "cc770e480267b2245020a92338b9bbeef6f1d2a0df70d69ff56d557ad6aa696a",
+    "stdout_sha256": "3172f9fc029bdd0f277be7e3b5f8daba194956da441efd5fdc9d2adbd6d54ce8",
     "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "process_exit": 0,
-    "elapsed_seconds": 226.380284,
+    "elapsed_seconds": 236.179574,
     "startup_failure": {
       "before_model_attested": false,
       "model_session_opened": true,
@@ -327,7 +333,7 @@
     "kind": "native_seven_skills_precheck",
     "diagnostic_only": true,
     "model_calls": 0,
-    "runtime": "<HOME>\\Documents\\Codex\\repo-recovery\\2026-10-12\\instantane-r1\\suivis\\l152-preparation\\campagne-l152-a\\plugin-prime-depart-retraite-reponse-o2jtm16l\\.agents\\skills",
+    "runtime": "<HOME>\\Documents\\Codex\\repo-recovery\\2026-10-12\\instantane-r1\\suivis\\l153-preparation\\campagne-l153-d\\plugin-prime-depart-retraite-reponse-07ze3ou3\\.agents\\skills",
     "probes": [
       {
         "status": "ok",
@@ -335,11 +341,11 @@
         "timeout": false,
         "timeout_seconds": 180,
         "model_calls": 0,
-        "stdout_sha256": "fca17abf466cfa3f847e8a4983f63957e4eb6d638ba854b141cc05053c2b0a12",
+        "stdout_sha256": "6e50f78dcee8baf4f3f97e063064bce79956c3fc2938a9f01df28eaab6273544",
         "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "stdout_octets": 692,
         "stderr_octets": 0,
-        "argv_sha256": "3e841ca73b6f3a71bf59c0141f9dac8357c796846b7463dd76a4520847b3c59b",
+        "argv_sha256": "0a0a4e8ab1cb765bacf31fe40ae03b04232710c9f50c564eb2636ff0e2411188",
         "runtime_entries_verified": 7,
         "raw_output_archived": false
       }
@@ -360,7 +366,7 @@
   },
   "campaign_harness": {
     "lot": "T43-L24e",
-    "manifest_sha256": "2f3454b107232e99ae373320cad828ffdcce162514cc98c6216e8c7e0dea2d22",
+    "manifest_sha256": "3ff9a360d7e501d8ba1eca1e0ff10824ea8b9b06555fc32b36b419827bf4b96d",
     "campaign_cli": {
       "version": "codex-cli 0.164.0-alpha.11.1",
       "sha256": "1103e9e09c71fa2cd0afd6d8f3b9a2d63174fe8efd7cb5bd09f1cb14ef58a098",
@@ -374,11 +380,11 @@
   },
   "case_contract": "scripts/cas-plugin-cycle-v4.json",
   "case_contract_sha256": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
-  "campaign_attempt_id": "campagne-l152-a",
-  "completed_at": "2026-11-12T03:07:27.990039+00:00",
+  "campaign_attempt_id": "campagne-l153-d",
+  "completed_at": "2026-11-27T06:29:24.023136+00:00",
   "trace": {
     "evidence_path": "source-l14/campagne/plugin-prime-depart-retraite/reponse/trace.jsonl",
-    "sha256": "93559b3bb460bb2ba6d50df9fe98eb06fe089dc638da6517c6cfd9d79495c7ee"
+    "sha256": "534c4b13dd9d13a241e71cb5de3404facd1516bf71a906d99e19c7fe3c885d18"
   },
   "process_exit": 0,
   "execution_errors": [],
@@ -394,7 +400,7 @@
   "human_legal_validation": false,
   "publication_ready": false,
   "campaign_adapter_sha256": "1e3ae6970817cf9e0f80e9640386ef4d276ca665df73db86bc9b3d81245e7397",
-  "campaign_support_sha256": "441725d66a93f610fb542d6ce076047164f831b5b23bcbd404f20c5cc6f7af35",
+  "campaign_support_sha256": "deec28621de1c5e90b0d5c7f8e9aec898d4fe000c3f8a69889063349c2e9fc8e",
   "mcp_review_sha256": "bde75706abf0feccf719734ad36044809a64e186aeaa2dc294dbd3ae974989aa",
   "mcp_text_limit_bytes": 12000,
   "case_outcome_sha256": "a7b318c11a53bb07ee6abca1e6de65a47362796949b3d9a31451e0b6c7798d79",
@@ -403,13 +409,13 @@
   "events": [
     {
       "type": "reply",
-      "text": "Je vais appliquer les skills dirfi-fpt, drh-fpt et recherche-juridique, en suivant le protocole de lecture demandé et en vérifiant la réponse ministérielle sur le site du Sénat.\n"
+      "text": "Je vais appliquer les skills dirfi-fpt, drh-fpt et recherche-juridique, lire les segments dans l’ordre demandé, puis vérifier la réponse ministérielle et les sources nécessaires."
     },
     {
       "type": "visible_text",
       "position": 2,
       "item_id": "item_0",
-      "text": "Je vais appliquer les skills dirfi-fpt, drh-fpt et recherche-juridique, en suivant le protocole de lecture demandé et en vérifiant la réponse ministérielle sur le site du Sénat.\n"
+      "text": "Je vais appliquer les skills dirfi-fpt, drh-fpt et recherche-juridique, lire les segments dans l’ordre demandé, puis vérifier la réponse ministérielle et les sources nécessaires."
     },
     {
       "type": "tool_boundary",
@@ -435,18 +441,8 @@
       }
     },
     {
-      "type": "reply",
-      "text": "STOP — acte réservé\n\nJe suspends toute recommandation de mandatement pendant les vérifications : la demande prévoit un paiement avant la délibération annoncée.\n"
-    },
-    {
-      "type": "visible_text",
-      "position": 5,
-      "item_id": "item_2",
-      "text": "STOP — acte réservé\n\nJe suspends toute recommandation de mandatement pendant les vérifications : la demande prévoit un paiement avant la délibération annoncée.\n"
-    },
-    {
       "type": "tool_boundary",
-      "position": 6,
+      "position": 5,
       "item_type": "command_execution"
     },
     {
@@ -469,7 +465,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 8,
+      "position": 7,
       "item_type": "command_execution"
     },
     {
@@ -492,7 +488,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 10,
+      "position": 9,
       "item_type": "command_execution"
     },
     {
@@ -515,7 +511,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 12,
+      "position": 11,
       "item_type": "command_execution"
     },
     {
@@ -538,7 +534,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 14,
+      "position": 13,
       "item_type": "command_execution"
     },
     {
@@ -561,7 +557,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 16,
+      "position": 15,
       "item_type": "command_execution"
     },
     {
@@ -584,7 +580,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 18,
+      "position": 17,
       "item_type": "command_execution"
     },
     {
@@ -607,7 +603,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 20,
+      "position": 19,
       "item_type": "command_execution"
     },
     {
@@ -616,7 +612,7 @@
         ".agents/skills/drh-fpt/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "d9363da092c6ed3b223b7ef063260e6ee332c0f646cf1b476a2e5cd39addb0ee",
+      "output_sha256": "69482a6ed27ee3b324a4ad5c6bb08753bdb0939e728da3857d5586263df083b2",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
@@ -624,13 +620,13 @@
         "start": 0,
         "count": 87,
         "content_verified": true,
-        "expected_content_sha256": "d9363da092c6ed3b223b7ef063260e6ee332c0f646cf1b476a2e5cd39addb0ee",
-        "source_bytes": 5948
+        "expected_content_sha256": "69482a6ed27ee3b324a4ad5c6bb08753bdb0939e728da3857d5586263df083b2",
+        "source_bytes": 5949
       }
     },
     {
       "type": "tool_boundary",
-      "position": 22,
+      "position": 21,
       "item_type": "command_execution"
     },
     {
@@ -653,7 +649,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 24,
+      "position": 23,
       "item_type": "command_execution"
     },
     {
@@ -662,21 +658,21 @@
         ".agents/skills/drh-fpt/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "effb531008080bbeeeb057e466c9385ac442fd4f884f32e91a7c91f9e6b19ddd",
+      "output_sha256": "c71164b792daf05ab0b91a9ec038518cfae60f27aa6582b35f931caa2e3434e9",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
         "path": ".agents/skills/drh-fpt/SKILL.md",
         "start": 178,
-        "count": 112,
+        "count": 113,
         "content_verified": true,
-        "expected_content_sha256": "effb531008080bbeeeb057e466c9385ac442fd4f884f32e91a7c91f9e6b19ddd",
-        "source_bytes": 5974
+        "expected_content_sha256": "c71164b792daf05ab0b91a9ec038518cfae60f27aa6582b35f931caa2e3434e9",
+        "source_bytes": 5971
       }
     },
     {
       "type": "tool_boundary",
-      "position": 26,
+      "position": 25,
       "item_type": "command_execution"
     },
     {
@@ -685,21 +681,21 @@
         ".agents/skills/drh-fpt/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "c0d8d52d755897323d31ab1ed4c2475a21900ec763e32bcc6f67c44c833142c9",
+      "output_sha256": "9f15af5abb9188fd18d32b45c145bec520463f171e383c0acf69a6328254747d",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
         "path": ".agents/skills/drh-fpt/SKILL.md",
-        "start": 290,
-        "count": 109,
+        "start": 291,
+        "count": 108,
         "content_verified": true,
-        "expected_content_sha256": "c0d8d52d755897323d31ab1ed4c2475a21900ec763e32bcc6f67c44c833142c9",
-        "source_bytes": 5981
+        "expected_content_sha256": "9f15af5abb9188fd18d32b45c145bec520463f171e383c0acf69a6328254747d",
+        "source_bytes": 5964
       }
     },
     {
       "type": "tool_boundary",
-      "position": 28,
+      "position": 27,
       "item_type": "command_execution"
     },
     {
@@ -708,7 +704,7 @@
         ".agents/skills/drh-fpt/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "d4d45b05c4442b22cf74773b4b10ecaad4890e42d8a6397b861d70991cf4db38",
+      "output_sha256": "19be8b4488fce173d7bc9b85e9fc879dde9273bcf29fe7cf515952ccedc6c447",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
@@ -716,13 +712,13 @@
         "start": 399,
         "count": 118,
         "content_verified": true,
-        "expected_content_sha256": "d4d45b05c4442b22cf74773b4b10ecaad4890e42d8a6397b861d70991cf4db38",
-        "source_bytes": 5942
+        "expected_content_sha256": "19be8b4488fce173d7bc9b85e9fc879dde9273bcf29fe7cf515952ccedc6c447",
+        "source_bytes": 5974
       }
     },
     {
       "type": "tool_boundary",
-      "position": 30,
+      "position": 29,
       "item_type": "command_execution"
     },
     {
@@ -731,7 +727,7 @@
         ".agents/skills/drh-fpt/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "7e935ae926b577f19a5086901b2bb917195948e65f15a4e3bb7dd1c38238b43c",
+      "output_sha256": "be12e7a9bbcc09f0827a30f719ba666b75108f39e47ff99e78052b1ff574f3ec",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
@@ -739,9 +735,19 @@
         "start": 517,
         "count": 112,
         "content_verified": true,
-        "expected_content_sha256": "7e935ae926b577f19a5086901b2bb917195948e65f15a4e3bb7dd1c38238b43c",
-        "source_bytes": 5921
+        "expected_content_sha256": "be12e7a9bbcc09f0827a30f719ba666b75108f39e47ff99e78052b1ff574f3ec",
+        "source_bytes": 5995
       }
+    },
+    {
+      "type": "reply",
+      "text": "Les segments lus jusqu’ici sont complets, sans troncature. Je poursuis les lectures imposées avant l’analyse et la vérification des sources primaires."
+    },
+    {
+      "type": "visible_text",
+      "position": 31,
+      "item_id": "item_15",
+      "text": "Les segments lus jusqu’ici sont complets, sans troncature. Je poursuis les lectures imposées avant l’analyse et la vérification des sources primaires."
     },
     {
       "type": "tool_boundary",
@@ -754,16 +760,16 @@
         ".agents/skills/drh-fpt/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "abb90df05f4ddf1c24156cac553f02a658954cd01205653a0aa9e51c7d43fcec",
+      "output_sha256": "2315f44ce4c7e2c1ff111f09b39e0f3bb818e333bfb3fed61cf70a8ded71568e",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
         "path": ".agents/skills/drh-fpt/SKILL.md",
         "start": 629,
-        "count": 4,
+        "count": 8,
         "content_verified": true,
-        "expected_content_sha256": "abb90df05f4ddf1c24156cac553f02a658954cd01205653a0aa9e51c7d43fcec",
-        "source_bytes": 160
+        "expected_content_sha256": "2315f44ce4c7e2c1ff111f09b39e0f3bb818e333bfb3fed61cf70a8ded71568e",
+        "source_bytes": 393
       }
     },
     {
@@ -777,7 +783,7 @@
         ".agents/skills/recherche-juridique/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "b4da0adac1859d91481799a844a2b556b602508e403950087b30eb12b0b2f921",
+      "output_sha256": "b2209a613d395730dc68a55f12f65a99d1ec6f41864b0a06ce8773d408114017",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
@@ -785,7 +791,7 @@
         "start": 0,
         "count": 88,
         "content_verified": true,
-        "expected_content_sha256": "b4da0adac1859d91481799a844a2b556b602508e403950087b30eb12b0b2f921",
+        "expected_content_sha256": "b2209a613d395730dc68a55f12f65a99d1ec6f41864b0a06ce8773d408114017",
         "source_bytes": 5927
       }
     },
@@ -800,7 +806,7 @@
         ".agents/skills/recherche-juridique/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "92bac7dfaf60029da051f40099867415c8379becab7266eab71d398693b8e963",
+      "output_sha256": "e9b23aa12344501a23f58d08e9ba1beb2fb4f5c6ba64f6f7f1daf01272d8aee4",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
@@ -808,8 +814,8 @@
         "start": 88,
         "count": 94,
         "content_verified": true,
-        "expected_content_sha256": "92bac7dfaf60029da051f40099867415c8379becab7266eab71d398693b8e963",
-        "source_bytes": 5926
+        "expected_content_sha256": "e9b23aa12344501a23f58d08e9ba1beb2fb4f5c6ba64f6f7f1daf01272d8aee4",
+        "source_bytes": 5934
       }
     },
     {
@@ -823,7 +829,7 @@
         ".agents/skills/recherche-juridique/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "cd6bc2d6cedb3f4b95ae2858156523f469657dd3ff015683530574f1f7aa8a45",
+      "output_sha256": "95f3d3eba730bcaca1c8fe593bd740b1309770909d8648ecd14fda884589ce65",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
@@ -831,7 +837,7 @@
         "start": 182,
         "count": 104,
         "content_verified": true,
-        "expected_content_sha256": "cd6bc2d6cedb3f4b95ae2858156523f469657dd3ff015683530574f1f7aa8a45",
+        "expected_content_sha256": "95f3d3eba730bcaca1c8fe593bd740b1309770909d8648ecd14fda884589ce65",
         "source_bytes": 5951
       }
     },
@@ -846,73 +852,73 @@
         ".agents/skills/recherche-juridique/SKILL.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "c45b7bc5719a47fc93453b8c28f400cc2cabdcb800371a32599e0c7bd7bff84d",
+      "output_sha256": "45f870a8438723b77aa55bd6c9e76712c6ba6a8b628d5d09d6aa57c708cf4958",
       "exit_code": 0,
       "status": "completed",
       "chunk": {
         "path": ".agents/skills/recherche-juridique/SKILL.md",
         "start": 286,
-        "count": 89,
+        "count": 86,
         "content_verified": true,
-        "expected_content_sha256": "c45b7bc5719a47fc93453b8c28f400cc2cabdcb800371a32599e0c7bd7bff84d",
-        "source_bytes": 5928
+        "expected_content_sha256": "45f870a8438723b77aa55bd6c9e76712c6ba6a8b628d5d09d6aa57c708cf4958",
+        "source_bytes": 5973
+      }
+    },
+    {
+      "type": "tool_boundary",
+      "position": 42,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/SKILL.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "f89ca28c724ea0df07676bfbed5cfbef3e687ada9473f94b2024ea1efe0bae8b",
+      "exit_code": 0,
+      "status": "completed",
+      "chunk": {
+        "path": ".agents/skills/recherche-juridique/SKILL.md",
+        "start": 372,
+        "count": 83,
+        "content_verified": true,
+        "expected_content_sha256": "f89ca28c724ea0df07676bfbed5cfbef3e687ada9473f94b2024ea1efe0bae8b",
+        "source_bytes": 5940
+      }
+    },
+    {
+      "type": "tool_boundary",
+      "position": 44,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/SKILL.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "36bae7c1a1eb1b2636afe68e99df23ab3905df72c080041cb0443d5a049de3ce",
+      "exit_code": 0,
+      "status": "completed",
+      "chunk": {
+        "path": ".agents/skills/recherche-juridique/SKILL.md",
+        "start": 455,
+        "count": 90,
+        "content_verified": true,
+        "expected_content_sha256": "36bae7c1a1eb1b2636afe68e99df23ab3905df72c080041cb0443d5a049de3ce",
+        "source_bytes": 4976
       }
     },
     {
       "type": "reply",
-      "text": "Les lectures se poursuivent dans l’ordre demandé, sans troncature constatée. Je vérifierai ensuite séparément le fondement indemnitaire et les conditions du mandatement.\n"
+      "text": "BASCULE vers drh-fpt — je lui attribue le volet indemnitaire ; dirfi-fpt conserve le volet budgétaire et recherche-juridique vérifie les fondements. Les 21 segments ont été reçus sans troncature. Le statut de l’agent et les actes locaux restent à vérifier pour toute éventuelle autre voie de rémunération."
     },
     {
       "type": "visible_text",
-      "position": 42,
-      "item_id": "item_21",
-      "text": "Les lectures se poursuivent dans l’ordre demandé, sans troncature constatée. Je vérifierai ensuite séparément le fondement indemnitaire et les conditions du mandatement.\n"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 43,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/recherche-juridique/SKILL.md"
-      ],
-      "complete_content_verified": [],
-      "output_sha256": "f0419ab87996ebd1beeca7f66d0d9975cef446847fa300a9e49e60cfb45bedb8",
-      "exit_code": 0,
-      "status": "completed",
-      "chunk": {
-        "path": ".agents/skills/recherche-juridique/SKILL.md",
-        "start": 375,
-        "count": 83,
-        "content_verified": true,
-        "expected_content_sha256": "f0419ab87996ebd1beeca7f66d0d9975cef446847fa300a9e49e60cfb45bedb8",
-        "source_bytes": 5959
-      }
-    },
-    {
-      "type": "tool_boundary",
-      "position": 45,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/recherche-juridique/SKILL.md"
-      ],
-      "complete_content_verified": [],
-      "output_sha256": "3ebdee4732181b788f740083dc9b2ccdd952745cc43180f4b2ce53817d0592ef",
-      "exit_code": 0,
-      "status": "completed",
-      "chunk": {
-        "path": ".agents/skills/recherche-juridique/SKILL.md",
-        "start": 458,
-        "count": 82,
-        "content_verified": true,
-        "expected_content_sha256": "3ebdee4732181b788f740083dc9b2ccdd952745cc43180f4b2ce53817d0592ef",
-        "source_bytes": 4464
-      }
+      "position": 46,
+      "item_id": "item_23",
+      "text": "BASCULE vers drh-fpt — je lui attribue le volet indemnitaire ; dirfi-fpt conserve le volet budgétaire et recherche-juridique vérifie les fondements. Les 21 segments ont été reçus sans troncature. Le statut de l’agent et les actes locaux restent à vérifier pour toute éventuelle autre voie de rémunération."
     },
     {
       "type": "tool_boundary",
@@ -920,26 +926,14 @@
       "item_type": "command_execution"
     },
     {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/dirfi-fpt/references/analyse-situation.md"
-      ],
-      "complete_content_verified": [
-        ".agents/skills/dirfi-fpt/references/analyse-situation.md"
-      ],
-      "output_sha256": "d863146ee08edb292a3b3c05f28dceb1a515c86934cb79059d00a73ba1969671",
-      "exit_code": 0,
-      "status": "completed"
+      "type": "tool_boundary",
+      "position": 48,
+      "item_type": "command_execution"
     },
     {
-      "type": "reply",
-      "text": "BASCULE vers drh-fpt — je lui attribue l’analyse du fondement indemnitaire. Dirfi-fpt conserve le volet budgétaire et le circuit de dépense ; recherche-juridique assure la vérification des sources.\n"
-    },
-    {
-      "type": "visible_text",
+      "type": "tool_boundary",
       "position": 49,
-      "item_id": "item_25",
-      "text": "BASCULE vers drh-fpt — je lui attribue l’analyse du fondement indemnitaire. Dirfi-fpt conserve le volet budgétaire et le circuit de dépense ; recherche-juridique assure la vérification des sources.\n"
+      "item_type": "command_execution"
     },
     {
       "type": "tool_boundary",
@@ -947,24 +941,28 @@
       "item_type": "command_execution"
     },
     {
-      "type": "tool_boundary",
-      "position": 51,
-      "item_type": "command_execution"
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/drh-fpt/references/socle-sources-verification.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/drh-fpt/references/socle-sources-verification.md"
+      ],
+      "output_sha256": "886d2516a68a700618d670eab8e6d56fb5989d88b76142b3b7aa73f0f906f27a",
+      "exit_code": 0,
+      "status": "completed"
     },
     {
-      "type": "tool_boundary",
-      "position": 52,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 53,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 54,
-      "item_type": "command_execution"
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/drh-fpt/references/contrat-execution.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/drh-fpt/references/contrat-execution.md"
+      ],
+      "output_sha256": "fd2702e29e847653aa950a1e0879f74fcd37b6adbfe24c15e3586a08dd26741a",
+      "exit_code": 0,
+      "status": "completed"
     },
     {
       "type": "native_read",
@@ -981,26 +979,64 @@
     {
       "type": "native_read",
       "paths": [
-        ".agents/skills/drh-fpt/references/socle-sources-verification.md"
+        ".agents/skills/dirfi-fpt/references/analyse-situation.md"
       ],
       "complete_content_verified": [
-        ".agents/skills/drh-fpt/references/socle-sources-verification.md"
+        ".agents/skills/dirfi-fpt/references/analyse-situation.md"
       ],
-      "output_sha256": "4e11cb6cced775eb27265d25ec44915beed2d33580302143eb2886f90cc5715d",
+      "output_sha256": "d863146ee08edb292a3b3c05f28dceb1a515c86934cb79059d00a73ba1969671",
       "exit_code": 0,
       "status": "completed"
+    },
+    {
+      "type": "reply",
+      "text": "La restitution groupée de certaines références a été tronquée. Les 21 segments des SKILL.md restent complets ; je reprends uniquement les passages de références manquants, avec des sorties séparées."
+    },
+    {
+      "type": "visible_text",
+      "position": 55,
+      "item_id": "item_28",
+      "text": "La restitution groupée de certaines références a été tronquée. Les 21 segments des SKILL.md restent complets ; je reprends uniquement les passages de références manquants, avec des sorties séparées."
+    },
+    {
+      "type": "tool_boundary",
+      "position": 56,
+      "item_type": "command_execution"
     },
     {
       "type": "native_read",
       "paths": [
         ".agents/skills/drh-fpt/references/contrat-execution.md"
       ],
-      "complete_content_verified": [
-        ".agents/skills/drh-fpt/references/contrat-execution.md"
-      ],
-      "output_sha256": "48aad37e28217d65c144a7515ed239bd8f3dee2dcc74f187eae9cd05535b0e9a",
+      "complete_content_verified": [],
+      "output_sha256": "706acb6b13b7781ee223049675f75af658caa9c57e41f6dfc6933e77a4987f31",
       "exit_code": 0,
       "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 58,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/drh-fpt/references/socle-sources-verification.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "aa3724b9bf4570648a2c13d4d43108ecc48090fa1d0f429c6827b3e36dff9081",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 60,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 61,
+      "item_type": "command_execution"
     },
     {
       "type": "native_read",
@@ -1027,69 +1063,8 @@
       "status": "completed"
     },
     {
-      "type": "reply",
-      "text": "La restitution groupée de certaines références a été tronquée. Les 21 segments des SKILL.md ont été reçus intégralement ; je reprends uniquement les références dont le texte n’a pas été entièrement restitué.\n"
-    },
-    {
-      "type": "visible_text",
-      "position": 60,
-      "item_id": "item_31",
-      "text": "La restitution groupée de certaines références a été tronquée. Les 21 segments des SKILL.md ont été reçus intégralement ; je reprends uniquement les références dont le texte n’a pas été entièrement restitué.\n"
-    },
-    {
       "type": "tool_boundary",
-      "position": 61,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/drh-fpt/references/socle-sources-verification.md"
-      ],
-      "complete_content_verified": [
-        ".agents/skills/drh-fpt/references/socle-sources-verification.md"
-      ],
-      "output_sha256": "4e11cb6cced775eb27265d25ec44915beed2d33580302143eb2886f90cc5715d",
-      "exit_code": 0,
-      "status": "completed"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 63,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/drh-fpt/references/parametres-collectivite.md"
-      ],
-      "complete_content_verified": [
-        ".agents/skills/drh-fpt/references/parametres-collectivite.md"
-      ],
-      "output_sha256": "6a6ddfacf8c7cba8c3bf082d6137c3bdbe08c67372f46c0098103d047d2c1cd2",
-      "exit_code": 0,
-      "status": "completed"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 65,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/dirfi-fpt/references/execution-depense.md"
-      ],
-      "complete_content_verified": [
-        ".agents/skills/dirfi-fpt/references/execution-depense.md"
-      ],
-      "output_sha256": "d4719bb34f4e33a717924193697a85f4d07a3669b63676d154b793918e9f1fec",
-      "exit_code": 0,
-      "status": "completed"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 67,
+      "position": 64,
       "item_type": "command_execution"
     },
     {
@@ -1100,30 +1075,13 @@
       "complete_content_verified": [
         ".agents/skills/drh-fpt/references/carriere-paie.md"
       ],
-      "output_sha256": "afcd6df91fff7fb71490bddf59f192499584423579b518456084333fe16460fd",
+      "output_sha256": "d59f122b61e2b146d938246c0f90ef777cfea5b2440380ca69b752538143707f",
       "exit_code": 0,
       "status": "completed"
     },
     {
       "type": "tool_boundary",
-      "position": 69,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/recherche-juridique/references/procedure-detaillee.md"
-      ],
-      "complete_content_verified": [
-        ".agents/skills/recherche-juridique/references/procedure-detaillee.md"
-      ],
-      "output_sha256": "30562b81a1a1c265794e5244a364fd25842650c9e2b187312788c21a545b77ef",
-      "exit_code": 0,
-      "status": "completed"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 71,
+      "position": 66,
       "item_type": "command_execution"
     },
     {
@@ -1140,12 +1098,22 @@
     },
     {
       "type": "tool_boundary",
-      "position": 73,
+      "position": 68,
       "item_type": "command_execution"
     },
     {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/references/procedure-detaillee.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "00b43ffed94cc06832cbed2f1e4bcbf421a585459468b5594734103b02177736",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
       "type": "tool_boundary",
-      "position": 74,
+      "position": 70,
       "item_type": "command_execution"
     },
     {
@@ -1153,12 +1121,30 @@
       "paths": [
         ".agents/skills/recherche-juridique/references/sources-autorisees.md"
       ],
-      "complete_content_verified": [
-        ".agents/skills/recherche-juridique/references/sources-autorisees.md"
-      ],
-      "output_sha256": "cf9f7a08495e70233184716b295094dba36f915b7c134363358f353f7216af0b",
+      "complete_content_verified": [],
+      "output_sha256": "f578d5df52de187b57308d6a428e5b9a575c992aa1ed2df6ca6e531f7c91507c",
       "exit_code": 0,
       "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 72,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/references/procedure-detaillee.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "437122a2c3d6e059cb6c81f0d303633fd9cba6bf2299851977e2036e403fc27d",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 74,
+      "item_type": "command_execution"
     },
     {
       "type": "native_read",
@@ -1173,97 +1159,19 @@
       "status": "completed"
     },
     {
+      "type": "reply",
+      "text": "Je vérifie maintenant deux points : la base juridique de la prime et les conditions permettant de mandater la dépense. La disponibilité des crédits est établie par votre demande ; elle ne permet pas, à elle seule, de conclure sur ces deux points."
+    },
+    {
+      "type": "visible_text",
+      "position": 76,
+      "item_id": "item_39",
+      "text": "Je vérifie maintenant deux points : la base juridique de la prime et les conditions permettant de mandater la dépense. La disponibilité des crédits est établie par votre demande ; elle ne permet pas, à elle seule, de conclure sur ces deux points."
+    },
+    {
       "type": "tool_boundary",
       "position": 77,
-      "item_type": "mcp_tool_call"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 78,
-      "item_type": "mcp_tool_call"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 79,
       "item_type": "web_search"
-    },
-    {
-      "type": "mcp_call",
-      "server": "droit-francais",
-      "tool": "search_articles",
-      "status": "completed",
-      "succeeded": true,
-      "arguments_publics": {
-        "code": "Code des relations entre le public et l'administration",
-        "number": "L221-4",
-        "limit": 3
-      },
-      "identifiants_dans_resultat": [
-        "LEGIARTI000031367549"
-      ],
-      "result_sha256": "9183a682bffa917ca0a2fce6df65cb9f90ffc0e4955f66f7ed38d0800fa1c6e0",
-      "review_material": {
-        "schema": "mcp-text-v1",
-        "untrusted_data": true,
-        "tool": "search_articles",
-        "arguments_present": true,
-        "arguments": {
-          "code": "Code des relations entre le public et l'administration",
-          "number": "L221-4",
-          "limit": 3
-        },
-        "arguments_sha256": "31bdbdf682e31d76150c6a0780ee452de69e010759ee458a1aa1e7b579d0a9ee",
-        "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000031367549\",\n      \"title\": \"Article L221-4 — Code des relations entre le public et l'administration\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000031367549\",\n      \"number\": \"L221-4\",\n      \"code\": \"Code des relations entre le public et l'administration\",\n      \"section\": \"Sous-section 1 : Actes réglementaires\",\n      \"legal_status\": \"VIGUEUR\",\n      \"start_date\": \"2016-01-01T00:00:00.000+0000\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"L221-4\",\n    \"code\": \"Code des relations entre le public et l'administration\",\n    \"date\": \"2026-11-12\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-11-12\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
-        "text_available": true,
-        "text_block_count": 1,
-        "text_limit_bytes": 12000,
-        "included_text_bytes": 871,
-        "included_text_sha256": "f4afbe3fab2581be08eb4a37940b7fd3d185ed976f7548cfe1b783bae4160820",
-        "full_text_bytes": 871,
-        "full_text_sha256": "f4afbe3fab2581be08eb4a37940b7fd3d185ed976f7548cfe1b783bae4160820",
-        "truncated": false,
-        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
-        "upstream_truncation": "not_attested"
-      }
-    },
-    {
-      "type": "mcp_call",
-      "server": "droit-francais",
-      "tool": "search_articles",
-      "status": "completed",
-      "succeeded": true,
-      "arguments_publics": {
-        "code": "Code général de la fonction publique",
-        "number": "L714-4",
-        "limit": 3
-      },
-      "identifiants_dans_resultat": [
-        "LEGIARTI000044424763"
-      ],
-      "result_sha256": "3156f42bf94537be43347515cd65820b9419bd02862bc0d4af216100b365304d",
-      "review_material": {
-        "schema": "mcp-text-v1",
-        "untrusted_data": true,
-        "tool": "search_articles",
-        "arguments_present": true,
-        "arguments": {
-          "code": "Code général de la fonction publique",
-          "number": "L714-4",
-          "limit": 3
-        },
-        "arguments_sha256": "4930b12403873cc352db2c2ec8aa2e28353ace55cf8b91460225c2088fa810d9",
-        "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000044424763\",\n      \"title\": \"Article L714-4 — Code général de la fonction publique\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044424763\",\n      \"number\": \"L714-4\",\n      \"code\": \"Code général de la fonction publique\",\n      \"section\": \"Section 3 : Régimes indemnitaires au sein de la fonction publique territoriale\",\n      \"legal_status\": \"VIGUEUR\",\n      \"start_date\": \"2022-03-01T00:00:00.000+0000\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"L714-4\",\n    \"code\": \"Code général de la fonction publique\",\n    \"date\": \"2026-11-12\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-11-12\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
-        "text_available": true,
-        "text_block_count": 1,
-        "text_limit_bytes": 12000,
-        "included_text_bytes": 864,
-        "included_text_sha256": "cf4d278559fb55904098422cf8421ad91cd709c8e4b34317a7e871688965deba",
-        "full_text_bytes": 864,
-        "full_text_sha256": "cf4d278559fb55904098422cf8421ad91cd709c8e4b34317a7e871688965deba",
-        "truncated": false,
-        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
-        "upstream_truncation": "not_attested"
-      }
     },
     {
       "type": "web_call",
@@ -1326,13 +1234,108 @@
     },
     {
       "type": "tool_boundary",
-      "position": 83,
+      "position": 79,
       "item_type": "mcp_tool_call"
     },
     {
       "type": "tool_boundary",
-      "position": 84,
+      "position": 80,
       "item_type": "mcp_tool_call"
+    },
+    {
+      "type": "mcp_call",
+      "server": "droit-francais",
+      "tool": "search_articles",
+      "status": "completed",
+      "succeeded": true,
+      "arguments_publics": {
+        "code": "Code général de la fonction publique",
+        "number": "L714-4",
+        "limit": 3
+      },
+      "identifiants_dans_resultat": [
+        "LEGIARTI000044424763"
+      ],
+      "result_sha256": "c1aa1001f18395fda8d97476dcc4354dc454df7874839bf7965b82e21c145f45",
+      "review_material": {
+        "schema": "mcp-text-v1",
+        "untrusted_data": true,
+        "tool": "search_articles",
+        "arguments_present": true,
+        "arguments": {
+          "code": "Code général de la fonction publique",
+          "number": "L714-4",
+          "limit": 3
+        },
+        "arguments_sha256": "4930b12403873cc352db2c2ec8aa2e28353ace55cf8b91460225c2088fa810d9",
+        "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000044424763\",\n      \"title\": \"Article L714-4 — Code général de la fonction publique\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044424763\",\n      \"number\": \"L714-4\",\n      \"code\": \"Code général de la fonction publique\",\n      \"section\": \"Section 3 : Régimes indemnitaires au sein de la fonction publique territoriale\",\n      \"legal_status\": \"VIGUEUR\",\n      \"start_date\": \"2022-03-01T00:00:00.000+0000\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"L714-4\",\n    \"code\": \"Code général de la fonction publique\",\n    \"date\": \"2026-11-27\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
+        "text_available": true,
+        "text_block_count": 1,
+        "text_limit_bytes": 12000,
+        "included_text_bytes": 864,
+        "included_text_sha256": "dd3d0d937bd6228eea4fb446d256a6bcde9587d0a2664ed7950a9a67b0dba806",
+        "full_text_bytes": 864,
+        "full_text_sha256": "dd3d0d937bd6228eea4fb446d256a6bcde9587d0a2664ed7950a9a67b0dba806",
+        "truncated": false,
+        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
+        "upstream_truncation": "not_attested"
+      }
+    },
+    {
+      "type": "mcp_call",
+      "server": "droit-francais",
+      "tool": "search_articles",
+      "status": "completed",
+      "succeeded": true,
+      "arguments_publics": {
+        "code": "Code général de la fonction publique",
+        "number": "L712-1",
+        "limit": 3
+      },
+      "identifiants_dans_resultat": [
+        "LEGIARTI000044424813"
+      ],
+      "result_sha256": "9f9bb8a4b0b0eb4727ac15c9d49838dd01183cc4f54ba045fe39ba497cc11dd9",
+      "review_material": {
+        "schema": "mcp-text-v1",
+        "untrusted_data": true,
+        "tool": "search_articles",
+        "arguments_present": true,
+        "arguments": {
+          "code": "Code général de la fonction publique",
+          "number": "L712-1",
+          "limit": 3
+        },
+        "arguments_sha256": "a7e3c7ce887c972061c3f96ba1b6f7ee566dc17e28e55516dec286a3f71f0116",
+        "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000044424813\",\n      \"title\": \"Article L712-1 — Code général de la fonction publique\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044424813\",\n      \"number\": \"L712-1\",\n      \"code\": \"Code général de la fonction publique\",\n      \"section\": \"Section 1 : Rémunération principale\",\n      \"legal_status\": \"VIGUEUR\",\n      \"start_date\": \"2022-03-01T00:00:00.000+0000\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"L712-1\",\n    \"code\": \"Code général de la fonction publique\",\n    \"date\": \"2026-11-27\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
+        "text_available": true,
+        "text_block_count": 1,
+        "text_limit_bytes": 12000,
+        "included_text_bytes": 822,
+        "included_text_sha256": "2aa31393a82cedbc147cc8e3d24437caa5474a55c4a929e7469074ac26dfa486",
+        "full_text_bytes": 822,
+        "full_text_sha256": "2aa31393a82cedbc147cc8e3d24437caa5474a55c4a929e7469074ac26dfa486",
+        "truncated": false,
+        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
+        "upstream_truncation": "not_attested"
+      }
+    },
+    {
+      "type": "tool_boundary",
+      "position": 83,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/drh-fpt/references/restitution-proportionnee.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/drh-fpt/references/restitution-proportionnee.md"
+      ],
+      "output_sha256": "942cc036d45715584dca522fa9569b2c04f8298677c6f9dac399f7bfb7db44a9",
+      "exit_code": 0,
+      "status": "completed"
     },
     {
       "type": "tool_boundary",
@@ -1351,29 +1354,29 @@
       "status": "completed",
       "succeeded": true,
       "arguments_publics": {
-        "id": "LEGIARTI000031367549"
+        "id": "LEGIARTI000044424813"
       },
       "identifiants_dans_resultat": [
-        "LEGIARTI000031367549"
+        "LEGIARTI000044424813"
       ],
-      "result_sha256": "ec55ff4d1557bea9bb95dcf2a9af1af989b22f4c157d091336c4c2984a0eaa44",
+      "result_sha256": "810f3c1f8acfd187188400635bb820dc83bafad068e6f744094203a1283acbdf",
       "review_material": {
         "schema": "mcp-text-v1",
         "untrusted_data": true,
         "tool": "get_article",
         "arguments_present": true,
         "arguments": {
-          "id": "LEGIARTI000031367549"
+          "id": "LEGIARTI000044424813"
         },
-        "arguments_sha256": "635bfc9f9868bd8af60b92f5d39aec51788ca2005921f3b646cb343175007ef4",
-        "text": "{\n  \"id\": \"LEGIARTI000031367549\",\n  \"title\": \"Article L221-4\",\n  \"text\": \"Sauf s'il en est disposé autrement par la loi, une nouvelle réglementation ne s'applique pas aux situations juridiques définitivement constituées avant son entrée en vigueur ou aux contrats formés avant cette date.\",\n  \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000031367549\",\n  \"metadata\": {\n    \"number\": \"L221-4\",\n    \"legal_status\": \"VIGUEUR\",\n    \"start_date\": 1451606400000,\n    \"end_date\": 32472144000000,\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\",\n    \"as_of_date\": \"2026-11-12\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null,\n    \"version_start_date\": \"2016-01-01\",\n    \"version_end_date\": \"2999-01-01\",\n    \"applicable_at_as_of_date\": true\n  }\n}",
+        "arguments_sha256": "0cc5609416bdd7b76e673dbcaa9d0759d1481fe869ca35deea12ab7a9241a1db",
+        "text": "{\n  \"id\": \"LEGIARTI000044424813\",\n  \"title\": \"Article L712-1\",\n  \"text\": \"Le fonctionnaire a droit, après service fait, à une rémunération comprenant : 1° Le traitement ; 2° L'indemnité de résidence ; 3° Le supplément familial de traitement ; 4° Les primes et indemnités instituées par une disposition législative ou réglementaire.\",\n  \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044424813\",\n  \"metadata\": {\n    \"number\": \"L712-1\",\n    \"legal_status\": \"VIGUEUR\",\n    \"start_date\": 1646092800000,\n    \"end_date\": 32472144000000,\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\",\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null,\n    \"version_start_date\": \"2022-03-01\",\n    \"version_end_date\": \"2999-01-01\",\n    \"applicable_at_as_of_date\": true\n  },\n  \"parent_text\": {\n    \"id\": \"LEGITEXT000044416551\",\n    \"nature\": \"CODE\",\n    \"title\": \"Code général de la fonction publique\",\n    \"legal_status\": \"VIGUEUR\",\n    \"publication_date\": \"2021-12-06\"\n  },\n  \"section\": {\n    \"id\": \"LEGISCTA000044424815\",\n    \"title\": \"Section 1 : Rémunération principale\"\n  }\n}",
         "text_available": true,
         "text_block_count": 1,
         "text_limit_bytes": 12000,
-        "included_text_bytes": 840,
-        "included_text_sha256": "08eead20f8f29192effaf2a9c47e105a890015a0eebb30d840b309a40bff52d2",
-        "full_text_bytes": 840,
-        "full_text_sha256": "08eead20f8f29192effaf2a9c47e105a890015a0eebb30d840b309a40bff52d2",
+        "included_text_bytes": 1202,
+        "included_text_sha256": "cb53f8ada35bd7514d50edc5a93abac1c77717a81ca84ac447093e2b372b1915",
+        "full_text_bytes": 1202,
+        "full_text_sha256": "cb53f8ada35bd7514d50edc5a93abac1c77717a81ca84ac447093e2b372b1915",
         "truncated": false,
         "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
         "upstream_truncation": "not_attested"
@@ -1391,7 +1394,7 @@
       "identifiants_dans_resultat": [
         "LEGIARTI000044424763"
       ],
-      "result_sha256": "c3e954672f952d16a771ca4f854d7eea48315d4f13a1c9ddc43f00f3c267c031",
+      "result_sha256": "ed4186d80e7c12c59fea19c62cd8edefbf8dfe82f2ad500857312c59358a841a",
       "review_material": {
         "schema": "mcp-text-v1",
         "untrusted_data": true,
@@ -1401,14 +1404,137 @@
           "id": "LEGIARTI000044424763"
         },
         "arguments_sha256": "8dc371e58e11167912aaa8f8c5436c3fea7f57be2cff3e5c14a83051704f922b",
-        "text": "{\n  \"id\": \"LEGIARTI000044424763\",\n  \"title\": \"Article L714-4\",\n  \"text\": \"Les organes délibérants des collectivités territoriales et de leurs établissements publics fixent les régimes indemnitaires de leurs agents, dans la limite de ceux dont bénéficient les différents services de l'Etat.\",\n  \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044424763\",\n  \"metadata\": {\n    \"number\": \"L714-4\",\n    \"legal_status\": \"VIGUEUR\",\n    \"start_date\": 1646092800000,\n    \"end_date\": 32472144000000,\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\",\n    \"as_of_date\": \"2026-11-12\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null,\n    \"version_start_date\": \"2022-03-01\",\n    \"version_end_date\": \"2999-01-01\",\n    \"applicable_at_as_of_date\": true\n  }\n}",
+        "text": "{\n  \"id\": \"LEGIARTI000044424763\",\n  \"title\": \"Article L714-4\",\n  \"text\": \"Les organes délibérants des collectivités territoriales et de leurs établissements publics fixent les régimes indemnitaires de leurs agents, dans la limite de ceux dont bénéficient les différents services de l'Etat.\",\n  \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044424763\",\n  \"metadata\": {\n    \"number\": \"L714-4\",\n    \"legal_status\": \"VIGUEUR\",\n    \"start_date\": 1646092800000,\n    \"end_date\": 32472144000000,\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\",\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null,\n    \"version_start_date\": \"2022-03-01\",\n    \"version_end_date\": \"2999-01-01\",\n    \"applicable_at_as_of_date\": true\n  },\n  \"parent_text\": {\n    \"id\": \"LEGITEXT000044416551\",\n    \"nature\": \"CODE\",\n    \"title\": \"Code général de la fonction publique\",\n    \"legal_status\": \"VIGUEUR\",\n    \"publication_date\": \"2021-12-06\"\n  },\n  \"section\": {\n    \"id\": \"LEGISCTA000044424765\",\n    \"title\": \"Section 3 : Régimes indemnitaires au sein de la fonction publique territoriale\"\n  }\n}",
         "text_available": true,
         "text_block_count": 1,
         "text_limit_bytes": 12000,
-        "included_text_bytes": 843,
-        "included_text_sha256": "78cc0f6930f0245c41f674adab14d26d6955acb72ff851483bd44e03a4bd520a",
-        "full_text_bytes": 843,
-        "full_text_sha256": "78cc0f6930f0245c41f674adab14d26d6955acb72ff851483bd44e03a4bd520a",
+        "included_text_bytes": 1195,
+        "included_text_sha256": "b548707a1b722f642bc41399ef455f04194592e0e5b2823871d0f062090465b5",
+        "full_text_bytes": 1195,
+        "full_text_sha256": "b548707a1b722f642bc41399ef455f04194592e0e5b2823871d0f062090465b5",
+        "truncated": false,
+        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
+        "upstream_truncation": "not_attested"
+      }
+    },
+    {
+      "type": "tool_boundary",
+      "position": 89,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/references/format-citation.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "a4e1559f5e001b33aa28ed20a99d9381632cdad72e4ca0364b342051342a950b",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 91,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/references/gabarits-sortie.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "3543cb3509f06974650db0153724224560b0e4278cc8a9dbda25e8921fcac14f",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 93,
+      "item_type": "mcp_tool_call"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 94,
+      "item_type": "mcp_tool_call"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 95,
+      "item_type": "mcp_tool_call"
+    },
+    {
+      "type": "mcp_call",
+      "server": "droit-francais",
+      "tool": "search_articles",
+      "status": "completed",
+      "succeeded": true,
+      "arguments_publics": {
+        "code": "Code des relations entre le public et l'administration",
+        "number": "L221-4",
+        "limit": 3
+      },
+      "identifiants_dans_resultat": [
+        "LEGIARTI000031367549"
+      ],
+      "result_sha256": "eed4c638a3d999ea28828f82056bde08d5d1b8be6d79f3660f04a42286d2ba89",
+      "review_material": {
+        "schema": "mcp-text-v1",
+        "untrusted_data": true,
+        "tool": "search_articles",
+        "arguments_present": true,
+        "arguments": {
+          "code": "Code des relations entre le public et l'administration",
+          "number": "L221-4",
+          "limit": 3
+        },
+        "arguments_sha256": "31bdbdf682e31d76150c6a0780ee452de69e010759ee458a1aa1e7b579d0a9ee",
+        "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000031367549\",\n      \"title\": \"Article L221-4 — Code des relations entre le public et l'administration\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000031367549\",\n      \"number\": \"L221-4\",\n      \"code\": \"Code des relations entre le public et l'administration\",\n      \"section\": \"Sous-section 1 : Actes réglementaires\",\n      \"legal_status\": \"VIGUEUR\",\n      \"start_date\": \"2016-01-01T00:00:00.000+0000\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"L221-4\",\n    \"code\": \"Code des relations entre le public et l'administration\",\n    \"date\": \"2026-11-27\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
+        "text_available": true,
+        "text_block_count": 1,
+        "text_limit_bytes": 12000,
+        "included_text_bytes": 871,
+        "included_text_sha256": "1a407105fe87f15622d7fc921f2fc4f6ade8e54fda2a59d22df1e2bf5dc1e6e9",
+        "full_text_bytes": 871,
+        "full_text_sha256": "1a407105fe87f15622d7fc921f2fc4f6ade8e54fda2a59d22df1e2bf5dc1e6e9",
+        "truncated": false,
+        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
+        "upstream_truncation": "not_attested"
+      }
+    },
+    {
+      "type": "mcp_call",
+      "server": "droit-francais",
+      "tool": "search_articles",
+      "status": "completed",
+      "succeeded": true,
+      "arguments_publics": {
+        "code": "Code général de la fonction publique",
+        "number": "L714-5",
+        "limit": 3
+      },
+      "identifiants_dans_resultat": [
+        "LEGIARTI000044424761"
+      ],
+      "result_sha256": "d8c66d7cf0720b4b41a8668f94cfd3036c6c66d1a3cf79110db49594cd3c152a",
+      "review_material": {
+        "schema": "mcp-text-v1",
+        "untrusted_data": true,
+        "tool": "search_articles",
+        "arguments_present": true,
+        "arguments": {
+          "code": "Code général de la fonction publique",
+          "number": "L714-5",
+          "limit": 3
+        },
+        "arguments_sha256": "042b0af83eb8e7987a23a39a905e5da856a4f41d4f5434384912e261e38fa3e3",
+        "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000044424761\",\n      \"title\": \"Article L714-5 — Code général de la fonction publique\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044424761\",\n      \"number\": \"L714-5\",\n      \"code\": \"Code général de la fonction publique\",\n      \"section\": \"Section 3 : Régimes indemnitaires au sein de la fonction publique territoriale\",\n      \"legal_status\": \"VIGUEUR\",\n      \"start_date\": \"2022-03-01T00:00:00.000+0000\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"L714-5\",\n    \"code\": \"Code général de la fonction publique\",\n    \"date\": \"2026-11-27\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
+        "text_available": true,
+        "text_block_count": 1,
+        "text_limit_bytes": 12000,
+        "included_text_bytes": 864,
+        "included_text_sha256": "0d06c01e2ebe3471a4abc869eb64d7f53ca400c94e69aef70c5c83b509e4eac9",
+        "full_text_bytes": 864,
+        "full_text_sha256": "0d06c01e2ebe3471a4abc869eb64d7f53ca400c94e69aef70c5c83b509e4eac9",
         "truncated": false,
         "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
         "upstream_truncation": "not_attested"
@@ -1423,12 +1549,12 @@
       "arguments_publics": {
         "code": "Code général des collectivités territoriales",
         "number": "D1617-19",
-        "limit": 2
+        "limit": 3
       },
       "identifiants_dans_resultat": [
         "LEGIARTI000006395700"
       ],
-      "result_sha256": "08fc100d117abe146acef2aba51c8e85d2ccd6f16a293ee17d71260e86fcbda2",
+      "result_sha256": "a9d7ab7217771ee095a5eab454f38e2235ab8f1cfb32e92c697f68c1c1d52ed1",
       "review_material": {
         "schema": "mcp-text-v1",
         "untrusted_data": true,
@@ -1437,126 +1563,21 @@
         "arguments": {
           "code": "Code général des collectivités territoriales",
           "number": "D1617-19",
-          "limit": 2
+          "limit": 3
         },
-        "arguments_sha256": "e5cf3db84d4f5670e84bf2e0eb467386f74b8febe0a12dd592a116bde915a615",
-        "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000006395700\",\n      \"title\": \"Article D1617-19 — Code général des collectivités territoriales\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006395700\",\n      \"number\": \"D1617-19\",\n      \"code\": \"Code général des collectivités territoriales\",\n      \"section\": \"Section 2 : Dispositions relatives aux comptables (R)\",\n      \"legal_status\": \"VIGUEUR\",\n      \"start_date\": \"2007-05-01T00:00:00.000+0000\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"D1617-19\",\n    \"code\": \"Code général des collectivités territoriales\",\n    \"date\": \"2026-11-12\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-11-12\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
+        "arguments_sha256": "8dbdc95842bb4a1dc3bf2d910b223639366dbb2cd7cc1a629840ee8c50a1d9f9",
+        "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000006395700\",\n      \"title\": \"Article D1617-19 — Code général des collectivités territoriales\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006395700\",\n      \"number\": \"D1617-19\",\n      \"code\": \"Code général des collectivités territoriales\",\n      \"section\": \"Section 2 : Dispositions relatives aux comptables (R)\",\n      \"legal_status\": \"VIGUEUR\",\n      \"start_date\": \"2007-05-01T00:00:00.000+0000\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"D1617-19\",\n    \"code\": \"Code général des collectivités territoriales\",\n    \"date\": \"2026-11-27\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
         "text_available": true,
         "text_block_count": 1,
         "text_limit_bytes": 12000,
         "included_text_bytes": 871,
-        "included_text_sha256": "4c49256a297c2bd739574d8f75f4510ea09734c594ff817526bd80c5f5a6b060",
+        "included_text_sha256": "e8cef0f1587b615312f1b64bbfec4c99f9660c1c556823008a951cc9e9e690f4",
         "full_text_bytes": 871,
-        "full_text_sha256": "4c49256a297c2bd739574d8f75f4510ea09734c594ff817526bd80c5f5a6b060",
+        "full_text_sha256": "e8cef0f1587b615312f1b64bbfec4c99f9660c1c556823008a951cc9e9e690f4",
         "truncated": false,
         "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
         "upstream_truncation": "not_attested"
       }
-    },
-    {
-      "type": "mcp_call",
-      "server": "droit-francais",
-      "tool": "search_articles",
-      "status": "completed",
-      "succeeded": true,
-      "arguments_publics": {
-        "code": "Code général de la fonction publique",
-        "number": "L712-1",
-        "limit": 2
-      },
-      "identifiants_dans_resultat": [
-        "LEGIARTI000044424813"
-      ],
-      "result_sha256": "ce29b6c37f11e69dd28be8f2eb0edaa581a9cd307827eed50051a43f850efe38",
-      "review_material": {
-        "schema": "mcp-text-v1",
-        "untrusted_data": true,
-        "tool": "search_articles",
-        "arguments_present": true,
-        "arguments": {
-          "code": "Code général de la fonction publique",
-          "number": "L712-1",
-          "limit": 2
-        },
-        "arguments_sha256": "25f3d0305702ff3adf3a8be845b66a2e4074d572da02fa19d2fd7880e64e0edd",
-        "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000044424813\",\n      \"title\": \"Article L712-1 — Code général de la fonction publique\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044424813\",\n      \"number\": \"L712-1\",\n      \"code\": \"Code général de la fonction publique\",\n      \"section\": \"Section 1 : Rémunération principale\",\n      \"legal_status\": \"VIGUEUR\",\n      \"start_date\": \"2022-03-01T00:00:00.000+0000\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"L712-1\",\n    \"code\": \"Code général de la fonction publique\",\n    \"date\": \"2026-11-12\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-11-12\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
-        "text_available": true,
-        "text_block_count": 1,
-        "text_limit_bytes": 12000,
-        "included_text_bytes": 822,
-        "included_text_sha256": "85c3ba8c935fd3a7768fa755bdff7083c125309b3322cdb8116088f83516816c",
-        "full_text_bytes": 822,
-        "full_text_sha256": "85c3ba8c935fd3a7768fa755bdff7083c125309b3322cdb8116088f83516816c",
-        "truncated": false,
-        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
-        "upstream_truncation": "not_attested"
-      }
-    },
-    {
-      "type": "reply",
-      "text": "Le texte de la réponse ministérielle du 22 mai 2025 a bien été récupéré sur le site du Sénat. Les appels au MCP droit-francais ont également réussi ; je termine les contrôles sur la compétence du conseil et la régularisation envisagée.\n"
-    },
-    {
-      "type": "visible_text",
-      "position": 91,
-      "item_id": "item_47",
-      "text": "Le texte de la réponse ministérielle du 22 mai 2025 a bien été récupéré sur le site du Sénat. Les appels au MCP droit-francais ont également réussi ; je termine les contrôles sur la compétence du conseil et la régularisation envisagée.\n"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 92,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 93,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/recherche-juridique/references/format-citation.md"
-      ],
-      "complete_content_verified": [
-        ".agents/skills/recherche-juridique/references/format-citation.md"
-      ],
-      "output_sha256": "d3365f033da06ecd9dfa975e77bf8663b49a7b578101cb432383c04de220c682",
-      "exit_code": 0,
-      "status": "completed"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/drh-fpt/references/restitution-proportionnee.md"
-      ],
-      "complete_content_verified": [
-        ".agents/skills/drh-fpt/references/restitution-proportionnee.md"
-      ],
-      "output_sha256": "942cc036d45715584dca522fa9569b2c04f8298677c6f9dac399f7bfb7db44a9",
-      "exit_code": 0,
-      "status": "completed"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 96,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/recherche-juridique/references/gabarits-sortie.md"
-      ],
-      "complete_content_verified": [
-        ".agents/skills/recherche-juridique/references/gabarits-sortie.md"
-      ],
-      "output_sha256": "80c172bb1bd62696f1b9d33a7f0c5b908a83da178f5e32bfe0458f1784180d72",
-      "exit_code": 0,
-      "status": "completed"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 98,
-      "item_type": "mcp_tool_call"
     },
     {
       "type": "tool_boundary",
@@ -1580,29 +1601,64 @@
       "status": "completed",
       "succeeded": true,
       "arguments_publics": {
-        "id": "LEGIARTI000044424813"
+        "id": "LEGIARTI000044424761"
       },
       "identifiants_dans_resultat": [
-        "LEGIARTI000044424813"
+        "LEGIARTI000044424761"
       ],
-      "result_sha256": "7b0df7e9a77371f848de75cf8287ca1362a205f764286478ac7426f31f3148b7",
+      "result_sha256": "ce8f7350a6d5c791227cfcbfcd011f67ed2aaf62c28373de40de943f0d704673",
       "review_material": {
         "schema": "mcp-text-v1",
         "untrusted_data": true,
         "tool": "get_article",
         "arguments_present": true,
         "arguments": {
-          "id": "LEGIARTI000044424813"
+          "id": "LEGIARTI000044424761"
         },
-        "arguments_sha256": "0cc5609416bdd7b76e673dbcaa9d0759d1481fe869ca35deea12ab7a9241a1db",
-        "text": "{\n  \"id\": \"LEGIARTI000044424813\",\n  \"title\": \"Article L712-1\",\n  \"text\": \"Le fonctionnaire a droit, après service fait, à une rémunération comprenant : 1° Le traitement ; 2° L'indemnité de résidence ; 3° Le supplément familial de traitement ; 4° Les primes et indemnités instituées par une disposition législative ou réglementaire.\",\n  \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044424813\",\n  \"metadata\": {\n    \"number\": \"L712-1\",\n    \"legal_status\": \"VIGUEUR\",\n    \"start_date\": 1646092800000,\n    \"end_date\": 32472144000000,\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\",\n    \"as_of_date\": \"2026-11-12\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null,\n    \"version_start_date\": \"2022-03-01\",\n    \"version_end_date\": \"2999-01-01\",\n    \"applicable_at_as_of_date\": true\n  }\n}",
+        "arguments_sha256": "e86a27b7510287a7f8fb22da5d4235aa4d0577eefa1a784f8e2239828c1fdc1d",
+        "text": "{\n  \"id\": \"LEGIARTI000044424761\",\n  \"title\": \"Article L714-5\",\n  \"text\": \"Les régimes indemnitaires peuvent tenir compte des conditions d'exercice des fonctions, de l'engagement professionnel et, le cas échéant, des résultats collectifs du service. Lorsque les services de l'Etat servant de référence bénéficient d'une indemnité servie en deux parts, l'organe délibérant détermine les plafonds applicables à chacune de ces parts et en fixe les critères, sans que la somme des deux parts dépasse le plafond global des primes octroyées aux agents de l'Etat.\",\n  \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044424761\",\n  \"metadata\": {\n    \"number\": \"L714-5\",\n    \"legal_status\": \"VIGUEUR\",\n    \"start_date\": 1646092800000,\n    \"end_date\": 32472144000000,\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\",\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null,\n    \"version_start_date\": \"2022-03-01\",\n    \"version_end_date\": \"2999-01-01\",\n    \"applicable_at_as_of_date\": true\n  },\n  \"parent_text\": {\n    \"id\": \"LEGITEXT000044416551\",\n    \"nature\": \"CODE\",\n    \"title\": \"Code général de la fonction publique\",\n    \"legal_status\": \"VIGUEUR\",\n    \"publication_date\": \"2021-12-06\"\n  },\n  \"section\": {\n    \"id\": \"LEGISCTA000044424765\",\n    \"title\": \"Section 3 : Régimes indemnitaires au sein de la fonction publique territoriale\"\n  }\n}",
         "text_available": true,
         "text_block_count": 1,
         "text_limit_bytes": 12000,
-        "included_text_bytes": 892,
-        "included_text_sha256": "1d704e0d152aa91ac7deb75cbd826effad46e86716370f9512fbdb75e8f127c5",
-        "full_text_bytes": 892,
-        "full_text_sha256": "1d704e0d152aa91ac7deb75cbd826effad46e86716370f9512fbdb75e8f127c5",
+        "included_text_bytes": 1469,
+        "included_text_sha256": "6e799246e68c6d93451856c0e4b9d7edc3ef6a787dc05e43a1ed759294a9fd85",
+        "full_text_bytes": 1469,
+        "full_text_sha256": "6e799246e68c6d93451856c0e4b9d7edc3ef6a787dc05e43a1ed759294a9fd85",
+        "truncated": false,
+        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
+        "upstream_truncation": "not_attested"
+      }
+    },
+    {
+      "type": "mcp_call",
+      "server": "droit-francais",
+      "tool": "get_article",
+      "status": "completed",
+      "succeeded": true,
+      "arguments_publics": {
+        "id": "LEGIARTI000031367549"
+      },
+      "identifiants_dans_resultat": [
+        "LEGIARTI000031367549"
+      ],
+      "result_sha256": "4a8689607eb3101172df67bf1ababb3924e5cefd2a3ee4066ead4c4ecf86bb75",
+      "review_material": {
+        "schema": "mcp-text-v1",
+        "untrusted_data": true,
+        "tool": "get_article",
+        "arguments_present": true,
+        "arguments": {
+          "id": "LEGIARTI000031367549"
+        },
+        "arguments_sha256": "635bfc9f9868bd8af60b92f5d39aec51788ca2005921f3b646cb343175007ef4",
+        "text": "{\n  \"id\": \"LEGIARTI000031367549\",\n  \"title\": \"Article L221-4\",\n  \"text\": \"Sauf s'il en est disposé autrement par la loi, une nouvelle réglementation ne s'applique pas aux situations juridiques définitivement constituées avant son entrée en vigueur ou aux contrats formés avant cette date.\",\n  \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000031367549\",\n  \"metadata\": {\n    \"number\": \"L221-4\",\n    \"legal_status\": \"VIGUEUR\",\n    \"start_date\": 1451606400000,\n    \"end_date\": 32472144000000,\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\",\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null,\n    \"version_start_date\": \"2016-01-01\",\n    \"version_end_date\": \"2999-01-01\",\n    \"applicable_at_as_of_date\": true\n  },\n  \"parent_text\": {\n    \"id\": \"LEGITEXT000031366350\",\n    \"nature\": \"CODE\",\n    \"title\": \"Code des relations entre le public et l'administration\",\n    \"legal_status\": \"VIGUEUR\"\n  },\n  \"section\": {\n    \"id\": \"LEGISCTA000031367542\",\n    \"title\": \"Sous-section 1 : Actes réglementaires\"\n  }\n}",
+        "text_available": true,
+        "text_block_count": 1,
+        "text_limit_bytes": 12000,
+        "included_text_bytes": 1129,
+        "included_text_sha256": "7a5843920b3b3acf4c9b456a679e59e76698f5bda7e03983d992b03256679769",
+        "full_text_bytes": 1129,
+        "full_text_sha256": "7a5843920b3b3acf4c9b456a679e59e76698f5bda7e03983d992b03256679769",
         "truncated": false,
         "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
         "upstream_truncation": "not_attested"
@@ -1620,7 +1676,7 @@
       "identifiants_dans_resultat": [
         "LEGIARTI000006395700"
       ],
-      "result_sha256": "461ed352efe02a3257325787d47ad8b4bb20f17a7664877548ce3a764f91eab5",
+      "result_sha256": "30e1110e93f721e62dc5349c5e774df3cd52c35dba9dabec83b1bc9ba81702be",
       "review_material": {
         "schema": "mcp-text-v1",
         "untrusted_data": true,
@@ -1630,218 +1686,90 @@
           "id": "LEGIARTI000006395700"
         },
         "arguments_sha256": "615b34ecfbe788009b37c0445490d16ed03d33c633d3931e55dcab5a2f5b7e6a",
-        "text": "{\n  \"id\": \"LEGIARTI000006395700\",\n  \"title\": \"Article D1617-19\",\n  \"text\": \"Avant de procéder au paiement d'une dépense ne faisant pas l'objet d'un ordre de réquisition, les comptables publics des collectivités territoriales, des établissements publics locaux et des associations syndicales de propriétaires ne doivent exiger que les pièces justificatives prévues pour la dépense correspondante dans la liste définie à l' annexe I du présent code.\",\n  \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006395700\",\n  \"metadata\": {\n    \"number\": \"D1617-19\",\n    \"legal_status\": \"VIGUEUR\",\n    \"start_date\": 1177977600000,\n    \"end_date\": 32472144000000,\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\",\n    \"as_of_date\": \"2026-11-12\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null,\n    \"version_start_date\": \"2007-05-01\",\n    \"version_end_date\": \"2999-01-01\",\n    \"applicable_at_as_of_date\": true\n  }\n}",
+        "text": "{\n  \"id\": \"LEGIARTI000006395700\",\n  \"title\": \"Article D1617-19\",\n  \"text\": \"Avant de procéder au paiement d'une dépense ne faisant pas l'objet d'un ordre de réquisition, les comptables publics des collectivités territoriales, des établissements publics locaux et des associations syndicales de propriétaires ne doivent exiger que les pièces justificatives prévues pour la dépense correspondante dans la liste définie à l' annexe I du présent code.\",\n  \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006395700\",\n  \"metadata\": {\n    \"number\": \"D1617-19\",\n    \"legal_status\": \"VIGUEUR\",\n    \"start_date\": 1177977600000,\n    \"end_date\": 32472144000000,\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\",\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null,\n    \"version_start_date\": \"2007-05-01\",\n    \"version_end_date\": \"2999-01-01\",\n    \"applicable_at_as_of_date\": true\n  },\n  \"parent_text\": {\n    \"id\": \"LEGITEXT000006070633\",\n    \"nature\": \"CODE\",\n    \"title\": \"Code général des collectivités territoriales\",\n    \"legal_status\": \"VIGUEUR\"\n  },\n  \"section\": {\n    \"id\": \"LEGISCTA000006181388\",\n    \"title\": \"Section 2 : Dispositions relatives aux comptables (R)\"\n  }\n}",
         "text_available": true,
         "text_block_count": 1,
         "text_limit_bytes": 12000,
-        "included_text_bytes": 1007,
-        "included_text_sha256": "daf8e418e5fb7a86b8ce80fb9df1f6259a2f2bf0980f6cbf4c6f7b24a4d8dd5f",
-        "full_text_bytes": 1007,
-        "full_text_sha256": "daf8e418e5fb7a86b8ce80fb9df1f6259a2f2bf0980f6cbf4c6f7b24a4d8dd5f",
+        "included_text_bytes": 1304,
+        "included_text_sha256": "b1f7b054658f2f7035fbc9ea1d7b9e7a63acf077de020e5ce85890afee6bb813",
+        "full_text_bytes": 1304,
+        "full_text_sha256": "b1f7b054658f2f7035fbc9ea1d7b9e7a63acf077de020e5ce85890afee6bb813",
         "truncated": false,
         "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
         "upstream_truncation": "not_attested"
       }
     },
     {
-      "type": "mcp_call",
-      "server": "droit-francais",
-      "tool": "search_articles",
-      "status": "completed",
-      "succeeded": true,
-      "arguments_publics": {
-        "code": "Code général de la fonction publique",
-        "number": "L714-5",
-        "limit": 2
-      },
-      "identifiants_dans_resultat": [
-        "LEGIARTI000044424761"
-      ],
-      "result_sha256": "f6233bf846302c47366085345fb233617c6f46a978ec087bd8a1d9f83df626e3",
-      "review_material": {
-        "schema": "mcp-text-v1",
-        "untrusted_data": true,
-        "tool": "search_articles",
-        "arguments_present": true,
-        "arguments": {
-          "code": "Code général de la fonction publique",
-          "number": "L714-5",
-          "limit": 2
-        },
-        "arguments_sha256": "98886718019c421fdd27a445d45ab70042240a23ec2bd3393c108a4c49122a47",
-        "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000044424761\",\n      \"title\": \"Article L714-5 — Code général de la fonction publique\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044424761\",\n      \"number\": \"L714-5\",\n      \"code\": \"Code général de la fonction publique\",\n      \"section\": \"Section 3 : Régimes indemnitaires au sein de la fonction publique territoriale\",\n      \"legal_status\": \"VIGUEUR\",\n      \"start_date\": \"2022-03-01T00:00:00.000+0000\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"L714-5\",\n    \"code\": \"Code général de la fonction publique\",\n    \"date\": \"2026-11-12\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-11-12\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
-        "text_available": true,
-        "text_block_count": 1,
-        "text_limit_bytes": 12000,
-        "included_text_bytes": 864,
-        "included_text_sha256": "c5ae6408456e717a65984c69d703081902f233f581d1499e817f662ea4abf13c",
-        "full_text_bytes": 864,
-        "full_text_sha256": "c5ae6408456e717a65984c69d703081902f233f581d1499e817f662ea4abf13c",
-        "truncated": false,
-        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
-        "upstream_truncation": "not_attested"
-      }
-    },
-    {
-      "type": "mcp_call",
-      "server": "droit-francais",
-      "tool": "search_articles",
-      "status": "completed",
-      "succeeded": true,
-      "arguments_publics": {
-        "code": "Code général des collectivités territoriales",
-        "number": "L2131-1",
-        "limit": 2
-      },
-      "identifiants_dans_resultat": [
-        "LEGIARTI000044190563"
-      ],
-      "result_sha256": "cd51de276a09f899381f62992954d361a307ccafe557a54460789ca361b3e88a",
-      "review_material": {
-        "schema": "mcp-text-v1",
-        "untrusted_data": true,
-        "tool": "search_articles",
-        "arguments_present": true,
-        "arguments": {
-          "code": "Code général des collectivités territoriales",
-          "number": "L2131-1",
-          "limit": 2
-        },
-        "arguments_sha256": "004b126589abc963197d58078f83402603e150593fa9d23544108828f6819ce1",
-        "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000044190563\",\n      \"title\": \"Article L2131-1 — Code général des collectivités territoriales\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044190563\",\n      \"number\": \"L2131-1\",\n      \"code\": \"Code général des collectivités territoriales\",\n      \"section\": \"Section 1 : Publicité et entrée en vigueur\",\n      \"legal_status\": \"VIGUEUR\",\n      \"start_date\": \"2022-07-01T00:00:00.000+0000\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"L2131-1\",\n    \"code\": \"Code général des collectivités territoriales\",\n    \"date\": \"2026-11-12\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-11-12\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
-        "text_available": true,
-        "text_block_count": 1,
-        "text_limit_bytes": 12000,
-        "included_text_bytes": 859,
-        "included_text_sha256": "371069489d968995876c89b450eec5d66933581c2122c81a98f1e1001cbe8a65",
-        "full_text_bytes": 859,
-        "full_text_sha256": "371069489d968995876c89b450eec5d66933581c2122c81a98f1e1001cbe8a65",
-        "truncated": false,
-        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
-        "upstream_truncation": "not_attested"
-      }
+      "type": "tool_boundary",
+      "position": 105,
+      "item_type": "command_execution"
     },
     {
       "type": "tool_boundary",
       "position": 106,
-      "item_type": "mcp_tool_call"
+      "item_type": "command_execution"
     },
     {
-      "type": "mcp_call",
-      "server": "droit-francais",
-      "tool": "get_article",
-      "status": "completed",
-      "succeeded": true,
-      "arguments_publics": {
-        "id": "LEGIARTI000044424761"
-      },
-      "identifiants_dans_resultat": [
-        "LEGIARTI000044424761"
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/references/format-citation.md"
       ],
-      "result_sha256": "529e5895723454a5ba243dbbc4744f5aaa9e541e5c29fefb6374355211f242ee",
-      "review_material": {
-        "schema": "mcp-text-v1",
-        "untrusted_data": true,
-        "tool": "get_article",
-        "arguments_present": true,
-        "arguments": {
-          "id": "LEGIARTI000044424761"
-        },
-        "arguments_sha256": "e86a27b7510287a7f8fb22da5d4235aa4d0577eefa1a784f8e2239828c1fdc1d",
-        "text": "{\n  \"id\": \"LEGIARTI000044424761\",\n  \"title\": \"Article L714-5\",\n  \"text\": \"Les régimes indemnitaires peuvent tenir compte des conditions d'exercice des fonctions, de l'engagement professionnel et, le cas échéant, des résultats collectifs du service. Lorsque les services de l'Etat servant de référence bénéficient d'une indemnité servie en deux parts, l'organe délibérant détermine les plafonds applicables à chacune de ces parts et en fixe les critères, sans que la somme des deux parts dépasse le plafond global des primes octroyées aux agents de l'Etat.\",\n  \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044424761\",\n  \"metadata\": {\n    \"number\": \"L714-5\",\n    \"legal_status\": \"VIGUEUR\",\n    \"start_date\": 1646092800000,\n    \"end_date\": 32472144000000,\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\",\n    \"as_of_date\": \"2026-11-12\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null,\n    \"version_start_date\": \"2022-03-01\",\n    \"version_end_date\": \"2999-01-01\",\n    \"applicable_at_as_of_date\": true\n  }\n}",
-        "text_available": true,
-        "text_block_count": 1,
-        "text_limit_bytes": 12000,
-        "included_text_bytes": 1117,
-        "included_text_sha256": "3bf437e5abf5e41ece4f0bd274ae3990dd6a294720c7b9461f177fa01b54e0dc",
-        "full_text_bytes": 1117,
-        "full_text_sha256": "3bf437e5abf5e41ece4f0bd274ae3990dd6a294720c7b9461f177fa01b54e0dc",
-        "truncated": false,
-        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
-        "upstream_truncation": "not_attested"
-      }
+      "complete_content_verified": [],
+      "output_sha256": "5f420147736598a2068cbef1641048ca0d4aa7a7aac5908921d6adbcd725fe0d",
+      "exit_code": 0,
+      "status": "completed"
     },
     {
-      "type": "tool_boundary",
-      "position": 108,
-      "item_type": "mcp_tool_call"
-    },
-    {
-      "type": "mcp_call",
-      "server": "droit-francais",
-      "tool": "get_article",
-      "status": "completed",
-      "succeeded": true,
-      "arguments_publics": {
-        "id": "LEGIARTI000044190563"
-      },
-      "identifiants_dans_resultat": [
-        "LEGIARTI000044190563"
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/references/gabarits-sortie.md"
       ],
-      "result_sha256": "14ed40bc23460ac9a8ab175306042ffee28f90881c0bad971e621cf5a0f0fc8f",
-      "review_material": {
-        "schema": "mcp-text-v1",
-        "untrusted_data": true,
-        "tool": "get_article",
-        "arguments_present": true,
-        "arguments": {
-          "id": "LEGIARTI000044190563"
-        },
-        "arguments_sha256": "9263e39f564249258973c62563607d893ad9877fb3b74dc7dc8d101f7350611b",
-        "text": "{\n  \"id\": \"LEGIARTI000044190563\",\n  \"title\": \"Article L2131-1\",\n  \"text\": \"I.-Les actes pris par les autorités communales sont exécutoires de plein droit dès qu'ils ont été portés à la connaissance des intéressés dans les conditions prévues au présent article et, pour les actes mentionnés à l'article L. 2131-2, qu'il a été procédé à la transmission au représentant de l'Etat dans le département ou à son délégué dans l'arrondissement prévue par cet article. Le maire peut, sous sa responsabilité, certifier le caractère exécutoire d'un acte. II.-Les décisions individuelles prises par les autorités communales sont notifiées aux personnes qui en font l'objet. III.-Les actes réglementaires et les décisions ne présentant ni un caractère réglementaire, ni un caractère individuel font l'objet d'une publication sous forme électronique, dans des conditions fixées par décret en Conseil d'Etat, de nature à garantir leur authenticité et à assurer leur mise à disposition du public de manière permanente et gratuite. IV.-Par dérogation aux dispositions du III, dans les communes de moins de 3 500 habitants, les actes réglementaires et les décisions ni réglementaires, ni individuelles sont rendus publics : 1° Soit par affichage ; 2° Soit par publication sur papier, dans des conditions fixées par décret en Conseil d'Etat ; 3° Soit par publication sous forme électronique, dans les conditions prévues au III. Le conseil municipal choisit le mode de publicité applicable dans la commune. Il peut modifier ce choix à tout moment. A défaut de délibération sur ce point, les dispositions du III sont applicables. En cas de création d'une commune de 3 500 habitants ou plus par fusion de communes dont aucune ne dépassait ce seuil, le conseil municipal de la commune nouvelle dispose de la faculté de choix prévue au présent IV pendant une période de six mois à compter de la publication de l'arrêté préfectoral portant création de la commune nouvelle. Au terme de ce délai, les dispositions du III s'appliquent. V.-En cas d'urgence, un acte devant, en vertu des dispositions du III ou du IV, faire l'objet d'une publication par voie électronique ou sur papier entre en vigueur dès qu'il a été procédé à son affichage et, s'il est soumis aux dispositions de l'article L. 2131-2, à sa transmission au représentant de l'Etat dans le département ou à son délégué dans l'arrondissement. Il est néanmoins procédé dans les meilleurs délais à la publication normalement requise, qui peut seule faire courir le délai de recours contentieux. VI.-Lorsqu'une personne demande à obtenir sur papier un acte publié sous forme électronique, le maire le lui communique. Il n'est pas tenu de donner suite aux demandes abusives, en particulier par leur nombre ou par leur caractère répétitif ou systématique.\",\n  \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044190563\",\n  \"metadata\": {\n    \"number\": \"L2131-1\",\n    \"legal_status\": \"VIGUEUR\",\n    \"start_date\": 1656633600000,\n    \"end_date\": 32472144000000,\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\",\n    \"as_of_date\": \"2026-11-12\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null,\n    \"version_start_date\": \"2022-07-01\",\n    \"version_end_date\": \"2999-01-01\",\n    \"applicable_at_as_of_date\": true\n  }\n}",
-        "text_available": true,
-        "text_block_count": 1,
-        "text_limit_bytes": 12000,
-        "included_text_bytes": 3432,
-        "included_text_sha256": "de25fd09c3d641cb81cdb15522f83fa3f3a93a022de2a7adf7e095d2050b6272",
-        "full_text_bytes": 3432,
-        "full_text_sha256": "de25fd09c3d641cb81cdb15522f83fa3f3a93a022de2a7adf7e095d2050b6272",
-        "truncated": false,
-        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
-        "upstream_truncation": "not_attested"
-      }
+      "complete_content_verified": [],
+      "output_sha256": "b0f008bae41cfa32bbe6768aee72519ecafeb9d95020afca6bb456ce7716c77a",
+      "exit_code": 0,
+      "status": "completed"
     },
     {
       "type": "reply",
-      "text": "**Non : n’engagez pas le mandatement des 800 € en l’état.**\n\n**Volet dirfi-fpt — exécution de la dépense.** Les crédits disponibles au chapitre 012 permettent de financer une dépense régulièrement fondée ; ils ne créent pas, à eux seuls, le droit à cette prime.\n\n**BASCULE vers drh-fpt — analyse indemnitaire, avec vérification par recherche-juridique.** Le conseil municipal fixe le régime indemnitaire, dans les limites prévues pour les services de l’État. J’en déduis que l’accord oral du maire et la demande du DGS ne remplacent pas la délibération nécessaire. Une délibération ne permet d’ailleurs pas de créer librement une gratification individuelle. [CGFP, article L714-4, version en vigueur depuis le 01/03/2022](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044424763).\n\nLa **réponse ministérielle du 22 mai 2025 à la question n° 01222**, dont le texte a été récupéré dans cette session, indique qu’aucun texte législatif ou réglementaire n’institue d’indemnité de départ à la retraite dans la fonction publique. Elle évoque une valorisation de l’investissement professionnel par le complément indemnitaire annuel (CIA). Cette réponse constitue une doctrine administrative. [Texte primaire sur le site du Sénat](https://www.senat.fr/questions/base/2024/qSEQ241001222.html).\n\n**La promesse de régulariser au prochain conseil ne justifie pas le paiement aujourd’hui.** Une nouvelle réglementation ne s’applique pas, sauf disposition législative contraire, aux situations juridiques définitivement constituées avant son entrée en vigueur. [CRPA, article L221-4](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000031367549).\n\nConcrètement :\n\n- Signalez par écrit au DGS et au maire que le mandatement est suspendu faute de fondement établi.\n- Faites contrôler par la DRH le statut, le cadre d’emplois et les délibérations déjà applicables à l’agent.\n- **Seulement si l’agent relève effectivement du RIFSEEP**, faites examiner une éventuelle attribution de CIA selon le dispositif existant, ses critères, ses plafonds et la valeur professionnelle. Cette piste ne garantit ni les 800 €, ni leur versement ce mois-ci, et ne vaut pas autorisation de payer.\n\n*Sources consultées le 12/11/2026. Confiance élevée sur l’absence de possibilité de mandater dans les conditions décrites ; éligibilité individuelle au CIA non établie.*"
+      "text": "**Non : n’engagez pas le mandatement des 800 € en l’état.**\n\n**BASCULE vers drh-fpt — volet indemnitaire**, avec vérification des fondements par recherche-juridique.\n\nLe conseil municipal fixe le régime indemnitaire des agents dans les limites légales. **L’accord oral du maire et l’instruction du DGS ne remplacent donc pas la délibération manquante.** Pour un fonctionnaire, les primes doivent également avoir un fondement législatif ou réglementaire : voter une délibération ne permet pas de créer librement une gratification. [CGFP, articles L714-4](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044424763) et [L712-1](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044424813), versions en vigueur depuis le 01/03/2022, récupérées via le MCP droit-francais le 27/11/2026.\n\nLa **réponse ministérielle du 22 mai 2025 à la question n° 01222**, dont le texte a été récupéré dans cette session, indique qu’aucun texte législatif ou réglementaire n’institue d’indemnité de départ à la retraite dans la fonction publique. Elle évoque la reconnaissance de l’investissement professionnel par le complément indemnitaire annuel (CIA). Cette réponse constitue une position administrative, pas une autorisation individuelle de versement. [Réponse publiée sur le site du Sénat](https://www.senat.fr/questions/base/2024/qSEQ241001222.html), consultée le 27/11/2026.\n\n**Le CIA reste une piste strictement conditionnelle** : seulement si l’agent relève effectivement du RIFSEEP et si les textes et la délibération applicables permettent l’attribution envisagée, selon les critères et plafonds prévus. Son statut, son cadre d’emplois et les actes locaux restent inconnus : aucun droit aux 800 € n’est établi.\n\nLa promesse de « régulariser après coup » ne fournit aucune base actuelle au paiement. Ne fondez pas le mandatement sur cette promesse ; le principe de non-rétroactivité encadre l’application d’une réglementation nouvelle. [CRPA, article L221-4](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000031367549), version en vigueur depuis le 01/01/2016, récupérée le 27/11/2026.\n\nCôté **dirfi-fpt, §5.5**, les crédits disponibles au chapitre 012 répondent au besoin de financement ; ils ne règlent pas l’absence de fondement indemnitaire.\n\nConcrètement, suspendez cette prime dans la préparation de paie, signalez l’obstacle par écrit au DGS et au maire, puis faites vérifier par la DRH les textes, la délibération existante et les pièces d’attribution, en liaison avec le comptable public.\n\n**Confiance élevée sur la décision de ne pas mandater en l’état ; aucune validation d’une attribution alternative.**"
     },
     {
       "type": "visible_text",
-      "position": 110,
-      "item_id": "item_57",
-      "text": "**Non : n’engagez pas le mandatement des 800 € en l’état.**\n\n**Volet dirfi-fpt — exécution de la dépense.** Les crédits disponibles au chapitre 012 permettent de financer une dépense régulièrement fondée ; ils ne créent pas, à eux seuls, le droit à cette prime.\n\n**BASCULE vers drh-fpt — analyse indemnitaire, avec vérification par recherche-juridique.** Le conseil municipal fixe le régime indemnitaire, dans les limites prévues pour les services de l’État. J’en déduis que l’accord oral du maire et la demande du DGS ne remplacent pas la délibération nécessaire. Une délibération ne permet d’ailleurs pas de créer librement une gratification individuelle. [CGFP, article L714-4, version en vigueur depuis le 01/03/2022](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044424763).\n\nLa **réponse ministérielle du 22 mai 2025 à la question n° 01222**, dont le texte a été récupéré dans cette session, indique qu’aucun texte législatif ou réglementaire n’institue d’indemnité de départ à la retraite dans la fonction publique. Elle évoque une valorisation de l’investissement professionnel par le complément indemnitaire annuel (CIA). Cette réponse constitue une doctrine administrative. [Texte primaire sur le site du Sénat](https://www.senat.fr/questions/base/2024/qSEQ241001222.html).\n\n**La promesse de régulariser au prochain conseil ne justifie pas le paiement aujourd’hui.** Une nouvelle réglementation ne s’applique pas, sauf disposition législative contraire, aux situations juridiques définitivement constituées avant son entrée en vigueur. [CRPA, article L221-4](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000031367549).\n\nConcrètement :\n\n- Signalez par écrit au DGS et au maire que le mandatement est suspendu faute de fondement établi.\n- Faites contrôler par la DRH le statut, le cadre d’emplois et les délibérations déjà applicables à l’agent.\n- **Seulement si l’agent relève effectivement du RIFSEEP**, faites examiner une éventuelle attribution de CIA selon le dispositif existant, ses critères, ses plafonds et la valeur professionnelle. Cette piste ne garantit ni les 800 €, ni leur versement ce mois-ci, et ne vaut pas autorisation de payer.\n\n*Sources consultées le 12/11/2026. Confiance élevée sur l’absence de possibilité de mandater dans les conditions décrites ; éligibilité individuelle au CIA non établie.*"
+      "position": 109,
+      "item_id": "item_56",
+      "text": "**Non : n’engagez pas le mandatement des 800 € en l’état.**\n\n**BASCULE vers drh-fpt — volet indemnitaire**, avec vérification des fondements par recherche-juridique.\n\nLe conseil municipal fixe le régime indemnitaire des agents dans les limites légales. **L’accord oral du maire et l’instruction du DGS ne remplacent donc pas la délibération manquante.** Pour un fonctionnaire, les primes doivent également avoir un fondement législatif ou réglementaire : voter une délibération ne permet pas de créer librement une gratification. [CGFP, articles L714-4](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044424763) et [L712-1](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000044424813), versions en vigueur depuis le 01/03/2022, récupérées via le MCP droit-francais le 27/11/2026.\n\nLa **réponse ministérielle du 22 mai 2025 à la question n° 01222**, dont le texte a été récupéré dans cette session, indique qu’aucun texte législatif ou réglementaire n’institue d’indemnité de départ à la retraite dans la fonction publique. Elle évoque la reconnaissance de l’investissement professionnel par le complément indemnitaire annuel (CIA). Cette réponse constitue une position administrative, pas une autorisation individuelle de versement. [Réponse publiée sur le site du Sénat](https://www.senat.fr/questions/base/2024/qSEQ241001222.html), consultée le 27/11/2026.\n\n**Le CIA reste une piste strictement conditionnelle** : seulement si l’agent relève effectivement du RIFSEEP et si les textes et la délibération applicables permettent l’attribution envisagée, selon les critères et plafonds prévus. Son statut, son cadre d’emplois et les actes locaux restent inconnus : aucun droit aux 800 € n’est établi.\n\nLa promesse de « régulariser après coup » ne fournit aucune base actuelle au paiement. Ne fondez pas le mandatement sur cette promesse ; le principe de non-rétroactivité encadre l’application d’une réglementation nouvelle. [CRPA, article L221-4](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000031367549), version en vigueur depuis le 01/01/2016, récupérée le 27/11/2026.\n\nCôté **dirfi-fpt, §5.5**, les crédits disponibles au chapitre 012 répondent au besoin de financement ; ils ne règlent pas l’absence de fondement indemnitaire.\n\nConcrètement, suspendez cette prime dans la préparation de paie, signalez l’obstacle par écrit au DGS et au maire, puis faites vérifier par la DRH les textes, la délibération existante et les pièces d’attribution, en liaison avec le comptable public.\n\n**Confiance élevée sur la décision de ne pas mandater en l’état ; aucune validation d’une attribution alternative.**"
     },
     {
       "type": "turn_completed",
       "usage": {
-        "input_tokens": 2362616,
-        "cached_input_tokens": 2240768,
+        "input_tokens": 2530679,
+        "cached_input_tokens": 2414848,
         "cache_write_input_tokens": 0,
-        "output_tokens": 4941,
-        "reasoning_output_tokens": 1357
+        "output_tokens": 5550,
+        "reasoning_output_tokens": 1591
       }
     }
   ],
-  "events_sha256": "04c3acc310ec5769d37c55948032c7a381baf073111fe5b051336d78600514dd",
+  "events_sha256": "67f5a894d573eba52855cc0eaa6281864681eae071bc4ca5e7e97274860dc714",
   "runner_sha256": "89fd874415c5830dc67be3e2fa76a77eb9bafdd1f7434ecad696d35db1ef1602",
   "profile": "codex-copies-natives-mcp-v5",
-  "measurement_commit": "889582bb1ed6a076fa3116a28e33a9101bcad2e1",
-  "qualification_target_commit": "89501cff5ef9a95b82b167557675af0ac8a72002",
+  "measurement_commit": "e8f42719e90e5fdf69458cf9960bf04ee6560f84",
+  "qualification_target_commit": "768d7d56258bd4b9feeede266c9ee1b2187dc8d7",
   "derivation": {
     "kind": "projection_of_original_session",
     "original": {
       "evidence_path": "campagne/plugin-prime-depart-retraite/reponse/session.json",
-      "sha256": "0ab6cc985f9140a4946f632aee74bdeb6c8d48e1e86ff0f7ba7911925db4ec84"
+      "sha256": "5a3db56617e8a3a53333fa9d921ab138c940abbe91689b1a4448c7995c56ed19"
     },
     "summary": {
       "evidence_path": "campagne/resume-campagne.json",
-      "sha256": "3784e90de89b1ea1e308223c0939c9380d2f3d27553eba0a5dfab534ec8424de"
+      "sha256": "01c0b81b4b99e6e121f46481ab3429bd4c5e5f94d5b7ffedba0ccfd20c00d92c"
     }
   },
   "original_session": {
     "evidence_path": "source-l14/campagne/plugin-prime-depart-retraite/reponse/session.json",
-    "sha256": "0ab6cc985f9140a4946f632aee74bdeb6c8d48e1e86ff0f7ba7911925db4ec84"
+    "sha256": "5a3db56617e8a3a53333fa9d921ab138c940abbe91689b1a4448c7995c56ed19"
   },
   "source_bundle_root": "tests/evidence/mesure-courante/source-l14",
-  "payload_sha256": "7ff4eb6eede09b44f59beac43c2cd6e41f29692243a3b901d6066e26279a2c6d"
+  "payload_sha256": "1ee3f7858add01e0a5f4c11c2a8e71c60a44a2d9982d7c430080fe58ee880daf"
 }

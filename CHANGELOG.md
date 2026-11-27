@@ -1,7 +1,17 @@
 # Historique des versions
 
-## Non publié
+## 1.5.3 : candidat non mesuré, non qualifié
 
+Patch, comme la 1.5.2 : distribution Antigravity et contenu de skills, sans autre
+fonctionnalité du plugin. Les trois manifestes passent en 1.5.3 ; les catalogues
+restent sur 1.5.2.
+
+- Cycle 1.5.3 préparé en H1 (ADR 0039) : contrat v4 inchangé, même CLI figée que la
+  1.5.0, transition 0039 non fermée.
+- Surcharge locale `recherche-juridique` (réserve de la campagne 1.5.2,
+  `plugin-prime-depart-retraite`) : « texte récupéré » ou « lu dans cette session »
+  seulement si le libellé a été reçu dans une sortie d'outil ; sinon « page officielle
+  consultée ». Empreintes rechaînées dans `upstream.json`, copie resynchronisée.
 - Distribution Antigravity (ADR 0037) : manifeste natif `plugin.json` et
   `mcp_config.json` à la racine, serveur `droit-francais` déclaré par
   `serverUrl` et le client OAuth public déjà utilisé par Claude Code et Codex,
@@ -11,6 +21,27 @@
   2026-11-15 : authentification OAuth réussie après ajout de
   `https://antigravity.google/oauth-callback` au client Auth0, puis appels
   `search` et `fetch` réussis de bout en bout.
+- Ré-épinglage du 2026-11-16 : dcp-fpt 0.1.9 → 0.2.0 (`cad0259`, ADR 0038).
+  Cinq réserves corrigées en amont (acte refusé nommé après le STOP égalité,
+  référence ou « non vérifié » après chaque bloc STOP, délai décisif indiqué,
+  trois voies face à la défaillance). `SKILL.md` (353 lignes) et
+  `references/resiliation-difficultes.md` changent. Nouvelle référence
+  autonome DCP-020 : mesure 27/28 à `c810d10`, un ÉCHEC non critique (cas-06),
+  huit critiques réussis, relue par Jo avec sept réserves. DCP-014, DCP-017 et
+  DCP-019 conservées comme historiques. Les pièces de la 1.5.2 restent liées à
+  DCP 0.1.9 : la barrière de release échoue jusqu'à H3.
+- Cycle groupé du 2026-11-26, nouveau H1 de la 1.5.3 (ADR 0041) : trois tentatives
+  consommées sans mesure liée sur `c1659bf`, abandonné. Contrat v4 et CLI inchangés ;
+  19e cas `drh-detachement-pm-equivalence` reporté à un prochain contrat de cycle.
+  - dcp-fpt 0.2.0 → 0.2.2 (`86d9896`, ADR 0040) : en-têtes STOP exacts associés à
+    leur déclencheur dans la description, abstention après échec de lecture, bloc
+    BASCULE dirfi-fpt sans liste. `SKILL.md` seul change (355 lignes). Référence
+    autonome DCP-025 : 27/28 à `d9da5db`, une DEMI-RÉUSSITE non critique (cas-15),
+    aucun ÉCHEC, relue par Jo avec trois réserves. DCP-020 conservée comme historique.
+  - drh-fpt 0.7.0 → 0.8.0 (`1880d02`) : module mobilité et registre d'identifiants ;
+    deux références ajoutées à l'inventaire fermé de la surcharge, ancre v0.8.0.
+  - recherche-juridique 3.6.0 → 3.7.0 (`ce675c6`) : outil `search_texts` et ligne
+    §4 bis de `gabarits-requetes.md`. Surcharge locale inchangée.
 
 ## 1.5.2 — Qualifiée et publiée le 2026-11-14
 

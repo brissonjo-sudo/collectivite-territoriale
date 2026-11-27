@@ -1,0 +1,70 @@
+{
+  "policy": "mesure-controlee-publique-v1",
+  "source_runtime_commit": "d9da5db8165ee858b57c10f543a504861926011e",
+  "private_sources_sha256": {
+    "resume-final.json": "198b1d5ef821628b89247e22e55261a0e6acdcbc55b3ed67e5d3ea7ae8ff6783",
+    "PLAN-D1.json": "142efe96499beae5aabe935ea0dd3145959b0056992e5875ea2afffcca859877",
+    "autorisation-jo.json": "182f8efa8b23c42bb40e99b6aba47b1e47086d4cb20a92c8dfb318df02dab448",
+    "avis-humain-jo-20261126.json": "c5a4cf89006a6178bbe6bd1f499f0aa478c1d5138f1a46ec64f3f07915010935",
+    "fiche-relecture.md": "396cfa321638a18e0bdf7ddf4d1ae4c7e52deeba1a94c3e48c99ecd5d568f415",
+    "manifest.json": "ef7ab3b6d4200a970048f5b1b5952cd33695fc5da63f1ec448ea4c4b87146d77"
+  },
+  "source_launcher_manifest_sha256": "a6528d319ef06a8a5f9b4a35e0130dd631b79832aea68afee118995a8a9985c9",
+  "excluded": [
+    "homes",
+    "credentials",
+    "flux bruts",
+    "pensées",
+    "signatures",
+    "identifiants de thread",
+    "chemins personnels"
+  ],
+  "human_review": {
+    "reviewer": "Jo",
+    "practitioner": false,
+    "case_count": 28,
+    "reserves": {
+      "cas-07": "Circuit d'instruction correct (pièces, acceptation, agrément des conditions de paiement, effet du silence à vérifier). La réserve du 16/11 n'est que partiellement levée : le régime juridique du paiement direct n'est ni traité ni inscrit parmi les points restant à vérifier ; il n'apparaît que dans la phrase d'ouverture.",
+      "cas-12": "La réserve du 16/11 n'est que partiellement levée. Le corps distingue désormais l'argumentaire de faveur d'une relance dont les conditions seraient démontrées, mais la réponse s'ouvre toujours sur « STOP — égalité de traitement », alors qu'aucun attendu du cas ne prévoit de STOP et que la demande porte sur un retour d'expérience après infructuosité.",
+      "cas-15": "Fond correct : dispense réservée, besoin global demandé, abstention sur le seuil faute de source lue. Deux attendus restent non explicités : le maintien des principes de la commande publique malgré une dispense et le refus du fractionnement destiné à contourner la procédure. Confirme la DEMI-RÉUSSITE du juge."
+    },
+    "review_file": "avis-humain-jo-20261126.json",
+    "review_date": "2026-11-26",
+    "verdicts": {
+      "cas-01": "conforme",
+      "cas-02": "conforme",
+      "cas-03": "conforme",
+      "cas-04": "conforme",
+      "cas-05": "conforme",
+      "cas-06": "conforme",
+      "cas-07": "en réserve",
+      "cas-08": "conforme",
+      "cas-09": "conforme",
+      "cas-10": "conforme",
+      "cas-11": "conforme",
+      "cas-12": "en réserve",
+      "cas-13": "conforme",
+      "cas-14": "conforme",
+      "cas-15": "en réserve",
+      "cas-16": "conforme",
+      "cas-17": "conforme",
+      "cas-18": "conforme",
+      "cas-19": "conforme",
+      "cas-20": "conforme",
+      "cas-21": "conforme",
+      "cas-22": "conforme",
+      "cas-23": "conforme",
+      "cas-24": "conforme",
+      "cas-25": "conforme",
+      "cas-26": "conforme",
+      "cas-27": "conforme",
+      "cas-28": "conforme"
+    },
+    "demi_reussites": [
+      "cas-15"
+    ],
+    "reserve_report": "relecture-reserves.md"
+  },
+  "publication_ready": false,
+  "plugin_qualified": false
+}

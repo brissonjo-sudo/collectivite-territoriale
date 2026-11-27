@@ -1,0 +1,37 @@
+{
+  "version": "0.2.2",
+  "date": "2026-11-26",
+  "statut": "mesuré 27/28, relu par Jo (non praticien) avec réserves ; relecture praticien en attente",
+  "run": "tests/runs/codex-web-v0.2.2-dcp-025-20261126-a",
+  "totals": {
+    "DEMI-RÉUSSITE": 1,
+    "RÉUSSITE": 27,
+    "ÉCHEC": 0
+  },
+  "sessions": 56,
+  "input_tokens": 6165580,
+  "human_review_done": true,
+  "practitioner_reviewed": false,
+  "plugin_qualified": false,
+  "publication_ready": false,
+  "historical_score_transferred": false,
+  "date_mesure": "2026-11-26",
+  "source_runtime_commit": "d9da5db8165ee858b57c10f543a504861926011e",
+  "attempt": "dcp-025-20261126-a",
+  "threshold_passed": true,
+  "critical_failures": [],
+  "stop_checks_passed": 6,
+  "skill_citation_occurrences": 0,
+  "human_review": {
+    "reviewer": "Jo",
+    "date": "2026-11-26",
+    "conformes": 25,
+    "reserves": {
+      "cas-07": "Circuit d'instruction correct (pièces, acceptation, agrément des conditions de paiement, effet du silence à vérifier). La réserve du 16/11 n'est que partiellement levée : le régime juridique du paiement direct n'est ni traité ni inscrit parmi les points restant à vérifier ; il n'apparaît que dans la phrase d'ouverture.",
+      "cas-12": "La réserve du 16/11 n'est que partiellement levée. Le corps distingue désormais l'argumentaire de faveur d'une relance dont les conditions seraient démontrées, mais la réponse s'ouvre toujours sur « STOP — égalité de traitement », alors qu'aucun attendu du cas ne prévoit de STOP et que la demande porte sur un retour d'expérience après infructuosité.",
+      "cas-15": "Fond correct : dispense réservée, besoin global demandé, abstention sur le seuil faute de source lue. Deux attendus restent non explicités : le maintien des principes de la commande publique malgré une dispense et le refus du fractionnement destiné à contourner la procédure. Confirme la DEMI-RÉUSSITE du juge."
+    },
+    "avis_sha256": "c5a4cf89006a6178bbe6bd1f499f0aa478c1d5138f1a46ec64f3f07915010935"
+  },
+  "suivi": "STOP égalité émis sans attendu (cas-12) ; régime du paiement direct non signalé comme lacune (cas-07) ; principes et interdiction du fractionnement malgré une dispense (cas-15) ; « texte intégral lu » non attesté par la trace (cas-09). Tentatives DCP-022 à DCP-024 sans score complet, non exportées. Voir qualification-0.2.2-2026-11-26.md ; runtime mesuré inchangé."
+}
