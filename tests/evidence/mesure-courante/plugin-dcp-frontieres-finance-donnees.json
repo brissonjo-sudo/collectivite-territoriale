@@ -1,5 +1,5 @@
 {
-  "plugin_commit": "e8f42719e90e5fdf69458cf9960bf04ee6560f84",
+  "plugin_commit": "30617203c9514736af680dc97c79de53d4a6df4c",
   "runtime_sha256": {
     "skills/dcp-fpt/agents/openai.yaml": "b37aec5086edadd2d0012545ab4c3b1a6493db31f7b6f26673674f5f514aeb40",
     "skills/dcp-fpt/LICENCE.fr.txt": "14e59bc002e1339e5554451aedad7c2b113dc7ef942e96b410b5517099ad6d91",
@@ -227,9 +227,9 @@
     "skills/recherche-juridique/SKILL.md": "13bb816e3b168daed181813411be87d1cf58ea65b15212b4207f68f201b5e7cd"
   },
   "plugin_configuration_sha256": {
-    ".codex-plugin/plugin.json": "4294642b42d209a3bc3184945f249559c2f748b56f3e7a1a62bb3e9e9a0bf22d",
-    ".claude-plugin/plugin.json": "8671012148c78ec01f217103b96a87fda761271e236a01d9428186a6407a038e",
-    ".mcp.json": "c1988401a93d468e87557dc1ebf47989323203b9c5ef7607641529615aefbcac",
+    ".codex-plugin/plugin.json": "53dc3a55357f4494e21abf4175e7eba855006495fc05d08922b4e9f0c8783cd8",
+    ".claude-plugin/plugin.json": "6991732b0a46573c15579319319bfba83c99da77ff0b11651b7fba69d87096db",
+    ".mcp.json": "bc8b6f791066cdde35139b757c805751d566055ea176d8e2a918e36d47179c32",
     "assets/icon.png": "10aca45cb876735f06e10b352b9a2ba004b5deae462e08d8dfba092044aaee1f"
   },
   "case_file_sha256": "0747b6268cccab1bb46c820217d2a4ba1c69e5c2ad6fe61126e3a5bd9242f5ea",
@@ -243,7 +243,7 @@
     "scripts/cas-plugin-cycle-v4.json": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
     "scripts/check_dcp_protocol.py": "6faeea694546084ceae2b64d8c87603f4c04fb521efdb5baa3b743958fad5f06",
     "scripts/check_sync.py": "69f080fbe4ded47ab1c5980a662e4219e15e111a67de8a6cbf166aac831e008e",
-    "scripts/cli_toolchains.py": "e1c73adbd0a52d01214853ca32a316343445c4d6cfd8d4d054118ff17ed32d67",
+    "scripts/cli_toolchains.py": "63cd143299ee3b643f86090f3f314ff7d64739b9d45b8939468329ba447d933f",
     "scripts/codex_event_contract.py": "f4e848f3c34504b4df6b5f444337b4064829828d8c492ecd3023cbae471d42d7",
     "scripts/cycle-v4-source-requirements.json": "54bed7aaf6afc439a6d24e1f95204d4b3e7d9327024ce5435bd9cc0988a8a333",
     "scripts/cycle_satisfiability.py": "5a8625a8f8169393a6b3bcf35ab696830707cc142366c9d179c192fa128bb6ea",
@@ -257,7 +257,7 @@
     "scripts/extract_native_read_commands.py": "d1292a0e6f798fcab1bd55fdce76b0e804526208b97e9e82172702057f1ef6c4",
     "scripts/human_resolution.py": "444d01b13428773c33a9100310ebb5815c32067b4f838f8f6afd9b4d9a284e32",
     "scripts/instruction_overlays.py": "e40decc70e39416d33b484b9d9620e2e6db64a0b6d1826c88b9899e0fbe57e99",
-    "scripts/measurement-cli.json": "96f0c453455891fe6367a957ac2a674b7d17ab16ad03229b2bc1dd3c42a1ac99",
+    "scripts/measurement-cli.json": "d883a8cce147d0f80c47aaf13dfde3799545e003619422315a134d27a9e5047a",
     "scripts/measurement_common.py": "1a703163152afa70d669e276f7be8f62f86a7989819daff8676d6fd8afddb7a4",
     "scripts/public_projection.py": "7521e1835e16dd841966f30237370f225e29014f418a5557e6c01953d0f4c102",
     "scripts/qualify_distribution.py": "f05040ca0e3921aa2407c3be56c0bb0402809588edb8785983d8d9977bc03d20",
@@ -281,7 +281,8 @@
     "scripts/toolchain-transition-0031.json": "05ba38e8b694a7ec0d5b0ec1ec098f627c9d392ab06b4cea65d9b9d3d3f19b61",
     "scripts/toolchain-transition-0034.json": "73bdaa3c74e30b70a337ee9865c78c158086f59919f9cc743ff9e1960db11e44",
     "scripts/toolchain-transition-0036.json": "df2c1bcb356e67bded5efe82c7257acbd05375fb2e30618f290225daabcbd11c",
-    "scripts/toolchain-transition-0039.json": "77b565d483928a203c2b436c66bfc537f60f49c542082690e57d8a081eefb729"
+    "scripts/toolchain-transition-0039.json": "890028bde9aeaeced79355b4404ac5a2f20718ca0c5a3feb33423961053de7c8",
+    "scripts/toolchain-transition-0042.json": "f72e0552e4b891cf0cb326b018df0b5b4c9f7f64d73305731b74dd671c430363"
   },
   "case_id": "plugin-dcp-frontieres-finance-donnees",
   "role": "reponse",
@@ -302,14 +303,14 @@
       }
     },
     "cli_version": "codex-cli 0.164.0-alpha.11.1",
-    "thread_id": "b2ec8accf69ef000a6d71906e1bd0ccceda6b0bf0fd9cefc2f6955cf8193a4dd",
+    "thread_id": "4cc5ea8b7f96ce1e19fa1ef4782839ef3bf3dd38aeb52c4095b1a8f40110c0c2",
     "cli_sha256": "1103e9e09c71fa2cd0afd6d8f3b9a2d63174fe8efd7cb5bd09f1cb14ef58a098",
-    "argv_sha256": "91631ba7cbea2e5a20df98809bf08f48fc4a578c3ee6b93243dfb6a35db4108c",
+    "argv_sha256": "5e3cd663d2c037c5f4d673ac9f43c6cfb4e6fa4ddb1c3cdb1be8cb7d0b0c4dee",
     "prompt_sha256": "19529946113cc7b4896cd59c9b56bc35ebd82ec2c579d53946958aadc0d22c49",
-    "stdout_sha256": "bd668afc4fa3590d0abab63cce76c04a5d12e02d8f1de782eca5a3a0feca88b9",
+    "stdout_sha256": "e960153a67f7393da09c393473866575d9a5cfa8f10c9f6d365e28d3275ff4fd",
     "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "process_exit": 0,
-    "elapsed_seconds": 211.907845,
+    "elapsed_seconds": 249.598663,
     "startup_failure": {
       "before_model_attested": false,
       "model_session_opened": true,
@@ -333,7 +334,7 @@
     "kind": "native_seven_skills_precheck",
     "diagnostic_only": true,
     "model_calls": 0,
-    "runtime": "<HOME>\\Documents\\Codex\\repo-recovery\\2026-10-12\\instantane-r1\\suivis\\l153-preparation\\campagne-l153-d\\plugin-dcp-frontieres-finance-donnees-reponse-9linnjmy\\.agents\\skills",
+    "runtime": "<HOME>\\Documents\\Codex\\repo-recovery\\2026-10-12\\instantane-r1\\suivis\\l154-preparation\\campagne-l154-a\\plugin-dcp-frontieres-finance-donnees-reponse-gbhadwuj\\.agents\\skills",
     "probes": [
       {
         "status": "ok",
@@ -345,7 +346,7 @@
         "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "stdout_octets": 692,
         "stderr_octets": 0,
-        "argv_sha256": "0c62d432695cd5d95bd7806f3a6cdc2f2c92736891686273a0d1eb9b3c024d7c",
+        "argv_sha256": "0c1a9defaa627fe8e4448d24dae2e1bfc7a2253d49944dbffd8ab96b418bf5ae",
         "runtime_entries_verified": 7,
         "raw_output_archived": false
       }
@@ -366,7 +367,7 @@
   },
   "campaign_harness": {
     "lot": "T43-L24e",
-    "manifest_sha256": "3ff9a360d7e501d8ba1eca1e0ff10824ea8b9b06555fc32b36b419827bf4b96d",
+    "manifest_sha256": "abec7fdf334e0edef6a4eeae3793c8c132bea199544b9bad3e6eae194e9711f4",
     "campaign_cli": {
       "version": "codex-cli 0.164.0-alpha.11.1",
       "sha256": "1103e9e09c71fa2cd0afd6d8f3b9a2d63174fe8efd7cb5bd09f1cb14ef58a098",
@@ -380,11 +381,11 @@
   },
   "case_contract": "scripts/cas-plugin-cycle-v4.json",
   "case_contract_sha256": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
-  "campaign_attempt_id": "campagne-l153-d",
-  "completed_at": "2026-11-27T06:46:51.633768+00:00",
+  "campaign_attempt_id": "campagne-l154-a",
+  "completed_at": "2026-11-27T20:50:34.621913+00:00",
   "trace": {
     "evidence_path": "source-l14/campagne/plugin-dcp-frontieres-finance-donnees/reponse/trace.jsonl",
-    "sha256": "61ee6471353e97a7f6f785bd469220683f94162488b765edef142c0e1966efc5"
+    "sha256": "1a1b3fadb5794370f067b2c3da58c5a7b4d46b1e155f3e69b1b5899ae0eca83d"
   },
   "process_exit": 0,
   "execution_errors": [],
@@ -400,7 +401,7 @@
   "human_legal_validation": false,
   "publication_ready": false,
   "campaign_adapter_sha256": "1e3ae6970817cf9e0f80e9640386ef4d276ca665df73db86bc9b3d81245e7397",
-  "campaign_support_sha256": "deec28621de1c5e90b0d5c7f8e9aec898d4fe000c3f8a69889063349c2e9fc8e",
+  "campaign_support_sha256": "5076ff8bbbcf70022096ea4626241cd41ab172a9758b8f20dad9589994a7bd0d",
   "mcp_review_sha256": "bde75706abf0feccf719734ad36044809a64e186aeaa2dc294dbd3ae974989aa",
   "mcp_text_limit_bytes": 12000,
   "case_outcome_sha256": "a7b318c11a53bb07ee6abca1e6de65a47362796949b3d9a31451e0b6c7798d79",
@@ -409,13 +410,13 @@
   "events": [
     {
       "type": "reply",
-      "text": "J’applique les skills de commande publique, de finances, de protection des données et de recherche juridique pour répartir les volets et délimiter les brouillons possibles sans les pièces contractuelles. Je commence par les lectures prescrites, dans l’ordre."
+      "text": "J’applique les skills de la campagne et commence les lectures dans l’ordre demandé, puis je préciserai qui reprend chaque volet et les brouillons possibles avec les pièces manquantes.\n"
     },
     {
       "type": "visible_text",
       "position": 2,
       "item_id": "item_0",
-      "text": "J’applique les skills de commande publique, de finances, de protection des données et de recherche juridique pour répartir les volets et délimiter les brouillons possibles sans les pièces contractuelles. Je commence par les lectures prescrites, dans l’ordre."
+      "text": "J’applique les skills de la campagne et commence les lectures dans l’ordre demandé, puis je préciserai qui reprend chaque volet et les brouillons possibles avec les pièces manquantes.\n"
     },
     {
       "type": "tool_boundary",
@@ -648,8 +649,18 @@
       }
     },
     {
-      "type": "tool_boundary",
+      "type": "reply",
+      "text": "La lecture fait apparaître trois volets distincts. Je poursuis le protocole avant de préparer la réponse et le brouillon anonymisé.\n"
+    },
+    {
+      "type": "visible_text",
       "position": 23,
+      "item_id": "item_11",
+      "text": "La lecture fait apparaître trois volets distincts. Je poursuis le protocole avant de préparer la réponse et le brouillon anonymisé.\n"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 24,
       "item_type": "command_execution"
     },
     {
@@ -672,7 +683,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 25,
+      "position": 26,
       "item_type": "command_execution"
     },
     {
@@ -692,16 +703,6 @@
         "expected_content_sha256": "e2309d137892935657004f074a07f77c7848aa369059e6ff4f8736fddf1228e1",
         "source_bytes": 3432
       }
-    },
-    {
-      "type": "reply",
-      "text": "Les lectures se poursuivent dans l’ordre demandé. Aucune restitution n’a été tronquée à ce stade ; l’absence des pièces contractuelles reste déterminante pour délimiter le brouillon."
-    },
-    {
-      "type": "visible_text",
-      "position": 27,
-      "item_id": "item_13",
-      "text": "Les lectures se poursuivent dans l’ordre demandé. Aucune restitution n’a été tronquée à ce stade ; l’absence des pièces contractuelles reste déterminante pour délimiter le brouillon."
     },
     {
       "type": "tool_boundary",
@@ -957,8 +958,18 @@
       }
     },
     {
-      "type": "tool_boundary",
+      "type": "reply",
+      "text": "Les 23 segments ont été restitués sans troncature signalée. J’active dcp-fpt, dirfi-fpt, dpo-ct et recherche-juridique pour ce cas. Les pièces absentes limitent la réponse à une répartition des travaux et à des brouillons marqués [INCOMPLET].\n"
+    },
+    {
+      "type": "visible_text",
       "position": 50,
+      "item_id": "item_25",
+      "text": "Les 23 segments ont été restitués sans troncature signalée. J’active dcp-fpt, dirfi-fpt, dpo-ct et recherche-juridique pour ce cas. Les pièces absentes limitent la réponse à une répartition des travaux et à des brouillons marqués [INCOMPLET].\n"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 51,
       "item_type": "command_execution"
     },
     {
@@ -975,7 +986,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 52,
+      "position": 53,
       "item_type": "command_execution"
     },
     {
@@ -992,7 +1003,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 54,
+      "position": 55,
       "item_type": "command_execution"
     },
     {
@@ -1009,7 +1020,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 56,
+      "position": 57,
       "item_type": "command_execution"
     },
     {
@@ -1026,7 +1037,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 58,
+      "position": 59,
       "item_type": "command_execution"
     },
     {
@@ -1043,7 +1054,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 60,
+      "position": 61,
       "item_type": "command_execution"
     },
     {
@@ -1060,17 +1071,100 @@
     },
     {
       "type": "reply",
-      "text": "Les 23 segments prescrits ont été lus sans troncature. La restitution du registre complémentaire des références DCP a ensuite été tronquée ; je ne retiens pas les passages non reçus et je poursuis avec des lectures bornées.\n\nBASCULE recherche-juridique — Validité, vigueur ou portée d'une référence.\nÀ reprendre : point précis de droit, version pertinente et source à consulter."
+      "text": "Le registre de références DCP a été tronqué par l’outil. Je ne m’appuie pas sur les passages non reçus et lis une tranche bornée pour retrouver la section utile.\n"
     },
     {
       "type": "visible_text",
-      "position": 62,
-      "item_id": "item_31",
-      "text": "Les 23 segments prescrits ont été lus sans troncature. La restitution du registre complémentaire des références DCP a ensuite été tronquée ; je ne retiens pas les passages non reçus et je poursuis avec des lectures bornées.\n\nBASCULE recherche-juridique — Validité, vigueur ou portée d'une référence.\nÀ reprendre : point précis de droit, version pertinente et source à consulter."
+      "position": 63,
+      "item_id": "item_32",
+      "text": "Le registre de références DCP a été tronqué par l’outil. Je ne m’appuie pas sur les passages non reçus et lis une tranche bornée pour retrouver la section utile.\n"
     },
     {
       "type": "tool_boundary",
-      "position": 63,
+      "position": 64,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dcp-fpt/references/references-verifiees.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "1c0e02559bf1402fed9ddd1db6ad283616dede242693a2bfbc629ae3580c17c7",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 66,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dirfi-fpt/references/analyse-situation.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/dirfi-fpt/references/analyse-situation.md"
+      ],
+      "output_sha256": "d863146ee08edb292a3b3c05f28dceb1a515c86934cb79059d00a73ba1969671",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 68,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dirfi-fpt/references/commande-publique-financiere.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/dirfi-fpt/references/commande-publique-financiere.md"
+      ],
+      "output_sha256": "d0cf7b152effbfea8544dc9a8359f79d86a2c8b50d766ccbdce355fe78e9d68a",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 70,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dpo-ct/references/analyse-situation.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/dpo-ct/references/analyse-situation.md"
+      ],
+      "output_sha256": "cd8bcd56366eefbf7ba871b8ef0850f634149898e73c8e1b039a37656bb470c1",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 72,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dpo-ct/references/sous-traitance-transferts.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/dpo-ct/references/sous-traitance-transferts.md"
+      ],
+      "output_sha256": "313a650ed852387d6e6816b2d6b9e996cd979341a3e34a137e5d0314ce709e3a",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 74,
       "item_type": "command_execution"
     },
     {
@@ -1079,13 +1173,38 @@
         ".agents/skills/recherche-juridique/references/procedure-detaillee.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "03b5d5a24332f02dd96882b54d686d4daae8cb290159db496644ad73b674cd60",
+      "output_sha256": "af61045d7ef2980be480c72724caf04aa0cb4e8879cf5f45f95a1099d3a5ed26",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "reply",
+      "text": "BASCULE recherche-juridique — Validité, vigueur ou portée d'une référence.\nÀ reprendre : point précis de droit, version pertinente et source à consulter.\n\nLa vérification portera sur le cadre général des modifications de marché. Le fondement de cet avenant restera indéterminé sans les pièces contractuelles et la description du changement.\n"
+    },
+    {
+      "type": "visible_text",
+      "position": 76,
+      "item_id": "item_39",
+      "text": "BASCULE recherche-juridique — Validité, vigueur ou portée d'une référence.\nÀ reprendre : point précis de droit, version pertinente et source à consulter.\n\nLa vérification portera sur le cadre général des modifications de marché. Le fondement de cet avenant restera indéterminé sans les pièces contractuelles et la description du changement.\n"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 77,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/references/procedure-detaillee.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "b2c4a63721dd7fd5fd1515606e624c69549deec8c16329d24b45178c3ca10374",
       "exit_code": 0,
       "status": "completed"
     },
     {
       "type": "tool_boundary",
-      "position": 65,
+      "position": 79,
       "item_type": "command_execution"
     },
     {
@@ -1094,13 +1213,13 @@
         ".agents/skills/recherche-juridique/references/sources-autorisees.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "111d5de5eb111cf0c4472313a217c2ad1a55cac3a2aa7d21469ad64d2bb32a95",
+      "output_sha256": "ab5f851a28943948ae23943ee5de380693c396497a4ac7058914c627af1adff1",
       "exit_code": 0,
       "status": "completed"
     },
     {
       "type": "tool_boundary",
-      "position": 67,
+      "position": 81,
       "item_type": "mcp_tool_call"
     },
     {
@@ -1111,8 +1230,7 @@
       "succeeded": true,
       "arguments_publics": {
         "code": "Code de la commande publique",
-        "number": "L2194-1",
-        "limit": 3
+        "number": "L2194-1"
       },
       "identifiants_dans_resultat": [
         "LEGIARTI000037703841"
@@ -1125,10 +1243,9 @@
         "arguments_present": true,
         "arguments": {
           "code": "Code de la commande publique",
-          "number": "L2194-1",
-          "limit": 3
+          "number": "L2194-1"
         },
-        "arguments_sha256": "57562cd97673f4462dbf7f30405ccfbb626a0d314a079433baf1b0b637ce0776",
+        "arguments_sha256": "a9d51a0b008303144468b7bd521489714c6ecf78d16f46f8fe22f81f23c946d2",
         "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000037703841\",\n      \"title\": \"Article L2194-1 — Code de la commande publique\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037703841\",\n      \"number\": \"L2194-1\",\n      \"code\": \"Code de la commande publique\",\n      \"section\": \"Chapitre IV : Modification du marché\",\n      \"legal_status\": \"VIGUEUR\",\n      \"start_date\": \"2019-04-01T00:00:00.000+0000\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"L2194-1\",\n    \"code\": \"Code de la commande publique\",\n    \"date\": \"2026-11-27\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
         "text_available": true,
         "text_block_count": 1,
@@ -1144,7 +1261,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 69,
+      "position": 83,
       "item_type": "mcp_tool_call"
     },
     {
@@ -1184,100 +1301,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 71,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 72,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 73,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 74,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/dpo-ct/references/sous-traitance-transferts.md"
-      ],
-      "complete_content_verified": [
-        ".agents/skills/dpo-ct/references/sous-traitance-transferts.md"
-      ],
-      "output_sha256": "313a650ed852387d6e6816b2d6b9e996cd979341a3e34a137e5d0314ce709e3a",
-      "exit_code": 0,
-      "status": "completed"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/dirfi-fpt/references/commande-publique-financiere.md"
-      ],
-      "complete_content_verified": [
-        ".agents/skills/dirfi-fpt/references/commande-publique-financiere.md"
-      ],
-      "output_sha256": "d0cf7b152effbfea8544dc9a8359f79d86a2c8b50d766ccbdce355fe78e9d68a",
-      "exit_code": 0,
-      "status": "completed"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/dpo-ct/references/analyse-situation.md"
-      ],
-      "complete_content_verified": [
-        ".agents/skills/dpo-ct/references/analyse-situation.md"
-      ],
-      "output_sha256": "cd8bcd56366eefbf7ba871b8ef0850f634149898e73c8e1b039a37656bb470c1",
-      "exit_code": 0,
-      "status": "completed"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/dirfi-fpt/references/analyse-situation.md"
-      ],
-      "complete_content_verified": [
-        ".agents/skills/dirfi-fpt/references/analyse-situation.md"
-      ],
-      "output_sha256": "d863146ee08edb292a3b3c05f28dceb1a515c86934cb79059d00a73ba1969671",
-      "exit_code": 0,
-      "status": "completed"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 79,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/dirfi-fpt/references/commande-publique-financiere.md"
-      ],
-      "complete_content_verified": [],
-      "output_sha256": "690bba8633f1b03d4ec5ce7d815c788b5b5f4821964a8cd124528f6a1117daa4",
-      "exit_code": 0,
-      "status": "completed"
-    },
-    {
-      "type": "reply",
-      "text": "Le MCP droit-francais a bien fourni le texte officiel relatif aux modifications du marché. Cela ne suffit pas à retenir un fondement d’avenant pour ce cas sans connaître le changement demandé et le contrat. Une seconde restitution complémentaire a été tronquée ; le passage financier utile a été récupéré séparément par une lecture bornée."
-    },
-    {
-      "type": "visible_text",
-      "position": 81,
-      "item_id": "item_41",
-      "text": "Le MCP droit-francais a bien fourni le texte officiel relatif aux modifications du marché. Cela ne suffit pas à retenir un fondement d’avenant pour ce cas sans connaître le changement demandé et le contrat. Une seconde restitution complémentaire a été tronquée ; le passage financier utile a été récupéré séparément par une lecture bornée."
-    },
-    {
-      "type": "tool_boundary",
-      "position": 82,
+      "position": 85,
       "item_type": "command_execution"
     },
     {
@@ -1286,66 +1310,153 @@
         ".agents/skills/recherche-juridique/references/gabarits-sortie.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "fbdd2168e0a62bc665abcc5ff34fd56d4b40fffb3bf2987407e83824a701ac3e",
+      "output_sha256": "3855f4883458a141e9a9692850fc079e5c38751141775f2d4aef9500e301b924",
       "exit_code": 0,
       "status": "completed"
     },
     {
       "type": "tool_boundary",
-      "position": 84,
+      "position": 87,
       "item_type": "command_execution"
     },
     {
       "type": "native_read",
       "paths": [
-        ".agents/skills/dcp-fpt/references/references-verifiees.md"
+        ".agents/skills/recherche-juridique/references/procedure-detaillee.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "3635b5e2c75e03dbd9b7a85fcb236553745095b3973adeb90c7c5e16cdc5b73a",
+      "output_sha256": "f0de3aeefd3cc1391842bcd996d014f672f68168575483035e956c0f3feea689",
       "exit_code": 0,
       "status": "completed"
     },
     {
       "type": "reply",
-      "text": "**Le service achat prépare la structure du projet d’avenant ; le calcul revient à dirfi-fpt et les clauses de données à dpo-ct. Sans pièces contractuelles, seul un brouillon [INCOMPLET] peut être préparé.**\n\nAnalyse au 27 novembre 2026 — cas fictif, dates du marché et de la modification inconnues.\n\n**Volet commande publique — dcp-fpt**\n\nLe service achat conserve l’analyse juridique de la modification et l’assemblage de l’avenant. Il doit obtenir le marché signé, ses annexes, les modifications antérieures, le changement précisément demandé et les habilitations utiles. Le mode d’exercice du service achat reste également à préciser.\n\nLe brouillon peut prendre cette forme, conformément à dcp-fpt, branche modifications §10 et gabarit projet d’avenant :\n\n> **Projet d’avenant — [INCOMPLET], document de travail**\n>\n> - Marché concerné et parties : [à compléter].\n> - Objet et motif factuel du changement : [à documenter].\n> - Fondement juridique et preuves de ses conditions : [non établis].\n> - Dispositions modifiées : [pièce et clause / rédaction actuelle / rédaction proposée / justification].\n> - Prestations et calendrier concernés : [à préciser].\n> - Volet financier : [contribution attendue de dirfi-fpt].\n> - Annexe relative aux données : [contribution attendue de dpo-ct].\n> - Autorité habilitée, avis éventuels et formalités : [à vérifier].\n\nCe document ne permet pas de conclure que l’avenant est juridiquement possible.\n\nBASCULE dirfi-fpt — Volet financier du marché.  \nÀ reprendre : l'ensemble du volet financier de la décision.  \nCe volet est renvoyé à dirfi-fpt ; il n'est ni détaillé ni traité ici.\n\n**Analyse dirfi-fpt**\n\nLa direction des finances reprend le calcul de la pénalité et l’incidence financière de l’avenant. Elle peut préparer une **fiche de calcul [INCOMPLET]** recensant la clause applicable, les faits justificatifs et les paramètres contractuels manquants. Aucun montant ni formule applicable ne peut être retenu sans ces éléments.  \nRéférence interne : dirfi-fpt, branche commande publique financière §5.6.\n\nBASCULE dpo-ct — Clauses relatives aux données personnelles.  \nÀ reprendre : contenu des clauses de traitement, sous-traitance des données et transferts.\n\n**Analyse dpo-ct**\n\nLe DPO reprend la qualification des acteurs et la préparation du contenu relatif aux données. Une **trame d’annexe [INCOMPLET]** peut recenser les informations attendues : finalités, opérations, données, personnes concernées, durée, acteurs, lieux de stockage et d’accès, chaîne de prestataires et clauses existantes. La rédaction juridique reste suspendue sur les points non documentés et non vérifiés. Le livrable demeure un avis et un brouillon soumis à relecture humaine avant transmission externe.  \nRéférences internes : dpo-ct, §5.4 et §8, branche sous-traitance et transferts §4.\n\nBASCULE recherche-juridique — Validité, vigueur ou portée d'une référence.  \nÀ reprendre : point précis de droit, version pertinente et source à consulter.\n\n**Vérification recherche-juridique**\n\nLe MCP droit-francais a fourni l’[article L2194-1 du Code de la commande publique](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037703841), en vigueur au 27 novembre 2026. Ses conditions réglementaires et son application à cet avenant ne sont pas établies.\n\n**Limites :** les 23 segments prescrits ont été reçus sans troncature ; deux restitutions complémentaires ont été tronquées. Confiance élevée sur cette répartition de travail ; aucune validation du fondement de l’avenant, du montant de pénalité ou des clauses finales."
+      "text": "Le MCP droit-francais a renvoyé le texte primaire sur les modifications de marché, avec une version applicable au 27 novembre 2026. Cette lecture ne permet pas, à elle seule, de choisir le fondement de l’avenant ni de calculer la pénalité.\n"
     },
     {
       "type": "visible_text",
-      "position": 86,
-      "item_id": "item_44",
-      "text": "**Le service achat prépare la structure du projet d’avenant ; le calcul revient à dirfi-fpt et les clauses de données à dpo-ct. Sans pièces contractuelles, seul un brouillon [INCOMPLET] peut être préparé.**\n\nAnalyse au 27 novembre 2026 — cas fictif, dates du marché et de la modification inconnues.\n\n**Volet commande publique — dcp-fpt**\n\nLe service achat conserve l’analyse juridique de la modification et l’assemblage de l’avenant. Il doit obtenir le marché signé, ses annexes, les modifications antérieures, le changement précisément demandé et les habilitations utiles. Le mode d’exercice du service achat reste également à préciser.\n\nLe brouillon peut prendre cette forme, conformément à dcp-fpt, branche modifications §10 et gabarit projet d’avenant :\n\n> **Projet d’avenant — [INCOMPLET], document de travail**\n>\n> - Marché concerné et parties : [à compléter].\n> - Objet et motif factuel du changement : [à documenter].\n> - Fondement juridique et preuves de ses conditions : [non établis].\n> - Dispositions modifiées : [pièce et clause / rédaction actuelle / rédaction proposée / justification].\n> - Prestations et calendrier concernés : [à préciser].\n> - Volet financier : [contribution attendue de dirfi-fpt].\n> - Annexe relative aux données : [contribution attendue de dpo-ct].\n> - Autorité habilitée, avis éventuels et formalités : [à vérifier].\n\nCe document ne permet pas de conclure que l’avenant est juridiquement possible.\n\nBASCULE dirfi-fpt — Volet financier du marché.  \nÀ reprendre : l'ensemble du volet financier de la décision.  \nCe volet est renvoyé à dirfi-fpt ; il n'est ni détaillé ni traité ici.\n\n**Analyse dirfi-fpt**\n\nLa direction des finances reprend le calcul de la pénalité et l’incidence financière de l’avenant. Elle peut préparer une **fiche de calcul [INCOMPLET]** recensant la clause applicable, les faits justificatifs et les paramètres contractuels manquants. Aucun montant ni formule applicable ne peut être retenu sans ces éléments.  \nRéférence interne : dirfi-fpt, branche commande publique financière §5.6.\n\nBASCULE dpo-ct — Clauses relatives aux données personnelles.  \nÀ reprendre : contenu des clauses de traitement, sous-traitance des données et transferts.\n\n**Analyse dpo-ct**\n\nLe DPO reprend la qualification des acteurs et la préparation du contenu relatif aux données. Une **trame d’annexe [INCOMPLET]** peut recenser les informations attendues : finalités, opérations, données, personnes concernées, durée, acteurs, lieux de stockage et d’accès, chaîne de prestataires et clauses existantes. La rédaction juridique reste suspendue sur les points non documentés et non vérifiés. Le livrable demeure un avis et un brouillon soumis à relecture humaine avant transmission externe.  \nRéférences internes : dpo-ct, §5.4 et §8, branche sous-traitance et transferts §4.\n\nBASCULE recherche-juridique — Validité, vigueur ou portée d'une référence.  \nÀ reprendre : point précis de droit, version pertinente et source à consulter.\n\n**Vérification recherche-juridique**\n\nLe MCP droit-francais a fourni l’[article L2194-1 du Code de la commande publique](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037703841), en vigueur au 27 novembre 2026. Ses conditions réglementaires et son application à cet avenant ne sont pas établies.\n\n**Limites :** les 23 segments prescrits ont été reçus sans troncature ; deux restitutions complémentaires ont été tronquées. Confiance élevée sur cette répartition de travail ; aucune validation du fondement de l’avenant, du montant de pénalité ou des clauses finales."
+      "position": 89,
+      "item_id": "item_46",
+      "text": "Le MCP droit-francais a renvoyé le texte primaire sur les modifications de marché, avec une version applicable au 27 novembre 2026. Cette lecture ne permet pas, à elle seule, de choisir le fondement de l’avenant ni de calculer la pénalité.\n"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 90,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/references/format-citation.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "3204e6f7e4a9c8431a913ecfefa96a4851418994456e95a5e15b4effc1c1527e",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 92,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dirfi-fpt/references/ecrits-financiers.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "82b2b52aa0f595b71cd032950ef019e7421fec78998ba4d180c084d2e994e448",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 94,
+      "item_type": "mcp_tool_call"
+    },
+    {
+      "type": "mcp_call",
+      "server": "droit-francais",
+      "tool": "search",
+      "status": "completed",
+      "succeeded": true,
+      "arguments_publics": {},
+      "identifiants_dans_resultat": [
+        "LEGIARTI000006350071",
+        "LEGIARTI000006350542",
+        "LEGIARTI000006410122",
+        "LEGIARTI000006514865",
+        "LEGIARTI000006792025",
+        "LEGIARTI000026313106",
+        "LEGIARTI000042779601",
+        "LEGIARTI000042915054",
+        "LEGIARTI000052064331",
+        "LEGIARTI000054359188"
+      ],
+      "result_sha256": "f219a07b91dca9fcc60111d34b93c98346fbd0eaa8951733a3e237b7f02314ce",
+      "review_material": {
+        "schema": "mcp-text-v1",
+        "untrusted_data": true,
+        "tool": "search",
+        "arguments_present": true,
+        "arguments": {
+          "query": "article 28 règlement général sur la protection des données sous-traitant"
+        },
+        "arguments_sha256": "76455143896ab6e315e00fc9c9e1ea6eb33542b487f4fe91d3a01cf6d7aabfbc",
+        "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000006514865\",\n      \"title\": \"Article D28 — Code de procédure pénale\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006514865\"\n    },\n    {\n      \"id\": \"LEGIARTI000026313106\",\n      \"title\": \"Article R28 — Code de procédure pénale\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000026313106\"\n    },\n    {\n      \"id\": \"LEGIARTI000042779601\",\n      \"title\": \"Article 28 — Code de procédure pénale\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042779601\"\n    },\n    {\n      \"id\": \"LEGIARTI000006410122\",\n      \"title\": \"Article 28 — Code de procédure civile\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006410122\"\n    },\n    {\n      \"id\": \"LEGIARTI000052064331\",\n      \"title\": \"Article R28 — Code électoral\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000052064331\"\n    },\n    {\n      \"id\": \"LEGIARTI000054359188\",\n      \"title\": \"Article 28 — Code de déontologie des architectes\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054359188\"\n    },\n    {\n      \"id\": \"LEGIARTI000006350071\",\n      \"title\": \"Article A28 — Code du domaine de l'Etat\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006350071\"\n    },\n    {\n      \"id\": \"LEGIARTI000006350542\",\n      \"title\": \"Article R28 — Code du domaine de l'Etat\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006350542\"\n    },\n    {\n      \"id\": \"LEGIARTI000006792025\",\n      \"title\": \"Article R28 — Code des pensions de retraite des marins français du commerce, de pêche ou de plaisance\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006792025\"\n    },\n    {\n      \"id\": \"LEGIARTI000042915054\",\n      \"title\": \"Article L28 — Livre des procédures fiscales\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042915054\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"28\",\n    \"code\": null,\n    \"date\": \"2026-11-27\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
+        "text_available": true,
+        "text_block_count": 1,
+        "text_limit_bytes": 12000,
+        "included_text_bytes": 2348,
+        "included_text_sha256": "b51ac71b821c922695d517c4917e109536cb2957571439af18c18eaf94a5da05",
+        "full_text_bytes": 2348,
+        "full_text_sha256": "b51ac71b821c922695d517c4917e109536cb2957571439af18c18eaf94a5da05",
+        "truncated": false,
+        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
+        "upstream_truncation": "not_attested"
+      }
+    },
+    {
+      "type": "reply",
+      "text": "**Le service achat, avec dcp-fpt, conduit le projet d’avenant. Le calcul financier et les clauses de données sont repris séparément.** Sans pièces contractuelles, seul un brouillon anonymisé **[INCOMPLET]** peut être préparé.\n\n**Volet dcp-fpt — avenant**\n\nDCP examine la modification envisagée, son fondement, les clauses touchées et les habilitations. Le service achat prépare ; l’autorité habilitée reste à identifier, délégation à l’appui. Aucun fondement d’avenant n’est établi dans ce cas fictif.\n\nBrouillon préparatoire, selon dcp-fpt, branche modifications, §10 et gabarit projet d’avenant :\n\n> **[INCOMPLET] — Projet d’avenant pour instruction interne**\n>\n> Marché de services : [objet anonymisé].  \n> Pièces contractuelles, procédure initiale, dates et modifications antérieures : [manquantes].  \n> Motif du changement : [faits et justificatifs à fournir].  \n> Modification envisagée : [pièce et clause concernées ; contenu initial ; rédaction proposée].  \n> Fondement et conditions de modification : [à établir].  \n> Autorité habilitée, avis éventuels et formalités : [à vérifier].  \n> Contributions complémentaires : [à intégrer après instruction des volets ci-dessous].\n\nCe document constitue une trame de travail, sans validation de la modification.\n\nBASCULE dirfi-fpt — Volet financier du marché.  \nÀ reprendre : l'ensemble du volet financier de la décision.  \nCe volet est renvoyé à dirfi-fpt ; il n'est ni détaillé ni traité ici.\n\n**Analyse dirfi-fpt**\n\nLa direction des finances reprend le **calcul de la pénalité et l’incidence financière de l’avenant**. Elle peut préparer une fiche **[INCOMPLET]** recensant la clause applicable, la formule contractuelle, les paramètres, les événements datés et leurs justificatifs.\n\n**Aucun montant ni taux par défaut** ne peut être retenu sans ces éléments. DCP conserve l’examen du mécanisme juridique contractuel ; DirFi réalise le calcul dans son périmètre.  \n*Référence interne : dirfi-fpt, branche commande publique financière, §6 et §8.*\n\nBASCULE dpo-ct — Clauses relatives aux données personnelles.  \nÀ reprendre : contenu des clauses de traitement, sous-traitance des données et transferts.\n\n**Analyse dpo-ct**\n\nLe DPO reprend **la qualification des acteurs et le contenu des clauses de données**. Une fiche préparatoire **[INCOMPLET]** peut recueillir : prestation et finalités, rôles réels, données et personnes concernées, durées, instructions, lieux de stockage et d’accès, intervenants ultérieurs et clauses existantes.\n\nLa recherche effectuée n’a pas fourni le primaire pertinent pour ces clauses : **source officielle non lue en session**. Je limite donc ce volet à cette collecte, sans proposer de clauses présentées comme conformes. Le DPO humain relit les documents avant sortie externe ; son avis reste consultatif.  \n*Référence interne : dpo-ct, branche sous-traitance et transferts, §4 ; SKILL, §5.2 et §8.*\n\nBASCULE recherche-juridique — Validité, vigueur ou portée d'une référence.  \nÀ reprendre : point précis de droit, version pertinente et source à consulter.\n\n**Analyse recherche-juridique**\n\nLe MCP droit-francais a fourni l’[article L. 2194-1 du Code de la commande publique](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037703841), version depuis le 1er avril 2019, applicable selon l’outil au **27 novembre 2026**, date de consultation. Il encadre les modifications et interdit de changer la nature globale du marché. Ses conditions réglementaires et l’applicabilité au contrat restent à instruire.\n\nPour compléter les brouillons, réunir les pièces signées et annexes, la description du changement, la clause de pénalité et les justificatifs d’exécution, ainsi que la description du traitement. **Ni pénalité due, ni avenant régulier, ni conformité des clauses ne sont établis en l’état.**"
+    },
+    {
+      "type": "visible_text",
+      "position": 96,
+      "item_id": "item_50",
+      "text": "**Le service achat, avec dcp-fpt, conduit le projet d’avenant. Le calcul financier et les clauses de données sont repris séparément.** Sans pièces contractuelles, seul un brouillon anonymisé **[INCOMPLET]** peut être préparé.\n\n**Volet dcp-fpt — avenant**\n\nDCP examine la modification envisagée, son fondement, les clauses touchées et les habilitations. Le service achat prépare ; l’autorité habilitée reste à identifier, délégation à l’appui. Aucun fondement d’avenant n’est établi dans ce cas fictif.\n\nBrouillon préparatoire, selon dcp-fpt, branche modifications, §10 et gabarit projet d’avenant :\n\n> **[INCOMPLET] — Projet d’avenant pour instruction interne**\n>\n> Marché de services : [objet anonymisé].  \n> Pièces contractuelles, procédure initiale, dates et modifications antérieures : [manquantes].  \n> Motif du changement : [faits et justificatifs à fournir].  \n> Modification envisagée : [pièce et clause concernées ; contenu initial ; rédaction proposée].  \n> Fondement et conditions de modification : [à établir].  \n> Autorité habilitée, avis éventuels et formalités : [à vérifier].  \n> Contributions complémentaires : [à intégrer après instruction des volets ci-dessous].\n\nCe document constitue une trame de travail, sans validation de la modification.\n\nBASCULE dirfi-fpt — Volet financier du marché.  \nÀ reprendre : l'ensemble du volet financier de la décision.  \nCe volet est renvoyé à dirfi-fpt ; il n'est ni détaillé ni traité ici.\n\n**Analyse dirfi-fpt**\n\nLa direction des finances reprend le **calcul de la pénalité et l’incidence financière de l’avenant**. Elle peut préparer une fiche **[INCOMPLET]** recensant la clause applicable, la formule contractuelle, les paramètres, les événements datés et leurs justificatifs.\n\n**Aucun montant ni taux par défaut** ne peut être retenu sans ces éléments. DCP conserve l’examen du mécanisme juridique contractuel ; DirFi réalise le calcul dans son périmètre.  \n*Référence interne : dirfi-fpt, branche commande publique financière, §6 et §8.*\n\nBASCULE dpo-ct — Clauses relatives aux données personnelles.  \nÀ reprendre : contenu des clauses de traitement, sous-traitance des données et transferts.\n\n**Analyse dpo-ct**\n\nLe DPO reprend **la qualification des acteurs et le contenu des clauses de données**. Une fiche préparatoire **[INCOMPLET]** peut recueillir : prestation et finalités, rôles réels, données et personnes concernées, durées, instructions, lieux de stockage et d’accès, intervenants ultérieurs et clauses existantes.\n\nLa recherche effectuée n’a pas fourni le primaire pertinent pour ces clauses : **source officielle non lue en session**. Je limite donc ce volet à cette collecte, sans proposer de clauses présentées comme conformes. Le DPO humain relit les documents avant sortie externe ; son avis reste consultatif.  \n*Référence interne : dpo-ct, branche sous-traitance et transferts, §4 ; SKILL, §5.2 et §8.*\n\nBASCULE recherche-juridique — Validité, vigueur ou portée d'une référence.  \nÀ reprendre : point précis de droit, version pertinente et source à consulter.\n\n**Analyse recherche-juridique**\n\nLe MCP droit-francais a fourni l’[article L. 2194-1 du Code de la commande publique](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037703841), version depuis le 1er avril 2019, applicable selon l’outil au **27 novembre 2026**, date de consultation. Il encadre les modifications et interdit de changer la nature globale du marché. Ses conditions réglementaires et l’applicabilité au contrat restent à instruire.\n\nPour compléter les brouillons, réunir les pièces signées et annexes, la description du changement, la clause de pénalité et les justificatifs d’exécution, ainsi que la description du traitement. **Ni pénalité due, ni avenant régulier, ni conformité des clauses ne sont établis en l’état.**"
     },
     {
       "type": "turn_completed",
       "usage": {
-        "input_tokens": 2221111,
-        "cached_input_tokens": 2123136,
+        "input_tokens": 3065672,
+        "cached_input_tokens": 2942208,
         "cache_write_input_tokens": 0,
-        "output_tokens": 4765,
-        "reasoning_output_tokens": 1221
+        "output_tokens": 5192,
+        "reasoning_output_tokens": 1269
       }
     }
   ],
-  "events_sha256": "4aa9f181d12af5952985ce1fa74740031bdb41d5f22a53acf2f295bf971d928b",
+  "events_sha256": "dbb5e94976120f68c97b95bb2e1db01d61b696fc02c8337dfb5817de6a1875f8",
   "runner_sha256": "89fd874415c5830dc67be3e2fa76a77eb9bafdd1f7434ecad696d35db1ef1602",
   "profile": "codex-copies-natives-mcp-v5",
-  "measurement_commit": "e8f42719e90e5fdf69458cf9960bf04ee6560f84",
-  "qualification_target_commit": "768d7d56258bd4b9feeede266c9ee1b2187dc8d7",
+  "measurement_commit": "30617203c9514736af680dc97c79de53d4a6df4c",
+  "qualification_target_commit": "6a469ab56495c5b9179da7ccb15dc7afd71a2a39",
   "derivation": {
     "kind": "projection_of_original_session",
     "original": {
       "evidence_path": "campagne/plugin-dcp-frontieres-finance-donnees/reponse/session.json",
-      "sha256": "12bc0f7f90836d7cfe21e4ba4f2ba367152d2f9d0401fd09093c00ec62f0b992"
+      "sha256": "85880f869fc5481d6acbf59eeaa3b8fffe1c921e48dd53c286b9206a867ebd71"
     },
     "summary": {
       "evidence_path": "campagne/resume-campagne.json",
-      "sha256": "01c0b81b4b99e6e121f46481ab3429bd4c5e5f94d5b7ffedba0ccfd20c00d92c"
+      "sha256": "ab189608f01e0b3de8c84026e835c792aa16afcf7988151a9a278132529d69b5"
     }
   },
   "original_session": {
     "evidence_path": "source-l14/campagne/plugin-dcp-frontieres-finance-donnees/reponse/session.json",
-    "sha256": "12bc0f7f90836d7cfe21e4ba4f2ba367152d2f9d0401fd09093c00ec62f0b992"
+    "sha256": "85880f869fc5481d6acbf59eeaa3b8fffe1c921e48dd53c286b9206a867ebd71"
   },
   "source_bundle_root": "tests/evidence/mesure-courante/source-l14",
-  "payload_sha256": "c13aa9ac6e1aa9266e998bc8f9e741757ca3361f20eeee50543c70781916fa67"
+  "payload_sha256": "67cdb1d8f6686b0f184e2ac16e3107b20d70f3562f035b315f3ffe0a44328157"
 }

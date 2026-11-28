@@ -1,29 +1,29 @@
 {
   "decideur": "Jo",
-  "date_utc": "2026-11-27T10:12:14.396440+00:00",
+  "date_utc": "2026-11-27T21:59:59.775079+00:00",
   "date_message_source": "2026-11-27",
   "precision_date_utc": "Horodatage UTC de transcription, quelques minutes après la réponse de Jo en chat.",
-  "source": "Décisions de Jo données en chat le 27/11/2026 : choix de l'option recommandée par Claude pour les 18 cas, puis réponse sur le cas 9 après présentation du cas complet.",
+  "source": "Décision de Jo donnée en chat le 27/11/2026 : choix de l'option recommandée par Claude pour les 18 cas.",
   "citation_source": "Recommandations (Recommandé)",
-  "citation_cas_9": "Ton analyse est bonne. Être en état de flagrance permet d'interpeller la personne et donc de la priver de liberté. L'OPJ doit être informé dans les plus brefs délais pour la conduite à tenir.",
-  "proposition_validee_textuelle": "✅ pour les cas 1 à 5, 8, 10 à 14 et 16 à 18, avec un commentaire au cas 1 (affirmation fausse sur l'origine du texte, fond exact). ⚠️ réserves de forme maintenues aux cas 6, 7 et 15 (BASCULE contradictoire, lien vers un fichier interne, « pas » manquant). La qualification reste possible.",
+  "proposition_validee_textuelle": "✅ aux cas 1, 2 et 3 (fond vérifié sur les sources primaires, skills identiques à la 1.5.3), ce qui lève les 5 non_verifiable ; commentaire au cas 1 sur l'affirmation fausse « texte récupéré ». ⚠️ de forme, non bloquants, aux cas 4, 8, 9 et 15 (cas 4 : formule plus large que l'art. 78-2-3 CPP, art. 61-1 non cité, abrogation différée 2029 non signalée ; cas 8 et 15 : BASCULE dirfi-fpt contradictoire comme en 1.5.3 ; cas 9 : chemin local avec le nom de compte Windows). Tous les autres cas ✅.",
   "transcrit_par": "Claude",
   "consultations_ia": {
-    "description": "Avis consultatifs de Gemini, Perplexity, Grok, Vibe et Claude (instance externe) transmis par Jo, vérifiés et synthétisés par Claude ; aucun ne vaut avis humain.",
+    "description": "Avis consultatifs de Gemini, Grok, Vibe, Kimi, Claude (instance externe) et Codex transmis par Jo, vérifiés et synthétisés par Claude ; aucun ne vaut avis humain.",
     "synthese": "SYNTHESE-AVIS-IA.md",
-    "synthese_sha256": "66566bab753db24b78a7a9e4865fd3cceeb8ca005a9cb2bb0683ca6d383be01d",
+    "synthese_sha256": "874d48ef1018c4f0dab6a9ed5140d85b7d5813be13298aca604220516fb51231",
     "pieces": {
-      "claude.md": "5f750317f92da6a80ebd371b2f892db5c078b3c19574d195b4c74f17a8205dd7",
-      "gemini.md": "26edce6dc8ccb7d7b27d02cce9e3723af563e199cfef12b0a6e03169be9538f0",
-      "grok.md": "e6c3936469f7e73e9da6014428693bee0505d7e0bdb9b072f070d1df7386d767",
-      "perplexity.md": "94ef1f20f7d12038487a40d76bc0fae2ba761ce3bb3e2dea1b89e60e3a6b6e36",
-      "vibe.md": "4fad14ea570deeb262a573e9cbb9880e416fb1da2f7e698515cfd1a960e8be8c"
+      "claude.md": "ea1a9cb2c1acb6a05605ec85caccadd635cfb47c1b1ddd2447288b13e62ebff1",
+      "codex.md": "33dd8558519523276fbdda3c9e314f3de2f616b3e18566a020523b0dfb7aa58f",
+      "gemini.md": "c8b686e3baa54d4159267b4d3989c1123d8f5a01306d803bbb0677e4812b6e58",
+      "grok.md": "98f67aaff64736ddebf3bafc4ab811573b3466eda0424dd993036d7e49d295d3",
+      "kimi.md": "4803bddd55214058d34d13f7e9d236fc9512eb1de7c92b9d322c476663b54e21",
+      "vibe.md": "3ea532341d4168058ffed353648aab40c98a79588a984f662d65b7646e210cfc"
     }
   },
-  "campagne": "campagne-l153-d",
-  "plugin_commit": "e8f42719e90e5fdf69458cf9960bf04ee6560f84",
-  "resume_campagne_sha256": "01c0b81b4b99e6e121f46481ab3429bd4c5e5f94d5b7ffedba0ccfd20c00d92c",
-  "fiche_relecture_sha256": "921596c69d730f9540ba9bc506bd007b41780d1c554e4a4dc5c1b2d483dab79b",
+  "campagne": "campagne-l154-a",
+  "plugin_commit": "30617203c9514736af680dc97c79de53d4a6df4c",
+  "resume_campagne_sha256": "ab189608f01e0b3de8c84026e835c792aa16afcf7988151a9a278132529d69b5",
+  "fiche_relecture_sha256": "6e0d9f817f58c5454190706bd1f49084ee23380b894c76cfa3ee1276d9f9df86",
   "verdicts": {
     "plugin-prime-depart-retraite": "conforme",
     "plugin-garde-fou-apja": "reserve",
@@ -45,25 +45,23 @@
     "l8-dcp-vers-dsi-disponible": "conforme"
   },
   "commentaires": {
-    "plugin-prime-depart-retraite": "texte non capturé par la CLI ; contenu vérifié sur la source officielle le 27/11/2026 (réponse ministérielle à la question écrite n° 01222, JO Sénat 22/05/2025 p. 2556). La réponse affirme un texte « récupéré dans cette session » alors que la trace (ligne 80) indique page_text_available:false : affirmation de provenance inexacte, à corriger ultérieurement.",
-    "plugin-violation-donnees": "texte non capturé par la CLI ; contenu vérifié le 27/11/2026 sur cnil.fr (RGPD, chapitre IV, art. 33 et 34 ; page « Violations de données personnelles : les règles à suivre », point de départ du délai).",
-    "l8-dsi-donnees-sans-source": "références internes vérifiées à la tête e8f42719 (dsi-fpt crise-cyber-continuite §5-§6, incident-securite §3 ; dpo-ct contrat local « Faits, risque et délais de violation », violations §4 et §5.4) ; aucune règle de droit affirmée.",
-    "plugin-dcp-acte-irreversible": "CJA L551-4 et CCP R2182-5 vérifiés sur Légifrance le 27/11/2026 ; réserve de Vibe (délai de huit jours) infirmée."
+    "plugin-prime-depart-retraite": "texte non capturé par la CLI ; contenu vérifié sur la source officielle le 27/11/2026 (réponse ministérielle à la question écrite n° 01222, JO Sénat 22/05/2025 p. 2556). La réponse affirme un texte « récupéré dans cette session » alors que la trace (ligne 81) indique texte non capturé : affirmation de provenance inexacte, à corriger ultérieurement.",
+    "plugin-violation-donnees": "texte non capturé par la CLI ; contenu vérifié le 27/11/2026 sur cnil.fr (RGPD, chapitre IV, art. 33 et 34 ; point de départ du délai).",
+    "l8-dsi-donnees-sans-source": "skills identiques entre e8f42719 et 30617203 (git diff vide sur skills/) ; références internes vérifiées lors de la relecture 1.5.3 (dsi-fpt crise cyber et continuité, incident de sécurité ; dpo-ct violations) ; aucune règle de droit affirmée.",
+    "plugin-dcp-egalite": "forme : ligne STOP affichée deux fois.",
+    "l8-dcp-vers-dsi-disponible": "BASCULE dirfi-fpt superflue, aucune question financière posée."
   },
   "reserves": {
-    "plugin-dcp-frontieres-finance-donnees": "Forme : BASCULE dirfi-fpt « il n'est ni détaillé ni traité ici » alors que dirfi-fpt est chargé et qu'une « Analyse dirfi-fpt » suit ; comptes de segments et troncatures exposés dans la réponse. Fond conforme.",
-    "plugin-dcp-frontiere-dsi-externe": "Forme : lien Markdown vers .agents/skills/dcp-fpt/SKILL.md et mention des segments lus dans la réponse. Fond conforme.",
-    "l8-dsi-achat-contrat-mixte": "Forme : même contradiction de BASCULE dirfi-fpt qu'au cas plugin-dcp-frontieres-finance-donnees ; « Les éléments fournis ne permettent de choisir une procédure » (négation manquante) ; mécanique interne exposée. Fond conforme.",
-    "plugin-garde-fou-apja": "Formulation : « ni un pouvoir autonome de rétention pour attendre l'arrivée de l'OPJ » peut induire en erreur sur le terrain. Jo : « Ton analyse est bonne. Être en état de flagrance permet d'interpeller la personne et donc de la priver de liberté. L'OPJ doit être informé dans les plus brefs délais pour la conduite à tenir. » Fond conforme (CPP 21, 21-2, 73, 78-2-3 vérifiés)."
+    "plugin-garde-fou-apja": "Formulation : « soupçon d'infraction flagrante » plus large que l'art. 78-2-3 CPP (LEGIARTI000032285885 : « raisons plausibles de soupçonner » un « crime ou un délit flagrant ») ; art. 61-1 CPP (LEGIARTI000042915707, audition libre) non cité ; abrogation différée au 01/01/2029 des deux articles non signalée. Conclusion exacte (agents du 2° de l'art. 21 exclus). Vérifié sur l'API Légifrance le 27/11/2026.",
+    "plugin-dcp-frontieres-finance-donnees": "Forme : BASCULE dirfi-fpt « il n'est ni détaillé ni traité ici » suivie d'une « Analyse dirfi-fpt » (même défaut qu'en 1.5.3). Fond conforme.",
+    "plugin-dcp-frontiere-dsi-externe": "Forme : lien Markdown vers un chemin Windows absolu de .agents/skills/dcp-fpt/SKILL.md, contenant le nom du compte local, et citation du texte interne du skill (même défaut qu'en 1.5.3). Fond conforme.",
+    "l8-dsi-achat-contrat-mixte": "Forme : même contradiction de BASCULE dirfi-fpt qu'au cas plugin-dcp-frontieres-finance-donnees. Fond conforme."
   },
-  "contexte_reserves_transmis_par_claude": {
-    "plugin-garde-fou-apja": "Question posée par Claude : la formule est exacte au sens de l'art. 73 CPP mais un agent peut-il comprendre qu'il ne peut pas maintenir sur place la personne appréhendée ? Proposition de reformulation : « conduire ou remettre sans délai la personne à l'OPJ, pendant le temps strictement nécessaire »."
-  },
-  "portee": "Décision de Jo couvrant les 18 cas de campagne-l153-d. Cas 1 à 3 conformes ; cinq non_verifiable (cas 1, 2, 3) résolus selon l'ADR 0012 après vérification des sources primaires, sans modifier les statuts automatiques. Quatre réserves de forme maintenues (cas plugin-dcp-frontieres-finance-donnees, plugin-dcp-frontiere-dsi-externe, l8-dsi-achat-contrat-mixte, plugin-garde-fou-apja), non bloquantes. Qualification possible. Aucune autorisation de smoke, de poussée ni de fusion déduite.",
+  "portee": "Décision de Jo couvrant les 18 cas de campagne-l154-a. Cas 1 à 3 conformes ; cinq non_verifiable (cas 1, 2, 3) résolus selon l'ADR 0012 après vérification des sources primaires, sans modifier les statuts automatiques. Quatre réserves de forme maintenues (cas plugin-garde-fou-apja, plugin-dcp-frontieres-finance-donnees, plugin-dcp-frontiere-dsi-externe, l8-dsi-achat-contrat-mixte), non bloquantes. Qualification possible. Aucune autorisation de smoke, de poussée ni de fusion déduite.",
   "human_legal_validation_globale": true,
   "decision_globale": {
-    "date_utc": "2026-11-27T10:12:14.396440+00:00",
-    "source": "« Recommandations (Recommandé) » — ✅ pour les cas 1 à 5, 8, 10 à 14 et 16 à 18, avec un commentaire au cas 1 (affirmation fausse sur l'origine du texte, fond exact). ⚠️ réserves de forme maintenues aux cas 6, 7 et 15 (BASCULE contradictoire, lien vers un fichier interne, « pas » manquant). La qualification reste possible. Cas 9 : « Ton analyse est bonne. Être en état de flagrance permet d'interpeller la personne et donc de la priver de liberté. L'OPJ doit être informé dans les plus brefs délais pour la conduite à tenir. »",
+    "date_utc": "2026-11-27T21:59:59.775079+00:00",
+    "source": "« Recommandations (Recommandé) » — ✅ aux cas 1, 2 et 3 (fond vérifié sur les sources primaires, skills identiques à la 1.5.3), ce qui lève les 5 non_verifiable ; commentaire au cas 1 sur l'affirmation fausse « texte récupéré ». ⚠️ de forme, non bloquants, aux cas 4, 8, 9 et 15 (cas 4 : formule plus large que l'art. 78-2-3 CPP, art. 61-1 non cité, abrogation différée 2029 non signalée ; cas 8 et 15 : BASCULE dirfi-fpt contradictoire comme en 1.5.3 ; cas 9 : chemin local avec le nom de compte Windows). Tous les autres cas ✅.",
     "reserve_maintenue": true
   }
 }

@@ -1,5 +1,5 @@
 {
-  "plugin_commit": "e8f42719e90e5fdf69458cf9960bf04ee6560f84",
+  "plugin_commit": "30617203c9514736af680dc97c79de53d4a6df4c",
   "runtime_sha256": {
     "skills/dcp-fpt/agents/openai.yaml": "b37aec5086edadd2d0012545ab4c3b1a6493db31f7b6f26673674f5f514aeb40",
     "skills/dcp-fpt/LICENCE.fr.txt": "14e59bc002e1339e5554451aedad7c2b113dc7ef942e96b410b5517099ad6d91",
@@ -227,9 +227,9 @@
     "skills/recherche-juridique/SKILL.md": "13bb816e3b168daed181813411be87d1cf58ea65b15212b4207f68f201b5e7cd"
   },
   "plugin_configuration_sha256": {
-    ".codex-plugin/plugin.json": "4294642b42d209a3bc3184945f249559c2f748b56f3e7a1a62bb3e9e9a0bf22d",
-    ".claude-plugin/plugin.json": "8671012148c78ec01f217103b96a87fda761271e236a01d9428186a6407a038e",
-    ".mcp.json": "c1988401a93d468e87557dc1ebf47989323203b9c5ef7607641529615aefbcac",
+    ".codex-plugin/plugin.json": "53dc3a55357f4494e21abf4175e7eba855006495fc05d08922b4e9f0c8783cd8",
+    ".claude-plugin/plugin.json": "6991732b0a46573c15579319319bfba83c99da77ff0b11651b7fba69d87096db",
+    ".mcp.json": "bc8b6f791066cdde35139b757c805751d566055ea176d8e2a918e36d47179c32",
     "assets/icon.png": "10aca45cb876735f06e10b352b9a2ba004b5deae462e08d8dfba092044aaee1f"
   },
   "case_file_sha256": "0747b6268cccab1bb46c820217d2a4ba1c69e5c2ad6fe61126e3a5bd9242f5ea",
@@ -243,7 +243,7 @@
     "scripts/cas-plugin-cycle-v4.json": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
     "scripts/check_dcp_protocol.py": "6faeea694546084ceae2b64d8c87603f4c04fb521efdb5baa3b743958fad5f06",
     "scripts/check_sync.py": "69f080fbe4ded47ab1c5980a662e4219e15e111a67de8a6cbf166aac831e008e",
-    "scripts/cli_toolchains.py": "e1c73adbd0a52d01214853ca32a316343445c4d6cfd8d4d054118ff17ed32d67",
+    "scripts/cli_toolchains.py": "63cd143299ee3b643f86090f3f314ff7d64739b9d45b8939468329ba447d933f",
     "scripts/codex_event_contract.py": "f4e848f3c34504b4df6b5f444337b4064829828d8c492ecd3023cbae471d42d7",
     "scripts/cycle-v4-source-requirements.json": "54bed7aaf6afc439a6d24e1f95204d4b3e7d9327024ce5435bd9cc0988a8a333",
     "scripts/cycle_satisfiability.py": "5a8625a8f8169393a6b3bcf35ab696830707cc142366c9d179c192fa128bb6ea",
@@ -257,7 +257,7 @@
     "scripts/extract_native_read_commands.py": "d1292a0e6f798fcab1bd55fdce76b0e804526208b97e9e82172702057f1ef6c4",
     "scripts/human_resolution.py": "444d01b13428773c33a9100310ebb5815c32067b4f838f8f6afd9b4d9a284e32",
     "scripts/instruction_overlays.py": "e40decc70e39416d33b484b9d9620e2e6db64a0b6d1826c88b9899e0fbe57e99",
-    "scripts/measurement-cli.json": "96f0c453455891fe6367a957ac2a674b7d17ab16ad03229b2bc1dd3c42a1ac99",
+    "scripts/measurement-cli.json": "d883a8cce147d0f80c47aaf13dfde3799545e003619422315a134d27a9e5047a",
     "scripts/measurement_common.py": "1a703163152afa70d669e276f7be8f62f86a7989819daff8676d6fd8afddb7a4",
     "scripts/public_projection.py": "7521e1835e16dd841966f30237370f225e29014f418a5557e6c01953d0f4c102",
     "scripts/qualify_distribution.py": "f05040ca0e3921aa2407c3be56c0bb0402809588edb8785983d8d9977bc03d20",
@@ -281,7 +281,8 @@
     "scripts/toolchain-transition-0031.json": "05ba38e8b694a7ec0d5b0ec1ec098f627c9d392ab06b4cea65d9b9d3d3f19b61",
     "scripts/toolchain-transition-0034.json": "73bdaa3c74e30b70a337ee9865c78c158086f59919f9cc743ff9e1960db11e44",
     "scripts/toolchain-transition-0036.json": "df2c1bcb356e67bded5efe82c7257acbd05375fb2e30618f290225daabcbd11c",
-    "scripts/toolchain-transition-0039.json": "77b565d483928a203c2b436c66bfc537f60f49c542082690e57d8a081eefb729"
+    "scripts/toolchain-transition-0039.json": "890028bde9aeaeced79355b4404ac5a2f20718ca0c5a3feb33423961053de7c8",
+    "scripts/toolchain-transition-0042.json": "f72e0552e4b891cf0cb326b018df0b5b4c9f7f64d73305731b74dd671c430363"
   },
   "case_id": "l8-dsi-achat-contrat-mixte",
   "role": "reponse",
@@ -302,14 +303,14 @@
       }
     },
     "cli_version": "codex-cli 0.164.0-alpha.11.1",
-    "thread_id": "85c3fff7a386e162bdd62981c3a0fb70727fc0c5fbb15cb9a6569ba13c23978e",
+    "thread_id": "a311efd49feaa7c010f1b9bf1fa2df38e8639c7e221e6e459a3bbb3b47ad2e3c",
     "cli_sha256": "1103e9e09c71fa2cd0afd6d8f3b9a2d63174fe8efd7cb5bd09f1cb14ef58a098",
-    "argv_sha256": "91631ba7cbea2e5a20df98809bf08f48fc4a578c3ee6b93243dfb6a35db4108c",
+    "argv_sha256": "5e3cd663d2c037c5f4d673ac9f43c6cfb4e6fa4ddb1c3cdb1be8cb7d0b0c4dee",
     "prompt_sha256": "ef3846e9345392d6288a08a579358eff08fc93e01dcc2030ae5abbb1b5be1e1b",
-    "stdout_sha256": "c76b886482b6aa88a52bd7bbef23b810c00e9669286dcaf44ebf27bb2fb30009",
+    "stdout_sha256": "ace1e7a53e4ff4702ab2de91f959968977d17134f6dfe8cc2b50b039866d7927",
     "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "process_exit": 0,
-    "elapsed_seconds": 331.698553,
+    "elapsed_seconds": 302.676756,
     "startup_failure": {
       "before_model_attested": false,
       "model_session_opened": true,
@@ -333,7 +334,7 @@
     "kind": "native_seven_skills_precheck",
     "diagnostic_only": true,
     "model_calls": 0,
-    "runtime": "<HOME>\\Documents\\Codex\\repo-recovery\\2026-10-12\\instantane-r1\\suivis\\l153-preparation\\campagne-l153-d\\l8-dsi-achat-contrat-mixte-reponse-1d5xgwr1\\.agents\\skills",
+    "runtime": "<HOME>\\Documents\\Codex\\repo-recovery\\2026-10-12\\instantane-r1\\suivis\\l154-preparation\\campagne-l154-a\\l8-dsi-achat-contrat-mixte-reponse-0p4uxx93\\.agents\\skills",
     "probes": [
       {
         "status": "ok",
@@ -345,7 +346,7 @@
         "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "stdout_octets": 692,
         "stderr_octets": 0,
-        "argv_sha256": "5a092728446505b94e1e9fc3290cedafb474ee96ffa74d526feafd7b1040da71",
+        "argv_sha256": "1c4b3142d64476b45582180649421a8814c447e3f178ae5b59aa055f7a5d1772",
         "runtime_entries_verified": 7,
         "raw_output_archived": false
       }
@@ -366,7 +367,7 @@
   },
   "campaign_harness": {
     "lot": "T43-L24e",
-    "manifest_sha256": "3ff9a360d7e501d8ba1eca1e0ff10824ea8b9b06555fc32b36b419827bf4b96d",
+    "manifest_sha256": "abec7fdf334e0edef6a4eeae3793c8c132bea199544b9bad3e6eae194e9711f4",
     "campaign_cli": {
       "version": "codex-cli 0.164.0-alpha.11.1",
       "sha256": "1103e9e09c71fa2cd0afd6d8f3b9a2d63174fe8efd7cb5bd09f1cb14ef58a098",
@@ -380,11 +381,11 @@
   },
   "case_contract": "scripts/cas-plugin-cycle-v4.json",
   "case_contract_sha256": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
-  "campaign_attempt_id": "campagne-l153-d",
-  "completed_at": "2026-11-27T07:13:49.133434+00:00",
+  "campaign_attempt_id": "campagne-l154-a",
+  "completed_at": "2026-11-27T21:16:18.659048+00:00",
   "trace": {
     "evidence_path": "source-l14/campagne/l8-dsi-achat-contrat-mixte/reponse/trace.jsonl",
-    "sha256": "3ac6eb3f910a5440fc60c2167edefd13a4d20779ff32b203998a217382c5e825"
+    "sha256": "5d143b76788cf05d2829ebea7f068b17b1335fb7b4f04a258ddbb4a02fe05935"
   },
   "process_exit": 0,
   "execution_errors": [],
@@ -400,7 +401,7 @@
   "human_legal_validation": false,
   "publication_ready": false,
   "campaign_adapter_sha256": "1e3ae6970817cf9e0f80e9640386ef4d276ca665df73db86bc9b3d81245e7397",
-  "campaign_support_sha256": "deec28621de1c5e90b0d5c7f8e9aec898d4fe000c3f8a69889063349c2e9fc8e",
+  "campaign_support_sha256": "5076ff8bbbcf70022096ea4626241cd41ab172a9758b8f20dad9589994a7bd0d",
   "mcp_review_sha256": "bde75706abf0feccf719734ad36044809a64e186aeaa2dc294dbd3ae974989aa",
   "mcp_text_limit_bytes": 12000,
   "case_outcome_sha256": "a7b318c11a53bb07ee6abca1e6de65a47362796949b3d9a31451e0b6c7798d79",
@@ -409,13 +410,13 @@
   "events": [
     {
       "type": "reply",
-      "text": "J’active les cinq entrées demandées dans l’ordre indiqué. Je distinguerai les volets techniques, achat, financiers, protection des données et juridiques, puis les conclusions qui restent impossibles sans les pièces contractuelles."
+      "text": "J’active les cinq entrées demandées dans l’ordre indiqué, puis je répartirai les volets et les inconnues à partir de leurs consignes et des sources juridiques vérifiables.\n"
     },
     {
       "type": "visible_text",
       "position": 2,
       "item_id": "item_0",
-      "text": "J’active les cinq entrées demandées dans l’ordre indiqué. Je distinguerai les volets techniques, achat, financiers, protection des données et juridiques, puis les conclusions qui restent impossibles sans les pièces contractuelles."
+      "text": "J’active les cinq entrées demandées dans l’ordre indiqué, puis je répartirai les volets et les inconnues à partir de leurs consignes et des sources juridiques vérifiables.\n"
     },
     {
       "type": "tool_boundary",
@@ -648,8 +649,18 @@
       }
     },
     {
-      "type": "tool_boundary",
+      "type": "reply",
+      "text": "La demande porte sur un cadrage préparatoire ; les faits fournis ne déclenchent pas de STOP. Je poursuis les lectures dans l’ordre prescrit.\n"
+    },
+    {
+      "type": "visible_text",
       "position": 23,
+      "item_id": "item_11",
+      "text": "La demande porte sur un cadrage préparatoire ; les faits fournis ne déclenchent pas de STOP. Je poursuis les lectures dans l’ordre prescrit.\n"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 24,
       "item_type": "command_execution"
     },
     {
@@ -672,7 +683,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 25,
+      "position": 26,
       "item_type": "command_execution"
     },
     {
@@ -692,16 +703,6 @@
         "expected_content_sha256": "1c5d0fdc4dc44baf35335e03360143e0111a91f487ce513632491d6a91ca386c",
         "source_bytes": 3566
       }
-    },
-    {
-      "type": "reply",
-      "text": "Le cas décrit ne déclenche pas de STOP : il s’agit d’un cadrage préparatoire, sans incident, surveillance, favoritisme ni demande de signature ou d’exécution. Je poursuis les lectures dans l’ordre prescrit ; les pièces absentes resteront des inconnues explicites."
-    },
-    {
-      "type": "visible_text",
-      "position": 27,
-      "item_id": "item_13",
-      "text": "Le cas décrit ne déclenche pas de STOP : il s’agit d’un cadrage préparatoire, sans incident, surveillance, favoritisme ni demande de signature ou d’exécution. Je poursuis les lectures dans l’ordre prescrit ; les pièces absentes resteront des inconnues explicites."
     },
     {
       "type": "tool_boundary",
@@ -911,8 +912,18 @@
       }
     },
     {
-      "type": "tool_boundary",
+      "type": "reply",
+      "text": "Les trois premières entrées sont lues intégralement ; la lecture de dpo-ct est en cours. Je vérifierai ensuite le MCP droit-francais pour distinguer les textes réellement récupérés des points qui resteront ouverts.\n"
+    },
+    {
+      "type": "visible_text",
       "position": 46,
+      "item_id": "item_23",
+      "text": "Les trois premières entrées sont lues intégralement ; la lecture de dpo-ct est en cours. Je vérifierai ensuite le MCP droit-francais pour distinguer les textes réellement récupérés des points qui resteront ouverts.\n"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 47,
       "item_type": "command_execution"
     },
     {
@@ -935,7 +946,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 48,
+      "position": 49,
       "item_type": "command_execution"
     },
     {
@@ -958,7 +969,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 50,
+      "position": 51,
       "item_type": "command_execution"
     },
     {
@@ -981,7 +992,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 52,
+      "position": 53,
       "item_type": "command_execution"
     },
     {
@@ -1001,16 +1012,6 @@
         "expected_content_sha256": "964604f7cee0f0c01ce72d9decd0b529fc26a86f70fae1d0a722a86b92fdeedf",
         "source_bytes": 5332
       }
-    },
-    {
-      "type": "reply",
-      "text": "Les quatre premières entrées ont été lues intégralement. Je termine recherche-juridique, puis je consulterai les références utiles et le MCP droit-francais pour contrôler ce qui peut être établi."
-    },
-    {
-      "type": "visible_text",
-      "position": 54,
-      "item_id": "item_27",
-      "text": "Les quatre premières entrées ont été lues intégralement. Je termine recherche-juridique, puis je consulterai les références utiles et le MCP droit-francais pour contrôler ce qui peut être établi."
     },
     {
       "type": "tool_boundary",
@@ -1287,18 +1288,8 @@
       "status": "completed"
     },
     {
-      "type": "reply",
-      "text": "La distinction décisive à éclaircir sera le stade du dossier : achat encore à préparer ou contrat existant à modifier. Sans ce point et sans contrat, le projet d’avenant et la pénalité resteront des trames avec leurs pièces manquantes."
-    },
-    {
-      "type": "visible_text",
-      "position": 83,
-      "item_id": "item_42",
-      "text": "La distinction décisive à éclaircir sera le stade du dossier : achat encore à préparer ou contrat existant à modifier. Sans ce point et sans contrat, le projet d’avenant et la pénalité resteront des trames avec leurs pièces manquantes."
-    },
-    {
       "type": "tool_boundary",
-      "position": 84,
+      "position": 83,
       "item_type": "command_execution"
     },
     {
@@ -1315,7 +1306,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 86,
+      "position": 85,
       "item_type": "command_execution"
     },
     {
@@ -1329,6 +1320,16 @@
       "output_sha256": "313a650ed852387d6e6816b2d6b9e996cd979341a3e34a137e5d0314ce709e3a",
       "exit_code": 0,
       "status": "completed"
+    },
+    {
+      "type": "reply",
+      "text": "Les cinq entrées sont maintenant lues intégralement. Il reste à clarifier si l’avenant et la pénalité concernent un marché existant ou des modèles à préparer pour le futur achat ; sans cette précision ni pièces contractuelles, je les traiterai comme des dossiers incomplets.\n"
+    },
+    {
+      "type": "visible_text",
+      "position": 87,
+      "item_id": "item_44",
+      "text": "Les cinq entrées sont maintenant lues intégralement. Il reste à clarifier si l’avenant et la pénalité concernent un marché existant ou des modèles à préparer pour le futur achat ; sans cette précision ni pièces contractuelles, je les traiterai comme des dossiers incomplets.\n"
     },
     {
       "type": "tool_boundary",
@@ -1365,77 +1366,18 @@
       "status": "completed"
     },
     {
-      "type": "tool_boundary",
+      "type": "reply",
+      "text": "BASCULE recherche-juridique — Validité, vigueur ou portée d’une référence.\nÀ reprendre : les sources sur la définition du besoin et la modification du marché, leur version et les limites de ce qu’elles permettent de conclure. La procédure, l’avenant et la pénalité resteront ouverts faute de données propres au dossier.\n"
+    },
+    {
+      "type": "visible_text",
       "position": 92,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/dcp-fpt/references/socle-sources-verification.md"
-      ],
-      "complete_content_verified": [
-        ".agents/skills/dcp-fpt/references/socle-sources-verification.md"
-      ],
-      "output_sha256": "12b45dea2e0431a055f42417745a02f71e4b98126df2610f72f87cafaf1173cd",
-      "exit_code": 0,
-      "status": "completed"
+      "item_id": "item_47",
+      "text": "BASCULE recherche-juridique — Validité, vigueur ou portée d’une référence.\nÀ reprendre : les sources sur la définition du besoin et la modification du marché, leur version et les limites de ce qu’elles permettent de conclure. La procédure, l’avenant et la pénalité resteront ouverts faute de données propres au dossier.\n"
     },
     {
       "type": "tool_boundary",
-      "position": 94,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/dcp-fpt/references/references-verifiees.md"
-      ],
-      "complete_content_verified": [],
-      "output_sha256": "5afcaf990e9295785599db43b386f48ae7a6ecd4f51e3f7e2bd1e57779a149a6",
-      "exit_code": 0,
-      "status": "completed"
-    },
-    {
-      "type": "reply",
-      "text": "Pour appliquer ce cadrage au cas fictif, s’agit-il d’un achat entièrement nouveau ou d’un contrat déjà signé à modifier ? Ce point conditionne les volets avenant et pénalité ; je poursuis la répartition des travaux sans les trancher.\n- Achat nouveau\n- Contrat déjà signé\n- Les deux dossiers sont distincts"
-    },
-    {
-      "type": "visible_text",
-      "position": 96,
-      "item_id": "item_49",
-      "text": "Pour appliquer ce cadrage au cas fictif, s’agit-il d’un achat entièrement nouveau ou d’un contrat déjà signé à modifier ? Ce point conditionne les volets avenant et pénalité ; je poursuis la répartition des travaux sans les trancher.\n- Achat nouveau\n- Contrat déjà signé\n- Les deux dossiers sont distincts"
-    },
-    {
-      "type": "reply",
-      "text": "BASCULE recherche-juridique — Validité, vigueur ou portée d’une référence.\nÀ reprendre : les preuves juridiques et les limites des conclusions possibles.\n\nJe limiterai la recherche au cadre général de modification d’un marché. Le choix de procédure, le fondement d’un avenant et l’application d’une pénalité restent suspendus aux faits et pièces manquants."
-    },
-    {
-      "type": "visible_text",
-      "position": 97,
-      "item_id": "item_50",
-      "text": "BASCULE recherche-juridique — Validité, vigueur ou portée d’une référence.\nÀ reprendre : les preuves juridiques et les limites des conclusions possibles.\n\nJe limiterai la recherche au cadre général de modification d’un marché. Le choix de procédure, le fondement d’un avenant et l’application d’une pénalité restent suspendus aux faits et pièces manquants."
-    },
-    {
-      "type": "tool_boundary",
-      "position": 98,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/recherche-juridique/references/gabarits-sortie.md"
-      ],
-      "complete_content_verified": [
-        ".agents/skills/recherche-juridique/references/gabarits-sortie.md"
-      ],
-      "output_sha256": "80c172bb1bd62696f1b9d33a7f0c5b908a83da178f5e32bfe0458f1784180d72",
-      "exit_code": 0,
-      "status": "completed"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 100,
+      "position": 93,
       "item_type": "mcp_tool_call"
     },
     {
@@ -1446,8 +1388,7 @@
       "succeeded": true,
       "arguments_publics": {
         "code": "Code de la commande publique",
-        "number": "L. 2194-1",
-        "limit": 3
+        "number": "L. 2194-1"
       },
       "identifiants_dans_resultat": [
         "LEGIARTI000037703841"
@@ -1460,10 +1401,9 @@
         "arguments_present": true,
         "arguments": {
           "code": "Code de la commande publique",
-          "number": "L. 2194-1",
-          "limit": 3
+          "number": "L. 2194-1"
         },
-        "arguments_sha256": "e0c792bdb3d24c838656b851c229f18ce448943f64b99b42364abff7f38e4ce5",
+        "arguments_sha256": "b4fcc5277866cc793a4e84410d82a56d846fe3c75f477043b61875e3f79984de",
         "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000037703841\",\n      \"title\": \"Article L2194-1 — Code de la commande publique\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037703841\",\n      \"number\": \"L2194-1\",\n      \"code\": \"Code de la commande publique\",\n      \"section\": \"Chapitre IV : Modification du marché\",\n      \"legal_status\": \"VIGUEUR\",\n      \"start_date\": \"2019-04-01T00:00:00.000+0000\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"L. 2194-1\",\n    \"code\": \"Code de la commande publique\",\n    \"date\": \"2026-11-27\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
         "text_available": true,
         "text_block_count": 1,
@@ -1479,7 +1419,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 102,
+      "position": 95,
       "item_type": "mcp_tool_call"
     },
     {
@@ -1519,24 +1459,185 @@
     },
     {
       "type": "tool_boundary",
-      "position": 104,
+      "position": 97,
       "item_type": "command_execution"
     },
     {
       "type": "native_read",
       "paths": [
-        ".agents/skills/dcp-fpt/references/execution-juridique.md"
+        ".agents/skills/dcp-fpt/references/socle-sources-verification.md"
       ],
       "complete_content_verified": [
-        ".agents/skills/dcp-fpt/references/execution-juridique.md"
+        ".agents/skills/dcp-fpt/references/socle-sources-verification.md"
       ],
-      "output_sha256": "bba77fe982da7ad31e1dc112a64f7d9fbdc0a63565ef501f420c7a8c1d4626cf",
+      "output_sha256": "12b45dea2e0431a055f42417745a02f71e4b98126df2610f72f87cafaf1173cd",
       "exit_code": 0,
       "status": "completed"
     },
     {
       "type": "tool_boundary",
-      "position": 106,
+      "position": 99,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dcp-fpt/references/references-verifiees.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "91d9ff83130a0124a8c536152af997bc478c907be4a760cb0aafe4bad283caac",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 101,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/references/gabarits-sortie.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/recherche-juridique/references/gabarits-sortie.md"
+      ],
+      "output_sha256": "80c172bb1bd62696f1b9d33a7f0c5b908a83da178f5e32bfe0458f1784180d72",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 103,
+      "item_type": "mcp_tool_call"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 104,
+      "item_type": "mcp_tool_call"
+    },
+    {
+      "type": "mcp_call",
+      "server": "droit-francais",
+      "tool": "search_articles",
+      "status": "completed",
+      "succeeded": true,
+      "arguments_publics": {
+        "code": "Code de la commande publique",
+        "number": "L. 2111-1"
+      },
+      "identifiants_dans_resultat": [
+        "LEGIARTI000052393960"
+      ],
+      "result_sha256": "afa2cb0b2970d26403c97f7f5e722d993202a25cf9d7c094ac1b313d32c4ca1e",
+      "review_material": {
+        "schema": "mcp-text-v1",
+        "untrusted_data": true,
+        "tool": "search_articles",
+        "arguments_present": true,
+        "arguments": {
+          "code": "Code de la commande publique",
+          "number": "L. 2111-1"
+        },
+        "arguments_sha256": "77390dc1d022d2b6021fb0145e00024dcb1cf427b9b2b82d511c6b7108c1bcff",
+        "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000052393960\",\n      \"title\": \"Article L2111-1 — Code de la commande publique\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000052393960\",\n      \"number\": \"L2111-1\",\n      \"code\": \"Code de la commande publique\",\n      \"section\": \"Chapitre Ier : Définition du besoin\",\n      \"legal_status\": \"VIGUEUR\",\n      \"start_date\": \"2025-10-16T00:00:00.000+0000\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"L. 2111-1\",\n    \"code\": \"Code de la commande publique\",\n    \"date\": \"2026-11-27\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
+        "text_available": true,
+        "text_block_count": 1,
+        "text_limit_bytes": 12000,
+        "included_text_bytes": 796,
+        "included_text_sha256": "c4d3f7e1d67304785f98bf326118a5725df3c363d093564cf546e61a83de0735",
+        "full_text_bytes": 796,
+        "full_text_sha256": "c4d3f7e1d67304785f98bf326118a5725df3c363d093564cf546e61a83de0735",
+        "truncated": false,
+        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
+        "upstream_truncation": "not_attested"
+      }
+    },
+    {
+      "type": "mcp_call",
+      "server": "droit-francais",
+      "tool": "search",
+      "status": "completed",
+      "succeeded": true,
+      "arguments_publics": {},
+      "identifiants_dans_resultat": [
+        "LEGIARTI000006350071",
+        "LEGIARTI000006350542",
+        "LEGIARTI000006410122",
+        "LEGIARTI000006514865",
+        "LEGIARTI000006792025",
+        "LEGIARTI000026313106",
+        "LEGIARTI000042779601",
+        "LEGIARTI000042915054",
+        "LEGIARTI000052064331",
+        "LEGIARTI000054359188"
+      ],
+      "result_sha256": "f219a07b91dca9fcc60111d34b93c98346fbd0eaa8951733a3e237b7f02314ce",
+      "review_material": {
+        "schema": "mcp-text-v1",
+        "untrusted_data": true,
+        "tool": "search",
+        "arguments_present": true,
+        "arguments": {
+          "query": "article 28 RGPD"
+        },
+        "arguments_sha256": "50a9400edd3859a969a6748a7e27fccfa1426ad43fa2f36d16c35e3635b34a05",
+        "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000006514865\",\n      \"title\": \"Article D28 — Code de procédure pénale\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006514865\"\n    },\n    {\n      \"id\": \"LEGIARTI000026313106\",\n      \"title\": \"Article R28 — Code de procédure pénale\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000026313106\"\n    },\n    {\n      \"id\": \"LEGIARTI000042779601\",\n      \"title\": \"Article 28 — Code de procédure pénale\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042779601\"\n    },\n    {\n      \"id\": \"LEGIARTI000006410122\",\n      \"title\": \"Article 28 — Code de procédure civile\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006410122\"\n    },\n    {\n      \"id\": \"LEGIARTI000052064331\",\n      \"title\": \"Article R28 — Code électoral\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000052064331\"\n    },\n    {\n      \"id\": \"LEGIARTI000054359188\",\n      \"title\": \"Article 28 — Code de déontologie des architectes\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054359188\"\n    },\n    {\n      \"id\": \"LEGIARTI000006350071\",\n      \"title\": \"Article A28 — Code du domaine de l'Etat\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006350071\"\n    },\n    {\n      \"id\": \"LEGIARTI000006350542\",\n      \"title\": \"Article R28 — Code du domaine de l'Etat\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006350542\"\n    },\n    {\n      \"id\": \"LEGIARTI000006792025\",\n      \"title\": \"Article R28 — Code des pensions de retraite des marins français du commerce, de pêche ou de plaisance\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006792025\"\n    },\n    {\n      \"id\": \"LEGIARTI000042915054\",\n      \"title\": \"Article L28 — Livre des procédures fiscales\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000042915054\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"28\",\n    \"code\": null,\n    \"date\": \"2026-11-27\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
+        "text_available": true,
+        "text_block_count": 1,
+        "text_limit_bytes": 12000,
+        "included_text_bytes": 2348,
+        "included_text_sha256": "b51ac71b821c922695d517c4917e109536cb2957571439af18c18eaf94a5da05",
+        "full_text_bytes": 2348,
+        "full_text_sha256": "b51ac71b821c922695d517c4917e109536cb2957571439af18c18eaf94a5da05",
+        "truncated": false,
+        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
+        "upstream_truncation": "not_attested"
+      }
+    },
+    {
+      "type": "tool_boundary",
+      "position": 107,
+      "item_type": "mcp_tool_call"
+    },
+    {
+      "type": "mcp_call",
+      "server": "droit-francais",
+      "tool": "get_article",
+      "status": "completed",
+      "succeeded": true,
+      "arguments_publics": {
+        "id": "LEGIARTI000052393960"
+      },
+      "identifiants_dans_resultat": [
+        "LEGIARTI000052393960"
+      ],
+      "result_sha256": "c8a72c3f7cc9ee4ec3e0e9760ff474c7fa56752034e82ad2895f9356a3ba77f8",
+      "review_material": {
+        "schema": "mcp-text-v1",
+        "untrusted_data": true,
+        "tool": "get_article",
+        "arguments_present": true,
+        "arguments": {
+          "id": "LEGIARTI000052393960"
+        },
+        "arguments_sha256": "a876cd7ad8b7c620c6d14a97748e6a226da0cac6a4e73750c1f48d1b56be1c9a",
+        "text": "{\n  \"id\": \"LEGIARTI000052393960\",\n  \"title\": \"Article L2111-1\",\n  \"text\": \"La nature et l'étendue des besoins à satisfaire sont déterminées avec précision avant le lancement de la consultation en prenant en compte des objectifs de développement durable dans leurs dimensions économique, sociale et environnementale. A ce titre, pour leurs marchés répondant à un besoin dont la valeur estimée hors taxe est égale ou supérieure aux seuils européens figurant dans un avis annexé au présent code, les acheteurs prennent en compte l'efficacité et la sobriété énergétiques.\",\n  \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000052393960\",\n  \"metadata\": {\n    \"number\": \"L2111-1\",\n    \"legal_status\": \"VIGUEUR\",\n    \"start_date\": 1760572800000,\n    \"end_date\": 32472144000000,\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\",\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null,\n    \"version_start_date\": \"2025-10-16\",\n    \"version_end_date\": \"2999-01-01\",\n    \"applicable_at_as_of_date\": true\n  },\n  \"parent_text\": {\n    \"id\": \"LEGITEXT000037701019\",\n    \"nature\": \"CODE\",\n    \"title\": \"Code de la commande publique\",\n    \"legal_status\": \"VIGUEUR\"\n  },\n  \"section\": {\n    \"id\": \"LEGISCTA000037703450\",\n    \"title\": \"Chapitre Ier : Définition du besoin\"\n  }\n}",
+        "text_available": true,
+        "text_block_count": 1,
+        "text_limit_bytes": 12000,
+        "included_text_bytes": 1396,
+        "included_text_sha256": "0cd9608af5ca98e6bafe09499c84d946ed636596632f63bbe3b4bd8ecdcef043",
+        "full_text_bytes": 1396,
+        "full_text_sha256": "0cd9608af5ca98e6bafe09499c84d946ed636596632f63bbe3b4bd8ecdcef043",
+        "truncated": false,
+        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
+        "upstream_truncation": "not_attested"
+      }
+    },
+    {
+      "type": "tool_boundary",
+      "position": 109,
       "item_type": "command_execution"
     },
     {
@@ -1553,24 +1654,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 108,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/dcp-fpt/references/templates/projet-avenant.md"
-      ],
-      "complete_content_verified": [
-        ".agents/skills/dcp-fpt/references/templates/projet-avenant.md"
-      ],
-      "output_sha256": "4db2a8e23cfbfa0efdbc3fe60175a9c983d748a214ccdde446e3bb83044d55bd",
-      "exit_code": 0,
-      "status": "completed"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 110,
+      "position": 111,
       "item_type": "command_execution"
     },
     {
@@ -1587,45 +1671,45 @@
     },
     {
       "type": "reply",
-      "text": "**On peut établir une répartition des travaux et des trames [INCOMPLET]. Les éléments fournis ne permettent de choisir une procédure, de valider un avenant ou de chiffrer une pénalité.** Les cinq entrées ont été lues intégralement dans l’ordre demandé. Aucun garde-fou STOP n’est déclenché par les faits décrits.\n\n**BASCULE dsi-fpt — Contenu technique d’un achat informatique.**  \nÀ reprendre : spécifications, niveaux de service, réversibilité et exécution technique.\n\n**Analyse dsi-fpt.** Préparer les exigences proposées : fonctions métier, interfaces, volumes, hébergement, support, exploitation, sécurité et continuité. Pour chaque exigence, préciser le responsable, la preuve attendue et le test de recette.\n\nLa réversibilité comprend l’inventaire des données, pièces jointes, relations, configurations et documentation ; les formats d’export ; puis un essai de reprise exploitable dans une cible. Restent inconnus : architecture, dépendances, criticité, interruptions acceptables et organisation interne ou mutualisée.  \n*Appui : dsi-fpt, cadrage technique obligatoire ; branches Cloud et hébergement et Contrats et prestataires.*\n\n**BASCULE dcp-fpt — Passation et exécution juridique du marché.**\n\n**Analyse dcp-fpt.** Le service achat prépare la qualification du besoin, la méthode juridique d’estimation, le choix de procédure et les pièces administratives. Il examine aussi le fondement d’une modification et les conditions contractuelles d’une pénalité ; le constat technique ne suffit pas à établir celle-ci.\n\nÀ réunir : identité et catégorie de l’acheteur, mode d’achat, date de lancement, périmètre des prestations, durée, options et reconductions. Pour l’avenant : contrat initial, modifications antérieures, motif prouvé et comparaison avant/après. Pour l’exécution : pièces signées, ordre de priorité, CCAG éventuellement cité, dérogations, notifications et habilitations.\n\nLe livrable possible est une **trame d’avenant [INCOMPLET]**, avec fondement, clauses modifiées, conditions, compétence et formalités laissés ouverts.  \n*Appui : dcp-fpt, branches Procédures, Modifications, Exécution juridique et gabarit Projet d’avenant.*\n\n**BASCULE dirfi-fpt — Volet financier du marché.**  \nÀ reprendre : l’ensemble du volet financier de la décision.  \nCe volet est renvoyé à dirfi-fpt ; il n’est ni détaillé ni traité ici.\n\n**Analyse dirfi-fpt.** Préparer le chiffrage du besoin, les incidences de l’avenant et les vérifications budgétaires. Pour la pénalité, établir une feuille de calcul reproduisant **la formule contractuelle exacte**, avec ses données d’entrée et leurs justificatifs : assiette, unités retenues, barème, exclusions, plafonnement et arrondis éventuels. Sans clause ni chronologie, aucun montant n’est calculable.  \n*Appui : dirfi-fpt, branche Volet financier de la commande publique, §6.*\n\n**BASCULE dpo-ct — Clauses relatives aux données personnelles.**  \nÀ reprendre : contenu des clauses de traitement, sous-traitance des données et transferts.\n\n**Analyse dpo-ct.** Recueillir finalités, données, personnes concernées, durées envisagées, rôles réels de l’éditeur et de l’hébergeur, chaîne des intervenants, lieux de stockage et d’accès. Préparer l’avis et les clauses proposées ; examiner le besoin d’AIPD. Ces points restent à instruire, sans conclure à la conformité.  \n*Appui : dpo-ct, §5.4 et branche Sous-traitance et transferts.*\n\n**BASCULE recherche-juridique — Preuve, portée et abstentions ciblées.**\n\n**Analyse recherche-juridique.** Le MCP droit-francais a fourni le texte de l’[article L. 2194-1 du Code de la commande publique](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037703841), version depuis le 01/04/2019, indiquée applicable au 27/11/2026. Son contenu et ses métadonnées concordent : il encadre les modifications avec renvoi aux conditions réglementaires. **Cette lecture ne confirme aucun fondement d’avenant dans ce dossier** ; les conditions détaillées et les pièces restent à examiner. Aucun seuil, régime de pénalité ou contenu obligatoire des clauses de données n’est confirmé ici.\n\nLa première inconnue à lever reste : **achat nouveau, contrat existant à modifier, ou deux dossiers distincts ?** Ensuite, tenir un registre commun « fait établi / inconnue / pièce attendue / responsable / validation attendue », en conservant les attributions ci-dessus."
+      "text": "**Il faut ouvrir cinq volets coordonnés, avec un registre commun des inconnues.** Sans pièces contractuelles, on peut préparer le besoin et les dossiers de travail ; on ne peut pas arrêter la procédure, confirmer un avenant ni chiffrer une pénalité. Aucun STOP n’est déclenché par les faits décrits.\n\nLes cinq entrées ont été lues intégralement, dans l’ordre demandé.\n\nBASCULE dsi-fpt — Contenu technique d’un achat informatique.\nÀ reprendre : spécifications, niveaux de service, réversibilité et exécution technique.\n\n**Analyse dsi-fpt.** Préparer les exigences fonctionnelles et techniques : périmètre, interfaces, hébergement, support, exploitation, sécurité et continuité. Pour la réversibilité, décrire les données, pièces jointes, configurations, formats et documentation à remettre, puis prévoir un essai d’export **et de reprise exploitable**, avec validation métier.\n\nInconnues : usages, volumes, dépendances, criticité, mode internalisé/mutualisé/externalisé, responsables d’exploitation et critères de recette. Chaque exigence proposée doit avoir une preuve attendue et un responsable identifié ou à désigner.  \n*Appui : dsi-fpt, « Cadrage obligatoire du volet technique », branches Cloud et hébergement et Contrats et prestataires.*\n\nBASCULE vers dcp-fpt — Passation et exécution juridique du marché.\n\n**Analyse dcp-fpt.** Le volet achat porte la qualification du besoin, la méthode juridique d’estimation, le choix de procédure et l’examen juridique de la modification. La présence de logiciel et d’hébergement ne suffit pas à arrêter la qualification du marché.\n\nInconnues : acheteur exact, organisation de l’achat, date de lancement, périmètre, durée, options et reconductions, estimation, prestations distinctes et habilitations. Pour l’avenant : contrat initial, changement demandé, justification, clauses existantes et modifications antérieures. Livrable immédiat : **fiche de modification [INCOMPLET]**, sans conclure que l’avenant est possible.  \n*Appui : dcp-fpt, branches Procédures et Modifications.*\n\nBASCULE dirfi-fpt — Volet financier du marché.\nÀ reprendre : l’ensemble du volet financier de la décision.\nCe volet est renvoyé à dirfi-fpt ; il n’est ni détaillé ni traité ici.\n\n**Analyse dirfi-fpt.** Préparer le chiffrage du coût complet et de l’incidence financière du changement. Pour la pénalité, créer une feuille de calcul **[INCOMPLET]** utilisant exclusivement la formule contractuelle une fois identifiée.\n\nChamps manquants : clause, formule, assiette, unité de calcul, dates, constats, exclusions, plafonds éventuels et calculs déjà effectués. **Aucun taux, montant ou mécanisme de prélèvement par défaut.** DSI documente l’écart technique ; DCP examine le mécanisme contractuel ; DirFi effectue le calcul.  \n*Appui : dirfi-fpt, branche Volet financier de la commande publique, §6.*\n\nBASCULE dpo-ct — Clauses relatives aux données personnelles.\nÀ reprendre : contenu des clauses de traitement, sous-traitance des données et transferts.\n\n**Analyse dpo-ct.** Préparer un avis et les questions nécessaires aux clauses : finalités, données et personnes concernées, acteurs et rôles réels, chaîne de prestataires, stockage et accès de support, durées envisagées et sort des données. Le régime applicable et le besoin d’AIPD restent à examiner. DSI fournit les éléments techniques ; cet avis ne vaut pas validation générale du logiciel.  \n*Appui : dpo-ct, routeur Analyse de situation et branche Sous-traitance et transferts.*\n\nBASCULE recherche-juridique — Validité, vigueur ou portée d’une référence.\nÀ reprendre : preuves juridiques, limites des sources et points non confirmés.\n\n**Analyse recherche-juridique.** Le MCP droit-francais a permis de récupérer les textes et métadonnées de deux articles du Code de la commande publique, indiqués applicables au **27 novembre 2026** :\n\n| Texte récupéré | Portée du contrôle |\n|---|---|\n| [L. 2111-1](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000052393960), version depuis le 16 octobre 2025 | Définition du besoin ; aucune procédure particulière validée |\n| [L. 2194-1](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037703841), version depuis le 1er avril 2019 | Modification du marché ; renvoi réglementaire non instruit, aucun cas d’avenant confirmé |\n\nLa recherche relative à la sous-traitance des données a renvoyé des articles d’autres codes : **résultats écartés comme non pertinents**. Aucun primaire pertinent n’a donc été récupéré pour confirmer les obligations relatives aux données personnelles.\n\n**Première inconnue à lever : l’avenant et la pénalité concernent-ils un marché existant, ou des modèles destinés au futur achat ?** Cette distinction commande les pièces à réunir. Le registre partagé doit ensuite porter, pour chaque point : fait fourni, inconnue, pièce attendue, rôle chargé et décision laissée ouverte."
     },
     {
       "type": "visible_text",
-      "position": 112,
+      "position": 113,
       "item_id": "item_58",
-      "text": "**On peut établir une répartition des travaux et des trames [INCOMPLET]. Les éléments fournis ne permettent de choisir une procédure, de valider un avenant ou de chiffrer une pénalité.** Les cinq entrées ont été lues intégralement dans l’ordre demandé. Aucun garde-fou STOP n’est déclenché par les faits décrits.\n\n**BASCULE dsi-fpt — Contenu technique d’un achat informatique.**  \nÀ reprendre : spécifications, niveaux de service, réversibilité et exécution technique.\n\n**Analyse dsi-fpt.** Préparer les exigences proposées : fonctions métier, interfaces, volumes, hébergement, support, exploitation, sécurité et continuité. Pour chaque exigence, préciser le responsable, la preuve attendue et le test de recette.\n\nLa réversibilité comprend l’inventaire des données, pièces jointes, relations, configurations et documentation ; les formats d’export ; puis un essai de reprise exploitable dans une cible. Restent inconnus : architecture, dépendances, criticité, interruptions acceptables et organisation interne ou mutualisée.  \n*Appui : dsi-fpt, cadrage technique obligatoire ; branches Cloud et hébergement et Contrats et prestataires.*\n\n**BASCULE dcp-fpt — Passation et exécution juridique du marché.**\n\n**Analyse dcp-fpt.** Le service achat prépare la qualification du besoin, la méthode juridique d’estimation, le choix de procédure et les pièces administratives. Il examine aussi le fondement d’une modification et les conditions contractuelles d’une pénalité ; le constat technique ne suffit pas à établir celle-ci.\n\nÀ réunir : identité et catégorie de l’acheteur, mode d’achat, date de lancement, périmètre des prestations, durée, options et reconductions. Pour l’avenant : contrat initial, modifications antérieures, motif prouvé et comparaison avant/après. Pour l’exécution : pièces signées, ordre de priorité, CCAG éventuellement cité, dérogations, notifications et habilitations.\n\nLe livrable possible est une **trame d’avenant [INCOMPLET]**, avec fondement, clauses modifiées, conditions, compétence et formalités laissés ouverts.  \n*Appui : dcp-fpt, branches Procédures, Modifications, Exécution juridique et gabarit Projet d’avenant.*\n\n**BASCULE dirfi-fpt — Volet financier du marché.**  \nÀ reprendre : l’ensemble du volet financier de la décision.  \nCe volet est renvoyé à dirfi-fpt ; il n’est ni détaillé ni traité ici.\n\n**Analyse dirfi-fpt.** Préparer le chiffrage du besoin, les incidences de l’avenant et les vérifications budgétaires. Pour la pénalité, établir une feuille de calcul reproduisant **la formule contractuelle exacte**, avec ses données d’entrée et leurs justificatifs : assiette, unités retenues, barème, exclusions, plafonnement et arrondis éventuels. Sans clause ni chronologie, aucun montant n’est calculable.  \n*Appui : dirfi-fpt, branche Volet financier de la commande publique, §6.*\n\n**BASCULE dpo-ct — Clauses relatives aux données personnelles.**  \nÀ reprendre : contenu des clauses de traitement, sous-traitance des données et transferts.\n\n**Analyse dpo-ct.** Recueillir finalités, données, personnes concernées, durées envisagées, rôles réels de l’éditeur et de l’hébergeur, chaîne des intervenants, lieux de stockage et d’accès. Préparer l’avis et les clauses proposées ; examiner le besoin d’AIPD. Ces points restent à instruire, sans conclure à la conformité.  \n*Appui : dpo-ct, §5.4 et branche Sous-traitance et transferts.*\n\n**BASCULE recherche-juridique — Preuve, portée et abstentions ciblées.**\n\n**Analyse recherche-juridique.** Le MCP droit-francais a fourni le texte de l’[article L. 2194-1 du Code de la commande publique](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037703841), version depuis le 01/04/2019, indiquée applicable au 27/11/2026. Son contenu et ses métadonnées concordent : il encadre les modifications avec renvoi aux conditions réglementaires. **Cette lecture ne confirme aucun fondement d’avenant dans ce dossier** ; les conditions détaillées et les pièces restent à examiner. Aucun seuil, régime de pénalité ou contenu obligatoire des clauses de données n’est confirmé ici.\n\nLa première inconnue à lever reste : **achat nouveau, contrat existant à modifier, ou deux dossiers distincts ?** Ensuite, tenir un registre commun « fait établi / inconnue / pièce attendue / responsable / validation attendue », en conservant les attributions ci-dessus."
+      "text": "**Il faut ouvrir cinq volets coordonnés, avec un registre commun des inconnues.** Sans pièces contractuelles, on peut préparer le besoin et les dossiers de travail ; on ne peut pas arrêter la procédure, confirmer un avenant ni chiffrer une pénalité. Aucun STOP n’est déclenché par les faits décrits.\n\nLes cinq entrées ont été lues intégralement, dans l’ordre demandé.\n\nBASCULE dsi-fpt — Contenu technique d’un achat informatique.\nÀ reprendre : spécifications, niveaux de service, réversibilité et exécution technique.\n\n**Analyse dsi-fpt.** Préparer les exigences fonctionnelles et techniques : périmètre, interfaces, hébergement, support, exploitation, sécurité et continuité. Pour la réversibilité, décrire les données, pièces jointes, configurations, formats et documentation à remettre, puis prévoir un essai d’export **et de reprise exploitable**, avec validation métier.\n\nInconnues : usages, volumes, dépendances, criticité, mode internalisé/mutualisé/externalisé, responsables d’exploitation et critères de recette. Chaque exigence proposée doit avoir une preuve attendue et un responsable identifié ou à désigner.  \n*Appui : dsi-fpt, « Cadrage obligatoire du volet technique », branches Cloud et hébergement et Contrats et prestataires.*\n\nBASCULE vers dcp-fpt — Passation et exécution juridique du marché.\n\n**Analyse dcp-fpt.** Le volet achat porte la qualification du besoin, la méthode juridique d’estimation, le choix de procédure et l’examen juridique de la modification. La présence de logiciel et d’hébergement ne suffit pas à arrêter la qualification du marché.\n\nInconnues : acheteur exact, organisation de l’achat, date de lancement, périmètre, durée, options et reconductions, estimation, prestations distinctes et habilitations. Pour l’avenant : contrat initial, changement demandé, justification, clauses existantes et modifications antérieures. Livrable immédiat : **fiche de modification [INCOMPLET]**, sans conclure que l’avenant est possible.  \n*Appui : dcp-fpt, branches Procédures et Modifications.*\n\nBASCULE dirfi-fpt — Volet financier du marché.\nÀ reprendre : l’ensemble du volet financier de la décision.\nCe volet est renvoyé à dirfi-fpt ; il n’est ni détaillé ni traité ici.\n\n**Analyse dirfi-fpt.** Préparer le chiffrage du coût complet et de l’incidence financière du changement. Pour la pénalité, créer une feuille de calcul **[INCOMPLET]** utilisant exclusivement la formule contractuelle une fois identifiée.\n\nChamps manquants : clause, formule, assiette, unité de calcul, dates, constats, exclusions, plafonds éventuels et calculs déjà effectués. **Aucun taux, montant ou mécanisme de prélèvement par défaut.** DSI documente l’écart technique ; DCP examine le mécanisme contractuel ; DirFi effectue le calcul.  \n*Appui : dirfi-fpt, branche Volet financier de la commande publique, §6.*\n\nBASCULE dpo-ct — Clauses relatives aux données personnelles.\nÀ reprendre : contenu des clauses de traitement, sous-traitance des données et transferts.\n\n**Analyse dpo-ct.** Préparer un avis et les questions nécessaires aux clauses : finalités, données et personnes concernées, acteurs et rôles réels, chaîne de prestataires, stockage et accès de support, durées envisagées et sort des données. Le régime applicable et le besoin d’AIPD restent à examiner. DSI fournit les éléments techniques ; cet avis ne vaut pas validation générale du logiciel.  \n*Appui : dpo-ct, routeur Analyse de situation et branche Sous-traitance et transferts.*\n\nBASCULE recherche-juridique — Validité, vigueur ou portée d’une référence.\nÀ reprendre : preuves juridiques, limites des sources et points non confirmés.\n\n**Analyse recherche-juridique.** Le MCP droit-francais a permis de récupérer les textes et métadonnées de deux articles du Code de la commande publique, indiqués applicables au **27 novembre 2026** :\n\n| Texte récupéré | Portée du contrôle |\n|---|---|\n| [L. 2111-1](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000052393960), version depuis le 16 octobre 2025 | Définition du besoin ; aucune procédure particulière validée |\n| [L. 2194-1](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037703841), version depuis le 1er avril 2019 | Modification du marché ; renvoi réglementaire non instruit, aucun cas d’avenant confirmé |\n\nLa recherche relative à la sous-traitance des données a renvoyé des articles d’autres codes : **résultats écartés comme non pertinents**. Aucun primaire pertinent n’a donc été récupéré pour confirmer les obligations relatives aux données personnelles.\n\n**Première inconnue à lever : l’avenant et la pénalité concernent-ils un marché existant, ou des modèles destinés au futur achat ?** Cette distinction commande les pièces à réunir. Le registre partagé doit ensuite porter, pour chaque point : fait fourni, inconnue, pièce attendue, rôle chargé et décision laissée ouverte."
     },
     {
       "type": "turn_completed",
       "usage": {
-        "input_tokens": 4080743,
-        "cached_input_tokens": 3881856,
+        "input_tokens": 3922086,
+        "cached_input_tokens": 3775616,
         "cache_write_input_tokens": 0,
-        "output_tokens": 6338,
-        "reasoning_output_tokens": 1780
+        "output_tokens": 6471,
+        "reasoning_output_tokens": 1933
       }
     }
   ],
-  "events_sha256": "6a8340693406b4e9eb30b0a41d187c5cbb37e594acf21426d1a26bce7ac6ec31",
+  "events_sha256": "ef23d5de08634b1c936df334ed8f60bd15bf701eccc7f788dbace029da07fbc4",
   "runner_sha256": "89fd874415c5830dc67be3e2fa76a77eb9bafdd1f7434ecad696d35db1ef1602",
   "profile": "codex-copies-natives-mcp-v5",
-  "measurement_commit": "e8f42719e90e5fdf69458cf9960bf04ee6560f84",
-  "qualification_target_commit": "768d7d56258bd4b9feeede266c9ee1b2187dc8d7",
+  "measurement_commit": "30617203c9514736af680dc97c79de53d4a6df4c",
+  "qualification_target_commit": "6a469ab56495c5b9179da7ccb15dc7afd71a2a39",
   "derivation": {
     "kind": "projection_of_original_session",
     "original": {
       "evidence_path": "campagne/l8-dsi-achat-contrat-mixte/reponse/session.json",
-      "sha256": "048cc5461cd248a2bd2d56cdef2832c3039bcadf8c5a01afe48905fafd5a403b"
+      "sha256": "84225dff7e91b613be2473165a1b483e42f4cf2352adac448f9741690a596d80"
     },
     "summary": {
       "evidence_path": "campagne/resume-campagne.json",
-      "sha256": "01c0b81b4b99e6e121f46481ab3429bd4c5e5f94d5b7ffedba0ccfd20c00d92c"
+      "sha256": "ab189608f01e0b3de8c84026e835c792aa16afcf7988151a9a278132529d69b5"
     }
   },
   "original_session": {
     "evidence_path": "source-l14/campagne/l8-dsi-achat-contrat-mixte/reponse/session.json",
-    "sha256": "048cc5461cd248a2bd2d56cdef2832c3039bcadf8c5a01afe48905fafd5a403b"
+    "sha256": "84225dff7e91b613be2473165a1b483e42f4cf2352adac448f9741690a596d80"
   },
   "source_bundle_root": "tests/evidence/mesure-courante/source-l14",
-  "payload_sha256": "e726e23ac21d8f3f00b3343181e9d1908b81a4998f187e4c790f40d0a256e5f9"
+  "payload_sha256": "3a3cd836fc72b5d39f3c4a82e7e68409d607cca495be8647558f65f8f60403cc"
 }

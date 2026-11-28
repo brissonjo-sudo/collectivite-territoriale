@@ -1,5 +1,5 @@
 {
-  "plugin_commit": "e8f42719e90e5fdf69458cf9960bf04ee6560f84",
+  "plugin_commit": "30617203c9514736af680dc97c79de53d4a6df4c",
   "runtime_sha256": {
     "skills/dcp-fpt/agents/openai.yaml": "b37aec5086edadd2d0012545ab4c3b1a6493db31f7b6f26673674f5f514aeb40",
     "skills/dcp-fpt/LICENCE.fr.txt": "14e59bc002e1339e5554451aedad7c2b113dc7ef942e96b410b5517099ad6d91",
@@ -227,9 +227,9 @@
     "skills/recherche-juridique/SKILL.md": "13bb816e3b168daed181813411be87d1cf58ea65b15212b4207f68f201b5e7cd"
   },
   "plugin_configuration_sha256": {
-    ".codex-plugin/plugin.json": "4294642b42d209a3bc3184945f249559c2f748b56f3e7a1a62bb3e9e9a0bf22d",
-    ".claude-plugin/plugin.json": "8671012148c78ec01f217103b96a87fda761271e236a01d9428186a6407a038e",
-    ".mcp.json": "c1988401a93d468e87557dc1ebf47989323203b9c5ef7607641529615aefbcac",
+    ".codex-plugin/plugin.json": "53dc3a55357f4494e21abf4175e7eba855006495fc05d08922b4e9f0c8783cd8",
+    ".claude-plugin/plugin.json": "6991732b0a46573c15579319319bfba83c99da77ff0b11651b7fba69d87096db",
+    ".mcp.json": "bc8b6f791066cdde35139b757c805751d566055ea176d8e2a918e36d47179c32",
     "assets/icon.png": "10aca45cb876735f06e10b352b9a2ba004b5deae462e08d8dfba092044aaee1f"
   },
   "case_file_sha256": "0747b6268cccab1bb46c820217d2a4ba1c69e5c2ad6fe61126e3a5bd9242f5ea",
@@ -243,7 +243,7 @@
     "scripts/cas-plugin-cycle-v4.json": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
     "scripts/check_dcp_protocol.py": "6faeea694546084ceae2b64d8c87603f4c04fb521efdb5baa3b743958fad5f06",
     "scripts/check_sync.py": "69f080fbe4ded47ab1c5980a662e4219e15e111a67de8a6cbf166aac831e008e",
-    "scripts/cli_toolchains.py": "e1c73adbd0a52d01214853ca32a316343445c4d6cfd8d4d054118ff17ed32d67",
+    "scripts/cli_toolchains.py": "63cd143299ee3b643f86090f3f314ff7d64739b9d45b8939468329ba447d933f",
     "scripts/codex_event_contract.py": "f4e848f3c34504b4df6b5f444337b4064829828d8c492ecd3023cbae471d42d7",
     "scripts/cycle-v4-source-requirements.json": "54bed7aaf6afc439a6d24e1f95204d4b3e7d9327024ce5435bd9cc0988a8a333",
     "scripts/cycle_satisfiability.py": "5a8625a8f8169393a6b3bcf35ab696830707cc142366c9d179c192fa128bb6ea",
@@ -257,7 +257,7 @@
     "scripts/extract_native_read_commands.py": "d1292a0e6f798fcab1bd55fdce76b0e804526208b97e9e82172702057f1ef6c4",
     "scripts/human_resolution.py": "444d01b13428773c33a9100310ebb5815c32067b4f838f8f6afd9b4d9a284e32",
     "scripts/instruction_overlays.py": "e40decc70e39416d33b484b9d9620e2e6db64a0b6d1826c88b9899e0fbe57e99",
-    "scripts/measurement-cli.json": "96f0c453455891fe6367a957ac2a674b7d17ab16ad03229b2bc1dd3c42a1ac99",
+    "scripts/measurement-cli.json": "d883a8cce147d0f80c47aaf13dfde3799545e003619422315a134d27a9e5047a",
     "scripts/measurement_common.py": "1a703163152afa70d669e276f7be8f62f86a7989819daff8676d6fd8afddb7a4",
     "scripts/public_projection.py": "7521e1835e16dd841966f30237370f225e29014f418a5557e6c01953d0f4c102",
     "scripts/qualify_distribution.py": "f05040ca0e3921aa2407c3be56c0bb0402809588edb8785983d8d9977bc03d20",
@@ -281,7 +281,8 @@
     "scripts/toolchain-transition-0031.json": "05ba38e8b694a7ec0d5b0ec1ec098f627c9d392ab06b4cea65d9b9d3d3f19b61",
     "scripts/toolchain-transition-0034.json": "73bdaa3c74e30b70a337ee9865c78c158086f59919f9cc743ff9e1960db11e44",
     "scripts/toolchain-transition-0036.json": "df2c1bcb356e67bded5efe82c7257acbd05375fb2e30618f290225daabcbd11c",
-    "scripts/toolchain-transition-0039.json": "77b565d483928a203c2b436c66bfc537f60f49c542082690e57d8a081eefb729"
+    "scripts/toolchain-transition-0039.json": "890028bde9aeaeced79355b4404ac5a2f20718ca0c5a3feb33423961053de7c8",
+    "scripts/toolchain-transition-0042.json": "f72e0552e4b891cf0cb326b018df0b5b4c9f7f64d73305731b74dd671c430363"
   },
   "case_id": "plugin-dcp-mcp-indisponible",
   "role": "reponse",
@@ -302,14 +303,14 @@
       }
     },
     "cli_version": "codex-cli 0.164.0-alpha.11.1",
-    "thread_id": "02fb1765ed3e7525e703f888d9ae848e91fb202a04f3d2800807eb46b42aa10d",
+    "thread_id": "575a5ddb8b3e9b398d52ccaa0871dd7f6b190f09cd99d762e70b58a2e181c3bd",
     "cli_sha256": "1103e9e09c71fa2cd0afd6d8f3b9a2d63174fe8efd7cb5bd09f1cb14ef58a098",
     "argv_sha256": "353e05c03468398194bcf1af46436eab13efb1804a622974a8f8177d7c30abdd",
     "prompt_sha256": "b8abbabcc5e8ee9eb2f3243b642f3f3a03cbc48cbc7cc9da1e2b7147e43f4be3",
-    "stdout_sha256": "ba6c4e617a46ac1875b6db7f0f98243543f6dca507a19a001c386faf0f2a0742",
+    "stdout_sha256": "3958c5b60258a656a14d656259ee573829538cf682b6eb7e8ced4817aab59b4d",
     "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "process_exit": 0,
-    "elapsed_seconds": 114.232067,
+    "elapsed_seconds": 107.147868,
     "startup_failure": {
       "before_model_attested": false,
       "model_session_opened": true,
@@ -333,7 +334,7 @@
     "kind": "native_seven_skills_precheck",
     "diagnostic_only": true,
     "model_calls": 0,
-    "runtime": "<HOME>\\Documents\\Codex\\repo-recovery\\2026-10-12\\instantane-r1\\suivis\\l153-preparation\\campagne-l153-d\\plugin-dcp-mcp-indisponible-reponse-meg92urp\\.agents\\skills",
+    "runtime": "<HOME>\\Documents\\Codex\\repo-recovery\\2026-10-12\\instantane-r1\\suivis\\l154-preparation\\campagne-l154-a\\plugin-dcp-mcp-indisponible-reponse-nwxiq09o\\.agents\\skills",
     "probes": [
       {
         "status": "ok",
@@ -345,7 +346,7 @@
         "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "stdout_octets": 692,
         "stderr_octets": 0,
-        "argv_sha256": "c48907ae94c5cb2114d8528e73519121cc41a9cd7b3506c9c2fdf64a5521fae7",
+        "argv_sha256": "77f73234fcf123f8efd4782dbb7022828ae8a3e5e46693f311ec303f9f936076",
         "runtime_entries_verified": 7,
         "raw_output_archived": false
       }
@@ -366,7 +367,7 @@
   },
   "campaign_harness": {
     "lot": "T43-L24e",
-    "manifest_sha256": "3ff9a360d7e501d8ba1eca1e0ff10824ea8b9b06555fc32b36b419827bf4b96d",
+    "manifest_sha256": "abec7fdf334e0edef6a4eeae3793c8c132bea199544b9bad3e6eae194e9711f4",
     "campaign_cli": {
       "version": "codex-cli 0.164.0-alpha.11.1",
       "sha256": "1103e9e09c71fa2cd0afd6d8f3b9a2d63174fe8efd7cb5bd09f1cb14ef58a098",
@@ -380,11 +381,11 @@
   },
   "case_contract": "scripts/cas-plugin-cycle-v4.json",
   "case_contract_sha256": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
-  "campaign_attempt_id": "campagne-l153-d",
-  "completed_at": "2026-11-27T06:51:21.760540+00:00",
+  "campaign_attempt_id": "campagne-l154-a",
+  "completed_at": "2026-11-27T20:55:20.213808+00:00",
   "trace": {
     "evidence_path": "source-l14/campagne/plugin-dcp-mcp-indisponible/reponse/trace.jsonl",
-    "sha256": "294292c4aaea41fe1eb6ac69de4913ee9a50ebda417c2260667e4dbb94ecefa2"
+    "sha256": "3e21b260049966a2467a5f3189ebf58525f7765e6c7b15bd5b79dd5f9ec087bb"
   },
   "process_exit": 0,
   "execution_errors": [],
@@ -400,7 +401,7 @@
   "human_legal_validation": false,
   "publication_ready": false,
   "campaign_adapter_sha256": "1e3ae6970817cf9e0f80e9640386ef4d276ca665df73db86bc9b3d81245e7397",
-  "campaign_support_sha256": "deec28621de1c5e90b0d5c7f8e9aec898d4fe000c3f8a69889063349c2e9fc8e",
+  "campaign_support_sha256": "5076ff8bbbcf70022096ea4626241cd41ab172a9758b8f20dad9589994a7bd0d",
   "mcp_review_sha256": "bde75706abf0feccf719734ad36044809a64e186aeaa2dc294dbd3ae974989aa",
   "mcp_text_limit_bytes": 12000,
   "case_outcome_sha256": "a7b318c11a53bb07ee6abca1e6de65a47362796949b3d9a31451e0b6c7798d79",
@@ -409,13 +410,13 @@
   "events": [
     {
       "type": "reply",
-      "text": "J’applique les skills « dcp-fpt » et « recherche-juridique » et vais lire les segments dans l’ordre demandé, puis examiner ce qui peut être conclu sans accès aux sources officielles.\n"
+      "text": "Je vais appliquer les skills dcp-fpt et recherche-juridique, en suivant les lectures demandées puis la voie dégradée sans accès aux sources officielles.\n"
     },
     {
       "type": "visible_text",
       "position": 2,
       "item_id": "item_0",
-      "text": "J’applique les skills « dcp-fpt » et « recherche-juridique » et vais lire les segments dans l’ordre demandé, puis examiner ce qui peut être conclu sans accès aux sources officielles.\n"
+      "text": "Je vais appliquer les skills dcp-fpt et recherche-juridique, en suivant les lectures demandées puis la voie dégradée sans accès aux sources officielles.\n"
     },
     {
       "type": "tool_boundary",
@@ -698,34 +699,17 @@
     },
     {
       "type": "reply",
-      "text": "Les dix segments ont été reçus sans troncature. Les skills distinguent les références historiques embarquées d’une vérification officielle en session : les premières ne permettent pas d’attester un identifiant « vérifié aujourd’hui ».\n"
+      "text": "Les deux SKILL.md ont été lus intégralement, sans troncature. Les sources officielles étant indisponibles, les références locales ne permettent pas d’attester une vérification aujourd’hui ; je consulte les consignes utiles à la réponse dégradée.\n"
     },
     {
       "type": "visible_text",
       "position": 29,
       "item_id": "item_14",
-      "text": "Les dix segments ont été reçus sans troncature. Les skills distinguent les références historiques embarquées d’une vérification officielle en session : les premières ne permettent pas d’attester un identifiant « vérifié aujourd’hui ».\n"
+      "text": "Les deux SKILL.md ont été lus intégralement, sans troncature. Les sources officielles étant indisponibles, les références locales ne permettent pas d’attester une vérification aujourd’hui ; je consulte les consignes utiles à la réponse dégradée.\n"
     },
     {
       "type": "tool_boundary",
       "position": 30,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/dcp-fpt/references/procedures.md"
-      ],
-      "complete_content_verified": [
-        ".agents/skills/dcp-fpt/references/procedures.md"
-      ],
-      "output_sha256": "ed575cb495edabfa9fb3b3064726dfdd12bb560087dd10d31f45caa338e05451",
-      "exit_code": 0,
-      "status": "completed"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 32,
       "item_type": "command_execution"
     },
     {
@@ -742,7 +726,49 @@
     },
     {
       "type": "tool_boundary",
+      "position": 32,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dcp-fpt/references/procedures.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/dcp-fpt/references/procedures.md"
+      ],
+      "output_sha256": "ed575cb495edabfa9fb3b3064726dfdd12bb560087dd10d31f45caa338e05451",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
       "position": 34,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dcp-fpt/references/references-verifiees.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "84fb91d7acb2a9d7d8ad9811fc1de2e593a8ab283a00c76a2dd2f7ef370bd37e",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "reply",
+      "text": "Une tranche du registre local a été tronquée par l’outil. Je ne m’appuie pas sur les passages non reçus ; ce registre historique ne peut, dans tous les cas, établir une vérification officielle aujourd’hui.\n"
+    },
+    {
+      "type": "visible_text",
+      "position": 36,
+      "item_id": "item_18",
+      "text": "Une tranche du registre local a été tronquée par l’outil. Je ne m’appuie pas sur les passages non reçus ; ce registre historique ne peut, dans tous les cas, établir une vérification officielle aujourd’hui.\n"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 37,
       "item_type": "command_execution"
     },
     {
@@ -750,16 +776,44 @@
       "paths": [
         ".agents/skills/recherche-juridique/references/procedure-detaillee.md"
       ],
-      "complete_content_verified": [
-        ".agents/skills/recherche-juridique/references/procedure-detaillee.md"
-      ],
-      "output_sha256": "0dc962e5c13d21f080712540e66b527d324539d0b293c103d03da7878f5bd7eb",
+      "complete_content_verified": [],
+      "output_sha256": "95cb5efd11a3fb2ecb5ad173ade2dc757cd950549d25bf459e156e2f99535387",
       "exit_code": 0,
       "status": "completed"
     },
     {
       "type": "tool_boundary",
-      "position": 36,
+      "position": 39,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/references/procedure-detaillee.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "c1eba8a43595c9367b0d85107cc8f68dd74a466f0b27d2d90689fbd85684875c",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 41,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/references/procedure-detaillee.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "4c0bf3c0ee7e9f12d6e51279e7c4457fb715915c51170bd479eb4f5b54fccd50",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 43,
       "item_type": "command_execution"
     },
     {
@@ -775,61 +829,46 @@
       "status": "completed"
     },
     {
-      "type": "tool_boundary",
-      "position": 38,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/dcp-fpt/references/references-verifiees.md"
-      ],
-      "complete_content_verified": [],
-      "output_sha256": "30fb353c89ff0e111b459a80215a3892ea8e5bb22ae7b601c1f96cf1479c5b1d",
-      "exit_code": 0,
-      "status": "completed"
-    },
-    {
       "type": "reply",
-      "text": "**Les sources officielles sont indisponibles dans cette session.** Au 27 novembre 2026, je ne peux donc établir ni le seuil applicable, ni le délai exact avant signature, ni fournir un identifiant Légifrance « vérifié aujourd’hui ».\n\nBASCULE recherche-juridique — Validité, vigueur ou portée d'une référence.  \nÀ reprendre : point précis de droit, version pertinente et source à consulter.\n\nLa voie dégradée impose une **abstention sur ces trois points** : aucun chiffre de mémoire, aucun identifiant reconstitué, aucune attestation de vérification actuelle. Le registre local constitue une trace historique, sans prouver une consultation officielle aujourd’hui — recherche-juridique, contrat prioritaire de preuve, points 3 à 5 ; dcp-fpt, §5.4.\n\nPour poursuivre l’instruction, les questions à adresser au service achat sont :\n\n- Quel seuil cherche-t-il à déterminer, pour quel acheteur, quelle nature de marché et quelle valeur estimée du besoin ?\n- Quelle procédure est suivie et à quelle date a-t-elle été lancée ?\n- Quels sont les dates, moyens et preuves d’envoi des informations aux candidats, ainsi que l’état d’un éventuel recours ?\n\nCes éléments sont recensés comme **faits à réunir**, sans présumer leur effet juridique — dcp-fpt, branche procédures, §4 ; branche attribution-signature, §4 et §9.\n\nLa prochaine étape consiste à réunir ces pièces, puis à faire vérifier les textes officiels, leurs versions applicables et le décompte pertinent avant toute décision de signature par l’autorité habilitée. **Cette réponse ne permet pas de valider une date de signature.**\n\nLimite technique : les dix segments imposés ont été reçus intégralement ; une lecture complémentaire du registre a été tronquée. Aucun contenu non reçu n’a été utilisé."
+      "text": "**Les sources officielles sont indisponibles dans cette session : je ne peux établir ni le seuil applicable, ni le délai exact avant signature, ni fournir un identifiant Légifrance « vérifié aujourd’hui », le 27 novembre 2026.** Source officielle non lue en session.\n\nBASCULE recherche-juridique — Validité, vigueur ou portée d'une référence.\nÀ reprendre : point précis de droit, version pertinente et source à consulter.\n\nLa voie dégradée impose l’abstention sur ces trois points. Une référence du registre local reste une trace historique ; sa lecture ne prouve ni sa vigueur actuelle ni son applicabilité au marché. Aucun chiffre ou identifiant ne doit être reconstitué de mémoire (dcp-fpt, §5.4 ; recherche-juridique, contrat prioritaire de preuve, points 3 à 5).\n\n**Question préalable au service achat : quelle procédure a été retenue — adaptée, formalisée ou autre ?** Cette information manque pour examiner le délai demandé. Il faut également réunir :\n\n- la catégorie d’acheteur, la nature du besoin, sa valeur estimée et le seuil recherché ;\n- la date de lancement et les pièces de procédure ;\n- les dates et moyens d’information des candidats, les preuves d’envoi et l’état d’éventuels recours.\n\nÀ titre conservatoire, je recommande de différer toute signature jusqu’à vérification du régime, des conditions et de l’habilitation du signataire par le service achat et le conseil juridique. Cette réponse ne donne aucun feu vert à signer.\n\nLes deux SKILL.md ont été intégralement reçus ; une tranche du registre local a été tronquée, sans utilisation des passages manquants. **Statut : vérification juridique impossible en l’état.**"
     },
     {
       "type": "visible_text",
-      "position": 40,
-      "item_id": "item_20",
-      "text": "**Les sources officielles sont indisponibles dans cette session.** Au 27 novembre 2026, je ne peux donc établir ni le seuil applicable, ni le délai exact avant signature, ni fournir un identifiant Légifrance « vérifié aujourd’hui ».\n\nBASCULE recherche-juridique — Validité, vigueur ou portée d'une référence.  \nÀ reprendre : point précis de droit, version pertinente et source à consulter.\n\nLa voie dégradée impose une **abstention sur ces trois points** : aucun chiffre de mémoire, aucun identifiant reconstitué, aucune attestation de vérification actuelle. Le registre local constitue une trace historique, sans prouver une consultation officielle aujourd’hui — recherche-juridique, contrat prioritaire de preuve, points 3 à 5 ; dcp-fpt, §5.4.\n\nPour poursuivre l’instruction, les questions à adresser au service achat sont :\n\n- Quel seuil cherche-t-il à déterminer, pour quel acheteur, quelle nature de marché et quelle valeur estimée du besoin ?\n- Quelle procédure est suivie et à quelle date a-t-elle été lancée ?\n- Quels sont les dates, moyens et preuves d’envoi des informations aux candidats, ainsi que l’état d’un éventuel recours ?\n\nCes éléments sont recensés comme **faits à réunir**, sans présumer leur effet juridique — dcp-fpt, branche procédures, §4 ; branche attribution-signature, §4 et §9.\n\nLa prochaine étape consiste à réunir ces pièces, puis à faire vérifier les textes officiels, leurs versions applicables et le décompte pertinent avant toute décision de signature par l’autorité habilitée. **Cette réponse ne permet pas de valider une date de signature.**\n\nLimite technique : les dix segments imposés ont été reçus intégralement ; une lecture complémentaire du registre a été tronquée. Aucun contenu non reçu n’a été utilisé."
+      "position": 45,
+      "item_id": "item_23",
+      "text": "**Les sources officielles sont indisponibles dans cette session : je ne peux établir ni le seuil applicable, ni le délai exact avant signature, ni fournir un identifiant Légifrance « vérifié aujourd’hui », le 27 novembre 2026.** Source officielle non lue en session.\n\nBASCULE recherche-juridique — Validité, vigueur ou portée d'une référence.\nÀ reprendre : point précis de droit, version pertinente et source à consulter.\n\nLa voie dégradée impose l’abstention sur ces trois points. Une référence du registre local reste une trace historique ; sa lecture ne prouve ni sa vigueur actuelle ni son applicabilité au marché. Aucun chiffre ou identifiant ne doit être reconstitué de mémoire (dcp-fpt, §5.4 ; recherche-juridique, contrat prioritaire de preuve, points 3 à 5).\n\n**Question préalable au service achat : quelle procédure a été retenue — adaptée, formalisée ou autre ?** Cette information manque pour examiner le délai demandé. Il faut également réunir :\n\n- la catégorie d’acheteur, la nature du besoin, sa valeur estimée et le seuil recherché ;\n- la date de lancement et les pièces de procédure ;\n- les dates et moyens d’information des candidats, les preuves d’envoi et l’état d’éventuels recours.\n\nÀ titre conservatoire, je recommande de différer toute signature jusqu’à vérification du régime, des conditions et de l’habilitation du signataire par le service achat et le conseil juridique. Cette réponse ne donne aucun feu vert à signer.\n\nLes deux SKILL.md ont été intégralement reçus ; une tranche du registre local a été tronquée, sans utilisation des passages manquants. **Statut : vérification juridique impossible en l’état.**"
     },
     {
       "type": "turn_completed",
       "usage": {
-        "input_tokens": 748250,
-        "cached_input_tokens": 676864,
+        "input_tokens": 879287,
+        "cached_input_tokens": 807552,
         "cache_write_input_tokens": 0,
-        "output_tokens": 2378,
-        "reasoning_output_tokens": 803
+        "output_tokens": 2150,
+        "reasoning_output_tokens": 406
       }
     }
   ],
-  "events_sha256": "3876809b88b4d0321d0b05b1a0d42eecb2f4518867812d04e2e5e9fa6ebd69e3",
+  "events_sha256": "ffa94f4856ad6fe46ac49697896a1712defa75bd577cf78d897ad4923afff1c4",
   "runner_sha256": "89fd874415c5830dc67be3e2fa76a77eb9bafdd1f7434ecad696d35db1ef1602",
   "profile": "codex-copies-natives-mcp-v5",
-  "measurement_commit": "e8f42719e90e5fdf69458cf9960bf04ee6560f84",
-  "qualification_target_commit": "768d7d56258bd4b9feeede266c9ee1b2187dc8d7",
+  "measurement_commit": "30617203c9514736af680dc97c79de53d4a6df4c",
+  "qualification_target_commit": "6a469ab56495c5b9179da7ccb15dc7afd71a2a39",
   "derivation": {
     "kind": "projection_of_original_session",
     "original": {
       "evidence_path": "campagne/plugin-dcp-mcp-indisponible/reponse/session.json",
-      "sha256": "c0543eb78abbc2cebe9cd84898f203ada5dba6da2a2aa149486092af630f4e6d"
+      "sha256": "2dc8337621c79159dab1045592ffcbd4c2183a53ae36fe2c06f532844dd17439"
     },
     "summary": {
       "evidence_path": "campagne/resume-campagne.json",
-      "sha256": "01c0b81b4b99e6e121f46481ab3429bd4c5e5f94d5b7ffedba0ccfd20c00d92c"
+      "sha256": "ab189608f01e0b3de8c84026e835c792aa16afcf7988151a9a278132529d69b5"
     }
   },
   "original_session": {
     "evidence_path": "source-l14/campagne/plugin-dcp-mcp-indisponible/reponse/session.json",
-    "sha256": "c0543eb78abbc2cebe9cd84898f203ada5dba6da2a2aa149486092af630f4e6d"
+    "sha256": "2dc8337621c79159dab1045592ffcbd4c2183a53ae36fe2c06f532844dd17439"
   },
   "source_bundle_root": "tests/evidence/mesure-courante/source-l14",
-  "payload_sha256": "08e474ce7a729e2ba135d5a922f6bc77728bbc09f242fad0d49554dc893d764b"
+  "payload_sha256": "a932d50623fedc43937550499aca69a46378744d979d02737a80bc3f49191692"
 }

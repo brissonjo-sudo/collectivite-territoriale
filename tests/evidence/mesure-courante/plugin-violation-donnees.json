@@ -1,5 +1,5 @@
 {
-  "plugin_commit": "e8f42719e90e5fdf69458cf9960bf04ee6560f84",
+  "plugin_commit": "30617203c9514736af680dc97c79de53d4a6df4c",
   "runtime_sha256": {
     "skills/dcp-fpt/agents/openai.yaml": "b37aec5086edadd2d0012545ab4c3b1a6493db31f7b6f26673674f5f514aeb40",
     "skills/dcp-fpt/LICENCE.fr.txt": "14e59bc002e1339e5554451aedad7c2b113dc7ef942e96b410b5517099ad6d91",
@@ -227,9 +227,9 @@
     "skills/recherche-juridique/SKILL.md": "13bb816e3b168daed181813411be87d1cf58ea65b15212b4207f68f201b5e7cd"
   },
   "plugin_configuration_sha256": {
-    ".codex-plugin/plugin.json": "4294642b42d209a3bc3184945f249559c2f748b56f3e7a1a62bb3e9e9a0bf22d",
-    ".claude-plugin/plugin.json": "8671012148c78ec01f217103b96a87fda761271e236a01d9428186a6407a038e",
-    ".mcp.json": "c1988401a93d468e87557dc1ebf47989323203b9c5ef7607641529615aefbcac",
+    ".codex-plugin/plugin.json": "53dc3a55357f4494e21abf4175e7eba855006495fc05d08922b4e9f0c8783cd8",
+    ".claude-plugin/plugin.json": "6991732b0a46573c15579319319bfba83c99da77ff0b11651b7fba69d87096db",
+    ".mcp.json": "bc8b6f791066cdde35139b757c805751d566055ea176d8e2a918e36d47179c32",
     "assets/icon.png": "10aca45cb876735f06e10b352b9a2ba004b5deae462e08d8dfba092044aaee1f"
   },
   "case_file_sha256": "0747b6268cccab1bb46c820217d2a4ba1c69e5c2ad6fe61126e3a5bd9242f5ea",
@@ -243,7 +243,7 @@
     "scripts/cas-plugin-cycle-v4.json": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
     "scripts/check_dcp_protocol.py": "6faeea694546084ceae2b64d8c87603f4c04fb521efdb5baa3b743958fad5f06",
     "scripts/check_sync.py": "69f080fbe4ded47ab1c5980a662e4219e15e111a67de8a6cbf166aac831e008e",
-    "scripts/cli_toolchains.py": "e1c73adbd0a52d01214853ca32a316343445c4d6cfd8d4d054118ff17ed32d67",
+    "scripts/cli_toolchains.py": "63cd143299ee3b643f86090f3f314ff7d64739b9d45b8939468329ba447d933f",
     "scripts/codex_event_contract.py": "f4e848f3c34504b4df6b5f444337b4064829828d8c492ecd3023cbae471d42d7",
     "scripts/cycle-v4-source-requirements.json": "54bed7aaf6afc439a6d24e1f95204d4b3e7d9327024ce5435bd9cc0988a8a333",
     "scripts/cycle_satisfiability.py": "5a8625a8f8169393a6b3bcf35ab696830707cc142366c9d179c192fa128bb6ea",
@@ -257,7 +257,7 @@
     "scripts/extract_native_read_commands.py": "d1292a0e6f798fcab1bd55fdce76b0e804526208b97e9e82172702057f1ef6c4",
     "scripts/human_resolution.py": "444d01b13428773c33a9100310ebb5815c32067b4f838f8f6afd9b4d9a284e32",
     "scripts/instruction_overlays.py": "e40decc70e39416d33b484b9d9620e2e6db64a0b6d1826c88b9899e0fbe57e99",
-    "scripts/measurement-cli.json": "96f0c453455891fe6367a957ac2a674b7d17ab16ad03229b2bc1dd3c42a1ac99",
+    "scripts/measurement-cli.json": "d883a8cce147d0f80c47aaf13dfde3799545e003619422315a134d27a9e5047a",
     "scripts/measurement_common.py": "1a703163152afa70d669e276f7be8f62f86a7989819daff8676d6fd8afddb7a4",
     "scripts/public_projection.py": "7521e1835e16dd841966f30237370f225e29014f418a5557e6c01953d0f4c102",
     "scripts/qualify_distribution.py": "f05040ca0e3921aa2407c3be56c0bb0402809588edb8785983d8d9977bc03d20",
@@ -281,7 +281,8 @@
     "scripts/toolchain-transition-0031.json": "05ba38e8b694a7ec0d5b0ec1ec098f627c9d392ab06b4cea65d9b9d3d3f19b61",
     "scripts/toolchain-transition-0034.json": "73bdaa3c74e30b70a337ee9865c78c158086f59919f9cc743ff9e1960db11e44",
     "scripts/toolchain-transition-0036.json": "df2c1bcb356e67bded5efe82c7257acbd05375fb2e30618f290225daabcbd11c",
-    "scripts/toolchain-transition-0039.json": "77b565d483928a203c2b436c66bfc537f60f49c542082690e57d8a081eefb729"
+    "scripts/toolchain-transition-0039.json": "890028bde9aeaeced79355b4404ac5a2f20718ca0c5a3feb33423961053de7c8",
+    "scripts/toolchain-transition-0042.json": "f72e0552e4b891cf0cb326b018df0b5b4c9f7f64d73305731b74dd671c430363"
   },
   "case_id": "plugin-violation-donnees",
   "role": "reponse",
@@ -302,14 +303,14 @@
       }
     },
     "cli_version": "codex-cli 0.164.0-alpha.11.1",
-    "thread_id": "a63937f8c668686d06687aaf6840ea9b16d3d3d5c2ed57c03f7c22796ff0f680",
+    "thread_id": "c4c8156e5ce33e559aa29be3196ce45bb9e453c023c53162fba63cf1a8c01592",
     "cli_sha256": "1103e9e09c71fa2cd0afd6d8f3b9a2d63174fe8efd7cb5bd09f1cb14ef58a098",
-    "argv_sha256": "9a2381bf5b135259a209f2df11425efcc5963e454409cc076bd5646d93867d83",
+    "argv_sha256": "39bf8776dcfb8143f7e9dc76bc31bfb5b4143ec1307906176c8292791ff97add",
     "prompt_sha256": "5d05c654dcccb275961c19fa54e4990cb415a9a1d61a98629f8145008bef3233",
-    "stdout_sha256": "eca9327b2604603df6fcd628d540e165fa40eb38b8ac06d45f42e7cc6353796b",
+    "stdout_sha256": "c0c1fe63e2223c6a79f6d7f2fd24bba669c4570db5006cce261c8b98a4b37fee",
     "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "process_exit": 0,
-    "elapsed_seconds": 131.539111,
+    "elapsed_seconds": 145.724308,
     "startup_failure": {
       "before_model_attested": false,
       "model_session_opened": true,
@@ -333,7 +334,7 @@
     "kind": "native_seven_skills_precheck",
     "diagnostic_only": true,
     "model_calls": 0,
-    "runtime": "<HOME>\\Documents\\Codex\\repo-recovery\\2026-10-12\\instantane-r1\\suivis\\l153-preparation\\campagne-l153-d\\plugin-violation-donnees-reponse-lv0vg2ru\\.agents\\skills",
+    "runtime": "<HOME>\\Documents\\Codex\\repo-recovery\\2026-10-12\\instantane-r1\\suivis\\l154-preparation\\campagne-l154-a\\plugin-violation-donnees-reponse-0cswd5re\\.agents\\skills",
     "probes": [
       {
         "status": "ok",
@@ -345,7 +346,7 @@
         "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "stdout_octets": 692,
         "stderr_octets": 0,
-        "argv_sha256": "dd1e8166318b21d5053ebb41e7055ae006a577d2e527bc419c60ebdb0233f45c",
+        "argv_sha256": "687d26ea0ed3591d81247f61411dacd224d40054d000ac4c8148b5e3a9350d4c",
         "runtime_entries_verified": 7,
         "raw_output_archived": false
       }
@@ -366,7 +367,7 @@
   },
   "campaign_harness": {
     "lot": "T43-L24e",
-    "manifest_sha256": "3ff9a360d7e501d8ba1eca1e0ff10824ea8b9b06555fc32b36b419827bf4b96d",
+    "manifest_sha256": "abec7fdf334e0edef6a4eeae3793c8c132bea199544b9bad3e6eae194e9711f4",
     "campaign_cli": {
       "version": "codex-cli 0.164.0-alpha.11.1",
       "sha256": "1103e9e09c71fa2cd0afd6d8f3b9a2d63174fe8efd7cb5bd09f1cb14ef58a098",
@@ -380,11 +381,11 @@
   },
   "case_contract": "scripts/cas-plugin-cycle-v4.json",
   "case_contract_sha256": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
-  "campaign_attempt_id": "campagne-l153-d",
-  "completed_at": "2026-11-27T06:35:22.027655+00:00",
+  "campaign_attempt_id": "campagne-l154-a",
+  "completed_at": "2026-11-27T20:37:11.981499+00:00",
   "trace": {
     "evidence_path": "source-l14/campagne/plugin-violation-donnees/reponse/trace.jsonl",
-    "sha256": "47806006c2d2c0f061d03334ce13910dfe10eda5c7ad0bf4fd7763a9c4f82440"
+    "sha256": "bad67ed3f94a90306e73352e18576e2e8d763cca2c8e9acbcfe961cfd8c5bc9c"
   },
   "process_exit": 0,
   "execution_errors": [],
@@ -400,7 +401,7 @@
   "human_legal_validation": false,
   "publication_ready": false,
   "campaign_adapter_sha256": "1e3ae6970817cf9e0f80e9640386ef4d276ca665df73db86bc9b3d81245e7397",
-  "campaign_support_sha256": "deec28621de1c5e90b0d5c7f8e9aec898d4fe000c3f8a69889063349c2e9fc8e",
+  "campaign_support_sha256": "5076ff8bbbcf70022096ea4626241cd41ab172a9758b8f20dad9589994a7bd0d",
   "mcp_review_sha256": "bde75706abf0feccf719734ad36044809a64e186aeaa2dc294dbd3ae974989aa",
   "mcp_text_limit_bytes": 12000,
   "case_outcome_sha256": "a7b318c11a53bb07ee6abca1e6de65a47362796949b3d9a31451e0b6c7798d79",
@@ -409,13 +410,13 @@
   "events": [
     {
       "type": "reply",
-      "text": "STOP — violation potentielle de données personnelles. Je vais appliquer les skills dpo-ct et recherche-juridique, puis vérifier les textes officiels sur les mesures à prendre et les délais.\n\n"
+      "text": "STOP — incident impliquant des données personnelles.\n\nJ’applique les skills « dpo-ct » et « recherche-juridique » et vais lire les segments demandés, puis vérifier les articles 33 et 34 du RGPD sur les sources autorisées."
     },
     {
       "type": "visible_text",
       "position": 2,
       "item_id": "item_0",
-      "text": "STOP — violation potentielle de données personnelles. Je vais appliquer les skills dpo-ct et recherche-juridique, puis vérifier les textes officiels sur les mesures à prendre et les délais.\n\n"
+      "text": "STOP — incident impliquant des données personnelles.\n\nJ’applique les skills « dpo-ct » et « recherche-juridique » et vais lire les segments demandés, puis vérifier les articles 33 et 34 du RGPD sur les sources autorisées."
     },
     {
       "type": "tool_boundary",
@@ -671,8 +672,18 @@
       }
     },
     {
-      "type": "tool_boundary",
+      "type": "reply",
+      "text": "Les onze segments ont été lus intégralement, sans troncature. La date de l’envoi ne suffit pas à fixer le départ du délai : il faut connaître le moment où la collectivité a pris connaissance de la violation. Je confie au skill « recherche-juridique » la vérification des obligations et délais ; l’analyse des risques pour les usagers relève de « dpo-ct »."
+    },
+    {
+      "type": "visible_text",
       "position": 25,
+      "item_id": "item_12",
+      "text": "Les onze segments ont été lus intégralement, sans troncature. La date de l’envoi ne suffit pas à fixer le départ du délai : il faut connaître le moment où la collectivité a pris connaissance de la violation. Je confie au skill « recherche-juridique » la vérification des obligations et délais ; l’analyse des risques pour les usagers relève de « dpo-ct »."
+    },
+    {
+      "type": "tool_boundary",
+      "position": 26,
       "item_type": "command_execution"
     },
     {
@@ -689,7 +700,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 27,
+      "position": 28,
       "item_type": "command_execution"
     },
     {
@@ -706,7 +717,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 29,
+      "position": 30,
       "item_type": "command_execution"
     },
     {
@@ -720,16 +731,6 @@
       "output_sha256": "0dc962e5c13d21f080712540e66b527d324539d0b293c103d03da7878f5bd7eb",
       "exit_code": 0,
       "status": "completed"
-    },
-    {
-      "type": "reply",
-      "text": "Les onze segments ont été lus sans troncature. J’attribue à recherche-juridique la vérification des obligations et des délais. La date d’envoi ne suffit pas à calculer l’échéance : il faut aussi connaître le moment où la collectivité a découvert la violation.\n\n"
-    },
-    {
-      "type": "visible_text",
-      "position": 31,
-      "item_id": "item_15",
-      "text": "Les onze segments ont été lus sans troncature. J’attribue à recherche-juridique la vérification des obligations et des délais. La date d’envoi ne suffit pas à calculer l’échéance : il faut aussi connaître le moment où la collectivité a découvert la violation.\n\n"
     },
     {
       "type": "tool_boundary",
@@ -785,40 +786,6 @@
     {
       "type": "tool_boundary",
       "position": 38,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 39,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/recherche-juridique/references/format-citation.md"
-      ],
-      "complete_content_verified": [
-        ".agents/skills/recherche-juridique/references/format-citation.md"
-      ],
-      "output_sha256": "d3375671e65b7579b73f94ce8f8f28f8c3b6a0101532273933eb2bf0b48019db",
-      "exit_code": 0,
-      "status": "completed"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/recherche-juridique/references/gabarits-sortie.md"
-      ],
-      "complete_content_verified": [
-        ".agents/skills/recherche-juridique/references/gabarits-sortie.md"
-      ],
-      "output_sha256": "80c172bb1bd62696f1b9d33a7f0c5b908a83da178f5e32bfe0458f1784180d72",
-      "exit_code": 0,
-      "status": "completed"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 42,
       "item_type": "mcp_tool_call"
     },
     {
@@ -828,36 +795,25 @@
       "status": "completed",
       "succeeded": true,
       "arguments_publics": {},
-      "identifiants_dans_resultat": [
-        "LEGIARTI000006293464",
-        "LEGIARTI000006350077",
-        "LEGIARTI000006350284",
-        "LEGIARTI000006354484",
-        "LEGIARTI000006410130",
-        "LEGIARTI000006514880",
-        "LEGIARTI000006574915",
-        "LEGIARTI000026313091",
-        "LEGIARTI000039345207",
-        "LEGIARTI000054359238"
-      ],
-      "result_sha256": "53fe45a71c38199e35741fd8dc7b15ee8c323961823bf73bb755a6eaf04e1dad",
+      "identifiants_dans_resultat": [],
+      "result_sha256": "3dc89d39f96d8576439637223364d096a9a3adf8dd5e4455725c61bb41e60612",
       "review_material": {
         "schema": "mcp-text-v1",
         "untrusted_data": true,
         "tool": "search",
         "arguments_present": true,
         "arguments": {
-          "query": "Article 33 du règlement général sur la protection des données : notification d’une violation de données à caractère personnel à l’autorité de contrôle"
+          "query": "RGPD articles 33 et 34 notification violation de données personnelles"
         },
-        "arguments_sha256": "226c7c396fc7a6292f7c252619170e3bcce4c54095c036af9a1daa0d0bad86dc",
-        "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000026313091\",\n      \"title\": \"Article R33 — Code de procédure pénale\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000026313091\"\n    },\n    {\n      \"id\": \"LEGIARTI000006574915\",\n      \"title\": \"Article 33 — Code de procédure pénale\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006574915\"\n    },\n    {\n      \"id\": \"LEGIARTI000006514880\",\n      \"title\": \"Article D33 — Code de procédure pénale\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006514880\"\n    },\n    {\n      \"id\": \"LEGIARTI000006410130\",\n      \"title\": \"Article 33 — Code de procédure civile\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006410130\"\n    },\n    {\n      \"id\": \"LEGIARTI000006354484\",\n      \"title\": \"Article R33 — Code électoral\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006354484\"\n    },\n    {\n      \"id\": \"LEGIARTI000054359238\",\n      \"title\": \"Article 33 — Code de déontologie des architectes\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054359238\"\n    },\n    {\n      \"id\": \"LEGIARTI000006350284\",\n      \"title\": \"Article D33 — Code du domaine de l'Etat\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006350284\"\n    },\n    {\n      \"id\": \"LEGIARTI000006350077\",\n      \"title\": \"Article A33 — Code du domaine de l'Etat\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006350077\"\n    },\n    {\n      \"id\": \"LEGIARTI000039345207\",\n      \"title\": \"Article R33 — Code du domaine de l'Etat\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000039345207\"\n    },\n    {\n      \"id\": \"LEGIARTI000006293464\",\n      \"title\": \"Article 33 — Code général des impôts, annexe I\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000006293464\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"33\",\n    \"code\": null,\n    \"date\": \"2026-11-27\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
+        "arguments_sha256": "06b62a1e1a40de004371e477fe488a8aa344725aa21699d3b0c45f8120b913e8",
+        "text": "{\n  \"results\": [\n    {\n      \"id\": \"66fe33ec91b69e88a370f983\",\n      \"title\": \"cc, 2024-10-03, n° 21-20.979\",\n      \"url\": \"https://www.courdecassation.fr/decision/66fe33ec91b69e88a370f983\"\n    },\n    {\n      \"id\": \"60796ce39ba5988459c49b8c\",\n      \"title\": \"cc, 2012-01-18, n° 11-10.072\",\n      \"url\": \"https://www.courdecassation.fr/decision/60796ce39ba5988459c49b8c\"\n    },\n    {\n      \"id\": \"60795c7f9ba5988459c4951a\",\n      \"title\": \"cc, 2009-11-25, n° 08-21.049\",\n      \"url\": \"https://www.courdecassation.fr/decision/60795c7f9ba5988459c4951a\"\n    },\n    {\n      \"id\": \"607966489ba5988459c498f7\",\n      \"title\": \"cc, 2011-09-14, n° 10-30.825\",\n      \"url\": \"https://www.courdecassation.fr/decision/607966489ba5988459c498f7\"\n    },\n    {\n      \"id\": \"607970ae9ba5988459c49d09\",\n      \"title\": \"cc, 2013-03-06, n° 12-13.962\",\n      \"url\": \"https://www.courdecassation.fr/decision/607970ae9ba5988459c49d09\"\n    },\n    {\n      \"id\": \"681af5d40dfb1f09369ce221\",\n      \"title\": \"cc, 2025-05-07, n° 22-18.210\",\n      \"url\": \"https://www.courdecassation.fr/decision/681af5d40dfb1f09369ce221\"\n    },\n    {\n      \"id\": \"60797fcd9ba5988459c4a2f7\",\n      \"title\": \"cc, 2014-11-05, n° 13-21.990\",\n      \"url\": \"https://www.courdecassation.fr/decision/60797fcd9ba5988459c4a2f7\"\n    },\n    {\n      \"id\": \"67f615ab3b0cdae54cf3d7f0\",\n      \"title\": \"cc, 2025-04-09, n° 22-23.639\",\n      \"url\": \"https://www.courdecassation.fr/decision/67f615ab3b0cdae54cf3d7f0\"\n    },\n    {\n      \"id\": \"5fd9160968419db14cd6e87c\",\n      \"title\": \"cc, 2016-12-01, n° 15-20.365\",\n      \"url\": \"https://www.courdecassation.fr/decision/5fd9160968419db14cd6e87c\"\n    },\n    {\n      \"id\": \"682d68f316fd466a1ce900c4\",\n      \"title\": \"cc, 2025-05-21, n° 22-19.925\",\n      \"url\": \"https://www.courdecassation.fr/decision/682d68f316fd466a1ce900c4\"\n    }\n  ]\n}",
         "text_available": true,
         "text_block_count": 1,
         "text_limit_bytes": 12000,
-        "included_text_bytes": 2289,
-        "included_text_sha256": "5a1c2dac48cf6d1b16104f38f99c7f69802682577f2f8b56bc8b48690cee838d",
-        "full_text_bytes": 2289,
-        "full_text_sha256": "5a1c2dac48cf6d1b16104f38f99c7f69802682577f2f8b56bc8b48690cee838d",
+        "included_text_bytes": 1831,
+        "included_text_sha256": "27e65401b6e6bb2ab1eeea092528b8d6eb78e4b40ab4372978c75a63b3469ce2",
+        "full_text_bytes": 1831,
+        "full_text_sha256": "27e65401b6e6bb2ab1eeea092528b8d6eb78e4b40ab4372978c75a63b3469ce2",
         "truncated": false,
         "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
         "upstream_truncation": "not_attested"
@@ -865,7 +821,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 44,
+      "position": 40,
       "item_type": "web_search"
     },
     {
@@ -1030,7 +986,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 46,
+      "position": 42,
       "item_type": "web_search"
     },
     {
@@ -1050,16 +1006,8 @@
           "results",
           "type"
         ],
-        "result_count": 4,
+        "result_count": 3,
         "first_30_result_fields": [
-          [
-            "domain",
-            "ref_id",
-            "snippet",
-            "title",
-            "type",
-            "url"
-          ],
           [
             "domain",
             "ref_id",
@@ -1111,9 +1059,8 @@
         "upstream_truncation": "not_attested",
         "urls": [
           "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4",
-          "https://www.cnil.fr/fr/violations-de-donnees-personnelles-les-regles-suivre",
-          "https://www.cnil.fr/fr/services-en-ligne/notifier-une-violation-de-donnees-personnelles",
-          "https://eur-lex.europa.eu/eli/reg/2016/679/oj/fra"
+          "https://eur-lex.europa.eu/eli/reg/2016/679/2016-05-04/fra",
+          "https://www.cnil.fr/fr/notifier-une-violation-de-donnees-personnelles"
         ],
         "text_field_paths": [],
         "page_text_available": false,
@@ -1122,13 +1069,58 @@
     },
     {
       "type": "tool_boundary",
+      "position": 44,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/references/format-citation.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/recherche-juridique/references/format-citation.md"
+      ],
+      "output_sha256": "d3375671e65b7579b73f94ce8f8f28f8c3b6a0101532273933eb2bf0b48019db",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 46,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/references/gabarits-sortie.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/recherche-juridique/references/gabarits-sortie.md"
+      ],
+      "output_sha256": "80c172bb1bd62696f1b9d33a7f0c5b908a83da178f5e32bfe0458f1784180d72",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "reply",
+      "text": "L’appel au MCP « droit-francais » a réussi, mais ses résultats ne permettent pas de vérifier les articles demandés. Le texte de l’article 33 a été récupéré sur la CNIL ; je complète la lecture de l’article 34. Le risque devra être évalué sur le contenu exact du fichier : « données sociales » ne signifie pas automatiquement données de santé."
+    },
+    {
+      "type": "visible_text",
       "position": 48,
+      "item_id": "item_24",
+      "text": "L’appel au MCP « droit-francais » a réussi, mais ses résultats ne permettent pas de vérifier les articles demandés. Le texte de l’article 33 a été récupéré sur la CNIL ; je complète la lecture de l’article 34. Le risque devra être évalué sur le contenu exact du fichier : « données sociales » ne signifie pas automatiquement données de santé."
+    },
+    {
+      "type": "tool_boundary",
+      "position": 49,
       "item_type": "web_search"
     },
     {
       "type": "web_call",
-      "action": "find_in_page",
+      "action": "open_page",
       "hosts": [
+        "eur-lex.europa.eu",
         "www.cnil.fr"
       ],
       "status": null,
@@ -1141,13 +1133,8 @@
           "results",
           "type"
         ],
-        "result_count": 3,
+        "result_count": 2,
         "first_30_result_fields": [
-          [
-            "ref_id",
-            "title",
-            "type"
-          ],
           [
             "domain",
             "ref_id",
@@ -1174,10 +1161,10 @@
         "tool": "web_search",
         "arguments_present": true,
         "arguments": {
-          "type": "find_in_page",
-          "pattern": "### Article 33"
+          "type": "open_page",
+          "url": "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4"
         },
-        "arguments_sha256": "d458b90777d7f281a0e314e8e8dfe3317b3562e51be85b4640e0dd8acfca1883",
+        "arguments_sha256": "5833e2a85d4015fef3d0ef99a8ac6207b5362afafbcba7268de4f3061c4f8329",
         "text": "",
         "text_available": false,
         "text_block_count": 0,
@@ -1190,7 +1177,253 @@
         "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
         "upstream_truncation": "not_attested",
         "urls": [
-          "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4"
+          "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4",
+          "https://eur-lex.europa.eu/legal-content/FR/TXT/?uri=CELEX%3A02016R0679-20160504"
+        ],
+        "text_field_paths": [],
+        "page_text_available": false,
+        "source_scope": "text_fields_observed_in_cli_results_not_independent_page_capture"
+      }
+    },
+    {
+      "type": "tool_boundary",
+      "position": 51,
+      "item_type": "web_search"
+    },
+    {
+      "type": "web_call",
+      "action": "search",
+      "hosts": [
+        "www.cnil.fr"
+      ],
+      "status": null,
+      "result_present": true,
+      "web_content_observation": {
+        "item_fields": [
+          "action",
+          "id",
+          "query",
+          "results",
+          "type"
+        ],
+        "result_count": 18,
+        "first_30_result_fields": [
+          [
+            "domain",
+            "ref_id",
+            "snippet",
+            "title",
+            "type",
+            "url"
+          ],
+          [
+            "domain",
+            "ref_id",
+            "snippet",
+            "title",
+            "type",
+            "url"
+          ],
+          [
+            "domain",
+            "ref_id",
+            "snippet",
+            "title",
+            "type",
+            "url"
+          ],
+          [
+            "domain",
+            "ref_id",
+            "snippet",
+            "title",
+            "type",
+            "url"
+          ],
+          [
+            "domain",
+            "ref_id",
+            "snippet",
+            "title",
+            "type",
+            "url"
+          ],
+          [
+            "domain",
+            "ref_id",
+            "snippet",
+            "title",
+            "type",
+            "url"
+          ],
+          [
+            "domain",
+            "ref_id",
+            "snippet",
+            "title",
+            "type",
+            "url"
+          ],
+          [
+            "domain",
+            "ref_id",
+            "snippet",
+            "title",
+            "type",
+            "url"
+          ],
+          [
+            "domain",
+            "ref_id",
+            "snippet",
+            "title",
+            "type",
+            "url"
+          ],
+          [
+            "domain",
+            "ref_id",
+            "snippet",
+            "title",
+            "type",
+            "url"
+          ],
+          [
+            "domain",
+            "ref_id",
+            "snippet",
+            "title",
+            "type",
+            "url"
+          ],
+          [
+            "domain",
+            "ref_id",
+            "snippet",
+            "title",
+            "type",
+            "url"
+          ],
+          [
+            "domain",
+            "ref_id",
+            "snippet",
+            "title",
+            "type",
+            "url"
+          ],
+          [
+            "domain",
+            "ref_id",
+            "snippet",
+            "title",
+            "type",
+            "url"
+          ],
+          [
+            "domain",
+            "ref_id",
+            "snippet",
+            "title",
+            "type",
+            "url"
+          ],
+          [
+            "domain",
+            "ref_id",
+            "snippet",
+            "title",
+            "type",
+            "url"
+          ],
+          [
+            "domain",
+            "ref_id",
+            "snippet",
+            "title",
+            "type",
+            "url"
+          ],
+          [
+            "domain",
+            "ref_id",
+            "snippet",
+            "title",
+            "type",
+            "url"
+          ]
+        ],
+        "field_list_truncated": false,
+        "page_text_available": false
+      }
+    },
+    {
+      "type": "tool_boundary",
+      "position": 53,
+      "item_type": "web_search"
+    },
+    {
+      "type": "web_call",
+      "action": "open_page",
+      "hosts": [
+        "www.cnil.fr"
+      ],
+      "status": null,
+      "result_present": true,
+      "web_content_observation": {
+        "item_fields": [
+          "action",
+          "id",
+          "query",
+          "results",
+          "type"
+        ],
+        "result_count": 2,
+        "first_30_result_fields": [
+          [
+            "domain",
+            "ref_id",
+            "snippet",
+            "title",
+            "type",
+            "url"
+          ],
+          [
+            "domain",
+            "ref_id",
+            "snippet",
+            "title",
+            "type",
+            "url"
+          ]
+        ],
+        "field_list_truncated": false,
+        "page_text_available": false
+      },
+      "review_web_material": {
+        "schema": "web-text-v1",
+        "untrusted_data": true,
+        "tool": "web_search",
+        "arguments_present": true,
+        "arguments": {
+          "type": "open_page",
+          "url": "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre1"
+        },
+        "arguments_sha256": "c8257d3164a839f3548afe68bb68a64e92865b76fc07b7919776445a3d29665f",
+        "text": "",
+        "text_available": false,
+        "text_block_count": 0,
+        "text_limit_bytes": 12000,
+        "included_text_bytes": 0,
+        "included_text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "full_text_bytes": 0,
+        "full_text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "truncated": false,
+        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
+        "upstream_truncation": "not_attested",
+        "urls": [
+          "https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre1",
+          "https://www.cnil.fr/fr/violations-de-donnees-personnelles-les-regles-suivre"
         ],
         "text_field_paths": [],
         "page_text_available": false,
@@ -1199,45 +1432,45 @@
     },
     {
       "type": "reply",
-      "text": "**La collectivité doit agir immédiatement : contenir la divulgation, documenter l’incident et évaluer les deux obligations distinctes de notification.** Un envoi à un destinataire non autorisé constitue une violation de confidentialité, même accidentelle. [CNIL — règles à suivre](https://www.cnil.fr/fr/violations-de-donnees-personnelles-les-regles-suivre).\n\n**Dès maintenant :**\n\n- Alerter le DPO, la direction et le responsable du traitement concerné.\n- Contacter le mauvais destinataire : demander de ne pas utiliser ni transmettre le fichier, de supprimer les copies reçues et de confirmer par écrit ses actions, en précisant s’il l’a ouvert ou retransmis. Cette confirmation doit être évaluée ; elle ne suffit pas, seule, à écarter tout risque.\n- Conserver les preuves de l’envoi, des échanges et des mesures prises ; établir une chronologie.\n- Examiner le contenu exact du fichier, son accessibilité, l’identité du destinataire et les conséquences possibles : escroquerie ciblée, discrimination, atteinte à la confidentialité de la situation sociale.\n\nLe volume de **2 000 usagers** et les données sociales justifient une évaluation urgente. Ils ne permettent toutefois pas, seuls, de conclure définitivement à un risque élevé. « Données sociales » ne signifie pas nécessairement données de santé.\n\nLes délais et conditions sont les suivants, d’après les **articles 33 et 34 du RGPD, lus sur le site de la CNIL le 27 novembre 2026** :\n\n| Démarche | Condition et délai |\n|---|---|\n| **Documenter en interne** | Toute violation doit être documentée, même sans notification : faits, effets et mesures correctrices — article 33 §5. Commencer immédiatement. |\n| **Notifier la CNIL** | Sauf violation non susceptible d’engendrer un risque pour les droits et libertés : dans les meilleurs délais et, si possible, **au plus tard 72 heures après en avoir pris connaissance** — article 33 §1. |\n| **Informer les usagers concernés** | Si un **risque élevé** est susceptible de résulter de la violation : **dans les meilleurs délais** — article 34 §1. Aucun délai forfaitaire de 72 heures n’est prévu pour cette information. |\n\n[RGPD — articles 33 et 34, texte publié par la CNIL](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4).\n\n**« Envoyé hier » ne permet pas de calculer l’échéance.** Il faut déterminer **T0**, le moment où le responsable du traitement a acquis une certitude raisonnable qu’une violation avait touché des données personnelles. L’échéance de notification se calcule alors **T0 + 72 heures**, sans attendre cette limite pour agir. [CNIL — point de départ du délai](https://www.cnil.fr/fr/violations-de-donnees-personnelles-les-regles-suivre).\n\nSi l’enquête reste incomplète, transmettre une notification initiale puis compléter sans retard indu. Si les 72 heures sont dépassées, notifier immédiatement en expliquant le retard, via le [service de notification de la CNIL](https://www.cnil.fr/fr/services-en-ligne/notifier-une-violation-de-donnees-personnelles).\n\nLa notification précise la nature de l’incident, les catégories et volumes concernés, le contact DPO, les conséquences probables et les mesures prises ou envisagées. L’information des personnes doit être claire ; **elle n’attend pas l’achèvement de la notification CNIL** si le risque élevé est établi. Les exceptions de l’article 34 doivent être démontrées, notamment protection rendant les données incompréhensibles ou mesures supprimant le risque élevé. [Articles 33 et 34](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4).\n\nLe DPO conseille ; **le responsable du traitement décide**. Toute notification ou communication préparée doit être relue et validée par le DPO humain avant envoi, sans retarder les échéances.\n\n**À préciser pour arrêter la décision :** quand la violation a-t-elle été découverte exactement, quelles données sociales figurent dans le fichier, et le destinataire a-t-il pu le lire ou le retransmettre ?"
+      "text": "**La collectivité doit agir immédiatement : l’envoi à un destinataire non autorisé constitue une violation de confidentialité, même accidentelle.** [RGPD, article 4 §12](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre1).\n\n1. **Alerter le DPO et la direction**, identifier l’organisme responsable du fichier et ouvrir une chronologie précise. Contacter rapidement le destinataire pour lui demander de ne pas utiliser ni transmettre le fichier, de supprimer les copies reçues et de confirmer par écrit ses actions. Conserver les preuves de l’envoi et des échanges.\n\n2. **Évaluer le risque pour les 2 000 usagers**, avec le DPO : contenu exact des données sociales, possibilités d’identification, conséquences possibles, éventuelle vulnérabilité des personnes, fichier lisible ou protégé, consultation ou retransmission. Le volume appelle une évaluation urgente, mais **« données sociales » ne prouve pas à lui seul la présence de données de santé ni un risque élevé**. Une confirmation de suppression doit être prise en compte sans suffire, seule, à clore l’analyse. [CNIL, règles à suivre](https://www.cnil.fr/fr/violations-de-donnees-personnelles-les-regles-suivre).\n\n3. **Documenter la violation dans le registre interne**, même si aucune notification externe n’est finalement nécessaire : faits, effets, mesures prises et justification des décisions. [RGPD, article 33 §5](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4).\n\nLes deux obligations externes ont des seuils et des délais distincts :\n\n| Démarche | Condition | Délai juridique |\n|---|---|---|\n| **Notification à la CNIL** | Sauf si la violation n’est pas susceptible d’engendrer un risque pour les droits et libertés | Dans les meilleurs délais et, si possible, **72 heures au plus tard après la prise de connaissance** |\n| **Information des usagers concernés** | Violation susceptible d’engendrer un **risque élevé**, sauf exception applicable | **Dans les meilleurs délais** ; aucun délai chiffré de 72 heures n’est prévu pour cette communication |\n\nCes règles résultent des [articles 33 et 34 du RGPD, lus sur la CNIL le 27 novembre 2026](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4). L’information des usagers ne doit pas attendre l’achèvement de la notification à la CNIL.\n\n**« Envoyé hier » ne permet pas de calculer l’échéance.** Il faut établir **T0**, moment où le responsable du traitement avait une certitude raisonnable qu’une violation avait touché des données personnelles. L’échéance de référence est **T0 + 72 heures**. Quelle est la date et l’heure de cette prise de connaissance ? [CNIL, point de départ du délai](https://www.cnil.fr/fr/violations-de-donnees-personnelles-les-regles-suivre).\n\nSi les informations sont incomplètes, effectuer une notification initiale puis la compléter sans retard indu. Si le délai est dépassé, notifier malgré tout et expliquer les motifs du retard. Préparer la nature de l’incident, les catégories et volumes concernés, les conséquences probables, les mesures prises et le contact du DPO. Utiliser le [téléservice officiel accessible depuis cette page CNIL](https://www.cnil.fr/fr/services-en-ligne/notifier-une-violation-de-donnees-personnelles).\n\n**Je recommande de préparer dès maintenant la notification**, sans préjuger du niveau de risque élevé. La décision appartient au responsable du traitement, conseillé par le DPO. Toute notification ou communication externe doit être relue et validée par le DPO humain avant envoi, sans dépasser les délais applicables."
     },
     {
       "type": "visible_text",
-      "position": 50,
-      "item_id": "item_25",
-      "text": "**La collectivité doit agir immédiatement : contenir la divulgation, documenter l’incident et évaluer les deux obligations distinctes de notification.** Un envoi à un destinataire non autorisé constitue une violation de confidentialité, même accidentelle. [CNIL — règles à suivre](https://www.cnil.fr/fr/violations-de-donnees-personnelles-les-regles-suivre).\n\n**Dès maintenant :**\n\n- Alerter le DPO, la direction et le responsable du traitement concerné.\n- Contacter le mauvais destinataire : demander de ne pas utiliser ni transmettre le fichier, de supprimer les copies reçues et de confirmer par écrit ses actions, en précisant s’il l’a ouvert ou retransmis. Cette confirmation doit être évaluée ; elle ne suffit pas, seule, à écarter tout risque.\n- Conserver les preuves de l’envoi, des échanges et des mesures prises ; établir une chronologie.\n- Examiner le contenu exact du fichier, son accessibilité, l’identité du destinataire et les conséquences possibles : escroquerie ciblée, discrimination, atteinte à la confidentialité de la situation sociale.\n\nLe volume de **2 000 usagers** et les données sociales justifient une évaluation urgente. Ils ne permettent toutefois pas, seuls, de conclure définitivement à un risque élevé. « Données sociales » ne signifie pas nécessairement données de santé.\n\nLes délais et conditions sont les suivants, d’après les **articles 33 et 34 du RGPD, lus sur le site de la CNIL le 27 novembre 2026** :\n\n| Démarche | Condition et délai |\n|---|---|\n| **Documenter en interne** | Toute violation doit être documentée, même sans notification : faits, effets et mesures correctrices — article 33 §5. Commencer immédiatement. |\n| **Notifier la CNIL** | Sauf violation non susceptible d’engendrer un risque pour les droits et libertés : dans les meilleurs délais et, si possible, **au plus tard 72 heures après en avoir pris connaissance** — article 33 §1. |\n| **Informer les usagers concernés** | Si un **risque élevé** est susceptible de résulter de la violation : **dans les meilleurs délais** — article 34 §1. Aucun délai forfaitaire de 72 heures n’est prévu pour cette information. |\n\n[RGPD — articles 33 et 34, texte publié par la CNIL](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4).\n\n**« Envoyé hier » ne permet pas de calculer l’échéance.** Il faut déterminer **T0**, le moment où le responsable du traitement a acquis une certitude raisonnable qu’une violation avait touché des données personnelles. L’échéance de notification se calcule alors **T0 + 72 heures**, sans attendre cette limite pour agir. [CNIL — point de départ du délai](https://www.cnil.fr/fr/violations-de-donnees-personnelles-les-regles-suivre).\n\nSi l’enquête reste incomplète, transmettre une notification initiale puis compléter sans retard indu. Si les 72 heures sont dépassées, notifier immédiatement en expliquant le retard, via le [service de notification de la CNIL](https://www.cnil.fr/fr/services-en-ligne/notifier-une-violation-de-donnees-personnelles).\n\nLa notification précise la nature de l’incident, les catégories et volumes concernés, le contact DPO, les conséquences probables et les mesures prises ou envisagées. L’information des personnes doit être claire ; **elle n’attend pas l’achèvement de la notification CNIL** si le risque élevé est établi. Les exceptions de l’article 34 doivent être démontrées, notamment protection rendant les données incompréhensibles ou mesures supprimant le risque élevé. [Articles 33 et 34](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4).\n\nLe DPO conseille ; **le responsable du traitement décide**. Toute notification ou communication préparée doit être relue et validée par le DPO humain avant envoi, sans retarder les échéances.\n\n**À préciser pour arrêter la décision :** quand la violation a-t-elle été découverte exactement, quelles données sociales figurent dans le fichier, et le destinataire a-t-il pu le lire ou le retransmettre ?"
+      "position": 55,
+      "item_id": "item_28",
+      "text": "**La collectivité doit agir immédiatement : l’envoi à un destinataire non autorisé constitue une violation de confidentialité, même accidentelle.** [RGPD, article 4 §12](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre1).\n\n1. **Alerter le DPO et la direction**, identifier l’organisme responsable du fichier et ouvrir une chronologie précise. Contacter rapidement le destinataire pour lui demander de ne pas utiliser ni transmettre le fichier, de supprimer les copies reçues et de confirmer par écrit ses actions. Conserver les preuves de l’envoi et des échanges.\n\n2. **Évaluer le risque pour les 2 000 usagers**, avec le DPO : contenu exact des données sociales, possibilités d’identification, conséquences possibles, éventuelle vulnérabilité des personnes, fichier lisible ou protégé, consultation ou retransmission. Le volume appelle une évaluation urgente, mais **« données sociales » ne prouve pas à lui seul la présence de données de santé ni un risque élevé**. Une confirmation de suppression doit être prise en compte sans suffire, seule, à clore l’analyse. [CNIL, règles à suivre](https://www.cnil.fr/fr/violations-de-donnees-personnelles-les-regles-suivre).\n\n3. **Documenter la violation dans le registre interne**, même si aucune notification externe n’est finalement nécessaire : faits, effets, mesures prises et justification des décisions. [RGPD, article 33 §5](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4).\n\nLes deux obligations externes ont des seuils et des délais distincts :\n\n| Démarche | Condition | Délai juridique |\n|---|---|---|\n| **Notification à la CNIL** | Sauf si la violation n’est pas susceptible d’engendrer un risque pour les droits et libertés | Dans les meilleurs délais et, si possible, **72 heures au plus tard après la prise de connaissance** |\n| **Information des usagers concernés** | Violation susceptible d’engendrer un **risque élevé**, sauf exception applicable | **Dans les meilleurs délais** ; aucun délai chiffré de 72 heures n’est prévu pour cette communication |\n\nCes règles résultent des [articles 33 et 34 du RGPD, lus sur la CNIL le 27 novembre 2026](https://www.cnil.fr/fr/reglement-europeen-protection-donnees/chapitre4). L’information des usagers ne doit pas attendre l’achèvement de la notification à la CNIL.\n\n**« Envoyé hier » ne permet pas de calculer l’échéance.** Il faut établir **T0**, moment où le responsable du traitement avait une certitude raisonnable qu’une violation avait touché des données personnelles. L’échéance de référence est **T0 + 72 heures**. Quelle est la date et l’heure de cette prise de connaissance ? [CNIL, point de départ du délai](https://www.cnil.fr/fr/violations-de-donnees-personnelles-les-regles-suivre).\n\nSi les informations sont incomplètes, effectuer une notification initiale puis la compléter sans retard indu. Si le délai est dépassé, notifier malgré tout et expliquer les motifs du retard. Préparer la nature de l’incident, les catégories et volumes concernés, les conséquences probables, les mesures prises et le contact du DPO. Utiliser le [téléservice officiel accessible depuis cette page CNIL](https://www.cnil.fr/fr/services-en-ligne/notifier-une-violation-de-donnees-personnelles).\n\n**Je recommande de préparer dès maintenant la notification**, sans préjuger du niveau de risque élevé. La décision appartient au responsable du traitement, conseillé par le DPO. Toute notification ou communication externe doit être relue et validée par le DPO humain avant envoi, sans dépasser les délais applicables."
     },
     {
       "type": "turn_completed",
       "usage": {
-        "input_tokens": 1179349,
-        "cached_input_tokens": 1089280,
+        "input_tokens": 1492045,
+        "cached_input_tokens": 1385600,
         "cache_write_input_tokens": 0,
-        "output_tokens": 3127,
-        "reasoning_output_tokens": 595
+        "output_tokens": 3314,
+        "reasoning_output_tokens": 639
       }
     }
   ],
-  "events_sha256": "f5fe1e99ec1194159fb527abb4b20221e7210442081e93bd59fa6e3639c240fa",
+  "events_sha256": "e36d7a24cf888320d506a7d85fe8ca09d8b255864c7677c193c3b5371acd6654",
   "runner_sha256": "89fd874415c5830dc67be3e2fa76a77eb9bafdd1f7434ecad696d35db1ef1602",
   "profile": "codex-copies-natives-mcp-v5",
-  "measurement_commit": "e8f42719e90e5fdf69458cf9960bf04ee6560f84",
-  "qualification_target_commit": "768d7d56258bd4b9feeede266c9ee1b2187dc8d7",
+  "measurement_commit": "30617203c9514736af680dc97c79de53d4a6df4c",
+  "qualification_target_commit": "6a469ab56495c5b9179da7ccb15dc7afd71a2a39",
   "derivation": {
     "kind": "projection_of_original_session",
     "original": {
       "evidence_path": "campagne/plugin-violation-donnees/reponse/session.json",
-      "sha256": "4ac271931a7736e817d5415d6faa5e85beaa15af1d34ed15dbc01c576fc41529"
+      "sha256": "17e34aee396734bc6df069460a1f6de4bbaa761b876f089cfdc11a5b7c92d1e6"
     },
     "summary": {
       "evidence_path": "campagne/resume-campagne.json",
-      "sha256": "01c0b81b4b99e6e121f46481ab3429bd4c5e5f94d5b7ffedba0ccfd20c00d92c"
+      "sha256": "ab189608f01e0b3de8c84026e835c792aa16afcf7988151a9a278132529d69b5"
     }
   },
   "original_session": {
     "evidence_path": "source-l14/campagne/plugin-violation-donnees/reponse/session.json",
-    "sha256": "4ac271931a7736e817d5415d6faa5e85beaa15af1d34ed15dbc01c576fc41529"
+    "sha256": "17e34aee396734bc6df069460a1f6de4bbaa761b876f089cfdc11a5b7c92d1e6"
   },
   "source_bundle_root": "tests/evidence/mesure-courante/source-l14",
-  "payload_sha256": "dc970c21dc9ef66fc849b6a3af31743deb1213c2121747fd59dbd956fd67c417"
+  "payload_sha256": "d902b4ae69498530dd13d6d7c50ce84b6c77418924e4f5c71c66f7955f959718"
 }

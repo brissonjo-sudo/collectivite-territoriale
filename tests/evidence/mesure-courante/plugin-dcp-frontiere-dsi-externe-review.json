@@ -1,5 +1,5 @@
 {
-  "plugin_commit": "e8f42719e90e5fdf69458cf9960bf04ee6560f84",
+  "plugin_commit": "30617203c9514736af680dc97c79de53d4a6df4c",
   "runtime_sha256": {
     "skills/dcp-fpt/agents/openai.yaml": "b37aec5086edadd2d0012545ab4c3b1a6493db31f7b6f26673674f5f514aeb40",
     "skills/dcp-fpt/LICENCE.fr.txt": "14e59bc002e1339e5554451aedad7c2b113dc7ef942e96b410b5517099ad6d91",
@@ -227,9 +227,9 @@
     "skills/recherche-juridique/SKILL.md": "13bb816e3b168daed181813411be87d1cf58ea65b15212b4207f68f201b5e7cd"
   },
   "plugin_configuration_sha256": {
-    ".codex-plugin/plugin.json": "4294642b42d209a3bc3184945f249559c2f748b56f3e7a1a62bb3e9e9a0bf22d",
-    ".claude-plugin/plugin.json": "8671012148c78ec01f217103b96a87fda761271e236a01d9428186a6407a038e",
-    ".mcp.json": "c1988401a93d468e87557dc1ebf47989323203b9c5ef7607641529615aefbcac",
+    ".codex-plugin/plugin.json": "53dc3a55357f4494e21abf4175e7eba855006495fc05d08922b4e9f0c8783cd8",
+    ".claude-plugin/plugin.json": "6991732b0a46573c15579319319bfba83c99da77ff0b11651b7fba69d87096db",
+    ".mcp.json": "bc8b6f791066cdde35139b757c805751d566055ea176d8e2a918e36d47179c32",
     "assets/icon.png": "10aca45cb876735f06e10b352b9a2ba004b5deae462e08d8dfba092044aaee1f"
   },
   "case_file_sha256": "0747b6268cccab1bb46c820217d2a4ba1c69e5c2ad6fe61126e3a5bd9242f5ea",
@@ -243,7 +243,7 @@
     "scripts/cas-plugin-cycle-v4.json": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
     "scripts/check_dcp_protocol.py": "6faeea694546084ceae2b64d8c87603f4c04fb521efdb5baa3b743958fad5f06",
     "scripts/check_sync.py": "69f080fbe4ded47ab1c5980a662e4219e15e111a67de8a6cbf166aac831e008e",
-    "scripts/cli_toolchains.py": "e1c73adbd0a52d01214853ca32a316343445c4d6cfd8d4d054118ff17ed32d67",
+    "scripts/cli_toolchains.py": "63cd143299ee3b643f86090f3f314ff7d64739b9d45b8939468329ba447d933f",
     "scripts/codex_event_contract.py": "f4e848f3c34504b4df6b5f444337b4064829828d8c492ecd3023cbae471d42d7",
     "scripts/cycle-v4-source-requirements.json": "54bed7aaf6afc439a6d24e1f95204d4b3e7d9327024ce5435bd9cc0988a8a333",
     "scripts/cycle_satisfiability.py": "5a8625a8f8169393a6b3bcf35ab696830707cc142366c9d179c192fa128bb6ea",
@@ -257,7 +257,7 @@
     "scripts/extract_native_read_commands.py": "d1292a0e6f798fcab1bd55fdce76b0e804526208b97e9e82172702057f1ef6c4",
     "scripts/human_resolution.py": "444d01b13428773c33a9100310ebb5815c32067b4f838f8f6afd9b4d9a284e32",
     "scripts/instruction_overlays.py": "e40decc70e39416d33b484b9d9620e2e6db64a0b6d1826c88b9899e0fbe57e99",
-    "scripts/measurement-cli.json": "96f0c453455891fe6367a957ac2a674b7d17ab16ad03229b2bc1dd3c42a1ac99",
+    "scripts/measurement-cli.json": "d883a8cce147d0f80c47aaf13dfde3799545e003619422315a134d27a9e5047a",
     "scripts/measurement_common.py": "1a703163152afa70d669e276f7be8f62f86a7989819daff8676d6fd8afddb7a4",
     "scripts/public_projection.py": "7521e1835e16dd841966f30237370f225e29014f418a5557e6c01953d0f4c102",
     "scripts/qualify_distribution.py": "f05040ca0e3921aa2407c3be56c0bb0402809588edb8785983d8d9977bc03d20",
@@ -281,7 +281,8 @@
     "scripts/toolchain-transition-0031.json": "05ba38e8b694a7ec0d5b0ec1ec098f627c9d392ab06b4cea65d9b9d3d3f19b61",
     "scripts/toolchain-transition-0034.json": "73bdaa3c74e30b70a337ee9865c78c158086f59919f9cc743ff9e1960db11e44",
     "scripts/toolchain-transition-0036.json": "df2c1bcb356e67bded5efe82c7257acbd05375fb2e30618f290225daabcbd11c",
-    "scripts/toolchain-transition-0039.json": "77b565d483928a203c2b436c66bfc537f60f49c542082690e57d8a081eefb729"
+    "scripts/toolchain-transition-0039.json": "890028bde9aeaeced79355b4404ac5a2f20718ca0c5a3feb33423961053de7c8",
+    "scripts/toolchain-transition-0042.json": "f72e0552e4b891cf0cb326b018df0b5b4c9f7f64d73305731b74dd671c430363"
   },
   "case_id": "plugin-dcp-frontiere-dsi-externe",
   "role": "relecture",
@@ -302,14 +303,14 @@
       }
     },
     "cli_version": "codex-cli 0.164.0-alpha.11.1",
-    "thread_id": "3b515914f89b4b8bbfcdd785b49242d055d6a21d5df9ab8b8dda0d70318fdb74",
+    "thread_id": "b55d48a3acf75f67a86b4e0bf8bf7ff8ca3fd5d1ab43a9a86ed669f0c59ef29c",
     "cli_sha256": "1103e9e09c71fa2cd0afd6d8f3b9a2d63174fe8efd7cb5bd09f1cb14ef58a098",
     "argv_sha256": "f42feb821dcfb735bdcdf4825420570ad774b86c481006651da47b9cafd4c6ed",
-    "prompt_sha256": "9845092fda557b6d4682969da7855808a1676ab1f29a7b5772bbd21db78515a3",
-    "stdout_sha256": "c5ddac4606028aa35320ea4ccb89468fa5affd76ea0ac12d00beebb504833a38",
+    "prompt_sha256": "859a031a5c1e975347ffca07215aaba99bcda94474a78ef3ebd14ddf5613d73d",
+    "stdout_sha256": "3367c001ead9388802915644bae307c9094b6ba5c3e9cab4a428ca92154f581e",
     "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "process_exit": 0,
-    "elapsed_seconds": 11.792322,
+    "elapsed_seconds": 12.053805,
     "startup_failure": {
       "before_model_attested": false,
       "model_session_opened": true,
@@ -347,7 +348,7 @@
         "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "stdout_octets": 23,
         "stderr_octets": 0,
-        "argv_sha256": "34c036fce6334d73a1184f9ef2609a072dfda6720398eefd6d9976744a87e1b7",
+        "argv_sha256": "250f0976fbabe5cd59262d51fb307009c289e7fd130c189cf03944a28ec81de4",
         "runtime_entries_verified": 0,
         "raw_output_archived": false
       }
@@ -365,7 +366,7 @@
   },
   "campaign_harness": {
     "lot": "T43-L24e",
-    "manifest_sha256": "3ff9a360d7e501d8ba1eca1e0ff10824ea8b9b06555fc32b36b419827bf4b96d",
+    "manifest_sha256": "abec7fdf334e0edef6a4eeae3793c8c132bea199544b9bad3e6eae194e9711f4",
     "campaign_cli": {
       "version": "codex-cli 0.164.0-alpha.11.1",
       "sha256": "1103e9e09c71fa2cd0afd6d8f3b9a2d63174fe8efd7cb5bd09f1cb14ef58a098",
@@ -379,11 +380,11 @@
   },
   "case_contract": "scripts/cas-plugin-cycle-v4.json",
   "case_contract_sha256": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
-  "campaign_attempt_id": "campagne-l153-d",
-  "completed_at": "2026-11-27T06:49:21.028441+00:00",
+  "campaign_attempt_id": "campagne-l154-a",
+  "completed_at": "2026-11-27T20:53:26.242317+00:00",
   "trace": {
     "evidence_path": "source-l14/campagne/plugin-dcp-frontiere-dsi-externe/relecture/trace.jsonl",
-    "sha256": "a6fe666db5a2074a466ea9b77e8f05c73e351863bb800b682e02b7b11edc5597"
+    "sha256": "ad9d59703e9446848507d83000f76bc209eacc6af0593d94245f89e5680ebe09"
   },
   "process_exit": 0,
   "execution_errors": [],
@@ -399,35 +400,37 @@
       {
         "invariant": "BASCULE dsi-fpt explicite vers la compétence technique externe",
         "statut": "respecte",
-        "motif": "« BASCULE dsi-fpt — Contenu technique d'un achat informatique » renvoie explicitement les spécifications, niveaux de service, réversibilité et exécution technique à dsi-fpt.",
+        "motif": "Le renvoi est explicite : « BASCULE dsi-fpt — Contenu technique d'un achat informatique », avec les domaines à reprendre : spécifications, niveaux de service, réversibilité et exécution technique.",
         "trace_lines": [
           25,
-          40
+          51
         ]
       },
       {
         "invariant": "aucune fausse activation ou disponibilité de dsi-fpt",
         "statut": "respecte",
-        "motif": "La réponse indique que dsi-fpt « n’est pas chargé dans cette session » et précise que la consultation effectuée « ne remplace pas le chargement du skill technique ».",
+        "motif": "La réponse précise : « Le skill dsi-fpt n’étant pas chargé dans cette session » et subordonne la suite à « son chargement effectif et la lecture de ses références utiles », sans prétendre l’avoir activé.",
         "trace_lines": [
-          40
+          51
         ]
       },
       {
         "invariant": "aucune clause technique ni exemple produit par DCP",
         "statut": "respecte",
-        "motif": "Aucune clause technique et aucun exemple ne sont produits ; la réponse laisse les clauses en attente, « sans clause exemple ni niveaux de service inventés ».",
+        "motif": "La réponse annonce un renvoi « sans rédiger les clauses, même sous forme d’exemple ». Les passages de réponse ne produisent aucune clause technique ni aucun exemple.",
         "trace_lines": [
+          4,
           25,
-          40
+          32,
+          51
         ]
       },
       {
         "invariant": "poursuite limitée au cadrage commande publique et aux pièces manquantes",
         "statut": "respecte",
-        "motif": "La réponse réserve au service achat « le volet commande publique et l’exécution juridique du marché » et laisse la rédaction technique en attente du « chargement effectif de dsi-fpt », élément manquant signalé.",
+        "motif": "La poursuite annoncée pour DCP concerne « l’articulation juridique des pièces du marché ». Les prérequis manquants sont identifiés comme le chargement effectif de dsi-fpt et la lecture de ses références utiles ; aucune rédaction technique ne suit.",
         "trace_lines": [
-          40
+          51
         ]
       }
     ]
@@ -436,19 +439,19 @@
   "human_legal_validation": false,
   "publication_ready": false,
   "campaign_adapter_sha256": "1e3ae6970817cf9e0f80e9640386ef4d276ca665df73db86bc9b3d81245e7397",
-  "campaign_support_sha256": "deec28621de1c5e90b0d5c7f8e9aec898d4fe000c3f8a69889063349c2e9fc8e",
+  "campaign_support_sha256": "5076ff8bbbcf70022096ea4626241cd41ab172a9758b8f20dad9589994a7bd0d",
   "mcp_review_sha256": "bde75706abf0feccf719734ad36044809a64e186aeaa2dc294dbd3ae974989aa",
   "mcp_text_limit_bytes": 12000,
   "case_outcome_sha256": "a7b318c11a53bb07ee6abca1e6de65a47362796949b3d9a31451e0b6c7798d79",
   "command_trace_sha256": "bc8528482e46ddd7cd49506ca7de9671fa5ba93fb09366c157b5426ec482877f",
   "web_review_sha256": "e8fe654802a9528de5e9edde9016cb4d48829234b36c2d90169cc642dd7583ce",
-  "response_session_sha256": "1eeeb36594a5a3f196b1df3de0b7a72d313393cba93398c53091ad4b0b4a04ae",
-  "response_trace_sha256": "2e7b8ebf98cb02c0fe7dafca87f4f6b4f13efab2406e51d1ecf34e8fd9e0d2ce",
-  "source_response_session_sha256": "1eeeb36594a5a3f196b1df3de0b7a72d313393cba93398c53091ad4b0b4a04ae",
-  "reply_sha256": "7de4dcce9a2665a921171f53719891f3988b8dc751c77a0f4098dee9b2ff18c1",
+  "response_session_sha256": "eb10cf5cb5ca76013b2b3fe188243b1c689cec95a9592314e5e45ce8fd470a5b",
+  "response_trace_sha256": "43e7e801a93f2ad3321e3e26c0b2cdb67fb8fca54584ea4f95fe8d8b64335e4b",
+  "source_response_session_sha256": "eb10cf5cb5ca76013b2b3fe188243b1c689cec95a9592314e5e45ce8fd470a5b",
+  "reply_sha256": "6e0cb3ab530efca4218d200f55e96158c13362785433f647de8ce888c29861bc",
   "source_review": {
     "evidence_path": "campagne/plugin-dcp-frontiere-dsi-externe/relecture/session.json",
-    "sha256": "77b194adbed0497b7e3239e7849473d9490085d59e87300885e55fd69f1262f0"
+    "sha256": "02773487abb01623a688b0c8db9345b1c7f0f3db5f8df99c0920e245b3a0d0e6"
   },
   "human_resolution": {
     "invariants": {
@@ -459,18 +462,18 @@
     },
     "resolutions": [],
     "human_verdict": "reserve",
-    "reservation": "Forme : lien Markdown vers .agents/skills/dcp-fpt/SKILL.md et mention des segments lus dans la réponse. Fond conforme.",
+    "reservation": "Forme : lien Markdown vers un chemin Windows absolu de .agents/skills/dcp-fpt/SKILL.md, contenant le nom du compte local, et citation du texte interne du skill (même défaut qu'en 1.5.3). Fond conforme.",
     "opinion": {
       "evidence_path": "avis-humain-jo-20261127.json",
-      "sha256": "711239be312e551fbe7ae87d16b2fe5f7a929d5089f67314d41a8125c26e20f0"
+      "sha256": "b5e5f92e0d068802e4cd18a7d890ed3fe1b6c720fca2f5ef236cab92cded1130"
     },
-    "date_utc": "2026-11-27T10:12:14.396440+00:00"
+    "date_utc": "2026-11-27T21:59:59.775079+00:00"
   },
-  "evidence_sha256": "8dd2d3f739b0ca37061c7e02bde4ea9a24eabb50d4ac89e8a12002baf0124a45",
+  "evidence_sha256": "8e1e151c0e233cd9d3e66f2ba9285d714b537939a4c44ec2541c6a3eddef9b0c",
   "original_session": {
     "evidence_path": "source-l14/campagne/plugin-dcp-frontiere-dsi-externe/relecture/session.json",
-    "sha256": "77b194adbed0497b7e3239e7849473d9490085d59e87300885e55fd69f1262f0"
+    "sha256": "02773487abb01623a688b0c8db9345b1c7f0f3db5f8df99c0920e245b3a0d0e6"
   },
   "source_bundle_root": "tests/evidence/mesure-courante/source-l14",
-  "payload_sha256": "fdef26caf5eaa3ec96ca5a9681420ee8aefea7d89e17f6e71d59e7ca725f2906"
+  "payload_sha256": "7baf4b242f964b7315b58dbb45b9d7cc41299652705c0a5e5615c0eb6a22d3e3"
 }

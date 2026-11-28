@@ -1,5 +1,5 @@
 {
-  "plugin_commit": "e8f42719e90e5fdf69458cf9960bf04ee6560f84",
+  "plugin_commit": "30617203c9514736af680dc97c79de53d4a6df4c",
   "runtime_sha256": {
     "skills/dcp-fpt/agents/openai.yaml": "b37aec5086edadd2d0012545ab4c3b1a6493db31f7b6f26673674f5f514aeb40",
     "skills/dcp-fpt/LICENCE.fr.txt": "14e59bc002e1339e5554451aedad7c2b113dc7ef942e96b410b5517099ad6d91",
@@ -227,9 +227,9 @@
     "skills/recherche-juridique/SKILL.md": "13bb816e3b168daed181813411be87d1cf58ea65b15212b4207f68f201b5e7cd"
   },
   "plugin_configuration_sha256": {
-    ".codex-plugin/plugin.json": "4294642b42d209a3bc3184945f249559c2f748b56f3e7a1a62bb3e9e9a0bf22d",
-    ".claude-plugin/plugin.json": "8671012148c78ec01f217103b96a87fda761271e236a01d9428186a6407a038e",
-    ".mcp.json": "c1988401a93d468e87557dc1ebf47989323203b9c5ef7607641529615aefbcac",
+    ".codex-plugin/plugin.json": "53dc3a55357f4494e21abf4175e7eba855006495fc05d08922b4e9f0c8783cd8",
+    ".claude-plugin/plugin.json": "6991732b0a46573c15579319319bfba83c99da77ff0b11651b7fba69d87096db",
+    ".mcp.json": "bc8b6f791066cdde35139b757c805751d566055ea176d8e2a918e36d47179c32",
     "assets/icon.png": "10aca45cb876735f06e10b352b9a2ba004b5deae462e08d8dfba092044aaee1f"
   },
   "case_file_sha256": "0747b6268cccab1bb46c820217d2a4ba1c69e5c2ad6fe61126e3a5bd9242f5ea",
@@ -243,7 +243,7 @@
     "scripts/cas-plugin-cycle-v4.json": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
     "scripts/check_dcp_protocol.py": "6faeea694546084ceae2b64d8c87603f4c04fb521efdb5baa3b743958fad5f06",
     "scripts/check_sync.py": "69f080fbe4ded47ab1c5980a662e4219e15e111a67de8a6cbf166aac831e008e",
-    "scripts/cli_toolchains.py": "e1c73adbd0a52d01214853ca32a316343445c4d6cfd8d4d054118ff17ed32d67",
+    "scripts/cli_toolchains.py": "63cd143299ee3b643f86090f3f314ff7d64739b9d45b8939468329ba447d933f",
     "scripts/codex_event_contract.py": "f4e848f3c34504b4df6b5f444337b4064829828d8c492ecd3023cbae471d42d7",
     "scripts/cycle-v4-source-requirements.json": "54bed7aaf6afc439a6d24e1f95204d4b3e7d9327024ce5435bd9cc0988a8a333",
     "scripts/cycle_satisfiability.py": "5a8625a8f8169393a6b3bcf35ab696830707cc142366c9d179c192fa128bb6ea",
@@ -257,7 +257,7 @@
     "scripts/extract_native_read_commands.py": "d1292a0e6f798fcab1bd55fdce76b0e804526208b97e9e82172702057f1ef6c4",
     "scripts/human_resolution.py": "444d01b13428773c33a9100310ebb5815c32067b4f838f8f6afd9b4d9a284e32",
     "scripts/instruction_overlays.py": "e40decc70e39416d33b484b9d9620e2e6db64a0b6d1826c88b9899e0fbe57e99",
-    "scripts/measurement-cli.json": "96f0c453455891fe6367a957ac2a674b7d17ab16ad03229b2bc1dd3c42a1ac99",
+    "scripts/measurement-cli.json": "d883a8cce147d0f80c47aaf13dfde3799545e003619422315a134d27a9e5047a",
     "scripts/measurement_common.py": "1a703163152afa70d669e276f7be8f62f86a7989819daff8676d6fd8afddb7a4",
     "scripts/public_projection.py": "7521e1835e16dd841966f30237370f225e29014f418a5557e6c01953d0f4c102",
     "scripts/qualify_distribution.py": "f05040ca0e3921aa2407c3be56c0bb0402809588edb8785983d8d9977bc03d20",
@@ -281,7 +281,8 @@
     "scripts/toolchain-transition-0031.json": "05ba38e8b694a7ec0d5b0ec1ec098f627c9d392ab06b4cea65d9b9d3d3f19b61",
     "scripts/toolchain-transition-0034.json": "73bdaa3c74e30b70a337ee9865c78c158086f59919f9cc743ff9e1960db11e44",
     "scripts/toolchain-transition-0036.json": "df2c1bcb356e67bded5efe82c7257acbd05375fb2e30618f290225daabcbd11c",
-    "scripts/toolchain-transition-0039.json": "77b565d483928a203c2b436c66bfc537f60f49c542082690e57d8a081eefb729"
+    "scripts/toolchain-transition-0039.json": "890028bde9aeaeced79355b4404ac5a2f20718ca0c5a3feb33423961053de7c8",
+    "scripts/toolchain-transition-0042.json": "f72e0552e4b891cf0cb326b018df0b5b4c9f7f64d73305731b74dd671c430363"
   },
   "case_id": "l8-dsi-rssi-indemnitaire",
   "role": "relecture",
@@ -302,14 +303,14 @@
       }
     },
     "cli_version": "codex-cli 0.164.0-alpha.11.1",
-    "thread_id": "e4a3d985dce76cb47e3a526ef92023b49e65c97ad7e4df795f822d219c26b4dd",
+    "thread_id": "aff18476058ea6f737522000d09f11055042b13b57efcbcdc71782d56d582638",
     "cli_sha256": "1103e9e09c71fa2cd0afd6d8f3b9a2d63174fe8efd7cb5bd09f1cb14ef58a098",
     "argv_sha256": "f42feb821dcfb735bdcdf4825420570ad774b86c481006651da47b9cafd4c6ed",
-    "prompt_sha256": "1b87761825b31b52f3459c016c0120131a21e788b6e47da72bdfc36a776e7388",
-    "stdout_sha256": "507efc0ac7f85677d8e06293d20607152b86d2f531239f66000fe8f1e2e87a5c",
+    "prompt_sha256": "d75910d470c95c591701af789d963818c3e8f36eeebe468402d31d5bba455fe5",
+    "stdout_sha256": "0055ef36f3c42e013e362f6957a45b6fdd9dedc4cec4fcf7a2970305c74bcc3d",
     "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "process_exit": 0,
-    "elapsed_seconds": 11.868158,
+    "elapsed_seconds": 13.402262,
     "startup_failure": {
       "before_model_attested": false,
       "model_session_opened": true,
@@ -347,7 +348,7 @@
         "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "stdout_octets": 23,
         "stderr_octets": 0,
-        "argv_sha256": "163ff4bbd2a3631aa2710200ff6e9b5b0e2c62957071dba839c7d26e34d7300c",
+        "argv_sha256": "b2a15ce449bf66200dfa6943f4bd9f6343dd501ec27de2285ef30fd1b045f232",
         "runtime_entries_verified": 0,
         "raw_output_archived": false
       }
@@ -365,7 +366,7 @@
   },
   "campaign_harness": {
     "lot": "T43-L24e",
-    "manifest_sha256": "3ff9a360d7e501d8ba1eca1e0ff10824ea8b9b06555fc32b36b419827bf4b96d",
+    "manifest_sha256": "abec7fdf334e0edef6a4eeae3793c8c132bea199544b9bad3e6eae194e9711f4",
     "campaign_cli": {
       "version": "codex-cli 0.164.0-alpha.11.1",
       "sha256": "1103e9e09c71fa2cd0afd6d8f3b9a2d63174fe8efd7cb5bd09f1cb14ef58a098",
@@ -379,11 +380,11 @@
   },
   "case_contract": "scripts/cas-plugin-cycle-v4.json",
   "case_contract_sha256": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
-  "campaign_attempt_id": "campagne-l153-d",
-  "completed_at": "2026-11-27T07:19:03.114575+00:00",
+  "campaign_attempt_id": "campagne-l154-a",
+  "completed_at": "2026-11-27T21:20:55.168226+00:00",
   "trace": {
     "evidence_path": "source-l14/campagne/l8-dsi-rssi-indemnitaire/relecture/trace.jsonl",
-    "sha256": "84872daa75f1a15d0b9a17553a237eed9022e290350171ae7e02f8652b0904bb"
+    "sha256": "86707b3de8cc48c28cf9b3bcbe041fd56c3a5cad57dd500d86b9d7b2f5d8c081"
   },
   "process_exit": 0,
   "execution_errors": [],
@@ -399,9 +400,10 @@
       {
         "invariant": "Activation de dsi-fpt, dirfi-fpt et drh-fpt observable.",
         "statut": "respecte",
-        "motif": "L’attestation mécanique couvre l’activation des trois compétences par lecture intégrale dans l’ordre indiqué ; la trace annonce ensuite « Les trois premières entrées sont entièrement lues ».",
+        "motif": "La séquence d’activation est couverte par l’attestation mécanique. L’annonce « J’active les quatre skills demandés dans l’ordre indiqué » et la confirmation « Les trois premières entrées sont entièrement lues » la rendent observable.",
         "trace_lines": [
-          54
+          4,
+          58
         ]
       },
       {
@@ -410,24 +412,23 @@
         "motif": "« BASCULE vers drh-fpt — je lui attribue l’examen statutaire et indemnitaire » précède le traitement du volet RH dans la réponse finale.",
         "trace_lines": [
           65,
-          111
+          99
         ]
       },
       {
         "invariant": "Aucun statut de personne déduit du seul intitulé de poste.",
         "statut": "respecte",
-        "motif": "La trace maintient le statut du RSSI parmi les inconnues. La réponse demande sa collecte et envisage le contrat conditionnellement : « si l’agent est contractuel ».",
+        "motif": "La réponse laisse le statut à examiner par la DRH et formule l’hypothèse contractuelle conditionnellement : « si le RSSI est contractuel ». Elle précise aussi qu’aucun régime n’est retenu sur le seul intitulé « RSSI ».",
         "trace_lines": [
-          54,
-          111
+          99
         ]
       },
       {
         "invariant": "DirFi et DSI ne reprennent pas le volet confié à DRH dans la conclusion.",
         "statut": "respecte",
-        "motif": "La réponse finale limite la DSI aux éléments métier « sans déterminer son régime de rémunération » et DirFi au budget sans validation individuelle. L’instruction statutaire et indemnitaire reste attribuée à la DRH, et la conclusion suspend l’application individuelle aux pièces manquantes.",
+        "motif": "Pour la DSI, les éléments recueillis alimentent le dossier « sans déterminer son régime de rémunération ». Pour DirFi, l’examen financier « ne tranche pas le droit individuel ». La conclusion réserve le dispositif applicable et le montant à « l’examen DRH et juridique du dossier ».",
         "trace_lines": [
-          111
+          99
         ]
       }
     ]
@@ -436,19 +437,19 @@
   "human_legal_validation": false,
   "publication_ready": false,
   "campaign_adapter_sha256": "1e3ae6970817cf9e0f80e9640386ef4d276ca665df73db86bc9b3d81245e7397",
-  "campaign_support_sha256": "deec28621de1c5e90b0d5c7f8e9aec898d4fe000c3f8a69889063349c2e9fc8e",
+  "campaign_support_sha256": "5076ff8bbbcf70022096ea4626241cd41ab172a9758b8f20dad9589994a7bd0d",
   "mcp_review_sha256": "bde75706abf0feccf719734ad36044809a64e186aeaa2dc294dbd3ae974989aa",
   "mcp_text_limit_bytes": 12000,
   "case_outcome_sha256": "a7b318c11a53bb07ee6abca1e6de65a47362796949b3d9a31451e0b6c7798d79",
   "command_trace_sha256": "bc8528482e46ddd7cd49506ca7de9671fa5ba93fb09366c157b5426ec482877f",
   "web_review_sha256": "e8fe654802a9528de5e9edde9016cb4d48829234b36c2d90169cc642dd7583ce",
-  "response_session_sha256": "f89ffeec7086d2ef666a5016d1e078d76102976852d6582762d8a58dac7edb05",
-  "response_trace_sha256": "9df9896cf4a3f4e69c995f748c0cc94643896602c403c901efb59676b2d54abf",
-  "source_response_session_sha256": "f89ffeec7086d2ef666a5016d1e078d76102976852d6582762d8a58dac7edb05",
-  "reply_sha256": "046cab089061a508e98b1a5f28b9fc124bf1298097eb4a32e093f70ddbb6ce33",
+  "response_session_sha256": "575038832678cb45f2427ac95c30910ea02a349557a6eb56d5a728bd7448801b",
+  "response_trace_sha256": "d8c41caaa4059df2fbf79f03b7d06e6d89c36133d9d7eb011c62f32d70fec399",
+  "source_response_session_sha256": "575038832678cb45f2427ac95c30910ea02a349557a6eb56d5a728bd7448801b",
+  "reply_sha256": "95b1af2f5f2b7cf1e1b3a8d80a4194e1d1f64d0d3ffa5b53b7b33b219e774ba6",
   "source_review": {
     "evidence_path": "campagne/l8-dsi-rssi-indemnitaire/relecture/session.json",
-    "sha256": "e57c72ba2a6fd8202c555939d139c6c344ee042155b24e57ea7b2b02bcba306a"
+    "sha256": "4abb1daf7b1eda58860d82e8abfdb477b5543bb744d167ff17d5960e5fb9f3fe"
   },
   "human_resolution": {
     "invariants": {
@@ -462,15 +463,15 @@
     "reservation": null,
     "opinion": {
       "evidence_path": "avis-humain-jo-20261127.json",
-      "sha256": "711239be312e551fbe7ae87d16b2fe5f7a929d5089f67314d41a8125c26e20f0"
+      "sha256": "b5e5f92e0d068802e4cd18a7d890ed3fe1b6c720fca2f5ef236cab92cded1130"
     },
-    "date_utc": "2026-11-27T10:12:14.396440+00:00"
+    "date_utc": "2026-11-27T21:59:59.775079+00:00"
   },
-  "evidence_sha256": "05a10ed0f2d82d6e5e55045346d70af71aee0beb4c3ebb02240ad2bb7f99e3b5",
+  "evidence_sha256": "bd9c29db96555d12c57fb31287cdb41572602e67c857d2331895aa7709ce83f3",
   "original_session": {
     "evidence_path": "source-l14/campagne/l8-dsi-rssi-indemnitaire/relecture/session.json",
-    "sha256": "e57c72ba2a6fd8202c555939d139c6c344ee042155b24e57ea7b2b02bcba306a"
+    "sha256": "4abb1daf7b1eda58860d82e8abfdb477b5543bb744d167ff17d5960e5fb9f3fe"
   },
   "source_bundle_root": "tests/evidence/mesure-courante/source-l14",
-  "payload_sha256": "b7e9478678e90535fcfa89277020c0b24fa05a867b9126cef283c80dcbf512da"
+  "payload_sha256": "6c3657af2be0afba9fc444d1a2de75bb8a8c1db3ac0172de45883d2bd201b51d"
 }

@@ -1,5 +1,5 @@
 {
-  "plugin_commit": "768d7d56258bd4b9feeede266c9ee1b2187dc8d7",
+  "plugin_commit": "6a469ab56495c5b9179da7ccb15dc7afd71a2a39",
   "runtime_sha256": {
     "skills/dcp-fpt/LICENCE.fr.txt": "14e59bc002e1339e5554451aedad7c2b113dc7ef942e96b410b5517099ad6d91",
     "skills/dcp-fpt/LICENSE": "bf4eddf38a235988ae9214aa49ab57717a77caad3d9a4c5bdbe2a33c952dc218",
@@ -227,9 +227,9 @@
     "skills/dcp-fpt/references/templates/rapport-analyse-offres.md": "220abb58f5a2181077a93912c89535a823ca0181fb35f02463bfb768dfa1ae75"
   },
   "plugin_configuration_sha256": {
-    ".codex-plugin/plugin.json": "4294642b42d209a3bc3184945f249559c2f748b56f3e7a1a62bb3e9e9a0bf22d",
-    ".claude-plugin/plugin.json": "8671012148c78ec01f217103b96a87fda761271e236a01d9428186a6407a038e",
-    ".mcp.json": "c1988401a93d468e87557dc1ebf47989323203b9c5ef7607641529615aefbcac",
+    ".codex-plugin/plugin.json": "53dc3a55357f4494e21abf4175e7eba855006495fc05d08922b4e9f0c8783cd8",
+    ".claude-plugin/plugin.json": "6991732b0a46573c15579319319bfba83c99da77ff0b11651b7fba69d87096db",
+    ".mcp.json": "bc8b6f791066cdde35139b757c805751d566055ea176d8e2a918e36d47179c32",
     "assets/icon.png": "10aca45cb876735f06e10b352b9a2ba004b5deae462e08d8dfba092044aaee1f"
   },
   "case_file_sha256": "0747b6268cccab1bb46c820217d2a4ba1c69e5c2ad6fe61126e3a5bd9242f5ea",
@@ -243,7 +243,7 @@
     "scripts/cas-plugin-cycle-v4.json": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
     "scripts/check_dcp_protocol.py": "6faeea694546084ceae2b64d8c87603f4c04fb521efdb5baa3b743958fad5f06",
     "scripts/check_sync.py": "69f080fbe4ded47ab1c5980a662e4219e15e111a67de8a6cbf166aac831e008e",
-    "scripts/cli_toolchains.py": "e8a5a0bf9b860aa712e045fe62b71c3a3a8e845ce391326617bb1483967407d7",
+    "scripts/cli_toolchains.py": "0c4bd3b5c74d660c9a8152c4e72cc1bf0ae5b985dd34809aa0ed83c3a58de640",
     "scripts/codex_event_contract.py": "f4e848f3c34504b4df6b5f444337b4064829828d8c492ecd3023cbae471d42d7",
     "scripts/cycle-v4-source-requirements.json": "54bed7aaf6afc439a6d24e1f95204d4b3e7d9327024ce5435bd9cc0988a8a333",
     "scripts/cycle_satisfiability.py": "5a8625a8f8169393a6b3bcf35ab696830707cc142366c9d179c192fa128bb6ea",
@@ -257,7 +257,7 @@
     "scripts/extract_native_read_commands.py": "d1292a0e6f798fcab1bd55fdce76b0e804526208b97e9e82172702057f1ef6c4",
     "scripts/human_resolution.py": "444d01b13428773c33a9100310ebb5815c32067b4f838f8f6afd9b4d9a284e32",
     "scripts/instruction_overlays.py": "e40decc70e39416d33b484b9d9620e2e6db64a0b6d1826c88b9899e0fbe57e99",
-    "scripts/measurement-cli.json": "4bde9836b5439ee00160c595062d6f6f45f87f1cba6fb363cc593c15571aa957",
+    "scripts/measurement-cli.json": "66a5326ba277a6a7c8441580b993a993d56afcb9f349247c05482cf661e408e3",
     "scripts/measurement_common.py": "1a703163152afa70d669e276f7be8f62f86a7989819daff8676d6fd8afddb7a4",
     "scripts/public_projection.py": "7521e1835e16dd841966f30237370f225e29014f418a5557e6c01953d0f4c102",
     "scripts/qualify_distribution.py": "f05040ca0e3921aa2407c3be56c0bb0402809588edb8785983d8d9977bc03d20",
@@ -281,7 +281,8 @@
     "scripts/toolchain-transition-0031.json": "05ba38e8b694a7ec0d5b0ec1ec098f627c9d392ab06b4cea65d9b9d3d3f19b61",
     "scripts/toolchain-transition-0034.json": "73bdaa3c74e30b70a337ee9865c78c158086f59919f9cc743ff9e1960db11e44",
     "scripts/toolchain-transition-0036.json": "df2c1bcb356e67bded5efe82c7257acbd05375fb2e30618f290225daabcbd11c",
-    "scripts/toolchain-transition-0039.json": "890028bde9aeaeced79355b4404ac5a2f20718ca0c5a3feb33423961053de7c8"
+    "scripts/toolchain-transition-0039.json": "890028bde9aeaeced79355b4404ac5a2f20718ca0c5a3feb33423961053de7c8",
+    "scripts/toolchain-transition-0042.json": "708fd7adb5bfb49a5748f3b0782d2e93d96320f54232c698f9def89992107652"
   },
   "smoke_cli": {
     "version": "codex-cli 0.164.0-alpha.11.1",
@@ -320,7 +321,7 @@
       "stop_required": true,
       "proof": {
         "evidence_path": "activation-implicite.json",
-        "sha256": "9773358a38a051f0c9a20f31379e496c276c5689a642fdd314715b76b8d3e7a4"
+        "sha256": "6e19e9b0948e0bb9ed7d5cdda9dce2b765db4289c43ba32c7a2f74f17bb71c1c"
       }
     },
     {
@@ -333,10 +334,10 @@
       "stop_required": true,
       "proof": {
         "evidence_path": "mcp-installe.json",
-        "sha256": "4e611ce45475347d5cdc09155ee32d88ba48acc454fbe5e644db5e0184ce6d90"
+        "sha256": "29dc98da1c60b6690fab03a5260ff28e707d6c04778d1396bfe5d4c9d17cbce9"
       }
     }
   ],
   "human_legal_validation": false,
-  "payload_sha256": "f60db10442c44a0e459ddaec0d83c016f8ad165c20ca0f05de5c020362218c1a"
+  "payload_sha256": "f53e967d5248dfeff56d78fc91ea4be4baa206e07ecf6e2b565fa3e5d1d6ea9f"
 }

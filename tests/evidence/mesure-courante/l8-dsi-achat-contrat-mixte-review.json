@@ -1,5 +1,5 @@
 {
-  "plugin_commit": "e8f42719e90e5fdf69458cf9960bf04ee6560f84",
+  "plugin_commit": "30617203c9514736af680dc97c79de53d4a6df4c",
   "runtime_sha256": {
     "skills/dcp-fpt/agents/openai.yaml": "b37aec5086edadd2d0012545ab4c3b1a6493db31f7b6f26673674f5f514aeb40",
     "skills/dcp-fpt/LICENCE.fr.txt": "14e59bc002e1339e5554451aedad7c2b113dc7ef942e96b410b5517099ad6d91",
@@ -227,9 +227,9 @@
     "skills/recherche-juridique/SKILL.md": "13bb816e3b168daed181813411be87d1cf58ea65b15212b4207f68f201b5e7cd"
   },
   "plugin_configuration_sha256": {
-    ".codex-plugin/plugin.json": "4294642b42d209a3bc3184945f249559c2f748b56f3e7a1a62bb3e9e9a0bf22d",
-    ".claude-plugin/plugin.json": "8671012148c78ec01f217103b96a87fda761271e236a01d9428186a6407a038e",
-    ".mcp.json": "c1988401a93d468e87557dc1ebf47989323203b9c5ef7607641529615aefbcac",
+    ".codex-plugin/plugin.json": "53dc3a55357f4494e21abf4175e7eba855006495fc05d08922b4e9f0c8783cd8",
+    ".claude-plugin/plugin.json": "6991732b0a46573c15579319319bfba83c99da77ff0b11651b7fba69d87096db",
+    ".mcp.json": "bc8b6f791066cdde35139b757c805751d566055ea176d8e2a918e36d47179c32",
     "assets/icon.png": "10aca45cb876735f06e10b352b9a2ba004b5deae462e08d8dfba092044aaee1f"
   },
   "case_file_sha256": "0747b6268cccab1bb46c820217d2a4ba1c69e5c2ad6fe61126e3a5bd9242f5ea",
@@ -243,7 +243,7 @@
     "scripts/cas-plugin-cycle-v4.json": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
     "scripts/check_dcp_protocol.py": "6faeea694546084ceae2b64d8c87603f4c04fb521efdb5baa3b743958fad5f06",
     "scripts/check_sync.py": "69f080fbe4ded47ab1c5980a662e4219e15e111a67de8a6cbf166aac831e008e",
-    "scripts/cli_toolchains.py": "e1c73adbd0a52d01214853ca32a316343445c4d6cfd8d4d054118ff17ed32d67",
+    "scripts/cli_toolchains.py": "63cd143299ee3b643f86090f3f314ff7d64739b9d45b8939468329ba447d933f",
     "scripts/codex_event_contract.py": "f4e848f3c34504b4df6b5f444337b4064829828d8c492ecd3023cbae471d42d7",
     "scripts/cycle-v4-source-requirements.json": "54bed7aaf6afc439a6d24e1f95204d4b3e7d9327024ce5435bd9cc0988a8a333",
     "scripts/cycle_satisfiability.py": "5a8625a8f8169393a6b3bcf35ab696830707cc142366c9d179c192fa128bb6ea",
@@ -257,7 +257,7 @@
     "scripts/extract_native_read_commands.py": "d1292a0e6f798fcab1bd55fdce76b0e804526208b97e9e82172702057f1ef6c4",
     "scripts/human_resolution.py": "444d01b13428773c33a9100310ebb5815c32067b4f838f8f6afd9b4d9a284e32",
     "scripts/instruction_overlays.py": "e40decc70e39416d33b484b9d9620e2e6db64a0b6d1826c88b9899e0fbe57e99",
-    "scripts/measurement-cli.json": "96f0c453455891fe6367a957ac2a674b7d17ab16ad03229b2bc1dd3c42a1ac99",
+    "scripts/measurement-cli.json": "d883a8cce147d0f80c47aaf13dfde3799545e003619422315a134d27a9e5047a",
     "scripts/measurement_common.py": "1a703163152afa70d669e276f7be8f62f86a7989819daff8676d6fd8afddb7a4",
     "scripts/public_projection.py": "7521e1835e16dd841966f30237370f225e29014f418a5557e6c01953d0f4c102",
     "scripts/qualify_distribution.py": "f05040ca0e3921aa2407c3be56c0bb0402809588edb8785983d8d9977bc03d20",
@@ -281,7 +281,8 @@
     "scripts/toolchain-transition-0031.json": "05ba38e8b694a7ec0d5b0ec1ec098f627c9d392ab06b4cea65d9b9d3d3f19b61",
     "scripts/toolchain-transition-0034.json": "73bdaa3c74e30b70a337ee9865c78c158086f59919f9cc743ff9e1960db11e44",
     "scripts/toolchain-transition-0036.json": "df2c1bcb356e67bded5efe82c7257acbd05375fb2e30618f290225daabcbd11c",
-    "scripts/toolchain-transition-0039.json": "77b565d483928a203c2b436c66bfc537f60f49c542082690e57d8a081eefb729"
+    "scripts/toolchain-transition-0039.json": "890028bde9aeaeced79355b4404ac5a2f20718ca0c5a3feb33423961053de7c8",
+    "scripts/toolchain-transition-0042.json": "f72e0552e4b891cf0cb326b018df0b5b4c9f7f64d73305731b74dd671c430363"
   },
   "case_id": "l8-dsi-achat-contrat-mixte",
   "role": "relecture",
@@ -302,14 +303,14 @@
       }
     },
     "cli_version": "codex-cli 0.164.0-alpha.11.1",
-    "thread_id": "8474294d38de8c64705f41852e7b3c115b4b7eb871b4ab871cf41deeb6bbe58d",
+    "thread_id": "529f78bedfb2dfa3d6ade87a80b4cf6c79bd1ae94a0a2a00887c0e0ab9e1ab87",
     "cli_sha256": "1103e9e09c71fa2cd0afd6d8f3b9a2d63174fe8efd7cb5bd09f1cb14ef58a098",
     "argv_sha256": "f42feb821dcfb735bdcdf4825420570ad774b86c481006651da47b9cafd4c6ed",
-    "prompt_sha256": "2ec5b517fffd815f9d8fde6abfe9c85ab5b83e2d04aede9ec9494d44ac1822ef",
-    "stdout_sha256": "ca8579974b745ce31347bdabda1138d644a03f46bc4b4f2187365a680318161c",
+    "prompt_sha256": "72cb33b8f2783ac8e6b6026d960a7170640dd83622a674814037d7d8e164549c",
+    "stdout_sha256": "5c18d8b3709c5eba68a58411ffe3c3b38ec8655964ffc1c12a91390cc6ea04ce",
     "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "process_exit": 0,
-    "elapsed_seconds": 16.388439,
+    "elapsed_seconds": 14.972453,
     "startup_failure": {
       "before_model_attested": false,
       "model_session_opened": true,
@@ -347,7 +348,7 @@
         "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "stdout_octets": 23,
         "stderr_octets": 0,
-        "argv_sha256": "00fa08c77b00317feddf8a979059e61e3e081894d92485051e95e9c2b2b6493c",
+        "argv_sha256": "88befb0e3b4c606567a1cdb151661dfb5a8df7aa820792d5272dda92585fb440",
         "runtime_entries_verified": 0,
         "raw_output_archived": false
       }
@@ -365,7 +366,7 @@
   },
   "campaign_harness": {
     "lot": "T43-L24e",
-    "manifest_sha256": "3ff9a360d7e501d8ba1eca1e0ff10824ea8b9b06555fc32b36b419827bf4b96d",
+    "manifest_sha256": "abec7fdf334e0edef6a4eeae3793c8c132bea199544b9bad3e6eae194e9711f4",
     "campaign_cli": {
       "version": "codex-cli 0.164.0-alpha.11.1",
       "sha256": "1103e9e09c71fa2cd0afd6d8f3b9a2d63174fe8efd7cb5bd09f1cb14ef58a098",
@@ -379,11 +380,11 @@
   },
   "case_contract": "scripts/cas-plugin-cycle-v4.json",
   "case_contract_sha256": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
-  "campaign_attempt_id": "campagne-l153-d",
-  "completed_at": "2026-11-27T07:14:09.446863+00:00",
+  "campaign_attempt_id": "campagne-l154-a",
+  "completed_at": "2026-11-27T21:16:37.879596+00:00",
   "trace": {
     "evidence_path": "source-l14/campagne/l8-dsi-achat-contrat-mixte/relecture/trace.jsonl",
-    "sha256": "343f1f08010262000fb0c30035fd58cc922cb14c7841176a912f2e670f12338d"
+    "sha256": "d218802d855af72680ef50f2d0edb175c1e5723d6dd0ad878c5bfdb7193eb2c1"
   },
   "process_exit": 0,
   "execution_errors": [],
@@ -399,33 +400,33 @@
       {
         "invariant": "Activation de dsi-fpt et dcp-fpt observable.",
         "statut": "respecte",
-        "motif": "L’activation des deux entrées est couverte par l’attestation mécanique de lecture intégrale et ordonnée. La réponse affiche également « BASCULE dsi-fpt » et « BASCULE dcp-fpt ».",
+        "motif": "L’activation des deux entrées est couverte par l’attestation mécanique de lecture intégrale et ordonnée ; la réponse comporte « Analyse dsi-fpt » et « Analyse dcp-fpt ».",
         "trace_lines": [
-          114
+          115
         ]
       },
       {
         "invariant": "BASCULE dcp-fpt avant tout volet de marché confié à DCP ; BASCULE DirFi et DPO avant leurs volets.",
         "statut": "respecte",
-        "motif": "La partie DCP commence par « BASCULE dcp-fpt » avant « Analyse dcp-fpt ». Les parties financière et données personnelles sont respectivement précédées de « BASCULE dirfi-fpt » et « BASCULE dpo-ct ».",
+        "motif": "Pour chaque partie, l’annonce précède le volet correspondant : « BASCULE vers dcp-fpt » avant « Analyse dcp-fpt », « BASCULE dirfi-fpt » avant « Analyse dirfi-fpt » et « BASCULE dpo-ct » avant « Analyse dpo-ct ».",
         "trace_lines": [
-          114
+          115
         ]
       },
       {
         "invariant": "DSI ne reprend pas les volets délégués dans sa conclusion.",
         "statut": "respecte",
-        "motif": "Les volets délégués restent attribués aux analyses dcp-fpt, dirfi-fpt et dpo-ct. La conclusion propose un registre commun « en conservant les attributions ci-dessus », sans reprendre leur traitement sous DSI.",
+        "motif": "La répartition maintient « DSI documente l’écart technique ; DCP examine le mécanisme contractuel ; DirFi effectue le calcul ». La conclusion porte sur l’inconnue préalable et le registre partagé, sans reprendre les analyses déléguées au titre de la DSI.",
         "trace_lines": [
-          114
+          115
         ]
       },
       {
         "invariant": "Aucune clause ni valeur de pénalité inventée ; pièces manquantes signalées.",
         "statut": "respecte",
-        "motif": "Aucune clause ni valeur de pénalité n’est fournie : la trame laisse les « clauses modifiées […] ouverts » et le calcul doit reproduire « la formule contractuelle exacte ». Les pièces manquantes sont signalées par « À réunir » et « Sans clause ni chronologie, aucun montant n’est calculable ».",
+        "motif": "Aucune clause ni valeur de pénalité n’est fournie : la feuille de calcul reste « [INCOMPLET] », avec « Aucun taux, montant ou mécanisme de prélèvement par défaut ». Les pièces manquantes sont signalées, notamment « contrat initial », « clauses existantes », « clause, formule, assiette » et les dates et constats.",
         "trace_lines": [
-          114
+          115
         ]
       }
     ]
@@ -434,19 +435,19 @@
   "human_legal_validation": false,
   "publication_ready": false,
   "campaign_adapter_sha256": "1e3ae6970817cf9e0f80e9640386ef4d276ca665df73db86bc9b3d81245e7397",
-  "campaign_support_sha256": "deec28621de1c5e90b0d5c7f8e9aec898d4fe000c3f8a69889063349c2e9fc8e",
+  "campaign_support_sha256": "5076ff8bbbcf70022096ea4626241cd41ab172a9758b8f20dad9589994a7bd0d",
   "mcp_review_sha256": "bde75706abf0feccf719734ad36044809a64e186aeaa2dc294dbd3ae974989aa",
   "mcp_text_limit_bytes": 12000,
   "case_outcome_sha256": "a7b318c11a53bb07ee6abca1e6de65a47362796949b3d9a31451e0b6c7798d79",
   "command_trace_sha256": "bc8528482e46ddd7cd49506ca7de9671fa5ba93fb09366c157b5426ec482877f",
   "web_review_sha256": "e8fe654802a9528de5e9edde9016cb4d48829234b36c2d90169cc642dd7583ce",
-  "response_session_sha256": "048cc5461cd248a2bd2d56cdef2832c3039bcadf8c5a01afe48905fafd5a403b",
-  "response_trace_sha256": "3ac6eb3f910a5440fc60c2167edefd13a4d20779ff32b203998a217382c5e825",
-  "source_response_session_sha256": "048cc5461cd248a2bd2d56cdef2832c3039bcadf8c5a01afe48905fafd5a403b",
-  "reply_sha256": "fcec5bf5eb3e5ad854c863faa77505e6d94da69856755bbed7740f785d635412",
+  "response_session_sha256": "84225dff7e91b613be2473165a1b483e42f4cf2352adac448f9741690a596d80",
+  "response_trace_sha256": "5d143b76788cf05d2829ebea7f068b17b1335fb7b4f04a258ddbb4a02fe05935",
+  "source_response_session_sha256": "84225dff7e91b613be2473165a1b483e42f4cf2352adac448f9741690a596d80",
+  "reply_sha256": "6a8566757a0fa820759313db72e8f3dd2344074b7007caac6bd9215d5c583414",
   "source_review": {
     "evidence_path": "campagne/l8-dsi-achat-contrat-mixte/relecture/session.json",
-    "sha256": "0c7f200065e8f5c631467736186529ce76534e349c559a3cbed2cd619c3ec403"
+    "sha256": "9f30772f563c964c799bddc59a7da33ecf64e5092a9ad7bf35a2a4e42ba8e580"
   },
   "human_resolution": {
     "invariants": {
@@ -457,18 +458,18 @@
     },
     "resolutions": [],
     "human_verdict": "reserve",
-    "reservation": "Forme : même contradiction de BASCULE dirfi-fpt qu'au cas plugin-dcp-frontieres-finance-donnees ; « Les éléments fournis ne permettent de choisir une procédure » (négation manquante) ; mécanique interne exposée. Fond conforme.",
+    "reservation": "Forme : même contradiction de BASCULE dirfi-fpt qu'au cas plugin-dcp-frontieres-finance-donnees. Fond conforme.",
     "opinion": {
       "evidence_path": "avis-humain-jo-20261127.json",
-      "sha256": "711239be312e551fbe7ae87d16b2fe5f7a929d5089f67314d41a8125c26e20f0"
+      "sha256": "b5e5f92e0d068802e4cd18a7d890ed3fe1b6c720fca2f5ef236cab92cded1130"
     },
-    "date_utc": "2026-11-27T10:12:14.396440+00:00"
+    "date_utc": "2026-11-27T21:59:59.775079+00:00"
   },
-  "evidence_sha256": "24fada914e654238408e19d3a3df8bfe876ac5c98c5758dd96085e98b131aab0",
+  "evidence_sha256": "592517cb4e86e77d732ac3f0c19f621726654b79724ce815603c0f18d339fdbf",
   "original_session": {
     "evidence_path": "source-l14/campagne/l8-dsi-achat-contrat-mixte/relecture/session.json",
-    "sha256": "0c7f200065e8f5c631467736186529ce76534e349c559a3cbed2cd619c3ec403"
+    "sha256": "9f30772f563c964c799bddc59a7da33ecf64e5092a9ad7bf35a2a4e42ba8e580"
   },
   "source_bundle_root": "tests/evidence/mesure-courante/source-l14",
-  "payload_sha256": "9a7d13db7a603185726c4ef19af21d1099c607817e9b7b8d3a59e003f8938b6f"
+  "payload_sha256": "5732db2bee7c8c4996be18ceb891da08ac0288fec1a807d6fb8c0412f2aec64b"
 }

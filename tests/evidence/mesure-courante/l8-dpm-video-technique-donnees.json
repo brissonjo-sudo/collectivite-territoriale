@@ -1,5 +1,5 @@
 {
-  "plugin_commit": "e8f42719e90e5fdf69458cf9960bf04ee6560f84",
+  "plugin_commit": "30617203c9514736af680dc97c79de53d4a6df4c",
   "runtime_sha256": {
     "skills/dcp-fpt/agents/openai.yaml": "b37aec5086edadd2d0012545ab4c3b1a6493db31f7b6f26673674f5f514aeb40",
     "skills/dcp-fpt/LICENCE.fr.txt": "14e59bc002e1339e5554451aedad7c2b113dc7ef942e96b410b5517099ad6d91",
@@ -227,9 +227,9 @@
     "skills/recherche-juridique/SKILL.md": "13bb816e3b168daed181813411be87d1cf58ea65b15212b4207f68f201b5e7cd"
   },
   "plugin_configuration_sha256": {
-    ".codex-plugin/plugin.json": "4294642b42d209a3bc3184945f249559c2f748b56f3e7a1a62bb3e9e9a0bf22d",
-    ".claude-plugin/plugin.json": "8671012148c78ec01f217103b96a87fda761271e236a01d9428186a6407a038e",
-    ".mcp.json": "c1988401a93d468e87557dc1ebf47989323203b9c5ef7607641529615aefbcac",
+    ".codex-plugin/plugin.json": "53dc3a55357f4494e21abf4175e7eba855006495fc05d08922b4e9f0c8783cd8",
+    ".claude-plugin/plugin.json": "6991732b0a46573c15579319319bfba83c99da77ff0b11651b7fba69d87096db",
+    ".mcp.json": "bc8b6f791066cdde35139b757c805751d566055ea176d8e2a918e36d47179c32",
     "assets/icon.png": "10aca45cb876735f06e10b352b9a2ba004b5deae462e08d8dfba092044aaee1f"
   },
   "case_file_sha256": "0747b6268cccab1bb46c820217d2a4ba1c69e5c2ad6fe61126e3a5bd9242f5ea",
@@ -243,7 +243,7 @@
     "scripts/cas-plugin-cycle-v4.json": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
     "scripts/check_dcp_protocol.py": "6faeea694546084ceae2b64d8c87603f4c04fb521efdb5baa3b743958fad5f06",
     "scripts/check_sync.py": "69f080fbe4ded47ab1c5980a662e4219e15e111a67de8a6cbf166aac831e008e",
-    "scripts/cli_toolchains.py": "e1c73adbd0a52d01214853ca32a316343445c4d6cfd8d4d054118ff17ed32d67",
+    "scripts/cli_toolchains.py": "63cd143299ee3b643f86090f3f314ff7d64739b9d45b8939468329ba447d933f",
     "scripts/codex_event_contract.py": "f4e848f3c34504b4df6b5f444337b4064829828d8c492ecd3023cbae471d42d7",
     "scripts/cycle-v4-source-requirements.json": "54bed7aaf6afc439a6d24e1f95204d4b3e7d9327024ce5435bd9cc0988a8a333",
     "scripts/cycle_satisfiability.py": "5a8625a8f8169393a6b3bcf35ab696830707cc142366c9d179c192fa128bb6ea",
@@ -257,7 +257,7 @@
     "scripts/extract_native_read_commands.py": "d1292a0e6f798fcab1bd55fdce76b0e804526208b97e9e82172702057f1ef6c4",
     "scripts/human_resolution.py": "444d01b13428773c33a9100310ebb5815c32067b4f838f8f6afd9b4d9a284e32",
     "scripts/instruction_overlays.py": "e40decc70e39416d33b484b9d9620e2e6db64a0b6d1826c88b9899e0fbe57e99",
-    "scripts/measurement-cli.json": "96f0c453455891fe6367a957ac2a674b7d17ab16ad03229b2bc1dd3c42a1ac99",
+    "scripts/measurement-cli.json": "d883a8cce147d0f80c47aaf13dfde3799545e003619422315a134d27a9e5047a",
     "scripts/measurement_common.py": "1a703163152afa70d669e276f7be8f62f86a7989819daff8676d6fd8afddb7a4",
     "scripts/public_projection.py": "7521e1835e16dd841966f30237370f225e29014f418a5557e6c01953d0f4c102",
     "scripts/qualify_distribution.py": "f05040ca0e3921aa2407c3be56c0bb0402809588edb8785983d8d9977bc03d20",
@@ -281,7 +281,8 @@
     "scripts/toolchain-transition-0031.json": "05ba38e8b694a7ec0d5b0ec1ec098f627c9d392ab06b4cea65d9b9d3d3f19b61",
     "scripts/toolchain-transition-0034.json": "73bdaa3c74e30b70a337ee9865c78c158086f59919f9cc743ff9e1960db11e44",
     "scripts/toolchain-transition-0036.json": "df2c1bcb356e67bded5efe82c7257acbd05375fb2e30618f290225daabcbd11c",
-    "scripts/toolchain-transition-0039.json": "77b565d483928a203c2b436c66bfc537f60f49c542082690e57d8a081eefb729"
+    "scripts/toolchain-transition-0039.json": "890028bde9aeaeced79355b4404ac5a2f20718ca0c5a3feb33423961053de7c8",
+    "scripts/toolchain-transition-0042.json": "f72e0552e4b891cf0cb326b018df0b5b4c9f7f64d73305731b74dd671c430363"
   },
   "case_id": "l8-dpm-video-technique-donnees",
   "role": "reponse",
@@ -302,14 +303,14 @@
       }
     },
     "cli_version": "codex-cli 0.164.0-alpha.11.1",
-    "thread_id": "e35ee9efbdcfa69a2270b440ca6a6483a7fd3f11bae08912973dd84d60771e61",
+    "thread_id": "e2c30040a2580a113eaf08b6b5e18e7419d642153233e9473680bb01ff322487",
     "cli_sha256": "1103e9e09c71fa2cd0afd6d8f3b9a2d63174fe8efd7cb5bd09f1cb14ef58a098",
-    "argv_sha256": "91631ba7cbea2e5a20df98809bf08f48fc4a578c3ee6b93243dfb6a35db4108c",
+    "argv_sha256": "5e3cd663d2c037c5f4d673ac9f43c6cfb4e6fa4ddb1c3cdb1be8cb7d0b0c4dee",
     "prompt_sha256": "e292f5c541a22b3925e9604cf3eb049171a740ad85a4e81135581637ab31169c",
-    "stdout_sha256": "3ebfad7851614300bf107ec74b8e57dca8cb0e9143f61a9c35b03cb1f6e6ae97",
+    "stdout_sha256": "3cbf359b4e0b3aec72c6df3ad7a2cc5b09740c549236f8ac564a4d0159deeefd",
     "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "process_exit": 0,
-    "elapsed_seconds": 243.105187,
+    "elapsed_seconds": 232.258169,
     "startup_failure": {
       "before_model_attested": false,
       "model_session_opened": true,
@@ -333,7 +334,7 @@
     "kind": "native_seven_skills_precheck",
     "diagnostic_only": true,
     "model_calls": 0,
-    "runtime": "<HOME>\\Documents\\Codex\\repo-recovery\\2026-10-12\\instantane-r1\\suivis\\l153-preparation\\campagne-l153-d\\l8-dpm-video-technique-donnees-reponse-6ouonh9_\\.agents\\skills",
+    "runtime": "<HOME>\\Documents\\Codex\\repo-recovery\\2026-10-12\\instantane-r1\\suivis\\l154-preparation\\campagne-l154-a\\l8-dpm-video-technique-donnees-reponse-vz1q13i7\\.agents\\skills",
     "probes": [
       {
         "status": "ok",
@@ -345,7 +346,7 @@
         "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "stdout_octets": 692,
         "stderr_octets": 0,
-        "argv_sha256": "3fa58df5c761b8020d8b7582f75bc1ccc3066b70f2dc5a79595c371ed11d7ba6",
+        "argv_sha256": "b99047ecdde0b3a5459ac78466e3843e035192b20cddecdd8c76a499aa3c53e2",
         "runtime_entries_verified": 7,
         "raw_output_archived": false
       }
@@ -366,7 +367,7 @@
   },
   "campaign_harness": {
     "lot": "T43-L24e",
-    "manifest_sha256": "3ff9a360d7e501d8ba1eca1e0ff10824ea8b9b06555fc32b36b419827bf4b96d",
+    "manifest_sha256": "abec7fdf334e0edef6a4eeae3793c8c132bea199544b9bad3e6eae194e9711f4",
     "campaign_cli": {
       "version": "codex-cli 0.164.0-alpha.11.1",
       "sha256": "1103e9e09c71fa2cd0afd6d8f3b9a2d63174fe8efd7cb5bd09f1cb14ef58a098",
@@ -380,11 +381,11 @@
   },
   "case_contract": "scripts/cas-plugin-cycle-v4.json",
   "case_contract_sha256": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
-  "campaign_attempt_id": "campagne-l153-d",
-  "completed_at": "2026-11-27T07:23:12.817597+00:00",
+  "campaign_attempt_id": "campagne-l154-a",
+  "completed_at": "2026-11-27T21:24:54.298952+00:00",
   "trace": {
     "evidence_path": "source-l14/campagne/l8-dpm-video-technique-donnees/reponse/trace.jsonl",
-    "sha256": "a1bbb104665ba05b619f0986ae12466df0d6667c2ba715f6ed682a00dc4d0bcc"
+    "sha256": "9e98719d3526d16d7d7727dad227e646199c9b38921948f0c58e355ef4c7a42d"
   },
   "process_exit": 0,
   "execution_errors": [],
@@ -400,7 +401,7 @@
   "human_legal_validation": false,
   "publication_ready": false,
   "campaign_adapter_sha256": "1e3ae6970817cf9e0f80e9640386ef4d276ca665df73db86bc9b3d81245e7397",
-  "campaign_support_sha256": "deec28621de1c5e90b0d5c7f8e9aec898d4fe000c3f8a69889063349c2e9fc8e",
+  "campaign_support_sha256": "5076ff8bbbcf70022096ea4626241cd41ab172a9758b8f20dad9589994a7bd0d",
   "mcp_review_sha256": "bde75706abf0feccf719734ad36044809a64e186aeaa2dc294dbd3ae974989aa",
   "mcp_text_limit_bytes": 12000,
   "case_outcome_sha256": "a7b318c11a53bb07ee6abca1e6de65a47362796949b3d9a31451e0b6c7798d79",
@@ -409,13 +410,13 @@
   "events": [
     {
       "type": "reply",
-      "text": "STOP — surveillance : le projet doit rester au stade de l’étude, sans présumer d’autorisation ni de validation juridique ou technique. Je vais appliquer les quatre skills demandés, dans l’ordre indiqué, pour répartir les travaux et les validations à établir."
+      "text": "STOP — surveillance : aucune validation juridique, technique ou opérationnelle ne peut être présumée à ce stade.\n\nJ’active les quatre skills demandés dans l’ordre indiqué, en lisant chaque entrée intégralement avant la suivante.\n"
     },
     {
       "type": "visible_text",
       "position": 2,
       "item_id": "item_0",
-      "text": "STOP — surveillance : le projet doit rester au stade de l’étude, sans présumer d’autorisation ni de validation juridique ou technique. Je vais appliquer les quatre skills demandés, dans l’ordre indiqué, pour répartir les travaux et les validations à établir."
+      "text": "STOP — surveillance : aucune validation juridique, technique ou opérationnelle ne peut être présumée à ce stade.\n\nJ’active les quatre skills demandés dans l’ordre indiqué, en lisant chaque entrée intégralement avant la suivante.\n"
     },
     {
       "type": "tool_boundary",
@@ -648,8 +649,18 @@
       }
     },
     {
-      "type": "tool_boundary",
+      "type": "reply",
+      "text": "Les lectures confirment que chaque volet doit conserver son responsable et ses preuves propres. Je poursuis les entrées demandées ; l’attribution des travaux restera distincte d’une validation du projet.\n"
+    },
+    {
+      "type": "visible_text",
       "position": 23,
+      "item_id": "item_11",
+      "text": "Les lectures confirment que chaque volet doit conserver son responsable et ses preuves propres. Je poursuis les entrées demandées ; l’attribution des travaux restera distincte d’une validation du projet.\n"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 24,
       "item_type": "command_execution"
     },
     {
@@ -669,16 +680,6 @@
         "expected_content_sha256": "25a8921780a371cae7f218e6067a732a7908b1a399569a2bd6f58290aa26f08a",
         "source_bytes": 5988
       }
-    },
-    {
-      "type": "reply",
-      "text": "La lecture de dpm-fpt est terminée ; celle de dsi-fpt se poursuit. Les instructions imposent de distinguer les travaux préparatoires des validations, et de signaler explicitement chaque changement de rôle avant de traiter le volet concerné."
-    },
-    {
-      "type": "visible_text",
-      "position": 25,
-      "item_id": "item_12",
-      "text": "La lecture de dpm-fpt est terminée ; celle de dsi-fpt se poursuit. Les instructions imposent de distinguer les travaux préparatoires des validations, et de signaler explicitement chaque changement de rôle avant de traiter le volet concerné."
     },
     {
       "type": "tool_boundary",
@@ -1027,13 +1028,13 @@
     },
     {
       "type": "reply",
-      "text": "Les quatre entrées ont été lues intégralement, dans l’ordre demandé. Je consulte maintenant les références utiles et le MCP droit-francais ; l’absence de dossier et d’inventaire restera une limite explicite à toute conclusion de validation."
+      "text": "Les quatre entrées ont été lues intégralement dans l’ordre demandé. Je consulte maintenant les références utiles et le MCP droit-francais, en vérifiant si ses résultats apportent bien les textes nécessaires.\n"
     },
     {
       "type": "visible_text",
       "position": 56,
       "item_id": "item_28",
-      "text": "Les quatre entrées ont été lues intégralement, dans l’ordre demandé. Je consulte maintenant les références utiles et le MCP droit-francais ; l’absence de dossier et d’inventaire restera une limite explicite à toute conclusion de validation."
+      "text": "Les quatre entrées ont été lues intégralement dans l’ordre demandé. Je consulte maintenant les références utiles et le MCP droit-francais, en vérifiant si ses résultats apportent bien les textes nécessaires.\n"
     },
     {
       "type": "tool_boundary",
@@ -1077,6 +1078,23 @@
     {
       "type": "native_read",
       "paths": [
+        ".agents/skills/dpm-fpt/objets/videoprotection.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/dpm-fpt/objets/videoprotection.md"
+      ],
+      "output_sha256": "8cf01e45297b9e7ea3e3d51260f778a00946111fd8ff26c28444514e8917f20b",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 63,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
         ".agents/skills/dsi-fpt/references/analyse-situation.md"
       ],
       "complete_content_verified": [
@@ -1088,7 +1106,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 63,
+      "position": 65,
       "item_type": "command_execution"
     },
     {
@@ -1105,7 +1123,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 65,
+      "position": 67,
       "item_type": "command_execution"
     },
     {
@@ -1122,7 +1140,24 @@
     },
     {
       "type": "tool_boundary",
-      "position": 67,
+      "position": 69,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/dpo-ct/references/secteur-collectivites.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/dpo-ct/references/secteur-collectivites.md"
+      ],
+      "output_sha256": "df5410d46c6f1918907c7b184434bd146a2e9768d7077202af99c153bf34e1d0",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 71,
       "item_type": "command_execution"
     },
     {
@@ -1131,23 +1166,13 @@
         ".agents/skills/recherche-juridique/references/procedure-detaillee.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "1a8ec3b74fe0886a311a612513745b9e89e2aadbdc0ff4f3dcca199149738d56",
+      "output_sha256": "00b43ffed94cc06832cbed2f1e4bcbf421a585459468b5594734103b02177736",
       "exit_code": 0,
       "status": "completed"
     },
     {
-      "type": "reply",
-      "text": "BASCULE vers recherche-juridique — je lui attribue le contrôle des sources et les limites de preuve. La recherche portera sur le cadre d’autorisation ; elle ne permettra pas de conclure à la régularité de ce projet fictif, dont les pièces sont absentes."
-    },
-    {
-      "type": "visible_text",
-      "position": 69,
-      "item_id": "item_35",
-      "text": "BASCULE vers recherche-juridique — je lui attribue le contrôle des sources et les limites de preuve. La recherche portera sur le cadre d’autorisation ; elle ne permettra pas de conclure à la régularité de ce projet fictif, dont les pièces sont absentes."
-    },
-    {
       "type": "tool_boundary",
-      "position": 70,
+      "position": 73,
       "item_type": "command_execution"
     },
     {
@@ -1156,13 +1181,23 @@
         ".agents/skills/recherche-juridique/references/sources-autorisees.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "b2afc056cfa41ec3f164c555cdeef3e4b896d17fe3100fcb3783828c159f190e",
+      "output_sha256": "dead5879e3d90365e1109893c546d1c1b167cb59727d046388586c267f883a29",
       "exit_code": 0,
       "status": "completed"
     },
     {
+      "type": "reply",
+      "text": "BASCULE vers recherche-juridique — je lui attribue la vérification des sources, leur portée et les abstentions éventuelles. La recherche porte sur le cadre d’autorisation et le rattachement des données ; elle ne permettra pas, à elle seule, de valider ce projet sans dossier.\n"
+    },
+    {
+      "type": "visible_text",
+      "position": 75,
+      "item_id": "item_38",
+      "text": "BASCULE vers recherche-juridique — je lui attribue la vérification des sources, leur portée et les abstentions éventuelles. La recherche porte sur le cadre d’autorisation et le rattachement des données ; elle ne permettra pas, à elle seule, de valider ce projet sans dossier.\n"
+    },
+    {
       "type": "tool_boundary",
-      "position": 72,
+      "position": 76,
       "item_type": "mcp_tool_call"
     },
     {
@@ -1173,13 +1208,13 @@
       "succeeded": true,
       "arguments_publics": {
         "code": "Code de la sécurité intérieure",
-        "number": "L. 252-1",
+        "number": "L252-1",
         "limit": 3
       },
       "identifiants_dans_resultat": [
         "LEGIARTI000047569446"
       ],
-      "result_sha256": "f80adbc276adbe6a9a94fd12423a015c0700f70f0db8c17856d74661e0f8740c",
+      "result_sha256": "30de55c688b75316f07e3ec4a5c33b198725a447cda2cdcaa4b4618083b41648",
       "review_material": {
         "schema": "mcp-text-v1",
         "untrusted_data": true,
@@ -1187,18 +1222,18 @@
         "arguments_present": true,
         "arguments": {
           "code": "Code de la sécurité intérieure",
-          "number": "L. 252-1",
+          "number": "L252-1",
           "limit": 3
         },
-        "arguments_sha256": "f1698700a43893aaf5ad26dc1f1d337ae6d2c37deac39b05f5819cb6cf0aeae2",
-        "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000047569446\",\n      \"title\": \"Article L252-1 — Code de la sécurité intérieure\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000047569446\",\n      \"number\": \"L252-1\",\n      \"code\": \"Code de la sécurité intérieure\",\n      \"section\": \"Chapitre II : Autorisation et conditions de fonctionnement\",\n      \"legal_status\": \"VIGUEUR\",\n      \"start_date\": \"2023-05-21T00:00:00.000+0000\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"L. 252-1\",\n    \"code\": \"Code de la sécurité intérieure\",\n    \"date\": \"2026-11-27\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
+        "arguments_sha256": "282b6b7308ab7938fb1cc86d62b764c114822628a163885fe4e458646fdc6241",
+        "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000047569446\",\n      \"title\": \"Article L252-1 — Code de la sécurité intérieure\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000047569446\",\n      \"number\": \"L252-1\",\n      \"code\": \"Code de la sécurité intérieure\",\n      \"section\": \"Chapitre II : Autorisation et conditions de fonctionnement\",\n      \"legal_status\": \"VIGUEUR\",\n      \"start_date\": \"2023-05-21T00:00:00.000+0000\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"L252-1\",\n    \"code\": \"Code de la sécurité intérieure\",\n    \"date\": \"2026-11-27\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
         "text_available": true,
         "text_block_count": 1,
         "text_limit_bytes": 12000,
-        "included_text_bytes": 830,
-        "included_text_sha256": "cd4eca667d25a68a985ace1da65d4687351e710ba26e70421fe8d3122404dbff",
-        "full_text_bytes": 830,
-        "full_text_sha256": "cd4eca667d25a68a985ace1da65d4687351e710ba26e70421fe8d3122404dbff",
+        "included_text_bytes": 828,
+        "included_text_sha256": "f2c5fcc90b3d9842d4fa9664f1b34c9b1606dc6bf462934fa4e49642b5fc5f85",
+        "full_text_bytes": 828,
+        "full_text_sha256": "f2c5fcc90b3d9842d4fa9664f1b34c9b1606dc6bf462934fa4e49642b5fc5f85",
         "truncated": false,
         "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
         "upstream_truncation": "not_attested"
@@ -1206,7 +1241,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 74,
+      "position": 78,
       "item_type": "mcp_tool_call"
     },
     {
@@ -1246,24 +1281,91 @@
     },
     {
       "type": "tool_boundary",
-      "position": 76,
-      "item_type": "command_execution"
+      "position": 80,
+      "item_type": "mcp_tool_call"
     },
     {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/dpm-fpt/objets/videoprotection.md"
+      "type": "mcp_call",
+      "server": "droit-francais",
+      "tool": "search_articles",
+      "status": "completed",
+      "succeeded": true,
+      "arguments_publics": {
+        "code": "Code de la sécurité intérieure",
+        "number": "L251-1",
+        "limit": 3
+      },
+      "identifiants_dans_resultat": [
+        "LEGIARTI000047569469"
       ],
-      "complete_content_verified": [
-        ".agents/skills/dpm-fpt/objets/videoprotection.md"
-      ],
-      "output_sha256": "8cf01e45297b9e7ea3e3d51260f778a00946111fd8ff26c28444514e8917f20b",
-      "exit_code": 0,
-      "status": "completed"
+      "result_sha256": "6523b699071fc0101872342ffe259eb03489f8241ba5bcac200d24ae3a70335f",
+      "review_material": {
+        "schema": "mcp-text-v1",
+        "untrusted_data": true,
+        "tool": "search_articles",
+        "arguments_present": true,
+        "arguments": {
+          "code": "Code de la sécurité intérieure",
+          "number": "L251-1",
+          "limit": 3
+        },
+        "arguments_sha256": "2f38225e4e9d590003f7493adf25d7ad0faa7aecfa9879a36cfa8b85950f3057",
+        "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000047569469\",\n      \"title\": \"Article L251-1 — Code de la sécurité intérieure\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000047569469\",\n      \"number\": \"L251-1\",\n      \"code\": \"Code de la sécurité intérieure\",\n      \"section\": \"Chapitre Ier : Dispositions générales\",\n      \"legal_status\": \"VIGUEUR\",\n      \"start_date\": \"2023-05-21T00:00:00.000+0000\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"L251-1\",\n    \"code\": \"Code de la sécurité intérieure\",\n    \"date\": \"2026-11-27\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
+        "text_available": true,
+        "text_block_count": 1,
+        "text_limit_bytes": 12000,
+        "included_text_bytes": 809,
+        "included_text_sha256": "236151ced76fdc7af8db47ffccc28ca52c0a2bd71307d624a99548265224da2e",
+        "full_text_bytes": 809,
+        "full_text_sha256": "236151ced76fdc7af8db47ffccc28ca52c0a2bd71307d624a99548265224da2e",
+        "truncated": false,
+        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
+        "upstream_truncation": "not_attested"
+      }
     },
     {
       "type": "tool_boundary",
-      "position": 78,
+      "position": 82,
+      "item_type": "mcp_tool_call"
+    },
+    {
+      "type": "mcp_call",
+      "server": "droit-francais",
+      "tool": "get_article",
+      "status": "completed",
+      "succeeded": true,
+      "arguments_publics": {
+        "id": "LEGIARTI000047569469"
+      },
+      "identifiants_dans_resultat": [
+        "LEGIARTI000047569469"
+      ],
+      "result_sha256": "d03e1d0392c0e4b1a203dd4be22a7e6920c68497da9ad2cb7d3ec32223176ea6",
+      "review_material": {
+        "schema": "mcp-text-v1",
+        "untrusted_data": true,
+        "tool": "get_article",
+        "arguments_present": true,
+        "arguments": {
+          "id": "LEGIARTI000047569469"
+        },
+        "arguments_sha256": "bdd8edeb2e762ca0216e2804e22176d1566d486b0f1e018ae853c71fe2a7d3a9",
+        "text": "{\n  \"id\": \"LEGIARTI000047569469\",\n  \"title\": \"Article L251-1\",\n  \"text\": \"Les systèmes de vidéoprotection remplissant les conditions fixées à l'article L. 251-2 sont des traitements de données à caractère personnel régis par le présent titre, par le règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 relatif à la protection des personnes physiques à l'égard du traitement des données à caractère personnel et à la libre circulation de ces données, et abrogeant la directive 95/46/ CE (règlement général sur la protection des données) et par la loi n° 78-17 du 6 janvier 1978 relative à l'informatique, aux fichiers et aux libertés.\",\n  \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000047569469\",\n  \"metadata\": {\n    \"number\": \"L251-1\",\n    \"legal_status\": \"VIGUEUR\",\n    \"start_date\": 1684627200000,\n    \"end_date\": 32472144000000,\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\",\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null,\n    \"version_start_date\": \"2023-05-21\",\n    \"version_end_date\": \"2999-01-01\",\n    \"applicable_at_as_of_date\": true\n  },\n  \"parent_text\": {\n    \"id\": \"LEGITEXT000025503132\",\n    \"nature\": \"CODE\",\n    \"title\": \"Code de la sécurité intérieure\",\n    \"legal_status\": \"VIGUEUR\"\n  },\n  \"section\": {\n    \"id\": \"LEGISCTA000025508190\",\n    \"title\": \"Chapitre Ier : Dispositions générales\"\n  }\n}",
+        "text_available": true,
+        "text_block_count": 1,
+        "text_limit_bytes": 12000,
+        "included_text_bytes": 1499,
+        "included_text_sha256": "f5139d7f3d291f5d6a62ccbef83f3620e0e69be7fbeabe6f5f4e8ba239ce89af",
+        "full_text_bytes": 1499,
+        "full_text_sha256": "f5139d7f3d291f5d6a62ccbef83f3620e0e69be7fbeabe6f5f4e8ba239ce89af",
+        "truncated": false,
+        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
+        "upstream_truncation": "not_attested"
+      }
+    },
+    {
+      "type": "tool_boundary",
+      "position": 84,
       "item_type": "command_execution"
     },
     {
@@ -1272,13 +1374,13 @@
         ".agents/skills/recherche-juridique/references/procedure-detaillee.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "cd79f5e767ead86bdef24bb5d50dbbdb435dbc78b013074ad492e07e39e2806b",
+      "output_sha256": "437122a2c3d6e059cb6c81f0d303633fd9cba6bf2299851977e2036e403fc27d",
       "exit_code": 0,
       "status": "completed"
     },
     {
       "type": "tool_boundary",
-      "position": 80,
+      "position": 86,
       "item_type": "command_execution"
     },
     {
@@ -1287,23 +1389,28 @@
         ".agents/skills/recherche-juridique/references/gabarits-sortie.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "f659a49a4e8cdb763cdab11eb58468095564569b320dd1c7da840c416c969320",
+      "output_sha256": "3543cb3509f06974650db0153724224560b0e4278cc8a9dbda25e8921fcac14f",
       "exit_code": 0,
       "status": "completed"
     },
     {
-      "type": "reply",
-      "text": "Le MCP a fourni le texte de l’article recherché et indique que sa version est applicable au 27 novembre 2026. Ce contrôle établit le contenu du texte, pas l’existence d’une autorisation pour le projet. La réponse peut donc répartir les études et les pièces à réunir, tout en laissant les validations ouvertes."
+      "type": "tool_boundary",
+      "position": 88,
+      "item_type": "command_execution"
     },
     {
-      "type": "visible_text",
-      "position": 82,
-      "item_id": "item_42",
-      "text": "Le MCP a fourni le texte de l’article recherché et indique que sa version est applicable au 27 novembre 2026. Ce contrôle établit le contenu du texte, pas l’existence d’une autorisation pour le projet. La réponse peut donc répartir les études et les pièces à réunir, tout en laissant les validations ouvertes."
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/references/gabarits-sortie.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "b0f008bae41cfa32bbe6768aee72519ecafeb9d95020afca6bb456ce7716c77a",
+      "exit_code": 0,
+      "status": "completed"
     },
     {
       "type": "tool_boundary",
-      "position": 83,
+      "position": 90,
       "item_type": "command_execution"
     },
     {
@@ -1312,13 +1419,23 @@
         ".agents/skills/recherche-juridique/references/checklist-vigueur.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "800b69e0081bc40c1d722d3521b76b985510b6bf7b6ac666fdb43a633ac83c1d",
+      "output_sha256": "ff36db2414a5731dc7970c18f90295340d255357a37c315d943b77f36ebe8d96",
       "exit_code": 0,
       "status": "completed"
     },
     {
+      "type": "reply",
+      "text": "Le MCP a fourni deux articles avec leur texte intégral et des métadonnées indiquant leur applicabilité au 27 novembre 2026. Cela établit un cadre général ; aucun élément reçu ne prouve l’existence d’une autorisation du projet, une architecture validée ou un régime de données déterminé.\n"
+    },
+    {
+      "type": "visible_text",
+      "position": 92,
+      "item_id": "item_47",
+      "text": "Le MCP a fourni deux articles avec leur texte intégral et des métadonnées indiquant leur applicabilité au 27 novembre 2026. Cela établit un cadre général ; aucun élément reçu ne prouve l’existence d’une autorisation du projet, une architecture validée ou un régime de données déterminé.\n"
+    },
+    {
       "type": "tool_boundary",
-      "position": 85,
+      "position": 93,
       "item_type": "command_execution"
     },
     {
@@ -1327,51 +1444,51 @@
         ".agents/skills/recherche-juridique/references/format-citation.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "3204e6f7e4a9c8431a913ecfefa96a4851418994456e95a5e15b4effc1c1527e",
+      "output_sha256": "48dc2e6ac69b3ed26f04ecfe84b34f80083f1e1aa3995c59bc6f25826916e1bb",
       "exit_code": 0,
       "status": "completed"
     },
     {
       "type": "reply",
-      "text": "**Attribuer des travaux d’instruction, avec des livrables marqués `[INCOMPLET — NON VALIDÉ]`.** L’absence de dossier d’autorisation et d’inventaire technique ne prouve ni l’absence d’autorisation ni la conformité du projet.\n\nLes quatre entrées ont été lues intégralement, dans l’ordre demandé.\n\n**BASCULE vers dpm-fpt — doctrine d’emploi et volet autorisation.**  \nConfier au DPM le cadrage du besoin : objectifs, lieux concernés, usages envisagés, organisation du visionnage et transmissions souhaitées. Livrable : projet de doctrine d’emploi, accompagné des pièces à réunir et des questions ouvertes. Aucun périmètre autorisé, droit de visionnage ou accord institutionnel n’est présumé.  \n*Appui : dpm-fpt, branche Vidéoprotection et objet Vidéoprotection / CSU.*\n\n**BASCULE vers dsi-fpt — étude de l’architecture réseau et de l’exploitation technique.**  \nCommencer par établir l’inventaire : équipements, liaisons, stockage, flux, dépendances, support et mode d’exploitation — interne, mutualisé ou externalisé. Préparer ensuite les options d’architecture, les exigences de sécurité, de supervision et de continuité, ainsi que les critères de recette. Désigner un responsable d’exploitation ou inscrire « à désigner ». Aucune option n’est figée ; aucune commande ni configuration de surveillance n’est fournie à ce stade.  \n*Appui : dsi-fpt, Cadrage obligatoire du volet technique et branche Infrastructures et réseaux.*\n\n**BASCULE vers dpo-ct — examen des données traitées.**  \n**STOP RÉGIME — les finalités et les opérations ne permettent pas encore de déterminer le régime applicable.** Confier à dpo-ct leur clarification, puis l’examen des données, personnes concernées, destinataires, durées envisagées, prestataires et risques. Lui attribuer l’examen du registre, de l’information, des droits et de la nécessité d’une AIPD. Livrable : analyse des manques puis avis consultatif, sans validation du traitement. La DSI fournit les éléments techniques ; le DPM décrit les usages.  \n*Appui : dpo-ct, routeur Analyse de situation et §5.4.*\n\n**BASCULE vers recherche-juridique — preuve des règles et limites des conclusions.**  \nLe MCP droit-francais a fourni le texte de l’[article L. 252-1 du Code de la sécurité intérieure](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000047569446), version depuis le 21 mai 2023, indiquée applicable au 27 novembre 2026. Son contenu subordonne l’installation, **dans le cadre du titre concerné**, à une autorisation de l’autorité qu’il désigne. Ce contrôle ne démontre ni le rattachement précis du projet à ce cadre ni l’existence d’une autorisation. Recherche-juridique conserve ces points ouverts, ainsi que les règles non vérifiées sur les données et l’exploitation.\n\nPour chaque travail, consigner **un responsable nommé, le livrable attendu, les pièces manquantes, les réserves et la décision restant à prendre**. Une revue commune confrontera doctrine, architecture et analyse des données ; elle ne sera pas présentée comme une autorisation de mise en service."
+      "text": "STOP — Surveillance de personnes : aucune commande, extraction ni mise en service avant établissement de la base et des conditions d’emploi.\n\n**Attribuer des travaux préparatoires, avec des livrables marqués `[INCOMPLET — NON VALIDÉ]`.** L’absence de dossier ne prouve ni l’existence ni l’absence d’une autorisation. Les quatre skills demandés ont été lus intégralement, dans l’ordre indiqué.\n\n**BASCULE vers dpm-fpt — besoin métier et doctrine d’emploi.**\n\nConfier au DPM la description des objectifs, des lieux concernés, des usages envisagés et de l’organisation de l’exploitation. Lui demander de réunir les éventuelles autorisations, leurs annexes et les documents d’exploitation existants.\n\nLivrable : projet de doctrine recensant les usages proposés, les limites envisagées et les points restant à instruire. Il ne vaut ni autorisation ni habilitation. Attribution fondée sur dpm-fpt, branche Vidéoprotection.\n\n**BASCULE vers dsi-fpt — étude technique et exploitation du SI.**\n\nConfier à la DSI/RSSI un cadrage préalable à toute architecture définitive :\n\n| Travaux | Preuves à réunir et résultat attendu |\n|---|---|\n| Inventaire et dépendances | Équipements, liaisons, stockage, logiciels, alimentation et interfaces documentés |\n| Exploitation | Mode internalisé, mutualisé ou externalisé ; responsable d’exploitation et intervenants identifiés |\n| Support et supervision | Couverture réelle, maintenance, alertes et responsabilités documentées |\n| Sécurité et continuité | Exigences proposées, dépendances critiques et fonctionnement dégradé à examiner |\n| Recette | Critères techniques, essais ultérieurs dans un périmètre autorisé, validation métier et responsables à désigner |\n\nLivrable : dossier d’étude avec inconnues, options et réserves, sans paramétrage de surveillance ni dimensionnement présenté comme acquis. Attribution fondée sur dsi-fpt, Cadrage obligatoire du volet technique et branche Infrastructures et réseaux.\n\n**BASCULE vers dpo-ct — examen des données.**\n\n**STOP RÉGIME — Le régime applicable reste indéterminé tant que les finalités et les acteurs ne sont pas précisés.**\n\nConfier au DPO la cartographie des opérations et données envisagées : images, éventuelles métadonnées, journaux, destinataires, hébergement, accès et durées proposées. Lui attribuer l’examen du régime, des bases, des droits, de l’information, du registre et du besoin d’AIPD, avec les éléments techniques fournis par la DSI.\n\nLivrable : avis consultatif exposant les pièces manquantes et les recommandations, sans formule « traitement autorisé ». Attribution fondée sur dpo-ct, §5.2 et branche Traitements sectoriels des collectivités, §5.6.\n\n**BASCULE vers recherche-juridique — preuve des règles et limites documentaires.**\n\nLe texte intégral de l’[article L. 252-1 du Code de la sécurité intérieure](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000047569446), version depuis le 21 mai 2023, a été récupéré par le MCP et contrôlé au 27 novembre 2026. Il subordonne l’installation d’un système relevant de ce titre à une autorisation du représentant de l’État, avec les distinctions qu’il prévoit. **Ce texte ne prouve aucune autorisation propre au projet.**\n\nRecherche-juridique ne confirme donc ici ni la couverture du projet, ni les habilitations, ni les durées, ni son régime de données.\n\nFaire tenir par un pilote désigné un tableau commun : **action, responsable, pièce attendue, critère d’acceptation, réserve, décideur identifié**. La réception d’une étude, l’avis DPO, la recette technique et l’autorisation applicable doivent rester des étapes distinctes et explicitement tracées."
     },
     {
       "type": "visible_text",
-      "position": 87,
-      "item_id": "item_45",
-      "text": "**Attribuer des travaux d’instruction, avec des livrables marqués `[INCOMPLET — NON VALIDÉ]`.** L’absence de dossier d’autorisation et d’inventaire technique ne prouve ni l’absence d’autorisation ni la conformité du projet.\n\nLes quatre entrées ont été lues intégralement, dans l’ordre demandé.\n\n**BASCULE vers dpm-fpt — doctrine d’emploi et volet autorisation.**  \nConfier au DPM le cadrage du besoin : objectifs, lieux concernés, usages envisagés, organisation du visionnage et transmissions souhaitées. Livrable : projet de doctrine d’emploi, accompagné des pièces à réunir et des questions ouvertes. Aucun périmètre autorisé, droit de visionnage ou accord institutionnel n’est présumé.  \n*Appui : dpm-fpt, branche Vidéoprotection et objet Vidéoprotection / CSU.*\n\n**BASCULE vers dsi-fpt — étude de l’architecture réseau et de l’exploitation technique.**  \nCommencer par établir l’inventaire : équipements, liaisons, stockage, flux, dépendances, support et mode d’exploitation — interne, mutualisé ou externalisé. Préparer ensuite les options d’architecture, les exigences de sécurité, de supervision et de continuité, ainsi que les critères de recette. Désigner un responsable d’exploitation ou inscrire « à désigner ». Aucune option n’est figée ; aucune commande ni configuration de surveillance n’est fournie à ce stade.  \n*Appui : dsi-fpt, Cadrage obligatoire du volet technique et branche Infrastructures et réseaux.*\n\n**BASCULE vers dpo-ct — examen des données traitées.**  \n**STOP RÉGIME — les finalités et les opérations ne permettent pas encore de déterminer le régime applicable.** Confier à dpo-ct leur clarification, puis l’examen des données, personnes concernées, destinataires, durées envisagées, prestataires et risques. Lui attribuer l’examen du registre, de l’information, des droits et de la nécessité d’une AIPD. Livrable : analyse des manques puis avis consultatif, sans validation du traitement. La DSI fournit les éléments techniques ; le DPM décrit les usages.  \n*Appui : dpo-ct, routeur Analyse de situation et §5.4.*\n\n**BASCULE vers recherche-juridique — preuve des règles et limites des conclusions.**  \nLe MCP droit-francais a fourni le texte de l’[article L. 252-1 du Code de la sécurité intérieure](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000047569446), version depuis le 21 mai 2023, indiquée applicable au 27 novembre 2026. Son contenu subordonne l’installation, **dans le cadre du titre concerné**, à une autorisation de l’autorité qu’il désigne. Ce contrôle ne démontre ni le rattachement précis du projet à ce cadre ni l’existence d’une autorisation. Recherche-juridique conserve ces points ouverts, ainsi que les règles non vérifiées sur les données et l’exploitation.\n\nPour chaque travail, consigner **un responsable nommé, le livrable attendu, les pièces manquantes, les réserves et la décision restant à prendre**. Une revue commune confrontera doctrine, architecture et analyse des données ; elle ne sera pas présentée comme une autorisation de mise en service."
+      "position": 95,
+      "item_id": "item_49",
+      "text": "STOP — Surveillance de personnes : aucune commande, extraction ni mise en service avant établissement de la base et des conditions d’emploi.\n\n**Attribuer des travaux préparatoires, avec des livrables marqués `[INCOMPLET — NON VALIDÉ]`.** L’absence de dossier ne prouve ni l’existence ni l’absence d’une autorisation. Les quatre skills demandés ont été lus intégralement, dans l’ordre indiqué.\n\n**BASCULE vers dpm-fpt — besoin métier et doctrine d’emploi.**\n\nConfier au DPM la description des objectifs, des lieux concernés, des usages envisagés et de l’organisation de l’exploitation. Lui demander de réunir les éventuelles autorisations, leurs annexes et les documents d’exploitation existants.\n\nLivrable : projet de doctrine recensant les usages proposés, les limites envisagées et les points restant à instruire. Il ne vaut ni autorisation ni habilitation. Attribution fondée sur dpm-fpt, branche Vidéoprotection.\n\n**BASCULE vers dsi-fpt — étude technique et exploitation du SI.**\n\nConfier à la DSI/RSSI un cadrage préalable à toute architecture définitive :\n\n| Travaux | Preuves à réunir et résultat attendu |\n|---|---|\n| Inventaire et dépendances | Équipements, liaisons, stockage, logiciels, alimentation et interfaces documentés |\n| Exploitation | Mode internalisé, mutualisé ou externalisé ; responsable d’exploitation et intervenants identifiés |\n| Support et supervision | Couverture réelle, maintenance, alertes et responsabilités documentées |\n| Sécurité et continuité | Exigences proposées, dépendances critiques et fonctionnement dégradé à examiner |\n| Recette | Critères techniques, essais ultérieurs dans un périmètre autorisé, validation métier et responsables à désigner |\n\nLivrable : dossier d’étude avec inconnues, options et réserves, sans paramétrage de surveillance ni dimensionnement présenté comme acquis. Attribution fondée sur dsi-fpt, Cadrage obligatoire du volet technique et branche Infrastructures et réseaux.\n\n**BASCULE vers dpo-ct — examen des données.**\n\n**STOP RÉGIME — Le régime applicable reste indéterminé tant que les finalités et les acteurs ne sont pas précisés.**\n\nConfier au DPO la cartographie des opérations et données envisagées : images, éventuelles métadonnées, journaux, destinataires, hébergement, accès et durées proposées. Lui attribuer l’examen du régime, des bases, des droits, de l’information, du registre et du besoin d’AIPD, avec les éléments techniques fournis par la DSI.\n\nLivrable : avis consultatif exposant les pièces manquantes et les recommandations, sans formule « traitement autorisé ». Attribution fondée sur dpo-ct, §5.2 et branche Traitements sectoriels des collectivités, §5.6.\n\n**BASCULE vers recherche-juridique — preuve des règles et limites documentaires.**\n\nLe texte intégral de l’[article L. 252-1 du Code de la sécurité intérieure](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000047569446), version depuis le 21 mai 2023, a été récupéré par le MCP et contrôlé au 27 novembre 2026. Il subordonne l’installation d’un système relevant de ce titre à une autorisation du représentant de l’État, avec les distinctions qu’il prévoit. **Ce texte ne prouve aucune autorisation propre au projet.**\n\nRecherche-juridique ne confirme donc ici ni la couverture du projet, ni les habilitations, ni les durées, ni son régime de données.\n\nFaire tenir par un pilote désigné un tableau commun : **action, responsable, pièce attendue, critère d’acceptation, réserve, décideur identifié**. La réception d’une étude, l’avis DPO, la recette technique et l’autorisation applicable doivent rester des étapes distinctes et explicitement tracées."
     },
     {
       "type": "turn_completed",
       "usage": {
-        "input_tokens": 2572898,
-        "cached_input_tokens": 2470016,
+        "input_tokens": 3077600,
+        "cached_input_tokens": 2919168,
         "cache_write_input_tokens": 0,
-        "output_tokens": 4177,
-        "reasoning_output_tokens": 713
+        "output_tokens": 4570,
+        "reasoning_output_tokens": 799
       }
     }
   ],
-  "events_sha256": "60fef30cd283ae07bb07920e1f7a8b0d5d48f438f869f1bfd02c04c5f61b79d6",
+  "events_sha256": "35073d3130028bc3f4e6f1e15d3447906118d8a1474d1abf849081d12157ea19",
   "runner_sha256": "89fd874415c5830dc67be3e2fa76a77eb9bafdd1f7434ecad696d35db1ef1602",
   "profile": "codex-copies-natives-mcp-v5",
-  "measurement_commit": "e8f42719e90e5fdf69458cf9960bf04ee6560f84",
-  "qualification_target_commit": "768d7d56258bd4b9feeede266c9ee1b2187dc8d7",
+  "measurement_commit": "30617203c9514736af680dc97c79de53d4a6df4c",
+  "qualification_target_commit": "6a469ab56495c5b9179da7ccb15dc7afd71a2a39",
   "derivation": {
     "kind": "projection_of_original_session",
     "original": {
       "evidence_path": "campagne/l8-dpm-video-technique-donnees/reponse/session.json",
-      "sha256": "d7e772d4f381eacfcee2e56224c3beb90ca6e5b63879e4e9f67bde595601ac4a"
+      "sha256": "10144c2c66683010ea70275f55bb479fe94c6a12153696445c4c04fdf41dfcd4"
     },
     "summary": {
       "evidence_path": "campagne/resume-campagne.json",
-      "sha256": "01c0b81b4b99e6e121f46481ab3429bd4c5e5f94d5b7ffedba0ccfd20c00d92c"
+      "sha256": "ab189608f01e0b3de8c84026e835c792aa16afcf7988151a9a278132529d69b5"
     }
   },
   "original_session": {
     "evidence_path": "source-l14/campagne/l8-dpm-video-technique-donnees/reponse/session.json",
-    "sha256": "d7e772d4f381eacfcee2e56224c3beb90ca6e5b63879e4e9f67bde595601ac4a"
+    "sha256": "10144c2c66683010ea70275f55bb479fe94c6a12153696445c4c04fdf41dfcd4"
   },
   "source_bundle_root": "tests/evidence/mesure-courante/source-l14",
-  "payload_sha256": "21b88e7bbbf459e73f117b8b20f86e2179a7a5c32faa29340f36000ed867a5bf"
+  "payload_sha256": "ba0b4c1a990bcc5dd8ad5b65d54254c6433569273531ddf41b7189ab678dbcde"
 }

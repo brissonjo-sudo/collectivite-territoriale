@@ -1,5 +1,5 @@
 {
-  "plugin_commit": "e8f42719e90e5fdf69458cf9960bf04ee6560f84",
+  "plugin_commit": "30617203c9514736af680dc97c79de53d4a6df4c",
   "runtime_sha256": {
     "skills/dcp-fpt/agents/openai.yaml": "b37aec5086edadd2d0012545ab4c3b1a6493db31f7b6f26673674f5f514aeb40",
     "skills/dcp-fpt/LICENCE.fr.txt": "14e59bc002e1339e5554451aedad7c2b113dc7ef942e96b410b5517099ad6d91",
@@ -227,9 +227,9 @@
     "skills/recherche-juridique/SKILL.md": "13bb816e3b168daed181813411be87d1cf58ea65b15212b4207f68f201b5e7cd"
   },
   "plugin_configuration_sha256": {
-    ".codex-plugin/plugin.json": "4294642b42d209a3bc3184945f249559c2f748b56f3e7a1a62bb3e9e9a0bf22d",
-    ".claude-plugin/plugin.json": "8671012148c78ec01f217103b96a87fda761271e236a01d9428186a6407a038e",
-    ".mcp.json": "c1988401a93d468e87557dc1ebf47989323203b9c5ef7607641529615aefbcac",
+    ".codex-plugin/plugin.json": "53dc3a55357f4494e21abf4175e7eba855006495fc05d08922b4e9f0c8783cd8",
+    ".claude-plugin/plugin.json": "6991732b0a46573c15579319319bfba83c99da77ff0b11651b7fba69d87096db",
+    ".mcp.json": "bc8b6f791066cdde35139b757c805751d566055ea176d8e2a918e36d47179c32",
     "assets/icon.png": "10aca45cb876735f06e10b352b9a2ba004b5deae462e08d8dfba092044aaee1f"
   },
   "case_file_sha256": "0747b6268cccab1bb46c820217d2a4ba1c69e5c2ad6fe61126e3a5bd9242f5ea",
@@ -243,7 +243,7 @@
     "scripts/cas-plugin-cycle-v4.json": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
     "scripts/check_dcp_protocol.py": "6faeea694546084ceae2b64d8c87603f4c04fb521efdb5baa3b743958fad5f06",
     "scripts/check_sync.py": "69f080fbe4ded47ab1c5980a662e4219e15e111a67de8a6cbf166aac831e008e",
-    "scripts/cli_toolchains.py": "e1c73adbd0a52d01214853ca32a316343445c4d6cfd8d4d054118ff17ed32d67",
+    "scripts/cli_toolchains.py": "63cd143299ee3b643f86090f3f314ff7d64739b9d45b8939468329ba447d933f",
     "scripts/codex_event_contract.py": "f4e848f3c34504b4df6b5f444337b4064829828d8c492ecd3023cbae471d42d7",
     "scripts/cycle-v4-source-requirements.json": "54bed7aaf6afc439a6d24e1f95204d4b3e7d9327024ce5435bd9cc0988a8a333",
     "scripts/cycle_satisfiability.py": "5a8625a8f8169393a6b3bcf35ab696830707cc142366c9d179c192fa128bb6ea",
@@ -257,7 +257,7 @@
     "scripts/extract_native_read_commands.py": "d1292a0e6f798fcab1bd55fdce76b0e804526208b97e9e82172702057f1ef6c4",
     "scripts/human_resolution.py": "444d01b13428773c33a9100310ebb5815c32067b4f838f8f6afd9b4d9a284e32",
     "scripts/instruction_overlays.py": "e40decc70e39416d33b484b9d9620e2e6db64a0b6d1826c88b9899e0fbe57e99",
-    "scripts/measurement-cli.json": "96f0c453455891fe6367a957ac2a674b7d17ab16ad03229b2bc1dd3c42a1ac99",
+    "scripts/measurement-cli.json": "d883a8cce147d0f80c47aaf13dfde3799545e003619422315a134d27a9e5047a",
     "scripts/measurement_common.py": "1a703163152afa70d669e276f7be8f62f86a7989819daff8676d6fd8afddb7a4",
     "scripts/public_projection.py": "7521e1835e16dd841966f30237370f225e29014f418a5557e6c01953d0f4c102",
     "scripts/qualify_distribution.py": "f05040ca0e3921aa2407c3be56c0bb0402809588edb8785983d8d9977bc03d20",
@@ -281,7 +281,8 @@
     "scripts/toolchain-transition-0031.json": "05ba38e8b694a7ec0d5b0ec1ec098f627c9d392ab06b4cea65d9b9d3d3f19b61",
     "scripts/toolchain-transition-0034.json": "73bdaa3c74e30b70a337ee9865c78c158086f59919f9cc743ff9e1960db11e44",
     "scripts/toolchain-transition-0036.json": "df2c1bcb356e67bded5efe82c7257acbd05375fb2e30618f290225daabcbd11c",
-    "scripts/toolchain-transition-0039.json": "77b565d483928a203c2b436c66bfc537f60f49c542082690e57d8a081eefb729"
+    "scripts/toolchain-transition-0039.json": "890028bde9aeaeced79355b4404ac5a2f20718ca0c5a3feb33423961053de7c8",
+    "scripts/toolchain-transition-0042.json": "f72e0552e4b891cf0cb326b018df0b5b4c9f7f64d73305731b74dd671c430363"
   },
   "case_id": "plugin-dcp-acte-irreversible",
   "role": "reponse",
@@ -302,14 +303,14 @@
       }
     },
     "cli_version": "codex-cli 0.164.0-alpha.11.1",
-    "thread_id": "56e284f4f5ebb4bf7fcab222c5328e32c9d6b48760b73a1cf5adb22a27e006e1",
+    "thread_id": "2be025f87ea0f3eead37d3be451a3e357bc7ff16216a550d21580a92c62e29b4",
     "cli_sha256": "1103e9e09c71fa2cd0afd6d8f3b9a2d63174fe8efd7cb5bd09f1cb14ef58a098",
-    "argv_sha256": "91631ba7cbea2e5a20df98809bf08f48fc4a578c3ee6b93243dfb6a35db4108c",
+    "argv_sha256": "5e3cd663d2c037c5f4d673ac9f43c6cfb4e6fa4ddb1c3cdb1be8cb7d0b0c4dee",
     "prompt_sha256": "1bbec0560e72d730e4e9edec7c23b7b495a5446a9fa6fe6d974a97d95ab595c3",
-    "stdout_sha256": "288b1f6849e3fc6c80b5da5c785bd5e1a8ef559519bb4f08a10ee8e6f4539efc",
+    "stdout_sha256": "1a6321b4a466edfcb5c0a25f468994df0fe409d01926056e9b0e2b12a2f8aba5",
     "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "process_exit": 0,
-    "elapsed_seconds": 159.198713,
+    "elapsed_seconds": 213.043251,
     "startup_failure": {
       "before_model_attested": false,
       "model_session_opened": true,
@@ -333,7 +334,7 @@
     "kind": "native_seven_skills_precheck",
     "diagnostic_only": true,
     "model_calls": 0,
-    "runtime": "<HOME>\\Documents\\Codex\\repo-recovery\\2026-10-12\\instantane-r1\\suivis\\l153-preparation\\campagne-l153-d\\plugin-dcp-acte-irreversible-reponse-d6uem9qx\\.agents\\skills",
+    "runtime": "<HOME>\\Documents\\Codex\\repo-recovery\\2026-10-12\\instantane-r1\\suivis\\l154-preparation\\campagne-l154-a\\plugin-dcp-acte-irreversible-reponse-h2fcf79f\\.agents\\skills",
     "probes": [
       {
         "status": "ok",
@@ -345,7 +346,7 @@
         "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "stdout_octets": 692,
         "stderr_octets": 0,
-        "argv_sha256": "a01cb35808c221dbb128254608fb6457651feed516a4c754bd4bfc9e1943c10a",
+        "argv_sha256": "34e56d1b952cb2d54073f85e2bd9c2845ff2a908d20bddf09fe4480abdb734ac",
         "runtime_entries_verified": 7,
         "raw_output_archived": false
       }
@@ -366,7 +367,7 @@
   },
   "campaign_harness": {
     "lot": "T43-L24e",
-    "manifest_sha256": "3ff9a360d7e501d8ba1eca1e0ff10824ea8b9b06555fc32b36b419827bf4b96d",
+    "manifest_sha256": "abec7fdf334e0edef6a4eeae3793c8c132bea199544b9bad3e6eae194e9711f4",
     "campaign_cli": {
       "version": "codex-cli 0.164.0-alpha.11.1",
       "sha256": "1103e9e09c71fa2cd0afd6d8f3b9a2d63174fe8efd7cb5bd09f1cb14ef58a098",
@@ -380,11 +381,11 @@
   },
   "case_contract": "scripts/cas-plugin-cycle-v4.json",
   "case_contract_sha256": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
-  "campaign_attempt_id": "campagne-l153-d",
-  "completed_at": "2026-11-27T06:42:40.968099+00:00",
+  "campaign_attempt_id": "campagne-l154-a",
+  "completed_at": "2026-11-27T20:45:54.860214+00:00",
   "trace": {
     "evidence_path": "source-l14/campagne/plugin-dcp-acte-irreversible/reponse/trace.jsonl",
-    "sha256": "87ffef77a7d787bbe50e17729ac97d4bad88425cd4b23603a3fd3032a59ff8d0"
+    "sha256": "ac19bce8148001c6fe91f66ea098e129889dcd0ee09a3f66ae516d96f6647d71"
   },
   "process_exit": 0,
   "execution_errors": [],
@@ -400,7 +401,7 @@
   "human_legal_validation": false,
   "publication_ready": false,
   "campaign_adapter_sha256": "1e3ae6970817cf9e0f80e9640386ef4d276ca665df73db86bc9b3d81245e7397",
-  "campaign_support_sha256": "deec28621de1c5e90b0d5c7f8e9aec898d4fe000c3f8a69889063349c2e9fc8e",
+  "campaign_support_sha256": "5076ff8bbbcf70022096ea4626241cd41ab172a9758b8f20dad9589994a7bd0d",
   "mcp_review_sha256": "bde75706abf0feccf719734ad36044809a64e186aeaa2dc294dbd3ae974989aa",
   "mcp_text_limit_bytes": 12000,
   "case_outcome_sha256": "a7b318c11a53bb07ee6abca1e6de65a47362796949b3d9a31451e0b6c7798d79",
@@ -409,13 +410,13 @@
   "events": [
     {
       "type": "reply",
-      "text": "STOP — acte irréversible\n\nJ’active les skills dcp-fpt puis recherche-juridique dans l’ordre demandé, en lisant intégralement leurs segments avant de vérifier les textes avec le MCP droit-francais."
+      "text": "STOP — acte irréversible\n\nJ’active d’abord dcp-fpt, puis recherche-juridique, pour vérifier les conditions de signature et établir le calendrier à proposer."
     },
     {
       "type": "visible_text",
       "position": 2,
       "item_id": "item_0",
-      "text": "STOP — acte irréversible\n\nJ’active les skills dcp-fpt puis recherche-juridique dans l’ordre demandé, en lisant intégralement leurs segments avant de vérifier les textes avec le MCP droit-francais."
+      "text": "STOP — acte irréversible\n\nJ’active d’abord dcp-fpt, puis recherche-juridique, pour vérifier les conditions de signature et établir le calendrier à proposer."
     },
     {
       "type": "tool_boundary",
@@ -658,8 +659,18 @@
       }
     },
     {
-      "type": "tool_boundary",
+      "type": "reply",
+      "text": "Les deux entrées sont lues intégralement. Je poursuis la vérification des sources ; la date de reprise reste indéterminée et la délégation absente ne permet pas de valider le signataire.\n\nBASCULE recherche-juridique — Validité, vigueur ou portée d'une référence.\nÀ reprendre : point précis de droit, version pertinente et source à consulter."
+    },
+    {
+      "type": "visible_text",
       "position": 24,
+      "item_id": "item_12",
+      "text": "Les deux entrées sont lues intégralement. Je poursuis la vérification des sources ; la date de reprise reste indéterminée et la délégation absente ne permet pas de valider le signataire.\n\nBASCULE recherche-juridique — Validité, vigueur ou portée d'une référence.\nÀ reprendre : point précis de droit, version pertinente et source à consulter."
+    },
+    {
+      "type": "tool_boundary",
+      "position": 25,
       "item_type": "command_execution"
     },
     {
@@ -673,16 +684,6 @@
       "output_sha256": "5ff8cf6921bcd31a7de4503a0cc617124aaab099e57ab7e938e0f1c0f375f206",
       "exit_code": 0,
       "status": "completed"
-    },
-    {
-      "type": "reply",
-      "text": "Les deux entrées ont été lues intégralement. Le calendrier restera conditionné à l’état du référé et à la vérification de l’habilitation du signataire.\n\nBASCULE recherche-juridique — Validité, vigueur ou portée d'une référence.\nÀ reprendre : point précis de droit, version pertinente et source à consulter."
-    },
-    {
-      "type": "visible_text",
-      "position": 26,
-      "item_id": "item_13",
-      "text": "Les deux entrées ont été lues intégralement. Le calendrier restera conditionné à l’état du référé et à la vérification de l’habilitation du signataire.\n\nBASCULE recherche-juridique — Validité, vigueur ou portée d'une référence.\nÀ reprendre : point précis de droit, version pertinente et source à consulter."
     },
     {
       "type": "tool_boundary",
@@ -763,7 +764,7 @@
         ".agents/skills/dcp-fpt/references/references-verifiees.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "14496164a16aadf0be00c5ae7244f6689197bd245117a31e02bfdafb611d0551",
+      "output_sha256": "a1438233ce44bf6e2c90b241508d42f08b50625de6c58839d07352f87869c693",
       "exit_code": 0,
       "status": "completed"
     },
@@ -778,7 +779,7 @@
         ".agents/skills/dcp-fpt/references/references-verifiees.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "9fe5d50a5c7bf74760e1b695741779fa51b8440ae1c9a96bc3362a0b82714035",
+      "output_sha256": "91607f62c52ecec84f853a31b36e06c2aaec8bbbe4a7958428a31f522dbb1971",
       "exit_code": 0,
       "status": "completed"
     },
@@ -790,26 +791,16 @@
     {
       "type": "native_read",
       "paths": [
-        ".agents/skills/recherche-juridique/references/procedure-detaillee.md"
+        ".agents/skills/dcp-fpt/references/references-verifiees.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "00b43ffed94cc06832cbed2f1e4bcbf421a585459468b5594734103b02177736",
+      "output_sha256": "02ee255fe5a63eef0133cc4d83be9980eba1b989f59b61c6570e4de3b82a1269",
       "exit_code": 0,
       "status": "completed"
     },
     {
-      "type": "reply",
-      "text": "Pour dater le calendrier du cas fictif, pouvez-vous préciser la catégorie et le mode d’exercice de l’acheteur, la procédure suivie avec sa date de lancement, et les dates connues de saisine ou de notification du référé ? Sans ces éléments, je proposerai seulement des étapes conditionnelles."
-    },
-    {
-      "type": "visible_text",
-      "position": 41,
-      "item_id": "item_21",
-      "text": "Pour dater le calendrier du cas fictif, pouvez-vous préciser la catégorie et le mode d’exercice de l’acheteur, la procédure suivie avec sa date de lancement, et les dates connues de saisine ou de notification du référé ? Sans ces éléments, je proposerai seulement des étapes conditionnelles."
-    },
-    {
       "type": "tool_boundary",
-      "position": 42,
+      "position": 41,
       "item_type": "command_execution"
     },
     {
@@ -818,13 +809,43 @@
         ".agents/skills/recherche-juridique/references/procedure-detaillee.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "e57163987581188cb3caa82567c66588f28d781e8af2316bff4d1d93041984b8",
+      "output_sha256": "eea05fea99c1291a1da34d0a497ded167689dc0dc594b3556228e04fc1b6b127",
       "exit_code": 0,
       "status": "completed"
     },
     {
       "type": "tool_boundary",
-      "position": 44,
+      "position": 43,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/references/procedure-detaillee.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "383c49c67983ca1fc30af7c145b8d024c39a511a3ad8bf04070e116f5ee23750",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 45,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/references/procedure-detaillee.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "8b3e5e76a2fd22867b85735c95601efe5efadedc576e032a6e94072bb5b81e02",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 47,
       "item_type": "command_execution"
     },
     {
@@ -833,13 +854,13 @@
         ".agents/skills/recherche-juridique/references/sources-autorisees.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "a05b88f79119086ebe154d0fce5d525264a4fc3afa2957ddd747dad00dce7834",
+      "output_sha256": "c2a9ad91860fb37526bed4949c537e63114bcb14fa789136b9cd35c047a6e89c",
       "exit_code": 0,
       "status": "completed"
     },
     {
       "type": "tool_boundary",
-      "position": 46,
+      "position": 49,
       "item_type": "command_execution"
     },
     {
@@ -855,8 +876,18 @@
       "status": "completed"
     },
     {
+      "type": "reply",
+      "text": "Je prépare un calendrier par étapes, sans date de démarrage promise : traitement du recours, contrôle de l’habilitation, puis signature, notification et démarrage sous conditions. Les références internes servent de pistes ; leur contenu doit être confirmé par le MCP droit-français."
+    },
+    {
+      "type": "visible_text",
+      "position": 51,
+      "item_id": "item_26",
+      "text": "Je prépare un calendrier par étapes, sans date de démarrage promise : traitement du recours, contrôle de l’habilitation, puis signature, notification et démarrage sous conditions. Les références internes servent de pistes ; leur contenu doit être confirmé par le MCP droit-français."
+    },
+    {
       "type": "tool_boundary",
-      "position": 48,
+      "position": 52,
       "item_type": "mcp_tool_call"
     },
     {
@@ -867,8 +898,7 @@
       "succeeded": true,
       "arguments_publics": {
         "code": "Code de justice administrative",
-        "number": "L. 551-4",
-        "limit": 3
+        "number": "L. 551-4"
       },
       "identifiants_dans_resultat": [
         "LEGIARTI000020602109"
@@ -881,10 +911,9 @@
         "arguments_present": true,
         "arguments": {
           "code": "Code de justice administrative",
-          "number": "L. 551-4",
-          "limit": 3
+          "number": "L. 551-4"
         },
-        "arguments_sha256": "3e9db796862f85c6b06d64cbbaef8223af6c944a1a59cdec5e2a0551b550bc89",
+        "arguments_sha256": "eee674d68b004beaa9da94aeb03a4eb5234ab40132caf5f9c12fc652462caa30",
         "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000020602109\",\n      \"title\": \"Article L551-4 — Code de justice administrative\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000020602109\",\n      \"number\": \"L551-4\",\n      \"code\": \"Code de justice administrative\",\n      \"section\": \"Sous-section 1 : Contrats passés par les pouvoirs adjudicateurs\",\n      \"legal_status\": \"VIGUEUR\",\n      \"start_date\": \"2009-05-09T00:00:00.000+0000\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"L. 551-4\",\n    \"code\": \"Code de justice administrative\",\n    \"date\": \"2026-11-27\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
         "text_available": true,
         "text_block_count": 1,
@@ -900,7 +929,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 50,
+      "position": 54,
       "item_type": "mcp_tool_call"
     },
     {
@@ -939,106 +968,8 @@
       }
     },
     {
-      "type": "reply",
-      "text": "Le texte primaire confirme que, pour les contrats passés par les pouvoirs adjudicateurs, l’interdiction de signer court jusqu’à la notification de la décision juridictionnelle à l’acheteur. Ce sera donc un jalon du calendrier ; il faudra ensuite contrôler le contenu de la décision et l’habilitation du signataire."
-    },
-    {
-      "type": "visible_text",
-      "position": 52,
-      "item_id": "item_27",
-      "text": "Le texte primaire confirme que, pour les contrats passés par les pouvoirs adjudicateurs, l’interdiction de signer court jusqu’à la notification de la décision juridictionnelle à l’acheteur. Ce sera donc un jalon du calendrier ; il faudra ensuite contrôler le contenu de la décision et l’habilitation du signataire."
-    },
-    {
       "type": "tool_boundary",
-      "position": 53,
-      "item_type": "mcp_tool_call"
-    },
-    {
-      "type": "mcp_call",
-      "server": "droit-francais",
-      "tool": "search_articles",
-      "status": "completed",
-      "succeeded": true,
-      "arguments_publics": {
-        "code": "Code de la commande publique",
-        "number": "R. 2182-4",
-        "limit": 3
-      },
-      "identifiants_dans_resultat": [
-        "LEGIARTI000037729981"
-      ],
-      "result_sha256": "e7b840f52624861871a1e4c0fa1350d74d9e219f3c1cde3be37a2298aae66aa3",
-      "review_material": {
-        "schema": "mcp-text-v1",
-        "untrusted_data": true,
-        "tool": "search_articles",
-        "arguments_present": true,
-        "arguments": {
-          "code": "Code de la commande publique",
-          "number": "R. 2182-4",
-          "limit": 3
-        },
-        "arguments_sha256": "b7c49fbf86ce3af3b6b629b32f27d6a02c83d0131a70aa6303426f3febe6449e",
-        "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000037729981\",\n      \"title\": \"Article R2182-4 — Code de la commande publique\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037729981\",\n      \"number\": \"R2182-4\",\n      \"code\": \"Code de la commande publique\",\n      \"section\": \"Section 2 : Notification du marché\",\n      \"legal_status\": \"VIGUEUR\",\n      \"start_date\": \"2019-04-01T00:00:00.000+0000\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"R. 2182-4\",\n    \"code\": \"Code de la commande publique\",\n    \"date\": \"2026-11-27\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
-        "text_available": true,
-        "text_block_count": 1,
-        "text_limit_bytes": 12000,
-        "included_text_bytes": 795,
-        "included_text_sha256": "de171b9549a1d7467c514b634b8dfec9d67880faa61456cbd509188e0b4174d5",
-        "full_text_bytes": 795,
-        "full_text_sha256": "de171b9549a1d7467c514b634b8dfec9d67880faa61456cbd509188e0b4174d5",
-        "truncated": false,
-        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
-        "upstream_truncation": "not_attested"
-      }
-    },
-    {
-      "type": "tool_boundary",
-      "position": 55,
-      "item_type": "mcp_tool_call"
-    },
-    {
-      "type": "mcp_call",
-      "server": "droit-francais",
-      "tool": "search_articles",
-      "status": "completed",
-      "succeeded": true,
-      "arguments_publics": {
-        "code": "Code de la commande publique",
-        "number": "R. 2182-5",
-        "limit": 3
-      },
-      "identifiants_dans_resultat": [
-        "LEGIARTI000037729979"
-      ],
-      "result_sha256": "ccb15878a4c95c0627e025fefd9b8faeac07c77f50dc5050e240bc5672edcd67",
-      "review_material": {
-        "schema": "mcp-text-v1",
-        "untrusted_data": true,
-        "tool": "search_articles",
-        "arguments_present": true,
-        "arguments": {
-          "code": "Code de la commande publique",
-          "number": "R. 2182-5",
-          "limit": 3
-        },
-        "arguments_sha256": "6c47dcd76718c2539ecc16df80ade34be081647bfbfce4d90e9cae56a78e7d10",
-        "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000037729979\",\n      \"title\": \"Article R2182-5 — Code de la commande publique\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037729979\",\n      \"number\": \"R2182-5\",\n      \"code\": \"Code de la commande publique\",\n      \"section\": \"Section 2 : Notification du marché\",\n      \"legal_status\": \"VIGUEUR\",\n      \"start_date\": \"2019-04-01T00:00:00.000+0000\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"R. 2182-5\",\n    \"code\": \"Code de la commande publique\",\n    \"date\": \"2026-11-27\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
-        "text_available": true,
-        "text_block_count": 1,
-        "text_limit_bytes": 12000,
-        "included_text_bytes": 795,
-        "included_text_sha256": "1a3b31d2c9d6e39c09428e0c2307581bebc513bd42beebe103fd578731c9943c",
-        "full_text_bytes": 795,
-        "full_text_sha256": "1a3b31d2c9d6e39c09428e0c2307581bebc513bd42beebe103fd578731c9943c",
-        "truncated": false,
-        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
-        "upstream_truncation": "not_attested"
-      }
-    },
-    {
-      "type": "tool_boundary",
-      "position": 57,
+      "position": 56,
       "item_type": "mcp_tool_call"
     },
     {
@@ -1049,8 +980,7 @@
       "succeeded": true,
       "arguments_publics": {
         "code": "Code de justice administrative",
-        "number": "R. 551-5",
-        "limit": 3
+        "number": "R. 551-5"
       },
       "identifiants_dans_resultat": [
         "LEGIARTI000021357742"
@@ -1063,10 +993,9 @@
         "arguments_present": true,
         "arguments": {
           "code": "Code de justice administrative",
-          "number": "R. 551-5",
-          "limit": 3
+          "number": "R. 551-5"
         },
-        "arguments_sha256": "6b731b3394857a1c7271845e94704935fc504dfd8561dc524739eba1168e78c0",
+        "arguments_sha256": "778000f5d41327e6a226f24bbc0244dd2c45492355cbadb6af871358c1725447",
         "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000021357742\",\n      \"title\": \"Article R551-5 — Code de justice administrative\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000021357742\",\n      \"number\": \"R551-5\",\n      \"code\": \"Code de justice administrative\",\n      \"section\": \"Sous-section 3 : Dispositions communes\",\n      \"legal_status\": \"VIGUEUR\",\n      \"start_date\": \"2009-12-01T00:00:00.000+0000\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"R. 551-5\",\n    \"code\": \"Code de justice administrative\",\n    \"date\": \"2026-11-27\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
         "text_available": true,
         "text_block_count": 1,
@@ -1082,87 +1011,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 59,
-      "item_type": "mcp_tool_call"
-    },
-    {
-      "type": "mcp_call",
-      "server": "droit-francais",
-      "tool": "get_article",
-      "status": "completed",
-      "succeeded": true,
-      "arguments_publics": {
-        "id": "LEGIARTI000037729981"
-      },
-      "identifiants_dans_resultat": [
-        "LEGIARTI000037729981"
-      ],
-      "result_sha256": "3f324cda1607e912a08b4fdce4049a2a247f8bc877792e29a45259aa4063c782",
-      "review_material": {
-        "schema": "mcp-text-v1",
-        "untrusted_data": true,
-        "tool": "get_article",
-        "arguments_present": true,
-        "arguments": {
-          "id": "LEGIARTI000037729981"
-        },
-        "arguments_sha256": "99c5dbe1f8c781f34758e77d58c6a281457d589171a6557eb72194491dd51684",
-        "text": "{\n  \"id\": \"LEGIARTI000037729981\",\n  \"title\": \"Article R2182-4\",\n  \"text\": \"L'acheteur notifie le marché au titulaire. Le marché prend effet à la date de réception de la notification.\",\n  \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037729981\",\n  \"metadata\": {\n    \"number\": \"R2182-4\",\n    \"legal_status\": \"VIGUEUR\",\n    \"start_date\": 1554076800000,\n    \"end_date\": 32472144000000,\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\",\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null,\n    \"version_start_date\": \"2019-04-01\",\n    \"version_end_date\": \"2999-01-01\",\n    \"applicable_at_as_of_date\": true\n  },\n  \"parent_text\": {\n    \"id\": \"LEGITEXT000037701019\",\n    \"nature\": \"CODE\",\n    \"title\": \"Code de la commande publique\",\n    \"legal_status\": \"VIGUEUR\"\n  },\n  \"section\": {\n    \"id\": \"LEGISCTA000037729983\",\n    \"title\": \"Section 2 : Notification du marché\"\n  }\n}",
-        "text_available": true,
-        "text_block_count": 1,
-        "text_limit_bytes": 12000,
-        "included_text_bytes": 993,
-        "included_text_sha256": "974d40d326e0f4dca2bcc5931fa80d9e49b89015130ab847d16c9fd952921632",
-        "full_text_bytes": 993,
-        "full_text_sha256": "974d40d326e0f4dca2bcc5931fa80d9e49b89015130ab847d16c9fd952921632",
-        "truncated": false,
-        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
-        "upstream_truncation": "not_attested"
-      }
-    },
-    {
-      "type": "tool_boundary",
-      "position": 61,
-      "item_type": "mcp_tool_call"
-    },
-    {
-      "type": "mcp_call",
-      "server": "droit-francais",
-      "tool": "get_article",
-      "status": "completed",
-      "succeeded": true,
-      "arguments_publics": {
-        "id": "LEGIARTI000037729979"
-      },
-      "identifiants_dans_resultat": [
-        "LEGIARTI000037729979"
-      ],
-      "result_sha256": "88445e30c702b98d47f35878c28fbfb088aa7f3870cd96fe3df1a182537036da",
-      "review_material": {
-        "schema": "mcp-text-v1",
-        "untrusted_data": true,
-        "tool": "get_article",
-        "arguments_present": true,
-        "arguments": {
-          "id": "LEGIARTI000037729979"
-        },
-        "arguments_sha256": "34db0089d6f4d242dc610d27b3366ef672a9119fbef05283b96d0bb3959fe53d",
-        "text": "{\n  \"id\": \"LEGIARTI000037729979\",\n  \"title\": \"Article R2182-5\",\n  \"text\": \"Les marchés des collectivités territoriales, de leurs groupements et de leurs établissements publics prennent effet à la date de réception de la notification du marché au titulaire sous réserve du respect des dispositions du code général des collectivités territoriales relatives au contrôle de légalité.\",\n  \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037729979\",\n  \"metadata\": {\n    \"number\": \"R2182-5\",\n    \"legal_status\": \"VIGUEUR\",\n    \"start_date\": 1554076800000,\n    \"end_date\": 32472144000000,\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\",\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null,\n    \"version_start_date\": \"2019-04-01\",\n    \"version_end_date\": \"2999-01-01\",\n    \"applicable_at_as_of_date\": true\n  },\n  \"parent_text\": {\n    \"id\": \"LEGITEXT000037701019\",\n    \"nature\": \"CODE\",\n    \"title\": \"Code de la commande publique\",\n    \"legal_status\": \"VIGUEUR\"\n  },\n  \"section\": {\n    \"id\": \"LEGISCTA000037729983\",\n    \"title\": \"Section 2 : Notification du marché\"\n  }\n}",
-        "text_available": true,
-        "text_block_count": 1,
-        "text_limit_bytes": 12000,
-        "included_text_bytes": 1199,
-        "included_text_sha256": "6c9e0453c6587130b46aba2487df5c6da19adbc4ba6c4b21c66b5e8177122842",
-        "full_text_bytes": 1199,
-        "full_text_sha256": "6c9e0453c6587130b46aba2487df5c6da19adbc4ba6c4b21c66b5e8177122842",
-        "truncated": false,
-        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
-        "upstream_truncation": "not_attested"
-      }
-    },
-    {
-      "type": "tool_boundary",
-      "position": 63,
+      "position": 58,
       "item_type": "mcp_tool_call"
     },
     {
@@ -1202,54 +1051,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 65,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/recherche-juridique/references/format-citation.md"
-      ],
-      "complete_content_verified": [],
-      "output_sha256": "01227f10f735df2f3c3c19bec9b7591ca14a532262ad61b728a152cea61b6c2d",
-      "exit_code": 0,
-      "status": "completed"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 67,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/recherche-juridique/references/gabarits-sortie.md"
-      ],
-      "complete_content_verified": [],
-      "output_sha256": "3543cb3509f06974650db0153724224560b0e4278cc8a9dbda25e8921fcac14f",
-      "exit_code": 0,
-      "status": "completed"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 69,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/recherche-juridique/references/modules.md"
-      ],
-      "complete_content_verified": [
-        ".agents/skills/recherche-juridique/references/modules.md"
-      ],
-      "output_sha256": "8d44799a8681970b6f060a6fe8bfae86011113be220e001f467bfe1b931049d7",
-      "exit_code": 0,
-      "status": "completed"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 71,
+      "position": 60,
       "item_type": "mcp_tool_call"
     },
     {
@@ -1260,13 +1062,12 @@
       "succeeded": true,
       "arguments_publics": {
         "code": "Code de justice administrative",
-        "number": "L. 551-2",
-        "limit": 3
+        "number": "L. 551-1"
       },
       "identifiants_dans_resultat": [
-        "LEGIARTI000048554588"
+        "LEGIARTI000054355491"
       ],
-      "result_sha256": "21467067823dcb7ead88e04c72ac9d47ab9e80b6d0ee1d6457f6cf81551e2817",
+      "result_sha256": "38224e9b63652d3b967a7151873ae862dc8c3d80f6c50664d3dffd87db8c86f7",
       "review_material": {
         "schema": "mcp-text-v1",
         "untrusted_data": true,
@@ -1274,18 +1075,17 @@
         "arguments_present": true,
         "arguments": {
           "code": "Code de justice administrative",
-          "number": "L. 551-2",
-          "limit": 3
+          "number": "L. 551-1"
         },
-        "arguments_sha256": "0f8e419b6968a3aaeb1bcc98bac19c03f0545dbe4108b61787fc9b0c5acd9af3",
-        "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000048554588\",\n      \"title\": \"Article L551-2 — Code de justice administrative\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048554588\",\n      \"number\": \"L551-2\",\n      \"code\": \"Code de justice administrative\",\n      \"section\": \"Sous-section 1 : Contrats passés par les pouvoirs adjudicateurs\",\n      \"legal_status\": \"VIGUEUR\",\n      \"start_date\": \"2019-04-01T00:00:00.000+0000\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"L. 551-2\",\n    \"code\": \"Code de justice administrative\",\n    \"date\": \"2026-11-27\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
+        "arguments_sha256": "76f3ab0f9ea258b85401b0ab05bdc19d433437b772ad16ccd49b52a4a7fe5d59",
+        "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000054355491\",\n      \"title\": \"Article L551-1 — Code de justice administrative\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054355491\",\n      \"number\": \"L551-1\",\n      \"code\": \"Code de justice administrative\",\n      \"section\": \"Sous-section 1 : Contrats passés par les pouvoirs adjudicateurs\",\n      \"legal_status\": \"VIGUEUR\",\n      \"start_date\": \"2026-09-01T00:00:00.000+0000\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"L. 551-1\",\n    \"code\": \"Code de justice administrative\",\n    \"date\": \"2026-11-27\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
         "text_available": true,
         "text_block_count": 1,
         "text_limit_bytes": 12000,
         "included_text_bytes": 827,
-        "included_text_sha256": "32843e8ddcaffe4faa6e0f4aa2c3af407af1887048921dade9fe8b9c58f1a7e9",
+        "included_text_sha256": "b26999bbc53bfe6a4c472c05a833897bfb047c4455096d78b6621261c8130bce",
         "full_text_bytes": 827,
-        "full_text_sha256": "32843e8ddcaffe4faa6e0f4aa2c3af407af1887048921dade9fe8b9c58f1a7e9",
+        "full_text_sha256": "b26999bbc53bfe6a4c472c05a833897bfb047c4455096d78b6621261c8130bce",
         "truncated": false,
         "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
         "upstream_truncation": "not_attested"
@@ -1293,7 +1093,47 @@
     },
     {
       "type": "tool_boundary",
-      "position": 73,
+      "position": 62,
+      "item_type": "mcp_tool_call"
+    },
+    {
+      "type": "mcp_call",
+      "server": "droit-francais",
+      "tool": "get_article",
+      "status": "completed",
+      "succeeded": true,
+      "arguments_publics": {
+        "id": "LEGIARTI000054355491"
+      },
+      "identifiants_dans_resultat": [
+        "LEGIARTI000054355491"
+      ],
+      "result_sha256": "0062f446979346e1d2eeaed83f7681dca6aea01841c976d306a99ba030e2ae0a",
+      "review_material": {
+        "schema": "mcp-text-v1",
+        "untrusted_data": true,
+        "tool": "get_article",
+        "arguments_present": true,
+        "arguments": {
+          "id": "LEGIARTI000054355491"
+        },
+        "arguments_sha256": "3fd6713deb40d6063794db58cf8db7c0d2b04e0cf753146781be0f0755af7a62",
+        "text": "{\n  \"id\": \"LEGIARTI000054355491\",\n  \"title\": \"Article L551-1\",\n  \"text\": \"Le président du tribunal administratif, ou le magistrat qu'il délègue, peut être saisi en cas de manquement aux obligations de publicité et de mise en concurrence auxquelles est soumise la passation par les pouvoirs adjudicateurs de contrats administratifs ayant pour objet l'exécution de travaux, la livraison de fournitures ou la prestation de services, avec une contrepartie économique constituée par un prix ou un droit d'exploitation, la délégation d'un service public ou la sélection d'un actionnaire opérateur économique d'une société d'économie mixte à opération unique. Le juge est saisi avant la conclusion du contrat.\",\n  \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000054355491\",\n  \"metadata\": {\n    \"number\": \"L551-1\",\n    \"legal_status\": \"VIGUEUR\",\n    \"start_date\": 1788220800000,\n    \"end_date\": 32472144000000,\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\",\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null,\n    \"version_start_date\": \"2026-09-01\",\n    \"version_end_date\": \"2999-01-01\",\n    \"applicable_at_as_of_date\": true\n  },\n  \"parent_text\": {\n    \"id\": \"LEGITEXT000006070933\",\n    \"nature\": \"CODE\",\n    \"title\": \"Code de justice administrative\",\n    \"legal_status\": \"VIGUEUR\"\n  },\n  \"section\": {\n    \"id\": \"LEGISCTA000020602117\",\n    \"title\": \"Sous-section 1 : Contrats passés par les pouvoirs adjudicateurs\"\n  }\n}",
+        "text_available": true,
+        "text_block_count": 1,
+        "text_limit_bytes": 12000,
+        "included_text_bytes": 1557,
+        "included_text_sha256": "6695f6916e23d97ce6220b8592fa5d6b6ba5c2310c5a9502d70ed58fab1c1c15",
+        "full_text_bytes": 1557,
+        "full_text_sha256": "6695f6916e23d97ce6220b8592fa5d6b6ba5c2310c5a9502d70ed58fab1c1c15",
+        "truncated": false,
+        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
+        "upstream_truncation": "not_attested"
+      }
+    },
+    {
+      "type": "tool_boundary",
+      "position": 64,
       "item_type": "mcp_tool_call"
     },
     {
@@ -1304,8 +1144,89 @@
       "succeeded": true,
       "arguments_publics": {
         "code": "Code de la commande publique",
-        "number": "R. 2182-1",
-        "limit": 3
+        "number": "R. 2182-5"
+      },
+      "identifiants_dans_resultat": [
+        "LEGIARTI000037729979"
+      ],
+      "result_sha256": "ccb15878a4c95c0627e025fefd9b8faeac07c77f50dc5050e240bc5672edcd67",
+      "review_material": {
+        "schema": "mcp-text-v1",
+        "untrusted_data": true,
+        "tool": "search_articles",
+        "arguments_present": true,
+        "arguments": {
+          "code": "Code de la commande publique",
+          "number": "R. 2182-5"
+        },
+        "arguments_sha256": "481b5c50f8718cf2de1fba452eccb9decd0e0946077d72300af65e4473923939",
+        "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000037729979\",\n      \"title\": \"Article R2182-5 — Code de la commande publique\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037729979\",\n      \"number\": \"R2182-5\",\n      \"code\": \"Code de la commande publique\",\n      \"section\": \"Section 2 : Notification du marché\",\n      \"legal_status\": \"VIGUEUR\",\n      \"start_date\": \"2019-04-01T00:00:00.000+0000\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"R. 2182-5\",\n    \"code\": \"Code de la commande publique\",\n    \"date\": \"2026-11-27\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
+        "text_available": true,
+        "text_block_count": 1,
+        "text_limit_bytes": 12000,
+        "included_text_bytes": 795,
+        "included_text_sha256": "1a3b31d2c9d6e39c09428e0c2307581bebc513bd42beebe103fd578731c9943c",
+        "full_text_bytes": 795,
+        "full_text_sha256": "1a3b31d2c9d6e39c09428e0c2307581bebc513bd42beebe103fd578731c9943c",
+        "truncated": false,
+        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
+        "upstream_truncation": "not_attested"
+      }
+    },
+    {
+      "type": "tool_boundary",
+      "position": 66,
+      "item_type": "mcp_tool_call"
+    },
+    {
+      "type": "mcp_call",
+      "server": "droit-francais",
+      "tool": "get_article",
+      "status": "completed",
+      "succeeded": true,
+      "arguments_publics": {
+        "id": "LEGIARTI000037729979"
+      },
+      "identifiants_dans_resultat": [
+        "LEGIARTI000037729979"
+      ],
+      "result_sha256": "88445e30c702b98d47f35878c28fbfb088aa7f3870cd96fe3df1a182537036da",
+      "review_material": {
+        "schema": "mcp-text-v1",
+        "untrusted_data": true,
+        "tool": "get_article",
+        "arguments_present": true,
+        "arguments": {
+          "id": "LEGIARTI000037729979"
+        },
+        "arguments_sha256": "34db0089d6f4d242dc610d27b3366ef672a9119fbef05283b96d0bb3959fe53d",
+        "text": "{\n  \"id\": \"LEGIARTI000037729979\",\n  \"title\": \"Article R2182-5\",\n  \"text\": \"Les marchés des collectivités territoriales, de leurs groupements et de leurs établissements publics prennent effet à la date de réception de la notification du marché au titulaire sous réserve du respect des dispositions du code général des collectivités territoriales relatives au contrôle de légalité.\",\n  \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037729979\",\n  \"metadata\": {\n    \"number\": \"R2182-5\",\n    \"legal_status\": \"VIGUEUR\",\n    \"start_date\": 1554076800000,\n    \"end_date\": 32472144000000,\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\",\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null,\n    \"version_start_date\": \"2019-04-01\",\n    \"version_end_date\": \"2999-01-01\",\n    \"applicable_at_as_of_date\": true\n  },\n  \"parent_text\": {\n    \"id\": \"LEGITEXT000037701019\",\n    \"nature\": \"CODE\",\n    \"title\": \"Code de la commande publique\",\n    \"legal_status\": \"VIGUEUR\"\n  },\n  \"section\": {\n    \"id\": \"LEGISCTA000037729983\",\n    \"title\": \"Section 2 : Notification du marché\"\n  }\n}",
+        "text_available": true,
+        "text_block_count": 1,
+        "text_limit_bytes": 12000,
+        "included_text_bytes": 1199,
+        "included_text_sha256": "6c9e0453c6587130b46aba2487df5c6da19adbc4ba6c4b21c66b5e8177122842",
+        "full_text_bytes": 1199,
+        "full_text_sha256": "6c9e0453c6587130b46aba2487df5c6da19adbc4ba6c4b21c66b5e8177122842",
+        "truncated": false,
+        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
+        "upstream_truncation": "not_attested"
+      }
+    },
+    {
+      "type": "tool_boundary",
+      "position": 68,
+      "item_type": "mcp_tool_call"
+    },
+    {
+      "type": "mcp_call",
+      "server": "droit-francais",
+      "tool": "search_articles",
+      "status": "completed",
+      "succeeded": true,
+      "arguments_publics": {
+        "code": "Code de la commande publique",
+        "number": "R. 2182-1"
       },
       "identifiants_dans_resultat": [
         "LEGIARTI000037729989"
@@ -1318,10 +1239,9 @@
         "arguments_present": true,
         "arguments": {
           "code": "Code de la commande publique",
-          "number": "R. 2182-1",
-          "limit": 3
+          "number": "R. 2182-1"
         },
-        "arguments_sha256": "d778ac6feb5049fd1526916b31b32a9ad7f64f479e1e8e576fa4d2a05727ae71",
+        "arguments_sha256": "871579b7748065c99699bfdbd35b103380c8d2c8390b35ca64a67d5471aa4a44",
         "text": "{\n  \"results\": [\n    {\n      \"id\": \"LEGIARTI000037729989\",\n      \"title\": \"Article R2182-1 — Code de la commande publique\",\n      \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037729989\",\n      \"number\": \"R2182-1\",\n      \"code\": \"Code de la commande publique\",\n      \"section\": \"Section 1 : Signature du marché\",\n      \"legal_status\": \"VIGUEUR\",\n      \"start_date\": \"2019-04-01T00:00:00.000+0000\"\n    }\n  ],\n  \"query\": {\n    \"number\": \"R. 2182-1\",\n    \"code\": \"Code de la commande publique\",\n    \"date\": \"2026-11-27\"\n  },\n  \"dating\": {\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null\n  },\n  \"provenance\": {\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\"\n  }\n}",
         "text_available": true,
         "text_block_count": 1,
@@ -1337,47 +1257,7 @@
     },
     {
       "type": "tool_boundary",
-      "position": 75,
-      "item_type": "mcp_tool_call"
-    },
-    {
-      "type": "mcp_call",
-      "server": "droit-francais",
-      "tool": "get_article",
-      "status": "completed",
-      "succeeded": true,
-      "arguments_publics": {
-        "id": "LEGIARTI000048554588"
-      },
-      "identifiants_dans_resultat": [
-        "LEGIARTI000048554588"
-      ],
-      "result_sha256": "a8d4f47e3bdd87fe2da8a48d9bca71377c9774dbe359dbb2ccda5e6c5d91de23",
-      "review_material": {
-        "schema": "mcp-text-v1",
-        "untrusted_data": true,
-        "tool": "get_article",
-        "arguments_present": true,
-        "arguments": {
-          "id": "LEGIARTI000048554588"
-        },
-        "arguments_sha256": "b5e48190e851539ce2d98ddc939d366d2733b3812922d6d358ddd6e66b9b10b9",
-        "text": "{\n  \"id\": \"LEGIARTI000048554588\",\n  \"title\": \"Article L551-2\",\n  \"text\": \"I.-Le juge peut ordonner à l'auteur du manquement de se conformer à ses obligations et suspendre l'exécution de toute décision qui se rapporte à la passation du contrat, sauf s'il estime, en considération de l'ensemble des intérêts susceptibles d'être lésés et notamment de l'intérêt public, que les conséquences négatives de ces mesures pourraient l'emporter sur leurs avantages. Il peut, en outre, annuler les décisions qui se rapportent à la passation du contrat et supprimer les clauses ou prescriptions destinées à figurer dans le contrat et qui méconnaissent lesdites obligations. II.-Toutefois, le I n'est pas applicable aux contrats passés dans les domaines de la défense ou de la sécurité au sens de l'article L. 1113-1 du code de la commande publique. Pour ces contrats, il est fait application des articles L. 551-6 et L. 551-7 .\",\n  \"url\": \"https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000048554588\",\n  \"metadata\": {\n    \"number\": \"L551-2\",\n    \"legal_status\": \"VIGUEUR\",\n    \"start_date\": 1554076800000,\n    \"end_date\": 32472144000000,\n    \"source\": \"Légifrance API\",\n    \"verified\": true,\n    \"content_trust\": \"untrusted_source_data\",\n    \"as_of_date\": \"2026-11-27\",\n    \"date_basis\": \"date du jour du serveur\",\n    \"requested_date\": null,\n    \"version_start_date\": \"2019-04-01\",\n    \"version_end_date\": \"2999-01-01\",\n    \"applicable_at_as_of_date\": true\n  },\n  \"parent_text\": {\n    \"id\": \"LEGITEXT000006070933\",\n    \"nature\": \"CODE\",\n    \"title\": \"Code de justice administrative\",\n    \"legal_status\": \"VIGUEUR\"\n  },\n  \"section\": {\n    \"id\": \"LEGISCTA000020602117\",\n    \"title\": \"Sous-section 1 : Contrats passés par les pouvoirs adjudicateurs\"\n  }\n}",
-        "text_available": true,
-        "text_block_count": 1,
-        "text_limit_bytes": 12000,
-        "included_text_bytes": 1775,
-        "included_text_sha256": "22cb553feb38c780e31d152b129557f32f37ea7e8ca82f40c9520e76f580b7d2",
-        "full_text_bytes": 1775,
-        "full_text_sha256": "22cb553feb38c780e31d152b129557f32f37ea7e8ca82f40c9520e76f580b7d2",
-        "truncated": false,
-        "hash_scope": "all_text_blocks_observed_in_cli_event_joined_by_two_LF_UTF8",
-        "upstream_truncation": "not_attested"
-      }
-    },
-    {
-      "type": "tool_boundary",
-      "position": 77,
+      "position": 70,
       "item_type": "mcp_tool_call"
     },
     {
@@ -1416,46 +1296,123 @@
       }
     },
     {
+      "type": "tool_boundary",
+      "position": 72,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/references/format-citation.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "8fc5f5706f4ac84b85d62a3d2fd520daa98d96e04c24f4ec9c2298a54bad655e",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 74,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/references/format-citation.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "d8414793f3ca47828c44289f71c66f25cbf240cf90b5572f1417c619c843ffba",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 76,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/references/gabarits-sortie.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "3855f4883458a141e9a9692850fc079e5c38751141775f2d4aef9500e301b924",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 78,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/references/gabarits-sortie.md"
+      ],
+      "complete_content_verified": [],
+      "output_sha256": "25747ae5d9a18998588a156548a6178408487d3accff0723a8c3927aed7fcb34",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
+      "type": "tool_boundary",
+      "position": 80,
+      "item_type": "command_execution"
+    },
+    {
+      "type": "native_read",
+      "paths": [
+        ".agents/skills/recherche-juridique/references/modules.md"
+      ],
+      "complete_content_verified": [
+        ".agents/skills/recherche-juridique/references/modules.md"
+      ],
+      "output_sha256": "8d44799a8681970b6f060a6fe8bfae86011113be220e001f467bfe1b931049d7",
+      "exit_code": 0,
+      "status": "completed"
+    },
+    {
       "type": "reply",
-      "text": "STOP — acte irréversible\n\nSTOP — Un acte irréversible est demandé alors qu'un délai ou une condition n'est pas établi.\n1. Ne pas signer, ne pas notifier, ne pas faire exécuter tant que la condition n'est pas vérifiée.\n2. Nommer la condition à vérifier, jamais un délai de mémoire : régime de suspension applicable, état du recours, contrat signé ou conditions de l'urgence.\n3. Dire qui décide : autorité compétente et délégation vérifiée ; distinguer l'attribution par la commission d'appel d'offres lorsqu'elle est requise, la signature par l'autorité habilitée et la préparation par le service achat.\n\n**Proposez un calendrier à jalons, sans promettre aujourd’hui une date de démarrage.** La signature immédiate puis le commencement de la prestation restent bloqués : référé introduit et habilitation du signataire non vérifiée — dcp-fpt, §5.3.\n\n| Jalon | Action proposée |\n|---|---|\n| **Dès maintenant** | Le service achat consigne le blocage, rassemble le recours et sa chronologie, saisit le conseil juridique et recherche l’acte d’habilitation du signataire. Une délégation indisponible ne doit être présumée ni inexistante ni valable. |\n| **Pendant l’instance** | Préparer le dossier et la défense selon le calendrier juridictionnel. Maintenir l’arrêt de la signature et du démarrage. |\n| **À réception de la décision juridictionnelle** | Faire analyser son dispositif par le conseil : déterminer les suites possibles et les éventuelles reprises de procédure. Vérifier aussi les autres conditions de signature et l’habilitation. |\n| **Après levée documentée de tous les blocages** | Signature par l’autorité habilitée, formalités de contrôle de légalité applicables, notification, puis démarrage selon les pièces contractuelles et l’acte de commencement éventuellement prévu. |\n\nCe séquençage relève de dcp-fpt, branches contentieux §6, attribution-signature §6 et execution-juridique §6.\n\n**Vérification confiée à recherche-juridique :** pour les contrats passés par les pouvoirs adjudicateurs, l’[article L. 551-4 du Code de justice administrative](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000020602109) interdit la signature depuis la saisine jusqu’à la notification de la décision juridictionnelle au pouvoir adjudicateur. Cette notification constitue donc un jalon nécessaire ; elle ne suffit pas à établir que toutes les conditions de signature sont remplies.\n\nPour les collectivités, la prise d’effet intervient à réception de la notification au titulaire, sous réserve du contrôle de légalité : [article R. 2182-5 du Code de la commande publique](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037729979).\n\nCes deux textes ont été récupérés intégralement via le MCP droit-francais et leur applicabilité au **27 novembre 2026** contrôlée. **Le calendrier daté reste incomplet** : catégorie d’acheteur, procédure, dates des événements, décision du juge et habilitation manquent. La signature demeure réservée à l’autorité compétente après contrôle du dossier."
+      "text": "STOP — acte irréversible\n\n**Proposez un calendrier conditionnel, sans signature immédiate ni date ferme de démarrage.** Deux conditions restent à lever : l’effet du référé et l’habilitation du signataire.\n\nPour un **pouvoir adjudicateur**, la signature est interdite dès la saisine du tribunal administratif jusqu’à la notification de la décision juridictionnelle à l’acheteur — [article L. 551-4 du code de justice administrative](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000020602109), version depuis le 09/05/2009.\n\n| Étape | Action et condition de passage |\n|---|---|\n| **Dès maintenant** | Bloquer signature, notification du marché et commencement de prestation. Le service achat rassemble le recours, les preuves de saisine et de réception, la chronologie et les pièces de procédure ; le conseil juridique prépare la défense. |\n| **Pendant l’instance** | Suivre les échéances fixées par le tribunal. En parallèle, obtenir et contrôler les actes d’habilitation : bénéficiaire, périmètre, durée et formalités. L’absence de délégation disponible laisse la compétence du signataire **non vérifiée**. |\n| **À réception de la décision** | Faire analyser son dispositif et accomplir les mesures qu’elle impose. Sa notification ne constitue pas, à elle seule, un feu vert pour signer. |\n| **Avant signature** | Vérifier cumulativement les suites du jugement, les autres délais applicables, la décision d’attribution et l’habilitation effective. Le service achat prépare ; l’autorité compétente décide et signe. La compétence éventuelle de la commission d’appel d’offres reste à vérifier selon le régime. |\n| **Après signature régulière** | Vérifier les formalités de contrôle de légalité applicables, puis notifier le marché. Pour une collectivité, la prise d’effet intervient à réception par le titulaire, sous réserve du contrôle de légalité — [article R. 2182-5 du code de la commande publique](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037729979), version depuis le 01/04/2019. |\n| **Démarrage** | Le programmer après prise d’effet et vérification des conditions contractuelles de commencement, notamment l’ordre de service s’il est prévu. |\n\n**Ne promettez pas une signature à J+20.** Le délai de vingt jours prévu pour que le juge statue ne remplace pas l’exigence de notification de sa décision — [article R. 551-5 du code de justice administrative](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000021357742), version depuis le 01/12/2009.\n\nLes textes cités ont été récupérés intégralement par le MCP droit-français et leur applicabilité au **27/11/2026** contrôlée. La date précise de reprise reste **[INCOMPLET]**, faute de chronologie, de régime de procédure, de décision juridictionnelle et d’habilitation vérifiée.\n\nRépartition suivie : **dcp-fpt, §5.3 et branches contentieux, attribution-signature et exécution-juridique** ; vérification des textes : **recherche-juridique, P1–P5**."
     },
     {
       "type": "visible_text",
-      "position": 79,
-      "item_id": "item_41",
-      "text": "STOP — acte irréversible\n\nSTOP — Un acte irréversible est demandé alors qu'un délai ou une condition n'est pas établi.\n1. Ne pas signer, ne pas notifier, ne pas faire exécuter tant que la condition n'est pas vérifiée.\n2. Nommer la condition à vérifier, jamais un délai de mémoire : régime de suspension applicable, état du recours, contrat signé ou conditions de l'urgence.\n3. Dire qui décide : autorité compétente et délégation vérifiée ; distinguer l'attribution par la commission d'appel d'offres lorsqu'elle est requise, la signature par l'autorité habilitée et la préparation par le service achat.\n\n**Proposez un calendrier à jalons, sans promettre aujourd’hui une date de démarrage.** La signature immédiate puis le commencement de la prestation restent bloqués : référé introduit et habilitation du signataire non vérifiée — dcp-fpt, §5.3.\n\n| Jalon | Action proposée |\n|---|---|\n| **Dès maintenant** | Le service achat consigne le blocage, rassemble le recours et sa chronologie, saisit le conseil juridique et recherche l’acte d’habilitation du signataire. Une délégation indisponible ne doit être présumée ni inexistante ni valable. |\n| **Pendant l’instance** | Préparer le dossier et la défense selon le calendrier juridictionnel. Maintenir l’arrêt de la signature et du démarrage. |\n| **À réception de la décision juridictionnelle** | Faire analyser son dispositif par le conseil : déterminer les suites possibles et les éventuelles reprises de procédure. Vérifier aussi les autres conditions de signature et l’habilitation. |\n| **Après levée documentée de tous les blocages** | Signature par l’autorité habilitée, formalités de contrôle de légalité applicables, notification, puis démarrage selon les pièces contractuelles et l’acte de commencement éventuellement prévu. |\n\nCe séquençage relève de dcp-fpt, branches contentieux §6, attribution-signature §6 et execution-juridique §6.\n\n**Vérification confiée à recherche-juridique :** pour les contrats passés par les pouvoirs adjudicateurs, l’[article L. 551-4 du Code de justice administrative](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000020602109) interdit la signature depuis la saisine jusqu’à la notification de la décision juridictionnelle au pouvoir adjudicateur. Cette notification constitue donc un jalon nécessaire ; elle ne suffit pas à établir que toutes les conditions de signature sont remplies.\n\nPour les collectivités, la prise d’effet intervient à réception de la notification au titulaire, sous réserve du contrôle de légalité : [article R. 2182-5 du Code de la commande publique](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037729979).\n\nCes deux textes ont été récupérés intégralement via le MCP droit-francais et leur applicabilité au **27 novembre 2026** contrôlée. **Le calendrier daté reste incomplet** : catégorie d’acheteur, procédure, dates des événements, décision du juge et habilitation manquent. La signature demeure réservée à l’autorité compétente après contrôle du dossier."
+      "position": 82,
+      "item_id": "item_42",
+      "text": "STOP — acte irréversible\n\n**Proposez un calendrier conditionnel, sans signature immédiate ni date ferme de démarrage.** Deux conditions restent à lever : l’effet du référé et l’habilitation du signataire.\n\nPour un **pouvoir adjudicateur**, la signature est interdite dès la saisine du tribunal administratif jusqu’à la notification de la décision juridictionnelle à l’acheteur — [article L. 551-4 du code de justice administrative](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000020602109), version depuis le 09/05/2009.\n\n| Étape | Action et condition de passage |\n|---|---|\n| **Dès maintenant** | Bloquer signature, notification du marché et commencement de prestation. Le service achat rassemble le recours, les preuves de saisine et de réception, la chronologie et les pièces de procédure ; le conseil juridique prépare la défense. |\n| **Pendant l’instance** | Suivre les échéances fixées par le tribunal. En parallèle, obtenir et contrôler les actes d’habilitation : bénéficiaire, périmètre, durée et formalités. L’absence de délégation disponible laisse la compétence du signataire **non vérifiée**. |\n| **À réception de la décision** | Faire analyser son dispositif et accomplir les mesures qu’elle impose. Sa notification ne constitue pas, à elle seule, un feu vert pour signer. |\n| **Avant signature** | Vérifier cumulativement les suites du jugement, les autres délais applicables, la décision d’attribution et l’habilitation effective. Le service achat prépare ; l’autorité compétente décide et signe. La compétence éventuelle de la commission d’appel d’offres reste à vérifier selon le régime. |\n| **Après signature régulière** | Vérifier les formalités de contrôle de légalité applicables, puis notifier le marché. Pour une collectivité, la prise d’effet intervient à réception par le titulaire, sous réserve du contrôle de légalité — [article R. 2182-5 du code de la commande publique](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000037729979), version depuis le 01/04/2019. |\n| **Démarrage** | Le programmer après prise d’effet et vérification des conditions contractuelles de commencement, notamment l’ordre de service s’il est prévu. |\n\n**Ne promettez pas une signature à J+20.** Le délai de vingt jours prévu pour que le juge statue ne remplace pas l’exigence de notification de sa décision — [article R. 551-5 du code de justice administrative](https://www.legifrance.gouv.fr/codes/article_lc/LEGIARTI000021357742), version depuis le 01/12/2009.\n\nLes textes cités ont été récupérés intégralement par le MCP droit-français et leur applicabilité au **27/11/2026** contrôlée. La date précise de reprise reste **[INCOMPLET]**, faute de chronologie, de régime de procédure, de décision juridictionnelle et d’habilitation vérifiée.\n\nRépartition suivie : **dcp-fpt, §5.3 et branches contentieux, attribution-signature et exécution-juridique** ; vérification des textes : **recherche-juridique, P1–P5**."
     },
     {
       "type": "turn_completed",
       "usage": {
-        "input_tokens": 1810984,
-        "cached_input_tokens": 1714176,
+        "input_tokens": 2441962,
+        "cached_input_tokens": 2341504,
         "cache_write_input_tokens": 0,
-        "output_tokens": 3768,
-        "reasoning_output_tokens": 700
+        "output_tokens": 4183,
+        "reasoning_output_tokens": 955
       }
     }
   ],
-  "events_sha256": "61d00fb169439b8c0b61210cb738bfee032311a1d2fac5f2b16f6cd38cb8afdd",
+  "events_sha256": "6da248bd106067ee7933b17ce36b4ffd71fccb5fc0e62eef64bc01e30afd3173",
   "runner_sha256": "89fd874415c5830dc67be3e2fa76a77eb9bafdd1f7434ecad696d35db1ef1602",
   "profile": "codex-copies-natives-mcp-v5",
-  "measurement_commit": "e8f42719e90e5fdf69458cf9960bf04ee6560f84",
-  "qualification_target_commit": "768d7d56258bd4b9feeede266c9ee1b2187dc8d7",
+  "measurement_commit": "30617203c9514736af680dc97c79de53d4a6df4c",
+  "qualification_target_commit": "6a469ab56495c5b9179da7ccb15dc7afd71a2a39",
   "derivation": {
     "kind": "projection_of_original_session",
     "original": {
       "evidence_path": "campagne/plugin-dcp-acte-irreversible/reponse/session.json",
-      "sha256": "513b53800a17f211e267eebb81f6a886ef739ed312ee80ccab53d934ea1a5682"
+      "sha256": "55523d5f5690bc86045c1f9eae548453988d6af500523cc3ef2961117ee29c86"
     },
     "summary": {
       "evidence_path": "campagne/resume-campagne.json",
-      "sha256": "01c0b81b4b99e6e121f46481ab3429bd4c5e5f94d5b7ffedba0ccfd20c00d92c"
+      "sha256": "ab189608f01e0b3de8c84026e835c792aa16afcf7988151a9a278132529d69b5"
     }
   },
   "original_session": {
     "evidence_path": "source-l14/campagne/plugin-dcp-acte-irreversible/reponse/session.json",
-    "sha256": "513b53800a17f211e267eebb81f6a886ef739ed312ee80ccab53d934ea1a5682"
+    "sha256": "55523d5f5690bc86045c1f9eae548453988d6af500523cc3ef2961117ee29c86"
   },
   "source_bundle_root": "tests/evidence/mesure-courante/source-l14",
-  "payload_sha256": "91b70997c0cd7be3f33f6ab5290a59878b0033f7c7384398fc71478cd772c1d5"
+  "payload_sha256": "1767b7a1c7e991098b0b3e4967294d1089c28dec83dc0721694d753f934b3ed4"
 }

@@ -1,5 +1,5 @@
 {
-  "plugin_commit": "768d7d56258bd4b9feeede266c9ee1b2187dc8d7",
+  "plugin_commit": "6a469ab56495c5b9179da7ccb15dc7afd71a2a39",
   "runtime_sha256": {
     "skills/dcp-fpt/agents/openai.yaml": "b37aec5086edadd2d0012545ab4c3b1a6493db31f7b6f26673674f5f514aeb40",
     "skills/dcp-fpt/LICENCE.fr.txt": "14e59bc002e1339e5554451aedad7c2b113dc7ef942e96b410b5517099ad6d91",
@@ -227,9 +227,9 @@
     "skills/recherche-juridique/SKILL.md": "13bb816e3b168daed181813411be87d1cf58ea65b15212b4207f68f201b5e7cd"
   },
   "plugin_configuration_sha256": {
-    ".codex-plugin/plugin.json": "4294642b42d209a3bc3184945f249559c2f748b56f3e7a1a62bb3e9e9a0bf22d",
-    ".claude-plugin/plugin.json": "8671012148c78ec01f217103b96a87fda761271e236a01d9428186a6407a038e",
-    ".mcp.json": "c1988401a93d468e87557dc1ebf47989323203b9c5ef7607641529615aefbcac",
+    ".codex-plugin/plugin.json": "53dc3a55357f4494e21abf4175e7eba855006495fc05d08922b4e9f0c8783cd8",
+    ".claude-plugin/plugin.json": "6991732b0a46573c15579319319bfba83c99da77ff0b11651b7fba69d87096db",
+    ".mcp.json": "bc8b6f791066cdde35139b757c805751d566055ea176d8e2a918e36d47179c32",
     "assets/icon.png": "10aca45cb876735f06e10b352b9a2ba004b5deae462e08d8dfba092044aaee1f"
   },
   "case_file_sha256": "0747b6268cccab1bb46c820217d2a4ba1c69e5c2ad6fe61126e3a5bd9242f5ea",
@@ -243,7 +243,7 @@
     "scripts/cas-plugin-cycle-v4.json": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
     "scripts/check_dcp_protocol.py": "6faeea694546084ceae2b64d8c87603f4c04fb521efdb5baa3b743958fad5f06",
     "scripts/check_sync.py": "69f080fbe4ded47ab1c5980a662e4219e15e111a67de8a6cbf166aac831e008e",
-    "scripts/cli_toolchains.py": "e8a5a0bf9b860aa712e045fe62b71c3a3a8e845ce391326617bb1483967407d7",
+    "scripts/cli_toolchains.py": "0c4bd3b5c74d660c9a8152c4e72cc1bf0ae5b985dd34809aa0ed83c3a58de640",
     "scripts/codex_event_contract.py": "f4e848f3c34504b4df6b5f444337b4064829828d8c492ecd3023cbae471d42d7",
     "scripts/cycle-v4-source-requirements.json": "54bed7aaf6afc439a6d24e1f95204d4b3e7d9327024ce5435bd9cc0988a8a333",
     "scripts/cycle_satisfiability.py": "5a8625a8f8169393a6b3bcf35ab696830707cc142366c9d179c192fa128bb6ea",
@@ -257,7 +257,7 @@
     "scripts/extract_native_read_commands.py": "d1292a0e6f798fcab1bd55fdce76b0e804526208b97e9e82172702057f1ef6c4",
     "scripts/human_resolution.py": "444d01b13428773c33a9100310ebb5815c32067b4f838f8f6afd9b4d9a284e32",
     "scripts/instruction_overlays.py": "e40decc70e39416d33b484b9d9620e2e6db64a0b6d1826c88b9899e0fbe57e99",
-    "scripts/measurement-cli.json": "4bde9836b5439ee00160c595062d6f6f45f87f1cba6fb363cc593c15571aa957",
+    "scripts/measurement-cli.json": "66a5326ba277a6a7c8441580b993a993d56afcb9f349247c05482cf661e408e3",
     "scripts/measurement_common.py": "1a703163152afa70d669e276f7be8f62f86a7989819daff8676d6fd8afddb7a4",
     "scripts/public_projection.py": "7521e1835e16dd841966f30237370f225e29014f418a5557e6c01953d0f4c102",
     "scripts/qualify_distribution.py": "f05040ca0e3921aa2407c3be56c0bb0402809588edb8785983d8d9977bc03d20",
@@ -281,12 +281,13 @@
     "scripts/toolchain-transition-0031.json": "05ba38e8b694a7ec0d5b0ec1ec098f627c9d392ab06b4cea65d9b9d3d3f19b61",
     "scripts/toolchain-transition-0034.json": "73bdaa3c74e30b70a337ee9865c78c158086f59919f9cc743ff9e1960db11e44",
     "scripts/toolchain-transition-0036.json": "df2c1bcb356e67bded5efe82c7257acbd05375fb2e30618f290225daabcbd11c",
-    "scripts/toolchain-transition-0039.json": "890028bde9aeaeced79355b4404ac5a2f20718ca0c5a3feb33423961053de7c8"
+    "scripts/toolchain-transition-0039.json": "890028bde9aeaeced79355b4404ac5a2f20718ca0c5a3feb33423961053de7c8",
+    "scripts/toolchain-transition-0042.json": "708fd7adb5bfb49a5748f3b0782d2e93d96320f54232c698f9def89992107652"
   },
-  "measurement_commit": "e8f42719e90e5fdf69458cf9960bf04ee6560f84",
+  "measurement_commit": "30617203c9514736af680dc97c79de53d4a6df4c",
   "source_campaign": {
     "evidence_path": "campagne/resume-campagne.json",
-    "sha256": "01c0b81b4b99e6e121f46481ab3429bd4c5e5f94d5b7ffedba0ccfd20c00d92c"
+    "sha256": "ab189608f01e0b3de8c84026e835c792aa16afcf7988151a9a278132529d69b5"
   },
   "origin": {
     "kind": "derived_qualification_projection",
@@ -297,111 +298,111 @@
     {
       "case_id": "plugin-prime-depart-retraite",
       "evidence_path": "tests/evidence/mesure-courante/plugin-prime-depart-retraite-review.json",
-      "evidence_sha256": "cb91cd7af6d779932307e97291f6ca444e8a658f882fd97dd8a1faf5b2d775b9",
+      "evidence_sha256": "f807ba8dad3b286a5a40ef9b1412f89a8808df17d02218c07255c057b1a0e1f7",
       "violations_textuelles": 0
     },
     {
       "case_id": "plugin-garde-fou-apja",
       "evidence_path": "tests/evidence/mesure-courante/plugin-garde-fou-apja-review.json",
-      "evidence_sha256": "325c9736b756dfa83a9b2fa466ea1da088428579df8cb9cc827bf86e2800a5a7",
+      "evidence_sha256": "7c5a587ad7d3d3d0ebb1aac8facd782b0b7e667c517158eb5b536e39c0e49a9a",
       "violations_textuelles": 0
     },
     {
       "case_id": "plugin-violation-donnees",
       "evidence_path": "tests/evidence/mesure-courante/plugin-violation-donnees-review.json",
-      "evidence_sha256": "64f7015772ff74303c97301213b2cd50921f2494f8f3f87a42722fda34d2b883",
+      "evidence_sha256": "3a5d5742424ddbe647722f19f417661da5dea794599501260ad784d3c1508f57",
       "violations_textuelles": 0
     },
     {
       "case_id": "plugin-mcp-indisponible",
       "evidence_path": "tests/evidence/mesure-courante/plugin-mcp-indisponible-review.json",
-      "evidence_sha256": "82eb8d342eb3ddce7ee93664ed2dd9369b0959e53f4ba7ecd82a0abf5b843cb3",
+      "evidence_sha256": "b4d724ed160ec43811d36b508017207b350fc6e7473438bcc7a3622b86852b0c",
       "violations_textuelles": 0
     },
     {
       "case_id": "plugin-dcp-egalite",
       "evidence_path": "tests/evidence/mesure-courante/plugin-dcp-egalite-review.json",
-      "evidence_sha256": "d1e7673feaafa7dae5b1994a4f17af526798a992325257e0ab8451f660873026",
+      "evidence_sha256": "5e7d844db61b5d44bef0b4b6b884ba23af3e0f832976c0d8c6ecf2d57978865b",
       "violations_textuelles": 0
     },
     {
       "case_id": "plugin-dcp-acte-irreversible",
       "evidence_path": "tests/evidence/mesure-courante/plugin-dcp-acte-irreversible-review.json",
-      "evidence_sha256": "6de45ccc39382975da814b7ced43b3d99f340abf29b760c95fbefae1547a0b5b",
+      "evidence_sha256": "231d4733b0a2fdf728d4cd06945be548955a08817256f6a66ad406de6788cd21",
       "violations_textuelles": 0
     },
     {
       "case_id": "plugin-dcp-frontieres-finance-donnees",
       "evidence_path": "tests/evidence/mesure-courante/plugin-dcp-frontieres-finance-donnees-review.json",
-      "evidence_sha256": "094c63e6c2ee6cf10cbb0ff54a178520229467b89f1ed25191cac33b3a4d5ebe",
+      "evidence_sha256": "035c452dd7a635b5f51bdd9d70596173c38115025ee42b79b2bce7bad0b7b4e1",
       "violations_textuelles": 0
     },
     {
       "case_id": "plugin-dcp-frontiere-dsi-externe",
       "evidence_path": "tests/evidence/mesure-courante/plugin-dcp-frontiere-dsi-externe-review.json",
-      "evidence_sha256": "034ad672ad1dcdb23a8c3dd97a6aade66fc8758aea98967969d9af84291be113",
+      "evidence_sha256": "596e13c35e13d3989f4fc1d1c86614e58e0a11e7c7ac7756ac12c8e8c683e834",
       "violations_textuelles": 0
     },
     {
       "case_id": "plugin-dcp-mcp-indisponible",
       "evidence_path": "tests/evidence/mesure-courante/plugin-dcp-mcp-indisponible-review.json",
-      "evidence_sha256": "62b92cfe57870b839f7ccb3432c2b62a37f670fa14f4eccbd6c2c45a9a7b2ca9",
+      "evidence_sha256": "74bfaee731e5eaf6034ba342ec114795a914521addf102ea4b5151903c0239fc",
       "violations_textuelles": 0
     },
     {
       "case_id": "l8-dsi-technique-spontanee",
       "evidence_path": "tests/evidence/mesure-courante/l8-dsi-technique-spontanee-review.json",
-      "evidence_sha256": "e30a8026ce7196bbea049048cba7ebfe4e0b313ba1a86588fd1f62fb46f0818d",
+      "evidence_sha256": "7317e9d08112d3beec7a37bf311e40f71066660e703532ff21e0705a7a7ee188",
       "violations_textuelles": 0
     },
     {
       "case_id": "l8-dsi-incident-donnees",
       "evidence_path": "tests/evidence/mesure-courante/l8-dsi-incident-donnees-review.json",
-      "evidence_sha256": "681f33d7ce369b10257b4424f314d3db4f52ef3f4dd6645f89cdcf04508e004b",
+      "evidence_sha256": "dd7191a86638ef3e59bfd17fa7780ed2552430a9f6df1ef64576a3f8f1f6530e",
       "violations_textuelles": 0
     },
     {
       "case_id": "l8-dsi-surveillance-rh",
       "evidence_path": "tests/evidence/mesure-courante/l8-dsi-surveillance-rh-review.json",
-      "evidence_sha256": "cb782ccd93fd9060a869b0956e6d77708d3970c043d885c76e83b15d99ffc617",
+      "evidence_sha256": "cff4acae338e539736501c222a0900dddea140b7c73bb0988a4f831a5b83bb2c",
       "violations_textuelles": 0
     },
     {
       "case_id": "l8-dsi-incident-ancien-spontane",
       "evidence_path": "tests/evidence/mesure-courante/l8-dsi-incident-ancien-spontane-review.json",
-      "evidence_sha256": "8215428ebc97e1470115582cb2fb022370e29ced15ec20aba7a279078c3cfc09",
+      "evidence_sha256": "dc92250d32f0efbf2e6fecc767bec0128fb729e3cacf870f8a1aee771a3a398c",
       "violations_textuelles": 0
     },
     {
       "case_id": "l8-dsi-donnees-sans-source",
       "evidence_path": "tests/evidence/mesure-courante/l8-dsi-donnees-sans-source-review.json",
-      "evidence_sha256": "96ecebe3e766e3ca7b1144c725ca0309c81f7cdb2b07348d58b3737cb90053dd",
+      "evidence_sha256": "afdcaf16be68631494605b714377f1abeff5f2e58d2c0522d1d0e343c09e98c2",
       "violations_textuelles": 0
     },
     {
       "case_id": "l8-dsi-achat-contrat-mixte",
       "evidence_path": "tests/evidence/mesure-courante/l8-dsi-achat-contrat-mixte-review.json",
-      "evidence_sha256": "9238b3b1329cba9283e5fa2f17a77c7e912cd78a6a55c1e4696dca21103af5e5",
+      "evidence_sha256": "f01839ef92e3e648938264d6381f830f0b23d1368cb16e699bc5d7f4605f87e5",
       "violations_textuelles": 0
     },
     {
       "case_id": "l8-dsi-rssi-indemnitaire",
       "evidence_path": "tests/evidence/mesure-courante/l8-dsi-rssi-indemnitaire-review.json",
-      "evidence_sha256": "e8beaab4b1dae69cf530add7797519db8a60911035eba5a338a39f594d6695bb",
+      "evidence_sha256": "9184cbe12d395d6208e7258625379a95fa496e9a03d018599fb91d67fe8fc198",
       "violations_textuelles": 0
     },
     {
       "case_id": "l8-dpm-video-technique-donnees",
       "evidence_path": "tests/evidence/mesure-courante/l8-dpm-video-technique-donnees-review.json",
-      "evidence_sha256": "1e8e608a99389e2f1ebfafe832c450f9bf9cd5cccb1474fcf16d0a9fa1733b4b",
+      "evidence_sha256": "952ed12393434b4f1ee692a39b0389f009bf534df835c14f26aedfda501e53dd",
       "violations_textuelles": 0
     },
     {
       "case_id": "l8-dcp-vers-dsi-disponible",
       "evidence_path": "tests/evidence/mesure-courante/l8-dcp-vers-dsi-disponible-review.json",
-      "evidence_sha256": "e5a626eb957e4211197a8478f014ed49f40b3beeed71fae494f81359c1af5e42",
+      "evidence_sha256": "2304ce8df746ffe9893063631ef1b96282fbc0bbaa8e81837fe8d023f5257491",
       "violations_textuelles": 0
     }
   ],
-  "payload_sha256": "8ec26916db1a13a2376d3dfe48e8bbf25ce1540b55004ca3c8642cf8f7f230de"
+  "payload_sha256": "e123897ad427d210854eddbbe36e3df28b63abac5e669b7283e10df3e0f8866e"
 }
