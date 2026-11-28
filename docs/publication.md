@@ -25,6 +25,8 @@
 
 | `v1.5.3` | `30140245dbada1ddae201782c6a2ebac0390b818` | 2026-11-27 | **distribution open source qualifiée techniquement** ; avis métier enregistré avec quatre réserves (`release-1.5.3.json`) | Distribution Antigravity (ADR 0037), DCP 0.2.2 (référence autonome DCP-025, ADR 0040), DRH 0.8.0, recherche-juridique 3.7.0, H1 groupé (ADR 0041) ; mesure sur `e8f4271`, commit publié limité aux preuves et à la liaison de mesure (ADR 0039) ; étiquette annotée |
 
+| `v1.5.4` | `d7b2091f269a84651c9bdd233cc86934a8182996` | 2026-11-28 | **distribution open source qualifiée techniquement** ; avis métier enregistré avec quatre réserves (`release-1.5.4.json`) | Serveur MCP sur le pont `droit-francais-pont` : comptes à e-mail vérifié, clés PISTE personnelles (ADR 0042) ; skills inchangés depuis 1.5.3 ; mesure sur `3061720`, commit publié limité aux preuves et à la liaison de mesure (ADR 0042) ; étiquette annotée |
+
 Ajouter une ligne par étiquette distribuée ; ne jamais réécrire une ligne.
 Le test `test_distribution_epinglee_sur_etiquette` exige que l'étiquette et
 le commit épinglés figurent dans ce tableau.
