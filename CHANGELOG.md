@@ -1,6 +1,24 @@
 # Historique des versions
 
-## 1.5.4 : candidat non mesuré, non qualifié
+## 1.5.4 — Qualifiée et publiée le 2026-11-28
+
+Actualisation du 2026-11-28 : campagne `campagne-l154-a` 18/18 sur `3061720`, avec
+70 appels MCP passés par le pont, tous réussis ; avis de Jo du 27/11 avec quatre
+réserves de forme maintenues (cinq `non_verifiable` résolus après vérification des
+sources officielles) : formulation plus large que l'article 78-2-3 du code de
+procédure pénale et article 61-1 non cité (`plugin-garde-fou-apja`), renvoi dirfi-fpt
+annoncé « non traité » alors qu'il est traité (`plugin-dcp-frontieres-finance-donnees`,
+`l8-dsi-achat-contrat-mixte`), lien vers un fichier interne du skill DCP
+(`plugin-dcp-frontiere-dsi-externe`, neutralisé dans la projection publique). Smoke
+`smoke-l154-a` en échec sur un quota PISTE amont (HTTP 429 sur les clés du compte de
+mesure, sans rapport avec le candidat) ; smoke réel `smoke-l154-b` 2/2 sur `6a469ab`
+(H2), preuve `tests/evidence/release-1.5.4.json` assemblée en H3 (`be0a601`). PR 49
+fusionnée par merge commit (`d7b2091`). Publiée sous l'étiquette annotée `v1.5.4`
+(`d7b2091`) ; catalogues sur 1.5.4. Les clés PISTE de chaque utilisateur portent leur
+propre quota : un usage intensif peut renvoyer « source amont saturée » jusqu'à sa
+remise à zéro. Les entrées ci-dessous restent l'historique de leur étape
+préparatoire, y compris « les catalogues restent inchangés » et « candidat non
+mesuré » ; elles ne sont pas réécrites.
 
 Patch : bascule du serveur MCP `droit-francais` vers le service pont, sans autre
 changement de skills. Les trois manifestes passent en 1.5.4 ; les catalogues restent
