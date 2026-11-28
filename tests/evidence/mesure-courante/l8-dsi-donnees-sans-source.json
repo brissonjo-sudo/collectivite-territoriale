@@ -1,5 +1,5 @@
 {
-  "plugin_commit": "e8f42719e90e5fdf69458cf9960bf04ee6560f84",
+  "plugin_commit": "30617203c9514736af680dc97c79de53d4a6df4c",
   "runtime_sha256": {
     "skills/dcp-fpt/agents/openai.yaml": "b37aec5086edadd2d0012545ab4c3b1a6493db31f7b6f26673674f5f514aeb40",
     "skills/dcp-fpt/LICENCE.fr.txt": "14e59bc002e1339e5554451aedad7c2b113dc7ef942e96b410b5517099ad6d91",
@@ -227,9 +227,9 @@
     "skills/recherche-juridique/SKILL.md": "13bb816e3b168daed181813411be87d1cf58ea65b15212b4207f68f201b5e7cd"
   },
   "plugin_configuration_sha256": {
-    ".codex-plugin/plugin.json": "4294642b42d209a3bc3184945f249559c2f748b56f3e7a1a62bb3e9e9a0bf22d",
-    ".claude-plugin/plugin.json": "8671012148c78ec01f217103b96a87fda761271e236a01d9428186a6407a038e",
-    ".mcp.json": "c1988401a93d468e87557dc1ebf47989323203b9c5ef7607641529615aefbcac",
+    ".codex-plugin/plugin.json": "53dc3a55357f4494e21abf4175e7eba855006495fc05d08922b4e9f0c8783cd8",
+    ".claude-plugin/plugin.json": "6991732b0a46573c15579319319bfba83c99da77ff0b11651b7fba69d87096db",
+    ".mcp.json": "bc8b6f791066cdde35139b757c805751d566055ea176d8e2a918e36d47179c32",
     "assets/icon.png": "10aca45cb876735f06e10b352b9a2ba004b5deae462e08d8dfba092044aaee1f"
   },
   "case_file_sha256": "0747b6268cccab1bb46c820217d2a4ba1c69e5c2ad6fe61126e3a5bd9242f5ea",
@@ -243,7 +243,7 @@
     "scripts/cas-plugin-cycle-v4.json": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
     "scripts/check_dcp_protocol.py": "6faeea694546084ceae2b64d8c87603f4c04fb521efdb5baa3b743958fad5f06",
     "scripts/check_sync.py": "69f080fbe4ded47ab1c5980a662e4219e15e111a67de8a6cbf166aac831e008e",
-    "scripts/cli_toolchains.py": "e1c73adbd0a52d01214853ca32a316343445c4d6cfd8d4d054118ff17ed32d67",
+    "scripts/cli_toolchains.py": "63cd143299ee3b643f86090f3f314ff7d64739b9d45b8939468329ba447d933f",
     "scripts/codex_event_contract.py": "f4e848f3c34504b4df6b5f444337b4064829828d8c492ecd3023cbae471d42d7",
     "scripts/cycle-v4-source-requirements.json": "54bed7aaf6afc439a6d24e1f95204d4b3e7d9327024ce5435bd9cc0988a8a333",
     "scripts/cycle_satisfiability.py": "5a8625a8f8169393a6b3bcf35ab696830707cc142366c9d179c192fa128bb6ea",
@@ -257,7 +257,7 @@
     "scripts/extract_native_read_commands.py": "d1292a0e6f798fcab1bd55fdce76b0e804526208b97e9e82172702057f1ef6c4",
     "scripts/human_resolution.py": "444d01b13428773c33a9100310ebb5815c32067b4f838f8f6afd9b4d9a284e32",
     "scripts/instruction_overlays.py": "e40decc70e39416d33b484b9d9620e2e6db64a0b6d1826c88b9899e0fbe57e99",
-    "scripts/measurement-cli.json": "96f0c453455891fe6367a957ac2a674b7d17ab16ad03229b2bc1dd3c42a1ac99",
+    "scripts/measurement-cli.json": "d883a8cce147d0f80c47aaf13dfde3799545e003619422315a134d27a9e5047a",
     "scripts/measurement_common.py": "1a703163152afa70d669e276f7be8f62f86a7989819daff8676d6fd8afddb7a4",
     "scripts/public_projection.py": "7521e1835e16dd841966f30237370f225e29014f418a5557e6c01953d0f4c102",
     "scripts/qualify_distribution.py": "f05040ca0e3921aa2407c3be56c0bb0402809588edb8785983d8d9977bc03d20",
@@ -281,7 +281,8 @@
     "scripts/toolchain-transition-0031.json": "05ba38e8b694a7ec0d5b0ec1ec098f627c9d392ab06b4cea65d9b9d3d3f19b61",
     "scripts/toolchain-transition-0034.json": "73bdaa3c74e30b70a337ee9865c78c158086f59919f9cc743ff9e1960db11e44",
     "scripts/toolchain-transition-0036.json": "df2c1bcb356e67bded5efe82c7257acbd05375fb2e30618f290225daabcbd11c",
-    "scripts/toolchain-transition-0039.json": "77b565d483928a203c2b436c66bfc537f60f49c542082690e57d8a081eefb729"
+    "scripts/toolchain-transition-0039.json": "890028bde9aeaeced79355b4404ac5a2f20718ca0c5a3feb33423961053de7c8",
+    "scripts/toolchain-transition-0042.json": "f72e0552e4b891cf0cb326b018df0b5b4c9f7f64d73305731b74dd671c430363"
   },
   "case_id": "l8-dsi-donnees-sans-source",
   "role": "reponse",
@@ -302,14 +303,14 @@
       }
     },
     "cli_version": "codex-cli 0.164.0-alpha.11.1",
-    "thread_id": "2a3fc5cdc2288176f94326a8e2a5c2d7b92c627a8e32480289176e69931e9365",
+    "thread_id": "969c122774326420dbb08d88f3cf3b857bbc04a22c73e04339e6b7dff95e6fde",
     "cli_sha256": "1103e9e09c71fa2cd0afd6d8f3b9a2d63174fe8efd7cb5bd09f1cb14ef58a098",
     "argv_sha256": "353e05c03468398194bcf1af46436eab13efb1804a622974a8f8177d7c30abdd",
     "prompt_sha256": "2c6ac4f1c29f66482a0ad7a770853a6be44ccf27d93e7f196d19f18b71b46479",
-    "stdout_sha256": "b4e31b494928cc83ae3a0f770d005561fc8dbbb6db03343f07d3fc97cfdc74c8",
+    "stdout_sha256": "07c0405e1b064b4e53cd7c6005dfe47087b8edf10ae35eb43b3c8c92b9800e93",
     "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "process_exit": 0,
-    "elapsed_seconds": 167.048847,
+    "elapsed_seconds": 155.602816,
     "startup_failure": {
       "before_model_attested": false,
       "model_session_opened": true,
@@ -333,7 +334,7 @@
     "kind": "native_seven_skills_precheck",
     "diagnostic_only": true,
     "model_calls": 0,
-    "runtime": "<HOME>\\Documents\\Codex\\repo-recovery\\2026-10-12\\instantane-r1\\suivis\\l153-preparation\\campagne-l153-d\\l8-dsi-donnees-sans-source-reponse-vjandoft\\.agents\\skills",
+    "runtime": "<HOME>\\Documents\\Codex\\repo-recovery\\2026-10-12\\instantane-r1\\suivis\\l154-preparation\\campagne-l154-a\\l8-dsi-donnees-sans-source-reponse-84iodstc\\.agents\\skills",
     "probes": [
       {
         "status": "ok",
@@ -345,7 +346,7 @@
         "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
         "stdout_octets": 692,
         "stderr_octets": 0,
-        "argv_sha256": "3c2573acca1a3f8d827c0241a2613dea8a6fcb188027523bf8b6c53174671bc5",
+        "argv_sha256": "8eab3228dfb56e99409a1de7bef02e868544fa485ab657ef2551ef64cb60cc56",
         "runtime_entries_verified": 7,
         "raw_output_archived": false
       }
@@ -366,7 +367,7 @@
   },
   "campaign_harness": {
     "lot": "T43-L24e",
-    "manifest_sha256": "3ff9a360d7e501d8ba1eca1e0ff10824ea8b9b06555fc32b36b419827bf4b96d",
+    "manifest_sha256": "abec7fdf334e0edef6a4eeae3793c8c132bea199544b9bad3e6eae194e9711f4",
     "campaign_cli": {
       "version": "codex-cli 0.164.0-alpha.11.1",
       "sha256": "1103e9e09c71fa2cd0afd6d8f3b9a2d63174fe8efd7cb5bd09f1cb14ef58a098",
@@ -380,11 +381,11 @@
   },
   "case_contract": "scripts/cas-plugin-cycle-v4.json",
   "case_contract_sha256": "be70f64b4650a72c15a33e477c81f84c61c602ceb22ad23cc1783c3412888f24",
-  "campaign_attempt_id": "campagne-l153-d",
-  "completed_at": "2026-11-27T07:07:48.272998+00:00",
+  "campaign_attempt_id": "campagne-l154-a",
+  "completed_at": "2026-11-27T21:10:41.402129+00:00",
   "trace": {
     "evidence_path": "source-l14/campagne/l8-dsi-donnees-sans-source/reponse/trace.jsonl",
-    "sha256": "0ca4521db6a72cb0f899890b4354463d2a9169183636daed6aba404d6b850874"
+    "sha256": "acfb2e794304188da20c04599af30bc7aba8c69a4123a1baa61e09805dbed865"
   },
   "process_exit": 0,
   "execution_errors": [],
@@ -400,7 +401,7 @@
   "human_legal_validation": false,
   "publication_ready": false,
   "campaign_adapter_sha256": "1e3ae6970817cf9e0f80e9640386ef4d276ca665df73db86bc9b3d81245e7397",
-  "campaign_support_sha256": "deec28621de1c5e90b0d5c7f8e9aec898d4fe000c3f8a69889063349c2e9fc8e",
+  "campaign_support_sha256": "5076ff8bbbcf70022096ea4626241cd41ab172a9758b8f20dad9589994a7bd0d",
   "mcp_review_sha256": "bde75706abf0feccf719734ad36044809a64e186aeaa2dc294dbd3ae974989aa",
   "mcp_text_limit_bytes": 12000,
   "case_outcome_sha256": "a7b318c11a53bb07ee6abca1e6de65a47362796949b3d9a31451e0b6c7798d79",
@@ -409,13 +410,13 @@
   "events": [
     {
       "type": "reply",
-      "text": "STOP — suspicion de fuite de données : activer le circuit interne de gestion d’incident et préserver les éléments utiles. Sans source officielle accessible, je ne déduirai aucune obligation, aucun destinataire ni aucun délai juridique.\n\nJe vais lire et appliquer les skills dsi-fpt, dpo-ct, puis recherche-juridique, dans cet ordre.\n"
+      "text": "STOP — incident cyber : une fuite de données est suspectée. Les mesures conservatoires peuvent être préparées ; aucune obligation, aucun destinataire ni délai juridique ne sera déduit de mémoire.\n\nJe vais lire intégralement les skills dsi-fpt, dpo-ct puis recherche-juridique, dans cet ordre, et appliquer l’abstention faute de source officielle accessible.\n"
     },
     {
       "type": "visible_text",
       "position": 2,
       "item_id": "item_0",
-      "text": "STOP — suspicion de fuite de données : activer le circuit interne de gestion d’incident et préserver les éléments utiles. Sans source officielle accessible, je ne déduirai aucune obligation, aucun destinataire ni aucun délai juridique.\n\nJe vais lire et appliquer les skills dsi-fpt, dpo-ct, puis recherche-juridique, dans cet ordre.\n"
+      "text": "STOP — incident cyber : une fuite de données est suspectée. Les mesures conservatoires peuvent être préparées ; aucune obligation, aucun destinataire ni délai juridique ne sera déduit de mémoire.\n\nJe vais lire intégralement les skills dsi-fpt, dpo-ct puis recherche-juridique, dans cet ordre, et appliquer l’abstention faute de source officielle accessible.\n"
     },
     {
       "type": "tool_boundary",
@@ -603,13 +604,13 @@
     },
     {
       "type": "reply",
-      "text": "La lecture complète de dsi-fpt est terminée. BASCULE dpo-ct — je lui attribue l’examen du volet données personnelles, puis à recherche-juridique le contrôle des sources et des points sur lesquels s’abstenir.\n"
+      "text": "La lecture intégrale de dsi-fpt est terminée. Je poursuis avec dpo-ct, puis recherche-juridique. Les sources officielles étant désactivées dans cette session, la réponse restera limitée aux mesures conservatoires, aux faits à documenter et aux questions à faire vérifier.\n"
     },
     {
       "type": "visible_text",
       "position": 19,
       "item_id": "item_9",
-      "text": "La lecture complète de dsi-fpt est terminée. BASCULE dpo-ct — je lui attribue l’examen du volet données personnelles, puis à recherche-juridique le contrôle des sources et des points sur lesquels s’abstenir.\n"
+      "text": "La lecture intégrale de dsi-fpt est terminée. Je poursuis avec dpo-ct, puis recherche-juridique. Les sources officielles étant désactivées dans cette session, la réponse restera limitée aux mesures conservatoires, aux faits à documenter et aux questions à faire vérifier.\n"
     },
     {
       "type": "tool_boundary",
@@ -866,13 +867,13 @@
     },
     {
       "type": "reply",
-      "text": "Les trois entrées ont été lues intégralement dans l’ordre demandé. Les sources officielles sont indisponibles dans cette session : recherche-juridique ne peut donc confirmer ni qualification juridique, ni démarche externe, ni destinataire, ni délai. Je consulte maintenant les références locales utiles aux mesures conservatoires et à la collecte des faits.\n"
+      "text": "Les trois entrées ont été lues intégralement dans l’ordre demandé. Je consulte maintenant les références locales utiles à la gestion de l’incident ; elles ne constituent pas des sources officielles permettant d’établir le droit.\n\nBASCULE vers dpo-ct — je lui attribue le volet des données personnelles potentiellement touchées. BASCULE vers recherche-juridique — je lui attribue le constat d’indisponibilité des sources et l’abstention sur les obligations, destinataires et délais.\n"
     },
     {
       "type": "visible_text",
       "position": 42,
       "item_id": "item_21",
-      "text": "Les trois entrées ont été lues intégralement dans l’ordre demandé. Les sources officielles sont indisponibles dans cette session : recherche-juridique ne peut donc confirmer ni qualification juridique, ni démarche externe, ni destinataire, ni délai. Je consulte maintenant les références locales utiles aux mesures conservatoires et à la collecte des faits.\n"
+      "text": "Les trois entrées ont été lues intégralement dans l’ordre demandé. Je consulte maintenant les références locales utiles à la gestion de l’incident ; elles ne constituent pas des sources officielles permettant d’établir le droit.\n\nBASCULE vers dpo-ct — je lui attribue le volet des données personnelles potentiellement touchées. BASCULE vers recherche-juridique — je lui attribue le constat d’indisponibilité des sources et l’abstention sur les obligations, destinataires et délais.\n"
     },
     {
       "type": "tool_boundary",
@@ -901,8 +902,10 @@
       "paths": [
         ".agents/skills/dsi-fpt/references/crise-cyber-continuite.md"
       ],
-      "complete_content_verified": [],
-      "output_sha256": "de18a3f392363165d7b51c2ffe2a67df8e0bd3c73193efbf500673f4a24649a1",
+      "complete_content_verified": [
+        ".agents/skills/dsi-fpt/references/crise-cyber-continuite.md"
+      ],
+      "output_sha256": "65b46ee450f0e1dbd48cba9d5f6ec13028862fee7e8a609aebf5165892406168",
       "exit_code": 0,
       "status": "completed"
     },
@@ -914,12 +917,12 @@
     {
       "type": "native_read",
       "paths": [
-        ".agents/skills/dsi-fpt/objets/incident-securite.md"
+        ".agents/skills/dsi-fpt/references/securite-si.md"
       ],
       "complete_content_verified": [
-        ".agents/skills/dsi-fpt/objets/incident-securite.md"
+        ".agents/skills/dsi-fpt/references/securite-si.md"
       ],
-      "output_sha256": "80181b831548539909b85e6c5fdea4e07bc76fbe5f4a04d4e25e27f884849300",
+      "output_sha256": "f6c6e4133985003d260fef6c94bf70ca83e3a059d308425a0bb1a2d9602673af",
       "exit_code": 0,
       "status": "completed"
     },
@@ -931,10 +934,12 @@
     {
       "type": "native_read",
       "paths": [
-        ".agents/skills/dsi-fpt/references/securite-si.md"
+        ".agents/skills/dsi-fpt/objets/incident-securite.md"
       ],
-      "complete_content_verified": [],
-      "output_sha256": "4c6dd706b022b65f23d45134f417aa79cbf7f472b8e13e710c90b3058f765042",
+      "complete_content_verified": [
+        ".agents/skills/dsi-fpt/objets/incident-securite.md"
+      ],
+      "output_sha256": "80181b831548539909b85e6c5fdea4e07bc76fbe5f4a04d4e25e27f884849300",
       "exit_code": 0,
       "status": "completed"
     },
@@ -965,8 +970,10 @@
       "paths": [
         ".agents/skills/dpo-ct/references/violations.md"
       ],
-      "complete_content_verified": [],
-      "output_sha256": "680307bdf4f5e63fc0abc1342e9142e1159509466523d07655c8a29c6c6e34d1",
+      "complete_content_verified": [
+        ".agents/skills/dpo-ct/references/violations.md"
+      ],
+      "output_sha256": "dbd0779833f1deef052d343e978d14987309dc4cd0917e045fa9fb5337a75c6c",
       "exit_code": 0,
       "status": "completed"
     },
@@ -980,8 +987,10 @@
       "paths": [
         ".agents/skills/recherche-juridique/references/gabarits-sortie.md"
       ],
-      "complete_content_verified": [],
-      "output_sha256": "3543cb3509f06974650db0153724224560b0e4278cc8a9dbda25e8921fcac14f",
+      "complete_content_verified": [
+        ".agents/skills/recherche-juridique/references/gabarits-sortie.md"
+      ],
+      "output_sha256": "80c172bb1bd62696f1b9d33a7f0c5b908a83da178f5e32bfe0458f1784180d72",
       "exit_code": 0,
       "status": "completed"
     },
@@ -993,10 +1002,10 @@
     {
       "type": "native_read",
       "paths": [
-        ".agents/skills/recherche-juridique/references/gabarits-sortie.md"
+        ".agents/skills/recherche-juridique/references/procedure-detaillee.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "c5164c53b2786c90cea3ca09f4bac764bd8ce801f4a1b82a45c6a3aa5c3bdb46",
+      "output_sha256": "00b43ffed94cc06832cbed2f1e4bcbf421a585459468b5594734103b02177736",
       "exit_code": 0,
       "status": "completed"
     },
@@ -1011,7 +1020,7 @@
         ".agents/skills/recherche-juridique/references/procedure-detaillee.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "eef1cb7d3442b68c0d26c32f5d51e41ef771f064b8942aed07ca0af3b48b1a80",
+      "output_sha256": "e57163987581188cb3caa82567c66588f28d781e8af2316bff4d1d93041984b8",
       "exit_code": 0,
       "status": "completed"
     },
@@ -1026,66 +1035,51 @@
         ".agents/skills/recherche-juridique/references/procedure-detaillee.md"
       ],
       "complete_content_verified": [],
-      "output_sha256": "d02bebbbcfd9b590949731dad468c13d20af6a2798b223f71c6839c297d41695",
-      "exit_code": 0,
-      "status": "completed"
-    },
-    {
-      "type": "tool_boundary",
-      "position": 63,
-      "item_type": "command_execution"
-    },
-    {
-      "type": "native_read",
-      "paths": [
-        ".agents/skills/recherche-juridique/references/procedure-detaillee.md"
-      ],
-      "complete_content_verified": [],
       "output_sha256": "8f004d5cf9e6a6761ab2c428876cea13b3051faaddc51433ec622d705d1470fe",
       "exit_code": 0,
       "status": "completed"
     },
     {
       "type": "reply",
-      "text": "**Sources officielles indisponibles dans cette session : MCP et web désactivés.** Les trois entrées ont été lues intégralement, par segments contigus, dans l’ordre demandé : dsi-fpt, dpo-ct, recherche-juridique.\n\n**BASCULE recherche-juridique — vérification et abstention.** Aucun texte primaire officiel n’a été récupéré. Je ne conclus donc ni à une obligation de notification, ni à son destinataire, ni à un délai ou à son point de départ. Les références locales servent ici à organiser la réponse opérationnelle ; elles ne prouvent pas le droit applicable.\n\n**Volet dsi-fpt — mesures conservatoires proposées**  \n*dsi-fpt, branche Crise cyber et continuité, §5–6 ; objet Incident de sécurité, §3.*\n\n1. **Préserver les éléments utiles.** Éviter réinstallation, effacement ou restauration des systèmes touchés. Faire organiser la préservation et le confinement par les intervenants habilités, en traçant chaque action. Aucune contre-mesure offensive ni intervention sur un système tiers.\n2. **Coordonner en interne.** Mobiliser les responsables opérationnels désignés par l’organisation et choisir un canal dont la fiabilité est établie. Identifier le pilote, les exécutants et les décisions nécessitant un arbitrage.\n3. **Établir les faits.** Ouvrir un journal distinguant observations, hypothèses et inconnues : indice initial, dates et heures, systèmes concernés, services affectés, mesures prises et résultats. Conserver les éléments sensibles dans un espace à accès restreint.\n4. **Cadrer la continuité.** Recenser actifs, dépendances, support disponible et services prioritaires. Faire préciser si l’exploitation est interne, mutualisée ou externalisée. Avant reprise, définir les contrôles techniques, la validation métier et la personne chargée de chaque action. Un service rétabli ne suffit pas à démontrer la fin de l’incident.\n\n**BASCULE dpo-ct — volet données personnelles à instruire.**  \n*dpo-ct, Contrat local, « Faits, risque et délais de violation » ; branche Violations de données, §4 et §5.4.*\n\nRéunir, sans présumer la fuite confirmée :\n\n- les catégories de données et de personnes possiblement touchées ;\n- le volume estimé, l’exposition constatée et les protections effectivement établies ;\n- les conséquences possibles pour les personnes ;\n- une chronologie séparant événement suspect, découverte et informations reçues par chaque acteur.\n\nLa qualification juridique et l’évaluation restent ouvertes : aucune absence de risque ne se déduit du manque d’informations.\n\n**Suite à préparer :** un dossier factuel pour le DPO humain et le conseil juridique, avec les questions à vérifier dès qu’une source officielle devient accessible : régime applicable, éventuelles démarches externes, conditions, interlocuteurs, délais et éléments déclencheurs. Toute communication externe envisagée reste un brouillon soumis à revue humaine et à décision par la personne dont la compétence sera établie. Cette vérification peut avancer en parallèle des mesures conservatoires."
+      "text": "**Sources officielles indisponibles dans cette session : MCP et web désactivés.** Aucun texte primaire n’a été récupéré. Je m’abstiens donc de fixer une obligation, un destinataire externe, un délai juridique ou une échéance. Les références locales lues servent uniquement au cadrage opérationnel.\n\nLes trois skills ont été lus intégralement, dans l’ordre demandé : dsi-fpt, dpo-ct, recherche-juridique.\n\n**BASCULE vers dsi-fpt — mesures techniques conservatoires.**  \nD’après dsi-fpt, branches « Crise cyber et continuité », « Sécurité du SI » et objet « Incident de sécurité » :\n\n1. **Préserver les preuves.** Éviter réinstallation, effacement ou restauration des éléments touchés. Faire organiser le confinement par les intervenants habilités, en documentant chaque intervention.\n2. **Activer la coordination interne.** Mobiliser les responsables opérationnels désignés et l’appui technique disponible, par un canal dont la fiabilité a été vérifiée. Cette alerte interne ne détermine aucune démarche externe.\n3. **Ouvrir un journal factuel.** Séparer observations, hypothèses, inconnues, décisions et résultats. Distinguer la date supposée de l’incident, celle de sa découverte et les moments où chaque acteur en a été informé.\n4. **Cadrer le périmètre avant de choisir la remédiation.** Recenser services, équipements, applications et dépendances potentiellement touchés ; préciser qui exploite le SI, quel support est disponible et qui conduit chaque action.\n5. **Préparer la continuité et la reprise.** Faire préciser les services prioritaires et leur fonctionnement dégradé. Prévoir des contrôles techniques et métier avant réouverture ; une application qui fonctionne ne démontre pas la clôture de l’incident.\n\nNe pas décider seul d’un paiement, d’une communication publique ou d’un arrêt de service. Aucune contre-mesure offensive ni accès à un système tiers.\n\n**BASCULE vers dpo-ct — données personnelles potentiellement touchées.**  \nD’après dpo-ct, branche « Violations de données », préparer un dossier anonymisé recensant :\n\n- les données et personnes possiblement concernées, les volumes connus et leurs incertitudes ;\n- les indices d’accès, de divulgation, d’altération ou de perte ;\n- les conséquences possibles et les protections effectivement démontrées.\n\nLa suspicion reste une suspicion : elle ne permet de conclure ni à une violation juridiquement établie, ni à l’absence d’atteinte.\n\n**BASCULE vers recherche-juridique — abstention ciblée et vérifications à préparer.**  \nRestent à établir sur sources officielles : le régime applicable, la qualification des faits, les acteurs compétents, les éventuelles démarches externes, leurs destinataires, conditions, contenus et délais. Examiner séparément une éventuelle notification externe et une éventuelle information des personnes.\n\nL’indisponibilité des sources ne justifie pas de différer la préservation et la documentation. Toute communication externe préparée dans ce cadre reste un brouillon soumis à validation humaine avant envoi."
     },
     {
       "type": "visible_text",
-      "position": 65,
-      "item_id": "item_33",
-      "text": "**Sources officielles indisponibles dans cette session : MCP et web désactivés.** Les trois entrées ont été lues intégralement, par segments contigus, dans l’ordre demandé : dsi-fpt, dpo-ct, recherche-juridique.\n\n**BASCULE recherche-juridique — vérification et abstention.** Aucun texte primaire officiel n’a été récupéré. Je ne conclus donc ni à une obligation de notification, ni à son destinataire, ni à un délai ou à son point de départ. Les références locales servent ici à organiser la réponse opérationnelle ; elles ne prouvent pas le droit applicable.\n\n**Volet dsi-fpt — mesures conservatoires proposées**  \n*dsi-fpt, branche Crise cyber et continuité, §5–6 ; objet Incident de sécurité, §3.*\n\n1. **Préserver les éléments utiles.** Éviter réinstallation, effacement ou restauration des systèmes touchés. Faire organiser la préservation et le confinement par les intervenants habilités, en traçant chaque action. Aucune contre-mesure offensive ni intervention sur un système tiers.\n2. **Coordonner en interne.** Mobiliser les responsables opérationnels désignés par l’organisation et choisir un canal dont la fiabilité est établie. Identifier le pilote, les exécutants et les décisions nécessitant un arbitrage.\n3. **Établir les faits.** Ouvrir un journal distinguant observations, hypothèses et inconnues : indice initial, dates et heures, systèmes concernés, services affectés, mesures prises et résultats. Conserver les éléments sensibles dans un espace à accès restreint.\n4. **Cadrer la continuité.** Recenser actifs, dépendances, support disponible et services prioritaires. Faire préciser si l’exploitation est interne, mutualisée ou externalisée. Avant reprise, définir les contrôles techniques, la validation métier et la personne chargée de chaque action. Un service rétabli ne suffit pas à démontrer la fin de l’incident.\n\n**BASCULE dpo-ct — volet données personnelles à instruire.**  \n*dpo-ct, Contrat local, « Faits, risque et délais de violation » ; branche Violations de données, §4 et §5.4.*\n\nRéunir, sans présumer la fuite confirmée :\n\n- les catégories de données et de personnes possiblement touchées ;\n- le volume estimé, l’exposition constatée et les protections effectivement établies ;\n- les conséquences possibles pour les personnes ;\n- une chronologie séparant événement suspect, découverte et informations reçues par chaque acteur.\n\nLa qualification juridique et l’évaluation restent ouvertes : aucune absence de risque ne se déduit du manque d’informations.\n\n**Suite à préparer :** un dossier factuel pour le DPO humain et le conseil juridique, avec les questions à vérifier dès qu’une source officielle devient accessible : régime applicable, éventuelles démarches externes, conditions, interlocuteurs, délais et éléments déclencheurs. Toute communication externe envisagée reste un brouillon soumis à revue humaine et à décision par la personne dont la compétence sera établie. Cette vérification peut avancer en parallèle des mesures conservatoires."
+      "position": 63,
+      "item_id": "item_32",
+      "text": "**Sources officielles indisponibles dans cette session : MCP et web désactivés.** Aucun texte primaire n’a été récupéré. Je m’abstiens donc de fixer une obligation, un destinataire externe, un délai juridique ou une échéance. Les références locales lues servent uniquement au cadrage opérationnel.\n\nLes trois skills ont été lus intégralement, dans l’ordre demandé : dsi-fpt, dpo-ct, recherche-juridique.\n\n**BASCULE vers dsi-fpt — mesures techniques conservatoires.**  \nD’après dsi-fpt, branches « Crise cyber et continuité », « Sécurité du SI » et objet « Incident de sécurité » :\n\n1. **Préserver les preuves.** Éviter réinstallation, effacement ou restauration des éléments touchés. Faire organiser le confinement par les intervenants habilités, en documentant chaque intervention.\n2. **Activer la coordination interne.** Mobiliser les responsables opérationnels désignés et l’appui technique disponible, par un canal dont la fiabilité a été vérifiée. Cette alerte interne ne détermine aucune démarche externe.\n3. **Ouvrir un journal factuel.** Séparer observations, hypothèses, inconnues, décisions et résultats. Distinguer la date supposée de l’incident, celle de sa découverte et les moments où chaque acteur en a été informé.\n4. **Cadrer le périmètre avant de choisir la remédiation.** Recenser services, équipements, applications et dépendances potentiellement touchés ; préciser qui exploite le SI, quel support est disponible et qui conduit chaque action.\n5. **Préparer la continuité et la reprise.** Faire préciser les services prioritaires et leur fonctionnement dégradé. Prévoir des contrôles techniques et métier avant réouverture ; une application qui fonctionne ne démontre pas la clôture de l’incident.\n\nNe pas décider seul d’un paiement, d’une communication publique ou d’un arrêt de service. Aucune contre-mesure offensive ni accès à un système tiers.\n\n**BASCULE vers dpo-ct — données personnelles potentiellement touchées.**  \nD’après dpo-ct, branche « Violations de données », préparer un dossier anonymisé recensant :\n\n- les données et personnes possiblement concernées, les volumes connus et leurs incertitudes ;\n- les indices d’accès, de divulgation, d’altération ou de perte ;\n- les conséquences possibles et les protections effectivement démontrées.\n\nLa suspicion reste une suspicion : elle ne permet de conclure ni à une violation juridiquement établie, ni à l’absence d’atteinte.\n\n**BASCULE vers recherche-juridique — abstention ciblée et vérifications à préparer.**  \nRestent à établir sur sources officielles : le régime applicable, la qualification des faits, les acteurs compétents, les éventuelles démarches externes, leurs destinataires, conditions, contenus et délais. Examiner séparément une éventuelle notification externe et une éventuelle information des personnes.\n\nL’indisponibilité des sources ne justifie pas de différer la préservation et la documentation. Toute communication externe préparée dans ce cadre reste un brouillon soumis à validation humaine avant envoi."
     },
     {
       "type": "turn_completed",
       "usage": {
-        "input_tokens": 1512422,
-        "cached_input_tokens": 1441152,
+        "input_tokens": 1460870,
+        "cached_input_tokens": 1386880,
         "cache_write_input_tokens": 0,
-        "output_tokens": 3329,
-        "reasoning_output_tokens": 563
+        "output_tokens": 3130,
+        "reasoning_output_tokens": 455
       }
     }
   ],
-  "events_sha256": "efa15e402c0bfb7a7827a7284400564eb85e75b09a81f9f827b1210c6f3deefd",
+  "events_sha256": "d9771c0493b4787bfc8e06a5bb95894134e38457ad8f82c05c86c65029b8a9be",
   "runner_sha256": "89fd874415c5830dc67be3e2fa76a77eb9bafdd1f7434ecad696d35db1ef1602",
   "profile": "codex-copies-natives-mcp-v5",
-  "measurement_commit": "e8f42719e90e5fdf69458cf9960bf04ee6560f84",
-  "qualification_target_commit": "768d7d56258bd4b9feeede266c9ee1b2187dc8d7",
+  "measurement_commit": "30617203c9514736af680dc97c79de53d4a6df4c",
+  "qualification_target_commit": "6a469ab56495c5b9179da7ccb15dc7afd71a2a39",
   "derivation": {
     "kind": "projection_of_original_session",
     "original": {
       "evidence_path": "campagne/l8-dsi-donnees-sans-source/reponse/session.json",
-      "sha256": "3f3b49b952e68edda352c610ebb7ed2532444fcd43990321b407c50206b5ef39"
+      "sha256": "6c65dc98a519d88044e16b12b0e3c75f257b1b70656918ac80dee34c30144ac5"
     },
     "summary": {
       "evidence_path": "campagne/resume-campagne.json",
-      "sha256": "01c0b81b4b99e6e121f46481ab3429bd4c5e5f94d5b7ffedba0ccfd20c00d92c"
+      "sha256": "ab189608f01e0b3de8c84026e835c792aa16afcf7988151a9a278132529d69b5"
     }
   },
   "original_session": {
     "evidence_path": "source-l14/campagne/l8-dsi-donnees-sans-source/reponse/session.json",
-    "sha256": "3f3b49b952e68edda352c610ebb7ed2532444fcd43990321b407c50206b5ef39"
+    "sha256": "6c65dc98a519d88044e16b12b0e3c75f257b1b70656918ac80dee34c30144ac5"
   },
   "source_bundle_root": "tests/evidence/mesure-courante/source-l14",
-  "payload_sha256": "47588bc7405b62810add93c32cb44d93725a0049f49fabc7c3796a47aca911d7"
+  "payload_sha256": "c29be112b27c4fabbc396e49ce12c934191f232ae587ceb44e2ee8c30ca28423"
 }

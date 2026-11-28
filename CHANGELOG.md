@@ -1,5 +1,25 @@
 # Historique des versions
 
+## 1.5.4 : candidat non mesuré, non qualifié
+
+Patch : bascule du serveur MCP `droit-francais` vers le service pont, sans autre
+changement de skills. Les trois manifestes passent en 1.5.4 ; les catalogues restent
+inchangés.
+
+- Serveur MCP (ADR 0042) : `.mcp.json` et `mcp_config.json` pointent vers
+  `https://droit-francais-pont.onrender.com/mcp` au lieu du service historique
+  `droit-francais-skill.onrender.com`. Même émetteur Auth0, même client public et même
+  port de rappel. Chaque utilisateur se connecte avec un compte à e-mail vérifié et
+  enregistre **ses** clés PISTE (`configurer_cles_piste`, suppression par
+  `oublier_cles_piste`) ; aucune clé d'exploitant n'est utilisée.
+- **Réserve ouverte** : la question des CGU PISTE § 3.1.2 n'est pas tranchée (décision de
+  Jo du 2026-11-27, « Assumer et signaler »). Elle est signalée aux utilisateurs.
+- Cycle 1.5.4 préparé en H1 (ADR 0042) : contrat v4 inchangé, même CLI figée que la
+  1.5.0, transition 0042 non fermée. Changer `.mcp.json` change l'empreinte de
+  configuration : cycle complet (campagne 18 cas, relecture, H2, smoke, H3).
+- Points ouverts pour Jo : Action Auth0 du pont à ouvrir à tout compte vérifié, clés
+  PISTE à enregistrer avant la campagne, autorisation du client sur l'API du pont.
+
 ## 1.5.3 — Qualifiée et publiée le 2026-11-27
 
 Actualisation du 2026-11-27 : campagne `campagne-l153-d` 18/18 sur `e8f4271`,
