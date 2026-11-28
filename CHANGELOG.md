@@ -1,5 +1,21 @@
 # Historique des versions
 
+## 1.5.5 : en préparation, non mesuré, non qualifié
+
+Préparation décidée par Jo le 2026-11-28 (« Préparer, mesurer plus tard ») : trois
+réserves de forme récurrentes des campagnes 1.5.3 et 1.5.4, corrigées sans mesure.
+Les manifestes restent en 1.5.4 jusqu'au H1 ; la barrière de release refuse ce
+runtime tant que le cycle 1.5.5 n'est pas fait.
+
+- Surcouche `recherche-juridique` (provenance) : « texte récupéré » ou « lu dans cette
+  session » est réservé au libellé reçu du MCP juridique. Une page web, même
+  officielle, se dit « page officielle consultée (site) », avec le seul passage exact
+  utilisé entre guillemets : la trace ne conserve pas le texte des pages (cas
+  `plugin-prime-depart-retraite`, réservé en 1.5.3 et 1.5.4).
+- À reprendre au H1 : épinglage de dcp-fpt 0.2.3 (DCP-fpt, PR 27), qui corrige la 3e
+  ligne de la BASCULE dirfi-fpt (« DCP ne le détaille ni ne le traite ») et la citation
+  de §5.5 sans lien ni chemin ; mesure autonome DCP puis cycle complet 1.5.5.
+
 ## 1.5.4 — Qualifiée et publiée le 2026-11-28
 
 Actualisation du 2026-11-28 : campagne `campagne-l154-a` 18/18 sur `3061720`, avec

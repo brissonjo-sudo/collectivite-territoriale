@@ -176,9 +176,11 @@ sans modifier les étapes ni autoriser d'autres outils.
   Sans récupération suffisante, signaler le point comme non vérifié et ne
   pas conclure sur son applicabilité actuelle.
 - **Formulation de la provenance** : écrire « texte récupéré » ou « lu dans
-  cette session » seulement si le libellé a été reçu dans une sortie d'outil
-  de la session. Une page officielle ouverte sans texte reçu se dit « page
-  officielle consultée », sans affirmer en avoir lu le contenu.
+  cette session » seulement si le libellé a été reçu dans une sortie du MCP
+  juridique de la session. Une page web, même officielle, ouverte par l'outil
+  de navigation se dit « page officielle consultée (site) », jamais « texte
+  récupéré » : la trace ne conserve pas le texte de la page. Reproduire alors
+  entre guillemets le seul passage exact sur lequel la réponse s'appuie.
 - **Identifiants** : la règle de provenance vaut aussi pour les identifiants
   de codes, sections, textes européens et décisions, pas seulement ceux
   d'articles. Ne restituer aucun identifiant non récupéré dans la session,
